@@ -1,0 +1,243 @@
+{
+  "site": {
+    "name": "Logia",
+    "tagline": "Scripture beside two thousand years of commentary: the early church, the Middle Ages, the Reformers, the Puritans and the 1800s, copied word for word from public-domain editions.",
+    "description": "Logia sets every verse of Scripture beside what the church has said about it for two thousand years: public-domain commentaries from the early church to the 1800s, free and open.",
+    "skip": "Skip to content",
+    "licence_pill": "CC0",
+    "licence": "Logia's data is free to use, with no rights reserved. The commentaries are in the public domain."
+  },
+  "nav": {
+    "main": "Main",
+    "home": "Home",
+    "read": "Read",
+    "commentators": "Commentators",
+    "about": "About",
+    "menu": "Menu",
+    "with_commentary": "With commentary",
+    "all_books": "All books",
+    "all_commentators": "All commentators",
+    "about_logia": "About Logia",
+    "about_logia_note": "What it is and who it is for",
+    "checked": "How excerpts are checked",
+    "checked_note": "Copied, never rewritten",
+    "owb": "The Open Word Bible",
+    "owb_note": "The translation Logia reads",
+    "source": "Source code and data",
+    "source_note": "Everything is open, on GitHub"
+  },
+  "prefs": {
+    "display": "Settings",
+    "theme": "Theme",
+    "size": "Text size",
+    "font": "Typeface",
+    "leading": "Line spacing",
+    "motion": "Motion",
+    "level": "Bible text",
+    "excerpt": "Commentary excerpts"
+  },
+  "theme": {
+    "auto": "Automatic",
+    "light": "Paper",
+    "sepia": "Sepia",
+    "dark": "Lamplight",
+    "night": "Night",
+    "contrast": "High contrast"
+  },
+  "size": {
+    "s": "Small",
+    "m": "Medium",
+    "l": "Large",
+    "xl": "Largest"
+  },
+  "font": {
+    "serif": "Serif",
+    "sans": "Sans",
+    "readable": "Readable"
+  },
+  "leading": {
+    "compact": "Compact",
+    "normal": "Normal",
+    "spacious": "Spacious"
+  },
+  "motion": {
+    "auto": "Automatic",
+    "reduce": "Reduced"
+  },
+  "level": {
+    "L": "Literal",
+    "B": "Balanced",
+    "R": "Readable"
+  },
+  "excerpt": {
+    "preview": "Preview",
+    "full": "In full"
+  },
+  "eras": {
+    "Early church": "Early church",
+    "Middle Ages": "Middle Ages",
+    "Reformation": "Reformation",
+    "Puritans and the 1700s": "Puritans and the 1700s",
+    "The 1800s": "The 1800s"
+  },
+  "testaments": {
+    "old": "Old Testament",
+    "new": "New Testament"
+  },
+  "footer": {
+    "read": "Read",
+    "commentators": "Commentators",
+    "project": "The project",
+    "report": "Report a problem",
+    "books_with": "Books with commentary",
+    "licences": "Bible text: Open Word Bible (CC0). Greek: SBLGNT with MACULA Greek word data (CC BY 4.0). Cross-references: OpenBible.info (CC BY). Commentary texts: public domain.",
+    "review": "Logia is new: its selection of excerpts, its verse tags and its biographies are drafts awaiting human review."
+  },
+  "home": {
+    "verse": "“They were entrusted with the oracles of God.” Romans 3:2",
+    "title": "The Word, and what the church has said about it",
+    "lead": "Read a verse, and beside it hear Chrysostom, Augustine, Aquinas, Calvin, Matthew Henry and many more: two thousand years of commentary, copied word for word from public-domain editions, free to read and free to share.",
+    "start": "Start with John 1",
+    "browse": "Browse the books",
+    "read_heading": "Read",
+    "voices_heading": "The voices, so far",
+    "all_commentators": "All commentators",
+    "how_heading": "How Logia works",
+    "how_copied": "Copied, never rewritten",
+    "how_copied_text": "Each excerpt is checked against the source it came from and links to the full text. Where a page scan misread a letter, the fix is listed in the open data.",
+    "how_owb": "On a modern translation",
+    "how_owb_text": "The Bible text is the Open Word Bible, translated from Hebrew and Greek with the reasoning behind every sentence. Tap a word for its Greek.",
+    "how_langs": "English first, then many languages",
+    "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
+  },
+  "read": {
+    "title": "Read",
+    "heading": "Every book, with what the church has said about it",
+    "dek": "Choose a book, then a chapter. Chapters marked in gold have commentary; the rest have the Bible text, with commentary still to come.",
+    "commentary_on": "Commentary on {n} of {total} chapters",
+    "commentary_on_one": "Commentary on 1 of {total} chapters",
+    "text_only": "Bible text, commentary to come",
+    "coming": "Coming later",
+    "coming_note": "These books are not in Logia yet.",
+    "book_page": "About {book}",
+    "has_commentary": "has commentary",
+    "text_only_chapter": "Bible text only"
+  },
+  "book": {
+    "eyebrow": "Book",
+    "dek": "{n} chapters. Commentary so far on {done} of them.",
+    "chapters": "Chapters",
+    "commentators": "Who comments on {book}",
+    "chapter_card": "{n} commentaries on verses {span}",
+    "chapter_card_one": "1 commentary on verses {span}",
+    "chapter_none": "Bible text; commentary to come"
+  },
+  "chapter": {
+    "eyebrow": "Chapter {chapter}",
+    "pick": "Pick a verse to see what the church has said about it. In Balanced, tap a word for its Greek.",
+    "level_label": "Translation level",
+    "owb_hint": "Bible text: {link} (CC0), English. An AI draft awaiting human review.",
+    "previous": "Previous chapter",
+    "next": "Next chapter",
+    "description": "{book} {chapter} with {n} public-domain commentaries from the early church to the 1800s, verse by verse.",
+    "description_none": "{book} {chapter} in the Open Word Bible. Commentary on this chapter is still to come.",
+    "credits": "Commentary excerpts are copied word for word from public-domain editions and link to the full text: {works}. The Catena Aurea, Bengel, Ryle and Westcott come from page scans on archive.org: misread letters and figures are corrected to match the printed page, and Greek the scans cannot read is left out (marked … where it breaks a sentence).",
+    "panel_label": "Commentary on the chosen verse",
+    "prev_verse": "Previous verse",
+    "next_verse": "Next verse",
+    "toggle_panel": "Show or hide the commentary panel",
+    "rail_label": "Commentators on a line of centuries",
+    "tab_comm": "Commentary",
+    "tab_words": "Greek words",
+    "tab_notes": "Translation notes",
+    "tab_xref": "Cross-references"
+  },
+  "reader": {
+    "summary": "{n} voices from {eras} eras, {first} to {last}",
+    "summary_one": "1 voice: {first}",
+    "none_yet": "No commentary on this verse yet",
+    "none_yet_long": "No commentary on this verse yet.",
+    "none_in_eras": "No commentary from the chosen eras on this verse. Turn an era back on above.",
+    "show_eras": "Show eras",
+    "on_verses": "On verses {a}–{b}",
+    "read_all": "Read all {n} words",
+    "full_text": "Full text",
+    "tap_word": "Tap a Greek word above, or a word in the Balanced text, to see what it means and how it was translated.",
+    "lemma": "Dictionary form",
+    "grammar": "Grammar",
+    "gloss": "Gloss",
+    "strong": "Strong's",
+    "how_translated": "How the Open Word Bible translated it",
+    "meaning": "Meaning",
+    "english_levels": "English {levels}",
+    "uncertain": "Uncertain",
+    "not_": "Not:",
+    "sentence_spans": "This sentence runs across verses {a}–{b}",
+    "word_for_word": "Word for word:",
+    "no_xrefs": "No cross-references for this verse.",
+    "xref_credit": "Cross-references from OpenBible.info (CC BY), most voted first.",
+    "categories": {
+      "grammar": "Grammar",
+      "word_sense": "Word sense",
+      "word_choice": "Word choice",
+      "theology": "Theology",
+      "supplied_words": "Supplied words",
+      "culture": "Culture",
+      "allusion": "Allusion",
+      "setting_alternative": "Reader setting",
+      "word_order": "Word order",
+      "text_variant": "Manuscripts",
+      "idiom": "Idiom",
+      "punctuation": "Punctuation",
+      "register": "Register"
+    }
+  },
+  "commentators": {
+    "title": "Commentators",
+    "heading": "The voices in Logia",
+    "dek": "Preachers, bishops and scholars from the early church to the 1800s, Eastern and Western, Catholic and Protestant, each in their own words.",
+    "verses": "{n} verses",
+    "works": "Works in Logia",
+    "comments_on": "What {name} says, verse by verse",
+    "bio_draft": "This biography is a draft awaiting review.",
+    "died": "Died {year}",
+    "back": "All commentators",
+    "passages": "{n} passages"
+  },
+  "work": {
+    "eyebrow": "Commentary",
+    "by": "By {name}",
+    "edition": "Edition",
+    "translation": "Translation",
+    "original": "Written in",
+    "published": "This edition",
+    "source": "Copied from",
+    "source_scan": "Page scans on archive.org: the text has misread letters, corrected in Logia's data ({n} corrections).",
+    "source_digital": "A transcription on CCEL, checked word for word.",
+    "rights": "Rights",
+    "full_text": "Read the full text at the source",
+    "in_logia": "In Logia",
+    "excerpts": "{n} excerpts",
+    "front_to_back": "Front to back",
+    "front_to_back_note": "Every excerpt Logia holds from this work, in order. Each links to its verse in the reader.",
+    "open_verse": "Read {ref} with all its commentary"
+  },
+  "about": {
+    "title": "About",
+    "heading": "About Logia",
+    "dek": "A free, open library of Christian commentary, set verse by verse beside Scripture.",
+    "body": [
+      "## What it is",
+      "Logia sets each verse of the Bible beside what the church has said about it, from the early church to the 1800s. It is free to read, free to share, and its data is open for anyone to build on, in the spirit of Sefaria's library of Jewish texts.",
+      "The name comes from *ta logia tou theou*, “the oracles of God” (Romans 3:2), and from Papias's lost *Exposition of the Logia of the Lord*, one of the first Christian commentaries.",
+      "## How excerpts are checked",
+      "Every excerpt is copied from a public-domain edition, never rewritten, and the source text it came from is kept beside it. A script checks each excerpt against its source on every change: word for word for a transcription, and in runs of six words for a page scan, whose lines carry margin notes and running heads. Where a scan misread a letter (“Let ns” for “Let us”), the correction is listed openly and applied when the site is built.",
+      "## The Bible text",
+      "Logia reads the Open Word Bible, a CC0 translation from Hebrew and Greek with the reasoning behind every sentence. Logia never edits it: it is imported at a pinned version from the Open Word Bible's own repository.",
+      "## Languages",
+      "Logia starts in English. Each new language is translated from the best public-domain source, the original Greek, Latin or German where that is better than the English, and reviewed by native speakers before it is marked reviewed.",
+      "## Open",
+      "Logia's data and writing are CC0, its code is MIT, and everything is on GitHub."
+    ]
+  }
+}

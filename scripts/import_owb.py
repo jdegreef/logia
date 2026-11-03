@@ -31,8 +31,11 @@ def verse_of(ref):
 
 
 def pack_chapter(owb, book, chapter, markup, morph):
-    files = sorted(glob.glob(os.path.join(owb, "content", book, f"{book}.{chapter}.*.json")),
-                   key=lambda p: int(os.path.basename(p).split(".")[2].split("-")[0]))
+    # A chapter is one file (JHN.2.json) or several passages (JHN.1.1-18.json).
+    whole = os.path.join(owb, "content", book, f"{book}.{chapter}.json")
+    files = [whole] if os.path.exists(whole) else sorted(
+        glob.glob(os.path.join(owb, "content", book, f"{book}.{chapter}.*.json")),
+        key=lambda p: int(os.path.basename(p).split(".")[2].split("-")[0]))
     if not files:
         sys.exit(f"no Open Word Bible content for {book} {chapter}")
     grc = json.load(open(os.path.join(owb, "data", "grc", f"{book}.{chapter}.json"), encoding="utf-8"))
@@ -120,8 +123,12 @@ def main():
         sys.exit(f"open-word-bible checkout is at {commit or 'an unknown commit'}, but bible/owb/SOURCE.json "
                  f"pins {pin['commit']}. Check out the pin, or update the pin on purpose.")
     books = json.load(open(os.path.join(owb, "data", "books.json"), encoding="utf-8"))["books"]
-    json.dump({k: v["en"] for k, v in books.items()},
-              open(os.path.join(OUT, "books.en.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    # Every book in canonical order, with its English name and its number of
+    # chapters (Hebrew numbering for the Old Testament, as the Open Word Bible).
+    with open(os.path.join(OUT, "books.json"), "w", encoding="utf-8") as f:
+        json.dump({k: {"en": v["en"], "chapters": v["chapters"]} for k, v in books.items()},
+                  f, ensure_ascii=False, indent=1)
+        f.write("\n")
     for ch in args.chapters:
         book, chapter = ch.split(".")
         data = pack_chapter(owb, book, int(chapter), markup, morph)

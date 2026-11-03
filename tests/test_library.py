@@ -58,29 +58,57 @@ class VerifyCatchesChanges(unittest.TestCase):
 
 
 class Site(unittest.TestCase):
+    PAGES = ("index.html", "read/index.html", "jhn/index.html", "jhn/1/index.html", "jhn/21/index.html",
+             "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html")
+
     @classmethod
     def setUpClass(cls):
         quiet(build_site.build)
 
-    def test_pages_exist_and_are_filled(self):
-        for page in ("index.html", os.path.join("jhn", "1", "index.html")):
-            with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
-                text = f.read()
-            self.assertNotRegex(text, r"\{\{[A-Z_]+\}\}", page)
+    def read(self, page):
+        with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
+            return f.read()
+
+    def test_pages_exist_with_the_site_frame(self):
+        for page in self.PAGES:
+            text = self.read(page)
             self.assertTrue(text.startswith("<!doctype html>"), page)
+            self.assertIn('<header class="site">', text, page)
+            self.assertIn('<footer class="site">', text, page)
+            self.assertIn('id="colour-menu"', text, page)
+
+    def test_every_internal_link_leads_to_a_page(self):
+        missing = set()
+        for root, _dirs, files in os.walk(build_site.SITE):
+            for name in files:
+                if not name.endswith(".html"):
+                    continue
+                with open(os.path.join(root, name), encoding="utf-8") as f:
+                    for href in re.findall(r'href="(/[^"#]*)', f.read()):
+                        path = os.path.join(build_site.SITE, href.lstrip("/"))
+                        if not (os.path.isfile(path) or os.path.isfile(os.path.join(path, "index.html"))):
+                            missing.add(href)
+        self.assertEqual(missing, set())
 
     def test_chapter_page_carries_its_data(self):
-        with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:
-            text = f.read()
-        m = re.search(r"const DATA = (\{.*?\});\n", text, re.S)
-        data = json.loads(m[1].replace("<\\/", "</"))
-        self.assertEqual(data["book"], "JHN")
+        text = self.read(os.path.join("jhn", "1", "index.html"))
+        m = re.search(r'<script type="application/json" id="chapter-data">(.*?)</script>', text, re.S)
+        data = json.loads(m[1])
+        self.assertEqual((data["book"], data["chapter"]), ("JHN", 1))
         self.assertEqual(len(data["commentaries"]), 8)
         self.assertTrue(all(w["entries"] for w in data["commentaries"]))
+        for key in ("summary", "none_yet", "eras", "levels", "categories"):
+            self.assertIn(key, data["ui"])
+
+    def test_a_chapter_without_commentary_still_reads(self):
+        text = self.read(os.path.join("jhn", "21", "index.html"))
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertEqual(data["commentaries"], [])
+        self.assertEqual(data["verses"][-1], 25)
 
     def test_corrections_are_applied(self):
-        works, comments = build_site.load_library()
-        ryle = " ".join(c["text"] for c in comments if c["work"] == "ryle")
+        lib = build_site.Library()
+        ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")
         self.assertNotIn("Let ns", ryle)
         self.assertIn("Let us", ryle)
 
