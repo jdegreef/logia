@@ -22,7 +22,7 @@ Christian commentaries.
 | `i18n/en.json` | Every word of the interface, so a language can be added by adding a catalog |
 | `web/` | The stylesheets, scripts and fonts the pages use (see "The site" below) |
 | `scripts/` | Import, validate, verify and build |
-| `docs/` | How to add a work, and the editorial rules |
+| `docs/` | How to add a work, the editorial rules, and how the site is deployed |
 
 The library today: the whole Gospel of John in the Open Word Bible text, and
 John 1:1–18 with eight commentaries (Chrysostom,
