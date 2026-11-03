@@ -1,0 +1,7 @@
+# The built site (scripts/build_site.py) and fetched checkouts.
+site/
+vendor/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
