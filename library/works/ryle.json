@@ -1,0 +1,20 @@
+{
+ "id": "ryle",
+ "author": "J. C. Ryle",
+ "author_dates": "1816-1900",
+ "tradition": "Anglican (Evangelical)",
+ "era": "The 1800s",
+ "title": "Expository Thoughts on the Gospels: St. John, Vol. I",
+ "edition": "Expository Thoughts on the Gospels, for Family and Private Use, with the Text Complete. St. John, Vol. I. New York: Robert Carter & Brothers, 1879 (American printing of the work first published in London, 1865); archive.org scan \"expositorythough05ryle\", djvu OCR text",
+ "original_language": "English",
+ "translation": null,
+ "published": 1879,
+ "full_text_url": "https://archive.org/details/expositorythough05ryle",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years)"
+ },
+ "source_kind": "scan",
+ "notes": "None: every verse 1-18 has at least one entry. Not on CCEL (CCEL has only Ryle on Matthew) and not on Project Gutenberg (Gutendex returned 503), and no 1865/1869 London scan turned up in an archive.org search, so this is the 1879 New York Carter printing of the same text. The text is archive.org djvu OCR: the only changes are line breaks reflowed, hyphenated line ends joined, and running heads and page numbers dropped. Where a genuine hyphenated compound fell at a line end, joining the line end may have dropped its hyphen. OCR errors are kept verbatim and not corrected, for example \"Let ns\", \"Cre-ator\", \"signifymg\", \"Genesi.^\", \"(Gen. i. I.)\", \"inefiably\", \"e-ternity\", \"illustratio.is\", \"Hiire\", \"fullypersuaded t^i at\", \"p^rasp\", \"ctf God\", \"Ciiristians\", \"Sabelhans\", \"iSow\", \"ahve\", \"Bre^tius\", \"Liglitfoot\", \"apphes\", \"hght\", \"Ufe\", \"Tght\", \"Chiist\", \"tv/o\", \"ten-e\", \"07i Sim\", \"th-e\", \"bhnd\" (after a stray \"^\"), \"locking\" (for looking), \"saj- s\", \"tr.ue\", \"suflficiently\", \"G-entiles\", \"Clirist\", \"unbehef\", \"Chri'st's\", \"'^His\", \"abihty\", \"did 80\", \"rep-eneration\", \"a'man\", \"BeHevers\", \"v/hat\", \"owx\", \"ChrisVs incarnation^ or heing\", \"accomphshed\", \"Grhost\", \"w^orth\", \"und\", \"th«\", \"Jo- n's\", \"spiiitnnl\", \"inchned\", \"G-reek\", \"unfaihng\", \"Mose5\", \"ceremonie.^\", \"fiora\", \"hoKnes^\", \"compas-ion\", \"siu\", \"sinner.?\", \"brou,2:ht\", \"ditferentfrom\", \"Avhether\", \"dw^elleth\", \"-epresented\". The second scan of the same 1879 printing (expositorythoug02rylegoog, also saved) has different OCR errors and was not mixed in. Headings are the bracketed lemmas (KJV words) of the Notes, or the section heading for the expository passages. Because the lemmas are the worst-OCR'd lines, I wrote the headings out in clean KJV wording from the verse text the volume prints. They are metadata and are not counted as excerpt text. Excerpts begin just after the lemma. For verse 1, the \"with God\" entry is cut at \"than to attempt to explain.\" because the OCR drops a line at the page foot right after it (the quotation \"I am in the Father...\" is mangled). Four of the 36 entries are the expository section passages (one per section: 1-5, 6-13, 14, 15-18); the rest come from the Notes.",
+ "status": "ai_draft"
+}

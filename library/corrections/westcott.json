@@ -1,0 +1,174 @@
+{
+ "work": "westcott",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "Jlesh",
+   "to": "flesh"
+  },
+  {
+   "from": "Irenasus",
+   "to": "Irenaeus"
+  },
+  {
+   "from": "<zvas",
+   "to": "was"
+  },
+  {
+   "from": "<we",
+   "to": "we"
+  },
+  {
+   "from": "no<w",
+   "to": "now"
+  },
+  {
+   "from": "which twos eternally",
+   "to": "which was eternally"
+  },
+  {
+   "from": "ligbteth",
+   "to": "lighteth"
+  },
+  {
+   "from": "trutb~\\",
+   "to": "truth"
+  },
+  {
+   "from": "me~\\",
+   "to": "me"
+  },
+  {
+   "from": "(i) in the beginning",
+   "to": "(1) in the beginning"
+  },
+  {
+   "from": "(a) with God",
+   "to": "(2) with God"
+  },
+  {
+   "from": "He was (3) God",
+   "to": "He was (3) God"
+  },
+  {
+   "from": "(...and... and...}",
+   "to": "(...and... and...)"
+  },
+  {
+   "from": "ist verse",
+   "to": "1st verse"
+  },
+  {
+   "from": "grace}",
+   "to": "grace)"
+  },
+  {
+   "from": "light}",
+   "to": "light)"
+  },
+  {
+   "from": "the / Light",
+   "to": "the Light"
+  },
+  {
+   "from": " \\/ ",
+   "to": " "
+  },
+  {
+   "from": " /\\ ",
+   "to": " "
+  },
+  {
+   "from": "\"Word in Jesus",
+   "to": "Word in Jesus"
+  },
+  {
+   "from": "i John",
+   "to": "1 John"
+  },
+  {
+   "from": "(i K.",
+   "to": "(1 K."
+  },
+  {
+   "from": "1 John i. i, a)",
+   "to": "1 John i. 1, 2)"
+  },
+  {
+   "from": "1 John i. i,",
+   "to": "1 John i. 1,"
+  },
+  {
+   "from": "1 John iv. a)",
+   "to": "1 John iv. 2)"
+  },
+  {
+   "from": "v. i, 4, 18",
+   "to": "v. 1, 4, 18"
+  },
+  {
+   "from": "iv. 8, 1 6)",
+   "to": "iv. 8, 16)"
+  },
+  {
+   "from": "viii. n)",
+   "to": "viii. 11)"
+  },
+  {
+   "from": "Matt. Hi. n ;",
+   "to": "Matt. iii. 11;"
+  },
+  {
+   "from": "Matt. xi. IT.",
+   "to": "Matt. xi. 27."
+  },
+  {
+   "from": "vi. 33, 5°",
+   "to": "vi. 33, 50"
+  },
+  {
+   "from": "-w. ",
+   "to": "vv. "
+  },
+  {
+   "from": "(xvii. j)",
+   "to": "(xvii. 5)"
+  },
+  {
+   "from": "Irenaeus : n. 30. 9",
+   "to": "Irenaeus, ii. 30. 9"
+  },
+  {
+   "from": "(comp. i. i, n.)",
+   "to": "(comp. i. 1 ...)"
+  },
+  {
+   "from": "(i)",
+   "to": "(1)"
+  },
+  {
+   "from": "(a)",
+   "to": "(2)"
+  },
+  {
+   "from": "xxxiii. i 2 ff.",
+   "to": "xxxiii. 12 ff."
+  },
+  {
+   "from": "be declared Him",
+   "to": "he declared Him"
+  },
+  {
+   "from": "it- Thus",
+   "to": "it. Thus"
+  },
+  {
+   "from": "and / dwells",
+   "to": "and dwells"
+  },
+  {
+   "from": "iii. 26 flf.",
+   "to": "iii. 26 ff."
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+# Render Blueprint for Logia (logia.faith). Not created on Render yet: create
+# it with New > Blueprint and this repository, then point logia.faith's DNS
+# at it. The site is static, built from this repository with no dependencies.
+services:
+  - type: web
+    name: logia
+    runtime: static
+    buildCommand: python3 scripts/build_site.py
+    staticPublishPath: site
+    pullRequestPreviewsEnabled: true
+    # Deploy main only once CI (.github/workflows/ci.yml) passes.
+    autoDeployTrigger: checksPass
+    domains:
+      - logia.faith
+      - www.logia.faith
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
