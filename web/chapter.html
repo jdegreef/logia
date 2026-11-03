@@ -154,6 +154,10 @@ h1 { font-family: var(--display); font-weight: 600; font-size: clamp(28px, 4vw, 
 .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
 a.cite { color: inherit; text-decoration: underline dotted var(--accent); text-underline-offset: 3px; }
 a.cite:hover { color: var(--accent); }
+.qs { font-size: 13.5px; color: var(--muted); margin: 6px 0 12px; padding-left: 10px; border-left: 2px solid var(--line); }
+.qs div + div { margin-top: 4px; }
+.qs b { color: var(--text, inherit); font-weight: 600; }
+.qs button { border: 0; background: none; padding: 0; color: var(--accent); cursor: pointer; font: inherit; font-weight: 600; }
 .elsewhere { margin-top: 22px; }
 .elsewhere .hint { margin: 2px 0 10px; }
 .cb { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
@@ -332,6 +336,22 @@ function linked(text, cites) {
   }
   return h + esc(text.slice(pos));
 }
+// Quotations of the Fathers, both ways: a catena's to the quoted passage,
+// and a passage to the catena that quotes it.
+const UNCHECKED = `<span title="Matched by shared wording; no one has checked it yet">(matched by wording, unchecked)</span>`;
+function readIt(href, verse, work, on) {
+  if (!href) return "";
+  return href.startsWith(location.pathname) || href.startsWith("/" + DATA.book.toLowerCase() + "/" + DATA.chapter + "/")
+    ? `<button data-goto="${verse}" data-work="${esc(work)}">read it on ${esc(on)}</button>`
+    : `<a href="${esc(href)}">read it on ${esc(on)}</a>`;
+}
+function traced(e) {
+  const rows = (e.quotes || []).map(q => `<div><b>${esc(q.label)}</b> ${esc(q.author)}, ${esc(q.where)}${q.exact ? "" : " (the passage is not pinned down)"}:
+      ${q.excerpt ? readIt(q.href, q.verse, q.work_id, REF(q.verse)) + " · " : ""}<a href="${esc(q.url)}" target="_blank" rel="noopener">full text ↗</a> ${q.status === "reviewed" ? "" : UNCHECKED}</div>`)
+    .concat((e.quotedIn || []).map(q => `<div>Quoted by ${esc(q.author)} in the <i>Catena Aurea</i> on ${esc(q.on)}:
+      ${readIt(q.href, q.verse, q.work_id, q.on)} ${q.status === "reviewed" ? "" : UNCHECKED}</div>`));
+  return rows.length ? `<div class="qs">${rows.join("")}</div>` : "";
+}
 function locusLabel(w, e) {
   if (!e.locus || !Array.isArray(w.divisions)) return "";
   return e.locus.split(".").map((n, i) => `${i ? w.divisions[i].toLowerCase() : w.divisions[i]} ${n}`).join(", ");
@@ -354,7 +374,7 @@ function commTab() {
         const range = where ? `<div class="range">${esc(where)}</div>` : "";
         const lemma = e.heading && !e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().startsWith(e.heading.toLowerCase())
           ? `<div class="lemma">${esc(e.heading)}</div>` : "";
-        return `${range}${lemma}${paras(linked(e.excerpt, e.cites))}`;
+        return `${range}${lemma}${paras(linked(e.excerpt, e.cites))}${traced(e)}`;
       }).join("");
       const words = es.reduce((n, e) => n + e.excerpt.split(/\s+/).length, 0);
       const long = words > 140;

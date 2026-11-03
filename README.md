@@ -15,6 +15,7 @@ Christian commentaries.
 | `library/works/<work>.json` | One commentary: author, dates, tradition, era, divisions, edition, translator, rights, status |
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
+| `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |

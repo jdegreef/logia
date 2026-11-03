@@ -24,9 +24,13 @@ checking.
 declare their `divisions` and the Chrysostom and Augustine excerpts carry
 their homily or tractate and section. `scripts/find_refs.py` finds 325
 Scripture citations in the excerpts. The reader links each one and lists,
-under every verse, the excerpts on other verses that cite it. Still to do:
-page numbers for the scanned editions, human review of the citations, and
-items 4–7.
+under every verse, the excerpts on other verses that cite it. Item 4 has
+a first version too: 15 of the Catena's quotations of Chrysostom and
+Augustine are traced to their homily or tractate, 9 of them to the section
+and 8 to an excerpt Logia holds, and the reader links them both ways. Still
+to do: page numbers for the scanned editions, human review of the citations
+and quotations, the Catena's other Fathers (Hilary, Theophylact, Bede,
+Alcuin, Basil) once their works are in the library, and items 5–7.
 
 1. **A standard reference for every text, not only the Bible.** Sefaria can
    address "Rashi on Genesis 1:1:2" as easily as "Genesis 1:1". Logia has

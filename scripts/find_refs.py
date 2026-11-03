@@ -20,10 +20,21 @@ Two things are read from the sources, never written by hand:
   Either way a citation starts as `"status": "detected"`; a person checking
   it sets "reviewed", or "rejected" for a false match, and running this
   script again keeps their status.
+- **Quotations of the Fathers**, in library/quotations/<work>/<BOOK>.json. A
+  catena quotes the Fathers under printed labels ("CHRYS.", "AUG."). Where
+  the library holds the quoted work's source pages, each quotation is
+  matched to the paragraph of that work whose words it shares most: the
+  Catena's English was made from Aquinas's Latin, so it is never word for
+  word the same as the CCEL translation. A match names the section when one
+  section stands out, only the homily or tractate when only that does, and
+  is left out otherwise (`"found": "similar"`, with its `score`). Like a
+  citation it stays "detected" until a person checks it, for instance
+  against the margin note printed beside it ("Aug. in Joan. tract. i. c. 13").
 """
 import argparse
 import glob
 import json
+import math
 import os
 import re
 import sys
@@ -58,7 +69,7 @@ class Page(HTMLParser):
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.text, self.paras, self.refs = [], [], []
+        self.text, self.paras, self.para_ids, self.refs = [], [], [], []
         self.depth, self.open_ref, self.size = 0, None, 0
 
     def handle_starttag(self, tag, attrs):
@@ -71,6 +82,7 @@ class Page(HTMLParser):
         if tag == "p":
             self._add("\n")
             self.paras.append(self.size)
+            self.para_ids.append(a.get("id"))
         if tag == "a" and "scripRef" in (a.get("class") or "").split():
             m = GOBIBLE.search(a.get("onclick") or "")
             self.open_ref = [self.size, m.groups() if m else None]
@@ -106,7 +118,8 @@ def read_page(path):
         if "a" <= ch <= "z":
             letters.append(ch)
             at.append(i)
-    return {"text": text, "paras": p.paras, "refs": p.refs, "letters": "".join(letters), "at": at}
+    return {"text": text, "paras": p.paras, "para_ids": p.para_ids, "refs": p.refs,
+            "letters": "".join(letters), "at": at}
 
 
 def letters(s):
@@ -276,6 +289,84 @@ def scan_citations(excerpt, book, chapter):
     return sorted((at, text, a, b) for at, _, text, a, b in found)
 
 
+# ---- Quotations of the Fathers in a catena ---------------------------------
+
+# For each catena, the labels it prints before a quotation that the library
+# can follow to the quoted work: the library's source pages for that work.
+CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"}}
+LABEL = re.compile(r"\b(CHRYS|Chrys|AUG|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
+STOPWORDS = set("""that this with which from have they their them there were been what when will would shall
+should these those than then thus also into upon unto said saith says hath doth more being because such only
+thing things other even very itself himself whom whose where while each some made make like after before same
+through about against word""".split())
+MIN_WORDS = 10                 # fewer shared-able words than this: too short to match
+SECTION = (0.35, 0.10)         # a section: its score, and its lead over any other section
+DIVISION = (0.20, 0.08)        # a homily or tractate: the same, over any other one
+
+
+def content_words(text):
+    return {w for w in re.findall(r"[a-z]+", text.lower()) if len(w) >= 4 and w not in STOPWORDS}
+
+
+def paragraphs(pages):
+    """(work, source, paragraph id, locus, start, end, words) for each
+    paragraph of the library's pages of the quoted works."""
+    out = []
+    for (work, source), page in pages.items():
+        text, starts = page["text"], page["paras"] + [len(page["text"])]
+        for i, (a, b) in enumerate(zip(starts, starts[1:])):
+            words = content_words(text[a:b])
+            loc = locus(page, a)
+            if len(words) > 15 and loc:
+                out.append((work, source, page["para_ids"][i], loc, a, b, words))
+    return out
+
+
+def match_quotation(words, candidates, idf):
+    """The best paragraph for a quotation's words, as (score, paragraph,
+    level): level "section", "division" or None."""
+    if len(words) < MIN_WORDS:
+        return None
+    total = sum(idf.get(w, max(idf.values())) for w in words)
+    scored = sorted(((sum(idf[w] for w in words & c[6]) / total, c) for c in candidates),
+                    key=lambda x: -x[0])
+    if not scored:
+        return None
+    best, para = scored[0]
+    division = para[3].split(".")[0]
+    other_section = next((s for s, c in scored if c[3] != para[3]), 0)
+    other_division = next((s for s, c in scored if c[3].split(".")[0] != division), 0)
+    if best >= SECTION[0] and best - other_section >= SECTION[1]:
+        return best, para, "section"
+    if best >= DIVISION[0] and best - other_division >= DIVISION[1]:
+        return best, para, "division"
+    return None
+
+
+def catena_quotations(entries, labels, candidates, idf, held):
+    rows = []
+    for e in entries:
+        text = e["text"]
+        marks = list(LABEL.finditer(text))
+        for i, m in enumerate(marks):
+            work = labels.get(m[1].upper())
+            if not work:
+                continue
+            seg = text[m.end():marks[i + 1].start() if i + 1 < len(marks) else len(text)]
+            found = match_quotation(content_words(seg), [c for c in candidates if c[0] == work], idf)
+            if not found:
+                continue
+            score, (_, source, pid, loc, a, b, _), level = found
+            excerpt = None
+            if level == "section":
+                excerpt = next((x for s, t, x in held.get((work, source), []) if s < b and a < t), None)
+            rows.append({"in": e["id"], "at": m.start(), "label": m[0], "work": work,
+                         "locus": loc if level == "section" else loc.split(".")[0], "source": source,
+                         "para": pid if level == "section" else None, "excerpt": excerpt,
+                         "score": round(score, 2), "found": "similar", "status": "detected"})
+    return rows
+
+
 # ---- The library ---------------------------------------------------------
 
 def corrected_texts():
@@ -288,12 +379,13 @@ def corrected_texts():
 
 def derive():
     """What the library should hold: {comments path: entries with loci},
-    {citations path: file}."""
+    {citations path: file}, {quotations path: file}, problems."""
     manifest = load(os.path.join(ROOT, "sources", "manifest.json"))
     paths = {(f["work"], os.path.basename(f["path"])): os.path.join(ROOT, f["path"]) for f in manifest["files"]}
     works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
     fixes = corrected_texts()
     pages, comments, citations, problems = {}, {}, {}, []
+    held = {}                                # (work, source) -> [(start, end, excerpt id)]
     for path in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
         data = load(path)
         work = works[data["work"]]
@@ -315,6 +407,7 @@ def derive():
                     found = []
                 else:
                     found = ccel_citations(pages[src], where, text)
+                    held.setdefault((work["id"], os.path.basename(src)), []).append((*where, e["id"]))
                     if by_division:
                         loc = locus(pages[src], where[0])
                         if loc:
@@ -334,19 +427,40 @@ def derive():
         if rows:
             out = os.path.join(ROOT, "library", "citations", work["id"], f"{data['book']}.json")
             citations[out] = {"work": work["id"], "book": data["book"], "citations": rows}
-    return comments, citations, problems
+
+    quotations = {}
+    quoted = {w for labels in CATENAS.values() for w in labels.values()}
+    for (work, _), path in sorted(paths.items()):
+        if work in quoted and path.endswith(".html") and path not in pages:
+            pages[path] = read_page(path)
+    by_work = {(w, os.path.basename(p)): pages[p] for (w, _), p in paths.items() if w in quoted and p in pages}
+    candidates = paragraphs(by_work)
+    df = {}
+    for c in candidates:
+        for w in c[6]:
+            df[w] = df.get(w, 0) + 1
+    idf = {w: math.log(len(candidates) / n) for w, n in df.items()}
+    for data in comments.values():
+        labels = CATENAS.get(data["work"])
+        if not labels:
+            continue
+        rows = catena_quotations(data["entries"], labels, candidates, idf, held)
+        if rows:
+            out = os.path.join(ROOT, "library", "quotations", data["work"], f"{data['book']}.json")
+            quotations[out] = {"work": data["work"], "book": data["book"], "quotations": rows}
+    return comments, citations, quotations, problems
 
 
-def keep_status(new, old):
-    """Carry each person-set status over to the same citation found again."""
+def keep_status(new, old, rows, fields):
+    """Carry each person-set status over to the same row found again."""
     def key(c, seen):
-        k = (c["in"], c["text"], c["start"], c["end"])
+        k = tuple(c[f] for f in fields)
         seen[k] = seen.get(k, 0) + 1
         return k + (seen[k],)
     seen = {}
-    status = {key(c, seen): c["status"] for c in (old or {}).get("citations", [])}
+    status = {key(c, seen): c["status"] for c in (old or {}).get(rows, [])}
     seen = {}
-    for c in new["citations"]:
+    for c in new[rows]:
         c["status"] = status.get(key(c, seen), "detected")
     return new
 
@@ -355,25 +469,27 @@ def main(argv):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--check", action="store_true", help="change nothing; exit 1 if anything would change")
     args = ap.parse_args(argv)
-    comments, citations, problems = derive()
+    comments, citations, quotations, problems = derive()
     changed = []
     for path, data in comments.items():
         if load(path) != data:
             changed.append(path)
             if not args.check:
                 dump(path, data)
-    existing = set(glob.glob(os.path.join(ROOT, "library", "citations", "*", "*.json")))
-    for path, data in citations.items():
-        old = load(path) if path in existing else None
-        data = keep_status(data, old)
-        if old != data:
+    for kind, found, rows, fields in (("citations", citations, "citations", ("in", "text", "start", "end")),
+                                      ("quotations", quotations, "quotations", ("in", "label", "work", "locus"))):
+        existing = set(glob.glob(os.path.join(ROOT, "library", kind, "*", "*.json")))
+        for path, data in found.items():
+            old = load(path) if path in existing else None
+            data = keep_status(data, old, rows, fields)
+            if old != data:
+                changed.append(path)
+                if not args.check:
+                    dump(path, data)
+        for path in sorted(existing - set(found)):
             changed.append(path)
             if not args.check:
-                dump(path, data)
-    for path in sorted(existing - set(citations)):
-        changed.append(path)
-        if not args.check:
-            os.remove(path)
+                os.remove(path)
     for p in problems:
         print(p)
     n = sum(len(c["citations"]) for c in citations.values())
@@ -381,7 +497,9 @@ def main(argv):
     verb = "out of date" if args.check else "updated"
     for path in changed:
         print(f"{os.path.relpath(path, ROOT)}: {verb}")
-    print(f"{loci} excerpts placed in their works, {n} citations of Scripture found")
+    q = sum(len(c["quotations"]) for c in quotations.values())
+    print(f"{loci} excerpts placed in their works, {n} citations of Scripture found, "
+          f"{q} quotations of the Fathers traced")
     if args.check and changed:
         print("run python3 scripts/find_refs.py and commit what it writes")
     return 1 if problems or (args.check and changed) else 0

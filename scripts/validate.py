@@ -24,6 +24,7 @@ ENTRY_FIELDS = {"id", "start", "end", "heading", "text", "sources"}
 STATUSES = {"ai_draft", "reviewed"}          # "reviewed" is set only by a named human reviewer
 CITATION_FIELDS = {"in", "at", "text", "start", "end", "found", "status"}
 CITATION_STATUSES = {"detected", "reviewed", "rejected"}   # set by a person checking it
+QUOTATION_FIELDS = {"in", "at", "label", "work", "locus", "source", "para", "excerpt", "score", "found", "status"}
 REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
 GREEK_OR_HEBREW = re.compile(r"[Ͱ-Ͽἀ-῿֐-׿]")
 
@@ -173,6 +174,37 @@ def main():
                 say(f"{where}: found {x['found']!r}")
             if x["status"] not in CITATION_STATUSES:
                 say(f"{where}: status {x['status']!r}")
+
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "quotations", "*", "*.json"))):
+        q = load(p)
+        name = os.path.relpath(p, ROOT)
+        work = q.get("work")
+        if os.path.basename(os.path.dirname(p)) != work or os.path.basename(p) != f"{q.get('book')}.json":
+            say(f"{name}: file path does not match work {work!r} and book {q.get('book')!r}")
+        for x in q.get("quotations", []):
+            where = f"{name}: {x.get('in')} {x.get('label')!r}"
+            if set(x) != QUOTATION_FIELDS:
+                say(f"{where}: fields {sorted(x)}, not {sorted(QUOTATION_FIELDS)}")
+                continue
+            if x["in"] not in texts or texts[x["in"]][0] != work:
+                say(f"{where}: {x['in']!r} is not an excerpt of {work}")
+                continue
+            if texts[x["in"]][1][x["at"]:x["at"] + len(x["label"])] != x["label"]:
+                say(f"{where}: the label is not at {x['at']} in the excerpt any more; run scripts/find_refs.py")
+            quoted = works.get(x["work"])
+            if not quoted:
+                say(f"{where}: quoted work {x['work']!r} is not in the library")
+                continue
+            div = quoted["divisions"]
+            if not isinstance(div, list) or not re.fullmatch(r"[1-9]\d*(\.[1-9]\d*){0,%d}" % (len(div) - 1),
+                                                             x["locus"]):
+                say(f"{where}: locus {x['locus']!r} does not fit {x['work']}'s divisions {div!r}")
+            if x["source"] not in sources.get(x["work"], set()):
+                say(f"{where}: source {x['source']!r} is not in sources/manifest.json for {x['work']}")
+            if x["excerpt"] is not None and (x["excerpt"] not in texts or texts[x["excerpt"]][0] != x["work"]):
+                say(f"{where}: {x['excerpt']!r} is not an excerpt of {x['work']}")
+            if x["found"] != "similar" or x["status"] not in CITATION_STATUSES:
+                say(f"{where}: found {x['found']!r}, status {x['status']!r}")
 
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "translations", "*", "*", "*.json"))):
         t = load(p)

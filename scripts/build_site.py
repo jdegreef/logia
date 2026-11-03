@@ -40,6 +40,11 @@ def death_year(work):
     return int(years[-1]) if years else 0
 
 
+def source_urls():
+    return {(f["work"], os.path.basename(f["path"])): f["url"]
+            for f in load(os.path.join(ROOT, "sources", "manifest.json"))["files"]}
+
+
 def load_library():
     works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
     fixes = {}
@@ -55,6 +60,13 @@ def load_library():
             if c["status"] != "rejected":
                 cites.setdefault(c["in"], []).append(
                     {k: c[k] for k in ("at", "text", "start", "end", "status")})
+    quotes, quoted_in = {}, {}
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "quotations", "*", "*.json"))):
+        for q in load(p)["quotations"]:
+            if q["status"] != "rejected":
+                quotes.setdefault(q["in"], []).append(q)
+                if q["excerpt"]:
+                    quoted_in.setdefault(q["excerpt"], []).append(q)
     comments = []
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
         data = load(p)
@@ -64,6 +76,7 @@ def load_library():
             for a, b in fixes.get(work, []):
                 text = text.replace(a, b)
             comments.append({**e, "work": work, "text": text, "cites": cites.get(e["id"], []),
+                             "quotes": quotes.get(e["id"], []), "quoted_in": quoted_in.get(e["id"], []),
                              "source_url": urls.get((work, e["sources"][0]), works[work]["full_text_url"])})
     return works, comments
 
@@ -105,9 +118,51 @@ def cites_for(c, pages):
             for x in c["cites"]]
 
 
-def chapter_data(bible, book_name, works, comments, pages=frozenset()):
+def locus_label(work, locus):
+    """'4.1' in Chrysostom -> 'Homily 4, section 1'."""
+    parts = locus.split(".")
+    names = [n if i == 0 else n.lower() for i, n in enumerate(work["divisions"])]
+    return ", ".join(f"{name} {n}" for name, n in zip(names, parts))
+
+
+def excerpt_link(c, pages):
+    """Where to read an excerpt: its verse on its chapter page."""
+    b, ch, v = ref_parts(c["start"])
+    return f"/{b.lower()}/{ch}/#v{v}" if (b, ch) in pages else None
+
+
+def quote_rows(c, works, by_id, urls, pages):
+    """A catena excerpt's quotations, traced to the quoted works."""
+    out = []
+    for q in c["quotes"]:
+        w = works[q["work"]]
+        held = by_id.get(q["excerpt"])
+        url = urls.get((q["work"], q["source"]), w["full_text_url"]) + (f"#{q['para']}" if q["para"] else "")
+        out.append({"label": q["label"], "author": w["author"], "title": w["title"],
+                    "where": locus_label(w, q["locus"]), "exact": bool(q["para"]), "url": url,
+                    "excerpt": q["excerpt"] if held else None, "work_id": q["work"],
+                    "href": excerpt_link(held, pages) if held else None,
+                    "verse": ref_parts(held["start"])[2] if held else None, "status": q["status"]})
+    return out
+
+
+def quoted_in_rows(c, works, by_id, pages):
+    """The catena excerpts that quote this excerpt's passage."""
+    out = []
+    for q in c["quoted_in"]:
+        cat = by_id[q["in"]]
+        w = works[cat["work"]]
+        out.append({"author": w["author"], "title": w["title"], "on": scripture.label(cat["start"], cat["end"]),
+                    "work_id": w["id"], "href": excerpt_link(cat, pages),
+                    "verse": ref_parts(cat["start"])[2], "status": q["status"]})
+    return out
+
+
+def chapter_data(bible, book_name, works, comments, pages=frozenset(), urls=None):
     book, chapter = bible["book"], bible["chapter"]
     first, last = bible["verses"][0], bible["verses"][-1]
+    by_id = {c["id"]: c for c in comments}
+    urls = urls or {}
     by_work = {}
     for c in comments:
         sb, sc, sv = ref_parts(c["start"])
@@ -118,7 +173,9 @@ def chapter_data(bible, book_name, works, comments, pages=frozenset()):
         end = ev if ec == chapter else last
         by_work.setdefault(c["work"], []).append(
             {"id": c["id"], "start": start, "end": end, "heading": c["heading"], "excerpt": c["text"],
-             "locus": c.get("locus"), "source_url": c["source_url"], "cites": cites_for(c, pages)})
+             "locus": c.get("locus"), "source_url": c["source_url"], "cites": cites_for(c, pages),
+             "quotes": quote_rows(c, works, by_id, urls, pages),
+             "quotedIn": quoted_in_rows(c, works, by_id, pages)})
     commentaries = []
     for wid, entries in by_work.items():
         w = works[wid]
@@ -189,7 +246,7 @@ def build():
     for path in paths:
         bible = load(path)
         name = books[bible["book"]]
-        data = chapter_data(bible, name, works, comments, pages)
+        data = chapter_data(bible, name, works, comments, pages, source_urls())
         covered = sorted({v for w in data["commentaries"] for e in w["entries"]
                           for v in range(e["start"], e["end"] + 1)})
         n = len(data["commentaries"])

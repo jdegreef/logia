@@ -81,6 +81,28 @@ class FindRefs(unittest.TestCase):
         self.assertEqual(loci["augustine.JHN.1.1.1"], "1.5")          # the paragraph begins "5."
 
 
+class Quotations(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        with open(os.path.join(ROOT, "library", "quotations", "catena", "JHN.json"), encoding="utf-8") as f:
+            cls.rows = {(q["in"], q["label"]): q for q in json.load(f)["quotations"]}
+
+    def test_matches_agree_with_the_printed_margin_notes(self):
+        # The scan's margin notes read "Aug. in Joan. tract. i. c. 13", "Aug. ... Joan. ii c. 11",
+        # "Chrys. ... xv. [xiv.] 3" and "Aug. ... tract. iii": the matching found the same places.
+        self.assertEqual(self.rows[("catena.JHN.1.3.2", "AUG.")]["locus"], "1.13")
+        self.assertEqual(self.rows[("catena.JHN.1.10.1", "AUG.")]["locus"], "2.11")
+        self.assertEqual(self.rows[("catena.JHN.1.18.2", "CHRYS.")]["locus"], "15.3")
+        self.assertEqual(self.rows[("catena.JHN.1.16-17.1", "AUG.")]["locus"], "3")
+
+    def test_an_unclear_match_is_left_out(self):
+        # "Not because the light wanted the testimony": Homilies 6 and 7 score almost the same.
+        self.assertNotIn(("catena.JHN.1.7.1", "CHRYS."), self.rows)
+
+    def test_a_quoted_passage_links_to_the_excerpt_that_holds_it(self):
+        self.assertEqual(self.rows[("catena.JHN.1.3.2", "AUG.")]["excerpt"], "augustine.JHN.1.3.1")
+
+
 class VerifyCatchesChanges(unittest.TestCase):
     def setUp(self):
         self.digital = verify_sources.source_letters(os.path.join(ROOT, "sources", "calvin", "calcom34.vii.i.html"))

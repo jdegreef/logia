@@ -64,9 +64,11 @@ add Greek or Hebrew; leave unreadable Greek out of the excerpt instead.
     python3 scripts/find_refs.py
 
 writes each excerpt's `locus` (for a work with its own divisions) and
-`library/citations/<work>/<BOOK>.json`, the Scripture each excerpt cites.
-Never edit either by hand except a citation's `status`; read the new
-citations and set `"rejected"` on a false match.
+`library/citations/<work>/<BOOK>.json`, the Scripture each excerpt cites, and,
+for a catena, `library/quotations/`. Never edit these by hand except a
+`status`; read what is new and set `"rejected"` on a false match. A new
+work by a Father the Catena quotes can be added to `CATENAS` in the script,
+so the Catena's quotations of it are traced too.
 
 ## 7. Check
 

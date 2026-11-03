@@ -72,3 +72,36 @@ The site uses citations both ways. Each reference in an excerpt links to
 the verse (on Logia if the chapter is there, otherwise on the Open Word
 Bible), and each verse lists the excerpts on other verses that refer to it
 ("Elsewhere in the library").
+
+## Quotations of the Fathers
+
+A catena is made of quotations: the Catena Aurea prints "CHRYS." or "AUG."
+before each, and an abbreviated reference in the margin ("Chrys. Hom. ii. in
+Joan."). The scans' OCR scatters those margin notes over several lines, so
+they cannot be read reliably, and the excerpts leave them out.
+
+Instead, `scripts/find_refs.py` traces each quotation from a work the
+library holds (Chrysostom's homilies, Augustine's tractates) to the passage
+of that work whose words it shares most. The Catena's English was made from
+Aquinas's Latin, not from the Greek or Latin original the CCEL text was
+translated from, so the words are never the same; the match weighs the
+rarer words both share. `library/quotations/<work>/<BOOK>.json`:
+
+```json
+{"in": "catena.JHN.1.3.2", "at": 0, "label": "AUG.", "work": "augustine",
+ "locus": "1.13", "source": "npnf107.iii.ii.html", "para": "iii.ii-p34",
+ "excerpt": "augustine.JHN.1.3.1", "score": 0.7, "found": "similar", "status": "detected"}
+```
+
+- `locus` is a section ("1.13", Tractate 1, section 13) when one paragraph
+  stands clearly above the rest (score 0.35 or more, 0.10 ahead of any other
+  section), only the homily or tractate ("3") when only that stands out
+  (0.20, 0.08 ahead of any other), and the quotation is left out otherwise.
+- `para` is the CCEL paragraph, for a section match; `excerpt` the Logia
+  excerpt that holds it, if there is one.
+- `status` works as for citations. A reviewer checks a match against the
+  margin note on the printed page; every legible note so far agrees with
+  the match (tests/test_library.py).
+
+The reader shows both directions: under a Catena excerpt, where each
+quotation comes from; under the quoted excerpt, that the Catena quotes it.

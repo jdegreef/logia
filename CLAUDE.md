@@ -28,8 +28,9 @@ procedure for a new commentary.
   in order at build time. Fix only what the printed page plainly says ("Let
   ns" → "Let us"); leave anything uncertain alone.
 - **Loci and citations are read from the sources.** `scripts/find_refs.py`
-  writes each excerpt's `locus` and `library/citations/`; never type either.
-  Only a person sets a citation's status to `reviewed` or `rejected`
+  writes each excerpt's `locus`, `library/citations/` and
+  `library/quotations/`; never type them. Only a person sets a citation's or
+  quotation's status to `reviewed` or `rejected`
   (docs/references.md).
 - **Nothing is marked reviewed by Claude.** Works and translations stay
   `ai_draft` until a named human reviewer approves them.
