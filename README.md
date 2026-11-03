@@ -20,7 +20,7 @@ Christian commentaries.
 | `bible/owb/` | The Bible text: Open Word Bible chapters, imported at a pinned commit |
 | `web/` | Page templates: the home page and the chapter reader |
 | `scripts/` | Import, validate, verify and build |
-| `docs/` | How to add a work, and the editorial rules |
+| `docs/` | How to add a work, the editorial rules, and the roadmap (`docs/roadmap.md`) |
 
 The library today: John 1:1–18 with eight commentaries (Chrysostom,
 Augustine, the Catena Aurea, Calvin, Matthew Henry, Bengel, J. C. Ryle and
