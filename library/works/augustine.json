@@ -1,0 +1,20 @@
+{
+ "id": "augustine",
+ "author": "Augustine of Hippo",
+ "author_dates": "354-430",
+ "tradition": "Patristic (Latin West)",
+ "era": "Early church",
+ "title": "Lectures or Tractates on the Gospel According to St. John",
+ "edition": "Translated by John Gibb and James Innes; Nicene and Post-Nicene Fathers, Series 1, Vol. 7 (1888)",
+ "original_language": "Latin",
+ "translation": "Translated by John Gibb and James Innes, Nicene and Post-Nicene Fathers, Series 1, Vol. 7 (1888)",
+ "published": 1888,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf107.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years)"
+ },
+ "source_kind": "digital",
+ "notes": "",
+ "status": "ai_draft"
+}

@@ -1,0 +1,426 @@
+{
+ "work": "ryle",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "07i Sim",
+   "to": "on Him"
+  },
+  {
+   "from": "Avhether",
+   "to": "Whether"
+  },
+  {
+   "from": "BeHevers",
+   "to": "Believers"
+  },
+  {
+   "from": "Bnrkitt",
+   "to": "Burkitt"
+  },
+  {
+   "from": "Bre^tius",
+   "to": "Brentius"
+  },
+  {
+   "from": "Chiist",
+   "to": "Christ"
+  },
+  {
+   "from": "Chri'st's",
+   "to": "Christ's"
+  },
+  {
+   "from": "ChrisVs incarnation^ or heing",
+   "to": "Christ's incarnation, or being"
+  },
+  {
+   "from": "Ciiristians",
+   "to": "Christians"
+  },
+  {
+   "from": "Clirist",
+   "to": "Christ"
+  },
+  {
+   "from": "Cre-ator",
+   "to": "Creator"
+  },
+  {
+   "from": "G-entiles",
+   "to": "Gentiles"
+  },
+  {
+   "from": "G-reek",
+   "to": "Greek"
+  },
+  {
+   "from": "Genesi.^",
+   "to": "Genesis"
+  },
+  {
+   "from": "Grhost",
+   "to": "Ghost"
+  },
+  {
+   "from": "Grod",
+   "to": "God"
+  },
+  {
+   "from": "Hiire,",
+   "to": "Here,"
+  },
+  {
+   "from": "Hterally",
+   "to": "literally"
+  },
+  {
+   "from": "Kght",
+   "to": "light"
+  },
+  {
+   "from": "Liglitfoot",
+   "to": "Lightfoot"
+  },
+  {
+   "from": "Mose5",
+   "to": "Moses"
+  },
+  {
+   "from": "RoUock",
+   "to": "Rollock"
+  },
+  {
+   "from": "Sabelhans",
+   "to": "Sabellians"
+  },
+  {
+   "from": "Saddueees",
+   "to": "Sadducees"
+  },
+  {
+   "from": "Tght",
+   "to": "light"
+  },
+  {
+   "from": "Ufe",
+   "to": "life"
+  },
+  {
+   "from": "Ught",
+   "to": "light"
+  },
+  {
+   "from": "aU ",
+   "to": "all "
+  },
+  {
+   "from": "abihty",
+   "to": "ability"
+  },
+  {
+   "from": "accomphshed",
+   "to": "accomplished"
+  },
+  {
+   "from": "ahve",
+   "to": "alive"
+  },
+  {
+   "from": "apphes",
+   "to": "applies"
+  },
+  {
+   "from": "aud ",
+   "to": "and "
+  },
+  {
+   "from": "unbehef",
+   "to": "unbelief"
+  },
+  {
+   "from": "behevers",
+   "to": "believers"
+  },
+  {
+   "from": "beheve",
+   "to": "believe"
+  },
+  {
+   "from": "^ bhnd",
+   "to": "blind"
+  },
+  {
+   "from": "brou,2:ht",
+   "to": "brought"
+  },
+  {
+   "from": "ceremonie.^",
+   "to": "ceremonies"
+  },
+  {
+   "from": "cieation",
+   "to": "creation"
+  },
+  {
+   "from": "compas-ion",
+   "to": "compassion"
+  },
+  {
+   "from": "ctf ",
+   "to": "of "
+  },
+  {
+   "from": "ditferentfrom",
+   "to": "different from"
+  },
+  {
+   "from": "dw^elleth",
+   "to": "dwelleth"
+  },
+  {
+   "from": "e-ternity",
+   "to": "eternity"
+  },
+  {
+   "from": "-epresented",
+   "to": "represented"
+  },
+  {
+   "from": "famihar",
+   "to": "familiar"
+  },
+  {
+   "from": "fiora",
+   "to": "from"
+  },
+  {
+   "from": "hfe",
+   "to": "life"
+  },
+  {
+   "from": "hght",
+   "to": "light"
+  },
+  {
+   "from": "hke",
+   "to": "like"
+  },
+  {
+   "from": "hoKnes^",
+   "to": "holiness"
+  },
+  {
+   "from": "iSow",
+   "to": "Now"
+  },
+  {
+   "from": "illustratio.is",
+   "to": "illustrations"
+  },
+  {
+   "from": "inchned",
+   "to": "inclined"
+  },
+  {
+   "from": "indiflferently",
+   "to": "indifferently"
+  },
+  {
+   "from": "inefiably",
+   "to": "ineffably"
+  },
+  {
+   "from": "locking for",
+   "to": "looking for"
+  },
+  {
+   "from": "m.an",
+   "to": "man"
+  },
+  {
+   "from": "Let ns",
+   "to": "Let us"
+  },
+  {
+   "from": " oa the",
+   "to": " on the"
+  },
+  {
+   "from": "owx",
+   "to": "own"
+  },
+  {
+   "from": "pecuUar",
+   "to": "peculiar"
+  },
+  {
+   "from": "rep-eneration",
+   "to": "regeneration"
+  },
+  {
+   "from": "saj- s",
+   "to": "says"
+  },
+  {
+   "from": "signifymg",
+   "to": "signifying"
+  },
+  {
+   "from": " siu,",
+   "to": " sin,"
+  },
+  {
+   "from": "spiiitnnl",
+   "to": "spiritual"
+  },
+  {
+   "from": "spolcen",
+   "to": "spoken"
+  },
+  {
+   "from": "suflficiently",
+   "to": "sufficiently"
+  },
+  {
+   "from": "suppUes",
+   "to": "supplies"
+  },
+  {
+   "from": "sxxvi.",
+   "to": "xxxvi."
+  },
+  {
+   "from": "ten-e",
+   "to": "tense"
+  },
+  {
+   "from": "th-e",
+   "to": "the"
+  },
+  {
+   "from": "th«",
+   "to": "the"
+  },
+  {
+   "from": "tlie",
+   "to": "the"
+  },
+  {
+   "from": "tne ",
+   "to": "the "
+  },
+  {
+   "from": "tr.ue",
+   "to": "true"
+  },
+  {
+   "from": "trae",
+   "to": "true"
+  },
+  {
+   "from": "tv/o",
+   "to": "two"
+  },
+  {
+   "from": " und ",
+   "to": " and "
+  },
+  {
+   "from": "unfaihng",
+   "to": "unfailing"
+  },
+  {
+   "from": "v/hat",
+   "to": "what"
+  },
+  {
+   "from": "w^orth",
+   "to": "worth"
+  },
+  {
+   "from": "theyargued",
+   "to": "they argued"
+  },
+  {
+   "from": "'^His",
+   "to": "\"His"
+  },
+  {
+   "from": "'^ received",
+   "to": "\"received"
+  },
+  {
+   "from": "Jo- n's",
+   "to": "John's"
+  },
+  {
+   "from": "did 80",
+   "to": "did so"
+  },
+  {
+   "from": "a'man",
+   "to": "a man"
+  },
+  {
+   "from": "Ixxviii",
+   "to": "lxxviii"
+  },
+  {
+   "from": "Ixxxix",
+   "to": "lxxxix"
+  },
+  {
+   "from": "sinner.?",
+   "to": "sinners"
+  },
+  {
+   "from": " Ha was",
+   "to": " He was"
+  },
+  {
+   "from": "(Gen. i. I.)",
+   "to": "(Gen. i. 1.)"
+  },
+  {
+   "from": "'' ",
+   "to": "\""
+  },
+  {
+   "from": "*' ",
+   "to": "\""
+  },
+  {
+   "from": "'*his",
+   "to": "\"his"
+  },
+  {
+   "from": " lie has",
+   "to": " He has"
+  },
+  {
+   "from": "St, John",
+   "to": "St. John"
+  },
+  {
+   "from": "1 John V.",
+   "to": "1 John v."
+  },
+  {
+   "from": "1 Thess. V.",
+   "to": "1 Thess. v."
+  },
+  {
+   "from": "Awake, 0 sword",
+   "to": "Awake, O sword"
+  },
+  {
+   "from": "\"the Gospel",
+   "to": "the \"Gospel"
+  },
+  {
+   "from": "\"Word was",
+   "to": "Word was"
+  }
+ ]
+}
