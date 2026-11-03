@@ -106,6 +106,19 @@ class Site(unittest.TestCase):
         self.assertEqual(data["commentaries"], [])
         self.assertEqual(data["verses"][-1], 25)
 
+    def test_accounts_are_open_word_bible_s(self):
+        text = self.read("index.html")
+        self.assertIn('<meta name="logia-api" content="https://api.openwordbible.org">', text)
+        self.assertIn('href="https://openwordbible.org/handoff/?site=logia&amp;to=%2F" data-login', text)
+        for page in ("signed-in/index.html", "saved/index.html"):
+            self.assertIn('<meta name="robots" content="noindex">', self.read(page), page)
+
+    def test_the_saved_page_has_each_chapter_s_comments(self):
+        data = json.loads(self.read(os.path.join("data", "JHN.1.json")))
+        self.assertEqual(data["bookName"], "John")
+        self.assertEqual({w["work_id"] for w in data["commentaries"]},
+                         {"chrysostom", "augustine", "catena", "calvin", "henry", "bengel", "ryle", "westcott"})
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")

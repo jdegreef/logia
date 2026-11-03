@@ -51,8 +51,27 @@ menus and the settings menu (theme, text size, typeface, line spacing, motion,
 and Logia's own: the translation level and how much of each excerpt to show).
 `web/logia.css` and `web/reader.js` are Logia's own.
 
-Accounts (sign-in, saving, likes) will be shared with openwordbible.org: one
-account for both sites.
+### Accounts, saving, liking and sharing
+
+Logia has no sign-in of its own: readers use their Open Word Bible account.
+
+1. "Sign in" goes to `openwordbible.org/handoff/?site=logia&to=<page>`, which
+   signs the reader in there (email, password, Google or passkey) and asks
+   them to continue to Logia.
+2. Open Word Bible sends them back to `/signed-in/#code=…&to=…` with a
+   single-use code that lasts five minutes; `web/account.js` trades it for an
+   API token of Logia's own and keeps it in `localStorage`.
+3. Likes and saves are kept by Open Word Bible's API against the same
+   account (`backend/logia/` in the open-word-bible repository):
+   `/api/logia/me`, `/api/logia/saved/<key>`, `/api/logia/likes/<key>`, and
+   the public like counts at `/api/logia/likes?chapter=JHN.1`. A comment's key
+   is `<work>.<BOOK>.<chapter>.<verse>`, for example `calvin.JHN.1.14`.
+4. Sharing needs no account: a card's link (`/jhn/1/#v14-calvin`) opens the
+   verse at that comment, through the device's share sheet or copied.
+
+`/saved/` lists a reader's saved comments, with their text from the chapter
+data files the build writes to `/data/<BOOK>.<chapter>.json`. A local build
+can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
 
 ## How the text stays honest
 

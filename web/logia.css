@@ -189,3 +189,31 @@
 /* The Read page's books still to come: the footer's chips, on the page. */
 .lg-coming .book-chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
 .lg-coming .testaments { margin-top: 16px; }
+
+/* Like, save and share under a commentary card (web/reader.js). */
+.cx-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.cx-act { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border: 1px solid var(--line);
+  border-radius: 999px; background: var(--bg); color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: border-color var(--fast) ease, color var(--fast) ease; }
+.cx-act:hover { border-color: var(--line-strong); color: var(--text); }
+.cx-act svg { flex: none; }
+.cx-like svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.cx-like[aria-pressed="true"] { color: var(--wj); border-color: color-mix(in srgb, var(--wj) 45%, var(--line)); }
+.cx-like[aria-pressed="true"] svg { fill: currentColor; }
+.cx-save[aria-pressed="true"] { color: var(--accent); border-color: var(--accent-soft-border); background: var(--accent-soft); }
+.cx-save[aria-pressed="true"] svg { fill: currentColor; }
+.cx-count:empty { display: none; }
+.cx-count { font-variant-numeric: tabular-nums; }
+.cx-act-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+.cx-copy { width: 100%; margin-top: 6px; font: inherit; font-size: 13px; padding: 6px 8px; border: 1px solid var(--line);
+  border-radius: 8px; background: var(--surface); color: var(--text); }
+
+/* Saved (web/account.js). */
+.lg-saved-list { list-style: none; padding: 0; margin: 24px 0 0; max-width: 760px; display: grid; gap: 12px; }
+.lg-saved { padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.lg-saved-who { margin: 0 0 6px; font-size: 14.5px; }
+.lg-saved-who b { font-family: var(--display); font-size: 17px; font-weight: 600; }
+.lg-saved-text { margin: 0; font-family: var(--read-font); font-size: calc(17px * var(--read-scale)); line-height: 1.6; }
+.lg-saved-actions { display: flex; gap: 18px; align-items: center; margin: 10px 0 0; font-size: 14px; }
+.lg-linkish { border: 0; background: none; padding: 0; font: inherit; color: var(--muted); cursor: pointer; text-decoration: underline; }
+.lg-linkish:hover { color: var(--text); }
