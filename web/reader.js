@@ -23,7 +23,16 @@
   function hiddenEras() {
     try { return JSON.parse(localStorage.getItem("logia-eras") || "[]"); } catch (e) { return []; }
   }
-  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS) };
+  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), marks: null, counts: {}, note: null };
+  var Account = window.LogiaAccount;
+  var CHAPTER = DATA.book + "." + DATA.chapter;
+  // A comment's key: <work>.<BOOK>.<chapter>.<verse> (backend/logia/ in open-word-bible).
+  var keyOf = function (w, v) { return w.work_id + "." + CHAPTER + "." + v; };
+  var ICON = {
+    like: '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2 0 3.6 1.1 4.4 2.6.8-1.5 2.4-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>',
+    save: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>',
+    share: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8M5 12.5v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>'
+  };
   hiddenEras().forEach(function (e) { state.eras.delete(e); });
   function level() { return Prefs ? Prefs.get("level") : "B"; }
   function fullExcerpts() { return Prefs && Prefs.get("excerpt") === "full"; }
@@ -100,9 +109,13 @@
     $("#n-xref").textContent = (DATA.crossrefs[v] || []).length;
     document.querySelectorAll(".cx-tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === state.tab); });
     renderRail();
+    var keep = $("#pb").scrollTop;
     $("#pb").innerHTML = ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
-    $("#pb").scrollTop = 0;
+    $("#pb").scrollTop = state.keepScroll ? keep : 0;
+    state.keepScroll = false;
   }
+  // Re-render the panel where the reader is, after likes or saves arrive.
+  function refresh() { state.keepScroll = true; renderPanel(); }
 
   function paras(t) { return t.split(/\n\s*\n/).map(function (p) { return "<p>" + esc(p.trim()) + "</p>"; }).join(""); }
   function commTab() {
@@ -133,13 +146,83 @@
           '<div class="cx-work"><a href="' + w.work_url + '"><i>' + esc(w.title) + "</i></a> · " + esc(w.edition_short) + "</div>" +
           '<div class="cx-ex' + (long ? " cx-clamp" : "") + '">' + body + "</div>" +
           '<div class="cx-more">' + (long ? '<button type="button" data-expand>' + esc(fmt(U.read_all, { n: words.toLocaleString() })) + "</button>" : "") +
-          '<a href="' + esc(es[0].source_url) + '" target="_blank" rel="noopener">' + esc(U.full_text) + " ↗</a></div></section>";
+          '<a href="' + esc(es[0].source_url) + '" target="_blank" rel="noopener">' + esc(U.full_text) + " ↗</a></div>" +
+          actions(w, v) + "</section>";
       });
     });
     if (!any) {
       h += '<p class="cx-empty">' + esc(works.some(function (w) { return entriesFor(w, v).length; }) ? U.none_in_eras : U.none_yet_long) + "</p>";
     }
     return h;
+  }
+
+  // Like, save and share under a card. Likes and saves need an account
+  // (web/account.js); sharing does not.
+  function actions(w, v) {
+    var key = keyOf(w, v);
+    var liked = !!(state.marks && state.marks.liked[key]);
+    var isSaved = !!(state.marks && state.marks.saved[key]);
+    // The public counts are cached for a minute, so a like of the reader's
+    // own may be newer than them: it always counts.
+    var n = Math.max(state.counts[key] || 0, liked ? 1 : 0);
+    var note = state.note && state.note.key === key
+      ? '<p class="cx-act-note" role="status">' + state.note.html + "</p>" : "";
+    return '<div class="cx-actions" data-key="' + key + '" data-work="' + w.work_id + '">' +
+      '<button type="button" class="cx-act cx-like" data-act="like" aria-pressed="' + liked + '" aria-label="' +
+      esc(liked ? U.unlike : U.like) + '">' + ICON.like + '<span class="cx-count">' + (n ? n : "") + "</span>" +
+      '<span class="cx-act-label">' + esc(liked ? U.liked : U.like) + "</span></button>" +
+      '<button type="button" class="cx-act cx-save" data-act="save" aria-pressed="' + isSaved + '">' + ICON.save +
+      '<span class="cx-act-label">' + esc(isSaved ? U.saved : U.save) + "</span></button>" +
+      '<button type="button" class="cx-act" data-act="share">' + ICON.share + '<span class="cx-act-label">' + esc(U.share) +
+      "</span></button></div>" + note;
+  }
+
+  function signInNote(key) {
+    state.note = { key: key, html: esc(U.sign_in_to) + ' <a href="' + esc(Account ? Account.signInUrl() : "#") + '">' +
+      esc(U.sign_in) + "</a>" };
+    refresh();
+  }
+
+  function act(button) {
+    var box = button.closest(".cx-actions");
+    var key = box.getAttribute("data-key");
+    var w = works.filter(function (x) { return x.work_id === box.getAttribute("data-work"); })[0];
+    var kind = button.getAttribute("data-act");
+    if (kind === "share") return share(w, key);
+    if (!Account || !Account.user()) return signInNote(key);
+    var mark = kind === "like" ? "liked" : "saved";
+    var on = !(state.marks && state.marks[mark][key]);
+    if (!state.marks) state.marks = { saved: {}, liked: {} };
+    // Show it at once; put it back if the API says no.
+    if (on) state.marks[mark][key] = true; else delete state.marks[mark][key];
+    if (kind === "like") state.counts[key] = Math.max(0, (state.counts[key] || 0) + (on ? 1 : -1));
+    state.note = null;
+    refresh();
+    Account.setMark(mark, key, on).catch(function (err) {
+      if (on) delete state.marks[mark][key]; else state.marks[mark][key] = true;
+      if (kind === "like") state.counts[key] = Math.max(0, (state.counts[key] || 0) + (on ? -1 : 1));
+      if (err.signedOut) return signInNote(key);
+      state.note = { key: key, html: esc(err.message) };
+      refresh();
+    });
+  }
+
+  // A link to this comment (/jhn/1/#v14-calvin), through the device's share
+  // sheet where there is one, else copied.
+  function share(w, key) {
+    var v = +key.split(".").pop();
+    var url = location.origin + location.pathname + "#v" + v + "-" + w.work_id;
+    var title = fmt(U.share_title, { name: w.author, ref: REF(v) });
+    if (navigator.share) {
+      navigator.share({ title: title, text: title, url: url }).catch(function () { /* closed */ });
+      return;
+    }
+    var done = function (ok) {
+      state.note = { key: key, html: ok ? esc(U.copied) : esc(U.copy_this) + ' <input class="cx-copy" readonly value="' + esc(url) + '">' };
+      refresh();
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+    else done(false);
   }
 
   function wordsTab() {
@@ -193,10 +276,12 @@
     opts = opts || {};
     state.verse = Math.max(FIRST, Math.min(LAST, v));
     if (!opts.keepToken) state.token = null;
+    state.note = null;
     document.querySelectorAll(".cx-verse").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
     markTokens();
     renderPanel();
-    if (location.hash !== "#v" + state.verse) history.replaceState(null, "", "#v" + state.verse);
+    var cur = location.hash.match(/^#v(\d+)/);
+    if (!cur || +cur[1] !== state.verse) history.replaceState(null, "", "#v" + state.verse);
   }
 
   $("#text").addEventListener("click", function (e) {
@@ -229,6 +314,8 @@
   $("#prev").addEventListener("click", function () { go(state.verse - 1); });
   $("#next").addEventListener("click", function () { go(state.verse + 1); });
   $("#pb").addEventListener("click", function (e) {
+    var actButton = e.target.closest("[data-act]");
+    if (actButton) { act(actButton); return; }
     var chip = e.target.closest(".cx-chip");
     if (chip) {
       var era = chip.dataset.era;
@@ -256,12 +343,22 @@
       card.classList.remove("cx-flash"); void card.offsetWidth; card.classList.add("cx-flash");
     }
   });
+  // #v14 opens verse 14; #v14-calvin opens it at Calvin's comment (a shared link).
+  var HASH = /^#v(\d+)(?:-([a-z][a-z0-9-]*))?$/;
+  function showCard(work) {
+    var card = document.getElementById("c-" + work);
+    if (!card) return;
+    card.scrollIntoView({ block: "start" });
+    card.classList.remove("cx-flash"); void card.offsetWidth; card.classList.add("cx-flash");
+  }
   window.addEventListener("hashchange", function () {
-    var m = location.hash.match(/^#v(\d+)$/);
-    if (m && +m[1] !== state.verse) go(+m[1]);
+    var m = location.hash.match(HASH);
+    if (!m) return;
+    if (+m[1] !== state.verse) { state.tab = "comm"; go(+m[1]); }
+    if (m[2]) { $("#panel").classList.remove("cx-min"); showCard(m[2]); }
   });
 
-  var m0 = location.hash.match(/^#v(\d+)$/);
+  var m0 = location.hash.match(HASH);
   if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
   else {
     // With no verse asked for, open at the first verse that has commentary.
@@ -269,4 +366,11 @@
     if (firstWith) state.verse = firstWith;
   }
   renderText(); go(state.verse);
+  if (m0 && m0[2]) { $("#panel").classList.remove("cx-min"); showCard(m0[2]); }
+
+  // Likes for this chapter (public), and the reader's own likes and saves.
+  if (Account && works.length) {
+    Account.likeCounts(CHAPTER).then(function (counts) { state.counts = counts || {}; if (state.tab === "comm") refresh(); });
+    Account.marks().then(function (m) { if (m) { state.marks = m; if (state.tab === "comm") refresh(); } });
+  }
 })();

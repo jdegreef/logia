@@ -25,13 +25,18 @@ import json
 import os
 import re
 import shutil
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
 WEB = os.path.join(ROOT, "web")
 LANG = "en"
 SITE_URL = "https://logia.faith"
-OWB_SITE = "https://openwordbible.org"
+# Accounts are Open Word Bible's: its API keeps them, and its site signs
+# readers in (web/account.js). LOGIA_API_URL / LOGIA_OWB_URL point a local
+# build at a local API and site.
+OWB_SITE = os.environ.get("LOGIA_OWB_URL", "https://openwordbible.org").rstrip("/")
+API_URL = os.environ.get("LOGIA_API_URL", "https://api.openwordbible.org").rstrip("/")
 GITHUB_URL = "https://github.com/jdegreef/logia"
 ERAS = ["Early church", "Middle Ages", "Reformation", "Puritans and the 1700s", "The 1800s"]
 OT_BOOKS = 39
@@ -56,7 +61,9 @@ BOOT_SCRIPT = ("try{var d=document.documentElement,t=localStorage.getItem('logia
                "var p={" + ",".join(f"{name}:{[v for v in values if v != default]!r}"
                                    for name, default, values in DISPLAY_PREFS) + "};"
                "for(var k in p){var v=localStorage.getItem('logia-'+k);"
-               "if(p[k].indexOf(v)>=0)d.setAttribute('data-'+k,v)}}catch(e){}")
+               "if(p[k].indexOf(v)>=0)d.setAttribute('data-'+k,v)}"
+               # Signed in (web/account.js): the header's "Sign in" stays hidden.
+               "if(localStorage.getItem('logia.account'))d.classList.add('signed-in')}catch(e){}")
 
 ICONS = {
     "home": '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/>',
@@ -70,6 +77,7 @@ ICONS = {
     "back": '<path d="M19 12H5M11 6l-6 6 6 6"/>',
     "menu": '<path d="M4 7h16M4 12h16M4 17h16"/>',
     "close": '<path d="M6 6l12 12M18 6 6 18"/>',
+    "user": '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
 }
 GEAR = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/>'
@@ -297,6 +305,25 @@ def nav_menus(lib):
             ("about", t("nav.about"), "info", "/about/", about, "dd-about"))
 
 
+def account_menu(path):
+    """Signed out, "Sign in", leading to Open Word Bible's /handoff/ and back
+    to this page; signed in, the reader's initial, opening their name, Saved,
+    their account on Open Word Bible and signing out. web/account.js runs it."""
+    href = f"{OWB_SITE}/handoff/?site=logia&to={quote(path, safe='')}"
+    label = e(t("account.your_account"))
+    return (
+        '<div class="account-menu">'
+        f'<a class="sign-in-btn" href="{e(href)}" data-login>{icon("user")}<span>{e(t("account.sign_in"))}</span></a>'
+        f'<button type="button" class="tool-btn avatar-btn" aria-expanded="false" aria-controls="account-pop" '
+        f'aria-label="{label}" title="{label}" hidden><span class="account-initial"></span></button>'
+        f'<div class="account-pop" id="account-pop" role="group" aria-label="{label}" hidden>'
+        '<p class="who"><strong class="who-name"></strong><span class="who-email"></span></p>'
+        f'<a class="pop-item" href="/saved/">{e(t("account.saved"))}</a>'
+        f'<a class="pop-item" href="{OWB_SITE}/account/" rel="noopener">{e(t("account.account_page"))}</a>'
+        f'<button type="button" class="pop-item sign-out">{e(t("account.sign_out"))}</button>'
+        '</div></div>')
+
+
 def site_header(lib, current, path):
     home_on = current == "/"
     items = [f'<li><a class="nav-link" href="/"{" aria-current=page" if home_on else ""}>'
@@ -316,6 +343,7 @@ def site_header(lib, current, path):
 <a class="brand" href="/"{" aria-current=page" if home_on else ""}>{MARK}<span class="brand-name">Logia</span></a>
 <nav class="primary" id="site-nav" aria-label="{e(t("nav.main"))}"><ul class="nav-list">{"".join(items)}</ul></nav>
 <div class="tools">
+{account_menu(path)}
 {prefs_menu()}
 <button type="button" class="tool-btn menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="{menu}">{icon("menu", 22)}{icon("close", 22)}</button>
 </div>
@@ -369,11 +397,12 @@ def site_footer(lib):
 </div></footer>"""
 
 
-def page(lib, title, body, path, current="", description="", scripts=()):
+def page(lib, title, body, path, current="", description="", scripts=(), noindex=False):
     full = f"{title} · Logia" if title != "Logia" else "Logia"
     description = description or t("site.description")
     own = e(SITE_URL + path)
-    js = "".join(f'\n<script src="/{s}" defer></script>' for s in ("site.js",) + tuple(scripts))
+    js = "".join(f'\n<script src="/{s}" defer></script>' for s in ("site.js", "account.js") + tuple(scripts))
+    account_text = json.dumps(CATALOG["account"]["ui"], ensure_ascii=False).replace("</", "<\\/")
     return f"""<!doctype html>
 <html lang="{LANG}">
 <head>
@@ -386,8 +415,10 @@ def page(lib, title, body, path, current="", description="", scripts=()):
 <meta property="og:type" content="website">
 <meta property="og:url" content="{own}">
 <meta property="og:title" content="{e(full)}">
-<meta property="og:description" content="{e(description)}">
+<meta property="og:description" content="{e(description)}">{'<meta name="robots" content="noindex">' if noindex else ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="logia-api" content="{API_URL}">
+<meta name="logia-owb" content="{OWB_SITE}">
 <meta name="theme-color" content="#f4eee3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#2a241c" media="(prefers-color-scheme: dark)">
 <script>{BOOT_SCRIPT}</script>
@@ -403,6 +434,7 @@ def page(lib, title, body, path, current="", description="", scripts=()):
 {body}
 </main>
 {site_footer(lib)}
+<script type="application/json" id="account-text">{account_text}</script>
 </body>
 </html>
 """
@@ -715,6 +747,40 @@ def work_page(lib, wid):
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
 
 
+def signed_in_page(lib):
+    """Where Open Word Bible sends a reader back with a single-use code
+    (#code=...&to=...); web/account.js trades it for a token and goes on."""
+    body = f"""
+<section class="auth" id="signed-in"><div class="auth-card auth-message">
+{MARK}
+<h1>{e(t("account.signed_in_title"))}</h1>
+<p class="auth-dek">{e(t("account.signed_in_dek"))}</p>
+<p id="signed-in-status" role="status"></p>
+<p><a class="button" id="signed-in-retry" href="{OWB_SITE}/handoff/?site=logia&amp;to=%2F" hidden>{e(t("account.try_again"))}</a></p>
+</div></section>"""
+    return page(lib, t("account.signed_in_title"), body, "/signed-in/", description=t("account.signed_in_dek"),
+                noindex=True)
+
+
+def saved_page(lib):
+    """The reader's saved comments; web/account.js fills it in."""
+    body = f"""
+<header class="page-head"><p class="eyebrow">{e(t("account.saved_title"))}</p>
+<h1>{e(t("account.saved_heading"))}</h1><p class="dek">{e(t("account.saved_dek"))}</p></header>
+<section id="saved-page"><p class="lg-quiet" id="saved-note" role="status"></p><ul class="lg-saved-list" id="saved-list"></ul></section>"""
+    return page(lib, t("account.saved_title"), body, "/saved/", noindex=True)
+
+
+def chapter_file(lib, book, chapter):
+    """A chapter's commentary as JSON, for the Saved page (/data/<BOOK>.<chapter>.json)."""
+    bible = lib.bible(book, chapter)
+    by_work = lib.in_chapter(book, chapter, bible["verses"][-1])
+    return {"book": book, "chapter": chapter, "bookName": lib.books[book]["en"], "commentaries": [
+        {"work_id": w, "author": lib.author_of(w)["name"], "title": lib.works[w]["title"],
+         "entries": [{"start": x["start"], "end": x["end"], "excerpt": x["excerpt"]} for x in by_work[w]]}
+        for w in lib.ordered_works(by_work)]}
+
+
 def about_page(lib):
     parts = []
     for block in t("about.body"):
@@ -746,7 +812,7 @@ def build():
     if os.path.isdir(SITE):
         shutil.rmtree(SITE)
     os.makedirs(SITE)
-    for name in ("style.css", "logia.css", "site.js", "reader.js"):
+    for name in ("style.css", "logia.css", "site.js", "account.js", "reader.js"):
         shutil.copy(os.path.join(WEB, name), os.path.join(SITE, name))
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
@@ -770,6 +836,12 @@ def build():
         pages.append(f"/works/{wid}/")
     write("/about/", about_page(lib))
     pages.append("/about/")
+    write("/signed-in/", signed_in_page(lib))
+    write("/saved/", saved_page(lib))
+    os.makedirs(os.path.join(SITE, "data"))
+    for book, chapter in sorted(lib.coverage()):
+        with open(os.path.join(SITE, "data", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
+            json.dump(chapter_file(lib, book, chapter), f, ensure_ascii=False, separators=(",", ":"))
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"<url><loc>{SITE_URL}{p}</loc></url>\n" for p in pages) + "</urlset>\n")

@@ -190,7 +190,18 @@
       "idiom": "Idiom",
       "punctuation": "Punctuation",
       "register": "Register"
-    }
+    },
+    "like": "Like",
+    "liked": "Liked",
+    "unlike": "Unlike",
+    "save": "Save",
+    "saved": "Saved",
+    "share": "Share",
+    "share_title": "{name} on {ref} · Logia",
+    "copied": "Link copied.",
+    "copy_this": "Copy this link:",
+    "sign_in_to": "Sign in with your Open Word Bible account to like and save comments.",
+    "sign_in": "Sign in"
   },
   "commentators": {
     "title": "Commentators",
@@ -239,5 +250,29 @@
       "## Open",
       "Logia's data and writing are CC0, its code is MIT, and everything is on GitHub."
     ]
+  },
+  "account": {
+    "sign_in": "Sign in",
+    "your_account": "Your account",
+    "account_page": "Account (on Open Word Bible)",
+    "saved": "Saved",
+    "sign_out": "Sign out",
+    "signed_in_title": "Signing you in",
+    "signed_in_dek": "One moment: you are signed in to Logia with your Open Word Bible account.",
+    "try_again": "Try signing in again",
+    "saved_title": "Saved",
+    "saved_heading": "Your saved comments",
+    "saved_dek": "Comments you saved while reading, newest first. They are kept with your account, on every device.",
+    "ui": {
+      "sign_in": "Sign in",
+      "sign_in_failed": "Signing in did not work.",
+      "error": "Something went wrong. Please try again.",
+      "offline": "You seem to be offline. Check your connection and try again.",
+      "signed_out": "You have been signed out. Sign in again.",
+      "saved_signed_out": "Sign in to see the comments you have saved.",
+      "saved_empty": "Nothing saved yet. Save a comment from the reader and it will be here.",
+      "open_in_reader": "Read it in context",
+      "remove": "Remove"
+    }
   }
 }
