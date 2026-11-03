@@ -206,6 +206,25 @@ def main():
             if x["found"] != "similar" or x["status"] not in CITATION_STATUSES:
                 say(f"{where}: found {x['found']!r}, status {x['status']!r}")
 
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json"))):
+        t = load(p)
+        name = os.path.relpath(p, ROOT)
+        w = works.get(t.get("work"))
+        if not w or not isinstance(w["divisions"], list):
+            say(f"{name}: work {t.get('work')!r} is not a work with its own divisions")
+            continue
+        if os.path.basename(os.path.dirname(p)) != w["id"] or os.path.basename(p) != f"{t.get('locus')}.json":
+            say(f"{name}: file path does not match work {w['id']!r} and locus {t.get('locus')!r}")
+        if t.get("source") not in sources.get(w["id"], set()):
+            say(f"{name}: source {t.get('source')!r} is not in sources/manifest.json for {w['id']}")
+        for para in t.get("paragraphs", []):
+            for x in para["excerpts"]:
+                if x not in texts or texts[x][0] != w["id"]:
+                    say(f"{name}: {para['id']}: {x!r} is not an excerpt of {w['id']}")
+            for c in para["cites"]:
+                if para["text"][c["at"]:c["at"] + len(c["text"])] != c["text"] or not scripture.parse(c["start"]):
+                    say(f"{name}: {para['id']}: citation {c['text']!r} does not fit; run scripts/extract_texts.py")
+
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "translations", "*", "*", "*.json"))):
         t = load(p)
         name = os.path.relpath(p, ROOT)

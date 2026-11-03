@@ -382,7 +382,7 @@ function commTab() {
         <div class="who"><b>${esc(w.author)}</b><span class="d">${esc(w.author_dates)}</span><span class="tag">${esc(w.tradition)}</span></div>
         <div class="work"><i>${esc(w.title)}</i> · ${esc(shortEd(w))}</div>
         <div class="ex${long ? " clamp" : ""}">${body}</div>
-        <div class="more">${long ? `<button data-expand>Read all ${words.toLocaleString()} words</button>` : ""}<a href="${esc(es[0].source_url)}" target="_blank" rel="noopener">Full text ↗</a></div>
+        <div class="more">${long ? `<button data-expand>Read all ${words.toLocaleString()} words</button>` : ""}${es[0].inFull ? `<a href="${esc(es[0].inFull)}">Read ${esc(locusLabel(w, { locus: es[0].locus.split(".")[0] }))} in full</a>` : ""}<a href="${esc(es[0].source_url)}" target="_blank" rel="noopener">Full text ↗</a></div>
       </section>`;
     }
   }

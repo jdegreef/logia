@@ -15,6 +15,7 @@ Christian commentaries.
 | `library/works/<work>.json` | One commentary: author, dates, tradition, era, divisions, edition, translator, rights, status |
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
+| `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
 | `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
@@ -50,6 +51,7 @@ Westcott), 246 excerpts in all.
 ## Commands
 
     python3 scripts/find_refs.py --check # loci and citations are up to date
+    python3 scripts/extract_texts.py --check  # whole texts are up to date
     python3 scripts/validate.py          # the data is well formed
     python3 scripts/verify_sources.py    # every excerpt is in its source
     python3 -m unittest discover -s tests -t .
@@ -57,7 +59,8 @@ Westcott), 246 excerpts in all.
     uvx ruff@0.16.9 check .              # lint (pyproject.toml)
 
 Preview the built site with `python3 -m http.server -d site` and open
-<http://localhost:8000/jhn/1/>.
+<http://localhost:8000/jhn/1/>, or a whole homily at
+<http://localhost:8000/works/chrysostom/2/>.
 
 To refresh the Bible text, check out
 [open-word-bible](https://github.com/jdegreef/open-word-bible) at the commit

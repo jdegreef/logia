@@ -7,6 +7,8 @@ library/citations), the
 Bible text (bible/owb) and the page templates (web/), and writes static pages:
 site/index.html and one page per imported chapter, site/<book>/<chapter>/.
 Each chapter page carries its own data inline, so the site needs no server.
+Whole homilies and tractates (library/texts) get a page each,
+site/works/<work>/<n>/, and each such work a list, site/works/<work>/.
 """
 import glob
 import html
@@ -158,7 +160,7 @@ def quoted_in_rows(c, works, by_id, pages):
     return out
 
 
-def chapter_data(bible, book_name, works, comments, pages=frozenset(), urls=None):
+def chapter_data(bible, book_name, works, comments, pages=frozenset(), urls=None, in_full=None):
     book, chapter = bible["book"], bible["chapter"]
     first, last = bible["verses"][0], bible["verses"][-1]
     by_id = {c["id"]: c for c in comments}
@@ -175,7 +177,7 @@ def chapter_data(bible, book_name, works, comments, pages=frozenset(), urls=None
             {"id": c["id"], "start": start, "end": end, "heading": c["heading"], "excerpt": c["text"],
              "locus": c.get("locus"), "source_url": c["source_url"], "cites": cites_for(c, pages),
              "quotes": quote_rows(c, works, by_id, urls, pages),
-             "quotedIn": quoted_in_rows(c, works, by_id, pages)})
+             "quotedIn": quoted_in_rows(c, works, by_id, pages), "inFull": (in_full or {}).get(c["id"])})
     commentaries = []
     for wid, entries in by_work.items():
         w = works[wid]
@@ -218,6 +220,137 @@ def chapter_data(bible, book_name, works, comments, pages=frozenset(), urls=None
             "books": scripture.BOOK_NAMES}
 
 
+def load_texts():
+    """{work: [text, ...]} in order, from library/texts."""
+    out = {}
+    for p in glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json")):
+        t = load(p)
+        out.setdefault(t["work"], []).append(t)
+    for ts in out.values():
+        ts.sort(key=lambda t: int(t["locus"]))
+    return out
+
+
+def text_link(texts):
+    """{excerpt id: '/works/<work>/<n>/#<paragraph>'}: where each excerpt
+    begins in its whole text."""
+    out = {}
+    for work, ts in texts.items():
+        for t in ts:
+            for para in t["paragraphs"]:
+                for x in para["excerpts"]:
+                    out.setdefault(x, f"/works/{work}/{t['locus']}/#{para['id']}")
+    return out
+
+
+def linked_html(text, cites, pages):
+    h, pos = [], 0
+    for c in sorted(cites, key=lambda c: c["at"]):
+        if c["at"] < pos:
+            continue
+        href = cite_link(c["start"], pages)
+        words = html.escape(text[c["at"]:c["at"] + len(c["text"])])
+        label = html.escape(scripture.label(c["start"], c["end"]))
+        h.append(html.escape(text[pos:c["at"]]))
+        if href:
+            ext = "" if href.startswith("/") else ' target="_blank" rel="noopener"'
+            h.append(f'<a class="cite" href="{html.escape(href)}"{ext} title="{label}">{words}</a>')
+        else:
+            h.append(f'<span class="cite" title="{label}">{words}</span>')
+        pos = c["at"] + len(c["text"])
+    return "".join(h) + html.escape(text[pos:])
+
+
+def plural(word):
+    return word[:-1] + "ies" if word.endswith("y") else word + "s"
+
+
+def text_page(tpl, work, t, siblings, by_id, quoted, pages):
+    """A whole homily or tractate, paragraph by paragraph."""
+    name = locus_label(work, t["locus"])
+    paras = t["paragraphs"]
+    lead = []                                # the short headings under the title: "John i. 1", "Chapter I. 1–5"
+    for p in paras[1:3]:
+        if len(p["text"]) >= 60 or p["excerpts"]:
+            break
+        lead.append(p)
+    body, section = [], None
+    rest = paras[1 + len(lead):]
+    for n, p in enumerate(rest):
+        sec = p["locus"].split(".")[-1] if p["locus"] else None
+        if sec != section:
+            if section is not None:
+                body.append("</section>")
+            body.append(f'<section id="s{sec}" aria-label="{html.escape(work["divisions"][-1])} {sec}">')
+            section = sec
+        head = len(p["text"]) < 60 and not p["cites"] and not re.search(r"[.?!”]$", p["text"])
+        cls = " ".join(c for c in ("head" if head else "", "held" if p["excerpts"] else "") if c)
+        body.append(f'<p id="{html.escape(p["id"])}"{f" class={chr(34)}{cls}{chr(34)}" if cls else ""}>'
+                    f'{linked_html(p["text"], p["cites"], pages)}</p>')
+        marks = []
+        after = rest[n + 1]["excerpts"] if n + 1 < len(rest) else []
+        for x in (x for x in p["excerpts"] if x not in after):     # once, under its last paragraph
+            c = by_id.get(x)
+            href = c and excerpt_link(c, pages)
+            if href:
+                marks.append(f'<a href="{href}">In Logia on {html.escape(scripture.label(c["start"], c["end"]))}</a>')
+        for q in quoted.get(p["id"], []):
+            c = by_id[q["in"]]
+            href = excerpt_link(c, pages)
+            on = html.escape(scripture.label(c["start"], c["end"]))
+            link = f'<a href="{href}">on {on}</a>' if href else f"on {on}"
+            note = "" if q["status"] == "reviewed" else " (matched by wording, unchecked)"
+            marks.append(f"<span>Quoted by Thomas Aquinas in the <i>Catena Aurea</i>, {link}{note}</span>")
+        if marks:
+            body.append(f'<div class="marks">{"".join(marks)}</div>')
+    if section is not None:
+        body.append("</section>")
+    i = next(n for n, x in enumerate(siblings) if x is t)
+    prev = siblings[i - 1] if i else None
+    nxt = siblings[i + 1] if i + 1 < len(siblings) else None
+    nav = [f'<a href="/works/{work["id"]}/{prev["locus"]}/">← {html.escape(locus_label(work, prev["locus"]))}</a>'
+           if prev else "", f'<a href="/works/{work["id"]}/">All of {html.escape(work["title"])}</a>',
+           '<span class="sp"></span>',
+           f'<a href="{html.escape(t["url"])}" target="_blank" rel="noopener">On CCEL ↗</a>',
+           f'<a href="/works/{work["id"]}/{nxt["locus"]}/">{html.escape(locus_label(work, nxt["locus"]))} →</a>'
+           if nxt else ""]
+    return fill(tpl, {
+        "TITLE": html.escape(f"{work['author']}, {name} · Logia"),
+        "DESCRIPTION": html.escape(f"{work['author']}, {work['title']}, {name}, read straight through."),
+        "TOP": html.escape(work["author"]),
+        "EYEBROW": html.escape(f"{work['author']} · {work['title']}"),
+        "H1": html.escape(name),
+        "SUB": html.escape(" · ".join(p["text"] for p in lead) or work["edition"]),
+        "NAV": "".join(nav),
+        "BODY": f'<div class="text">{"".join(body)}</div>',
+        "FOOT": html.escape(f"Copied word for word from {work['edition']}, as transcribed by CCEL; the "
+                            f"translator's footnotes are left out. {work['rights']['basis'].capitalize()}. "
+                            "Scripture references are linked as CCEL marks them. A gold rule marks the "
+                            "passages Logia sets beside a verse."),
+    })
+
+
+def work_page(tpl, work, ts):
+    items = "".join(
+        f'<li><a href="/works/{work["id"]}/{t["locus"]}/">{html.escape(locus_label(work, t["locus"]))}</a>'
+        f'<span>{html.escape(next((p["text"] for p in t["paragraphs"][1:4] if len(p["text"]) < 60), ""))}</span></li>'
+        for t in ts)
+    first, last = ts[0]["locus"], ts[-1]["locus"]
+    return fill(tpl, {
+        "TITLE": html.escape(f"{work['author']}, {work['title']} · Logia"),
+        "DESCRIPTION": html.escape(f"{work['title']} by {work['author']}, read straight through."),
+        "TOP": html.escape(work["author"]),
+        "EYEBROW": html.escape(f"{work['author']} · {work['author_dates']}"),
+        "H1": html.escape(work["title"]),
+        "SUB": html.escape(f"{plural(work['divisions'][0])} {first}–{last} so far, read straight through. "
+                           f"{work['edition']}."),
+        "NAV": f'<a href="{html.escape(work["full_text_url"])}" target="_blank" rel="noopener">'
+               "The whole work on CCEL ↗</a>",
+        "BODY": f'<ul class="list">{items}</ul>',
+        "FOOT": "Logia copies the homilies and tractates that hold its excerpts; the rest of the work is on CCEL.",
+    })
+
+
 def fill(template, values):
     for k, v in values.items():
         template = template.replace("{{" + k + "}}", v)
@@ -239,6 +372,8 @@ def build():
     if os.path.isdir(SITE):
         shutil.rmtree(SITE)
     os.makedirs(SITE)
+    texts = load_texts()
+    in_full = text_link(texts)
     chapters = []
     paths = sorted(glob.glob(os.path.join(ROOT, "bible", "owb", "en", "*.json")))
     pages = {tuple(os.path.basename(p)[:-5].split(".")) for p in paths}
@@ -246,7 +381,7 @@ def build():
     for path in paths:
         bible = load(path)
         name = books[bible["book"]]
-        data = chapter_data(bible, name, works, comments, pages, source_urls())
+        data = chapter_data(bible, name, works, comments, pages, source_urls(), in_full)
         covered = sorted({v for w in data["commentaries"] for e in w["entries"]
                           for v in range(e["start"], e["end"] + 1)})
         n = len(data["commentaries"])
@@ -268,6 +403,26 @@ def build():
             f.write(page)
         chapters.append((name, bible, n, span))
 
+    text_tpl = open(os.path.join(ROOT, "web", "text.html"), encoding="utf-8").read()
+    by_id = {c["id"]: c for c in comments}
+    quoted = {}
+    for c in comments:
+        for q in c["quotes"]:
+            if q["para"]:
+                quoted.setdefault(q["para"], []).append(q)
+    n_texts = 0
+    for wid, ts in sorted(texts.items()):
+        work = works[wid]
+        out = os.path.join(SITE, "works", wid)
+        os.makedirs(out, exist_ok=True)
+        with open(os.path.join(out, "index.html"), "w", encoding="utf-8") as f:
+            f.write(work_page(text_tpl, work, ts))
+        for t in ts:
+            os.makedirs(os.path.join(out, t["locus"]), exist_ok=True)
+            with open(os.path.join(out, t["locus"], "index.html"), "w", encoding="utf-8") as f:
+                f.write(text_page(text_tpl, work, t, ts, by_id, quoted, pages))
+            n_texts += 1
+
     def work_card(w):
         return (f'<li><b>{html.escape(w["author"])}</b> <span class="d">{html.escape(w["author_dates"])}</span>'
                 f'<span class="w"><i>{html.escape(w["title"])}</i></span>'
@@ -281,14 +436,19 @@ def build():
     links = "".join(
         f'<a class="ch" href="/{b["book"].lower()}/{b["chapter"]}/"><b>{html.escape(name)} {b["chapter"]}</b>'
         f'<span>{NUMBER_WORDS.get(n, str(n))} commentaries · {html.escape(span)}</span></a>'
-        for name, b, n, span in chapters)
+        for name, b, n, span in chapters) + "".join(
+        f'<a class="ch" href="/works/{wid}/"><b>{html.escape(works[wid]["author"])}</b>'
+        f'<span>{html.escape(plural(works[wid]["divisions"][0]))} {ts[0]["locus"]}–{ts[-1]["locus"]}, '
+        f'read straight through</span></a>'
+        for wid, ts in sorted(texts.items()))
     first = chapters[0][1] if chapters else None
     with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
         f.write(fill(home_tpl, {
             "START_URL": f"/{first['book'].lower()}/{first['chapter']}/" if first else "/",
             "CHAPTERS": links, "ERAS": eras, "WORK_COUNT": NUMBER_WORDS.get(len(works), str(len(works))).lower(),
         }))
-    print(f"site/: home page and {len(chapters)} chapter page(s), {len(works)} works, {len(comments)} excerpts")
+    print(f"site/: home page, {len(chapters)} chapter page(s), {n_texts} whole homilies and tractates; "
+          f"{len(works)} works, {len(comments)} excerpts")
 
 
 if __name__ == "__main__":

@@ -70,9 +70,19 @@ for a catena, `library/quotations/`. Never edit these by hand except a
 work by a Father the Catena quotes can be added to `CATENAS` in the script,
 so the Catena's quotations of it are traced too.
 
+For a work with its own divisions, also run
+
+    python3 scripts/extract_texts.py
+
+to copy each whole homily or tractate from its source pages into
+`library/texts/`, so it can be read straight through. Save the whole CCEL
+page (its book-content block) under `sources/`, not only the part an
+excerpt comes from.
+
 ## 7. Check
 
     python3 scripts/find_refs.py --check
+    python3 scripts/extract_texts.py --check
     python3 scripts/validate.py
     python3 scripts/verify_sources.py <work>
     python3 scripts/build_site.py

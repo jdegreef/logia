@@ -30,7 +30,15 @@ Augustine are traced to their homily or tractate, 9 of them to the section
 and 8 to an excerpt Logia holds, and the reader links them both ways. Still
 to do: page numbers for the scanned editions, human review of the citations
 and quotations, the Catena's other Fathers (Hilary, Theophylact, Bede,
-Alcuin, Basil) once their works are in the library, and items 5–7.
+Alcuin, Basil) once their works are in the library, and items 6–7.
+
+Item 5 has a first version: Chrysostom's Homilies 2–15 and Augustine's
+Tractates 1–3, the ones that hold Logia's excerpts, can be read straight
+through at /works/. A gold rule marks each passage Logia sets beside a
+verse, and notes link to it and to the Catena where it is quoted. Each
+excerpt links to its place in the whole text. Still to do for item 5: the
+works arranged by verse (Calvin, Henry and the scanned editions), and the
+rest of each work beyond John 1.
 
 1. **A standard reference for every text, not only the Bible.** Sefaria can
    address "Rashi on Genesis 1:1:2" as easily as "Genesis 1:1". Logia has

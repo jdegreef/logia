@@ -1,0 +1,114 @@
+"""Copy whole homilies and tractates from their CCEL source pages.
+
+    python3 scripts/extract_texts.py           # write library/texts/
+    python3 scripts/extract_texts.py --check   # exit 1 if library/texts/ is out of date
+
+An excerpt is the part of a work Logia sets beside a verse; a homily or a
+tractate is also worth reading straight through (roadmap, item 5). For each
+work with its own divisions (`divisions` in library/works/<work>.json), each
+of its CCEL source pages is copied, paragraph by paragraph, into
+library/texts/<work>/<n>.json, where n is the homily or tractate number:
+
+- the words are the page's own, as for excerpts: footnotes, footnote
+  markers and page numbers are left out, and spacing is normalised;
+- each paragraph keeps CCEL's id (so a link can reach the same paragraph on
+  CCEL), its locus ("2.8", Homily 2, section 8), the Scripture references
+  CCEL marks in it, and the ids of the Logia excerpts that hold it.
+
+The book's title lines before the first homily or tractate heading are not
+part of it and are left out. scripts/verify_sources.py checks every paragraph
+against its source.
+"""
+import argparse
+import glob
+import json
+import os
+import re
+import sys
+
+import find_refs
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
+
+
+def load(path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def derive():
+    manifest = load(os.path.join(ROOT, "sources", "manifest.json"))
+    works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
+    out, problems = {}, []
+    for f in manifest["files"]:
+        work = works.get(f["work"])
+        if not work or not isinstance(work["divisions"], list) or not f["path"].endswith(".html"):
+            continue
+        path = os.path.join(ROOT, f["path"])
+        page = find_refs.read_page(path)
+        text, starts = page["text"], page["paras"] + [len(page["text"])]
+        source = os.path.basename(path)
+        held = []
+        for c in glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json")):
+            for e in load(c)["entries"]:
+                if e["sources"][0] == source and (where := find_refs.span(page, e["text"])):
+                    held.append((*where, e["id"]))
+        paras, number, title = [], None, None
+        for i, (a, b) in enumerate(zip(starts, starts[1:])):
+            words = " ".join(text[a:b].split())
+            if not words:
+                continue
+            if number is None:
+                m = HEADING.match(words)
+                if not m:
+                    continue                 # the book's title lines
+                number, title = find_refs.scripture.roman(m[2]), words
+            cites = find_refs.ccel_citations(page, (a, b), words)
+            paras.append({
+                "id": page["para_ids"][i], "locus": find_refs.locus(page, a), "text": words,
+                "cites": [{"at": at, "text": t, "start": s, "end": e} for at, t, s, e in cites],
+                "excerpts": [x for s, t, x in held if s < b and a < t],
+            })
+        if number is None:
+            problems.append(f"{f['path']}: no Homily or Tractate heading")
+            continue
+        dest = os.path.join(ROOT, "library", "texts", work["id"], f"{number}.json")
+        if dest in out:
+            problems.append(f"{f['path']}: a second page for {work['id']} {number}")
+            continue
+        out[dest] = {"work": work["id"], "locus": str(number), "title": title, "source": source,
+                     "url": f["url"], "paragraphs": paras}
+    return out, problems
+
+
+def main(argv):
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--check", action="store_true", help="change nothing; exit 1 if anything would change")
+    args = ap.parse_args(argv)
+    texts, problems = derive()
+    existing = set(glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json")))
+    changed = []
+    for path, data in texts.items():
+        if path not in existing or load(path) != data:
+            changed.append(path)
+            if not args.check:
+                find_refs.dump(path, data)
+    for path in sorted(existing - set(texts)):
+        changed.append(path)
+        if not args.check:
+            os.remove(path)
+    for p in problems:
+        print(p)
+    verb = "out of date" if args.check else "updated"
+    for path in changed:
+        print(f"{os.path.relpath(path, ROOT)}: {verb}")
+    n = sum(len(t["paragraphs"]) for t in texts.values())
+    print(f"{len(texts)} whole homilies and tractates, {n} paragraphs")
+    if args.check and changed:
+        print("run python3 scripts/extract_texts.py and commit what it writes")
+    return 1 if problems or (args.check and changed) else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

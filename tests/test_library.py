@@ -14,6 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build_site  # noqa: E402
+import extract_texts  # noqa: E402
 import find_refs  # noqa: E402
 import validate  # noqa: E402
 import verify_sources  # noqa: E402
@@ -37,6 +38,10 @@ class Library(unittest.TestCase):
 
     def test_loci_and_citations_are_up_to_date(self):
         code, out = quiet(find_refs.main, ["--check"])
+        self.assertEqual(code, 0, out)
+
+    def test_whole_texts_are_up_to_date(self):
+        code, out = quiet(extract_texts.main, ["--check"])
         self.assertEqual(code, 0, out)
 
 
@@ -157,6 +162,19 @@ class Site(unittest.TestCase):
             on_it = {e["id"] for w in data["commentaries"] for e in w["entries"]
                      if e["start"] <= int(verse) <= e["end"]}
             self.assertFalse(on_it & {r["id"] for r in rows}, verse)
+
+    def test_whole_texts_have_pages(self):
+        with open(os.path.join(build_site.SITE, "works", "augustine", "1", "index.html"), encoding="utf-8") as f:
+            page = f.read()
+        self.assertNotRegex(page, r"\{\{[A-Z_]+\}\}")
+        self.assertIn("<h1>Tractate 1</h1>", page)
+        # Section 13 is the passage Logia sets beside John 1:3 and the Catena quotes.
+        sec = page[page.index('id="s13"'):page.index('id="s14"')]
+        self.assertIn('class="held"', sec)
+        self.assertIn('href="/jhn/1/#v3">In Logia on John 1:3', sec)
+        self.assertIn("Catena Aurea", sec)
+        with open(os.path.join(build_site.SITE, "works", "chrysostom", "index.html"), encoding="utf-8") as f:
+            self.assertIn('href="/works/chrysostom/15/"', f.read())
 
     def test_corrections_are_applied(self):
         works, comments = build_site.load_library()

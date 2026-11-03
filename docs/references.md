@@ -47,6 +47,24 @@ tractate heading, and the last section mark before the excerpt); no locus
 is typed by hand. It reads CCEL pages only. A scanned work with its own
 divisions will need its section marks read from the scan first.
 
+## Whole texts
+
+A work with its own divisions can also be read straight through.
+`scripts/extract_texts.py` copies each of its CCEL source pages, one
+homily or tractate each, into `library/texts/<work>/<n>.json`. Each
+paragraph keeps:
+
+- CCEL's paragraph id (`iii.ii-p34`), which is also its anchor on Logia and
+  on CCEL;
+- its locus (`1.13`);
+- the Scripture references CCEL marks in it;
+- the ids of the Logia excerpts that hold it.
+
+The words are the page's own, with footnotes and page numbers left out as
+for excerpts, and `scripts/verify_sources.py` checks every paragraph. The
+site shows each text at `/works/<work>/<n>/`, with a section anchor
+`#s<section>`, and each work's list at `/works/<work>/`.
+
 ## Citations
 
 `library/citations/<work>/<BOOK>.json` lists the Scripture each excerpt
