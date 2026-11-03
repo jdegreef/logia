@@ -152,6 +152,15 @@ h1 { font-family: var(--display); font-weight: 600; font-size: clamp(28px, 4vw, 
 .more { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; margin-top: 4px; }
 .more button { border: 0; background: none; padding: 0; color: var(--accent); cursor: pointer; font-weight: 600; }
 .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
+a.cite { color: inherit; text-decoration: underline dotted var(--accent); text-underline-offset: 3px; }
+a.cite:hover { color: var(--accent); }
+.elsewhere { margin-top: 22px; }
+.elsewhere .hint { margin: 2px 0 10px; }
+.cb { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.cb .who { margin-bottom: 4px; }
+.cb q { quotes: none; font-family: var(--serif); }
+.cb mark { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 2px; }
+.cb button, .cb a.go { border: 0; background: none; padding: 0; color: var(--accent); cursor: pointer; font-weight: 600; font-size: 13px; }
 
 /* Words */
 .greek { font-family: var(--serif); font-size: 21px; line-height: 1.9; margin-bottom: 14px; }
@@ -308,7 +317,25 @@ function shortEd(w) {
   const m = String(w.edition).match(/^[^;(]+/); let s = (m ? m[0] : w.edition).trim().replace(/[,.]$/, "");
   return s.length > 90 ? s.slice(0, 88).replace(/\s+\S*$/, "") + "…" : s;
 }
-function paras(t) { return t.split(/\n\s*\n/).map(p => `<p>${esc(p.trim())}</p>`).join(""); }
+function paras(t) { return t.split(/\n\s*\n/).map(p => `<p>${p.trim()}</p>`).join(""); }
+// An excerpt's text with the Scripture it cites made into links.
+function linked(text, cites) {
+  let h = "", pos = 0;
+  for (const c of (cites || []).slice().sort((a, b) => a.at - b.at)) {
+    if (c.at < pos) continue;
+    const same = cites.filter(x => x.at === c.at).map(x => x.label).join(", ");
+    const words = esc(text.slice(c.at, c.at + c.text.length));
+    h += esc(text.slice(pos, c.at)) + (c.href
+      ? `<a class="cite" href="${esc(c.href)}"${c.href.startsWith("/") ? "" : ` target="_blank" rel="noopener"`} title="${esc(same)}">${words}</a>`
+      : `<span class="cite" title="${esc(same)}">${words}</span>`);
+    pos = c.at + c.text.length;
+  }
+  return h + esc(text.slice(pos));
+}
+function locusLabel(w, e) {
+  if (!e.locus || !Array.isArray(w.divisions)) return "";
+  return e.locus.split(".").map((n, i) => `${i ? w.divisions[i].toLowerCase() : w.divisions[i]} ${n}`).join(", ");
+}
 function commTab() {
   const v = state.verse;
   let h = `<div class="chips" role="group" aria-label="Show eras">` + ERAS.map(e =>
@@ -323,10 +350,11 @@ function commTab() {
     for (const w of ws) {
       const es = entriesFor(w, v);
       const body = es.map(e => {
-        const range = e.start === e.end ? "" : `<div class="range">On verses ${e.start}–${e.end}</div>`;
+        const where = [e.start === e.end ? "" : `On verses ${e.start}–${e.end}`, locusLabel(w, e)].filter(Boolean).join(" · ");
+        const range = where ? `<div class="range">${esc(where)}</div>` : "";
         const lemma = e.heading && !e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().startsWith(e.heading.toLowerCase())
           ? `<div class="lemma">${esc(e.heading)}</div>` : "";
-        return `${range}${lemma}${paras(e.excerpt)}`;
+        return `${range}${lemma}${paras(linked(e.excerpt, e.cites))}`;
       }).join("");
       const words = es.reduce((n, e) => n + e.excerpt.split(/\s+/).length, 0);
       const long = words > 140;
@@ -341,7 +369,20 @@ function commTab() {
   if (!any) h += works.some(w => entriesFor(w, v).length)
     ? `<p class="empty">No commentary from the chosen eras on this verse. Turn an era back on above.</p>`
     : `<p class="empty">No commentary on this verse yet.</p>`;
-  return h;
+  return h + elsewhere(v);
+}
+function elsewhere(v) {
+  const rows = (DATA.citedBy[v] || []).filter(r => state.eras.has(r.era));
+  if (!rows.length) return "";
+  return `<section class="elsewhere"><div class="era">Elsewhere in the library</div>
+    <p class="hint">Writing on other verses, these commentators refer to ${esc(REF(v))}.</p>` + rows.map(r => {
+    const i = r.snippet.indexOf(r.text);
+    const q = i < 0 ? esc(r.snippet) : esc(r.snippet.slice(0, i)) + `<mark>${esc(r.text)}</mark>` + esc(r.snippet.slice(i + r.text.length));
+    const go = r.here ? `<button data-goto="${r.verse}" data-work="${esc(r.work_id)}">Read it on ${esc(r.on)}</button>`
+      : `<a class="go" href="${esc(r.href)}">Read it on ${esc(r.on)}</a>`;
+    return `<div class="cb"><div class="who"><b>${esc(r.author)}</b><span class="d">${esc(r.author_dates)}</span><span class="tag">${esc(r.tradition)}</span></div>
+      <q>${q}</q><div>${go}</div></div>`;
+  }).join("") + `</section>`;
 }
 
 function wordsTab() {
@@ -434,6 +475,13 @@ $("#pb").addEventListener("click", e => {
     if (state.eras.has(era)) state.eras.delete(era); else state.eras.add(era);
     renderPanel(); return;
   }
+  const to = e.target.closest("[data-goto]");
+  if (to) {
+    state.tab = "comm"; go(+to.dataset.goto);
+    const card = document.getElementById("c-" + to.dataset.work);
+    if (card) { card.scrollIntoView({ behavior: "smooth", block: "start" }); card.classList.add("flash"); }
+    return;
+  }
   const ex = e.target.closest("[data-expand]");
   if (ex) { ex.closest(".card").querySelector(".ex").classList.remove("clamp"); ex.remove(); return; }
   const g = e.target.closest(".g");
@@ -453,7 +501,7 @@ window.addEventListener("hashchange", () => { const m = location.hash.match(/^#v
 
 $("#foot").innerHTML = `Commentary excerpts are copied word for word from public-domain editions and link to the full text: ` +
   works.map(w => `${esc(w.author)}, <a href="${esc(w.full_text_url)}" target="_blank" rel="noopener"><i>${esc(w.title)}</i></a> (${esc(w.edition)})`).join("; ") +
-  `. The Catena Aurea, Bengel, Ryle and Westcott come from page scans on archive.org: misread letters and figures have been corrected to match the printed page, and Greek that the scans cannot read is left out (marked … where it breaks a sentence). Greek text: SBLGNT with MACULA Greek word data (CC BY 4.0). Translation: Open Word Bible (CC0).`;
+  `. The Catena Aurea, Bengel, Ryle and Westcott come from page scans on archive.org: misread letters and figures have been corrected to match the printed page, and Greek that the scans cannot read is left out (marked … where it breaks a sentence). Scripture references in the excerpts are linked: in the CCEL transcriptions as CCEL's editors marked them, in the scans where they are printed in the usual way; no one has checked these links yet. Greek text: SBLGNT with MACULA Greek word data (CC BY 4.0). Translation: Open Word Bible (CC0).`;
 
 const m0 = location.hash.match(/^#v(\d+)$/);
 if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));

@@ -1,4 +1,5 @@
-"""Check the library's data: every work, excerpt, correction and translation.
+"""Check the library's data: every work, excerpt, citation, correction and
+translation.
 
     python3 scripts/validate.py
 
@@ -12,12 +13,17 @@ import os
 import re
 import sys
 
+import scripture
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ERAS = {"Early church", "Middle Ages", "Reformation", "Puritans and the 1700s", "The 1800s"}
-WORK_FIELDS = {"id", "author", "author_dates", "tradition", "era", "title", "edition", "original_language",
-               "translation", "published", "full_text_url", "rights", "source_kind", "notes", "status"}
+WORK_FIELDS = {"id", "author", "author_dates", "tradition", "era", "title", "divisions", "edition",
+               "original_language", "translation", "published", "full_text_url", "rights", "source_kind", "notes",
+               "status"}
 ENTRY_FIELDS = {"id", "start", "end", "heading", "text", "sources"}
 STATUSES = {"ai_draft", "reviewed"}          # "reviewed" is set only by a named human reviewer
+CITATION_FIELDS = {"in", "at", "text", "start", "end", "found", "status"}
+CITATION_STATUSES = {"detected", "reviewed", "rejected"}   # set by a person checking it
 REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
 GREEK_OR_HEBREW = re.compile(r"[Ͱ-Ͽἀ-῿֐-׿]")
 
@@ -60,11 +66,15 @@ def main():
         if not isinstance(w.get("published"), int) or w["published"] > 1930:
             say(f"{name}: published {w.get('published')!r}: only editions published in 1930 or earlier are "
                 "public domain in the US; anything later needs a rights note and a decision")
+        div = w.get("divisions")
+        if div != "verse" and not (isinstance(div, list) and div and all(isinstance(x, str) and x for x in div)):
+            say(f"{name}: divisions {div!r}: \"verse\" for a work arranged by verse, or the names of its own "
+                "divisions, e.g. [\"Homily\", \"Section\"]")
         if w.get("source_kind") not in ("digital", "scan"):
             say(f"{name}: source_kind {w.get('source_kind')!r}")
         works[w["id"]] = w
 
-    texts = {}
+    texts, entries = {}, {}
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
         d = load(p)
         name = os.path.relpath(p, ROOT)
@@ -79,12 +89,18 @@ def main():
         last = None
         for e in d["entries"]:
             eid = e.get("id", "?")
-            if set(e) != ENTRY_FIELDS:
-                say(f"{name}: {eid}: fields {sorted(e)}")
+            divisions = works[work].get("divisions")
+            want = ENTRY_FIELDS | ({"locus"} if isinstance(divisions, list) else set())
+            if set(e) != want:
+                say(f"{name}: {eid}: fields {sorted(e)}, not {sorted(want)}")
                 continue
+            if "locus" in e and not re.fullmatch(r"[1-9]\d*(\.[1-9]\d*){%d}" % (len(divisions) - 1), e["locus"]):
+                say(f"{name}: {eid}: locus {e['locus']!r} is not {len(divisions)} numbers like "
+                    + ".".join(["2"] * len(divisions)) + f" ({', '.join(divisions)})")
             if eid in texts:
                 say(f"{name}: duplicate id {eid}")
             texts[eid] = (work, e["text"])
+            entries[eid] = e
             refs = []
             for key in ("start", "end"):
                 m = REF.match(e[key])
@@ -124,6 +140,39 @@ def main():
             body = body.replace(x["from"], x["to"])
             if GREEK_OR_HEBREW.search(x["to"]):
                 say(f"{name}: correction {x['from']!r} would type Greek or Hebrew; leave it out instead")
+
+    fixes = {}
+    for p in glob.glob(os.path.join(ROOT, "library", "corrections", "*.json")):
+        c = load(p)
+        fixes[c.get("work")] = [(x["from"], x["to"]) for x in c.get("corrections", [])]
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "citations", "*", "*.json"))):
+        c = load(p)
+        name = os.path.relpath(p, ROOT)
+        work = c.get("work")
+        if os.path.basename(os.path.dirname(p)) != work or os.path.basename(p) != f"{c.get('book')}.json":
+            say(f"{name}: file path does not match work {work!r} and book {c.get('book')!r}")
+        for x in c.get("citations", []):
+            where = f"{name}: {x.get('in')} {x.get('text')!r}"
+            if set(x) != CITATION_FIELDS:
+                say(f"{where}: fields {sorted(x)}, not {sorted(CITATION_FIELDS)}")
+                continue
+            if x["in"] not in texts or texts[x["in"]][0] != work:
+                say(f"{where}: {x['in']!r} is not an excerpt of {work}")
+                continue
+            text = texts[x["in"]][1]
+            for a, b in fixes.get(work, []):
+                text = text.replace(a, b)
+            if text[x["at"]:x["at"] + len(x["text"])] != x["text"]:
+                say(f"{where}: is not at {x['at']} in the excerpt any more; run scripts/find_refs.py")
+            s, e = scripture.parse(x["start"]), scripture.parse(x["end"])
+            if not s or not e:
+                say(f"{where}: {x['start']}–{x['end']} is not a reference to a chapter that exists")
+            elif s[0] != e[0] or s[1:] > e[1:]:
+                say(f"{where}: {x['start']}–{x['end']} is not a forward range in one book")
+            if x["found"] not in ("source", "pattern"):
+                say(f"{where}: found {x['found']!r}")
+            if x["status"] not in CITATION_STATUSES:
+                say(f"{where}: status {x['status']!r}")
 
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "translations", "*", "*", "*.json"))):
         t = load(p)

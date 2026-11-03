@@ -12,8 +12,9 @@ Christian commentaries.
 
 | Path | Holds |
 |---|---|
-| `library/works/<work>.json` | One commentary: author, dates, tradition, era, edition, translator, rights, status |
-| `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) |
+| `library/works/<work>.json` | One commentary: author, dates, tradition, era, divisions, edition, translator, rights, status |
+| `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
+| `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
@@ -36,6 +37,10 @@ Westcott), 246 excerpts in all.
 - **Scan misreadings are corrected in the open.** An excerpt keeps the scan's
   text; `library/corrections/` lists each fix ("Let ns" → "Let us"), and the
   build applies them.
+- **Places and citations are read from the sources.** `scripts/find_refs.py`
+  reads where each excerpt sits in its work, and the Scripture it cites,
+  from the source pages; a citation stays `detected` until a person checks
+  it.
 - **Rights are recorded per work**: the edition, the translator, the year,
   and what is still to confirm for worldwide use.
 - **Nothing is marked reviewed by an AI.** Works and translations stay
@@ -43,6 +48,7 @@ Westcott), 246 excerpts in all.
 
 ## Commands
 
+    python3 scripts/find_refs.py --check # loci and citations are up to date
     python3 scripts/validate.py          # the data is well formed
     python3 scripts/verify_sources.py    # every excerpt is in its source
     python3 -m unittest discover -s tests -t .

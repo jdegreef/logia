@@ -20,6 +20,14 @@ checking.
 
 ## Phase 1: the data model
 
+*Progress:* items 1–3 have a first version (docs/references.md). Works
+declare their `divisions` and the Chrysostom and Augustine excerpts carry
+their homily or tractate and section. `scripts/find_refs.py` finds 325
+Scripture citations in the excerpts. The reader links each one and lists,
+under every verse, the excerpts on other verses that cite it. Still to do:
+page numbers for the scanned editions, human review of the citations, and
+items 4–7.
+
 1. **A standard reference for every text, not only the Bible.** Sefaria can
    address "Rashi on Genesis 1:1:2" as easily as "Genesis 1:1". Logia has
    verse references (`JHN.1.1`) and entry ids (`calvin.JHN.1.1.1`), but no

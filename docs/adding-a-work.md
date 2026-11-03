@@ -25,7 +25,10 @@ a row to `sources/manifest.json` with the URL, the date, `kind` (`digital` or
 
 `library/works/<work>.json`, copying the fields of an existing work. `era` is
 one of Early church, Middle Ages, Reformation, Puritans and the 1700s, and The
-1800s. `status` starts as `ai_draft`.
+1800s. `divisions` is `"verse"` for a commentary arranged by the verses it
+comments on, or the names of the work's own divisions, such as
+`["Homily", "Section"]`, for homilies, sermons or treatises
+(docs/references.md). `status` starts as `ai_draft`.
 
 ## 4. Copy the excerpts
 
@@ -46,6 +49,8 @@ or range:
   verse (about 80–350 words), cut only at sentence ends.
 - `heading` is the source's own lemma or section heading, or empty.
 - `id` is `<work>.<start>[-<end verse>].<n>`; entries are in verse order.
+  Once published an id never changes: a new excerpt takes the next free
+  `<n>`, even if it sits before an older one.
 
 ## 5. Correct scan misreadings
 
@@ -54,8 +59,18 @@ For a scanned source only: `library/corrections/<work>.json` lists
 the work at build time. Fix only what the printed page plainly reads. Never
 add Greek or Hebrew; leave unreadable Greek out of the excerpt instead.
 
-## 6. Check
+## 6. Find its place and its citations
 
+    python3 scripts/find_refs.py
+
+writes each excerpt's `locus` (for a work with its own divisions) and
+`library/citations/<work>/<BOOK>.json`, the Scripture each excerpt cites.
+Never edit either by hand except a citation's `status`; read the new
+citations and set `"rejected"` on a false match.
+
+## 7. Check
+
+    python3 scripts/find_refs.py --check
     python3 scripts/validate.py
     python3 scripts/verify_sources.py <work>
     python3 scripts/build_site.py

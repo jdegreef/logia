@@ -6,7 +6,8 @@ the commit pinned in bible/owb/SOURCE.json. Each chapter becomes one file,
 bible/owb/en/<BOOK>.<chapter>.json, holding what the reader needs: the
 English text at three levels, the word alignments of the Balanced level, the
 SBLGNT Greek words with their MACULA data, the translation notes, headings
-and cross-references.
+and cross-references. It also writes books.en.json (each book's English
+name) and chapters.json (its number of chapters).
 
     python3 scripts/import_owb.py --owb ../open-word-bible JHN.1
 
@@ -122,6 +123,8 @@ def main():
     books = json.load(open(os.path.join(owb, "data", "books.json"), encoding="utf-8"))["books"]
     json.dump({k: v["en"] for k, v in books.items()},
               open(os.path.join(OUT, "books.en.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    json.dump({k: v["chapters"] for k, v in books.items()},      # Hebrew chapter numbering in the OT
+              open(os.path.join(OUT, "chapters.json"), "w", encoding="utf-8"), indent=0)
     for ch in args.chapters:
         book, chapter = ch.split(".")
         data = pack_chapter(owb, book, int(chapter), markup, morph)
