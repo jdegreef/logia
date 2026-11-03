@@ -21,11 +21,16 @@ a scan's full text that holds the passage, with some margin on each side. Add
 a row to `sources/manifest.json` with the URL, the date, `kind` (`digital` or
 `scan`), the SHA-256 of the full download and a note on what the extract is.
 
-## 3. Write the work record
+## 3. Write the author and work records
 
-`library/works/<work>.json`, copying the fields of an existing work. `era` is
-one of Early church, Middle Ages, Reformation, Puritans and the 1700s, and The
-1800s. `status` starts as `ai_draft`.
+A new commentator gets `library/authors/<author>.json`: name, dates, the year
+they died (it places them on the reader's line of centuries), `era` (one of
+Early church, Middle Ages, Reformation, Puritans and the 1700s, and The 1800s),
+tradition, and a short biography of plain facts. `bio_status` starts as
+`ai_draft`.
+
+The work is `library/works/<work>.json`, copying the fields of an existing
+work; `author` names the author file. `status` starts as `ai_draft`.
 
 ## 4. Copy the excerpts
 

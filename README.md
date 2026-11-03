@@ -12,19 +12,47 @@ Christian commentaries.
 
 | Path | Holds |
 |---|---|
-| `library/works/<work>.json` | One commentary: author, dates, tradition, era, edition, translator, rights, status |
+| `library/authors/<author>.json` | One commentator: dates, era, tradition, a short biography (a draft until reviewed) |
+| `library/works/<work>.json` | One commentary: its author, edition, translator, rights, status |
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
 | `bible/owb/` | The Bible text: Open Word Bible chapters, imported at a pinned commit |
-| `web/` | Page templates: the home page and the chapter reader |
+| `i18n/en.json` | Every word of the interface, so a language can be added by adding a catalog |
+| `web/` | The stylesheets, scripts and fonts the pages use (see "The site" below) |
 | `scripts/` | Import, validate, verify and build |
 | `docs/` | How to add a work, and the editorial rules |
 
-The library today: John 1:1–18 with eight commentaries (Chrysostom,
+The library today: the whole Gospel of John in the Open Word Bible text, and
+John 1:1–18 with eight commentaries (Chrysostom,
 Augustine, the Catena Aurea, Calvin, Matthew Henry, Bengel, J. C. Ryle and
 Westcott), 246 excerpts in all.
+
+## The site
+
+`scripts/build_site.py` writes a static site to `site/`:
+
+| Path | Page |
+|---|---|
+| `/` | Home |
+| `/read/` | Every book; the ones in Logia with a pill per chapter, gold where there is commentary |
+| `/<book>/` | A book's chapters and who comments on it |
+| `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek words, translation notes and cross-references for the chosen verse |
+| `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
+| `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
+| `/about/` | What Logia is and how excerpts are checked |
+
+It looks and works like [openwordbible.org](https://openwordbible.org), its
+sister site: `web/style.css` and `web/fonts/` are the Open Word Bible's own
+(copied from its repository at the pinned commit; refresh them together with
+the Bible text), and `web/site.js` is taken from its site script: the header's
+menus and the settings menu (theme, text size, typeface, line spacing, motion,
+and Logia's own: the translation level and how much of each excerpt to show).
+`web/logia.css` and `web/reader.js` are Logia's own.
+
+Accounts (sign-in, saving, likes) will be shared with openwordbible.org: one
+account for both sites.
 
 ## How the text stays honest
 

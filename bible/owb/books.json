@@ -1,0 +1,266 @@
+{
+ "GEN": {
+  "en": "Genesis",
+  "chapters": 50
+ },
+ "EXO": {
+  "en": "Exodus",
+  "chapters": 40
+ },
+ "LEV": {
+  "en": "Leviticus",
+  "chapters": 27
+ },
+ "NUM": {
+  "en": "Numbers",
+  "chapters": 36
+ },
+ "DEU": {
+  "en": "Deuteronomy",
+  "chapters": 34
+ },
+ "JOS": {
+  "en": "Joshua",
+  "chapters": 24
+ },
+ "JDG": {
+  "en": "Judges",
+  "chapters": 21
+ },
+ "RUT": {
+  "en": "Ruth",
+  "chapters": 4
+ },
+ "1SA": {
+  "en": "1 Samuel",
+  "chapters": 31
+ },
+ "2SA": {
+  "en": "2 Samuel",
+  "chapters": 24
+ },
+ "1KI": {
+  "en": "1 Kings",
+  "chapters": 22
+ },
+ "2KI": {
+  "en": "2 Kings",
+  "chapters": 25
+ },
+ "1CH": {
+  "en": "1 Chronicles",
+  "chapters": 29
+ },
+ "2CH": {
+  "en": "2 Chronicles",
+  "chapters": 36
+ },
+ "EZR": {
+  "en": "Ezra",
+  "chapters": 10
+ },
+ "NEH": {
+  "en": "Nehemiah",
+  "chapters": 13
+ },
+ "EST": {
+  "en": "Esther",
+  "chapters": 10
+ },
+ "JOB": {
+  "en": "Job",
+  "chapters": 42
+ },
+ "PSA": {
+  "en": "Psalms",
+  "chapters": 150
+ },
+ "PRO": {
+  "en": "Proverbs",
+  "chapters": 31
+ },
+ "ECC": {
+  "en": "Ecclesiastes",
+  "chapters": 12
+ },
+ "SNG": {
+  "en": "Song of Songs",
+  "chapters": 8
+ },
+ "ISA": {
+  "en": "Isaiah",
+  "chapters": 66
+ },
+ "JER": {
+  "en": "Jeremiah",
+  "chapters": 52
+ },
+ "LAM": {
+  "en": "Lamentations",
+  "chapters": 5
+ },
+ "EZK": {
+  "en": "Ezekiel",
+  "chapters": 48
+ },
+ "DAN": {
+  "en": "Daniel",
+  "chapters": 12
+ },
+ "HOS": {
+  "en": "Hosea",
+  "chapters": 14
+ },
+ "JOL": {
+  "en": "Joel",
+  "chapters": 4
+ },
+ "AMO": {
+  "en": "Amos",
+  "chapters": 9
+ },
+ "OBA": {
+  "en": "Obadiah",
+  "chapters": 1
+ },
+ "JON": {
+  "en": "Jonah",
+  "chapters": 4
+ },
+ "MIC": {
+  "en": "Micah",
+  "chapters": 7
+ },
+ "NAM": {
+  "en": "Nahum",
+  "chapters": 3
+ },
+ "HAB": {
+  "en": "Habakkuk",
+  "chapters": 3
+ },
+ "ZEP": {
+  "en": "Zephaniah",
+  "chapters": 3
+ },
+ "HAG": {
+  "en": "Haggai",
+  "chapters": 2
+ },
+ "ZEC": {
+  "en": "Zechariah",
+  "chapters": 14
+ },
+ "MAL": {
+  "en": "Malachi",
+  "chapters": 3
+ },
+ "MAT": {
+  "en": "Matthew",
+  "chapters": 28
+ },
+ "MRK": {
+  "en": "Mark",
+  "chapters": 16
+ },
+ "LUK": {
+  "en": "Luke",
+  "chapters": 24
+ },
+ "JHN": {
+  "en": "John",
+  "chapters": 21
+ },
+ "ACT": {
+  "en": "Acts",
+  "chapters": 28
+ },
+ "ROM": {
+  "en": "Romans",
+  "chapters": 16
+ },
+ "1CO": {
+  "en": "1 Corinthians",
+  "chapters": 16
+ },
+ "2CO": {
+  "en": "2 Corinthians",
+  "chapters": 13
+ },
+ "GAL": {
+  "en": "Galatians",
+  "chapters": 6
+ },
+ "EPH": {
+  "en": "Ephesians",
+  "chapters": 6
+ },
+ "PHP": {
+  "en": "Philippians",
+  "chapters": 4
+ },
+ "COL": {
+  "en": "Colossians",
+  "chapters": 4
+ },
+ "1TH": {
+  "en": "1 Thessalonians",
+  "chapters": 5
+ },
+ "2TH": {
+  "en": "2 Thessalonians",
+  "chapters": 3
+ },
+ "1TI": {
+  "en": "1 Timothy",
+  "chapters": 6
+ },
+ "2TI": {
+  "en": "2 Timothy",
+  "chapters": 4
+ },
+ "TIT": {
+  "en": "Titus",
+  "chapters": 3
+ },
+ "PHM": {
+  "en": "Philemon",
+  "chapters": 1
+ },
+ "HEB": {
+  "en": "Hebrews",
+  "chapters": 13
+ },
+ "JAS": {
+  "en": "James",
+  "chapters": 5
+ },
+ "1PE": {
+  "en": "1 Peter",
+  "chapters": 5
+ },
+ "2PE": {
+  "en": "2 Peter",
+  "chapters": 3
+ },
+ "1JN": {
+  "en": "1 John",
+  "chapters": 5
+ },
+ "2JN": {
+  "en": "2 John",
+  "chapters": 1
+ },
+ "3JN": {
+  "en": "3 John",
+  "chapters": 1
+ },
+ "JUD": {
+  "en": "Jude",
+  "chapters": 1
+ },
+ "REV": {
+  "en": "Revelation",
+  "chapters": 22
+ }
+}

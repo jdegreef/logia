@@ -2,10 +2,10 @@
 name = "logia"
 version = "0.1.0"
 description = "Logia (logia.faith): Scripture beside two thousand years of public-domain commentary."
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 line-length = 120
 extend-exclude = ["site", "vendor"]
 
@@ -15,3 +15,7 @@ select = ["E", "W", "F", "B"]
 ignore = [
     "B905",  # zip() without strict=: adding it changes behaviour, so case by case
 ]
+
+[tool.ruff.lint.per-file-ignores]
+# Page markup is kept on whole lines.
+"scripts/build_site.py" = ["E501"]
