@@ -856,6 +856,2004 @@
    "end": "JHN.6.45",
    "found": "pattern",
    "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19.1",
+   "at": 75,
+   "text": "vv. 15, 6, 7",
+   "start": "JHN.1.15",
+   "end": "JHN.1.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19.1",
+   "at": 170,
+   "text": "v. 17",
+   "start": "JHN.1.17",
+   "end": "JHN.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19.2",
+   "at": 160,
+   "text": "Luke x. 32",
+   "start": "LUK.10.32",
+   "end": "LUK.10.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19.2",
+   "at": 217,
+   "text": "Acts iv. 36",
+   "start": "ACT.4.36",
+   "end": "ACT.4.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-28.1",
+   "at": 800,
+   "text": "Luke iii. 15",
+   "start": "LUK.3.15",
+   "end": "LUK.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.1",
+   "at": 94,
+   "text": "Acts i. 22",
+   "start": "ACT.1.22",
+   "end": "ACT.1.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.1",
+   "at": 106,
+   "text": "x. 37",
+   "start": "ACT.10.37",
+   "end": "ACT.10.37",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.1",
+   "at": 113,
+   "text": "xiii. 24",
+   "start": "ACT.13.24",
+   "end": "ACT.13.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.1",
+   "at": 907,
+   "text": "vv. 29, 35",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.1",
+   "at": 907,
+   "text": "vv. 29, 35",
+   "start": "JHN.1.35",
+   "end": "JHN.1.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.1",
+   "at": 998,
+   "text": "v. 26",
+   "start": "JHN.1.26",
+   "end": "JHN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.1",
+   "at": 1032,
+   "text": "v. 33",
+   "start": "JHN.1.33",
+   "end": "JHN.1.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.2",
+   "at": 168,
+   "text": "v. 26",
+   "start": "JHN.1.26",
+   "end": "JHN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.2",
+   "at": 222,
+   "text": "v. 33",
+   "start": "JHN.1.33",
+   "end": "JHN.1.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.2",
+   "at": 381,
+   "text": "v. 29",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.19-34.2",
+   "at": 1012,
+   "text": "v. 30",
+   "start": "JHN.1.30",
+   "end": "JHN.1.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 29,
+   "text": "v. 3",
+   "start": "JHN.1.3",
+   "end": "JHN.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 774,
+   "text": "v. 23",
+   "start": "JHN.1.23",
+   "end": "JHN.1.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 793,
+   "text": "v. 26",
+   "start": "JHN.1.26",
+   "end": "JHN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 818,
+   "text": "v. 27",
+   "start": "JHN.1.27",
+   "end": "JHN.1.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 842,
+   "text": "v. 30",
+   "start": "JHN.1.30",
+   "end": "JHN.1.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 866,
+   "text": "vv. 31, 33",
+   "start": "JHN.1.31",
+   "end": "JHN.1.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 866,
+   "text": "vv. 31, 33",
+   "start": "JHN.1.33",
+   "end": "JHN.1.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 887,
+   "text": "v. 31",
+   "start": "JHN.1.31",
+   "end": "JHN.1.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 908,
+   "text": "v. 34",
+   "start": "JHN.1.34",
+   "end": "JHN.1.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 1015,
+   "text": "Acts xiii. 25",
+   "start": "ACT.13.25",
+   "end": "ACT.13.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.20.1",
+   "at": 1031,
+   "text": "Luke iii. 15",
+   "start": "LUK.3.15",
+   "end": "LUK.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.1",
+   "at": 120,
+   "text": "Rom. vi. 15",
+   "start": "ROM.6.15",
+   "end": "ROM.6.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.1",
+   "at": 133,
+   "text": "xi. 7",
+   "start": "ROM.11.7",
+   "end": "ROM.11.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.1",
+   "at": 331,
+   "text": "Matt. xi. 14",
+   "start": "MAT.11.14",
+   "end": "MAT.11.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.1",
+   "at": 345,
+   "text": "xvii. 10",
+   "start": "MAT.17.10",
+   "end": "MAT.17.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.1",
+   "at": 403,
+   "text": "Luke i. 1",
+   "start": "LUK.1.1",
+   "end": "LUK.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.1",
+   "at": 632,
+   "text": "Matt. xvii. 10",
+   "start": "MAT.17.10",
+   "end": "MAT.17.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.1",
+   "at": 813,
+   "text": "Luke ix. 30",
+   "start": "LUK.9.30",
+   "end": "LUK.9.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.2",
+   "at": 140,
+   "text": "Deut. xviii. 15",
+   "start": "DEU.18.15",
+   "end": "DEU.18.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.2",
+   "at": 188,
+   "text": "Acts iii. 22",
+   "start": "ACT.3.22",
+   "end": "ACT.3.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.2",
+   "at": 202,
+   "text": "vii. 37",
+   "start": "ACT.7.37",
+   "end": "ACT.7.37",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.2",
+   "at": 243,
+   "text": "vii. 40",
+   "start": "JHN.7.40",
+   "end": "JHN.7.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.21.2",
+   "at": 312,
+   "text": "Matt. xvi. 14",
+   "start": "MAT.16.14",
+   "end": "MAT.16.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.23.1",
+   "at": 214,
+   "text": "Isai. xl. 3",
+   "start": "ISA.40.3",
+   "end": "ISA.40.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.23.1",
+   "at": 351,
+   "text": "Matt. iii. 3",
+   "start": "MAT.3.3",
+   "end": "MAT.3.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.23.1",
+   "at": 366,
+   "text": "Mark i. 3",
+   "start": "MRK.1.3",
+   "end": "MRK.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.23.1",
+   "at": 378,
+   "text": "Luke iii. 4",
+   "start": "LUK.3.4",
+   "end": "LUK.3.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.23.1",
+   "at": 467,
+   "text": "Ps. Ixviii. 7",
+   "start": "PSA.68.7",
+   "end": "PSA.68.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.25.1",
+   "at": 307,
+   "text": "Ezek. xxxvi. 25",
+   "start": "EZK.36.25",
+   "end": "EZK.36.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.25.1",
+   "at": 325,
+   "text": "Isai. lii. 15",
+   "start": "ISA.52.15",
+   "end": "ISA.52.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.25.1",
+   "at": 362,
+   "text": "Heb. x. 22",
+   "start": "HEB.10.22",
+   "end": "HEB.10.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.26.1",
+   "at": 702,
+   "text": "Acts i. 5",
+   "start": "ACT.1.5",
+   "end": "ACT.1.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.26.2",
+   "at": 379,
+   "text": "Mark xi. 25",
+   "start": "MRK.11.25",
+   "end": "MRK.11.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.27.1",
+   "at": 221,
+   "text": "Mark i. 7",
+   "start": "MRK.1.7",
+   "end": "MRK.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.28.1",
+   "at": 11,
+   "text": "Judg. vii. 24",
+   "start": "JDG.7.24",
+   "end": "JDG.7.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.28.1",
+   "at": 1010,
+   "text": "viii. 18",
+   "start": "JHN.8.18",
+   "end": "JHN.8.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.28.1",
+   "at": 1020,
+   "text": "v. 39",
+   "start": "JHN.1.39",
+   "end": "JHN.1.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.1",
+   "at": 9,
+   "text": "v. 36",
+   "start": "JHN.1.36",
+   "end": "JHN.1.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.1",
+   "at": 416,
+   "text": "v. 3",
+   "start": "JHN.1.3",
+   "end": "JHN.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.1",
+   "at": 521,
+   "text": "v. 47",
+   "start": "JHN.1.47",
+   "end": "JHN.1.47",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.1",
+   "at": 553,
+   "text": "Luke xxiv. 39",
+   "start": "LUK.24.39",
+   "end": "LUK.24.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 427,
+   "text": "Acts viii. 32",
+   "start": "ACT.8.32",
+   "end": "ACT.8.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 578,
+   "text": "Jer. xi. 19",
+   "start": "JER.11.19",
+   "end": "JER.11.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 705,
+   "text": "Exod. xxix. 38",
+   "start": "EXO.29.38",
+   "end": "EXO.29.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 1065,
+   "text": "Rev. xv. 3",
+   "start": "REV.15.3",
+   "end": "REV.15.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 1078,
+   "text": "Heb. iii. 3",
+   "start": "HEB.3.3",
+   "end": "HEB.3.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 1096,
+   "text": "Ezek. xx. 33",
+   "start": "EZK.20.33",
+   "end": "EZK.20.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 1766,
+   "text": "Luke ii. 25",
+   "start": "LUK.2.25",
+   "end": "LUK.2.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.2",
+   "at": 1948,
+   "text": "Matt. xvi. 21",
+   "start": "MAT.16.21",
+   "end": "MAT.16.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.3",
+   "at": 190,
+   "text": "Gen. xxii. 8",
+   "start": "GEN.22.8",
+   "end": "GEN.22.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.3",
+   "at": 529,
+   "text": "v. 21",
+   "start": "JHN.1.21",
+   "end": "JHN.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.3",
+   "at": 559,
+   "text": "Rev. v. 5",
+   "start": "REV.5.5",
+   "end": "REV.5.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.3",
+   "at": 725,
+   "text": "Rev. v. 5",
+   "start": "REV.5.5",
+   "end": "REV.5.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.3",
+   "at": 743,
+   "text": "Gen. xlix. 9",
+   "start": "GEN.49.9",
+   "end": "GEN.49.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.3",
+   "at": 821,
+   "text": "v. 51",
+   "start": "JHN.1.51",
+   "end": "JHN.1.51",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.3",
+   "at": 957,
+   "text": "Rev. v. 6",
+   "start": "REV.5.6",
+   "end": "REV.5.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.4",
+   "at": 536,
+   "text": "1 John iii. 5",
+   "start": "1JN.3.5",
+   "end": "1JN.3.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.4",
+   "at": 838,
+   "text": "Matt. viii. 1",
+   "start": "MAT.8.1",
+   "end": "MAT.8.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.4",
+   "at": 1043,
+   "text": "1 John i. 7",
+   "start": "1JN.1.7",
+   "end": "1JN.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.5",
+   "at": 45,
+   "text": "1 John iii. 5",
+   "start": "1JN.3.5",
+   "end": "1JN.3.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.5",
+   "at": 585,
+   "text": "1 John ii. 2",
+   "start": "1JN.2.2",
+   "end": "1JN.2.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.6",
+   "at": 632,
+   "text": "John iv. 9",
+   "start": "JHN.4.9",
+   "end": "JHN.4.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.6",
+   "at": 767,
+   "text": "1 John ii. 2",
+   "start": "1JN.2.2",
+   "end": "1JN.2.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.6",
+   "at": 809,
+   "text": "v. 10",
+   "start": "JHN.1.10",
+   "end": "JHN.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.6",
+   "at": 953,
+   "text": "Matt. iii. 9",
+   "start": "MAT.3.9",
+   "end": "MAT.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.29.6",
+   "at": 1091,
+   "text": "v. 7",
+   "start": "JHN.1.7",
+   "end": "JHN.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.31.1",
+   "at": 65,
+   "text": "Luke i. 80",
+   "start": "LUK.1.80",
+   "end": "LUK.1.80",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.31.1",
+   "at": 136,
+   "text": "v. 26",
+   "start": "JHN.1.26",
+   "end": "JHN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.31.1",
+   "at": 876,
+   "text": "vv. 26, 33",
+   "start": "JHN.1.26",
+   "end": "JHN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.31.1",
+   "at": 876,
+   "text": "vv. 26, 33",
+   "start": "JHN.1.33",
+   "end": "JHN.1.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.1",
+   "at": 79,
+   "text": "vv. 7, 8, 15, 19, 34",
+   "start": "JHN.1.15",
+   "end": "JHN.1.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.1",
+   "at": 79,
+   "text": "vv. 7, 8, 15, 19, 34",
+   "start": "JHN.1.19",
+   "end": "JHN.1.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.1",
+   "at": 79,
+   "text": "vv. 7, 8, 15, 19, 34",
+   "start": "JHN.1.34",
+   "end": "JHN.1.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.1",
+   "at": 79,
+   "text": "vv. 7, 8, 15, 19, 34",
+   "start": "JHN.1.7",
+   "end": "JHN.1.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.1",
+   "at": 270,
+   "text": "1 John iv. 12, 14",
+   "start": "1JN.4.12",
+   "end": "1JN.4.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.1",
+   "at": 270,
+   "text": "1 John iv. 12, 14",
+   "start": "1JN.4.14",
+   "end": "1JN.4.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.1",
+   "at": 346,
+   "text": "v. 34",
+   "start": "JHN.1.34",
+   "end": "JHN.1.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.2",
+   "at": 78,
+   "text": "Acts ii. 3",
+   "start": "ACT.2.3",
+   "end": "ACT.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.2",
+   "at": 156,
+   "text": "Gen. i. 2",
+   "start": "GEN.1.2",
+   "end": "GEN.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.2",
+   "at": 629,
+   "text": "Matt. iii. 16",
+   "start": "MAT.3.16",
+   "end": "MAT.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.2",
+   "at": 644,
+   "text": "Mark i. 10",
+   "start": "MRK.1.10",
+   "end": "MRK.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.2",
+   "at": 790,
+   "text": "Matt. x. 1",
+   "start": "MAT.10.1",
+   "end": "MAT.10.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.32.2",
+   "at": 943,
+   "text": "Isai. xi. 2",
+   "start": "ISA.11.2",
+   "end": "ISA.11.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.33.1",
+   "at": 37,
+   "text": "v. 31",
+   "start": "JHN.1.31",
+   "end": "JHN.1.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.33.1",
+   "at": 408,
+   "text": "v. 18",
+   "start": "JHN.1.18",
+   "end": "JHN.1.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.33.1",
+   "at": 576,
+   "text": "v. 32",
+   "start": "JHN.1.32",
+   "end": "JHN.1.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.33.2",
+   "at": 51,
+   "text": "iii. 5",
+   "start": "JHN.3.5",
+   "end": "JHN.3.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.33.2",
+   "at": 272,
+   "text": "Joel ii. 28",
+   "start": "JOL.2.28",
+   "end": "JOL.2.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.33.2",
+   "at": 285,
+   "text": "Acts ii. 17",
+   "start": "ACT.2.17",
+   "end": "ACT.2.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.33.2",
+   "at": 494,
+   "text": "v. 51",
+   "start": "JHN.1.51",
+   "end": "JHN.1.51",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.34.1",
+   "at": 97,
+   "text": "v. 32",
+   "start": "JHN.1.32",
+   "end": "JHN.1.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.34.1",
+   "at": 310,
+   "text": "Dan. iii. 25",
+   "start": "DAN.3.25",
+   "end": "DAN.3.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.34.1",
+   "at": 505,
+   "text": "Ps. Ixxxii. 6",
+   "start": "PSA.82.6",
+   "end": "PSA.82.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.34.1",
+   "at": 572,
+   "text": "Ps. ii. 7",
+   "start": "PSA.2.7",
+   "end": "PSA.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35.1",
+   "at": 235,
+   "text": "viii. 17",
+   "start": "JHN.8.17",
+   "end": "JHN.8.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35.1",
+   "at": 272,
+   "text": "v. 40",
+   "start": "JHN.1.40",
+   "end": "JHN.1.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35-51.1",
+   "at": 485,
+   "text": "vv. 39, 41, 49",
+   "start": "JHN.1.39",
+   "end": "JHN.1.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35-51.1",
+   "at": 485,
+   "text": "vv. 39, 41, 49",
+   "start": "JHN.1.41",
+   "end": "JHN.1.41",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35-51.1",
+   "at": 485,
+   "text": "vv. 39, 41, 49",
+   "start": "JHN.1.49",
+   "end": "JHN.1.49",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35-51.1",
+   "at": 672,
+   "text": "v. 51",
+   "start": "JHN.1.51",
+   "end": "JHN.1.51",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35-51.1",
+   "at": 932,
+   "text": "v. 41",
+   "start": "JHN.1.41",
+   "end": "JHN.1.41",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35-51.1",
+   "at": 1019,
+   "text": "v. 45",
+   "start": "JHN.1.45",
+   "end": "JHN.1.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.35-51.1",
+   "at": 1090,
+   "text": "v. 49",
+   "start": "JHN.1.49",
+   "end": "JHN.1.49",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.1",
+   "at": 73,
+   "text": "v. 42",
+   "start": "JHN.1.42",
+   "end": "JHN.1.42",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.1",
+   "at": 137,
+   "text": "Mark x. 21, 27",
+   "start": "MRK.10.21",
+   "end": "MRK.10.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.1",
+   "at": 137,
+   "text": "Mark x. 21, 27",
+   "start": "MRK.10.27",
+   "end": "MRK.10.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.1",
+   "at": 153,
+   "text": "Luke xx. 17",
+   "start": "LUK.20.17",
+   "end": "LUK.20.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.1",
+   "at": 166,
+   "text": "xxii. 61",
+   "start": "LUK.22.61",
+   "end": "LUK.22.61",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.1",
+   "at": 220,
+   "text": "v. 29",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.2",
+   "at": 53,
+   "text": "v. 29",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.2",
+   "at": 508,
+   "text": "v. 29",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.36.2",
+   "at": 1130,
+   "text": "v. 29",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.38.1",
+   "at": 200,
+   "text": "vi. 5",
+   "start": "JHN.6.5",
+   "end": "JHN.6.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.38.1",
+   "at": 398,
+   "text": "Matt. iii. 15",
+   "start": "MAT.3.15",
+   "end": "MAT.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.38.1",
+   "at": 509,
+   "text": "Mark i. 15",
+   "start": "MRK.1.15",
+   "end": "MRK.1.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.38.1",
+   "at": 609,
+   "text": "Luke ii. 49",
+   "start": "LUK.2.49",
+   "end": "LUK.2.49",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.38.1",
+   "at": 1015,
+   "text": "iii. 2",
+   "start": "JHN.3.2",
+   "end": "JHN.3.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.38.1",
+   "at": 1061,
+   "text": "v. 39",
+   "start": "JHN.1.39",
+   "end": "JHN.1.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.38.1",
+   "at": 1217,
+   "text": "v. 38",
+   "start": "JHN.1.38",
+   "end": "JHN.1.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.39.1",
+   "at": 504,
+   "text": "iv. 6",
+   "start": "JHN.4.6",
+   "end": "JHN.4.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.40.1",
+   "at": 25,
+   "text": "v. 35",
+   "start": "JHN.1.35",
+   "end": "JHN.1.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.40.1",
+   "at": 223,
+   "text": "Mark xiii. 3",
+   "start": "MRK.13.3",
+   "end": "MRK.13.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.40-42.1",
+   "at": 73,
+   "text": "Matt. iv. 18",
+   "start": "MAT.4.18",
+   "end": "MAT.4.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.40-42.1",
+   "at": 93,
+   "text": "Mark i. 16",
+   "start": "MRK.1.16",
+   "end": "MRK.1.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.1",
+   "at": 271,
+   "text": "vv. 35, 43",
+   "start": "JHN.1.35",
+   "end": "JHN.1.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.1",
+   "at": 271,
+   "text": "vv. 35, 43",
+   "start": "JHN.1.43",
+   "end": "JHN.1.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.1",
+   "at": 408,
+   "text": "v. 45",
+   "start": "JHN.1.45",
+   "end": "JHN.1.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.1",
+   "at": 592,
+   "text": "v. 38",
+   "start": "JHN.1.38",
+   "end": "JHN.1.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.1",
+   "at": 638,
+   "text": "v. 45",
+   "start": "JHN.1.45",
+   "end": "JHN.1.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 55,
+   "text": "v. 38",
+   "start": "JHN.1.38",
+   "end": "JHN.1.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 76,
+   "text": "v. 42",
+   "start": "JHN.1.42",
+   "end": "JHN.1.42",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 105,
+   "text": "vv. 20, 25",
+   "start": "JHN.1.20",
+   "end": "JHN.1.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 105,
+   "text": "vv. 20, 25",
+   "start": "JHN.1.25",
+   "end": "JHN.1.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 702,
+   "text": "ix. 22",
+   "start": "JHN.9.22",
+   "end": "JHN.9.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 839,
+   "text": "iv. 25, 29",
+   "start": "JHN.4.25",
+   "end": "JHN.4.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 839,
+   "text": "iv. 25, 29",
+   "start": "JHN.4.29",
+   "end": "JHN.4.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 946,
+   "text": "1 John ii. 22",
+   "start": "1JN.2.22",
+   "end": "1JN.2.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 978,
+   "text": "Rev. xi. 15",
+   "start": "REV.11.15",
+   "end": "REV.11.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 991,
+   "text": "xii. 10",
+   "start": "REV.12.10",
+   "end": "REV.12.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 1000,
+   "text": "xx. 4",
+   "start": "REV.20.4",
+   "end": "REV.20.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.41.2",
+   "at": 1013,
+   "text": "i. 17",
+   "start": "JHN.1.17",
+   "end": "JHN.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.42.1",
+   "at": 63,
+   "text": "v. 36",
+   "start": "JHN.1.36",
+   "end": "JHN.1.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.42.1",
+   "at": 491,
+   "text": "Matt. xvi. 18",
+   "start": "MAT.16.18",
+   "end": "MAT.16.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.42.1",
+   "at": 795,
+   "text": "Gal. i. 18",
+   "start": "GAL.1.18",
+   "end": "GAL.1.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.42.1",
+   "at": 807,
+   "text": "ii. 9",
+   "start": "GAL.2.9",
+   "end": "GAL.2.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 403,
+   "text": "ii. 13",
+   "start": "JHN.2.13",
+   "end": "JHN.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 707,
+   "text": "vv. 43, 45",
+   "start": "JHN.1.43",
+   "end": "JHN.1.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 707,
+   "text": "vv. 43, 45",
+   "start": "JHN.1.45",
+   "end": "JHN.1.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 724,
+   "text": "v. 14",
+   "start": "JHN.1.14",
+   "end": "JHN.1.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 806,
+   "text": "iv. 23",
+   "start": "JHN.4.23",
+   "end": "JHN.4.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 978,
+   "text": "xii. 20",
+   "start": "JHN.12.20",
+   "end": "JHN.12.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 1089,
+   "text": "Matt. viii. 22",
+   "start": "MAT.8.22",
+   "end": "MAT.8.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 1105,
+   "text": "ix. 9",
+   "start": "MAT.9.9",
+   "end": "MAT.9.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 1112,
+   "text": "xix. 21",
+   "start": "MAT.19.21",
+   "end": "MAT.19.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 1140,
+   "text": "xxi. 19, 22",
+   "start": "JHN.21.19",
+   "end": "JHN.21.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 1140,
+   "text": "xxi. 19, 22",
+   "start": "JHN.21.22",
+   "end": "JHN.21.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43.1",
+   "at": 1167,
+   "text": "Matt. iv. 19",
+   "start": "MAT.4.19",
+   "end": "MAT.4.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.43-51.1",
+   "at": 183,
+   "text": "v. 43",
+   "start": "JHN.1.43",
+   "end": "JHN.1.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.44.1",
+   "at": 267,
+   "text": "Matt. xiv. 22",
+   "start": "MAT.14.22",
+   "end": "MAT.14.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.44.1",
+   "at": 287,
+   "text": "Mark viii. 22",
+   "start": "MRK.8.22",
+   "end": "MRK.8.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.1",
+   "at": 652,
+   "text": "Acts xiii. 6",
+   "start": "ACT.13.6",
+   "end": "ACT.13.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.1",
+   "at": 871,
+   "text": "Acts i. 13",
+   "start": "ACT.1.13",
+   "end": "ACT.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 140,
+   "text": "v. 41",
+   "start": "JHN.1.41",
+   "end": "JHN.1.41",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 435,
+   "text": "iii. 14",
+   "start": "JHN.3.14",
+   "end": "JHN.3.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 475,
+   "text": "Deut. xviii. 15",
+   "start": "DEU.18.15",
+   "end": "DEU.18.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 498,
+   "text": "Acts iii. 22",
+   "start": "ACT.3.22",
+   "end": "ACT.3.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 512,
+   "text": "vii. 37",
+   "start": "ACT.7.37",
+   "end": "ACT.7.37",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 528,
+   "text": "v. 46",
+   "start": "JHN.1.46",
+   "end": "JHN.1.46",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 686,
+   "text": "Matt. xxi. 1",
+   "start": "MAT.21.1",
+   "end": "MAT.21.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.45.2",
+   "at": 711,
+   "text": "vi. 42",
+   "start": "JHN.6.42",
+   "end": "JHN.6.42",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.46.1",
+   "at": 236,
+   "text": "Isai. ii. 3",
+   "start": "ISA.2.3",
+   "end": "ISA.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.46.1",
+   "at": 335,
+   "text": "Luke iv. 1",
+   "start": "LUK.4.1",
+   "end": "LUK.4.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.46.1",
+   "at": 438,
+   "text": "Mark vi. 6",
+   "start": "MRK.6.6",
+   "end": "MRK.6.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.46.1",
+   "at": 789,
+   "text": "iii. 31",
+   "start": "JHN.3.31",
+   "end": "JHN.3.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.46.1",
+   "at": 834,
+   "text": "v. 39",
+   "start": "JHN.1.39",
+   "end": "JHN.1.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.46.1",
+   "at": 971,
+   "text": "v. 40",
+   "start": "JHN.1.40",
+   "end": "JHN.1.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.47.1",
+   "at": 280,
+   "text": "v. 43",
+   "start": "JHN.1.43",
+   "end": "JHN.1.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.47.1",
+   "at": 299,
+   "text": "v. 47",
+   "start": "JHN.1.47",
+   "end": "JHN.1.47",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.47.1",
+   "at": 614,
+   "text": "v. 51",
+   "start": "JHN.1.51",
+   "end": "JHN.1.51",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.47.1",
+   "at": 778,
+   "text": "1 John ii. 5",
+   "start": "1JN.2.5",
+   "end": "1JN.2.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.47.1",
+   "at": 1071,
+   "text": "v. 42",
+   "start": "JHN.1.42",
+   "end": "JHN.1.42",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.48.1",
+   "at": 122,
+   "text": "ii. 25",
+   "start": "JHN.2.25",
+   "end": "JHN.2.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.48.1",
+   "at": 745,
+   "text": "Matt. xxi. 10",
+   "start": "MAT.21.10",
+   "end": "MAT.21.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.48.1",
+   "at": 769,
+   "text": "ii. 13",
+   "start": "JHN.2.13",
+   "end": "JHN.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.48.1",
+   "at": 848,
+   "text": "Mic. iv. 4",
+   "start": "MIC.4.4",
+   "end": "MIC.4.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.48.1",
+   "at": 860,
+   "text": "Zech. iii. 10",
+   "start": "ZEC.3.10",
+   "end": "ZEC.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.49.1",
+   "at": 495,
+   "text": "Matt. xvi. 16",
+   "start": "MAT.16.16",
+   "end": "MAT.16.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.49.1",
+   "at": 521,
+   "text": "vi. 68, 69",
+   "start": "JHN.6.68",
+   "end": "JHN.6.69",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.49.1",
+   "at": 635,
+   "text": "v. 34",
+   "start": "JHN.1.34",
+   "end": "JHN.1.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.49.1",
+   "at": 1115,
+   "text": "Mark xv. 32",
+   "start": "MRK.15.32",
+   "end": "MRK.15.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.50.1",
+   "at": 108,
+   "text": "xvi. 31",
+   "start": "JHN.16.31",
+   "end": "JHN.16.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 332,
+   "text": "Luke iv. 25",
+   "start": "LUK.4.25",
+   "end": "LUK.4.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 345,
+   "text": "ix. 27",
+   "start": "LUK.9.27",
+   "end": "LUK.9.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 423,
+   "text": "Neh. v. 13",
+   "start": "NEH.5.13",
+   "end": "NEH.5.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 435,
+   "text": "viii. 6",
+   "start": "NEH.8.6",
+   "end": "NEH.8.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 485,
+   "text": "Ps. xli. 13",
+   "start": "PSA.41.13",
+   "end": "PSA.41.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 498,
+   "text": "Ixxii. 19",
+   "start": "PSA.72.19",
+   "end": "PSA.72.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 509,
+   "text": "Ixxxix. 52",
+   "start": "PSA.89.52",
+   "end": "PSA.89.52",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 584,
+   "text": "Isai. Ixv. 16",
+   "start": "ISA.65.16",
+   "end": "ISA.65.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.1",
+   "at": 600,
+   "text": "Rev. iii. 14",
+   "start": "REV.3.14",
+   "end": "REV.3.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.2",
+   "at": 579,
+   "text": "Gen. xxviii. 12",
+   "start": "GEN.28.12",
+   "end": "GEN.28.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.3",
+   "at": 220,
+   "text": "vv. 26",
+   "start": "JHN.1.26",
+   "end": "JHN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.3",
+   "at": 280,
+   "text": "v. 34, 49",
+   "start": "JHN.1.34",
+   "end": "JHN.1.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.3",
+   "at": 280,
+   "text": "v. 34, 49",
+   "start": "JHN.1.49",
+   "end": "JHN.1.49",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.3",
+   "at": 337,
+   "text": "v. 49",
+   "start": "JHN.1.49",
+   "end": "JHN.1.49",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.1.51.3",
+   "at": 721,
+   "text": "Matt. xiii. 12",
+   "start": "MAT.13.12",
+   "end": "MAT.13.12",
+   "found": "pattern",
+   "status": "detected"
   }
  ]
 }
