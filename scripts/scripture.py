@@ -2,7 +2,7 @@
 
 A Logia reference is BOOK.chapter.verse with a USFM book code (JHN.1.14),
 as in bible/owb. The 66 books, their English names and chapter counts come
-from the Open Word Bible (bible/owb/books.en.json, bible/owb/chapters.json).
+from the Open Word Bible (bible/owb/books.json).
 The deuterocanonical books, which the Catholic and Orthodox churches read as
 Scripture and the Fathers quote as such, are not in the Open Word Bible: they
 are listed here so that a citation of them is kept like any other.
@@ -67,8 +67,10 @@ def _load(name):
         return json.load(f)
 
 
-BOOK_NAMES = {**_load("books.en.json"), **{k: v[0] for k, v in DEUTEROCANON.items()}}
-CHAPTERS = {**_load("chapters.json"), **{k: v[1] for k, v in DEUTEROCANON.items()}, **ENGLISH_CHAPTERS}
+_BOOKS = _load("books.json")
+BOOK_NAMES = {**{k: v["en"] for k, v in _BOOKS.items()}, **{k: v[0] for k, v in DEUTEROCANON.items()}}
+CHAPTERS = {**{k: v["chapters"] for k, v in _BOOKS.items()}, **{k: v[1] for k, v in DEUTEROCANON.items()},
+            **ENGLISH_CHAPTERS}
 REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
 
 

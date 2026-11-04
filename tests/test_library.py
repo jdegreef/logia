@@ -131,29 +131,70 @@ class VerifyCatchesChanges(unittest.TestCase):
 
 
 class Site(unittest.TestCase):
+    PAGES = ("index.html", "read/index.html", "jhn/index.html", "jhn/1/index.html", "jhn/21/index.html",
+             "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html")
+
     @classmethod
     def setUpClass(cls):
         quiet(build_site.build)
 
-    def test_pages_exist_and_are_filled(self):
-        for page in ("index.html", os.path.join("jhn", "1", "index.html")):
-            with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
-                text = f.read()
-            self.assertNotRegex(text, r"\{\{[A-Z_]+\}\}", page)
+    def read(self, page):
+        with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
+            return f.read()
+
+    def test_pages_exist_with_the_site_frame(self):
+        for page in self.PAGES:
+            text = self.read(page)
             self.assertTrue(text.startswith("<!doctype html>"), page)
+            self.assertIn('<header class="site">', text, page)
+            self.assertIn('<footer class="site">', text, page)
+            self.assertIn('id="colour-menu"', text, page)
+
+    def test_every_internal_link_leads_to_a_page(self):
+        missing = set()
+        for root, _dirs, files in os.walk(build_site.SITE):
+            for name in files:
+                if not name.endswith(".html"):
+                    continue
+                with open(os.path.join(root, name), encoding="utf-8") as f:
+                    for href in re.findall(r'href="(/[^"#]*)', f.read()):
+                        path = os.path.join(build_site.SITE, href.lstrip("/"))
+                        if not (os.path.isfile(path) or os.path.isfile(os.path.join(path, "index.html"))):
+                            missing.add(href)
+        self.assertEqual(missing, set())
 
     def test_chapter_page_carries_its_data(self):
-        with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:
-            text = f.read()
-        m = re.search(r"const DATA = (\{.*?\});\n", text, re.S)
-        data = json.loads(m[1].replace("<\\/", "</"))
-        self.assertEqual(data["book"], "JHN")
+        text = self.read(os.path.join("jhn", "1", "index.html"))
+        m = re.search(r'<script type="application/json" id="chapter-data">(.*?)</script>', text, re.S)
+        data = json.loads(m[1])
+        self.assertEqual((data["book"], data["chapter"]), ("JHN", 1))
         self.assertEqual(len(data["commentaries"]), 8)
         self.assertTrue(all(w["entries"] for w in data["commentaries"]))
+        for key in ("summary", "none_yet", "eras", "levels", "categories"):
+            self.assertIn(key, data["ui"])
+
+    def test_a_chapter_without_commentary_still_reads(self):
+        text = self.read(os.path.join("jhn", "21", "index.html"))
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertEqual(data["commentaries"], [])
+        self.assertEqual(data["verses"][-1], 25)
+
+    def test_accounts_are_open_word_bible_s(self):
+        text = self.read("index.html")
+        self.assertIn('<meta name="logia-api" content="https://api.openwordbible.org">', text)
+        self.assertIn('href="https://openwordbible.org/handoff/?site=logia&amp;to=%2F" data-login', text)
+        for page in ("signed-in/index.html", "saved/index.html"):
+            self.assertIn('<meta name="robots" content="noindex">', self.read(page), page)
+
+    def test_the_saved_page_has_each_chapter_s_comments(self):
+        data = json.loads(self.read(os.path.join("data", "JHN.1.json")))
+        self.assertEqual(data["bookName"], "John")
+        self.assertEqual({w["work_id"] for w in data["commentaries"]},
+                         {"chrysostom", "augustine", "catena", "calvin", "henry", "bengel", "ryle", "westcott"})
 
     def test_citations_link_both_ways(self):
         with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:
-            data = json.loads(re.search(r"const DATA = (\{.*?\});\n", f.read(), re.S)[1].replace("<\\/", "</"))
+            data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', f.read(), re.S)[1].replace("<\\/", "</"))
         westcott = next(w for w in data["commentaries"] if w["work_id"] == "westcott")
         first = westcott["entries"][0]
         self.assertIn(("v. 14", "/jhn/1/#v14"), [(c["text"], c["href"]) for c in first["cites"]])
@@ -166,19 +207,18 @@ class Site(unittest.TestCase):
     def test_whole_texts_have_pages(self):
         with open(os.path.join(build_site.SITE, "works", "augustine", "1", "index.html"), encoding="utf-8") as f:
             page = f.read()
-        self.assertNotRegex(page, r"\{\{[A-Z_]+\}\}")
         self.assertIn("<h1>Tractate 1</h1>", page)
         # Section 13 is the passage Logia sets beside John 1:3 and the Catena quotes.
         sec = page[page.index('id="s13"'):page.index('id="s14"')]
-        self.assertIn('class="held"', sec)
-        self.assertIn('href="/jhn/1/#v3">In Logia on John 1:3', sec)
+        self.assertIn('class="lg-held"', sec)
+        self.assertIn('href="/jhn/1/#v3-augustine">In Logia on John 1:3', sec)
         self.assertIn("Catena Aurea", sec)
         with open(os.path.join(build_site.SITE, "works", "chrysostom", "index.html"), encoding="utf-8") as f:
-            self.assertIn('href="/works/chrysostom/15/"', f.read())
+            self.assertIn('href="/works/chrysostom/15/"', f.read())     # the work page lists its whole texts
 
     def test_corrections_are_applied(self):
-        works, comments = build_site.load_library()
-        ryle = " ".join(c["text"] for c in comments if c["work"] == "ryle")
+        lib = build_site.Library()
+        ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")
         self.assertNotIn("Let ns", ryle)
         self.assertIn("Let us", ryle)
 

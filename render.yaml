@@ -1,6 +1,6 @@
-# Render Blueprint for Logia (logia.faith). Not created on Render yet: create
-# it with New > Blueprint and this repository, then point logia.faith's DNS
-# at it. The site is static, built from this repository with no dependencies.
+# Render Blueprint for Logia (logia.faith): create it with New > Blueprint and
+# this repository, then point logia.faith's DNS at it (docs/deploy.md). The
+# site is static, built from this repository with no dependencies.
 services:
   - type: web
     name: logia
@@ -10,9 +10,9 @@ services:
     pullRequestPreviewsEnabled: true
     # Deploy main only once CI (.github/workflows/ci.yml) passes.
     autoDeployTrigger: checksPass
+    # Render adds www.logia.faith itself and redirects it to the root.
     domains:
       - logia.faith
-      - www.logia.faith
     headers:
       - path: /*
         name: X-Content-Type-Options

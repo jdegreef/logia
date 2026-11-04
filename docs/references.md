@@ -8,7 +8,7 @@ phase 1).
 
 `BOOK.chapter.verse` with a USFM book code: `JHN.1.14`. A range is a
 `start` and an `end`. The 66 books and their chapter counts come from the
-Open Word Bible (`bible/owb/books.en.json`, `bible/owb/chapters.json`). The
+Open Word Bible (`bible/owb/books.json`). The
 deuterocanonical books (Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2
 Maccabees), which the Fathers quote as Scripture and the Catholic and
 Orthodox churches read, are listed in `scripts/scripture.py`. Citations of

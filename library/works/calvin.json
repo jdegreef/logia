@@ -1,9 +1,6 @@
 {
  "id": "calvin",
- "author": "John Calvin",
- "author_dates": "1509-1564",
- "tradition": "Reformed",
- "era": "Reformation",
+ "author": "calvin",
  "title": "Commentary on the Gospel According to John",
  "divisions": "verse",
  "edition": "Calvin Translation Society, tr. William Pringle, 1847",

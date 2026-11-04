@@ -21,14 +21,19 @@ a scan's full text that holds the passage, with some margin on each side. Add
 a row to `sources/manifest.json` with the URL, the date, `kind` (`digital` or
 `scan`), the SHA-256 of the full download and a note on what the extract is.
 
-## 3. Write the work record
+## 3. Write the author and work records
 
-`library/works/<work>.json`, copying the fields of an existing work. `era` is
-one of Early church, Middle Ages, Reformation, Puritans and the 1700s, and The
-1800s. `divisions` is `"verse"` for a commentary arranged by the verses it
-comments on, or the names of the work's own divisions, such as
-`["Homily", "Section"]`, for homilies, sermons or treatises
-(docs/references.md). `status` starts as `ai_draft`.
+A new commentator gets `library/authors/<author>.json`: name, dates, the year
+they died (it places them on the reader's line of centuries), `era` (one of
+Early church, Middle Ages, Reformation, Puritans and the 1700s, and The 1800s),
+tradition, and a short biography of plain facts. `bio_status` starts as
+`ai_draft`.
+
+The work is `library/works/<work>.json`, copying the fields of an existing
+work; `author` names the author file. `divisions` is `"verse"` for a
+commentary arranged by the verses it comments on, or the names of the
+work's own divisions, such as `["Homily", "Section"]`, for homilies,
+sermons or treatises (docs/references.md). `status` starts as `ai_draft`.
 
 ## 4. Copy the excerpts
 
@@ -44,13 +49,13 @@ or range:
 
 - Copy the source's words exactly, paragraphs separated by a blank line.
   Drop footnote markers, footnotes, page numbers and running heads, nothing
+  Once published an id never changes: a new excerpt takes the next free
+  `<n>`, even if it sits before an older one.
   else. Mark a cut inside a paragraph with " ... ".
 - Take the commentator's most substantive one to three paragraphs on the
   verse (about 80–350 words), cut only at sentence ends.
 - `heading` is the source's own lemma or section heading, or empty.
 - `id` is `<work>.<start>[-<end verse>].<n>`; entries are in verse order.
-  Once published an id never changes: a new excerpt takes the next free
-  `<n>`, even if it sits before an older one.
 
 ## 5. Correct scan misreadings
 
