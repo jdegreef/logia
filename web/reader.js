@@ -1,11 +1,12 @@
 // The chapter reader: the Bible text on the left and, beside it, the panel
 // of what the church has said about the chosen verse (see chapter_page in
 // scripts/build_site.py). The page carries its chapter as JSON in
-// #chapter-data: the Open Word Bible text, Greek words, translation notes,
-// cross-references, the commentaries on this chapter and the interface text
-// in the page's language (ui). Settings come from the gear menu through
-// window.LogiaPrefs (web/site.js): the translation level and how much of
-// each excerpt to show; the eras shown are kept here, as logia-eras.
+// #chapter-data: the Open Word Bible text, its Greek or Hebrew words,
+// translation notes, cross-references, the commentaries on this chapter and
+// the interface text in the page's language (ui). Settings come from the gear
+// menu through window.LogiaPrefs (web/site.js): the translation level, the
+// Open Word Bible's wording settings and how much of each excerpt to show;
+// the eras shown are kept here, as logia-eras.
 (function () {
   "use strict";
   var holder = document.getElementById("chapter-data");
@@ -46,6 +47,30 @@
   };
   hiddenEras().forEach(function (e) { state.eras.delete(e); });
   function level() { return Prefs ? Prefs.get("level") : "B"; }
+
+  // The Open Word Bible writes its reader settings into the text as spans,
+  // {{gender:all people|men}}, and its poetry lines as "\q" (owb/markup.py).
+  // DATA.wording lists each setting's values in the order of its options;
+  // the menu's choice picks the option, and a missing one keeps the default
+  // (the first, or "He" for pronouns for God).
+  var SPAN = /\{\{([a-z_]+):([^{}]*)\}\}/g;
+  var LINES = / ?\\q ?/g, LINE = / ?\\q ?/;
+  var DEFAULT_OPTION = { deity_pronoun: 1 };
+  function wording(text) {
+    return String(text || "").replace(SPAN, function (_, name, opts) {
+      var options = opts.split("|"), values = DATA.wording[name];
+      var i = values && Prefs ? values.indexOf(Prefs.get(name)) : -1;
+      if (i < 0) i = DEFAULT_OPTION[name] || 0;
+      return i < options.length ? options[i] : options[0];
+    });
+  }
+  // On one line (the panel, notes): a poetic line break reads as a space.
+  function flat(text) { return wording(text).replace(LINES, " "); }
+  // In the passage: each poetic line on its own line.
+  function lined(text) { return esc(wording(text)).replace(LINES, '<br class="cx-q">'); }
+  var HEBREW = DATA.source === "hbo";
+  var SOURCE_LANG = HEBREW ? "hbo" : "grc";
+  var DIR = HEBREW ? ' dir="rtl"' : "";
   function fullExcerpts() { return Prefs && Prefs.get("excerpt") === "full"; }
 
   var works = DATA.commentaries;
@@ -56,23 +81,26 @@
 
   function verseText(v) {
     var r = recFor(v), lv = level();
-    if (lv === "B") return r.pieces.filter(function (p) { return p[0] === v; }).map(function (p) { return p[1]; }).join("").trim();
-    return r[lv][v] || "";
+    if (lv === "B") return flat(r.pieces.filter(function (p) { return p[0] === v; }).map(function (p) { return p[1]; }).join("")).trim();
+    return flat(r[lv][v] || "");
   }
 
   function renderText() {
     var out = [], lv = level();
     DATA.records.forEach(function (r) {
-      if (r.heading && r.verses[0] !== FIRST) out.push('<h2 class="cx-head">' + esc(r.heading) + "</h2>");
+      if (r.heading && r.verses[0] !== FIRST) out.push('<h2 class="cx-head">' + esc(flat(r.heading)) + "</h2>");
+      // A sentence set as poetry at any level starts each verse on its own line.
+      var poem = ["L", "R"].some(function (l) { return Object.keys(r[l]).some(function (k) { return LINE.test(r[l][k]); }); }) ||
+        r.pieces.some(function (p) { return LINE.test(p[1]); });
       r.verses.forEach(function (v) {
         var inner;
         if (lv === "B") {
           inner = r.pieces.filter(function (p) { return p[0] === v; }).map(function (p) {
-            return p[2] ? '<span class="cx-w" data-tok="' + p[2].join(" ") + '">' + esc(p[1]) + "</span>" : esc(p[1]);
+            return p[2] ? '<span class="cx-w" data-tok="' + p[2].join(" ") + '">' + lined(p[1]) + "</span>" : lined(p[1]);
           }).join("");
-        } else inner = esc(r[lv][v] || "");
+        } else inner = lined(r[lv][v] || "");
         var has = works.some(function (w) { return entriesFor(w, v).length; });
-        out.push('<span class="cx-verse' + (v === state.verse ? " cx-on" : "") + (has ? " cx-has" : "") + '" data-v="' + v +
+        out.push('<span class="cx-verse' + (v === state.verse ? " cx-on" : "") + (has ? " cx-has" : "") + (poem ? " cx-poem" : "") + '" data-v="' + v +
           '" tabindex="0" role="button" aria-label="' + esc(REF(v)) + '"><span class="cx-vn">' + v + "</span>" + inner + "</span> ");
       });
     });
@@ -134,16 +162,44 @@
       : U.none_yet;
     var r = recFor(v);
     $("#n-comm").textContent = voices.length;
-    $("#n-words").textContent = (DATA.greek[v] || []).length;
-    $("#n-notes").textContent = r.decisions.length;
+    $("#n-words").textContent = DATA.wordCounts[v] || 0;
+    $("#n-notes").textContent = r.notes;
     $("#n-xref").textContent = (DATA.crossrefs[v] || []).length;
     document.querySelectorAll(".cx-tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === state.tab); });
     renderRail();
     var keep = $("#pb").scrollTop;
-    $("#pb").innerHTML = ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
+    $("#pb").innerHTML = needsPanel() && !PANEL ? panelWaiting()
+      : ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
     $("#pb").scrollTop = state.keepScroll ? keep : 0;
     state.keepScroll = false;
   }
+  // The words and notes tabs read the chapter's panel file (DATA.panel:
+  // /panel/<BOOK>.<chapter>.json, see panel_file in scripts/build_site.py),
+  // fetched the first time one of them is opened.
+  var PANEL = null, panelLoad = null, panelFailed = false;
+  function needsPanel() { return state.tab === "words" || state.tab === "notes"; }
+  function loadPanel() {
+    if (!panelLoad) {
+      panelFailed = false;
+      panelLoad = fetch(DATA.panel).then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        return res.json();
+      }).then(function (p) { PANEL = p; refresh(); }, function () {
+        panelLoad = null; panelFailed = true; refresh();
+      });
+    }
+    return panelLoad;
+  }
+  function panelWaiting() {
+    if (panelFailed) {
+      return '<p class="cx-empty">' + esc(U.panel_failed) + ' <button type="button" class="lg-linkish" data-retry>' +
+        esc(U.try_again) + "</button></p>";
+    }
+    loadPanel();
+    return '<p class="cx-empty" role="status">' + esc(U.loading) + "</p>";
+  }
+  var notesOf = function (r) { return PANEL.records[r.id]; };
+
   // Re-render the panel where the reader is, after likes or saves arrive.
   function refresh() { state.keepScroll = true; renderPanel(); }
 
@@ -397,19 +453,22 @@
   }
 
   function wordsTab() {
-    var v = state.verse, toks = DATA.greek[v] || [];
-    var h = '<div class="cx-greek" lang="grc">' + toks.map(function (t) {
+    var v = state.verse, toks = PANEL.words[v] || [];
+    var h = '<div class="cx-greek" lang="' + SOURCE_LANG + '"' + DIR + ">" + toks.map(function (t) {
       return '<span class="cx-g' + (t.id === state.token ? " cx-on" : "") + '" data-gid="' + t.id + '" role="button" tabindex="0">' +
         esc(t.text) + "</span>" + esc((t.after || " ").replace(/(\S)$/, "$1 "));
     }).join("") + "</div>";
     var t = toks.filter(function (x) { return x.id === state.token; })[0];
     if (!t) return h + '<p class="cx-empty">' + esc(U.tap_word) + "</p>";
-    h += '<div class="cx-word"><div class="cx-big cx-gk" lang="grc">' + esc(t.text) + "</div><dl>" +
-      "<dt>" + esc(U.lemma) + '</dt><dd class="cx-gk" lang="grc">' + esc(t.lemma) + "</dd>" +
-      "<dt>" + esc(U.grammar) + "</dt><dd>" + esc(t.parse) + "</dd>" +
+    var lang = HEBREW && t.lang === "A" ? "arc" : SOURCE_LANG;
+    h += '<div class="cx-word"><div class="cx-big cx-gk" lang="' + lang + '"' + DIR + ">" + esc(t.text) + "</div><dl>" +
+      (t.transliteration ? "<dt>" + esc(U.transliteration) + "</dt><dd><i>" + esc(t.transliteration) + "</i></dd>" : "") +
+      "<dt>" + esc(U.lemma) + '</dt><dd class="cx-gk" lang="' + lang + '"' + DIR + ">" + esc(t.lemma) + "</dd>" +
+      (t.parse ? "<dt>" + esc(U.grammar) + "</dt><dd>" + esc(t.parse) + "</dd>" : "") +
       "<dt>" + esc(U.gloss) + "</dt><dd>" + esc(t.gloss) + "</dd>" +
-      "<dt>" + esc(U.strong) + "</dt><dd>G" + esc(t.strong) + "</dd></dl></div>";
-    var decs = recFor(v).decisions.filter(function (d) { return (d.tokens || []).indexOf(t.id) >= 0; });
+      (t.strong ? "<dt>" + esc(U.strong) + "</dt><dd>" + (HEBREW ? "H" + esc(t.strong.replace(/^0+/, "")) : "G" + esc(t.strong)) + "</dd>" : "") +
+      "</dl></div>";
+    var decs = notesOf(recFor(v)).decisions.filter(function (d) { return (d.tokens || []).indexOf(t.id) >= 0; });
     if (decs.length) h += '<div class="cx-era cx-gap">' + esc(U.how_translated) + "</div>" + decs.map(noteHtml).join("");
     return h;
   }
@@ -417,29 +476,28 @@
   function noteHtml(d) {
     var kind = d.layer === "meaning" ? U.meaning
       : fmt(U.english_levels, { levels: (d.levels || []).map(function (l) { return U.levels[l]; }).join(", ") });
-    return '<div class="cx-note"><h4>' + esc(d.choice) + ' <span class="cx-tag">' + esc(U.categories[d.category] || d.category) +
+    return '<div class="cx-note"><h4>' + esc(flat(d.choice)) + ' <span class="cx-tag">' + esc(U.categories[d.category] || d.category) +
       '</span><span class="cx-tag">' + esc(kind) + "</span>" + (d.uncertain ? '<span class="cx-tag">' + esc(U.uncertain) + "</span>" : "") + "</h4>" +
-      (d.alternatives && d.alternatives.length ? '<div class="cx-alt">' + esc(U.not_) + " " + d.alternatives.map(esc).join(" · ") + "</div>" : "") +
-      "<p>" + esc(d.reason) + "</p></div>";
+      (d.alternatives && d.alternatives.length ? '<div class="cx-alt">' + esc(U.not_) + " " +
+        d.alternatives.map(function (a) { return esc(flat(a)); }).join(" · ") + "</div>" : "") +
+      "<p>" + esc(flat(d.reason)) + "</p></div>";
   }
   function notesTab() {
-    var r = recFor(state.verse);
+    var r = recFor(state.verse), n = notesOf(r);
     var span = r.verses.length > 1
       ? '<div class="cx-range">' + esc(fmt(U.sentence_spans, { a: r.verses[0], b: r.verses[r.verses.length - 1] })) + "</div>" : "";
-    return span + '<div class="cx-src" lang="grc">' + esc(r.greek) + '</div><div class="cx-gloss">' + esc(U.word_for_word) + " " +
-      esc(r.gloss) + "</div>" + r.decisions.map(noteHtml).join("");
+    return span + '<div class="cx-src" lang="' + SOURCE_LANG + '"' + DIR + ">" + esc(n.source) + '</div><div class="cx-gloss">' + esc(U.word_for_word) + " " +
+      esc(n.gloss) + "</div>" + n.decisions.map(noteHtml).join("");
   }
   function xrefTab() {
     var xs = DATA.crossrefs[state.verse] || [];
     if (!xs.length) return '<p class="cx-empty">' + esc(U.no_xrefs) + "</p>";
     return '<div class="cx-xr">' + xs.map(function (x) {
-      var p = x.split("."), key = p[0] + "." + p[1];
+      // Every chapter of the Bible is in Logia, so a reference opens here.
+      var p = x.split(".");
       var verse = (p[2] || "").split("-")[0];
-      var href = DATA.available.indexOf(key) >= 0
-        ? "/" + p[0].toLowerCase() + "/" + p[1] + "/" + (verse ? "#v" + verse : "")
-        : DATA.owb_site + "/" + p[0].toLowerCase() + "/" + p[1] + "/";
-      var ext = href.indexOf("http") === 0 ? ' target="_blank" rel="noopener"' : "";
-      return '<a href="' + href + '"' + ext + ">" + esc((DATA.books[p[0]] || p[0]) + " " + p[1] + (p[2] ? ":" + p[2] : "")) + "</a>";
+      var href = "/" + p[0].toLowerCase() + "/" + p[1] + "/" + (verse ? "#v" + verse : "");
+      return '<a href="' + href + '">' + esc((DATA.books[p[0]] || p[0]) + " " + p[1] + (p[2] ? ":" + p[2] : "")) + "</a>";
     }).join("") + '</div><p class="cx-hint">' + esc(U.xref_credit) + "</p>";
   }
 
@@ -524,6 +582,7 @@
       } catch (err) { /* storage blocked: the choice lasts for this page */ }
       renderPanel(); renderStrip(); return;
     }
+    if (e.target.closest("[data-retry]")) { panelFailed = false; refresh(); return; }
     var ex = e.target.closest("[data-expand]");
     if (ex) {
       var card = ex.closest(".cx-card");

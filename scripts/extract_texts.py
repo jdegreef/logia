@@ -40,8 +40,9 @@ import find_refs
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # The verse a homily or tractate opens on, as its heading prints it.
-OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)"
-                   r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)[–-](?P<b>\d+))$")
+# "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5".
+OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
+                   r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?)$")
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13."
 VER = re.compile(r"^(?:\[\d+\.\]\s*)?Ver\.\s+(\d+)\.")
 
@@ -71,7 +72,7 @@ def derive():
         comment_files = glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json"))
         books = {os.path.basename(c)[:-5] for c in comment_files}       # the book the work comments on
         book = books.pop() if len(books) == 1 else None
-        paras, number, title, chapter, verse, span = [], None, None, None, None, None
+        paras, number, title, chapter, start_chapter, verse, span = [], None, None, None, None, None, None
         for i, (a, b) in enumerate(zip(starts, starts[1:])):
             words = " ".join(text[a:b].split())
             if not words:
@@ -83,14 +84,21 @@ def derive():
                 number, title = find_refs.scripture.roman(m[2]), words
             o = OPENS.match(words)
             if o and book and chapter is None:
-                chapter = find_refs.scripture.roman(o["ch"] or o["CH"])
-                span = [int(o["v"] or o["a"]), int(o["b"] or o["v"])]
+                chapter = start_chapter = find_refs.scripture.roman(o["ch"] or o["CH"])
+                first = int(o["v"] or o["a"])
+                span = [first, int(o["v2"] or o["b"] or first)]
                 # A heading with a range ("Chapter I. 1–5") says what the whole
                 # text covers, not which verse each paragraph is on.
                 verse = span[0] if span[0] == span[1] else None
             elif (m := VER.match(words)) and chapter is not None:
                 verse = int(m[1])
-                span[1] = max(span[1], verse)
+                if verse < span[1] and verse < span[0]:
+                    # A mark that goes back past where the text began: it has
+                    # gone on into the next chapter (Homily XXI, John i. 49 to ii. 4).
+                    chapter += 1
+                    span[1] = verse
+                else:
+                    span[1] = max(span[1], verse)
             cites = find_refs.ccel_citations(page, (a, b), words)
             paras.append({
                 "id": page["para_ids"][i], "locus": find_refs.locus(page, a), "text": words,
@@ -111,7 +119,7 @@ def derive():
         version = next((load(c)["version"] for c in comment_files), None)
         out[dest] = {"work": work["id"], "version": version, "locus": str(number), "title": title, "source": source,
                      "url": f["url"],
-                     "verses": {"start": f"{book}.{chapter}.{span[0]}", "end": f"{book}.{chapter}.{span[1]}"},
+                     "verses": {"start": f"{book}.{start_chapter}.{span[0]}", "end": f"{book}.{chapter}.{span[1]}"},
                      "paragraphs": paras}
     return out, problems
 

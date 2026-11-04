@@ -21,6 +21,86 @@
   {
    "from": " .",
    "to": "."
+  },
+  {
+   "from": "John says, / am not Elias",
+   "to": "John says, I am not Elias"
+  },
+  {
+   "from": "Master,}",
+   "to": "Master,)"
+  },
+  {
+   "from": "NaIhanael",
+   "to": "Nathanael"
+  },
+  {
+   "from": "iMmb",
+   "to": "Lamb"
+  },
+  {
+   "from": "Lord of.the",
+   "to": "Lord of the"
+  },
+  {
+   "from": "Q Arms",
+   "to": "O Arius"
+  },
+  {
+   "from": "Eock",
+   "to": "Rock"
+  },
+  {
+   "from": "CHHYS.",
+   "to": "CHRYS."
+  },
+  {
+   "from": "THEOPUYL.",
+   "to": "THEOPHYL."
+  },
+  {
+   "from": "THKOPHYL.",
+   "to": "THEOPHYL."
+  },
+  {
+   "from": "He carne to John",
+   "to": "He came to John"
+  },
+  {
+   "from": "where He divelt",
+   "to": "where He dwelt"
+  },
+  {
+   "from": "descending, fyc.",
+   "to": "descending, &c."
+  },
+  {
+   "from": "jig tree",
+   "to": "fig tree"
+  },
+  {
+   "from": "they knowit not",
+   "to": "they know it not"
+  },
+  {
+   "from": "wiped offj but",
+   "to": "wiped off, but"
+  },
+  {
+   "from": "tliat",
+   "to": "that"
+  },
+  {
+   "from": "near tne river",
+   "to": "near the river"
+  },
+  {
+   "from": "undeiiled",
+   "to": "undefiled"
+  },
+  {
+   "from": "For He wan before me",
+   "to": "For He was before me"
   }
  ]
 }

@@ -339,3 +339,10 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 }
 .lg-topic-rule { max-width: 72ch; font-size: 15px; }
 .lg-topics a b { font-family: var(--display); font-size: 19px; font-weight: 600; }
+
+
+/* Poetry (the Open Word Bible's "\q" lines): a verse of a poem starts its own
+   line, and its later lines are indented under the first. */
+.cx-verse.cx-poem { display: block; padding-left: 1.6em; text-indent: -1.6em; }
+.cx-greek[dir="rtl"], .cx-src[dir="rtl"] { font-family: var(--hebrew); font-size: 23px; line-height: 2; }
+.cx-word .cx-big[dir="rtl"] { font-family: var(--hebrew); font-size: 32px; }

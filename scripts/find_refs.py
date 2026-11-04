@@ -301,7 +301,10 @@ thing things other even very itself himself whom whose where while each some mad
 through about against word""".split())
 MIN_WORDS = 10                 # fewer shared-able words than this: too short to match
 SECTION = (0.35, 0.10)         # a section: its score, and its lead over any other section
-DIVISION = (0.20, 0.08)        # a homily or tractate: the same, over any other one
+DIVISION = (0.20, 0.07)        # a homily or tractate: the same, over any other one
+# (0.07, not 0.08: with Tractates IV-VII in the library, the Catena's "Grace for
+# grace" (John 1:16) still points to Tractate III, as its margin note says, but
+# leads Tractate VII by 0.0795.)
 
 
 def content_words(text):
