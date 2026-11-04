@@ -67,7 +67,8 @@ def derive():
             for e in load(c)["entries"]:
                 if e["sources"][0] == source and (where := find_refs.span(page, e["text"])):
                     held.append((*where, e["id"]))
-        books = {os.path.basename(c)[:-5] for c in glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json"))}
+        comment_files = glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json"))
+        books = {os.path.basename(c)[:-5] for c in comment_files}       # the book the work comments on
         book = books.pop() if len(books) == 1 else None
         paras, number, title, chapter, verse, span = [], None, None, None, None, None
         for i, (a, b) in enumerate(zip(starts, starts[1:])):
