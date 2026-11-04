@@ -157,7 +157,7 @@ class Site(unittest.TestCase):
                 if not name.endswith(".html"):
                     continue
                 with open(os.path.join(root, name), encoding="utf-8") as f:
-                    for href in re.findall(r'href="(/[^"#]*)', f.read()):
+                    for href in re.findall(r'href="(/[^"#?]*)', f.read()):
                         path = os.path.join(build_site.SITE, href.lstrip("/"))
                         if not (os.path.isfile(path) or os.path.isfile(os.path.join(path, "index.html"))):
                             missing.add(href)
@@ -178,6 +178,59 @@ class Site(unittest.TestCase):
         data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
         self.assertEqual(data["commentaries"], [])
         self.assertEqual(data["verses"][-1], 25)
+
+    def test_the_whole_bible_is_here(self):
+        lib = build_site.Library()
+        self.assertEqual(len(lib.chapters), sum(b["chapters"] for b in lib.books.values()))
+        self.assertEqual({b for b, _c in lib.chapters}, set(lib.books))
+
+    def test_an_old_testament_chapter_reads_from_the_hebrew(self):
+        text = self.read(os.path.join("psa", "23", "index.html"))
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertEqual(data["source"], "hbo")
+        panel = json.loads(self.read(os.path.join("panel", "PSA.23.json")))
+        self.assertIn("transliteration", panel["words"]["1"][0])
+        self.assertIn("Hebrew words", text)
+        self.assertEqual(data["ui"]["tap_word"], build_site.CATALOG["reader"]["tap_word_hbo"])
+
+    def test_the_text_keeps_the_open_word_bible_s_variations(self):
+        data = build_site.Library().bible("PSA", 23)
+        balanced = " ".join(p[1] for r in data["records"] for p in r["pieces"])
+        self.assertIn("{{divine_name:", balanced)
+        self.assertIn("{{deity_pronoun:", balanced)
+        self.assertIn("\\q", balanced)
+        text = self.read(os.path.join("psa", "23", "index.html"))
+        page = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertEqual(set(page["wording"]), set(build_site.WORDING))
+        for name in build_site.WORDING:
+            self.assertIn(f'data-pref="{name}"', self.read("index.html"), name)
+
+    def test_the_plain_text_shows_the_default_wording(self):
+        poem = "{{divine_name:the LORD|Yahweh}} is my shepherd; \\q I lack nothing"
+        self.assertEqual(build_site.default_wording(poem), "the LORD is my shepherd; I lack nothing")
+        self.assertEqual(build_site.default_wording("{{deity_pronoun:he|He}} leads me"), "He leads me")
+        text = self.read(os.path.join("psa", "23", "index.html"))
+        plain = text.split('id="text">')[1].split("</div>")[0]
+        self.assertNotIn("{{", plain)
+        self.assertNotIn("\\q", plain)
+        self.assertIn("The LORD is my shepherd", plain)
+
+    def test_words_and_notes_are_a_file_of_their_own(self):
+        text = self.read(os.path.join("jhn", "1", "index.html"))
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertNotIn("words", data)
+        self.assertTrue(all("decisions" not in r and r["notes"] >= 0 for r in data["records"]))
+        self.assertRegex(data["panel"], r"^/panel/JHN\.1\.json\?v=[0-9a-f]{10}$")
+        panel = json.loads(self.read(data["panel"].split("?")[0].lstrip("/")))
+        self.assertEqual(set(panel["records"]), {r["id"] for r in data["records"]})
+        self.assertEqual({v: len(ws) for v, ws in panel["words"].items()}, data["wordCounts"])
+        self.assertEqual(sum(r["notes"] for r in data["records"]),
+                         sum(len(r["decisions"]) for r in panel["records"].values()))
+
+    def test_assets_are_addressed_by_their_digest(self):
+        text = self.read("index.html")
+        for name in ("style.css", "logia.css", "site.js", "account.js"):
+            self.assertRegex(text, rf'"/{re.escape(name)}\?v=[0-9a-f]{{10}}"', name)
 
     def test_accounts_are_open_word_bible_s(self):
         text = self.read("index.html")

@@ -34,6 +34,11 @@
     "leading": "Line spacing",
     "motion": "Motion",
     "level": "Bible text",
+    "gender": "Gender language",
+    "christos": "Title of Jesus",
+    "divine_name": "Name of God",
+    "deity_pronoun": "Pronouns for God",
+    "units": "Measures",
     "excerpt": "Commentary excerpts"
   },
   "theme": {
@@ -69,6 +74,26 @@
     "B": "Balanced",
     "R": "Readable"
   },
+  "gender": {
+    "inclusive": "Inclusive",
+    "traditional": "Traditional"
+  },
+  "christos": {
+    "christ": "Christ",
+    "messiah": "Messiah"
+  },
+  "divine_name": {
+    "lord": "LORD",
+    "yahweh": "Yahweh"
+  },
+  "deity_pronoun": {
+    "lower": "he",
+    "upper": "He"
+  },
+  "units": {
+    "modern": "Modern",
+    "original": "Original"
+  },
   "excerpt": {
     "preview": "Preview",
     "full": "In full"
@@ -90,7 +115,7 @@
     "project": "The project",
     "report": "Report a problem",
     "books_with": "Books with commentary",
-    "licences": "Bible text: Open Word Bible (CC0). Greek: SBLGNT with MACULA Greek word data (CC BY 4.0). Cross-references: OpenBible.info (CC BY). Commentary texts: public domain.",
+    "licences": "Bible text: Open Word Bible (CC0). Greek: SBLGNT with MACULA Greek word data (CC BY 4.0). Hebrew: Westminster Leningrad Codex with MACULA Hebrew word data and OSHB morphology (CC BY 4.0). Cross-references: OpenBible.info (CC BY). Commentary texts: public domain.",
     "review": "Logia is new: its selection of excerpts, its verse tags and its biographies are drafts awaiting human review."
   },
   "home": {
@@ -106,7 +131,7 @@
     "how_copied": "Copied, never rewritten",
     "how_copied_text": "Each excerpt is checked against the source it came from and links to the full text. Where a page scan misread a letter, the fix is listed in the open data.",
     "how_owb": "On a modern translation",
-    "how_owb_text": "The Bible text is the Open Word Bible, translated from Hebrew and Greek with the reasoning behind every sentence. Tap a word for its Greek.",
+    "how_owb_text": "The Bible text is the Open Word Bible, translated from Hebrew and Greek with the reasoning behind every sentence, in your choice of wording. Tap a word for its Greek or Hebrew.",
     "how_langs": "English first, then many languages",
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
@@ -135,6 +160,7 @@
   "chapter": {
     "eyebrow": "Chapter {chapter}",
     "pick": "Pick a verse to see what the church has said about it. In Balanced, tap a word for its Greek.",
+    "pick_hbo": "Pick a verse to see what the church has said about it. In Balanced, tap a word for its Hebrew.",
     "level_label": "Translation level",
     "owb_hint": "Bible text: {link} (CC0), English. An AI draft awaiting human review.",
     "previous": "Previous chapter",
@@ -149,6 +175,7 @@
     "rail_label": "Commentators on a line of centuries",
     "tab_comm": "Commentary",
     "tab_words": "Greek words",
+    "tab_words_hbo": "Hebrew words",
     "tab_notes": "Translation notes",
     "tab_xref": "Cross-references"
   },
@@ -163,6 +190,8 @@
     "read_all": "Read all {n} words",
     "full_text": "Full text",
     "tap_word": "Tap a Greek word above, or a word in the Balanced text, to see what it means and how it was translated.",
+    "tap_word_hbo": "Tap a Hebrew word above, or a word in the Balanced text, to see what it means and how it was translated.",
+    "transliteration": "Sounds like",
     "lemma": "Dictionary form",
     "grammar": "Grammar",
     "gloss": "Gloss",
@@ -211,7 +240,10 @@
     "not_pinned": "(the passage is not pinned down)",
     "quoted_by": "Quoted by {name} in the {title} on {ref}",
     "full_text_short": "full text",
-    "whole_texts": "Read in full on this verse"
+    "whole_texts": "Read in full on this verse",
+    "loading": "Loading…",
+    "panel_failed": "This could not be loaded.",
+    "try_again": "Try again"
   },
   "commentators": {
     "title": "Commentators",
