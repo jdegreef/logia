@@ -296,7 +296,8 @@ def scan_citations(excerpt, book, chapter):
 # For each catena, the labels it prints before a quotation that the library
 # can follow to the quoted work: the library's source pages for that work.
 CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"}}
-LABEL = re.compile(r"\b(CHRYS|Chrys|AUG|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
+# The Part II scans of the Catena (John 11-21) print the names in this form: "Aug.", "Chrys."
+LABEL = re.compile(r"\b(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
 STOPWORDS = set("""that this with which from have they their them there were been what when will would shall
 should these those than then thus also into upon unto said saith says hath doth more being because such only
 thing things other even very itself himself whom whose where while each some made make like after before same
