@@ -397,7 +397,7 @@ def site_footer(lib):
 </div></footer>"""
 
 
-def page(lib, title, body, path, current="", description="", scripts=(), noindex=False):
+def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True):
     full = f"{title} · Logia" if title != "Logia" else "Logia"
     description = description or t("site.description")
     own = e(SITE_URL + path)
@@ -410,10 +410,9 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(full)}</title>
 <meta name="description" content="{e(description)}">
-<link rel="canonical" href="{own}">
+{f'<link rel="canonical" href="{own}">' if canonical else ""}
 <meta property="og:site_name" content="Logia">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{own}">
+<meta property="og:type" content="website">{f'{chr(10)}<meta property="og:url" content="{own}">' if canonical else ""}
 <meta property="og:title" content="{e(full)}">
 <meta property="og:description" content="{e(description)}">{'<meta name="robots" content="noindex">' if noindex else ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -771,6 +770,21 @@ def saved_page(lib):
     return page(lib, t("account.saved_title"), body, "/saved/", noindex=True)
 
 
+def not_found_page(lib):
+    """Served by Render for any address with no page (/404.html). It can be
+    served at any depth, so every link on it is absolute; signing in from it
+    returns to the home page."""
+    body = f"""
+<section class="auth lg-not-found"><div class="auth-card auth-message">
+{MARK}
+<h1>{e(t("not_found.heading"))}</h1>
+<p class="auth-dek">{e(t("not_found.dek"))}</p>
+<p class="lg-not-found-links"><a class="button" href="/">{e(t("not_found.home"))}</a>
+<a class="button ghost" href="/read/">{e(t("not_found.read"))}</a></p>
+</div></section>"""
+    return page(lib, t("not_found.title"), body, "/", description=t("not_found.dek"), noindex=True, canonical=False)
+
+
 def chapter_file(lib, book, chapter):
     """A chapter's commentary as JSON, for the Saved page (/data/<BOOK>.<chapter>.json)."""
     bible = lib.bible(book, chapter)
@@ -800,7 +814,7 @@ def about_page(lib):
 # --- Build --------------------------------------------------------------------
 
 def write(rel, text):
-    path = os.path.join(SITE, rel.strip("/"), "index.html") if not rel.endswith((".svg", ".xml", ".txt")) \
+    path = os.path.join(SITE, rel.strip("/"), "index.html") if not rel.endswith((".svg", ".xml", ".txt", ".html")) \
         else os.path.join(SITE, rel.strip("/"))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -838,6 +852,7 @@ def build():
     pages.append("/about/")
     write("/signed-in/", signed_in_page(lib))
     write("/saved/", saved_page(lib))
+    write("/404.html", not_found_page(lib))
     os.makedirs(os.path.join(SITE, "data"))
     for book, chapter in sorted(lib.coverage()):
         with open(os.path.join(SITE, "data", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:

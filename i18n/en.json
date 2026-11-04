@@ -251,6 +251,13 @@
       "Logia's data and writing are CC0, its code is MIT, and everything is on GitHub."
     ]
   },
+  "not_found": {
+    "title": "Page not found",
+    "heading": "Page not found",
+    "dek": "There is no page at this address. It may have moved, or the link may be mistyped.",
+    "home": "Go to the home page",
+    "read": "Browse the books"
+  },
   "account": {
     "sign_in": "Sign in",
     "your_account": "Your account",
