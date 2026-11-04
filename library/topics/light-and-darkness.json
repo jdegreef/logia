@@ -1,0 +1,16 @@
+{
+ "id": "light-and-darkness",
+ "title": "Light and darkness",
+ "note": "Passages on the light that shines in the darkness.",
+ "order": 3,
+ "verses": [
+  "JHN.1.4",
+  "JHN.1.5",
+  "JHN.1.9"
+ ],
+ "terms": [
+  "darkness"
+ ],
+ "status": "ai_draft",
+ "reviewer": null
+}

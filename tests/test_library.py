@@ -300,6 +300,95 @@ class Site(unittest.TestCase):
         self.assertEqual(rows, {("chrysostom", "Homily 10, section 2"), ("augustine", "Tractate 2")})
         self.assertEqual({r["work_id"] for r in data["wholeTexts"]["2"]}, {"augustine"})   # no homily marks 1:2
 
+    def test_each_work_has_its_versions(self):
+        lib = build_site.Library()
+        for wid in lib.works:
+            v = lib.edition(wid)
+            self.assertEqual((v["work"], v["made_by"]), (wid, "print"))
+        self.assertEqual(lib.edition("calvin")["kind"], "translation")      # Calvin wrote in Latin
+        self.assertEqual(lib.edition("henry")["kind"], "original")
+        with open(os.path.join(build_site.SITE, "works", "calvin", "index.html"), encoding="utf-8") as f:
+            page = f.read()
+        self.assertIn('id="calvin.en"', page)
+        self.assertIn("Translation into English", page)
+
+    def test_the_reader_has_what_cite_and_source_need(self):
+        with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:
+            page = f.read()
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', page, re.S)[1].replace("<\\/", "</"))
+        self.assertIn('id="strip"', page)
+        self.assertTrue(data["issues_url"].endswith("/issues/new"))
+        by_work = {w["work_id"]: w for w in data["commentaries"]}
+        self.assertEqual({w["family"] for w in by_work.values()}, {"undivided", "catholic", "anglican", "protestant"})
+        self.assertEqual(by_work["calvin"]["version"]["id"], "calvin.en")
+        ryle = {e["id"]: e for e in by_work["ryle"]["entries"]}
+        # The scan corrections an excerpt shows are listed with it, as applied.
+        self.assertIn(["pecuUar", "peculiar"], ryle["ryle.JHN.1.1.2"]["fixed"])
+        self.assertEqual(by_work["calvin"]["entries"][0]["fixed"], [])
+
+    def test_search_index_holds_every_excerpt_and_whole_text(self):
+        with open(os.path.join(build_site.SITE, "data", "search.json"), encoding="utf-8") as f:
+            index = json.load(f)
+        excerpts = [r for r in index["rows"] if r["k"] == "x"]
+        self.assertEqual(len(excerpts), len(build_site.Library().comments))
+        self.assertTrue(all(re.match(r"^/[a-z0-9]+/\d+/#[a-z]+\.", r["u"]) for r in excerpts))
+        paras = [r for r in index["rows"] if r["k"] == "p"]
+        self.assertTrue(paras and all(r["u"].startswith("/works/") for r in paras))
+        self.assertTrue(any(r["x"] for r in paras))        # paragraphs know the excerpts they hold
+        self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "search", "index.html")))
+
+    def test_library_and_timeline_pages(self):
+        with open(os.path.join(build_site.SITE, "library", "index.html"), encoding="utf-8") as f:
+            page = f.read()
+        self.assertEqual(page.count('class="lg-cat-work"'), 8)
+        for genre in ("Commentaries", "Homilies and lectures", "Catenas"):
+            self.assertIn(f"<h2>{genre}</h2>", page)
+        with open(os.path.join(build_site.SITE, "commentators", "index.html"), encoding="utf-8") as f:
+            self.assertEqual(f.read().count('class="lg-tl-row"'), 8)
+
+    def test_topics_gather_by_their_rule(self):
+        lib = build_site.Library()
+        tp = next(x for x in lib.topics if x["id"] == "incarnation")
+        members = {c["id"]: why for c, why in lib.topic_members(tp)}
+        on_14 = {c["id"] for c in lib.comments
+                 if build_site.ref_parts(c["start"])[:2] == ("JHN", 1) == build_site.ref_parts(c["end"])[:2]
+                 and build_site.ref_parts(c["start"])[2] <= 14 <= build_site.ref_parts(c["end"])[2]}
+        self.assertTrue(on_14 <= set(members))                 # every excerpt on John 1:14
+        self.assertEqual(members["chrysostom.JHN.1.1.3"], "made flesh")   # and one elsewhere that uses a term
+        self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "topics", "incarnation", "index.html")))
+
+    def test_the_api(self):
+        def get(rel):
+            with open(os.path.join(build_site.SITE, "api", "v1", rel), encoding="utf-8") as f:
+                return json.load(f)
+        index = get("index.json")
+        self.assertEqual(index["api_version"], 1)
+        jn1 = get("chapters/JHN.1.json")
+        v1 = jn1["verses"][0]
+        self.assertTrue(v1["text"].startswith("In the beginning was the Word"))
+        self.assertTrue(v1["excerpts"] and all(x in jn1["excerpts"] for x in v1["excerpts"]))
+        self.assertEqual(jn1["excerpts"]["calvin.JHN.1.1.1"]["author_name"], "John Calvin")
+        # Every chapter has a file, even without commentary, and citations reach it:
+        # Ryle on John 1:1 cites Gen. i. 1.
+        self.assertIn("ryle.JHN.1.1.1", get("chapters/GEN.1.json")["verses"][0]["cited_by"])
+        # Citations are English-numbered; the API files them at the Open Word Bible's
+        # number (Ryle's "Psalm lxxxix. 19" is PSA.89.20, the psalm's title being verse 1).
+        self.assertTrue(any(v["verse"] == 20 and v["cited_by"] for v in get("chapters/PSA.89.json")["verses"]))
+        self.assertEqual({w["id"] for w in get("works.json")}, set(build_site.Library().works))
+        self.assertEqual(get("works/calvin.json")["versions"][0]["id"], "calvin.en")
+
+    def test_the_linker_and_the_rules_page(self):
+        with open(os.path.join(build_site.SITE, "linker.js"), encoding="utf-8") as f:
+            js = f.read()
+        for placeholder in ("/*SITE*/", "/*NAMES*/", "/*CHAPTERS*/", "/*RENUMBER*/"):
+            self.assertNotIn(placeholder, js)
+        self.assertIn('"1 cor":"1CO"', js)
+        self.assertIn('"PSA.19":[[1,', js)
+        self.assertEqual(build_site.scripture.to_source("PSA.19.1"), "PSA.19.2")
+        self.assertEqual(build_site.scripture.to_source("JHN.3.16"), "JHN.3.16")
+        with open(os.path.join(build_site.SITE, "about", "rules", "index.html"), encoding="utf-8") as f:
+            self.assertEqual(f.read().count('#versions"><i>'), len(build_site.Library().versions))
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")

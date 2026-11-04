@@ -1,0 +1,36 @@
+name: Data release
+
+# Push a tag data-v<version> (docs/data.md, "Releases") to publish a release
+# of Logia's data: the checks run, scripts/export_data.py builds
+# logia-data-<version>.zip, and it is attached to a GitHub release for the tag.
+on:
+  push:
+    tags: ["data-v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the library
+        run: |
+          python3 scripts/find_refs.py --check
+          python3 scripts/extract_texts.py --check
+          python3 scripts/validate.py
+          python3 scripts/verify_sources.py
+      - name: Build the data release
+        run: python3 scripts/export_data.py "${GITHUB_REF_NAME#data-v}"
+      - name: Publish it
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#data-v}"
+          gh release create "$GITHUB_REF_NAME" "dist/logia-data-${version}.zip" \
+            --title "Logia data ${version}" \
+            --notes "Logia's library as data: authors, works, versions, excerpts, corrections, citations, quotations, whole texts and topics. Format and fields: docs/data.md. CC0; the commentary texts are in the public domain."

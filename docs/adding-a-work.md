@@ -21,7 +21,7 @@ a scan's full text that holds the passage, with some margin on each side. Add
 a row to `sources/manifest.json` with the URL, the date, `kind` (`digital` or
 `scan`), the SHA-256 of the full download and a note on what the extract is.
 
-## 3. Write the author and work records
+## 3. Write the author, work and version records
 
 A new commentator gets `library/authors/<author>.json`: name, dates, the year
 they died (it places them on the reader's line of centuries), `era` (one of
@@ -34,6 +34,19 @@ work; `author` names the author file. `divisions` is `"verse"` for a
 commentary arranged by the verses it comments on, or the names of the
 work's own divisions, such as `["Homily", "Section"]`, for homilies,
 sermons or treatises (docs/references.md). `status` starts as `ai_draft`.
+
+The edition you copy from is a version of the work:
+`library/versions/<work>/<lang>.json`, with id `<work>.<lang>` (`calvin.en`).
+It holds what is true of that edition, not of the work: `edition`, the
+translator and what was translated (`translation`, or null for an
+original), `published`, `full_text_url`, `source_kind` (`digital` or
+`scan`), `rights`, `made_by` (`print`), and `status` (`ai_draft`, with
+`reviewer` null). A second version of the same work, such as the Latin
+original beside an English translation, is a second file
+(`calvin.la.json`); a second edition in one language adds a name
+(`calvin.en-beveridge.json`). Each comments file names its version
+(`"version": "calvin.en"`), and all of a work's excerpts come from one
+version; the others translate them (docs/references.md, "Versions").
 
 ## 4. Copy the excerpts
 

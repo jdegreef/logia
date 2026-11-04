@@ -1,0 +1,18 @@
+{
+ "id": "john-the-baptist",
+ "title": "John the Baptist",
+ "note": "Passages on John, the witness sent from God.",
+ "order": 4,
+ "verses": [
+  "JHN.1.6",
+  "JHN.1.7",
+  "JHN.1.8",
+  "JHN.1.15"
+ ],
+ "terms": [
+  "Baptist",
+  "forerunner"
+ ],
+ "status": "ai_draft",
+ "reviewer": null
+}

@@ -1,0 +1,19 @@
+{
+ "id": "catena.en",
+ "work": "catena",
+ "language": "en",
+ "kind": "translation",
+ "edition": "Oxford: John Henry Parker, 1841-45 (Vol. IV, 1845), translation edited by John Henry Newman; text from University of Toronto scans on archive.org (djvu OCR)",
+ "translation": "The Oxford translation, edited by John Henry Newman, Vol. IV (1845)",
+ "published": 1845,
+ "full_text_url": "https://archive.org/details/catenaaureacomme04thomuoft",
+ "source_kind": "scan",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years)"
+ },
+ "made_by": "print",
+ "status": "ai_draft",
+ "reviewer": null,
+ "notes": "Not on CCEL (CCEL has only the Matthew and Mark volumes), so the text is archive.org OCR of the 1841-45 Oxford edition. Three University of Toronto scans of Vol. IV were used, entry by entry, to pick the cleanest OCR of each passage: catenaaureacomme04thomuoft (main), catenaurecomment04thomuoft and p1catenaaureaco04thomuoft (source_url names the copy used). Editing limited to: joining words broken at line ends (the OCR often drops the hyphen); dropping the printed margin references (e.g. 'Chrys. Hom. ii. in Joan.'), which the OCR interleaves into the text lines and sometimes fuses onto a word ('asChrys.', 'Heinjoh'), running heads, page numbers, footnote markers and footnotes. The Fathers' attributions inside the text (CHRYS., AUG., HILARY, ORIGEN, THEOPHYL., BEDE, ALCUIN, GREG.) are kept as printed; the p1 copy's OCR renders the small caps as 'Chrys.' (v. 18 first entry). ' ... ' joins non-adjacent sentences of one lemma where intervening text was garbled OCR (vv. 4, 6, 17). Remaining OCR slips were left uncorrected per the brief, e.g. 'graspestit' (v. 1, Hilary), spaces before punctuation, 'that Light, If' (v. 8). Several strong passages were skipped because the OCR garbles them (e.g. Chrysostom on v. 5, Gregory on v. 18). Greek in footnotes was not used. All verses 1-18 are covered; the Catena has no separate comment on v. 16 apart from vv. 16-17 together."
+}

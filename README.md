@@ -13,10 +13,12 @@ Christian commentaries.
 | Path | Holds |
 |---|---|
 | `library/authors/<author>.json` | One commentator: dates, era, tradition, a short biography (a draft until reviewed) |
-| `library/works/<work>.json` | One commentary: its author, divisions, edition, translator, rights, status |
+| `library/works/<work>.json` | One commentary: its author, title, divisions and original language |
+| `library/versions/<work>/<lang>.json` | One version of it: an edition of the original, a printed translation, or Logia's own translation, with its edition, translator, year, source, rights and review status |
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
 | `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
+| `library/topics/<id>.json` | A topic: its title, note, the verses at its centre and the terms that gather excerpts (docs/references.md) |
 | `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
@@ -25,7 +27,7 @@ Christian commentaries.
 | `i18n/en.json` | Every word of the interface, so a language can be added by adding a catalog |
 | `web/` | The stylesheets, scripts and fonts the pages use (see "The site" below) |
 | `scripts/` | Import, validate, verify and build |
-| `docs/` | How to add a work, the editorial rules, the reference scheme (`references.md`), the roadmap (`roadmap.md`), and how the site is deployed |
+| `docs/` | How to add a work, the editorial rules, the reference scheme (`references.md`), the data files and releases (`data.md`), the API (`api.md`), the roadmap (`roadmap.md`), and how the site is deployed |
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
@@ -42,11 +44,17 @@ Westcott), 246 excerpts in all.
 | `/` | Home |
 | `/read/` | Every book; the ones in Logia with a pill per chapter, gold where there is commentary |
 | `/<book>/` | A book's chapters and who comments on it |
-| `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek or Hebrew words, translation notes and cross-references for the chosen verse |
+| `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek or Hebrew words, translation notes and cross-references for the chosen verse. `#calvin.JHN.1.1.1` opens one excerpt; each has Cite, How this was copied and Report a mistake |
 | `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
 | `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |
+| `/library/` | The catalogue: every work by genre and era, what it covers, its versions, and what is still to come |
+| `/search/` | Search every excerpt and whole text, narrowed by kind, era, tradition and commentator (`web/search.js` over `/data/search.json`) |
+| `/topics/`, `/topics/<id>/` | Topics: the excerpts a topic's verses and terms gather, from every tradition |
 | `/about/` | What Logia is and how excerpts are checked |
+| `/about/rules/` | The editorial rules, and every version's edition, source, rights and review |
+| `/api/v1/` | The public read-only JSON API (`scripts/api.py`, `docs/api.md`) |
+| `/linker.js`, `/linker/` | A script other sites embed to link Bible references to Logia, and how to use it |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its
 sister site: `web/style.css` and `web/fonts/` are the Open Word Bible's own
@@ -92,8 +100,8 @@ can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
   reads where each excerpt sits in its work, the Scripture it cites and, in
   the Catena, which Father's passage it quotes; each stays `detected` until
   a person checks it.
-- **Rights are recorded per work**: the edition, the translator, the year,
-  and what is still to confirm for worldwide use.
+- **Rights are recorded per version**: the edition, the translator, the
+  year, and what is still to confirm for worldwide use.
 - **Nothing is marked reviewed by an AI.** Works and translations stay
   `ai_draft` until a named human reviewer approves them.
 

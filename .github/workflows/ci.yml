@@ -20,7 +20,7 @@ jobs:
       - name: Check whole texts are up to date
         run: python3 scripts/extract_texts.py --check
       - name: Check the page scripts parse
-        run: node --check web/site.js && node --check web/reader.js && node --check web/account.js
+        run: node --check web/site.js && node --check web/reader.js && node --check web/account.js && node --check web/search.js && node --check web/linker.js
       - name: Validate the library
         run: python3 scripts/validate.py
       - name: Check every excerpt against its source

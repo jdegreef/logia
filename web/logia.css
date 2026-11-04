@@ -260,9 +260,101 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-not-found .mark { display: block; margin: 0 auto; }
 .lg-not-found-links { display: grid; gap: 10px; margin: 8px 0 0; }
 .lg-not-found-links .button { box-sizing: border-box; width: 100%; justify-content: center; }
+.lg-versions { display: grid; gap: 18px; }
+.lg-version { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--surface); max-width: 900px; }
+.lg-version h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 600; font-size: 19px; }
+.lg-version .lg-facts { margin-top: 10px; }
+
+/* The reader, Phase 2: the verse strip (how much commentary each verse has),
+   and under each excerpt Cite, How this was copied, Report a mistake. */
+.cx-strip { display: flex; align-items: flex-end; gap: 2px; height: 34px; margin: 4px 0 18px; }
+.cx-bar { flex: 1 1 0; min-width: 3px; height: 100%; border: 0; padding: 0; background: none; cursor: pointer; display: flex; align-items: flex-end; }
+.cx-bar span { display: block; width: 100%; height: max(var(--h), 8%); background: var(--gold); opacity: .45; border-radius: 2px 2px 0 0; }
+.cx-bar.cx-zero span { height: 3px; background: var(--line-strong, var(--line)); opacity: 1; }
+.cx-bar:hover span, .cx-bar.cx-on span { opacity: 1; }
+.cx-bar.cx-on span { background: var(--accent); }
+.cx-entry { scroll-margin-top: 12px; border-radius: 6px; }
+.cx-entry.cx-flash { animation: flash 1.2s ease-out; }
+@media (prefers-reduced-motion: reduce) { .cx-entry.cx-flash { animation: none; } }
+.cx-tools, .cx-tool-panel button { font-family: var(--sans); }
+.cx-tool-panel button + button { margin-left: 14px; }
+.cx-tools { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; margin: 2px 0 10px; }
+.cx-tools button, .cx-tool-panel button { border: 0; background: none; padding: 0; color: var(--muted); cursor: pointer; font: inherit; font-family: var(--sans); font-weight: 600; }
+.cx-tools button[aria-expanded="true"] { color: var(--accent); }
+.cx-tools a { color: var(--muted); font-weight: 600; text-decoration: none; }
+.cx-tools button:hover, .cx-tools a:hover, .cx-tool-panel button:hover { color: var(--accent); }
+.cx-tool-panel { font-size: 13.5px; background: var(--surface-2); border-radius: 8px; padding: 10px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.cx-tool-panel p { margin: 0 0 6px; }
+.cx-tool-panel ul { margin: 0 0 6px; padding-left: 18px; }
+.cx-tool-panel button { color: var(--accent); }
+.cx-citation { font-family: var(--serif); }
+
+/* Search (/search/, web/search.js) */
+.lg-search { display: flex; gap: 10px; flex-wrap: wrap; margin: 24px 0 6px; max-width: 760px; }
+.lg-search input { flex: 1 1 260px; min-width: 0; font: inherit; font-size: 17px; padding: 10px 14px; border: 1px solid var(--line-strong, var(--line)); border-radius: 999px; background: var(--surface); color: var(--text); }
+.lg-search-body { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; margin-top: 24px; align-items: start; }
+@media (max-width: 760px) { .lg-search-body { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
+.lg-facet { border: 0; padding: 0; margin: 0 0 18px; font-size: 14px; }
+.lg-facet legend { font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+.lg-facet label { display: flex; gap: 6px; align-items: baseline; padding: 2px 0; cursor: pointer; }
+.lg-results { list-style: none; padding: 0; margin: 0 0 18px; max-width: 72ch; }
+.lg-results li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lg-results a { text-decoration: none; }
+.lg-results p { margin: 4px 0 0; font-family: var(--serif); overflow-wrap: break-word; }
+.lg-results mark { background: var(--accent-soft, var(--surface-2)); color: inherit; border-radius: 3px; padding: 0 1px; }
+
+/* The library (/library/) */
+.lg-summary { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 28px 0 0; }
+.lg-summary div { display: flex; flex-direction: column; }
+.lg-summary b { font-family: var(--display); font-size: 30px; font-weight: 600; line-height: 1.1; }
+.lg-summary span { font-size: 13px; color: var(--muted); }
+.lg-cat { list-style: none; padding: 0; margin: 6px 0 0; max-width: 860px; }
+.lg-cat li { padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+.lg-cat a { text-decoration: none; }
+.lg-cat-work > a b { font-family: var(--display); font-size: 19px; font-weight: 600; }
+.lg-cat-by { font-size: 14px; }
+
+/* The commentators' timeline (/commentators/) */
+.lg-tl { list-style: none; margin: 0; padding: 0; }
+.lg-tl-row, .lg-tl-axis { display: grid; grid-template-columns: minmax(150px, 260px) minmax(0, 1fr); gap: 16px; align-items: center; }
+.lg-tl-row { text-decoration: none; color: inherit; padding: 5px 0; border-bottom: 1px solid var(--line); }
+.lg-tl-row:hover .lg-tl-name { color: var(--accent); }
+.lg-tl-name { font-size: 14px; font-weight: 600; }
+.lg-tl-name .lg-quiet { font-weight: 400; font-size: 12.5px; }
+.lg-tl-track { position: relative; height: 14px; }
+.lg-tl-axis .lg-tl-track { height: 22px; }
+.lg-tl-life { position: absolute; top: 3px; height: 8px; border-radius: 4px; display: inline-block; }
+.lg-tl-tick { position: absolute; top: 4px; transform: translateX(-50%); font-size: 11px; color: var(--muted); }
+.lg-fam-undivided { background: var(--gold); }
+.lg-fam-catholic { background: #a8432f; }
+.lg-fam-orthodox { background: #2f7d6d; }
+.lg-fam-anglican { background: #6a4fa3; }
+.lg-fam-protestant { background: var(--accent); }
+.lg-tl-key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); margin-top: 10px; }
+.lg-tl-key span { display: inline-flex; align-items: center; gap: 6px; }
+.lg-tl-key .lg-tl-life { position: static; width: 18px; }
+@media (max-width: 560px) {
+  .lg-tl-row, .lg-tl-axis { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .lg-tl-axis .lg-tl-name { display: none; }
+}
+.lg-topic-rule { max-width: 72ch; font-size: 15px; }
+.lg-topics a b { font-family: var(--display); font-size: 19px; font-weight: 600; }
+
 
 /* Poetry (the Open Word Bible's "\q" lines): a verse of a poem starts its own
    line, and its later lines are indented under the first. */
 .cx-verse.cx-poem { display: block; padding-left: 1.6em; text-indent: -1.6em; }
 .cx-greek[dir="rtl"], .cx-src[dir="rtl"] { font-family: var(--hebrew); font-size: 23px; line-height: 2; }
 .cx-word .cx-big[dir="rtl"] { font-family: var(--hebrew); font-size: 32px; }
+
+/* The linker page (/linker/) */
+.lg-code { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; overflow-x: auto; font-size: 14px; max-width: 72ch; }
+.lg-linker-demo { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--surface); max-width: 72ch; font-family: var(--serif); font-size: 18px; }
+
+/* Editorial rules (/about/rules/): the rights table */
+.lg-rules h3 { margin: 1.2em 0 .2em; font-size: 17px; }
+.lg-table-wrap { overflow-x: auto; margin-top: 12px; }
+.lg-table { border-collapse: collapse; font-size: 14px; min-width: 760px; }
+.lg-table th { text-align: left; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); padding: 6px 10px 6px 0; border-bottom: 1px solid var(--line-strong, var(--line)); }
+.lg-table td { vertical-align: top; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--line); }
+.lg-table a { text-decoration: none; }

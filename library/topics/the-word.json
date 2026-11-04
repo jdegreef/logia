@@ -1,0 +1,15 @@
+{
+ "id": "the-word",
+ "title": "The Word",
+ "note": "Passages on John's name for the Son, “the Word”.",
+ "order": 1,
+ "verses": [
+  "JHN.1.1",
+  "JHN.1.2"
+ ],
+ "terms": [
+  "Logos"
+ ],
+ "status": "ai_draft",
+ "reviewer": null
+}

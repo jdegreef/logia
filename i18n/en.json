@@ -24,7 +24,16 @@
     "owb": "The Open Word Bible",
     "owb_note": "The translation Logia reads",
     "source": "Source code and data",
-    "source_note": "Everything is open, on GitHub"
+    "source_note": "Everything is open, on GitHub",
+    "search": "Search",
+    "library": "The library",
+    "topics": "Topics",
+    "rules": "Editorial rules",
+    "rules_note": "How texts get in, and their rights",
+    "linker": "Link references to Logia",
+    "linker_note": "A script for your own site",
+    "api": "The API",
+    "api_note": "Logia's data as JSON"
   },
   "prefs": {
     "display": "Settings",
@@ -115,7 +124,7 @@
     "project": "The project",
     "report": "Report a problem",
     "books_with": "Books with commentary",
-    "licences": "Bible text: Open Word Bible (CC0). Greek: SBLGNT with MACULA Greek word data (CC BY 4.0). Hebrew: Westminster Leningrad Codex with MACULA Hebrew word data and OSHB morphology (CC BY 4.0). Cross-references: OpenBible.info (CC BY). Commentary texts: public domain.",
+    "licences": "Bible text: Open Word Bible (CC0). Greek: SBLGNT with MACULA Greek word data (CC BY 4.0). Hebrew: Westminster Leningrad Codex with MACULA Hebrew word data and OSHB morphology (CC BY 4.0). Cross-references: OpenBible.info (CC BY). English verse numbering: Open Scriptures Hebrew Bible (CC BY 4.0). Commentary texts: public domain.",
     "review": "Logia is new: its selection of excerpts, its verse tags and its biographies are drafts awaiting human review."
   },
   "home": {
@@ -241,6 +250,32 @@
     "quoted_by": "Quoted by {name} in the {title} on {ref}",
     "full_text_short": "full text",
     "whole_texts": "Read in full on this verse",
+    "show_families": "Show traditions",
+    "families_note": "Traditions: the church each commentator belonged to. The Fathers before the East–West division belong to all of them.",
+    "strip_label": "How much commentary each verse has",
+    "strip_verse": "{ref}: {n} commentaries, {m} references from other verses",
+    "cite": "Cite",
+    "source": "How this was copied",
+    "report": "Report a mistake",
+    "copy": "Copy citation",
+    "copied_citation": "Copied.",
+    "permalink": "Copy link",
+    "cite_on": "on {ref}",
+    "cite_in_logia": "In Logia",
+    "from_ccel": "a transcription on CCEL, checked word for word against it by script",
+    "from_scan": "an OCR page scan on archive.org, checked against it by script in runs of six words",
+    "copied_from": "Copied from {source}.",
+    "fixes": "Scan misreadings corrected in this excerpt, to match the printed page:",
+    "no_fixes": "No scan corrections in this excerpt.",
+    "version_label": "Version: {kind}, {edition}.",
+    "version_original": "the original in {language}",
+    "version_translation": "a translation into {language}",
+    "review_draft": "Copied by an AI and not yet reviewed by a person.",
+    "review_done": "Reviewed by {name}.",
+    "all_versions": "This work's versions and rights",
+    "report_title": "Mistake in {id}",
+    "report_body": "Excerpt: {id}\nVerse: {ref}\nOn Logia: {url}\nSource: {source}\n\nWhat is wrong? If you can, quote what the printed page or the source says:\n\n",
+    "topics": "Topics",
     "loading": "Loading…",
     "panel_failed": "This could not be loaded.",
     "try_again": "Try again"
@@ -255,7 +290,9 @@
     "bio_draft": "This biography is a draft awaiting review.",
     "died": "Died {year}",
     "back": "All commentators",
-    "passages": "{n} passages"
+    "passages": "{n} passages",
+    "timeline": "Two thousand years, one line",
+    "timeline_note": "Each commentator's life, from birth to death, on a line of centuries. The colour is their tradition."
   },
   "work": {
     "eyebrow": "Commentary",
@@ -278,7 +315,9 @@
     "straight_through_note": "The {divisions} that hold Logia's excerpts, copied whole from their CCEL transcriptions. Each marks the passages Logia sets beside a verse.",
     "by_division": "By {division}",
     "by_verse": "By verse",
-    "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on."
+    "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on.",
+    "versions": "Versions",
+    "versions_note": "Each edition and translation of this work is a record of its own: where it was copied from, its rights, and whether a person has reviewed it."
   },
   "about": {
     "title": "About",
@@ -335,5 +374,169 @@
     "on_ccel": "On CCEL",
     "note": "Copied word for word from {edition}, as transcribed by CCEL. The translator's footnotes are left out. Scripture references are linked as CCEL marks them. A gold rule marks the passages Logia sets beside a verse.",
     "description": "{name}, {title}, {where}: the whole text, with the passages Logia sets beside each verse."
+  },
+  "version": {
+    "original": "The original, in {language}",
+    "translation": "Translation into {language}",
+    "status": "Review",
+    "ai_draft": "Copied by an AI and checked against its source by script; not yet reviewed by a person.",
+    "reviewed": "Reviewed by {name}.",
+    "excerpts_from": "Logia's excerpts are copied from this version.",
+    "ai_draft_logia": "Translated by an AI for Logia; not yet reviewed by a native speaker."
+  },
+  "languages": {
+    "en": "English",
+    "la": "Latin",
+    "grc": "Greek",
+    "de": "German",
+    "es": "Spanish",
+    "pt": "Portuguese",
+    "fr": "French",
+    "sw": "Swahili",
+    "am": "Amharic",
+    "ko": "Korean",
+    "vi": "Vietnamese"
+  },
+  "families": {
+    "undivided": "Before the divisions",
+    "catholic": "Catholic",
+    "orthodox": "Orthodox",
+    "anglican": "Anglican",
+    "protestant": "Protestant"
+  },
+  "search": {
+    "title": "Search",
+    "eyebrow": "Search",
+    "heading": "Search the library",
+    "dek": "Every excerpt and every whole homily and tractate in Logia, searched as you type.",
+    "label": "Search for",
+    "placeholder": "grace and truth, “the true light”, Logos…",
+    "go": "Search",
+    "tips": "All the words must appear (word beginnings count: “bapt” finds baptism and baptized). Put a phrase in quotes to find it exactly.",
+    "narrow": "Narrow the results",
+    "noscript": "Search needs JavaScript. Every excerpt is also listed, verse by verse, on each work's page.",
+    "kinds": "Show",
+    "kind_x": "Excerpts beside a verse",
+    "kind_p": "Whole homilies and tractates",
+    "eras_head": "Era",
+    "families_head": "Tradition",
+    "works_head": "Commentator",
+    "results": "{n} results",
+    "result_one": "1 result",
+    "none": "Nothing found. Try fewer words, or the beginning of a word.",
+    "more": "Show {n} more",
+    "loading": "Loading the library…",
+    "empty": "Type a word or a phrase above."
+  },
+  "library": {
+    "title": "The library",
+    "eyebrow": "The library",
+    "heading": "What is in Logia",
+    "dek": "Every work in the library, by kind and era: what each covers, the versions it is in, and what is still to come.",
+    "count_works": "works",
+    "count_authors": "commentators",
+    "count_versions": "versions",
+    "count_excerpts": "excerpts",
+    "count_texts": "whole homilies and tractates",
+    "count_verses": "verses with commentary",
+    "genre_commentary": "Commentaries",
+    "genre_commentary_note": "Notes that go through the text verse by verse.",
+    "genre_homilies": "Homilies and lectures",
+    "genre_homilies_note": "Sermons and lectures preached on the text, one after another, through a book.",
+    "genre_catena": "Catenas",
+    "genre_catena_note": "A chain of the Fathers' own words, gathered verse by verse.",
+    "covers": "On {spans}",
+    "excerpts": "{n} excerpts",
+    "whole": "{n} whole {kind}",
+    "in": "In {langs}",
+    "draft": "awaiting review",
+    "to_come": "Still to come",
+    "to_come_note": "The Bible text Logia has, and how much of it has commentary so far.",
+    "gap": "{have} of {total} verses have commentary; {empty} of {chapters} chapters have none yet.",
+    "none_yet": "{n} books with no commentary yet"
+  },
+  "topics": {
+    "title": "Topics",
+    "eyebrow": "Topics",
+    "heading": "Topics",
+    "dek": "What the commentators say on a theme, gathered from every tradition and every era.",
+    "count": "{n} excerpts",
+    "uses": "uses “{term}”",
+    "rule": "Gathered by a rule, not chosen one by one: every excerpt on {verses}, and every other excerpt that uses {terms}.",
+    "rule_verses": "Gathered by a rule, not chosen one by one: every excerpt on {verses}.",
+    "how": "Each topic gathers excerpts by a rule anyone can read: the verses at its centre, and words that bring in what is said about it elsewhere. Nothing is added to what the commentators say.",
+    "draft": "This topic's verses and words are a draft awaiting review.",
+    "on_verse": "Topics"
+  },
+  "linker": {
+    "title": "Link Bible references to Logia",
+    "eyebrow": "For other sites",
+    "heading": "Link Bible references to Logia",
+    "dek": "One line on your site turns every Bible reference into a link to that verse on Logia, with a preview of the verse and of who has commented on it.",
+    "how": "How to add it",
+    "how_text": "Put this line in your page, before </body> or in the <head>. It finds references such as John 3:16, Jn 1:14, 1 Cor. 13:4–7 or Rom 8:28 in the page's text and links them.",
+    "options": "Options, as attributes on the script tag:",
+    "scope": "only look inside the elements this CSS selector matches",
+    "preview_off": "make links, but show no preview cards",
+    "skip": "on any element, leaves its text alone (links, code and form fields are always left alone)",
+    "try": "Try it",
+    "example": "In the beginning was the Word (John 1:1), and the Word became flesh (Jn 1:14). Love is patient and kind (1 Cor. 13:4–7). The heavens declare the glory of God (Ps 19:1), and the sun of righteousness shall rise (Mal 4:2). We know that all things work together for good (Rom 8:28). Is 53:5 is linked; “the train is 9:30” is not.",
+    "data": "The data behind it",
+    "data_text": "The previews read Logia's public, read-only API ({api}), which any site or program may use: every verse's text and commentary, works, versions, authors and topics, as JSON. Its shape is documented in {docs}. Logia's data is CC0; the script is MIT."
+  },
+  "rules": {
+    "title": "Editorial rules",
+    "eyebrow": "About",
+    "heading": "How texts get into Logia",
+    "dek": "The rules every text in Logia follows, and the rights each one is used under, so anyone can check them.",
+    "rules_heading": "The rules",
+    "rules": [
+      [
+        "Copied, never written",
+        "Every excerpt is copied from a public-domain edition exactly as it reads, and the source it came from is kept beside it. Nothing is paraphrased, summarised, modernised or filled in from memory. A script checks every excerpt against its source on every change."
+      ],
+      [
+        "Public domain only",
+        "Text and translation must be published in 1930 or earlier, which makes them public domain in the United States. Each version records its edition, translator and year, and what is still to confirm for use worldwide (the death dates of everyone named). Logia copies from scans and open transcriptions, not from sites that claim rights in their typed editions."
+      ],
+      [
+        "Greek and Hebrew are never retyped",
+        "Original-language words appear only as the source prints them. Where a scan turns Greek into noise, the Greek is left out and the cut is marked, rather than typed in by hand."
+      ],
+      [
+        "Scan misreadings are corrected in the open",
+        "An excerpt keeps the scan's text. A misreading is fixed by a listed correction (“Let ns” → “Let us”), applied when the site is built, and shown under the excerpt. Only what the printed page plainly says is fixed."
+      ],
+      [
+        "Places, citations and links are read from the sources",
+        "Where an excerpt sits in its work, the Scripture it cites and the Fathers a catena quotes are found by scripts from the sources, not typed. Each stays marked as unchecked until a person checks it."
+      ],
+      [
+        "Nothing is marked reviewed by an AI",
+        "Excerpts, versions, biographies, topics and translations are drafts until a named person reviews them, and the site says so."
+      ],
+      [
+        "The Bible text is imported, never edited",
+        "Logia reads the Open Word Bible at a pinned version. A problem with its wording is raised with the Open Word Bible, not changed here."
+      ],
+      [
+        "Every tradition, in its own words",
+        "Logia sets Catholic, Orthodox and Protestant voices side by side and takes no side where they differ. A commentator's words are kept whole, even when harsh or dated; a note may explain, but nothing is cut silently."
+      ]
+    ],
+    "procedure": "The full procedure for adding a work, and the reference scheme, are in the repository: {adding} and {references}.",
+    "rights_heading": "Every version, and its rights",
+    "rights_note": "Each version of each work: where it was copied from, the basis on which Logia uses it, what is still to confirm, and whether a person has reviewed it.",
+    "col_work": "Work",
+    "col_version": "Version",
+    "col_published": "Published",
+    "col_source": "Copied from",
+    "col_rights": "Rights",
+    "col_review": "Review",
+    "scan": "page scan",
+    "digital": "transcription",
+    "reviewed": "reviewed by {name}",
+    "draft": "draft",
+    "report": "Found something wrong? Every excerpt has a “Report a mistake” link, or open an issue on GitHub."
   }
 }

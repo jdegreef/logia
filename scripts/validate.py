@@ -17,9 +17,18 @@ import scripture
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ERAS = {"Early church", "Middle Ages", "Reformation", "Puritans and the 1700s", "The 1800s"}
-WORK_FIELDS = {"id", "author", "title", "divisions", "edition", "original_language", "translation", "published",
-               "full_text_url", "rights", "source_kind", "notes", "status"}
-AUTHOR_FIELDS = {"id", "name", "dates", "died", "era", "tradition", "bio", "bio_status", "portrait"}
+WORK_FIELDS = {"id", "author", "title", "divisions", "genre", "original_language", "status"}
+# How a work is made, for the library page: notes verse by verse, homilies or
+# lectures preached on the text, or a catena (a chain of the Fathers' words).
+GENRES = ("commentary", "homilies", "catena")
+VERSION_FIELDS = {"id", "work", "language", "kind", "edition", "translation", "published", "full_text_url",
+                  "source_kind", "rights", "made_by", "status", "reviewer", "notes"}
+TOPIC_FIELDS = {"id", "title", "note", "order", "verses", "terms", "status", "reviewer"}
+LANGUAGE = re.compile(r"^[a-z]{2,3}$")       # ISO 639 code: en, la, grc, de, es
+AUTHOR_FIELDS = {"id", "name", "dates", "died", "era", "tradition", "family", "bio", "bio_status", "portrait"}
+# The reader's tradition filter (docs/references.md, "Families"): which church
+# a commentator belongs to, with those before the East–West division in common.
+FAMILIES = ("undivided", "catholic", "orthodox", "anglican", "protestant")
 ENTRY_FIELDS = {"id", "start", "end", "heading", "text", "sources"}
 CITATION_FIELDS = {"in", "at", "text", "start", "end", "found", "status"}
 CITATION_STATUSES = {"detected", "reviewed", "rejected"}   # set by a person checking it
@@ -62,6 +71,8 @@ def main():
                 f"extra {sorted(set(a) - AUTHOR_FIELDS)}")
         if a.get("era") not in ERAS:
             say(f"{name}: era {a.get('era')!r} is not one of {sorted(ERAS)}")
+        if a.get("family") not in FAMILIES:
+            say(f"{name}: family {a.get('family')!r} is not one of {FAMILIES}")
         if a.get("bio_status") not in STATUSES:
             say(f"{name}: bio_status {a.get('bio_status')!r}")
         if not isinstance(a.get("died"), int):
@@ -81,17 +92,52 @@ def main():
             say(f"{name}: author {w.get('author')!r} has no library/authors/ file")
         if w.get("status") not in STATUSES:
             say(f"{name}: status {w.get('status')!r}")
-        if not isinstance(w.get("published"), int) or w["published"] > 1930:
-            say(f"{name}: published {w.get('published')!r}: only editions published in 1930 or earlier are "
-                "public domain in the US; anything later needs a rights note and a decision")
+        if w.get("genre") not in GENRES:
+            say(f"{name}: genre {w.get('genre')!r} is not one of {GENRES}")
         div = w.get("divisions")
         if div != "verse" and not (isinstance(div, list) and div and all(isinstance(x, str) and x for x in div)):
             say(f"{name}: divisions {div!r}: \"verse\" for a work arranged by verse, or the names of its own "
                 "divisions, e.g. [\"Homily\", \"Section\"]")
-        if w.get("source_kind") not in ("digital", "scan"):
-            say(f"{name}: source_kind {w.get('source_kind')!r}")
         works[w["id"]] = w
 
+    # Versions: each edition of the original, each printed translation, and
+    # each of Logia's own translations, with its own source, rights and status.
+    versions = {}
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "versions", "*", "*.json"))):
+        v = load(p)
+        name = os.path.relpath(p, ROOT)
+        if set(v) != VERSION_FIELDS:
+            say(f"{name}: fields differ from the schema: missing {sorted(VERSION_FIELDS - set(v))}, "
+                f"extra {sorted(set(v) - VERSION_FIELDS)}")
+            continue
+        work = v["work"]
+        if work not in works:
+            say(f"{name}: work {work!r} has no library/works/{work}.json")
+            continue
+        if os.path.basename(os.path.dirname(p)) != work or v["id"] != f"{work}.{os.path.basename(p)[:-5]}":
+            say(f"{name}: id {v['id']!r} must be <work>.<file name>, in library/versions/<work>/")
+        if not LANGUAGE.match(v["language"]) or not os.path.basename(p).startswith(v["language"]):
+            say(f"{name}: language {v['language']!r}: an ISO 639 code, which the file name starts with")
+        if v["kind"] not in ("original", "translation"):
+            say(f"{name}: kind {v['kind']!r}: original or translation")
+        if v["kind"] == "translation" and not v["translation"]:
+            say(f"{name}: a translation says who made it, from what, in `translation`")
+        if v["made_by"] == "print":
+            if not isinstance(v["published"], int) or v["published"] > 1930:
+                say(f"{name}: published {v['published']!r}: only editions published in 1930 or earlier are "
+                    "public domain in the US; anything later needs a rights note and a decision")
+            if v["source_kind"] not in ("digital", "scan"):
+                say(f"{name}: source_kind {v['source_kind']!r}")
+        elif v["made_by"] == "logia":
+            if v["kind"] != "translation" or v["published"] is not None or v["source_kind"] is not None:
+                say(f"{name}: Logia's own version is a translation, with no published year or source_kind")
+        else:
+            say(f"{name}: made_by {v['made_by']!r}: print (a public-domain edition) or logia (Logia's own translation)")
+        if v["status"] not in STATUSES or (v["status"] == "reviewed") != bool(v["reviewer"]):
+            say(f"{name}: status {v['status']!r} with reviewer {v['reviewer']!r}: ai_draft with none, or reviewed "
+                "with the name of the person who reviewed it")
+        versions[v["id"]] = v
+    base = {}                                    # work -> the version its excerpts are copied from
     texts, entries = {}, {}
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
         d = load(p)
@@ -104,6 +150,12 @@ def main():
             say(f"{name}: file path does not match work {work!r} and book {d.get('book')!r}")
         if d.get("book") not in books:
             say(f"{name}: unknown book {d.get('book')!r}")
+        ver = versions.get(d.get("version"))
+        if not ver or ver["work"] != work or ver["made_by"] != "print":
+            say(f"{name}: version {d.get('version')!r} is not a printed version of {work} in library/versions/")
+        elif base.setdefault(work, ver["id"]) != ver["id"]:
+            say(f"{name}: version {ver['id']!r}, but {work}'s other excerpts are from {base[work]!r}; "
+                "a work's excerpts come from one version, and other versions translate them")
         last = None
         for e in d["entries"]:
             eid = e.get("id", "?")
@@ -149,7 +201,7 @@ def main():
         if c.get("work") not in works:
             say(f"{name}: unknown work {c.get('work')!r}")
             continue
-        if works[c["work"]]["source_kind"] != "scan":
+        if c["work"] in base and versions[base[c["work"]]]["source_kind"] != "scan":
             say(f"{name}: corrections are only for scanned sources; {c['work']} is digital")
         body = "\n".join(t for w, t in texts.values() if w == c["work"])
         for x in c["corrections"]:          # applied in order, as the build does
@@ -232,6 +284,8 @@ def main():
             continue
         if os.path.basename(os.path.dirname(p)) != w["id"] or os.path.basename(p) != f"{t.get('locus')}.json":
             say(f"{name}: file path does not match work {w['id']!r} and locus {t.get('locus')!r}")
+        if t.get("version") != base.get(w["id"]):
+            say(f"{name}: version {t.get('version')!r} is not the version {w['id']}'s excerpts are from")
         if t.get("source") not in sources.get(w["id"], set()):
             say(f"{name}: source {t.get('source')!r} is not in sources/manifest.json for {w['id']}")
         vs = t.get("verses") or {}
@@ -253,18 +307,49 @@ def main():
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "translations", "*", "*", "*.json"))):
         t = load(p)
         name = os.path.relpath(p, ROOT)
+        ver = versions.get(t.get("version"))
+        if (not ver or ver["work"] != t.get("work") or ver["language"] != t.get("language")
+                or ver["kind"] != "translation"):
+            say(f"{name}: version {t.get('version')!r} is not a translation of {t.get('work')} into "
+                f"{t.get('language')} in library/versions/")
         for e in t.get("entries", []):
             if e.get("of") not in texts:
                 say(f"{name}: {e.get('of')!r} is not an excerpt id")
             if e.get("status") not in STATUSES:
                 say(f"{name}: {e.get('of')}: status {e.get('status')!r}")
 
+    # Topics (docs/references.md, "Topics"): a title, a note, the verses at
+    # their centre and the terms that gather excerpts from elsewhere.
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "topics", "*.json"))):
+        tp = load(p)
+        name = os.path.relpath(p, ROOT)
+        if set(tp) != TOPIC_FIELDS:
+            say(f"{name}: fields differ from the schema: missing {sorted(TOPIC_FIELDS - set(tp))}, "
+                f"extra {sorted(set(tp) - TOPIC_FIELDS)}")
+            continue
+        if os.path.basename(p) != f"{tp['id']}.json" or not re.fullmatch(r"[a-z][a-z0-9-]*", tp["id"]):
+            say(f"{name}: id {tp['id']!r} must be lower-case words joined by hyphens, and the file name")
+        for v in tp["verses"]:
+            if not scripture.parse(v):
+                say(f"{name}: verse {v!r} is not a reference like JHN.1.14")
+        if not tp["verses"] and not tp["terms"]:
+            say(f"{name}: a topic needs verses or terms to gather its excerpts")
+        for term in tp["terms"]:
+            if not isinstance(term, str) or len(term) < 3 or GREEK_OR_HEBREW.search(term):
+                say(f"{name}: term {term!r}: at least three letters, and no Greek or Hebrew typed")
+        if tp["status"] not in STATUSES or (tp["status"] == "reviewed") != bool(tp["reviewer"]):
+            say(f"{name}: status {tp['status']!r} with reviewer {tp['reviewer']!r}")
+
+    for wid in works:
+        if not any(v["work"] == wid for v in versions.values()):
+            say(f"library/works/{wid}.json: no version in library/versions/{wid}/")
     for a in authors:
         if not any(w["author"] == a for w in works.values()):
             say(f"library/authors/{a}.json: no work in library/works/ is by this author")
     for msg in problems:
         print(msg)
-    print(f"{len(authors)} authors, {len(works)} works, {len(texts)} excerpts: {len(problems)} problem(s)")
+    print(f"{len(authors)} authors, {len(works)} works, {len(versions)} versions, {len(texts)} excerpts: "
+          f"{len(problems)} problem(s)")
     return 1 if problems else 0
 
 

@@ -414,6 +414,8 @@ def derive():
     manifest = load(os.path.join(ROOT, "sources", "manifest.json"))
     paths = {(f["work"], os.path.basename(f["path"])): os.path.join(ROOT, f["path"]) for f in manifest["files"]}
     works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
+    versions = {v["id"]: v for v in
+                (load(p) for p in glob.glob(os.path.join(ROOT, "library", "versions", "*", "*.json")))}
     fixes = corrected_texts()
     pages, comments, citations, problems = {}, {}, {}, []
     held = {}                                # (work, source) -> [(start, end, excerpt id)]
@@ -429,7 +431,7 @@ def derive():
                 text = text.replace(a, b)
             src = paths.get((work["id"], e["sources"][0]))
             _, ch, _ = e["start"].split(".")
-            if work["source_kind"] == "digital" and src and src.endswith(".html"):
+            if versions[data["version"]]["source_kind"] == "digital" and src and src.endswith(".html"):
                 if src not in pages:
                     pages[src] = read_page(src)
                 where = span(pages[src], e["text"])

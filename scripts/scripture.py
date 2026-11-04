@@ -72,6 +72,15 @@ BOOK_NAMES = {**{k: v["en"] for k, v in _BOOKS.items()}, **{k: v[0] for k, v in 
 CHAPTERS = {**{k: v["chapters"] for k, v in _BOOKS.items()}, **{k: v[1] for k, v in DEUTEROCANON.items()},
             **ENGLISH_CHAPTERS}
 REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
+# English verse numbers -> the Open Word Bible's, where they differ (its
+# source text numbers a psalm's title as verse 1): bible/owb/versification.json.
+TO_SOURCE = _load("versification.json")["to_source"]
+
+
+def to_source(ref):
+    """The Open Word Bible verse that holds an English-numbered verse, where
+    a commentator's or a reader's "Psalm 19:1" is read on Logia: PSA.19.2."""
+    return TO_SOURCE.get(ref, [ref])[0]
 
 
 def parse(ref):
@@ -111,3 +120,73 @@ def roman(s):
                 total, prev = (total - n, prev) if n < prev else (total + n, n)
             return total
     return None
+
+
+# Names and abbreviations people write today ("Jn 3:16", "1 Cor 13:4",
+# "Song of Songs 2:1"), for web/linker.js, besides the full names and the
+# older forms above. Numbered books are written with 1, 2, 3 or I, II, III.
+MODERN = {
+    "GEN": "Gn", "EXO": "Exo Exod", "LEV": "Lv", "NUM": "Nm Nu", "DEU": "Dt Deu", "JOS": "Jos", "JDG": "Jdg Jg",
+    "RUT": "Ru Rth", "EZR": "Ezr", "NEH": "Ne", "EST": "Es", "PSA": "Pss Pslm", "PRO": "Pr Prv",
+    "ECC": "Ec Qoh", "SNG": "Song,Song of Songs,Song of Solomon,SS", "ISA": "Is", "JER": "Je Jr", "EZK": "Eze Ezk",
+    "DAN": "Dn Da", "HOS": "Ho", "JOL": "Jl", "AMO": "Am", "OBA": "Ob", "JON": "Jnh", "MIC": "Mc", "NAM": "Na",
+    "HAB": "Hb", "ZEP": "Zp", "HAG": "Hg", "ZEC": "Zc", "MAL": "Ml", "MAT": "Mt Matt", "MRK": "Mk Mr Mrk",
+    "LUK": "Lk Lu", "JHN": "Jn Jhn", "ACT": "Ac", "ROM": "Ro Rm", "GAL": "Ga", "EPH": "Ephes", "PHP": "Php Pp",
+    "COL": "Cl", "TIT": "Ti", "PHM": "Phm Phlm", "JAS": "Jm Jas", "JUD": "Jd Jud", "REV": "Re Rv",
+}
+MODERN_NUMBERED = {
+    "Sa Sm": ("1SA", "2SA"), "Ki Kgs Kg": ("1KI", "2KI"), "Ch Chr": ("1CH", "2CH"), "Co": ("1CO", "2CO"),
+    "Th Thes": ("1TH", "2TH"), "Ti Tm": ("1TI", "2TI"), "Pe Pt": ("1PE", "2PE"), "Jn Jhn Jo": ("1JN", "2JN", "3JN"),
+}
+
+
+def linker_names():
+    """{name as written, lower case, without its full stop: book code}: every
+    form web/linker.js recognises. A numbered book's forms include its number
+    (\"1 cor\", \"i cor\", \"1cor\")."""
+    out = {}
+
+    def add(name, code):
+        name = name.strip().lower()
+        if name and name not in out:
+            out[name] = code
+
+    for code, name in BOOK_NAMES.items():
+        if code in DEUTEROCANON:
+            continue
+        num = name[0] if name[0] in "123" else None
+        if num:
+            base = name[2:]
+            for n in (num, "I" * int(num)):
+                add(f"{n} {base}", code)
+                add(f"{n}{base}", code)
+        else:
+            add(name, code)
+    for table in (NAMES, MODERN):
+        for code, names in table.items():
+            for n in (names.split(",") if "," in names else names.split()):
+                add(n, code)
+    for table in (NUMBERED, MODERN_NUMBERED):
+        for names, codes in table.items():
+            for base in names.split():
+                for i, code in enumerate(codes):
+                    for n in (str(i + 1), "I" * (i + 1)):
+                        add(f"{n} {base}", code)
+                        add(f"{n}{base}", code)
+    return out
+
+
+def renumber_runs():
+    """TO_SOURCE as runs, for web/linker.js: {"PSA.19": [[1, 14, 19, 1]]} is
+    English Psalm 19:1-14 -> Psalm 19, each verse plus one."""
+    runs = {}
+    for e, own in TO_SOURCE.items():
+        b, c, v = REF.match(e).groups()
+        _, sc, sv = REF.match(own[0]).groups()
+        c, v, sc, sv = int(c), int(v), int(sc), int(sv)
+        r = runs.setdefault(f"{b}.{c}", [])
+        if r and r[-1][1] == v - 1 and r[-1][2] == sc and r[-1][3] == sv - v:
+            r[-1][1] = v
+        else:
+            r.append([v, v, sc, sv - v])
+    return runs
