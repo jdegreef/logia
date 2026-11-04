@@ -27,7 +27,9 @@ Two things are read from the sources, never written by hand:
   Catena's English was made from Aquinas's Latin, so it is never word for
   word the same as the CCEL translation. A match names the section when one
   section stands out, only the homily or tractate when only that does, and
-  is left out otherwise (`"found": "similar"`, with its `score`). Like a
+  is left out otherwise (`"found": "similar"`, with its `score`). A homily or
+  tractate on the verse the catena is at (library/texts/, so run
+  scripts/extract_texts.py first when texts change) needs a smaller lead. Like a
   citation it stays "detected" until a person checks it, for instance
   against the margin note printed beside it ("Aug. in Joan. tract. i. c. 13").
 """
@@ -301,10 +303,15 @@ thing things other even very itself himself whom whose where while each some mad
 through about against word""".split())
 MIN_WORDS = 10                 # fewer shared-able words than this: too short to match
 SECTION = (0.35, 0.10)         # a section: its score, and its lead over any other section
-DIVISION = (0.20, 0.07)        # a homily or tractate: the same, over any other one
-# (0.07, not 0.08: with Tractates IV-VII in the library, the Catena's "Grace for
-# grace" (John 1:16) still points to Tractate III, as its margin note says, but
-# leads Tractate VII by 0.0795.)
+DIVISION = (0.20, 0.08)        # a homily or tractate: the same, over any other one
+# The lead a homily or tractate needs when it is the one on the verse the catena
+# is commenting on (library/texts/<work>/<n>.json, "verses"). A catena gathers
+# the Fathers' comments verse by verse, so that is where a quotation is likeliest
+# to come from, and the more of a Father's works the library holds, the closer
+# some other homily comes by chance: "Grace for grace" (John 1:16) leads Tractate
+# X by only 0.053 once Tractates IV-XI are in, though its margin note and its
+# five best paragraphs all say Tractate III.
+NEAR_LEAD = 0.04
 
 
 def content_words(text):
@@ -325,9 +332,11 @@ def paragraphs(pages):
     return out
 
 
-def match_quotation(words, candidates, idf):
+def match_quotation(words, candidates, idf, near=lambda para: False):
     """The best paragraph for a quotation's words, as (score, paragraph,
-    level): level "section", "division" or None."""
+    level): level "section", "division" or None. near(paragraph) says whether
+    its homily or tractate is the one on the verse being commented on, which
+    then needs only NEAR_LEAD over any other."""
     if len(words) < MIN_WORDS:
         return None
     total = sum(idf.get(w, max(idf.values())) for w in words)
@@ -341,12 +350,30 @@ def match_quotation(words, candidates, idf):
     other_division = next((s for s, c in scored if c[3].split(".")[0] != division), 0)
     if best >= SECTION[0] and best - other_section >= SECTION[1]:
         return best, para, "section"
-    if best >= DIVISION[0] and best - other_division >= DIVISION[1]:
+    if best >= DIVISION[0] and best - other_division >= (NEAR_LEAD if near(para) else DIVISION[1]):
         return best, para, "division"
     return None
 
 
-def catena_quotations(entries, labels, candidates, idf, held):
+def overlaps(span, entry):
+    """True if a text's verses (from library/texts/) overlap an excerpt's."""
+    if not span:
+        return False
+    key = lambda ref: tuple(int(x) for x in ref.split(".")[1:])     # noqa: E731
+    return key(span["start"]) <= key(entry["end"]) and key(entry["start"]) <= key(span["end"])
+
+
+def text_spans():
+    """{(work, source page): verses} for the whole texts in library/texts/."""
+    spans = {}
+    for p in glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json")):
+        t = load(p)
+        spans[(t["work"], t["source"])] = t["verses"]
+    return spans
+
+
+def catena_quotations(entries, labels, candidates, idf, held, spans=None):
+    spans = spans or {}
     rows = []
     for e in entries:
         text = e["text"]
@@ -356,7 +383,8 @@ def catena_quotations(entries, labels, candidates, idf, held):
             if not work:
                 continue
             seg = text[m.end():marks[i + 1].start() if i + 1 < len(marks) else len(text)]
-            found = match_quotation(content_words(seg), [c for c in candidates if c[0] == work], idf)
+            found = match_quotation(content_words(seg), [c for c in candidates if c[0] == work], idf,
+                                    near=lambda c, e=e: overlaps(spans.get((c[0], c[1])), e))
             if not found:
                 continue
             score, (_, source, pid, loc, a, b, _), level = found
@@ -449,7 +477,7 @@ def derive():
         labels = CATENAS.get(data["work"])
         if not labels:
             continue
-        rows = catena_quotations(data["entries"], labels, candidates, idf, held)
+        rows = catena_quotations(data["entries"], labels, candidates, idf, held, text_spans())
         if rows:
             out = os.path.join(ROOT, "library", "quotations", data["work"], f"{data['book']}.json")
             quotations[out] = {"work": data["work"], "book": data["book"], "quotations": rows}

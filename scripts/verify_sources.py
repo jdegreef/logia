@@ -21,6 +21,7 @@ Exit status 1 if any excerpt fails.
     python3 scripts/verify_sources.py calvin    # one work
 """
 import glob
+import html
 import json
 import os
 import re
@@ -68,6 +69,9 @@ def source_letters(path):
         p = _Text()
         p.feed(text)
         text = " ".join(p.out)
+    else:
+        # archive.org's text view is an HTML page: "&" is saved as "&amp;".
+        text = html.unescape(text)
     text = re.sub(r"-\s*\n\s*", "", text)   # a word broken at a line end
     return letters(text)
 
