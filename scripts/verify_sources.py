@@ -14,6 +14,9 @@ compares the two.
 - A scan source (archive.org OCR) mixes margin notes, running heads and page
   numbers into its lines, so it is checked in runs of six words: at least
   MIN_SCAN_SHARE of an excerpt's words must lie in a run found in the scan.
+- The checks above compare Latin letters, so every Greek or Hebrew word in an
+  excerpt or a whole text is also looked for, as it is written, in its source:
+  original-language text is copied, never typed.
 
 Exit status 1 if any excerpt fails.
 
@@ -26,12 +29,14 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MIN_SCAN_SHARE = 0.9
 CHUNK = 80          # letters per piece checked in a digital source
 SKIP = {"Note", "NoteRef", "mnote", "Footnote", "footer_note", "pb", "page"}
+ORIGINAL = re.compile(r"[\u0370-\u03ff\u1f00-\u1fff\u0590-\u05ff]+")    # Greek and Hebrew
 VOID = {"br", "img", "hr", "meta", "link", "input", "wbr", "col", "area", "base", "source"}
 
 
@@ -74,6 +79,18 @@ def source_letters(path):
         text = html.unescape(text)
     text = re.sub(r"-\s*\n\s*", "", text)   # a word broken at a line end
     return letters(text)
+
+
+def source_original(path):
+    """The source as written, for finding Greek and Hebrew words in it."""
+    return unicodedata.normalize("NFC", html.unescape(open(path, encoding="utf-8").read()))
+
+
+def check_original(excerpt, raw):
+    for w in ORIGINAL.findall(unicodedata.normalize("NFC", excerpt)):
+        if w not in raw:
+            return f"Greek or Hebrew not in source: {w}"
+    return None
 
 
 def check_digital(excerpt, src):
@@ -132,9 +149,10 @@ def main(argv):
                     problems.append(f"source {key} is not in sources/manifest.json")
                     continue
                 if key not in cache:
-                    cache[key] = source_letters(os.path.join(ROOT, meta["path"]))
+                    path = os.path.join(ROOT, meta["path"])
+                    cache[key] = source_letters(path), source_original(path)
                 check = check_digital if meta["kind"] == "digital" else check_scan
-                problem = check(e["text"], cache[key])
+                problem = check(e["text"], cache[key][0]) or check_original(e["text"], cache[key][1])
                 if problem is None:
                     problems = []
                     break           # one listed source holding it is enough
@@ -154,9 +172,10 @@ def main(argv):
             print(f"{os.path.relpath(path, ROOT)}: source {t['source']} is not in sources/manifest.json")
             continue
         src = source_letters(os.path.join(ROOT, meta["path"]))
+        raw = source_original(os.path.join(ROOT, meta["path"]))
         for para in t["paragraphs"]:
             paras += 1
-            problem = check_digital(para["text"], src)
+            problem = check_digital(para["text"], src) or check_original(para["text"], raw)
             if problem:
                 bad += 1
                 print(f"{os.path.relpath(path, ROOT)}: {para['id']}: {problem}")

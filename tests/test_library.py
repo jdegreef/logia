@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import unittest
 from contextlib import redirect_stdout
 
@@ -128,6 +129,18 @@ class VerifyCatchesChanges(unittest.TestCase):
         invented = ("The Word here signifies the eternal reason of the Father, which every believer may "
                     "contemplate in quiet prayer each morning before the work of the day begins.")
         self.assertIsNotNone(verify_sources.check_scan(invented, scan))
+
+    def test_retyped_greek_fails(self):
+        # Calvin on John 1:1 quotes a Greek word: as copied it is in the source;
+        # the same word without its accents (as if retyped) is not.
+        with open(os.path.join(ROOT, "library", "comments", "calvin", "JHN.json"), encoding="utf-8") as f:
+            entry = next(e for e in json.load(f)["entries"] if verify_sources.ORIGINAL.search(e["text"]))
+        raw = verify_sources.source_original(os.path.join(ROOT, "sources", "calvin", entry["sources"][0]))
+        self.assertIsNone(verify_sources.check_original(entry["text"], raw))
+        word = verify_sources.ORIGINAL.search(entry["text"])[0]
+        bare = "".join(c for c in unicodedata.normalize("NFD", word) if not unicodedata.combining(c))
+        self.assertNotEqual(bare, word)
+        self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
 
 
 class Site(unittest.TestCase):
