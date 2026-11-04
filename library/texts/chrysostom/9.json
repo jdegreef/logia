@@ -4,13 +4,18 @@
  "title": "Homily IX.",
  "source": "npnf114.iv.xi.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xi.html",
+ "verses": {
+  "start": "JHN.1.11",
+  "end": "JHN.1.11"
+ },
  "paragraphs": [
   {
    "id": "iv.xi-p1",
    "locus": "9.1",
    "text": "Homily IX.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.xi-p2",
@@ -24,21 +29,24 @@
      "end": "JHN.1.11"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p3",
    "locus": "9.1",
    "text": "“He came unto His own, and His own received Him not.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p4",
    "locus": "9.1",
    "text": "[1.] If ye remember our former reflections, we shall the more zealously proceed with the building up of what remains, as doing so for great gain. For so will our discourse be more intelligible to you who remember what has been already said, and we shall not need much labor, because you are able through your great love of learning to see more clearly into what remains. The man who is always losing what is given to him will always need a teacher, and will never know anything; but he who retains what he has received, and so receives in addition what remains, will quickly be a teacher instead of a learner, and useful not only to himself, but to all others also; as, conjecturing from their great readiness to hear, I anticipate that this assembly will specially be. Come then, let us lay up in your souls, as in a safe treasury, the Lord’s money, and unfold, as far as the grace of the Spirit may afford us power, the words this day set before us.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p6",
@@ -90,7 +98,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.11.1"
-   ]
+   ],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p9",
@@ -110,7 +119,8 @@
      "end": "MAT.15.24"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p14",
@@ -142,7 +152,8 @@
      "end": "ROM.9.32"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p16",
@@ -186,7 +197,8 @@
      "end": "ISA.52.5"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p20",
@@ -224,14 +236,16 @@
      "end": "ROM.3.23"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p27",
    "locus": "9.2",
    "text": "Why then exaltest thou thyself, O Jew? why art thou high minded? for thy mouth also is stopped, thy boldness also is taken away, thou also with all the world art become guilty, and, like others, art placed in need of being justified freely. Thou oughtest surely even if thou hadst stood upright and hadst had great boldness with God, not even so to have envied those who should be pitied and saved through His lovingkindness. This is the extreme of wickedness, to pine at the blessings of others; especially when this was to be effected without any loss of thine. If indeed the salvation of others had been prejudicial to thy advantages, thy grieving might have been reasonable; though not even then would it have been so to one who had learned true wisdom. But if thy reward is not increased by the punishment of another, nor diminished by his welfare, why dost thou bewail thyself because that other is freely saved? As I said, thou oughtest not, even wert thou (one) of the approved, to be pained at the salvation which cometh to the Gentiles through grace. But when thou, who art guilty before thy Lord of the same things as they, and hast thyself offended, art displeased at the good of others, and thinkest great things, as if thou alone oughtest to be partaker of the grace, thou art guilty not only of envy and insolence, but of extreme folly, and mayest be liable to all the severest torments; for thou hast planted within thyself the root of all evils, pride.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   },
   {
    "id": "iv.xi-p29",
@@ -251,7 +265,8 @@
      "end": "PRO.16.5"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.11"
   }
  ]
 }

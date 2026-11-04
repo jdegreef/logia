@@ -234,7 +234,15 @@ def main():
             say(f"{name}: file path does not match work {w['id']!r} and locus {t.get('locus')!r}")
         if t.get("source") not in sources.get(w["id"], set()):
             say(f"{name}: source {t.get('source')!r} is not in sources/manifest.json for {w['id']}")
+        vs = t.get("verses") or {}
+        start, end = scripture.parse(vs.get("start")), scripture.parse(vs.get("end"))
+        if not start or not end or start[0] != end[0] or start[1:] > end[1:]:
+            say(f"{name}: verses {vs!r} is not a forward range of verses")
         for para in t.get("paragraphs", []):
+            v = para.get("verse")
+            if v is not None and not (start and end and (p_ := scripture.parse(v))
+                                      and p_[0] == start[0] and start[1:] <= p_[1:] <= end[1:]):
+                say(f"{name}: {para['id']}: verse {v!r} is outside the text's verses")
             for x in para["excerpts"]:
                 if x not in texts or texts[x][0] != w["id"]:
                     say(f"{name}: {para['id']}: {x!r} is not an excerpt of {w['id']}")

@@ -4,13 +4,18 @@
  "title": "Homily XV.",
  "source": "npnf114.iv.xvii.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xvii.html",
+ "verses": {
+  "start": "JHN.1.18",
+  "end": "JHN.1.18"
+ },
  "paragraphs": [
   {
    "id": "iv.xvii-p1",
    "locus": "15.1",
    "text": "Homily XV.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.xvii-p2",
@@ -24,14 +29,16 @@
      "end": "JHN.1.18"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p3",
    "locus": "15.1",
    "text": "“No man hath seen God at any time; the Only-begotten Son, which is in the bosom of the Father, He hath declared Him.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p4",
@@ -81,7 +88,8 @@
      "end": "REV.1.15"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p7",
@@ -157,14 +165,16 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.18.1"
-   ]
+   ],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p15",
    "locus": "15.2",
    "text": "[2.] So that even to angels He then became visible, when He put on the Flesh; but before that time they did not so behold Him, because even to them His Essence was invisible.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p16",
@@ -196,7 +206,8 @@
      "end": "JHN.10.15"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p20",
@@ -218,7 +229,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.18.2"
-   ]
+   ],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p25",
@@ -232,7 +244,8 @@
      "end": "EXO.3.14"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p29",
@@ -266,7 +279,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.18.3"
-   ]
+   ],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p34",
@@ -298,7 +312,8 @@
      "end": "1CO.12.13"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   },
   {
    "id": "iv.xvii-p38",
@@ -312,7 +327,8 @@
      "end": "EPH.5.29"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.18"
   }
  ]
 }

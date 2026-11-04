@@ -4,13 +4,18 @@
  "title": "Homily XIV.",
  "source": "npnf114.iv.xvi.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xvi.html",
+ "verses": {
+  "start": "JHN.1.16",
+  "end": "JHN.1.17"
+ },
  "paragraphs": [
   {
    "id": "iv.xvi-p1",
    "locus": "14.1",
    "text": "Homily XIV.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.xvi-p2",
@@ -24,21 +29,24 @@
      "end": "JHN.1.16"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.16"
   },
   {
    "id": "iv.xvi-p3",
    "locus": "14.1",
    "text": "“And of His fullness have all we received, and grace for grace.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.16"
   },
   {
    "id": "iv.xvi-p4",
    "locus": "14.1",
    "text": "[1.] I said the other day, that John, to resolve the doubts of those who should question with themselves how the Lord, though He came after to the preaching, became before and more glorious than he, added, “for He was before me.” And this is indeed one reason. But not content with this, he adds again a second, which now he declares. What is it? “And of his fullness,” says he, “have all we received, and grace for grace.” With these again he mentions another. What is this? That",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.16"
   },
   {
    "id": "iv.xvi-p5",
@@ -52,7 +60,8 @@
      "end": "JHN.1.17"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p6",
@@ -61,7 +70,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.16.1"
-   ]
+   ],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p10",
@@ -117,14 +127,16 @@
      "end": "JER.31.31"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p16",
    "locus": "14.2",
    "text": "[2.] Do not then, because the same words are used, suppose that the things are identical, nor yet diverse either; for in that they were models they did not differ from the truth; but in that they merely preserved the outline, they were less than the truth. What is the difference in all these instances? Will you that we take in hand and proceed to examine one or two of the cases mentioned? thus the rest will be plain to you; and we shall see that the first were lessons for children, the last for high-minded full-grown men; that the first laws were made as for mortals, the latter as for angels.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p17",
@@ -174,7 +186,8 @@
      "end": "PRO.9.9"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p26",
@@ -202,14 +215,16 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.16.2"
-   ]
+   ],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p31",
    "locus": "14.3",
    "text": "[3.] Therefore that men received the law was of pity, mercies, and grace; and for this reason he saith, “Grace for grace.” But striving yet more fervently to (express) the greatness of the gifts, he goes on to say,",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p33",
@@ -225,7 +240,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.17.1"
-   ]
+   ],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p34",
@@ -234,7 +250,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.17.1"
-   ]
+   ],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p35",
@@ -256,14 +273,16 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.17.1"
-   ]
+   ],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p37",
    "locus": "14.3",
    "text": "Seest thou how “grace” cometh by Him? look also to “truth.” His “grace” the instance just mentioned, and what happened in the case of the thief, and the gift of Baptism, and the grace of the Spirit given by Him declare, and many other things. But His “truth” we shall more clearly know, if we understand the types. For the types like patterns anticipated and sketched beforehand the dispensations which should be accomplished under the new covenant, and Christ came and fulfilled them. Let us now consider the types in few words, for we cannot at the present time go through all that relates to them; but when you have learned some points from those (instances) which I shall set before you, you will know the others also.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p42",
@@ -277,7 +296,8 @@
      "end": "EXO.12.3"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p44",
@@ -291,7 +311,8 @@
      "end": "EXO.17.12"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p45",
@@ -305,7 +326,8 @@
      "end": "EXO.17.12"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p46",
@@ -331,14 +353,16 @@
      "end": "GAL.3.13"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   },
   {
    "id": "iv.xvi-p47",
    "locus": "14.4",
    "text": "Since then we have enjoyed such “grace” and “truth,” I exhort you that we be not more slothful by reason of the greatness of the gift; for the greater the honor of which we have been deemed worthy, the greater our debt of excellence; for one who has received but small benefits, even though he makes but small returns, does not deserve the same condemnation; but he who has been raised to the highest summit of honor, and yet manifests groveling and mean dispositions, will be worthy of much greater punishment. May I never have to suspect this of you. For we trust in the Lord that you have winged your souls for heaven, that you have removed from earth, that being in the world ye handle not the things of the world; yet though so persuaded, we do not cease thus continually to exhort you. In the games of the heathen, they whom all the spectators encourage are not those who have fallen and lie supine, but those who are exerting themselves and running still; of the others, (since they would be doing what would be of no use, and would not be able to raise up by their encouragements men once for all severed from victory,) they cease to take any notice. But in this case some good may be expected, not only of you who are sober, but even of those who have fallen, if they would but be converted. Wherefore we use every means, exhorting, reproving, encouraging, praising, in order that we may bring about your salvation. Be not then offended by our continual admonishing concerning the Christian conversation, for the words are not the words of one accusing you of sloth, but of one who has very excellent hopes respecting you. And not to you alone, but to ourselves who speak them, are these words said, yea, and shall be said, for we too need the same teaching; so though they be spoken by us, yet nothing hinders their being spoken to us, (for the Word, when it finds a man in fault, amends him, when clear and free, sets him as far off from it as possible,) and we ourselves are not pure from transgressions. The course of healing is the same for all, the medicines are set forth for all, only the application is not the same, but is made according to the choice of those who use the medicines; for one who will handle the remedy as he ought, gains some benefit from the application, while he who does not place it upon the wound, makes the evil greater, and brings it to the most painful end. Let us then not fret when we are being healed, but much rather rejoice, even though the system of discipline bring bitter pains, for hereafter it will show to us fruit sweeter than any. Let us then do all to this end, that we may depart to that world, cleared of the wounds and strokes which the teeth of sin make in the soul, so that having become worthy to behold the countenance of Christ, we may be delivered in that day, not to the avenging and cruel powers, but to those who are able to bring us to that inheritance of the heavens which is prepared for them that love Him; to which may it come to pass that we all attain, through the grace and lovingkindness of our Lord Jesus Christ, to whom be glory and dominion for ever and ever. Amen.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.17"
   }
  ]
 }

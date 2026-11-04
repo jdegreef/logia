@@ -159,6 +159,15 @@
     }));
     return rows.length ? '<div class="cx-qs">' + rows.join("") + "</div>" : "";
   }
+  // Whole homilies and tractates on this verse: the works' second structure,
+  // by the verse they expound (library/texts), even where Logia has no excerpt.
+  function wholeTexts(v) {
+    var rows = DATA.wholeTexts[v] || [];
+    if (!rows.length) return "";
+    return '<p class="cx-whole">' + esc(U.whole_texts) + ": " + rows.map(function (r) {
+      return '<a href="' + esc(r.href) + '">' + esc(r.short) + ", " + esc(r.where) + "</a>";
+    }).join(" · ") + "</p>";
+  }
   // Excerpts on other verses that refer to this one (the other way of a citation).
   function elsewhere(v) {
     var rows = (DATA.citedBy[v] || []).filter(function (r) { return state.eras.has(r.era); });
@@ -212,7 +221,7 @@
     if (!any) {
       h += '<p class="cx-empty">' + esc(works.some(function (w) { return entriesFor(w, v).length; }) ? U.none_in_eras : U.none_yet_long) + "</p>";
     }
-    return h + elsewhere(v);
+    return h + wholeTexts(v) + elsewhere(v);
   }
 
   // Like, save and share under a card. Likes and saves need an account

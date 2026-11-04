@@ -4,13 +4,18 @@
  "title": "Homily VI.",
  "source": "npnf114.iv.viii.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.viii.html",
+ "verses": {
+  "start": "JHN.1.6",
+  "end": "JHN.1.8"
+ },
  "paragraphs": [
   {
    "id": "iv.viii-p1",
    "locus": "6.1",
    "text": "Homily VI.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.viii-p2",
@@ -24,14 +29,16 @@
      "end": "JHN.1.6"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.6"
   },
   {
    "id": "iv.viii-p3",
    "locus": "6.1",
    "text": "“There was a man sent from God, whose name was John.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.6"
   },
   {
    "id": "iv.viii-p4",
@@ -47,7 +54,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.6.1"
-   ]
+   ],
+   "verse": "JHN.1.6"
   },
   {
    "id": "iv.viii-p7",
@@ -73,7 +81,8 @@
      "end": "MRK.1.2"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.6"
   },
   {
    "id": "iv.viii-p11",
@@ -89,7 +98,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.7.1"
-   ]
+   ],
+   "verse": "JHN.1.7"
   },
   {
    "id": "iv.viii-p12",
@@ -111,7 +121,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.7.1"
-   ]
+   ],
+   "verse": "JHN.1.7"
   },
   {
    "id": "iv.viii-p15",
@@ -120,7 +131,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.7.1"
-   ]
+   ],
+   "verse": "JHN.1.7"
   },
   {
    "id": "iv.viii-p16",
@@ -152,7 +164,8 @@
      "end": "JHN.5.34"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.7"
   },
   {
    "id": "iv.viii-p26",
@@ -161,7 +174,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.7-8.1"
-   ]
+   ],
+   "verse": "JHN.1.7"
   },
   {
    "id": "iv.viii-p28",
@@ -177,7 +191,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.7-8.1"
-   ]
+   ],
+   "verse": "JHN.1.8"
   },
   {
    "id": "iv.viii-p29",
@@ -186,14 +201,16 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.7-8.1"
-   ]
+   ],
+   "verse": "JHN.1.8"
   },
   {
    "id": "iv.viii-p32",
    "locus": "6.1",
    "text": "Let us pray then, that henceforth with the revelation of these thoughts and rightness of doctrine, we may have also a pure life and bright conversation, since these things profit nothing unless good works be present with us. For though we have all faith and all knowledge of the Scriptures, yet if we be naked and destitute of the protection derived from (holy) living, there is nothing to hinder us from being hurried into the fire of hell, and burning for ever in the unquenchable flame. For as they who have done good shall rise to life everlasting, so they who have dared the contrary shall rise to everlasting punishment, which never has an end. Let us then manifest all eagerness not to mar the gain which accrues to us from a right faith by the vileness of our actions, but becoming well-pleasing to Him by these also, boldly to look on Christ. No happiness can be equal to this. And may it come to pass, that we all having obtained what has been mentioned, may do all to the glory of God; to whom, with the Only-Begotten Son and the Holy Ghost, be glory for ever and ever. Amen.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.8"
   }
  ]
 }

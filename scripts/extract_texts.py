@@ -13,7 +13,15 @@ library/texts/<work>/<n>.json, where n is the homily or tractate number:
   markers and page numbers are left out, and spacing is normalised;
 - each paragraph keeps CCEL's id (so a link can reach the same paragraph on
   CCEL), its locus ("2.8", Homily 2, section 8), the Scripture references
-  CCEL marks in it, and the ids of the Logia excerpts that hold it.
+  CCEL marks in it, and the ids of the Logia excerpts that hold it;
+- each paragraph also has the verse it expounds (`verse`), and the text the
+  span of verses it covers (`verses`): a second way of dividing the work,
+  by the Gospel it comments on (roadmap, item 6). Both are read from what
+  the page prints: the heading's verse ("John i. 6", "Chapter I. 6–14") and
+  the verse marks a homily gives as it moves on ("Ver. 7."). A homily that
+  prints no later mark is taken to stay on its heading's verse; under a
+  heading that names a range, a paragraph has no verse until a mark gives
+  one.
 
 The book's title lines before the first homily or tractate heading are not
 part of it and are left out. scripts/verify_sources.py checks every paragraph
@@ -30,6 +38,11 @@ import find_refs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
+# The verse a homily or tractate opens on, as its heading prints it.
+OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)"
+                   r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)[–-](?P<b>\d+))$")
+# A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13."
+VER = re.compile(r"^(?:\[\d+\.\]\s*)?Ver\.\s+(\d+)\.")
 
 
 def load(path):
@@ -54,7 +67,9 @@ def derive():
             for e in load(c)["entries"]:
                 if e["sources"][0] == source and (where := find_refs.span(page, e["text"])):
                     held.append((*where, e["id"]))
-        paras, number, title = [], None, None
+        books = {os.path.basename(c)[:-5] for c in glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json"))}
+        book = books.pop() if len(books) == 1 else None
+        paras, number, title, chapter, verse, span = [], None, None, None, None, None
         for i, (a, b) in enumerate(zip(starts, starts[1:])):
             words = " ".join(text[a:b].split())
             if not words:
@@ -64,11 +79,22 @@ def derive():
                 if not m:
                     continue                 # the book's title lines
                 number, title = find_refs.scripture.roman(m[2]), words
+            o = OPENS.match(words)
+            if o and book and chapter is None:
+                chapter = find_refs.scripture.roman(o["ch"] or o["CH"])
+                span = [int(o["v"] or o["a"]), int(o["b"] or o["v"])]
+                # A heading with a range ("Chapter I. 1–5") says what the whole
+                # text covers, not which verse each paragraph is on.
+                verse = span[0] if span[0] == span[1] else None
+            elif (m := VER.match(words)) and chapter is not None:
+                verse = int(m[1])
+                span[1] = max(span[1], verse)
             cites = find_refs.ccel_citations(page, (a, b), words)
             paras.append({
                 "id": page["para_ids"][i], "locus": find_refs.locus(page, a), "text": words,
                 "cites": [{"at": at, "text": t, "start": s, "end": e} for at, t, s, e in cites],
                 "excerpts": [x for s, t, x in held if s < b and a < t],
+                "verse": f"{book}.{chapter}.{verse}" if verse else None,
             })
         if number is None:
             problems.append(f"{f['path']}: no Homily or Tractate heading")
@@ -77,8 +103,12 @@ def derive():
         if dest in out:
             problems.append(f"{f['path']}: a second page for {work['id']} {number}")
             continue
-        out[dest] = {"work": work["id"], "locus": str(number), "title": title, "source": source,
-                     "url": f["url"], "paragraphs": paras}
+        if span is None:
+            problems.append(f"{f['path']}: no heading names the verse it opens on")
+            continue
+        out[dest] = {"work": work["id"], "locus": str(number), "title": title, "source": source, "url": f["url"],
+                     "verses": {"start": f"{book}.{chapter}.{span[0]}", "end": f"{book}.{chapter}.{span[1]}"},
+                     "paragraphs": paras}
     return out, problems
 
 

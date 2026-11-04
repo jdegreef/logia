@@ -4,13 +4,18 @@
  "title": "Homily V.",
  "source": "npnf114.iv.vii.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.vii.html",
+ "verses": {
+  "start": "JHN.1.3",
+  "end": "JHN.1.3"
+ },
  "paragraphs": [
   {
    "id": "iv.vii-p1",
    "locus": "5.1",
    "text": "Homily V.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.vii-p2",
@@ -24,14 +29,16 @@
      "end": "JHN.1.3"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p3",
    "locus": "5.1",
    "text": "“All things were made by Him; and without Him was not anything made that was made.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p4",
@@ -40,7 +47,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.3.1"
-   ]
+   ],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p8",
@@ -60,7 +68,8 @@
      "end": "JHN.1.7"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p9",
@@ -74,7 +83,8 @@
      "end": "JHN.1.14"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p11",
@@ -88,14 +98,16 @@
      "end": "1CO.1.24"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p12",
    "locus": "5.1",
    "text": "When we have shut them out from these strange opinions, they who take all manner of pains to withstand the truth, say, (still clinging to the same reading,) “Whatever came into existence by him was life, because,” says one, “whatever came into existence was life.” What then do you say of the punishment of the men of Sodom, and the flood, and hell fire, and ten thousand like things? “But,” says one, “we are speaking of the material creation.” Well, these too belong entirely to the material creation. But that we may out of our abundance refute their argument, we will ask them, “Is wood, life,” tell me? “Is stone, life?” these things that are lifeless and motionless? Nay, is man absolutely life? Who would say so? he is not pure life, but is capable of receiving life.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p17",
@@ -121,7 +133,8 @@
      "end": "JHN.1.12"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p20",
@@ -130,7 +143,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.3.2"
-   ]
+   ],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p23",
@@ -144,7 +158,8 @@
      "end": "COL.1.16"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p24",
@@ -170,7 +185,8 @@
      "end": "COL.2.19"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p26",
@@ -226,7 +242,8 @@
      "end": "ROM.6.23"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p31",
@@ -242,7 +259,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.4.1"
-   ]
+   ],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p36",
@@ -304,7 +322,8 @@
      "end": "JHN.16.15"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p39",
@@ -320,7 +339,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.4.2"
-   ]
+   ],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p41",
@@ -336,7 +356,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.5.1"
-   ]
+   ],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p43",
@@ -345,7 +366,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.5.1"
-   ]
+   ],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p44",
@@ -361,7 +383,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.5.1"
-   ]
+   ],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p47",
@@ -381,7 +404,8 @@
      "end": "EPH.5.12"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   },
   {
    "id": "iv.vii-p49",
@@ -395,7 +419,8 @@
      "end": "ROM.13.13"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.3"
   }
  ]
 }

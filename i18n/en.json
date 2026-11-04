@@ -210,7 +210,8 @@
     "unchecked_title": "Matched by shared wording; no one has checked it yet",
     "not_pinned": "(the passage is not pinned down)",
     "quoted_by": "Quoted by {name} in the {title} on {ref}",
-    "full_text_short": "full text"
+    "full_text_short": "full text",
+    "whole_texts": "Read in full on this verse"
   },
   "commentators": {
     "title": "Commentators",
@@ -242,7 +243,10 @@
     "front_to_back_note": "Every excerpt Logia holds from this work, in order. Each links to its verse in the reader.",
     "open_verse": "Read {ref} with all its commentary",
     "straight_through": "Read straight through",
-    "straight_through_note": "The {divisions} that hold Logia's excerpts, copied whole from their CCEL transcriptions. Each marks the passages Logia sets beside a verse."
+    "straight_through_note": "The {divisions} that hold Logia's excerpts, copied whole from their CCEL transcriptions. Each marks the passages Logia sets beside a verse.",
+    "by_division": "By {division}",
+    "by_verse": "By verse",
+    "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on."
   },
   "about": {
     "title": "About",

@@ -248,3 +248,10 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-turns { display: flex; justify-content: space-between; gap: 16px; max-width: 70ch; margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--line); }
 .lg-whole-note { max-width: 70ch; margin-top: 18px; }
 @media (max-width: 560px) { .lg-whole .lg-held, .lg-held + .lg-marks { margin-left: -12px; padding-left: 9px; } }
+.cx-whole { font-size: 13.5px; color: var(--muted); margin: 18px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
+.lg-structures { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 8px 40px; max-width: 980px; }
+.lg-structures h3 { margin: 18px 0 0; }
+.lg-by-verse a { font-family: var(--sans); font-size: 14px; }
+.lg-by-verse li > a b { font-family: var(--display); font-size: 17px; font-weight: 600; }
+.lg-whole p.lg-verse { font-family: var(--sans); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; margin: 1.4em 0 .4em; }
+.lg-whole p.lg-verse a { text-decoration: none; }

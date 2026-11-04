@@ -65,6 +65,30 @@ for excerpts, and `scripts/verify_sources.py` checks every paragraph. The
 site shows each text at `/works/<work>/<n>/`, with a section anchor
 `#s<section>`, and each work's list at `/works/<work>/`.
 
+## Two structures
+
+A work with its own divisions can be read in two orders, as Sefaria's
+alternate structures allow: by its own divisions (Homily 10, section 2)
+and by the verses it expounds (John 1:12). The second is read from what
+the CCEL page prints, never inferred:
+
+- the verse a homily or tractate opens on, from its heading: "John i. 11"
+  (Chrysostom), or a range, "Chapter I. 6–14" (Augustine);
+- the verse marks a homily prints as it moves on: "Ver. 12.", "[3.] Ver. 13.".
+
+`scripts/extract_texts.py` gives each whole text its `verses` (the heading's
+verse or range, to the last verse marked) and each paragraph its `verse`:
+the verse last marked before it, or `null` under a heading that names a
+range and no mark yet. So Homily 10 covers John 1:11–13 and has paragraphs
+on each verse, while Tractate 2 covers John 1:6–14 without saying which
+paragraph is on which verse. Nothing is guessed in between. Homily 4 marks
+only John 1:1, so it is not listed for John 1:2 even if it touches it.
+
+The site uses both. A work's page lists its whole texts by homily and by
+verse. A whole text labels the verse where its exposition moves on. The
+reader lists, under every verse, the whole homilies and tractates on it,
+even where Logia holds no excerpt from them.
+
 ## Citations
 
 `library/citations/<work>/<BOOK>.json` lists the Scripture each excerpt

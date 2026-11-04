@@ -4,13 +4,18 @@
  "title": "Homily III.",
  "source": "npnf114.iv.v.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.v.html",
+ "verses": {
+  "start": "JHN.1.1",
+  "end": "JHN.1.1"
+ },
  "paragraphs": [
   {
    "id": "iv.v-p1",
    "locus": "3.1",
    "text": "Homily III.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.v-p2",
@@ -24,56 +29,64 @@
      "end": "JHN.1.1"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p3",
    "locus": "3.1",
    "text": "“In the beginning was the Word.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p4",
    "locus": "3.1",
    "text": "[1.] On the subject of attention in hearkening it is superfluous to exhort you any more, so quickly have you shown by your actions the effects of my advice. For your manner of running together, your attentive postures, the thrusting one another in your eagerness to get the inner places, where my voice may more clearly be heard by you, your unwillingness to retire from the press until this spiritual assembly be dissolved, the clapping of hands, the murmurs of applause; in a word, all things of this kind may be considered proofs of the fervor of your souls, and of your desire to hear. So that on this point it is superfluous to exhort you. One thing, however, it is necessary for us to bid and entreat, that you continue to have the same zeal, and manifest it not here only, but that also when you are at home, you converse man with wife, and father with son, concerning these matters. And say somewhat of yourselves, and require somewhat in return from them; and so all contribute to this excellent banquet.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p6",
    "locus": "3.1",
    "text": "For let no one tell me that our children ought not to be occupied with these things; they ought not only to be occupied with them, but to be zealous about them only. And although on account of your infirmity I do not assert this, nor take them away from their worldly learning, just as I do not draw you either from your civil business; yet of these seven days I claim that you dedicate one to the common Lord of us all. For is it not a strange thing that we should bid our domestics slave for us all their time, and ourselves apportion not even a little of our leisure to God; and this too when all our service adds nothing to Him, (for the Godhead is incapable of want,) but turns out to our own advantage? And yet when you take your children into the theaters, you allege neither their mathematical lessons, nor anything of the kind; but if it be required to gain or collect anything spiritual, you call the matter a waste of time. And how shall you not anger God, if you find leisure and assign a season for everything else, and yet think it a troublesome and unseasonable thing for your children to take in hand what relates to Him?",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p8",
    "locus": "3.1",
    "text": "Do not so, brethren, do not so. It is this very age that most of all needs the hearing these things; for from its tenderness it readily stores up what is said; and what children hear is impressed as a seal on the wax of their minds. Besides, it is then that their life begins to incline to vice or virtue; and if from the very gates and portals one lead them away from iniquity, and guide them by the hand to the best road, he will fix them for the time to come in a sort of habit and nature, and they will not, even if they be willing, easily change for the worse, since this force of custom draws them to the performance of good actions. So that we shall see them become more worthy of respect than those who have grown old, and they will be more useful in civil matters, displaying in youth the qualities of the aged.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p10",
    "locus": "3.1",
    "text": "For, as I before said, it cannot be that they who enjoy the hearing of such things as these, and who are in the company of such an Apostle, should depart without receiving some great and remarkable advantage, be it man, woman, or youth, that partakes of this table. If we train by words the animals which we have, and so tame them, how much more shall we effect this with men by this spiritual teaching, when there is a wide difference between the remedy in each case, and the subject healed as well. For neither is there so much fierceness in us as in the brutes, since theirs is from nature, ours from choice; nor is the power of the words the same, for the power of the first is that of the human intellect, the power of the second is that of the might and grace of the Spirit. Let then the man who despairs of himself consider the tame animals, and he shall no longer be thus affected; let him come continually to this house of healing, let him hear at all times the laws of the Spirit, and on retiring home let him write down in his mind the things which he has heard; so shall his hopes be good and his confidence great, as he feels his progress by experience. For when the devil sees the law of God written in the soul, and the heart become tablets to write it on, he will not approach any more. Since wherever the king’s writing is, not engraved on a pillar of brass, but stamped by the Holy Ghost on a mind loving God, and bright with abundant grace, that (evil one) will not be able even to look at it, but from afar will turn his back upon us. For nothing is so terrible to him and to the thoughts which are suggested by him as a mind careful about Divine matters, and a soul which ever hangs over this fountain. Such an one can nothing present annoy, even though it be displeasing; nothing puff up or make proud, even though it be favorable; but amidst all this storm and surge it will even enjoy a great calm.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p12",
    "locus": "3.2",
    "text": "[2.] For confusion arises within us, not from the nature of circumstances, but from the infirmity of our minds; for if we were thus affected by reason of what befalls us, then, (as we all sail the same sea, and it is impossible to escape waves and spray,) all men must needs be troubled; but if there are some who stand beyond the influence of the storm and the raging sea, then it is clear that it is not circumstances which make the storm, but the condition of our own mind. If therefore we so order the mind that it may bear all things contentedly, we shall have no storm nor even a ripple, but always a clear calm.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p13",
    "locus": "3.2",
    "text": "After professing that I should say nothing on these points, I know not how I have been carried away into such a length of exhortation. Pardon my prolixity; for I fear, yes, I greatly fear lest this zeal of ours should ever become weaker. Did I feel confident respecting it, I would not now have said to you anything on these matters, since it is sufficient to make all things easy to you. But it is time in what follows to proceed to the matters proposed for consideration to-day; that you may not come weary to the contest. For we have contests against the enemies of the truth, against those who use every artifice to destroy the honor of the Son of God, or rather their own. This remains for ever as it now is, nothing lessened by the blaspheming tongue, but they, by seeking eagerly to pull down Him whom they say they worship, fill their faces with shame and their souls with punishment.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p14",
@@ -87,7 +100,8 @@
      "end": "PSA.82.6"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p15",
@@ -107,21 +121,24 @@
      "end": "1SA.1.1"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p19",
    "locus": "3.2",
    "text": "For I can mention even another thing by way of going further. What is it? It is, that if it had been said of the earth, “In the beginning was the earth,” and of man, “In the beginning was the man,” we must not even then have imagined any greater things concerning them than what we have now determined. For the terms “earth” and “man” as they are presupposed, whatever may be said concerning them, do not allow the mind to imagine to itself anything greater concerning them than what we know at present. Just as “the Word,” although but little be said of It, does not allow us to think (respecting It) anything low or poor. Since in proceeding he says of the earth, “The earth was invisible and unformed.” For having said that “He made” it, and having settled its proper limit, he afterwards declares fearlessly what follows, as knowing that there is no one so silly as to suppose that it is without beginning and uncreated, since the word “earth,” and that other “made,” are enough to convince even a very simple person that it is not eternal nor increate, but one of those things created in time.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p21",
    "locus": "3.3",
    "text": "[3.] Besides, the expression “was,” applied to the earth and to man, is not indicative of absolute existence. But in the case of a man (it denotes) his being of a certain place, in that of the earth its being in a certain way. For he has not said absolutely “the earth was,” and then held his peace, but has taught how it was even after its creation, as that it was “invisible and unformed,” as yet covered by the waters and in confusion. So in the case of Elkanah he does not merely say that “there was a man,” but adds also whence he was, “of Armathaim Zophim.” But in the case of “the Word,” it is not so. I am ashamed to try these cases, one against the other, for if we find fault with those who do so in the case of men, when there is a great difference in the virtue of those who are so tried, though in truth their substance be one; where the difference both of nature and of everything else is so infinite, is it not the extremest madness to raise such questions? But may He who is blasphemed by them be merciful to us. For it was not we who invented the necessity of such discussions, but they who war against their own salvation laid it on us.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p22",
@@ -130,7 +147,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.1.2"
-   ]
+   ],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p26",
@@ -144,7 +162,8 @@
      "end": "PSA.19.1"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p30",
@@ -164,7 +183,8 @@
      "end": "JHN.18.37"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p33",
@@ -196,7 +216,8 @@
      "end": "ROM.1.3"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p39",
@@ -282,7 +303,8 @@
      "end": "MAT.5.22"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p43",
@@ -302,21 +324,24 @@
      "end": "JHN.5.44"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p49",
    "locus": "3.5",
    "text": "Would you learn what a tyrannous sway it exercises? Why surely, the words of Christ are sufficient to show it all. But yet listen to these further remarks. If you will ask any of those men who mingle in state affairs and incur great expenses, why they lavish so much gold, and what their so vast expenditure means; you will hear from them, that it is for nothing else but to gratify the people. If again you ask what the people may be; they will say, that it is a thing full of confusion and turbulent, made up for the most part of folly, tossed blindly to and fro like the waves of the sea, and often composed of varying and adverse opinions. Must not the man who has such a master be more pitiable than any one? And yet strange though it be, it is not so strange that worldly men should be eager about these things; but that those who say that they have started away from the world should be sick of this same disease, or rather of one more grievous still, this is the strangest thing of all. For with the first the loss extends only to money, but in the last case the danger reaches to the soul. For when men alter a right faith for reputation’s sake, and dishonor God that they may be in high repute themselves, tell me, what excess of stupidity and madness must there not be in what they do? Other passions, even if they are very hurtful, at least bring some pleasure with them, though it be but for a time and fleeting; those who love money, or wine, or women, have, with their hurt, a pleasure, though a brief one. But those who are taken captives by this passion, live a life continually embittered and stripped of enjoyment, for they do not obtain what they earnestly desire, glory, I mean, from the many. They think they enjoy it, but do not really, because the thing they aim at is not glory at all. And therefore their state of mind is not called glory, but a something void of glory, vaingloriousness, so have all the ancients named it, and with good reason; inasmuch as it is quite empty, and contains nothing bright or glorious within it, but as players’ masks seem to be bright and lovely, but are hollow within, (for which cause, though they be more beautiful than natural faces, yet they never draw any to love them,) even so, or rather yet more wretchedly, has the applause of the multitude tricked out for us this passion, dangerous as an antagonist, and cruel as a master. Its countenance alone is bright, but within it is no more like the mask’s mere emptiness, but crammed with dishonor, and full of savage tyranny. Whence then, it may be asked, has this passion, so unreasonable, so devoid of pleasure, its birth? Whence else but from a low, mean soul? It cannot be that one who is captivated by love of applause should imagine readily anything great or noble; he needs must be base, mean, dishonorable, little. He who does nothing for virtue’s sake, but to please men worthy of no consideration, and who ever makes account of their mistaken and erring opinions, how can he be worth anything? Consider; if any one should ask him, What do you think of the many? he clearly would say, “that they are thoughtless, and not to be regarded.” Then if any one again should ask him, “Would you choose to be like them?” I do not suppose he could possibly desire to be like them. Must it not then be excessively ridiculous to seek the good opinion of those whom you never would choose to resemble?",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p53",
    "locus": "3.6",
    "text": "[6.] Do you say that they are many and a sort of collective body? this is the very reason why you ought most to despise them. If when taken singly they are contemptible, still more will this be the case when they are many; for when they are assembled together, their individual folly is increased by numbers, and becomes greater. So that a man might possibly take a single one of them and set him right, but could not do so with them when together, because then their folly becomes intense, and they are led like sheep, and follow in every direction the opinions of one another. Tell me, will you seek to obtain this vulgar glory? Do not, I beg and entreat you. It turns everything upside down; it is the mother of avarice, of slander, of false witness, of treacheries; it arms and exasperates those who have received no injury against those who have inflicted none. He who has fallen into this disease neither knows friendship nor remembers old companionship, and knows not how to respect any one at all; he has cast away from his soul all goodness, and is at war with every one, unstable, without natural affection.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.v-p54",
@@ -342,7 +367,8 @@
      "end": "1TH.2.6"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   }
  ]
 }

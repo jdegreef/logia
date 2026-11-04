@@ -4,13 +4,18 @@
  "title": "Homily XIII.",
  "source": "npnf114.iv.xv.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xv.html",
+ "verses": {
+  "start": "JHN.1.15",
+  "end": "JHN.1.15"
+ },
  "paragraphs": [
   {
    "id": "iv.xv-p1",
    "locus": "13.1",
    "text": "Homily XIII.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.xv-p2",
@@ -24,14 +29,16 @@
      "end": "JHN.1.15"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p3",
    "locus": "13.1",
    "text": "“John beareth witness of Him, and crieth, saying, This is He of whom I spake, saying, He that cometh after me is preferred before me, for He was before me.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p4",
@@ -63,7 +70,8 @@
      "end": "EXO.32.10"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p15",
@@ -107,7 +115,8 @@
      "end": "HOS.11.1"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p25",
@@ -121,7 +130,8 @@
      "end": "JHN.1.33"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p32",
@@ -130,7 +140,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.15.1"
-   ]
+   ],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p42",
@@ -146,7 +157,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.15.2"
-   ]
+   ],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p49",
@@ -184,14 +196,16 @@
      "end": "PSA.69.21"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p52",
    "locus": "13.4",
    "text": "[4.] Do you desire that we adduce more examples, or do these suffice? For my part, I think they do; for if we have not dug over the ground in all its extent, we have at least dug down to its bottom; and this last kind of work is not less laborious than the former; and we fear lest by straining your attention immoderately we cause you to fall back.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   },
   {
    "id": "iv.xv-p54",
@@ -235,7 +249,8 @@
      "end": "SIR.34.24"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.15"
   }
  ]
 }

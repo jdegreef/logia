@@ -40,6 +40,14 @@ excerpt links to its place in the whole text. Still to do for item 5: the
 works arranged by verse (Calvin, Henry and the scanned editions), and the
 rest of each work beyond John 1.
 
+Item 6 has a first version: the whole texts can be read by homily or
+tractate and by verse (docs/references.md, "Two structures"). The verse
+structure comes from the headings and verse marks the CCEL pages print.
+Each work page lists both, each whole text labels its verses, and the
+reader lists the whole homilies and tractates on every verse. Still to do
+for item 6: the Catena's own lectures, and a second structure for the
+works arranged by verse (Henry's sections, for example).
+
 1. **A standard reference for every text, not only the Bible.** Sefaria can
    address "Rashi on Genesis 1:1:2" as easily as "Genesis 1:1". Logia has
    verse references (`JHN.1.1`) and entry ids (`calvin.JHN.1.1.1`), but no

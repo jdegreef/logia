@@ -316,6 +316,26 @@ class Library:
                         "href": self.verse_link(cat["start"], cat["work"])})
         return out
 
+    def whole_on(self, ref):
+        """The whole homilies and tractates that expound a verse (the work's
+        second structure, by verse): each with where the verse begins in it,
+        the first paragraph marked with that verse, or the text's top when
+        only its heading's range covers it."""
+        out = []
+        b, ch, v = scripture.parse(ref)
+        for wid in self.ordered_works(self.texts):
+            w, a = self.works[wid], self.author_of(wid)
+            for x in self.texts[wid]:
+                sb, sc, sv = scripture.parse(x["verses"]["start"])
+                _, ec, ev = scripture.parse(x["verses"]["end"])
+                if sb != b or not (sc, sv) <= (ch, v) <= (ec, ev):
+                    continue
+                para = next((p for p in x["paragraphs"] if p["verse"] == ref), None)
+                where = locus_label(w, para["locus"] if para and para["locus"].split(".")[-1] != "1" else x["locus"])
+                out.append({"author": a["name"], "short": short_name(a), "work_id": wid, "where": where,
+                            "href": f"/works/{wid}/{x['locus']}/" + (f"#{para['id']}" if para else "")})
+        return out
+
     def cited_by(self, book, chapter, verses):
         """{verse: [excerpts anywhere in the library that cite it while
         commenting on another verse]}."""
@@ -716,6 +736,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     ui["levels"] = CATALOG["level"]
     data = {**bible, "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
             "citedBy": lib.cited_by(book, chapter, bible["verses"]),
+            "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "books": {k: v["en"] for k, v in lib.books.items()},
             "available": [f"{b}.{c}" for b, c in all_chapters], "owb_site": OWB_SITE}
     heading = next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}")
@@ -880,9 +901,21 @@ def work_page(lib, wid):
         items = "".join(
             f'<li><a href="/works/{wid}/{x["locus"]}/"><b>{e(locus_label(w, x["locus"]))}</b></a>'
             f'<span class="lg-quiet">{e(text_lead(x))}</span></li>' for x in texts)
+        verses = []
+        for x in texts:
+            b, c, a1 = scripture.parse(x["verses"]["start"])
+            _, _, a2 = scripture.parse(x["verses"]["end"])
+            verses += [f"{b}.{c}.{v}" for v in range(a1, a2 + 1) if f"{b}.{c}.{v}" not in verses]
+        by_verse = "".join(
+            f'<li><a href="{e(lib.verse_link(ref) or "")}"><b>{e(scripture.label(ref))}</b></a><span>'
+            + " · ".join(f'<a href="{e(r["href"])}">{e(r["where"])}</a>' for r in lib.whole_on(ref) if r["work_id"] == wid)
+            + "</span></li>" for ref in verses)
         whole = (f'<section class="lg-block" id="whole"><h2>{e(t("work.straight_through"))}</h2>'
                  f'<p class="lg-quiet">{e(t("work.straight_through_note", divisions=plural(w["divisions"][0]).lower()))}</p>'
-                 f'<ul class="lg-wholes">{items}</ul></section>')
+                 f'<div class="lg-structures"><div><h3 class="label">{e(t("work.by_division", division=w["divisions"][0].lower()))}</h3>'
+                 f'<ul class="lg-wholes">{items}</ul></div>'
+                 f'<div><h3 class="label">{e(t("work.by_verse"))}</h3><p class="lg-quiet">{e(t("work.by_verse_note"))}</p>'
+                 f'<ul class="lg-wholes lg-by-verse">{by_verse}</ul></div></div></section>')
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
@@ -941,6 +974,10 @@ def text_page(lib, wid, x):
                 body.append("</section>")
             body.append(f'<section class="lg-section" id="s{sec}">')
             section = sec
+        if p["verse"] and p["verse"] != (paras[n - 1]["verse"] if n else None):
+            href = lib.verse_link(p["verse"])
+            label = e(scripture.label(p["verse"]))
+            body.append('<p class="lg-verse">' + (f'<a href="{e(href)}">{label}</a>' if href else label) + "</p>")
         head = len(p["text"]) < 60 and not p["cites"] and not re.search(r"[.?!”]$", p["text"])
         cls = " ".join(k for k, on in (("lg-head", head), ("lg-held", p["excerpts"])) if on)
         body.append(f'<p id="{e(p["id"])}"' + (f' class="{cls}"' if cls else "") + f'>{linked_html(lib, p["text"], p["cites"])}</p>')
@@ -969,7 +1006,7 @@ def text_page(lib, wid, x):
              f'<a rel="next" href="/works/{wid}/{siblings[i + 1]["locus"]}/">{e(locus_label(w, siblings[i + 1]["locus"]))} &rarr;</a>'
              if i + 1 < len(siblings) else "<span></span>"]
     html_body = f"""
-<header class="page-head"><p class="eyebrow"><a href="/works/{wid}/">{e(w["title"])}</a></p>
+<header class="page-head"><p class="eyebrow"><a href="/works/{wid}/">{e(w["title"])}</a> · {e(scripture.label(x["verses"]["start"], x["verses"]["end"]))}</p>
 <h1>{e(name)}</h1><p class="dek">{e(lead)}</p>
 <p class="actions"><a class="button ghost" href="/commentators/{a["id"]}/">{e(a["name"])}</a>
 <a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p></header>

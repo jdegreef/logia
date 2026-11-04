@@ -216,6 +216,27 @@ class Site(unittest.TestCase):
         with open(os.path.join(build_site.SITE, "works", "chrysostom", "index.html"), encoding="utf-8") as f:
             self.assertIn('href="/works/chrysostom/15/"', f.read())     # the work page lists its whole texts
 
+    def test_whole_texts_are_divided_by_verse_too(self):
+        def text(work, n):
+            with open(os.path.join(ROOT, "library", "texts", work, f"{n}.json"), encoding="utf-8") as f:
+                return json.load(f)
+        # Homily 10 opens on "John i. 11" and marks "Ver. 12." and "Ver. 13." as it goes on.
+        h10 = text("chrysostom", 10)
+        self.assertEqual(h10["verses"], {"start": "JHN.1.11", "end": "JHN.1.13"})
+        marked = [p for p in h10["paragraphs"] if p["text"].startswith(("Ver. 12.", "[3.] Ver. 13."))]
+        self.assertEqual([p["verse"] for p in marked][:1], ["JHN.1.12"])
+        # Tractate 2's heading gives a range and no verse marks: no paragraph claims a verse.
+        t2 = text("augustine", 2)
+        self.assertEqual(t2["verses"], {"start": "JHN.1.6", "end": "JHN.1.14"})
+        self.assertEqual({p["verse"] for p in t2["paragraphs"]}, {None})
+
+    def test_the_reader_lists_whole_texts_on_a_verse(self):
+        with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:
+            data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', f.read(), re.S)[1].replace("<\\/", "</"))
+        rows = {(r["work_id"], r["where"]) for r in data["wholeTexts"]["12"]}
+        self.assertEqual(rows, {("chrysostom", "Homily 10, section 2"), ("augustine", "Tractate 2")})
+        self.assertEqual({r["work_id"] for r in data["wholeTexts"]["2"]}, {"augustine"})   # no homily marks 1:2
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")

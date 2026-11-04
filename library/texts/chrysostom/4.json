@@ -4,13 +4,18 @@
  "title": "Homily IV.",
  "source": "npnf114.iv.vi.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.vi.html",
+ "verses": {
+  "start": "JHN.1.1",
+  "end": "JHN.1.1"
+ },
  "paragraphs": [
   {
    "id": "iv.vi-p1",
    "locus": "4.1",
    "text": "Homily IV.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.vi-p2",
@@ -24,21 +29,24 @@
      "end": "JHN.1.1"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p3",
    "locus": "4.1",
    "text": "“In the beginning was the Word, and the Word was with God.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p4",
    "locus": "4.1",
    "text": "[1.] When children are just brought to their learning, their teachers do not give them many tasks in succession, nor do they set them once for all, but they often repeat to them the same short ones, so that what is said may be easily implanted in their minds, and they may not be vexed at the first onset with the quantity, and with finding it hard to remember, and become less active in picking up what is given them, a kind of sluggishness arising from the difficulty. And I, who wish to effect the same with you, and to render your labor easy, take by little and little the food which lies on this Divine table, and instill it into your souls. On this account I shall handle again the same words, not so as to say again the same things, but to set before you only what yet remains. Come, then, let us again apply our discourse to the introduction.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p5",
@@ -54,7 +62,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.1.3"
-   ]
+   ],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p7",
@@ -63,7 +72,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.1.3"
-   ]
+   ],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p9",
@@ -79,7 +89,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.1-2.1"
-   ]
+   ],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p15",
@@ -105,14 +116,16 @@
      "end": "GEN.1.1"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p19",
    "locus": "4.1",
    "text": "But if any one say, “How can it be that He is a Son, and yet not younger than the Father? since that which proceeds from something else needs must be later than that from which it proceeds”; we will say that, properly speaking, these are human reasonings; that he who questions on this matter will question on others yet more improper; and that to such we ought not even to give ear. For our speech is now concerning God, not concerning the nature of men, which is subject to the sequence and necessary conclusions of these reasonings. Still, for the assurance of the weaker sort, we will speak even to these points.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p21",
@@ -126,7 +139,8 @@
      "end": "HEB.1.3"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p26",
@@ -140,7 +154,8 @@
      "end": "JHN.5.23"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p27",
@@ -160,7 +175,8 @@
      "end": "ISA.43.10"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p30",
@@ -192,7 +208,8 @@
      "end": "JHN.17.3"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p34",
@@ -206,14 +223,16 @@
      "end": "HEB.7.3"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p36",
    "locus": "4.3",
    "text": "[3.] And how again, since He is “Life,” was there ever when He was not? For all must allow, that Life both is always, and is without beginning and without end, if It be indeed Life, as indeed It is. For if there be when It is not, how can It be the life of others, when It even Itself is not?",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p37",
@@ -277,7 +296,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.1.4"
-   ]
+   ],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p43",
@@ -291,7 +311,8 @@
      "end": "PSA.102.27"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p44",
@@ -317,28 +338,32 @@
      "end": "LUK.6.37"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p46",
    "locus": "4.4",
    "text": "And besides, consider this, whether there has been a time when thou wert being carried away into ferocity, and didst control thyself, and another time when thou hast been dragged along by the passion. Compare the two seasons, and thou shalt gain thence great improvement. For tell me, when didst thou praise thyself? Was it when thou wast worsted, or when thou hadst the mastery? Do we not in the first case vehemently blame ourselves, and feel ashamed. even when none reproves us, and do not many feelings of repentance come over us, both for what we have said and done; but when we gain the mastery, then are we not proud, and exult as conquerors? For victory in the case of anger is, not the requiting evil with the like, (that is utter defeat,) but the bearing meekly to be ill treated and ill spoken of. To get the better is not to inflict but to suffer evil. Therefore when angry do not say, “certainly I will retaliate,” “certainly I will be revenged”; do not persist in saying to those who exhort you to gain a victory, “I will not endure that the man mock me, and escape clear.” He will never mock thee, except when thou avengest thyself; or if he even should mock thee he will do so as a fool. Seek not when thou conquerest honor from fools, but consider that sufficient which comes from men of understanding. Nay, why do I set before thee a small and mean body of spectators, when I make it up of men? Look up straight to God: He will praise thee, and the man who is approved by Him must not seek honor from mortals. Mortal honor often arises from flattery or hatred of others, and brings no profit; but the decision of God is free from this inequality, and brings great advantage to the man whom He approves. This praise then let us follow after.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p47",
    "locus": "4.4",
    "text": "Will you learn what an evil is anger? Stand by while others are quarreling in the forum. In yourself you cannot easily see the disgrace of the thing, because your reason is darkened and drunken; but when you are clear from the passion, and while your judgment is sound, view your own case in others. Observe, I pray you, the crowds collecting round, and the angry men like maniacs acting shamefully in the midst. For when the passion boils up within the breast, and becomes excited and savage, the mouth breathes fire, the eyes emit fire, all the face becomes swollen, the hands are extended disorderly, the feet dance ridiculously, and they spring at those who restrain them, and differ nothing from madmen in their insensibility to all these things; nay, differ not from wild asses, kicking and biting. Truly a passionate man is not a graceful one.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   },
   {
    "id": "iv.vi-p48",
    "locus": "4.4",
    "text": "And then, when after this exceedingly ridiculous conduct, they return home and come to themselves, they have the greater pain, and much fear, thinking who were present when they were angry. For like raving men, they did not then know the standers by, but when they have returned to their right mind, then they consider, were they friends? were they foes and enemies that looked on? And they fear alike about both; the first because they will condemn them and give them more shame; the others because they will rejoice at it. And if they have even exchanged blows, then their fear is the more pressing; for instance, lest anything very grievous happen to the sufferer; a fever follow and bring on death, or a troublesome swelling rise and place him in danger of the worst. And, “what need” (say they) “had I of fighting, and violence, and quarreling? Perish such things.” And then they curse the ill-fated business which caused them to begin, and the more foolish lay on “wicked spirits,” and “an evil hour,” the blame of what has been done; but these things are not from an evil hour, (for there is no such thing as an evil hour,) nor from a wicked spirit, but from the wickedness of those captured by the passion; they draw the spirits to them, and bring upon themselves all things terrible. “But the heart swells,” says one, “and is stung by insults.” I know it; and that is the reason why I admire those who master this dreadful wild beast; yet it is possible if we will, to beat off the passion. For why when our rulers insult us do we not feel it? It is because fear counterbalances the passion, and frightens us from it, and does not allow it to spring up at all. And why too do our servants, though insulted by us in ten thousand ways, bear all in silence? Because they too have the same restraint laid upon them. And think thou not merely of the fear of God, but that it is even God Himself who then insults thee, who bids thee be silent, and then thou wilt bear all things meekly, and say to the aggressor, How can I be angry with thee? there is another that restrains both my hand and my tongue; and the saying will be a suggestion of sound wisdom, both to thyself and to him. Even now we bear unbearable things on account of men, and often say to those who have insulted us, “Such an one insulted me, not you.” Shall we not use the same caution in the case of God? How else can we hope for pardon? Let us say to our soul, “It is God who holds our hands, who now insults us; let us not be restive, let not God be less honored by us than men.” Did ye shudder at the word? I wish you would shudder not at the word only, but at the deed. For God hath commanded us when buffeted not only to endure it, but even to offer ourselves to suffer something worse; and we withstand Him with such vehemence, that we not only refuse to offer ourselves to suffer evil, but even avenge ourselves, nay often are the first to act on the offensive, and think we are disgraced if we do not the same in return. Yes, and the mischief is, that when utterly worsted we think ourselves conquerors, and when lying undermost and receiving ten thousand blows from the devil, then we imagine that we are mastering him. Let us then, I exhort you, understand what is the nature of this victory, and this kind of nature let us follow after. To suffer evil is to get the crown. If then we wish to be proclaimed victors by God, let us not in these contests observe the laws of heathen games, but those of God, and learn to bear all things with longsuffering; for so we may get the better of our antagonists, and obtain both present and promised goods, through the grace and lovingkindness of our Lord Jesus Christ, through whom and with whom to the Father and the Holy Spirit be glory, power, and honor, now and ever, and world without end. Amen.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.1"
   }
  ]
 }

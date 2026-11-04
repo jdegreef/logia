@@ -4,48 +4,58 @@
  "title": "Tractate I.",
  "source": "npnf107.iii.ii.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.ii.html",
+ "verses": {
+  "start": "JHN.1.1",
+  "end": "JHN.1.5"
+ },
  "paragraphs": [
   {
    "id": "iii.ii-p5",
    "locus": "1.1",
    "text": "Tractate I.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p6",
    "locus": "1.1",
    "text": "Chapter I. 1–5",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p7",
    "locus": "1.1",
    "text": "1. When I give heed to what we have just read from the apostolic lesson, that “the natural man perceiveth not the things which are of the Spirit of God,” and consider that in the present assembly, my beloved, there must of necessity be among you many natural men, who know only according to the flesh, and cannot yet raise themselves to spiritual understanding, I am in great difficulty how, as the Lord shall grant, I may be able to express, or in my small measure to explain, what has been read from the Gospel, “In the beginning was the Word, and the Word was with God, and the Word was God;” for this the natural man does not perceive. What then, brethren? Shall we be silent for this cause? Why then is it read, if we are to be silent regarding it? Or why is it heard, if it be not explained? And why is it explained, if it be not understood? And so, on the other hand, since I do not doubt that there are among your number some who can not only receive it when explained, but even understand it before it is explained, I shall not defraud those who are able to receive it, from fear of my words being wasted on the ears of those who are not able to receive it. Finally, there will be present with us the compassion of God, so that perchance there may be enough for all, and each receive what he is able, while he who speaks says what he is able. For to speak of the matter as it is, who is able? I venture to say, my brethren, perhaps not John himself spoke of the matter as it is, but even he only as he was able; for it was man that spoke of God, inspired indeed by God, but still man. Because he was inspired he said something; if he had not been inspired, he would have said nothing; but because a man inspired, he spoke not the whole, but what a man could he spoke.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p9",
    "locus": "1.2",
    "text": "2. For this John, dearly beloved brethren, was one of those mountains concerning which it is written: “Let the mountains receive peace for thy people, and the hills righteousness.” The mountains are lofty souls, the hills little souls. But for this reason do the mountains receive peace, that the hills may be able to receive righteousness. What is the righteousness which the hills receive? Faith, for “the just doth live by faith.” The smaller souls, however, would not receive faith unless the greater souls, which are called mountains, were illuminated by Wisdom herself, that they may be able to transmit to the little ones what the little ones can receive; and the hills live by faith, because the mountains receive peace. By the mountains themselves it was said to the Church, “Peace be with you;” and the mountains themselves in proclaiming peace to the Church did not divide themselves against Him from whom they received peace, that truly, not feignedly, they might proclaim peace.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p13",
    "locus": "1.3",
    "text": "3. For there are other mountains which cause shipwreck, on which, if any one drive his ship, she is dashed to pieces. For it is easy, when land is seen by men in peril, to make a venture as it were to reach it; but sometimes land is seen on a mountain, and rocks lie hid under the mountain; and when any one makes for the mountain, he falls on the rocks, and finds there not rest, but wrecking. So there have been certain mountains, and great have they appeared among men, and they have created heresies and schisms, and have divided the Church of God; but those who divided the Church of God were not those mountains concerning which it is said, “Let the mountains receive peace for thy people.” For in what manner have they received peace who have severed unity?",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p14",
    "locus": "1.4",
    "text": "4. But those who received peace to proclaim it to the people have made Wisdom herself an object of contemplation, so far as human hearts could lay hold on that which “eye hath not seen, nor ear heard, neither has ascended into the heart of man.” If it has not ascended into the heart of man, how has it ascended into the heart of John? Was not John a man? Or perhaps neither into John’s heart did it ascend, but John’s heart ascended into it? For that which ascends into the heart of man is from beneath, to man; but that to which the heart of man ascends is above, from man. Even so brethren, can it be said that, if it ascended into the heart of John (if in any way it can be said), it ascended into his heart in so far as he was not man. What means “was not man”? In so far as he had begun to be an angel. For all saints are angels, since they are messengers of God. Therefore to carnal and natural men, who are not able to perceive the things that are of God, what says the apostle? “For whereas ye say, I am of Paul, I of Apollos, are ye not men?” What did he wish to make them whom he upbraided because they were men? Do you wish to know what he wished to make them? Hear in the Psalms: “I have said, ye are gods; and all of you are children of the Most High.” To this, then, God calls us, that we be not men. But then will it be for the better that we be not men, if first we recognize the fact that we are men, that is, to the end that we may rise to that height from humility; lest, when we think that we are something when we are nothing, we not only do not receive what we are not, but even lose what we are.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p18",
@@ -54,21 +64,24 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.1.1"
-   ]
+   ],
+   "verse": null
   },
   {
    "id": "iii.ii-p20",
    "locus": "1.6",
    "text": "6. Consider, then, brethren, if perchance John is not one of those mountains concerning whom we sang a little while ago, “I have lifted up mine eyes to the mountains, from whence shall come my help.” Therefore, my brethren, if you would understand, lift up your eyes to this mountain, that is, raise yourselves up to the evangelist, rise to his meaning. But, because though these mountains receive peace he cannot be in peace who places his hope in man, do not so raise your eyes to the mountain as to think that your hope should be placed in man; and so say, “I have lifted up mine eyes to the mountains, from whence shall come my help,” that you immediately add, “My help is from the Lord, who made heaven and earth.” Therefore let us lift our eyes to the mountains, from whence shall come our help; and yet it is not in the mountains themselves that our hope should be placed, for the mountains receive what they may minister to us; therefore, from whence the mountains also receive there should our hope be placed. When we lift our eyes to the Scriptures, since it was through men the Scriptures were ministered, we are lifting our eyes to the mountains, from whence shall come our help; but still, since they were men who wrote the Scriptures, they did not shine of themselves, but “He was the true light, who lighteth every man that cometh into the world.” A mountain also was that John the Baptist, who said, “I am not the Christ,” lest any one, placing his hope in the mountain, should fall from Him who illuminates the mountain. He also confessed, saying, “Since of His fullness have all we received.” So thou oughtest to say, “I have lifted up mine eyes to the mountains, from whence shall come my help,” so as not to ascribe to the mountains the help that comes to thee; but continue and say, “My help is from the Lord, who made heaven and earth.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p25",
    "locus": "1.7",
    "text": "7. Therefore, brethren, may this be the result of my admonition, that you understand that in raising your hearts to the Scriptures (when the gospel was sounding forth, “In the beginning was the Word, and the Word was with God, and the Word was God,” and the rest that was read), you were lifting your eyes to the mountains. For unless the mountains said these things, you would not find out how to think of them at all. Therefore from the mountains came your help, that you even heard of these things; but you cannot yet understand what you have heard. Call for help from the Lord, who made heaven and earth; for the mountains were enabled only so to speak as not of themselves to illuminate, because they themselves are also illuminated by hearing. Thence John, who said these things, received them—he who lay on the Lord’s breast, and from the Lord’s breast drank in what he might give us to drink. But he gave us words to drink. Thou oughtest then to receive understanding from the source from which he drank who gave thee to drink; so that thou mayest lift up thine eyes to the mountains from whence shall come thine aid, so that from thence thou mayest receive, as it were, the cup, that is, the word, given thee to drink; and yet, since thy help is from the Lord, who made heaven and earth, thou mayest fill thy breast from the source from which he filled his; whence thou saidst, “My help is from the Lord, who made heaven and earth:” let him, then, fill who can. Brethren, this is what I have said: Let each one lift up his heart in the manner that seems fitting, and receive what is spoken. But perhaps you will say that I am more present to you than God. Far be such a thought from you! He is much more present to you; for I appear to your eyes, He presides over your consciences. Give me then your ears, Him your hearts, that you may fill both. Behold, your eyes, and those your bodily senses, you lift up to us; and yet not to us, for we are not of those mountains, but to the gospel itself, to the evangelist himself: your hearts, however, to the Lord to be filled. Moreover, let each one so lift up as to see what he lifts up, and whither. What do I mean by saying, “what he lifts up, and whither?” Let him see to it what sort of a heart he lifts up, because it is to the Lord he lifts it up, lest, encumbered by a load of fleshly pleasure, it fall ere ever it is raised. But does each one see that he bears a burden of flesh? Let him strive by continence to purify that which he may lift up to God. For “Blessed are the pure in heart, because they shall see God.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p27",
@@ -77,14 +90,16 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.1.2"
-   ]
+   ],
+   "verse": null
   },
   {
    "id": "iii.ii-p29",
    "locus": "1.9",
    "text": "9. Turn thy attention to that word. Thou canst have a word in thy heart, as it were a design born in thy mind, so that thy mind brings forth the design; and the design is, so to speak, the offspring of thy mind, the child of thy heart. For first thy heart brings forth a design to construct some fabric, to set up something great on the earth; already the design is conceived, and the work is not yet finished: thou seest what thou wilt make; but another does not admire, until thou hast made and constructed the pile, and brought that fabric into shape and to completion; then men regard the admirable fabric, and admire the design of the architect; they are astonished at what they see, and are pleased with what they do not see: who is there who can see a design? If, then, on account of some great building a human design receives praise, do you wish to see what a design of God is the Lord Jesus Christ, that is, the Word of God? Mark this fabric of the world. View what was made by the Word, and then thou wilt understand what is the nature of the world. Mark these two bodies of the world, the heavens and the earth. Who will unfold in words the beauty of the heavens? Who will unfold in words the fruitfulness of the earth? Who will worthily extol the changes of the seasons? Who will worthily extol the power of seeds? You see what things I do not mention, lest in giving a long list I should perhaps tell of less than you can call up to your own minds. From this fabric, then, judge the nature of the Word by which it was made: and not it alone; for all these things are seen, because they have to do with the bodily sense. By that Word angels also were made; by that Word archangels were made, powers, thrones, dominions, principalities; by that Word were made all things. Hence, judge what a Word this is.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p30",
@@ -93,7 +108,8 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.1.3"
-   ]
+   ],
+   "verse": null
   },
   {
    "id": "iii.ii-p31",
@@ -102,14 +118,16 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.1-3.1"
-   ]
+   ],
+   "verse": null
   },
   {
    "id": "iii.ii-p33",
    "locus": "1.12",
    "text": "12. Do not then believe that that was made by which were made all things, lest thou be not new-made by the Word, which makes all things new. For already hast thou been made by the Word, but it behoves thee to be new-made by the Word. If, however, thy belief about the Word be wrong, thou wilt not be able to be new-made by the Word. And although creation by the Word has happened to thee, so that thou hast been made by Him, thou art unmade by thyself: if by thyself thou art unmade, let Him who made thee make thee new: if by thyself thou hast been made worse, let Him who created thee re-create thee. But how can He re-create thee by the Word, if thou holdest a wrong opinion about the Word? The evangelist says, “In the beginning was the Word;” and thou sayest, “In the beginning the Word was made.” He says, “All things were made by Him;” and thou sayest that the Word Himself was made. The evangelist might have said, “In the beginning the Word was made:” but what does he say? “In the beginning was the Word.” If He was, He was not made; that all things might be made by it, and without Him nothing be made. If, then, “in the beginning the Word was, and the Word was with God, and the Word was God;” if thou canst not imagine what it is, wait till thou art grown. That is strong meat: receive thou milk that thou mayest be nourished, and be able to receive strong meat.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p34",
@@ -118,21 +136,24 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.3.1"
-   ]
+   ],
+   "verse": null
   },
   {
    "id": "iii.ii-p39",
    "locus": "1.14",
    "text": "14. Therefore, let no one deceive you, when perchance you suffer annoyance from flies. For some have been mocked by the devil, and taken with flies. As fowlers are accustomed to put flies in their traps to deceive hungry birds, so these have been deceived with flies by the devil. Some one or other was suffering annoyance from flies; a Manichæan found him in his trouble, and when he said that he could not bear flies, and hated them exceedingly, immediately the Manichæan said, “Who made them?” And since he was suffering from annoyance, and hated them, he dared not say, “God made them,” though he was a Catholic. The other immediately added, “If God did not make them, who made them?” “Truly,” replied the Catholic, “I believe the devil made them.” And the other immediately said, “If the devil made the fly, as I see you allow, because you understand the matter well, who made the bee, which is a little larger than the fly?” The Catholic dared not say that God made the bee and not the fly, for the case was much the same. From the bee he led him to the locust; from the locust to the lizard; from the lizard to the bird; from the bird to the sheep; from the sheep to the cow; from that to the elephant, and at last to man; and persuaded a man that man was not made by God. Thus the miserable man, being troubled with the flies, became himself a fly, and the property of the devil. In fact, Beelzebub, they say, means “Prince of flies;” and of these it is written, “Dying flies deprive the ointment of its sweetness.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p41",
    "locus": "1.15",
    "text": "15. What then, brethren? why have I said these things? Shut the ears of your hearts against the wiles of the enemy. Understand that God made all things, and arranged them in their orders. Why, then, do we suffer many evils from a creature that God made? Because we have offended God? Do angels suffer these things? Perhaps we, too, in that life of theirs, would have no such thing to fear. For thy punishment, accuse thy sin, not the Judge. For, on account of our pride, God appointed that tiny and contemptible creature to torment us; so that, since man has become proud and has boasted himself against God, and, though mortal, has oppressed mortals, and, though man, has not acknowledged his fellowman,—since he has lifted himself up, he may be brought low by gnats. Why art thou inflated with human pride? Some one has censured thee, and thou art swollen with rage. Drive off the gnats, that thou mayest sleep: understand who thou art. For, that you may know, brethren, it was for the taming of our pride these things were created to be troublesome to us, God could have humbled Pharaoh’s proud people by bears, by lions, by serpents; He sent flies and frogs upon them, that their pride might be subdued by the meanest creatures.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p43",
@@ -141,14 +162,16 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.3-4.1"
-   ]
+   ],
+   "verse": null
   },
   {
    "id": "iii.ii-p45",
    "locus": "1.17",
    "text": "17. As far as I can, I shall explain my meaning to you, beloved. A carpenter makes a box. First he has the box in design; for if he had it not in design, how could he produce it by workmanship? But the box in theory is not the very box as it appears to the eyes. It exists invisibly in design, it will be visible in the work. Behold, it is made in the work; has it ceased to exist in design? The one is made in the work, and the other remains which exists in design; for that box may rot, and another be fashioned according to that which exists in design. Give heed, then, to the box as it is in design, and the box as it is in fact. The actual box is not life, the box in design is life; because the soul of the artificer, where all these things are before they are brought forth, is living. So, dearly beloved brethren, because the Wisdom of God, by which all things have been made, contains everything according to design before it is made, therefore those things which are made through this design itself are not forthwith life, but whatever has been made is life in Him. You see the earth, there is an earth in design; you see the sky, there is a sky in design; you see the sun and the moon, these also exist in design: but externally they are bodies, in design they are life. Understand, if in any way you are able, for a great matter has been spoken. If I am not great by whom it is spoken, or through whom it is spoken, still it is from a great authority. For these things are not spoken by me who am small; He is not small to whom I refer in saying these things. Let each one take in what he can, and to what extent he can; and he who is not able to take in any of it, let him nourish his heart, that he may become able. How is he to nourish it? Let him nourish it with milk, that he may come to strong meat. Let him not leave Christ born through the flesh till he arrive at Christ born of the Father alone, the God-Word with God, through whom all things were made; for that is life, which in Him is the light of men.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iii.ii-p46",
@@ -157,7 +180,8 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.4.1"
-   ]
+   ],
+   "verse": null
   },
   {
    "id": "iii.ii-p48",
@@ -166,7 +190,8 @@
    "cites": [],
    "excerpts": [
     "augustine.JHN.1.5.1"
-   ]
+   ],
+   "verse": null
   }
  ]
 }

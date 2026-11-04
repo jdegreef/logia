@@ -4,13 +4,18 @@
  "title": "Homily VIII.",
  "source": "npnf114.iv.x.html",
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.x.html",
+ "verses": {
+  "start": "JHN.1.9",
+  "end": "JHN.1.10"
+ },
  "paragraphs": [
   {
    "id": "iv.x-p1",
    "locus": "8.1",
    "text": "Homily VIII.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": null
   },
   {
    "id": "iv.x-p2",
@@ -24,14 +29,16 @@
      "end": "JHN.1.9"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.9"
   },
   {
    "id": "iv.x-p3",
    "locus": "8.1",
    "text": "“That was the true Light, which lighteth every man that cometh into the world.”",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.9"
   },
   {
    "id": "iv.x-p4",
@@ -47,7 +54,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.9.2"
-   ]
+   ],
+   "verse": "JHN.1.9"
   },
   {
    "id": "iv.x-p5",
@@ -56,7 +64,8 @@
    "cites": [],
    "excerpts": [
     "chrysostom.JHN.1.9.2"
-   ]
+   ],
+   "verse": "JHN.1.9"
   },
   {
    "id": "iv.x-p7",
@@ -72,7 +81,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.10.1"
-   ]
+   ],
+   "verse": "JHN.1.10"
   },
   {
    "id": "iv.x-p8",
@@ -88,7 +98,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.10.1"
-   ]
+   ],
+   "verse": "JHN.1.10"
   },
   {
    "id": "iv.x-p12",
@@ -128,7 +139,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.10.2"
-   ]
+   ],
+   "verse": "JHN.1.10"
   },
   {
    "id": "iv.x-p16",
@@ -142,21 +154,24 @@
      "end": "LUK.10.24"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.10"
   },
   {
    "id": "iv.x-p20",
    "locus": "8.1",
    "text": "When therefore the Greeks bring charges such as these against us, and say; “What then did Christ in former time, that He did not look upon the race of men? And for what possible reason did He come at last to assist in our salvation, after neglecting us so long?” we will reply, that before this He was in the world, and took thought for His works, and was known to all who were worthy. But if ye should say, that, because all did not then know Him, because He was only known by those noble and excellent persons, therefore He was not acknowledged; at this rate you will not allow that He is worshiped even now, since even now all men do not know Him. But as at present no one, because of those who do not know Him, would refuse credit to those who do, so as regards former times, we must not doubt that He was known to many, or rather to all of those noble and admirable persons.",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.10"
   },
   {
    "id": "iv.x-p21",
    "locus": "8.2",
    "text": "[2.] And if any one say, “Why did not all men give heed to Him? nor all worship Him, but the just only?” I also will ask, why even now do not all men know him? But why do I speak of Christ, when not all men knew His Father then, or know Him now? For some say, that all things are borne along by chance, while others commit the providence of the universe to devils. Others invent another God besides Him, and some blasphemously assert, that His is an opposing power, and think that His laws are the laws of a wicked dæmon. What then? Shall we say that He is not God because there are some who say so? And shall we confess Him to be evil? for there are some who even so blaspheme Him. Away with such mental wandering, such utter insanity. If we should delineate doctrines according to the judgment of madmen, there is nothing to hinder us from being mad ourselves with most grievous madness. No one will assert, looking to those who have weak vision, that the sun is injurious to the eyes, but he will say that it is fitted to give light, drawing his judgments from persons in health. And no one will call honey bitter, because it seems so to the sense of the sick. And will any, from the imaginations of men diseased (in mind) decide that God either is not, or is evil; or that He sometimes indeed exerts His Providence, sometimes doth not so at all? Who can say that such men are of sound mind, or deny that they are beside themselves, delirious, utterly mad?",
    "cites": [],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.10"
   },
   {
    "id": "iv.x-p24",
@@ -172,7 +187,8 @@
    ],
    "excerpts": [
     "chrysostom.JHN.1.10.3"
-   ]
+   ],
+   "verse": "JHN.1.10"
   },
   {
    "id": "iv.x-p28",
@@ -186,7 +202,8 @@
      "end": "MAT.6.24"
     }
    ],
-   "excerpts": []
+   "excerpts": [],
+   "verse": "JHN.1.10"
   }
  ]
 }
