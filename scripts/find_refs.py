@@ -334,18 +334,10 @@ def paragraphs(pages):
     return out
 
 
-def match_quotation(words, candidates, idf, near=lambda para: False):
-    """The best paragraph for a quotation's words, as (score, paragraph,
-    level): level "section", "division" or None. near(paragraph) says whether
-    its homily or tractate is the one on the verse being commented on, which
-    then needs only NEAR_LEAD over any other."""
-    if len(words) < MIN_WORDS:
-        return None
-    total = sum(idf.get(w, max(idf.values())) for w in words)
-    scored = sorted(((sum(idf[w] for w in words & c[6]) / total, c) for c in candidates),
-                    key=lambda x: -x[0])
-    if not scored:
-        return None
+def judge(scored):
+    """The best of scored paragraphs, as (score, paragraph, level), if it
+    leads the others by enough: level "section" (that paragraph) or
+    "division" (its homily or tractate)."""
     best, para = scored[0]
     division = para[3].split(".")[0]
     other_section = next((s for s, c in scored if c[3] != para[3]), 0)
@@ -354,8 +346,36 @@ def match_quotation(words, candidates, idf, near=lambda para: False):
         return best, para, "section"
     if best >= DIVISION[0] and best - other_division >= DIVISION[1]:
         return best, para, "division"
-    # The homily or tractate on the verse being commented on: its own two best
-    # paragraphs are the two best of all, or it leads by NEAR_LEAD.
+    return None
+
+
+def match_quotation(words, candidates, idf, near=lambda para: False):
+    """The best paragraph for a quotation's words, as (score, paragraph,
+    level): level "section", "division" or None.
+
+    near(paragraph) says whether its homily or tractate is one on the verse
+    being commented on. A catena gathers the Fathers' comments verse by verse,
+    so when the best paragraph of all is in one of those, it is judged
+    against them only: it does not have to beat every other homily in the
+    library by a margin, though their number grows with every chapter added
+    and brings chance near-misses with it. Otherwise, the whole library is searched with the same thresholds, and the
+    homily on the verse is also taken when its own two best paragraphs are
+    the two best of all, or it leads by NEAR_LEAD."""
+    if len(words) < MIN_WORDS:
+        return None
+    total = sum(idf.get(w, max(idf.values())) for w in words)
+    scored = sorted(((sum(idf[w] for w in words & c[6]) / total, c) for c in candidates),
+                    key=lambda x: -x[0])
+    if not scored:
+        return None
+    on_verse = [x for x in scored if near(x[1])]
+    if near(scored[0][1]) and (found := judge(on_verse)):
+        return found
+    if found := judge(scored):
+        return found
+    best, para = scored[0]
+    division = para[3].split(".")[0]
+    other_division = next((s for s, c in scored if c[3].split(".")[0] != division), 0)
     if best >= DIVISION[0] and near(para) and (
             best - other_division >= NEAR_LEAD
             or (len(scored) > 1 and scored[1][1][3].split(".")[0] == division)):

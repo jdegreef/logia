@@ -42,6 +42,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.1.4.2",
+   "at": 291,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "1",
+   "source": "npnf107.iii.ii.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.33,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.1.5.1",
    "at": 0,
    "label": "AUG.",
@@ -51,6 +64,19 @@
    "para": "iii.ii-p48",
    "excerpt": "augustine.JHN.1.5.1",
    "score": 0.44,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.1.6.1",
+   "at": 172,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "6.1",
+   "source": "npnf114.iv.viii.html",
+   "para": "iv.viii-p4",
+   "excerpt": "chrysostom.JHN.1.6.1",
+   "score": 0.36,
    "found": "similar",
    "status": "detected"
   },
@@ -103,6 +129,19 @@
    "para": null,
    "excerpt": null,
    "score": 0.23,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.1.12.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "10",
+   "source": "npnf114.iv.xii.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.28,
    "found": "similar",
    "status": "detected"
   },
@@ -250,6 +289,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.1.31.2",
+   "at": 0,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "4",
+   "source": "npnf107.iii.v.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.45,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.1.32.2",
    "at": 0,
    "label": "AUG.",
@@ -311,6 +363,19 @@
    "para": null,
    "excerpt": null,
    "score": 0.27,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.1.35-36.1",
+   "at": 197,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "18",
+   "source": "npnf114.iv.xx.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.23,
    "found": "similar",
    "status": "detected"
   },
@@ -389,6 +454,19 @@
    "para": "iv.xx-p32",
    "excerpt": "chrysostom.JHN.1.40.1",
    "score": 0.46,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.1.41.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "19.1",
+   "source": "npnf114.iv.xxi.html",
+   "para": "iv.xxi-p10",
+   "excerpt": "chrysostom.JHN.1.41.1",
+   "score": 0.57,
    "found": "similar",
    "status": "detected"
   },
@@ -536,6 +614,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.1.49.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "21",
+   "source": "npnf114.iv.xxiii.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.21,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.1.51.1",
    "at": 0,
    "label": "AUG.",
@@ -610,6 +701,19 @@
    "para": null,
    "excerpt": null,
    "score": 0.33,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.2.4.1",
+   "at": 881,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "8",
+   "source": "npnf107.iii.ix.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.34,
    "found": "similar",
    "status": "detected"
   },
@@ -865,9 +969,9 @@
    "at": 953,
    "label": "CHRYS.",
    "work": "chrysostom",
-   "locus": "23",
+   "locus": "23.3",
    "source": "npnf114.iv.xxv.html",
-   "para": null,
+   "para": "iv.xxv-p54",
    "excerpt": null,
    "score": 0.35,
    "found": "similar",
@@ -1329,6 +1433,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.3.22.1",
+   "at": 1186,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "13",
+   "source": "npnf107.iii.xiv.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.52,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.3.25.1",
    "at": 1240,
    "label": "AUG.",
@@ -1359,11 +1476,24 @@
    "at": 845,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "13",
+   "locus": "13.9",
    "source": "npnf107.iii.xiv.html",
+   "para": "iii.xiv-p20",
+   "excerpt": "augustine.JHN.3.26-28.1",
+   "score": 0.54,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.3.28.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "29",
+   "source": "npnf114.iv.xxxi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.54,
+   "score": 0.23,
    "found": "similar",
    "status": "detected"
   },
@@ -1403,6 +1533,19 @@
    "para": null,
    "excerpt": null,
    "score": 0.46,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.3.30.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "29",
+   "source": "npnf114.iv.xxxi.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.21,
    "found": "similar",
    "status": "detected"
   },
@@ -1459,14 +1602,27 @@
    "status": "detected"
   },
   {
-   "in": "catena.JHN.3.32-33.1",
-   "at": 0,
+   "in": "catena.JHN.3.31-32.1",
+   "at": 478,
    "label": "CHRYS.",
    "work": "chrysostom",
    "locus": "30",
    "source": "npnf114.iv.xxxii.html",
    "para": null,
    "excerpt": null,
+   "score": 0.24,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.3.32-33.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "30.2",
+   "source": "npnf114.iv.xxxii.html",
+   "para": "iv.xxxii-p18",
+   "excerpt": "chrysostom.JHN.3.32-33.1",
    "score": 0.42,
    "found": "similar",
    "status": "detected"
@@ -1580,10 +1736,10 @@
    "at": 0,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15",
+   "locus": "15.3",
    "source": "npnf107.iii.xvi.html",
-   "para": null,
-   "excerpt": null,
+   "para": "iii.xvi-p5",
+   "excerpt": "augustine.JHN.4.2.1",
    "score": 0.37,
    "found": "similar",
    "status": "detected"
@@ -1641,6 +1797,32 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.4.6.3",
+   "at": 0,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "15.9",
+   "source": "npnf107.iii.xvi.html",
+   "para": "iii.xvi-p13",
+   "excerpt": "augustine.JHN.4.6.2",
+   "score": 0.45,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.4.7.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "31",
+   "source": "npnf114.iv.xxxiii.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.28,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.4.7.1",
    "at": 377,
    "label": "AUG.",
@@ -1684,10 +1866,10 @@
    "at": 0,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15",
+   "locus": "15.12",
    "source": "npnf107.iii.xvi.html",
-   "para": null,
-   "excerpt": null,
+   "para": "iii.xvi-p18",
+   "excerpt": "augustine.JHN.4.10.1",
    "score": 0.6,
    "found": "similar",
    "status": "detected"
@@ -1697,10 +1879,10 @@
    "at": 735,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15",
+   "locus": "15.12",
    "source": "npnf107.iii.xvi.html",
-   "para": null,
-   "excerpt": null,
+   "para": "iii.xvi-p18",
+   "excerpt": "augustine.JHN.4.10.1",
    "score": 0.38,
    "found": "similar",
    "status": "detected"
@@ -2044,6 +2226,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.4.28.1",
+   "at": 428,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "34",
+   "source": "npnf114.iv.xxxvi.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.3,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.4.28.2",
    "at": 441,
    "label": "AUG.",
@@ -2061,10 +2256,10 @@
    "at": 0,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15",
+   "locus": "15.31",
    "source": "npnf107.iii.xvi.html",
-   "para": null,
-   "excerpt": null,
+   "para": "iii.xvi-p53",
+   "excerpt": "augustine.JHN.4.31-34.1",
    "score": 0.38,
    "found": "similar",
    "status": "detected"
