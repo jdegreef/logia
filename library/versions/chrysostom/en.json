@@ -1,0 +1,19 @@
+{
+ "id": "chrysostom.en",
+ "work": "chrysostom",
+ "language": "en",
+ "kind": "translation",
+ "edition": "The Oxford Translation (Library of the Fathers), edited with additional notes by Philip Schaff; Nicene and Post-Nicene Fathers, Series 1, Vol. 14 (1889)",
+ "translation": "The Oxford translation (Library of the Fathers), revised and edited by Philip Schaff, Nicene and Post-Nicene Fathers, Series 1, Vol. 14 (1889)",
+ "published": 1889,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf114.html",
+ "source_kind": "digital",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years)"
+ },
+ "made_by": "print",
+ "status": "ai_draft",
+ "reviewer": null,
+ "notes": ""
+}

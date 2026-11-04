@@ -14,8 +14,9 @@ procedure for a new commentary.
   paraphrase, summarise, modernise or fill a gap from memory.
   `scripts/verify_sources.py` must pass.
 - **Only public-domain editions.** Text and translation published in 1930 or
-  earlier (US); record the edition, translator and year in the work's
-  `rights`, and what is still to confirm for worldwide use. Use scans and open
+  earlier (US); record the edition, translator and year in the version's
+  record (`library/versions/`), and what is still to confirm for worldwide
+  use in its `rights`. Use scans and open
   transcriptions (CCEL, archive.org, Project Gutenberg). Don't copy from sites
   that claim rights in their typed editions (BibleHub, StudyLight,
   newadvent.org).
@@ -60,7 +61,8 @@ procedure for a new commentary.
 ## Languages
 
 English first. Interface text and translations of excerpts will be added per
-language (`library/translations/<lang>/`); a translation is made from the best
+language (`library/translations/<lang>/`, each with its own version record in
+`library/versions/`); a translation is made from the best
 public-domain source (the Greek, Latin or German original where the English
 is weak), ships as `ai_draft`, and is approved by a native-speaking reviewer.
 

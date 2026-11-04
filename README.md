@@ -13,7 +13,8 @@ Christian commentaries.
 | Path | Holds |
 |---|---|
 | `library/authors/<author>.json` | One commentator: dates, era, tradition, a short biography (a draft until reviewed) |
-| `library/works/<work>.json` | One commentary: its author, divisions, edition, translator, rights, status |
+| `library/works/<work>.json` | One commentary: its author, title, divisions and original language |
+| `library/versions/<work>/<lang>.json` | One version of it: an edition of the original, a printed translation, or Logia's own translation, with its edition, translator, year, source, rights and review status |
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
 | `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
@@ -91,8 +92,8 @@ can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
   reads where each excerpt sits in its work, the Scripture it cites and, in
   the Catena, which Father's passage it quotes; each stays `detected` until
   a person checks it.
-- **Rights are recorded per work**: the edition, the translator, the year,
-  and what is still to confirm for worldwide use.
+- **Rights are recorded per version**: the edition, the translator, the
+  year, and what is still to confirm for worldwide use.
 - **Nothing is marked reviewed by an AI.** Works and translations stay
   `ai_draft` until a named human reviewer approves them.
 

@@ -89,6 +89,44 @@ verse. A whole text labels the verse where its exposition moves on. The
 reader lists, under every verse, the whole homilies and tractates on it,
 even where Logia holds no excerpt from them.
 
+## Versions
+
+A work is what its author wrote; a version is one text of it, in one
+language, as Sefaria keeps versions of each text. Each version has its own
+record in `library/versions/<work>/<lang>.json`, id `<work>.<lang>`:
+
+```json
+{"id": "calvin.en", "work": "calvin", "language": "en", "kind": "translation",
+ "edition": "Calvin Translation Society, tr. William Pringle, 1847",
+ "translation": "Translated by William Pringle for the Calvin Translation Society (1847)",
+ "published": 1847, "full_text_url": "https://www.ccel.org/ccel/calvin/calcom34.html",
+ "source_kind": "digital", "rights": {"basis": "...", "worldwide": "..."},
+ "made_by": "print", "status": "ai_draft", "reviewer": null, "notes": "..."}
+```
+
+- `kind` is `original` (the language the author wrote in: Henry's English,
+  Calvin's Latin) or `translation`.
+- `made_by` is `print`, a public-domain edition (published 1930 or earlier,
+  copied from `source_kind` digital or scan), or `logia`, Logia's own
+  translation (no published year or source; CC0).
+- `status` is the version's own review: `ai_draft` until a named person
+  reviews it, who is then its `reviewer`. A translation is reviewed by a
+  native speaker; a copied edition by someone checking it against the page.
+- Rights belong to a version, not a work: Calvin's Latin and Pringle's
+  English have different translators, years and terms.
+
+Each comments file names the version its excerpts are copied from
+(`"version": "calvin.en"`), and a work's excerpts all come from one version.
+The others are aligned to the same excerpt ids: a translation file in
+`library/translations/` gives each excerpt's text in its version (`of` is the
+excerpt id), and an edition of the original will do the same, so an excerpt
+can be read in every version Logia holds. The whole texts in `library/texts/`
+name their version too.
+
+Today each work has one version, the English one its excerpts come from.
+The work page lists each version with its edition, source, rights and
+review.
+
 ## Citations
 
 `library/citations/<work>/<BOOK>.json` lists the Scripture each excerpt

@@ -5,8 +5,14 @@ here, one file per work and book:
 
     library/translations/<lang>/<work>/<BOOK>.json
 
+Each is a version of the work, so it first gets a version record,
+`library/versions/<work>/<lang>-logia.json` (docs/references.md,
+"Versions"): `"kind": "translation"`, `"made_by": "logia"`, `published` and
+`source_kind` null, its `rights` (Logia's own work, CC0), and the version's
+`status` and `reviewer`. The translation file names it:
+
 ```json
-{"language": "es", "work": "calvin", "book": "JHN",
+{"language": "es", "work": "calvin", "book": "JHN", "version": "calvin.es-logia",
  "entries": [
    {"of": "calvin.JHN.1.1.1", "text": "...", "from_language": "la",
     "status": "ai_draft", "reviewer": null}

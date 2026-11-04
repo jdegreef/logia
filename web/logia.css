@@ -260,3 +260,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-not-found .mark { display: block; margin: 0 auto; }
 .lg-not-found-links { display: grid; gap: 10px; margin: 8px 0 0; }
 .lg-not-found-links .button { box-sizing: border-box; width: 100%; justify-content: center; }
+.lg-versions { display: grid; gap: 18px; }
+.lg-version { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--surface); max-width: 900px; }
+.lg-version h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 600; font-size: 19px; }
+.lg-version .lg-facts { margin-top: 10px; }

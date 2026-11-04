@@ -48,6 +48,16 @@ reader lists the whole homilies and tractates on every verse. Still to do
 for item 6: the Catena's own lectures, and a second structure for the
 works arranged by verse (Henry's sections, for example).
 
+Item 7 has a first version: each work's edition details (edition,
+translator, year, source, rights, review status) moved from the work record
+to a version record of their own (docs/references.md, "Versions"). Every
+excerpt, whole text and future translation names the version it holds, and
+each work page lists its versions. Each work has one version so far, the
+English one. Still to do for item 7: a second version beside one, such as
+Calvin's Latin (Corpus Reformatorum, 1892) or Bengel's Latin Gnomon, copied
+from public-domain scans and aligned to the same excerpts, and the first of
+Logia's own translations.
+
 1. **A standard reference for every text, not only the Bible.** Sefaria can
    address "Rashi on Genesis 1:1:2" as easily as "Genesis 1:1". Logia has
    verse references (`JHN.1.1`) and entry ids (`calvin.JHN.1.1.1`), but no

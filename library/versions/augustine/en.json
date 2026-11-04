@@ -1,0 +1,19 @@
+{
+ "id": "augustine.en",
+ "work": "augustine",
+ "language": "en",
+ "kind": "translation",
+ "edition": "Translated by John Gibb and James Innes; Nicene and Post-Nicene Fathers, Series 1, Vol. 7 (1888)",
+ "translation": "Translated by John Gibb and James Innes, Nicene and Post-Nicene Fathers, Series 1, Vol. 7 (1888)",
+ "published": 1888,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf107.html",
+ "source_kind": "digital",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years)"
+ },
+ "made_by": "print",
+ "status": "ai_draft",
+ "reviewer": null,
+ "notes": ""
+}

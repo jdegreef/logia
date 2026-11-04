@@ -247,6 +247,18 @@ class Site(unittest.TestCase):
         self.assertEqual(rows, {("chrysostom", "Homily 10, section 2"), ("augustine", "Tractate 2")})
         self.assertEqual({r["work_id"] for r in data["wholeTexts"]["2"]}, {"augustine"})   # no homily marks 1:2
 
+    def test_each_work_has_its_versions(self):
+        lib = build_site.Library()
+        for wid in lib.works:
+            v = lib.edition(wid)
+            self.assertEqual((v["work"], v["made_by"]), (wid, "print"))
+        self.assertEqual(lib.edition("calvin")["kind"], "translation")      # Calvin wrote in Latin
+        self.assertEqual(lib.edition("henry")["kind"], "original")
+        with open(os.path.join(build_site.SITE, "works", "calvin", "index.html"), encoding="utf-8") as f:
+            page = f.read()
+        self.assertIn('id="calvin.en"', page)
+        self.assertIn("Translation into English", page)
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")

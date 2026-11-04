@@ -1,0 +1,19 @@
+{
+ "id": "westcott.en",
+ "work": "westcott",
+ "language": "en",
+ "kind": "original",
+ "edition": "London: John Murray, 1892 (\"Ninth thousand\"), the separate edition reprinted from The Speaker's Commentary (1880); archive.org scan \"gospelaccordingt00westuoft\" (University of Toronto), djvu OCR text",
+ "translation": null,
+ "published": 1892,
+ "full_text_url": "https://archive.org/details/gospelaccordingt00westuoft",
+ "source_kind": "scan",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years)"
+ },
+ "made_by": "print",
+ "status": "ai_draft",
+ "reviewer": null,
+ "notes": "None: every verse 1-18 has at least one entry. Not on CCEL (CCEL has only Westcott on Hebrews). The text is archive.org djvu OCR: the only changes are line breaks reflowed, hyphenated line ends joined, and running heads and page footers dropped (e.g. \"New Test. — VOL. II.\" inside the \"the Word was God\" note). Greek: the OCR turns Westcott's Greek into Latin-letter garbage (e.g. \"(Xoyof, Vulg. verbum ...)\"). Per the brief, nothing was retyped. Passages heavy in Greek were avoided, and where a short parenthetical held OCR'd Greek it was dropped whole, without any marker. Some of those parentheticals also held a Vulgate gloss or a cross-reference, e.g. \"(t^yjivaTo, Vulg. enarravit [disseruit, exposuit])\", \"(Qtov, not rov $eoi/)\", \"(riDNl non)\" (Hebrew), \"(8o|a)\", \"(rtdfa^fda)\". In one note (\"the Word was God\") a whole sentence quoting Greek was replaced by \" ...\". The .pieces.json sidecar lists the verbatim fragments around every dropped parenthetical. OCR errors are kept verbatim and not corrected, notably the old-style figures read as letters (\"i John i. 2\" for 1 John, \"(i) ... (a) ... (3)\" for (1) (2) (3), \"v. n\" for v. 11, \"Matt. xi. IT.\"), and also \"Jlesh\", \"Irenasus : n. 30. 9.\", \"<zvas\", \"which twos eternally\", \"ist verse\", \"-w. 6, 9\", \"the / Light\", \"post- Christian\", \"5°\", \"ligbteth\", \"\\/ ... /\\\" (margin marks in the v. 13 note), \"trutb~\\\", \"be declared\" (for he declared), \"it- Thus\" (where the dropped Greek ended in OCR'd punctuation), \"\\\"Word in Jesus\", \"(xvii. j)\", \"(Matt. Hi. n\", \"is no<w come to be\", \"for (because) he was before me~\\\", \"flf.\". Headings are Westcott's bold lemmas, written out cleanly (they are metadata). They are empty where the note opens with the verse number and no lemma."
+}

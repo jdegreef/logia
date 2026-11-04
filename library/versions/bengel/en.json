@@ -1,0 +1,19 @@
+{
+ "id": "bengel.en",
+ "work": "bengel",
+ "language": "en",
+ "kind": "translation",
+ "edition": "Edinburgh: T. & T. Clark, 1857-58 (Vol. II, 1858), tr. and ed. Andrew R. Fausset; text from archive.org djvu OCR",
+ "translation": "Translated and edited by Andrew R. Fausset, T&T Clark, Vol. II (1858)",
+ "published": 1858,
+ "full_text_url": "https://archive.org/details/gnomonofnewtesta0000mern",
+ "source_kind": "scan",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years)"
+ },
+ "made_by": "print",
+ "status": "ai_draft",
+ "reviewer": null,
+ "notes": "Not on CCEL; the text is archive.org OCR of Vol. II of the 1857-58 T&T Clark edition (gnomonofnewtesta0000mern, title page MDCCCLVIII). Bengel comments lemma by lemma: each Greek lemma is followed by its English or Latin gloss and a closing parenthesis, then the note. The OCR turns the Greek lemmas and the Greek or Hebrew inside the notes into garbage, so those were dropped. Each entry's heading is the English/Latin gloss of the lemma as printed; '' where an entry combines notes on several lemmas. ' ... ' marks where a garbled Greek lemma or phrase, or a sentence containing one, was left out between kept sentences. Editing otherwise limited to joining hyphenated line ends and dropping running heads, page numbers, footnote markers and the translator's footnotes. OCR slips left uncorrected per the brief: 'Son of Gop' (v. 7, small caps GOD), 'inthe' (v. 14), 'Y.g.' for 'V.g.' (v. 14), a stray quotation mark in 'behind my” back' (v. 15). Bengel's own note on v. 8 is two short sentences, one built around a Greek word, so that entry is only 18 words; the v. 11 entry is 40 words for the same reason. The very long v. 1 note (pp. 229-240) is mostly a polemic against Artemonius (Samuel Crell); the three v. 1 entries keep the exegetical parts. All verses 1-18 are covered."
+}

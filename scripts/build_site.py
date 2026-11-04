@@ -2,8 +2,8 @@
 
     python3 scripts/build_site.py
 
-Reads the library (library/authors, works, comments, corrections, citations,
-quotations, texts), the Bible
+Reads the library (library/authors, works, versions, comments, corrections,
+citations, quotations, texts), the Bible
 text (bible/owb), the interface text (i18n/en.json) and web/, and writes a
 static site:
 
@@ -193,6 +193,14 @@ class Library:
         self.authors = {a["id"]: a for a in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "authors", "*.json")))}
         self.works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
         self.books = load(os.path.join(ROOT, "bible", "owb", "books.json"))
+        # Every version of every work (library/versions): editions of the
+        # original, printed translations, Logia's own translations.
+        self.versions = {v["id"]: v for v in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "versions", "*", "*.json")))}
+        # The version each work's excerpts are copied from.
+        self.base = {}
+        for p in glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json")):
+            d = load(p)
+            self.base[d["work"]] = self.versions[d["version"]]
         self.fixes = {}
         for p in glob.glob(os.path.join(ROOT, "library", "corrections", "*.json")):
             c = load(p)
@@ -222,7 +230,7 @@ class Library:
                 for a, b in self.fixes.get(work, []):
                     text = text.replace(a, b)
                 self.comments.append({**entry, "work": work, "text": text,
-                                      "source_url": urls.get((work, entry["sources"][0]), self.works[work]["full_text_url"]),
+                                      "source_url": urls.get((work, entry["sources"][0]), self.base[work]["full_text_url"]),
                                       "cites": cites.get(entry["id"], []), "quotes": quotes.get(entry["id"], []),
                                       "quoted_in": quoted_in.get(entry["id"], [])})
         self.by_id = {c["id"]: c for c in self.comments}
@@ -248,6 +256,16 @@ class Library:
 
     def bible(self, book, chapter):
         return load(os.path.join(ROOT, "bible", "owb", "en", f"{book}.{chapter}.json"))
+
+    def edition(self, work_id):
+        """The version a work's excerpts are copied from."""
+        return self.base[work_id]
+
+    def versions_of(self, work_id):
+        """A work's versions: the one its excerpts come from first, then
+        originals, then translations, by language."""
+        vs = [v for v in self.versions.values() if v["work"] == work_id]
+        return sorted(vs, key=lambda v: (v["id"] != self.base[work_id]["id"], v["kind"] != "original", v["id"]))
 
     def author_of(self, work_id):
         return self.authors[self.works[work_id]["author"]]
@@ -298,7 +316,8 @@ class Library:
         for q in c["quotes"]:
             w, a = self.works[q["work"]], self.author_of(q["work"])
             held = self.by_id.get(q["excerpt"])
-            url = self.urls.get((q["work"], q["source"]), w["full_text_url"]) + (f"#{q['para']}" if q["para"] else "")
+            url = (self.urls.get((q["work"], q["source"]), self.edition(q["work"])["full_text_url"])
+                   + (f"#{q['para']}" if q["para"] else ""))
             out.append({"label": q["label"], "author": a["name"], "where": locus_label(w, q["locus"]),
                         "exact": bool(q["para"]), "url": url, "status": q["status"],
                         "href": self.verse_link(held["start"], held["work"]) if held else None,
@@ -359,7 +378,7 @@ class Library:
                     rows.append({"id": c["id"], "author": a["name"], "author_dates": a["dates"],
                                  "tradition": a["tradition"], "era": a["era"], "died": a["died"],
                                  "ref": scripture.label(c["start"], c["end"]),
-                                 "href": self.verse_link(c["start"], c["work"]) or self.works[c["work"]]["full_text_url"],
+                                 "href": self.verse_link(c["start"], c["work"]) or self.edition(c["work"])["full_text_url"],
                                  "text": x["text"], "snippet": cite_snippet(c["text"], x["at"], len(x["text"]))})
         for rows in out.values():
             rows.sort(key=lambda r: (ERAS.index(r["era"]), r["died"]))
@@ -727,7 +746,7 @@ def chapter_page(lib, book, chapter, all_chapters):
         commentaries.append({
             "work_id": wid, "author": a["name"], "short_name": short_name(a), "author_dates": a["dates"],
             "tradition": a["tradition"], "era": a["era"], "died": a["died"], "title": w["title"],
-            "edition_short": short_edition(w["edition"]), "author_url": f'/commentators/{a["id"]}/',
+            "edition_short": short_edition(lib.edition(wid)["edition"]), "author_url": f'/commentators/{a["id"]}/',
             "divisions": w["divisions"],
             "work_url": f"/works/{wid}/", "entries": sorted(by_work[wid], key=lambda x: (x["start"], x["end"]))})
     ui = dict(CATALOG["reader"])
@@ -761,7 +780,7 @@ def chapter_page(lib, book, chapter, all_chapters):
         f'<button type="button" id="lv-{lv}" data-level="{lv}" aria-pressed="{"true" if lv == "B" else "false"}">'
         f'{e(t("level." + lv))}</button>' for lv in ("L", "B", "R"))
     works_credit = "; ".join(
-        f'{e(c["author"])}, <a href="{e(lib.works[c["work_id"]]["full_text_url"])}" rel="noopener"><i>{e(c["title"])}</i></a>'
+        f'{e(c["author"])}, <a href="{e(lib.edition(c["work_id"])["full_text_url"])}" rel="noopener"><i>{e(c["title"])}</i></a>'
         for c in commentaries)
     credits = f'<p class="cx-credits">{t("chapter.credits", works=works_credit)}</p>' if commentaries else ""
     owb_link = f'<a href="{OWB_SITE}{chapter_url(book, chapter)}" rel="noopener">Open Word Bible</a>'
@@ -855,7 +874,7 @@ def author_page(lib, author):
     works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
     work_cards = "".join(
         f'<li><a class="lg-card" href="/works/{w}/"><b>{e(lib.works[w]["title"])}</b>'
-        f'<span>{e(short_edition(lib.works[w]["edition"]))}</span></a></li>' for w in works)
+        f'<span>{e(short_edition(lib.edition(w)["edition"]))}</span></a></li>' for w in works)
     comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
     bio = "".join(f"<p>{e(p)}</p>" for p in author["bio"].split("\n\n"))
     draft = f'<p class="lg-quiet">{e(t("commentators.bio_draft"))}</p>' if author["bio_status"] == "ai_draft" else ""
@@ -869,18 +888,34 @@ def author_page(lib, author):
                 description=author["bio"].split("\n\n")[0])
 
 
+def version_card(lib, wid, v):
+    """One version of a work: what it is, where it was copied from, its
+    rights and whether a person has reviewed it."""
+    lang = t("languages." + v["language"]) if v["language"] in CATALOG["languages"] else v["language"]
+    kind = t("version.original" if v["kind"] == "original" else "version.translation", language=lang)
+    facts = [(t("work.edition"), v["edition"])]
+    if v["translation"]:
+        facts.append((t("work.translation"), v["translation"]))
+    if v["made_by"] == "print":
+        source = (t("work.source_scan", n=len(lib.fixes.get(wid, []))) if v["source_kind"] == "scan"
+                  else t("work.source_digital"))
+        facts += [(t("work.published"), str(v["published"])), (t("work.source"), source)]
+    facts += [(t("work.rights"), f'{v["rights"]["basis"]}; {v["rights"]["worldwide"]}'),
+              (t("version.status"), t("version.reviewed", name=v["reviewer"]) if v["status"] == "reviewed"
+               else t("version.ai_draft_logia" if v["made_by"] == "logia" else "version.ai_draft"))]
+    used = (f'<p class="lg-quiet">{e(t("version.excerpts_from"))}</p>' if v["id"] == lib.edition(wid)["id"] else "")
+    dl = "".join(f"<dt>{e(k)}</dt><dd>{e(x)}</dd>" for k, x in facts)
+    return (f'<article class="lg-version" id="{e(v["id"])}"><h3>{e(kind)}</h3>{used}'
+            f'<dl class="lg-facts">{dl}</dl></article>')
+
+
 def work_page(lib, wid):
     w, a = lib.works[wid], lib.author_of(wid)
     comments = sorted((c for c in lib.comments if c["work"] == wid), key=order_key)
-    source = (t("work.source_scan", n=len(lib.fixes.get(wid, []))) if w["source_kind"] == "scan"
-              else t("work.source_digital"))
-    facts = [(t("work.original"), w["original_language"]), (t("work.edition"), w["edition"])]
-    if w["translation"]:
-        facts.append((t("work.translation"), w["translation"]))
-    facts += [(t("work.published"), str(w["published"])), (t("work.source"), source),
-              (t("work.rights"), f'{w["rights"]["basis"]}; {w["rights"]["worldwide"]}'),
-              (t("work.in_logia"), t("work.excerpts", n=len(comments)))]
+    facts = [(t("work.original"), w["original_language"]),
+             (t("work.in_logia"), t("work.excerpts", n=len(comments)))]
     dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
+    versions = "".join(version_card(lib, wid, v) for v in lib.versions_of(wid))
     full = []
     chapter = None
     for c in comments:
@@ -918,8 +953,10 @@ def work_page(lib, wid):
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
-<p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
+<p class="actions"><a class="button ghost" href="{e(lib.edition(wid)["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
 <dl class="lg-facts">{dl}</dl>
+<section class="lg-block" id="versions"><h2>{e(t("work.versions"))}</h2><p class="lg-quiet">{e(t("work.versions_note"))}</p>
+<div class="lg-versions">{versions}</div></section>
 {whole}
 <section class="lg-block"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 <div class="lg-book">{"".join(full)}</div></section>"""
@@ -1011,7 +1048,7 @@ def text_page(lib, wid, x):
 <a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p></header>
 <div class="lg-whole">{"".join(body)}</div>
 <nav class="lg-turns" aria-label="{e(w["title"])}">{"".join(turns)}</nav>
-<p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>"""
+<p class="lg-quiet lg-whole-note">{e(t("text.note", edition=lib.edition(wid)["edition"]))}</p>"""
     return page(lib, f'{a["name"]}, {name}', html_body, f"/works/{wid}/{x['locus']}/", current="/commentators/",
                 description=t("text.description", name=a["name"], title=w["title"], where=name))
 

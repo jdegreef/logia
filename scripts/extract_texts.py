@@ -7,7 +7,8 @@ An excerpt is the part of a work Logia sets beside a verse; a homily or a
 tractate is also worth reading straight through (roadmap, item 5). For each
 work with its own divisions (`divisions` in library/works/<work>.json), each
 of its CCEL source pages is copied, paragraph by paragraph, into
-library/texts/<work>/<n>.json, where n is the homily or tractate number:
+library/texts/<work>/<n>.json, where n is the homily or tractate number. It
+is the same version (library/versions/) as the work's excerpts:
 
 - the words are the page's own, as for excerpts: footnotes, footnote
   markers and page numbers are left out, and spacing is normalised;
@@ -107,7 +108,9 @@ def derive():
         if span is None:
             problems.append(f"{f['path']}: no heading names the verse it opens on")
             continue
-        out[dest] = {"work": work["id"], "locus": str(number), "title": title, "source": source, "url": f["url"],
+        version = next((load(c)["version"] for c in comment_files), None)
+        out[dest] = {"work": work["id"], "version": version, "locus": str(number), "title": title, "source": source,
+                     "url": f["url"],
                      "verses": {"start": f"{book}.{chapter}.{span[0]}", "end": f"{book}.{chapter}.{span[1]}"},
                      "paragraphs": paras}
     return out, problems

@@ -246,7 +246,9 @@
     "straight_through_note": "The {divisions} that hold Logia's excerpts, copied whole from their CCEL transcriptions. Each marks the passages Logia sets beside a verse.",
     "by_division": "By {division}",
     "by_verse": "By verse",
-    "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on."
+    "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on.",
+    "versions": "Versions",
+    "versions_note": "Each edition and translation of this work is a record of its own: where it was copied from, its rights, and whether a person has reviewed it."
   },
   "about": {
     "title": "About",
@@ -303,5 +305,27 @@
     "on_ccel": "On CCEL",
     "note": "Copied word for word from {edition}, as transcribed by CCEL. The translator's footnotes are left out. Scripture references are linked as CCEL marks them. A gold rule marks the passages Logia sets beside a verse.",
     "description": "{name}, {title}, {where}: the whole text, with the passages Logia sets beside each verse."
+  },
+  "version": {
+    "original": "The original, in {language}",
+    "translation": "Translation into {language}",
+    "status": "Review",
+    "ai_draft": "Copied by an AI and checked against its source by script; not yet reviewed by a person.",
+    "reviewed": "Reviewed by {name}.",
+    "excerpts_from": "Logia's excerpts are copied from this version.",
+    "ai_draft_logia": "Translated by an AI for Logia; not yet reviewed by a native speaker."
+  },
+  "languages": {
+    "en": "English",
+    "la": "Latin",
+    "grc": "Greek",
+    "de": "German",
+    "es": "Spanish",
+    "pt": "Portuguese",
+    "fr": "French",
+    "sw": "Swahili",
+    "am": "Amharic",
+    "ko": "Korean",
+    "vi": "Vietnamese"
   }
 }
