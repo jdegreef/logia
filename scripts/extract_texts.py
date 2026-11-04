@@ -40,7 +40,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # The verse a homily or tractate opens on, as its heading prints it.
 # "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5",
-# "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX".
+# (or, for a tractate "on the same passage", the verses of the one before it).
+# "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX", "John xiii";
+# a stray full stop at the end ("Chapter XIII. 10–15.", "John xiii. 20 .") is allowed.
 OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
                    r"(?:;\s*(?P<ch2>[ivxl]+)\.\s+(?P<e>\d+)(?:[–-](?P<f>\d+))?)?"
                    r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"
@@ -48,7 +50,9 @@ OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)
                    # ("Chapter XI. 55–57; XII": into the next chapter, its verses unnamed)
                    r"(?:;\s*(?P<CH2>[IVXL]+)(?:\.\s+(?P<c>\d+)(?:[–-](?P<d>\d+))?)?)?"
                    # or a whole chapter: "Chapter IX"
-                   r"|Chapter\s+(?P<WH>[IVXL]+)\.?)$")
+                   r"|Chapter\s+(?P<WH>[IVXL]+)\.?|John\s+(?P<wh>[ivxl]+)\.?)\s*\.?$")
+# A tractate on the passage of the one before it: "on the same passage.", "again on the same passage."
+SAME = re.compile(r"^(?:again\s+)?on the same passage\.?$", re.I)
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13."
 VER = re.compile(r"^(?:\[\d+\.\]\s*)?Ver\.\s+(\d+)\.")
 
@@ -85,6 +89,7 @@ def derive():
         book = books.pop() if len(books) == 1 else None
         paras, number, title, chapter, start_chapter, verse, span = [], None, None, None, None, None, None
         heading_end = None                   # where a heading that crosses a chapter says the text ends
+        same = False                         # "on the same passage": the verses of the one before
         for i, (a, b) in enumerate(zip(starts, starts[1:])):
             words = " ".join(text[a:b].split())
             if not words:
@@ -94,10 +99,13 @@ def derive():
                 if not m:
                     continue                 # the book's title lines
                 number, title = find_refs.scripture.roman(m[2]), words
+            if book and chapter is None and not same and SAME.match(words):
+                same = True
+                continue
             o = OPENS.match(words)
             if o and book and chapter is None:
-                chapter = start_chapter = find_refs.scripture.roman(o["ch"] or o["CH"] or o["WH"])
-                if o["WH"]:
+                chapter = start_chapter = find_refs.scripture.roman(o["ch"] or o["CH"] or o["WH"] or o["wh"])
+                if o["WH"] or o["wh"]:
                     span = [1, verse_count(book, chapter)]
                 else:
                     first = int(o["v"] or o["a"])
@@ -132,13 +140,23 @@ def derive():
         if dest in out:
             problems.append(f"{f['path']}: a second page for {work['id']} {number}")
             continue
-        if span is None:
+        if span is None and not same:
             problems.append(f"{f['path']}: no heading names the verse it opens on")
             continue
         out[dest] = {"work": work["id"], "locus": str(number), "title": title, "source": source, "url": f["url"],
-                     "verses": {"start": f"{book}.{start_chapter}.{span[0]}",
-                                "end": "{}.{}.{}".format(book, *max((chapter, span[1]), heading_end or (0, 0)))},
+                     "verses": None if same else {
+                         "start": f"{book}.{start_chapter}.{span[0]}",
+                         "end": "{}.{}.{}".format(book, *max((chapter, span[1]), heading_end or (0, 0)))},
                      "paragraphs": paras}
+    # "On the same passage": the verses of the homily or tractate before, once that is known.
+    for dest in sorted(out, key=lambda d: (os.path.dirname(d), int(os.path.basename(d)[:-5]))):
+        if out[dest]["verses"] is None:
+            before = os.path.join(os.path.dirname(dest), f"{int(out[dest]['locus']) - 1}.json")
+            if before in out and out[before]["verses"]:
+                out[dest]["verses"] = dict(out[before]["verses"])
+            else:
+                problems.append(f"{out[dest]['source']}: 'on the same passage', but no text before it")
+                del out[dest]
     return out, problems
 
 
