@@ -27,6 +27,12 @@ procedure for a new commentary.
   misreading is fixed by a pair in `library/corrections/<work>.json`, applied
   in order at build time. Fix only what the printed page plainly says ("Let
   ns" → "Let us"); leave anything uncertain alone.
+- **Loci and citations are read from the sources.** `scripts/find_refs.py`
+  writes each excerpt's `locus`, `library/citations/` and
+  `library/quotations/`, and `scripts/extract_texts.py` writes the whole
+  texts in `library/texts/`; never type them. Only a person sets a citation's or
+  quotation's status to `reviewed` or `rejected`
+  (docs/references.md).
 - **Nothing is marked reviewed by Claude.** Works and translations stay
   `ai_draft` until a named human reviewer approves them.
 - **The Bible text is imported, never edited.** `bible/owb/` comes from
@@ -60,6 +66,8 @@ is weak), ships as `ai_draft`, and is approved by a native-speaking reviewer.
 
 ## Before pushing
 
+    python3 scripts/find_refs.py --check
+    python3 scripts/extract_texts.py --check
     python3 scripts/validate.py
     python3 scripts/verify_sources.py
     python3 -m unittest discover -s tests -t .

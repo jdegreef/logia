@@ -117,7 +117,71 @@
   // Re-render the panel where the reader is, after likes or saves arrive.
   function refresh() { state.keepScroll = true; renderPanel(); }
 
-  function paras(t) { return t.split(/\n\s*\n/).map(function (p) { return "<p>" + esc(p.trim()) + "</p>"; }).join(""); }
+  // Paragraphs of an excerpt already made into HTML (by linked()).
+  function paras(h) { return h.split(/\n\s*\n/).map(function (p) { return "<p>" + p.trim() + "</p>"; }).join(""); }
+  // An excerpt's text with the Scripture it cites made into links
+  // (library/citations, docs/references.md).
+  function linked(text, cites) {
+    var h = "", pos = 0;
+    (cites || []).slice().sort(function (a, b) { return a.at - b.at; }).forEach(function (c) {
+      if (c.at < pos) return;
+      var same = cites.filter(function (x) { return x.at === c.at; }).map(function (x) { return x.label; }).join(", ");
+      var words = esc(text.slice(c.at, c.at + c.text.length));
+      var ext = c.href && c.href.indexOf("http") === 0 ? ' target="_blank" rel="noopener"' : "";
+      h += esc(text.slice(pos, c.at)) + (c.href
+        ? '<a class="cx-cite" href="' + esc(c.href) + '"' + ext + ' title="' + esc(same) + '">' + words + "</a>"
+        : '<span class="cx-cite" title="' + esc(same) + '">' + words + "</span>");
+      pos = c.at + c.text.length;
+    });
+    return h + esc(text.slice(pos));
+  }
+  // "Homily 2, section 8" from a work's divisions and an excerpt's locus.
+  function locusLabel(w, locus) {
+    if (!locus || !Array.isArray(w.divisions)) return "";
+    return locus.split(".").map(function (n, i) {
+      return (i ? w.divisions[i].toLowerCase() : w.divisions[i]) + " " + n;
+    }).join(", ");
+  }
+  // The Catena's quotations, both ways: under a Catena excerpt, the Father's
+  // passage each comes from; under that passage, that the Catena quotes it.
+  function traced(e) {
+    var unchecked = function (q) {
+      return q.status === "reviewed" ? "" : ' <span title="' + esc(U.unchecked_title) + '">' + esc(U.unchecked) + "</span>";
+    };
+    var rows = (e.quotes || []).map(function (q) {
+      return "<div><b>" + esc(q.label) + "</b> " + esc(q.author) + ", " + esc(q.where) +
+        (q.exact ? "" : " " + esc(U.not_pinned)) + ": " +
+        (q.href ? '<a href="' + esc(q.href) + '">' + esc(fmt(U.read_it_on, { ref: q.ref })) + "</a> · " : "") +
+        '<a href="' + esc(q.url) + '" target="_blank" rel="noopener">' + esc(U.full_text_short) + " ↗</a>" + unchecked(q) + "</div>";
+    }).concat((e.quotedIn || []).map(function (q) {
+      var label = esc(fmt(U.quoted_by, { name: q.author, title: q.title, ref: q.ref }));
+      return "<div>" + (q.href ? '<a href="' + esc(q.href) + '">' + label + "</a>" : label) + unchecked(q) + "</div>";
+    }));
+    return rows.length ? '<div class="cx-qs">' + rows.join("") + "</div>" : "";
+  }
+  // Whole homilies and tractates on this verse: the works' second structure,
+  // by the verse they expound (library/texts), even where Logia has no excerpt.
+  function wholeTexts(v) {
+    var rows = DATA.wholeTexts[v] || [];
+    if (!rows.length) return "";
+    return '<p class="cx-whole">' + esc(U.whole_texts) + ": " + rows.map(function (r) {
+      return '<a href="' + esc(r.href) + '">' + esc(r.short) + ", " + esc(r.where) + "</a>";
+    }).join(" · ") + "</p>";
+  }
+  // Excerpts on other verses that refer to this one (the other way of a citation).
+  function elsewhere(v) {
+    var rows = (DATA.citedBy[v] || []).filter(function (r) { return state.eras.has(r.era); });
+    if (!rows.length) return "";
+    return '<section class="cx-elsewhere"><div class="cx-era">' + esc(U.elsewhere) + "</div>" +
+      '<p class="cx-hint">' + esc(fmt(U.elsewhere_hint, { ref: REF(v) })) + "</p>" + rows.map(function (r) {
+        var i = r.snippet.indexOf(r.text);
+        var q = i < 0 ? esc(r.snippet)
+          : esc(r.snippet.slice(0, i)) + "<mark>" + esc(r.text) + "</mark>" + esc(r.snippet.slice(i + r.text.length));
+        return '<div class="cx-cb"><div class="cx-who"><b>' + esc(r.author) + '</b><span class="cx-d">' + esc(r.author_dates) +
+          '</span><span class="cx-tag">' + esc(r.tradition) + "</span></div><q>" + q + '</q><div><a href="' + esc(r.href) + '">' +
+          esc(fmt(U.read_it_on, { ref: r.ref })) + "</a></div></div>";
+      }).join("") + "</section>";
+  }
   function commTab() {
     var v = state.verse;
     var h = '<div class="cx-chips" role="group" aria-label="' + esc(U.show_eras) + '">' + ERAS.map(function (e) {
@@ -133,10 +197,12 @@
       ws.forEach(function (w) {
         var es = entriesFor(w, v);
         var body = es.map(function (e) {
-          var range = e.start === e.end ? "" : '<div class="cx-range">' + esc(fmt(U.on_verses, { a: e.start, b: e.end })) + "</div>";
+          var where = [e.start === e.end ? "" : fmt(U.on_verses, { a: e.start, b: e.end }), locusLabel(w, e.locus)]
+            .filter(Boolean).join(" · ");
+          var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
           var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
             ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
-          return range + lemma + paras(e.excerpt);
+          return range + lemma + paras(linked(e.excerpt, e.cites)) + traced(e);
         }).join("");
         var words = es.reduce(function (n, e) { return n + e.excerpt.split(/\s+/).length; }, 0);
         var long = words > 140 && !fullExcerpts();
@@ -146,6 +212,8 @@
           '<div class="cx-work"><a href="' + w.work_url + '"><i>' + esc(w.title) + "</i></a> · " + esc(w.edition_short) + "</div>" +
           '<div class="cx-ex' + (long ? " cx-clamp" : "") + '">' + body + "</div>" +
           '<div class="cx-more">' + (long ? '<button type="button" data-expand>' + esc(fmt(U.read_all, { n: words.toLocaleString() })) + "</button>" : "") +
+          (es[0].inFull ? '<a href="' + esc(es[0].inFull) + '">' +
+            esc(fmt(U.read_in_full, { where: locusLabel(w, es[0].locus.split(".")[0]) })) + "</a>" : "") +
           '<a href="' + esc(es[0].source_url) + '" target="_blank" rel="noopener">' + esc(U.full_text) + " ↗</a></div>" +
           actions(w, v) + "</section>";
       });
@@ -153,7 +221,7 @@
     if (!any) {
       h += '<p class="cx-empty">' + esc(works.some(function (w) { return entriesFor(w, v).length; }) ? U.none_in_eras : U.none_yet_long) + "</p>";
     }
-    return h;
+    return h + wholeTexts(v) + elsewhere(v);
   }
 
   // Like, save and share under a card. Likes and saves need an account

@@ -15,6 +15,10 @@ jobs:
           python-version: "3.12"
       - name: Lint
         run: pipx run ruff==0.16.9 check .
+      - name: Check loci and citations are up to date
+        run: python3 scripts/find_refs.py --check
+      - name: Check whole texts are up to date
+        run: python3 scripts/extract_texts.py --check
       - name: Check the page scripts parse
         run: node --check web/site.js && node --check web/reader.js && node --check web/account.js
       - name: Validate the library

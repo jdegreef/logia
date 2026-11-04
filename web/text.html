@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@400..700&display=swap">
+<style>
+/* A whole homily or tractate (or a work's list of them). Same tokens as web/index.html. */
+:root {
+  --bg: #faf6ef; --surface: #ffffff; --surface-2: #f4eee3; --text: #221c15; --muted: #6e6358;
+  --line: #e8dfcf; --line-strong: #968462; --accent: #3f3d9a; --accent-contrast: #ffffff; --gold: #b07d22;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --serif: "Gentium Book Plus", Georgia, "Times New Roman", serif;
+  --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark; --bg: #16130f; --surface: #201b15; --surface-2: #2a241c; --text: #ece3d4; --muted: #ab9f8b;
+    --line: #2d261d; --line-strong: #7c7060; --accent: #9c9af2; --accent-contrast: #16130f; --gold: #e0b45c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark; --bg: #16130f; --surface: #201b15; --surface-2: #2a241c; --text: #ece3d4; --muted: #ab9f8b;
+  --line: #2d261d; --line-strong: #7c7060; --accent: #9c9af2; --accent-contrast: #16130f; --gold: #e0b45c;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.55; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 20px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.top { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.brand { font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--text); text-decoration: none; }
+.top span { font-size: 13px; color: var(--muted); }
+.page { max-width: 44rem; padding-top: 36px; }
+.eyebrow { font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(32px, 6vw, 48px); line-height: 1.05; margin: 0 0 10px; letter-spacing: -.01em; }
+.sub { color: var(--muted); margin: 0 0 24px; font-size: 15px; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+.nav .sp { flex: 1; }
+.text p { font-family: var(--serif); font-size: 19px; line-height: 1.7; margin: 0 0 1em; text-wrap: pretty; overflow-wrap: break-word; }
+.text p.head { font-family: var(--sans); font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: .6em; }
+.text section { scroll-margin-top: 16px; }
+.text .held { border-left: 3px solid var(--gold); padding-left: 14px; margin-left: -17px; }
+.text p:target, .text section:target > p:first-of-type { background: var(--surface-2); border-radius: 6px; }
+.marks { font-family: var(--sans); font-size: 13px; color: var(--muted); margin: -.6em 0 1.1em; display: flex; flex-direction: column; gap: 2px; }
+.held + .marks { padding-left: 14px; margin-left: -17px; border-left: 3px solid var(--gold); }
+a.cite { color: inherit; text-decoration: underline dotted var(--accent); text-underline-offset: 3px; }
+a.cite:hover { color: var(--accent); }
+.list { list-style: none; padding: 0; margin: 0; }
+.list li { padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 2px 12px; align-items: baseline; }
+.list a { font-family: var(--display); font-weight: 600; font-size: 19px; text-decoration: none; }
+.list span { color: var(--muted); font-size: 14px; }
+.foot { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 36px; max-width: 72ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="brand" href="/">Logia</a><span>{{TOP}}</span></header>
+  <main class="page">
+    <p class="eyebrow">{{EYEBROW}}</p>
+    <h1>{{H1}}</h1>
+    <p class="sub">{{SUB}}</p>
+    <nav class="nav" aria-label="Pages of this work">{{NAV}}</nav>
+    {{BODY}}
+    <footer class="foot">{{FOOT}}</footer>
+  </main>
+</div>
+</body>
+</html>
