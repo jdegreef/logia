@@ -132,16 +132,44 @@
       : U.none_yet;
     var r = recFor(v);
     $("#n-comm").textContent = voices.length;
-    $("#n-words").textContent = (DATA.words[v] || []).length;
-    $("#n-notes").textContent = r.decisions.length;
+    $("#n-words").textContent = DATA.wordCounts[v] || 0;
+    $("#n-notes").textContent = r.notes;
     $("#n-xref").textContent = (DATA.crossrefs[v] || []).length;
     document.querySelectorAll(".cx-tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === state.tab); });
     renderRail();
     var keep = $("#pb").scrollTop;
-    $("#pb").innerHTML = ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
+    $("#pb").innerHTML = needsPanel() && !PANEL ? panelWaiting()
+      : ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
     $("#pb").scrollTop = state.keepScroll ? keep : 0;
     state.keepScroll = false;
   }
+  // The words and notes tabs read the chapter's panel file (DATA.panel:
+  // /panel/<BOOK>.<chapter>.json, see panel_file in scripts/build_site.py),
+  // fetched the first time one of them is opened.
+  var PANEL = null, panelLoad = null, panelFailed = false;
+  function needsPanel() { return state.tab === "words" || state.tab === "notes"; }
+  function loadPanel() {
+    if (!panelLoad) {
+      panelFailed = false;
+      panelLoad = fetch(DATA.panel).then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        return res.json();
+      }).then(function (p) { PANEL = p; refresh(); }, function () {
+        panelLoad = null; panelFailed = true; refresh();
+      });
+    }
+    return panelLoad;
+  }
+  function panelWaiting() {
+    if (panelFailed) {
+      return '<p class="cx-empty">' + esc(U.panel_failed) + ' <button type="button" class="lg-linkish" data-retry>' +
+        esc(U.try_again) + "</button></p>";
+    }
+    loadPanel();
+    return '<p class="cx-empty" role="status">' + esc(U.loading) + "</p>";
+  }
+  var notesOf = function (r) { return PANEL.records[r.id]; };
+
   // Re-render the panel where the reader is, after likes or saves arrive.
   function refresh() { state.keepScroll = true; renderPanel(); }
 
@@ -322,7 +350,7 @@
   }
 
   function wordsTab() {
-    var v = state.verse, toks = DATA.words[v] || [];
+    var v = state.verse, toks = PANEL.words[v] || [];
     var h = '<div class="cx-greek" lang="' + SOURCE_LANG + '"' + DIR + ">" + toks.map(function (t) {
       return '<span class="cx-g' + (t.id === state.token ? " cx-on" : "") + '" data-gid="' + t.id + '" role="button" tabindex="0">' +
         esc(t.text) + "</span>" + esc((t.after || " ").replace(/(\S)$/, "$1 "));
@@ -337,7 +365,7 @@
       "<dt>" + esc(U.gloss) + "</dt><dd>" + esc(t.gloss) + "</dd>" +
       (t.strong ? "<dt>" + esc(U.strong) + "</dt><dd>" + (HEBREW ? "H" + esc(t.strong.replace(/^0+/, "")) : "G" + esc(t.strong)) + "</dd>" : "") +
       "</dl></div>";
-    var decs = recFor(v).decisions.filter(function (d) { return (d.tokens || []).indexOf(t.id) >= 0; });
+    var decs = notesOf(recFor(v)).decisions.filter(function (d) { return (d.tokens || []).indexOf(t.id) >= 0; });
     if (decs.length) h += '<div class="cx-era cx-gap">' + esc(U.how_translated) + "</div>" + decs.map(noteHtml).join("");
     return h;
   }
@@ -352,23 +380,21 @@
       "<p>" + esc(flat(d.reason)) + "</p></div>";
   }
   function notesTab() {
-    var r = recFor(state.verse);
+    var r = recFor(state.verse), n = notesOf(r);
     var span = r.verses.length > 1
       ? '<div class="cx-range">' + esc(fmt(U.sentence_spans, { a: r.verses[0], b: r.verses[r.verses.length - 1] })) + "</div>" : "";
-    return span + '<div class="cx-src" lang="' + SOURCE_LANG + '"' + DIR + ">" + esc(r.source) + '</div><div class="cx-gloss">' + esc(U.word_for_word) + " " +
-      esc(r.gloss) + "</div>" + r.decisions.map(noteHtml).join("");
+    return span + '<div class="cx-src" lang="' + SOURCE_LANG + '"' + DIR + ">" + esc(n.source) + '</div><div class="cx-gloss">' + esc(U.word_for_word) + " " +
+      esc(n.gloss) + "</div>" + n.decisions.map(noteHtml).join("");
   }
   function xrefTab() {
     var xs = DATA.crossrefs[state.verse] || [];
     if (!xs.length) return '<p class="cx-empty">' + esc(U.no_xrefs) + "</p>";
     return '<div class="cx-xr">' + xs.map(function (x) {
-      var p = x.split("."), key = p[0] + "." + p[1];
+      // Every chapter of the Bible is in Logia, so a reference opens here.
+      var p = x.split(".");
       var verse = (p[2] || "").split("-")[0];
-      var href = DATA.available.indexOf(key) >= 0
-        ? "/" + p[0].toLowerCase() + "/" + p[1] + "/" + (verse ? "#v" + verse : "")
-        : DATA.owb_site + "/" + p[0].toLowerCase() + "/" + p[1] + "/";
-      var ext = href.indexOf("http") === 0 ? ' target="_blank" rel="noopener"' : "";
-      return '<a href="' + href + '"' + ext + ">" + esc((DATA.books[p[0]] || p[0]) + " " + p[1] + (p[2] ? ":" + p[2] : "")) + "</a>";
+      var href = "/" + p[0].toLowerCase() + "/" + p[1] + "/" + (verse ? "#v" + verse : "");
+      return '<a href="' + href + '">' + esc((DATA.books[p[0]] || p[0]) + " " + p[1] + (p[2] ? ":" + p[2] : "")) + "</a>";
     }).join("") + '</div><p class="cx-hint">' + esc(U.xref_credit) + "</p>";
   }
 
@@ -425,6 +451,7 @@
       } catch (err) { /* storage blocked: the choice lasts for this page */ }
       renderPanel(); return;
     }
+    if (e.target.closest("[data-retry]")) { panelFailed = false; refresh(); return; }
     var ex = e.target.closest("[data-expand]");
     if (ex) { ex.closest(".cx-card").querySelector(".cx-ex").classList.remove("cx-clamp"); ex.remove(); return; }
     var g = e.target.closest(".cx-g");

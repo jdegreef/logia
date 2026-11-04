@@ -21,7 +21,9 @@ The look, the header, footer and settings menu follow openwordbible.org:
 web/style.css and the fonts are the Open Word Bible's own, and web/site.js
 is taken from its site script. web/logia.css adds Logia's own parts.
 """
+import functools
 import glob
+import hashlib
 import html
 import json
 import os
@@ -578,11 +580,24 @@ def site_footer(lib):
 </div></footer>"""
 
 
+@functools.lru_cache(maxsize=None)
+def asset(name):
+    """A file in web/ by an address that changes when its contents do
+    (/style.css?v=1a2b3c4d5e), so browsers may keep it for a year
+    (render.yaml) and still see each new version at once."""
+    with open(os.path.join(WEB, name), "rb") as f:
+        return f"/{name}?v={hashlib.sha256(f.read()).hexdigest()[:10]}"
+
+
+def digest_url(path, text):
+    return f"{path}?v={hashlib.sha256(text.encode()).hexdigest()[:10]}"
+
+
 def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True):
     full = f"{title} · Logia" if title != "Logia" else "Logia"
     description = description or t("site.description")
     own = e(SITE_URL + path)
-    js = "".join(f'\n<script src="/{s}" defer></script>' for s in ("site.js", "account.js") + tuple(scripts))
+    js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js") + tuple(scripts))
     account_text = json.dumps(CATALOG["account"]["ui"], ensure_ascii=False).replace("</", "<\\/")
     return f"""<!doctype html>
 <html lang="{LANG}">
@@ -604,8 +619,8 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <script>{BOOT_SCRIPT}</script>
 <link rel="preload" href="/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/gentium-book-plus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/logia.css">{js}
+<link rel="stylesheet" href="{asset("style.css")}">
+<link rel="stylesheet" href="{asset("logia.css")}">{js}
 </head>
 <body>
 <a class="skip" href="#main">{e(t("site.skip"))}</a>
@@ -741,7 +756,25 @@ def book_page(lib, book):
     return page(lib, name, body, f"/{book.lower()}/", current="/read/")
 
 
+# What the panel's Greek/Hebrew words and translation notes tabs show is most
+# of a chapter's data (Psalm 119: 550 KB of 690 KB), and most readers never
+# open them, so it is a file of its own, /panel/<BOOK>.<chapter>.json,
+# fetched by web/reader.js when one is opened. The page keeps the counts
+# the tabs show.
+PANEL_FIELDS = ("source", "gloss", "decisions")
+
+
+def panel_file(bible):
+    """The words and notes of a chapter, and the page's slimmer records."""
+    panel = {"words": bible["words"],
+             "records": {r["id"]: {k: r[k] for k in PANEL_FIELDS} for r in bible["records"]}}
+    records = [{**{k: v for k, v in r.items() if k not in PANEL_FIELDS and k != "status"}, "notes": len(r["decisions"])}
+               for r in bible["records"]]
+    return json.dumps(panel, ensure_ascii=False, separators=(",", ":")), records
+
+
 def chapter_page(lib, book, chapter, all_chapters):
+    """The reader page, and the text of its panel file."""
     bible = lib.bible(book, chapter)
     name = lib.books[book]["en"]
     last = bible["verses"][-1]
@@ -763,12 +796,15 @@ def chapter_page(lib, book, chapter, all_chapters):
         # Old Testament chapters read from the Hebrew: a string with an _hbo
         # variant uses it there ("Tap a Hebrew word...").
         ui.update({k[:-4]: v for k, v in CATALOG["reader"].items() if k.endswith("_hbo")})
-    data = {**bible, "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
+    panel, records = panel_file(bible)
+    text_data = {k: v for k, v in bible.items() if k not in ("records", "words")}
+    data = {**text_data, "records": records, "wordCounts": {v: len(ws) for v, ws in bible["words"].items()},
+            "panel": digest_url(f"/panel/{book}.{chapter}.json", panel),
+            "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
             "citedBy": lib.cited_by(book, chapter, bible["verses"]),
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
-            "books": {k: v["en"] for k, v in lib.books.items()},
-            "available": [f"{b}.{c}" for b, c in all_chapters], "owb_site": OWB_SITE}
+            "books": {k: v["en"] for k, v in lib.books.items()}}
     heading = default_wording(next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}"))
     # The text as plain Balanced verses, for search engines and readers
     # without JavaScript; web/reader.js replaces it.
@@ -832,7 +868,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     description = (t("chapter.description", book=name, chapter=chapter, n=n) if n
                    else t("chapter.description_none", book=name, chapter=chapter))
     return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/",
-                description=description, scripts=("reader.js",))
+                description=description, scripts=("reader.js",)), panel
 
 
 def commentators_page(lib):
@@ -1140,7 +1176,11 @@ def build():
         write(f"/{book.lower()}/", book_page(lib, book))
         pages.append(f"/{book.lower()}/")
     for book, chapter in lib.chapters:
-        write(chapter_url(book, chapter), chapter_page(lib, book, chapter, lib.chapters))
+        html_text, panel = chapter_page(lib, book, chapter, lib.chapters)
+        write(chapter_url(book, chapter), html_text)
+        os.makedirs(os.path.join(SITE, "panel"), exist_ok=True)
+        with open(os.path.join(SITE, "panel", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
+            f.write(panel)
         pages.append(chapter_url(book, chapter))
     write("/commentators/", commentators_page(lib))
     pages.append("/commentators/")

@@ -22,3 +22,29 @@ services:
       - path: /*
         name: Referrer-Policy
         value: strict-origin-when-cross-origin
+      # Files whose address carries their digest (?v=..., asset() and
+      # digest_url() in scripts/build_site.py) never change at that address,
+      # so browsers may keep them a year. The fonts keep their names when
+      # refreshed from the Open Word Bible, so they are kept a month. Pages
+      # themselves are checked on every visit (Render's default).
+      - path: /fonts/*
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /panel/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /style.css
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /logia.css
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /site.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /account.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /reader.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
