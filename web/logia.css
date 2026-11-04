@@ -288,3 +288,54 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .cx-tool-panel ul { margin: 0 0 6px; padding-left: 18px; }
 .cx-tool-panel button { color: var(--accent); }
 .cx-citation { font-family: var(--serif); }
+
+/* Search (/search/, web/search.js) */
+.lg-search { display: flex; gap: 10px; flex-wrap: wrap; margin: 24px 0 6px; max-width: 760px; }
+.lg-search input { flex: 1 1 260px; min-width: 0; font: inherit; font-size: 17px; padding: 10px 14px; border: 1px solid var(--line-strong, var(--line)); border-radius: 999px; background: var(--surface); color: var(--text); }
+.lg-search-body { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; margin-top: 24px; align-items: start; }
+@media (max-width: 760px) { .lg-search-body { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
+.lg-facet { border: 0; padding: 0; margin: 0 0 18px; font-size: 14px; }
+.lg-facet legend { font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+.lg-facet label { display: flex; gap: 6px; align-items: baseline; padding: 2px 0; cursor: pointer; }
+.lg-results { list-style: none; padding: 0; margin: 0 0 18px; max-width: 72ch; }
+.lg-results li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lg-results a { text-decoration: none; }
+.lg-results p { margin: 4px 0 0; font-family: var(--serif); overflow-wrap: break-word; }
+.lg-results mark { background: var(--accent-soft, var(--surface-2)); color: inherit; border-radius: 3px; padding: 0 1px; }
+
+/* The library (/library/) */
+.lg-summary { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 28px 0 0; }
+.lg-summary div { display: flex; flex-direction: column; }
+.lg-summary b { font-family: var(--display); font-size: 30px; font-weight: 600; line-height: 1.1; }
+.lg-summary span { font-size: 13px; color: var(--muted); }
+.lg-cat { list-style: none; padding: 0; margin: 6px 0 0; max-width: 860px; }
+.lg-cat li { padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+.lg-cat a { text-decoration: none; }
+.lg-cat-work > a b { font-family: var(--display); font-size: 19px; font-weight: 600; }
+.lg-cat-by { font-size: 14px; }
+
+/* The commentators' timeline (/commentators/) */
+.lg-tl { list-style: none; margin: 0; padding: 0; }
+.lg-tl-row, .lg-tl-axis { display: grid; grid-template-columns: minmax(150px, 260px) minmax(0, 1fr); gap: 16px; align-items: center; }
+.lg-tl-row { text-decoration: none; color: inherit; padding: 5px 0; border-bottom: 1px solid var(--line); }
+.lg-tl-row:hover .lg-tl-name { color: var(--accent); }
+.lg-tl-name { font-size: 14px; font-weight: 600; }
+.lg-tl-name .lg-quiet { font-weight: 400; font-size: 12.5px; }
+.lg-tl-track { position: relative; height: 14px; }
+.lg-tl-axis .lg-tl-track { height: 22px; }
+.lg-tl-life { position: absolute; top: 3px; height: 8px; border-radius: 4px; display: inline-block; }
+.lg-tl-tick { position: absolute; top: 4px; transform: translateX(-50%); font-size: 11px; color: var(--muted); }
+.lg-fam-undivided { background: var(--gold); }
+.lg-fam-catholic { background: #a8432f; }
+.lg-fam-orthodox { background: #2f7d6d; }
+.lg-fam-anglican { background: #6a4fa3; }
+.lg-fam-protestant { background: var(--accent); }
+.lg-tl-key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); margin-top: 10px; }
+.lg-tl-key span { display: inline-flex; align-items: center; gap: 6px; }
+.lg-tl-key .lg-tl-life { position: static; width: 18px; }
+@media (max-width: 560px) {
+  .lg-tl-row, .lg-tl-axis { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .lg-tl-axis .lg-tl-name { display: none; }
+}
+.lg-topic-rule { max-width: 72ch; font-size: 15px; }
+.lg-topics a b { font-family: var(--display); font-size: 19px; font-weight: 600; }

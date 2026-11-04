@@ -273,6 +273,36 @@ class Site(unittest.TestCase):
         self.assertIn(["pecuUar", "peculiar"], ryle["ryle.JHN.1.1.2"]["fixed"])
         self.assertEqual(by_work["calvin"]["entries"][0]["fixed"], [])
 
+    def test_search_index_holds_every_excerpt_and_whole_text(self):
+        with open(os.path.join(build_site.SITE, "data", "search.json"), encoding="utf-8") as f:
+            index = json.load(f)
+        excerpts = [r for r in index["rows"] if r["k"] == "x"]
+        self.assertEqual(len(excerpts), 246)
+        self.assertTrue(all(r["u"].startswith("/jhn/1/#") for r in excerpts))
+        paras = [r for r in index["rows"] if r["k"] == "p"]
+        self.assertTrue(paras and all(r["u"].startswith("/works/") for r in paras))
+        self.assertTrue(any(r["x"] for r in paras))        # paragraphs know the excerpts they hold
+        self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "search", "index.html")))
+
+    def test_library_and_timeline_pages(self):
+        with open(os.path.join(build_site.SITE, "library", "index.html"), encoding="utf-8") as f:
+            page = f.read()
+        self.assertEqual(page.count('class="lg-cat-work"'), 8)
+        for genre in ("Commentaries", "Homilies and lectures", "Catenas"):
+            self.assertIn(f"<h2>{genre}</h2>", page)
+        with open(os.path.join(build_site.SITE, "commentators", "index.html"), encoding="utf-8") as f:
+            self.assertEqual(f.read().count('class="lg-tl-row"'), 8)
+
+    def test_topics_gather_by_their_rule(self):
+        lib = build_site.Library()
+        tp = next(x for x in lib.topics if x["id"] == "incarnation")
+        members = {c["id"]: why for c, why in lib.topic_members(tp)}
+        on_14 = {c["id"] for c in lib.comments            # all of today's excerpts are in John 1
+                 if build_site.ref_parts(c["start"])[2] <= 14 <= build_site.ref_parts(c["end"])[2]}
+        self.assertTrue(on_14 <= set(members))                 # every excerpt on John 1:14
+        self.assertEqual(members["chrysostom.JHN.1.1.3"], "made flesh")   # and one elsewhere that uses a term
+        self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "topics", "incarnation", "index.html")))
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")

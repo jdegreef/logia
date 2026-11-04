@@ -18,6 +18,7 @@ Christian commentaries.
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
 | `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
+| `library/topics/<id>.json` | A topic: its title, note, the verses at its centre and the terms that gather excerpts (docs/references.md) |
 | `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
@@ -46,6 +47,9 @@ Westcott), 246 excerpts in all.
 | `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
 | `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |
+| `/library/` | The catalogue: every work by genre and era, what it covers, its versions, and what is still to come |
+| `/search/` | Search every excerpt and whole text, narrowed by kind, era, tradition and commentator (`web/search.js` over `/data/search.json`) |
+| `/topics/`, `/topics/<id>/` | Topics: the excerpts a topic's verses and terms gather, from every tradition |
 | `/about/` | What Logia is and how excerpts are checked |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its

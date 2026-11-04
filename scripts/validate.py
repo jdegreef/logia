@@ -17,9 +17,13 @@ import scripture
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ERAS = {"Early church", "Middle Ages", "Reformation", "Puritans and the 1700s", "The 1800s"}
-WORK_FIELDS = {"id", "author", "title", "divisions", "original_language", "status"}
+WORK_FIELDS = {"id", "author", "title", "divisions", "genre", "original_language", "status"}
+# How a work is made, for the library page: notes verse by verse, homilies or
+# lectures preached on the text, or a catena (a chain of the Fathers' words).
+GENRES = ("commentary", "homilies", "catena")
 VERSION_FIELDS = {"id", "work", "language", "kind", "edition", "translation", "published", "full_text_url",
                   "source_kind", "rights", "made_by", "status", "reviewer", "notes"}
+TOPIC_FIELDS = {"id", "title", "note", "order", "verses", "terms", "status", "reviewer"}
 LANGUAGE = re.compile(r"^[a-z]{2,3}$")       # ISO 639 code: en, la, grc, de, es
 AUTHOR_FIELDS = {"id", "name", "dates", "died", "era", "tradition", "family", "bio", "bio_status", "portrait"}
 # The reader's tradition filter (docs/references.md, "Families"): which church
@@ -88,6 +92,8 @@ def main():
             say(f"{name}: author {w.get('author')!r} has no library/authors/ file")
         if w.get("status") not in STATUSES:
             say(f"{name}: status {w.get('status')!r}")
+        if w.get("genre") not in GENRES:
+            say(f"{name}: genre {w.get('genre')!r} is not one of {GENRES}")
         div = w.get("divisions")
         if div != "verse" and not (isinstance(div, list) and div and all(isinstance(x, str) and x for x in div)):
             say(f"{name}: divisions {div!r}: \"verse\" for a work arranged by verse, or the names of its own "
@@ -311,6 +317,28 @@ def main():
                 say(f"{name}: {e.get('of')!r} is not an excerpt id")
             if e.get("status") not in STATUSES:
                 say(f"{name}: {e.get('of')}: status {e.get('status')!r}")
+
+    # Topics (docs/references.md, "Topics"): a title, a note, the verses at
+    # their centre and the terms that gather excerpts from elsewhere.
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "topics", "*.json"))):
+        tp = load(p)
+        name = os.path.relpath(p, ROOT)
+        if set(tp) != TOPIC_FIELDS:
+            say(f"{name}: fields differ from the schema: missing {sorted(TOPIC_FIELDS - set(tp))}, "
+                f"extra {sorted(set(tp) - TOPIC_FIELDS)}")
+            continue
+        if os.path.basename(p) != f"{tp['id']}.json" or not re.fullmatch(r"[a-z][a-z0-9-]*", tp["id"]):
+            say(f"{name}: id {tp['id']!r} must be lower-case words joined by hyphens, and the file name")
+        for v in tp["verses"]:
+            if not scripture.parse(v):
+                say(f"{name}: verse {v!r} is not a reference like JHN.1.14")
+        if not tp["verses"] and not tp["terms"]:
+            say(f"{name}: a topic needs verses or terms to gather its excerpts")
+        for term in tp["terms"]:
+            if not isinstance(term, str) or len(term) < 3 or GREEK_OR_HEBREW.search(term):
+                say(f"{name}: term {term!r}: at least three letters, and no Greek or Hebrew typed")
+        if tp["status"] not in STATUSES or (tp["status"] == "reviewed") != bool(tp["reviewer"]):
+            say(f"{name}: status {tp['status']!r} with reviewer {tp['reviewer']!r}")
 
     for wid in works:
         if not any(v["work"] == wid for v in versions.values()):

@@ -161,6 +161,26 @@ describe. The author's own `tradition` ("Reformed", "Lutheran Pietist",
 "Anglican (Evangelical)") stays what the reader sees on each card. Like
 the biographies, these assignments are a draft for a person to review.
 
+## Topics
+
+A topic (`library/topics/<id>.json`) is a rule, not a list: a title, a
+one-line note, the verses at its centre and some terms.
+
+```json
+{"id": "incarnation", "title": "The Incarnation", "note": "Passages on the Word made flesh.",
+ "order": 6, "verses": ["JHN.1.14"], "terms": ["incarnation", "incarnate", "made flesh"],
+ "status": "ai_draft", "reviewer": null}
+```
+
+The topic page gathers every excerpt on one of its verses, and every other
+excerpt that uses one of its terms (a term matches at the start of a word,
+so "regenerat" finds regeneration and regenerate). It groups them by era,
+shows how many come from each tradition, and prints the rule, so anyone can
+see why each excerpt is there. Nothing is added to what the commentators
+say. Choosing the verses and terms is editorial, so a topic stays
+`ai_draft` until a named person reviews it. The reader lists, under each
+verse, the topics it is at the centre of.
+
 ## Citations
 
 `library/citations/<work>/<BOOK>.json` lists the Scripture each excerpt

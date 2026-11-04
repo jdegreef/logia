@@ -198,6 +198,14 @@
       return '<a href="' + esc(r.href) + '">' + esc(r.short) + ", " + esc(r.where) + "</a>";
     }).join(" · ") + "</p>";
   }
+  // The topics this verse is at the centre of (library/topics).
+  function topicsOn(v) {
+    var ts = (DATA.topics || {})[v] || [];
+    if (!ts.length) return "";
+    return '<p class="cx-whole">' + esc(U.topics) + ": " + ts.map(function (tp) {
+      return '<a href="/topics/' + esc(tp.id) + '/">' + esc(tp.title) + "</a>";
+    }).join(" · ") + "</p>";
+  }
   // Excerpts on other verses that refer to this one (the other way of a citation).
   function elsewhere(v) {
     var rows = (DATA.citedBy[v] || []).filter(shown);
@@ -316,7 +324,7 @@
     if (!any) {
       h += '<p class="cx-empty">' + esc(works.some(function (w) { return entriesFor(w, v).length; }) ? U.none_in_eras : U.none_yet_long) + "</p>";
     }
-    return h + wholeTexts(v) + elsewhere(v);
+    return h + wholeTexts(v) + topicsOn(v) + elsewhere(v);
   }
 
   // Like, save and share under a card. Likes and saves need an account

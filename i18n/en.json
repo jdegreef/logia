@@ -24,7 +24,10 @@
     "owb": "The Open Word Bible",
     "owb_note": "The translation Logia reads",
     "source": "Source code and data",
-    "source_note": "Everything is open, on GitHub"
+    "source_note": "Everything is open, on GitHub",
+    "search": "Search",
+    "library": "The library",
+    "topics": "Topics"
   },
   "prefs": {
     "display": "Settings",
@@ -236,7 +239,8 @@
     "review_done": "Reviewed by {name}.",
     "all_versions": "This work's versions and rights",
     "report_title": "Mistake in {id}",
-    "report_body": "Excerpt: {id}\nVerse: {ref}\nOn Logia: {url}\nSource: {source}\n\nWhat is wrong? If you can, quote what the printed page or the source says:\n\n"
+    "report_body": "Excerpt: {id}\nVerse: {ref}\nOn Logia: {url}\nSource: {source}\n\nWhat is wrong? If you can, quote what the printed page or the source says:\n\n",
+    "topics": "Topics"
   },
   "commentators": {
     "title": "Commentators",
@@ -248,7 +252,9 @@
     "bio_draft": "This biography is a draft awaiting review.",
     "died": "Died {year}",
     "back": "All commentators",
-    "passages": "{n} passages"
+    "passages": "{n} passages",
+    "timeline": "Two thousand years, one line",
+    "timeline_note": "Each commentator's life, from birth to death, on a line of centuries. The colour is their tradition."
   },
   "work": {
     "eyebrow": "Commentary",
@@ -359,5 +365,68 @@
     "orthodox": "Orthodox",
     "anglican": "Anglican",
     "protestant": "Protestant"
+  },
+  "search": {
+    "title": "Search",
+    "eyebrow": "Search",
+    "heading": "Search the library",
+    "dek": "Every excerpt and every whole homily and tractate in Logia, searched as you type.",
+    "label": "Search for",
+    "placeholder": "grace and truth, “the true light”, Logos…",
+    "go": "Search",
+    "tips": "All the words must appear (word beginnings count: “bapt” finds baptism and baptized). Put a phrase in quotes to find it exactly.",
+    "narrow": "Narrow the results",
+    "noscript": "Search needs JavaScript. Every excerpt is also listed, verse by verse, on each work's page.",
+    "kinds": "Show",
+    "kind_x": "Excerpts beside a verse",
+    "kind_p": "Whole homilies and tractates",
+    "eras_head": "Era",
+    "families_head": "Tradition",
+    "works_head": "Commentator",
+    "results": "{n} results",
+    "result_one": "1 result",
+    "none": "Nothing found. Try fewer words, or the beginning of a word.",
+    "more": "Show {n} more",
+    "loading": "Loading the library…",
+    "empty": "Type a word or a phrase above."
+  },
+  "library": {
+    "title": "The library",
+    "eyebrow": "The library",
+    "heading": "What is in Logia",
+    "dek": "Every work in the library, by kind and era: what each covers, the versions it is in, and what is still to come.",
+    "count_works": "works",
+    "count_authors": "commentators",
+    "count_versions": "versions",
+    "count_excerpts": "excerpts",
+    "count_texts": "whole homilies and tractates",
+    "count_verses": "verses with commentary",
+    "genre_commentary": "Commentaries",
+    "genre_commentary_note": "Notes that go through the text verse by verse.",
+    "genre_homilies": "Homilies and lectures",
+    "genre_homilies_note": "Sermons and lectures preached on the text, one after another, through a book.",
+    "genre_catena": "Catenas",
+    "genre_catena_note": "A chain of the Fathers' own words, gathered verse by verse.",
+    "covers": "On {spans}",
+    "excerpts": "{n} excerpts",
+    "whole": "{n} whole {kind}",
+    "in": "In {langs}",
+    "draft": "awaiting review",
+    "to_come": "Still to come",
+    "to_come_note": "The Bible text Logia has, and how much of it has commentary so far.",
+    "gap": "{have} of {total} verses have commentary; {empty} of {chapters} chapters have none yet."
+  },
+  "topics": {
+    "title": "Topics",
+    "eyebrow": "Topics",
+    "heading": "Topics",
+    "dek": "What the commentators say on a theme, gathered from every tradition and every era.",
+    "count": "{n} excerpts",
+    "uses": "uses “{term}”",
+    "rule": "Gathered by a rule, not chosen one by one: every excerpt on {verses}, and every other excerpt that uses {terms}.",
+    "rule_verses": "Gathered by a rule, not chosen one by one: every excerpt on {verses}.",
+    "how": "Each topic gathers excerpts by a rule anyone can read: the verses at its centre, and words that bring in what is said about it elsewhere. Nothing is added to what the commentators say.",
+    "draft": "This topic's verses and words are a draft awaiting review.",
+    "on_verse": "Topics"
   }
 }

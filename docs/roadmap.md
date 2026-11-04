@@ -139,6 +139,19 @@ version (item 7) and a public-domain lexicon.
 
 ## Phase 3: finding things
 
+*Progress:* all four items have a first version. Item 15 is /library/,
+every work by genre (commentaries, homilies and lectures, catenas) and era,
+with what it covers, its versions, its whole texts, and the Bible text
+still without commentary. Item 16 is a timeline of the commentators' lives
+on /commentators/, coloured by tradition; the author pages were already
+there. Item 17 is /search/, every excerpt and every paragraph of a whole
+text, searched in the browser, with filters by kind, era, tradition and
+commentator. Item 18 is /topics/: eight topics on John 1:1–18, each a rule
+(its verses and terms) that gathers excerpts from every tradition, a draft
+for review. Still to do: places for the commentators (where they lived and
+worked), splitting the search index as the library grows, and topics past
+John 1, such as baptism and the Eucharist.
+
 15. **A library catalogue page.** Sefaria's table of contents is organised by
     category, era and genre. *Why:* as Logia grows past John 1, readers need
     to see what is there and what is missing.
