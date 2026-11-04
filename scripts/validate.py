@@ -21,7 +21,10 @@ WORK_FIELDS = {"id", "author", "title", "divisions", "original_language", "statu
 VERSION_FIELDS = {"id", "work", "language", "kind", "edition", "translation", "published", "full_text_url",
                   "source_kind", "rights", "made_by", "status", "reviewer", "notes"}
 LANGUAGE = re.compile(r"^[a-z]{2,3}$")       # ISO 639 code: en, la, grc, de, es
-AUTHOR_FIELDS = {"id", "name", "dates", "died", "era", "tradition", "bio", "bio_status", "portrait"}
+AUTHOR_FIELDS = {"id", "name", "dates", "died", "era", "tradition", "family", "bio", "bio_status", "portrait"}
+# The reader's tradition filter (docs/references.md, "Families"): which church
+# a commentator belongs to, with those before the East–West division in common.
+FAMILIES = ("undivided", "catholic", "orthodox", "anglican", "protestant")
 ENTRY_FIELDS = {"id", "start", "end", "heading", "text", "sources"}
 CITATION_FIELDS = {"in", "at", "text", "start", "end", "found", "status"}
 CITATION_STATUSES = {"detected", "reviewed", "rejected"}   # set by a person checking it
@@ -64,6 +67,8 @@ def main():
                 f"extra {sorted(set(a) - AUTHOR_FIELDS)}")
         if a.get("era") not in ERAS:
             say(f"{name}: era {a.get('era')!r} is not one of {sorted(ERAS)}")
+        if a.get("family") not in FAMILIES:
+            say(f"{name}: family {a.get('family')!r} is not one of {FAMILIES}")
         if a.get("bio_status") not in STATUSES:
             say(f"{name}: bio_status {a.get('bio_status')!r}")
         if not isinstance(a.get("died"), int):

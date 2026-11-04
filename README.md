@@ -42,7 +42,7 @@ Westcott), 246 excerpts in all.
 | `/` | Home |
 | `/read/` | Every book; the ones in Logia with a pill per chapter, gold where there is commentary |
 | `/<book>/` | A book's chapters and who comments on it |
-| `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek words, translation notes and cross-references for the chosen verse |
+| `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek words, translation notes and cross-references for the chosen verse. `#calvin.JHN.1.1.1` opens one excerpt; each has Cite, How this was copied and Report a mistake |
 | `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
 | `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |

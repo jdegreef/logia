@@ -127,6 +127,40 @@ Today each work has one version, the English one its excerpts come from.
 The work page lists each version with its edition, source, rights and
 review.
 
+## Links to an excerpt, and citing it
+
+Every excerpt can be linked to on its own: the chapter page with the
+excerpt's id, `https://logia.faith/jhn/1/#calvin.JHN.1.1.1`, opens the
+reader at that verse and that excerpt. Because excerpt ids never change,
+these links last. (`#v14` opens a verse, and `#v14-calvin` a verse at one
+commentator's card.)
+
+The reader's **Cite** button gives a citation built from the work and its
+version: a translation names its translator, an original its year, and a
+work with its own divisions gives its place:
+
+> John Chrysostom, *Homilies on the Gospel of St. John*, the Oxford
+> translation (Library of the Fathers), revised and edited by Philip Schaff,
+> Nicene and Post-Nicene Fathers, Series 1, Vol. 14 (1889), Homily 2,
+> section 8 (on John 1:1). In Logia: https://logia.faith/jhn/1/#chrysostom.JHN.1.1.1.
+
+**How this was copied** shows where the excerpt came from (the CCEL page or
+the archive.org scan), how `verify_sources.py` checks it, every scan
+correction applied to it, its version and whether a person has reviewed it.
+**Report a mistake** opens a GitHub issue with the excerpt's id, verse, link
+and source filled in; a confirmed misreading becomes a pair in
+`library/corrections/`.
+
+## Traditions
+
+Each author has a `family`, used only by the reader's tradition filter:
+`undivided` for the Fathers before the East–West division (Chrysostom,
+Augustine), whom Catholic, Orthodox and Protestant readers all claim, then
+`catholic`, `orthodox`, `anglican` or `protestant`. It sorts; it does not
+describe. The author's own `tradition` ("Reformed", "Lutheran Pietist",
+"Anglican (Evangelical)") stays what the reader sees on each card. Like
+the biographies, these assignments are a draft for a person to review.
+
 ## Citations
 
 `library/citations/<work>/<BOOK>.json` lists the Scripture each excerpt

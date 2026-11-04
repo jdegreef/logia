@@ -96,6 +96,16 @@ Logia's own translations.
 
 ## Phase 2: the reader
 
+*Progress:* items 9, 10, 12, 13 and 14 have a first version in the reader.
+Item 9 adds a tradition filter beside the era filter (authors' `family`,
+docs/references.md); a language filter waits for a second language. Item
+10 adds a strip above the chapter, one bar per verse, as tall as the
+commentators on it. Items 12–14 add, under every excerpt, Cite (a citation
+and a link that opens that excerpt), How this was copied (source, check,
+scan corrections applied, version, review) and Report a mistake (a
+prefilled GitHub issue). Items 8 and 11 wait on sources: an original-language
+version (item 7) and a public-domain lexicon.
+
 8. **Show the original beside the translation.** Sefaria's Hebrew and English
    side by side is its best-known screen. *Why:* Augustine's Latin beside the
    1800s English lets readers check the translation. Originals are copied from

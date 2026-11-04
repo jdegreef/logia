@@ -23,7 +23,18 @@
   function hiddenEras() {
     try { return JSON.parse(localStorage.getItem("logia-eras") || "[]"); } catch (e) { return []; }
   }
-  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), marks: null, counts: {}, note: null };
+  // The traditions present in this chapter (library/authors "family"), in a fixed order.
+  var FAMILIES = Object.keys(U.families).filter(function (f) {
+    return DATA.commentaries.some(function (w) { return w.family === f; });
+  });
+  function hiddenFamilies() {
+    try { return JSON.parse(localStorage.getItem("logia-families") || "[]"); } catch (e) { return []; }
+  }
+  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), families: new Set(Object.keys(U.families)),
+    marks: null, counts: {}, note: null, open: {}, unclamped: {} };
+  hiddenFamilies().forEach(function (f) { state.families.delete(f); });
+  // A commentator is shown when both their era and their tradition are on.
+  function shown(x) { return state.eras.has(x.era) && state.families.has(x.family); }
   var Account = window.LogiaAccount;
   var CHAPTER = DATA.book + "." + DATA.chapter;
   // A comment's key: <work>.<BOOK>.<chapter>.<verse> (backend/logia/ in open-word-bible).
@@ -66,8 +77,27 @@
       });
     });
     $("#text").innerHTML = out.join("");
+    renderStrip();
     document.querySelectorAll(".cx-levels button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.level === lv); });
     markTokens();
+  }
+  // How much commentary each verse has (item 10): one bar per verse, as tall
+  // as the number of commentators shown on it, with the references to it from
+  // other verses in its label. A bar opens its verse.
+  function renderStrip() {
+    var el = $("#strip");
+    if (!el) return;
+    var counts = DATA.verses.map(function (v) {
+      return works.filter(function (w) { return shown(w) && entriesFor(w, v).length; }).length;
+    });
+    var top = Math.max.apply(null, counts.concat([1]));
+    if (!works.length) { el.hidden = true; return; }
+    el.innerHTML = DATA.verses.map(function (v, i) {
+      var n = counts[i], m = (DATA.citedBy[v] || []).filter(shown).length;
+      return '<button type="button" class="cx-bar' + (v === state.verse ? " cx-on" : "") + (n ? "" : " cx-zero") + '" data-v="' + v +
+        '" style="--h:' + Math.round((n / top) * 100) + '%" aria-label="' + esc(fmt(U.strip_verse, { ref: REF(v), n: n, m: m })) +
+        '" title="' + esc(fmt(U.strip_verse, { ref: REF(v), n: n, m: m })) + '"><span></span></button>';
+    }).join("");
   }
   function markTokens() {
     document.querySelectorAll(".cx-w").forEach(function (el) {
@@ -81,7 +111,7 @@
     [300, 600, 900, 1200, 1500, 1800].forEach(function (t) { h += '<span class="cx-tick" style="left:' + pos(t) + '%">' + t + "</span>"; });
     var last = -99, lift = false;
     works.slice().sort(function (a, b) { return a.died - b.died; }).forEach(function (w) {
-      var on = entriesFor(w, state.verse).length > 0 && state.eras.has(w.era);
+      var on = entriesFor(w, state.verse).length > 0 && shown(w);
       var x = pos(w.died);
       lift = x - last < 2.5 ? !lift : false; last = x;
       h += '<button class="cx-dot' + (on ? "" : " cx-off") + '" style="left:' + x + "%;" + (lift ? "top:1px" : "") +
@@ -170,7 +200,7 @@
   }
   // Excerpts on other verses that refer to this one (the other way of a citation).
   function elsewhere(v) {
-    var rows = (DATA.citedBy[v] || []).filter(function (r) { return state.eras.has(r.era); });
+    var rows = (DATA.citedBy[v] || []).filter(shown);
     if (!rows.length) return "";
     return '<section class="cx-elsewhere"><div class="cx-era">' + esc(U.elsewhere) + "</div>" +
       '<p class="cx-hint">' + esc(fmt(U.elsewhere_hint, { ref: REF(v) })) + "</p>" + rows.map(function (r) {
@@ -182,15 +212,76 @@
           esc(fmt(U.read_it_on, { ref: r.ref })) + "</a></div></div>";
       }).join("") + "</section>";
   }
+  // Under each excerpt: Cite (item 12), How this was copied (item 14) and
+  // Report a mistake (item 13). An excerpt's own link is the chapter page
+  // with its id: /jhn/1/#calvin.JHN.1.1.1, opened at that excerpt.
+  function permalink(e) {
+    return DATA.site_url + "/" + DATA.book.toLowerCase() + "/" + DATA.chapter + "/#" + e.id;
+  }
+  function refOf(e) { return e.start === e.end ? REF(e.start) : REF(e.start) + "–" + e.end; }
+  function citation(w, e, html) {
+    var title = html ? "<i>" + esc(w.title) + "</i>" : w.title;
+    var where = locusLabel(w, e.locus);
+    var on = fmt(U.cite_on, { ref: refOf(e) });
+    // A translation names its translator ("translated by William Pringle … (1847)"),
+    // an original its year ("(1879)").
+    var t = w.version.translation;
+    var ed = t ? ", " + (/^[A-Z][a-z]/.test(t) ? t.charAt(0).toLowerCase() + t.slice(1) : t) : " (" + w.version.published + ")";
+    var text = w.author + ", " + title + ed + ", " + (where ? where + " (" + on + ")" : on) +
+      ". " + U.cite_in_logia + ": " + permalink(e) + ".";
+    return html ? text.replace(permalink(e), '<a href="' + esc(permalink(e)) + '">' + esc(permalink(e)) + "</a>") : text;
+  }
+  function provenance(w, e) {
+    var v = w.version;
+    var how = v.source_kind === "scan" ? U.from_scan : U.from_ccel;
+    var src = '<a href="' + esc(e.source_url) + '" target="_blank" rel="noopener">' + esc(e.sources[0]) + "</a> (" + esc(how) + ")";
+    var lang = U.languages[v.language] || v.language;
+    var kind = fmt(v.kind === "original" ? U.version_original : U.version_translation, { language: lang });
+    var fixes = e.fixed.length
+      ? "<p>" + esc(U.fixes) + "</p><ul>" + e.fixed.map(function (f) {
+          return "<li><s>" + esc(f[0]) + "</s> → " + esc(f[1]) + "</li>";
+        }).join("") + "</ul>"
+      : "<p>" + esc(U.no_fixes) + "</p>";
+    return "<p>" + fmt(esc(U.copied_from), { source: src }) + "</p>" + fixes +
+      "<p>" + esc(fmt(U.version_label, { kind: kind, edition: v.edition })) + " " +
+      esc(v.status === "reviewed" ? fmt(U.review_done, { name: v.reviewer }) : U.review_draft) + "</p>" +
+      '<p><a href="' + esc(w.work_url) + '#versions">' + esc(U.all_versions) + "</a></p>";
+  }
+  function reportUrl(w, e) {
+    var body = fmt(U.report_body, { id: e.id, ref: refOf(e), url: permalink(e), source: e.source_url });
+    return DATA.issues_url + "?title=" + encodeURIComponent(fmt(U.report_title, { id: e.id })) + "&body=" + encodeURIComponent(body);
+  }
+  function tools(w, e) {
+    var open = state.open[e.id];
+    var panel = "";
+    if (open === "cite") {
+      panel = '<div class="cx-tool-panel"><p class="cx-citation">' + citation(w, e, true) + "</p>" +
+        '<button type="button" data-copy="' + esc(citation(w, e, false)) + '">' + esc(U.copy) + "</button> " +
+        '<button type="button" data-copy="' + esc(permalink(e)) + '">' + esc(U.permalink) + "</button></div>";
+    } else if (open === "source") {
+      panel = '<div class="cx-tool-panel">' + provenance(w, e) + "</div>";
+    }
+    return '<div class="cx-tools">' +
+      '<button type="button" data-tool="cite" data-id="' + esc(e.id) + '" aria-expanded="' + (open === "cite") + '">' + esc(U.cite) + "</button>" +
+      '<button type="button" data-tool="source" data-id="' + esc(e.id) + '" aria-expanded="' + (open === "source") + '">' + esc(U.source) + "</button>" +
+      '<a href="' + esc(reportUrl(w, e)) + '" target="_blank" rel="noopener">' + esc(U.report) + "</a></div>" + panel;
+  }
+
   function commTab() {
     var v = state.verse;
     var h = '<div class="cx-chips" role="group" aria-label="' + esc(U.show_eras) + '">' + ERAS.map(function (e) {
       return '<button class="cx-chip" data-era="' + esc(e) + '" aria-pressed="' + state.eras.has(e) + '">' + esc(U.eras[e]) + "</button>";
     }).join("") + "</div>";
+    if (FAMILIES.length > 1) {
+      h += '<div class="cx-chips" role="group" aria-label="' + esc(U.show_families) + '" title="' + esc(U.families_note) + '">' +
+        FAMILIES.map(function (f) {
+          return '<button class="cx-chip" data-family="' + f + '" aria-pressed="' + state.families.has(f) + '">' + esc(U.families[f]) + "</button>";
+        }).join("") + "</div>";
+    }
     var any = false;
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
-      var ws = works.filter(function (w) { return w.era === era && entriesFor(w, v).length; });
+      var ws = works.filter(function (w) { return w.era === era && state.families.has(w.family) && entriesFor(w, v).length; });
       if (!ws.length) return;
       any = true;
       h += '<div class="cx-era">' + esc(U.eras[era]) + "</div>";
@@ -202,10 +293,14 @@
           var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
           var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
             ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
-          return range + lemma + paras(linked(e.excerpt, e.cites)) + traced(e);
+          return '<div class="cx-entry" id="x-' + esc(e.id) + '">' + range + lemma + paras(linked(e.excerpt, e.cites)) + traced(e) +
+            tools(w, e) + "</div>";
         }).join("");
         var words = es.reduce(function (n, e) { return n + e.excerpt.split(/\s+/).length; }, 0);
-        var long = words > 140 && !fullExcerpts();
+        // Opened in full by "Read all", by a panel open under one of its
+        // excerpts, or by a link to one of them.
+        var opened = state.unclamped[w.work_id] || es.some(function (e) { return state.open[e.id]; });
+        var long = words > 140 && !fullExcerpts() && !opened;
         h += '<section class="cx-card" id="c-' + w.work_id + '">' +
           '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
           '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span></div>" +
@@ -346,8 +441,10 @@
     if (!opts.keepToken) state.token = null;
     state.note = null;
     document.querySelectorAll(".cx-verse").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
+    document.querySelectorAll(".cx-bar").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
     markTokens();
     renderPanel();
+    if (opts.keepHash) return;
     var cur = location.hash.match(/^#v(\d+)/);
     if (!cur || +cur[1] !== state.verse) history.replaceState(null, "", "#v" + state.verse);
   }
@@ -377,6 +474,10 @@
     var b = e.target.closest("button"); if (!b) return;
     state.tab = b.dataset.tab; renderPanel();
   });
+  if ($("#strip")) $("#strip").addEventListener("click", function (e) {
+    var b = e.target.closest(".cx-bar"); if (!b) return;
+    state.tab = "comm"; go(+b.dataset.v);
+  });
   $("#grab").addEventListener("click", function () { $("#panel").classList.toggle("cx-min"); });
   if (window.innerWidth <= 880 && !location.hash) $("#panel").classList.add("cx-min");
   $("#prev").addEventListener("click", function () { go(state.verse - 1); });
@@ -384,6 +485,28 @@
   $("#pb").addEventListener("click", function (e) {
     var actButton = e.target.closest("[data-act]");
     if (actButton) { act(actButton); return; }
+    var tool = e.target.closest("[data-tool]");
+    if (tool) {
+      var id = tool.dataset.id;
+      state.open[id] = state.open[id] === tool.dataset.tool ? null : tool.dataset.tool;
+      refresh(); return;
+    }
+    var copy = e.target.closest("[data-copy]");
+    if (copy) {
+      var label = copy.textContent;
+      var done = function () { copy.textContent = U.copied_citation; setTimeout(function () { copy.textContent = label; }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(copy.dataset.copy).then(done, function () { /* blocked */ });
+      return;
+    }
+    var fam = e.target.closest("[data-family]");
+    if (fam) {
+      var f = fam.dataset.family;
+      if (state.families.has(f)) state.families.delete(f); else state.families.add(f);
+      try {
+        localStorage.setItem("logia-families", JSON.stringify(Object.keys(U.families).filter(function (x) { return !state.families.has(x); })));
+      } catch (err) { /* storage blocked: the choice lasts for this page */ }
+      renderPanel(); renderStrip(); return;
+    }
     var chip = e.target.closest(".cx-chip");
     if (chip) {
       var era = chip.dataset.era;
@@ -391,10 +514,14 @@
       try {
         localStorage.setItem("logia-eras", JSON.stringify(ERAS.filter(function (x) { return !state.eras.has(x); })));
       } catch (err) { /* storage blocked: the choice lasts for this page */ }
-      renderPanel(); return;
+      renderPanel(); renderStrip(); return;
     }
     var ex = e.target.closest("[data-expand]");
-    if (ex) { ex.closest(".cx-card").querySelector(".cx-ex").classList.remove("cx-clamp"); ex.remove(); return; }
+    if (ex) {
+      var card = ex.closest(".cx-card");
+      state.unclamped[card.id.slice(2)] = true;
+      card.querySelector(".cx-ex").classList.remove("cx-clamp"); ex.remove(); return;
+    }
     var g = e.target.closest(".cx-g");
     if (g) { state.token = g.dataset.gid; markTokens(); renderPanel(); }
   });
@@ -419,21 +546,44 @@
     card.scrollIntoView({ block: "start" });
     card.classList.remove("cx-flash"); void card.offsetWidth; card.classList.add("cx-flash");
   }
+  // #calvin.JHN.1.1.1 opens that excerpt: its verse, its card, the excerpt itself.
+  function excerptAt(hash) {
+    var id = decodeURIComponent(hash.slice(1));
+    for (var i = 0; i < works.length; i++) {
+      var e = works[i].entries.filter(function (x) { return x.id === id; })[0];
+      if (e) return e;
+    }
+    return null;
+  }
+  function showExcerpt(e) {
+    state.tab = "comm";
+    state.unclamped[e.id.split(".")[0]] = true;
+    if (state.verse !== e.start) go(e.start, { keepHash: true }); else renderPanel();
+    $("#panel").classList.remove("cx-min");
+    var el = document.getElementById("x-" + e.id);
+    if (!el) return;
+    el.scrollIntoView({ block: "start" });
+    el.classList.remove("cx-flash"); void el.offsetWidth; el.classList.add("cx-flash");
+  }
   window.addEventListener("hashchange", function () {
+    var x = excerptAt(location.hash);
+    if (x) { showExcerpt(x); return; }
     var m = location.hash.match(HASH);
     if (!m) return;
     if (+m[1] !== state.verse) { state.tab = "comm"; go(+m[1]); }
     if (m[2]) { $("#panel").classList.remove("cx-min"); showCard(m[2]); }
   });
 
-  var m0 = location.hash.match(HASH);
-  if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
+  var m0 = location.hash.match(HASH), x0 = excerptAt(location.hash);
+  if (x0) state.verse = x0.start;
+  else if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
   else {
     // With no verse asked for, open at the first verse that has commentary.
     var firstWith = DATA.verses.filter(function (v) { return works.some(function (w) { return entriesFor(w, v).length; }); })[0];
     if (firstWith) state.verse = firstWith;
   }
-  renderText(); go(state.verse);
+  renderText(); go(state.verse, { keepHash: !!x0 });
+  if (x0) showExcerpt(x0);
   if (m0 && m0[2]) { $("#panel").classList.remove("cx-min"); showCard(m0[2]); }
 
   // Likes for this chapter (public), and the reader's own likes and saves.

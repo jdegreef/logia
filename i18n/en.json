@@ -211,7 +211,32 @@
     "not_pinned": "(the passage is not pinned down)",
     "quoted_by": "Quoted by {name} in the {title} on {ref}",
     "full_text_short": "full text",
-    "whole_texts": "Read in full on this verse"
+    "whole_texts": "Read in full on this verse",
+    "show_families": "Show traditions",
+    "families_note": "Traditions: the church each commentator belonged to. The Fathers before the East–West division belong to all of them.",
+    "strip_label": "How much commentary each verse has",
+    "strip_verse": "{ref}: {n} commentaries, {m} references from other verses",
+    "cite": "Cite",
+    "source": "How this was copied",
+    "report": "Report a mistake",
+    "copy": "Copy citation",
+    "copied_citation": "Copied.",
+    "permalink": "Copy link",
+    "cite_on": "on {ref}",
+    "cite_in_logia": "In Logia",
+    "from_ccel": "a transcription on CCEL, checked word for word against it by script",
+    "from_scan": "an OCR page scan on archive.org, checked against it by script in runs of six words",
+    "copied_from": "Copied from {source}.",
+    "fixes": "Scan misreadings corrected in this excerpt, to match the printed page:",
+    "no_fixes": "No scan corrections in this excerpt.",
+    "version_label": "Version: {kind}, {edition}.",
+    "version_original": "the original in {language}",
+    "version_translation": "a translation into {language}",
+    "review_draft": "Copied by an AI and not yet reviewed by a person.",
+    "review_done": "Reviewed by {name}.",
+    "all_versions": "This work's versions and rights",
+    "report_title": "Mistake in {id}",
+    "report_body": "Excerpt: {id}\nVerse: {ref}\nOn Logia: {url}\nSource: {source}\n\nWhat is wrong? If you can, quote what the printed page or the source says:\n\n"
   },
   "commentators": {
     "title": "Commentators",
@@ -327,5 +352,12 @@
     "am": "Amharic",
     "ko": "Korean",
     "vi": "Vietnamese"
+  },
+  "families": {
+    "undivided": "Before the divisions",
+    "catholic": "Catholic",
+    "orthodox": "Orthodox",
+    "anglican": "Anglican",
+    "protestant": "Protestant"
   }
 }

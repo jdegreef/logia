@@ -259,6 +259,20 @@ class Site(unittest.TestCase):
         self.assertIn('id="calvin.en"', page)
         self.assertIn("Translation into English", page)
 
+    def test_the_reader_has_what_cite_and_source_need(self):
+        with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:
+            page = f.read()
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', page, re.S)[1].replace("<\\/", "</"))
+        self.assertIn('id="strip"', page)
+        self.assertTrue(data["issues_url"].endswith("/issues/new"))
+        by_work = {w["work_id"]: w for w in data["commentaries"]}
+        self.assertEqual({w["family"] for w in by_work.values()}, {"undivided", "catholic", "anglican", "protestant"})
+        self.assertEqual(by_work["calvin"]["version"]["id"], "calvin.en")
+        ryle = {e["id"]: e for e in by_work["ryle"]["entries"]}
+        # The scan corrections an excerpt shows are listed with it, as applied.
+        self.assertIn(["pecuUar", "peculiar"], ryle["ryle.JHN.1.1.2"]["fixed"])
+        self.assertEqual(by_work["calvin"]["entries"][0]["fixed"], [])
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")

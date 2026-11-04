@@ -264,3 +264,27 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-version { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--surface); max-width: 900px; }
 .lg-version h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 600; font-size: 19px; }
 .lg-version .lg-facts { margin-top: 10px; }
+
+/* The reader, Phase 2: the verse strip (how much commentary each verse has),
+   and under each excerpt Cite, How this was copied, Report a mistake. */
+.cx-strip { display: flex; align-items: flex-end; gap: 2px; height: 34px; margin: 4px 0 18px; }
+.cx-bar { flex: 1 1 0; min-width: 3px; height: 100%; border: 0; padding: 0; background: none; cursor: pointer; display: flex; align-items: flex-end; }
+.cx-bar span { display: block; width: 100%; height: max(var(--h), 8%); background: var(--gold); opacity: .45; border-radius: 2px 2px 0 0; }
+.cx-bar.cx-zero span { height: 3px; background: var(--line-strong, var(--line)); opacity: 1; }
+.cx-bar:hover span, .cx-bar.cx-on span { opacity: 1; }
+.cx-bar.cx-on span { background: var(--accent); }
+.cx-entry { scroll-margin-top: 12px; border-radius: 6px; }
+.cx-entry.cx-flash { animation: flash 1.2s ease-out; }
+@media (prefers-reduced-motion: reduce) { .cx-entry.cx-flash { animation: none; } }
+.cx-tools, .cx-tool-panel button { font-family: var(--sans); }
+.cx-tool-panel button + button { margin-left: 14px; }
+.cx-tools { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; margin: 2px 0 10px; }
+.cx-tools button, .cx-tool-panel button { border: 0; background: none; padding: 0; color: var(--muted); cursor: pointer; font: inherit; font-family: var(--sans); font-weight: 600; }
+.cx-tools button[aria-expanded="true"] { color: var(--accent); }
+.cx-tools a { color: var(--muted); font-weight: 600; text-decoration: none; }
+.cx-tools button:hover, .cx-tools a:hover, .cx-tool-panel button:hover { color: var(--accent); }
+.cx-tool-panel { font-size: 13.5px; background: var(--surface-2); border-radius: 8px; padding: 10px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.cx-tool-panel p { margin: 0 0 6px; }
+.cx-tool-panel ul { margin: 0 0 6px; padding-left: 18px; }
+.cx-tool-panel button { color: var(--accent); }
+.cx-citation { font-family: var(--serif); }

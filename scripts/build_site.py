@@ -226,10 +226,12 @@ class Library:
             data = load(p)
             work = data["work"]
             for entry in data["entries"]:
-                text = entry["text"]
+                text, fixed = entry["text"], []
                 for a, b in self.fixes.get(work, []):
+                    if a in text:
+                        fixed.append([a, b])        # the scan corrections this excerpt shows
                     text = text.replace(a, b)
-                self.comments.append({**entry, "work": work, "text": text,
+                self.comments.append({**entry, "work": work, "text": text, "fixed": fixed,
                                       "source_url": urls.get((work, entry["sources"][0]), self.base[work]["full_text_url"]),
                                       "cites": cites.get(entry["id"], []), "quotes": quotes.get(entry["id"], []),
                                       "quoted_in": quoted_in.get(entry["id"], [])})
@@ -291,7 +293,8 @@ class Library:
                 "id": c["id"], "start": sv if sc == chapter else 1, "end": ev if ec == chapter else last_verse,
                 "heading": c["heading"], "excerpt": c["text"], "source_url": c["source_url"],
                 "locus": c.get("locus"), "cites": self.cites_for(c), "quotes": self.quote_rows(c),
-                "quotedIn": self.quoted_in_rows(c), "inFull": self.in_full.get(c["id"])})
+                "quotedIn": self.quoted_in_rows(c), "inFull": self.in_full.get(c["id"]), "fixed": c["fixed"],
+                "sources": c["sources"]})
         return out
 
     # --- Links between texts (docs/references.md) ---
@@ -376,7 +379,7 @@ class Library:
                         continue
                     a = self.author_of(c["work"])
                     rows.append({"id": c["id"], "author": a["name"], "author_dates": a["dates"],
-                                 "tradition": a["tradition"], "era": a["era"], "died": a["died"],
+                                 "tradition": a["tradition"], "era": a["era"], "family": a["family"], "died": a["died"],
                                  "ref": scripture.label(c["start"], c["end"]),
                                  "href": self.verse_link(c["start"], c["work"]) or self.edition(c["work"])["full_text_url"],
                                  "text": x["text"], "snippet": cite_snippet(c["text"], x["at"], len(x["text"]))})
@@ -735,6 +738,14 @@ def book_page(lib, book):
     return page(lib, name, body, f"/{book.lower()}/", current="/read/")
 
 
+def version_data(v):
+    """What the reader's Cite and Source panels say about a version."""
+    return {"id": v["id"], "kind": v["kind"], "language": v["language"], "edition": v["edition"],
+            "edition_short": short_edition(v["edition"]), "translation": v["translation"],
+            "published": v["published"], "source_kind": v["source_kind"], "made_by": v["made_by"],
+            "status": v["status"], "reviewer": v["reviewer"]}
+
+
 def chapter_page(lib, book, chapter, all_chapters):
     bible = lib.bible(book, chapter)
     name = lib.books[book]["en"]
@@ -747,16 +758,19 @@ def chapter_page(lib, book, chapter, all_chapters):
             "work_id": wid, "author": a["name"], "short_name": short_name(a), "author_dates": a["dates"],
             "tradition": a["tradition"], "era": a["era"], "died": a["died"], "title": w["title"],
             "edition_short": short_edition(lib.edition(wid)["edition"]), "author_url": f'/commentators/{a["id"]}/',
-            "divisions": w["divisions"],
+            "divisions": w["divisions"], "family": a["family"], "version": version_data(lib.edition(wid)),
             "work_url": f"/works/{wid}/", "entries": sorted(by_work[wid], key=lambda x: (x["start"], x["end"]))})
     ui = dict(CATALOG["reader"])
     ui["eras"] = CATALOG["eras"]
+    ui["families"] = CATALOG["families"]
+    ui["languages"] = CATALOG["languages"]
     ui["levels"] = CATALOG["level"]
     data = {**bible, "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
             "citedBy": lib.cited_by(book, chapter, bible["verses"]),
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "books": {k: v["en"] for k, v in lib.books.items()},
-            "available": [f"{b}.{c}" for b, c in all_chapters], "owb_site": OWB_SITE}
+            "available": [f"{b}.{c}" for b, c in all_chapters], "owb_site": OWB_SITE,
+            "site_url": SITE_URL, "issues_url": GITHUB_URL + "/issues/new"}
     heading = next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}")
     # The text as plain Balanced verses, for search engines and readers
     # without JavaScript; web/reader.js replaces it.
@@ -795,6 +809,7 @@ def chapter_page(lib, book, chapter, all_chapters):
 <h1>{e(heading)}</h1>
 <p class="cx-sub">{e(t("chapter.pick"))}</p>
 <div class="cx-levels" role="group" aria-label="{e(t("chapter.level_label"))}">{levels}</div>
+<div class="cx-strip" id="strip" role="group" aria-label="{e(t("reader.strip_label"))}"></div>
 <div class="cx-text" id="text">{plain}</div>
 <p class="cx-hint">{t("chapter.owb_hint", link=owb_link)}</p>
 <nav class="cx-turns" aria-label="{e(t("chapter.previous"))} / {e(t("chapter.next"))}">{"".join(turns)}</nav>
