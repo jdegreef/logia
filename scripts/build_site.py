@@ -73,6 +73,15 @@ SPAN = re.compile(r"\{\{([a-z_]+):([^{}]*)\}\}")
 LINE = re.compile(r" ?\\q ?")
 
 
+# A reader who chose another level or wording sees it from the first paint:
+# their choice is on <html> before anything is drawn (BOOT_SCRIPT), so the
+# page's plain text, written at the defaults, waits for web/reader.js. If the
+# script never runs, it shows after a moment anyway.
+TEXT_WAITS = ("html:is(" + ",".join(f"[data-{name}]" for name, _d, _v in DISPLAY_PREFS if name in ("level", *WORDING))
+              + ") .cx-text:not(.cx-ready){visibility:hidden;animation:cx-reveal 0s 1.5s forwards}"
+              "@keyframes cx-reveal{to{visibility:visible}}")
+
+
 def default_wording(text):
     """Text at the default reader settings, on one line (poetry's line breaks read as spaces)."""
     defaults = {name: values.index(default) for name, default, values in DISPLAY_PREFS if name in WORDING}
@@ -580,20 +589,90 @@ def site_footer(lib):
 </div></footer>"""
 
 
+# --- style.css, trimmed -------------------------------------------------------
+# web/style.css is the Open Word Bible's whole stylesheet (171 KB), kept as it
+# is so it can be refreshed from there. The site publishes only the rules
+# whose classes and ids Logia uses. Every class and id Logia writes appears
+# whole somewhere in this script or in web/*.js, so a rule is kept when each
+# of its selector's classes and ids is a word of those files. Element,
+# attribute and @-rules other than @media/@supports are kept as they are.
+
+def css_blocks(css):
+    """Top-level (prelude, body) pairs; body is None for a statement such as @import."""
+    out, i, n = [], 0, len(css)
+    while i < n:
+        j = i
+        while j < n and css[j] not in "{;":
+            j += 1
+        if j >= n:
+            break
+        if css[j] == ";":
+            out.append((css[i:j].strip(), None))
+            i = j + 1
+            continue
+        depth, k = 1, j + 1
+        while depth:
+            depth += {"{": 1, "}": -1}.get(css[k], 0)
+            k += 1
+        out.append((css[i:j].strip(), css[j + 1:k - 1]))
+        i = k
+    return out
+
+
+def trim_css(css, used):
+    """css without the rules whose selectors name a class or id not in used."""
+    def wanted(selector):
+        bare = re.sub(r"\[[^\]]*\]", "", selector)   # [href="#main"] names no id
+        names = re.findall(r"\.(-?[_a-zA-Z][\w-]*)", bare) + re.findall(r"#([_a-zA-Z][\w-]*)", bare)
+        return all(x in used for x in names)
+
+    def walk(text):
+        out = []
+        for prelude, body in css_blocks(text):
+            if body is None:
+                out.append(prelude + ";")
+            elif prelude.startswith(("@media", "@supports")):
+                inner = walk(body)
+                if inner:
+                    out.append(prelude + "{" + inner + "}")
+            elif prelude.startswith("@"):
+                out.append(prelude + "{" + body + "}")
+            else:
+                selectors = [x.strip() for x in prelude.split(",") if wanted(x)]
+                if selectors:
+                    out.append(",".join(selectors) + "{" + body.strip() + "}")
+        return "\n".join(out)
+
+    return walk(re.sub(r"/\*.*?\*/", "", css, flags=re.S)) + "\n"
+
+
 @functools.lru_cache(maxsize=None)
+def published(name):
+    """A web/ file as the site publishes it."""
+    with open(os.path.join(WEB, name), encoding="utf-8") as f:
+        text = f.read()
+    if name != "style.css":
+        return text
+    used = set()
+    for path in [__file__] + glob.glob(os.path.join(WEB, "*.js")):
+        with open(path, encoding="utf-8") as f:
+            used.update(re.findall(r"[\w-]+", f.read()))
+    return trim_css(text, used)
+
+
 def asset(name):
     """A file in web/ by an address that changes when its contents do
     (/style.css?v=1a2b3c4d5e), so browsers may keep it for a year
     (render.yaml) and still see each new version at once."""
-    with open(os.path.join(WEB, name), "rb") as f:
-        return f"/{name}?v={hashlib.sha256(f.read()).hexdigest()[:10]}"
+    return digest_url(f"/{name}", published(name))
 
 
 def digest_url(path, text):
     return f"{path}?v={hashlib.sha256(text.encode()).hexdigest()[:10]}"
 
 
-def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True):
+def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True,
+         preload=()):
     full = f"{title} · Logia" if title != "Logia" else "Logia"
     description = description or t("site.description")
     own = e(SITE_URL + path)
@@ -617,9 +696,10 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta name="theme-color" content="#f4eee3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#2a241c" media="(prefers-color-scheme: dark)">
 <script>{BOOT_SCRIPT}</script>
+<style>{TEXT_WAITS}</style>
 <link rel="preload" href="/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/gentium-book-plus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{asset("style.css")}">
+{"".join(f'<link rel="preload" href="{u}" as="fetch" crossorigin>{chr(10)}' for u in preload)}<link rel="stylesheet" href="{asset("style.css")}">
 <link rel="stylesheet" href="{asset("logia.css")}">{js}
 </head>
 <body>
@@ -773,8 +853,26 @@ def panel_file(bible):
     return json.dumps(panel, ensure_ascii=False, separators=(",", ":")), records
 
 
+# The commentary's text is most of a chapter page that has any (John 1:
+# 815 KB of 860 KB), so it is a file of its own too, /comm/<BOOK>.<chapter>.json,
+# preloaded from the page's head so it downloads beside the page while the
+# Bible text is shown. The page keeps an index of who comments on which
+# verses: enough for the timeline, the summary and the gold verse numbers.
+INDEX_FIELDS = ("work_id", "author", "short_name", "era", "died")
+
+
+def comm_file(commentaries, cited_by):
+    """The commentary file's text (None when there is nothing in it), and the page's index."""
+    index = [{**{k: w[k] for k in INDEX_FIELDS}, "entries": [{"start": x["start"], "end": x["end"]} for x in w["entries"]]}
+             for w in commentaries]
+    if not commentaries and not any(cited_by.values()):
+        return None, index
+    return json.dumps({"commentaries": commentaries, "citedBy": cited_by},
+                      ensure_ascii=False, separators=(",", ":")), index
+
+
 def chapter_page(lib, book, chapter, all_chapters):
-    """The reader page, and the text of its panel file."""
+    """The reader page, and the texts of its panel and commentary files."""
     bible = lib.bible(book, chapter)
     name = lib.books[book]["en"]
     last = bible["verses"][-1]
@@ -797,12 +895,13 @@ def chapter_page(lib, book, chapter, all_chapters):
         # variant uses it there ("Tap a Hebrew word...").
         ui.update({k[:-4]: v for k, v in CATALOG["reader"].items() if k.endswith("_hbo")})
     panel, records = panel_file(bible)
+    comm, index = comm_file(commentaries, lib.cited_by(book, chapter, bible["verses"]))
+    comm_url = digest_url(f"/comm/{book}.{chapter}.json", comm) if comm else None
     text_data = {k: v for k, v in bible.items() if k not in ("records", "words")}
     data = {**text_data, "records": records, "wordCounts": {v: len(ws) for v, ws in bible["words"].items()},
             "panel": digest_url(f"/panel/{book}.{chapter}.json", panel),
-            "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
+            "comm": comm_url, "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS,
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
-            "citedBy": lib.cited_by(book, chapter, bible["verses"]),
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "books": {k: v["en"] for k, v in lib.books.items()}}
     heading = default_wording(next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}"))
@@ -868,7 +967,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     description = (t("chapter.description", book=name, chapter=chapter, n=n) if n
                    else t("chapter.description_none", book=name, chapter=chapter))
     return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/",
-                description=description, scripts=("reader.js",)), panel
+                description=description, scripts=("reader.js",), preload=(comm_url,) if comm_url else ()), panel, comm
 
 
 def commentators_page(lib):
@@ -1165,7 +1264,8 @@ def build():
         shutil.rmtree(SITE)
     os.makedirs(SITE)
     for name in ("style.css", "logia.css", "site.js", "account.js", "reader.js"):
-        shutil.copy(os.path.join(WEB, name), os.path.join(SITE, name))
+        with open(os.path.join(SITE, name), "w", encoding="utf-8") as f:
+            f.write(published(name))
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
     pages = ["/"]
@@ -1176,11 +1276,14 @@ def build():
         write(f"/{book.lower()}/", book_page(lib, book))
         pages.append(f"/{book.lower()}/")
     for book, chapter in lib.chapters:
-        html_text, panel = chapter_page(lib, book, chapter, lib.chapters)
+        html_text, panel, comm = chapter_page(lib, book, chapter, lib.chapters)
         write(chapter_url(book, chapter), html_text)
-        os.makedirs(os.path.join(SITE, "panel"), exist_ok=True)
-        with open(os.path.join(SITE, "panel", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
-            f.write(panel)
+        for folder, text in (("panel", panel), ("comm", comm)):
+            if text is None:
+                continue
+            os.makedirs(os.path.join(SITE, folder), exist_ok=True)
+            with open(os.path.join(SITE, folder, f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
+                f.write(text)
         pages.append(chapter_url(book, chapter))
     write("/commentators/", commentators_page(lib))
     pages.append("/commentators/")

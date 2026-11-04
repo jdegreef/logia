@@ -227,6 +227,47 @@ class Site(unittest.TestCase):
         self.assertEqual(sum(r["notes"] for r in data["records"]),
                          sum(len(r["decisions"]) for r in panel["records"].values()))
 
+    def test_commentary_is_a_file_of_its_own_preloaded_by_the_page(self):
+        text = self.read(os.path.join("jhn", "1", "index.html"))
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertRegex(data["comm"], r"^/comm/JHN\.1\.json\?v=[0-9a-f]{10}$")
+        self.assertIn(f'<link rel="preload" href="{data["comm"]}" as="fetch" crossorigin>', text)
+        self.assertNotIn("citedBy", data)
+        comm = json.loads(self.read(data["comm"].split("?")[0].lstrip("/")))
+        # The page's index matches the file: same works, same verse ranges.
+        self.assertEqual([w["work_id"] for w in data["commentaries"]], [w["work_id"] for w in comm["commentaries"]])
+        for short, full in zip(data["commentaries"], comm["commentaries"]):
+            self.assertNotIn("excerpt", json.dumps(short))
+            self.assertEqual(short["entries"], [{"start": x["start"], "end": x["end"]} for x in full["entries"]])
+            self.assertTrue(all(x["excerpt"] for x in full["entries"]))
+        self.assertIn("citedBy", comm)
+
+    def test_a_chapter_with_nothing_on_it_has_no_commentary_file(self):
+        # No excerpt is on Obadiah, or cites it.
+        text = self.read(os.path.join("oba", "1", "index.html"))
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertIsNone(data["comm"])
+        self.assertNotIn('as="fetch"', text)
+        self.assertFalse(os.path.exists(os.path.join(build_site.SITE, "comm", "OBA.1.json")))
+
+    def test_the_published_stylesheet_keeps_only_what_logia_uses(self):
+        css = ".used{a:1}.unused{b:2}.used .unused,.used a{c:3}#skip{d:4}#gone{e:5}[href=\"#gone\"]{f:6}"
+        css += "@media (max-width:9px){.unused{g:7}}@media print{.used{h:8}}@font-face{font-family:X}"
+        out = build_site.trim_css(css, {"used", "skip"})
+        self.assertEqual(out, ".used{a:1}\n.used a{c:3}\n#skip{d:4}\n[href=\"#gone\"]{f:6}\n"
+                              "@media print{.used{h:8}}\n@font-face{font-family:X}\n")
+        published = self.read("style.css")
+        with open(os.path.join(build_site.WEB, "style.css"), encoding="utf-8") as f:
+            self.assertLess(len(published), len(f.read()) / 2)
+        for kept in (".prefs-menu", ".dd-item", ".page-head", "@font-face"):
+            self.assertIn(kept, published, kept)
+
+    def test_a_chosen_wording_waits_for_the_reader(self):
+        text = self.read(os.path.join("psa", "23", "index.html"))
+        self.assertIn(f"<style>{build_site.TEXT_WAITS}</style>", text)
+        for name in ("level", *build_site.WORDING):
+            self.assertIn(f"[data-{name}]", build_site.TEXT_WAITS)
+
     def test_assets_are_addressed_by_their_digest(self):
         text = self.read("index.html")
         for name in ("style.css", "logia.css", "site.js", "account.js"):
@@ -256,8 +297,7 @@ class Site(unittest.TestCase):
                          {"chrysostom", "augustine", "catena", "calvin", "henry", "bengel", "ryle", "westcott"})
 
     def test_citations_link_both_ways(self):
-        with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:
-            data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', f.read(), re.S)[1].replace("<\\/", "</"))
+        data = json.loads(self.read(os.path.join("comm", "JHN.1.json")))
         westcott = next(w for w in data["commentaries"] if w["work_id"] == "westcott")
         first = westcott["entries"][0]
         self.assertIn(("v. 14", "/jhn/1/#v14"), [(c["text"], c["href"]) for c in first["cites"]])

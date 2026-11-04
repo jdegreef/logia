@@ -56,6 +56,18 @@ menus and the settings menu (theme, text size, typeface, line spacing, motion,
 and Logia's own: the translation level and how much of each excerpt to show).
 `web/logia.css` and `web/reader.js` are Logia's own.
 
+### Keeping pages light
+
+- The site publishes `style.css` with only the rules whose classes and ids
+  Logia uses (`trim_css` in `scripts/build_site.py`); `web/style.css` stays
+  the Open Word Bible's whole file, so it can still be refreshed from there.
+- Stylesheets and scripts are linked by their digest (`/style.css?v=…`), so
+  `render.yaml` lets browsers keep them for a year.
+- A chapter page holds its Bible text and an index of who comments on which
+  verses. The commentary's text is `/comm/<BOOK>.<chapter>.json`, preloaded
+  by the page; the Greek or Hebrew words and translation notes are
+  `/panel/<BOOK>.<chapter>.json`, fetched when one of those tabs is opened.
+
 ### Accounts, saving, liking and sharing
 
 Logia has no sign-in of its own: readers use their Open Word Bible account.

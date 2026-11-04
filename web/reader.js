@@ -94,6 +94,7 @@
       });
     });
     $("#text").innerHTML = out.join("");
+    $("#text").classList.add("cx-ready");
     document.querySelectorAll(".cx-levels button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.level === lv); });
     markTokens();
   }
@@ -138,7 +139,8 @@
     document.querySelectorAll(".cx-tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === state.tab); });
     renderRail();
     var keep = $("#pb").scrollTop;
-    $("#pb").innerHTML = needsPanel() && !PANEL ? panelWaiting()
+    $("#pb").innerHTML = state.tab === "comm" && !COMM ? waiting(commFailed, "comm")
+      : needsPanel() && !PANEL ? panelWaiting()
       : ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
     $("#pb").scrollTop = state.keepScroll ? keep : 0;
     state.keepScroll = false;
@@ -160,13 +162,36 @@
     }
     return panelLoad;
   }
-  function panelWaiting() {
-    if (panelFailed) {
-      return '<p class="cx-empty">' + esc(U.panel_failed) + ' <button type="button" class="lg-linkish" data-retry>' +
+  function waiting(failed, what) {
+    if (failed) {
+      return '<p class="cx-empty">' + esc(U.panel_failed) + ' <button type="button" class="lg-linkish" data-retry="' + what + '">' +
         esc(U.try_again) + "</button></p>";
     }
-    loadPanel();
     return '<p class="cx-empty" role="status">' + esc(U.loading) + "</p>";
+  }
+  function panelWaiting() {
+    if (!panelFailed) loadPanel();
+    return waiting(panelFailed, "panel");
+  }
+
+  // The commentary's text and the excerpts elsewhere that cite this
+  // chapter (DATA.comm: /comm/<BOOK>.<chapter>.json, see comm_file in
+  // scripts/build_site.py), preloaded by the page's head and read at once.
+  // Until it arrives, works holds the page's index: who comments on which
+  // verses, enough for the timeline, the summary and the verse numbers.
+  var COMM = DATA.comm ? null : { commentaries: [], citedBy: {} }, commLoad = null, commFailed = false, pendingCard = null;
+  DATA.citedBy = {};
+  function loadComm() {
+    if (COMM || commLoad) return;
+    commFailed = false;
+    commLoad = fetch(DATA.comm).then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      return res.json();
+    }).then(function (c) {
+      COMM = c; works = c.commentaries; DATA.citedBy = c.citedBy;
+      commLoad = null; refresh();
+      if (pendingCard) { var card = pendingCard; pendingCard = null; showCard(card); }
+    }, function () { commLoad = null; commFailed = true; refresh(); });
   }
   var notesOf = function (r) { return PANEL.records[r.id]; };
 
@@ -451,7 +476,11 @@
       } catch (err) { /* storage blocked: the choice lasts for this page */ }
       renderPanel(); return;
     }
-    if (e.target.closest("[data-retry]")) { panelFailed = false; refresh(); return; }
+    var retry = e.target.closest("[data-retry]");
+    if (retry) {
+      if (retry.getAttribute("data-retry") === "comm") loadComm(); else panelFailed = false;
+      refresh(); return;
+    }
     var ex = e.target.closest("[data-expand]");
     if (ex) { ex.closest(".cx-card").querySelector(".cx-ex").classList.remove("cx-clamp"); ex.remove(); return; }
     var g = e.target.closest(".cx-g");
@@ -473,6 +502,7 @@
   // #v14 opens verse 14; #v14-calvin opens it at Calvin's comment (a shared link).
   var HASH = /^#v(\d+)(?:-([a-z][a-z0-9-]*))?$/;
   function showCard(work) {
+    if (!COMM) { pendingCard = work; return; }
     var card = document.getElementById("c-" + work);
     if (!card) return;
     card.scrollIntoView({ block: "start" });
@@ -492,6 +522,7 @@
     var firstWith = DATA.verses.filter(function (v) { return works.some(function (w) { return entriesFor(w, v).length; }); })[0];
     if (firstWith) state.verse = firstWith;
   }
+  loadComm();
   renderText(); go(state.verse);
   if (m0 && m0[2]) { $("#panel").classList.remove("cx-min"); showCard(m0[2]); }
 
