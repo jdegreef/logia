@@ -24,7 +24,7 @@
    "source": "npnf114.iv.vii.html",
    "para": "iv.vii-p4",
    "excerpt": "chrysostom.JHN.1.3.1",
-   "score": 0.38,
+   "score": 0.37,
    "found": "similar",
    "status": "detected"
   },
@@ -37,7 +37,7 @@
    "source": "npnf107.iii.ii.html",
    "para": "iii.ii-p34",
    "excerpt": "augustine.JHN.1.3.1",
-   "score": 0.72,
+   "score": 0.71,
    "found": "similar",
    "status": "detected"
   },
@@ -50,20 +50,7 @@
    "source": "npnf107.iii.ii.html",
    "para": "iii.ii-p48",
    "excerpt": "augustine.JHN.1.5.1",
-   "score": 0.43,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
-   "in": "catena.JHN.1.6.1",
-   "at": 172,
-   "label": "CHRYS.",
-   "work": "chrysostom",
-   "locus": "6",
-   "source": "npnf114.iv.viii.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.36,
+   "score": 0.44,
    "found": "similar",
    "status": "detected"
   },
@@ -76,7 +63,7 @@
    "source": "npnf114.iv.viii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.32,
+   "score": 0.33,
    "found": "similar",
    "status": "detected"
   },
@@ -102,7 +89,7 @@
    "source": "npnf107.iii.iii.html",
    "para": "iii.iii-p24",
    "excerpt": "augustine.JHN.1.10.2",
-   "score": 0.57,
+   "score": 0.56,
    "found": "similar",
    "status": "detected"
   },
@@ -128,7 +115,7 @@
    "source": "npnf114.iv.xii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.28,
+   "score": 0.27,
    "found": "similar",
    "status": "detected"
   },
@@ -245,7 +232,7 @@
    "source": "npnf114.iv.xviii.html",
    "para": "iv.xviii-p31",
    "excerpt": "chrysostom.JHN.1.26-27.1",
-   "score": 0.44,
+   "score": 0.43,
    "found": "similar",
    "status": "detected"
   },
@@ -310,7 +297,7 @@
    "source": "npnf107.iii.v.html",
    "para": null,
    "excerpt": null,
-   "score": 0.31,
+   "score": 0.32,
    "found": "similar",
    "status": "detected"
   },
@@ -407,19 +394,6 @@
   },
   {
    "in": "catena.JHN.1.41.1",
-   "at": 0,
-   "label": "CHRYS.",
-   "work": "chrysostom",
-   "locus": "19",
-   "source": "npnf114.iv.xxi.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.57,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
-   "in": "catena.JHN.1.41.1",
    "at": 761,
    "label": "AUG.",
    "work": "augustine",
@@ -427,7 +401,7 @@
    "source": "npnf107.iii.viii.html",
    "para": "iii.viii-p35",
    "excerpt": "augustine.JHN.1.40-41.1",
-   "score": 0.5,
+   "score": 0.49,
    "found": "similar",
    "status": "detected"
   },
@@ -531,7 +505,7 @@
    "source": "npnf107.iii.viii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.39,
+   "score": 0.4,
    "found": "similar",
    "status": "detected"
   },
@@ -558,19 +532,6 @@
    "para": "iii.viii-p48",
    "excerpt": "augustine.JHN.1.48.1",
    "score": 0.57,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
-   "in": "catena.JHN.1.49.1",
-   "at": 0,
-   "label": "CHRYS.",
-   "work": "chrysostom",
-   "locus": "21",
-   "source": "npnf114.iv.xxiii.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.21,
    "found": "similar",
    "status": "detected"
   },
@@ -648,7 +609,7 @@
    "source": "npnf114.iv.xxiii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.34,
+   "score": 0.33,
    "found": "similar",
    "status": "detected"
   },
@@ -700,7 +661,7 @@
    "source": "npnf114.iv.xxiv.html",
    "para": "iv.xxiv-p25",
    "excerpt": "chrysostom.JHN.2.6-7.1",
-   "score": 0.43,
+   "score": 0.44,
    "found": "similar",
    "status": "detected"
   },
@@ -778,7 +739,7 @@
    "source": "npnf114.iv.xxv.html",
    "para": "iv.xxv-p20",
    "excerpt": "chrysostom.JHN.2.12.1",
-   "score": 0.5,
+   "score": 0.49,
    "found": "similar",
    "status": "detected"
   },
@@ -804,7 +765,7 @@
    "source": "npnf114.iv.xxv.html",
    "para": "iv.xxv-p20",
    "excerpt": "chrysostom.JHN.2.12.1",
-   "score": 0.49,
+   "score": 0.48,
    "found": "similar",
    "status": "detected"
   },
@@ -843,7 +804,7 @@
    "source": "npnf107.iii.xi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.46,
+   "score": 0.47,
    "found": "similar",
    "status": "detected"
   },
@@ -856,7 +817,7 @@
    "source": "npnf107.iii.xi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.38,
+   "score": 0.39,
    "found": "similar",
    "status": "detected"
   },
@@ -869,7 +830,7 @@
    "source": "npnf107.iii.xi.html",
    "para": "iii.xi-p16",
    "excerpt": "augustine.JHN.2.13-16.1",
-   "score": 0.57,
+   "score": 0.56,
    "found": "similar",
    "status": "detected"
   },
@@ -908,7 +869,7 @@
    "source": "npnf114.iv.xxv.html",
    "para": null,
    "excerpt": null,
-   "score": 0.36,
+   "score": 0.35,
    "found": "similar",
    "status": "detected"
   },
@@ -921,7 +882,7 @@
    "source": "npnf107.iii.xi.html",
    "para": "iii.xi-p42",
    "excerpt": null,
-   "score": 0.64,
+   "score": 0.65,
    "found": "similar",
    "status": "detected"
   },
@@ -947,7 +908,7 @@
    "source": "npnf114.iv.xxvi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.34,
+   "score": 0.32,
    "found": "similar",
    "status": "detected"
   },
@@ -973,7 +934,7 @@
    "source": "npnf114.iv.xxvi.html",
    "para": "iv.xxvi-p13",
    "excerpt": "chrysostom.JHN.2.24-25.1",
-   "score": 0.42,
+   "score": 0.43,
    "found": "similar",
    "status": "detected"
   },
@@ -986,7 +947,7 @@
    "source": "npnf107.iii.xii.html",
    "para": "iii.xii-p4",
    "excerpt": "augustine.JHN.2.23-25.1",
-   "score": 0.75,
+   "score": 0.74,
    "found": "similar",
    "status": "detected"
   },
@@ -999,7 +960,7 @@
    "source": "npnf107.iii.xii.html",
    "para": "iii.xii-p10",
    "excerpt": "augustine.JHN.2.23-24.1",
-   "score": 0.73,
+   "score": 0.74,
    "found": "similar",
    "status": "detected"
   },
@@ -1077,7 +1038,7 @@
    "source": "npnf107.iii.xii.html",
    "para": "iii.xii-p22",
    "excerpt": "augustine.JHN.3.3-4.1",
-   "score": 0.4,
+   "score": 0.41,
    "found": "similar",
    "status": "detected"
   },
@@ -1090,7 +1051,7 @@
    "source": "npnf114.iv.xxvii.html",
    "para": "iv.xxvii-p8",
    "excerpt": "chrysostom.JHN.3.5.1",
-   "score": 0.65,
+   "score": 0.66,
    "found": "similar",
    "status": "detected"
   },
@@ -1103,7 +1064,7 @@
    "source": "npnf107.iii.xiii.html",
    "para": "iii.xiii-p10",
    "excerpt": "augustine.JHN.3.5.1",
-   "score": 0.37,
+   "score": 0.38,
    "found": "similar",
    "status": "detected"
   },
@@ -1142,7 +1103,7 @@
    "source": "npnf107.iii.xiii.html",
    "para": "iii.xiii-p10",
    "excerpt": "augustine.JHN.3.5.1",
-   "score": 0.57,
+   "score": 0.56,
    "found": "similar",
    "status": "detected"
   },
@@ -1181,7 +1142,7 @@
    "source": "npnf107.iii.xiii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.29,
+   "score": 0.28,
    "found": "similar",
    "status": "detected"
   },
@@ -1207,7 +1168,7 @@
    "source": "npnf114.iv.xxix.html",
    "para": "iv.xxix-p11",
    "excerpt": "chrysostom.JHN.3.13.1",
-   "score": 0.59,
+   "score": 0.58,
    "found": "similar",
    "status": "detected"
   },
@@ -1259,7 +1220,7 @@
    "source": "npnf114.iv.xxix.html",
    "para": null,
    "excerpt": null,
-   "score": 0.34,
+   "score": 0.33,
    "found": "similar",
    "status": "detected"
   },
@@ -1311,7 +1272,7 @@
    "source": "npnf114.iv.xxx.html",
    "para": "iv.xxx-p19",
    "excerpt": "chrysostom.JHN.3.18.1",
-   "score": 0.39,
+   "score": 0.4,
    "found": "similar",
    "status": "detected"
   },
@@ -1350,7 +1311,7 @@
    "source": "npnf107.iii.xiii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.31,
+   "score": 0.3,
    "found": "similar",
    "status": "detected"
   },
@@ -1402,7 +1363,7 @@
    "source": "npnf107.iii.xiv.html",
    "para": null,
    "excerpt": null,
-   "score": 0.53,
+   "score": 0.54,
    "found": "similar",
    "status": "detected"
   },
@@ -1493,7 +1454,7 @@
    "source": "npnf107.iii.xv.html",
    "para": null,
    "excerpt": null,
-   "score": 0.33,
+   "score": 0.34,
    "found": "similar",
    "status": "detected"
   },
@@ -1502,11 +1463,11 @@
    "at": 0,
    "label": "CHRYS.",
    "work": "chrysostom",
-   "locus": "30.2",
+   "locus": "30",
    "source": "npnf114.iv.xxxii.html",
-   "para": "iv.xxxii-p18",
-   "excerpt": "chrysostom.JHN.3.32-33.1",
-   "score": 0.41,
+   "para": null,
+   "excerpt": null,
+   "score": 0.42,
    "found": "similar",
    "status": "detected"
   },
@@ -1519,7 +1480,7 @@
    "source": "npnf107.iii.xv.html",
    "para": "iii.xv-p17",
    "excerpt": "augustine.JHN.3.32-33.1",
-   "score": 0.38,
+   "score": 0.37,
    "found": "similar",
    "status": "detected"
   },
@@ -1593,10 +1554,10 @@
    "at": 0,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15.2",
+   "locus": "15",
    "source": "npnf107.iii.xvi.html",
-   "para": "iii.xvi-p4",
-   "excerpt": "augustine.JHN.4.1-3.1",
+   "para": null,
+   "excerpt": null,
    "score": 0.35,
    "found": "similar",
    "status": "detected"
@@ -1662,7 +1623,7 @@
    "source": "npnf107.iii.xvi.html",
    "para": "iii.xvi-p8",
    "excerpt": "augustine.JHN.4.4-6.1",
-   "score": 0.52,
+   "score": 0.53,
    "found": "similar",
    "status": "detected"
   },
@@ -1675,7 +1636,7 @@
    "source": "npnf114.iv.xxxiii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.24,
+   "score": 0.25,
    "found": "similar",
    "status": "detected"
   },
@@ -1688,7 +1649,7 @@
    "source": "npnf107.iii.xvi.html",
    "para": "iii.xvi-p15",
    "excerpt": "augustine.JHN.4.7.1",
-   "score": 0.57,
+   "score": 0.58,
    "found": "similar",
    "status": "detected"
   },
@@ -1723,11 +1684,11 @@
    "at": 0,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15.12",
+   "locus": "15",
    "source": "npnf107.iii.xvi.html",
-   "para": "iii.xvi-p18",
-   "excerpt": "augustine.JHN.4.10.1",
-   "score": 0.61,
+   "para": null,
+   "excerpt": null,
+   "score": 0.6,
    "found": "similar",
    "status": "detected"
   },
@@ -1736,11 +1697,11 @@
    "at": 735,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15.12",
+   "locus": "15",
    "source": "npnf107.iii.xvi.html",
-   "para": "iii.xvi-p18",
-   "excerpt": "augustine.JHN.4.10.1",
-   "score": 0.39,
+   "para": null,
+   "excerpt": null,
+   "score": 0.38,
    "found": "similar",
    "status": "detected"
   },
@@ -1766,7 +1727,7 @@
    "source": "npnf114.iv.xxxiii.html",
    "para": "iv.xxxiii-p78",
    "excerpt": "chrysostom.JHN.4.11.1",
-   "score": 0.53,
+   "score": 0.52,
    "found": "similar",
    "status": "detected"
   },
@@ -1805,7 +1766,7 @@
    "source": "npnf114.iv.xxxiii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.27,
+   "score": 0.28,
    "found": "similar",
    "status": "detected"
   },
@@ -1831,7 +1792,7 @@
    "source": "npnf114.iv.xxxiv.html",
    "para": "iv.xxxiv-p14",
    "excerpt": "chrysostom.JHN.4.13-14.2",
-   "score": 0.55,
+   "score": 0.57,
    "found": "similar",
    "status": "detected"
   },
@@ -1844,7 +1805,7 @@
    "source": "npnf114.iv.xxxiv.html",
    "para": "iv.xxxiv-p17",
    "excerpt": "chrysostom.JHN.4.15.1",
-   "score": 0.45,
+   "score": 0.46,
    "found": "similar",
    "status": "detected"
   },
@@ -1909,7 +1870,7 @@
    "source": "npnf107.iii.xvi.html",
    "para": "iii.xvi-p35",
    "excerpt": "augustine.JHN.4.19.1",
-   "score": 0.5,
+   "score": 0.49,
    "found": "similar",
    "status": "detected"
   },
@@ -1957,10 +1918,10 @@
    "at": 636,
    "label": "AUG.",
    "work": "augustine",
-   "locus": "15.24",
+   "locus": "15",
    "source": "npnf107.iii.xvi.html",
-   "para": "iii.xvi-p38",
-   "excerpt": "augustine.JHN.4.20-21.1",
+   "para": null,
+   "excerpt": null,
    "score": 0.51,
    "found": "similar",
    "status": "detected"
@@ -2013,7 +1974,7 @@
    "source": "npnf107.iii.xvi.html",
    "para": "iii.xvi-p41",
    "excerpt": "augustine.JHN.4.21.1",
-   "score": 0.49,
+   "score": 0.48,
    "found": "similar",
    "status": "detected"
   },
@@ -2026,7 +1987,7 @@
    "source": "npnf114.iv.xx.html",
    "para": null,
    "excerpt": null,
-   "score": 0.26,
+   "score": 0.27,
    "found": "similar",
    "status": "detected"
   },
@@ -2065,7 +2026,7 @@
    "source": "npnf107.iii.xvi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.26,
+   "score": 0.27,
    "found": "similar",
    "status": "detected"
   },
@@ -2078,7 +2039,7 @@
    "source": "npnf114.iv.xxxv.html",
    "para": null,
    "excerpt": null,
-   "score": 0.33,
+   "score": 0.34,
    "found": "similar",
    "status": "detected"
   },
@@ -2117,7 +2078,7 @@
    "source": "npnf114.iv.xxxvi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.26,
+   "score": 0.25,
    "found": "similar",
    "status": "detected"
   },
@@ -2130,7 +2091,7 @@
    "source": "npnf107.iii.xvi.html",
    "para": "iii.xvi-p54",
    "excerpt": "augustine.JHN.4.35-38.1",
-   "score": 0.56,
+   "score": 0.55,
    "found": "similar",
    "status": "detected"
   },
@@ -2234,7 +2195,7 @@
    "source": "npnf107.iii.xvii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.55,
+   "score": 0.56,
    "found": "similar",
    "status": "detected"
   },
@@ -2286,7 +2247,7 @@
    "source": "npnf107.iii.xvii.html",
    "para": "iii.xvii-p6",
    "excerpt": "augustine.JHN.4.46-48.1",
-   "score": 0.42,
+   "score": 0.41,
    "found": "similar",
    "status": "detected"
   },
@@ -2299,7 +2260,7 @@
    "source": "npnf114.iv.xxxvii.html",
    "para": "iv.xxxvii-p34",
    "excerpt": "chrysostom.JHN.4.46-47.1",
-   "score": 0.41,
+   "score": 0.4,
    "found": "similar",
    "status": "detected"
   },
@@ -2325,7 +2286,7 @@
    "source": "npnf107.iii.xxiv.html",
    "para": "iii.xxiv-p14",
    "excerpt": null,
-   "score": 0.47,
+   "score": 0.46,
    "found": "similar",
    "status": "detected"
   },
@@ -2351,7 +2312,7 @@
    "source": "npnf114.iv.xxxvii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.28,
+   "score": 0.29,
    "found": "similar",
    "status": "detected"
   },
@@ -2377,7 +2338,7 @@
    "source": "npnf107.iii.xvii.html",
    "para": "iii.xvii-p6",
    "excerpt": "augustine.JHN.4.46-48.1",
-   "score": 0.59,
+   "score": 0.58,
    "found": "similar",
    "status": "detected"
   }
