@@ -260,3 +260,9 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-not-found .mark { display: block; margin: 0 auto; }
 .lg-not-found-links { display: grid; gap: 10px; margin: 8px 0 0; }
 .lg-not-found-links .button { box-sizing: border-box; width: 100%; justify-content: center; }
+
+/* Poetry (the Open Word Bible's "\q" lines): a verse of a poem starts its own
+   line, and its later lines are indented under the first. */
+.cx-verse.cx-poem { display: block; padding-left: 1.6em; text-indent: -1.6em; }
+.cx-greek[dir="rtl"], .cx-src[dir="rtl"] { font-family: var(--hebrew); font-size: 23px; line-height: 2; }
+.cx-word .cx-big[dir="rtl"] { font-family: var(--hebrew); font-size: 32px; }
