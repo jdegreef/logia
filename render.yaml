@@ -13,6 +13,8 @@ services:
     # Render adds www.logia.faith itself and redirects it to the root.
     domains:
       - logia.faith
+    # Serve only at logia.faith: the onrender.com address returns 404.
+    renderSubdomainPolicy: disabled
     headers:
       - path: /*
         name: X-Content-Type-Options
