@@ -331,7 +331,7 @@ class Site(unittest.TestCase):
             index = json.load(f)
         excerpts = [r for r in index["rows"] if r["k"] == "x"]
         self.assertEqual(len(excerpts), len(build_site.Library().comments))
-        self.assertTrue(all(r["u"].startswith("/jhn/1/#") for r in excerpts))
+        self.assertTrue(all(re.match(r"^/[a-z0-9]+/\d+/#[a-z]+\.", r["u"]) for r in excerpts))
         paras = [r for r in index["rows"] if r["k"] == "p"]
         self.assertTrue(paras and all(r["u"].startswith("/works/") for r in paras))
         self.assertTrue(any(r["x"] for r in paras))        # paragraphs know the excerpts they hold
@@ -350,8 +350,9 @@ class Site(unittest.TestCase):
         lib = build_site.Library()
         tp = next(x for x in lib.topics if x["id"] == "incarnation")
         members = {c["id"]: why for c, why in lib.topic_members(tp)}
-        on_14 = {c["id"] for c in lib.comments            # all of today's excerpts are in John 1
-                 if build_site.ref_parts(c["start"])[2] <= 14 <= build_site.ref_parts(c["end"])[2]}
+        on_14 = {c["id"] for c in lib.comments
+                 if build_site.ref_parts(c["start"])[:2] == ("JHN", 1) == build_site.ref_parts(c["end"])[:2]
+                 and build_site.ref_parts(c["start"])[2] <= 14 <= build_site.ref_parts(c["end"])[2]}
         self.assertTrue(on_14 <= set(members))                 # every excerpt on John 1:14
         self.assertEqual(members["chrysostom.JHN.1.1.3"], "made flesh")   # and one elsewhere that uses a term
         self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "topics", "incarnation", "index.html")))
