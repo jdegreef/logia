@@ -35,7 +35,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "54df10ea56066b1e72e88b745bc6e0249181f91fc71f43efe952e9ecf3c99ae6",
-   "extract": "Characters 178514-928590 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 170445-1479666 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/calvin/calcom34.vii.i.html",
@@ -80,7 +80,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "3ac327509ed10a2da033dcd0c602cb292fa56bb3989495033b0fd027f87c7fde",
-   "extract": "Characters 136019-1067204 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 136019-1153076 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/catena/catenaurecomment04thomuoft.txt",
@@ -89,7 +89,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "48b7f761c7d27d0990ccf7e6f554085a4724d495e7ba6512a1d6c1a8cb6daf34",
-   "extract": "Characters 148229-610050 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 148229-1144353 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/catena/p1catenaaureaco04thomuoft.txt",
@@ -242,7 +242,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "aff357ec909256f5cb27464feb0edc25266f49f225b20be8e5c9a80788fde9b2",
-   "extract": "Characters 171495-985934 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 169315-1400546 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/westcott/gospelaccordingt00westuoft.txt",
@@ -251,7 +251,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "7220d31edc2fed62d262486496689846ff8482dc116a6821672415c4e86158c8",
-   "extract": "Characters 202425-1440008 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 143901-2420362 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/augustine/npnf107.iii.v.html",
@@ -3537,6 +3537,51 @@
    "kind": "digital",
    "download_sha256": "c30d1db3e6a4d8a678bdcbe2073fc3755a131b56cb32cff18fb33e7fefaa5621",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle/expositorythough06ryle.txt",
+   "work": "ryle",
+   "url": "https://archive.org/stream/expositorythough06ryle/expositorythough06ryle_djvu.txt",
+   "retrieved": "2026-11-04",
+   "kind": "scan",
+   "download_sha256": "90df789e6fb68fed378ff65beb24c46436156528259b1a420be976d18c5b5235",
+   "extract": "Characters 147901-1237817 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/ryle/expositorythoug01rylegoog.txt",
+   "work": "ryle",
+   "url": "https://archive.org/stream/expositorythoug01rylegoog/expositorythoug01rylegoog_djvu.txt",
+   "retrieved": "2026-11-04",
+   "kind": "scan",
+   "download_sha256": "14d98e5a277f5d62ece6005951c042dd7972ef90edcae4bef46962d04f87f3ec",
+   "extract": "Characters 351387-604864 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/catena/p2catenaaureacom04thomuoft.txt",
+   "work": "catena",
+   "url": "https://archive.org/stream/p2catenaaureacom04thomuoft/p2catenaaureacom04thomuoft_djvu.txt",
+   "retrieved": "2026-11-04",
+   "kind": "scan",
+   "download_sha256": "1885eb260e7c68daced68a84ec51fe05c6776f2b276969a26486cf264fcfc0b8",
+   "extract": "Characters 136019-843691 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/catena/a6788682p204thomuoft.txt",
+   "work": "catena",
+   "url": "https://archive.org/stream/a6788682p204thomuoft/a6788682p204thomuoft_djvu.txt",
+   "retrieved": "2026-11-04",
+   "kind": "scan",
+   "download_sha256": "f0244a09f664d94e367047b91ad10d0a00688bac878e754febfb54ddae950b33",
+   "extract": "Characters 175279-815886 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/ryle/expositorythough07ryle.txt",
+   "work": "ryle",
+   "url": "https://archive.org/stream/expositorythough07ryle/expositorythough07ryle_djvu.txt",
+   "retrieved": "2026-11-04",
+   "kind": "scan",
+   "download_sha256": "cd6ec0c86f8dc3c6f9144b2bd541cce0196ce16d9180adbeefbcbc85af65977c",
+   "extract": "Characters 157032-1555466 of the scan's full text (the pages quoted, with a margin)."
   }
  ]
 }
