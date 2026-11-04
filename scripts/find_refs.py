@@ -310,7 +310,9 @@ DIVISION = (0.20, 0.08)        # a homily or tractate: the same, over any other 
 # to come from, and the more of a Father's works the library holds, the closer
 # some other homily comes by chance: "Grace for grace" (John 1:16) leads Tractate
 # X by only 0.053 once Tractates IV-XI are in, though its margin note and its
-# five best paragraphs all say Tractate III.
+# five best paragraphs all say Tractate III. And once the library reaches John 5,
+# Tractate XVII comes within 0.01: so the homily on the verse is also taken when
+# its two best paragraphs are the two best of all, which chance rarely gives.
 NEAR_LEAD = 0.04
 
 
@@ -350,7 +352,13 @@ def match_quotation(words, candidates, idf, near=lambda para: False):
     other_division = next((s for s, c in scored if c[3].split(".")[0] != division), 0)
     if best >= SECTION[0] and best - other_section >= SECTION[1]:
         return best, para, "section"
-    if best >= DIVISION[0] and best - other_division >= (NEAR_LEAD if near(para) else DIVISION[1]):
+    if best >= DIVISION[0] and best - other_division >= DIVISION[1]:
+        return best, para, "division"
+    # The homily or tractate on the verse being commented on: its own two best
+    # paragraphs are the two best of all, or it leads by NEAR_LEAD.
+    if best >= DIVISION[0] and near(para) and (
+            best - other_division >= NEAR_LEAD
+            or (len(scored) > 1 and scored[1][1][3].split(".")[0] == division)):
         return best, para, "division"
     return None
 
