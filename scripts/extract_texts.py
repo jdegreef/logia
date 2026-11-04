@@ -40,12 +40,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # The verse a homily or tractate opens on, as its heading prints it.
 # "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5",
-# "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter IX".
+# "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX".
 OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
                    r"(?:;\s*(?P<ch2>[ivxl]+)\.\s+(?P<e>\d+)(?:[–-](?P<f>\d+))?)?"
                    r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"
                    # and on into the next chapter: "Chapter II. 23–25; III. 1–5"
-                   r"(?:;\s*(?P<CH2>[IVXL]+)\.\s+(?P<c>\d+)(?:[–-](?P<d>\d+))?)?"
+                   # ("Chapter XI. 55–57; XII": into the next chapter, its verses unnamed)
+                   r"(?:;\s*(?P<CH2>[IVXL]+)(?:\.\s+(?P<c>\d+)(?:[–-](?P<d>\d+))?)?)?"
                    # or a whole chapter: "Chapter IX"
                    r"|Chapter\s+(?P<WH>[IVXL]+)\.?)$")
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13."
@@ -102,8 +103,9 @@ def derive():
                     first = int(o["v"] or o["a"])
                     span = [first, int(o["v2"] or o["b"] or first)]
                 if o["CH2"] or o["ch2"]:
+                    # with no verse named in the next chapter, at least its first
                     heading_end = (find_refs.scripture.roman(o["CH2"] or o["ch2"]),
-                                   int(o["d"] or o["c"] or o["f"] or o["e"]))
+                                   int(o["d"] or o["c"] or o["f"] or o["e"] or 1))
                 # A heading with a range ("Chapter I. 1–5") says what the whole
                 # text covers, not which verse each paragraph is on.
                 verse = span[0] if span[0] == span[1] else None

@@ -10,6 +10,24 @@
    "end": "JHN.8.58",
    "found": "source",
    "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.12.34.1",
+   "at": 565,
+   "text": "ver. 23",
+   "start": "JHN.12.23",
+   "end": "JHN.12.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.12.49.1",
+   "at": 1241,
+   "text": "ver. 29",
+   "start": "JHN.12.29",
+   "end": "JHN.12.29",
+   "found": "source",
+   "status": "detected"
   }
  ]
 }

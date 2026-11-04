@@ -1728,6 +1728,420 @@
    "kind": "digital",
    "download_sha256": "03478dce12a70641072c4d6467e7585d7bb6a61097ad5fdfe1caedd0264be751",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.xlvi.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.xlvi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "8296a6aad3b25f58f42f3ce730baff3b770d6891836368741183fa648d3a7e38",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.xlvii.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.xlvii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "33cde1347237424a3fd3b9f758eb2cf2c14424fe0abfba3f86c09486658bb0e0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.xlviii.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.xlviii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "da3e281a5fc25e86ace19c3f8a18ac8da42507fab8379780d687574da039c99f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.xlix.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.xlix.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "e74ac68d08473b483dfc3e0fc0bf50cf0bb803c85311ed39af2adbc5f4b6f1bf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvi.i.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvi.i.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "bfe18ff7baaad564f2c42906f84359b13ff4fbd4eb239c86a52a70a952128a83",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvi.ii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvi.ii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "c60fc421f7d60a48dfbc4fc097630d140e4da392626d8e93d03e24110cb45df8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvi.iii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvi.iii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "74b9086ce7c25f3c44c5e9ef37cb7f1b046ccbef3dd9d8782f4e4a8db2e4eebd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvi.iv.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvi.iv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "36fdcd20db54fea2ed1f0b63b4b29fc3d7361f17e16b785663a6648306a8e0be",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvi.v.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvi.v.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "f498ef366bf5aa520472af4d808b67f4e97110d9d6e5e6f4c60f078ec6001c6d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvi.vi.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvi.vi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "fe72a80324b8561eadf9db854b01404b336b1633cb5878b395b3e66dcfb9475f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvi.vii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvi.vii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "c4daeaa7023badb25982fa8c122f1e5870cd0bbaa1ce99468c6a1e1fe9fdefb9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "fe2e6b127c958b9fb52c51c573e7271d0c5629126c2c6c6b93e58ec505860c4c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxiii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxiii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "ebbf5d2662a19d8831737f906d626fbc5e3870816da5d4b892f3726c45ad7c3b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry/mhc5.John.xi.html",
+   "work": "henry",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.John.xi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "c369f21600f8db2f2ee3bc4071f9d321143c27d772305b4f8b8ce7424102bf31",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.l.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.l.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "169dbb0f751bca6e4b03c8cabae8b37c6bf9cb03911704d57e6ef0c2a1506d06",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.li.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.li.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "98551a049f7b843a860c943402148f657290f1b092b37966867504e096bc131f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvii.i.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvii.i.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "51677f35a909c1cc2e26e7a4c6faded361f7cba2670f1ac33eefd76cac38706c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvii.ii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvii.ii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "2941c82ef6b6733452a4ec2eb620d96ed6ca9b2086f643c81c5b0274cbf5e7ce",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvii.iii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvii.iii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "552b26c77f051479e6817b677154e93eac216bcbbf81b91cb8bd9dfb3d80aa46",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvii.iv.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvii.iv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "57e9a4f2a5a619bbc603f0053b9eab6a44f7fb18328de51ae795184fbe633994",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvii.v.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvii.v.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "36f08d252c07b2efb5e6aaca2b819e4e8d38d55b30d79f148f4144a2ca5a5dd1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvii.vi.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvii.vi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "c1532e8007fad7e5f20d588740a4553cb7ff333873e7a013f8631c0a759b693e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom34.xvii.vii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom34.xvii.vii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "983e4cc9e50ffde9c620fb86bae2b695ede3118c2628dac0bd5f7df083df290d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxiv.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxiv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "b4e51222bac884107d59732fab86f919acd0f414cb0523062bc4917a96daf4c3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxv.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "97db5ab73a644c6f71310b94d1a02713932ea00486d5ff9537580bdeff509486",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxvi.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxvi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "d32d176a7dfd8c7f99670e73b0087eda2ed1bfe19c06a6533f605b540c475c35",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxvii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxvii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "21951f98455fbddfd35d1b086b9532a16dee0d7f16167a86e9ef16a836641568",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry/mhc5.John.xii.html",
+   "work": "henry",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.John.xii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "2f4ca0e3b4557c6fdf49fc440b949371c0f3855238fdeaa912baf2b9c5742d32",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.lii.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.lii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "8b145f94928c0dfe97f322ad8f842a8221d35838cefa6a806af952de20e452ee",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.liii.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.liii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "2d80f3bc127299ea58752d4238d75449d633d0c6720e446115dc3f13826deeaf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.liv.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.liv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "86bf1d8464062733674d34713e51c9a31ba0d7f48a665fb89954d3a6a9c68855",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.lv.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.lv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "af08839bdae8c1ed2fb00d47be4aaa7ddbb5792a528bb74280a66b9b7c9ebbaf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.i.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.i.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "481006857d9459448025d25e43508f5e3e2b3c47930946903e5c725d60f9efb0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.ii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.ii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "711f2ad7baf34379f66d66296a8ab42500d97d2d7f7f185209f14287621db020",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.iii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.iii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "1b10243a0ec93ba28566b5f515da00588ebdb51ff08b6c47561a66c23ee3c360",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.iv.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.iv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "cadc3ce8229ab108904ecb0086a2ea5eb17359135401e62a2082ccad25d7d317",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.v.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.v.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "1df973008d2a0a60a6693f99d8af6dd2a8bc8c01ed1a0cf6d1ea5dd551f5556f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.vi.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.vi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "50644a57503d276aa61ef760c861e8688264771581031287886f4968a077b19b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.vii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.vii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "19b699c68413404d3c335a1af91aaafb47e67c1cdd513d13436edfa8d3fb0510",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.viii.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.viii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "845d6cb9d75eb46b646cc87780e3a36fbf44f108375a2beab886c35034abbeea",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin/calcom35.ii.ix.html",
+   "work": "calvin",
+   "url": "https://www.ccel.org/ccel/calvin/calcom35.ii.ix.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "e99310cde7a0a9220eec7c7c5b71d3b29af835952b95ef7e7dc85efe4206ac44",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxviii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxviii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "897db6a2e071c5f0e57b31052dbae44ecca31d2fb6666405500006ef1fc288cb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxix.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxix.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "1c9ffab906720a9786bb59e1fe6c94ace7bc451a7484eb7cbc4613fe5ee60510",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxx.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxx.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "4026952b92bb95c1746a8fe064e2a92969fffda0d9e41121715514b0bdf14fc7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.lxxi.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxxi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "4fcc3c07bde56b3aa6af465bef386912e4137a1af3647522a321cc5ef1e319c5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry/mhc5.John.xiii.html",
+   "work": "henry",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.John.xiii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "21037fd04a89a05e211316061dfe9989eb69c2571ddf43c4223441c06e40ecb9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
