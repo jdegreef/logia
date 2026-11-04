@@ -35,7 +35,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "54df10ea56066b1e72e88b745bc6e0249181f91fc71f43efe952e9ecf3c99ae6",
-   "extract": "Characters 727188-849724 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 178514-884591 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/calvin/calcom34.vii.i.html",
@@ -80,7 +80,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "3ac327509ed10a2da033dcd0c602cb292fa56bb3989495033b0fd027f87c7fde",
-   "extract": "Characters 136019-433429 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 136019-514329 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/catena/catenaurecomment04thomuoft.txt",
@@ -89,7 +89,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "48b7f761c7d27d0990ccf7e6f554085a4724d495e7ba6512a1d6c1a8cb6daf34",
-   "extract": "Characters 148229-429075 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 148229-515635 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/catena/p1catenaaureaco04thomuoft.txt",
@@ -242,7 +242,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "aff357ec909256f5cb27464feb0edc25266f49f225b20be8e5c9a80788fde9b2",
-   "extract": "Characters 171495-506143 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 171495-985934 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/westcott/gospelaccordingt00westuoft.txt",
@@ -251,7 +251,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "7220d31edc2fed62d262486496689846ff8482dc116a6821672415c4e86158c8",
-   "extract": "Characters 202425-974734 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 202425-1394149 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/augustine/npnf107.iii.v.html",

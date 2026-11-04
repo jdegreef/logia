@@ -169,6 +169,82 @@
   {
    "from": "[Jn fact",
    "to": "[In fact"
+  },
+  {
+   "from": "dificult",
+   "to": "difficult"
+  },
+  {
+   "from": "[also cometh}",
+   "to": "[also cometh]"
+  },
+  {
+   "from": "an~old man",
+   "to": "an old man"
+  },
+  {
+   "from": "in Aunon,",
+   "to": "in Ænon,"
+  },
+  {
+   "from": " thow hearest",
+   "to": " thou hearest"
+  },
+  {
+   "from": "Son, ete.,",
+   "to": "Son, etc.,"
+  },
+  {
+   "from": "V.g.|]",
+   "to": "V.g.]"
+  },
+  {
+   "from": "toheaven",
+   "to": "to heaven"
+  },
+  {
+   "from": "Son ts what",
+   "to": "Son is what"
+  },
+  {
+   "from": "having~been",
+   "to": "having been"
+  },
+  {
+   "from": "judgment [condemnation]) z.e.",
+   "to": "judgment [condemnation]) i.e."
+  },
+  {
+   "from": "John vy. 35",
+   "to": "John v. 35"
+  },
+  {
+   "from": "“Tfthe blood",
+   "to": "“If the blood"
+  },
+  {
+   "from": "mruch less",
+   "to": "much less"
+  },
+  {
+   "from": "al/ [men",
+   "to": "all [men"
+  },
+  {
+   "from": "who ts of the earth",
+   "to": "who is of the earth"
+  },
+  {
+   "from": "this is, ts above all",
+   "to": "this is, is above all"
+  },
+  {
+   "from": "1 Cor. xy. 27",
+   "to": "1 Cor. xv. 27"
+  },
+  {
+   "from": "but zs passed",
+   "to": "but is passed"
   }
  ]
 }
