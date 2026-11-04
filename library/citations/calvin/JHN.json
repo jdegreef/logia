@@ -379,6 +379,213 @@
    "end": "EPH.2.19",
    "found": "source",
    "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.1.1",
+   "at": 488,
+   "text": "1 Kings 17:9",
+   "start": "1KI.17.9",
+   "end": "1KI.17.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.1.1",
+   "at": 502,
+   "text": "Obadiah 20",
+   "start": "OBA.1.20",
+   "end": "OBA.1.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.1.1",
+   "at": 514,
+   "text": "Luke 4:26",
+   "start": "LUK.4.26",
+   "end": "LUK.4.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.11.1",
+   "at": 173,
+   "text": "Luke 2:8",
+   "start": "LUK.2.8",
+   "end": "LUK.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.11.1",
+   "at": 221,
+   "text": "Matthew 2:2",
+   "start": "MAT.2.2",
+   "end": "MAT.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.11.1",
+   "at": 298,
+   "text": "Matthew 3:16",
+   "start": "MAT.3.16",
+   "end": "MAT.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.11.1",
+   "at": 312,
+   "text": "Mark 1:10",
+   "start": "MRK.1.10",
+   "end": "MRK.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.11.1",
+   "at": 323,
+   "text": "John 1:32",
+   "start": "JHN.1.32",
+   "end": "JHN.1.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.12.1",
+   "at": 577,
+   "text": "Matthew 21:12",
+   "start": "MAT.21.12",
+   "end": "MAT.21.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.12.1",
+   "at": 592,
+   "text": "Mark 11:15",
+   "start": "MRK.11.15",
+   "end": "MRK.11.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.12.1",
+   "at": 604,
+   "text": "Luke 19:45",
+   "start": "LUK.19.45",
+   "end": "LUK.19.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.16.1",
+   "at": 258,
+   "text": "Matthew 21:13",
+   "start": "MAT.21.13",
+   "end": "MAT.21.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.17.2",
+   "at": 490,
+   "text": "Psalm 69:9",
+   "start": "PSA.69.9",
+   "end": "PSA.69.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.19.1",
+   "at": 322,
+   "text": "Matthew 13:13",
+   "start": "MAT.13.13",
+   "end": "MAT.13.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.19.2",
+   "at": 659,
+   "text": "Romans 8:11",
+   "start": "ROM.8.11",
+   "end": "ROM.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.19-21.1",
+   "at": 204,
+   "text": "2 Corinthians 5:4",
+   "start": "2CO.5.4",
+   "end": "2CO.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.19-21.1",
+   "at": 223,
+   "text": "2 Peter 1:13",
+   "start": "2PE.1.13",
+   "end": "2PE.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.19-21.1",
+   "at": 1121,
+   "text": "1 Corinthians 3:16",
+   "start": "1CO.3.16",
+   "end": "1CO.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.19-21.1",
+   "at": 1145,
+   "text": "1 Corinthians 6:19",
+   "start": "1CO.6.19",
+   "end": "1CO.6.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.19-21.1",
+   "at": 1165,
+   "text": "2 Corinthians 6:16",
+   "start": "2CO.6.16",
+   "end": "2CO.6.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.20.1",
+   "at": 78,
+   "text": "Daniel 9:25",
+   "start": "DAN.9.25",
+   "end": "DAN.9.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.20.1",
+   "at": 654,
+   "text": "Haggai 1:4",
+   "start": "HAG.1.4",
+   "end": "HAG.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.25.1",
+   "at": 993,
+   "text": "1 Corinthians 13:5",
+   "start": "1CO.13.5",
+   "end": "1CO.13.5",
+   "found": "source",
+   "status": "detected"
   }
  ]
 }

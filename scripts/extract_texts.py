@@ -39,9 +39,12 @@ import find_refs
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # The verse a homily or tractate opens on, as its heading prints it.
-# "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5".
+# "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5",
+# "Chapter II. 23–25; III. 1–5".
 OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
-                   r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?)$")
+                   r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"
+                   # and on into the next chapter: "Chapter II. 23–25; III. 1–5"
+                   r"(?:;\s*(?P<CH2>[IVXL]+)\.\s+(?P<c>\d+)(?:[–-](?P<d>\d+))?)?)$")
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13."
 VER = re.compile(r"^(?:\[\d+\.\]\s*)?Ver\.\s+(\d+)\.")
 
@@ -72,6 +75,7 @@ def derive():
         books = {os.path.basename(c)[:-5] for c in comment_files}       # the book the work comments on
         book = books.pop() if len(books) == 1 else None
         paras, number, title, chapter, start_chapter, verse, span = [], None, None, None, None, None, None
+        heading_end = None                   # where a heading that crosses a chapter says the text ends
         for i, (a, b) in enumerate(zip(starts, starts[1:])):
             words = " ".join(text[a:b].split())
             if not words:
@@ -86,6 +90,8 @@ def derive():
                 chapter = start_chapter = find_refs.scripture.roman(o["ch"] or o["CH"])
                 first = int(o["v"] or o["a"])
                 span = [first, int(o["v2"] or o["b"] or first)]
+                if o["CH2"]:
+                    heading_end = (find_refs.scripture.roman(o["CH2"]), int(o["d"] or o["c"]))
                 # A heading with a range ("Chapter I. 1–5") says what the whole
                 # text covers, not which verse each paragraph is on.
                 verse = span[0] if span[0] == span[1] else None
@@ -116,7 +122,8 @@ def derive():
             problems.append(f"{f['path']}: no heading names the verse it opens on")
             continue
         out[dest] = {"work": work["id"], "locus": str(number), "title": title, "source": source, "url": f["url"],
-                     "verses": {"start": f"{book}.{start_chapter}.{span[0]}", "end": f"{book}.{chapter}.{span[1]}"},
+                     "verses": {"start": f"{book}.{start_chapter}.{span[0]}",
+                                "end": "{}.{}.{}".format(book, *max((chapter, span[1]), heading_end or (0, 0)))},
                      "paragraphs": paras}
     return out, problems
 
