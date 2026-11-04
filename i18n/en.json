@@ -240,7 +240,10 @@
     "not_pinned": "(the passage is not pinned down)",
     "quoted_by": "Quoted by {name} in the {title} on {ref}",
     "full_text_short": "full text",
-    "whole_texts": "Read in full on this verse"
+    "whole_texts": "Read in full on this verse",
+    "loading": "Loading…",
+    "panel_failed": "This could not be loaded.",
+    "try_again": "Try again"
   },
   "commentators": {
     "title": "Commentators",
