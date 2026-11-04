@@ -513,6 +513,96 @@
    "kind": "digital",
    "download_sha256": "b161370e21214e6b9bdbeb0b56399eedb25ebdfca342bb424c26a694b8060515",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.xiii.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.xiii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "9db41b3bfdde57ef0504502305686ef97cb1236fad03d144d80a9bcb78b6bf1d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.xiv.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.xiv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "d20ae9af9a616b4331194a9ab758903d828d264f78129b4d57532f58a6258272",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine/npnf107.iii.xv.html",
+   "work": "augustine",
+   "url": "https://www.ccel.org/ccel/schaff/npnf107.iii.xv.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "0ebfa9c46dcfeaa3dbce6e1eba2713af88c98a6b436b442959f5dbd413b9886e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.xxvii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xxvii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "5bc10325cfe48bc4f6b2a79f74fc657f2a0003aca8e4e36c6463aa52b309c5d8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.xxviii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xxviii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "12114546f949460bc022f304bd5299b2dbe104b8812c89f432a9338d173b334b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.xxix.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xxix.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "2f20e22c5238a0360c19d5cc3cba25384128560c369f60a5547231af93b012c3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.xxx.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xxx.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "28dd323d29c499e307d53164375c2e4a17e1f2c68cd766b3fa598c62e333c085",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.xxxi.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xxxi.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "261c19780191b08fefc09e92bd0c3becac0342ab420356987f751781c63180d7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.xxxii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xxxii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "363a6a8f90d5b80bcbad35261ee11be183c14e1e241d56d2f516fa1bb266f847",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom/npnf114.iv.xxxiii.html",
+   "work": "chrysostom",
+   "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.xxxiii.html",
+   "retrieved": "2026-11-04",
+   "kind": "digital",
+   "download_sha256": "93662158da885848caad11aec36929b3c55ffaaa83c3c0b8e7e0db61eebda8bf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
