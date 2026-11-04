@@ -11,7 +11,7 @@
    "source": "npnf114.iv.vi.html",
    "para": "iv.vi-p5",
    "excerpt": "chrysostom.JHN.1.1.3",
-   "score": 0.52,
+   "score": 0.51,
    "found": "similar",
    "status": "detected"
   },
@@ -55,6 +55,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.1.6.1",
+   "at": 172,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "6",
+   "source": "npnf114.iv.viii.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.35,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.1.8.1",
    "at": 0,
    "label": "CHRYS.",
@@ -63,7 +76,7 @@
    "source": "npnf114.iv.viii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.33,
+   "score": 0.32,
    "found": "similar",
    "status": "detected"
   },
@@ -76,7 +89,7 @@
    "source": "npnf107.iii.iii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.24,
+   "score": 0.23,
    "found": "similar",
    "status": "detected"
   },
@@ -89,7 +102,7 @@
    "source": "npnf107.iii.iii.html",
    "para": "iii.iii-p24",
    "excerpt": "augustine.JHN.1.10.2",
-   "score": 0.56,
+   "score": 0.55,
    "found": "similar",
    "status": "detected"
   },
@@ -128,7 +141,7 @@
    "source": "npnf114.iv.xii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.27,
+   "score": 0.26,
    "found": "similar",
    "status": "detected"
   },
@@ -141,7 +154,7 @@
    "source": "npnf114.iv.xiii.html",
    "para": "iv.xiii-p20",
    "excerpt": "chrysostom.JHN.1.14.1",
-   "score": 0.44,
+   "score": 0.45,
    "found": "similar",
    "status": "detected"
   },
@@ -154,7 +167,7 @@
    "source": "npnf107.iii.iii.html",
    "para": "iii.iii-p34",
    "excerpt": "augustine.JHN.1.14.1",
-   "score": 0.49,
+   "score": 0.48,
    "found": "similar",
    "status": "detected"
   },
@@ -193,7 +206,7 @@
    "source": "npnf107.iii.iv.html",
    "para": null,
    "excerpt": null,
-   "score": 0.23,
+   "score": 0.22,
    "found": "similar",
    "status": "detected"
   },
@@ -232,7 +245,7 @@
    "source": "npnf114.iv.xviii.html",
    "para": "iv.xviii-p31",
    "excerpt": "chrysostom.JHN.1.26-27.1",
-   "score": 0.49,
+   "score": 0.48,
    "found": "similar",
    "status": "detected"
   },
@@ -245,7 +258,7 @@
    "source": "npnf114.iv.xviii.html",
    "para": "iv.xviii-p31",
    "excerpt": "chrysostom.JHN.1.26-27.1",
-   "score": 0.44,
+   "score": 0.43,
    "found": "similar",
    "status": "detected"
   },
@@ -310,7 +323,7 @@
    "source": "npnf107.iii.vi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.55,
+   "score": 0.54,
    "found": "similar",
    "status": "detected"
   },
@@ -337,19 +350,6 @@
    "para": null,
    "excerpt": null,
    "score": 0.28,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
-   "in": "catena.JHN.1.35-36.1",
-   "at": 197,
-   "label": "CHRYS.",
-   "work": "chrysostom",
-   "locus": "18",
-   "source": "npnf114.iv.xx.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.23,
    "found": "similar",
    "status": "detected"
   },
@@ -427,7 +427,7 @@
    "source": "npnf114.iv.xx.html",
    "para": "iv.xx-p32",
    "excerpt": "chrysostom.JHN.1.40.1",
-   "score": 0.44,
+   "score": 0.45,
    "found": "similar",
    "status": "detected"
   },
@@ -440,7 +440,7 @@
    "source": "npnf107.iii.viii.html",
    "para": "iii.viii-p35",
    "excerpt": "augustine.JHN.1.40-41.1",
-   "score": 0.51,
+   "score": 0.5,
    "found": "similar",
    "status": "detected"
   },
@@ -466,7 +466,7 @@
    "source": "npnf114.iv.xxii.html",
    "para": "iv.xxii-p4",
    "excerpt": "chrysostom.JHN.1.43-44.1",
-   "score": 0.56,
+   "score": 0.57,
    "found": "similar",
    "status": "detected"
   },
@@ -531,7 +531,7 @@
    "source": "npnf114.iv.xxii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.34,
+   "score": 0.33,
    "found": "similar",
    "status": "detected"
   },
@@ -570,7 +570,7 @@
    "source": "npnf107.iii.viii.html",
    "para": "iii.viii-p48",
    "excerpt": "augustine.JHN.1.48.1",
-   "score": 0.57,
+   "score": 0.56,
    "found": "similar",
    "status": "detected"
   },
@@ -609,7 +609,7 @@
    "source": "npnf107.iii.viii.html",
    "para": "iii.viii-p55",
    "excerpt": "augustine.JHN.1.51.1",
-   "score": 0.61,
+   "score": 0.6,
    "found": "similar",
    "status": "detected"
   },
@@ -622,7 +622,7 @@
    "source": "npnf114.iv.xxiii.html",
    "para": "iv.xxiii-p16",
    "excerpt": "chrysostom.JHN.2.1-2.1",
-   "score": 0.6,
+   "score": 0.61,
    "found": "similar",
    "status": "detected"
   },
@@ -635,7 +635,7 @@
    "source": "npnf107.iii.ix.html",
    "para": "iii.ix-p8",
    "excerpt": "augustine.JHN.2.1-2.1",
-   "score": 0.75,
+   "score": 0.74,
    "found": "similar",
    "status": "detected"
   },
@@ -661,20 +661,7 @@
    "source": "npnf114.iv.xxiii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.34,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
-   "in": "catena.JHN.2.4.1",
-   "at": 881,
-   "label": "AUG.",
-   "work": "augustine",
-   "locus": "8",
-   "source": "npnf107.iii.ix.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.35,
+   "score": 0.33,
    "found": "similar",
    "status": "detected"
   },
@@ -804,7 +791,7 @@
    "source": "npnf114.iv.xxv.html",
    "para": "iv.xxv-p20",
    "excerpt": "chrysostom.JHN.2.12.1",
-   "score": 0.49,
+   "score": 0.5,
    "found": "similar",
    "status": "detected"
   },
@@ -856,7 +843,7 @@
    "source": "npnf107.iii.xi.html",
    "para": "iii.xi-p22",
    "excerpt": "augustine.JHN.2.14-16.1",
-   "score": 0.67,
+   "score": 0.69,
    "found": "similar",
    "status": "detected"
   },
@@ -869,7 +856,7 @@
    "source": "npnf107.iii.xi.html",
    "para": null,
    "excerpt": null,
-   "score": 0.45,
+   "score": 0.46,
    "found": "similar",
    "status": "detected"
   },
@@ -895,7 +882,7 @@
    "source": "npnf107.iii.xi.html",
    "para": "iii.xi-p16",
    "excerpt": "augustine.JHN.2.13-16.1",
-   "score": 0.57,
+   "score": 0.58,
    "found": "similar",
    "status": "detected"
   },
@@ -921,7 +908,7 @@
    "source": "npnf107.iii.xi.html",
    "para": "iii.xi-p35",
    "excerpt": "augustine.JHN.2.17.1",
-   "score": 0.45,
+   "score": 0.43,
    "found": "similar",
    "status": "detected"
   },
@@ -999,7 +986,7 @@
    "source": "npnf107.iii.xii.html",
    "para": null,
    "excerpt": null,
-   "score": 0.37,
+   "score": 0.36,
    "found": "similar",
    "status": "detected"
   },
