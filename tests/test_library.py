@@ -186,6 +186,16 @@ class Site(unittest.TestCase):
         for page in ("signed-in/index.html", "saved/index.html"):
             self.assertIn('<meta name="robots" content="noindex">', self.read(page), page)
 
+    def test_the_not_found_page(self):
+        text = self.read("404.html")
+        self.assertIn("<title>Page not found · Logia</title>", text)
+        self.assertIn('<meta name="robots" content="noindex">', text)
+        self.assertNotIn('rel="canonical"', text)
+        # Served at any depth, so nothing may be linked relatively.
+        for link in re.findall(r'(?:href|src)="([^"]+)"', text):
+            self.assertTrue(link.startswith(("/", "https://", "#")), link)
+        self.assertNotIn("/404.html", self.read("sitemap.xml"))
+
     def test_the_saved_page_has_each_chapter_s_comments(self):
         data = json.loads(self.read(os.path.join("data", "JHN.1.json")))
         self.assertEqual(data["bookName"], "John")

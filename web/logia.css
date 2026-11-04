@@ -255,3 +255,8 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-by-verse li > a b { font-family: var(--display); font-size: 17px; font-weight: 600; }
 .lg-whole p.lg-verse { font-family: var(--sans); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; margin: 1.4em 0 .4em; }
 .lg-whole p.lg-verse a { text-decoration: none; }
+
+/* The page-not-found page (/404.html): the sign-in card's layout, two links stacked. */
+.lg-not-found .mark { display: block; margin: 0 auto; }
+.lg-not-found-links { display: grid; gap: 10px; margin: 8px 0 0; }
+.lg-not-found-links .button { box-sizing: border-box; width: 100%; justify-content: center; }
