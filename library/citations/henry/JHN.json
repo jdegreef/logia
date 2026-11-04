@@ -8650,6 +8650,4371 @@
    "end": "JHN.13.18",
    "found": "source",
    "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.1.1",
+   "at": 94,
+   "text": "v. 1",
+   "start": "JHN.7.1",
+   "end": "JHN.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.1.1",
+   "at": 222,
+   "text": "ch. v. 16",
+   "start": "JHN.5.16",
+   "end": "JHN.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.1.1",
+   "at": 1088,
+   "text": "Matt. x. 23",
+   "start": "MAT.10.23",
+   "end": "MAT.10.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.2.1",
+   "at": 46,
+   "text": "v. 2",
+   "start": "JHN.7.2",
+   "end": "JHN.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.2.1",
+   "at": 181,
+   "text": "Lev. xxiii. 34",
+   "start": "LEV.23.34",
+   "end": "LEV.23.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.2.1",
+   "at": 245,
+   "text": "Neh. viii. 14",
+   "start": "NEH.8.14",
+   "end": "NEH.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.3-4.1",
+   "at": 140,
+   "text": "v. 3",
+   "start": "JHN.7.3",
+   "end": "JHN.7.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.5.1",
+   "at": 173,
+   "text": "v. 5",
+   "start": "JHN.7.5",
+   "end": "JHN.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.5.2",
+   "at": 512,
+   "text": "ch. xi. 8",
+   "start": "JHN.11.8",
+   "end": "JHN.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.6-8.1",
+   "at": 114,
+   "text": "v. 6-8",
+   "start": "JHN.7.6",
+   "end": "JHN.7.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.6-8.2",
+   "at": 739,
+   "text": "Luke x. 1",
+   "start": "LUK.10.1",
+   "end": "LUK.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.6-8.3",
+   "at": 667,
+   "text": "v. 7",
+   "start": "JHN.7.7",
+   "end": "JHN.7.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.6-8.3",
+   "at": 898,
+   "text": "ch. xv. 19",
+   "start": "JHN.15.19",
+   "end": "JHN.15.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.7.1",
+   "at": 953,
+   "text": "Rev. xi. 10",
+   "start": "REV.11.10",
+   "end": "REV.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.8.1",
+   "at": 79,
+   "text": "v. 8",
+   "start": "JHN.7.8",
+   "end": "JHN.7.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.8.1",
+   "at": 906,
+   "text": "Exod. xxxiii. 1-3",
+   "start": "EXO.33.1",
+   "end": "EXO.33.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.8.1",
+   "at": 1458,
+   "text": "Num. ix. 6-11",
+   "start": "NUM.9.6",
+   "end": "NUM.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.9.1",
+   "at": 64,
+   "text": "v. 9",
+   "start": "JHN.7.9",
+   "end": "JHN.7.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.10.1",
+   "at": 363,
+   "text": "Isa. xlii. 2",
+   "start": "ISA.42.2",
+   "end": "ISA.42.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.10.1",
+   "at": 935,
+   "text": "Luke xviii. 11",
+   "start": "LUK.18.11",
+   "end": "LUK.18.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.10.1",
+   "at": 1575,
+   "text": "Luke xvii. 20",
+   "start": "LUK.17.20",
+   "end": "LUK.17.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.11.1",
+   "at": 38,
+   "text": "v. 11",
+   "start": "JHN.7.11",
+   "end": "JHN.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.11.1",
+   "at": 1190,
+   "text": "1 Sam. xx. 27",
+   "start": "1SA.20.27",
+   "end": "1SA.20.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.12.1",
+   "at": 66,
+   "text": "v. 12",
+   "start": "JHN.7.12",
+   "end": "JHN.7.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.12.1",
+   "at": 1027,
+   "text": "Luke xii. 51, 52",
+   "start": "LUK.12.51",
+   "end": "LUK.12.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.12.1",
+   "at": 1355,
+   "text": "Ezek. xxxvii. 7",
+   "start": "EZK.37.7",
+   "end": "EZK.37.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.12-13.1",
+   "at": 1220,
+   "text": "v. 13",
+   "start": "JHN.7.13",
+   "end": "JHN.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.14.1",
+   "at": 53,
+   "text": "v. 14",
+   "start": "JHN.7.14",
+   "end": "JHN.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.14.1",
+   "at": 1227,
+   "text": "Matt. xxv. 6",
+   "start": "MAT.25.6",
+   "end": "MAT.25.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.14.1",
+   "at": 1463,
+   "text": "Isa. l. 7, 8",
+   "start": "ISA.50.7",
+   "end": "ISA.50.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.14.2",
+   "at": 102,
+   "text": "Neh. viii. 17, 18",
+   "start": "NEH.8.17",
+   "end": "NEH.8.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.14.2",
+   "at": 392,
+   "text": "Ezek. xxxiv. 22, 23",
+   "start": "EZK.34.22",
+   "end": "EZK.34.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.14.2",
+   "at": 413,
+   "text": "Mal. iii. 1",
+   "start": "MAL.3.1",
+   "end": "MAL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.15.1",
+   "at": 30,
+   "text": "v. 15",
+   "start": "JHN.7.15",
+   "end": "JHN.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.16.1",
+   "at": 34,
+   "text": "v. 16",
+   "start": "JHN.7.16",
+   "end": "JHN.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.16.1",
+   "at": 894,
+   "text": "Deut. xviii. 18",
+   "start": "DEU.18.18",
+   "end": "DEU.18.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.17.1",
+   "at": 183,
+   "text": "v. 17",
+   "start": "JHN.7.17",
+   "end": "JHN.7.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.17.2",
+   "at": 393,
+   "text": "Ps. cxi. 10",
+   "start": "PSA.111.10",
+   "end": "PSA.111.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.18.1",
+   "at": 115,
+   "text": "v. 18",
+   "start": "JHN.7.18",
+   "end": "JHN.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.19.1",
+   "at": 93,
+   "text": "v. 19",
+   "start": "JHN.7.19",
+   "end": "JHN.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.20.1",
+   "at": 88,
+   "text": "v. 20",
+   "start": "JHN.7.20",
+   "end": "JHN.7.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.21.1",
+   "at": 100,
+   "text": "v. 21",
+   "start": "JHN.7.21",
+   "end": "JHN.7.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.22.1",
+   "at": 153,
+   "text": "v. 23",
+   "start": "JHN.7.23",
+   "end": "JHN.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.22.1",
+   "at": 530,
+   "text": "ch. vi. 32",
+   "start": "JHN.6.32",
+   "end": "JHN.6.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.22.1",
+   "at": 636,
+   "text": "v. 22",
+   "start": "JHN.7.22",
+   "end": "JHN.7.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.22.1",
+   "at": 860,
+   "text": "Gal. iii. 17",
+   "start": "GAL.3.17",
+   "end": "GAL.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.22.1",
+   "at": 1127,
+   "text": "Gal. iii. 14",
+   "start": "GAL.3.14",
+   "end": "GAL.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.23.1",
+   "at": 96,
+   "text": "v. 23",
+   "start": "JHN.7.23",
+   "end": "JHN.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.24.1",
+   "at": 43,
+   "text": "v. 24",
+   "start": "JHN.7.24",
+   "end": "JHN.7.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.24.1",
+   "at": 357,
+   "text": "Deut. i. 17",
+   "start": "DEU.1.17",
+   "end": "DEU.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.24.1",
+   "at": 1143,
+   "text": "Matt. xxiii. 27, 28",
+   "start": "MAT.23.27",
+   "end": "MAT.23.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.24.1",
+   "at": 1479,
+   "text": "Phil. ii. 7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.24.1",
+   "at": 1530,
+   "text": "Rom. viii. 3",
+   "start": "ROM.8.3",
+   "end": "ROM.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.24.2",
+   "at": 704,
+   "text": "Isa. xi. 3",
+   "start": "ISA.11.3",
+   "end": "ISA.11.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.24.2",
+   "at": 720,
+   "text": "1 Sam. xvi. 7",
+   "start": "1SA.16.7",
+   "end": "1SA.16.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.25.1",
+   "at": 148,
+   "text": "v. 25",
+   "start": "JHN.7.25",
+   "end": "JHN.7.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.25-26.1",
+   "at": 294,
+   "text": "v. 20",
+   "start": "JHN.7.20",
+   "end": "JHN.7.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.25-26.1",
+   "at": 655,
+   "text": "v. 26",
+   "start": "JHN.7.26",
+   "end": "JHN.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.26.1",
+   "at": 295,
+   "text": "Matt. xxiii. 15",
+   "start": "MAT.23.15",
+   "end": "MAT.23.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.27.1",
+   "at": 102,
+   "text": "v. 27",
+   "start": "JHN.7.27",
+   "end": "JHN.7.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.27.1",
+   "at": 679,
+   "text": "Mic. v. 2",
+   "start": "MIC.5.2",
+   "end": "MIC.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.27.1",
+   "at": 1099,
+   "text": "Matt. ii. 4, 5",
+   "start": "MAT.2.4",
+   "end": "MAT.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.28-29.1",
+   "at": 40,
+   "text": "v. 28, 29",
+   "start": "JHN.7.28",
+   "end": "JHN.7.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.30.1",
+   "at": 99,
+   "text": "v. 30",
+   "start": "JHN.7.30",
+   "end": "JHN.7.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.30.1",
+   "at": 691,
+   "text": "Rev. xi. 10",
+   "start": "REV.11.10",
+   "end": "REV.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.31.1",
+   "at": 99,
+   "text": "v. 31",
+   "start": "JHN.7.31",
+   "end": "JHN.7.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.31.1",
+   "at": 302,
+   "text": "1 Thess. ii. 2",
+   "start": "1TH.2.2",
+   "end": "1TH.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.31.1",
+   "at": 822,
+   "text": "1 Cor. i. 26",
+   "start": "1CO.1.26",
+   "end": "1CO.1.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.31.1",
+   "at": 975,
+   "text": "Isa. xxxv. 5, 6",
+   "start": "ISA.35.5",
+   "end": "ISA.35.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.32.1",
+   "at": 64,
+   "text": "v. 32",
+   "start": "JHN.7.32",
+   "end": "JHN.7.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.33-34.1",
+   "at": 47,
+   "text": "v. 33, 34",
+   "start": "JHN.7.33",
+   "end": "JHN.7.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.33-34.1",
+   "at": 785,
+   "text": "ch. xvii. 11",
+   "start": "JHN.17.11",
+   "end": "JHN.17.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.33-34.2",
+   "at": 803,
+   "text": "ch. iii. 13",
+   "start": "JHN.3.13",
+   "end": "JHN.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.33-34.3",
+   "at": 1256,
+   "text": "Prov. i. 28",
+   "start": "PRO.1.28",
+   "end": "PRO.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.33-34.4",
+   "at": 233,
+   "text": "Luke xvii. 22",
+   "start": "LUK.17.22",
+   "end": "LUK.17.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.37.1",
+   "at": 881,
+   "text": "Isa. lv. 1",
+   "start": "ISA.55.1",
+   "end": "ISA.55.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.37.2",
+   "at": 887,
+   "text": "Heb. x. 1",
+   "start": "HEB.10.1",
+   "end": "HEB.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.37-39.1",
+   "at": 51,
+   "text": "v. 37-39",
+   "start": "JHN.7.37",
+   "end": "JHN.7.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.37-39.1",
+   "at": 478,
+   "text": "Lev. xxiii. 36",
+   "start": "LEV.23.36",
+   "end": "LEV.23.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.37-39.1",
+   "at": 685,
+   "text": "Prov. i. 20",
+   "start": "PRO.1.20",
+   "end": "PRO.1.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.1",
+   "at": 53,
+   "text": "v. 38",
+   "start": "JHN.7.38",
+   "end": "JHN.7.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.1",
+   "at": 642,
+   "text": "ch. iv. 14",
+   "start": "JHN.4.14",
+   "end": "JHN.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.1",
+   "at": 1072,
+   "text": "Jer. ii. 13",
+   "start": "JER.2.13",
+   "end": "JER.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.2",
+   "at": 138,
+   "text": "1 John v. 10",
+   "start": "1JN.5.10",
+   "end": "1JN.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.2",
+   "at": 623,
+   "text": "Prov. x. 11",
+   "start": "PRO.10.11",
+   "end": "PRO.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 210,
+   "text": "Prov. i. 23",
+   "start": "PRO.1.23",
+   "end": "PRO.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 223,
+   "text": "Joel ii. 28",
+   "start": "JOL.2.28",
+   "end": "JOL.2.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 236,
+   "text": "Isa. xliv. 3",
+   "start": "ISA.44.3",
+   "end": "ISA.44.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 250,
+   "text": "Zech. xii. 10",
+   "start": "ZEC.12.10",
+   "end": "ZEC.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 316,
+   "text": "Isa. xli. 18",
+   "start": "ISA.41.18",
+   "end": "ISA.41.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 374,
+   "text": "Isa. xliii. 19",
+   "start": "ISA.43.19",
+   "end": "ISA.43.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 445,
+   "text": "Isa. lviii. 11",
+   "start": "ISA.58.11",
+   "end": "ISA.58.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 501,
+   "text": "Cant. iv. 15",
+   "start": "SNG.4.15",
+   "end": "SNG.4.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 590,
+   "text": "Ezek. xlvii. 1",
+   "start": "EZK.47.1",
+   "end": "EZK.47.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 614,
+   "text": "Rev. xxii. 1",
+   "start": "REV.22.1",
+   "end": "REV.22.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 636,
+   "text": "Zech. xiv. 8",
+   "start": "ZEC.14.8",
+   "end": "ZEC.14.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 1172,
+   "text": "Isa. xii. 3",
+   "start": "ISA.12.3",
+   "end": "ISA.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.38.3",
+   "at": 1185,
+   "text": "lv. 1",
+   "start": "ISA.55.1",
+   "end": "ISA.55.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.1",
+   "at": 56,
+   "text": "v. 39",
+   "start": "JHN.7.39",
+   "end": "JHN.7.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.1",
+   "at": 428,
+   "text": "Mark xvi. 17, 18",
+   "start": "MRK.16.17",
+   "end": "MRK.16.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.1",
+   "at": 570,
+   "text": "Acts ii. 39",
+   "start": "ACT.2.39",
+   "end": "ACT.2.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.1",
+   "at": 911,
+   "text": "ch. iii. 5",
+   "start": "JHN.3.5",
+   "end": "JHN.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.1",
+   "at": 1016,
+   "text": "Acts ii. 4",
+   "start": "ACT.2.4",
+   "end": "ACT.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.2",
+   "at": 579,
+   "text": "Isa. xlii. 1",
+   "start": "ISA.42.1",
+   "end": "ISA.42.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.2",
+   "at": 612,
+   "text": "Isa. liii. 11",
+   "start": "ISA.53.11",
+   "end": "ISA.53.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.2",
+   "at": 646,
+   "text": "1 Tim. iii. 16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.2",
+   "at": 1198,
+   "text": "Joel ii. 28",
+   "start": "JOL.2.28",
+   "end": "JOL.2.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.2",
+   "at": 1229,
+   "text": "Acts ii. 1",
+   "start": "ACT.2.1",
+   "end": "ACT.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.3",
+   "at": 790,
+   "text": "ch. xiii. 31",
+   "start": "JHN.13.31",
+   "end": "JHN.13.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.3",
+   "at": 1374,
+   "text": "ch. xiv. 16",
+   "start": "JHN.14.16",
+   "end": "JHN.14.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.4",
+   "at": 97,
+   "text": "ch. xii. 23",
+   "start": "JHN.12.23",
+   "end": "JHN.12.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.39.4",
+   "at": 408,
+   "text": "Acts i. 4",
+   "start": "ACT.1.4",
+   "end": "ACT.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.40-41.1",
+   "at": 669,
+   "text": "v. 41",
+   "start": "JHN.7.41",
+   "end": "JHN.7.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.41-42.1",
+   "at": 581,
+   "text": "Isa. xi. 1",
+   "start": "ISA.11.1",
+   "end": "ISA.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.41-42.1",
+   "at": 643,
+   "text": "Mic. v. 2",
+   "start": "MIC.5.2",
+   "end": "MIC.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.43.1",
+   "at": 164,
+   "text": "v. 43",
+   "start": "JHN.7.43",
+   "end": "JHN.7.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.44.1",
+   "at": 67,
+   "text": "v. 44",
+   "start": "JHN.7.44",
+   "end": "JHN.7.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.45.1",
+   "at": 540,
+   "text": "v. 32",
+   "start": "JHN.7.32",
+   "end": "JHN.7.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.46.1",
+   "at": 109,
+   "text": "v. 46",
+   "start": "JHN.7.46",
+   "end": "JHN.7.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.47.1",
+   "at": 77,
+   "text": "v. 47",
+   "start": "JHN.7.47",
+   "end": "JHN.7.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.48.1",
+   "at": 396,
+   "text": "Matt. ix. 18",
+   "start": "MAT.9.18",
+   "end": "MAT.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.48.1",
+   "at": 484,
+   "text": "ch. xii. 42",
+   "start": "JHN.12.42",
+   "end": "JHN.12.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.49.1",
+   "at": 79,
+   "text": "v. 43",
+   "start": "JHN.7.43",
+   "end": "JHN.7.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.49.2",
+   "at": 324,
+   "text": "Ps. cxix. 99, 100",
+   "start": "PSA.119.99",
+   "end": "PSA.119.100",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.49.2",
+   "at": 602,
+   "text": "Luke xi. 52",
+   "start": "LUK.11.52",
+   "end": "LUK.11.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.50.1",
+   "at": 72,
+   "text": "v. 50",
+   "start": "JHN.7.50",
+   "end": "JHN.7.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.50.2",
+   "at": 113,
+   "text": "v. 50",
+   "start": "JHN.7.50",
+   "end": "JHN.7.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.51.1",
+   "at": 48,
+   "text": "v. 51",
+   "start": "JHN.7.51",
+   "end": "JHN.7.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.51.1",
+   "at": 510,
+   "text": "ch. iii.",
+   "start": "JHN.3.1",
+   "end": "JHN.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.7.52.1",
+   "at": 481,
+   "text": "v. 52",
+   "start": "JHN.7.52",
+   "end": "JHN.7.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.1.1",
+   "at": 50,
+   "text": "v. 1",
+   "start": "JHN.8.1",
+   "end": "JHN.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.1.1",
+   "at": 502,
+   "text": "ch. vii. 53",
+   "start": "JHN.7.53",
+   "end": "JHN.7.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.1.1",
+   "at": 960,
+   "text": "Isa. xlix. 2",
+   "start": "ISA.49.2",
+   "end": "ISA.49.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.2.1",
+   "at": 68,
+   "text": "v. 2",
+   "start": "JHN.8.2",
+   "end": "JHN.8.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.3.1",
+   "at": 39,
+   "text": "v. 3",
+   "start": "JHN.8.3",
+   "end": "JHN.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.4.1",
+   "at": 86,
+   "text": "v. 4",
+   "start": "JHN.8.4",
+   "end": "JHN.8.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.4.1",
+   "at": 233,
+   "text": "Luke xx. 20",
+   "start": "LUK.20.20",
+   "end": "LUK.20.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.4.1",
+   "at": 537,
+   "text": "Job xxxi. 9-11",
+   "start": "JOB.31.9",
+   "end": "JOB.31.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.4.1",
+   "at": 553,
+   "text": "Gen. xxxviii. 24",
+   "start": "GEN.38.24",
+   "end": "GEN.38.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.4.1",
+   "at": 798,
+   "text": "Matt. xxiii. 27, 28",
+   "start": "MAT.23.27",
+   "end": "MAT.23.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.5.1",
+   "at": 95,
+   "text": "v. 5",
+   "start": "JHN.8.5",
+   "end": "JHN.8.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.5.1",
+   "at": 206,
+   "text": "Lev. xx. 10",
+   "start": "LEV.20.10",
+   "end": "LEV.20.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.5.1",
+   "at": 219,
+   "text": "Deut. xxii. 22",
+   "start": "DEU.22.22",
+   "end": "DEU.22.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.5.1",
+   "at": 349,
+   "text": "Deut. xxii. 21",
+   "start": "DEU.22.21",
+   "end": "DEU.22.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.5.2",
+   "at": 469,
+   "text": "v. 6",
+   "start": "JHN.8.6",
+   "end": "JHN.8.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.6.1",
+   "at": 1401,
+   "text": "Ps. xxxviii. 13",
+   "start": "PSA.38.13",
+   "end": "PSA.38.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.7.1",
+   "at": 145,
+   "text": "v. 7",
+   "start": "JHN.8.7",
+   "end": "JHN.8.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.7.1",
+   "at": 846,
+   "text": "Ps. lxxviii. 65",
+   "start": "PSA.78.65",
+   "end": "PSA.78.65",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.7.2",
+   "at": 820,
+   "text": "Deut. xvii. 7",
+   "start": "DEU.17.7",
+   "end": "DEU.17.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.7.2",
+   "at": 866,
+   "text": "Acts vii. 58",
+   "start": "ACT.7.58",
+   "end": "ACT.7.58",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.7.3",
+   "at": 1418,
+   "text": "Matt. vii. 5",
+   "start": "MAT.7.5",
+   "end": "MAT.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.7.4",
+   "at": 148,
+   "text": "Num. v. 15",
+   "start": "NUM.5.15",
+   "end": "NUM.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.8.1",
+   "at": 125,
+   "text": "v. 8",
+   "start": "JHN.8.8",
+   "end": "JHN.8.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.8.1",
+   "at": 684,
+   "text": "Jer. viii. 6",
+   "start": "JER.8.6",
+   "end": "JER.8.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.8.1",
+   "at": 971,
+   "text": "Job xiv. 17",
+   "start": "JOB.14.17",
+   "end": "JOB.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.8.1",
+   "at": 1101,
+   "text": "Jer. xvii. 1",
+   "start": "JER.17.1",
+   "end": "JER.17.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.9.1",
+   "at": 240,
+   "text": "v. 9",
+   "start": "JHN.8.9",
+   "end": "JHN.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.9.2",
+   "at": 493,
+   "text": "2 Sam. xix. 3",
+   "start": "2SA.19.3",
+   "end": "2SA.19.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.9.2",
+   "at": 1009,
+   "text": "Heb. iv. 12",
+   "start": "HEB.4.12",
+   "end": "HEB.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.9.2",
+   "at": 1513,
+   "text": "Gen. xxxviii. 23",
+   "start": "GEN.38.23",
+   "end": "GEN.38.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.9.4",
+   "at": 404,
+   "text": "v. 3",
+   "start": "JHN.8.3",
+   "end": "JHN.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.1",
+   "at": 131,
+   "text": "v. 10, 11",
+   "start": "JHN.8.10",
+   "end": "JHN.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.1",
+   "at": 421,
+   "text": "Ps. vii. 6",
+   "start": "PSA.7.6",
+   "end": "PSA.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.3",
+   "at": 1255,
+   "text": "Deut. xxxii. 26, 27",
+   "start": "DEU.32.26",
+   "end": "DEU.32.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.4",
+   "at": 597,
+   "text": "Luke vii. 48, 50",
+   "start": "LUK.7.48",
+   "end": "LUK.7.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.4",
+   "at": 597,
+   "text": "Luke vii. 48, 50",
+   "start": "LUK.7.50",
+   "end": "LUK.7.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.4",
+   "at": 972,
+   "text": "Ps. lxxxv. 8",
+   "start": "PSA.85.8",
+   "end": "PSA.85.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.4",
+   "at": 986,
+   "text": "Isa. lv. 7",
+   "start": "ISA.55.7",
+   "end": "ISA.55.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.10-11.4",
+   "at": 1270,
+   "text": "Rom. vi. 1, 2",
+   "start": "ROM.6.1",
+   "end": "ROM.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.12.1",
+   "at": 59,
+   "text": "v. 12",
+   "start": "JHN.8.12",
+   "end": "JHN.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.12.1",
+   "at": 487,
+   "text": "Dan. ii. 22",
+   "start": "DAN.2.22",
+   "end": "DAN.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.12.1",
+   "at": 676,
+   "text": "Luke ii. 32",
+   "start": "LUK.2.32",
+   "end": "LUK.2.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.13.1",
+   "at": 162,
+   "text": "v. 13",
+   "start": "JHN.8.13",
+   "end": "JHN.8.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.14.1",
+   "at": 39,
+   "text": "v. 14",
+   "start": "JHN.8.14",
+   "end": "JHN.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.14.1",
+   "at": 248,
+   "text": "ch. v. 31",
+   "start": "JHN.5.31",
+   "end": "JHN.5.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.14.1",
+   "at": 1215,
+   "text": "ch. xvi. 28",
+   "start": "JHN.16.28",
+   "end": "JHN.16.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.14.1",
+   "at": 1271,
+   "text": "ch. xvii. 5",
+   "start": "JHN.17.5",
+   "end": "JHN.17.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.14.2",
+   "at": 465,
+   "text": "Ps. xcii. 6",
+   "start": "PSA.92.6",
+   "end": "PSA.92.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.14.2",
+   "at": 687,
+   "text": "Jude, v. 8, 10",
+   "start": "JUD.1.8",
+   "end": "JUD.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.14.2",
+   "at": 735,
+   "text": "v. 15",
+   "start": "JHN.8.15",
+   "end": "JHN.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.15.1",
+   "at": 542,
+   "text": "ch. iii. 17",
+   "start": "JHN.3.17",
+   "end": "JHN.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 284,
+   "text": "Rom. ii. 2",
+   "start": "ROM.2.2",
+   "end": "ROM.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 893,
+   "text": "Isa. xi. 2",
+   "start": "ISA.11.2",
+   "end": "ISA.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 972,
+   "text": "Zech. vi. 13",
+   "start": "ZEC.6.13",
+   "end": "ZEC.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 1070,
+   "text": "Ps. lxxxix. 21",
+   "start": "PSA.89.21",
+   "end": "PSA.89.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 1091,
+   "text": "Isa. xlii. 1",
+   "start": "ISA.42.1",
+   "end": "ISA.42.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 1202,
+   "text": "ch. v. 17, and xiv. 9, 10",
+   "start": "JHN.5.17",
+   "end": "JHN.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 1353,
+   "text": "Exod. iii. 10, 12",
+   "start": "EXO.3.10",
+   "end": "EXO.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.16.1",
+   "at": 1353,
+   "text": "Exod. iii. 10, 12",
+   "start": "EXO.3.12",
+   "end": "EXO.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.17.1",
+   "at": 42,
+   "text": "v. 17",
+   "start": "JHN.8.17",
+   "end": "JHN.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.17.1",
+   "at": 201,
+   "text": "1 Kings xxi. 10",
+   "start": "1KI.21.10",
+   "end": "1KI.21.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.17.1",
+   "at": 415,
+   "text": "Deut. xvii. 6",
+   "start": "DEU.17.6",
+   "end": "DEU.17.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.17.1",
+   "at": 519,
+   "text": "Deut. ix. 15",
+   "start": "DEU.9.15",
+   "end": "DEU.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.17.1",
+   "at": 533,
+   "text": "Num. xxxv. 30",
+   "start": "NUM.35.30",
+   "end": "NUM.35.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.18.1",
+   "at": 42,
+   "text": "v. 18",
+   "start": "JHN.8.18",
+   "end": "JHN.8.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.18.1",
+   "at": 829,
+   "text": "1 John v. 7, 9-11",
+   "start": "1JN.5.7",
+   "end": "1JN.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.18.1",
+   "at": 829,
+   "text": "1 John v. 7, 9-11",
+   "start": "1JN.5.9",
+   "end": "1JN.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.19.1",
+   "at": 97,
+   "text": "v. 19",
+   "start": "JHN.8.19",
+   "end": "JHN.8.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.19.1",
+   "at": 799,
+   "text": "v. 15",
+   "start": "JHN.8.15",
+   "end": "JHN.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.19.2",
+   "at": 422,
+   "text": "Ps. lxxvi. 1",
+   "start": "PSA.76.1",
+   "end": "PSA.76.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.19.2",
+   "at": 696,
+   "text": "1 John ii. 13",
+   "start": "1JN.2.13",
+   "end": "1JN.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.19.2",
+   "at": 1104,
+   "text": "ch. xiv. 9",
+   "start": "JHN.14.9",
+   "end": "JHN.14.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.20.1",
+   "at": 954,
+   "text": "Amos, vii. 12, 13",
+   "start": "AMO.7.12",
+   "end": "AMO.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.21.1",
+   "at": 25,
+   "text": "v. 21",
+   "start": "JHN.8.21",
+   "end": "JHN.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.21.2",
+   "at": 813,
+   "text": "Rom. ix. 31, 32",
+   "start": "ROM.9.31",
+   "end": "ROM.9.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.21.2",
+   "at": 1192,
+   "text": "v. 24",
+   "start": "JHN.8.24",
+   "end": "JHN.8.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.21.2",
+   "at": 1488,
+   "text": "Ezek. iii. 19",
+   "start": "EZK.3.19",
+   "end": "EZK.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.21.3",
+   "at": 509,
+   "text": "Rev. xxii. 14",
+   "start": "REV.22.14",
+   "end": "REV.22.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.22.1",
+   "at": 126,
+   "text": "v. 22",
+   "start": "JHN.8.22",
+   "end": "JHN.8.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.22.1",
+   "at": 457,
+   "text": "Isa. xxviii. 13",
+   "start": "ISA.28.13",
+   "end": "ISA.28.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.22.1",
+   "at": 1027,
+   "text": "ch. vii. 34, 35",
+   "start": "JHN.7.34",
+   "end": "JHN.7.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.23.1",
+   "at": 85,
+   "text": "v. 23",
+   "start": "JHN.8.23",
+   "end": "JHN.8.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.24.1",
+   "at": 249,
+   "text": "v. 24",
+   "start": "JHN.8.24",
+   "end": "JHN.8.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.24.1",
+   "at": 372,
+   "text": "Exod. iii. 14",
+   "start": "EXO.3.14",
+   "end": "EXO.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.24.2",
+   "at": 595,
+   "text": "Mark xvi. 16",
+   "start": "MRK.16.16",
+   "end": "MRK.16.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.24.2",
+   "at": 854,
+   "text": "v. 21",
+   "start": "JHN.8.21",
+   "end": "JHN.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.1",
+   "at": 43,
+   "text": "v. 25",
+   "start": "JHN.8.25",
+   "end": "JHN.8.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 331,
+   "text": "Col. i. 18",
+   "start": "COL.1.18",
+   "end": "COL.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 343,
+   "text": "Rev. i. 8",
+   "start": "REV.1.8",
+   "end": "REV.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 354,
+   "text": "xxi. 6",
+   "start": "REV.21.6",
+   "end": "REV.21.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 362,
+   "text": "iii. 14",
+   "start": "REV.3.14",
+   "end": "REV.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 394,
+   "text": "v. 24",
+   "start": "JHN.8.24",
+   "end": "JHN.8.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 418,
+   "text": "Isa. xli. 4",
+   "start": "ISA.41.4",
+   "end": "ISA.41.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 623,
+   "text": "Rev. i. 8",
+   "start": "REV.1.8",
+   "end": "REV.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 1195,
+   "text": "ch. v. 17",
+   "start": "JHN.5.17",
+   "end": "JHN.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.25.2",
+   "at": 1225,
+   "text": "ch. iv. 26",
+   "start": "JHN.4.26",
+   "end": "JHN.4.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.26.1",
+   "at": 84,
+   "text": "v. 26",
+   "start": "JHN.8.26",
+   "end": "JHN.8.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.26.1",
+   "at": 726,
+   "text": "1 John iii. 20",
+   "start": "1JN.3.20",
+   "end": "1JN.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.26.1",
+   "at": 844,
+   "text": "Deut. xxxii. 34",
+   "start": "DEU.32.34",
+   "end": "DEU.32.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.26.2",
+   "at": 333,
+   "text": "Isa. lv. 4",
+   "start": "ISA.55.4",
+   "end": "ISA.55.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.26.2",
+   "at": 379,
+   "text": "Rev. iii. 14",
+   "start": "REV.3.14",
+   "end": "REV.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.26.2",
+   "at": 781,
+   "text": "Ps. ii. 7",
+   "start": "PSA.2.7",
+   "end": "PSA.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.26.2",
+   "at": 1022,
+   "text": "Deut. xviii. 19",
+   "start": "DEU.18.19",
+   "end": "DEU.18.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.27.1",
+   "at": 86,
+   "text": "v. 27",
+   "start": "JHN.8.27",
+   "end": "JHN.8.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.1",
+   "at": 56,
+   "text": "v. 28, 29",
+   "start": "JHN.8.28",
+   "end": "JHN.8.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.1",
+   "at": 211,
+   "text": "Isa. xxvi. 11",
+   "start": "ISA.26.11",
+   "end": "ISA.26.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.2",
+   "at": 151,
+   "text": "ch. iii. 14",
+   "start": "JHN.3.14",
+   "end": "JHN.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.2",
+   "at": 782,
+   "text": "ch. xii. 24",
+   "start": "JHN.12.24",
+   "end": "JHN.12.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.2",
+   "at": 1335,
+   "text": "Acts ii. 23",
+   "start": "ACT.2.23",
+   "end": "ACT.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.3",
+   "at": 529,
+   "text": "Luke xvii. 22",
+   "start": "LUK.17.22",
+   "end": "LUK.17.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.3",
+   "at": 972,
+   "text": "Acts ii. 36",
+   "start": "ACT.2.36",
+   "end": "ACT.2.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.28-29.3",
+   "at": 1443,
+   "text": "ch. xvi. 7, 8",
+   "start": "JHN.16.7",
+   "end": "JHN.16.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.29.1",
+   "at": 53,
+   "text": "v. 29",
+   "start": "JHN.8.29",
+   "end": "JHN.8.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.29.1",
+   "at": 643,
+   "text": "Isa. xlii. 1",
+   "start": "ISA.42.1",
+   "end": "ISA.42.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.29.1",
+   "at": 657,
+   "text": "Ps. lxxxix. 21",
+   "start": "PSA.89.21",
+   "end": "PSA.89.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.29.1",
+   "at": 834,
+   "text": "Isa. xliv. 26",
+   "start": "ISA.44.26",
+   "end": "ISA.44.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.29.2",
+   "at": 297,
+   "text": "Isa. liii. 10",
+   "start": "ISA.53.10",
+   "end": "ISA.53.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.30.1",
+   "at": 90,
+   "text": "v. 30",
+   "start": "JHN.8.30",
+   "end": "JHN.8.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.30.1",
+   "at": 414,
+   "text": "Isa. xlix. 5",
+   "start": "ISA.49.5",
+   "end": "ISA.49.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.30.1",
+   "at": 555,
+   "text": "Rom. xi. 5",
+   "start": "ROM.11.5",
+   "end": "ROM.11.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.30.1",
+   "at": 861,
+   "text": "Rom. i. 16, 18",
+   "start": "ROM.1.16",
+   "end": "ROM.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.30.1",
+   "at": 861,
+   "text": "Rom. i. 16, 18",
+   "start": "ROM.1.18",
+   "end": "ROM.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.32.1",
+   "at": 140,
+   "text": "v. 32",
+   "start": "JHN.8.32",
+   "end": "JHN.8.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.32.2",
+   "at": 107,
+   "text": "Isa. lxi. 1",
+   "start": "ISA.61.1",
+   "end": "ISA.61.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.32.2",
+   "at": 1324,
+   "text": "2 Cor. iii. 17",
+   "start": "2CO.3.17",
+   "end": "2CO.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.33.1",
+   "at": 197,
+   "text": "v. 33",
+   "start": "JHN.8.33",
+   "end": "JHN.8.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.33.2",
+   "at": 650,
+   "text": "Rom. xi. 28",
+   "start": "ROM.11.28",
+   "end": "ROM.11.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.33.2",
+   "at": 786,
+   "text": "Rom. ix. 4",
+   "start": "ROM.9.4",
+   "end": "ROM.9.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.33.4",
+   "at": 1105,
+   "text": "Ezek. xx. 49",
+   "start": "EZK.20.49",
+   "end": "EZK.20.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.34.1",
+   "at": 155,
+   "text": "v. 34",
+   "start": "JHN.8.34",
+   "end": "JHN.8.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.34.2",
+   "at": 585,
+   "text": "Jer. xliv. 16, 17",
+   "start": "JER.44.16",
+   "end": "JER.44.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.1",
+   "at": 149,
+   "text": "v. 35",
+   "start": "JHN.8.35",
+   "end": "JHN.8.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.1",
+   "at": 1042,
+   "text": "Gal. iv. 24, 25",
+   "start": "GAL.4.24",
+   "end": "GAL.4.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.1",
+   "at": 1194,
+   "text": "Gen. xxi. 14",
+   "start": "GEN.21.14",
+   "end": "GEN.21.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.1",
+   "at": 1479,
+   "text": "v. 36",
+   "start": "JHN.8.36",
+   "end": "JHN.8.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.2",
+   "at": 518,
+   "text": "Ezra ix. 8",
+   "start": "EZR.9.8",
+   "end": "EZR.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.2",
+   "at": 572,
+   "text": "ch. xiv. 2",
+   "start": "JHN.14.2",
+   "end": "JHN.14.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.2",
+   "at": 703,
+   "text": "Rom. viii. 21",
+   "start": "ROM.8.21",
+   "end": "ROM.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.35.2",
+   "at": 1100,
+   "text": "v. 36",
+   "start": "JHN.8.36",
+   "end": "JHN.8.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.36.2",
+   "at": 85,
+   "text": "v. 31",
+   "start": "JHN.8.31",
+   "end": "JHN.8.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.36.2",
+   "at": 926,
+   "text": "Prov. viii. 21",
+   "start": "PRO.8.21",
+   "end": "PRO.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.37.1",
+   "at": 106,
+   "text": "v. 37",
+   "start": "JHN.8.37",
+   "end": "JHN.8.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.37.1",
+   "at": 1300,
+   "text": "v. 59",
+   "start": "JHN.8.59",
+   "end": "JHN.8.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.38.1",
+   "at": 99,
+   "text": "v. 38",
+   "start": "JHN.8.38",
+   "end": "JHN.8.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.39.1",
+   "at": 100,
+   "text": "v. 39",
+   "start": "JHN.8.39",
+   "end": "JHN.8.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.39.1",
+   "at": 287,
+   "text": "Deut. xxvi. 5",
+   "start": "DEU.26.5",
+   "end": "DEU.26.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.39.1",
+   "at": 534,
+   "text": "Ezek. xvi. 3",
+   "start": "EZK.16.3",
+   "end": "EZK.16.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.39.2",
+   "at": 365,
+   "text": "Gen. xviii. 19",
+   "start": "GEN.18.19",
+   "end": "GEN.18.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.39.2",
+   "at": 506,
+   "text": "Rom. iv. 12",
+   "start": "ROM.4.12",
+   "end": "ROM.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.39.2",
+   "at": 894,
+   "text": "1 Pet. iii. 6",
+   "start": "1PE.3.6",
+   "end": "1PE.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.39.2",
+   "at": 1026,
+   "text": "James ii. 21, 22",
+   "start": "JAS.2.21",
+   "end": "JAS.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.40.1",
+   "at": 190,
+   "text": "v. 40",
+   "start": "JHN.8.40",
+   "end": "JHN.8.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.40.1",
+   "at": 601,
+   "text": "Ps. lxii. 3",
+   "start": "PSA.62.3",
+   "end": "PSA.62.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.40.2",
+   "at": 501,
+   "text": "Isa. lxiii. 16",
+   "start": "ISA.63.16",
+   "end": "ISA.63.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.40.2",
+   "at": 521,
+   "text": "Jer. xxii. 15-17",
+   "start": "JER.22.15",
+   "end": "JER.22.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.41.1",
+   "at": 39,
+   "text": "v. 41",
+   "start": "JHN.8.41",
+   "end": "JHN.8.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.41.1",
+   "at": 164,
+   "text": "v. 41",
+   "start": "JHN.8.41",
+   "end": "JHN.8.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.41.1",
+   "at": 1265,
+   "text": "Deut. xxiii. 3",
+   "start": "DEU.23.3",
+   "end": "DEU.23.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.41.2",
+   "at": 431,
+   "text": "Hosea ii. 4",
+   "start": "HOS.2.4",
+   "end": "HOS.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.41.2",
+   "at": 444,
+   "text": "Isa. lvii. 3",
+   "start": "ISA.57.3",
+   "end": "ISA.57.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.41.2",
+   "at": 1686,
+   "text": "v. 42, 43",
+   "start": "JHN.8.42",
+   "end": "JHN.8.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.42.1",
+   "at": 154,
+   "text": "v. 40",
+   "start": "JHN.8.40",
+   "end": "JHN.8.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.42.1",
+   "at": 1221,
+   "text": "1 John v. 1",
+   "start": "1JN.5.1",
+   "end": "1JN.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.42.2",
+   "at": 604,
+   "text": "Eph. i. 6",
+   "start": "EPH.1.6",
+   "end": "EPH.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.42.2",
+   "at": 805,
+   "text": "Jer. xxiii. 21",
+   "start": "JER.23.21",
+   "end": "JER.23.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.42.2",
+   "at": 1034,
+   "text": "ch. xi. 51",
+   "start": "JHN.11.51",
+   "end": "JHN.11.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.42.2",
+   "at": 1076,
+   "text": "Heb. ii. 10",
+   "start": "HEB.2.10",
+   "end": "HEB.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.43.1",
+   "at": 191,
+   "text": "v. 43",
+   "start": "JHN.8.43",
+   "end": "JHN.8.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.43.1",
+   "at": 985,
+   "text": "ch. iii. 34",
+   "start": "JHN.3.34",
+   "end": "JHN.3.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.43.1",
+   "at": 1530,
+   "text": "Acts vii. 57",
+   "start": "ACT.7.57",
+   "end": "ACT.7.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.43.2",
+   "at": 305,
+   "text": "Matt. xxvi. 70",
+   "start": "MAT.26.70",
+   "end": "MAT.26.70",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.43.2",
+   "at": 425,
+   "text": "Ps. lviii. 4, 5",
+   "start": "PSA.58.4",
+   "end": "PSA.58.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.1",
+   "at": 165,
+   "text": "v. 44",
+   "start": "JHN.8.44",
+   "end": "JHN.8.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.1",
+   "at": 344,
+   "text": "Eph. ii. 2",
+   "start": "EPH.2.2",
+   "end": "EPH.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.1",
+   "at": 420,
+   "text": "2 Cor. vi. 15",
+   "start": "2CO.6.15",
+   "end": "2CO.6.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.1",
+   "at": 456,
+   "text": "Gen. iii. 15",
+   "start": "GEN.3.15",
+   "end": "GEN.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.1",
+   "at": 499,
+   "text": "Matt. xiii. 38",
+   "start": "MAT.13.38",
+   "end": "MAT.13.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.1",
+   "at": 650,
+   "text": "Jer. ii. 27",
+   "start": "JER.2.27",
+   "end": "JER.2.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.3",
+   "at": 772,
+   "text": "Rom. vii. 11",
+   "start": "ROM.7.11",
+   "end": "ROM.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.3",
+   "at": 1285,
+   "text": "1 John iii. 12",
+   "start": "1JN.3.12",
+   "end": "1JN.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.44.4",
+   "at": 1084,
+   "text": "1 John ii. 21",
+   "start": "1JN.2.21",
+   "end": "1JN.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.45.1",
+   "at": 50,
+   "text": "v. 45",
+   "start": "JHN.8.45",
+   "end": "JHN.8.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.45.1",
+   "at": 411,
+   "text": "Isa. lix. 14, 15",
+   "start": "ISA.59.14",
+   "end": "ISA.59.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.45.1",
+   "at": 525,
+   "text": "Job xxiv. 13",
+   "start": "JOB.24.13",
+   "end": "JOB.24.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.46.1",
+   "at": 158,
+   "text": "Deut. xiii. 2",
+   "start": "DEU.13.2",
+   "end": "DEU.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.46.1",
+   "at": 1129,
+   "text": "ch. xviii. 20",
+   "start": "JHN.18.20",
+   "end": "JHN.18.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.46.1",
+   "at": 1436,
+   "text": "Jer. ii. 5, 31",
+   "start": "JER.2.5",
+   "end": "JER.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.46.1",
+   "at": 1436,
+   "text": "Jer. ii. 5, 31",
+   "start": "JER.2.31",
+   "end": "JER.2.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.46.1",
+   "at": 1452,
+   "text": "Mic. vi. 3",
+   "start": "MIC.6.3",
+   "end": "MIC.6.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.47.1",
+   "at": 81,
+   "text": "v. 47",
+   "start": "JHN.8.47",
+   "end": "JHN.8.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.47.1",
+   "at": 742,
+   "text": "1 Cor. ii. 14",
+   "start": "1CO.2.14",
+   "end": "1CO.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.47.1",
+   "at": 857,
+   "text": "Ps. lxxv. 1",
+   "start": "PSA.75.1",
+   "end": "PSA.75.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.47.1",
+   "at": 971,
+   "text": "Luke xii. 36",
+   "start": "LUK.12.36",
+   "end": "LUK.12.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.47.2",
+   "at": 480,
+   "text": "2 Cor. iv. 4",
+   "start": "2CO.4.4",
+   "end": "2CO.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.47.2",
+   "at": 494,
+   "text": "1 John iv. 6",
+   "start": "1JN.4.6",
+   "end": "1JN.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.48.1",
+   "at": 256,
+   "text": "v. 43, 47",
+   "start": "JHN.8.43",
+   "end": "JHN.8.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.48.1",
+   "at": 343,
+   "text": "v. 48",
+   "start": "JHN.8.48",
+   "end": "JHN.8.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.48.3",
+   "at": 450,
+   "text": "2 Kings ix. 11",
+   "start": "2KI.9.11",
+   "end": "2KI.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.48.3",
+   "at": 466,
+   "text": "Hosea ix. 7",
+   "start": "HOS.9.7",
+   "end": "HOS.9.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.49.1",
+   "at": 92,
+   "text": "v. 49, 50",
+   "start": "JHN.8.49",
+   "end": "JHN.8.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.49.1",
+   "at": 172,
+   "text": "Acts xxvi. 25",
+   "start": "ACT.26.25",
+   "end": "ACT.26.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.49.1",
+   "at": 764,
+   "text": "Luke x. 33",
+   "start": "LUK.10.33",
+   "end": "LUK.10.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.50.1",
+   "at": 91,
+   "text": "v. 50",
+   "start": "JHN.8.50",
+   "end": "JHN.8.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.50.1",
+   "at": 515,
+   "text": "Prov. xxv. 27",
+   "start": "PRO.25.27",
+   "end": "PRO.25.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.50.1",
+   "at": 1730,
+   "text": "Ps. xxxvii. 13-15",
+   "start": "PSA.37.13",
+   "end": "PSA.37.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.51.1",
+   "at": 59,
+   "text": "v. 51",
+   "start": "JHN.8.51",
+   "end": "JHN.8.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.51.1",
+   "at": 657,
+   "text": "1 Tim. vi. 14",
+   "start": "1TI.6.14",
+   "end": "1TI.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.51.2",
+   "at": 1018,
+   "text": "Luke xx. 36",
+   "start": "LUK.20.36",
+   "end": "LUK.20.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.51.2",
+   "at": 1166,
+   "text": "Exod. xiv. 13",
+   "start": "EXO.14.13",
+   "end": "EXO.14.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.52.1",
+   "at": 274,
+   "text": "v. 48",
+   "start": "JHN.8.48",
+   "end": "JHN.8.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.52-53.1",
+   "at": 163,
+   "text": "Rev. xxii. 6",
+   "start": "REV.22.6",
+   "end": "REV.22.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.54.1",
+   "at": 123,
+   "text": "v. 54",
+   "start": "JHN.8.54",
+   "end": "JHN.8.54",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.54.1",
+   "at": 336,
+   "text": "Prov. xxv. 27",
+   "start": "PRO.25.27",
+   "end": "PRO.25.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.54.1",
+   "at": 826,
+   "text": "Heb. v. 4, 5",
+   "start": "HEB.5.4",
+   "end": "HEB.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.54.2",
+   "at": 871,
+   "text": "Phil. ii. 8, 9",
+   "start": "PHP.2.8",
+   "end": "PHP.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.54.3",
+   "at": 205,
+   "text": "Rom. ix. 6",
+   "start": "ROM.9.6",
+   "end": "ROM.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.54.4",
+   "at": 397,
+   "text": "Rom. x. 3",
+   "start": "ROM.10.3",
+   "end": "ROM.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.55.1",
+   "at": 402,
+   "text": "Jer. xxiii. 27",
+   "start": "JER.23.27",
+   "end": "JER.23.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.55.1",
+   "at": 1073,
+   "text": "1 Cor. xv. 34",
+   "start": "1CO.15.34",
+   "end": "1CO.15.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.55.2",
+   "at": 189,
+   "text": "v. 51",
+   "start": "JHN.8.51",
+   "end": "JHN.8.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.55.2",
+   "at": 371,
+   "text": "Heb. v. 8, 9",
+   "start": "HEB.5.8",
+   "end": "HEB.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.55.2",
+   "at": 575,
+   "text": "1 John ii. 3",
+   "start": "1JN.2.3",
+   "end": "1JN.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.56.1",
+   "at": 140,
+   "text": "v. 56",
+   "start": "JHN.8.56",
+   "end": "JHN.8.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.56.2",
+   "at": 227,
+   "text": "the verse",
+   "start": "JHN.8.56",
+   "end": "JHN.8.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.56.2",
+   "at": 830,
+   "text": "1 Pet. i. 10",
+   "start": "1PE.1.10",
+   "end": "1PE.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.56.2",
+   "at": 1003,
+   "text": "Gen. xv. 14",
+   "start": "GEN.15.14",
+   "end": "GEN.15.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.56.3",
+   "at": 1109,
+   "text": "Heb. xi. 13",
+   "start": "HEB.11.13",
+   "end": "HEB.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.56.3",
+   "at": 1411,
+   "text": "Dan. xii. 4",
+   "start": "DAN.12.4",
+   "end": "DAN.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.56.4",
+   "at": 1092,
+   "text": "Gen. xvii. 16, 17",
+   "start": "GEN.17.16",
+   "end": "GEN.17.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.57.1",
+   "at": 54,
+   "text": "v. 57",
+   "start": "JHN.8.57",
+   "end": "JHN.8.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.57.2",
+   "at": 43,
+   "text": "Num. iv. 47",
+   "start": "NUM.4.47",
+   "end": "NUM.4.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.58.1",
+   "at": 126,
+   "text": "v. 58",
+   "start": "JHN.8.58",
+   "end": "JHN.8.58",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.58.1",
+   "at": 657,
+   "text": "Exod. iii. 14",
+   "start": "EXO.3.14",
+   "end": "EXO.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.58.1",
+   "at": 792,
+   "text": "Rev. i. 8",
+   "start": "REV.1.8",
+   "end": "REV.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.58.1",
+   "at": 874,
+   "text": "Prov. viii. 23",
+   "start": "PRO.8.23",
+   "end": "PRO.8.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.58.1",
+   "at": 1013,
+   "text": "Rev. xiii. 8",
+   "start": "REV.13.8",
+   "end": "REV.13.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.58.1",
+   "at": 1175,
+   "text": "Heb. xiii. 8",
+   "start": "HEB.13.8",
+   "end": "HEB.13.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.58.2",
+   "at": 575,
+   "text": "Mal. iii. 1, 2",
+   "start": "MAL.3.1",
+   "end": "MAL.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.1",
+   "at": 93,
+   "text": "v. 59",
+   "start": "JHN.8.59",
+   "end": "JHN.8.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.1",
+   "at": 181,
+   "text": "Lev. xxiv. 16",
+   "start": "LEV.24.16",
+   "end": "LEV.24.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.2",
+   "at": 408,
+   "text": "Ps. xxvii. 5",
+   "start": "PSA.27.5",
+   "end": "PSA.27.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.2",
+   "at": 573,
+   "text": "Prov. xxviii. 12, 28",
+   "start": "PRO.28.12",
+   "end": "PRO.28.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.2",
+   "at": 573,
+   "text": "Prov. xxviii. 12, 28",
+   "start": "PRO.28.28",
+   "end": "PRO.28.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.2",
+   "at": 845,
+   "text": "Jer. xxxvi. 26",
+   "start": "JER.36.26",
+   "end": "JER.36.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.2",
+   "at": 1128,
+   "text": "Isa. xlii. 4",
+   "start": "ISA.42.4",
+   "end": "ISA.42.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.3",
+   "at": 503,
+   "text": "1 Kings xix. 3, 4",
+   "start": "1KI.19.3",
+   "end": "1KI.19.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.3",
+   "at": 550,
+   "text": "Rev. xii. 6",
+   "start": "REV.12.6",
+   "end": "REV.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.8.59.4",
+   "at": 620,
+   "text": "Judg. xvi. 20",
+   "start": "JDG.16.20",
+   "end": "JDG.16.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.1.1",
+   "at": 84,
+   "text": "v. 1",
+   "start": "JHN.9.1",
+   "end": "JHN.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.1.2",
+   "at": 637,
+   "text": "Job iii. 20-23",
+   "start": "JOB.3.20",
+   "end": "JOB.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.1.3",
+   "at": 486,
+   "text": "Isa. lxv. 1",
+   "start": "ISA.65.1",
+   "end": "ISA.65.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.1.3",
+   "at": 591,
+   "text": "Gal. iv. 9",
+   "start": "GAL.4.9",
+   "end": "GAL.4.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.1.3",
+   "at": 627,
+   "text": "Phil. iii. 12",
+   "start": "PHP.3.12",
+   "end": "PHP.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.2.1",
+   "at": 84,
+   "text": "v. 2",
+   "start": "JHN.9.2",
+   "end": "JHN.9.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.2.1",
+   "at": 702,
+   "text": "Luke xiii. 4",
+   "start": "LUK.13.4",
+   "end": "LUK.13.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.2.2",
+   "at": 1010,
+   "text": "v. 34",
+   "start": "JHN.9.34",
+   "end": "JHN.9.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.2.3",
+   "at": 223,
+   "text": "ch. v. 14",
+   "start": "JHN.5.14",
+   "end": "JHN.5.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.3.1",
+   "at": 225,
+   "text": "v. 3",
+   "start": "JHN.9.3",
+   "end": "JHN.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.3.1",
+   "at": 1082,
+   "text": "Ps. lxix. 26",
+   "start": "PSA.69.26",
+   "end": "PSA.69.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.3.1",
+   "at": 1213,
+   "text": "Rom. viii. 33, 34",
+   "start": "ROM.8.33",
+   "end": "ROM.8.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.4-5.1",
+   "at": 84,
+   "text": "v. 4, 5",
+   "start": "JHN.9.4",
+   "end": "JHN.9.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.4-5.1",
+   "at": 1230,
+   "text": "Jer. xxx. 21",
+   "start": "JER.30.21",
+   "end": "JER.30.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.4-5.2",
+   "at": 748,
+   "text": "Ps. civ. 22, 23",
+   "start": "PSA.104.22",
+   "end": "PSA.104.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.5.1",
+   "at": 52,
+   "text": "v. 5",
+   "start": "JHN.9.5",
+   "end": "JHN.9.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.5.1",
+   "at": 170,
+   "text": "ch. viii. 12",
+   "start": "JHN.8.12",
+   "end": "JHN.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.6-7.1",
+   "at": 46,
+   "text": "v. 6, 7",
+   "start": "JHN.9.6",
+   "end": "JHN.9.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.6-7.1",
+   "at": 672,
+   "text": "Eccl. xi. 4",
+   "start": "ECC.11.4",
+   "end": "ECC.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.6-7.2",
+   "at": 1142,
+   "text": "Acts xxvi. 18",
+   "start": "ACT.26.18",
+   "end": "ACT.26.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.6-7.2",
+   "at": 1379,
+   "text": "Rev. iii. 18",
+   "start": "REV.3.18",
+   "end": "REV.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.6-7.3",
+   "at": 637,
+   "text": "1 Cor. iii. 18",
+   "start": "1CO.3.18",
+   "end": "1CO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.7.1",
+   "at": 40,
+   "text": "v. 7",
+   "start": "JHN.9.7",
+   "end": "JHN.9.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.7.1",
+   "at": 1421,
+   "text": "Ps. xlvi. 4",
+   "start": "PSA.46.4",
+   "end": "PSA.46.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.7.2",
+   "at": 127,
+   "text": "Isa. viii. 6",
+   "start": "ISA.8.6",
+   "end": "ISA.8.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.7.2",
+   "at": 510,
+   "text": "Mal. iii. 1",
+   "start": "MAL.3.1",
+   "end": "MAL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.8.1",
+   "at": 61,
+   "text": "v. 8",
+   "start": "JHN.9.8",
+   "end": "JHN.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.10-12.1",
+   "at": 41,
+   "text": "v. 10-12",
+   "start": "JHN.9.10",
+   "end": "JHN.9.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.10-12.1",
+   "at": 446,
+   "text": "Ps. cxi. 2",
+   "start": "PSA.111.2",
+   "end": "PSA.111.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.10-12.1",
+   "at": 925,
+   "text": "v. 11",
+   "start": "JHN.9.11",
+   "end": "JHN.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.10-12.1",
+   "at": 1248,
+   "text": "Ps. xxxiv. 4-6",
+   "start": "PSA.34.4",
+   "end": "PSA.34.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.12.1",
+   "at": 21,
+   "text": "v. 12",
+   "start": "JHN.9.12",
+   "end": "JHN.9.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.12.1",
+   "at": 386,
+   "text": "ch. xi. 57",
+   "start": "JHN.11.57",
+   "end": "JHN.11.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.12.1",
+   "at": 867,
+   "text": "ch. v. 13",
+   "start": "JHN.5.13",
+   "end": "JHN.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.13.1",
+   "at": 146,
+   "text": "v. 13",
+   "start": "JHN.9.13",
+   "end": "JHN.9.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.13.1",
+   "at": 1002,
+   "text": "ch. xi. 47, 48",
+   "start": "JHN.11.47",
+   "end": "JHN.11.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.14.1",
+   "at": 196,
+   "text": "v. 14",
+   "start": "JHN.9.14",
+   "end": "JHN.9.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.15.1",
+   "at": 64,
+   "text": "v. 15",
+   "start": "JHN.9.15",
+   "end": "JHN.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.15-16.1",
+   "at": 93,
+   "text": "v. 15, 16",
+   "start": "JHN.9.15",
+   "end": "JHN.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.17.1",
+   "at": 73,
+   "text": "v. 17",
+   "start": "JHN.9.17",
+   "end": "JHN.9.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.17.2",
+   "at": 206,
+   "text": "Dan. ix. 24",
+   "start": "DAN.9.24",
+   "end": "DAN.9.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.17.2",
+   "at": 464,
+   "text": "ch. iv. 19",
+   "start": "JHN.4.19",
+   "end": "JHN.4.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.18.1",
+   "at": 129,
+   "text": "v. 18",
+   "start": "JHN.9.18",
+   "end": "JHN.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.19.1",
+   "at": 42,
+   "text": "v. 19",
+   "start": "JHN.9.19",
+   "end": "JHN.9.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.20.1",
+   "at": 183,
+   "text": "v. 20",
+   "start": "JHN.9.20",
+   "end": "JHN.9.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.20.1",
+   "at": 326,
+   "text": "1 Kings iii. 26",
+   "start": "1KI.3.26",
+   "end": "1KI.3.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.21.1",
+   "at": 47,
+   "text": "v. 21",
+   "start": "JHN.9.21",
+   "end": "JHN.9.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.21.1",
+   "at": 905,
+   "text": "Luke xi. 23",
+   "start": "LUK.11.23",
+   "end": "LUK.11.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.21.1",
+   "at": 918,
+   "text": "Mark viii. 38",
+   "start": "MRK.8.38",
+   "end": "MRK.8.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.21.2",
+   "at": 264,
+   "text": "1 Cor. xii. 23, 24",
+   "start": "1CO.12.23",
+   "end": "1CO.12.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.22-23.1",
+   "at": 45,
+   "text": "v. 22, 23",
+   "start": "JHN.9.22",
+   "end": "JHN.9.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.22-23.1",
+   "at": 526,
+   "text": "1 Cor. x. 24",
+   "start": "1CO.10.24",
+   "end": "1CO.10.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.22-23.1",
+   "at": 540,
+   "text": "Esth. viii. 6",
+   "start": "EST.8.6",
+   "end": "EST.8.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.22-23.3",
+   "at": 1308,
+   "text": "Isa. lxvi. 5",
+   "start": "ISA.66.5",
+   "end": "ISA.66.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.22-23.4",
+   "at": 979,
+   "text": "Prov. xxix. 25",
+   "start": "PRO.29.25",
+   "end": "PRO.29.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.24.1",
+   "at": 399,
+   "text": "v. 24",
+   "start": "JHN.9.24",
+   "end": "JHN.9.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.24.2",
+   "at": 989,
+   "text": "ch. viii. 46",
+   "start": "JHN.8.46",
+   "end": "JHN.8.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.24.2",
+   "at": 1386,
+   "text": "Rom. viii. 3",
+   "start": "ROM.8.3",
+   "end": "ROM.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.25.1",
+   "at": 271,
+   "text": "v. 25",
+   "start": "JHN.9.25",
+   "end": "JHN.9.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.25.2",
+   "at": 236,
+   "text": "1 John i. 1",
+   "start": "1JN.1.1",
+   "end": "1JN.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.25.2",
+   "at": 249,
+   "text": "Acts iv. 20",
+   "start": "ACT.4.20",
+   "end": "ACT.4.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.25.2",
+   "at": 779,
+   "text": "Eph. v. 8",
+   "start": "EPH.5.8",
+   "end": "EPH.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.25.2",
+   "at": 897,
+   "text": "v. 26",
+   "start": "JHN.9.26",
+   "end": "JHN.9.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.26.1",
+   "at": 111,
+   "text": "v. 26",
+   "start": "JHN.9.26",
+   "end": "JHN.9.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.27.1",
+   "at": 113,
+   "text": "v. 27",
+   "start": "JHN.9.27",
+   "end": "JHN.9.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.27.1",
+   "at": 1313,
+   "text": "Jer. li. 9",
+   "start": "JER.51.9",
+   "end": "JER.51.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.27.1",
+   "at": 1329,
+   "text": "Matt. x. 14",
+   "start": "MAT.10.14",
+   "end": "MAT.10.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.28.1",
+   "at": 41,
+   "text": "v. 28",
+   "start": "JHN.9.28",
+   "end": "JHN.9.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.28.1",
+   "at": 365,
+   "text": "Matt. v. 11",
+   "start": "MAT.5.11",
+   "end": "MAT.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.29.1",
+   "at": 83,
+   "text": "v. 29",
+   "start": "JHN.9.29",
+   "end": "JHN.9.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.29.1",
+   "at": 1037,
+   "text": "ch. v. 46",
+   "start": "JHN.5.46",
+   "end": "JHN.5.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.29.1",
+   "at": 1086,
+   "text": "Luke xvi. 29",
+   "start": "LUK.16.29",
+   "end": "LUK.16.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.29.2",
+   "at": 1122,
+   "text": "ch. vii. 27",
+   "start": "JHN.7.27",
+   "end": "JHN.7.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.29.3",
+   "at": 150,
+   "text": "Jer. ii. 6",
+   "start": "JER.2.6",
+   "end": "JER.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.30.1",
+   "at": 49,
+   "text": "v. 30",
+   "start": "JHN.9.30",
+   "end": "JHN.9.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.30.2",
+   "at": 83,
+   "text": "Isa. xxix. 14",
+   "start": "ISA.29.14",
+   "end": "ISA.29.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.30.2",
+   "at": 285,
+   "text": "Mark vi. 6",
+   "start": "MRK.6.6",
+   "end": "MRK.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31.1",
+   "at": 97,
+   "text": "v. 31",
+   "start": "JHN.9.31",
+   "end": "JHN.9.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31.1",
+   "at": 1538,
+   "text": "Ps. xxxiv. 15",
+   "start": "PSA.34.15",
+   "end": "PSA.34.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31.1",
+   "at": 1804,
+   "text": "ch. ix. 31, 32",
+   "start": "JHN.9.31",
+   "end": "JHN.9.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31-33.1",
+   "at": 43,
+   "text": "v. 31-33",
+   "start": "JHN.9.31",
+   "end": "JHN.9.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31-33.1",
+   "at": 114,
+   "text": "v. 16",
+   "start": "JHN.9.16",
+   "end": "JHN.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31-33.1",
+   "at": 140,
+   "text": "v. 24",
+   "start": "JHN.9.24",
+   "end": "JHN.9.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31-33.1",
+   "at": 222,
+   "text": "v. 31",
+   "start": "JHN.9.31",
+   "end": "JHN.9.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31-33.1",
+   "at": 254,
+   "text": "v. 33",
+   "start": "JHN.9.33",
+   "end": "JHN.9.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.31-33.1",
+   "at": 1422,
+   "text": "Ps. lxvi. 18-20",
+   "start": "PSA.66.18",
+   "end": "PSA.66.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.32.1",
+   "at": 94,
+   "text": "v. 32",
+   "start": "JHN.9.32",
+   "end": "JHN.9.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.33.1",
+   "at": 599,
+   "text": "Deut. xiii. 1, 2",
+   "start": "DEU.13.1",
+   "end": "DEU.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.34.1",
+   "at": 183,
+   "text": "v. 34",
+   "start": "JHN.9.34",
+   "end": "JHN.9.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.1",
+   "at": 63,
+   "text": "v. 35",
+   "start": "JHN.9.35",
+   "end": "JHN.9.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.1",
+   "at": 1038,
+   "text": "Ps. ciii. 6",
+   "start": "PSA.103.6",
+   "end": "PSA.103.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.2",
+   "at": 270,
+   "text": "Matt. xiii. 12",
+   "start": "MAT.13.12",
+   "end": "MAT.13.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.2",
+   "at": 732,
+   "text": "Ps. ii. 7",
+   "start": "PSA.2.7",
+   "end": "PSA.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.2",
+   "at": 743,
+   "text": "lxxxix. 27",
+   "start": "PSA.89.27",
+   "end": "PSA.89.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.2",
+   "at": 759,
+   "text": "ch. i. 49",
+   "start": "JHN.1.49",
+   "end": "JHN.1.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.2",
+   "at": 977,
+   "text": "Matt. xxii. 42",
+   "start": "MAT.22.42",
+   "end": "MAT.22.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.35.2",
+   "at": 1490,
+   "text": "1 John iii. 23",
+   "start": "1JN.3.23",
+   "end": "1JN.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.36.1",
+   "at": 143,
+   "text": "v. 36",
+   "start": "JHN.9.36",
+   "end": "JHN.9.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.36.1",
+   "at": 622,
+   "text": "Cant. v. 6, 7",
+   "start": "SNG.5.6",
+   "end": "SNG.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.36.1",
+   "at": 637,
+   "text": "iii. 2, 3",
+   "start": "SNG.3.2",
+   "end": "SNG.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.37.1",
+   "at": 158,
+   "text": "v. 37",
+   "start": "JHN.9.37",
+   "end": "JHN.9.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.37.2",
+   "at": 743,
+   "text": "Luke xxiv. 32",
+   "start": "LUK.24.32",
+   "end": "LUK.24.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.39.1",
+   "at": 68,
+   "text": "v. 39",
+   "start": "JHN.9.39",
+   "end": "JHN.9.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.39.2",
+   "at": 557,
+   "text": "Hos. i. 10",
+   "start": "HOS.1.10",
+   "end": "HOS.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.39.2",
+   "at": 569,
+   "text": "ii. 23",
+   "start": "HOS.2.23",
+   "end": "HOS.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.39.2",
+   "at": 1066,
+   "text": "Isa. lxi. 1",
+   "start": "ISA.61.1",
+   "end": "ISA.61.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry.JHN.9.40.1",
+   "at": 826,
+   "text": "Luke xi. 45",
+   "start": "LUK.11.45",
+   "end": "LUK.11.45",
+   "found": "source",
+   "status": "detected"
   }
  ]
 }
