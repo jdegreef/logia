@@ -30,7 +30,10 @@ tradition, and a short biography of plain facts. `bio_status` starts as
 `ai_draft`.
 
 The work is `library/works/<work>.json`, copying the fields of an existing
-work; `author` names the author file. `status` starts as `ai_draft`.
+work; `author` names the author file. `divisions` is `"verse"` for a
+commentary arranged by the verses it comments on, or the names of the
+work's own divisions, such as `["Homily", "Section"]`, for homilies,
+sermons or treatises (docs/references.md). `status` starts as `ai_draft`.
 
 ## 4. Copy the excerpts
 
@@ -46,6 +49,8 @@ or range:
 
 - Copy the source's words exactly, paragraphs separated by a blank line.
   Drop footnote markers, footnotes, page numbers and running heads, nothing
+  Once published an id never changes: a new excerpt takes the next free
+  `<n>`, even if it sits before an older one.
   else. Mark a cut inside a paragraph with " ... ".
 - Take the commentator's most substantive one to three paragraphs on the
   verse (about 80–350 words), cut only at sentence ends.
@@ -59,8 +64,30 @@ For a scanned source only: `library/corrections/<work>.json` lists
 the work at build time. Fix only what the printed page plainly reads. Never
 add Greek or Hebrew; leave unreadable Greek out of the excerpt instead.
 
-## 6. Check
+## 6. Find its place and its citations
 
+    python3 scripts/find_refs.py
+
+writes each excerpt's `locus` (for a work with its own divisions) and
+`library/citations/<work>/<BOOK>.json`, the Scripture each excerpt cites, and,
+for a catena, `library/quotations/`. Never edit these by hand except a
+`status`; read what is new and set `"rejected"` on a false match. A new
+work by a Father the Catena quotes can be added to `CATENAS` in the script,
+so the Catena's quotations of it are traced too.
+
+For a work with its own divisions, also run
+
+    python3 scripts/extract_texts.py
+
+to copy each whole homily or tractate from its source pages into
+`library/texts/`, so it can be read straight through. Save the whole CCEL
+page (its book-content block) under `sources/`, not only the part an
+excerpt comes from.
+
+## 7. Check
+
+    python3 scripts/find_refs.py --check
+    python3 scripts/extract_texts.py --check
     python3 scripts/validate.py
     python3 scripts/verify_sources.py <work>
     python3 scripts/build_site.py

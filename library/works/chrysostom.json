@@ -2,6 +2,10 @@
  "id": "chrysostom",
  "author": "chrysostom",
  "title": "Homilies on the Gospel of St. John",
+ "divisions": [
+  "Homily",
+  "Section"
+ ],
  "edition": "The Oxford Translation (Library of the Fathers), edited with additional notes by Philip Schaff; Nicene and Post-Nicene Fathers, Series 1, Vol. 14 (1889)",
  "original_language": "Greek",
  "translation": "The Oxford translation (Library of the Fathers), revised and edited by Philip Schaff, Nicene and Post-Nicene Fathers, Series 1, Vol. 14 (1889)",

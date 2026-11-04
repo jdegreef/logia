@@ -1,0 +1,375 @@
+{
+ "work": "ryle",
+ "book": "JHN",
+ "citations": [
+  {
+   "in": "ryle.JHN.1.1.1",
+   "at": 585,
+   "text": "Gen. i. 1",
+   "start": "GEN.1.1",
+   "end": "GEN.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.1.2",
+   "at": 165,
+   "text": "Acts xx. 32",
+   "start": "ACT.20.32",
+   "end": "ACT.20.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.1.2",
+   "at": 182,
+   "text": "Heb. iv. 12",
+   "start": "HEB.4.12",
+   "end": "HEB.4.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.1.3",
+   "at": 345,
+   "text": "Heb. i. 1",
+   "start": "HEB.1.1",
+   "end": "HEB.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.1.4",
+   "at": 393,
+   "text": "Gen. i. 26",
+   "start": "GEN.1.26",
+   "end": "GEN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.1-5.1",
+   "at": 1074,
+   "text": "Psalm lxxxix. 19",
+   "start": "PSA.89.19",
+   "end": "PSA.89.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.1-5.1",
+   "at": 1299,
+   "text": "1 Peter ii. 6",
+   "start": "1PE.2.6",
+   "end": "1PE.2.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.2.1",
+   "at": 670,
+   "text": "Proverbs viii. 22",
+   "start": "PRO.8.22",
+   "end": "PRO.8.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.2.1",
+   "at": 710,
+   "text": "Zechariah xiii. 7",
+   "start": "ZEC.13.7",
+   "end": "ZEC.13.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.3.1",
+   "at": 140,
+   "text": "Coloss. i. 16",
+   "start": "COL.1.16",
+   "end": "COL.1.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.3.1",
+   "at": 226,
+   "text": "Heb. i. 10",
+   "start": "HEB.1.10",
+   "end": "HEB.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.3.1",
+   "at": 811,
+   "text": "John v. 19",
+   "start": "JHN.5.19",
+   "end": "JHN.5.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.3.1",
+   "at": 860,
+   "text": "Heb. i. 2",
+   "start": "HEB.1.2",
+   "end": "HEB.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.3.1",
+   "at": 923,
+   "text": "Prov. viii. 15",
+   "start": "PRO.8.15",
+   "end": "PRO.8.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.3.2",
+   "at": 615,
+   "text": "Rom. v. 12",
+   "start": "ROM.5.12",
+   "end": "ROM.5.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.4.2",
+   "at": 739,
+   "text": "Psalm xxxvi. 9",
+   "start": "PSA.36.9",
+   "end": "PSA.36.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.4.2",
+   "at": 755,
+   "text": "1 John v. 11",
+   "start": "1JN.5.11",
+   "end": "1JN.5.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.5.1",
+   "at": 395,
+   "text": "Ephes. v. 8",
+   "start": "EPH.5.8",
+   "end": "EPH.5.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.6-13.1",
+   "at": 945,
+   "text": "Gal. iii. 26",
+   "start": "GAL.3.26",
+   "end": "GAL.3.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.8.1",
+   "at": 273,
+   "text": "John vi. 32",
+   "start": "JHN.6.32",
+   "end": "JHN.6.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.8.1",
+   "at": 302,
+   "text": "John i. 21",
+   "start": "JHN.1.21",
+   "end": "JHN.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.8.1",
+   "at": 329,
+   "text": "1 Thess. v. 4",
+   "start": "1TH.5.4",
+   "end": "1TH.5.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.8.1",
+   "at": 357,
+   "text": "Acts ix. 2",
+   "start": "ACT.9.2",
+   "end": "ACT.9.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.8.1",
+   "at": 485,
+   "text": "John v. 35",
+   "start": "JHN.5.35",
+   "end": "JHN.5.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.8.1",
+   "at": 756,
+   "text": "Matt. v. 14",
+   "start": "MAT.5.14",
+   "end": "MAT.5.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.10.1",
+   "at": 180,
+   "text": "1 Pet. iii. 19",
+   "start": "1PE.3.19",
+   "end": "1PE.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.11.1",
+   "at": 987,
+   "text": "Psalm lxxviii. 71",
+   "start": "PSA.78.71",
+   "end": "PSA.78.71",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.12.1",
+   "at": 594,
+   "text": "Col. ii. 6",
+   "start": "COL.2.6",
+   "end": "COL.2.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.13.1",
+   "at": 446,
+   "text": "2 Cor. V. 17",
+   "start": "2CO.5.17",
+   "end": "2CO.5.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.14.1",
+   "at": 571,
+   "text": "Luke ii. 52",
+   "start": "LUK.2.52",
+   "end": "LUK.2.52",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.15-18.1",
+   "at": 413,
+   "text": "Exod. xxxiii. 20",
+   "start": "EXO.33.20",
+   "end": "EXO.33.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.15-18.1",
+   "at": 1417,
+   "text": "Coloss. ii. 9",
+   "start": "COL.2.9",
+   "end": "COL.2.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.15-18.1",
+   "at": 1491,
+   "text": "1 Tim. iii. 16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.15-18.1",
+   "at": 1508,
+   "text": "Heb. i. 3",
+   "start": "HEB.1.3",
+   "end": "HEB.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.15-18.1",
+   "at": 1520,
+   "text": "John x. 30",
+   "start": "JHN.10.30",
+   "end": "JHN.10.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.15-18.1",
+   "at": 1533,
+   "text": "xiv. 9",
+   "start": "JHN.14.9",
+   "end": "JHN.14.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.16.2",
+   "at": 685,
+   "text": "Rom. xii. 17",
+   "start": "ROM.12.17",
+   "end": "ROM.12.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.16.2",
+   "at": 721,
+   "text": "Acts xii. 23",
+   "start": "ACT.12.23",
+   "end": "ACT.12.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.16.2",
+   "at": 736,
+   "text": "Ephes. V. 31",
+   "start": "EPH.5.31",
+   "end": "EPH.5.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.18.1",
+   "at": 572,
+   "text": "John xv. 15",
+   "start": "JHN.15.15",
+   "end": "JHN.15.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.18.2",
+   "at": 646,
+   "text": "Acts XV. 14",
+   "start": "ACT.15.14",
+   "end": "ACT.15.14",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}
