@@ -242,7 +242,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "aff357ec909256f5cb27464feb0edc25266f49f225b20be8e5c9a80788fde9b2",
-   "extract": "Characters 171495-286042 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 171495-410564 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/westcott/gospelaccordingt00westuoft.txt",
@@ -251,7 +251,7 @@
    "retrieved": "2026-11-03",
    "kind": "scan",
    "download_sha256": "7220d31edc2fed62d262486496689846ff8482dc116a6821672415c4e86158c8",
-   "extract": "Characters 357097-706495 of the scan's full text (the pages quoted, with a margin)."
+   "extract": "Characters 220319-974734 of the scan's full text (the pages quoted, with a margin)."
   },
   {
    "path": "sources/augustine/npnf107.iii.v.html",
