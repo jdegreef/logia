@@ -7,8 +7,10 @@ The site is static: Render runs `python3 scripts/build_site.py` and serves
 
 1. Render Dashboard > **New** > **Blueprint**, pick `jdegreef/logia`, branch
    `main`, and apply. This creates the static site `logia`.
-2. Wait for the first deploy, then open `https://logia.onrender.com` (or the
-   `onrender.com` address Render gives it) and check the site.
+2. Wait for the first deploy, and note the service's `onrender.com` address
+   (Settings > Custom Domains > Render Subdomain; Logia's is
+   `logia-nw2v.onrender.com`). The site is not served there
+   (`renderSubdomainPolicy: disabled`), but it is the DNS target below.
 3. Under the service's **Settings > Custom Domains** you will see
    `logia.faith` and `www.logia.faith`. Render adds `www` and redirects it
    to the root.
@@ -26,8 +28,8 @@ In the Cloudflare dashboard for `logia.faith`:
 
    | Type  | Name  | Target                       | Proxy    |
    |-------|-------|------------------------------|----------|
-   | CNAME | `@`   | `logia.onrender.com`         | DNS only |
-   | CNAME | `www` | `logia.onrender.com`         | DNS only |
+   | CNAME | `@`   | `logia-nw2v.onrender.com`    | DNS only |
+   | CNAME | `www` | `logia-nw2v.onrender.com`    | DNS only |
 
    Use the exact `onrender.com` address from step 1. Cloudflare flattens the
    root CNAME, so `@` is allowed.
