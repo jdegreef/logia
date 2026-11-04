@@ -243,12 +243,15 @@ class Site(unittest.TestCase):
         self.assertIn("citedBy", comm)
 
     def test_a_chapter_with_nothing_on_it_has_no_commentary_file(self):
-        # No excerpt is on Obadiah, or cites it.
-        text = self.read(os.path.join("oba", "1", "index.html"))
+        # The last chapter, in canonical order, that no excerpt is on or cites.
+        lib = build_site.Library()
+        book, chapter = next((b, c) for b, c in reversed(lib.chapters)
+                             if not lib.in_chapter(b, c, 999) and not any(lib.cited_by(b, c, range(1, 200)).values()))
+        text = self.read(os.path.join(book.lower(), str(chapter), "index.html"))
         data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
         self.assertIsNone(data["comm"])
         self.assertNotIn('as="fetch"', text)
-        self.assertFalse(os.path.exists(os.path.join(build_site.SITE, "comm", "OBA.1.json")))
+        self.assertFalse(os.path.exists(os.path.join(build_site.SITE, "comm", f"{book}.{chapter}.json")))
 
     def test_the_published_stylesheet_keeps_only_what_logia_uses(self):
         css = ".used{a:1}.unused{b:2}.used .unused,.used a{c:3}#skip{d:4}#gone{e:5}[href=\"#gone\"]{f:6}"
