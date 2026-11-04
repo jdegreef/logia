@@ -211,6 +211,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.1.16-17.1",
+   "at": 0,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "3",
+   "source": "npnf107.iii.iv.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.22,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.1.17.1",
    "at": 0,
    "label": "CHRYS.",
@@ -220,6 +233,19 @@
    "para": null,
    "excerpt": null,
    "score": 0.22,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.1.18.1",
+   "at": 0,
+   "label": "Chrys.",
+   "work": "chrysostom",
+   "locus": "15",
+   "source": "npnf114.iv.xvii.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.3,
    "found": "similar",
    "status": "detected"
   },
@@ -614,6 +640,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.1.48.2",
+   "at": 670,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "7",
+   "source": "npnf107.iii.viii.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.24,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.1.49.1",
    "at": 0,
    "label": "CHRYS.",
@@ -935,6 +974,19 @@
    "para": "iii.xi-p16",
    "excerpt": "augustine.JHN.2.13-16.1",
    "score": 0.55,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.2.17.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "23",
+   "source": "npnf114.iv.xxv.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.24,
    "found": "similar",
    "status": "detected"
   },
@@ -1980,6 +2032,19 @@
   },
   {
    "in": "catena.JHN.4.13.1",
+   "at": 0,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "32",
+   "source": "npnf114.iv.xxxiv.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.26,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.4.13.1",
    "at": 703,
    "label": "AUG.",
    "work": "augustine",
@@ -2070,6 +2135,19 @@
    "status": "detected"
   },
   {
+   "in": "catena.JHN.4.18.1",
+   "at": 0,
+   "label": "AUG.",
+   "work": "augustine",
+   "locus": "15",
+   "source": "npnf107.iii.xvi.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.21,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena.JHN.4.19-20.1",
    "at": 283,
    "label": "AUG.",
@@ -2079,6 +2157,19 @@
    "para": "iii.xvi-p35",
    "excerpt": "augustine.JHN.4.19.1",
    "score": 0.48,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena.JHN.4.19-20.1",
+   "at": 501,
+   "label": "CHRYS.",
+   "work": "chrysostom",
+   "locus": "32",
+   "source": "npnf114.iv.xxxiv.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.36,
    "found": "similar",
    "status": "detected"
   },

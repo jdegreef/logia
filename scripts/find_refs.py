@@ -314,6 +314,12 @@ DIVISION = (0.20, 0.08)        # a homily or tractate: the same, over any other 
 # Tractate XVII comes within 0.01: so the homily on the verse is also taken when
 # its two best paragraphs are the two best of all, which chance rarely gives.
 NEAR_LEAD = 0.04
+# With the whole Gospel in, one paragraph in a far homily can share a short
+# quotation's words by chance ("Grace for grace" and Tractate CXXIV), so the
+# homily on the verse is also taken when the mean of its SPREAD best paragraphs
+# leads every other homily's by SPREAD_LEAD.
+SPREAD = 3
+SPREAD_LEAD = 0.02
 
 
 def content_words(text):
@@ -380,6 +386,20 @@ def match_quotation(words, candidates, idf, near=lambda para: False):
             best - other_division >= NEAR_LEAD
             or (len(scored) > 1 and scored[1][1][3].split(".")[0] == division)):
         return best, para, "division"
+    # Last, the homily on the verse when the quoted words run through it: its
+    # three best paragraphs average higher than any other homily's, so one
+    # paragraph elsewhere that happens to share them does not decide it.
+    spread = {}
+    for s, c in scored:
+        top = spread.setdefault((c[0], c[3].split(".")[0]), [])
+        if len(top) < SPREAD:
+            top.append((s, c))
+    ranked = sorted(spread.values(), key=lambda top: -sum(s for s, _ in top) / SPREAD)
+    lead = ranked[0]
+    mean = lambda top: sum(s for s, _ in top) / SPREAD    # noqa: E731
+    if (near(lead[0][1]) and lead[0][0] >= DIVISION[0]
+            and mean(lead) - (mean(ranked[1]) if len(ranked) > 1 else 0) >= SPREAD_LEAD):
+        return lead[0][0], lead[0][1], "division"
     return None
 
 
