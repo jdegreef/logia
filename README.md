@@ -27,7 +27,7 @@ Christian commentaries.
 | `i18n/en.json` | Every word of the interface, so a language can be added by adding a catalog |
 | `web/` | The stylesheets, scripts and fonts the pages use (see "The site" below) |
 | `scripts/` | Import, validate, verify and build |
-| `docs/` | How to add a work, the editorial rules, the reference scheme (`references.md`), the roadmap (`roadmap.md`), and how the site is deployed |
+| `docs/` | How to add a work, the editorial rules, the reference scheme (`references.md`), the data files and releases (`data.md`), the API (`api.md`), the roadmap (`roadmap.md`), and how the site is deployed |
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
@@ -52,6 +52,9 @@ Westcott), 246 excerpts in all.
 | `/search/` | Search every excerpt and whole text, narrowed by kind, era, tradition and commentator (`web/search.js` over `/data/search.json`) |
 | `/topics/`, `/topics/<id>/` | Topics: the excerpts a topic's verses and terms gather, from every tradition |
 | `/about/` | What Logia is and how excerpts are checked |
+| `/about/rules/` | The editorial rules, and every version's edition, source, rights and review |
+| `/api/v1/` | The public read-only JSON API (`scripts/api.py`, `docs/api.md`) |
+| `/linker.js`, `/linker/` | A script other sites embed to link Bible references to Logia, and how to use it |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its
 sister site: `web/style.css` and `web/fonts/` are the Open Word Bible's own

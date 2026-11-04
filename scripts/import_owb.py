@@ -139,7 +139,7 @@ def main():
     args = ap.parse_args()
     owb = os.path.abspath(args.owb)
     sys.path.insert(0, owb)
-    from owb import markup, morph  # noqa: E402  (the Open Word Bible's own code)
+    from owb import markup, morph, refs, versification  # noqa: E402  (the Open Word Bible's own code)
 
     commit = subprocess.run(["git", "-C", owb, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     pin = json.load(open(os.path.join(OUT, "SOURCE.json"), encoding="utf-8"))
@@ -153,6 +153,26 @@ def main():
         json.dump({k: {"en": v["en"], "chapters": v["chapters"]} for k, v in books.items()},
                   f, ensure_ascii=False, indent=1)
         f.write("\n")
+    # Where English Bibles number a verse otherwise than the Open Word Bible's
+    # source text (a psalm's title is its verse 1, so English Psalm 19:1 is
+    # PSA.19.2): English verse id -> the Open Word Bible's ids, for those only.
+    # Readers and commentators cite English numbers; web/linker.js and the
+    # site's citation links convert them (scripts/scripture.py, to_source).
+    data = json.load(open(os.path.join(owb, "data", "versification.json"), encoding="utf-8"))
+    english = {e for es in (data["english"] | versification.NEW_TESTAMENT).values() for e in es}
+    english |= set(data["not_in_hebrew"]) | set(versification.NEW_TESTAMENT_ABSENT)
+    to_source = {}
+    for e in sorted(english, key=lambda x: refs.parse(x).sort_key()):
+        own = [str(r) for r in versification.to_source(refs.parse(e))]
+        if own != [e]:
+            to_source[e] = own
+    with open(os.path.join(OUT, "versification.json"), "w", encoding="utf-8") as f:
+        f.write(json.dumps({"about": "English (KJV-numbered) verse id -> the Open Word Bible's verse ids, for the "
+                                     "verses numbered otherwise; from the Open Word Bible's owb/versification.py "
+                                     "and data/versification.json.",
+                            "source": data["source"]}, ensure_ascii=False, indent=1)[:-2]
+                + ',\n "to_source": {\n'
+                + ",\n".join(f"  {json.dumps(k)}: {json.dumps(v)}" for k, v in to_source.items()) + "\n }\n}\n")
     chapters = args.chapters
     if args.all:
         chapters = [f"{b}.{c}" for b, v in books.items() for c in range(1, v["chapters"] + 1)]

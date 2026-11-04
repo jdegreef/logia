@@ -357,6 +357,38 @@ class Site(unittest.TestCase):
         self.assertEqual(members["chrysostom.JHN.1.1.3"], "made flesh")   # and one elsewhere that uses a term
         self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "topics", "incarnation", "index.html")))
 
+    def test_the_api(self):
+        def get(rel):
+            with open(os.path.join(build_site.SITE, "api", "v1", rel), encoding="utf-8") as f:
+                return json.load(f)
+        index = get("index.json")
+        self.assertEqual(index["api_version"], 1)
+        jn1 = get("chapters/JHN.1.json")
+        v1 = jn1["verses"][0]
+        self.assertTrue(v1["text"].startswith("In the beginning was the Word"))
+        self.assertTrue(v1["excerpts"] and all(x in jn1["excerpts"] for x in v1["excerpts"]))
+        self.assertEqual(jn1["excerpts"]["calvin.JHN.1.1.1"]["author_name"], "John Calvin")
+        # Every chapter has a file, even without commentary, and citations reach it:
+        # Ryle on John 1:1 cites Gen. i. 1.
+        self.assertIn("ryle.JHN.1.1.1", get("chapters/GEN.1.json")["verses"][0]["cited_by"])
+        # Citations are English-numbered; the API files them at the Open Word Bible's
+        # number (Ryle's "Psalm lxxxix. 19" is PSA.89.20, the psalm's title being verse 1).
+        self.assertTrue(any(v["verse"] == 20 and v["cited_by"] for v in get("chapters/PSA.89.json")["verses"]))
+        self.assertEqual({w["id"] for w in get("works.json")}, set(build_site.Library().works))
+        self.assertEqual(get("works/calvin.json")["versions"][0]["id"], "calvin.en")
+
+    def test_the_linker_and_the_rules_page(self):
+        with open(os.path.join(build_site.SITE, "linker.js"), encoding="utf-8") as f:
+            js = f.read()
+        for placeholder in ("/*SITE*/", "/*NAMES*/", "/*CHAPTERS*/", "/*RENUMBER*/"):
+            self.assertNotIn(placeholder, js)
+        self.assertIn('"1 cor":"1CO"', js)
+        self.assertIn('"PSA.19":[[1,', js)
+        self.assertEqual(build_site.scripture.to_source("PSA.19.1"), "PSA.19.2")
+        self.assertEqual(build_site.scripture.to_source("JHN.3.16"), "JHN.3.16")
+        with open(os.path.join(build_site.SITE, "about", "rules", "index.html"), encoding="utf-8") as f:
+            self.assertEqual(f.read().count('#versions"><i>'), len(build_site.Library().versions))
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")

@@ -8,6 +8,7 @@
     "greek_text": "SBLGNT v1.2 via the Open Word Bible",
     "hebrew_text": "Westminster Leningrad Codex via MACULA Hebrew, with Open Scriptures Hebrew Bible morphology (CC BY 4.0)",
     "word_data": "MACULA Greek and MACULA Hebrew, CC BY 4.0 (Biblica / Clear Bible); MACULA Greek's ln and domain fields and MACULA Hebrew's word-sense columns are not imported",
-    "cross_references": "OpenBible.info cross references, CC BY"
+    "cross_references": "OpenBible.info cross references, CC BY",
+    "versification": "English verse numbering from the Open Scriptures Hebrew Bible's VerseMap.xml (CC BY 4.0), via the Open Word Bible"
   }
 }

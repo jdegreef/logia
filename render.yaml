@@ -19,6 +19,20 @@ services:
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
+      # The read-only API (docs/api.md) and the linker's data are for any
+      # site to read, so they allow every origin. They are checked hourly.
+      - path: /api/*
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /api/*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /linker.js
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /linker.js
+        name: Cache-Control
+        value: public, max-age=86400
       - path: /*
         name: Referrer-Policy
         value: strict-origin-when-cross-origin
