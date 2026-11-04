@@ -18,13 +18,14 @@ Christian commentaries.
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
-| `bible/owb/` | The Bible text: Open Word Bible chapters, imported at a pinned commit |
+| `bible/owb/` | The Bible text: every Open Word Bible chapter, imported at a pinned commit |
 | `i18n/en.json` | Every word of the interface, so a language can be added by adding a catalog |
 | `web/` | The stylesheets, scripts and fonts the pages use (see "The site" below) |
 | `scripts/` | Import, validate, verify and build |
 | `docs/` | How to add a work, the editorial rules, and how the site is deployed |
 
-The library today: the whole Gospel of John in the Open Word Bible text, and
+The library today: the whole Bible in the Open Word Bible text (all 66 books,
+1,189 chapters, with its Greek and Hebrew words and translation notes), and
 John 1:1–18 with eight commentaries (Chrysostom,
 Augustine, the Catena Aurea, Calvin, Matthew Henry, Bengel, J. C. Ryle and
 Westcott), 246 excerpts in all.
@@ -38,7 +39,7 @@ Westcott), 246 excerpts in all.
 | `/` | Home |
 | `/read/` | Every book; the ones in Logia with a pill per chapter, gold where there is commentary |
 | `/<book>/` | A book's chapters and who comments on it |
-| `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek words, translation notes and cross-references for the chosen verse |
+| `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek or Hebrew words, translation notes and cross-references for the chosen verse |
 | `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
 | `/about/` | What Logia is and how excerpts are checked |
@@ -104,12 +105,25 @@ To refresh the Bible text, check out
 in `bible/owb/SOURCE.json` (change the pin first to move to a newer one) and
 run:
 
-    python3 scripts/import_owb.py --owb ../open-word-bible JHN.1
+    python3 scripts/import_owb.py --owb ../open-word-bible --all
+
+or name chapters (`JHN.1 PSA.23`) to import only those. Copy the Open Word
+Bible's `web/style.css` and `web/fonts/` at the same commit.
+
+The text keeps the Open Word Bible's variations as it publishes them: the
+three levels (Literal, Balanced, Readable), its reader settings, written into
+the text as spans such as `{{gender:all people|men}}`, and its poetry lines
+(`\q`). The settings menu offers the same choices as openwordbible.org:
+inclusive or traditional gender language, Christ or Messiah, the LORD or
+Yahweh, he or He for God, and modern or original measures. `web/reader.js`
+shows each reader the wording they chose; the page's plain text, for search
+engines and readers without JavaScript, uses the defaults.
 
 ## Licences
 
 Logia's own data and writing are CC0 (`LICENSE`); the code is MIT
 (`LICENSE-CODE`). The commentary texts are in the public domain. The Bible text
-is the Open Word Bible (CC0); its Greek word data is MACULA Greek (CC BY 4.0)
-and its cross-references are from OpenBible.info (CC BY), credited on every
-page.
+is the Open Word Bible (CC0); its Greek word data is MACULA Greek and its
+Hebrew word data MACULA Hebrew, with Open Scriptures Hebrew Bible morphology
+(all CC BY 4.0), and its cross-references are from OpenBible.info (CC BY),
+credited on every page.

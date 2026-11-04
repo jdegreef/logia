@@ -5,10 +5,18 @@ Logia does not translate Scripture: its Bible text is the Open Word Bible
 the commit pinned in bible/owb/SOURCE.json. Each chapter becomes one file,
 bible/owb/en/<BOOK>.<chapter>.json, holding what the reader needs: the
 English text at three levels, the word alignments of the Balanced level, the
-SBLGNT Greek words with their MACULA data, the translation notes, headings
-and cross-references.
+original-language words with their MACULA data (SBLGNT Greek for the New
+Testament, the Westminster Leningrad Codex for the Old), the translation
+notes, headings and cross-references.
 
-    python3 scripts/import_owb.py --owb ../open-word-bible JHN.1
+The text keeps the Open Word Bible's variations as it has them: its reader
+settings ({{gender:all people|men}}, {{christos:Christ|the Messiah}},
+{{divine_name:the LORD|Yahweh}}, {{deity_pronoun:he|He}}, {{units:...}}) and
+its poetry lines (\\q), so web/reader.js can show each reader the wording
+they chose, as openwordbible.org does.
+
+    python3 scripts/import_owb.py --owb ../open-word-bible --all
+    python3 scripts/import_owb.py --owb ../open-word-bible JHN.1 PSA.23
 
 Run it again after changing the pin; review the diff like any other change.
 """
@@ -22,6 +30,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "bible", "owb")
 FIELDS = ("id", "text", "after", "lemma", "morph", "gloss", "strong")
+HEBREW_FIELDS = FIELDS + ("transliteration", "lang")
 DECISION_FIELDS = ("id", "layer", "levels", "category", "tokens", "choice",
                    "alternatives", "reason", "uncertain", "footnote")
 
@@ -38,9 +47,12 @@ def pack_chapter(owb, book, chapter, markup, morph):
         key=lambda p: int(os.path.basename(p).split(".")[2].split("-")[0]))
     if not files:
         sys.exit(f"no Open Word Bible content for {book} {chapter}")
-    grc = json.load(open(os.path.join(owb, "data", "grc", f"{book}.{chapter}.json"), encoding="utf-8"))
+    hebrew = os.path.exists(os.path.join(owb, "data", "hbo", f"{book}.{chapter}.json"))
+    source = "hbo" if hebrew else "grc"
+    words_file = json.load(open(os.path.join(owb, "data", source, f"{book}.{chapter}.json"), encoding="utf-8"))
     xref = json.load(open(os.path.join(owb, "data", "crossrefs", f"{book}.json"), encoding="utf-8"))["refs"]
-    heads = json.load(open(os.path.join(owb, "data", "headings", f"{book}.json"), encoding="utf-8"))["headings"]
+    heads_path = os.path.join(owb, "data", "headings", f"{book}.json")
+    heads = json.load(open(heads_path, encoding="utf-8"))["headings"] if os.path.exists(heads_path) else {}
 
     def pieces(text, aligns):
         """Split a Balanced rendering into [verse, text, tokens] pieces."""
@@ -60,9 +72,9 @@ def pack_chapter(owb, book, chapter, markup, morph):
                     if v is not None:
                         verse = v
                     if part:
-                        res.append([verse, markup.render(part), None])
+                        res.append([verse, part, None])
             else:
-                res.append([verse, markup.render(chunk), toks])
+                res.append([verse, chunk, toks])
         return res
 
     def by_verse(text, first):
@@ -70,7 +82,7 @@ def pack_chapter(owb, book, chapter, markup, morph):
         for vv, part in markup.split_verses(text):
             if vv is not None:
                 v = vv
-            d[str(v)] = (d.get(str(v), "") + " " + markup.render(part)).strip()
+            d[str(v)] = (d.get(str(v), "") + " " + part).strip()
         return d
 
     records = []
@@ -86,7 +98,7 @@ def pack_chapter(owb, book, chapter, markup, morph):
             records.append({
                 "id": r["id"],
                 "verses": [verse_of(x) for x in r["refs"]],
-                "greek": r["source"]["text"],
+                "source": r["source"]["text"],
                 "gloss": r["literal_gloss"],
                 "pieces": pcs,
                 "L": by_verse(en["L"], first),
@@ -97,13 +109,24 @@ def pack_chapter(owb, book, chapter, markup, morph):
                 "status": r.get("status"),
             })
     verses = sorted({v for r in records for v in r["verses"]})
+    def parse(t):
+        if not hebrew:
+            return morph.describe(t["morph"])
+        try:
+            return morph.describe_hebrew(t["morph"], "en", t.get("lang") or "H")
+        except ValueError:
+            return ""
+
+    fields = HEBREW_FIELDS if hebrew else FIELDS
     words = {}
     for v in verses:
-        toks = grc["verses"].get(f"{book}.{chapter}.{v}", [])
-        words[str(v)] = [{**{k: t.get(k) for k in FIELDS}, "parse": morph.describe(t["morph"])} for t in toks]
+        toks = words_file["verses"].get(f"{book}.{chapter}.{v}", [])
+        # The article a Hebrew preposition swallows has a row with no text;
+        # the Open Word Bible leaves it out, and so does Logia.
+        words[str(v)] = [{**{k: t.get(k) for k in fields}, "parse": parse(t)} for t in toks if t.get("text")]
     return {
-        "book": book, "chapter": chapter, "verses": verses,
-        "records": records, "greek": words,
+        "book": book, "chapter": chapter, "source": source, "verses": verses,
+        "records": records, "words": words,
         "crossrefs": {str(v): xref.get(f"{book}.{chapter}.{v}", [])[:8] for v in verses},
     }
 
@@ -111,7 +134,8 @@ def pack_chapter(owb, book, chapter, markup, morph):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--owb", required=True, help="path to an open-word-bible checkout")
-    ap.add_argument("chapters", nargs="+", help="chapters to import, e.g. JHN.1")
+    ap.add_argument("--all", action="store_true", help="import every chapter of every book")
+    ap.add_argument("chapters", nargs="*", help="chapters to import, e.g. JHN.1")
     args = ap.parse_args()
     owb = os.path.abspath(args.owb)
     sys.path.insert(0, owb)
@@ -129,7 +153,12 @@ def main():
         json.dump({k: {"en": v["en"], "chapters": v["chapters"]} for k, v in books.items()},
                   f, ensure_ascii=False, indent=1)
         f.write("\n")
-    for ch in args.chapters:
+    chapters = args.chapters
+    if args.all:
+        chapters = [f"{b}.{c}" for b, v in books.items() for c in range(1, v["chapters"] + 1)]
+    if not chapters:
+        ap.error("name the chapters to import, or pass --all")
+    for ch in chapters:
         book, chapter = ch.split(".")
         data = pack_chapter(owb, book, int(chapter), markup, morph)
         path = os.path.join(OUT, "en", f"{book}.{chapter}.json")

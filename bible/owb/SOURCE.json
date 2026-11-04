@@ -1,12 +1,13 @@
 {
   "about": "Logia's Bible text is the Open Word Bible, imported by scripts/import_owb.py from this commit. It is an AI draft until its own reviewers approve it; Logia shows it as published there and never edits it.",
   "repository": "https://github.com/jdegreef/open-word-bible",
-  "commit": "b073181073d4bd5ba4274c5b5e7375c22caaf52f",
+  "commit": "9a9d1173b6b1b0c7fe99a94fae498323282a5d93",
   "commit_date": "2026-11-03",
   "licences": {
     "translation": "Open Word Bible, CC0 1.0",
     "greek_text": "SBLGNT v1.2 via the Open Word Bible",
-    "word_data": "MACULA Greek, CC BY 4.0 (Clear Bible); the ln and domain fields are not imported",
+    "hebrew_text": "Westminster Leningrad Codex via MACULA Hebrew, with Open Scriptures Hebrew Bible morphology (CC BY 4.0)",
+    "word_data": "MACULA Greek and MACULA Hebrew, CC BY 4.0 (Biblica / Clear Bible); MACULA Greek's ln and domain fields and MACULA Hebrew's word-sense columns are not imported",
     "cross_references": "OpenBible.info cross references, CC BY"
   }
 }

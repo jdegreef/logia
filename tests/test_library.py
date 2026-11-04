@@ -106,6 +106,41 @@ class Site(unittest.TestCase):
         self.assertEqual(data["commentaries"], [])
         self.assertEqual(data["verses"][-1], 25)
 
+    def test_the_whole_bible_is_here(self):
+        lib = build_site.Library()
+        self.assertEqual(len(lib.chapters), sum(b["chapters"] for b in lib.books.values()))
+        self.assertEqual({b for b, _c in lib.chapters}, set(lib.books))
+
+    def test_an_old_testament_chapter_reads_from_the_hebrew(self):
+        text = self.read(os.path.join("psa", "23", "index.html"))
+        data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertEqual(data["source"], "hbo")
+        self.assertIn("transliteration", data["words"]["1"][0])
+        self.assertIn("Hebrew words", text)
+        self.assertEqual(data["ui"]["tap_word"], build_site.CATALOG["reader"]["tap_word_hbo"])
+
+    def test_the_text_keeps_the_open_word_bible_s_variations(self):
+        data = build_site.Library().bible("PSA", 23)
+        balanced = " ".join(p[1] for r in data["records"] for p in r["pieces"])
+        self.assertIn("{{divine_name:", balanced)
+        self.assertIn("{{deity_pronoun:", balanced)
+        self.assertIn("\\q", balanced)
+        text = self.read(os.path.join("psa", "23", "index.html"))
+        page = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
+        self.assertEqual(set(page["wording"]), set(build_site.WORDING))
+        for name in build_site.WORDING:
+            self.assertIn(f'data-pref="{name}"', self.read("index.html"), name)
+
+    def test_the_plain_text_shows_the_default_wording(self):
+        poem = "{{divine_name:the LORD|Yahweh}} is my shepherd; \\q I lack nothing"
+        self.assertEqual(build_site.default_wording(poem), "the LORD is my shepherd; I lack nothing")
+        self.assertEqual(build_site.default_wording("{{deity_pronoun:he|He}} leads me"), "He leads me")
+        text = self.read(os.path.join("psa", "23", "index.html"))
+        plain = text.split('id="text">')[1].split("</div>")[0]
+        self.assertNotIn("{{", plain)
+        self.assertNotIn("\\q", plain)
+        self.assertIn("The LORD is my shepherd", plain)
+
     def test_accounts_are_open_word_bible_s(self):
         text = self.read("index.html")
         self.assertIn('<meta name="logia-api" content="https://api.openwordbible.org">', text)

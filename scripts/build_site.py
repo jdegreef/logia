@@ -51,7 +51,32 @@ DISPLAY_PREFS = (("size", "m", ("s", "m", "l", "xl")),
                  ("leading", "normal", ("compact", "normal", "spacious")),
                  ("motion", "auto", ("auto", "reduce")),
                  ("level", "B", ("L", "B", "R")),
+                 *(("gender", "inclusive", ("inclusive", "traditional")),
+                   ("christos", "christ", ("christ", "messiah")),
+                   ("divine_name", "lord", ("lord", "yahweh")),
+                   ("deity_pronoun", "upper", ("lower", "upper")),
+                   ("units", "modern", ("modern", "original"))),
                  ("excerpt", "preview", ("preview", "full")))
+# The Open Word Bible's reader settings: wording it writes both ways in the
+# text, {{gender:all people|men}}, its default first (owb/markup.py). A
+# choice's place among its values is the option it shows, so the values keep
+# the spans' order; pronouns for God show capitalised (the second) by default.
+# web/reader.js picks the options; the page's plain text uses the defaults.
+WORDING = ("gender", "christos", "divine_name", "deity_pronoun", "units")
+SPAN = re.compile(r"\{\{([a-z_]+):([^{}]*)\}\}")
+LINE = re.compile(r" ?\\q ?")
+
+
+def default_wording(text):
+    """Text at the default reader settings, on one line (poetry's line breaks read as spaces)."""
+    defaults = {name: values.index(default) for name, default, values in DISPLAY_PREFS if name in WORDING}
+
+    def choose(m):
+        options = m[2].split("|")
+        i = defaults.get(m[1], 0)
+        return options[i] if i < len(options) else options[0]
+
+    return LINE.sub(" ", SPAN.sub(choose, text or ""))
 LEADING_GAPS = {"compact": 5, "normal": 7, "spacious": 9}
 
 # Applies saved settings before the first paint, so a page never flashes the
@@ -241,7 +266,7 @@ def prefs_menu():
                 + "".join(option(v, default, face, name) for v, face, name in options) + "</div>")
 
     def sample(pref, value):
-        if pref in ("motion", "level", "excerpt"):
+        if pref in ("motion", "level", "excerpt", *WORDING):
             return ""
         if pref == "leading":
             gap = LEADING_GAPS[value]
@@ -577,16 +602,21 @@ def chapter_page(lib, book, chapter, all_chapters):
     ui = dict(CATALOG["reader"])
     ui["eras"] = CATALOG["eras"]
     ui["levels"] = CATALOG["level"]
-    data = {**bible, "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
+    hebrew = bible["source"] == "hbo"
+    if hebrew:
+        # Old Testament chapters read from the Hebrew: a string with an _hbo
+        # variant uses it there ("Tap a Hebrew word...").
+        ui.update({k[:-4]: v for k, v in CATALOG["reader"].items() if k.endswith("_hbo")})
+    data = {**bible, "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING}, "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
             "books": {k: v["en"] for k, v in lib.books.items()},
             "available": [f"{b}.{c}" for b, c in all_chapters], "owb_site": OWB_SITE}
-    heading = next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}")
+    heading = default_wording(next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}"))
     # The text as plain Balanced verses, for search engines and readers
     # without JavaScript; web/reader.js replaces it.
     verses = {}
     for r in bible["records"]:
         for p in r["pieces"]:
-            verses[p[0]] = verses.get(p[0], "") + p[1]
+            verses[p[0]] = verses.get(p[0], "") + default_wording(p[1])
     plain = " ".join(f'<span class="cx-verse"><span class="cx-vn">{v}</span>{e(verses[v].strip())}</span>'
                      for v in sorted(verses))
     i = all_chapters.index((book, chapter))
@@ -610,13 +640,14 @@ def chapter_page(lib, book, chapter, all_chapters):
     first_ref = f"{name} {chapter}:{bible['verses'][0]}"
     tabs = "".join(
         f'<button role="tab" id="tab-{k}" data-tab="{k}" aria-selected="{"true" if k == "comm" else "false"}">'
-        f'{e(t("chapter.tab_" + k))}<span class="cx-n" id="n-{k}"></span></button>' for k in ("comm", "words", "notes", "xref"))
+        f'{e(t("chapter.tab_" + k + ("_hbo" if hebrew and k == "words" else "")))}<span class="cx-n" id="n-{k}"></span></button>'
+        for k in ("comm", "words", "notes", "xref"))
     body = f"""
 <div class="cx-layout">
 <article class="cx-passage">
 <p class="cx-eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("chapter.eyebrow", chapter=chapter))}</p>
 <h1>{e(heading)}</h1>
-<p class="cx-sub">{e(t("chapter.pick"))}</p>
+<p class="cx-sub">{e(t("chapter.pick_hbo" if hebrew else "chapter.pick"))}</p>
 <div class="cx-levels" role="group" aria-label="{e(t("chapter.level_label"))}">{levels}</div>
 <div class="cx-text" id="text">{plain}</div>
 <p class="cx-hint">{t("chapter.owb_hint", link=owb_link)}</p>
