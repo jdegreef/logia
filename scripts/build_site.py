@@ -2,7 +2,8 @@
 
     python3 scripts/build_site.py
 
-Reads the library (library/authors, works, comments, corrections), the Bible
+Reads the library (library/authors, works, comments, corrections, citations,
+quotations, texts), the Bible
 text (bible/owb), the interface text (i18n/en.json) and web/, and writes a
 static site:
 
@@ -13,6 +14,7 @@ static site:
     /commentators/           every commentator, by era
     /commentators/<author>/  one commentator: biography, works, comments
     /works/<work>/           one commentary: edition, rights, every excerpt
+    /works/<work>/<n>/       a whole homily or tractate (library/texts)
     /about/                  what Logia is and how its text is checked
 
 The look, the header, footer and settings menu follow openwordbible.org:
@@ -26,6 +28,8 @@ import os
 import re
 import shutil
 from urllib.parse import quote
+
+import scripture
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
@@ -153,6 +157,35 @@ def snippet(text, words=34):
     return " ".join(first[:words]) + ("…" if len(first) > words else "")
 
 
+SENTENCE_END = re.compile(r"[.?!][\"”’)]*\s+(?=[A-Z“\"‘(\[])|\n\s*\n")
+
+
+def cite_snippet(text, at, length):
+    """The sentence a citation sits in, copied from the excerpt as it reads
+    (cut at about 220 characters on either side, marked with …)."""
+    lo, hi = max(0, at - 220), min(len(text), at + length + 220)
+    ends = [m.end() for m in SENTENCE_END.finditer(text, lo, at)]
+    s = ends[-1] if ends else lo
+    if not ends and s > 0:
+        s = text.find(" ", s) + 1
+    m = SENTENCE_END.search(text, at + length, hi)
+    e_ = m.start() + 1 if m else hi
+    if not m and e_ < len(text):
+        e_ = text.rfind(" ", at + length, e_)
+    piece = " ".join(text[s:e_].split())
+    return ("… " if s > 0 and not ends else "") + piece + (" …" if not m and e_ < len(text) else "")
+
+
+def plural(word):
+    return word[:-1] + "ies" if word.endswith("y") else word + "s"
+
+
+def locus_label(work, locus):
+    """'4.1' in Chrysostom -> 'Homily 4, section 1'."""
+    names = [n if i == 0 else n.lower() for i, n in enumerate(work["divisions"])]
+    return ", ".join(f"{name} {n}" for name, n in zip(names, locus.split(".")))
+
+
 # --- The library --------------------------------------------------------------
 
 class Library:
@@ -166,6 +199,20 @@ class Library:
             self.fixes[c["work"]] = [(x["from"], x["to"]) for x in c["corrections"]]
         urls = {(f["work"], os.path.basename(f["path"])): f["url"]
                 for f in load(os.path.join(ROOT, "sources", "manifest.json"))["files"]}
+        self.urls = urls
+        # Scripture each excerpt cites, and the Catena's quotations traced to
+        # the Fathers' passages (scripts/find_refs.py); rejected ones are left out.
+        cites, quotes, quoted_in = {}, {}, {}
+        for p in sorted(glob.glob(os.path.join(ROOT, "library", "citations", "*", "*.json"))):
+            for c in load(p)["citations"]:
+                if c["status"] != "rejected":
+                    cites.setdefault(c["in"], []).append(c)
+        for p in sorted(glob.glob(os.path.join(ROOT, "library", "quotations", "*", "*.json"))):
+            for q in load(p)["quotations"]:
+                if q["status"] != "rejected":
+                    quotes.setdefault(q["in"], []).append(q)
+                    if q["excerpt"]:
+                        quoted_in.setdefault(q["excerpt"], []).append(q)
         self.comments = []
         for p in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
             data = load(p)
@@ -175,7 +222,23 @@ class Library:
                 for a, b in self.fixes.get(work, []):
                     text = text.replace(a, b)
                 self.comments.append({**entry, "work": work, "text": text,
-                                      "source_url": urls.get((work, entry["sources"][0]), self.works[work]["full_text_url"])})
+                                      "source_url": urls.get((work, entry["sources"][0]), self.works[work]["full_text_url"]),
+                                      "cites": cites.get(entry["id"], []), "quotes": quotes.get(entry["id"], []),
+                                      "quoted_in": quoted_in.get(entry["id"], [])})
+        self.by_id = {c["id"]: c for c in self.comments}
+        # Whole homilies and tractates (scripts/extract_texts.py), in order,
+        # and where each excerpt begins in one.
+        self.texts = {}
+        for p in glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json")):
+            x = load(p)
+            self.texts.setdefault(x["work"], []).append(x)
+        self.in_full = {}
+        for wid, ts in self.texts.items():
+            ts.sort(key=lambda x: int(x["locus"]))
+            for x in ts:
+                for para in x["paragraphs"]:
+                    for cid in para["excerpts"]:
+                        self.in_full.setdefault(cid, f"/works/{wid}/{x['locus']}/#{para['id']}")
         # The chapters whose Bible text is imported, in canonical order.
         order = list(self.books)
         self.chapters = sorted(
@@ -197,7 +260,9 @@ class Library:
         return sorted(self.authors.values(), key=lambda a: (ERAS.index(a["era"]), a["died"]))
 
     def in_chapter(self, book, chapter, last_verse):
-        """{work: [entries clipped to this chapter as verse numbers]}."""
+        """{work: [entries clipped to this chapter as verse numbers]}, each
+        with what the reader shows beside it: the Scripture it cites, the
+        Fathers it quotes or that quote it, and its place in a whole text."""
         out = {}
         for c in self.comments:
             sb, sc, sv = ref_parts(c["start"])
@@ -205,8 +270,99 @@ class Library:
             if sb != book or not (sc <= chapter <= ec):
                 continue
             out.setdefault(c["work"], []).append({
-                "start": sv if sc == chapter else 1, "end": ev if ec == chapter else last_verse,
-                "heading": c["heading"], "excerpt": c["text"], "source_url": c["source_url"]})
+                "id": c["id"], "start": sv if sc == chapter else 1, "end": ev if ec == chapter else last_verse,
+                "heading": c["heading"], "excerpt": c["text"], "source_url": c["source_url"],
+                "locus": c.get("locus"), "cites": self.cites_for(c), "quotes": self.quote_rows(c),
+                "quotedIn": self.quoted_in_rows(c), "inFull": self.in_full.get(c["id"])})
+        return out
+
+    # --- Links between texts (docs/references.md) ---
+
+    def verse_link(self, ref, card=None):
+        """Where to read a verse: on Logia if its chapter is here, else on the
+        Open Word Bible, which has no deuterocanonical books (None)."""
+        book, chapter, verse = scripture.parse(ref)
+        if (book, chapter) in self.chapters:
+            return chapter_url(book, chapter) + f"#v{verse}" + (f"-{card}" if card else "")
+        if book in scripture.DEUTEROCANON or card:
+            return None
+        return OWB_SITE + chapter_url(book, chapter)
+
+    def cites_for(self, c):
+        return [{"at": x["at"], "text": x["text"], "label": scripture.label(x["start"], x["end"]),
+                 "href": self.verse_link(x["start"]), "status": x["status"]} for x in c["cites"]]
+
+    def quote_rows(self, c):
+        """A catena excerpt's quotations, traced to the quoted works."""
+        out = []
+        for q in c["quotes"]:
+            w, a = self.works[q["work"]], self.author_of(q["work"])
+            held = self.by_id.get(q["excerpt"])
+            url = self.urls.get((q["work"], q["source"]), w["full_text_url"]) + (f"#{q['para']}" if q["para"] else "")
+            out.append({"label": q["label"], "author": a["name"], "where": locus_label(w, q["locus"]),
+                        "exact": bool(q["para"]), "url": url, "status": q["status"],
+                        "href": self.verse_link(held["start"], held["work"]) if held else None,
+                        "ref": scripture.label(held["start"], held["end"]) if held else None})
+        return out
+
+    def quoted_in_rows(self, c):
+        """The catena excerpts that quote this excerpt's passage."""
+        out = []
+        for q in c["quoted_in"]:
+            cat = self.by_id[q["in"]]
+            w, a = self.works[cat["work"]], self.author_of(cat["work"])
+            out.append({"author": a["name"], "title": w["title"].split(":")[0], "status": q["status"],
+                        "ref": scripture.label(cat["start"], cat["end"]),
+                        "href": self.verse_link(cat["start"], cat["work"])})
+        return out
+
+    def whole_on(self, ref):
+        """The whole homilies and tractates that expound a verse (the work's
+        second structure, by verse): each with where the verse begins in it,
+        the first paragraph marked with that verse, or the text's top when
+        only its heading's range covers it."""
+        out = []
+        b, ch, v = scripture.parse(ref)
+        for wid in self.ordered_works(self.texts):
+            w, a = self.works[wid], self.author_of(wid)
+            for x in self.texts[wid]:
+                sb, sc, sv = scripture.parse(x["verses"]["start"])
+                _, ec, ev = scripture.parse(x["verses"]["end"])
+                if sb != b or not (sc, sv) <= (ch, v) <= (ec, ev):
+                    continue
+                para = next((p for p in x["paragraphs"] if p["verse"] == ref), None)
+                where = locus_label(w, para["locus"] if para and para["locus"].split(".")[-1] != "1" else x["locus"])
+                out.append({"author": a["name"], "short": short_name(a), "work_id": wid, "where": where,
+                            "href": f"/works/{wid}/{x['locus']}/" + (f"#{para['id']}" if para else "")})
+        return out
+
+    def cited_by(self, book, chapter, verses):
+        """{verse: [excerpts anywhere in the library that cite it while
+        commenting on another verse]}."""
+        first, last = verses[0], verses[-1]
+        out = {str(v): [] for v in verses}
+        for c in self.comments:
+            cb, cc, cv = ref_parts(c["start"])
+            _, ec, ev = ref_parts(c["end"])
+            for x in c["cites"]:
+                b, ch, v = scripture.parse(x["start"])
+                _, ch2, v2 = scripture.parse(x["end"])
+                if b != book or not (ch <= chapter <= ch2):
+                    continue
+                for verse in range(v if ch == chapter else first, (v2 if ch2 == chapter else last) + 1):
+                    rows = out.get(str(verse))
+                    if rows is None or (cb == book and (cc, cv) <= (chapter, verse) <= (ec, ev)):
+                        continue                 # not in this chapter, or already on the verse
+                    if any(r["id"] == c["id"] for r in rows):
+                        continue
+                    a = self.author_of(c["work"])
+                    rows.append({"id": c["id"], "author": a["name"], "author_dates": a["dates"],
+                                 "tradition": a["tradition"], "era": a["era"], "died": a["died"],
+                                 "ref": scripture.label(c["start"], c["end"]),
+                                 "href": self.verse_link(c["start"], c["work"]) or self.works[c["work"]]["full_text_url"],
+                                 "text": x["text"], "snippet": cite_snippet(c["text"], x["at"], len(x["text"]))})
+        for rows in out.values():
+            rows.sort(key=lambda r: (ERAS.index(r["era"]), r["died"]))
         return out
 
     def coverage(self):
@@ -572,11 +728,14 @@ def chapter_page(lib, book, chapter, all_chapters):
             "work_id": wid, "author": a["name"], "short_name": short_name(a), "author_dates": a["dates"],
             "tradition": a["tradition"], "era": a["era"], "died": a["died"], "title": w["title"],
             "edition_short": short_edition(w["edition"]), "author_url": f'/commentators/{a["id"]}/',
+            "divisions": w["divisions"],
             "work_url": f"/works/{wid}/", "entries": sorted(by_work[wid], key=lambda x: (x["start"], x["end"]))})
     ui = dict(CATALOG["reader"])
     ui["eras"] = CATALOG["eras"]
     ui["levels"] = CATALOG["level"]
     data = {**bible, "bookName": name, "commentaries": commentaries, "ui": ui, "eras": ERAS,
+            "citedBy": lib.cited_by(book, chapter, bible["verses"]),
+            "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "books": {k: v["en"] for k, v in lib.books.items()},
             "available": [f"{b}.{c}" for b, c in all_chapters], "owb_site": OWB_SITE}
     heading = next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}")
@@ -735,15 +894,126 @@ def work_page(lib, wid):
         paras = "".join(f"<p>{e(p.strip())}</p>" for p in c["text"].split("\n\n"))
         full.append(f'<article class="lg-excerpt" id="{e(c["id"])}"><p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
                     f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>{heading}<div class="lg-text">{paras}</div></article>')
+    texts = lib.texts.get(wid, [])
+    whole = ""
+    if texts:
+        items = "".join(
+            f'<li><a href="/works/{wid}/{x["locus"]}/"><b>{e(locus_label(w, x["locus"]))}</b></a>'
+            f'<span class="lg-quiet">{e(text_lead(x))}</span></li>' for x in texts)
+        verses = []
+        for x in texts:
+            b, c, a1 = scripture.parse(x["verses"]["start"])
+            _, _, a2 = scripture.parse(x["verses"]["end"])
+            verses += [f"{b}.{c}.{v}" for v in range(a1, a2 + 1) if f"{b}.{c}.{v}" not in verses]
+        by_verse = "".join(
+            f'<li><a href="{e(lib.verse_link(ref) or "")}"><b>{e(scripture.label(ref))}</b></a><span>'
+            + " · ".join(f'<a href="{e(r["href"])}">{e(r["where"])}</a>' for r in lib.whole_on(ref) if r["work_id"] == wid)
+            + "</span></li>" for ref in verses)
+        whole = (f'<section class="lg-block" id="whole"><h2>{e(t("work.straight_through"))}</h2>'
+                 f'<p class="lg-quiet">{e(t("work.straight_through_note", divisions=plural(w["divisions"][0]).lower()))}</p>'
+                 f'<div class="lg-structures"><div><h3 class="label">{e(t("work.by_division", division=w["divisions"][0].lower()))}</h3>'
+                 f'<ul class="lg-wholes">{items}</ul></div>'
+                 f'<div><h3 class="label">{e(t("work.by_verse"))}</h3><p class="lg-quiet">{e(t("work.by_verse_note"))}</p>'
+                 f'<ul class="lg-wholes lg-by-verse">{by_verse}</ul></div></div></section>')
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 <p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
 <dl class="lg-facts">{dl}</dl>
+{whole}
 <section class="lg-block"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 <div class="lg-book">{"".join(full)}</div></section>"""
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+
+
+def text_lead(x):
+    """The short headings under a homily's title: "John i. 1", "Chapter I. 1–5"."""
+    out = []
+    for p in x["paragraphs"][1:3]:
+        if len(p["text"]) >= 60 or p["excerpts"]:
+            break
+        out.append(p["text"])
+    return " · ".join(out)
+
+
+def linked_html(lib, text, cites):
+    """Text with the Scripture it cites made into links."""
+    h, pos = [], 0
+    for c in sorted(cites, key=lambda c: c["at"]):
+        if c["at"] < pos:
+            continue
+        href = lib.verse_link(c["start"])
+        words = e(text[c["at"]:c["at"] + len(c["text"])])
+        label = e(scripture.label(c["start"], c["end"]))
+        h.append(e(text[pos:c["at"]]))
+        h.append(f'<a class="lg-cite" href="{e(href)}" title="{label}">{words}</a>' if href
+                 else f'<span class="lg-cite" title="{label}">{words}</span>')
+        pos = c["at"] + len(c["text"])
+    return "".join(h) + e(text[pos:])
+
+
+def text_page(lib, wid, x):
+    """A whole homily or tractate, paragraph by paragraph, marking the
+    passages Logia sets beside a verse and those the Catena quotes."""
+    w, a = lib.works[wid], lib.author_of(wid)
+    name = locus_label(w, x["locus"])
+    lead = text_lead(x)
+    paras = x["paragraphs"][1 + (lead.count(" · ") + 1 if lead else 0):]
+    quoted = {}
+    for c in lib.comments:
+        for q in c["quotes"]:
+            if q["work"] == wid and q["para"]:
+                quoted.setdefault(q["para"], []).append(q)
+    body, section = [], None
+    for n, p in enumerate(paras):
+        sec = p["locus"].split(".")[-1] if p["locus"] else None
+        if sec != section:
+            if section is not None:
+                body.append("</section>")
+            body.append(f'<section class="lg-section" id="s{sec}">')
+            section = sec
+        if p["verse"] and p["verse"] != (paras[n - 1]["verse"] if n else None):
+            href = lib.verse_link(p["verse"])
+            label = e(scripture.label(p["verse"]))
+            body.append('<p class="lg-verse">' + (f'<a href="{e(href)}">{label}</a>' if href else label) + "</p>")
+        head = len(p["text"]) < 60 and not p["cites"] and not re.search(r"[.?!”]$", p["text"])
+        cls = " ".join(k for k, on in (("lg-head", head), ("lg-held", p["excerpts"])) if on)
+        body.append(f'<p id="{e(p["id"])}"' + (f' class="{cls}"' if cls else "") + f'>{linked_html(lib, p["text"], p["cites"])}</p>')
+        marks = []
+        after = paras[n + 1]["excerpts"] if n + 1 < len(paras) else []
+        for cid in (cid for cid in p["excerpts"] if cid not in after):     # once, under its last paragraph
+            c = lib.by_id[cid]
+            href = lib.verse_link(c["start"], wid)
+            if href:
+                marks.append(f'<a href="{e(href)}">{e(t("text.in_logia", ref=scripture.label(c["start"], c["end"])))}</a>')
+        for q in quoted.get(p["id"], []):
+            cat = lib.by_id[q["in"]]
+            href = lib.verse_link(cat["start"], cat["work"])
+            ref = e(scripture.label(cat["start"], cat["end"]))
+            link = f'<a href="{e(href)}">{ref}</a>' if href else ref
+            note = "" if q["status"] == "reviewed" else " " + e(t("reader.unchecked"))
+            marks.append(f'<span>{t("text.quoted", name=e(lib.author_of(cat["work"])["name"]), title="<i>" + e(lib.works[cat["work"]]["title"].split(":")[0]) + "</i>", ref=link)}{note}</span>')
+        if marks:
+            body.append(f'<div class="lg-marks">{"".join(marks)}</div>')
+    if section is not None:
+        body.append("</section>")
+    siblings = lib.texts[wid]
+    i = siblings.index(x)
+    turns = [f'<a rel="prev" href="/works/{wid}/{siblings[i - 1]["locus"]}/">&larr; {e(locus_label(w, siblings[i - 1]["locus"]))}</a>'
+             if i else "<span></span>",
+             f'<a rel="next" href="/works/{wid}/{siblings[i + 1]["locus"]}/">{e(locus_label(w, siblings[i + 1]["locus"]))} &rarr;</a>'
+             if i + 1 < len(siblings) else "<span></span>"]
+    html_body = f"""
+<header class="page-head"><p class="eyebrow"><a href="/works/{wid}/">{e(w["title"])}</a> · {e(scripture.label(x["verses"]["start"], x["verses"]["end"]))}</p>
+<h1>{e(name)}</h1><p class="dek">{e(lead)}</p>
+<p class="actions"><a class="button ghost" href="/commentators/{a["id"]}/">{e(a["name"])}</a>
+<a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p></header>
+<div class="lg-whole">{"".join(body)}</div>
+<nav class="lg-turns" aria-label="{e(w["title"])}">{"".join(turns)}</nav>
+<p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>"""
+    return page(lib, f'{a["name"]}, {name}', html_body, f"/works/{wid}/{x['locus']}/", current="/commentators/",
+                description=t("text.description", name=a["name"], title=w["title"], where=name))
 
 
 def signed_in_page(lib):
@@ -848,6 +1118,9 @@ def build():
     for wid in lib.ordered_works():
         write(f"/works/{wid}/", work_page(lib, wid))
         pages.append(f"/works/{wid}/")
+        for x in lib.texts.get(wid, []):
+            write(f"/works/{wid}/{x['locus']}/", text_page(lib, wid, x))
+            pages.append(f"/works/{wid}/{x['locus']}/")
     write("/about/", about_page(lib))
     pages.append("/about/")
     write("/signed-in/", signed_in_page(lib))

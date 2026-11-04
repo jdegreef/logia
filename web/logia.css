@@ -218,6 +218,44 @@
 .lg-linkish { border: 0; background: none; padding: 0; font: inherit; color: var(--muted); cursor: pointer; text-decoration: underline; }
 .lg-linkish:hover { color: var(--text); }
 
+/* Links between texts (docs/references.md): Scripture cited in an excerpt,
+   the Catena's quotations traced to the Fathers, excerpts that refer to a
+   verse from elsewhere, and whole homilies and tractates. */
+.cx-cite, .lg-cite { color: inherit; text-decoration: underline dotted var(--accent); text-underline-offset: 3px; }
+a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
+.cx-qs { font-size: 13.5px; color: var(--muted); margin: 6px 0 12px; padding-left: 10px; border-left: 2px solid var(--line); }
+.cx-qs div + div { margin-top: 4px; }
+.cx-qs b { color: var(--text); font-weight: 600; }
+.cx-elsewhere { margin-top: 22px; }
+.cx-elsewhere .cx-hint { margin: 2px 0 10px; }
+.cx-cb { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.cx-cb .cx-who { margin-bottom: 4px; }
+.cx-cb q { quotes: none; font-family: var(--serif); }
+.cx-cb mark { background: var(--accent-soft, var(--surface-2)); color: inherit; border-radius: 3px; padding: 0 2px; }
+.cx-cb a { font-size: 13px; font-weight: 600; }
+.lg-wholes { list-style: none; padding: 0; margin: 12px 0 0; max-width: 70ch; }
+.lg-wholes li { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 2px 12px; align-items: baseline; }
+.lg-wholes a { text-decoration: none; font-family: var(--display); font-size: 18px; }
+.lg-whole { max-width: 70ch; margin-top: 28px; font-family: var(--read-font); font-size: calc(18px * var(--read-scale));
+  line-height: calc(1.65 * var(--read-leading)); }
+.lg-whole p { margin: 0 0 .9em; overflow-wrap: break-word; }
+.lg-whole p.lg-head { font-family: var(--sans); font-size: 14px; font-style: italic; color: var(--muted); }
+.lg-section, .lg-whole p { scroll-margin-top: calc(var(--header-h) + 16px); }
+.lg-whole .lg-held { border-left: 3px solid var(--gold); padding-left: 14px; margin-left: -17px; }
+.lg-whole p:target { background: var(--surface-2); border-radius: 6px; }
+.lg-marks { font-family: var(--sans); font-size: 13px; color: var(--muted); margin: -.5em 0 1.1em; display: flex; flex-direction: column; gap: 2px; }
+.lg-held + .lg-marks { padding-left: 14px; margin-left: -17px; border-left: 3px solid var(--gold); }
+.lg-turns { display: flex; justify-content: space-between; gap: 16px; max-width: 70ch; margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--line); }
+.lg-whole-note { max-width: 70ch; margin-top: 18px; }
+@media (max-width: 560px) { .lg-whole .lg-held, .lg-held + .lg-marks { margin-left: -12px; padding-left: 9px; } }
+.cx-whole { font-size: 13.5px; color: var(--muted); margin: 18px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
+.lg-structures { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 8px 40px; max-width: 980px; }
+.lg-structures h3 { margin: 18px 0 0; }
+.lg-by-verse a { font-family: var(--sans); font-size: 14px; }
+.lg-by-verse li > a b { font-family: var(--display); font-size: 17px; font-weight: 600; }
+.lg-whole p.lg-verse { font-family: var(--sans); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; margin: 1.4em 0 .4em; }
+.lg-whole p.lg-verse a { text-decoration: none; }
+
 /* The page-not-found page (/404.html): the sign-in card's layout, two links stacked. */
 .lg-not-found .mark { display: block; margin: 0 auto; }
 .lg-not-found-links { display: grid; gap: 10px; margin: 8px 0 0; }

@@ -1,0 +1,366 @@
+{
+ "work": "bengel",
+ "book": "JHN",
+ "citations": [
+  {
+   "in": "bengel.JHN.1.1.1",
+   "at": 227,
+   "text": "ver. 3",
+   "start": "JHN.1.3",
+   "end": "JHN.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.1.1",
+   "at": 444,
+   "text": "ver. 10",
+   "start": "JHN.1.10",
+   "end": "JHN.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.1.3",
+   "at": 331,
+   "text": "Jer. xxiii. 6",
+   "start": "JER.23.6",
+   "end": "JER.23.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.1.3",
+   "at": 395,
+   "text": "Hos. i. 7",
+   "start": "HOS.1.7",
+   "end": "HOS.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.1.3",
+   "at": 449,
+   "text": "Ps. xxiii. 1",
+   "start": "PSA.23.1",
+   "end": "PSA.23.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.2.1",
+   "at": 187,
+   "text": "ver. 1",
+   "start": "JHN.1.1",
+   "end": "JHN.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.2.1",
+   "at": 474,
+   "text": "ver. 14",
+   "start": "JHN.1.14",
+   "end": "JHN.1.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.2.1",
+   "at": 491,
+   "text": "1 John ii. 1",
+   "start": "1JN.2.1",
+   "end": "1JN.2.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.2.1",
+   "at": 692,
+   "text": "ver. 2",
+   "start": "JHN.1.2",
+   "end": "JHN.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.3.1",
+   "at": 88,
+   "text": "ver. 10",
+   "start": "JHN.1.10",
+   "end": "JHN.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.4.1",
+   "at": 303,
+   "text": "viii. 12",
+   "start": "JHN.8.12",
+   "end": "JHN.8.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.4.1",
+   "at": 398,
+   "text": "1 Tim. vi. 16",
+   "start": "1TI.6.16",
+   "end": "1TI.6.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.4.1",
+   "at": 498,
+   "text": "Phil. ii. 15, 16",
+   "start": "PHP.2.15",
+   "end": "PHP.2.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.6.1",
+   "at": 160,
+   "text": "ver. 6",
+   "start": "JHN.1.6",
+   "end": "JHN.1.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.6.1",
+   "at": 1004,
+   "text": "ver. 1-5",
+   "start": "JHN.1.1",
+   "end": "JHN.1.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.9.1",
+   "at": 540,
+   "text": "ver. 7",
+   "start": "JHN.1.7",
+   "end": "JHN.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.9.1",
+   "at": 568,
+   "text": "ver. 6",
+   "start": "JHN.1.6",
+   "end": "JHN.1.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.11.1",
+   "at": 186,
+   "text": "ver. 6, 7",
+   "start": "JHN.1.6",
+   "end": "JHN.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.12.1",
+   "at": 3,
+   "text": "ver. 12",
+   "start": "JHN.1.12",
+   "end": "JHN.1.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.12.1",
+   "at": 299,
+   "text": "ver. 13",
+   "start": "JHN.1.13",
+   "end": "JHN.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.12.1",
+   "at": 323,
+   "text": "ver. 14",
+   "start": "JHN.1.14",
+   "end": "JHN.1.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.12.1",
+   "at": 502,
+   "text": "ver. 6",
+   "start": "JHN.1.6",
+   "end": "JHN.1.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.14.1",
+   "at": 94,
+   "text": "ver. 13",
+   "start": "JHN.1.13",
+   "end": "JHN.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.14.1",
+   "at": 208,
+   "text": "1 Tim. iii. 16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.14.2",
+   "at": 167,
+   "text": "Heb. ix. 11",
+   "start": "HEB.9.11",
+   "end": "HEB.9.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.14.2",
+   "at": 339,
+   "text": "John ii. 21",
+   "start": "JHN.2.21",
+   "end": "JHN.2.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.14.2",
+   "at": 494,
+   "text": "Luke ix. 32",
+   "start": "LUK.9.32",
+   "end": "LUK.9.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.14.3",
+   "at": 332,
+   "text": "Matt. iii. 17",
+   "start": "MAT.3.17",
+   "end": "MAT.3.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.15.1",
+   "at": 94,
+   "text": "ver. 15",
+   "start": "JHN.1.15",
+   "end": "JHN.1.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.15.1",
+   "at": 198,
+   "text": "ver. 19",
+   "start": "JHN.1.19",
+   "end": "JHN.1.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.15.1",
+   "at": 287,
+   "text": "ver. 29",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.15.1",
+   "at": 677,
+   "text": "ver. 15",
+   "start": "JHN.1.15",
+   "end": "JHN.1.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.15.1",
+   "at": 812,
+   "text": "ver. 29, 36",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.15.1",
+   "at": 812,
+   "text": "ver. 29, 36",
+   "start": "JHN.1.36",
+   "end": "JHN.1.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.16.1",
+   "at": 285,
+   "text": "ver. 17",
+   "start": "JHN.1.17",
+   "end": "JHN.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.17.1",
+   "at": 17,
+   "text": "Rom. iv. 15",
+   "start": "ROM.4.15",
+   "end": "ROM.4.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.17.1",
+   "at": 52,
+   "text": "Heb. x. 1",
+   "start": "HEB.10.1",
+   "end": "HEB.10.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.17.1",
+   "at": 211,
+   "text": "iv. 23",
+   "start": "JHN.4.23",
+   "end": "JHN.4.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.18.1",
+   "at": 226,
+   "text": "Rom. xvi. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.1.18.1",
+   "at": 425,
+   "text": "iii. 32",
+   "start": "JHN.3.32",
+   "end": "JHN.3.32",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}

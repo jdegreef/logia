@@ -141,7 +141,7 @@
     "next": "Next chapter",
     "description": "{book} {chapter} with {n} public-domain commentaries from the early church to the 1800s, verse by verse.",
     "description_none": "{book} {chapter} in the Open Word Bible. Commentary on this chapter is still to come.",
-    "credits": "Commentary excerpts are copied word for word from public-domain editions and link to the full text: {works}. The Catena Aurea, Bengel, Ryle and Westcott come from page scans on archive.org: misread letters and figures are corrected to match the printed page, and Greek the scans cannot read is left out (marked … where it breaks a sentence).",
+    "credits": "Commentary excerpts are copied word for word from public-domain editions and link to the full text: {works}. The Catena Aurea, Bengel, Ryle and Westcott come from page scans on archive.org: misread letters and figures are corrected to match the printed page, and Greek the scans cannot read is left out (marked … where it breaks a sentence). Scripture references in the excerpts are linked: in the CCEL transcriptions as CCEL's editors marked them, in the scans where they are printed in the usual way; no one has checked these links yet.",
     "panel_label": "Commentary on the chosen verse",
     "prev_verse": "Previous verse",
     "next_verse": "Next verse",
@@ -201,7 +201,17 @@
     "copied": "Link copied.",
     "copy_this": "Copy this link:",
     "sign_in_to": "Sign in with your Open Word Bible account to like and save comments.",
-    "sign_in": "Sign in"
+    "sign_in": "Sign in",
+    "elsewhere": "Elsewhere in the library",
+    "elsewhere_hint": "Writing on other verses, these commentators refer to {ref}.",
+    "read_it_on": "Read it on {ref}",
+    "read_in_full": "Read {where} in full",
+    "unchecked": "(matched by wording, unchecked)",
+    "unchecked_title": "Matched by shared wording; no one has checked it yet",
+    "not_pinned": "(the passage is not pinned down)",
+    "quoted_by": "Quoted by {name} in the {title} on {ref}",
+    "full_text_short": "full text",
+    "whole_texts": "Read in full on this verse"
   },
   "commentators": {
     "title": "Commentators",
@@ -231,7 +241,12 @@
     "excerpts": "{n} excerpts",
     "front_to_back": "Front to back",
     "front_to_back_note": "Every excerpt Logia holds from this work, in order. Each links to its verse in the reader.",
-    "open_verse": "Read {ref} with all its commentary"
+    "open_verse": "Read {ref} with all its commentary",
+    "straight_through": "Read straight through",
+    "straight_through_note": "The {divisions} that hold Logia's excerpts, copied whole from their CCEL transcriptions. Each marks the passages Logia sets beside a verse.",
+    "by_division": "By {division}",
+    "by_verse": "By verse",
+    "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on."
   },
   "about": {
     "title": "About",
@@ -281,5 +296,12 @@
       "open_in_reader": "Read it in context",
       "remove": "Remove"
     }
+  },
+  "text": {
+    "in_logia": "In Logia on {ref}",
+    "quoted": "Quoted by {name} in the {title}, on {ref}",
+    "on_ccel": "On CCEL",
+    "note": "Copied word for word from {edition}, as transcribed by CCEL. The translator's footnotes are left out. Scripture references are linked as CCEL marks them. A gold rule marks the passages Logia sets beside a verse.",
+    "description": "{name}, {title}, {where}: the whole text, with the passages Logia sets beside each verse."
   }
 }

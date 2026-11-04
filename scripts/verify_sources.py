@@ -9,6 +9,8 @@ compares the two.
   word for word. Footnotes, footnote markers and page numbers are ignored,
   since the brief for copying drops them, and a passage cut with "..." is
   checked piece by piece.
+- A whole homily or tractate (library/texts/, from scripts/extract_texts.py)
+  is checked like a digital excerpt, paragraph by paragraph.
 - A scan source (archive.org OCR) mixes margin notes, running heads and page
   numbers into its lines, so it is checked in runs of six words: at least
   MIN_SCAN_SHARE of an excerpt's words must lie in a run found in the scan.
@@ -137,7 +139,26 @@ def main(argv):
                 failures += 1
                 print(f"{e['id']}: " + "; ".join(problems))
     print(f"{total - failures} of {total} excerpts found in their sources")
-    return 1 if failures else 0
+    paras = bad = 0
+    for path in sorted(glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json"))):
+        t = json.load(open(path, encoding="utf-8"))
+        if only and t["work"] not in only:
+            continue
+        meta = files.get(t["work"], {}).get(t["source"])
+        if not meta:
+            bad += 1
+            print(f"{os.path.relpath(path, ROOT)}: source {t['source']} is not in sources/manifest.json")
+            continue
+        src = source_letters(os.path.join(ROOT, meta["path"]))
+        for para in t["paragraphs"]:
+            paras += 1
+            problem = check_digital(para["text"], src)
+            if problem:
+                bad += 1
+                print(f"{os.path.relpath(path, ROOT)}: {para['id']}: {problem}")
+    if paras:
+        print(f"{paras - bad} of {paras} paragraphs of whole texts found in their sources")
+    return 1 if failures or bad else 0
 
 
 if __name__ == "__main__":

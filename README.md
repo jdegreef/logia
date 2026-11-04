@@ -13,8 +13,11 @@ Christian commentaries.
 | Path | Holds |
 |---|---|
 | `library/authors/<author>.json` | One commentator: dates, era, tradition, a short biography (a draft until reviewed) |
-| `library/works/<work>.json` | One commentary: its author, edition, translator, rights, status |
-| `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) |
+| `library/works/<work>.json` | One commentary: its author, divisions, edition, translator, rights, status |
+| `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
+| `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
+| `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
+| `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
@@ -22,7 +25,7 @@ Christian commentaries.
 | `i18n/en.json` | Every word of the interface, so a language can be added by adding a catalog |
 | `web/` | The stylesheets, scripts and fonts the pages use (see "The site" below) |
 | `scripts/` | Import, validate, verify and build |
-| `docs/` | How to add a work, the editorial rules, and how the site is deployed |
+| `docs/` | How to add a work, the editorial rules, the reference scheme (`references.md`), the roadmap (`roadmap.md`), and how the site is deployed |
 
 The library today: the whole Gospel of John in the Open Word Bible text, and
 John 1:1–18 with eight commentaries (Chrysostom,
@@ -41,6 +44,7 @@ Westcott), 246 excerpts in all.
 | `/<book>/<chapter>/` | The reader: the Open Word Bible text, and the panel of commentary, Greek words, translation notes and cross-references for the chosen verse |
 | `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
+| `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |
 | `/about/` | What Logia is and how excerpts are checked |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its
@@ -83,6 +87,10 @@ can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
 - **Scan misreadings are corrected in the open.** An excerpt keeps the scan's
   text; `library/corrections/` lists each fix ("Let ns" → "Let us"), and the
   build applies them.
+- **Places and citations are read from the sources.** `scripts/find_refs.py`
+  reads where each excerpt sits in its work, the Scripture it cites and, in
+  the Catena, which Father's passage it quotes; each stays `detected` until
+  a person checks it.
 - **Rights are recorded per work**: the edition, the translator, the year,
   and what is still to confirm for worldwide use.
 - **Nothing is marked reviewed by an AI.** Works and translations stay
@@ -90,6 +98,8 @@ can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
 
 ## Commands
 
+    python3 scripts/find_refs.py --check      # loci, citations, quotations up to date
+    python3 scripts/extract_texts.py --check  # whole texts up to date
     python3 scripts/validate.py          # the data is well formed
     python3 scripts/verify_sources.py    # every excerpt is in its source
     python3 -m unittest discover -s tests -t .
