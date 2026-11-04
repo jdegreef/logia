@@ -28,6 +28,51 @@
    "end": "JHN.12.29",
    "found": "source",
    "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.13.12.1",
+   "at": 405,
+   "text": "vers. 7, 8",
+   "start": "JHN.13.7",
+   "end": "JHN.13.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.13.33.4",
+   "at": 540,
+   "text": "ver. 36",
+   "start": "JHN.13.36",
+   "end": "JHN.13.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.14.24.1",
+   "at": 347,
+   "text": "ver. 17",
+   "start": "JHN.14.17",
+   "end": "JHN.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.14.25.1",
+   "at": 346,
+   "text": "ver. 17",
+   "start": "JHN.14.17",
+   "end": "JHN.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.15.21.3",
+   "at": 401,
+   "text": "ver. 19",
+   "start": "JHN.15.19",
+   "end": "JHN.15.19",
+   "found": "source",
+   "status": "detected"
   }
  ]
 }
