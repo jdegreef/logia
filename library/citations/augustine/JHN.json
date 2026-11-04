@@ -1,0 +1,15 @@
+{
+ "work": "augustine",
+ "book": "JHN",
+ "citations": [
+  {
+   "in": "augustine.JHN.8.39-40.1",
+   "at": 490,
+   "text": "ver. 58",
+   "start": "JHN.8.58",
+   "end": "JHN.8.58",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}
