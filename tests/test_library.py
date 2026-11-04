@@ -187,10 +187,11 @@ class Site(unittest.TestCase):
             self.assertIn(key, data["ui"])
 
     def test_a_chapter_without_commentary_still_reads(self):
-        text = self.read(os.path.join("jhn", "21", "index.html"))
+        # The library covers John; Acts has no commentary yet.
+        text = self.read(os.path.join("act", "1", "index.html"))
         data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
         self.assertEqual(data["commentaries"], [])
-        self.assertEqual(data["verses"][-1], 25)
+        self.assertEqual(data["verses"][-1], 26)
 
     def test_the_whole_bible_is_here(self):
         lib = build_site.Library()

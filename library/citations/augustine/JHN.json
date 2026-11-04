@@ -73,6 +73,60 @@
    "end": "JHN.15.19",
    "found": "source",
    "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.16.4.2",
+   "at": 1308,
+   "text": "ver. 4",
+   "start": "JHN.16.4",
+   "end": "JHN.16.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.16.8.1",
+   "at": 312,
+   "text": "vers. 8–11",
+   "start": "JHN.16.8",
+   "end": "JHN.16.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.17.6.1",
+   "at": 1313,
+   "text": "ver. 4",
+   "start": "JHN.17.4",
+   "end": "JHN.17.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.17.6.2",
+   "at": 1160,
+   "text": "ver. 12",
+   "start": "JHN.17.12",
+   "end": "JHN.17.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.17.20-21.1",
+   "at": 645,
+   "text": "ver. 11",
+   "start": "JHN.17.11",
+   "end": "JHN.17.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "augustine.JHN.19.17.1",
+   "at": 1514,
+   "text": "verse 6",
+   "start": "JHN.19.6",
+   "end": "JHN.19.6",
+   "found": "source",
+   "status": "detected"
   }
  ]
 }

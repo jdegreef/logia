@@ -42,15 +42,16 @@ HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5",
 # (or, for a tractate "on the same passage", the verses of the one before it).
 # "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX", "John xiii";
-# a stray full stop at the end ("Chapter XIII. 10–15.", "John xiii. 20 .") is allowed.
+# a stray full stop at the end ("Chapter XIII. 10–15.", "John xiii. 20 ."), "(continued)" after the
+# verses, and "and" before the next chapter ("Chapter XIX. 31–42, and XX. 1-9") are allowed.
 OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
                    r"(?:;\s*(?P<ch2>[ivxl]+)\.\s+(?P<e>\d+)(?:[–-](?P<f>\d+))?)?"
                    r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"
                    # and on into the next chapter: "Chapter II. 23–25; III. 1–5"
                    # ("Chapter XI. 55–57; XII": into the next chapter, its verses unnamed)
-                   r"(?:;\s*(?P<CH2>[IVXL]+)(?:\.\s+(?P<c>\d+)(?:[–-](?P<d>\d+))?)?)?"
+                   r"(?:(?:;|,?\s+and)\s*(?P<CH2>[IVXL]+)(?:\.\s+(?P<c>\d+)(?:[–-](?P<d>\d+))?)?)?"
                    # or a whole chapter: "Chapter IX"
-                   r"|Chapter\s+(?P<WH>[IVXL]+)\.?|John\s+(?P<wh>[ivxl]+)\.?)\s*\.?$")
+                   r"|Chapter\s+(?P<WH>[IVXL]+)\.?|John\s+(?P<wh>[ivxl]+)\.?)(?:\s*\(continued\))?\s*\.?$")
 # A tractate on the passage of the one before it: "on the same passage.", "again on the same passage."
 SAME = re.compile(r"^(?:again\s+)?on the same passage\.?$", re.I)
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13."
