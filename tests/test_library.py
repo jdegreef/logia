@@ -405,7 +405,8 @@ class Site(unittest.TestCase):
         self.assertIn("<loc>https://logia.faith/jhn/3/16/</loc>", sitemap)
         self.assertEqual(sitemap.count("<loc>https://logia.faith/jhn/"),
                          1 + 21 + len([k for k in lib.voices_on if k[0] == "JHN"])
-                         + len(build_site.passages_with_commentary(lib, "JHN")) + 1)   # and most-discussed
+                         + len(build_site.passages_with_commentary(lib, "JHN")) + 1   # and most-discussed
+                         + len([c for c in build_site.collections(lib) if c["book"] == "JHN"]))
 
     def test_a_verse_page_holds_its_commentary_in_the_html(self):
         lib = build_site.Library()
@@ -530,6 +531,19 @@ class Site(unittest.TestCase):
         self.assertIn("<h1>The Gospel for Good Friday: John 18:1–19:42</h1>", good_friday)
         self.assertIn("#calvin.JHN.19.", good_friday)
         self.assertIn('href="/readings/"', self.read("index.html"))
+
+    def test_the_i_am_sayings_page_links_each_commentator_on_each_saying(self):
+        lib = build_site.Library()
+        text = self.read(os.path.join("jhn", "i-am", "index.html"))
+        self.assertIn("The seven “I am” sayings in John", text)
+        col = next(c for c in build_site.collections(lib) if c["id"] == "i-am")
+        self.assertEqual(len(col["items"]), 7)
+        for item in col["items"]:
+            _b, ch, v = build_site.ref_parts(item["start"])
+            self.assertIn("I am", build_site.chapter_plain("JHN", ch)[v], item)
+            for _wid, cs in build_site.in_passage(lib, "JHN", (ch, v), (ch, v)):
+                self.assertIn(build_site.excerpt_href(lib, cs[0]), text)
+        self.assertIn('href="/jhn/i-am/"', self.read(os.path.join("jhn", "index.html")))
 
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))

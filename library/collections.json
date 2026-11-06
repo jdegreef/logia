@@ -1,0 +1,14 @@
+{
+  "about": "Verses and passages readers look for together, each a page at /<book>/<id>/. The words are in i18n/<lang>.json under collections.<id>.",
+  "collections": [
+    {"id": "i-am", "book": "JHN", "items": [
+      {"key": "bread", "start": "JHN.6.35", "end": "JHN.6.35"},
+      {"key": "light", "start": "JHN.8.12", "end": "JHN.8.12"},
+      {"key": "door", "start": "JHN.10.7", "end": "JHN.10.7"},
+      {"key": "shepherd", "start": "JHN.10.11", "end": "JHN.10.11"},
+      {"key": "resurrection", "start": "JHN.11.25", "end": "JHN.11.25"},
+      {"key": "way", "start": "JHN.14.6", "end": "JHN.14.6"},
+      {"key": "vine", "start": "JHN.15.1", "end": "JHN.15.1"}
+    ]}
+  ]
+}
