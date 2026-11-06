@@ -226,7 +226,12 @@
     "tab_words": "Greek words",
     "tab_words_hbo": "Hebrew words",
     "tab_notes": "Translation notes",
-    "tab_xref": "Cross-references"
+    "tab_xref": "Cross-references",
+    "tab_comm_short": "Commentary",
+    "tab_words_short": "Greek",
+    "tab_words_short_hbo": "Hebrew",
+    "tab_notes_short": "Notes",
+    "tab_xref_short": "Cross-refs"
   },
   "reader": {
     "summary": "{n} voices from {eras} eras, {first} to {last}",

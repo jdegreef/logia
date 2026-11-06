@@ -1150,9 +1150,12 @@ def chapter_page(lib, book, chapter, all_chapters):
     credits = f'<p class="cx-credits">{t("chapter.credits", works=works_credit)}</p>' if commentaries else ""
     owb_link = f'<a href="{OWB_SITE}{chapter_url(book, chapter)}" rel="noopener">Open Word Bible</a>'
     first_ref = f"{name} {chapter}:{bible['verses'][0]}"
+    # Short tab names, so all four fit the panel; the full name is the tooltip.
+    def tab_name(k, short=""):
+        return t("chapter.tab_" + k + short + ("_hbo" if hebrew and k == "words" else ""))
     tabs = "".join(
-        f'<button role="tab" id="tab-{k}" data-tab="{k}" aria-selected="{"true" if k == "comm" else "false"}">'
-        f'{e(t("chapter.tab_" + k + ("_hbo" if hebrew and k == "words" else "")))}<span class="cx-n" id="n-{k}"></span></button>'
+        f'<button role="tab" id="tab-{k}" data-tab="{k}" aria-selected="{"true" if k == "comm" else "false"}" title="{e(tab_name(k))}">'
+        f'{e(tab_name(k, "_short"))}<span class="cx-n" id="n-{k}"></span></button>'
         for k in ("comm", "words", "notes", "xref"))
     picks = "".join(
         f'<li><a href="{chapter_url(book, n)}"{" aria-current=page" if n == chapter else ""}><b>{n}</b>'
