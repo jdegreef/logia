@@ -737,6 +737,11 @@
     var firstWith = DATA.verses.filter(function (v) { return works.some(function (w) { return entriesFor(w, v).length; }); })[0];
     if (firstWith) state.verse = firstWith;
   }
+  // This chapter, read: kept for the dot on its chip (web/logia.js).
+  try {
+    var read = JSON.parse(localStorage.getItem("logia-read") || "[]");
+    if (read.indexOf(location.pathname) < 0) { read.push(location.pathname); localStorage.setItem("logia-read", JSON.stringify(read.slice(-2000))); }
+  } catch (err) { /* storage blocked */ }
   loadComm();
   renderText(); go(state.verse);
   if (m0 && m0[2]) { sheet("half"); showCard(m0[2]); }

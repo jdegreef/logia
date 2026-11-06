@@ -1008,6 +1008,9 @@ def read_page(lib):
 <h1>{e(t("read.heading"))}</h1><p class="dek">{e(t("read.dek", books=so_far))}</p></header>
 <div class="lg-read-tools">{search_box(lib, "read-q", "hero-search lg-read-search")}
 <nav class="lg-jump" aria-label="{e(t("read.jump"))}"><a href="#ot">{e(t("testaments.old"))}</a><a href="#nt">{e(t("testaments.new"))}</a></nav></div>
+<ul class="lg-legend" aria-label="{e(t("read.legend"))}"><li><span class="chap lg-has" aria-hidden="true">3</span>{e(t("read.has_commentary_key"))}</li>
+<li><span class="chap part" aria-hidden="true">3</span>{e(t("read.text_only_key"))}</li>
+<li><span class="chap part lg-read" aria-hidden="true">3</span>{e(t("read.read_key"))}</li></ul>
 <div class="book-index">{"".join(parts)}</div>
 {coming}"""
     return page(lib, t("read.title"), body, "/read/", current="/read/")

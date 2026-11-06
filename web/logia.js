@@ -111,6 +111,15 @@
     a.hidden = false;
   });
 
+  // Chapters already read: a dot on their chip (web/reader.js keeps the list).
+  var read = [];
+  try { read = JSON.parse(localStorage.getItem("logia-read") || "[]"); } catch (e) { /* storage blocked */ }
+  if (read.length) {
+    document.querySelectorAll("a.chap").forEach(function (a) {
+      if (read.indexOf(a.getAttribute("href")) >= 0) a.classList.add("lg-read");
+    });
+  }
+
   // A button that copies its data-copy text (a work's citation), and says so.
   document.querySelectorAll("[data-copy]").forEach(function (b) {
     b.addEventListener("click", function () {
