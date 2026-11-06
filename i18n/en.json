@@ -408,6 +408,7 @@
     "title": "Page not found",
     "heading": "Page not found",
     "dek": "There is no page at this address. It may have moved, or the link may be mistyped.",
+    "guess": "Did you mean {link}?",
     "home": "Go to the home page",
     "read": "Browse the books"
   },

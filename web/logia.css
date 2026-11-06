@@ -635,3 +635,10 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-saved-empty .button .icon { margin-right: 2px; }
 .lg-saved-sample { max-width: 420px; transform: rotate(-1deg); box-shadow: var(--shadow-card); }
 .lg-saved-sample .lg-saved-text { color: var(--muted); }
+
+/* Page not found: a guess at the reference typed, and the search. */
+.lg-guess { font-family: var(--display); font-size: 22px; font-weight: 600; margin: 4px 0 8px; }
+.lg-nf-search { margin: 16px 0 0; text-align: left; }
+.lg-nf-try { justify-content: center; }
+.lg-not-found .auth-card { max-width: 520px; }
+.lg-nf-search input, .lg-nf-search input:focus { border: 0; background: none; box-shadow: none; margin: 0; width: auto; height: auto; padding: 8px 8px 8px 44px; border-radius: 0; }
