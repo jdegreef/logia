@@ -1125,22 +1125,36 @@ def commentators_page(lib):
 
 
 def excerpt_list(lib, comments, show_work=False):
-    """Excerpts grouped by chapter, one row per verse or range: its first
+    """Excerpts grouped by chapter, each chapter closed but the first, with a
+    bar of the chapters above them: one row per verse or range, its first
     words, how many passages there are, and a link to the verse in the reader."""
     out, rows = [], {}
     for c in comments:
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
         rows.setdefault((b, ch), {}).setdefault((v, ech, ev, c["work"] if show_work else ""), []).append(c)
-    for (b, ch), group in rows.items():
-        out.append(f'<h3 class="label">{e(lib.books[b]["en"])} {ch}</h3><ul class="lg-excerpts">')
+    bar = "".join(f'<a href="#ch-{b.lower()}-{ch}">{e(lib.books[b]["en"]) + " " if len({x for x, _y in rows}) > 1 else ""}{ch}</a>'
+                  for b, ch in rows)
+    out.append(f'<nav class="lg-chbar" aria-label="{e(t("commentators.chapters"))}">{bar}</nav>')
+    works = {c["work"] for c in comments}
+    for n, ((b, ch), group) in enumerate(rows.items()):
+        name = f'{lib.books[b]["en"]} {ch}'
+        passages = sum(len(cs) for cs in group.values())
+        whole = (f'<p class="lg-chlink"><a href="{work_chapter_url(next(iter(works)), b, ch)}">'
+                 f'{e(t("commentators.in_order", chapter=name))} {icon("arrow", 15)}</a></p>' if len(works) == 1 else "")
+        out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}"{" open" if n == 0 else ""}><summary><b>{e(name)}</b>'
+                   f'<span class="lg-quiet">{e(t("commentators.passages", n=passages))}</span>{icon("chevron", 16, "icon lg-caret")}</summary>'
+                   f'{whole}<ul class="lg-excerpts">')
         for (v, ech, ev, work), cs in group.items():
-            ref = f"{lib.books[b]['en']} {ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "")
-            more = f' <span class="lg-quiet">· {e(t("commentators.passages", n=len(cs)))}</span>' if len(cs) > 1 else ""
-            title = f' <span class="lg-quiet">· {e(lib.works[work]["title"])}</span>' if work else ""
-            out.append(f'<li><a href="{chapter_url(b, ch)}#v{v}"><b>{e(ref)}</b></a>{title}{more}'
-                       f'<p>{e(snippet(cs[0]["text"]))}</p></li>')
-        out.append("</ul>")
+            ref = f"{ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "") if ech == ch else f"{ch}:{v}–{ech}:{ev}"
+            more = f'<span class="lg-quiet">{e(t("commentators.passages", n=len(cs)))}</span>' if len(cs) > 1 else ""
+            title = f'<span class="lg-quiet">{e(lib.works[work]["title"])}</span>' if work else ""
+            h = cs[0]["heading"]
+            lead = re.sub(r"^\s*\d+\.\s*", "", cs[0]["text"]).lower()
+            lemma = f'<i>{e(h)}</i> ' if h and not lead.startswith(h.lower().strip(" .")) else ""
+            out.append(f'<li><p class="lg-ex-ref"><a href="{chapter_url(b, ch)}#v{v}" title="{e(lib.books[b]["en"])} {e(ref)}"><b>{e(ref)}</b></a>{more}</p>'
+                       f'<div>{title}<p>{lemma}{e(snippet(cs[0]["text"]))}</p></div></li>')
+        out.append("</ul></details>")
     return "".join(out)
 
 

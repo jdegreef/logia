@@ -408,3 +408,25 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
   .lg-work-toc { position: static; max-height: none; order: 2; border-top: 1px solid var(--line); padding-top: 16px; }
   .lg-work-toc .lg-contents { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
 }
+
+/* A commentator's comments, a chapter at a time (excerpt_list). */
+.lg-chbar { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 0; margin: 0 0 6px; position: sticky; top: var(--header-h); z-index: 2;
+  background: var(--bg); border-bottom: 1px solid var(--line); }
+.lg-chbar a { min-width: 34px; padding: 5px 8px; box-sizing: border-box; text-align: center; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--text); text-decoration: none; font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.lg-chbar a:hover { border-color: var(--accent); color: var(--accent); }
+.lg-ch { border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 64px); }
+.lg-ch summary { display: flex; align-items: baseline; gap: 12px; padding: 14px 32px 14px 0; cursor: pointer; list-style: none; position: relative; }
+.lg-ch summary::-webkit-details-marker { display: none; }
+.lg-ch summary b { font-family: var(--display); font-weight: 600; font-size: 20px; }
+.lg-ch summary:hover b { color: var(--accent); }
+.lg-ch[open] .lg-caret { transform: rotate(180deg); }
+.lg-ch .lg-caret { position: absolute; right: 4px; top: 19px; color: var(--muted); }
+.lg-chlink { margin: 0 0 6px; font-size: 14px; font-weight: 600; }
+.lg-chlink a { display: inline-flex; gap: 6px; align-items: center; text-decoration: none; }
+.lg-ch .lg-excerpts li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 4px 16px; }
+.lg-ex-ref { margin: 0; display: flex; flex-direction: column; font-size: 14px; }
+.lg-ex-ref .lg-quiet { font-size: 12.5px; }
+.lg-ch .lg-excerpts p { margin: 0; }
+.lg-ch .lg-excerpts i { color: var(--text); }
+@media (max-width: 560px) { .lg-ch .lg-excerpts li { grid-template-columns: minmax(0, 1fr); } .lg-ex-ref { flex-direction: row; gap: 8px; } }

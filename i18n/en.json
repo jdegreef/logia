@@ -296,7 +296,9 @@
     "bio_draft": "This biography is a draft awaiting review.",
     "died": "Died {year}",
     "back": "All commentators",
-    "passages": "{n} passages"
+    "passages": "{n} passages",
+    "chapters": "Chapters",
+    "in_order": "Read {chapter} in order, in full"
   },
   "work": {
     "eyebrow": "Commentary",
