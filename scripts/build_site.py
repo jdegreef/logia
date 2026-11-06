@@ -996,31 +996,35 @@ def read_page(lib):
 
 
 def book_page(lib, book):
+    """A book's contents: each chapter by its title, how many verses it has
+    and how many commentaries, and who comments on the book."""
     cov = lib.coverage()
     name = lib.books[book]["en"]
     total = lib.books[book]["chapters"]
     have = [c for b, c in lib.chapters if b == book]
     done = sum(1 for (b, _c) in cov if b == book)
-    cards = []
+    rows = []
     for c in have:
-        if (book, c) in cov:
-            n, vs = cov[(book, c)]
-            note = t("book.chapter_card_one" if n == 1 else "book.chapter_card", n=n, span=span_text(vs))
-        else:
-            note = t("book.chapter_none")
-        cards.append(f'<li><a class="lg-card{"" if (book, c) in cov else " lg-plain"}" href="{chapter_url(book, c)}">'
-                     f'<b>{e(name)} {c}</b><span>{e(note)}</span></a></li>')
+        verses = len(lib.plain(book, c))
+        n = cov[(book, c)][0] if (book, c) in cov else 0
+        badge = (f'<span class="lg-badge" title="{e(t("book.chapter_card_one" if n == 1 else "book.chapter_card", n=n, span=span_text(cov[(book, c)][1])))}">'
+                 f'{e(t("book.commentaries", n=n))}</span>' if n else "")
+        rows.append(f'<li><a href="{chapter_url(book, c)}"><span class="lg-toc-n">{c}</span>'
+                    f'<span class="lg-toc-title">{e(lib.chapter_title(book, c) or f"{name} {c}")}</span>{badge}'
+                    f'<span class="lg-quiet">{e(t("book.verses", n=verses))}</span></a></li>')
     works = {c["work"] for c in lib.comments if c["start"].startswith(book + ".")}
     people = "".join(
         f'<li><a href="/works/{w}/"><b>{e(lib.author_of(w)["name"])}</b> <span>{e(lib.works[w]["title"])}</span></a></li>'
         for w in lib.ordered_works(works))
     who = (f'<section class="lg-block"><h2>{e(t("book.commentators", book=name))}</h2><ul class="lg-people lg-wide">{people}</ul></section>'
            if people else "")
+    codes = list(lib.books)
+    testament = "old" if codes.index(book) < OT_BOOKS else "new"
+    start = f'<p class="actions"><a class="button" href="{chapter_url(book, have[0])}">{e(t("book.start", book=name, chapter=have[0]))}</a></p>' if have else ""
     body = f"""
-<header class="page-head"><p class="eyebrow"><a href="/read/">{e(t("read.title"))}</a></p>
-<h1>{e(name)}</h1><p class="dek">{e(t("book.dek", n=total, done=done))}</p></header>
-<section class="lg-block"><h2>{e(t("book.chapters"))}</h2><div class="chap-pills lg-pills">{chapter_pills(lib, book, cov)}</div>
-<ul class="lg-cards">{"".join(cards)}</ul></section>
+<header class="page-head"><p class="eyebrow"><a href="/read/">{e(t("read.title"))}</a> · <a href="/read/#{"ot" if testament == "old" else "nt"}">{e(t("testaments." + testament))}</a> · {e(t("canon." + canon_section(lib, book)))}</p>
+<h1>{e(name)}</h1><p class="dek">{e(t("book.dek", n=total, done=done))}</p>{start}</header>
+<section class="lg-block"><h2>{e(t("book.chapters"))}</h2><ol class="lg-toc">{"".join(rows)}</ol></section>
 {who}"""
     return page(lib, name, body, f"/{book.lower()}/", current="/read/")
 
