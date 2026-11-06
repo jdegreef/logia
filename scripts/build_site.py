@@ -137,8 +137,6 @@ MARK_INNER = ('<rect width="64" height="64" rx="14" fill="#9a6a1c"/>'
               'stroke-linecap="round"/>')
 MARK = f'<svg class="mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">{MARK_INNER}</svg>'
 FAVICON = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">{MARK_INNER}</svg>\n'
-NUMBER_WORDS = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine",
-                10: "Ten", 11: "Eleven", 12: "Twelve"}
 
 
 def load(path):
@@ -841,6 +839,8 @@ SEARCH_ICON = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stro
 # beside it: the earliest, the Reformation and the latest.
 HOME_VERSE = "JHN.3.16"
 HOME_ERAS = ("Early church", "Reformation", "The 1800s")
+# Well-known passages the home page offers as a way in, by chapter.
+HOME_PASSAGES = (("JHN", 1), ("JHN", 3), ("JHN", 6), ("JHN", 10), ("JHN", 11), ("JHN", 14), ("JHN", 17), ("JHN", 20))
 
 
 def home_verse(lib):
@@ -880,10 +880,18 @@ def home_verse(lib):
 def home_page(lib):
     cov = lib.coverage()
     first = sorted(cov)[0] if cov else lib.chapters[0]
-    cards = "".join(
-        f'<li><a class="lg-card" href="{chapter_url(b, c)}"><b>{e(lib.books[b]["en"])} {c}</b>'
-        f'<span>{e(NUMBER_WORDS.get(n, str(n)))} commentaries · verses {span_text(vs)}</span></a></li>'
-        for (b, c), (n, vs) in sorted(cov.items()))
+    # Start reading: each book with commentary as a strip of its chapters,
+    # then a few well-known passages by their titles.
+    strips = ""
+    for book in dict.fromkeys(b for b, _c in sorted(cov, key=lambda bc: lib.chapters.index(bc))):
+        strips += (f'<div class="lg-strip"><a class="lg-strip-book" href="/{book.lower()}/">{e(lib.books[book]["en"])}</a>'
+                   f'<div class="chap-pills">{chapter_pills(lib, book, cov)}</div></div>')
+    famous = "".join(
+        f'<li><a class="lg-card" href="{chapter_url(b, c)}"><span class="lg-card-ref">{e(lib.books[b]["en"])} {c}</span>'
+        f'<b>{e(lib.chapter_title(b, c))}</b></a></li>'
+        for b, c in HOME_PASSAGES if (b, c) in cov)
+    cards = (f'{strips}<h3 class="label lg-famous-h">{e(t("home.famous"))}</h3><ul class="lg-cards lg-famous">{famous}</ul>'
+             if famous else strips)
     voices = ""
     for era in ERAS:
         people = [a for a in lib.ordered_authors() if a["era"] == era]
@@ -903,7 +911,7 @@ def home_page(lib):
 </section>
 {home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
-<ul class="lg-cards">{cards}</ul></section>
+<p class="lg-quiet">{e(t("home.read_note"))}</p>{cards}</section>
 <section class="lg-block" aria-labelledby="h-voices"><h2 id="h-voices">{e(t("home.voices_heading"))}</h2>
 <div class="lg-eras">{voices}</div>
 <p><a class="lg-more" href="/commentators/">{e(t("home.all_commentators"))} {icon("arrow", 15)}</a></p></section>

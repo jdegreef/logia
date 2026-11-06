@@ -491,3 +491,13 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-toc-title { flex: 1; font-family: var(--serif); font-size: 17px; }
 .lg-toc .lg-quiet { font-size: 12.5px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .lg-toc .lg-badge { white-space: nowrap; }
+
+/* Home: a strip of each book's chapters, and well-known passages. */
+.lg-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; margin: 14px 0 0; }
+.lg-strip-book { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--text); text-decoration: none; min-width: 5em; }
+.lg-strip-book:hover { color: var(--accent); }
+.lg-strip .chap-pills { margin: 0; }
+.lg-famous-h { margin-top: 28px; }
+.lg-famous .lg-card { gap: 2px; }
+.lg-famous .lg-card b { font-family: var(--serif); font-weight: 400; font-size: 18px; }
+.lg-card .lg-card-ref { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold); }
