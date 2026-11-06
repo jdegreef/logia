@@ -327,3 +327,10 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
   .cx-cols { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 86%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
   .cx-col { scroll-snap-align: start; }
 }
+
+/* The footer's coverage: books with commentary out of each testament's. */
+.foot-books .testament .lg-meter { display: block; height: 5px; margin: 6px 0 10px; border-radius: 3px; background: var(--surface-2);
+  border: 1px solid var(--line); overflow: hidden; }
+.foot-books .lg-meter > span { display: block; height: 100%; min-width: 0; background: var(--gold); }
+.lg-chip-n { color: var(--muted); font-weight: 500; margin-left: 2px; }
+.lg-foot-note { margin: 12px 0 0; }

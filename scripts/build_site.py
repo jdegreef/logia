@@ -545,22 +545,21 @@ def site_header(lib, current, path):
 def site_footer(lib):
     cov = lib.coverage()
 
-    def chip(code):
-        done = sum(1 for (b, _c) in cov if b == code)
-        total = lib.books[code]["chapters"]
-        return (f'<li><a class="book-chip{"" if done == total else " part"}" href="/{code.lower()}/" '
-                f'title="{e(t("read.commentary_on", n=done, total=total))}">{e(lib.books[code]["en"])}</a></li>')
-
-    have = {b for b, _c in lib.chapters}
+    # How much of each testament has commentary: the books that have some,
+    # each with its chapters done, and a bar of books out of the testament's.
     codes = list(lib.books)
     tiers = []
     for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
-        started = [c for c in part if c in have]
-        missing = len(part) - len(started)
-        more = (f'<li><a class="book-chip none" href="/read/">{e(t("read.coming"))} ({missing})</a></li>' if missing else "")
+        started = [c for c in part if any(b == c for b, _c in cov)]
+        chips = "".join(
+            f'<li><a class="book-chip" href="/{c.lower()}/">{e(lib.books[c]["en"])} '
+            f'<span class="lg-chip-n">{e(t("footer.chapters_done", n=sum(1 for b, _c in cov if b == c), total=lib.books[c]["chapters"]))}</span></a></li>'
+            for c in started) or f'<li class="lg-quiet">{e(t("footer.none_yet"))}</li>'
         tiers.append(f'<section class="testament" aria-labelledby="foot-{key}"><div class="testament-head">'
-                     f'<h3 id="foot-{key}">{e(t("testaments." + key))}</h3><span>{len(started)}/{len(part)}</span></div>'
-                     f'<ul class="book-chips">{"".join(chip(c) for c in started)}{more}</ul></section>')
+                     f'<h3 id="foot-{key}">{e(t("testaments." + key))}</h3>'
+                     f'<span>{e(t("footer.books_done", n=len(started), total=len(part)))}</span></div>'
+                     f'<span class="lg-meter" aria-hidden="true"><span style="width:{100 * len(started) / len(part):.1f}%"></span></span>'
+                     f'<ul class="book-chips">{chips}</ul></section>')
 
     def links(pairs):
         return "".join(f'<li><a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(label)}</a></li>'
@@ -579,7 +578,8 @@ def site_footer(lib):
 <p class="foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("site.licence"))}</p>
 </div></div>
 <nav class="foot-books" aria-labelledby="foot-read"><h2 id="foot-read">{e(t("footer.books_with"))}</h2>
-<div class="testaments">{"".join(tiers)}</div></nav>
+<div class="testaments">{"".join(tiers)}</div>
+<p class="lg-quiet lg-foot-note">{e(t("footer.every_book"))} <a href="/read/">{e(t("footer.all_books"))}</a></p></nav>
 <div class="foot-grid">
 <nav aria-labelledby="foot-r"><h2 id="foot-r">{e(t("footer.read"))}</h2><ul>{links(read)}</ul></nav>
 <nav aria-labelledby="foot-c"><h2 id="foot-c">{e(t("footer.commentators"))}</h2><ul>{links(people)}</ul></nav>

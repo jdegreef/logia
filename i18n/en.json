@@ -114,7 +114,12 @@
     "commentators": "Commentators",
     "project": "The project",
     "report": "Report a problem",
-    "books_with": "Books with commentary",
+    "books_with": "Commentary so far",
+    "books_done": "{n} of {total} books",
+    "chapters_done": "{n} of {total} chapters",
+    "none_yet": "No commentary yet",
+    "every_book": "Every book has the Bible text, its Greek or Hebrew words and translation notes.",
+    "all_books": "All 66 books",
     "licences": "Bible text: Open Word Bible (CC0). Greek: SBLGNT with MACULA Greek word data (CC BY 4.0). Hebrew: Westminster Leningrad Codex with MACULA Hebrew word data and OSHB morphology (CC BY 4.0). Cross-references: OpenBible.info (CC BY). Commentary texts: public domain.",
     "review": "Logia is new: its selection of excerpts, its verse tags and its biographies are drafts awaiting human review."
   },
