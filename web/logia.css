@@ -481,3 +481,13 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .cx-rel-text { font-family: var(--serif); font-size: 16px; line-height: 1.5; }
 .cx-rel-snip { margin: 4px 0 6px; font-family: var(--serif); color: var(--muted); font-size: 15px; }
 .cx-rel-all { font-size: 13px; font-weight: 600; }
+
+/* A book's contents: each chapter by its title. */
+.lg-toc { list-style: none; padding: 0; margin: 0; columns: 2 380px; column-gap: 40px; }
+.lg-toc li { break-inside: avoid; border-bottom: 1px solid var(--line); }
+.lg-toc a { display: flex; align-items: baseline; gap: 6px 12px; padding: 10px 4px; color: var(--text); text-decoration: none; }
+.lg-toc a:hover .lg-toc-title { color: var(--accent); }
+.lg-toc-n { min-width: 2.2em; font-family: var(--display); font-weight: 600; color: var(--gold); font-variant-numeric: tabular-nums; }
+.lg-toc-title { flex: 1; font-family: var(--serif); font-size: 17px; }
+.lg-toc .lg-quiet { font-size: 12.5px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lg-toc .lg-badge { white-space: nowrap; }

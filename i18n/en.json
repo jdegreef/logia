@@ -188,7 +188,10 @@
     "commentators": "Who comments on {book}",
     "chapter_card": "{n} commentaries on verses {span}",
     "chapter_card_one": "1 commentary on verses {span}",
-    "chapter_none": "Bible text; commentary to come"
+    "chapter_none": "Bible text; commentary to come",
+    "commentaries": "{n} commentaries",
+    "verses": "{n} verses",
+    "start": "Start reading {book} {chapter}"
   },
   "chapter": {
     "eyebrow": "Chapter {chapter}",
