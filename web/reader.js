@@ -72,6 +72,9 @@
   function fullExcerpts() { return Prefs && Prefs.get("excerpt") === "full"; }
 
   var works = DATA.commentaries;
+  // A chapter with no commentary yet opens on its translation notes, with
+  // the commentary tab last; the timeline and the era filter stay hidden.
+  var EMPTY = !works.length;
   var FIRST = DATA.verses[0], LAST = DATA.verses[DATA.verses.length - 1];
   var REF = function (v) { return DATA.bookName + " " + DATA.chapter + ":" + v; };
   var recFor = function (v) { return DATA.records.filter(function (r) { return r.verses.indexOf(v) >= 0; })[0]; };
@@ -153,7 +156,8 @@
       ? fmt(voices.length === 1 ? U.summary_one : U.summary, {
           n: voices.length, eras: eras.size,
           first: voices[0].short_name, last: voices[voices.length - 1].short_name })
-      : U.none_yet;
+      : EMPTY ? fmt(U.none_book, { book: DATA.bookName }) : U.none_yet;
+    $("#rail").hidden = EMPTY;
     var r = recFor(v);
     $("#n-comm").textContent = voices.length;
     $("#n-words").textContent = DATA.wordCounts[v] || 0;
@@ -299,7 +303,8 @@
   }
   function commTab() {
     var v = state.verse;
-    var h = '<div class="cx-chips" role="group" aria-label="' + esc(U.show_eras) + '">' + ERAS.map(function (e) {
+    var onVerse = works.some(function (w) { return entriesFor(w, v).length; });
+    var h = !onVerse ? "" : '<div class="cx-chips" role="group" aria-label="' + esc(U.show_eras) + '">' + ERAS.map(function (e) {
       return '<button class="cx-chip" data-era="' + esc(e) + '" aria-pressed="' + state.eras.has(e) + '">' + esc(U.eras[e]) + "</button>";
     }).join("") + "</div>";
     var shown = works.filter(function (w) { return state.eras.has(w.era) && entriesFor(w, v).length; });
@@ -339,7 +344,7 @@
       });
     });
     if (!any) {
-      h += '<p class="cx-empty">' + esc(works.some(function (w) { return entriesFor(w, v).length; }) ? U.none_in_eras : U.none_yet_long) + "</p>";
+      h += '<p class="cx-empty' + (onVerse ? "" : " cx-empty-box") + '">' + esc(onVerse ? U.none_in_eras : EMPTY ? fmt(U.none_book_long, { book: DATA.bookName }) : U.none_yet_long) + "</p>";
     }
     return h + wholeTexts(v) + elsewhere(v);
   }
@@ -676,7 +681,7 @@
   window.addEventListener("hashchange", function () {
     var m = location.hash.match(HASH);
     if (!m) return;
-    if (+m[1] !== state.verse) { state.tab = "comm"; go(+m[1]); }
+    if (+m[1] !== state.verse) { if (!EMPTY) state.tab = "comm"; go(+m[1]); }
     if (m[2]) { sheet("half"); showCard(m[2]); }
   });
 
@@ -704,6 +709,12 @@
     });
   })();
 
+  if (EMPTY) {
+    state.tab = "notes";
+    var commTabButton = $("#tab-comm");
+    commTabButton.parentNode.appendChild(commTabButton);
+    commTabButton.classList.add("cx-zero");
+  }
   var m0 = location.hash.match(HASH);
   if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
   else {

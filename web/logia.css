@@ -464,3 +464,8 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
   body:has(.cx-bar:not([hidden])) .cx-panel { top: calc(var(--header-h) + 62px); max-height: calc(100vh - var(--header-h) - 78px); }
   .cx-panel { transition: top 150ms ease; }
 }
+
+/* A chapter with no commentary yet (web/reader.js): one plain note, and the
+   commentary tab last and muted. */
+.cx-tabs .cx-zero { opacity: .6; }
+.cx-empty-box { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; }

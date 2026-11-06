@@ -1087,7 +1087,7 @@ def chapter_page(lib, book, chapter, all_chapters):
 <article class="cx-passage">
 <p class="cx-eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("chapter.eyebrow", chapter=chapter))}</p>
 <h1>{e(heading)}</h1>
-<p class="cx-sub">{e(t("chapter.pick_hbo" if hebrew else "chapter.pick"))}</p>
+<p class="cx-sub">{e(t("chapter.pick" + ("" if commentaries else "_none") + ("_hbo" if hebrew else "")))}</p>
 <div class="cx-levels" role="group" aria-label="{e(t("chapter.level_label"))}">{levels}</div>
 <div class="cx-text" id="text">{plain}</div>
 <p class="cx-hint">{t("chapter.owb_hint", link=owb_link)}</p>
