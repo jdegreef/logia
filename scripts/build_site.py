@@ -2017,7 +2017,7 @@ def work_page(lib, wid):
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
-<p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
+<p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
@@ -2506,6 +2506,72 @@ def cited_page(lib, book, top=20):
                 ld=(breadcrumbs((name, f"/{book.lower()}/"), (t("cited.heading", book=name), f"/{book.lower()}/scripture-cited/")),))
 
 
+# --- Who the Catena quotes (/works/catena/fathers/) --------------------------
+#
+# The Catena Aurea is a chain of quotations, each opened by the Father's
+# name as the edition prints it ("CHRYS.", "AUG."). This counts those
+# labels in Logia's excerpts. A label the scan misread is not counted.
+
+CATENA_LABELS = {"AUG.": "augustine", "CHRYS.": "chrysostom", "THEOPHYL.": "theophylact", "ALCUIN.": "alcuin",
+                 "ORIGEN.": "origen", "BEDE.": "bede", "GREG.": "greg", "HILARY.": "hilary", "BASIL.": "basil",
+                 "HAYMO.": "haymo", "GLOSS.": "gloss", "JEROME.": "jerome"}
+CATENA_LABEL = re.compile(r"(?:^|(?<=[.;:?!\"”)\]] )|(?<=\n))(" + "|".join(re.escape(k) for k in CATENA_LABELS) + r")(?= )")
+
+
+def catena_labels(lib, work="catena"):
+    """{label: [excerpt]} for each Father's label in the Catena's excerpts, in the work's order."""
+    out = {}
+    for c in sorted((c for c in lib.comments if c["work"] == work), key=order_key):
+        for m in CATENA_LABEL.finditer(c["text"]):
+            out.setdefault(m.group(1), []).append(c)
+    return out
+
+
+def catena_fathers_page(lib, work="catena"):
+    w = lib.works[work]
+    labels = catena_labels(lib, work)
+    rows = sorted(labels.items(), key=lambda kv: -len(kv[1]))
+    total = sum(len(cs) for _k, cs in rows)
+    peak = len(rows[0][1])
+    traced = {}
+    for path in glob.glob(os.path.join(ROOT, "library", "quotations", work, "*.json")):
+        for q in load(path)["quotations"]:
+            if q.get("status") != "rejected":
+                traced[q["work"]] = traced.get(q["work"], 0) + 1
+    items = []
+    for label, cs in rows:
+        who = CATENA_LABELS[label]
+        name = t(f"catena.names.{who}")
+        held = ""
+        if who in lib.authors:
+            wid = next(x for x in lib.ordered_works() if lib.works[x]["author"] == who)
+            held = (f'<p class="lg-quiet">{e(t("catena.held", name=name, n=traced.get(wid, 0)))} '
+                    f'<a href="/commentators/{who}/">{e(t("catena.held_link", name=name))}</a></p>')
+        seen, examples = set(), []
+        for c in cs:
+            if c["id"] in seen:
+                continue
+            seen.add(c["id"])
+            examples.append(f'<a href="{excerpt_href(lib, c)}">{e(scripture.label(c["start"], c["end"]))}</a>')
+            if len(examples) == 4:
+                break
+        items.append(f'<li><div class="lg-bars-row"><span class="lg-bar-label"><b>{e(name)}</b> <code>{e(label)}</code></span>'
+                     f'<span class="lg-bar"><span style="width:{len(cs) / peak * 100:.1f}%"></span></span>'
+                     f'<span class="lg-bar-n">{len(cs)}</span></div>'
+                     f'<p class="lg-quiet lg-catena-ex">{e(t("catena.for_example"))} {" · ".join(examples)}</p>{held}</li>')
+    path = f"/works/{work}/fathers/"
+    body = f"""
+<article class="lg-verse lg-most lg-catena">
+<header class="page-head"><p class="eyebrow"><a href="/works/{work}/"><i>{e(t("catena.short_title"))}</i></a></p>
+<h1>{e(t("catena.heading"))}</h1><p class="dek">{e(t("catena.dek", n=f"{total:,}", k=len(rows)))}</p></header>
+<section class="lg-block"><ol class="lg-bars lg-bars-catena">{"".join(items)}</ol></section>
+<section class="lg-block"><h2>{e(t("most.how_title"))}</h2><p>{e(t("catena.how", edition=short_edition(w["edition"])))}</p></section>
+</article>"""
+    return path, page(lib, t("catena.heading"), body, path, current="/commentators/",
+                      description=t("catena.description", n=f"{total:,}"),
+                      ld=(breadcrumbs((t("catena.short_title"), f"/works/{work}/"), (t("catena.heading"), path)),))
+
+
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
 #
 # Counts only: how many excerpts in the library are on each verse and
@@ -2717,6 +2783,10 @@ def build():
         for x in lib.texts.get(wid, []):
             write(f"/works/{wid}/{x['locus']}/", text_page(lib, wid, x))
             pages.append(f"/works/{wid}/{x['locus']}/")
+    if "catena" in lib.works:
+        path, text = catena_fathers_page(lib)
+        write(path, text)
+        pages.append(path)
     write("/about/", about_page(lib))
     pages.append("/about/")
     files = downloads(lib)

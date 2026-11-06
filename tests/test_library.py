@@ -584,6 +584,15 @@ class Site(unittest.TestCase):
         self.assertIn(f'<span class="lg-bar-n">{matthew}</span>', text)
         self.assertIn('href="/jhn/scripture-cited/"', self.read(os.path.join("jhn", "index.html")))
 
+    def test_the_catena_page_counts_the_fathers_by_their_printed_names(self):
+        lib = build_site.Library()
+        labels = build_site.catena_labels(lib)
+        self.assertGreater(len(labels["AUG."]), len(labels["BEDE."]))
+        text = self.read(os.path.join("works", "catena", "fathers", "index.html"))
+        self.assertIn(f'<span class="lg-bar-n">{len(labels["CHRYS."])}</span>', text)
+        self.assertIn('href="/commentators/chrysostom/"', text)
+        self.assertIn('href="/works/catena/fathers/"', self.read(os.path.join("works", "catena", "index.html")))
+
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
         self.assertIn('href="/jhn/3/16/"', text)
