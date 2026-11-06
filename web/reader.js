@@ -356,11 +356,11 @@
       ? '<p class="cx-act-note" role="status">' + state.note.html + "</p>" : "";
     return '<div class="cx-actions" data-key="' + key + '" data-work="' + w.work_id + '">' +
       '<button type="button" class="cx-act cx-like" data-act="like" aria-pressed="' + liked + '" aria-label="' +
-      esc(liked ? U.unlike : U.like) + '">' + ICON.like + '<span class="cx-count">' + (n ? n : "") + "</span>" +
+      esc(liked ? U.unlike : U.like) + '" title="' + esc(liked ? U.unlike : U.like) + '">' + ICON.like + '<span class="cx-count">' + (n ? n : "") + "</span>" +
       '<span class="cx-act-label">' + esc(liked ? U.liked : U.like) + "</span></button>" +
-      '<button type="button" class="cx-act cx-save" data-act="save" aria-pressed="' + isSaved + '">' + ICON.save +
+      '<button type="button" class="cx-act cx-save" data-act="save" aria-pressed="' + isSaved + '" title="' + esc(isSaved ? U.saved : U.save) + '">' + ICON.save +
       '<span class="cx-act-label">' + esc(isSaved ? U.saved : U.save) + "</span></button>" +
-      '<button type="button" class="cx-act" data-act="share">' + ICON.share + '<span class="cx-act-label">' + esc(U.share) +
+      '<button type="button" class="cx-act" data-act="share" title="' + esc(U.share) + '">' + ICON.share + '<span class="cx-act-label">' + esc(U.share) +
       "</span></button></div>" + note;
   }
 
