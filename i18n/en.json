@@ -140,6 +140,7 @@
     "title": "The Word, and what the church has said about it",
     "season": "For Christmas:",
     "season_link": "the church on John 1:1–14, the Christmas Day Gospel",
+    "readings_link": "readings from John through the year",
     "lead": "Read a verse and hear the early church, the Middle Ages, the Reformers and the 1800s beside it, copied word for word from public-domain editions.",
     "verse_voices": "A verse and its voices",
     "resume": "Continue at {ref}",
@@ -523,13 +524,56 @@
     "in_chapter": "Passages in this chapter"
   },
   "occasions": {
+    "eyebrow": "Readings",
+    "heading": "The Gospel for {name}: {ref}",
+    "title": "{name} Gospel, {ref}: commentary from {names}",
+    "description": "What the church has said about the Gospel for {name}, {ref}: {n} excerpts from {names}, word for word from public-domain editions.",
+    "index_heading": "Readings from John through the church year",
+    "index_dek": "Many churches read from John on the great days of the year. Each page sets the reading beside everything Logia holds on it, from the early church to the 1800s.",
+    "index_note": "Lectionaries differ in where a reading starts and ends. Each page says which passage it shows and which lectionaries read it.",
+    "index_description": "The Gospel readings from John for Christmas, Holy Week, Easter and Pentecost, each with what the church fathers and later commentators wrote on it.",
     "christmas": {
+      "name": "Christmas Day",
+      "season": "Christmas",
       "path": "/christmas/",
-      "eyebrow": "Christmas",
-      "heading": "The Gospel for Christmas Day: {ref}",
       "intro": "John's prologue is read on Christmas Day. The Revised Common Lectionary and the Book of Common Prayer read John 1:1–14, and the Roman Missal reads John 1:1–18 at the Mass during the Day. Below is what the church has said about it, from the early church to the 1800s.",
-      "title": "Christmas Day Gospel, {ref}: commentary from {names}",
-      "description": "What the church has said about the Gospel for Christmas Day, {ref}: {n} excerpts from {names}, word for word from public-domain editions."
+      "read": "Revised Common Lectionary and Book of Common Prayer: John 1:1–14. Roman Missal: John 1:1–18."
+    },
+    "maundy-thursday": {
+      "name": "Maundy Thursday",
+      "season": "Holy Week",
+      "path": "/maundy-thursday/",
+      "intro": "On Maundy Thursday many churches read John's account of Jesus washing his disciples' feet. The Revised Common Lectionary reads John 13:1–17 and 31b–35, and the Roman Missal reads John 13:1–15 at the Evening Mass of the Lord's Supper. This page shows John 13:1–17.",
+      "read": "Revised Common Lectionary: John 13:1–17, 31b–35. Roman Missal: John 13:1–15."
+    },
+    "good-friday": {
+      "name": "Good Friday",
+      "season": "Holy Week",
+      "path": "/good-friday/",
+      "intro": "On Good Friday the Revised Common Lectionary and the Roman Missal both read the Passion according to John, John 18:1–19:42.",
+      "read": "Revised Common Lectionary and Roman Missal: John 18:1–19:42."
+    },
+    "easter": {
+      "name": "Easter Day",
+      "season": "Easter",
+      "path": "/easter/",
+      "intro": "On Easter Day many churches read John's account of the empty tomb. The Revised Common Lectionary gives John 20:1–18, and the Roman Missal reads John 20:1–9 at the Mass of the day. This page shows John 20:1–18.",
+      "read": "Revised Common Lectionary: John 20:1–18. Roman Missal: John 20:1–9."
+    },
+    "second-sunday-of-easter": {
+      "name": "Second Sunday of Easter",
+      "season": "Easter",
+      "path": "/second-sunday-of-easter/",
+      "heading": "The Gospel for the Second Sunday of Easter: {ref}",
+      "intro": "On the Sunday after Easter the Revised Common Lectionary and the Roman Missal read John 20:19–31 every year: Jesus appears to the disciples, and then to Thomas. The Orthodox Church reads it on Thomas Sunday.",
+      "read": "Revised Common Lectionary and Roman Missal, every year: John 20:19–31. Orthodox: Thomas Sunday."
+    },
+    "pentecost": {
+      "name": "Pentecost",
+      "season": "Pentecost",
+      "path": "/pentecost/",
+      "intro": "At Pentecost in Year B, the year that begins in Advent 2026, the Revised Common Lectionary reads Jesus's promise of the Advocate, John 15:26–27 and 16:4b–15. This page shows the whole of John 15:26–16:15.",
+      "read": "Revised Common Lectionary, Year B: John 15:26–27; 16:4b–15."
     }
   },
   "open_data": {

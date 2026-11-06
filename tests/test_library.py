@@ -518,6 +518,19 @@ class Site(unittest.TestCase):
         self.assertIn('"@type":"Dataset"', text)
         self.assertIn('href="/open-data/"', self.read(os.path.join("about", "index.html")))
 
+    def test_each_reading_has_a_page_and_the_readings_page_lists_them(self):
+        readings = self.read(os.path.join("readings", "index.html"))
+        for oid, _book, _start, _end, voices in build_site.occasions(build_site.Library()):
+            path = build_site.t(f"occasions.{oid}.path")
+            self.assertIn(f'href="{path}"', readings)
+            text = self.read(os.path.join(path.strip("/"), "index.html"))
+            self.assertIn("<h1>The Gospel for ", text)
+            self.assertTrue(voices, oid)
+        good_friday = self.read(os.path.join("good-friday", "index.html"))
+        self.assertIn("<h1>The Gospel for Good Friday: John 18:1–19:42</h1>", good_friday)
+        self.assertIn("#calvin.JHN.19.", good_friday)
+        self.assertIn('href="/readings/"', self.read("index.html"))
+
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
         self.assertIn('href="/jhn/3/16/"', text)

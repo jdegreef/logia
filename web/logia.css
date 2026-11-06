@@ -705,3 +705,6 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-bar { height: 12px; background: var(--line); border-radius: 6px; overflow: hidden; }
 .lg-bar span { display: block; height: 100%; background: var(--gold); border-radius: 6px; }
 .lg-bar-n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+/* Readings (/readings/): each day's Gospel, with which lectionaries read it. */
+.lg-readings li > p { margin: -4px 0 10px; font-size: 13.5px; }
