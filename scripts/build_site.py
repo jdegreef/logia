@@ -717,6 +717,46 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 
 # --- Pages --------------------------------------------------------------------
 
+# The verse the home page opens with, and the eras of the three voices shown
+# beside it: the earliest, the Reformation and the latest.
+HOME_VERSE = "JHN.3.16"
+HOME_ERAS = ("Early church", "Reformation", "The 1800s")
+
+
+def home_verse(lib):
+    """The home page's verse, its text, and a few words from three voices on
+    it, copied from their excerpts as they read (a first paragraph that only
+    repeats the verse is passed over)."""
+    book, chapter, verse = ref_parts(HOME_VERSE)
+    if (book, chapter) not in lib.chapters:
+        return ""
+    text = plain_verses(lib.bible(book, chapter)).get(verse, "")
+    on = [c for c in lib.comments if c["start"] == c["end"] == HOME_VERSE]
+    if not on:
+        return ""
+    voices = []
+    for era in HOME_ERAS:
+        for wid in lib.ordered_works({c["work"] for c in on}):
+            a = lib.author_of(wid)
+            if a["era"] != era:
+                continue
+            c = min((c for c in on if c["work"] == wid), key=lambda c: c["id"])
+            paras = [p for p in c["text"].split("\n\n") if p.strip()]
+            lead = paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]
+            voices.append(f'<li><p class="lg-vv-who"><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b></a> '
+                          f'<span>{e(t("eras." + era))} · {e(a["dates"])}</span></p>'
+                          f'<p class="lg-vv-text">{e(snippet(lead, 26))}</p></li>')
+            break
+    n = len({c["work"] for c in on})
+    href = chapter_url(book, chapter) + f"#v{verse}"
+    ref = f'{lib.books[book]["en"]} {chapter}:{verse}'
+    return (f'<section class="votd lg-votd" aria-labelledby="h-votd"><p class="eyebrow" id="h-votd">{e(t("home.verse_voices"))}</p>'
+            f'<blockquote><p class="votd-text">{e(text)}</p></blockquote>'
+            f'<footer><a class="votd-ref" href="{href}">{e(ref)}</a></footer>'
+            f'<ul class="lg-vv">{"".join(voices)}</ul>'
+            f'<p class="lg-vv-all"><a class="votd-why" href="{href}">{e(t("home.all_voices", n=n, ref=ref))} {icon("arrow", 15)}</a></p></section>')
+
+
 def home_page(lib):
     cov = lib.coverage()
     first = sorted(cov)[0] if cov else lib.chapters[0]
@@ -739,6 +779,7 @@ def home_page(lib):
 <p class="actions"><a class="button" href="{chapter_url(*first)}">{e(t("home.start"))}</a>
 <a class="button ghost" href="/read/">{e(t("home.browse"))}</a></p>
 </section>
+{home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
 <ul class="lg-cards">{cards}</ul></section>
 <section class="lg-block" aria-labelledby="h-voices"><h2 id="h-voices">{e(t("home.voices_heading"))}</h2>
@@ -871,6 +912,15 @@ def comm_file(commentaries, cited_by):
                       ensure_ascii=False, separators=(",", ":")), index
 
 
+def plain_verses(bible):
+    """{verse: its Balanced text at the default wording}, as the reader shows it."""
+    verses = {}
+    for r in bible["records"]:
+        for p in r["pieces"]:
+            verses[p[0]] = verses.get(p[0], "") + default_wording(p[1])
+    return {v: " ".join(x.split()) for v, x in verses.items()}
+
+
 def chapter_page(lib, book, chapter, all_chapters):
     """The reader page, and the texts of its panel and commentary files."""
     bible = lib.bible(book, chapter)
@@ -907,11 +957,8 @@ def chapter_page(lib, book, chapter, all_chapters):
     heading = default_wording(next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}"))
     # The text as plain Balanced verses, for search engines and readers
     # without JavaScript; web/reader.js replaces it.
-    verses = {}
-    for r in bible["records"]:
-        for p in r["pieces"]:
-            verses[p[0]] = verses.get(p[0], "") + default_wording(p[1])
-    plain = " ".join(f'<span class="cx-verse"><span class="cx-vn">{v}</span>{e(verses[v].strip())}</span>'
+    verses = plain_verses(bible)
+    plain = " ".join(f'<span class="cx-verse"><span class="cx-vn">{v}</span>{e(verses[v])}</span>'
                      for v in sorted(verses))
     i = all_chapters.index((book, chapter))
     turns = []

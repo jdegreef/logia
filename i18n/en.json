@@ -126,7 +126,9 @@
   "home": {
     "verse": "“They were entrusted with the oracles of God.” Romans 3:2",
     "title": "The Word, and what the church has said about it",
-    "lead": "Read a verse, and beside it hear Chrysostom, Augustine, Aquinas, Calvin, Matthew Henry and many more: two thousand years of commentary, copied word for word from public-domain editions, free to read and free to share.",
+    "lead": "Read a verse and hear the early church, the Middle Ages, the Reformers and the 1800s beside it, copied word for word from public-domain editions.",
+    "verse_voices": "A verse and its voices",
+    "all_voices": "All {n} voices on {ref}",
     "start": "Start with John 1",
     "browse": "Browse the books",
     "read_heading": "Read",
