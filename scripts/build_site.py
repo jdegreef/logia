@@ -285,6 +285,10 @@ class Library:
     def bible(self, book, chapter):
         return load(os.path.join(ROOT, "bible", "owb", "en", f"{book}.{chapter}.json"))
 
+    def chapter_title(self, book, chapter):
+        """The heading a chapter opens with ("Jesus and Nicodemus"), at the default wording."""
+        return chapter_title(book, chapter)
+
     def author_of(self, work_id):
         return self.authors[self.works[work_id]["author"]]
 
@@ -412,6 +416,12 @@ class Library:
                 works.add(c["work"])
                 verses.update(range(sv if ch == sc else 1, (ev if ch == ec else 999) + 1))
         return {k: (len(w), sorted(v)) for k, (w, v) in cov.items()}
+
+
+@functools.lru_cache(maxsize=None)
+def chapter_title(book, chapter):
+    bible = load(os.path.join(ROOT, "bible", "owb", "en", f"{book}.{chapter}.json"))
+    return default_wording(next((r["heading"] for r in bible["records"] if r["heading"]), ""))
 
 
 def span_text(verses):
@@ -1031,7 +1041,7 @@ def chapter_page(lib, book, chapter, all_chapters):
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "books": {k: v["en"] for k, v in lib.books.items()}}
-    heading = default_wording(next((r["heading"] for r in bible["records"] if r["heading"]), f"{name} {chapter}"))
+    heading = lib.chapter_title(book, chapter) or f"{name} {chapter}"
     # The text as plain Balanced verses, for search engines and readers
     # without JavaScript; web/reader.js replaces it.
     verses = plain_verses(bible)
@@ -1060,7 +1070,19 @@ def chapter_page(lib, book, chapter, all_chapters):
         f'<button role="tab" id="tab-{k}" data-tab="{k}" aria-selected="{"true" if k == "comm" else "false"}">'
         f'{e(t("chapter.tab_" + k + ("_hbo" if hebrew and k == "words" else "")))}<span class="cx-n" id="n-{k}"></span></button>'
         for k in ("comm", "words", "notes", "xref"))
+    picks = "".join(
+        f'<li><a href="{chapter_url(book, n)}"{" aria-current=page" if n == chapter else ""}><b>{n}</b>'
+        f'<span>{e(lib.chapter_title(book, n))}</span></a></li>'
+        for b, n in all_chapters if b == book)
+    bar_prev = (f'<a rel="prev" href="{chapter_url(*all_chapters[i - 1])}" aria-label="{e(t("chapter.previous"))}">&lsaquo; '
+                f'<span>{e(lib.books[all_chapters[i - 1][0]]["en"])} {all_chapters[i - 1][1]}</span></a>' if i > 0 else "<span></span>")
+    bar_next = (f'<a rel="next" href="{chapter_url(*all_chapters[i + 1])}" aria-label="{e(t("chapter.next"))}">'
+                f'<span>{e(lib.books[all_chapters[i + 1][0]]["en"])} {all_chapters[i + 1][1]}</span> &rsaquo;</a>'
+                if i + 1 < len(all_chapters) else "<span></span>")
     body = f"""
+<div class="cx-bar" id="cx-bar" hidden><div class="wrap cx-bar-in">{bar_prev}
+<details class="cx-pick"><summary><b>{e(name)} {chapter}</b> <span>{e(heading)}</span>{icon("chevron", 15, "icon lg-caret")}</summary>
+<ol class="cx-pick-list">{picks}</ol></details>{bar_next}</div><span class="cx-progress" id="cx-progress"></span></div>
 <div class="cx-layout">
 <article class="cx-passage">
 <p class="cx-eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("chapter.eyebrow", chapter=chapter))}</p>

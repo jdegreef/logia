@@ -430,3 +430,32 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-ch .lg-excerpts p { margin: 0; }
 .lg-ch .lg-excerpts i { color: var(--text); }
 @media (max-width: 560px) { .lg-ch .lg-excerpts li { grid-template-columns: minmax(0, 1fr); } .lg-ex-ref { flex-direction: row; gap: 8px; } }
+
+/* The chapter bar (web/reader.js): under the header once the chapter's title
+   has scrolled away. */
+.cx-bar { position: fixed; left: 0; right: 0; top: var(--header-h); z-index: 6; background: color-mix(in srgb, var(--bg) 94%, transparent);
+  border-bottom: 1px solid var(--line); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.cx-bar-in { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 6px; padding-bottom: 6px; }
+.cx-bar-in > a { font-size: 13.5px; font-weight: 600; color: var(--muted); text-decoration: none; white-space: nowrap; }
+.cx-bar-in > a:hover { color: var(--accent); }
+.cx-pick { position: relative; min-width: 0; }
+.cx-pick summary { display: flex; align-items: baseline; gap: 8px; cursor: pointer; list-style: none; padding: 4px 26px 4px 10px;
+  border-radius: 8px; position: relative; white-space: nowrap; overflow: hidden; }
+.cx-pick summary::-webkit-details-marker { display: none; }
+.cx-pick summary:hover { background: var(--surface-2); }
+.cx-pick summary b { font-family: var(--display); font-weight: 600; font-size: 16px; }
+.cx-pick summary span { color: var(--muted); font-size: 14px; overflow: hidden; text-overflow: ellipsis; }
+.cx-pick .lg-caret { position: absolute; right: 6px; top: 8px; color: var(--muted); }
+.cx-pick-list { position: absolute; left: 50%; transform: translateX(-50%); top: calc(100% + 8px); width: min(360px, 90vw); max-height: 60vh;
+  overflow-y: auto; margin: 0; padding: 6px; list-style: none; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-card); }
+.cx-pick-list a { display: flex; gap: 12px; padding: 7px 10px; border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14.5px; }
+.cx-pick-list a:hover { background: var(--surface-2); }
+.cx-pick-list a[aria-current] { background: var(--accent-soft); color: var(--accent); }
+.cx-pick-list b { min-width: 26px; font-variant-numeric: tabular-nums; color: var(--gold); }
+.cx-progress { display: block; height: 2px; width: 0; background: var(--gold); }
+@media (max-width: 560px) { .cx-bar-in > a span { display: none; } .cx-pick summary span { display: none; } }
+@media (min-width: 881px) {
+  body:has(.cx-bar:not([hidden])) .cx-panel { top: calc(var(--header-h) + 62px); max-height: calc(100vh - var(--header-h) - 78px); }
+  .cx-panel { transition: top 150ms ease; }
+}

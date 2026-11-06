@@ -661,6 +661,30 @@
     if (m[2]) { sheet("half"); showCard(m[2]); }
   });
 
+  // The chapter bar: once the chapter's title has scrolled away, a slim bar
+  // under the header with the chapters before and after, a list of the
+  // book's chapters, and how far through the text the reader is.
+  (function () {
+    var bar = $("#cx-bar"), title = document.querySelector(".cx-passage h1"), text = $("#text");
+    if (!bar || !title || !window.IntersectionObserver) return;
+    new IntersectionObserver(function (es) { bar.hidden = es[0].isIntersecting || es[0].boundingClientRect.top > 0; }).observe(title);
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return;
+      tick = true;
+      requestAnimationFrame(function () {
+        tick = false;
+        var r = text.getBoundingClientRect(), span = r.height - window.innerHeight * 0.5;
+        var done = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 1;
+        $("#cx-progress").style.width = (done * 100).toFixed(1) + "%";
+      });
+    }, { passive: true });
+    document.addEventListener("click", function (e) {
+      var pick = bar.querySelector(".cx-pick");
+      if (pick.open && !pick.contains(e.target)) pick.open = false;
+    });
+  })();
+
   var m0 = location.hash.match(HASH);
   if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
   else {
