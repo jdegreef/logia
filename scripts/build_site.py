@@ -1099,7 +1099,7 @@ def book_page(lib, book):
            if people else "")
     plist = passage_list(lib, book)
     passages = (f'<section class="lg-block" id="passages"><h2>{e(t("passage.list_title"))}</h2>'
-                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a> · <a href="/{book.lower()}/lent/">{e(t("plan.heading", book=name, n=40))}</a>{" · " + collection_links(lib, book) if collection_links(lib, book) else ""}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
+                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a> · <a href="/{book.lower()}/lent/">{e(t("plan.heading", book=name, n=40))}</a> · <a href="/{book.lower()}/scripture-cited/">{e(t("cited.heading", book=name))}</a>{" · " + collection_links(lib, book) if collection_links(lib, book) else ""}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
                 if plist else "")
     codes = list(lib.books)
     testament = "old" if codes.index(book) < OT_BOOKS else "new"
@@ -2432,6 +2432,80 @@ def lent_page(lib, book, year):
                 ld=(breadcrumbs((name, f"/{book.lower()}/"), (t("plan.heading", book=name, n=len(dates)), f"/{book.lower()}/lent/")),))
 
 
+# --- The Scripture cited (/<book>/scripture-cited/) --------------------------
+#
+# Counts of the Scripture the excerpts cite, from library/citations/ (found
+# by scripts/find_refs.py, each still to be reviewed). Counts only.
+
+def citations_on(book):
+    """[citation] in every work's excerpts on a book, leaving out those a person rejected."""
+    out = []
+    for path in sorted(glob.glob(os.path.join(ROOT, "library", "citations", "*", f"{book}.json"))):
+        data = load(path)
+        out.extend({**x, "work": data["work"]} for x in data["citations"] if x.get("status") != "rejected")
+    return out
+
+
+def chapter_list(lib, book):
+    return range(1, lib.books[book]["chapters"] + 1)
+
+
+def cited_page(lib, book, top=20):
+    name = lib.books[book]["en"]
+    cites = citations_on(book)
+    codes = list(lib.books)
+    by_book, by_verse, by_work = {}, {}, {}
+    for x in cites:
+        b = x["start"].split(".")[0]
+        by_book[b] = by_book.get(b, 0) + 1
+        by_verse[(x["start"], x["end"])] = by_verse.get((x["start"], x["end"]), 0) + 1
+        by_work[x["work"]] = by_work.get(x["work"], 0) + 1
+    own = by_book.get(book, 0)
+    ot = sum(n for b, n in by_book.items() if b in lib.books and codes.index(b) < OT_BOOKS)
+    others = sorted(((b, n) for b, n in by_book.items() if b != book), key=lambda kv: -kv[1])
+
+    def bars(rows, href, label):
+        peak = max(n for _k, n in rows)
+        return "".join(f'<li><a href="{href(k)}"><span class="lg-bar-label">{e(label(k))}</span>'
+                       f'<span class="lg-bar"><span style="width:{n / peak * 100:.1f}%"></span></span>'
+                       f'<span class="lg-bar-n">{n}</span></a></li>' for k, n in rows)
+
+    def verse_text(ref):
+        b, ch, v = ref_parts(ref)
+        return snippet(chapter_plain(b, ch).get(v, ""), 12) if b in lib.books and ch in chapter_list(lib, b) else ""
+
+    def verse_rows(rows, text=True):
+        # Only within the book is the text shown: elsewhere the printed numbering
+        # can differ from the Open Word Bible's (Micah 5:2 in English is its 5:1).
+        return "".join(f'<tr><td><a href="{e(verse_href(lib, a))}"><b>{e(scripture.label(a, z))}</b></a></td><td>{n}</td>'
+                       + (f'<td class="lg-quiet">{e(verse_text(a))}</td>' if text else "") + "</tr>"
+                       for (a, z), n in rows)
+    outside = sorted(((k, n) for k, n in by_verse.items() if not k[0].startswith(book + ".")), key=lambda kv: (-kv[1], kv[0]))[:top]
+    inside = sorted(((k, n) for k, n in by_verse.items() if k[0].startswith(book + ".")), key=lambda kv: (-kv[1], kv[0]))[:top]
+    head = "".join(f"<th>{e(x)}</th>" for x in t("cited.columns"))
+    head2 = "".join(f"<th>{e(x)}</th>" for x in t("cited.columns")[:2])
+    works = sorted(by_work.items(), key=lambda kv: -kv[1])
+    body = f"""
+<article class="lg-verse lg-most">
+<header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a></p>
+<h1>{e(t("cited.heading", book=name))}</h1>
+<p class="dek">{e(t("cited.dek", n=f"{len(cites):,}", book=name, own=f"{own:,}", ot=f"{ot:,}", others=len(others)))}</p></header>
+<section class="lg-block" id="books"><h2>{e(t("cited.books_title", book=name))}</h2>
+<ol class="lg-bars lg-bars-wide">{bars(others[:20], lambda b: f"/{b.lower()}/" if b in lib.books else "#outside", lambda b: scripture.BOOK_NAMES[b])}</ol></section>
+<section class="lg-block" id="outside"><h2>{e(t("cited.outside_title", n=top, book=name))}</h2>
+<div class="lg-table-wrap"><table class="lg-words lg-rank lg-narrow"><thead><tr>{head2}</tr></thead><tbody>{verse_rows(outside, text=False)}</tbody></table></div></section>
+<section class="lg-block" id="inside"><h2>{e(t("cited.inside_title", n=top, book=name))}</h2>
+<p class="lg-quiet">{e(t("cited.inside_note", book=name))}</p>
+<div class="lg-table-wrap"><table class="lg-words lg-rank"><thead><tr>{head}</tr></thead><tbody>{verse_rows(inside)}</tbody></table></div></section>
+<section class="lg-block" id="works"><h2>{e(t("cited.works_title"))}</h2>
+<ol class="lg-bars lg-bars-wide">{bars(works, lambda w: f"/works/{w}/", lambda w: short_name(lib.author_of(w)))}</ol></section>
+<section class="lg-block"><h2>{e(t("most.how_title"))}</h2><p>{e(t("cited.how"))}</p></section>
+</article>"""
+    return page(lib, t("cited.heading", book=name), body, f"/{book.lower()}/scripture-cited/", current="/read/",
+                description=t("cited.description", book=name, n=f"{len(cites):,}"),
+                ld=(breadcrumbs((name, f"/{book.lower()}/"), (t("cited.heading", book=name), f"/{book.lower()}/scripture-cited/")),))
+
+
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
 #
 # Counts only: how many excerpts in the library are on each verse and
@@ -2618,6 +2692,8 @@ def build():
     for book in dict.fromkeys(b for b, _c, _v in lib.voices_on):
         write(f"/{book.lower()}/lent/", lent_page(lib, book, LENT_YEAR))
         pages.append(f"/{book.lower()}/lent/")
+        write(f"/{book.lower()}/scripture-cited/", cited_page(lib, book))
+        pages.append(f"/{book.lower()}/scripture-cited/")
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
         pages.append(f"/{book.lower()}/most-discussed/")
     for oid, book, start, end, voices in occasions(lib):
