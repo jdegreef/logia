@@ -787,5 +787,29 @@
       "The verse"
     ],
     "how": "Each citation is a reference to Scripture printed in an excerpt, such as “(1 Timothy 3:16)”, found by a script that reads the excerpts. None has yet been checked by a person, so a few may be misreadings. A passage is counted each time any excerpt cites it. How often a commentary cites Scripture depends on its style and on how much of it Logia holds."
+  },
+  "catena": {
+    "short_title": "Catena Aurea",
+    "heading": "Who Aquinas quotes in the Catena Aurea on John",
+    "description": "Thomas Aquinas built his Catena Aurea on John from the Fathers: Augustine, Chrysostom, Theophylact, Alcuin, Origen, Bede and others. {n} quotations, counted from the edition in Logia.",
+    "dek": "Thomas Aquinas wrote the Catena Aurea as a chain of quotations from the Fathers, each opened by its author's name. In Logia's excerpts on John, {n} quotations name {k} sources.",
+    "for_example": "For example:",
+    "held": "Logia holds {name}'s own work on John, and links each quotation it can trace to the passage it comes from.",
+    "held_link": "Read {name}",
+    "how": "Each quotation is counted by the name printed at its head in {edition}: “CHRYS.” for Chrysostom, “AUG.” for Augustine. A name the scan misread is not counted, so the true numbers are a little higher.",
+    "names": {
+      "augustine": "Augustine",
+      "chrysostom": "John Chrysostom",
+      "theophylact": "Theophylact",
+      "alcuin": "Alcuin",
+      "origen": "Origen",
+      "bede": "Bede",
+      "greg": "Gregory",
+      "hilary": "Hilary of Poitiers",
+      "basil": "Basil",
+      "haymo": "Haymo",
+      "gloss": "The Gloss",
+      "jerome": "Jerome"
+    }
   }
 }
