@@ -1099,7 +1099,7 @@ def book_page(lib, book):
            if people else "")
     plist = passage_list(lib, book)
     passages = (f'<section class="lg-block" id="passages"><h2>{e(t("passage.list_title"))}</h2>'
-                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a> · <a href="/{book.lower()}/lent/">{e(t("plan.heading", book=name, n=40))}</a> · <a href="/{book.lower()}/scripture-cited/">{e(t("cited.heading", book=name))}</a>{" · " + collection_links(lib, book) if collection_links(lib, book) else ""}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
+                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a> · <a href="/{book.lower()}/lent/">{e(t("plan.heading", book=name, n=40))}</a> · <a href="/{book.lower()}/scripture-cited/">{e(t("cited.heading", book=name))}</a>{guide_links(book)}{" · " + collection_links(lib, book) if collection_links(lib, book) else ""}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
                 if plist else "")
     codes = list(lib.books)
     testament = "old" if codes.index(book) < OT_BOOKS else "new"
@@ -2658,11 +2658,7 @@ def era_page(lib, era, book="JHN"):
         for a in people:
             c = first_on(lib, {w for w in works if lib.works[w]["author"] == a["id"]}, ref)
             if c:
-                # Past a first paragraph that only quotes the verse.
-                paras = [x for x in c["text"].split("\n\n") if x.strip()]
-                while len(paras) > 1 and len(paras[0].split()) < 30:
-                    paras.pop(0)
-                items += (f'<li><b>{e(short_name(a))}</b> “{e(snippet(paras[0], 40))}” '
+                items += (f'<li><b>{e(short_name(a))}</b> “{e(opening_words(c))}” '
                           f'<a href="{excerpt_href(lib, c)}">{e(t("era.read_on"))}</a></li>')
         if items:
             samples += (f'<section class="lg-era-verse"><h3><a href="{verse_url(book, ch, v)}">{e(verse_ref(lib, book, ch, v))}</a></h3>'
@@ -2683,6 +2679,84 @@ def era_page(lib, era, book="JHN"):
                 head_title=t("era.head_title", book=name, era=t("era.in." + era)) + " · Logia",
                 description=t("era.description", book=name, era=t("era.in." + era), names=", ".join(a["name"] for a in people)),
                 ld=(breadcrumbs((t("commentators.title"), "/commentators/"), (title, era_url(era))),))
+
+
+# --- Guides (library/guides/en/<id>.json) -----------------------------------
+#
+# Logia's own writing about the commentaries: short notes that frame a
+# passage, never commentary. Each guide is a draft (status "ai_draft") until
+# a named person reviews it, and its page says so. Where a guide points to a
+# passage, the commentators then speak for themselves: the opening words of
+# what each says on it, linked to the whole excerpt.
+
+def guides():
+    return [load(p) for p in sorted(glob.glob(os.path.join(ROOT, "library", "guides", "en", "*.json")))]
+
+
+def opening_words(c, words=40):
+    """An excerpt's first words, past a first paragraph that only quotes the verse."""
+    paras = [x for x in c["text"].split("\n\n") if x.strip()]
+    while len(paras) > 1 and len(paras[0].split()) < 30:
+        paras.pop(0)
+    return snippet(paras[0], words)
+
+
+def voices_list(lib, ref, works=None):
+    """Each work's excerpt nearest ref, as a list of opening words and links."""
+    b, ch, v = ref_parts(ref)
+    items = ""
+    for w in lib.voices_on.get((b, ch, v), []):
+        if works is not None and w not in works:
+            continue
+        c = first_on(lib, {w}, ref)
+        if c:
+            a = lib.author_of(w)
+            items += (f'<li><b>{e(short_name(a))}</b> <span class="lg-quiet">{e(a["tradition"])}</span> '
+                      f'“{e(opening_words(c))}” <a href="{excerpt_href(lib, c)}">{e(t("era.read_on"))}</a></li>')
+    return f'<ul class="lg-era-says">{items}</ul>' if items else ""
+
+
+def guide_links(book):
+    """ · and a link to each guide on the book, for its book page."""
+    return "".join(f' · <a href="{g["path"]}">{e(g["title"])}</a>' for g in guides()
+                   if g.get("book") == book and g["path"].startswith(f"/{book.lower()}/"))
+
+
+def draft_note(g):
+    return (f'<p class="lg-guide-draft"><span class="lg-pill lg-pill-draft">{e(t("guide.draft"))}</span> '
+            f'{e(t("guide.draft_note"))}</p>' if g["status"] == "ai_draft" else "")
+
+
+def prose(paras):
+    return "".join("<p>" + re.sub(r"\*([^*]+)\*", r"<i>\1</i>", e(p)) + "</p>" for p in paras)
+
+
+def guide_page(lib, g):
+    book = g.get("book", "JHN")
+    name = lib.books[book]["en"]
+    parts = []
+    for i, x in enumerate(g.get("topics", []), 1):
+        _b, sc, sv = ref_parts(x["start"])
+        _b, ec, ev = ref_parts(x["end"])
+        _b, fc, fv = ref_parts(x["focus"])
+        where = section_url(lib, book, (sc, sv))
+        parts.append(
+            f'<section class="lg-block lg-guide-topic" id="t{i}"><h2>{e(x["title"])}</h2>'
+            f'<p class="lg-ex-ref"><a href="{where}">{e(scripture.label(x["start"], x["end"]))}</a></p>'
+            f'<blockquote class="lg-guide-verse"><p>{e(" ".join(chapter_plain(book, c_).get(v_, "") for c_ in range(sc, ec + 1) for v_ in chapter_verses(book, c_) if (sc, sv) <= (c_, v_) <= (ec, ev)))}</p></blockquote>'
+            f'<div class="prose">{prose(x["note"])}</div>'
+            f'<h3 class="label">{e(t("guide.voices", ref=verse_ref(lib, book, fc, fv)))}</h3>{voices_list(lib, x["focus"])}</section>')
+    toc = "".join(f'<li><a href="#t{i}">{e(x["title"])}</a></li>' for i, x in enumerate(g.get("topics", []), 1))
+    body = f"""
+<article class="lg-verse lg-guide">
+<header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("guide.eyebrow"))}</p>
+<h1>{e(g["title"])}</h1><p class="dek">{e(g["dek"])}</p>{draft_note(g)}</header>
+<div class="prose">{prose(g.get("intro", []))}</div>
+{f'<nav class="lg-block"><ol class="lg-guide-toc">{toc}</ol></nav>' if toc else ""}
+{"".join(parts)}
+</article>"""
+    return page(lib, g["title"], body, g["path"], current="/read/", head_title=g["head_title"] + " · Logia",
+                description=g["description"], ld=(breadcrumbs((name, f"/{book.lower()}/"), (g["title"], g["path"])),))
 
 
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
@@ -2875,6 +2949,9 @@ def build():
         pages.append(f"/{book.lower()}/scripture-cited/")
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
         pages.append(f"/{book.lower()}/most-discussed/")
+    for g in guides():
+        write(g["path"], guide_page(lib, g))
+        pages.append(g["path"])
     for era in ERAS:
         if any(a["era"] == era for a in lib.authors.values()):
             write(era_url(era), era_page(lib, era))

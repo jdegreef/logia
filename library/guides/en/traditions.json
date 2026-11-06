@@ -1,0 +1,97 @@
+{
+  "id": "traditions",
+  "path": "/jhn/traditions/",
+  "book": "JHN",
+  "status": "ai_draft",
+  "reviewed_by": null,
+  "title": "Where the traditions read John differently",
+  "head_title": "Where Catholic, Orthodox and Protestant readers differ on John",
+  "description": "Eight places in the Gospel of John that Catholic, Orthodox and Protestant Christians read differently, with what each commentator in Logia says, in their own words.",
+  "dek": "Eight passages of John that Christians of different churches read differently: baptism, the Eucharist, confession, Peter, Mary, the Holy Spirit, and grace. Each note says briefly how the readings differ; the commentators then speak for themselves.",
+  "intro": [
+    "Most of what the commentators say on John, they say in common. On a few passages, though, the churches have long read the same words differently, and those readings still divide Catholic, Orthodox and Protestant Christians today.",
+    "Logia takes no side. Each note below only says, as plainly and fairly as it can, how the readings differ. It is no substitute for the commentators, whose own words follow it: the opening lines of what each says on the passage, linked to the whole excerpt."
+  ],
+  "topics": [
+    {
+      "title": "Born of water and the Spirit",
+      "start": "JHN.3.3",
+      "end": "JHN.3.8",
+      "focus": "JHN.3.5",
+      "note": [
+        "Catholic and Orthodox teaching, with Lutheran and many Anglican readers, takes the water as the water of baptism, and the verse as teaching that baptism is the means by which a person is born again.",
+        "Many Reformed and evangelical readers take the water as a figure of the Spirit's cleansing, or hold that baptism is the sign of a new birth the Spirit gives, rather than the means of it."
+      ]
+    },
+    {
+      "title": "Eating the flesh of the Son of Man",
+      "start": "JHN.6.51",
+      "end": "JHN.6.58",
+      "focus": "JHN.6.53",
+      "note": [
+        "Catholic and Orthodox readers take these words of the Eucharist, in which, they believe, the bread and wine become the body and blood of Christ. Lutherans also hold that Christ's body and blood are truly present in the sacrament, though they explain it differently.",
+        "Reformed readers speak of a real but spiritual feeding on Christ by faith, in the Supper and beyond it. Others, among them many evangelicals, read the passage chiefly of believing in Christ, and not of the sacrament at all."
+      ]
+    },
+    {
+      "title": "The flesh profits nothing",
+      "start": "JHN.6.60",
+      "end": "JHN.6.66",
+      "focus": "JHN.6.63",
+      "note": [
+        "Readers who take the discourse of the sacrament hear in this verse a warning against a merely physical understanding of it: the Spirit gives the gift its life.",
+        "Readers who take the discourse of faith hear the key to the whole of it: Jesus' words are to be understood spiritually, of believing in him."
+      ]
+    },
+    {
+      "title": "Forgiving and retaining sins",
+      "start": "JHN.20.21",
+      "end": "JHN.20.23",
+      "focus": "JHN.20.23",
+      "note": [
+        "Catholic and Orthodox teaching finds here the authority Christ gave the apostles and their successors to forgive sins in his name, exercised in the sacrament of confession.",
+        "Protestant readers generally take it as the authority of the whole church to declare God's forgiveness through the preaching of the gospel; Lutherans and some Anglicans also keep private confession and absolution, without counting it a sacrament in the Catholic sense."
+      ]
+    },
+    {
+      "title": "Feed my sheep",
+      "start": "JHN.21.15",
+      "end": "JHN.21.17",
+      "focus": "JHN.21.17",
+      "note": [
+        "Catholic teaching reads Peter's threefold charge as making him shepherd of the whole flock, an office that continues in the bishops of Rome.",
+        "Orthodox readers honour Peter as first among the apostles but hold that the charge does not give one bishop authority over the whole church. Protestant readers see chiefly Peter's restoration after his three denials, and a charge that belongs to every pastor."
+      ]
+    },
+    {
+      "title": "Behold thy mother",
+      "start": "JHN.19.25",
+      "end": "JHN.19.27",
+      "focus": "JHN.19.27",
+      "note": [
+        "Catholic and Orthodox readers, with some Anglicans, see more than a son's care for his mother: in the beloved disciple Christ gives his mother to all his disciples, and so to the church, as their mother.",
+        "Most Protestant readers take the words as Jesus providing for his widowed mother from the cross, and an example of a son's duty."
+      ]
+    },
+    {
+      "title": "The Spirit who proceeds from the Father",
+      "start": "JHN.15.26",
+      "end": "JHN.15.27",
+      "focus": "JHN.15.26",
+      "note": [
+        "The Nicene Creed, as the Western churches came to say it, confesses that the Spirit proceeds from the Father and the Son (in Latin, filioque). Catholics, and most Protestants after them, read this verse alongside others in which the Son sends the Spirit.",
+        "The Orthodox churches confess, in the words of the verse, that the Spirit proceeds from the Father, and distinguish his eternal procession from the Father alone from his being sent into the world by the Son. The added words remain one of the chief questions between East and West."
+      ]
+    },
+    {
+      "title": "No one can come unless the Father draws him",
+      "start": "JHN.6.37",
+      "end": "JHN.6.45",
+      "focus": "JHN.6.44",
+      "note": [
+        "Readers in the line of Augustine, and Reformed readers above all, take the drawing as God's grace, which surely brings to Christ those the Father has given him.",
+        "Orthodox, Wesleyan and other readers hold that God draws all people and that his grace can be refused. Catholic teaching holds that no one comes to Christ without grace going before, and that the will, moved by grace, freely consents to it. These readings differ within churches as well as between them."
+      ]
+    }
+  ]
+}
