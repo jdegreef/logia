@@ -88,9 +88,12 @@
             return p[2] ? '<span class="cx-w" data-tok="' + p[2].join(" ") + '">' + lined(p[1]) + "</span>" : lined(p[1]);
           }).join("");
         } else inner = lined(r[lv][v] || "");
-        var has = works.some(function (w) { return entriesFor(w, v).length; });
-        out.push('<span class="cx-verse' + (v === state.verse ? " cx-on" : "") + (has ? " cx-has" : "") + (poem ? " cx-poem" : "") + '" data-v="' + v +
-          '" tabindex="0" role="button" aria-label="' + esc(REF(v)) + '"><span class="cx-vn">' + v + "</span>" + inner + "</span> ");
+        // The gold count beside a verse number: how many voices comment on it.
+        var n = works.filter(function (w) { return entriesFor(w, v).length; }).length;
+        var label = n ? fmt(n === 1 ? U.verse_voices_one : U.verse_voices, { ref: REF(v), n: n }) : REF(v);
+        out.push('<span class="cx-verse' + (v === state.verse ? " cx-on" : "") + (n ? " cx-has" : "") + (poem ? " cx-poem" : "") + '" data-v="' + v +
+          '" tabindex="0" role="button" aria-label="' + esc(label) + '"><span class="cx-vn">' + v + "</span>" +
+          (n ? '<span class="cx-vc" aria-hidden="true">' + n + "</span>" : "") + inner + "</span> ");
       });
     });
     $("#text").innerHTML = out.join("");
