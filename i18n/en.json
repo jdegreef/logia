@@ -279,6 +279,8 @@
     "copy_this": "Copy this link:",
     "sign_in_to": "Sign in with your Open Word Bible account to like and save comments.",
     "sign_in": "Sign in",
+    "related": "The church on a related verse",
+    "related_all": "All {n} voices on {ref}",
     "elsewhere": "Elsewhere in the library",
     "elsewhere_hint": "Writing on other verses, these commentators refer to {ref}.",
     "read_it_on": "Read it on {ref}",

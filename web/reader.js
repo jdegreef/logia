@@ -346,7 +346,20 @@
     if (!any) {
       h += '<p class="cx-empty' + (onVerse ? "" : " cx-empty-box") + '">' + esc(onVerse ? U.none_in_eras : EMPTY ? fmt(U.none_book_long, { book: DATA.bookName }) : U.none_yet_long) + "</p>";
     }
-    return h + wholeTexts(v) + elsewhere(v);
+    return h + related(v) + wholeTexts(v) + elsewhere(v);
+  }
+  // Where no one comments on a verse: the verses it cross-references that
+  // have commentary, with one voice's first words on each.
+  function related(v) {
+    var rows = (DATA.related || {})[v] || [];
+    if (!rows.length) return "";
+    return '<section class="cx-related"><div class="cx-era">' + esc(U.related) + "</div>" + rows.map(function (r) {
+      return '<div class="cx-rel"><a class="cx-rel-verse" href="' + esc(r.href) + '"><span class="cx-rel-ref">' + esc(r.ref) +
+        '</span><span class="cx-vc">' + r.n + "</span><span class=\"cx-rel-text\">" + esc(r.text) + "</span></a>" +
+        '<div class="cx-who"><b>' + esc(r.author) + '</b><span class="cx-d">' + esc(U.eras[r.era]) + "</span></div>" +
+        '<p class="cx-rel-snip">' + esc(r.snippet) + '</p><a class="cx-rel-all" href="' + esc(r.href) + '">' +
+        esc(fmt(U.related_all, { n: r.n, ref: r.ref })) + " \u2192</a></div>";
+    }).join("") + "</section>";
   }
 
   // Like, save and share under a card. Likes and saves need an account
@@ -710,7 +723,9 @@
   })();
 
   if (EMPTY) {
-    state.tab = "notes";
+    // ... unless the verse cross-references one the church comments on.
+    var hv = location.hash.match(/^#v(\d+)/);
+    state.tab = (DATA.related || {})[hv ? hv[1] : DATA.verses[0]] ? "comm" : "notes";
     var commTabButton = $("#tab-comm");
     commTabButton.parentNode.appendChild(commTabButton);
     commTabButton.classList.add("cx-zero");

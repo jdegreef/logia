@@ -209,6 +209,11 @@ def cite_snippet(text, at, length):
     if not m and e_ < len(text):
         e_ = text.rfind(" ", at + length, e_)
     piece = " ".join(text[s:e_].split())
+    if len(piece) < 60 and len(ends) > 1:
+        # A bare reference such as "(Gen. i. 1.)" says nothing alone: take
+        # the sentence before it as well.
+        s = ends[-2]
+        piece = " ".join(text[s:e_].split())
     return ("… " if s > 0 and not ends else "") + piece + (" …" if not m and e_ < len(text) else "")
 
 
@@ -405,6 +410,57 @@ class Library:
             rows.sort(key=lambda r: (ERAS.index(r["era"]), r["died"]))
         return out
 
+    @functools.cached_property
+    def voices_on(self):
+        """{(book, chapter, verse): [works commenting on it]}, in the reader's order."""
+        out = {}
+        for c in self.comments:
+            sb, sc, sv = ref_parts(c["start"])
+            _, ec, ev = ref_parts(c["end"])
+            if sc != ec:
+                continue
+            for v in range(sv, ev + 1):
+                ws = out.setdefault((sb, sc, v), [])
+                if c["work"] not in ws:
+                    ws.append(c["work"])
+        return {k: self.ordered_works(ws) for k, ws in out.items()}
+
+    def plain(self, book, chapter):
+        """{verse: its plain Balanced text} for a chapter."""
+        return chapter_plain(book, chapter)
+
+    def related(self, book, chapter, bible):
+        """{verse: [verses it cross-references that have commentary]} for the
+        verses no one in the library comments on: each with its text and the
+        first words of one voice on it, copied as the excerpt reads."""
+        out = {}
+        for v, refs in bible["crossrefs"].items():
+            if (book, chapter, int(v)) in self.voices_on:
+                continue
+            rows = []
+            for x in refs:
+                p = x.split(".")
+                if len(p) < 3:
+                    continue
+                key = (p[0], int(p[1]), int(p[2].split("-")[0]))
+                works = self.voices_on.get(key)
+                if not works or (key[0], key[1]) not in self.chapters:
+                    continue
+                ref = f"{key[0]}.{key[1]}.{key[2]}"
+                exact = [c for c in self.comments if c["start"] == ref and c["work"] == works[-1]]
+                c = exact[0] if exact else next(c for c in self.comments if c["work"] == works[-1]
+                                                and ref_parts(c["start"])[:2] == key[:2]
+                                                and ref_parts(c["start"])[2] <= key[2] <= ref_parts(c["end"])[2])
+                a = self.author_of(c["work"])
+                rows.append({"ref": scripture.label(ref), "href": chapter_url(key[0], key[1]) + f"#v{key[2]}",
+                             "n": len(works), "text": self.plain(key[0], key[1]).get(key[2], ""),
+                             "author": a["name"], "era": a["era"], "snippet": snippet(c["text"], 30)})
+                if len(rows) == 2:
+                    break
+            if rows:
+                out[v] = rows
+        return out
+
     def coverage(self):
         """{(book, chapter): (number of works, [verses with commentary])}."""
         cov = {}
@@ -422,6 +478,11 @@ class Library:
 def chapter_title(book, chapter):
     bible = load(os.path.join(ROOT, "bible", "owb", "en", f"{book}.{chapter}.json"))
     return default_wording(next((r["heading"] for r in bible["records"] if r["heading"]), ""))
+
+
+@functools.lru_cache(maxsize=None)
+def chapter_plain(book, chapter):
+    return plain_verses(load(os.path.join(ROOT, "bible", "owb", "en", f"{book}.{chapter}.json")))
 
 
 def span_text(verses):
@@ -1040,6 +1101,7 @@ def chapter_page(lib, book, chapter, all_chapters):
             "comm": comm_url, "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS,
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
+            "related": lib.related(book, chapter, bible),
             "books": {k: v["en"] for k, v in lib.books.items()}}
     heading = lib.chapter_title(book, chapter) or f"{name} {chapter}"
     # The text as plain Balanced verses, for search engines and readers
