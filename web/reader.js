@@ -525,7 +525,8 @@
       state.tab = "words";
       go(v, { keepToken: true });
     } else go(v);
-    $("#panel").classList.remove("cx-min");
+    sheet("half");
+    keepInView(vs);
   });
   $("#text").addEventListener("keydown", function (e) {
     var vs = e.target.closest(".cx-verse");
@@ -540,7 +541,46 @@
     var b = e.target.closest("button"); if (!b) return;
     state.tab = b.dataset.tab; renderPanel();
   });
-  $("#grab").addEventListener("click", function () { $("#panel").classList.toggle("cx-min"); });
+  // On a phone the panel is a sheet over the text: a peek, half the screen
+  // or nearly all of it. The handle steps through them; dragging the sheet's
+  // head up or down moves one step.
+  var PHONE = window.matchMedia("(max-width: 880px)");
+  function sheetState() {
+    var p = $("#panel");
+    return p.classList.contains("cx-min") ? "min" : p.classList.contains("cx-full") ? "full" : "half";
+  }
+  function sheet(to) {
+    var p = $("#panel");
+    p.classList.toggle("cx-min", to === "min");
+    p.classList.toggle("cx-full", to === "full");
+    $("#grab").setAttribute("aria-expanded", to !== "min");
+  }
+  // Scroll the chosen verse into the space above a half-height sheet.
+  function keepInView(el) {
+    if (!PHONE.matches || !el) return;
+    var top = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64;
+    var r = el.getBoundingClientRect(), room = window.innerHeight * 0.5;
+    if (r.top < top + 8 || r.bottom > room - 8) {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollBy({ top: r.top - top - 16, behavior: reduce ? "auto" : "smooth" });
+    }
+  }
+  $("#grab").addEventListener("click", function () {
+    sheet({ min: "half", half: "full", full: "min" }[sheetState()]);
+  });
+  (function () {
+    var head = document.querySelector(".cx-ph"), y0 = null;
+    [head, $("#grab")].forEach(function (el) {
+      el.addEventListener("touchstart", function (e) { y0 = e.touches[0].clientY; }, { passive: true });
+      el.addEventListener("touchend", function (e) {
+        if (y0 === null) return;
+        var dy = e.changedTouches[0].clientY - y0; y0 = null;
+        if (Math.abs(dy) < 40) return;
+        var order = ["min", "half", "full"], i = order.indexOf(sheetState());
+        sheet(order[Math.max(0, Math.min(2, i + (dy < 0 ? 1 : -1)))]);
+      });
+    });
+  })();
   if (window.innerWidth <= 880 && !location.hash) $("#panel").classList.add("cx-min");
   $("#prev").addEventListener("click", function () { go(state.verse - 1); });
   $("#next").addEventListener("click", function () { go(state.verse + 1); });
@@ -604,7 +644,7 @@
     var m = location.hash.match(HASH);
     if (!m) return;
     if (+m[1] !== state.verse) { state.tab = "comm"; go(+m[1]); }
-    if (m[2]) { $("#panel").classList.remove("cx-min"); showCard(m[2]); }
+    if (m[2]) { sheet("half"); showCard(m[2]); }
   });
 
   var m0 = location.hash.match(HASH);
@@ -616,7 +656,7 @@
   }
   loadComm();
   renderText(); go(state.verse);
-  if (m0 && m0[2]) { $("#panel").classList.remove("cx-min"); showCard(m0[2]); }
+  if (m0 && m0[2]) { sheet("half"); showCard(m0[2]); }
 
   // Likes for this chapter (public), and the reader's own likes and saves.
   if (Account && works.length) {
