@@ -179,7 +179,15 @@
       return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
     };
     if (!saved()) {
-      note.innerHTML = esc(T.saved_signed_out) + ' <a href="' + esc(signInUrl()) + '">' + esc(T.sign_in) + "</a>";
+      // Signed out: what saving does, with an example and a way to sign in
+      // (#saved-empty, saved_page in scripts/build_site.py).
+      var empty = document.getElementById("saved-empty");
+      if (empty) {
+        empty.hidden = false;
+        empty.querySelectorAll("[data-login]").forEach(function (a) { a.href = signInUrl(); });
+      } else {
+        note.innerHTML = esc(T.saved_signed_out) + ' <a href="' + esc(signInUrl()) + '">' + esc(T.sign_in) + "</a>";
+      }
       return;
     }
     loadMarks().then(function (m) {
