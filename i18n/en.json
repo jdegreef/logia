@@ -531,5 +531,125 @@
       "title": "Christmas Day Gospel, {ref}: commentary from {names}",
       "description": "What the church has said about the Gospel for Christmas Day, {ref}: {n} excerpts from {names}, word for word from public-domain editions."
     }
+  },
+  "open_data": {
+    "heading": "Open data",
+    "dek": "All {n} excerpts from {works} commentaries by {authors} commentators, free to download and build on. The data is CC0: no permission needed, no attribution required.",
+    "description": "Download Logia's {n} public-domain commentary excerpts on the Gospel of John as JSON or CSV, each tied to its verse and its source. CC0.",
+    "about_link": "Download the open data",
+    "download": "Download",
+    "download_note": "Every excerpt with its verse range, its place in the work and the address of the page it was copied from. Scan misreadings are already corrected. The files are rebuilt from the repository whenever the site is.",
+    "file_json": "JSON, with the commentators and works",
+    "file_csv": "CSV, one excerpt per row",
+    "file_about": "Logia's public-domain commentary excerpts, each copied word for word from the source at source_url. See https://logia.faith/open-data/.",
+    "fields_title": "What each field holds",
+    "fields": [
+      [
+        "id",
+        "The excerpt's permanent id: work, first verse and number (calvin.JHN.1.14.1). It never changes once published."
+      ],
+      [
+        "work",
+        "The commentary it comes from (calvin), as in library/works/."
+      ],
+      [
+        "author",
+        "The commentator (calvin), as in library/authors/."
+      ],
+      [
+        "start, end",
+        "The verses it comments on, as BOOK.chapter.verse (JHN.1.6 to JHN.1.8)."
+      ],
+      [
+        "heading",
+        "The source's own heading or lemma over the passage, where it has one."
+      ],
+      [
+        "text",
+        "The excerpt, copied from the source with scan corrections applied. Paragraphs are separated by a blank line, and a cut inside one is marked \" ... \"."
+      ],
+      [
+        "locus",
+        "Its place in a work with its own divisions: 2.8 is Homily 2, section 8."
+      ],
+      [
+        "source_url",
+        "The page or scan it was copied from."
+      ]
+    ],
+    "repo_title": "In the repository",
+    "repo_note": "The repository holds everything the site is built from, with more than these files: the Scripture each excerpt cites, the Catena's quotations traced to their sources, and the whole homilies and tractates.",
+    "repo": [
+      [
+        "library/comments",
+        "The excerpts, one file per work and book"
+      ],
+      [
+        "library/works",
+        "Each commentary's edition, translator, year and rights"
+      ],
+      [
+        "library/authors",
+        "Each commentator's dates, era and tradition"
+      ],
+      [
+        "library/citations",
+        "The Scripture each excerpt cites, found by a script, with a review status"
+      ],
+      [
+        "library/quotations",
+        "The Catena Aurea's quotations of the Fathers, traced to their works"
+      ],
+      [
+        "library/texts",
+        "Whole homilies and tractates, paragraph by paragraph"
+      ],
+      [
+        "library/corrections",
+        "Each scan misreading and its fix"
+      ],
+      [
+        "sources",
+        "The source text each excerpt was checked against, and where it came from"
+      ]
+    ],
+    "licences_title": "Licences",
+    "licences": [
+      "Logia's data and writing: CC0 1.0.",
+      "Logia's code: MIT.",
+      "Commentary texts: public domain in the US, published in 1930 or earlier.",
+      "Bible text: the Open Word Bible, CC0.",
+      "Greek and Hebrew word data: MACULA, CC BY 4.0.",
+      "Cross-references: OpenBible.info, CC BY."
+    ],
+    "rights_note": "Each work's record says what is still to confirm for use outside the US. Works and biographies are marked ai_draft until a named person reviews them.",
+    "ld_name": "Logia: public-domain Christian commentary, verse by verse",
+    "ld_description": "{n} excerpts from {works} public-domain commentaries on the Gospel of John, from the early church to the 1800s, each tied to its verses and the source it was copied from.",
+    "ld_keywords": [
+      "Bible commentary",
+      "church fathers",
+      "Gospel of John",
+      "patristics",
+      "public domain",
+      "biblical studies"
+    ]
+  },
+  "most": {
+    "heading": "The most-discussed verses in {book}",
+    "lead": "{verses} verses of {book} have commentary in Logia, and {every} have all {works} commentators on them. Here is where they wrote most, counted from the {n} excerpts in the library.",
+    "description": "Which verses of {book} did the church fathers and later commentators write most on? {ref} leads with {n} excerpts. Counted from Logia's public-domain library.",
+    "verses_title": "The {n} verses with the most excerpts",
+    "columns": [
+      "#",
+      "Verse",
+      "Excerpts",
+      "Commentators",
+      "The verse"
+    ],
+    "left_out": "Not in the Greek text the Open Word Bible translates; see its page.",
+    "chapters_title": "Excerpts by chapter",
+    "chapters_note": "Chapter {chapter} has the most, with {n} excerpts.",
+    "how_title": "How this is counted",
+    "how": "An excerpt is one passage a commentator wrote on a verse or a run of verses, as Logia copies it from the source. In the table, an excerpt on a run of verses counts on each of them. In the chart, each excerpt counts once, on the chapter where it begins. Counts depend on how each commentary is divided into excerpts, so they show where the {works} commentaries in Logia say most, not a ranking of importance."
   }
 }
