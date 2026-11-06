@@ -404,7 +404,8 @@ class Site(unittest.TestCase):
         sitemap = self.read("sitemap.xml")
         self.assertIn("<loc>https://logia.faith/jhn/3/16/</loc>", sitemap)
         self.assertEqual(sitemap.count("<loc>https://logia.faith/jhn/"),
-                         1 + 21 + len([k for k in lib.voices_on if k[0] == "JHN"]))
+                         1 + 21 + len([k for k in lib.voices_on if k[0] == "JHN"])
+                         + len(build_site.passages_with_commentary(lib, "JHN")))
 
     def test_a_verse_page_holds_its_commentary_in_the_html(self):
         lib = build_site.Library()
@@ -451,6 +452,40 @@ class Site(unittest.TestCase):
         self.assertNotIn('<blockquote class="lg-vtext"><p></p>', text)
         self.assertIn('<p class="lg-gap">Verses 1–11 are not in the Greek text', text)
         self.assertIn("a verse the oldest manuscripts leave out", text)
+
+    # --- Passage pages ---
+
+    def test_passages_follow_the_bible_headings(self):
+        sections = build_site.book_sections("JHN", 21)
+        self.assertEqual(sections[0], ("The Word became flesh", (1, 1), (1, 18)))
+        cana = next(x for x in sections if x[0] == "The wedding at Cana")
+        self.assertEqual(cana[1:], ((2, 1), (2, 12)))
+        # A heading inside a verse (John 12:36b) shares that verse with the passage before it.
+        self.assertIn(("Why many did not believe", (12, 36), (12, 50)), sections)
+        self.assertIn(((12, 20), (12, 36)), [x[1:] for x in sections])
+        # The passage the Bible text leaves out runs across the chapter break.
+        self.assertIn(("The woman caught in adultery", (7, 53), (8, 11)), sections)
+
+    def test_a_passage_page_lists_every_excerpt_on_it(self):
+        lib = build_site.Library()
+        text = self.read(os.path.join("jhn", "2", "1-12", "index.html"))
+        self.assertIn("<h1>The wedding at Cana (John 2:1–12)</h1>", text)
+        self.assertRegex(text, r"<title>The wedding at Cana \(John 2:1–12\) commentary: [^<]+ · Logia</title>")
+        on_it = [c for c in lib.comments if "JHN.2.1" <= c["start"] and c["start"].startswith("JHN.2.")
+                 and build_site.ref_parts(c["start"])[2] <= 12]
+        self.assertTrue(on_it)
+        for c in on_it:
+            self.assertIn(f'#{c["id"]}"', text, c["id"])
+        self.assertIn('href="/jhn/2/1-12/"', self.read(os.path.join("jhn", "index.html")))
+        self.assertIn('href="/jhn/2/1-12/"', self.read(os.path.join("jhn", "2", "index.html")))
+        self.assertIn("<loc>https://logia.faith/jhn/2/1-12/</loc>", self.read("sitemap.xml"))
+
+    def test_the_christmas_page_is_john_1_1_to_14(self):
+        text = self.read(os.path.join("christmas", "index.html"))
+        self.assertIn("<h1>The Gospel for Christmas Day: John 1:1–14</h1>", text)
+        self.assertIn("calvin.JHN.1.14", text)
+        self.assertNotIn("#calvin.JHN.1.15.", text)
+        self.assertIn('href="/christmas/"', self.read("index.html"))
 
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))

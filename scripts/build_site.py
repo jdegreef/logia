@@ -968,6 +968,7 @@ def home_page(lib):
 <a class="button ghost" href="/read/">{e(t("home.browse"))}</a></p>
 {search_box(lib, "home-q")}
 <p class="hero-try">{e(t("search.try"))} <a href="/jhn/1/#v1">John 1:1</a> <a href="/jhn/3/#v16">John 3:16</a> <a href="/jhn/11/#v25">John 11:25</a> <a href="/jhn/14/#v6">John 14:6</a></p>
+<p class="hero-try">{e(t("home.season"))} <a href="{e(t("occasions.christmas.path"))}">{e(t("home.season_link"))}</a></p>
 </section>
 {home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
@@ -1091,6 +1092,10 @@ def book_page(lib, book):
         for w in lib.ordered_works(works))
     who = (f'<section class="lg-block"><h2>{e(t("book.commentators", book=name))}</h2><ul class="lg-people lg-wide">{people}</ul></section>'
            if people else "")
+    plist = passage_list(lib, book)
+    passages = (f'<section class="lg-block" id="passages"><h2>{e(t("passage.list_title"))}</h2>'
+                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
+                if plist else "")
     codes = list(lib.books)
     testament = "old" if codes.index(book) < OT_BOOKS else "new"
     start = f'<p class="actions"><a class="button" href="{chapter_url(book, have[0])}">{e(t("book.start", book=name, chapter=have[0]))}</a></p>' if have else ""
@@ -1098,7 +1103,7 @@ def book_page(lib, book):
 <header class="page-head"><p class="eyebrow"><a href="/read/">{e(t("read.title"))}</a> · <a href="/read/#{"ot" if testament == "old" else "nt"}">{e(t("testaments." + testament))}</a> · {e(t("canon." + canon_section(lib, book)))}</p>
 <h1>{e(name)}</h1><p class="dek">{e(t("book.dek", n=total, done=done))}</p>{start}</header>
 <section class="lg-block"><h2>{e(t("book.chapters"))}</h2><ol class="lg-toc">{"".join(rows)}</ol></section>
-{who}"""
+{passages}{who}"""
     return page(lib, name, body, f"/{book.lower()}/", current="/read/",
                 ld=(breadcrumbs((t("read.title"), "/read/"), (name, f"/{book.lower()}/")),))
 
@@ -1303,7 +1308,7 @@ def chapter_page(lib, book, chapter, all_chapters):
 <div class="cx-cols" id="compare-cols"></div>
 </dialog>
 {credits}
-{chapter_verse_nav(lib, book, chapter, lib.verse_pages(book, chapter))}
+{chapter_verse_nav(lib, book, chapter, lib.verse_pages(book, chapter))}{chapter_passages(lib, book, chapter)}
 <script type="application/json" id="chapter-data">{json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")}</script>"""
     n = len(commentaries)
     description = (t("chapter.description", book=name, chapter=chapter, n=n) if n
@@ -1556,6 +1561,186 @@ def chapter_verse_nav(lib, book, chapter, verses):
     links = "".join(f'<a href="{verse_url(book, chapter, v)}">{v}</a>' for v in verses)
     return (f'<nav class="lg-block lg-vnav" aria-labelledby="by-verse"><h2 id="by-verse">{e(t("chapter.by_verse"))}</h2>'
             f'<p class="lg-quiet">{e(t("chapter.by_verse_note"))}</p><div class="lg-chbar">{links}</div></nav>')
+
+
+# --- Passage pages (/<book>/<chapter>/<a>-<b>/) -------------------------------
+#
+# A passage is a section of the Open Word Bible under one of its headings
+# ("The wedding at Cana", John 2:1-12): what people search for by name. Its
+# page is a contents of every excerpt on it, each opening with its first
+# words and linking to the verse page where it is printed in full, so each
+# excerpt's text still lives on one page.
+
+@functools.lru_cache(maxsize=None)
+def book_sections(book, chapters):
+    """[(heading, (chapter, verse), (chapter, verse))] for a book, from its
+    headings: each runs to the verse before the next heading, or to the next
+    heading's verse when that heading falls inside a verse (John 12:36b)."""
+    heads = []
+    for c in range(1, chapters + 1):
+        path = os.path.join(ROOT, "bible", "owb", "en", f"{book}.{c}.json")
+        if not os.path.exists(path):
+            continue
+        for r in load(path)["records"]:
+            if r["heading"]:
+                _b, rc, rv, part = r["id"].split(".")
+                key = (int(rc), int(rv), part)
+                if key not in [h[0] for h in heads]:
+                    heads.append((key, default_wording(r["heading"])))
+    heads.sort()
+    out = []
+    for i, ((c, v, _p), heading) in enumerate(heads):
+        if i + 1 < len(heads):
+            nc, nv, npart = heads[i + 1][0]
+            if npart != "s1":
+                end = (nc, nv)
+            elif nv > 1:
+                end = (nc, nv - 1)
+            else:
+                end = (nc - 1, max(chapter_verses(book, nc - 1)))
+        else:
+            end = (chapters, max(chapter_verses(book, chapters)))
+        out.append((heading, (c, v), end))
+    return tuple(out)
+
+
+def passage_url(book, start, end):
+    (c, v), (ec, ev) = start, end
+    tail = f"{ev}" if ec == c else f"{ec}.{ev}"
+    return f"/{book.lower()}/{c}/{v}-{tail}/"
+
+
+def passage_ref(lib, book, start, end):
+    (c, v), (ec, ev) = start, end
+    name = lib.books[book]["en"]
+    return f"{name} {c}:{v}–{ev}" if ec == c else f"{name} {c}:{v}–{ec}:{ev}"
+
+
+def in_passage(lib, book, start, end):
+    """[(work, [excerpts])] on a passage, in the reader's order of works and
+    each work's own order: every excerpt that begins in it, and one that
+    began before it and runs into it."""
+    lo, hi = start, end
+    by_work, seen = {}, set()
+    for ch in range(start[0], end[0] + 1):
+        for c in lib.comments_in(book, ch):
+            _, sc, sv = ref_parts(c["start"])
+            _, ec, ev = ref_parts(c["end"])
+            if (sc, sv) <= hi and (ec, ev) >= lo and c["id"] not in seen:
+                seen.add(c["id"])
+                by_work.setdefault(c["work"], []).append(c)
+    return [(w, sorted(by_work[w], key=order_key)) for w in lib.ordered_works(by_work)]
+
+
+def passages_with_commentary(lib, book):
+    """The sections of a book that have commentary, with their excerpts."""
+    out = []
+    for heading, start, end in book_sections(book, lib.books[book]["chapters"]):
+        voices = in_passage(lib, book, start, end)
+        if voices:
+            out.append((heading, start, end, voices))
+    return out
+
+
+def excerpt_href(lib, c):
+    """Where an excerpt is printed in full: its verse page, or its place on
+    its work's chapter page when it has none (one that crosses a chapter)."""
+    b, ch, v = ref_parts(c["start"])
+    if (b, ch, v) in lib.voices_on and c["work"] in lib.voices_on[(b, ch, v)] and ref_parts(c["end"])[1] == ch:
+        return f'{verse_url(b, ch, v)}#{c["id"]}'
+    return f'{work_chapter_url(c["work"], b, ch)}#{c["id"]}'
+
+
+def passage_page(lib, book, heading, start, end, voices, occasion=None):
+    """A passage's page: its Bible text, then each commentator's excerpts on
+    it, opening with their first words. occasion, when given, is the key in
+    i18n/en.json of a reading the page is built for ("occasions.christmas")."""
+    name = lib.books[book]["en"]
+    ref = passage_ref(lib, book, start, end)
+    authors = [lib.author_of(w) for w, _cs in voices]
+    names = [short_name(a) for a in authors]
+    n = sum(len(cs) for _w, cs in voices)
+    lines = []
+    for ch in range(start[0], end[0] + 1):
+        plain = chapter_plain(book, ch)
+        lo = start[1] if ch == start[0] else 1
+        hi = end[1] if ch == end[0] else max(chapter_verses(book, ch))
+        for v in range(lo, hi + 1):
+            if plain.get(v):
+                num = (f'<a href="{verse_url(book, ch, v)}">{v if ch == start[0] else f"{ch}:{v}"}</a>'
+                       if (book, ch, v) in lib.voices_on else str(v))
+                lines.append(f'<sup>{num}</sup> {e(plain[v])}')
+    text_html = (f'<blockquote class="lg-vtext lg-ptext"><p>{" ".join(lines)}</p></blockquote>' if lines
+                 else f'<p class="lg-gap">{e(t("passage.not_in_text", ref=ref))}</p>')
+    sections, toc = [], []
+    for (wid, cs), a in zip(voices, authors):
+        w = lib.works[wid]
+        rows = []
+        for c in cs:
+            b, sc, sv = ref_parts(c["start"])
+            _, ec, ev = ref_parts(c["end"])
+            on = verse_ref(lib, b, sc, sv) if (sc, sv) == (ec, ev) else scripture.label(c["start"], c["end"])
+            head = f' <span class="lg-quiet">{e(c["heading"])}</span>' if c["heading"] else ""
+            rows.append(f'<li><p class="lg-ex-ref"><a href="{excerpt_href(lib, c)}"><b>{e(on)}</b></a>{head}</p>'
+                        f'<div><p>{e(snippet(c["text"], 40))}</p></div></li>')
+        meta = (f'<p class="lg-vmeta"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a> ({e(a["dates"])}) · '
+                f'{e(a["tradition"])} · <i>{e(w["title"])}</i> · {e(t("passage.n_excerpts", n=len(cs)) if len(cs) != 1 else t("passage.one_excerpt"))}</p>')
+        sections.append(f'<section class="lg-voice" id="{wid}"><h3>{e(t("verse.question", name=short_name(a), ref=ref))}</h3>'
+                        f'{meta}<ul class="lg-excerpts">{"".join(rows)}</ul></section>')
+        toc.append(f'<a href="#{wid}">{e(short_name(a))}</a>')
+    lead = t("passage.lead", n=n, ref=ref, k=len(authors), first=authors[0]["name"], first_dates=authors[0]["dates"],
+             last=authors[-1]["name"], last_dates=authors[-1]["dates"]) if len(authors) > 1 else \
+        t("passage.lead_one", n=n, ref=ref, name=authors[0]["name"], dates=authors[0]["dates"])
+    title = f"{heading} ({ref})"
+    path = passage_url(book, start, end)
+    eyebrow = (f'<a href="/{book.lower()}/">{e(name)}</a> · <a href="{chapter_url(book, start[0])}">'
+               f'{e(t("chapter.eyebrow", chapter=start[0]))}</a> · <a href="/{book.lower()}/#passages">{e(t("passage.eyebrow"))}</a>')
+    intro = ""
+    if occasion:
+        path = t(occasion + ".path")
+        title = t(occasion + ".heading", ref=ref)
+        eyebrow = e(t(occasion + ".eyebrow"))
+        intro = f'<p class="dek">{e(t(occasion + ".intro", ref=ref))}</p>'
+    crumbs = [("Logia", "/"), (name, f"/{book.lower()}/"), (title if occasion else heading, path)]
+    shown = names[:3]
+    title_names = name_list(shown) if len(names) <= 3 else t("verse.title_more", names=", ".join(shown), n=len(names) - 3)
+    head_title = (t(occasion + ".title", ref=ref, names=title_names) if occasion
+                  else t("passage.title", heading=heading, ref=ref, names=title_names)) + " · Logia"
+    description = (t(occasion + ".description", ref=ref, n=n, names=name_list(names)) if occasion
+                   else t("passage.description", heading=heading, ref=ref, n=n, names=name_list(names)))
+    body = f"""
+<article class="lg-verse lg-passage">
+<header class="page-head"><p class="eyebrow">{eyebrow}</p>
+<h1>{e(title)}</h1>{intro}
+{text_html}
+<p class="lg-quiet">{t("verse.bible_credit", link=f'<a href="{OWB_SITE}{chapter_url(book, start[0])}" rel="noopener">Open Word Bible</a>')}</p>
+<p class="dek lg-vlead">{e(lead)}</p>
+<nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
+<section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>
+<p class="lg-quiet">{e(t("passage.how"))}</p>{"".join(sections)}</section>
+<p class="lg-block"><a class="lg-more" href="{chapter_url(book, start[0])}#v{start[1]}">{e(t("verse.open_chapter", chapter=f"{name} {start[0]}"))} {icon("arrow", 15)}</a></p>
+</article>
+<script type="application/ld+json">{breadcrumbs_ld(crumbs)}</script>"""
+    return page(lib, title, body, path, current="/read/", description=description, head_title=head_title)
+
+
+def passage_list(lib, book, chapter=None):
+    """The passages of a book (or one chapter) with commentary, as links."""
+    rows = []
+    for heading, start, end, voices in passages_with_commentary(lib, book):
+        if chapter is not None and not (start[0] <= chapter <= end[0]):
+            continue
+        n = sum(len(cs) for _w, cs in voices)
+        rows.append(f'<li><a href="{passage_url(book, start, end)}"><b>{e(heading)}</b> '
+                    f'<span>{e(passage_ref(lib, book, start, end))} · {e(t("passage.n_voices", n=len(voices)) if len(voices) != 1 else t("passage.one_voice"))} · '
+                    f'{e(t("passage.n_excerpts", n=n))}</span></a></li>')
+    return "".join(rows)
+
+
+def chapter_passages(lib, book, chapter):
+    rows = passage_list(lib, book, chapter)
+    return (f'<nav class="lg-block lg-vnav" aria-labelledby="passages"><h2 id="passages">{e(t("passage.in_chapter"))}</h2>'
+            f'<ul class="lg-people lg-wide">{rows}</ul></nav>' if rows else "")
 
 
 # The timeline's span (AD), and the eras drawn behind it: (era, from, to).
@@ -2102,6 +2287,17 @@ def build():
             for verse in here:
                 write(verse_url(book, chapter, verse), verse_page(lib, book, chapter, verse, bible, here, cited_by))
                 pages.append(verse_url(book, chapter, verse))
+    for book in dict.fromkeys(b for b, _c in lib.chapters):
+        for heading, start, end, voices in passages_with_commentary(lib, book):
+            write(passage_url(book, start, end), passage_page(lib, book, heading, start, end, voices))
+            pages.append(passage_url(book, start, end))
+    for o in load(os.path.join(ROOT, "library", "occasions.json"))["occasions"]:
+        book, sc, sv = ref_parts(o["start"])
+        _b, ec, ev = ref_parts(o["end"])
+        voices = in_passage(lib, book, (sc, sv), (ec, ev))
+        path = t(f'occasions.{o["id"]}.path')
+        write(path, passage_page(lib, book, "", (sc, sv), (ec, ev), voices, occasion=f'occasions.{o["id"]}'))
+        pages.append(path)
     write("/commentators/", commentators_page(lib))
     pages.append("/commentators/")
     for author in lib.ordered_authors():
