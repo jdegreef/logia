@@ -105,6 +105,16 @@
     "Puritans and the 1700s": "Puritans and the 1700s",
     "The 1800s": "The 1800s"
   },
+  "canon": {
+    "pentateuch": "The Pentateuch",
+    "history": "History",
+    "wisdom": "Wisdom and poetry",
+    "major_prophets": "The major prophets",
+    "minor_prophets": "The twelve prophets",
+    "gospels": "The Gospels and Acts",
+    "paul": "Paul's letters",
+    "letters": "Hebrews to Revelation"
+  },
   "testaments": {
     "old": "Old Testament",
     "new": "New Testament"
@@ -157,8 +167,11 @@
   },
   "read": {
     "title": "Read",
-    "heading": "Every book, with what the church has said about it",
-    "dek": "Choose a book, then a chapter. Chapters marked in gold have commentary; the rest have the Bible text, with commentary still to come.",
+    "heading": "Every book of the Bible",
+    "dek": "Commentary so far on {books}, in gold. Every book has the Bible text, its Greek or Hebrew words and translation notes: choose a book, then a chapter.",
+    "jump": "Go to a testament",
+    "chapters": "{n} chapters",
+    "commentary_short": "Commentary on {n} of {total}",
     "commentary_on": "Commentary on {n} of {total} chapters",
     "commentary_on_one": "Commentary on 1 of {total} chapters",
     "text_only": "Bible text, commentary to come",
