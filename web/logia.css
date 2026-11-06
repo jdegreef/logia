@@ -626,3 +626,12 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-fix del { text-decoration-color: var(--wj); background: color-mix(in srgb, var(--wj) 12%, transparent); padding: 0 6px; border-radius: 4px; }
 .lg-fix ins { text-decoration: none; color: var(--accent); background: var(--accent-soft); padding: 0 6px; border-radius: 4px; }
 .lg-fix .icon { color: var(--muted); }
+
+/* Saved, signed out: an example of a saved comment and a way to sign in. */
+.lg-saved-empty { max-width: 560px; margin: 8px 0 0; }
+.lg-saved-empty h2 { font-family: var(--display); font-weight: 600; font-size: 24px; margin: 24px 0 8px; text-wrap: balance; }
+.lg-saved-empty > p { color: var(--muted); max-width: 56ch; }
+.lg-saved-empty .actions { margin-top: 18px; }
+.lg-saved-empty .button .icon { margin-right: 2px; }
+.lg-saved-sample { max-width: 420px; transform: rotate(-1deg); box-shadow: var(--shadow-card); }
+.lg-saved-sample .lg-saved-text { color: var(--muted); }

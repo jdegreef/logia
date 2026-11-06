@@ -423,6 +423,10 @@
     "saved_title": "Saved",
     "saved_heading": "Your saved comments",
     "saved_dek": "Comments you saved while reading, newest first. They are kept with your account, on every device.",
+    "saved_empty_title": "Keep the comments you want to come back to",
+    "saved_empty_text": "Press the bookmark under any comment in the reader. Saved comments are kept with your Open Word Bible account, the same one you use on openwordbible.org, on every device.",
+    "saved_empty_sign_in": "Sign in with Open Word Bible",
+    "saved_empty_try": "Try it on John 3:16",
     "ui": {
       "sign_in": "Sign in",
       "sign_in_failed": "Signing in did not work.",

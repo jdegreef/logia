@@ -1601,11 +1601,25 @@ def signed_in_page(lib):
 
 
 def saved_page(lib):
-    """The reader's saved comments; web/account.js fills it in."""
+    """The reader's saved comments; web/account.js fills it in. Signed out,
+    it shows what saving does, with an excerpt as it would be kept."""
+    sample = ""
+    on = sorted((c for c in lib.comments if c["start"] == c["end"] == HOME_VERSE), key=lambda c: (lib.ordered_works().index(c["work"]), c["id"]))
+    calvin = [c for c in on if c["work"] == "calvin"] or on
+    if calvin:
+        c = calvin[0]
+        a = lib.author_of(c["work"])
+        sample = (f'<div class="lg-saved lg-saved-sample" aria-hidden="true"><p class="lg-saved-who"><b>{e(a["name"])}</b> '
+                  f'{e(t("commentators.on", ref=scripture.label(c["start"])))}</p><p class="lg-saved-text">{e(snippet(c["text"], 26))}</p></div>')
+    href = f"{OWB_SITE}/handoff/?site=logia&to={quote('/saved/', safe='')}"
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("account.saved_title"))}</p>
 <h1>{e(t("account.saved_heading"))}</h1><p class="dek">{e(t("account.saved_dek"))}</p></header>
-<section id="saved-page"><p class="lg-quiet" id="saved-note" role="status"></p><ul class="lg-saved-list" id="saved-list"></ul></section>"""
+<section id="saved-page"><p class="lg-quiet" id="saved-note" role="status"></p><ul class="lg-saved-list" id="saved-list"></ul>
+<div class="lg-saved-empty" id="saved-empty" hidden>{sample}
+<h2>{e(t("account.saved_empty_title"))}</h2><p>{e(t("account.saved_empty_text"))}</p>
+<p class="actions"><a class="button" href="{e(href)}" data-login>{icon("user")} {e(t("account.saved_empty_sign_in"))}</a>
+<a class="button ghost" href="/jhn/3/#v16">{e(t("account.saved_empty_try"))}</a></p></div></section>"""
     return page(lib, t("account.saved_title"), body, "/saved/", noindex=True)
 
 
