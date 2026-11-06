@@ -2765,7 +2765,13 @@ def guide_page(lib, g):
             rows += (f'<div><dt>{e(x["term"])}</dt><dd><p>{e(x["text"])}</p>'
                      f'<p class="lg-quiet lg-gloss-links">{" · ".join(links)}</p></dd></div>')
         parts.append(f'<section class="lg-block" id="t{i}"><h2>{e(grp["title"])}</h2><dl class="lg-gloss">{rows}</dl></section>')
-    toc = "".join(f'<li><a href="#t{i}">{e(x["title"])}</a></li>' for i, x in enumerate(g.get("topics", []) or g.get("groups", []), 1))
+    # A guide's steps: its own words, then links to the pages they mean.
+    for i, x in enumerate(g.get("sections", []), 1):
+        links = " · ".join(f'<a href="{href}">{e(label)}</a>' for label, href in x.get("links", []))
+        parts.append(f'<section class="lg-block" id="t{i}"><h2>{e(x["title"])}</h2><div class="prose">{prose(x["text"])}</div>'
+                     + (f'<p class="lg-gloss-links">{links}</p>' if links else "") + "</section>")
+    toc = "".join(f'<li><a href="#t{i}">{e(x["title"])}</a></li>'
+                  for i, x in enumerate(g.get("topics", []) or g.get("groups", []) or g.get("sections", []), 1))
     body = f"""
 <article class="lg-verse lg-guide">
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("guide.eyebrow"))}</p>

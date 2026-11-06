@@ -626,8 +626,13 @@ class Site(unittest.TestCase):
                     if x.get("link"):
                         where = os.path.join(build_site.SITE, x["link"].strip("/"), "index.html")
                         self.assertTrue(os.path.isfile(where), x["link"])
+            for x in g.get("sections", []):
+                for _label, href in x["links"]:
+                    where = os.path.join(build_site.SITE, href.split("#")[0].strip("/"), "index.html")
+                    self.assertTrue(os.path.isfile(where), href)
         self.assertIn('href="/jhn/traditions/"', self.read(os.path.join("jhn", "index.html")))
         self.assertIn('href="/glossary/"', self.read(os.path.join("jhn", "index.html")))
+        self.assertIn('href="/jhn/study/"', self.read(os.path.join("jhn", "index.html")))
 
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
