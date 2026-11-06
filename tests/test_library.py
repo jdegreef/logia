@@ -545,6 +545,21 @@ class Site(unittest.TestCase):
                 self.assertIn(build_site.excerpt_href(lib, cs[0]), text)
         self.assertIn('href="/jhn/i-am/"', self.read(os.path.join("jhn", "index.html")))
 
+    def test_the_signs_page_lists_seven_passages_with_their_commentators(self):
+        lib = build_site.Library()
+        text = self.read(os.path.join("jhn", "signs", "index.html"))
+        self.assertIn("<h1>The seven signs in John</h1>", text)
+        col = next(c for c in build_site.collections(lib) if c["id"] == "signs")
+        self.assertEqual(len(col["items"]), 7)
+        for item in col["items"]:
+            _b, sc, sv = build_site.ref_parts(item["start"])
+            _b, ec, ev = build_site.ref_parts(item["end"])
+            where = build_site.section_url(lib, "JHN", (sc, sv))
+            self.assertIn(f'href="{where}"', text)
+            self.assertTrue(os.path.isfile(os.path.join(build_site.SITE, where.strip("/"), "index.html")), where)
+        self.assertIn("first of the signs", build_site.chapter_plain("JHN", 2)[11])
+        self.assertIn("second sign", build_site.chapter_plain("JHN", 4)[54])
+
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
         self.assertIn('href="/jhn/3/16/"', text)

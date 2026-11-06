@@ -2317,8 +2317,8 @@ def collection_page(lib, col):
             more = f' <span class="lg-quiet">{e(t("collection.and_more", n=len(cs) - 1))}</span>' if len(cs) > 1 else ""
             rows.append(f'<li><p class="lg-ex-ref"><a href="{excerpt_href(lib, c)}"><b>{e(short_name(a))}</b></a>'
                         f' <span class="lg-quiet">{e(a["dates"])}</span>{more}</p><div><p>{e(snippet(c["text"], 30))}</p></div></li>')
-        where = verse_url(book, sc, sv) if single else passage_url(book, (sc, sv), (ec, ev))
-        all_link = (f'<p class="lg-vx-links"><a href="{where}">{e(t("collection.read_all", n=n, k=len(voices), ref=ref))}</a></p>'
+        where = verse_url(book, sc, sv) if single else section_url(lib, book, (sc, sv))
+        all_link = (f'<p class="lg-vx-links"><a href="{where}">{e(t("collection.read_all" if single else "collection.read_passage", n=n, k=len(voices), ref=ref))}</a></p>'
                     if voices else "")
         anchor_id = item["key"]
         blocks.append(f'<section class="lg-voice" id="{e(anchor_id)}"><h3><span class="lg-cnum">{i}</span> {e(label)}</h3>'
@@ -2337,6 +2337,14 @@ def collection_page(lib, col):
 <script type="application/ld+json">{breadcrumbs_ld([("Logia", "/"), (name, f"/{book.lower()}/"), (t(key + ".heading"), path)])}</script>"""
     return path, page(lib, t(key + ".heading"), body, path, current="/read/",
                       head_title=t(key + ".title") + " · Logia", description=t(key + ".description"))
+
+
+def section_url(lib, book, at):
+    """The passage page of the section a verse is in, or the verse in the reader."""
+    for _h, start, end in book_sections(book, lib.books[book]["chapters"]):
+        if start <= at <= end:
+            return passage_url(book, start, end)
+    return f"{chapter_url(book, at[0])}#v{at[1]}"
 
 
 def collection_links(lib, book):
