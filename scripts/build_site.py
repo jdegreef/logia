@@ -265,6 +265,8 @@ class Library:
                                       "cites": cites.get(entry["id"], []), "quotes": quotes.get(entry["id"], []),
                                       "quoted_in": quoted_in.get(entry["id"], [])})
         self.by_id = {c["id"]: c for c in self.comments}
+        # (work, book, chapter) of each page under /works/<work>/<book>/<chapter>/.
+        self.work_chapter_pages = {(c["work"], *ref_parts(c["start"])[:2]) for c in self.comments}
         # Whole homilies and tractates (scripts/extract_texts.py), in order,
         # and where each excerpt begins in one.
         self.texts = {}
@@ -583,7 +585,7 @@ def account_menu(path):
     label = e(t("account.your_account"))
     return (
         '<div class="account-menu">'
-        f'<a class="sign-in-btn" href="{e(href)}" data-login>{icon("user")}<span>{e(t("account.sign_in"))}</span></a>'
+        f'<a class="sign-in-btn" href="{e(href)}" data-login title="{e(t("account.sign_in_title"))}">{icon("user")}<span>{e(t("account.sign_in"))}</span></a>'
         f'<button type="button" class="tool-btn avatar-btn" aria-expanded="false" aria-controls="account-pop" '
         f'aria-label="{label}" title="{label}" hidden><span class="account-initial"></span></button>'
         f'<div class="account-pop" id="account-pop" role="group" aria-label="{label}" hidden>'
@@ -1089,9 +1091,42 @@ def plain_verses(bible):
     """{verse: its Balanced text at the default wording}, as the reader shows it."""
     verses = {}
     for r in bible["records"]:
+        # A verse of two sentences is in two records: keep a space between them.
+        for v in dict.fromkeys(p[0] for p in r["pieces"]):
+            if v in verses:
+                verses[v] += " "
         for p in r["pieces"]:
             verses[p[0]] = verses.get(p[0], "") + default_wording(p[1])
     return {v: " ".join(x.split()) for v, x in verses.items()}
+
+
+def verse_gaps(lib, book, chapter, verses, commentaries):
+    """{verse after a gap: a note}, for the verses the Open Word Bible leaves
+    out because its Greek text does (John 5:4, 7:53-8:11, Acts 8:37...),
+    naming the commentators who comment on them, linked to where they do."""
+    have = set(verses)
+    runs, run = [], []
+    for v in range(1, verses[-1] + 1):
+        if v in have:
+            if run:
+                runs.append((run[0], run[-1], v))
+            run = []
+        else:
+            run.append(v)
+    out = {}
+    for a, b, after in runs:
+        text = t("chapter.gap_one", v=a) if a == b else t("chapter.gap_range", a=a, b=b)
+        links = []
+        for c in commentaries:
+            hit = next((x for x in c["entries"] if x["start"] <= b and x["end"] >= a), None)
+            if hit:
+                orig = lib.by_id[hit["id"]]
+                ob, oc, _v = ref_parts(orig["start"])
+                links.append(f'<a href="{work_chapter_url(c["work_id"], ob, oc)}#{e(hit["id"])}">{e(c["short_name"] or c["author"])}</a>')
+        ref = f"{chapter}:{a}" + (f"–{b}" if b != a else "")
+        more = (f' {e(t("chapter.gap_comm", verses=ref))} ' + " · ".join(links)) if links else ""
+        out[str(after)] = f'<p class="lg-gap" id="gap-{a}" data-a="{a}" data-b="{b}"><b>{e(ref)}</b> {e(text)}{more}</p>'
+    return out
 
 
 def chapter_page(lib, book, chapter, all_chapters):
@@ -1128,11 +1163,13 @@ def chapter_page(lib, book, chapter, all_chapters):
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "related": lib.related(book, chapter, bible),
             "books": {k: v["en"] for k, v in lib.books.items()}}
+    gaps = verse_gaps(lib, book, chapter, bible["verses"], commentaries)
+    data["gaps"] = gaps
     heading = lib.chapter_title(book, chapter) or f"{name} {chapter}"
     # The text as plain Balanced verses, for search engines and readers
     # without JavaScript; web/reader.js replaces it.
     verses = plain_verses(bible)
-    plain = " ".join(f'<span class="cx-verse"><span class="cx-vn">{v}</span>{e(verses[v])}</span>'
+    plain = " ".join(gaps.get(str(v), "") + f'<span class="cx-verse"><span class="cx-vn">{v}</span>{e(verses[v])}</span>'
                      for v in sorted(verses))
     i = all_chapters.index((book, chapter))
     turns = []
@@ -1151,6 +1188,14 @@ def chapter_page(lib, book, chapter, all_chapters):
         f'{e(c["author"])}, <a href="{e(lib.works[c["work_id"]]["full_text_url"])}" rel="noopener"><i>{e(c["title"])}</i></a>'
         for c in commentaries)
     credits = f'<p class="cx-credits">{t("chapter.credits", works=works_credit)}</p>' if commentaries else ""
+    # Each commentary's own page for this chapter: its excerpts as text in the
+    # page, read straight through, for readers and search engines alike.
+    in_order = [(c, work_chapter_url(c["work_id"], book, chapter)) for c in commentaries
+                if (c["work_id"], book, chapter) in lib.work_chapter_pages]
+    in_order = (f'<nav class="lg-in-order" aria-label="{e(t("chapter.in_order", chapter=f"{name} {chapter}"))}">'
+                f'<p>{e(t("chapter.in_order", chapter=f"{name} {chapter}"))} '
+                + " · ".join(f'<a href="{href}">{e(c["short_name"] or c["author"])}</a>' for c, href in in_order)
+                + "</p></nav>") if in_order else ""
     owb_link = f'<a href="{OWB_SITE}{chapter_url(book, chapter)}" rel="noopener">Open Word Bible</a>'
     first_ref = f"{name} {chapter}:{bible['verses'][0]}"
     # Short tab names, so all four fit the panel; the full name is the tooltip.
@@ -1181,6 +1226,7 @@ def chapter_page(lib, book, chapter, all_chapters):
 <div class="cx-levels" role="group" aria-label="{e(t("chapter.level_label"))}">{levels}</div>
 <div class="cx-text" id="text">{plain}</div>
 <p class="cx-hint">{t("chapter.owb_hint", link=owb_link)}</p>
+{in_order}
 <nav class="cx-turns" aria-label="{e(t("chapter.previous"))} / {e(t("chapter.next"))}">{"".join(turns)}</nav>
 </article>
 <aside class="cx-panel" id="panel" aria-label="{e(t("chapter.panel_label"))}">

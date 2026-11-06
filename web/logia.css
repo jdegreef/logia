@@ -214,6 +214,12 @@
   font-weight: 700; line-height: 1.55; text-align: center; vertical-align: super; font-variant-numeric: tabular-nums; }
 .cx-verse.cx-on { box-shadow: inset 3px 0 0 var(--gold); padding-left: 6px; }
 .cx-verse.cx-on .cx-vc { background: var(--gold); color: var(--bg); }
+.cx-verse.cx-cont.cx-on { box-shadow: none; padding-left: 1px; }
+/* Verses the Open Word Bible leaves out (John 5:4, 8:1-11...), where they would be. */
+.lg-gap { margin: 10px 0; padding: 10px 14px; border-left: 3px solid var(--gold); background: var(--surface-2);
+  border-radius: 0 8px 8px 0; font-family: var(--sans); font-size: 14px; line-height: 1.55; color: var(--muted); }
+.lg-gap b { color: var(--text); margin-right: 4px; }
+.lg-in-order { margin: 14px 0 0; font-family: var(--sans); font-size: 14px; color: var(--muted); }
 .cx-gap { margin-top: 18px; }
 .cx-who a, .cx-work a { color: inherit; text-decoration: none; }
 .cx-who a:hover b, .cx-work a:hover i { text-decoration: underline; text-underline-offset: 3px; }

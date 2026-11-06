@@ -221,6 +221,10 @@
     "description": "{book} {chapter} with {n} public-domain commentaries from the early church to the 1800s, verse by verse.",
     "description_none": "{book} {chapter} in the Open Word Bible. Commentary on this chapter is still to come.",
     "credits": "Commentary excerpts are copied word for word from public-domain editions and link to the full text: {works}. The Catena Aurea, Bengel, Ryle and Westcott come from page scans on archive.org: misread letters and figures are corrected to match the printed page, and Greek the scans cannot read is left out (marked … where it breaks a sentence). Scripture references in the excerpts are linked: in the CCEL transcriptions as CCEL's editors marked them, in the scans where they are printed in the usual way; no one has checked these links yet.",
+    "gap_one": "Verse {v} is not in the Greek text the Open Word Bible translates, which follows the oldest manuscripts; many later manuscripts and older translations have it.",
+    "gap_range": "Verses {a}–{b} are not in the Greek text the Open Word Bible translates, which follows the oldest manuscripts; many later manuscripts and older translations have them.",
+    "gap_comm": "Read what the commentators say on {verses}:",
+    "in_order": "Each commentary on {chapter}, read in order:",
     "panel_label": "Commentary on the chosen verse",
     "prev_verse": "Previous verse",
     "next_verse": "Next verse",
@@ -414,6 +418,7 @@
   },
   "account": {
     "sign_in": "Sign in",
+    "sign_in_title": "Sign in with your Open Word Bible account to save and like comments, on every device. Reading needs no account.",
     "your_account": "Your account",
     "account_page": "Account (on Open Word Bible)",
     "saved": "Saved",

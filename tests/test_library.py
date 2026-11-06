@@ -290,6 +290,24 @@ class Site(unittest.TestCase):
         for name in ("style.css", "logia.css", "site.js", "account.js"):
             self.assertRegex(text, rf'"/{re.escape(name)}\?v=[0-9a-f]{{10}}"', name)
 
+    def test_a_verse_of_two_sentences_keeps_the_space_between_them(self):
+        # John 3:4 is two records in the Open Word Bible: "...grown old?" and "He cannot..."
+        self.assertIn("grown old? He cannot", build_site.chapter_plain("JHN", 3)[4])
+        self.assertIn("voice. This", build_site.chapter_plain("JHN", 3)[29])
+
+    def test_verses_left_out_are_noted_with_their_commentary(self):
+        text = self.read("jhn/8/index.html")
+        self.assertIn('class="lg-gap" id="gap-1" data-a="1" data-b="11"', text)
+        self.assertIn('href="/works/augustine/jhn/8/#augustine.JHN.8.1-2.1"', text)
+        self.assertIn('class="lg-gap" id="gap-4"', self.read("jhn/5/index.html"))
+        self.assertNotIn("lg-gap", self.read("jhn/3/index.html"))
+
+    def test_chapter_links_each_commentary_read_in_order(self):
+        text = self.read("jhn/3/index.html")
+        self.assertIn('class="lg-in-order"', text)
+        self.assertIn('href="/works/westcott/jhn/3/"', text)
+        self.assertNotIn('class="lg-in-order"', self.read("rom/8/index.html"))
+
     def test_accounts_are_open_word_bible_s(self):
         text = self.read("index.html")
         self.assertIn('<meta name="logia-api" content="https://api.openwordbible.org">', text)

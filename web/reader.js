@@ -77,17 +77,21 @@
   var EMPTY = !works.length;
   var FIRST = DATA.verses[0], LAST = DATA.verses[DATA.verses.length - 1];
   var REF = function (v) { return DATA.bookName + " " + DATA.chapter + ":" + v; };
-  var recFor = function (v) { return DATA.records.filter(function (r) { return r.verses.indexOf(v) >= 0; })[0]; };
+  // A verse of two sentences is in two records (one per sentence).
+  var recsFor = function (v) { return DATA.records.filter(function (r) { return r.verses.indexOf(v) >= 0; }); };
   var entriesFor = function (w, v) { return w.entries.filter(function (e) { return e.start <= v && v <= e.end; }); };
 
+  // A verse of two sentences is in two records: its text is all of them.
   function verseText(v) {
-    var r = recFor(v), lv = level();
-    if (lv === "B") return flat(r.pieces.filter(function (p) { return p[0] === v; }).map(function (p) { return p[1]; }).join("")).trim();
-    return flat(r[lv][v] || "");
+    var lv = level();
+    return recsFor(v).map(function (r) {
+      if (lv === "B") return flat(r.pieces.filter(function (p) { return p[0] === v; }).map(function (p) { return p[1]; }).join("")).trim();
+      return flat(r[lv][v] || "").trim();
+    }).join(" ");
   }
 
   function renderText() {
-    var out = [], lv = level();
+    var out = [], lv = level(), seen = {};
     DATA.records.forEach(function (r) {
       if (r.heading && r.verses[0] !== FIRST) out.push('<h2 class="cx-head">' + esc(flat(r.heading)) + "</h2>");
       // A sentence set as poetry at any level starts each verse on its own line.
@@ -100,6 +104,15 @@
             return p[2] ? '<span class="cx-w" data-tok="' + p[2].join(" ") + '">' + lined(p[1]) + "</span>" : lined(p[1]);
           }).join("");
         } else inner = lined(r[lv][v] || "");
+        // The verse's next sentence, in a later record: it carries on the
+        // verse already begun, without its number again.
+        if (seen[v]) {
+          out.push('<span class="cx-verse cx-cont' + (v === state.verse ? " cx-on" : "") + (poem ? " cx-poem" : "") + '" data-v="' + v + '">' + inner + "</span> ");
+          return;
+        }
+        seen[v] = true;
+        // Verses the Open Word Bible leaves out, just before the verse after them.
+        if ((DATA.gaps || {})[v]) out.push(DATA.gaps[v]);
         // The gold count beside a verse number: how many voices comment on it.
         var n = works.filter(function (w) { return entriesFor(w, v).length; }).length;
         var label = n ? fmt(n === 1 ? U.verse_voices_one : U.verse_voices, { ref: REF(v), n: n }) : REF(v);
@@ -158,10 +171,10 @@
           first: voices[0].short_name, last: voices[voices.length - 1].short_name })
       : EMPTY ? fmt(U.none_book, { book: DATA.bookName }) : U.none_yet;
     $("#rail").hidden = EMPTY;
-    var r = recFor(v);
+    var rs = recsFor(v);
     $("#n-comm").textContent = voices.length;
     $("#n-words").textContent = DATA.wordCounts[v] || 0;
-    $("#n-notes").textContent = r.notes;
+    $("#n-notes").textContent = rs.reduce(function (sum, r) { return sum + r.notes; }, 0);
     $("#n-xref").textContent = (DATA.crossrefs[v] || []).length;
     document.querySelectorAll(".cx-tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === state.tab); });
     renderRail();
@@ -465,7 +478,7 @@
       "<dt>" + esc(U.gloss) + "</dt><dd>" + esc(t.gloss) + "</dd>" +
       (t.strong ? "<dt>" + esc(U.strong) + "</dt><dd>" + (HEBREW ? "H" + esc(t.strong.replace(/^0+/, "")) : "G" + esc(t.strong)) + "</dd>" : "") +
       "</dl></div>";
-    var decs = notesOf(recFor(v)).decisions.filter(function (d) { return (d.tokens || []).indexOf(t.id) >= 0; });
+    var decs = [].concat.apply([], recsFor(v).map(function (r) { return notesOf(r).decisions; })).filter(function (d) { return (d.tokens || []).indexOf(t.id) >= 0; });
     if (decs.length) h += '<div class="cx-era cx-gap">' + esc(U.how_translated) + "</div>" + decs.map(noteHtml).join("");
     return h;
   }
@@ -480,11 +493,13 @@
       "<p>" + esc(flat(d.reason)) + "</p></div>";
   }
   function notesTab() {
-    var r = recFor(state.verse), n = notesOf(r);
-    var span = r.verses.length > 1
-      ? '<div class="cx-range">' + esc(fmt(U.sentence_spans, { a: r.verses[0], b: r.verses[r.verses.length - 1] })) + "</div>" : "";
-    return span + '<div class="cx-src" lang="' + SOURCE_LANG + '"' + DIR + ">" + esc(n.source) + '</div><div class="cx-gloss">' + esc(U.word_for_word) + " " +
-      esc(n.gloss) + "</div>" + n.decisions.map(noteHtml).join("");
+    return recsFor(state.verse).map(function (r) {
+      var n = notesOf(r);
+      var span = r.verses.length > 1
+        ? '<div class="cx-range">' + esc(fmt(U.sentence_spans, { a: r.verses[0], b: r.verses[r.verses.length - 1] })) + "</div>" : "";
+      return span + '<div class="cx-src" lang="' + SOURCE_LANG + '"' + DIR + ">" + esc(n.source) + '</div><div class="cx-gloss">' + esc(U.word_for_word) + " " +
+        esc(n.gloss) + "</div>" + n.decisions.map(noteHtml).join("");
+    }).join("");
   }
   function xrefTab() {
     var xs = DATA.crossrefs[state.verse] || [];
@@ -731,7 +746,11 @@
     commTabButton.classList.add("cx-zero");
   }
   var m0 = location.hash.match(HASH);
-  if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
+  // A verse the Open Word Bible leaves out (#v1 on John 8): open at the verse
+  // after it, and show the note that stands in its place.
+  var gapAsked = m0 && DATA.verses.indexOf(+m0[1]) < 0 && (DATA.verses.filter(function (v) { return v > +m0[1]; })[0] || 0);
+  if (gapAsked) state.verse = gapAsked;
+  else if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
   else {
     // With no verse asked for, open at the first verse that has commentary.
     var firstWith = DATA.verses.filter(function (v) { return works.some(function (w) { return entriesFor(w, v).length; }); })[0];
@@ -745,6 +764,10 @@
   loadComm();
   renderText(); go(state.verse);
   if (m0 && m0[2]) { sheet("half"); showCard(m0[2]); }
+  if (gapAsked) {
+    var gapNote = [].filter.call(document.querySelectorAll(".lg-gap"), function (el) { return +el.dataset.a <= +m0[1] && +m0[1] <= +el.dataset.b; })[0];
+    if (gapNote) gapNote.scrollIntoView({ block: "center" });
+  }
 
   // Likes for this chapter (public), and the reader's own likes and saves.
   if (Account && works.length) {
