@@ -101,6 +101,25 @@
     });
   });
 
+  // Page not found: an address that reads as a reference ("/jn3",
+  // "/john/3/16", "/rom-8") is offered as a link.
+  (function () {
+    var guess = document.getElementById("nf-guess");
+    if (!guess || !D) return;
+    var path = decodeURIComponent(location.pathname).replace(/\.html?$/, "").replace(/^\/+|\/+$/g, "");
+    var words = path.replace(/[\/_+-]+/g, " ").replace(/([a-z])(\d)/gi, "$1 $2").trim();
+    var r = parseRef(words) || parseRef(words.replace(/ (\d+) (\d+)$/, " $1:$2"));
+    var href, label;
+    if (r) { href = refHref(r); label = refLabel(r); }
+    else {
+      var code = bookOf(words.split(" ")[0]);
+      if (code) { href = "/" + code.toLowerCase() + "/"; label = D.names[code]; }
+    }
+    if (!href) return;
+    guess.innerHTML = fmt(esc(guess.getAttribute("data-text")), { link: '<a href="' + esc(href) + '">' + esc(label) + "</a>" });
+    guess.hidden = false;
+  })();
+
   // Continue reading: the last verse read (web/reader.js keeps it).
   document.querySelectorAll("[data-resume]").forEach(function (a) {
     var last = null;

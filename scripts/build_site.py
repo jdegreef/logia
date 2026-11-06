@@ -1631,7 +1631,10 @@ def not_found_page(lib):
 <section class="auth lg-not-found"><div class="auth-card auth-message">
 {MARK}
 <h1>{e(t("not_found.heading"))}</h1>
+<p class="lg-guess" id="nf-guess" data-text="{e(t("not_found.guess"))}" hidden></p>
 <p class="auth-dek">{e(t("not_found.dek"))}</p>
+{search_box(lib, "nf-q", "hero-search lg-nf-search")}
+<p class="hero-try lg-nf-try">{e(t("search.try"))} <a href="/jhn/1/#v1">John 1:1</a> <a href="/jhn/3/#v16">John 3:16</a> <a href="/jhn/14/#v6">John 14:6</a></p>
 <p class="lg-not-found-links"><a class="button" href="/">{e(t("not_found.home"))}</a>
 <a class="button ghost" href="/read/">{e(t("not_found.read"))}</a></p>
 </div></section>"""
