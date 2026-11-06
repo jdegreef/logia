@@ -1198,6 +1198,39 @@ def chapter_page(lib, book, chapter, all_chapters):
                 description=description, scripts=("reader.js",), preload=(comm_url,) if comm_url else ()), panel, comm
 
 
+# The timeline's span (AD), and the eras drawn behind it: (era, from, to).
+TIMELINE = (300, 1950)
+ERA_SPANS = (("Early church", 300, 600), ("Middle Ages", 600, 1500), ("Reformation", 1500, 1650),
+             ("Puritans and the 1700s", 1650, 1800), ("The 1800s", 1800, 1950))
+
+
+def born(author):
+    """The year an author was born, from their dates ("c. 347-407" -> 347)."""
+    m = re.search(r"(\d{3,4})\s*[-–]", author["dates"])
+    return int(m[1]) if m else author["died"] - 60
+
+
+def timeline(lib):
+    """Each commentator's lifetime as a bar on one line of centuries, over
+    the eras, each bar linking to their page."""
+    lo, hi = TIMELINE
+    pos = lambda y: (y - lo) / (hi - lo) * 100  # noqa: E731
+    bands = "".join(f'<span class="lg-tl-band" style="left:{pos(a):.2f}%;width:{pos(b) - pos(a):.2f}%">'
+                    f'<span>{e(t("eras." + era))}</span></span>' for era, a, b in ERA_SPANS)
+    ticks = "".join(f'<span class="lg-tl-tick" style="left:{pos(y):.2f}%">{y}</span>' for y in range(400, hi, 300))
+    rows = []
+    for a in lib.ordered_authors():
+        b, d = born(a), a["died"]
+        flip = pos(d) > 62
+        rows.append(f'<li class="lg-tl-row"><a class="lg-tl-life lg-era-{ERAS.index(a["era"])}{" lg-tl-flip" if flip else ""}" '
+                    f'href="/commentators/{a["id"]}/" style="left:{pos(b):.2f}%;width:{max(pos(d) - pos(b), .6):.2f}%">'
+                    f'<span class="lg-tl-name"><b>{e(a["name"])}</b> {e(a["dates"])}</span></a></li>')
+    return (f'<figure class="lg-tl" aria-labelledby="tl-cap"><div class="lg-tl-scroll"><div class="lg-tl-in">'
+            f'<div class="lg-tl-bands" aria-hidden="true">{bands}</div><ol class="lg-tl-rows">{"".join(rows)}</ol>'
+            f'<div class="lg-tl-axis" aria-hidden="true">{ticks}</div></div></div>'
+            f'<figcaption class="lg-quiet" id="tl-cap">{e(t("commentators.timeline_note", a=lo, b=hi))}</figcaption></figure>')
+
+
 def commentators_page(lib):
     counts = {}
     for c in lib.comments:
@@ -1217,6 +1250,7 @@ def commentators_page(lib):
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("commentators.title"))}</p>
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
+{timeline(lib)}
 {sections}"""
     return page(lib, t("commentators.title"), body, "/commentators/", current="/commentators/")
 
