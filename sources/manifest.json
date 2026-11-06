@@ -3582,6 +3582,1595 @@
    "kind": "scan",
    "download_sha256": "cd6ec0c86f8dc3c6f9144b2bd541cce0196ce16d9180adbeefbcbc85af65977c",
    "extract": "Characters 157032-1555466 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.ii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.ii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "77d494300fd01968f02a2d613df137e48370706e0896f51323f36892b7214669",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.iii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.iii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "1e7f770791ad4be44a8377f7c1ef43b9d62641b83c7caa291d597d9f3ee0ea64",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.iv.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.iv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "20321515587deaaafacc67a64ff4143eaa94c1c157370b5f3cabafe74dbae956",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.v.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.v.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e0f22345746f1855ce45b7827bf7184625da8edc01ae6764c6cd796c48fd68c8",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.vi.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.vi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "541d47ce51c310e142243d67a886e5ad876d480c31ce7f2b9b9725339d67bd8c",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.vii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.vii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "55782d77c902890e21a53eb631d44f0a952c254abff366d93f3d5982a8283ed1",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.viii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.viii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "10490be243423d3423065522cf65e6489450968d5b021c31eb388750a1d78c4e",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.ix.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.ix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "193c33904fba1f87090ff4e5b27b6d953de412d33c7929f1ffeda81f02f81538",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.x.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.x.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "30108626beb67a96b95dd5c1f7f70f428a2fabeadd765ab143f12e460992c353",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xi.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "53501f0791b4f66d8f27ff5468a87af7885c329dfbb53262d1657a10b4e5d52e",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "44466d0b665d333f0a1ffc9fc7ffe89b78d9df5f4f0220ab150ee999a9e9bd34",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xiii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "cb1111382c1433c85e0c7d6fdfccd93f5d7209b2030620638e8fb1a5a2a9b363",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xiv.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "d150752bd3ad4b9786e54111aad8a542174c119b694f3e5f5df27a65a46d0883",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xv.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e4fcdf3da593befffee130cdb4792285a55a58e298514dedbc07cea089562d30",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xvi.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "de1c614825cc108c9beacc12b85fe80f8a8620dd9f37eb0bc2af33483f61c0ad",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xvii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "749e82cab6aa74e0454f69adb5200509ac10b7d82f3c7e0db349477cfefcb1cc",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xviii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "b4f93080db95a262cc14e6a1ff8188483b67c93df1b3740017b75f518c65c9b2",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xix.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "ac5b8565e83e30a84d54da3d653516c8f8cf50166d818694fb9fc1a6ff48dc60",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xx.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "649e744a5895c32d8ea1be253014f6637f0cd66beef7a0e63b77261ee74abe03",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xxi.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xxi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "fd3c7f3a5926aa126a73af90327dd13e8ea8ff1c68ab794d510576b475035f1f",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley/notes.i.v.xxii.html",
+   "work": "wesley",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.v.xxii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "429a7502df56d0ca78b0dea44f692b6e2ac2f29f31b008900dc320c8fc5f027c",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.i.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.i.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "367403a398958bc8296d21ad2520d24f50a4a8ce18a63e17de5cfd697bb1a37a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.ii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.ii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "46725b5c5f68dbf1d0de168b7cee00f9f9850839675d6651647f71225a0d6435",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.iii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.iii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "83fcbcc91a4c7aeb2e6ae9b0cf9ee0dfc92c288dc0e4fa12a57f35a75b3dc1e5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.iv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.iv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "c50d52d901041b8da592a4aedfc0178e9a022be20890c97696ac175b49b452ea",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.v.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.v.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "3dff2411a89492ef0155e30b6333614e3bc323dbb97d1d55e34448713eef51f6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.vi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.vi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "a2e7c99a710d80bcc508805a497b100192da0989a0783ecc9107621ba02320b1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.vii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.vii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e943f1ed2da27aab9b2f785d055a8a1497c9736e35043fe4ae6339fadc5bc1f3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.viii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.viii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "a005c2197445ee0d478701fd695f6685c42fc4dbe46261186beb533a1e70cbd5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.ix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.ix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "db8e6553d1ddfbaf19f890ae238e05b42a52075447f63b3b2f4bcdad10ead638",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.x.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.x.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "c7c558576aa7522625764c3da590eb8c8b326aa679a21743c524b74696c0a123",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f6584955dcb5a86591e49e05386d6ba530845bfe4583554a9856b24e96971455",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "70f6e0e1be4e3970bf47b1fe8b6795c91ddced0227d611bbdc14a7460128caa6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "7f6d27c8a85c6d623b49d36be85ad12e1bb29f6a651724cbb8029fae0e89e1b8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "8d6ae6354f7f9070fc9d9cec0c58d9a53f66a8e70c45802747e0b36e55ecd0ca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "d6e399ffa975653a0815f6c021f3d0deab075569501927ae4f1189eaa8eb90fb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "37daaffb75205eb5f9d8cef77c7bd2a38d007a58b79ef2eed1a1fb8ab084bd13",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e195265b0fe097f85a902a4a524d6d66285f42c98ee61b555a92c4835c9d5d85",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "271b3602d1180685575b7439cf558a7765ed926d2af8fbd41042135046828b6e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "aabda7318947c4f12aba8e7a0da5ce4fe6c12f2e9ecaa65ebda07e2a388c8a87",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "a0f7c20e7620b436842faec9429fd2f8cc56634d452ebd69efe32e0ba9ea0bd0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "886e58e12259fd89fd145ed3310153f66fbceb0dbe56d0ad11d47f37f5833627",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "1f789c85f4decf79cdc7a140d2db12ea76e65e5c29336b7f6e74cf9f14d6eaf7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "b483167dbeea71fb6fe79114baf49236adeb0fbcbbbf5c7e05fee0dbbf020720",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "1a5446b95090096545361011955c2361b519b66437f1e2281abd5caa719f2486",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "86ce5b66a762c78ecfc9d4447087fd14050c9f947ed29c37c3a9bc52161a39dc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "801a64e22a1eb0068a240a438d7d8736239be990329c14af2e72b26b23779124",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "7b5cee2829dd8be5ccff95be0a8737fe5a1c7ca1b7d11a139b258c88f570ccd9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "7665560c0d65efb38e6a9478796e1c1d73034364616297c51f9f197f378c91ac",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "67d7d2eac4feb41239114d31ef3c06c9c678e455e3f9b5b6733ded6825e17297",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "007d77e783cc7aee98a3465e2a0d534d3cd6e0e11010c7c0bcb41638fe3b7726",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "afcb6fd02661fbd3267cc4b57532290c0033f5b0166b61df7de17253852b481f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "863d276d5a3719b55b255b0b99ef96704d9acc2c36458e489d62841178c91cea",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f4b0a2edb6700be9c76b3ca93a80ea830b0cae0c095bad5ade8aa3865d3aa314",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "0052176a3bd1efb38894a17996830e1a14507df456d68ce6c5588e91c04915b5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "8acf2e4770c155aaf16a8c9cf685ee9ed6d9bdafbf71dc599d5ea5c686acc1a2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "3832706834daf55e1d670f8b618dea86419c3d9c6dcb7ed6720191ed87d05a4d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f90f90bf9945501fe27c0d51f06b1b0c1ad22614023556138a1e16df9facdf24",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "be1296448bb67fa6ad32e47956f502552824d6ee9e783bd0bf2be29d191baf17",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xxxix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xxxix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "5d0f8e45e1fdb42367dea17371a3ebe3e174580d201958981bb4d07efe7cc502",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xl.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xl.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "0f03e1919885616f486b1166fe3ff3522465fe4a10a2aee13f85b13e332d484b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xli.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xli.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "d146ca7b3d7933313b76adaf95d9da87dc06dfe42adf83502498cb5a2ed62a84",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.i.xlii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.i.xlii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "55c86945eac51fb346d36391c9dc0138b1d339b1ee1e9d9587e9cd643ccf6353",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book I"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.i.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.i.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "529314f3b9bbca1165cb601bbcd17a6094e512f2c6798ef1b0569db76e5ab14d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.ii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.ii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f76c7c9fd0cc5571b858acc7f406a81a94c3501d13da1920316da4fe6acc726a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.iii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.iii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "063be3d78fb7cf2f5818df5889034f9ceed3cc3a9a12efe15b9363bd930d1caa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.iv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.iv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "d1f60b1e7bb1c190007ea557bf061f183b3dff2caa0ba92bf744553618f0cccf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.v.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.v.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f81c27a697e54773867448ea4e8cc7bf6066a695b3c45e4532c68c11cc60bf29",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.vi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.vi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "63cdfdf3c01beffb1ee5c150e807d50782b3f4207ced7ffdb02b77e45a1ad91b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.vii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.vii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "af26700bf0bcc52df293f3aa0e76f2eaa8fd3d27a823638480b38c88c85645a7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.viii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.viii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f13807a7e8e007f9814fb8b81975fa8cbc4bdf2161127c506ebadabdad397f10",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.ix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.ix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "a3eb092320d1809c03c813846f3ae4122483bc29ea74bdfa0a32a22604bfeb0b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.x.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.x.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "00545ad201c3a7cc8eecdc31dc2f71c3df9a0918de6ac1d7850473f424cdbeef",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "3dd46e5fcd877baa760048d7996d28683b9ce624f1fe7fd81a256ad09224b91c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "2695364f6c2df6153050c7422736f8c9661565d94ea9cf3ab43593b3187f7639",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "7dd828a9c45b50e186818129e82587acb9e8332dd7e5badcf0c2e30bb1449c3a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "9a28b4f430ce16747386d9fa25d6cc8520db08e6c75135ec0ff6934ac5a84eb8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "5a49323e0ca1c6b52229f881f87a8479ee4f2553537891a6b05ff80e79cf11a6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "1c15749f777887c6f60de3552ee202fa1a08a1a64d89d79b92c1bfb90c383e4d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "187487ae0d9aaf375c3f312dd50a6c670fc3015a8487a8c513a5e6a0d72d1c53",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "7c5b1d011c7d00ef8862c76a25cdd99d7b10edd92624a1c958557e26414f9fe7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "86115445858860f42e29013c757e171e3c473d0ad11b650ada380f1b50421f17",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "ad7b21595a6080dfd8266d42ea1f1a1a746f3d1a042bd2e8b1fa16cdf487b4fe",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f70fa7f6f4bd90d00743c15f885b60244ad4fb9d35b98660136eb5b2b2913fdd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "fbacce486c72161f43e56457f6d60d1f3d64d9ec78bc52d8b9b72475de6bf3ff",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "8eb8bcaeef83dbfa774b43b852b2b420d6943cafb04d31750c84f7d2db3e18f2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "32b18dc4080cb4a3a7e7fd78fe61ae4a7dbce64e3ae5841a335a6ca20eee1bfa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "fe01760d696e74a730bef6ed70d8ad6390306d20d0c7a338c977a573053b131e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "05aba2e99c222615217bf53524532e9c1d8a83ed766e74b0aae05bd7e39cedfb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "00bc58ea3b52fd277f627bc8bbc7f680e766f9efa3effac1e0841fb0e700105a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "9533cfd9c81ef5a1fb0789acfeecdefc34c303959f788751c33e78510eaf00ad",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "6890b61aa8a65429ac6bdf2fb1836ee3b3734844d3a803fbf6e6f15e035a9c4b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.ii.xxx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.ii.xxx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "619bf3a0eeb7080599eacbcc7abafa20b9fcdb2be04d82dc34e9319537a4a63c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book II"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.i.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.i.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "db4b9b20825b2e4113bb4148c7b5da239e9d68a8cf927a8aac5c48380cea190e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.ii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.ii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "4ecca7fa68e891134b46492b2004a41b1499ff3da03cdc2993de95f90c7e29cd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.iii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.iii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "d20a411c59d953766376f9eba4ce120c43671ea93bba46ea59d59d8f6b41fcd7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.iv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.iv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "c64c474f669e8f1e72bc3a1c78ffa0b73cd6daed869bda356b0f2f2ea94337c7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.v.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.v.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "a4c288299cb0e6c51c820553821d54b796841310a35002d703174e1d127a058c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.vi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.vi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f43c788a9892d434419df20cc39614f5352fea451654b9fcb5d3b36e8308fd86",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.vii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.vii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "9261ffe82e18a69fee2b9aa3c5b8b6160cfaa0bf0c27644a95cc75cddd4c6afd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.viii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.viii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "9dafc02d26daf550dcb26c3cd90b9cd8959a90e39a0c5a765602b333e45ed14c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.ix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.ix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "4b4ccf3e7f4e07ab68e4581556a052e9203af0c46799adff3a4a01aa2854c2d3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.x.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.x.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "d3884c04cd9bf8e62a11348db3ae72f746c421e3da7e113bfaf4c1301eb4af82",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e8447f5a71e6c47a3165f760fea1e5bac07a2f4bf7fcd720aa4275493d13ec27",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "913894c70aa37b518d343e617a607cfdd6b677756fc72e300536dc0065fbc46d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "7caeadbc4c4e8f5637408c45c7fc19d5606a2c35fa027ace803ae76042acc857",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "4f03f5078cf434e013fa5707de80cff771479aee7e4f994c6ad49b36f88037b9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "4e397c73523245a7d6ac31c46ba6c2b6880a46361c883d4ed9e7b0bdba8d3d52",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e29808ee876d02039ccabd97b4f1678f3b50bc659874cfe5140060c71cb7fbf3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "6e2ce8c5437412b83210326a887cfa2769caac5064683ddd92859066fd5666fd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "78ae9ce66ead10014184614cb8153d1028ab706e026e1293516760ee99d5bdea",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "8a56bfa970c06580efae48acc18f16b42ee87e5230d17f5e5aeab3dc19b89af4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "8a3e7aa18158a94539ba6958e6caa74200110baa834b10c5770dce62e9a11f06",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "45a9c10afccfe0c6b5af92d8b3cbb608e68f55f43156cbf4e4a541c128b837cb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "2c0829bbae3a15933cfb3673fc0e2d05cc2de80296fcb23e1d16977b212d3435",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "2c8ac554e8a22077a980f3154063f5d39e41485d92ac1ccb221637ffd2179b72",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "cdcadbbd519ddd3f87617d3ee1fcf6b7cdf2e4f0ac6e5469103c2e094f781cec",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "8a9d0c0bc294b5cb32f3a1f625e0c1d5f493907974c5645fc01903ce8fe07ae5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f47811caf5ced8c805512af86b28e152ebf1aff83d963d9fe57db557a5c9509b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "1b67fb14e45e5f7b2bfa9a4963f2fd2934fcc818a3b62884bc38a97ee21af601",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "a10e6e11eb7245a2b8a4f122c5d8d4cfdb72e4b8eea7c7b781b946f65bf21c31",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "c5d7bba9fbfc78925a0fa2982948141f05d82d3fc6ba35262e975c30a860a54a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "fe9c5b02c359ac90118692624a998d7645f309b3558ff8d013d7fc8578ca976c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "6d9f556a70f7ebbc2fbebcb1a9a72af5ba0682c5a270ec2f8dce656801ca5d98",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "6abf4217795a310db1d9bd4a77f0773258b6cc96286a01413958d28a7756867f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "9a6d5aa5d12f3fa81fd6ac6177b189d37574ecc084ea0aef7a5bf062dbde5ef7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "eda97fd980244506799e335bae497cdd3073e267d72e4ff10d887ae5d7805b86",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "2a3518f1b69c762060e56966882dade2b80f9c2f8800af5fdfc8c903b6895c79",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f2114f6441d5db7bce5c720ed672a2a759c6caf0a0fcd5cfd5670ba5e2d1347d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "35ec6326e7d3a0264fe72159e23a72b2291504f6d3c32cdc74ce46390805a273",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.v.xxxviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.v.xxxviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "eba8354529efda179e884d503a057289bbdc4f1a279ffc28f4983062142069d0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book VI"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.i.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.i.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "85f489fb3a6d5f31c727d22399067fb8425c9d54e3bcec4c259f41aae7e0bb90",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.ii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.ii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "c5d2e259fbceb72ad5d969d9c3cebfe549489e7f137238cba40e2fb598fc8055",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.iii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.iii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e207ed37852284b868158cd6e01b759cd8262ba409f2557a51a07cc81861d0c5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.iv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.iv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "41d3eb158d840c3abc79770a1eb750e6ded3ca4c27df07b06d54b3c1a2dce008",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.v.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.v.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "1366eec7afefbcd590db33e821e3da3ecb69b73a2772aa643c095802ce1586bc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.vi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.vi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "57def020c95a81c6ed597c925d1c37e205612b2a2806742d01d0492ab772bb65",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.vii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.vii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "1aa5d34e173b34431eeb7873906500b14b0e57409fdbdcc6ab445e8c5837ce10",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.viii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.viii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "fb61b023a0fe8748e02b5037def9743c769b760c37f264b14744ffa3de767798",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.ix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.ix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "ecf31d6c57286aa64ef5ad095d38b2a5ed29e4eaa05f86c32b0c17e18469109e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.x.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.x.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "ced517b7e278c547bccd54a9a27c277b7adb84d2ae162244c34229c772a31c50",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "c4d83e2917120b839a909eb64d1621895758ff6b1e5e424a27d08517505b96d0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "323e6fbad710f15d4005c5fd12ccb8f87deec714ca7884d5ba7d83a08eddfecf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "88b22febd3faed79cf9b981be73b44a9ff97e2b8c039eb633f77bdf8009d24de",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "3b83b8d04c086eef000c357900968c5965f041a03f8fe91a66bb3aa67d9ff449",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "72f1b84cdc2e43ef93fd8b847adc42efb126311ab80d7e1ef3d59af4f7fa0d02",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "7bed05d3dd3b9d75b199c76de8884a0f020f7baa7d68dc8b063a9b8501a94ba7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "2960ba829c91e0b4600ecaf671260f846e631036a6a7e0ced7cf93b8f66deded",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e0e5a9610683d1480b1c9e4af665554f3577597182a16d90b33bc1b86a58c10d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "4340b28bb1419fcea7241f5880b9b4af3209a41075a6c99bff67d2fb2e05e44a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "b7ce2076f1917afb4e4b3c7f296c4ee94b2c2011f8570f1c342ce69e2797dc42",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "30d8e66efd10e29b098345bb1ad784820ad595937ac49c57584c1d00123f2b0c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "d640a31b2794cb652f99f6e399a9c58dfa3c8a22e7ab2377ad4771d1226e69e9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxiii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxiii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "40d17d4e6a78289c79d7981b9c996b2eabcb76bc3d0daf57900f0224ba1f032e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxiv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxiv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "f1d24922308bc9f2d11e2662fde648963bbeed6466989c1f610288599b1037da",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxv.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxv.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "985abd557df5c37fde214d75c08e285705977854d547c258b0d9760356875174",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxvi.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxvi.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "4da93f9418de748225d04f55969cc48f51c34f06b9d1a4756b65bceb5dbf3693",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxvii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxvii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "8dc685846bf479e3ac549d100126ff551ece33b0fd66ece83c0f5a3abe2f0c34",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxviii.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxviii.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "56ee7d10dd82593020c3fb9f127679183bd8f194034cf21e5a03f6d25d6c7d06",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxix.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxix.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "e2402b2736ab035f061ddeea551a12a679649c8d4336dc6fa1053f238c00397a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
+  },
+  {
+   "path": "sources/origen/anf09.xv.iii.vi.xxx.html",
+   "work": "origen",
+   "url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.vi.xxx.html",
+   "retrieved": "2026-11-06",
+   "kind": "digital",
+   "download_sha256": "eb5341dc439d1ba7fbd5f526f1d784f677365cf2af9e505b34568eb491a8707b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
+   "part": "Book X"
   }
  ]
 }
