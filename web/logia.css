@@ -708,3 +708,8 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 
 /* Readings (/readings/): each day's Gospel, with which lectionaries read it. */
 .lg-readings li > p { margin: -4px 0 10px; font-size: 13.5px; }
+
+/* Collections (/<book>/<id>/): sayings or passages that belong together. */
+.lg-collection .lg-ctext p { font-size: calc(18px * var(--read-scale)); }
+.lg-cnum { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 6px; border-radius: 50%; background: var(--gold); color: #fff; font-size: 14px; vertical-align: 3px; }
+.lg-collection .lg-ex-ref { flex-direction: row; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }

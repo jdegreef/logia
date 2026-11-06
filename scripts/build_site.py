@@ -1096,7 +1096,7 @@ def book_page(lib, book):
            if people else "")
     plist = passage_list(lib, book)
     passages = (f'<section class="lg-block" id="passages"><h2>{e(t("passage.list_title"))}</h2>'
-                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a></p><ul class="lg-people lg-wide">{plist}</ul></section>'
+                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a>{" · " + collection_links(lib, book) if collection_links(lib, book) else ""}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
                 if plist else "")
     codes = list(lib.books)
     testament = "old" if codes.index(book) < OT_BOOKS else "new"
@@ -2282,6 +2282,68 @@ def about_page(lib):
     return page(lib, t("about.title"), body, "/about/", current="/about/")
 
 
+# --- Collections (/<book>/<id>/): passages that belong together -------------
+#
+# A collection is a set of verses or passages readers look for together,
+# such as the "I am" sayings, listed in library/collections.json. Its page
+# shows each one's text and, for each commentator, the opening words of
+# their first excerpt on it, linked to where it is printed in full.
+
+def collections(lib):
+    return load(os.path.join(ROOT, "library", "collections.json"))["collections"]
+
+
+def collection_page(lib, col):
+    key = f'collections.{col["id"]}'
+    book = col["book"]
+    name = lib.books[book]["en"]
+    path = f'/{book.lower()}/{col["id"]}/'
+    blocks, toc, total = [], [], 0
+    for i, item in enumerate(col["items"], 1):
+        _b, sc, sv = ref_parts(item["start"])
+        _b, ec, ev = ref_parts(item["end"])
+        voices = in_passage(lib, book, (sc, sv), (ec, ev))
+        n = sum(len(cs) for _w, cs in voices)
+        total += n
+        single = (sc, sv) == (ec, ev)
+        ref = verse_ref(lib, book, sc, sv) if single else passage_ref(lib, book, (sc, sv), (ec, ev))
+        label = t(f'{key}.items.{item["key"]}')
+        text = chapter_plain(book, sc).get(sv, "") if single else ""
+        quote = f'<blockquote class="lg-vtext lg-ctext"><p>{e(text)}</p></blockquote>' if text else ""
+        rows = []
+        for wid, cs in voices:
+            a = lib.author_of(wid)
+            c = cs[0]
+            more = f' <span class="lg-quiet">{e(t("collection.and_more", n=len(cs) - 1))}</span>' if len(cs) > 1 else ""
+            rows.append(f'<li><p class="lg-ex-ref"><a href="{excerpt_href(lib, c)}"><b>{e(short_name(a))}</b></a>'
+                        f' <span class="lg-quiet">{e(a["dates"])}</span>{more}</p><div><p>{e(snippet(c["text"], 30))}</p></div></li>')
+        where = verse_url(book, sc, sv) if single else passage_url(book, (sc, sv), (ec, ev))
+        all_link = (f'<p class="lg-vx-links"><a href="{where}">{e(t("collection.read_all", n=n, k=len(voices), ref=ref))}</a></p>'
+                    if voices else "")
+        anchor_id = item["key"]
+        blocks.append(f'<section class="lg-voice" id="{e(anchor_id)}"><h3><span class="lg-cnum">{i}</span> {e(label)}</h3>'
+                      f'<p class="lg-vmeta">{e(ref)}</p>{quote}<ul class="lg-excerpts">{"".join(rows)}</ul>{all_link}</section>')
+        toc.append(f'<a href="#{e(anchor_id)}">{e(label)}</a>')
+    note = f'<p class="lg-quiet">{e(t(key + ".note"))}</p>' if t(key + ".note") else ""
+    body = f"""
+<article class="lg-verse lg-collection">
+<header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("collection.eyebrow"))}</p>
+<h1>{e(t(key + ".heading"))}</h1><p class="dek">{e(t(key + ".dek"))}</p>
+<nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
+<section class="lg-block" id="items">{"".join(blocks)}</section>
+{note}
+<p class="lg-quiet">{e(t("collection.how", n=total))}</p>
+</article>
+<script type="application/ld+json">{breadcrumbs_ld([("Logia", "/"), (name, f"/{book.lower()}/"), (t(key + ".heading"), path)])}</script>"""
+    return path, page(lib, t(key + ".heading"), body, path, current="/read/",
+                      head_title=t(key + ".title") + " · Logia", description=t(key + ".description"))
+
+
+def collection_links(lib, book):
+    return " · ".join(f'<a href="/{book.lower()}/{c["id"]}/">{e(t("collections." + c["id"] + ".heading"))}</a>'
+                      for c in collections(lib) if c["book"] == book)
+
+
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
 #
 # Counts only: how many excerpts in the library are on each verse and
@@ -2459,6 +2521,10 @@ def build():
         for heading, start, end, voices in passages_with_commentary(lib, book):
             write(passage_url(book, start, end), passage_page(lib, book, heading, start, end, voices))
             pages.append(passage_url(book, start, end))
+    for col in collections(lib):
+        path, text = collection_page(lib, col)
+        write(path, text)
+        pages.append(path)
     for book in dict.fromkeys(b for b, _c, _v in lib.voices_on):
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
         pages.append(f"/{book.lower()}/most-discussed/")

@@ -695,5 +695,29 @@
     "chapters_note": "Chapter {chapter} has the most, with {n} excerpts.",
     "how_title": "How this is counted",
     "how": "An excerpt is one passage a commentator wrote on a verse or a run of verses, as Logia copies it from the source. In the table, an excerpt on a run of verses counts on each of them. In the chart, each excerpt counts once, on the chapter where it begins. Counts depend on how each commentary is divided into excerpts, so they show where the {works} commentaries in Logia say most, not a ranking of importance."
+  },
+  "collection": {
+    "eyebrow": "Collections",
+    "and_more": "and {n} more",
+    "read_all": "All {n} excerpts from {k} commentators on {ref}",
+    "how": "Each commentator's first excerpt on the verse or passage opens here with its first words. {n} excerpts in all; follow a name to read it in full."
+  },
+  "collections": {
+    "i-am": {
+      "heading": "The seven “I am” sayings in John",
+      "title": "The “I am” sayings of Jesus in John: what the church fathers and later commentators said",
+      "description": "The seven “I am” sayings in the Gospel of John, from the bread of life to the true vine, with what Chrysostom, Augustine, Aquinas, Calvin and others wrote on each.",
+      "dek": "Seven times in John, Jesus says “I am” with an image: bread, light, a door, a shepherd, the resurrection, the way, a vine. Here is each saying in the Open Word Bible, with what the commentators in Logia wrote on it.",
+      "note": "John also records “I am” with no image after it, as in 8:58, “before Abraham was, I am.”",
+      "items": {
+        "bread": "The bread of life",
+        "light": "The light of the world",
+        "door": "The door for the sheep",
+        "shepherd": "The good shepherd",
+        "resurrection": "The resurrection and the life",
+        "way": "The way, the truth, and the life",
+        "vine": "The true vine"
+      }
+    }
   }
 }
