@@ -609,3 +609,20 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 14px 0 0; padding: 0; list-style: none; font-size: 13px; color: var(--muted); }
 .lg-legend li { display: inline-flex; align-items: center; gap: 8px; }
 .lg-legend .chap { min-width: 26px; height: 26px; font-size: 11.5px; pointer-events: none; }
+
+/* About: how an excerpt reaches Logia, step by step, and a real correction. */
+.lg-steps-fig { margin: 16px 0 24px; }
+.lg-steps { list-style: none; counter-reset: step; padding: 0; margin: 0; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 124px), 1fr)); }
+.lg-steps li { counter-increment: step; position: relative; display: grid; gap: 4px; align-content: start; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.lg-steps li::before { content: counter(step); font-family: var(--display); font-weight: 600; color: var(--gold); font-size: 15px; }
+.lg-steps li:last-child { background: var(--accent-soft); border-color: var(--accent-soft-border); }
+.lg-steps b { font-family: var(--display); font-weight: 600; font-size: 15.5px; line-height: 1.25; }
+.lg-steps span { font-size: 13px; line-height: 1.45; color: var(--muted); }
+.lg-fix { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 12px 0 8px; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); font-family: var(--serif); font-size: 19px; }
+.lg-fix .label { flex-basis: 100%; margin: 0; }
+.lg-fix del { text-decoration-color: var(--wj); background: color-mix(in srgb, var(--wj) 12%, transparent); padding: 0 6px; border-radius: 4px; }
+.lg-fix ins { text-decoration: none; color: var(--accent); background: var(--accent-soft); padding: 0 6px; border-radius: 4px; }
+.lg-fix .icon { color: var(--muted); }

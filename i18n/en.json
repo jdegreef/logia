@@ -381,6 +381,15 @@
     "title": "About",
     "heading": "About Logia",
     "dek": "A free, open library of Christian commentary, set verse by verse beside Scripture.",
+    "steps": [
+      ["A public-domain edition", "A page scan on archive.org or a transcription on CCEL, published in 1930 or earlier."],
+      ["Its text, saved", "The page Logia copies from is kept in the repository, with its address and when it was fetched."],
+      ["Checked on every change", "A script finds each excerpt in its source: word for word, or in runs of six words for a scan."],
+      ["Misread letters, corrected", "Where a scan misread the printed page, the fix is a pair kept in the open data."],
+      ["Set beside its verse", "The excerpt appears on Logia beside the verse it comments on, linked to the full text."]
+    ],
+    "fix": "A correction from {work}'s scan, one of {n}",
+    "steps_note": "Every one of the {n} excerpts goes through these steps; {fixes} scan misreadings are corrected in all.",
     "body": [
       "## What it is",
       "Logia sets each verse of the Bible beside what the church has said about it, from the early church to the 1800s. It is free to read, free to share, and its data is open for anyone to build on, in the spirit of Sefaria's library of Jewish texts.",

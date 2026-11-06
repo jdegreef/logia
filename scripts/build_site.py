@@ -1634,6 +1634,25 @@ def chapter_file(lib, book, chapter):
         for w in lib.ordered_works(by_work)]}
 
 
+# The correction the About page shows, from library/corrections/.
+ABOUT_FIX = ("ryle", "Let ns")
+
+
+def checking_figure(lib):
+    """How an excerpt reaches Logia, step by step, and one real correction
+    pair as the build applies it."""
+    steps = "".join(f'<li><b>{e(title)}</b><span>{e(text)}</span></li>' for title, text in t("about.steps"))
+    work, wrong = ABOUT_FIX
+    right = dict(lib.fixes.get(work, [])).get(wrong)
+    fix = ""
+    if right:
+        fix = (f'<p class="lg-fix"><span class="label">{e(t("about.fix", work=lib.author_of(work)["name"], n=f"{len(lib.fixes[work]):,}"))}</span>'
+               f'<del>{e(wrong)}</del> {icon("arrow", 15)} <ins>{e(right)}</ins></p>')
+    total = sum(len(v) for v in lib.fixes.values())
+    return (f'<figure class="lg-steps-fig"><ol class="lg-steps">{steps}</ol>{fix}'
+            f'<figcaption class="lg-quiet">{e(t("about.steps_note", n=f"{len(lib.comments):,}", fixes=f"{total:,}"))}</figcaption></figure>')
+
+
 def about_page(lib):
     parts = []
     for block in t("about.body"):
@@ -1641,6 +1660,8 @@ def about_page(lib):
             title = block[3:]
             anchor = ' id="checked"' if title == "How excerpts are checked" else ""
             parts.append(f"<h2{anchor}>{e(title)}</h2>")
+            if anchor:
+                parts.append(checking_figure(lib))
         else:
             parts.append("<p>" + re.sub(r"\*([^*]+)\*", r"<i>\1</i>", e(block)) + "</p>")
     body = f"""
