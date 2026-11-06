@@ -24,7 +24,7 @@
   function hiddenEras() {
     try { return JSON.parse(localStorage.getItem("logia-eras") || "[]"); } catch (e) { return []; }
   }
-  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), marks: null, counts: {}, note: null };
+  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), marks: null, counts: {}, note: null, open: {} };
   var Account = window.LogiaAccount;
   var CHAPTER = DATA.book + "." + DATA.chapter;
   // A comment's key: <work>.<BOOK>.<chapter>.<verse> (backend/logia/ in open-word-bible).
@@ -34,7 +34,14 @@
     save: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>',
     share: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8M5 12.5v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>'
   };
+  ICON.chevron = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
   hiddenEras().forEach(function (e) { state.eras.delete(e); });
+  // Whether a voice's card is open on the chosen verse (see commTab).
+  function isOpen(work) {
+    if (work in state.open) return state.open[work];
+    if (fullExcerpts()) return true;
+    return works.filter(function (w) { return state.eras.has(w.era) && entriesFor(w, state.verse).length; }).length <= 2;
+  }
   function level() { return Prefs ? Prefs.get("level") : "B"; }
 
   // The Open Word Bible writes its reader settings into the text as spans,
@@ -290,16 +297,24 @@
         }).join("");
         var words = es.reduce(function (n, e) { return n + e.excerpt.split(/\s+/).length; }, 0);
         var long = words > 140 && !fullExcerpts();
-        h += '<section class="cx-card" id="c-' + w.work_id + '">' +
+        // A voice opens as two lines of its excerpt; the reader opens the ones
+        // they want. With one or two voices, or "In full" chosen, all are open.
+        var open = isOpen(w.work_id);
+        var peek = es[0].excerpt.split(/\n\s*\n/)[0].split(/\s+/).slice(0, 48).join(" ");
+        h += '<section class="cx-card' + (open ? "" : " cx-shut") + '" id="c-' + w.work_id + '">' +
           '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
-          '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span></div>" +
+          '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" +
+          '<button type="button" class="cx-toggle" data-toggle="' + w.work_id + '" aria-expanded="' + open + '" aria-controls="cb-' + w.work_id +
+          '" aria-label="' + esc(fmt(open ? U.hide_voice : U.show_voice, { name: w.author })) + '">' + ICON.chevron + "</button></div>" +
+          (open ? "" : '<button type="button" class="cx-peek" data-toggle="' + w.work_id + '">' + esc(peek) + "</button>") +
+          '<div class="cx-body" id="cb-' + w.work_id + '"' + (open ? "" : " hidden") + ">" +
           '<div class="cx-work"><a href="' + w.work_url + '"><i>' + esc(w.title) + "</i></a> · " + esc(w.edition_short) + "</div>" +
           '<div class="cx-ex' + (long ? " cx-clamp" : "") + '">' + body + "</div>" +
           '<div class="cx-more">' + (long ? '<button type="button" data-expand>' + esc(fmt(U.read_all, { n: words.toLocaleString() })) + "</button>" : "") +
           (es[0].inFull ? '<a href="' + esc(es[0].inFull) + '">' +
             esc(fmt(U.read_in_full, { where: locusLabel(w, es[0].locus.split(".")[0]) })) + "</a>" : "") +
           '<a href="' + esc(es[0].source_url) + '" target="_blank" rel="noopener">' + esc(U.full_text) + " ↗</a></div>" +
-          actions(w, v) + "</section>";
+          actions(w, v) + "</div></section>";
       });
     });
     if (!any) {
@@ -428,7 +443,9 @@
 
   function go(v, opts) {
     opts = opts || {};
-    state.verse = Math.max(FIRST, Math.min(LAST, v));
+    var to = Math.max(FIRST, Math.min(LAST, v));
+    if (to !== state.verse) state.open = {};
+    state.verse = to;
     if (!opts.keepToken) state.token = null;
     state.note = null;
     document.querySelectorAll(".cx-verse").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
@@ -470,6 +487,15 @@
   $("#pb").addEventListener("click", function (e) {
     var actButton = e.target.closest("[data-act]");
     if (actButton) { act(actButton); return; }
+    var toggle = e.target.closest("[data-toggle]");
+    if (toggle) {
+      var wid = toggle.getAttribute("data-toggle");
+      state.open[wid] = !isOpen(wid);
+      refresh();
+      var again = document.querySelector('[data-toggle="' + wid + '"].cx-toggle');
+      if (again) again.focus();
+      return;
+    }
     var chip = e.target.closest(".cx-chip");
     if (chip) {
       var era = chip.dataset.era;
@@ -495,7 +521,8 @@
   });
   $("#rail").addEventListener("click", function (e) {
     var d = e.target.closest(".cx-dot"); if (!d || d.classList.contains("cx-off")) return;
-    if (state.tab !== "comm") { state.tab = "comm"; renderPanel(); }
+    state.open[d.dataset.work] = true;
+    state.tab = "comm"; renderPanel();
     var card = document.getElementById("c-" + d.dataset.work);
     if (card) {
       card.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -506,6 +533,7 @@
   var HASH = /^#v(\d+)(?:-([a-z][a-z0-9-]*))?$/;
   function showCard(work) {
     if (!COMM) { pendingCard = work; return; }
+    if (!isOpen(work)) { state.open[work] = true; renderPanel(); }
     var card = document.getElementById("c-" + work);
     if (!card) return;
     card.scrollIntoView({ block: "start" });

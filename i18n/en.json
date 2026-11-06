@@ -190,6 +190,8 @@
     "show_eras": "Show eras",
     "on_verses": "On verses {a}–{b}",
     "read_all": "Read all {n} words",
+    "show_voice": "Show what {name} says",
+    "hide_voice": "Hide what {name} says",
     "full_text": "Full text",
     "tap_word": "Tap a Greek word above, or a word in the Balanced text, to see what it means and how it was translated.",
     "tap_word_hbo": "Tap a Hebrew word above, or a word in the Balanced text, to see what it means and how it was translated.",
