@@ -405,7 +405,7 @@ class Site(unittest.TestCase):
         self.assertIn("<loc>https://logia.faith/jhn/3/16/</loc>", sitemap)
         self.assertEqual(sitemap.count("<loc>https://logia.faith/jhn/"),
                          1 + 21 + len([k for k in lib.voices_on if k[0] == "JHN"])
-                         + len(build_site.passages_with_commentary(lib, "JHN")))
+                         + len(build_site.passages_with_commentary(lib, "JHN")) + 1)   # and most-discussed
 
     def test_a_verse_page_holds_its_commentary_in_the_html(self):
         lib = build_site.Library()
@@ -486,6 +486,37 @@ class Site(unittest.TestCase):
         self.assertIn("calvin.JHN.1.14", text)
         self.assertNotIn("#calvin.JHN.1.15.", text)
         self.assertIn('href="/christmas/"', self.read("index.html"))
+
+    def test_the_most_discussed_verses_are_counted_from_the_library(self):
+        lib = build_site.Library()
+        counts = build_site.verse_counts(lib, "JHN")
+        (ch, v), n = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        text = self.read(os.path.join("jhn", "most-discussed", "index.html"))
+        self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a></td><td>{n}</td>', text)
+        self.assertIn('href="/jhn/most-discussed/"', self.read(os.path.join("jhn", "index.html")))
+
+    # --- Open data ---
+
+    def test_the_downloads_hold_every_excerpt_as_the_site_shows_it(self):
+        lib = build_site.Library()
+        data = json.loads(self.read(os.path.join("downloads", "logia-en.json")))
+        self.assertEqual(len(data["excerpts"]), len(lib.comments))
+        self.assertEqual(data["licence"], "CC0-1.0")
+        by_id = {c["id"]: c for c in lib.comments}
+        for row in data["excerpts"][:50] + data["excerpts"][-50:]:
+            self.assertEqual(row["text"], by_id[row["id"]]["text"])
+        ryle = " ".join(r["text"] for r in data["excerpts"] if r["work"] == "ryle")
+        self.assertNotIn("Let ns", ryle)   # corrections applied
+        import csv as csv_
+        with open(os.path.join(build_site.SITE, "downloads", "logia-en.csv"), encoding="utf-8") as f:
+            rows = list(csv_.DictReader(f))
+        self.assertEqual([r["id"] for r in rows], [r["id"] for r in data["excerpts"]])
+
+    def test_the_open_data_page_describes_a_dataset(self):
+        text = self.read(os.path.join("open-data", "index.html"))
+        self.assertIn('href="/downloads/logia-en.json"', text)
+        self.assertIn('"@type":"Dataset"', text)
+        self.assertIn('href="/open-data/"', self.read(os.path.join("about", "index.html")))
 
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))

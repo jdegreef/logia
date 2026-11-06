@@ -22,10 +22,12 @@ The look, the header, footer and settings menu follow openwordbible.org:
 web/style.css and the fonts are the Open Word Bible's own, and web/site.js
 is taken from its site script. web/logia.css adds Logia's own parts.
 """
+import csv
 import functools
 import glob
 import hashlib
 import html
+import io
 import json
 import os
 import re
@@ -1094,7 +1096,7 @@ def book_page(lib, book):
            if people else "")
     plist = passage_list(lib, book)
     passages = (f'<section class="lg-block" id="passages"><h2>{e(t("passage.list_title"))}</h2>'
-                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
+                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a></p><ul class="lg-people lg-wide">{plist}</ul></section>'
                 if plist else "")
     codes = list(lib.books)
     testament = "old" if codes.index(book) < OT_BOOKS else "new"
@@ -2238,8 +2240,136 @@ def about_page(lib):
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("about.title"))}</p>
 <h1>{e(t("about.heading"))}</h1><p class="dek">{e(t("about.dek"))}</p></header>
-<div class="prose">{"".join(parts)}</div>"""
+<div class="prose">{"".join(parts)}<p><a class="lg-more" href="/open-data/">{e(t("open_data.about_link"))} {icon("arrow", 15)}</a></p></div>"""
     return page(lib, t("about.title"), body, "/about/", current="/about/")
+
+
+# --- The most-discussed verses (/<book>/most-discussed/) ----------------------
+#
+# Counts only: how many excerpts in the library are on each verse and
+# chapter. Nothing on the page is commentary or opinion.
+
+def verse_counts(lib, book):
+    """{(chapter, verse): excerpts on it}, an excerpt on a range counting on each of its verses."""
+    n = {}
+    for c in lib.comments:
+        b, sc, sv = ref_parts(c["start"])
+        _, ec, ev = ref_parts(c["end"])
+        if b != book or sc != ec:
+            continue
+        for v in range(sv, ev + 1):
+            n[(sc, v)] = n.get((sc, v), 0) + 1
+    return n
+
+
+def most_discussed_page(lib, book, top=25):
+    name = lib.books[book]["en"]
+    counts = verse_counts(lib, book)
+    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:top]
+    all_works = len({c["work"] for c in lib.comments if c["start"].startswith(book + ".")})
+    every = sum(1 for (b, _c, _v), ws in lib.voices_on.items() if b == book and len(ws) == all_works)
+    verses_with = sum(1 for (b, _c, _v) in lib.voices_on if b == book)
+    rows = []
+    for i, ((ch, v), n) in enumerate(ranked, 1):
+        ws = lib.voices_on.get((book, ch, v), [])
+        rows.append(f'<tr><td class="lg-quiet">{i}</td><td><a href="{verse_url(book, ch, v)}"><b>{e(verse_ref(lib, book, ch, v))}</b></a></td>'
+                    f'<td>{n}</td><td>{len(ws)}</td><td class="lg-quiet">{e(snippet(chapter_plain(book, ch).get(v, ""), 12) or t("most.left_out"))}</td></tr>')
+    head = "".join(f"<th>{e(x)}</th>" for x in t("most.columns"))
+    per_chapter = {}
+    for (ch, _v), n in counts.items():
+        per_chapter[ch] = per_chapter.get(ch, 0) + n
+    starts = {}
+    for c in lib.comments:
+        b, sc, _sv = ref_parts(c["start"])
+        if b == book:
+            starts[sc] = starts.get(sc, 0) + 1
+    peak = max(starts.values())
+    bars = "".join(f'<li><a href="{chapter_url(book, ch)}"><span class="lg-bar-label">{e(t("chapter.eyebrow", chapter=ch))}</span>'
+                   f'<span class="lg-bar"><span style="width:{starts[ch] / peak * 100:.1f}%"></span></span>'
+                   f'<span class="lg-bar-n">{starts[ch]}</span></a></li>' for ch in sorted(starts))
+    top_ch = max(starts, key=starts.get)
+    lead = t("most.lead", book=name, verses=verses_with, every=every, works=all_works, n=f"{sum(starts.values()):,}")
+    body = f"""
+<article class="lg-verse lg-most">
+<header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a></p>
+<h1>{e(t("most.heading", book=name))}</h1><p class="dek">{e(lead)}</p></header>
+<section class="lg-block" id="verses"><h2>{e(t("most.verses_title", n=top))}</h2>
+<div class="lg-table-wrap"><table class="lg-words lg-rank"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>
+<section class="lg-block" id="chapters"><h2>{e(t("most.chapters_title"))}</h2>
+<p class="lg-quiet">{e(t("most.chapters_note", chapter=top_ch, n=starts[top_ch]))}</p><ol class="lg-bars">{bars}</ol></section>
+<section class="lg-block"><h2>{e(t("most.how_title"))}</h2><p>{e(t("most.how", works=all_works))}</p>
+<p><a class="lg-more" href="/open-data/">{e(t("open_data.about_link"))} {icon("arrow", 15)}</a></p></section>
+</article>
+<script type="application/ld+json">{breadcrumbs_ld([("Logia", "/"), (name, f"/{book.lower()}/"), (t("most.heading", book=name), f"/{book.lower()}/most-discussed/")])}</script>"""
+    first = ranked[0]
+    return page(lib, t("most.heading", book=name), body, f"/{book.lower()}/most-discussed/", current="/read/",
+                description=t("most.description", book=name, ref=verse_ref(lib, book, *first[0]), n=first[1]))
+
+
+# --- Open data (/open-data/ and /downloads/) ---------------------------------
+#
+# Every excerpt as one file, with its scan corrections applied, so someone
+# can build on the library without cloning the repository. The repository
+# stays the record: these are written from it at every build.
+
+DOWNLOAD_FIELDS = ("id", "work", "author", "start", "end", "heading", "text", "locus", "source_url")
+
+
+def download_rows(lib):
+    for c in sorted(lib.comments, key=lambda c: (lib.ordered_works().index(c["work"]), order_key(c))):
+        yield {**{k: c.get(k) or "" for k in DOWNLOAD_FIELDS}, "author": lib.works[c["work"]]["author"]}
+
+
+def downloads(lib):
+    """{file name: text} for /downloads/: the excerpts as JSON and CSV."""
+    rows = list(download_rows(lib))
+    works = {w: {k: lib.works[w][k] for k in ("title", "author", "edition", "translation", "published",
+                                              "full_text_url", "rights", "status")}
+             for w in lib.ordered_works()}
+    authors = {a["id"]: {k: a[k] for k in ("name", "dates", "died", "era", "tradition")} for a in lib.ordered_authors()}
+    data = {"about": t("open_data.file_about"), "licence": "CC0-1.0", "source": GITHUB_URL,
+            "authors": authors, "works": works, "excerpts": rows}
+    buf = io.StringIO()
+    out = csv.DictWriter(buf, fieldnames=DOWNLOAD_FIELDS, lineterminator="\n")
+    out.writeheader()
+    out.writerows(rows)
+    return {"logia-en.json": json.dumps(data, ensure_ascii=False, indent=0) + "\n", "logia-en.csv": buf.getvalue()}
+
+
+def size_label(n):
+    return f"{n / 1_000_000:.1f} MB" if n >= 1_000_000 else f"{n // 1000} KB"
+
+
+def open_data_page(lib, files):
+    n = len(lib.comments)
+    dl = "".join(
+        f'<li><a href="/downloads/{name}" download><b>{e(name)}</b> '
+        f'<span>{e(t("open_data.file_" + name.rsplit(".", 1)[1]))} · {size_label(len(text.encode("utf-8")))}</span></a></li>'
+        for name, text in files.items())
+    fields = "".join(f"<tr><td><code>{e(k)}</code></td><td>{e(v)}</td></tr>" for k, v in t("open_data.fields"))
+    repo = "".join(f'<tr><td><a href="{GITHUB_URL}/tree/main/{e(path)}" rel="noopener"><code>{e(path)}</code></a></td><td>{e(what)}</td></tr>'
+                   for path, what in t("open_data.repo"))
+    licences = "".join(f"<li>{e(x)}</li>" for x in t("open_data.licences"))
+    ld = {"@context": "https://schema.org", "@type": "Dataset", "name": t("open_data.ld_name"),
+          "description": t("open_data.ld_description", n=n, works=len(lib.works)),
+          "url": SITE_URL + "/open-data/", "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "isAccessibleForFree": True, "inLanguage": LANG, "sameAs": GITHUB_URL,
+          "creator": {"@type": "Organization", "name": "Logia", "url": SITE_URL},
+          "keywords": t("open_data.ld_keywords"),
+          "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json" if name.endswith(".json") else "text/csv",
+                            "contentUrl": f"{SITE_URL}/downloads/{name}"} for name in files]}
+    body = f"""
+<header class="page-head"><p class="eyebrow">{e(t("about.title"))}</p>
+<h1>{e(t("open_data.heading"))}</h1><p class="dek">{e(t("open_data.dek", n=f"{n:,}", works=len(lib.works), authors=len(lib.authors)))}</p></header>
+<section class="lg-block"><h2>{e(t("open_data.download"))}</h2><p class="lg-quiet">{e(t("open_data.download_note"))}</p>
+<ul class="lg-people lg-wide">{dl}</ul></section>
+<section class="lg-block"><h2>{e(t("open_data.fields_title"))}</h2><div class="lg-table-wrap"><table class="lg-words lg-fields"><tbody>{fields}</tbody></table></div></section>
+<section class="lg-block"><h2>{e(t("open_data.repo_title"))}</h2><p class="lg-quiet">{e(t("open_data.repo_note"))}</p>
+<div class="lg-table-wrap"><table class="lg-words lg-fields"><tbody>{repo}</tbody></table></div></section>
+<section class="lg-block"><h2>{e(t("open_data.licences_title"))}</h2><ul class="lg-licences">{licences}</ul>
+<p class="lg-quiet">{e(t("open_data.rights_note"))}</p></section>"""
+    return page(lib, t("open_data.heading"), body, "/open-data/", current="/about/",
+                description=t("open_data.description", n=f"{n:,}"), ld=(ld,))
 
 
 # --- Build --------------------------------------------------------------------
@@ -2291,6 +2421,9 @@ def build():
         for heading, start, end, voices in passages_with_commentary(lib, book):
             write(passage_url(book, start, end), passage_page(lib, book, heading, start, end, voices))
             pages.append(passage_url(book, start, end))
+    for book in dict.fromkeys(b for b, _c, _v in lib.voices_on):
+        write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
+        pages.append(f"/{book.lower()}/most-discussed/")
     for o in load(os.path.join(ROOT, "library", "occasions.json"))["occasions"]:
         book, sc, sv = ref_parts(o["start"])
         _b, ec, ev = ref_parts(o["end"])
@@ -2315,6 +2448,13 @@ def build():
             pages.append(f"/works/{wid}/{x['locus']}/")
     write("/about/", about_page(lib))
     pages.append("/about/")
+    files = downloads(lib)
+    os.makedirs(os.path.join(SITE, "downloads"))
+    for name, text in files.items():
+        with open(os.path.join(SITE, "downloads", name), "w", encoding="utf-8") as f:
+            f.write(text)
+    write("/open-data/", open_data_page(lib, files))
+    pages.append("/open-data/")
     write("/signed-in/", signed_in_page(lib))
     write("/saved/", saved_page(lib))
     write("/404.html", not_found_page(lib))
