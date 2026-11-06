@@ -1098,7 +1098,7 @@ def text_lead(x):
     """The short headings under a homily's title: "John i. 1", "Chapter I. 1–5"."""
     out = []
     for p in x["paragraphs"][1:3]:
-        if len(p["text"]) >= 60 or p["excerpts"]:
+        if len(p["text"]) >= 60 or p["excerpts"] or re.match(r"\d+\.\s", p["text"]):   # a section's heading
             break
         out.append(p["text"])
     return " · ".join(out)

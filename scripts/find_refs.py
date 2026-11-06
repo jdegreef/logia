@@ -108,7 +108,10 @@ class Page(HTMLParser):
         self.size += len(s)
 
 
-def read_page(path):
+def read_page(path, part=None):
+    """A CCEL page. `part` is the division a page sits in when the page does
+    not name it: the manifest's "part" for the page, as CCEL's table of
+    contents gives it ("Book II" for a section of Origen's second book)."""
     p = Page()
     with open(path, encoding="utf-8") as f:
         p.feed(f.read())
@@ -121,7 +124,7 @@ def read_page(path):
             letters.append(ch)
             at.append(i)
     return {"text": text, "paras": p.paras, "para_ids": p.para_ids, "refs": p.refs,
-            "letters": "".join(letters), "at": at}
+            "letters": "".join(letters), "at": at, "part": part}
 
 
 def letters(s):
@@ -145,12 +148,17 @@ def span(page, excerpt):
 
 
 def locus(page, start):
-    """'3.2' for homily or tractate 3, section 2, read from the page."""
+    """'3.2' for homily or tractate 3, section 2, read from the page; for a
+    page that is one section of a book ("Book II", the page's `part`), the
+    book's number and the section number the page opens with."""
     text = page["text"]
-    head = re.search(r"\b(?:Homily|Tractate)\s+([IVXLC]+)\.", text)
-    if not head or head.start() > start:
-        return None
-    number = scripture.roman(head[1])
+    if page.get("part"):
+        number = scripture.roman(page["part"].split()[-1])
+    else:
+        head = re.search(r"\b(?:Homily|Tractate)\s+([IVXLC]+)\.", text)
+        if not head or head.start() > start:
+            return None
+        number = scripture.roman(head[1])
     sections = [(m.start(), int(m[1])) for m in re.finditer(r"\[(\d+)\.\]", text)]
     if not sections:                         # numbered paragraphs: "5. Accordingly, brethren"
         sections = [(p, int(m[1])) for p in page["paras"] if (m := re.match(r"\s*(\d+)\.\s", text[p:p + 12]))]
@@ -417,7 +425,8 @@ def text_spans():
     spans = {}
     for p in glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json")):
         t = load(p)
-        spans[(t["work"], t["source"])] = t["verses"]
+        for source in {t["source"]} | {para["source"] for para in t["paragraphs"] if "source" in para}:
+            spans[(t["work"], source)] = t["verses"]
     return spans
 
 
@@ -462,6 +471,7 @@ def derive():
     {citations path: file}, {quotations path: file}, problems."""
     manifest = load(os.path.join(ROOT, "sources", "manifest.json"))
     paths = {(f["work"], os.path.basename(f["path"])): os.path.join(ROOT, f["path"]) for f in manifest["files"]}
+    parts = {os.path.join(ROOT, f["path"]): f.get("part") for f in manifest["files"]}
     works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
     fixes = corrected_texts()
     pages, comments, citations, problems = {}, {}, {}, []
@@ -480,7 +490,7 @@ def derive():
             _, ch, _ = e["start"].split(".")
             if work["source_kind"] == "digital" and src and src.endswith(".html"):
                 if src not in pages:
-                    pages[src] = read_page(src)
+                    pages[src] = read_page(src, parts[src])
                 where = span(pages[src], e["text"])
                 if where is None:
                     problems.append(f"{e['id']}: could not place the excerpt in {os.path.basename(src)}")
@@ -512,7 +522,7 @@ def derive():
     quoted = {w for labels in CATENAS.values() for w in labels.values()}
     for (work, _), path in sorted(paths.items()):
         if work in quoted and path.endswith(".html") and path not in pages:
-            pages[path] = read_page(path)
+            pages[path] = read_page(path, parts[path])
     by_work = {(w, os.path.basename(p)): pages[p] for (w, _), p in paths.items() if w in quoted and p in pages}
     candidates = paragraphs(by_work)
     df = {}

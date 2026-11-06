@@ -29,9 +29,11 @@ Christian commentaries.
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
-John 1:1–18 with eight commentaries (Chrysostom,
-Augustine, the Catena Aurea, Calvin, Matthew Henry, Bengel, J. C. Ryle and
-Westcott), 246 excerpts in all.
+the whole Gospel of John with eight commentaries (Chrysostom, Augustine, the
+Catena Aurea, Calvin, Matthew Henry, Bengel, J. C. Ryle and Westcott), John
+Wesley's notes on the whole Gospel, and Origen's commentary on John 1:1–2:25,
+the only part of it with an English translation from 1930 or earlier: 9,272
+excerpts in all.
 
 ## The site
 

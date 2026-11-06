@@ -1,0 +1,21 @@
+{
+ "id": "origen",
+ "author": "origen",
+ "title": "Commentary on the Gospel of John",
+ "divisions": [
+  "Book",
+  "Section"
+ ],
+ "edition": "Ante-Nicene Fathers, Vol. 9 (the \"Additional Volume\"), edited by Allan Menzies (Edinburgh: T. & T. Clark, and New York: Christian Literature Company, 1896-97); Books I, II, VI and X, translated from Lommatzsch's Greek text (1831)",
+ "original_language": "Greek",
+ "translation": "English translation in Ante-Nicene Fathers, Vol. 9, ed. Allan Menzies (1896-97); the volume names no separate translator for the Commentary on John",
+ "published": 1896,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/anf09.xv.iii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: who translated the Commentary on John (Menzies, who died in 1916, or another of the volume's translators) and that translator's death date (life + 70 years)"
+ },
+ "source_kind": "digital",
+ "notes": "Only Books I, II, IV, V, VI and X are in this English edition, so Logia has Origen on John 1:1-2:25 only; Books XIII, XIX, XX, XXVIII and XXXII survive in Greek but have no English translation from 1930 or earlier. Books IV and V are short fragments from the Philocalia and Eusebius, on Scripture and on writing books, and are not set beside a verse. Each excerpt is the opening of one of the sections into which the edition divides each book, up to about 350 words and cut at a sentence end, set on the verse the section's heading names. Headings are the edition's section headings, with the book added, up to their first full stop.",
+ "status": "ai_draft"
+}

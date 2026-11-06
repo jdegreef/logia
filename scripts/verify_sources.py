@@ -171,10 +171,19 @@ def main(argv):
             bad += 1
             print(f"{os.path.relpath(path, ROOT)}: source {t['source']} is not in sources/manifest.json")
             continue
-        src = source_letters(os.path.join(ROOT, meta["path"]))
-        raw = source_original(os.path.join(ROOT, meta["path"]))
+        read = {}
         for para in t["paragraphs"]:
             paras += 1
+            key = para.get("source", t["source"])     # a book's text runs over several pages
+            meta = files.get(t["work"], {}).get(key)
+            if not meta:
+                bad += 1
+                print(f"{os.path.relpath(path, ROOT)}: {para['id']}: source {key} is not in sources/manifest.json")
+                continue
+            if key not in read:
+                read[key] = (source_letters(os.path.join(ROOT, meta["path"])),
+                             source_original(os.path.join(ROOT, meta["path"])))
+            src, raw = read[key]
             problem = check_digital(para["text"], src) or check_original(para["text"], raw)
             if problem:
                 bad += 1
