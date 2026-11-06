@@ -811,5 +811,27 @@
       "gloss": "The Gloss",
       "jerome": "Jerome"
     }
+  },
+  "era": {
+    "eyebrow": "By era",
+    "heading": "{book} in {era}",
+    "head_title": "{book} in {era}: what its commentators said",
+    "description": "How commentators of {era} read the Gospel of {book}: {names}, in their own words, verse by verse.",
+    "in": {
+      "Early church": "the early church",
+      "Middle Ages": "the Middle Ages",
+      "Reformation": "the Reformation",
+      "Puritans and the 1700s": "the age of the Puritans and the 1700s",
+      "The 1800s": "the 1800s"
+    },
+    "dek": "{n} excerpts on {book} from {names}, in their own words. Logia dates the era from AD {a} to {b}.",
+    "by_era": "By era:",
+    "people": "The commentators",
+    "on_verses": "On some well-known verses",
+    "on_verses_note": "The opening words of what each of them says on the verse. Follow the link to read the whole excerpt, and the verse to read every era on it.",
+    "read_on": "Read it all",
+    "verses_title": "The {n} verses they say most on",
+    "columns": ["Verse", "Excerpts", "The verse"],
+    "chapters_title": "Excerpts on each chapter"
   }
 }

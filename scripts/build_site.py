@@ -1861,6 +1861,7 @@ def commentators_page(lib):
 <header class="page-head"><p class="eyebrow">{e(t("commentators.title"))}</p>
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
 {timeline(lib)}
+<p class="lg-era-links">{e(t("era.by_era"))} {era_links(lib)}</p>
 {sections}"""
     return page(lib, t("commentators.title"), body, "/commentators/", current="/commentators/")
 
@@ -1949,7 +1950,7 @@ def author_page(lib, author):
                  for k, v in facts)
     body = f"""
 <div class="lg-profile lg-era-{ERAS.index(author["era"])}">
-<div class="lg-profile-main"><header class="page-head lg-person-head"><p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · {e(t("eras." + author["era"]))}</p>
+<div class="lg-profile-main"><header class="page-head lg-person-head"><p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · <a href="{era_url(author["era"])}">{e(t("eras." + author["era"]))}</a></p>
 <h1>{e(author["name"])}</h1><p class="dek">{e(author["dates"])} · {e(author["tradition"])}</p></header>
 <section class="prose lg-bio">{bio}{draft}</section></div>
 <dl class="lg-facts-card">{dl}</dl></div>
@@ -2572,6 +2573,118 @@ def catena_fathers_page(lib, work="catena"):
                       ld=(breadcrumbs((t("catena.short_title"), f"/works/{work}/"), (t("catena.heading"), path)),))
 
 
+# --- The eras (/commentators/era/<era>/) -------------------------------------
+#
+# Each era's commentators on a book side by side: who they are, the chapters
+# and verses they say most on, and the opening words of what each says on a
+# few well-known verses, linking to the whole excerpt. Counts and copied
+# words only.
+
+ERA_SLUGS = {"Early church": "early-church", "Middle Ages": "middle-ages", "Reformation": "reformation",
+             "Puritans and the 1700s": "1700s", "The 1800s": "1800s"}
+# Well-known verses each era page shows every commentator of the era on.
+ERA_VERSES = ("JHN.1.1", "JHN.1.14", "JHN.3.16", "JHN.6.53", "JHN.10.30", "JHN.14.6", "JHN.20.28")
+
+
+def era_url(era):
+    return f"/commentators/era/{ERA_SLUGS[era]}/"
+
+
+def era_links(lib, here=None):
+    """The eras with commentators, as links (the one shown is plain)."""
+    return " · ".join(
+        (f'<b>{e(t("eras." + era))}</b>' if era == here else f'<a href="{era_url(era)}">{e(t("eras." + era))}</a>')
+        for era in ERAS if any(a["era"] == era for a in lib.authors.values()))
+
+
+def first_on(lib, works, ref):
+    """The excerpt, in any of the works, that comments most closely on ref:
+    of those whose verses include it, the one that begins nearest it (the
+    first in order where several begin there)."""
+    b, ch, v = ref_parts(ref)
+    best = None
+    for c in sorted(lib.comments_in(b, ch), key=order_key):
+        _, sc, sv = ref_parts(c["start"])
+        _, ec, ev = ref_parts(c["end"])
+        if c["work"] in works and sc == ch and sv <= v and (ec != ch or v <= ev):
+            if best is None or sv > ref_parts(best["start"])[2]:
+                best = c
+    return best
+
+
+def era_page(lib, era, book="JHN"):
+    name = lib.books[book]["en"]
+    people = [a for a in lib.ordered_authors() if a["era"] == era]
+    works = {w for w, x in lib.works.items() if x["author"] in {a["id"] for a in people}}
+    mine = [c for c in lib.comments if c["work"] in works and c["start"].startswith(book + ".")]
+    lo, hi = next((a, b) for x, a, b in ERA_SPANS if x == era)
+    cards = "".join(
+        f'<li><a class="lg-person lg-era-{ERAS.index(era)}" href="/commentators/{a["id"]}/"><span><b>{e(a["name"])}</b>'
+        f'<span class="lg-dates">{e(a["dates"])} · {e(a["tradition"])}</span>'
+        + "".join(f'<span class="lg-meta"><i>{e(lib.works[w]["title"])}</i> · {e(t("work.excerpts", n=sum(1 for c in mine if c["work"] == w)))}</span>'
+                  for w in lib.ordered_works([w for w in works if lib.works[w]["author"] == a["id"]]))
+        + "</span></a></li>" for a in people)
+    # The chapters they say most on, by excerpts.
+    by_ch = {}
+    for c in mine:
+        ch = ref_parts(c["start"])[1]
+        by_ch[ch] = by_ch.get(ch, 0) + 1
+    peak = max(by_ch.values(), default=1)
+    chapters = "".join(
+        f'<li><a href="{chapter_url(book, ch)}"><span class="lg-bar-label">{e(name)} {ch}</span>'
+        f'<span class="lg-bar"><span style="width:{n / peak * 100:.1f}%"></span></span><span class="lg-bar-n">{n}</span></a></li>'
+        for ch, n in sorted(by_ch.items()))
+    # The verses they say most on: excerpts whose verses include each one.
+    counts = {}
+    for c in mine:
+        _, sc, sv = ref_parts(c["start"])
+        _, ec, ev = ref_parts(c["end"])
+        if sc == ec:
+            for v in range(sv, ev + 1):
+                counts[(sc, v)] = counts.get((sc, v), 0) + 1
+    top = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:10]
+    verses = "".join(
+        f'<tr><td><a href="{verse_url(book, ch, v)}"><b>{e(verse_ref(lib, book, ch, v))}</b></a></td><td>{n}</td>'
+        f'<td class="lg-quiet">{e(snippet(chapter_plain(book, ch).get(v, ""), 12) or t("most.left_out"))}</td></tr>'
+        for (ch, v), n in top)
+    head = "".join(f"<th>{e(x)}</th>" for x in t("era.columns"))
+    # What each of them says on a few well-known verses: the opening words.
+    samples = ""
+    for ref in ERA_VERSES:
+        b, ch, v = ref_parts(ref)
+        if b != book:
+            continue
+        items = ""
+        for a in people:
+            c = first_on(lib, {w for w in works if lib.works[w]["author"] == a["id"]}, ref)
+            if c:
+                # Past a first paragraph that only quotes the verse.
+                paras = [x for x in c["text"].split("\n\n") if x.strip()]
+                while len(paras) > 1 and len(paras[0].split()) < 30:
+                    paras.pop(0)
+                items += (f'<li><b>{e(short_name(a))}</b> “{e(snippet(paras[0], 40))}” '
+                          f'<a href="{excerpt_href(lib, c)}">{e(t("era.read_on"))}</a></li>')
+        if items:
+            samples += (f'<section class="lg-era-verse"><h3><a href="{verse_url(book, ch, v)}">{e(verse_ref(lib, book, ch, v))}</a></h3>'
+                        f'<p class="lg-quiet">{e(snippet(chapter_plain(book, ch).get(v, ""), 40))}</p><ul class="lg-era-says">{items}</ul></section>')
+    title = t("era.heading", book=name, era=t("era.in." + era))
+    body = f"""
+<article class="lg-verse lg-era-page">
+<header class="page-head"><p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · {e(t("era.eyebrow"))}</p>
+<h1>{e(title)}</h1><p class="dek">{e(t("era.dek", n=f"{len(mine):,}", names=" and ".join(a["name"] for a in people), book=name, a=lo, b=hi))}</p>
+<p class="lg-quiet">{era_links(lib, era)}</p></header>
+<section class="lg-block"><h2>{e(t("era.people"))}</h2><ul class="lg-grid lg-people-grid">{cards}</ul></section>
+<section class="lg-block"><h2>{e(t("era.on_verses"))}</h2><p class="lg-quiet">{e(t("era.on_verses_note"))}</p>{samples}</section>
+<section class="lg-block"><h2>{e(t("era.verses_title", n=len(top)))}</h2>
+<div class="lg-table-wrap"><table class="lg-words lg-rank"><thead><tr>{head}</tr></thead><tbody>{verses}</tbody></table></div></section>
+<section class="lg-block"><h2>{e(t("era.chapters_title"))}</h2><ol class="lg-bars">{chapters}</ol></section>
+</article>"""
+    return page(lib, title, body, era_url(era), current="/commentators/",
+                head_title=t("era.head_title", book=name, era=t("era.in." + era)) + " · Logia",
+                description=t("era.description", book=name, era=t("era.in." + era), names=", ".join(a["name"] for a in people)),
+                ld=(breadcrumbs((t("commentators.title"), "/commentators/"), (title, era_url(era))),))
+
+
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
 #
 # Counts only: how many excerpts in the library are on each verse and
@@ -2762,6 +2875,10 @@ def build():
         pages.append(f"/{book.lower()}/scripture-cited/")
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
         pages.append(f"/{book.lower()}/most-discussed/")
+    for era in ERAS:
+        if any(a["era"] == era for a in lib.authors.values()):
+            write(era_url(era), era_page(lib, era))
+            pages.append(era_url(era))
     for oid, book, start, end, voices in occasions(lib):
         path = t(f"occasions.{oid}.path")
         write(path, passage_page(lib, book, "", start, end, voices, occasion=f"occasions.{oid}"))
