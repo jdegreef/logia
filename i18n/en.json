@@ -736,5 +736,40 @@
         "lazarus": "Lazarus raised"
       }
     }
+  },
+  "plan": {
+    "heading": "{book} in {n} days: a Lent reading plan",
+    "title": "Read {book} in Lent {year} with the church fathers: a 40-day plan",
+    "description": "A 40-day plan to read the Gospel of {book} through Lent {year}, a few passages a day, each with what the church fathers and later commentators wrote on it.",
+    "dek": "Read the whole of {book} through Lent {year}, from Ash Wednesday, {start}, to Holy Saturday, the day before Easter on {easter}. Each day's passages open with everything Logia holds on them, from the early church to the 1800s.",
+    "day": "Day {n}",
+    "date": "{weekday} {day} {month} {year}",
+    "weekdays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "ash_wednesday": "Ash Wednesday",
+    "good_friday": "Good Friday",
+    "note": "Sundays are not counted in Lent's forty days, so the plan leaves them free. Each day has about the same number of verses, kept to whole passages.",
+    "easter_link": "On Easter Day, read the Gospel for Easter."
   }
 }

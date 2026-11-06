@@ -23,6 +23,7 @@ web/style.css and the fonts are the Open Word Bible's own, and web/site.js
 is taken from its site script. web/logia.css adds Logia's own parts.
 """
 import csv
+import datetime
 import functools
 import glob
 import hashlib
@@ -47,6 +48,8 @@ SITE_URL = "https://logia.faith"
 OWB_SITE = os.environ.get("LOGIA_OWB_URL", "https://openwordbible.org").rstrip("/")
 API_URL = os.environ.get("LOGIA_API_URL", "https://api.openwordbible.org").rstrip("/")
 GITHUB_URL = "https://github.com/jdegreef/logia"
+# The Lent the reading plan gives dates for (/<book>/lent/).
+LENT_YEAR = 2027
 ERAS = ["Early church", "Middle Ages", "Reformation", "Puritans and the 1700s", "The 1800s"]
 OT_BOOKS = 39
 
@@ -1096,7 +1099,7 @@ def book_page(lib, book):
            if people else "")
     plist = passage_list(lib, book)
     passages = (f'<section class="lg-block" id="passages"><h2>{e(t("passage.list_title"))}</h2>'
-                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a>{" · " + collection_links(lib, book) if collection_links(lib, book) else ""}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
+                f'<p class="lg-quiet">{e(t("passage.list_note", book=name))} <a href="/{book.lower()}/most-discussed/">{e(t("most.heading", book=name))}</a> · <a href="/{book.lower()}/lent/">{e(t("plan.heading", book=name, n=40))}</a>{" · " + collection_links(lib, book) if collection_links(lib, book) else ""}</p><ul class="lg-people lg-wide">{plist}</ul></section>'
                 if plist else "")
     codes = list(lib.books)
     testament = "old" if codes.index(book) < OT_BOOKS else "new"
@@ -1684,7 +1687,8 @@ def readings_page(lib):
 <header class="page-head"><p class="eyebrow">{e(t("occasions.eyebrow"))}</p>
 <h1>{e(t("occasions.index_heading"))}</h1><p class="dek">{e(t("occasions.index_dek"))}</p></header>
 <section class="lg-block"><ul class="lg-people lg-wide lg-readings">{"".join(rows)}</ul>
-<p class="lg-quiet">{e(t("occasions.index_note"))}</p></section>"""
+<p class="lg-quiet">{e(t("occasions.index_note"))}</p>
+<p><a class="lg-more" href="/jhn/lent/">{e(t("plan.heading", book=lib.books["JHN"]["en"], n=40))} {icon("arrow", 15)}</a></p></section>"""
     return page(lib, t("occasions.index_heading"), body, "/readings/", current="/read/",
                 description=t("occasions.index_description"),
                 ld=(breadcrumbs((t("occasions.eyebrow"), "/readings/")),))
@@ -2352,6 +2356,82 @@ def collection_links(lib, book):
                       for c in collections(lib) if c["book"] == book)
 
 
+# --- Reading plans (/<book>/lent/) ------------------------------------------
+#
+# A book read through in Lent's forty days (Sundays are not counted), a few
+# of its passages a day, with the dates of a given year. The plan is a
+# schedule and links: nothing in it is commentary.
+
+def easter_day(year):
+    """Western Easter (the anonymous Gregorian computus)."""
+    a, b, c = year % 19, year // 100, year % 100
+    d, e_ = b // 4, b % 4
+    f = (b + 8) // 25
+    g = (b - f + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    i, k = c // 4, c % 4
+    lq = (32 + 2 * e_ + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * lq) // 451
+    month, day = divmod(h + lq - 7 * m + 114, 31)
+    return datetime.date(year, month, day + 1)
+
+
+def lent_days(year):
+    """The forty days of Lent, Ash Wednesday to Holy Saturday, without the Sundays."""
+    ash = easter_day(year) - datetime.timedelta(days=46)
+    days = [ash + datetime.timedelta(days=i) for i in range(46)]
+    return [d for d in days if d.weekday() != 6]
+
+
+def section_verses(book, start, end):
+    return sum(1 for c in range(start[0], end[0] + 1) for v in chapter_verses(book, c) if start <= (c, v) <= end)
+
+
+def plan_days(lib, book, n_days):
+    """The book's passages shared out over n_days in order, about the same number of verses each day."""
+    secs = book_sections(book, lib.books[book]["chapters"])
+    sizes = [section_verses(book, s_, e_) for _h, s_, e_ in secs]
+    total, days, run, done = sum(sizes), [], [], 0
+    for i, (sec, size) in enumerate(zip(secs, sizes)):
+        run.append(sec)
+        done += size
+        left = len(secs) - i - 1          # sections still to share out
+        to_fill = n_days - len(days) - 1  # days after this one
+        if to_fill and (done >= total * (len(days) + 1) / n_days or left == to_fill) and left >= to_fill:
+            days.append(run)
+            run = []
+    return days + [run] if run else days
+
+
+def lent_page(lib, book, year):
+    name = lib.books[book]["en"]
+    dates = lent_days(year)
+    days = plan_days(lib, book, len(dates))
+    rows = []
+    for i, (date, secs) in enumerate(zip(dates, days), 1):
+        links = " · ".join(f'<a href="{passage_url(book, s_, e_)}">{e(h)}</a> <span class="lg-quiet">{e(passage_ref(lib, book, s_, e_).replace(name + " ", ""))}</span>'
+                           for h, s_, e_ in secs)
+        special = ""
+        if i == 1:
+            special = f' <span class="lg-badge">{e(t("plan.ash_wednesday"))}</span>'
+        elif date == easter_day(year) - datetime.timedelta(days=2):
+            special = f' <span class="lg-badge">{e(t("plan.good_friday"))}</span>'
+        rows.append(f'<li><p class="lg-plan-day"><b>{e(t("plan.day", n=i))}</b> <span class="lg-quiet">{e(t("plan.date", weekday=t("plan.weekdays")[date.weekday()], day=date.day, month=t("plan.months")[date.month - 1], year=date.year))}</span>{special}</p>'
+                    f'<p>{links}</p></li>')
+    easter = easter_day(year)
+    body = f"""
+<article class="lg-verse lg-plan">
+<header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · <a href="/readings/">{e(t("occasions.eyebrow"))}</a></p>
+<h1>{e(t("plan.heading", book=name, n=len(dates)))}</h1><p class="dek">{e(t("plan.dek", book=name, year=year, start=f"{dates[0].day} {t('plan.months')[dates[0].month - 1]}", easter=f"{easter.day} {t('plan.months')[easter.month - 1]}"))}</p></header>
+<ol class="lg-plan-days">{"".join(rows)}</ol>
+<p class="lg-quiet">{e(t("plan.note"))} <a href="/easter/">{e(t("plan.easter_link"))}</a></p>
+</article>"""
+    return page(lib, t("plan.heading", book=name, n=len(dates)), body, f"/{book.lower()}/lent/", current="/read/",
+                head_title=t("plan.title", book=name, year=year) + " · Logia",
+                description=t("plan.description", book=name, year=year),
+                ld=(breadcrumbs((name, f"/{book.lower()}/"), (t("plan.heading", book=name, n=len(dates)), f"/{book.lower()}/lent/")),))
+
+
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
 #
 # Counts only: how many excerpts in the library are on each verse and
@@ -2536,6 +2616,8 @@ def build():
         write(path, text)
         pages.append(path)
     for book in dict.fromkeys(b for b, _c, _v in lib.voices_on):
+        write(f"/{book.lower()}/lent/", lent_page(lib, book, LENT_YEAR))
+        pages.append(f"/{book.lower()}/lent/")
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
         pages.append(f"/{book.lower()}/most-discussed/")
     for oid, book, start, end, voices in occasions(lib):

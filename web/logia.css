@@ -713,3 +713,10 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-collection .lg-ctext p { font-size: calc(18px * var(--read-scale)); }
 .lg-cnum { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 6px; border-radius: 50%; background: var(--gold); color: #fff; font-size: 14px; vertical-align: 3px; }
 .lg-collection .lg-ex-ref { flex-direction: row; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+
+/* Reading plans (/<book>/lent/). */
+.lg-plan-days { list-style: none; margin: 0; padding: 0; }
+.lg-plan-days li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.lg-plan-days p { margin: 0; }
+.lg-plan-day { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; margin-bottom: 2px !important; }
+.lg-plan-days a { text-decoration: none; font-weight: 600; }
