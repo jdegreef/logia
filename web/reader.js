@@ -115,20 +115,31 @@
     });
   }
 
+  // The commentators on a line of centuries, each a labelled pill at the year
+  // they died: tap one to open what they say. Pills that would overlap stack
+  // in lanes; a voice with nothing on this verse is faded.
   function renderRail() {
     var lo = 200, hi = 1950, pos = function (y) { return ((y - lo) / (hi - lo)) * 100; };
-    var h = '<div class="cx-rail-line"></div>';
+    var width = $("#rail").offsetWidth || 480, PILL = 40;
+    var h = "";
     [300, 600, 900, 1200, 1500, 1800].forEach(function (t) { h += '<span class="cx-tick" style="left:' + pos(t) + '%">' + t + "</span>"; });
-    var last = -99, lift = false;
+    var lanes = [];
     works.slice().sort(function (a, b) { return a.died - b.died; }).forEach(function (w) {
       var on = entriesFor(w, state.verse).length > 0 && state.eras.has(w.era);
-      var x = pos(w.died);
-      lift = x - last < 2.5 ? !lift : false; last = x;
-      h += '<button class="cx-dot' + (on ? "" : " cx-off") + '" style="left:' + x + "%;" + (lift ? "top:1px" : "") +
-        '" data-work="' + w.work_id + '" data-name="' + esc(w.author) + '" aria-label="' + esc(w.author) + '"></button>';
+      var x = pos(w.died), px = x / 100 * width;
+      var lane = 0;
+      while (lanes[lane] !== undefined && px - lanes[lane] < PILL + 3) lane++;
+      lanes[lane] = px;
+      var label = (w.short_name || w.author).slice(0, 3);
+      h += '<button type="button" class="cx-dot cx-lane' + Math.min(lane, 2) + (on ? "" : " cx-off") +
+        (on && state.open[w.work_id] ? " cx-cur" : "") + '" style="left:' + x + '%" data-work="' + w.work_id +
+        '" title="' + esc(w.author + ", " + w.author_dates) + '" aria-label="' + esc(w.author) + '"' + (on ? "" : " disabled") + ">" +
+        esc(label) + "</button>";
     });
-    $("#rail").innerHTML = h;
+    $("#rail").style.setProperty("--lanes", Math.min(lanes.length, 3));
+    $("#rail").innerHTML = '<div class="cx-rail-line"></div>' + h;
   }
+  window.addEventListener("resize", function () { if ($("#rail").offsetWidth) renderRail(); });
 
   function renderPanel() {
     var v = state.verse;
