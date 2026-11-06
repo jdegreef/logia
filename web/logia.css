@@ -360,3 +360,30 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-sugg [aria-selected="true"] a, .lg-sugg a:hover { background: var(--accent-soft); }
 .lg-sugg-none { padding: 10px 12px; color: var(--muted); font-size: 14px; }
 .hero .lg-search + .hero-try { margin-top: 14px; }
+
+/* Read: every book in a compact grid, by part of the canon; a book opens to
+   its chapters across the whole row. */
+.lg-read-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 8px 0 0; }
+.lg-read-tools .lg-read-search { margin: 0; flex: 1 1 360px; max-width: 560px; }
+.lg-jump { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); }
+.lg-jump a { padding: 6px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; }
+.lg-jump a:hover { color: var(--accent); background: var(--accent-soft); }
+.lg-testament { scroll-margin-top: calc(var(--header-h) + 12px); }
+.lg-canon { margin: 0 0 18px; }
+.lg-books { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
+.lg-bk details { border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.lg-bk details[open] { border-color: var(--line-strong); }
+.lg-bk:has(details[open]) { grid-column: 1 / -1; }
+.lg-bk summary { display: flex; align-items: baseline; gap: 4px 10px; flex-wrap: wrap; padding: 10px 40px 10px 14px; cursor: pointer;
+  list-style: none; position: relative; }
+.lg-bk summary::-webkit-details-marker { display: none; }
+.lg-bk summary:hover .lg-bk-name { color: var(--accent); }
+.lg-bk-name { font-family: var(--display); font-weight: 600; font-size: 17px; }
+.lg-bk .lg-quiet { font-size: 13px; }
+.lg-caret { position: absolute; right: 12px; top: 13px; color: var(--muted); transition: transform var(--fast) ease; }
+.lg-bk details[open] .lg-caret { transform: rotate(180deg); }
+.lg-badge { font-size: 12px; font-weight: 700; color: var(--gold); background: color-mix(in srgb, var(--gold) 14%, transparent);
+  border-radius: 999px; padding: 1px 9px; }
+.lg-bk-has details { border-color: color-mix(in srgb, var(--gold) 45%, var(--line)); }
+.lg-bk-open { padding: 0 14px 12px; }
+.lg-bk-open p { margin: 10px 0 0; font-size: 14px; }

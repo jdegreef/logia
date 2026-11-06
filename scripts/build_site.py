@@ -860,41 +860,67 @@ def chapter_pills(lib, book, cov, current=None):
     return "".join(out)
 
 
+# The parts of the canon the Read page groups the books in: (key, first book, last book).
+CANON_SECTIONS = (("pentateuch", "GEN", "DEU"), ("history", "JOS", "EST"), ("wisdom", "JOB", "SNG"),
+                  ("major_prophets", "ISA", "DAN"), ("minor_prophets", "HOS", "MAL"), ("gospels", "MAT", "ACT"),
+                  ("paul", "ROM", "PHM"), ("letters", "HEB", "REV"))
+
+
+def canon_section(lib, code):
+    """The CANON_SECTIONS key a book is in."""
+    codes = list(lib.books)
+    i = codes.index(code)
+    return next(k for k, a, b in CANON_SECTIONS if codes.index(a) <= i <= codes.index(b))
+
+
 def read_page(lib):
-    """The books in Logia first, each a tile with a pill per chapter (gold
-    where there is commentary), then the books still to come, by testament."""
+    """Every book, by testament and part of the canon: a compact grid of
+    names, each opening to its chapters (gold where there is commentary).
+    Books with commentary start open."""
     cov = lib.coverage()
     have = {b for b, _c in lib.chapters}
     codes = list(lib.books)
-    tiles = []
-    for code in codes:
-        if code not in have:
-            continue
-        name = lib.books[code]["en"]
-        total = lib.books[code]["chapters"]
-        done = sum(1 for (b, _c) in cov if b == code)
-        progress = (t("read.commentary_on_one", total=total) if done == 1 else
-                    t("read.commentary_on", n=done, total=total) if done else t("read.text_only"))
-        tiles.append(
-            f'<li class="book-item"><details id="{code.lower()}" open>'
-            f'<summary class="book-tile"><span class="book-tile-name">{e(name)}</span>'
-            f'<span class="book-progress{" done" if done == total else ""}">{e(progress)}</span>'
-            f'<span class="meter" aria-hidden="true"><span style="width:{100 * done / total:.0f}%"></span></span></summary>'
-            f'<div class="book-open"><div class="chap-pills">{chapter_pills(lib, code, cov)}</div>'
-            f'<p class="book-open-links"><a class="book-page-link" href="/{code.lower()}/">'
-            f'{e(t("read.book_page", book=name))}&nbsp;&rarr;</a></p></div></details></li>')
+    commented = [c for c in codes if any(b == c for b, _c in cov)]
+    parts = []
+    for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
+        sections = []
+        for sec, a, b in CANON_SECTIONS:
+            books = [c for c in codes[codes.index(a):codes.index(b) + 1] if c in part and c in have]
+            if not books:
+                continue
+            tiles = []
+            for code in books:
+                name, total = lib.books[code]["en"], lib.books[code]["chapters"]
+                done = sum(1 for (bk, _c) in cov if bk == code)
+                badge = (f'<span class="lg-badge">{e(t("read.commentary_short", n=done, total=total))}</span>' if done
+                         else f'<span class="lg-quiet">{e(t("read.chapters", n=total))}</span>')
+                tiles.append(
+                    f'<li class="lg-bk{" lg-bk-has" if done else ""}"><details id="{code.lower()}"{" open" if done else ""}>'
+                    f'<summary><span class="lg-bk-name">{e(name)}</span>{badge}{icon("chevron", 16, "icon lg-caret")}</summary>'
+                    f'<div class="lg-bk-open"><div class="chap-pills">{chapter_pills(lib, code, cov)}</div>'
+                    f'<p><a class="book-page-link" href="/{code.lower()}/">{e(t("read.book_page", book=name))}&nbsp;&rarr;</a></p>'
+                    f'</div></details></li>')
+            sections.append(f'<section class="lg-canon" aria-labelledby="sec-{sec}"><h3 class="label" id="sec-{sec}">'
+                            f'{e(t("canon." + sec))}</h3><ul class="lg-books">{"".join(tiles)}</ul></section>')
+        parts.append(f'<section class="lg-block lg-testament" id="{"ot" if key == "old" else "nt"}" aria-labelledby="h-{key}">'
+                     f'<h2 id="h-{key}">{e(t("testaments." + key))}</h2>{"".join(sections)}</section>')
     coming = ""
     for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
         names = [f'<li><span class="book-chip none">{e(lib.books[c]["en"])}</span></li>' for c in part if c not in have]
         if names:
             coming += (f'<section class="testament"><div class="testament-head"><h3>{e(t("testaments." + key))}</h3>'
                        f'<span>{len(names)}</span></div><ul class="book-chips">{"".join(names)}</ul></section>')
+    if coming:
+        coming = (f'<section class="lg-block lg-coming" aria-labelledby="h-coming"><h2 id="h-coming">{e(t("read.coming"))}</h2>'
+                  f'<p class="lg-quiet">{e(t("read.coming_note"))}</p><div class="testaments">{coming}</div></section>')
+    so_far = ", ".join(lib.books[c]["en"] for c in commented) or "—"
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("read.title"))}</p>
-<h1>{e(t("read.heading"))}</h1><p class="dek">{e(t("read.dek"))}</p></header>
-<nav class="book-index" aria-label="{e(t("read.title"))}"><ul class="book-tiles">{"".join(tiles)}</ul></nav>
-<section class="lg-block lg-coming" aria-labelledby="h-coming"><h2 id="h-coming">{e(t("read.coming"))}</h2>
-<p class="lg-quiet">{e(t("read.coming_note"))}</p><div class="testaments">{coming}</div></section>"""
+<h1>{e(t("read.heading"))}</h1><p class="dek">{e(t("read.dek", books=so_far))}</p></header>
+<div class="lg-read-tools">{search_box(lib, "read-q", "hero-search lg-read-search")}
+<nav class="lg-jump" aria-label="{e(t("read.jump"))}"><a href="#ot">{e(t("testaments.old"))}</a><a href="#nt">{e(t("testaments.new"))}</a></nav></div>
+<div class="book-index">{"".join(parts)}</div>
+{coming}"""
     return page(lib, t("read.title"), body, "/read/", current="/read/")
 
 
