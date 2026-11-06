@@ -1369,9 +1369,25 @@ def work_page(lib, wid):
     if w["translation"]:
         facts.append((t("work.translation"), w["translation"]))
     facts += [(t("work.published"), str(w["published"])), (t("work.source"), source),
-              (t("work.rights"), f'{w["rights"]["basis"]}; {w["rights"]["worldwide"]}'),
               (t("work.in_logia"), t("work.excerpts", n=len(comments)))]
     dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
+    # Rights, said plainly: the status in the US and worldwide as pills, and
+    # the record's own words beneath.
+    r = w["rights"]
+    us = r["basis"].lower().startswith("public domain")
+    world = r["worldwide"].lower()
+    pills = (f'<span class="lg-pill {"lg-pill-ok" if us else "lg-pill-draft"}">{e(t("work.rights_us" if us else "work.rights_us_check"))}</span> '
+             f'<span class="lg-pill {"lg-pill-ok" if world.startswith("public domain") else "lg-pill-draft"}">'
+             f'{e(t("work.rights_world" if world.startswith("public domain") else "work.rights_world_check"))}</span>')
+    dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{pills}</span>'
+           f'<span class="lg-quiet lg-rights-note">{e(r["basis"])}; {e(r["worldwide"])}</span></dd>')
+    # The edition as a citation gives it: up to its first note in brackets
+    # or after a semicolon (which name the scan or the series).
+    edition = re.match(r"^[^;(]+", w["edition"])[0].strip().rstrip(",.")
+    citation = t("work.citation", name=a["name"], title=w["title"], edition=edition)
+    cite = (f'<div class="lg-cite-box"><p class="label">{e(t("work.cite"))}</p><p class="lg-cite-text">{e(citation)}</p>'
+            f'<button type="button" class="button ghost lg-copy" data-copy="{e(citation)}" data-done="{e(t("work.cite_copied"))}">'
+            f'{e(t("work.cite_copy"))}</button></div>')
     contents = work_contents(lib, wid, comments)
     texts = lib.texts.get(wid, [])
     whole = ""
@@ -1398,7 +1414,7 @@ def work_page(lib, wid):
 <header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 <p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
-<dl class="lg-facts">{dl}</dl>
+<section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 <ol class="lg-contents">{contents}</ol></section>"""
