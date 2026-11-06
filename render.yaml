@@ -51,3 +51,6 @@ services:
       - path: /reader.js
         name: Cache-Control
         value: public, max-age=31536000, immutable
+      - path: /logia.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
