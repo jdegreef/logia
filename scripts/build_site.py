@@ -970,7 +970,7 @@ def home_page(lib):
 <a class="button ghost" href="/read/">{e(t("home.browse"))}</a></p>
 {search_box(lib, "home-q")}
 <p class="hero-try">{e(t("search.try"))} <a href="/jhn/1/#v1">John 1:1</a> <a href="/jhn/3/#v16">John 3:16</a> <a href="/jhn/11/#v25">John 11:25</a> <a href="/jhn/14/#v6">John 14:6</a></p>
-<p class="hero-try">{e(t("home.season"))} <a href="{e(t("occasions.christmas.path"))}">{e(t("home.season_link"))}</a></p>
+<p class="hero-try">{e(t("home.season"))} <a href="{e(t("occasions.christmas.path"))}">{e(t("home.season_link"))}</a> · <a href="/readings/">{e(t("home.readings_link"))}</a></p>
 </section>
 {home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
@@ -1653,6 +1653,43 @@ def excerpt_href(lib, c):
     return f'{work_chapter_url(c["work"], b, ch)}#{c["id"]}'
 
 
+def occasion_text(occasion, field, **values):
+    """An occasion's own wording for field, or the shared one, which names it."""
+    own = CATALOG
+    for part in (occasion + "." + field).split("."):
+        own = own.get(part) if isinstance(own, dict) else None
+    return own.format(**values) if own else t("occasions." + field, name=t(occasion + ".name"), **values)
+
+
+def occasions(lib):
+    """[(id, book, start, end, voices)] for each reading in library/occasions.json, in the church year's order."""
+    out = []
+    for o in load(os.path.join(ROOT, "library", "occasions.json"))["occasions"]:
+        book, sc, sv = ref_parts(o["start"])
+        _b, ec, ev = ref_parts(o["end"])
+        out.append((o["id"], book, (sc, sv), (ec, ev), in_passage(lib, book, (sc, sv), (ec, ev))))
+    return out
+
+
+def readings_page(lib):
+    """/readings/: the days of the church year whose Gospel Logia has a page for."""
+    rows = []
+    for oid, book, start, end, voices in occasions(lib):
+        key = f"occasions.{oid}"
+        n = sum(len(cs) for _w, cs in voices)
+        rows.append(f'<li><a href="{e(t(key + ".path"))}"><b>{e(t(key + ".name"))}</b> '
+                    f'<span>{e(passage_ref(lib, book, start, end))} · {e(t(key + ".season"))} · {e(t("passage.n_excerpts", n=n))}</span></a>'
+                    f'<p class="lg-quiet">{e(t(key + ".read"))}</p></li>')
+    body = f"""
+<header class="page-head"><p class="eyebrow">{e(t("occasions.eyebrow"))}</p>
+<h1>{e(t("occasions.index_heading"))}</h1><p class="dek">{e(t("occasions.index_dek"))}</p></header>
+<section class="lg-block"><ul class="lg-people lg-wide lg-readings">{"".join(rows)}</ul>
+<p class="lg-quiet">{e(t("occasions.index_note"))}</p></section>"""
+    return page(lib, t("occasions.index_heading"), body, "/readings/", current="/read/",
+                description=t("occasions.index_description"),
+                ld=(breadcrumbs((t("occasions.eyebrow"), "/readings/")),))
+
+
 def passage_page(lib, book, heading, start, end, voices, occasion=None):
     """A passage's page: its Bible text, then each commentator's excerpts on
     it, opening with their first words. occasion, when given, is the key in
@@ -1700,15 +1737,16 @@ def passage_page(lib, book, heading, start, end, voices, occasion=None):
     intro = ""
     if occasion:
         path = t(occasion + ".path")
-        title = t(occasion + ".heading", ref=ref)
-        eyebrow = e(t(occasion + ".eyebrow"))
+        title = occasion_text(occasion, "heading", ref=ref)
+        eyebrow = (f'<a href="/readings/">{e(t("occasions.eyebrow"))}</a> · {e(t(occasion + ".season"))}')
         intro = f'<p class="dek">{e(t(occasion + ".intro", ref=ref))}</p>'
-    crumbs = [("Logia", "/"), (name, f"/{book.lower()}/"), (title if occasion else heading, path)]
+    crumbs = ([("Logia", "/"), (t("occasions.eyebrow"), "/readings/"), (title, path)] if occasion
+              else [("Logia", "/"), (name, f"/{book.lower()}/"), (heading, path)])
     shown = names[:3]
     title_names = name_list(shown) if len(names) <= 3 else t("verse.title_more", names=", ".join(shown), n=len(names) - 3)
-    head_title = (t(occasion + ".title", ref=ref, names=title_names) if occasion
+    head_title = (occasion_text(occasion, "title", ref=ref, names=title_names) if occasion
                   else t("passage.title", heading=heading, ref=ref, names=title_names)) + " · Logia"
-    description = (t(occasion + ".description", ref=ref, n=n, names=name_list(names)) if occasion
+    description = (occasion_text(occasion, "description", ref=ref, n=n, names=name_list(names)) if occasion
                    else t("passage.description", heading=heading, ref=ref, n=n, names=name_list(names)))
     body = f"""
 <article class="lg-verse lg-passage">
@@ -2424,13 +2462,12 @@ def build():
     for book in dict.fromkeys(b for b, _c, _v in lib.voices_on):
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
         pages.append(f"/{book.lower()}/most-discussed/")
-    for o in load(os.path.join(ROOT, "library", "occasions.json"))["occasions"]:
-        book, sc, sv = ref_parts(o["start"])
-        _b, ec, ev = ref_parts(o["end"])
-        voices = in_passage(lib, book, (sc, sv), (ec, ev))
-        path = t(f'occasions.{o["id"]}.path')
-        write(path, passage_page(lib, book, "", (sc, sv), (ec, ev), voices, occasion=f'occasions.{o["id"]}'))
+    for oid, book, start, end, voices in occasions(lib):
+        path = t(f"occasions.{oid}.path")
+        write(path, passage_page(lib, book, "", start, end, voices, occasion=f"occasions.{oid}"))
         pages.append(path)
+    write("/readings/", readings_page(lib))
+    pages.append("/readings/")
     write("/commentators/", commentators_page(lib))
     pages.append("/commentators/")
     for author in lib.ordered_authors():

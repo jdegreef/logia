@@ -1,6 +1,35 @@
 {
-  "about": "Readings Logia builds a page for: each gives its passage, and its words are in i18n/<lang>.json under occasions.<id>.",
+  "about": "The days of the church year Logia builds a Gospel page for, in the year's order: each gives its passage, and its words are in i18n/<lang>.json under occasions.<id>.",
   "occasions": [
-    {"id": "christmas", "start": "JHN.1.1", "end": "JHN.1.14"}
+    {
+      "id": "christmas",
+      "start": "JHN.1.1",
+      "end": "JHN.1.14"
+    },
+    {
+      "id": "maundy-thursday",
+      "start": "JHN.13.1",
+      "end": "JHN.13.17"
+    },
+    {
+      "id": "good-friday",
+      "start": "JHN.18.1",
+      "end": "JHN.19.42"
+    },
+    {
+      "id": "easter",
+      "start": "JHN.20.1",
+      "end": "JHN.20.18"
+    },
+    {
+      "id": "second-sunday-of-easter",
+      "start": "JHN.20.19",
+      "end": "JHN.20.31"
+    },
+    {
+      "id": "pentecost",
+      "start": "JHN.15.26",
+      "end": "JHN.16.15"
+    }
   ]
 }
