@@ -1179,19 +1179,7 @@ def work_page(lib, wid):
               (t("work.rights"), f'{w["rights"]["basis"]}; {w["rights"]["worldwide"]}'),
               (t("work.in_logia"), t("work.excerpts", n=len(comments)))]
     dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
-    full = []
-    chapter = None
-    for c in comments:
-        b, ch, v = ref_parts(c["start"])
-        _, ech, ev = ref_parts(c["end"])
-        if (b, ch) != chapter:
-            chapter = (b, ch)
-            full.append(f'<h3 class="lg-chapter">{e(lib.books[b]["en"])} {ch}</h3>')
-        ref = f"{lib.books[b]['en']} {ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "")
-        heading = f'<p class="lg-lemma">{e(c["heading"])}</p>' if c["heading"] else ""
-        paras = "".join(f"<p>{e(p.strip())}</p>" for p in c["text"].split("\n\n"))
-        full.append(f'<article class="lg-excerpt" id="{e(c["id"])}"><p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
-                    f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>{heading}<div class="lg-text">{paras}</div></article>')
+    contents = work_contents(lib, wid, comments)
     texts = lib.texts.get(wid, [])
     whole = ""
     if texts:
@@ -1219,10 +1207,65 @@ def work_page(lib, wid):
 <p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
 <dl class="lg-facts">{dl}</dl>
 {whole}
-<section class="lg-block"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
-<div class="lg-book">{"".join(full)}</div></section>"""
+<section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
+<ol class="lg-contents">{contents}</ol></section>"""
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+
+
+def work_chapters(comments):
+    """{(book, chapter): [excerpts]} in canonical order, for a work's excerpts sorted by order_key."""
+    out = {}
+    for c in comments:
+        b, ch, _v = ref_parts(c["start"])
+        out.setdefault((b, ch), []).append(c)
+    return out
+
+
+def work_chapter_url(wid, book, chapter):
+    return f"/works/{wid}/{book.lower()}/{chapter}/"
+
+
+def work_contents(lib, wid, comments, current=None):
+    """A work's chapters, each linking to its page with how many excerpts it has."""
+    return "".join(
+        f'<li><a href="{work_chapter_url(wid, b, ch)}"{" aria-current=page" if (b, ch) == current else ""}>'
+        f'<span>{e(lib.books[b]["en"])} {ch}</span><span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))}</span></a></li>'
+        for (b, ch), cs in work_chapters(comments).items())
+
+
+def work_chapter_page(lib, wid, book, chapter, comments):
+    """One chapter of a work: its excerpts in order, beside the work's contents."""
+    w, a = lib.works[wid], lib.author_of(wid)
+    chapters = list(work_chapters(comments))
+    here = work_chapters(comments)[(book, chapter)]
+    name = f'{lib.books[book]["en"]} {chapter}'
+    full = []
+    for c in here:
+        b, ch, v = ref_parts(c["start"])
+        _, ech, ev = ref_parts(c["end"])
+        ref = f"{lib.books[b]['en']} {ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "")
+        heading = f'<p class="lg-lemma">{e(c["heading"])}</p>' if c["heading"] else ""
+        paras = "".join(f"<p>{e(p.strip())}</p>" for p in c["text"].split("\n\n"))
+        full.append(f'<article class="lg-excerpt" id="{e(c["id"])}"><p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
+                    f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>{heading}<div class="lg-text">{paras}</div></article>')
+    i = chapters.index((book, chapter))
+    turns = [f'<a rel="prev" href="{work_chapter_url(wid, *chapters[i - 1])}">&larr; {e(lib.books[chapters[i - 1][0]]["en"])} {chapters[i - 1][1]}</a>'
+             if i else "<span></span>",
+             f'<a rel="next" href="{work_chapter_url(wid, *chapters[i + 1])}">{e(lib.books[chapters[i + 1][0]]["en"])} {chapters[i + 1][1]} &rarr;</a>'
+             if i + 1 < len(chapters) else "<span></span>"]
+    body = f"""
+<div class="lg-work-layout">
+<nav class="lg-work-toc" aria-labelledby="toc-h"><p class="label" id="toc-h"><a href="/works/{wid}/#contents">{e(t("work.contents"))}</a></p>
+<ol class="lg-contents">{work_contents(lib, wid, comments, (book, chapter))}</ol></nav>
+<article class="lg-work-main">
+<header class="page-head"><p class="eyebrow"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a> · <a href="/works/{wid}/">{e(w["title"])}</a></p>
+<h1>{e(name)}</h1><p class="dek">{e(t("work.chapter_dek", n=len(here), name=name))}</p></header>
+<div class="lg-book">{"".join(full)}</div>
+<nav class="lg-turns" aria-label="{e(w["title"])}">{"".join(turns)}</nav>
+</article></div>"""
+    return page(lib, f'{a["name"]} on {name}', body, work_chapter_url(wid, book, chapter), current="/commentators/",
+                description=t("work.chapter_description", name=a["name"], title=w["title"], chapter=name, n=len(here)))
 
 
 def text_lead(x):
@@ -1424,6 +1467,10 @@ def build():
     for wid in lib.ordered_works():
         write(f"/works/{wid}/", work_page(lib, wid))
         pages.append(f"/works/{wid}/")
+        comments = sorted((c for c in lib.comments if c["work"] == wid), key=order_key)
+        for book, chapter in work_chapters(comments):
+            write(work_chapter_url(wid, book, chapter), work_chapter_page(lib, wid, book, chapter, comments))
+            pages.append(work_chapter_url(wid, book, chapter))
         for x in lib.texts.get(wid, []):
             write(f"/works/{wid}/{x['locus']}/", text_page(lib, wid, x))
             pages.append(f"/works/{wid}/{x['locus']}/")
