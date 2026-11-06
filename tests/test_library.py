@@ -593,6 +593,21 @@ class Site(unittest.TestCase):
         self.assertIn('href="/commentators/chrysostom/"', text)
         self.assertIn('href="/works/catena/fathers/"', self.read(os.path.join("works", "catena", "index.html")))
 
+    def test_each_era_page_shows_its_commentators_on_well_known_verses(self):
+        lib = build_site.Library()
+        for era in build_site.ERAS:
+            people = [a for a in lib.authors.values() if a["era"] == era]
+            if not people:
+                continue
+            text = self.read(os.path.join(build_site.era_url(era).strip("/"), "index.html"))
+            for a in people:
+                self.assertIn(f'href="/commentators/{a["id"]}/"', text)
+            works = {w for w, x in lib.works.items() if lib.authors[x["author"]]["era"] == era}
+            c = build_site.first_on(lib, works, "JHN.1.1")
+            self.assertIsNotNone(c)
+            self.assertIn(build_site.excerpt_href(lib, c), text)
+        self.assertIn('href="/commentators/era/early-church/"', self.read(os.path.join("commentators", "index.html")))
+
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
         self.assertIn('href="/jhn/3/16/"', text)
