@@ -634,9 +634,9 @@ def site_footer(lib):
         return "".join(f'<li><a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(label)}</a></li>'
                        for href, label in pairs)
 
-    read = [("/read/", t("nav.all_books"))] + [(chapter_url(b, c), f'{lib.books[b]["en"]} {c}')
-                                               for (b, c) in sorted(cov)][:6]
-    people = [(f'/commentators/{a["id"]}/', a["name"]) for a in lib.ordered_authors()]
+    read = [("/read/", t("nav.all_books"))] + [(f"/{b.lower()}/", lib.books[b]["en"])
+                                               for b in dict.fromkeys(b for b, _c in sorted(cov))][:4]
+    people = [("/commentators/", t("nav.all_commentators"))]
     project = [("/about/", t("nav.about_logia")), ("/about/#checked", t("nav.checked")),
                (OWB_SITE + "/", t("nav.owb")), (GITHUB_URL, t("nav.source")),
                (GITHUB_URL + "/issues/new", t("footer.report"))]
@@ -645,13 +645,14 @@ def site_footer(lib):
 <a class="brand" href="/">{MARK}<span class="brand-name">Logia</span></a>
 <p>{e(t("site.tagline"))}</p>
 <p class="foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("site.licence"))}</p>
-</div></div>
+</div>
 <nav class="foot-books" aria-labelledby="foot-read"><h2 id="foot-read">{e(t("footer.books_with"))}</h2>
 <div class="testaments">{"".join(tiers)}</div>
-<p class="lg-quiet lg-foot-note">{e(t("footer.every_book"))} <a href="/read/">{e(t("footer.all_books"))}</a></p></nav>
+<p class="lg-quiet lg-foot-note">{e(t("footer.every_book"))} <a href="/read/">{e(t("footer.all_books"))}</a></p></nav></div>
 <div class="foot-grid">
 <nav aria-labelledby="foot-r"><h2 id="foot-r">{e(t("footer.read"))}</h2><ul>{links(read)}</ul></nav>
-<nav aria-labelledby="foot-c"><h2 id="foot-c">{e(t("footer.commentators"))}</h2><ul>{links(people)}</ul></nav>
+<nav aria-labelledby="foot-c"><h2 id="foot-c">{e(t("footer.commentators"))}</h2><ul>{links(people)}</ul>
+<p class="lg-foot-names">{" · ".join(f'<a href="/commentators/{a["id"]}/">{e(short_name(a))}</a>' for a in lib.ordered_authors())}</p></nav>
 <nav aria-labelledby="foot-p"><h2 id="foot-p">{e(t("footer.project"))}</h2><ul>{links(project)}</ul></nav>
 </div>
 <div class="foot-base"><p class="foot-review">{e(t("footer.review"))}</p><p>{e(t("footer.licences"))}</p></div>
