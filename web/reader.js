@@ -35,6 +35,7 @@
     share: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8M5 12.5v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>'
   };
   ICON.chevron = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+  ICON.copy = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
   hiddenEras().forEach(function (e) { state.eras.delete(e); });
   // Whether a voice's card is open on the chosen verse (see commTab).
@@ -360,6 +361,8 @@
       '<span class="cx-act-label">' + esc(liked ? U.liked : U.like) + "</span></button>" +
       '<button type="button" class="cx-act cx-save" data-act="save" aria-pressed="' + isSaved + '" title="' + esc(isSaved ? U.saved : U.save) + '">' + ICON.save +
       '<span class="cx-act-label">' + esc(isSaved ? U.saved : U.save) + "</span></button>" +
+      '<button type="button" class="cx-act" data-act="cite" title="' + esc(U.copy_cite) + '">' + ICON.copy + '<span class="cx-act-label">' + esc(U.copy_cite) +
+      "</span></button>" +
       '<button type="button" class="cx-act" data-act="share" title="' + esc(U.share) + '">' + ICON.share + '<span class="cx-act-label">' + esc(U.share) +
       "</span></button></div>" + note;
   }
@@ -376,6 +379,7 @@
     var w = works.filter(function (x) { return x.work_id === box.getAttribute("data-work"); })[0];
     var kind = button.getAttribute("data-act");
     if (kind === "share") return share(w, key);
+    if (kind === "cite") return cite(w, key);
     if (!Account || !Account.user()) return signInNote(key);
     var mark = kind === "like" ? "liked" : "saved";
     var on = !(state.marks && state.marks[mark][key]);
@@ -409,6 +413,21 @@
       refresh();
     };
     if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+    else done(false);
+  }
+
+  // The excerpt with its citation, for a sermon or a paper: the words as
+  // Logia has them, then who, which work and edition, the verse, and a link.
+  function cite(w, key) {
+    var v = +key.split(".").pop();
+    var url = location.origin + location.pathname + "#v" + v + "-" + w.work_id;
+    var words = entriesFor(w, v).map(function (e) { return e.excerpt.trim(); }).join("\n\n");
+    var text = "\u201c" + words + "\u201d\n\n" + fmt(U.citation, { name: w.author, title: w.title, edition: w.edition_short, ref: REF(v), url: url });
+    var done = function (ok) {
+      state.note = { key: key, html: ok ? esc(U.copied_cite) : esc(U.copy_this) + ' <textarea class="cx-copy" readonly rows="4">' + esc(text) + "</textarea>" };
+      refresh();
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
     else done(false);
   }
 
