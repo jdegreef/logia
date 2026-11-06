@@ -1434,14 +1434,27 @@ def work_chapter_page(lib, wid, book, chapter, comments):
     here = work_chapters(comments)[(book, chapter)]
     name = f'{lib.books[book]["en"]} {chapter}'
     full = []
+    text = lib.plain(book, chapter)
+    shown = None
     for c in here:
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
         ref = f"{lib.books[b]['en']} {ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "")
         heading = f'<p class="lg-lemma">{e(c["heading"])}</p>' if c["heading"] else ""
         paras = "".join(f"<p>{e(p.strip())}</p>" for p in c["text"].split("\n\n"))
-        full.append(f'<article class="lg-excerpt" id="{e(c["id"])}"><p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
-                    f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>{heading}<div class="lg-text">{paras}</div></article>')
+        # The verse being commented on, in the margin, once for a run of
+        # excerpts on the same verses (at most three verses of it).
+        side, label = "", ""
+        if (v, ech, ev) != shown:
+            shown = (v, ech, ev)
+            last = min(ev if ech == ch else max(text), v + 2)
+            words = " ".join(f'<sup>{x}</sup>{e(text[x])}' for x in range(v, last + 1) if x in text)
+            more = " …" if last < (ev if ech == ch else max(text)) else ""
+            side = (f'<aside class="lg-side"><p class="label">{e(ref)} · {e(t("work.bible_text"))}</p>'
+                    f'<p class="lg-side-text">{words}{more}</p></aside>') if words else ""
+            label = (f'<p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
+                     f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>')
+        full.append(f'<article class="lg-excerpt lg-excerpt-side" id="{e(c["id"])}">{label}{heading}<div class="lg-text">{paras}</div>{side}</article>')
     i = chapters.index((book, chapter))
     turns = [f'<a rel="prev" href="{work_chapter_url(wid, *chapters[i - 1])}">&larr; {e(lib.books[chapters[i - 1][0]]["en"])} {chapters[i - 1][1]}</a>'
              if i else "<span></span>",
@@ -1454,7 +1467,7 @@ def work_chapter_page(lib, wid, book, chapter, comments):
 <article class="lg-work-main">
 <header class="page-head"><p class="eyebrow"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a> · <a href="/works/{wid}/">{e(w["title"])}</a></p>
 <h1>{e(name)}</h1><p class="dek">{e(t("work.chapter_dek", n=len(here), name=name))}</p></header>
-<div class="lg-book">{"".join(full)}</div>
+<div class="lg-book lg-book-side">{"".join(full)}</div>
 <nav class="lg-turns" aria-label="{e(w["title"])}">{"".join(turns)}</nav>
 </article></div>"""
     return page(lib, f'{a["name"]} on {name}', body, work_chapter_url(wid, book, chapter), current="/commentators/",
