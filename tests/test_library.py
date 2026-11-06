@@ -308,6 +308,22 @@ class Site(unittest.TestCase):
         self.assertIn('href="/works/westcott/jhn/3/"', text)
         self.assertNotIn('class="lg-in-order"', self.read("rom/8/index.html"))
 
+    def test_pages_carry_a_share_card_and_data_for_search_engines(self):
+        home = self.read("index.html")
+        self.assertIn('<meta property="og:image" content="https://logia.faith/card.png">', home)
+        self.assertIn('"@type":"WebSite"', home)
+        self.assertIn("<title>Logia: Bible commentary", home)
+        self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "card.png")))
+        chapter = self.read("jhn/3/index.html")
+        self.assertIn('"@type":"BreadcrumbList"', chapter)
+        self.assertIn("<title>John 3 commentary: Chrysostom, Augustine, Aquinas and 5 more", chapter)
+        self.assertIn('"@type":"Person"', self.read("commentators/calvin/index.html"))
+
+    def test_a_commentator_page_lists_the_verses_they_pass_over(self):
+        text = self.read("commentators/calvin/index.html")
+        self.assertRegex(text, r'class="lg-missing"><summary>Verses with no comment from Calvin \(\d+\)</summary>')
+        self.assertNotIn("lg-missing", self.read("commentators/ryle/index.html"))
+
     def test_accounts_are_open_word_bible_s(self):
         text = self.read("index.html")
         self.assertIn('<meta name="logia-api" content="https://api.openwordbible.org">', text)

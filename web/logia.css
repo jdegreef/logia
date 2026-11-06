@@ -648,3 +648,8 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-nf-try { justify-content: center; }
 .lg-not-found .auth-card { max-width: 520px; }
 .lg-nf-search input, .lg-nf-search input:focus { border: 0; background: none; box-shadow: none; margin: 0; width: auto; height: auto; padding: 8px 8px 8px 44px; border-radius: 0; }
+
+/* A commentator's facts card: the verses they have no comment on. */
+.lg-missing { margin-top: 8px; font-size: 13.5px; }
+.lg-missing summary { cursor: pointer; color: var(--muted); }
+.lg-missing p { margin: 6px 0 0; line-height: 1.6; }
