@@ -961,6 +961,13 @@ def chapter_page(lib, book, chapter, all_chapters):
 <div class="cx-pb" id="pb"></div>
 </aside>
 </div>
+<dialog class="cx-compare" id="compare" aria-labelledby="compare-ref">
+<div class="cx-compare-head"><h2 id="compare-ref"></h2>
+<button type="button" class="cx-compare-close" data-close aria-label="{e(t("reader.close"))}">{icon("close", 20)}</button></div>
+<p class="cx-compare-text" id="compare-text"></p>
+<div class="cx-picks" id="compare-picks"></div>
+<div class="cx-cols" id="compare-cols"></div>
+</dialog>
 {credits}
 <script type="application/json" id="chapter-data">{json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")}</script>"""
     n = len(commentaries)

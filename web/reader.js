@@ -35,6 +35,7 @@
     share: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8M5 12.5v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>'
   };
   ICON.chevron = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+  ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
   hiddenEras().forEach(function (e) { state.eras.delete(e); });
   // Whether a voice's card is open on the chosen verse (see commTab).
   function isOpen(work) {
@@ -273,11 +274,26 @@
           esc(fmt(U.read_it_on, { ref: r.ref })) + "</a></div></div>";
       }).join("") + "</section>";
   }
+  // A voice's excerpts on a verse: where each sits, its lemma, its text.
+  function excerptsHtml(w, es) {
+    return es.map(function (e) {
+      var where = [e.start === e.end ? "" : fmt(U.on_verses, { a: e.start, b: e.end }), locusLabel(w, e.locus)]
+        .filter(Boolean).join(" · ");
+      var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
+      var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
+        ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
+      return range + lemma + paras(linked(e.excerpt, e.cites)) + traced(e);
+    }).join("");
+  }
   function commTab() {
     var v = state.verse;
     var h = '<div class="cx-chips" role="group" aria-label="' + esc(U.show_eras) + '">' + ERAS.map(function (e) {
       return '<button class="cx-chip" data-era="' + esc(e) + '" aria-pressed="' + state.eras.has(e) + '">' + esc(U.eras[e]) + "</button>";
     }).join("") + "</div>";
+    var shown = works.filter(function (w) { return state.eras.has(w.era) && entriesFor(w, v).length; });
+    if (COMM && shown.length > 1) {
+      h += '<button type="button" class="cx-compare-btn" data-compare>' + ICON.columns + esc(U.compare) + "</button>";
+    }
     var any = false;
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
@@ -287,14 +303,7 @@
       h += '<div class="cx-era">' + esc(U.eras[era]) + "</div>";
       ws.forEach(function (w) {
         var es = entriesFor(w, v);
-        var body = es.map(function (e) {
-          var where = [e.start === e.end ? "" : fmt(U.on_verses, { a: e.start, b: e.end }), locusLabel(w, e.locus)]
-            .filter(Boolean).join(" · ");
-          var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
-          var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
-            ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
-          return range + lemma + paras(linked(e.excerpt, e.cites)) + traced(e);
-        }).join("");
+        var body = excerptsHtml(w, es);
         var words = es.reduce(function (n, e) { return n + e.excerpt.split(/\s+/).length; }, 0);
         var long = words > 140 && !fullExcerpts();
         // A voice opens as two lines of its excerpt; the reader opens the ones
@@ -441,6 +450,57 @@
     }).join("") + '</div><p class="cx-hint">' + esc(U.xref_credit) + "</p>";
   }
 
+  // Compare: two or three voices on the chosen verse in columns, in a
+  // dialog over the page (#compare, chapter_page in scripts/build_site.py).
+  var cmp = { picked: [] };
+  function voicesHere() {
+    return works.filter(function (w) { return entriesFor(w, state.verse).length; });
+  }
+  function openCompare() {
+    var vs = voicesHere();
+    var ids = vs.map(function (w) { return w.work_id; });
+    cmp.picked = cmp.picked.filter(function (id) { return ids.indexOf(id) >= 0; });
+    if (cmp.picked.length < 2) {
+      // The earliest, the latest and one between: the widest spread of the eras.
+      var pick = vs.length <= 3 ? vs : [vs[0], vs[Math.floor((vs.length - 1) / 2)], vs[vs.length - 1]];
+      cmp.picked = pick.map(function (w) { return w.work_id; });
+    }
+    renderCompare();
+    var d = $("#compare");
+    if (d.showModal && !d.open) d.showModal(); else d.setAttribute("open", "");
+  }
+  function renderCompare() {
+    var v = state.verse, vs = voicesHere();
+    var chips = vs.map(function (w) {
+      var on = cmp.picked.indexOf(w.work_id) >= 0;
+      return '<button type="button" class="cx-chip" data-pick="' + w.work_id + '" aria-pressed="' + on + '"' +
+        (!on && cmp.picked.length >= 3 ? " disabled" : "") + ">" + esc(w.short_name) + "</button>";
+    }).join("");
+    var cols = vs.filter(function (w) { return cmp.picked.indexOf(w.work_id) >= 0; }).map(function (w) {
+      return '<section class="cx-col"><div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
+        '<span class="cx-d">' + esc(w.author_dates) + "</span></div>" +
+        '<div class="cx-work">' + esc(U.eras[w.era]) + " · <i>" + esc(w.title) + "</i></div>" +
+        '<div class="cx-ex">' + excerptsHtml(w, entriesFor(w, v)) + "</div></section>";
+    }).join("");
+    $("#compare-ref").textContent = fmt(U.compare_on, { ref: REF(v) });
+    $("#compare-text").textContent = verseText(v);
+    $("#compare-picks").innerHTML = '<span class="cx-picks-label">' + esc(U.compare_pick) + "</span>" + chips;
+    $("#compare-cols").innerHTML = cols;
+    $("#compare-cols").style.setProperty("--cols", cmp.picked.length);
+  }
+  (function () {
+    var d = $("#compare");
+    if (!d) return;
+    d.addEventListener("click", function (e) {
+      if (e.target === d || e.target.closest("[data-close]")) { if (d.close) d.close(); else d.removeAttribute("open"); return; }
+      var p = e.target.closest("[data-pick]");
+      if (!p) return;
+      var id = p.getAttribute("data-pick"), i = cmp.picked.indexOf(id);
+      if (i >= 0) { if (cmp.picked.length > 1) cmp.picked.splice(i, 1); } else if (cmp.picked.length < 3) cmp.picked.push(id);
+      renderCompare();
+    });
+  })();
+
   function go(v, opts) {
     opts = opts || {};
     var to = Math.max(FIRST, Math.min(LAST, v));
@@ -487,6 +547,7 @@
   $("#pb").addEventListener("click", function (e) {
     var actButton = e.target.closest("[data-act]");
     if (actButton) { act(actButton); return; }
+    if (e.target.closest("[data-compare]")) { openCompare(); return; }
     var toggle = e.target.closest("[data-toggle]");
     if (toggle) {
       var wid = toggle.getAttribute("data-toggle");
