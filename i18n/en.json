@@ -159,8 +159,8 @@
   },
   "chapter": {
     "eyebrow": "Chapter {chapter}",
-    "pick": "Pick a verse to see what the church has said about it. In Balanced, tap a word for its Greek.",
-    "pick_hbo": "Pick a verse to see what the church has said about it. In Balanced, tap a word for its Hebrew.",
+    "pick": "Pick a verse to see what the church has said about it: the gold count by a verse number is how many voices comment on it. In Balanced, tap a word for its Greek.",
+    "pick_hbo": "Pick a verse to see what the church has said about it: the gold count by a verse number is how many voices comment on it. In Balanced, tap a word for its Hebrew.",
     "level_label": "Translation level",
     "owb_hint": "Bible text: {link} (CC0), English. An AI draft awaiting human review.",
     "previous": "Previous chapter",
@@ -182,6 +182,8 @@
   "reader": {
     "summary": "{n} voices from {eras} eras, {first} to {last}",
     "summary_one": "1 voice: {first}",
+    "verse_voices": "{ref}: {n} voices comment on it",
+    "verse_voices_one": "{ref}: 1 voice comments on it",
     "none_yet": "No commentary on this verse yet",
     "none_yet_long": "No commentary on this verse yet.",
     "none_in_eras": "No commentary from the chosen eras on this verse. Turn an era back on above.",
