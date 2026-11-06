@@ -771,5 +771,21 @@
     "good_friday": "Good Friday",
     "note": "Sundays are not counted in Lent's forty days, so the plan leaves them free. Each day has about the same number of verses, kept to whole passages.",
     "easter_link": "On Easter Day, read the Gospel for Easter."
+  },
+  "cited": {
+    "heading": "The Scripture the commentators cite on {book}",
+    "description": "Which books and verses of the Bible did the church fathers and later commentators cite most when explaining {book}? {n} citations, counted from Logia's public-domain library.",
+    "dek": "Explaining {book}, the commentators in Logia cite Scripture {n} times: {own} times another verse of {book} itself, and {ot} times the Old Testament, across {others} other books in all.",
+    "books_title": "The books they cite, besides {book}",
+    "outside_title": "The {n} passages cited most from the rest of Scripture",
+    "inside_title": "The {n} verses of {book} cited most within it",
+    "inside_note": "A commentator explaining one verse of {book} often cites another verse of the same book.",
+    "works_title": "Citations in each commentary",
+    "columns": [
+      "Passage",
+      "Times cited",
+      "The verse"
+    ],
+    "how": "Each citation is a reference to Scripture printed in an excerpt, such as “(1 Timothy 3:16)”, found by a script that reads the excerpts. None has yet been checked by a person, so a few may be misreadings. A passage is counted each time any excerpt cites it. How often a commentary cites Scripture depends on its style and on how much of it Logia holds."
   }
 }

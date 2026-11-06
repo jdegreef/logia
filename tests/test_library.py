@@ -575,6 +575,15 @@ class Site(unittest.TestCase):
         self.assertIn("Wednesday 10 February 2027", text)
         self.assertIn('href="/jhn/21/20-25/"', text)
 
+    def test_the_scripture_cited_page_counts_the_citations(self):
+        cites = build_site.citations_on("JHN")
+        self.assertTrue(cites)
+        text = self.read(os.path.join("jhn", "scripture-cited", "index.html"))
+        self.assertIn(f"cite Scripture {len(cites):,} times", text)
+        matthew = sum(1 for x in cites if x["start"].startswith("MAT."))
+        self.assertIn(f'<span class="lg-bar-n">{matthew}</span>', text)
+        self.assertIn('href="/jhn/scripture-cited/"', self.read(os.path.join("jhn", "index.html")))
+
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
         self.assertIn('href="/jhn/3/16/"', text)
