@@ -511,3 +511,31 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
   footer.site .foot-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 48px; align-items: start; }
   footer.site .foot-top .foot-books { margin: 0; padding: 0; border: 0; }
 }
+
+/* The commentators' lifetimes on one line of centuries (/commentators/),
+   coloured by era from the early church's gold to the 1800s' indigo. */
+.lg-era-0 { --era: var(--gold); }
+.lg-era-1 { --era: color-mix(in srgb, var(--gold) 75%, var(--accent)); }
+.lg-era-2 { --era: color-mix(in srgb, var(--gold) 50%, var(--accent)); }
+.lg-era-3 { --era: color-mix(in srgb, var(--gold) 25%, var(--accent)); }
+.lg-era-4 { --era: var(--accent); }
+.lg-tl { margin: 32px 0 0; }
+.lg-tl-scroll { overflow-x: auto; }
+.lg-tl-in { position: relative; min-width: 720px; padding: 34px 0 28px; }
+.lg-tl-bands { position: absolute; inset: 0 0 24px; }
+.lg-tl-band { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--line); }
+.lg-tl-band:nth-child(odd) { background: color-mix(in srgb, var(--surface-2) 70%, transparent); }
+.lg-tl-band span { position: absolute; top: 8px; left: 8px; right: 4px; font-size: 10.5px; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--muted); line-height: 1.2; }
+.lg-tl-rows { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.lg-tl-row { position: relative; height: 24px; }
+.lg-tl-life { position: absolute; top: 0; height: 24px; min-width: 6px; border-radius: 5px; background: var(--era); text-decoration: none; }
+.lg-tl-life:hover, .lg-tl-life:focus-visible { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--era); }
+.lg-tl-name { position: absolute; left: calc(100% + 10px); top: 50%; transform: translateY(-50%); white-space: nowrap; color: var(--muted);
+  font-size: 12.5px; }
+.lg-tl-name b { font-family: var(--display); font-weight: 600; font-size: 15px; color: var(--text); }
+.lg-tl-flip .lg-tl-name { left: auto; right: calc(100% + 10px); }
+.lg-tl-life:hover .lg-tl-name b { color: var(--accent); }
+.lg-tl-axis { position: absolute; left: 0; right: 0; bottom: 0; height: 24px; border-top: 1px solid var(--line-strong); }
+.lg-tl-tick { position: absolute; top: 6px; transform: translateX(-50%); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-tl figcaption { margin-top: 8px; }
