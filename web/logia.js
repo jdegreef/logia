@@ -111,6 +111,23 @@
     a.hidden = false;
   });
 
+  // A button that copies its data-copy text (a work's citation), and says so.
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var label = b.textContent, text = b.getAttribute("data-copy");
+      var done = function () { b.textContent = b.getAttribute("data-done"); setTimeout(function () { b.textContent = label; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () { select(b); });
+      else select(b);
+    });
+  });
+  function select(b) {
+    var box = b.parentNode.querySelector(".lg-cite-text");
+    if (!box) return;
+    var range = document.createRange();
+    range.selectNodeContents(box);
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+  }
+
   // A link to #id inside a closed <details> opens it.
   function openTarget() {
     var id = decodeURIComponent(location.hash.slice(1));
