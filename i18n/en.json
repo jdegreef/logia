@@ -128,6 +128,7 @@
     "title": "The Word, and what the church has said about it",
     "lead": "Read a verse and hear the early church, the Middle Ages, the Reformers and the 1800s beside it, copied word for word from public-domain editions.",
     "verse_voices": "A verse and its voices",
+    "resume": "Continue at {ref}",
     "all_voices": "All {n} voices on {ref}",
     "start": "Start with John 1",
     "browse": "Browse the books",
@@ -141,6 +142,18 @@
     "how_owb_text": "The Bible text is the Open Word Bible, translated from Hebrew and Greek with the reasoning behind every sentence, in your choice of wording. Tap a word for its Greek or Hebrew.",
     "how_langs": "English first, then many languages",
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
+  },
+  "search": {
+    "label": "Go to a verse, a book or a commentator",
+    "placeholder": "John 3:16, Romans 8 or Calvin",
+    "go": "Go",
+    "try": "Try",
+    "ui": {
+      "verse": "Verse",
+      "chapter": "Chapter",
+      "book": "{n} chapters",
+      "none": "No verse, book or commentator by that name. Try “John 3:16”."
+    }
   },
   "read": {
     "title": "Read",

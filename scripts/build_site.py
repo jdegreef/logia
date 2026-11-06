@@ -676,7 +676,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
     full = f"{title} · Logia" if title != "Logia" else "Logia"
     description = description or t("site.description")
     own = e(SITE_URL + path)
-    js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js") + tuple(scripts))
+    js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js", "logia.js") + tuple(scripts))
     account_text = json.dumps(CATALOG["account"]["ui"], ensure_ascii=False).replace("</", "<\\/")
     return f"""<!doctype html>
 <html lang="{LANG}">
@@ -713,6 +713,55 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 </body>
 </html>
 """
+
+
+# --- The passage search (web/logia.js) --------------------------------------
+
+# Short forms readers type that the commentaries' printed abbreviations
+# (scripture.NAMES) don't cover.
+TYPED = {"jn": "JHN", "mt": "MAT", "mk": "MRK", "lk": "LUK", "ps": "PSA", "pss": "PSA", "gn": "GEN", "ex": "EXO",
+         "rm": "ROM", "sg": "SNG", "song": "SNG", "song of solomon": "SNG", "qoh": "ECC", "jas": "JAS", "phil": "PHP",
+         "php": "PHP", "1jn": "1JN", "2jn": "2JN", "3jn": "3JN"}
+
+
+@functools.lru_cache(maxsize=None)
+def search_json(lib):
+    """What the search box needs: every book's names and abbreviations, its
+    chapters, and the commentators."""
+    aliases = {}
+    for code, b in lib.books.items():
+        aliases[code.lower()] = code
+        aliases[b["en"].lower()] = code
+        aliases[b["en"].lower().replace(" ", "")] = code
+    for code, names in scripture.NAMES.items():
+        for n in names.split():
+            aliases.setdefault(n.lower(), code)
+    for names, codes in scripture.NUMBERED.items():
+        for i, code in enumerate(codes, 1):
+            for n in names.split():
+                aliases.setdefault(f"{i} {n.lower()}", code)
+                aliases.setdefault(f"{i}{n.lower()}", code)
+    aliases.update({k: v for k, v in TYPED.items() if k not in aliases})
+    data = {"aliases": aliases, "names": {k: v["en"] for k, v in lib.books.items()},
+            "chapters": {k: v["chapters"] for k, v in lib.books.items()},
+            "people": [[a["name"], f'/commentators/{a["id"]}/', a["dates"]] for a in lib.ordered_authors()],
+            "ui": CATALOG["search"]["ui"]}
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+def search_box(lib, sid, cls="hero-search"):
+    """A search box that goes to a verse, a book or a commentator."""
+    return (f'<form class="lg-search {cls}" role="search" action="/read/" autocomplete="off">'
+            f'<span class="hero-search-ico" aria-hidden="true">{SEARCH_ICON}</span>'
+            f'<input type="search" name="q" id="{sid}" placeholder="{e(t("search.placeholder"))}" aria-label="{e(t("search.label"))}" '
+            f'role="combobox" aria-expanded="false" aria-controls="{sid}-list" aria-autocomplete="list">'
+            f'<button type="submit" class="button">{e(t("search.go"))}</button>'
+            f'<ul class="lg-sugg" id="{sid}-list" role="listbox" aria-label="{e(t("search.label"))}" hidden></ul></form>'
+            f'<script type="application/json" id="search-data">{search_json(lib)}</script>')
+
+
+SEARCH_ICON = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+               'stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>')
 
 
 # --- Pages --------------------------------------------------------------------
@@ -776,8 +825,10 @@ def home_page(lib):
 <p class="eyebrow">{e(t("home.verse"))}</p>
 <h1>{e(t("home.title"))}</h1>
 <p class="hero-sub">{e(t("home.lead"))}</p>
-<p class="actions"><a class="button" href="{chapter_url(*first)}">{e(t("home.start"))}</a>
+<p class="actions"><a class="button" href="/" data-resume="{e(t("home.resume"))}" hidden></a><a class="button" href="{chapter_url(*first)}">{e(t("home.start"))}</a>
 <a class="button ghost" href="/read/">{e(t("home.browse"))}</a></p>
+{search_box(lib, "home-q")}
+<p class="hero-try">{e(t("search.try"))} <a href="/jhn/1/#v1">John 1:1</a> <a href="/jhn/3/#v16">John 3:16</a> <a href="/jhn/11/#v25">John 11:25</a> <a href="/jhn/14/#v6">John 14:6</a></p>
 </section>
 {home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
@@ -1317,7 +1368,7 @@ def build():
     if os.path.isdir(SITE):
         shutil.rmtree(SITE)
     os.makedirs(SITE)
-    for name in ("style.css", "logia.css", "site.js", "account.js", "reader.js"):
+    for name in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "reader.js"):
         with open(os.path.join(SITE, name), "w", encoding="utf-8") as f:
             f.write(published(name))
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))

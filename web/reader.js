@@ -522,6 +522,9 @@
     document.querySelectorAll(".cx-verse").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
     markTokens();
     renderPanel();
+    // The last verse read, for "Continue reading" (web/logia.js).
+    try { localStorage.setItem("logia-last", JSON.stringify({ href: location.pathname + "#v" + state.verse, ref: REF(state.verse) })); }
+    catch (err) { /* storage blocked */ }
     var cur = location.hash.match(/^#v(\d+)/);
     if (!cur || +cur[1] !== state.verse) history.replaceState(null, "", "#v" + state.verse);
   }

@@ -348,3 +348,15 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-vv-who span { font-size: 12.5px; color: var(--muted); }
 .lg-vv-text { margin: 0; font-family: var(--serif); font-size: 15.5px; line-height: 1.55; color: var(--muted); }
 .lg-vv-all { margin: 16px 0 0; font-size: 15px; }
+
+/* The passage search (web/logia.js), in the Open Word Bible's hero search box. */
+.lg-search { position: relative; }
+.lg-sugg { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 6px); margin: 0; padding: 4px; list-style: none; text-align: left;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: var(--shadow-card); }
+.lg-sugg a { display: flex; justify-content: space-between; gap: 4px 14px; flex-wrap: wrap; padding: 9px 12px; border-radius: 8px;
+  color: var(--text); text-decoration: none; font-size: 15px; }
+.lg-sugg b { font-family: var(--display); font-weight: 600; }
+.lg-sugg span { color: var(--muted); font-size: 13px; }
+.lg-sugg [aria-selected="true"] a, .lg-sugg a:hover { background: var(--accent-soft); }
+.lg-sugg-none { padding: 10px 12px; color: var(--muted); font-size: 14px; }
+.hero .lg-search + .hero-try { margin-top: 14px; }
