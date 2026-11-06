@@ -145,7 +145,8 @@ class VerifyCatchesChanges(unittest.TestCase):
 
 class Site(unittest.TestCase):
     PAGES = ("index.html", "read/index.html", "jhn/index.html", "jhn/1/index.html", "jhn/21/index.html",
-             "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html")
+             "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html",
+             "jhn/3/16/index.html")
 
     @classmethod
     def setUpClass(cls):
@@ -356,6 +357,66 @@ class Site(unittest.TestCase):
         rows = {(r["work_id"], r["where"]) for r in data["wholeTexts"]["12"]}
         self.assertEqual(rows, {("chrysostom", "Homily 10, section 2"), ("augustine", "Tractate 2")})
         self.assertEqual({r["work_id"] for r in data["wholeTexts"]["2"]}, {"augustine"})   # no homily marks 1:2
+
+    # --- Verse pages ---
+
+    def test_every_verse_with_commentary_has_a_page(self):
+        lib = build_site.Library()
+        for book, chapter, verse in lib.voices_on:
+            path = os.path.join(build_site.SITE, book.lower(), str(chapter), str(verse), "index.html")
+            self.assertTrue(os.path.isfile(path), (book, chapter, verse))
+        # Acts has no commentary, so no verse pages.
+        self.assertFalse(os.path.exists(os.path.join(build_site.SITE, "act", "1", "1")))
+        sitemap = self.read("sitemap.xml")
+        self.assertIn("<loc>https://logia.faith/jhn/3/16/</loc>", sitemap)
+        self.assertEqual(sitemap.count("<loc>https://logia.faith/jhn/"),
+                         1 + 21 + len([k for k in lib.voices_on if k[0] == "JHN"]))
+
+    def test_a_verse_page_holds_its_commentary_in_the_html(self):
+        lib = build_site.Library()
+        text = self.read(os.path.join("jhn", "3", "16", "index.html"))
+        self.assertNotIn('id="chapter-data"', text)
+        self.assertIn("<h1>John 3:16</h1>", text)
+        on_it = [c for c in lib.comments if c["start"] == "JHN.3.16"]
+        self.assertTrue(on_it)
+        for c in on_it:
+            first = re.split(r"\n\s*\n", c["text"])[0].strip()
+            self.assertIn(build_site.e(first[:80]), re.sub(r"<[^>]+>", "", text), c["id"])   # cites are links
+            self.assertIn(f'id="{c["id"]}"', text)
+        works = lib.voices_on[("JHN", 3, 16)]
+        for wid in works:
+            self.assertIn(f'What does {build_site.short_name(lib.author_of(wid))} say about John 3:16?', text)
+        self.assertIn(f"{len(works)} commentators in Logia comment on John 3:16", text)
+        for section in ('id="words"', 'id="notes"', 'id="xrefs"'):
+            self.assertIn(section, text)
+
+    def test_an_excerpt_on_a_range_is_printed_in_full_once(self):
+        lib = build_site.Library()
+        c = next(c for c in lib.comments if c["start"].startswith("JHN.3.")
+                 and build_site.ref_parts(c["end"])[2] > build_site.ref_parts(c["start"])[2])
+        _b, ch, sv = build_site.ref_parts(c["start"])
+        start = self.read(os.path.join("jhn", str(ch), str(sv), "index.html"))
+        later = self.read(os.path.join("jhn", str(ch), str(sv + 1), "index.html"))
+        self.assertIn(f'id="{c["id"]}"', start)
+        self.assertNotIn(f'id="{c["id"]}"', later)
+        self.assertIn(f'href="/jhn/{ch}/{sv}/#{c["id"]}"', later)
+
+    def test_a_verse_page_has_breadcrumbs_and_its_own_description(self):
+        text = self.read(os.path.join("jhn", "3", "16", "index.html"))
+        ld = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1])
+        self.assertEqual(ld["@type"], "BreadcrumbList")
+        self.assertEqual([x["item"] for x in ld["itemListElement"]][-2:],
+                         ["https://logia.faith/jhn/3/", "https://logia.faith/jhn/3/16/"])
+        self.assertIn('<link rel="canonical" href="https://logia.faith/jhn/3/16/">', text)
+        self.assertRegex(text, r'<title>John 3:16 commentary: [^<]+ · Logia</title>')
+        self.assertNotIn(re.search(r'name="description" content="([^"]*)"', text)[1],
+                         self.read(os.path.join("jhn", "3", "17", "index.html")))
+
+    def test_a_chapter_page_links_to_its_verse_pages(self):
+        text = self.read(os.path.join("jhn", "3", "index.html"))
+        self.assertIn('href="/jhn/3/16/"', text)
+        self.assertIn('id="vpage"', text)
+        self.assertNotIn('id="by-verse"', self.read(os.path.join("act", "1", "index.html")))
 
     def test_corrections_are_applied(self):
         lib = build_site.Library()

@@ -11,6 +11,7 @@ static site:
     /read/                   every book, by testament, with its chapters
     /<book>/                 a book: its chapters and who comments on it
     /<book>/<chapter>/       the reader: Bible text and the commentary panel
+    /<book>/<chapter>/<verse>/  a verse with commentary: every voice on it in full
     /commentators/           every commentator, by era
     /commentators/<author>/  one commentator: biography, works, comments
     /works/<work>/           one commentary: edition, rights, every excerpt
@@ -408,6 +409,20 @@ class Library:
             rows.sort(key=lambda r: (ERAS.index(r["era"]), r["died"]))
         return out
 
+    def comments_in(self, book, chapter):
+        """The excerpts on a chapter of a book."""
+        return self.by_chapter.get((book, chapter), [])
+
+    @functools.cached_property
+    def by_chapter(self):
+        out = {}
+        for c in self.comments:
+            sb, sc, _ = ref_parts(c["start"])
+            _, ec, _ = ref_parts(c["end"])
+            for ch in range(sc, ec + 1):
+                out.setdefault((sb, ch), []).append(c)
+        return out
+
     @functools.cached_property
     def voices_on(self):
         """{(book, chapter, verse): [works commenting on it]}, in the reader's order."""
@@ -422,6 +437,10 @@ class Library:
                 if c["work"] not in ws:
                     ws.append(c["work"])
         return {k: self.ordered_works(ws) for k, ws in out.items()}
+
+    def verse_pages(self, book, chapter):
+        """The verses of a chapter that have a page of their own: those with commentary."""
+        return sorted(v for b, c, v in self.voices_on if (b, c) == (book, chapter))
 
     def verses(self, book, chapter):
         """The verse numbers of a chapter, as the Open Word Bible has them."""
@@ -465,6 +484,11 @@ class Library:
 
     def coverage(self):
         """{(book, chapter): (number of works, [verses with commentary])}."""
+        return self._coverage
+
+    @functools.cached_property
+    def _coverage(self):
+        # Every page's menus read it, so it is worked out once.
         cov = {}
         for c in self.comments:
             sb, sc, sv = ref_parts(c["start"])
@@ -1191,6 +1215,7 @@ def chapter_page(lib, book, chapter, all_chapters):
 <button type="button" id="next" aria-label="{e(t("chapter.next_verse"))}">&#8250;</button></div></div>
 <div class="cx-ph-text" id="ph-text"></div>
 <div class="cx-summary" id="summary" aria-live="polite"></div>
+<a class="cx-vpage" id="vpage" hidden></a>
 <div class="cx-rail" id="rail" aria-label="{e(t("chapter.rail_label"))}"></div>
 <div class="cx-tabs" role="tablist">{tabs}</div>
 </div>
@@ -1205,12 +1230,240 @@ def chapter_page(lib, book, chapter, all_chapters):
 <div class="cx-cols" id="compare-cols"></div>
 </dialog>
 {credits}
+{chapter_verse_nav(lib, book, chapter, lib.verse_pages(book, chapter))}
 <script type="application/json" id="chapter-data">{json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")}</script>"""
     n = len(commentaries)
     description = (t("chapter.description", book=name, chapter=chapter, n=n) if n
                    else t("chapter.description_none", book=name, chapter=chapter))
     return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/",
                 description=description, scripts=("reader.js",), preload=(comm_url,) if comm_url else ()), panel, comm
+
+
+# --- Verse pages --------------------------------------------------------------
+#
+# /<book>/<chapter>/<verse>/: one verse and everything Logia holds on it,
+# written into the page so it reads without JavaScript and search engines
+# and answer engines can read it whole. An excerpt on a range of verses is
+# printed in full on the page of the verse it begins at; the other verses of
+# the range show its first words and link there, so each excerpt's text has
+# one page.
+
+def verse_url(book, chapter, verse):
+    return f"/{book.lower()}/{chapter}/{verse}/"
+
+
+def name_list(names):
+    names = list(names)
+    return names[0] if len(names) == 1 else ", ".join(names[:-1]) + t("verse.and") + names[-1]
+
+
+def verse_href(lib, ref):
+    """Where a verse reference leads from a verse page: its own page when it
+    has one, else its verse in the chapter reader (or the Open Word Bible)."""
+    b, ch, v = scripture.parse(ref)
+    if (b, ch, v) in lib.voices_on:
+        return verse_url(b, ch, v)
+    return lib.verse_link(ref)
+
+
+def verse_html(lib, text, cites):
+    """An excerpt's paragraphs, with the Scripture it cites linked."""
+    h, pos = [], 0
+    for c in sorted(cites, key=lambda c: c["at"]):
+        if c["at"] < pos:
+            continue
+        href = verse_href(lib, c["start"])
+        words = e(text[c["at"]:c["at"] + len(c["text"])])
+        label = e(scripture.label(c["start"], c["end"]))
+        h.append(e(text[pos:c["at"]]))
+        h.append(f'<a class="lg-cite" href="{e(href)}" title="{label}">{words}</a>' if href
+                 else f'<span class="lg-cite" title="{label}">{words}</span>')
+        pos = c["at"] + len(c["text"])
+    h.append(e(text[pos:]))
+    return "".join(f"<p>{p.strip()}</p>" for p in re.split(r"\n\s*\n", "".join(h)) if p.strip())
+
+
+def verse_ref(lib, book, chapter, v, ev=None):
+    return f'{lib.books[book]["en"]} {chapter}:{v}' + (f"–{ev}" if ev and ev != v else "")
+
+
+def verse_voices(lib, book, chapter, verse):
+    """[(work, [excerpts on the verse])], in the reader's order of works."""
+    by_work = {}
+    for c in lib.comments_in(book, chapter):
+        _, _, sv = ref_parts(c["start"])
+        _, _, ev = ref_parts(c["end"])
+        if sv <= verse <= ev:
+            by_work.setdefault(c["work"], []).append(c)
+    return [(w, sorted(by_work[w], key=order_key)) for w in lib.ordered_works(by_work)]
+
+
+def verse_excerpt(lib, c, book, chapter, verse):
+    w = lib.works[c["work"]]
+    _, _, sv = ref_parts(c["start"])
+    _, _, ev = ref_parts(c["end"])
+    on = f'<p class="lg-ref">{e(t("verse.on_range", ref=verse_ref(lib, book, chapter, sv, ev)))}</p>' if ev != sv else ""
+    heading = f'<p class="lg-lemma">{e(c["heading"])}</p>' if c["heading"] else ""
+    if sv != verse:
+        # Printed in full where it begins.
+        start = verse_ref(lib, book, chapter, sv)
+        return (f'<article class="lg-excerpt lg-vx">{on}<p class="lg-quiet">{e(t("verse.continues", ref=start))}</p>'
+                f'<div class="lg-text"><p>{e(snippet(c["text"], 40))}</p></div>'
+                f'<p class="lg-vx-links"><a href="{verse_url(book, chapter, sv)}#{e(c["id"])}">'
+                f'{e(t("verse.read_full", ref=start))}</a></p></article>')
+    links = [f'<a href="{e(c["source_url"])}" rel="noopener">{e(t("verse.source"))}</a>']
+    if lib.in_full.get(c["id"]):
+        links.append(f'<a href="{lib.in_full[c["id"]]}">{e(t("verse.in_whole", division=w["divisions"][0].lower()))}</a>')
+    links.append(f'<a href="{chapter_url(book, chapter)}#v{sv}-{c["work"]}">{e(t("verse.in_reader"))}</a>')
+    more = []
+    for q in lib.quote_rows(c):
+        label = e(t("verse.quotes", author=q["author"], where=q["where"]))
+        more.append(f'<li><a href="{e(q["href"])}">{label}</a></li>' if q["href"]
+                    else f'<li><a href="{e(q["url"])}" rel="noopener">{label}</a></li>')
+    for q in lib.quoted_in_rows(c):
+        label = e(t("verse.quoted_by", name=q["author"], title=q["title"], ref=q["ref"]))
+        more.append(f'<li><a href="{e(q["href"])}">{label}</a></li>' if q["href"] else f"<li>{label}</li>")
+    locus = f' {e(locus_label(w, c["locus"]))}.' if c.get("locus") else ""
+    return (f'<article class="lg-excerpt lg-vx" id="{e(c["id"])}">{on}{heading}'
+            f'<div class="lg-text">{verse_html(lib, c["text"], c["cites"])}</div>'
+            + (f'<ul class="lg-vx-more">{"".join(more)}</ul>' if more else "")
+            + f'<p class="lg-vx-links lg-quiet">{e(t("verse.from", edition=short_edition(w["edition"])))}{locus} '
+            f'{" · ".join(links)}</p></article>')
+
+
+def verse_words(bible, verse):
+    words = bible["words"].get(str(verse), [])
+    if not words:
+        return ""
+    lang = "hbo" if bible["source"] == "hbo" else "grc"
+    rows = "".join(
+        f'<tr><td class="cx-gk" lang="{"arc" if w.get("lang") == "A" else lang}"{" dir=rtl" if lang == "hbo" else ""}>{e(w["text"])}'
+        + (f'<br><i class="lg-quiet">{e(w["transliteration"])}</i>' if w.get("transliteration") else "")
+        + f'</td><td class="cx-gk" lang="{lang}"{" dir=rtl" if lang == "hbo" else ""}>{e(w["lemma"])}</td>'
+        f'<td>{e(w["gloss"])}</td><td class="lg-quiet">{e(w.get("parse", ""))}</td></tr>'
+        for w in words)
+    head = "".join(f"<th>{e(t('verse.col_' + k))}</th>" for k in ("word", "lemma", "gloss", "grammar"))
+    return (f'<section class="lg-block" id="words"><h2>{e(t("verse.words_hbo" if lang == "hbo" else "verse.words"))}</h2>'
+            f'<div class="lg-table-wrap"><table class="lg-words"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+            f'<p class="lg-quiet">{e(t("verse.words_note"))}</p></section>')
+
+
+def verse_notes(bible, verse, ref):
+    """The Open Word Bible's decisions on the sentences the verse is in: its
+    meaning decisions, and its wording at the Balanced level."""
+    out = []
+    for r in bible["records"]:
+        if verse not in r["verses"]:
+            continue
+        decs = [d for d in r["decisions"] if d["layer"] == "meaning" or "B" in (d["levels"] or [])]
+        notes = "".join(
+            f'<div class="cx-note"><h3>{e(default_wording(d["choice"]))} <span class="cx-tag">'
+            f'{e(CATALOG["reader"]["categories"].get(d["category"], d["category"]))}</span>'
+            + (f'<span class="cx-tag">{e(t("verse.uncertain"))}</span>' if d["uncertain"] else "") + "</h3>"
+            + (f'<p class="cx-alt">{e(t("verse.not_"))} {" · ".join(e(default_wording(a)) for a in d["alternatives"])}</p>'
+               if d["alternatives"] else "")
+            + f'<p>{e(default_wording(d["reason"]))}</p></div>' for d in decs)
+        out.append(f'<p class="lg-quiet">{e(t("verse.word_for_word"))} {e(r["gloss"])}</p>{notes}')
+    if not out:
+        return ""
+    return f'<section class="lg-block" id="notes"><h2>{e(t("verse.notes", ref=ref))}</h2>{"".join(out)}</section>'
+
+
+def verse_xrefs(lib, bible, verse):
+    rows = []
+    for x in bible["crossrefs"].get(str(verse), []):
+        p = x.split(".")
+        if len(p) < 3 or p[0] not in lib.books:
+            continue
+        ch, a = int(p[1]), int(p[2].split("-")[0])
+        label = f'{lib.books[p[0]]["en"]} {p[1]}:{p[2]}'
+        text = chapter_plain(p[0], ch).get(a, "") if (p[0], ch) in lib.chapters else ""
+        href = verse_url(p[0], ch, a) if (p[0], ch, a) in lib.voices_on else chapter_url(p[0], ch) + f"#v{a}"
+        rows.append(f'<li><a href="{href}"><b>{e(label)}</b></a> <span>{e(text)}</span></li>')
+    if not rows:
+        return ""
+    return (f'<section class="lg-block" id="xrefs"><h2>{e(t("verse.xrefs"))}</h2><ul class="lg-xrefs">{"".join(rows)}</ul>'
+            f'<p class="lg-quiet">{e(t("verse.xref_credit"))}</p></section>')
+
+
+def breadcrumbs_ld(items):
+    return json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": name, "item": SITE_URL + path}
+        for i, (name, path) in enumerate(items)]}, ensure_ascii=False).replace("</", "<\\/")
+
+
+def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
+    """A verse's page. cited_by is lib.cited_by for its whole chapter."""
+    name = lib.books[book]["en"]
+    ref = verse_ref(lib, book, chapter, verse)
+    text = chapter_plain(book, chapter).get(verse, "")
+    voices = verse_voices(lib, book, chapter, verse)
+    authors = [lib.author_of(w) for w, _cs in voices]
+    names = [short_name(a) for a in authors]
+    if len(authors) == 1:
+        lead = t("verse.lead_one", name=authors[0]["name"], dates=authors[0]["dates"], ref=ref)
+    else:
+        lead = t("verse.lead", n=len(authors), ref=ref, first=authors[0]["name"], first_dates=authors[0]["dates"],
+                 last=authors[-1]["name"], last_dates=authors[-1]["dates"], names=name_list(names))
+    sections, toc = [], []
+    for (wid, cs), a in zip(voices, authors):
+        w = lib.works[wid]
+        meta = (f'<p class="lg-vmeta"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a> ({e(a["dates"])}) · '
+                f'{e(a["tradition"])} · <a href="{work_chapter_url(wid, book, chapter)}"><i>{e(w["title"])}</i></a></p>')
+        sections.append(f'<section class="lg-voice" id="{wid}"><h3>{e(t("verse.question", name=short_name(a), ref=ref))}</h3>'
+                        f'{meta}{"".join(verse_excerpt(lib, c, book, chapter, verse) for c in cs)}</section>')
+        toc.append(f'<a href="#{wid}">{e(short_name(a))}</a>')
+    cited = cited_by.get(str(verse), [])
+    cited_html = ""
+    if cited:
+        rows = "".join(f'<li><p class="lg-ex-ref"><a href="{e(r["href"])}"><b>{e(r["author"])}</b> · {e(r["ref"])}</a></p>'
+                       f'<div><p>{e(r["snippet"])}</p></div></li>' for r in cited)
+        cited_html = (f'<section class="lg-block" id="cited"><h2>{e(t("verse.cited_by"))}</h2>'
+                      f'<p class="lg-quiet">{e(t("verse.cited_by_note", ref=ref))}</p><ul class="lg-excerpts">{rows}</ul></section>')
+    whole = lib.whole_on(f"{book}.{chapter}.{verse}")
+    whole_html = ""
+    if whole:
+        rows = "".join(f'<li><a href="{e(x["href"])}"><b>{e(x["author"])}</b> <span>{e(x["where"])}</span></a></li>' for x in whole)
+        whole_html = (f'<section class="lg-block" id="whole"><h2>{e(t("verse.whole_texts", ref=ref))}</h2>'
+                      f'<ul class="lg-people lg-wide">{rows}</ul></section>')
+    i = pages_here.index(verse)
+    turns = [f'<a rel="prev" href="{verse_url(book, chapter, pages_here[i - 1])}">&larr; {e(verse_ref(lib, book, chapter, pages_here[i - 1]))}</a>'
+             if i else "<span></span>",
+             f'<a rel="next" href="{verse_url(book, chapter, pages_here[i + 1])}">{e(verse_ref(lib, book, chapter, pages_here[i + 1]))} &rarr;</a>'
+             if i + 1 < len(pages_here) else "<span></span>"]
+    owb_link = f'<a href="{OWB_SITE}{chapter_url(book, chapter)}" rel="noopener">Open Word Bible</a>'
+    chapter_name = f"{name} {chapter}"
+    crumbs = [("Logia", "/"), (name, f"/{book.lower()}/"), (chapter_name, chapter_url(book, chapter)),
+              (ref, verse_url(book, chapter, verse))]
+    body = f"""
+<article class="lg-verse">
+<header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · <a href="{chapter_url(book, chapter)}">{e(t("chapter.eyebrow", chapter=chapter))}</a> · {e(lib.chapter_title(book, chapter))}</p>
+<h1>{e(ref)}</h1>
+<blockquote class="lg-vtext"><p>{e(text)}</p></blockquote>
+<p class="lg-quiet">{t("verse.bible_credit", link=owb_link)}</p>
+<p class="dek lg-vlead">{e(lead)}</p>
+<nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
+<section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
+{cited_html}{whole_html}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
+<p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
+<nav class="lg-turns" aria-label="{e(t("verse.previous"))} / {e(t("verse.next"))}">{"".join(turns)}</nav>
+</article>
+<script type="application/ld+json">{breadcrumbs_ld(crumbs)}</script>"""
+    shown = names if len(names) <= 3 else names[:3]
+    title_names = name_list(shown) if len(names) <= 3 else t("verse.title_more", names=", ".join(shown), n=len(names) - 3)
+    quote = snippet(text, 16)
+    return page(lib, t("verse.title", ref=ref, names=title_names), body, verse_url(book, chapter, verse),
+                current="/read/", description=t("verse.description", ref=ref, text=quote, names=name_list(names)))
+
+
+def chapter_verse_nav(lib, book, chapter, verses):
+    """The links from a chapter page to its verse pages: there for search
+    engines and readers without JavaScript, and a contents for everyone."""
+    if not verses:
+        return ""
+    links = "".join(f'<a href="{verse_url(book, chapter, v)}">{v}</a>' for v in verses)
+    return (f'<nav class="lg-block lg-vnav" aria-labelledby="by-verse"><h2 id="by-verse">{e(t("chapter.by_verse"))}</h2>'
+            f'<p class="lg-quiet">{e(t("chapter.by_verse_note"))}</p><div class="lg-chbar">{links}</div></nav>')
 
 
 # The timeline's span (AD), and the eras drawn behind it: (era, from, to).
@@ -1725,6 +1978,13 @@ def build():
             with open(os.path.join(SITE, folder, f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
                 f.write(text)
         pages.append(chapter_url(book, chapter))
+        here = lib.verse_pages(book, chapter)
+        if here:
+            bible = lib.bible(book, chapter)
+            cited_by = lib.cited_by(book, chapter, bible["verses"])
+            for verse in here:
+                write(verse_url(book, chapter, verse), verse_page(lib, book, chapter, verse, bible, here, cited_by))
+                pages.append(verse_url(book, chapter, verse))
     write("/commentators/", commentators_page(lib))
     pages.append("/commentators/")
     for author in lib.ordered_authors():

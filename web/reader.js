@@ -158,6 +158,12 @@
           first: voices[0].short_name, last: voices[voices.length - 1].short_name })
       : EMPTY ? fmt(U.none_book, { book: DATA.bookName }) : U.none_yet;
     $("#rail").hidden = EMPTY;
+    // A verse with commentary has a page of its own (verse_page in scripts/build_site.py).
+    $("#vpage").hidden = !voices.length;
+    if (voices.length) {
+      $("#vpage").href = "/" + DATA.book.toLowerCase() + "/" + DATA.chapter + "/" + v + "/";
+      $("#vpage").textContent = fmt(U.verse_page, { ref: REF(v) }) + " →";
+    }
     var r = recFor(v);
     $("#n-comm").textContent = voices.length;
     $("#n-words").textContent = DATA.wordCounts[v] || 0;
