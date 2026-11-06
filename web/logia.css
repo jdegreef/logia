@@ -749,3 +749,9 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-guide-verse { margin: 8px 0 12px; }
 .lg-guide-verse p { font-style: italic; }
 .lg-era-says .lg-quiet { font-size: 13px; }
+.lg-gloss { margin: 0; }
+.lg-gloss > div { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.lg-gloss dt { font-weight: 700; }
+.lg-gloss dd { margin: 2px 0 0; }
+.lg-gloss dd p { margin: 0 0 2px; }
+.lg-gloss-links { font-size: 13.5px; }

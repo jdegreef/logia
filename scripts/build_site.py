@@ -2718,8 +2718,7 @@ def voices_list(lib, ref, works=None):
 
 def guide_links(book):
     """ · and a link to each guide on the book, for its book page."""
-    return "".join(f' · <a href="{g["path"]}">{e(g["title"])}</a>' for g in guides()
-                   if g.get("book") == book and g["path"].startswith(f"/{book.lower()}/"))
+    return "".join(f' · <a href="{g["path"]}">{e(g["title"])}</a>' for g in guides() if g.get("book") == book)
 
 
 def draft_note(g):
@@ -2746,7 +2745,27 @@ def guide_page(lib, g):
             f'<blockquote class="lg-guide-verse"><p>{e(" ".join(chapter_plain(book, c_).get(v_, "") for c_ in range(sc, ec + 1) for v_ in chapter_verses(book, c_) if (sc, sv) <= (c_, v_) <= (ec, ev)))}</p></blockquote>'
             f'<div class="prose">{prose(x["note"])}</div>'
             f'<h3 class="label">{e(t("guide.voices", ref=verse_ref(lib, book, fc, fv)))}</h3>{voices_list(lib, x["focus"])}</section>')
-    toc = "".join(f'<li><a href="#t{i}">{e(x["title"])}</a></li>' for i, x in enumerate(g.get("topics", []), 1))
+    # A glossary's terms: what each means, how many excerpts on the book use
+    # it, and the first of them.
+    mine = sorted((c for c in lib.comments if c["start"].startswith(book + ".")), key=order_key)
+    for i, grp in enumerate(g.get("groups", []), 1):
+        rows = ""
+        for x in grp["terms"]:
+            pat = re.compile(x["match"])
+            hits = [c for c in mine if pat.search(c["text"])]
+            links = []
+            if x.get("see"):
+                _b, ch, v = ref_parts(x["see"])
+                links.append(f'<a href="{verse_url(book, ch, v)}">{e(verse_ref(lib, book, ch, v))}</a>')
+            if x.get("link"):
+                links.append(f'<a href="{x["link"]}">{e(x["link_label"])}</a>')
+            if hits:
+                first = hits[0]
+                links.append(f'<a href="{excerpt_href(lib, first)}">{e(t("guide.used", n=f"{len(hits):,}", who=short_name(lib.author_of(first["work"])), ref=scripture.label(first["start"], first["end"])))}</a>')
+            rows += (f'<div><dt>{e(x["term"])}</dt><dd><p>{e(x["text"])}</p>'
+                     f'<p class="lg-quiet lg-gloss-links">{" · ".join(links)}</p></dd></div>')
+        parts.append(f'<section class="lg-block" id="t{i}"><h2>{e(grp["title"])}</h2><dl class="lg-gloss">{rows}</dl></section>')
+    toc = "".join(f'<li><a href="#t{i}">{e(x["title"])}</a></li>' for i, x in enumerate(g.get("topics", []) or g.get("groups", []), 1))
     body = f"""
 <article class="lg-verse lg-guide">
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("guide.eyebrow"))}</p>
