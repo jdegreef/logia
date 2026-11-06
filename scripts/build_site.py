@@ -423,6 +423,10 @@ class Library:
                     ws.append(c["work"])
         return {k: self.ordered_works(ws) for k, ws in out.items()}
 
+    def verses(self, book, chapter):
+        """The verse numbers of a chapter, as the Open Word Bible has them."""
+        return chapter_verses(book, chapter)
+
     def plain(self, book, chapter):
         """{verse: its plain Balanced text} for a chapter."""
         return chapter_plain(book, chapter)
@@ -481,6 +485,11 @@ def chapter_title(book, chapter):
 @functools.lru_cache(maxsize=None)
 def chapter_plain(book, chapter):
     return plain_verses(load(os.path.join(ROOT, "bible", "owb", "en", f"{book}.{chapter}.json")))
+
+
+@functools.lru_cache(maxsize=None)
+def chapter_verses(book, chapter):
+    return tuple(load(os.path.join(ROOT, "bible", "owb", "en", f"{book}.{chapter}.json"))["verses"])
 
 
 def span_text(verses):
@@ -1232,21 +1241,42 @@ def timeline(lib):
 
 
 def commentators_page(lib):
-    counts = {}
+    # Each commentator as a card in one grid: their initials in their era's
+    # colour, dates and tradition, the first words of their first excerpt,
+    # the language they wrote in, and how much of each book they cover.
+    verses = {}
     for c in lib.comments:
-        counts.setdefault(lib.works[c["work"]]["author"], set()).add(c["start"])
-    sections = ""
-    for era in ERAS:
-        people = [a for a in lib.ordered_authors() if a["era"] == era]
-        if not people:
-            continue
-        cards = "".join(
-            f'<li><a class="lg-person" href="/commentators/{a["id"]}/">'
-            f'<span class="lg-mono" aria-hidden="true">{e(short_name(a)[0])}</span>'
-            f'<span><b>{e(a["name"])}</b><span class="lg-dates">{e(a["dates"])} · {e(a["tradition"])}</span>'
-            f'<span class="lg-quiet">{e(t("commentators.verses", n=len(counts.get(a["id"], ()))))}</span></span></a></li>'
-            for a in people)
-        sections += f'<section class="lg-block"><h2>{e(t("eras." + era))}</h2><ul class="lg-grid">{cards}</ul></section>'
+        b, ch, v = ref_parts(c["start"])
+        _, ech, ev = ref_parts(c["end"])
+        for x in lib.verses(b, ch):
+            if v <= x and (ech != ch or x <= ev):
+                verses.setdefault(lib.works[c["work"]]["author"], {}).setdefault(b, set()).add((ch, x))
+    book_verses = {b: sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b) for b, _c in lib.coverage()}
+    cards = []
+    for a in lib.ordered_authors():
+        mine = sorted((c for c in lib.comments if lib.works[c["work"]]["author"] == a["id"]), key=order_key)
+        works = lib.ordered_works({c["work"] for c in mine})
+        first = mine[0] if mine else None
+        quote = ""
+        if first:
+            paras = [p for p in first["text"].split("\n\n") if p.strip()]
+            lead = paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]
+            quote = (f'<p class="lg-pq">“{e(snippet(lead, 22))}” '
+                     f'<span>{e(t("commentators.on", ref=scripture.label(first["start"], first["end"])))}</span></p>')
+        cov = "".join(
+            f'<span class="lg-cov"><span class="lg-meter"><span style="width:{100 * len(vs) / book_verses[b]:.0f}%"></span></span>'
+            f'{e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=book_verses[b]))}</span>'
+            for b, vs in verses.get(a["id"], {}).items())
+        langs = " · ".join(dict.fromkeys(lib.works[w]["original_language"] for w in works))
+        initials = "".join(w[0] for w in a["name"].replace(".", " ").split() if w[0].isupper())
+        initials = initials[0] + initials[-1] if len(initials) > 1 else initials
+        cards.append(
+            f'<li><a class="lg-person lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/">'
+            f'<span class="lg-mono" aria-hidden="true">{e(initials)}</span>'
+            f'<span><span class="lg-era-name">{e(t("eras." + a["era"]))}</span><b>{e(a["name"])}</b>'
+            f'<span class="lg-dates">{e(a["dates"])} · {e(a["tradition"])}</span>{quote}'
+            f'<span class="lg-meta">{e(t("commentators.wrote_in", lang=langs))}</span>{cov}</span></a></li>')
+    sections = f'<section class="lg-block"><ul class="lg-grid lg-people-grid">{"".join(cards)}</ul></section>'
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("commentators.title"))}</p>
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
