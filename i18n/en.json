@@ -200,6 +200,7 @@
     "chapter_card_one": "1 commentary on verses {span}",
     "chapter_none": "Bible text; commentary to come",
     "commentaries": "{n} commentaries",
+    "commentaries_one": "1 commentary",
     "verses": "{n} verses",
     "on": "on {ref}",
     "wrote_in": "Wrote in {lang}",
@@ -535,7 +536,7 @@
   "open_data": {
     "heading": "Open data",
     "dek": "All {n} excerpts from {works} commentaries by {authors} commentators, free to download and build on. The data is CC0: no permission needed, no attribution required.",
-    "description": "Download Logia's {n} public-domain commentary excerpts on the Gospel of John as JSON or CSV, each tied to its verse and its source. CC0.",
+    "description": "Download Logia's {n} public-domain commentary excerpts on {books} as JSON or CSV, each tied to its verse and its source. CC0.",
     "about_link": "Download the open data",
     "download": "Download",
     "download_note": "Every excerpt with its verse range, its place in the work and the address of the page it was copied from. Scan misreadings are already corrected. The files are rebuilt from the repository whenever the site is.",
@@ -624,11 +625,10 @@
     ],
     "rights_note": "Each work's record says what is still to confirm for use outside the US. Works and biographies are marked ai_draft until a named person reviews them.",
     "ld_name": "Logia: public-domain Christian commentary, verse by verse",
-    "ld_description": "{n} excerpts from {works} public-domain commentaries on the Gospel of John, from the early church to the 1800s, each tied to its verses and the source it was copied from.",
+    "ld_description": "{n} excerpts from {works} public-domain commentaries on {books}, from the early church to the 1800s, each tied to its verses and the source it was copied from.",
     "ld_keywords": [
       "Bible commentary",
       "church fathers",
-      "Gospel of John",
       "patristics",
       "public domain",
       "biblical studies"
