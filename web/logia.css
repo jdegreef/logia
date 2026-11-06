@@ -117,13 +117,23 @@
 .cx-ph-text { font-family: var(--serif); font-size: 16px; color: var(--muted); margin: 6px 0 14px; }
 .cx-summary { font-size: 13px; color: var(--muted); }
 
-.cx-rail { position: relative; height: 54px; margin: 8px 6px 4px; }
-.cx-rail-line { position: absolute; left: 0; right: 0; top: 22px; height: 1px; background: var(--line-strong); }
-.cx-tick { position: absolute; top: 28px; font-size: 10.5px; color: var(--muted); transform: translateX(-50%); font-variant-numeric: tabular-nums; }
-.cx-tick::before { content: ""; position: absolute; left: 50%; top: -9px; width: 1px; height: 5px; background: var(--line-strong); }
-.cx-dot { position: absolute; top: 15px; width: 15px; height: 15px; margin-left: -7.5px; border-radius: 50%; border: 2px solid var(--surface); background: var(--gold); cursor: pointer; padding: 0; }
-.cx-dot.cx-off { background: var(--line-strong); opacity: .45; }
-.cx-dot:hover::after, .cx-dot:focus-visible::after { content: attr(data-name); position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: var(--text); color: var(--bg); font-size: 11.5px; padding: 2px 7px; border-radius: 5px; }
+.cx-rail { position: relative; height: calc(38px + var(--lanes, 1) * 22px); margin: 8px 18px 4px; }
+.cx-rail-line { position: absolute; left: -12px; right: -12px; bottom: 22px; height: 1px; background: var(--line-strong); }
+.cx-tick { position: absolute; bottom: 4px; font-size: 10.5px; color: var(--muted); transform: translateX(-50%); font-variant-numeric: tabular-nums; }
+.cx-tick::before { content: ""; position: absolute; left: 50%; top: -6px; width: 1px; height: 5px; background: var(--line-strong); }
+/* A commentator: a pill with the first letters of their name, on a stem down
+   to the year they died. */
+.cx-dot { position: absolute; bottom: 30px; transform: translateX(-50%); min-width: 34px; padding: 3px 5px; border-radius: 999px;
+  border: 1.5px solid var(--gold); background: color-mix(in srgb, var(--gold) 16%, var(--surface)); color: var(--text);
+  font: 700 10.5px/1 var(--sans); cursor: pointer; }
+.cx-dot::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 6px; background: var(--gold); }
+.cx-dot { z-index: 3; }
+.cx-dot.cx-lane1 { bottom: 52px; z-index: 2; } .cx-dot.cx-lane1::after { height: 28px; }
+.cx-dot.cx-lane2 { bottom: 74px; z-index: 1; } .cx-dot.cx-lane2::after { height: 50px; }
+.cx-dot:hover { background: var(--gold); color: var(--bg); }
+.cx-dot.cx-cur { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.cx-dot.cx-off { opacity: .4; border-style: dashed; cursor: default; background: var(--surface); }
+.cx-dot.cx-off:hover { color: var(--text); }
 
 .cx-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
 .cx-tabs button { border: 0; background: none; padding: 10px 12px 9px; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent; white-space: nowrap; }
