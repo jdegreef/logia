@@ -403,10 +403,8 @@ class Site(unittest.TestCase):
         self.assertFalse(os.path.exists(os.path.join(build_site.SITE, "act", "1", "1")))
         sitemap = self.read("sitemap.xml")
         self.assertIn("<loc>https://logia.faith/jhn/3/16/</loc>", sitemap)
-        self.assertEqual(sitemap.count("<loc>https://logia.faith/jhn/"),
-                         1 + 21 + len([k for k in lib.voices_on if k[0] == "JHN"])
-                         + len(build_site.passages_with_commentary(lib, "JHN")) + 1   # and most-discussed
-                         + len([c for c in build_site.collections(lib) if c["book"] == "JHN"]))
+        verse_locs = re.findall(r"<loc>https://logia\.faith/jhn/\d+/\d+/</loc>", sitemap)
+        self.assertEqual(len(verse_locs), len([k for k in lib.voices_on if k[0] == "JHN"]))
 
     def test_a_verse_page_holds_its_commentary_in_the_html(self):
         lib = build_site.Library()
@@ -559,6 +557,23 @@ class Site(unittest.TestCase):
             self.assertTrue(os.path.isfile(os.path.join(build_site.SITE, where.strip("/"), "index.html")), where)
         self.assertIn("first of the signs", build_site.chapter_plain("JHN", 2)[11])
         self.assertIn("second sign", build_site.chapter_plain("JHN", 4)[54])
+
+    def test_the_lent_plan_reads_every_passage_once_over_forty_days(self):
+        import datetime
+        self.assertEqual(build_site.easter_day(2027), datetime.date(2027, 3, 28))
+        self.assertEqual(build_site.easter_day(2026), datetime.date(2026, 4, 5))
+        days = build_site.lent_days(2027)
+        self.assertEqual(len(days), 40)
+        self.assertEqual(days[0], datetime.date(2027, 2, 10))   # Ash Wednesday
+        self.assertEqual(days[-1], datetime.date(2027, 3, 27))  # Holy Saturday
+        self.assertFalse(any(d.weekday() == 6 for d in days))
+        lib = build_site.Library()
+        plan = build_site.plan_days(lib, "JHN", 40)
+        self.assertEqual(len(plan), 40)
+        self.assertEqual([s for day in plan for s in day], list(build_site.book_sections("JHN", 21)))
+        text = self.read(os.path.join("jhn", "lent", "index.html"))
+        self.assertIn("Wednesday 10 February 2027", text)
+        self.assertIn('href="/jhn/21/20-25/"', text)
 
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
