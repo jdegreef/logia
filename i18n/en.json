@@ -700,6 +700,7 @@
     "eyebrow": "Collections",
     "and_more": "and {n} more",
     "read_all": "All {n} excerpts from {k} commentators on {ref}",
+    "read_passage": "{n} excerpts from {k} commentators on {ref}: read them with the passage",
     "how": "Each commentator's first excerpt on the verse or passage opens here with its first words. {n} excerpts in all; follow a name to read it in full."
   },
   "collections": {
@@ -717,6 +718,22 @@
         "resurrection": "The resurrection and the life",
         "way": "The way, the truth, and the life",
         "vine": "The true vine"
+      }
+    },
+    "signs": {
+      "heading": "The seven signs in John",
+      "title": "The seven signs in the Gospel of John: what the church fathers and later commentators said",
+      "description": "The seven signs in John, from water made wine at Cana to the raising of Lazarus, with what Chrysostom, Augustine, Aquinas, Calvin and others wrote on each.",
+      "dek": "John calls Jesus's miracles signs. He numbers the first two, at Cana (2:11) and the healing of the official's son (4:54), and ends by saying Jesus did many other signs not written in his book (20:30). Here are the seven usually counted, each with what the commentators in Logia wrote on it.",
+      "note": "Lists of the seven differ. Some count the catch of fish in John 21 in place of the walking on the sea, and some count the resurrection itself as the last sign.",
+      "items": {
+        "cana": "Water made wine at Cana",
+        "official": "The official's son healed",
+        "pool": "The man healed at the pool",
+        "feeding": "Five thousand fed",
+        "walking": "Walking on the sea",
+        "blind": "The man born blind",
+        "lazarus": "Lazarus raised"
       }
     }
   }
