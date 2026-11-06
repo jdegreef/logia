@@ -753,8 +753,10 @@ def digest_url(path, text):
 
 
 def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True,
-         preload=()):
-    full = f"{title} · Logia" if title != "Logia" else "Logia"
+         preload=(), head_title=None, ld=()):
+    """A whole page. head_title, when given, is the <title> and og:title in
+    place of "<title> · Logia"; ld is schema.org data for search engines."""
+    full = head_title or (f"{title} · Logia" if title != "Logia" else "Logia")
     description = description or t("site.description")
     own = e(SITE_URL + path)
     js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js", "logia.js") + tuple(scripts))
@@ -770,7 +772,12 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta property="og:site_name" content="Logia">
 <meta property="og:type" content="website">{f'{chr(10)}<meta property="og:url" content="{own}">' if canonical else ""}
 <meta property="og:title" content="{e(full)}">
-<meta property="og:description" content="{e(description)}">{'<meta name="robots" content="noindex">' if noindex else ""}
+<meta property="og:description" content="{e(description)}">
+<meta property="og:image" content="{SITE_URL}/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(t("site.card_alt"))}">
+<meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{json_ld(ld)}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="logia-api" content="{API_URL}">
 <meta name="logia-owb" content="{OWB_SITE}">
@@ -794,6 +801,23 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 </body>
 </html>
 """
+
+
+def json_ld(items):
+    """schema.org data, one <script type="application/ld+json"> for the page."""
+    if not items:
+        return ""
+    data = items[0] if len(items) == 1 else {"@context": "https://schema.org", "@graph": [
+        {k: v for k, v in x.items() if k != "@context"} for x in items]}
+    text = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    return f'\n<script type="application/ld+json">{text}</script>'
+
+
+def breadcrumbs(*crumbs):
+    """schema.org BreadcrumbList from (name, path) pairs, Home first."""
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": name, "item": SITE_URL + path}
+        for i, (name, path) in enumerate((("Logia", "/"), *crumbs))]}
 
 
 # --- The passage search (web/logia.js) --------------------------------------
@@ -933,7 +957,9 @@ def home_page(lib):
 <div><h3>{e(t("home.how_owb"))}</h3><p>{e(t("home.how_owb_text"))}</p></div>
 <div><h3>{e(t("home.how_langs"))}</h3><p>{e(t("home.how_langs_text"))}</p></div>
 </div></section>"""
-    return page(lib, "Logia", body, "/", current="/")
+    website = {"@context": "https://schema.org", "@type": "WebSite", "name": "Logia", "url": SITE_URL + "/",
+               "description": t("site.description"), "inLanguage": LANG}
+    return page(lib, "Logia", body, "/", current="/", head_title=t("site.home_title"), ld=(website,))
 
 
 def chapter_pills(lib, book, cov, current=None):
@@ -1049,7 +1075,8 @@ def book_page(lib, book):
 <h1>{e(name)}</h1><p class="dek">{e(t("book.dek", n=total, done=done))}</p>{start}</header>
 <section class="lg-block"><h2>{e(t("book.chapters"))}</h2><ol class="lg-toc">{"".join(rows)}</ol></section>
 {who}"""
-    return page(lib, name, body, f"/{book.lower()}/", current="/read/")
+    return page(lib, name, body, f"/{book.lower()}/", current="/read/",
+                ld=(breadcrumbs((t("read.title"), "/read/"), (name, f"/{book.lower()}/")),))
 
 
 # What the panel's Greek/Hebrew words and translation notes tabs show is most
@@ -1255,7 +1282,11 @@ def chapter_page(lib, book, chapter, all_chapters):
     n = len(commentaries)
     description = (t("chapter.description", book=name, chapter=chapter, n=n) if n
                    else t("chapter.description_none", book=name, chapter=chapter))
-    return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/",
+    crumbs = breadcrumbs((t("read.title"), "/read/"), (name, f"/{book.lower()}/"), (f"{name} {chapter}", chapter_url(book, chapter)))
+    names = [c["short_name"] or c["author"] for c in commentaries]
+    names = ", ".join(names[:3]) if len(names) <= 3 else t("chapter.head_more", names=", ".join(names[:3]), n=len(names) - 3)
+    head_title = t("chapter.head_title", book=name, chapter=chapter, names=names) if commentaries else None
+    return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/", ld=(crumbs,), head_title=head_title,
                 description=description, scripts=("reader.js",), preload=(comm_url,) if comm_url else ()), panel, comm
 
 
@@ -1376,6 +1407,23 @@ def order_key(c):
     return (b, ch, v, c["id"])
 
 
+def missing_verses(lib, author, book, covered):
+    """The verses of a book a commentator has no comment on, as linked runs
+    ("1:5, 2:3–4"), folded away under their count."""
+    missing = [(ch, v) for bb, ch in sorted(lib.chapters) if bb == book for v in lib.verses(bb, ch) if (ch, v) not in covered]
+    if not missing:
+        return ""
+    runs = []
+    for ch, v in missing:
+        if runs and runs[-1][0] == ch and runs[-1][2] + 1 == v:
+            runs[-1][2] = v
+        else:
+            runs.append([ch, v, v])
+    links = ", ".join(f'<a href="{chapter_url(book, ch)}#v{a}">{ch}:{a}{f"–{z}" if z != a else ""}</a>' for ch, a, z in runs)
+    return (f'<details class="lg-missing"><summary>{e(t("commentators.missing", name=short_name(author), n=len(missing)))}</summary>'
+            f'<p>{e(lib.books[book]["en"])} {links}</p></details>')
+
+
 def author_page(lib, author):
     works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
     comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
@@ -1398,7 +1446,8 @@ def author_page(lib, author):
     for b, vs in covered.items():
         total = sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b)
         facts.append((t("commentators.covers"), f'<span class="lg-meter"><span style="width:{100 * len(vs) / total:.0f}%"></span></span>'
-                      + e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=total))))
+                      + e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=total))
+                      + missing_verses(lib, author, b, vs)))
     dl = "".join(f"<div><dt>{e(k)}</dt><dd>{v if k in (t('commentators.work'), t('commentators.covers')) else e(v)}</dd></div>"
                  for k, v in facts)
     body = f"""
@@ -1408,7 +1457,13 @@ def author_page(lib, author):
 <section class="prose lg-bio">{bio}{draft}</section></div>
 <dl class="lg-facts-card">{dl}</dl></div>
 <section class="lg-block"><h2>{e(t("commentators.comments_on", name=author["name"]))}</h2>{excerpt_list(lib, comments, show_work=len(works) > 1)}</section>"""
+    books = " · ".join(lib.books[b]["en"] for b in covered)
+    person = {"@context": "https://schema.org", "@type": "Person", "name": author["name"],
+              "url": SITE_URL + f'/commentators/{author["id"]}/', "description": author["bio"].split("\n\n")[0]}
+    crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (author["name"], f'/commentators/{author["id"]}/'))
     return page(lib, author["name"], body, f'/commentators/{author["id"]}/', current="/commentators/",
+                head_title=t("commentators.head_title", name=author["name"], books=books) if books else None,
+                ld=(person, crumbs),
                 description=author["bio"].split("\n\n")[0])
 
 
@@ -1754,6 +1809,7 @@ def build():
             f.write(published(name))
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
+    shutil.copy(os.path.join(WEB, "card.png"), os.path.join(SITE, "card.png"))
     pages = ["/"]
     write("/", home_page(lib))
     write("/read/", read_page(lib))

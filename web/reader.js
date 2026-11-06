@@ -648,8 +648,26 @@
     });
   })();
   if (window.innerWidth <= 880 && !location.hash) $("#panel").classList.add("cx-min");
-  $("#prev").addEventListener("click", function () { go(state.verse - 1); });
-  $("#next").addEventListener("click", function () { go(state.verse + 1); });
+  // The verse before or after this one, past any the Bible text leaves out (John 5:4).
+  function step(d) {
+    var i = DATA.verses.indexOf(state.verse) + d;
+    if (i >= 0 && i < DATA.verses.length) go(DATA.verses[i]);
+  }
+  $("#prev").addEventListener("click", function () { step(-1); });
+  $("#next").addEventListener("click", function () { step(1); });
+  // The left and right arrow keys move a verse, when nothing else uses them:
+  // not while typing, in a menu, the panel's tabs or the compare dialog.
+  document.addEventListener("keydown", function (e) {
+    if ((e.key !== "ArrowLeft" && e.key !== "ArrowRight") || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    var el = document.activeElement;
+    if (el && (/input|textarea|select/i.test(el.tagName) || el.isContentEditable ||
+        el.closest('[role="tablist"], [role="radiogroup"], [role="menu"], dialog, .dropdown, .prefs-menu, .account-pop'))) return;
+    if ($("#compare").open) return;
+    e.preventDefault();
+    step(e.key === "ArrowLeft" ? -1 : 1);
+    var on = document.querySelector('.cx-verse[data-v="' + state.verse + '"]');
+    if (on) on.scrollIntoView({ block: "nearest" });
+  });
   $("#pb").addEventListener("click", function (e) {
     var actButton = e.target.closest("[data-act]");
     if (actButton) { act(actButton); return; }
