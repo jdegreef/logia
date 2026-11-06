@@ -597,3 +597,15 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-copy { font-size: 14px; padding: 8px 16px; }
 @media (max-width: 880px) { .lg-record { grid-template-columns: minmax(0, 1fr); padding: 16px; } }
 @media (max-width: 480px) { .cx-tabs button { padding: 10px 5px 9px; font-size: 13px; } .cx-tabs .cx-n { margin-left: 2px; font-size: 11px; } }
+
+/* Chapter chips: gold with commentary, a solid outline with the Bible text
+   (dashed read as "not available"), a ring for the chapter here, and a dot
+   for a chapter already read (web/logia.js). */
+.chap.part { border-style: solid; border-color: var(--line-strong); }
+.chap.lg-has[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); background: var(--gold); color: var(--bg); }
+.chap { position: relative; }
+.chap.lg-read::after { content: ""; position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 2px var(--bg); }
+.lg-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 14px 0 0; padding: 0; list-style: none; font-size: 13px; color: var(--muted); }
+.lg-legend li { display: inline-flex; align-items: center; gap: 8px; }
+.lg-legend .chap { min-width: 26px; height: 26px; font-size: 11.5px; pointer-events: none; }
