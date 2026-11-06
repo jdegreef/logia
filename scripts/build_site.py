@@ -1326,17 +1326,35 @@ def order_key(c):
 
 def author_page(lib, author):
     works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
-    work_cards = "".join(
-        f'<li><a class="lg-card" href="/works/{w}/"><b>{e(lib.works[w]["title"])}</b>'
-        f'<span>{e(short_edition(lib.works[w]["edition"]))}</span></a></li>' for w in works)
     comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
     bio = "".join(f"<p>{e(p)}</p>" for p in author["bio"].split("\n\n"))
-    draft = f'<p class="lg-quiet">{e(t("commentators.bio_draft"))}</p>' if author["bio_status"] == "ai_draft" else ""
+    draft = f'<p><span class="lg-pill lg-pill-draft">{e(t("commentators.bio_draft"))}</span></p>' if author["bio_status"] == "ai_draft" else ""
+    # The facts beside the biography: when they lived, their tradition, the
+    # language they wrote in, their works here and how much they cover.
+    facts = [(t("commentators.lived"), author["dates"]), (t("commentators.era"), t("eras." + author["era"])),
+             (t("commentators.tradition"), author["tradition"]),
+             (t("work.original"), " · ".join(dict.fromkeys(lib.works[w]["original_language"] for w in works)))]
+    for w in works:
+        x = lib.works[w]
+        facts.append((t("commentators.work"), f'<a href="/works/{w}/"><i>{e(x["title"])}</i></a>'
+                      + (f'<span class="lg-quiet">{e(short_edition(x["edition"]))}</span>' if x["edition"] else "")))
+    covered = {}
+    for c in comments:
+        b, ch, v = ref_parts(c["start"])
+        _, ech, ev = ref_parts(c["end"])
+        covered.setdefault(b, set()).update((ch, x) for x in lib.verses(b, ch) if v <= x and (ech != ch or x <= ev))
+    for b, vs in covered.items():
+        total = sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b)
+        facts.append((t("commentators.covers"), f'<span class="lg-meter"><span style="width:{100 * len(vs) / total:.0f}%"></span></span>'
+                      + e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=total))))
+    dl = "".join(f"<div><dt>{e(k)}</dt><dd>{v if k in (t('commentators.work'), t('commentators.covers')) else e(v)}</dd></div>"
+                 for k, v in facts)
     body = f"""
-<header class="page-head lg-person-head"><p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · {e(t("eras." + author["era"]))}</p>
+<div class="lg-profile lg-era-{ERAS.index(author["era"])}">
+<div class="lg-profile-main"><header class="page-head lg-person-head"><p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · {e(t("eras." + author["era"]))}</p>
 <h1>{e(author["name"])}</h1><p class="dek">{e(author["dates"])} · {e(author["tradition"])}</p></header>
-<section class="prose lg-bio">{bio}{draft}</section>
-<section class="lg-block"><h2>{e(t("commentators.works"))}</h2><ul class="lg-cards">{work_cards}</ul></section>
+<section class="prose lg-bio">{bio}{draft}</section></div>
+<dl class="lg-facts-card">{dl}</dl></div>
 <section class="lg-block"><h2>{e(t("commentators.comments_on", name=author["name"]))}</h2>{excerpt_list(lib, comments, show_work=len(works) > 1)}</section>"""
     return page(lib, author["name"], body, f'/commentators/{author["id"]}/', current="/commentators/",
                 description=author["bio"].split("\n\n")[0])

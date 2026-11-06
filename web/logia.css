@@ -550,3 +550,20 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-cov { display: grid; gap: 4px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
 .lg-cov .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
 .lg-cov .lg-meter > span { display: block; height: 100%; background: var(--era); }
+
+/* A commentator's page: the biography beside a card of facts. */
+.lg-profile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 24px 48px; align-items: start; }
+.lg-profile .lg-bio { margin-top: 0; }
+.lg-facts-card { margin: 40px 0 0; padding: 6px 18px; border: 1px solid var(--line); border-top: 3px solid var(--era); border-radius: var(--radius-sm);
+  background: var(--surface); }
+.lg-facts-card > div { padding: 10px 0; border-bottom: 1px solid var(--line); display: grid; gap: 2px; }
+.lg-facts-card > div:last-child { border-bottom: 0; }
+.lg-facts-card dt { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.lg-facts-card dd { margin: 0; font-size: 15px; display: grid; gap: 4px; }
+.lg-facts-card dd a { text-decoration: none; }
+.lg-facts-card .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.lg-facts-card .lg-meter > span { display: block; height: 100%; background: var(--era); }
+.lg-pill { display: inline-block; font-family: var(--sans); font-size: 12.5px; font-weight: 600; padding: 3px 11px; border-radius: 999px; }
+.lg-pill-draft { color: var(--gold); background: color-mix(in srgb, var(--gold) 14%, transparent); }
+@media (max-width: 880px) { .lg-profile { grid-template-columns: minmax(0, 1fr); } .lg-facts-card { margin-top: 0; } }
+.lg-profile .page-head { padding-bottom: 12px; } .lg-profile .lg-bio { padding-top: 0; }
