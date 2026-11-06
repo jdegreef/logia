@@ -138,6 +138,8 @@
   "home": {
     "verse": "“They were entrusted with the oracles of God.” Romans 3:2",
     "title": "The Word, and what the church has said about it",
+    "season": "For Christmas:",
+    "season_link": "the church on John 1:1–14, the Christmas Day Gospel",
     "lead": "Read a verse and hear the early church, the Middle Ages, the Reformers and the 1800s beside it, copied word for word from public-domain editions.",
     "verse_voices": "A verse and its voices",
     "resume": "Continue at {ref}",
@@ -503,5 +505,31 @@
     "previous": "Previous verse",
     "next": "Next verse",
     "bible_credit": "Bible text: {link} (CC0), Balanced. An AI draft awaiting human review."
+  },
+  "passage": {
+    "eyebrow": "Passages",
+    "title": "{heading} ({ref}) commentary: {names}",
+    "description": "What the church has said about “{heading}”, {ref}: {n} excerpts from {names}, word for word from public-domain editions.",
+    "lead": "{n} excerpts from {k} commentators on {ref}, from {first} ({first_dates}) to {last} ({last_dates}).",
+    "lead_one": "{n} excerpts from {name} ({dates}) on {ref}.",
+    "how": "Each excerpt opens with its first words. Follow its verse to read it in full.",
+    "n_excerpts": "{n} excerpts",
+    "one_excerpt": "1 excerpt",
+    "n_voices": "{n} commentators",
+    "one_voice": "1 commentator",
+    "not_in_text": "{ref} is not in the Greek text the Open Word Bible translates, which follows the oldest manuscripts; many later manuscripts and older translations have it.",
+    "list_title": "Passages",
+    "list_note": "Each section of {book} under its heading, with everything Logia holds on it.",
+    "in_chapter": "Passages in this chapter"
+  },
+  "occasions": {
+    "christmas": {
+      "path": "/christmas/",
+      "eyebrow": "Christmas",
+      "heading": "The Gospel for Christmas Day: {ref}",
+      "intro": "John's prologue is read on Christmas Day. The Revised Common Lectionary and the Book of Common Prayer read John 1:1–14, and the Roman Missal reads John 1:1–18 at the Mass during the Day. Below is what the church has said about it, from the early church to the 1800s.",
+      "title": "Christmas Day Gospel, {ref}: commentary from {names}",
+      "description": "What the church has said about the Gospel for Christmas Day, {ref}: {n} excerpts from {names}, word for word from public-domain editions."
+    }
   }
 }

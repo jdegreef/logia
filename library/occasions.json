@@ -1,0 +1,6 @@
+{
+  "about": "Readings Logia builds a page for: each gives its passage, and its words are in i18n/<lang>.json under occasions.<id>.",
+  "occasions": [
+    {"id": "christmas", "start": "JHN.1.1", "end": "JHN.1.14"}
+  ]
+}

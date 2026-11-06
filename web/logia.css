@@ -685,3 +685,11 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-vnav .lg-chbar { position: static; }
 .cx-vpage { display: inline-block; margin: 2px 0 6px; font-size: 13.5px; font-weight: 600; text-decoration: none; }
 .cx-vpage[hidden] { display: none; }
+
+/* Passage pages (/<book>/<chapter>/<a>-<b>/): a section of a book and the
+   excerpts on it, each opening with its first words. */
+.lg-ptext p { font-size: calc(18px * var(--read-scale)); line-height: 1.65; }
+.lg-ptext sup { font-family: var(--sans, inherit); font-size: 11px; font-weight: 700; color: var(--muted); margin-right: 2px; }
+.lg-ptext sup a { color: var(--gold); text-decoration: none; }
+.lg-passage .lg-excerpts li { padding: 8px 0; }
+.lg-passage .page-head .dek + .lg-vtext { margin-top: 18px; }
