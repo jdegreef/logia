@@ -1084,7 +1084,7 @@ def book_page(lib, book):
         verses = len(lib.plain(book, c))
         n = cov[(book, c)][0] if (book, c) in cov else 0
         badge = (f'<span class="lg-badge" title="{e(t("book.chapter_card_one" if n == 1 else "book.chapter_card", n=n, span=span_text(cov[(book, c)][1])))}">'
-                 f'{e(t("book.commentaries", n=n))}</span>' if n else "")
+                 f'{e(t("book.commentaries_one" if n == 1 else "book.commentaries", n=n))}</span>' if n else "")
         rows.append(f'<li><a href="{chapter_url(book, c)}"><span class="lg-toc-n">{c}</span>'
                     f'<span class="lg-toc-title">{e(lib.chapter_title(book, c) or f"{name} {c}")}</span>{badge}'
                     f'<span class="lg-quiet">{e(t("book.verses", n=verses))}</span></a></li>')
@@ -2380,6 +2380,8 @@ def size_label(n):
 
 def open_data_page(lib, files):
     n = len(lib.comments)
+    cov = lib.coverage()
+    books = [lib.books[c]["en"] for c in lib.books if any(b == c for b, _c in cov)]
     dl = "".join(
         f'<li><a href="/downloads/{name}" download><b>{e(name)}</b> '
         f'<span>{e(t("open_data.file_" + name.rsplit(".", 1)[1]))} · {size_label(len(text.encode("utf-8")))}</span></a></li>'
@@ -2389,11 +2391,11 @@ def open_data_page(lib, files):
                    for path, what in t("open_data.repo"))
     licences = "".join(f"<li>{e(x)}</li>" for x in t("open_data.licences"))
     ld = {"@context": "https://schema.org", "@type": "Dataset", "name": t("open_data.ld_name"),
-          "description": t("open_data.ld_description", n=n, works=len(lib.works)),
+          "description": t("open_data.ld_description", n=n, works=len(lib.works), books=name_list(books)),
           "url": SITE_URL + "/open-data/", "license": "https://creativecommons.org/publicdomain/zero/1.0/",
           "isAccessibleForFree": True, "inLanguage": LANG, "sameAs": GITHUB_URL,
           "creator": {"@type": "Organization", "name": "Logia", "url": SITE_URL},
-          "keywords": t("open_data.ld_keywords"),
+          "keywords": t("open_data.ld_keywords") + books,
           "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json" if name.endswith(".json") else "text/csv",
                             "contentUrl": f"{SITE_URL}/downloads/{name}"} for name in files]}
     body = f"""
@@ -2407,7 +2409,7 @@ def open_data_page(lib, files):
 <section class="lg-block"><h2>{e(t("open_data.licences_title"))}</h2><ul class="lg-licences">{licences}</ul>
 <p class="lg-quiet">{e(t("open_data.rights_note"))}</p></section>"""
     return page(lib, t("open_data.heading"), body, "/open-data/", current="/about/",
-                description=t("open_data.description", n=f"{n:,}"), ld=(ld,))
+                description=t("open_data.description", n=f"{n:,}", books=name_list(books)), ld=(ld,))
 
 
 # --- Build --------------------------------------------------------------------

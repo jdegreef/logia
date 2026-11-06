@@ -30,7 +30,10 @@ tradition, and a short biography of plain facts. `bio_status` starts as
 `ai_draft`.
 
 The work is `library/works/<work>.json`, copying the fields of an existing
-work; `author` names the author file. `divisions` is `"verse"` for a
+work; `author` names the author file. A work is one published commentary on
+one book: a commentator already in the library who wrote on another book gets
+a new work under the same author, named `<author>-<book>` (Calvin on Romans
+would be `calvin-romans`), with its own `sources/<work>/`. `divisions` is `"verse"` for a
 commentary arranged by the verses it comments on, or the names of the
 work's own divisions, such as `["Homily", "Section"]`, for homilies,
 sermons or treatises (docs/references.md). `status` starts as `ai_draft`.
