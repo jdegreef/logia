@@ -144,13 +144,17 @@ def span(page, excerpt):
     return page["at"][s], page["at"][e + len(tail) - 1] + 1
 
 
-def locus(page, start):
-    """'3.2' for homily or tractate 3, section 2, read from the page."""
+def locus(page, start, depth=2):
+    """'3.2' for homily or tractate 3, section 2, read from the page; '3' for
+    a work divided into homilies only (`depth` 1: its translation prints no
+    section numbers)."""
     text = page["text"]
     head = re.search(r"\b(?:Homily|Tractate)\s+([IVXLC]+)\.", text)
     if not head or head.start() > start:
         return None
     number = scripture.roman(head[1])
+    if depth == 1:
+        return str(number)
     sections = [(m.start(), int(m[1])) for m in re.finditer(r"\[(\d+)\.\]", text)]
     if not sections:                         # numbered paragraphs: "5. Accordingly, brethren"
         sections = [(p, int(m[1])) for p in page["paras"] if (m := re.match(r"\s*(\d+)\.\s", text[p:p + 12]))]
@@ -489,7 +493,7 @@ def derive():
                     found = ccel_citations(pages[src], where, text)
                     held.setdefault((work["id"], os.path.basename(src)), []).append((*where, e["id"]))
                     if by_division:
-                        loc = locus(pages[src], where[0])
+                        loc = locus(pages[src], where[0], len(work["divisions"]))
                         if loc:
                             e = {**e, "locus": loc}
                         else:

@@ -1,0 +1,20 @@
+{
+ "id": "chrysostom-romans",
+ "author": "chrysostom",
+ "title": "Homilies on the Epistle of St. Paul the Apostle to the Romans",
+ "divisions": [
+  "Homily"
+ ],
+ "edition": "The Oxford Translation (Library of the Fathers), revised by W. H. Simcox; edited by Philip Schaff with notes by George B. Stevens; Nicene and Post-Nicene Fathers, Series 1, Vol. 11 (1889)",
+ "original_language": "Greek",
+ "translation": "Translated by J. B. Morris for the Library of the Fathers, revised by W. H. Simcox; Nicene and Post-Nicene Fathers, Series 1, Vol. 11 (1889)",
+ "published": 1889,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf111.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years); J. B. Morris died in 1880, W. H. Simcox in 1889, George B. Stevens in 1906, Philip Schaff in 1893"
+ },
+ "source_kind": "digital",
+ "notes": "The thirty-two homilies are CCEL npnf111 sections vii.iii–vii.xxxiv; the Argument before them (vii.ii) is not included. This translation prints no section numbers, so a locus names the homily only. Each verse mark the homily prints ('Ver. 9.', 'Chap. ii. ver. 1.') opens an entry; what comes before the first mark is on the verses of the homily's heading. Every paragraph of a homily's exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each homily's closing exhortation is left out, from the first sentence after the last verse mark that exhorts the hearers ('Let us then...'); the whole homilies are in library/texts/. Homily XXVII is headed 'Rom. XIV. 25-27': Chrysostom's text has the closing doxology after 14:23, as many Greek manuscripts do, so its entries are on Romans 16:25-27. Homily VI prints 'Ver. 12.' over Romans 2:28 ('For he is not a Jew which is one outwardly'), between ver. 27 and 29; that entry is on 2:28. The translator's footnotes and the notes on manuscript readings are left out.",
+ "status": "ai_draft"
+}

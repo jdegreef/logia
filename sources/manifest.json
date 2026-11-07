@@ -4725,6 +4725,294 @@
    "kind": "digital",
    "download_sha256": "a9c42f26e3c702dbcad1d351224212a7e7307f1eef1479db502f2a4194659dbf",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.iii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cd7495f5d1fc3075a22b05015638b82d0c8c36663c1b57aae6286846bcbdc433",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.iv.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b16e27d9530177b8baf85df48d26aeebd49bfefcaacf7df0858ce9f3647e315a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.v.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b6c14360e2ee28c6a2084502f8a9df4d920dfd8785b04768ea0ff8c6be25cc3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.vi.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "42a76eb6f1e87eb75fdb6fb78f985d6288451ff9d739b9325c746c2d5a0b61dc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.vii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "05787ead6d2f609267f41c7a5b6782fa4f4a544937877d865b3133e013c577c3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.viii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "31fc4ba6a8788a782d23da685aed057bac5cbbef3cda88465a9e663edbbedf9f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.ix.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "210df6bb72266f9b6d9bd5d86fd40e579d35b8d299d2e8dcef27bf332086b549",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.x.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "664fb5840c360feffad88129a829c4094bf31bba5bfb3ee504ebc480ed58ae85",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xi.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1c2c2c40bf2a087f303b49e2019027b3dcea750c3986a8c14024ccded3ae5bdb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e33060e9786d1d2d216fd9080da8ec286c7472ea4c2caa00991249b60aa288a6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xiii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "25ad12f66f64adba9b2a4be5e3a4812de33eb4038166d5c28cf25ac7d73192f1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xiv.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "440f950829468b759b69f6a307edc1e512e9de1e3445cf847c87cd6c859908cf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xv.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "06260791a57389547cc94cff2254f0e2692a79df241830c7a10c3b277e41dbc2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xvi.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9a9c2d9a6346f308d918c4667182a61b053e611625113ac210bbb17849b98424",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xvii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1635120b77065222235671157ea1ac10622eeca8c4cf2695ddb4f5da5162f498",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xviii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "da553dcd9f08232713099ce5ea35d7d21aed1b2cce7bdb24a0938e227dff1056",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xix.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e4d1fe6b33371ab9705b6011413acb4e104f547557213050d8f4a6e5cb987bc4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xx.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b3bce54df62ec32a53e70a593c4012e667153e290ff3e823660eb600bec5a749",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxi.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b779471144bd5644338c39081f3e9237829616633b84c655b8ae5339dea4c315",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5bb4f44908f58ffcfb17f8206c24d0ea5770822ae639833569050845563fd7ed",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxiii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "70f06ac8e199b2f8f2b82c148b223e720aa7ac0a7aa8c2495765015a377034dc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxiv.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b0761d096528efd04ac21d7bb8e74f22d48d7694f83a96872508934aa783081b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxv.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2ab62697fab638d69f19e1fac3a49b81ec373f452f0b6148817578ca2ddbd431",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxvi.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cdbe14a916351d87f2a5794756b7b63259a0e3ceb93560f16e5cb39fcf2d4b03",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxvii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cca5c6e016ea53da1adcdd4b39b10e23829dbb24fc704692f639fcfe1ab27046",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxviii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f09d4cfe16c1b1711175a6a00d53b8d6286b825a6c5f69390e4ffd0e5c7925d2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxix.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ed9a6545c87dfcf0db6146b9c768fb9f6c894f3a21890af976e7d21d37077f9e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxx.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "186d925d1aabd8fd1b97c071c9085ed6988d954cc95cb9074ab2dffd85ac1888",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxxi.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3c9710247ac06eccde49d78f12d98cc021927e1be63837220d78b2f41e9b56c1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxxii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "18b73ae065398132a4b191ec6068107c887e21ca36f3d16a95ff110067da7935",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxxiii.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e949872205ee027f399884779eb3307e82840d95e332c5cc356d557c85dd65c9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/chrysostom-romans/npnf111.vii.xxxiv.html",
+   "work": "chrysostom-romans",
+   "url": "https://www.ccel.org/ccel/schaff/npnf111.vii.xxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4ba64856187bbcc7dc2b5f9aacf2b13a4a13729d5316bcae0cf0e8159b359187",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }

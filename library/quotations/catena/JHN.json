@@ -6295,19 +6295,6 @@
    "status": "detected"
   },
   {
-   "in": "catena.JHN.10.14.1",
-   "at": 0,
-   "label": "CHRYS.",
-   "work": "chrysostom",
-   "locus": "59",
-   "source": "npnf114.iv.lxi.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.33,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
    "in": "catena.JHN.10.14-15.1",
    "at": 332,
    "label": "CHRYS.",
@@ -6317,19 +6304,6 @@
    "para": "iv.lxii-p8",
    "excerpt": "chrysostom.JHN.10.15.1",
    "score": 0.36,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
-   "in": "catena.JHN.10.16-17.1",
-   "at": 370,
-   "label": "CHRYS.",
-   "work": "chrysostom",
-   "locus": "59",
-   "source": "npnf114.iv.lxi.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.28,
    "found": "similar",
    "status": "detected"
   },

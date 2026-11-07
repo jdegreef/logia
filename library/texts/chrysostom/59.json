@@ -6,7 +6,7 @@
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.lxi.html",
  "verses": {
   "start": "JHN.9.34",
-  "end": "JHN.11.12"
+  "end": "JHN.10.12"
  },
  "paragraphs": [
   {
@@ -259,7 +259,7 @@
    "excerpts": [
     "chrysostom.JHN.10.1.1"
    ],
-   "verse": "JHN.9.41"
+   "verse": "JHN.10.1"
   },
   {
    "id": "iv.lxi-p26",
@@ -288,7 +288,7 @@
    "excerpts": [
     "chrysostom.JHN.10.1.1"
    ],
-   "verse": "JHN.9.41"
+   "verse": "JHN.10.1"
   },
   {
    "id": "iv.lxi-p29",
@@ -305,7 +305,7 @@
    "excerpts": [
     "chrysostom.JHN.10.2-4.1"
    ],
-   "verse": "JHN.9.41"
+   "verse": "JHN.10.1"
   },
   {
    "id": "iv.lxi-p31",
@@ -328,7 +328,7 @@
    "excerpts": [
     "chrysostom.JHN.10.2-4.1"
    ],
-   "verse": "JHN.9.41"
+   "verse": "JHN.10.1"
   },
   {
    "id": "iv.lxi-p33",
@@ -445,7 +445,7 @@
    "excerpts": [
     "chrysostom.JHN.10.8.1"
    ],
-   "verse": "JHN.11.8"
+   "verse": "JHN.10.8"
   },
   {
    "id": "iv.lxi-p45",
@@ -455,7 +455,7 @@
    "excerpts": [
     "chrysostom.JHN.10.8.1"
    ],
-   "verse": "JHN.11.8"
+   "verse": "JHN.10.8"
   },
   {
    "id": "iv.lxi-p46",
@@ -472,7 +472,7 @@
    "excerpts": [
     "chrysostom.JHN.10.10.1"
    ],
-   "verse": "JHN.11.10"
+   "verse": "JHN.10.10"
   },
   {
    "id": "iv.lxi-p47",
@@ -482,7 +482,7 @@
    "excerpts": [
     "chrysostom.JHN.10.10.1"
    ],
-   "verse": "JHN.11.10"
+   "verse": "JHN.10.10"
   },
   {
    "id": "iv.lxi-p48",
@@ -492,7 +492,7 @@
    "excerpts": [
     "chrysostom.JHN.10.10.1"
    ],
-   "verse": "JHN.11.10"
+   "verse": "JHN.10.10"
   },
   {
    "id": "iv.lxi-p50",
@@ -502,7 +502,7 @@
    "excerpts": [
     "chrysostom.JHN.10.10.1"
    ],
-   "verse": "JHN.11.10"
+   "verse": "JHN.10.10"
   },
   {
    "id": "iv.lxi-p51",
@@ -519,7 +519,7 @@
    "excerpts": [
     "chrysostom.JHN.10.11-13.1"
    ],
-   "verse": "JHN.11.11"
+   "verse": "JHN.10.11"
   },
   {
    "id": "iv.lxi-p52",
@@ -529,7 +529,7 @@
    "excerpts": [
     "chrysostom.JHN.10.11-13.1"
    ],
-   "verse": "JHN.11.11"
+   "verse": "JHN.10.11"
   },
   {
    "id": "iv.lxi-p53",
@@ -539,7 +539,7 @@
    "excerpts": [
     "chrysostom.JHN.10.11-13.1"
    ],
-   "verse": "JHN.11.11"
+   "verse": "JHN.10.11"
   },
   {
    "id": "iv.lxi-p56",
@@ -556,7 +556,7 @@
    "excerpts": [
     "chrysostom.JHN.10.11-13.1"
    ],
-   "verse": "JHN.11.12"
+   "verse": "JHN.10.12"
   },
   {
    "id": "iv.lxi-p58",
@@ -585,7 +585,7 @@
    "excerpts": [
     "chrysostom.JHN.10.11-13.1"
    ],
-   "verse": "JHN.11.12"
+   "verse": "JHN.10.12"
   },
   {
    "id": "iv.lxi-p62",
@@ -618,7 +618,7 @@
     }
    ],
    "excerpts": [],
-   "verse": "JHN.11.12"
+   "verse": "JHN.10.12"
   }
  ]
 }

@@ -40,11 +40,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # The verse a homily or tractate opens on, as its heading prints it.
 # "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5",
+# "Rom. I. 1, 2", "Rom. III. 9–18",
 # (or, for a tractate "on the same passage", the verses of the one before it).
 # "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX", "John xiii";
 # a stray full stop at the end ("Chapter XIII. 10–15.", "John xiii. 20 ."), "(continued)" after the
 # verses, and "and" before the next chapter ("Chapter XIX. 31–42, and XX. 1-9") are allowed.
-OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
+OPENS = re.compile(r"^(?:(?:John|Rom\.)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
                    r"(?:;\s*(?P<ch2>[ivxl]+)\.\s+(?P<e>\d+)(?:[–-](?P<f>\d+))?)?"
                    r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"
                    # and on into the next chapter: "Chapter II. 23–25; III. 1–5"
@@ -54,8 +55,9 @@ OPENS = re.compile(r"^(?:John\s+(?P<ch>[ivxl]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)
                    r"|Chapter\s+(?P<WH>[IVXL]+)\.?|John\s+(?P<wh>[ivxl]+)\.?)(?:\s*\(continued\))?\s*\.?$")
 # A tractate on the passage of the one before it: "on the same passage.", "again on the same passage."
 SAME = re.compile(r"^(?:again\s+)?on the same passage\.?$", re.I)
-# A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13."
-VER = re.compile(r"^(?:\[\d+\.\]\s*)?Ver\.\s+(\d+)\.")
+# A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13.",
+# or one that names the chapter it goes on into: "Chap. xv. ver. 1."
+VER = re.compile(r"^(?:\[\d+\.\]\s*)?(?:Chap\.\s+(?P<chap>[ivxl]+)\.\s+ver|Ver)\.\s+(\d+)\.")
 
 
 def load(path):
@@ -90,6 +92,11 @@ def derive():
         book = books.pop() if len(books) == 1 else None
         paras, number, title, chapter, start_chapter, verse, span = [], None, None, None, None, None, None
         heading_end = None                   # where a heading that crosses a chapter says the text ends
+        before = None                        # a verse line printed above the title
+        # a page that prints where it goes on into the next chapter ("Chap. xv. ver. 1.") says so
+        # every time; on it a mark that goes back is a return to an earlier verse
+        marks_chapters = any((m := VER.match(" ".join(text[a:b].split()))) and m["chap"]
+                             for a, b in zip(starts, starts[1:]))
         same = False                         # "on the same passage": the verses of the one before
         for i, (a, b) in enumerate(zip(starts, starts[1:])):
             words = " ".join(text[a:b].split())
@@ -98,12 +105,15 @@ def derive():
             if number is None:
                 m = HEADING.match(words)
                 if not m:
-                    continue                 # the book's title lines
+                    # the book's title lines; a verse line printed above the
+                    # homily's title (Romans, Homily XVIII) still opens it
+                    before = OPENS.match(words) or before
+                    continue
                 number, title = find_refs.scripture.roman(m[2]), words
             if book and chapter is None and not same and SAME.match(words):
                 same = True
                 continue
-            o = OPENS.match(words)
+            o = OPENS.match(words) or (before if chapter is None else None)
             if o and book and chapter is None:
                 chapter = start_chapter = find_refs.scripture.roman(o["ch"] or o["CH"] or o["WH"] or o["wh"])
                 if o["WH"] or o["wh"]:
@@ -119,17 +129,25 @@ def derive():
                 # text covers, not which verse each paragraph is on.
                 verse = span[0] if span[0] == span[1] else None
             elif (m := VER.match(words)) and chapter is not None:
-                verse = int(m[1])
-                if verse < span[1] and verse < span[0]:
+                verse = int(m[2])
+                if m["chap"]:
+                    chapter = find_refs.scripture.roman(m["chap"])
+                    span[1] = verse
+                elif verse < span[1] and verse < span[0] and not marks_chapters:
                     # A mark that goes back past where the text began: it has
                     # gone on into the next chapter (Homily XXI, John i. 49 to ii. 4).
                     chapter += 1
                     span[1] = verse
+                elif verse < span[0] and chapter == start_chapter:
+                    # a mark before the verse the text opens on, on a page that
+                    # prints its chapters: a misprint (Romans, Homily VI prints
+                    # "Ver. 12." over 2:28), so the paragraph is left unplaced
+                    verse = None
                 else:
                     span[1] = max(span[1], verse)
             cites = find_refs.ccel_citations(page, (a, b), words)
             paras.append({
-                "id": page["para_ids"][i], "locus": find_refs.locus(page, a), "text": words,
+                "id": page["para_ids"][i], "locus": find_refs.locus(page, a, len(work["divisions"])), "text": words,
                 "cites": [{"at": at, "text": t, "start": s, "end": e} for at, t, s, e in cites],
                 "excerpts": [x for s, t, x in held if s < b and a < t],
                 "verse": f"{book}.{chapter}.{verse}" if verse else None,
