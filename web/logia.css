@@ -755,3 +755,5 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-gloss dd { margin: 2px 0 0; }
 .lg-gloss dd p { margin: 0 0 2px; }
 .lg-gloss-links { font-size: 13.5px; }
+.lg-guide .lg-block .prose { padding-top: 0; }
+.lg-guide > .prose { padding-top: 16px; }

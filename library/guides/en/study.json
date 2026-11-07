@@ -1,0 +1,60 @@
+{
+  "id": "study",
+  "path": "/jhn/study/",
+  "book": "JHN",
+  "status": "ai_draft",
+  "reviewed_by": null,
+  "title": "How to study or preach John with Logia",
+  "head_title": "How to study or preach the Gospel of John with the church fathers and Reformers",
+  "description": "A short guide to preparing a Bible study, a sermon or your own reading of John with Logia: read the passage, hear the commentators across sixteen centuries, follow the Scripture they cite, and quote them with a citation.",
+  "dek": "A way to prepare a sermon, a Bible study or your own reading of a passage of John, using the commentators in Logia from the early church to the 1800s.",
+  "intro": [
+    "Logia sets beside each verse of John what the church's commentators said on it, in their own words, from Chrysostom and Augustine to Westcott. The steps below are one way to use them; take whichever help."
+  ],
+  "sections": [
+    {
+      "title": "Choose the passage",
+      "text": [
+        "Start from a passage, not a single verse: John's sections, as the Open Word Bible heads them, each have a page with the text and every commentator on it, in order. If you are following the church's year, the readings page lists the Gospel passages for the feasts, and the Lent plan reads the whole Gospel in forty days."
+      ],
+      "links": [["Every passage of John", "/jhn/#passages"], ["Readings for the feasts", "/readings/"], ["John in 40 days", "/jhn/lent/"]]
+    },
+    {
+      "title": "Read the text first",
+      "text": [
+        "Read the passage through before reading any commentator, and note what you notice and what puzzles you. The commentators are most useful as answers to questions you already have. Where a verse turns on a word, the verse's own page lists its Greek words and how the Open Word Bible translates them."
+      ],
+      "links": [["Read John", "/jhn/1/"]]
+    },
+    {
+      "title": "Hear the commentators across the centuries",
+      "text": [
+        "Read at least one voice from each era. The Fathers preached John to their own congregations and often answer the controversies of their day; Aquinas gathers the Fathers into one chain; the Reformers and Puritans press the text on the conscience; the scholars of the 1800s weigh its words closely.",
+        "Where they agree, you are on common ground with most of the church. Where they differ, note it, and read each in full before deciding: the guide to where the traditions read John differently gathers the best-known of those places."
+      ],
+      "links": [["The commentators by era", "/commentators/"], ["Where the traditions read John differently", "/jhn/traditions/"]]
+    },
+    {
+      "title": "Follow the Scripture they cite",
+      "text": [
+        "The commentators explain Scripture by Scripture. The page of the Scripture they cite shows which passages they turn to most, and each verse page shows where they cite that verse while explaining another. Reading those passages is often the quickest way into their argument."
+      ],
+      "links": [["The Scripture the commentators cite", "/jhn/scripture-cited/"], ["The verses they say most on", "/jhn/most-discussed/"]]
+    },
+    {
+      "title": "Read the whole homily or tractate",
+      "text": [
+        "An excerpt is part of a longer sermon. Where Logia holds the whole text, as for Chrysostom's homilies and Augustine's tractates, read the paragraph before and after the excerpt you mean to use, so as to quote it as its author meant it."
+      ],
+      "links": [["Chrysostom's homilies", "/works/chrysostom/"], ["Augustine's tractates", "/works/augustine/"]]
+    },
+    {
+      "title": "Note what you will use, and cite it",
+      "text": [
+        "Signed in with an Open Word Bible account, you can save any excerpt and find it again on every device. Each excerpt can be copied with its citation: the commentator, the edition and the verse. Every work's page gives the edition Logia copied it from, so a quotation can be checked against the printed page.",
+        "The commentators wrote in their own times and words. Where one is harsh or dated, quote him whole or not at all, and say so if you need to."
+      ],
+      "links": [["Your saved comments", "/saved/"], ["A glossary for reading the commentators", "/glossary/"]]
+    }
+  ]
+}
