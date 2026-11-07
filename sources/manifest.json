@@ -20583,6 +20583,231 @@
    "kind": "scan",
    "download_sha256": "7e136c3088e3ba41c5abf4c30c945353ca3bd7a9d009f55fd94dc4737a7b3f11",
    "extract": "The scan's full text, as downloaded."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.ii.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e5dd78f863f3fc9fd5125ec7be7414edf1ed8c13d75c8c82e8da7e7932164f9b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.iii.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c4dd49495153e0458328c0a5f9b63070a7d9843a60df7cbebf4c927a5b36374f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.iv.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c18b512687ca4d076f32e913721f7be719c1a1827834fa07630ec732a4addb2e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.v.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d398016fbd44a3c50724849df93bae6dbae1d0a1d03fff1e452c2cd330f5f886",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.vi.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8944a450eae1186a241d239d26a14aa7f8764e5206e7ea88c76c740fd80fe295",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.vii.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d227156d5b8e182824d6586fd6c2465593f1d10a3908fc62b916ac0c65884d96",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.viii.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7af6e1dc4637e83246c67f2b8a18e4f9d49eda69049628bd881ff7430575ea74",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.ix.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0519b2877496c0922a7aedfb83a0371e4b15a58de8de873024980aab434d92a5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.x.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e89a663e0b765d62ee1889c3ac907886ed822118ec2282221b9d42225d26f162",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.xi.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "85c13e0dee197668d9b2518a1359350ccd30dcc8428806f6d3dd42830afa63bc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.xii.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a9402cad7464fa6ae7d984a4b84412bf1bdce269a0e8d192818ef9ebe5ddd4f6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-ecclesiastes/mhc3.Ec.xiii.html",
+   "work": "henry-ecclesiastes",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ec.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c73fcc3eed06c5eddd1984ff322e66ccf06724c7973158e915537b60d5a1486c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.ii.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e2633e364072ce23dc569eaeacdcf8a84b5ffab0ebda1ba8067d8de1a016c967",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.iii.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4ecfbbf4f6c06dee9e5b1d76d1126b3ca82dd02608d817d4414a9a665cab8df2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.iv.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "408a5ef8ff163bdf19743e2cb53d173668f31c75bd4efa62e86a1107cdbdf916",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.v.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8c2121fb6a142e7e97ea871733096441ce97de857b0923a0a79971e5ba0728df",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.vi.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "094166adb1a35101074c06d01a0c66db565b57e299043423b44979734d790a93",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.vii.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3585ce2c24a82b4941beb635de937e3e21902874cec10e31605b4c34241e6f5f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.viii.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4bf8c4e7cf06a5c910bc6f2806c62d4c58ec74190ef2efd816e649f89ba44fb3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.ix.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4519bdd0c5ec6a43c075b5a8a9e936bbbd586af07236957ebb1b23895da8911d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.x.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "084a3ad90b6c38be00c397ae8314c93ece95285a9b1204eec664aaeb7d7cb489",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.xi.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "935e1ff0a1d91bafdbdc2419d3b285d7b1cd2d26cfb9de2cf16bd1f4e6d3f02e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.xii.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "055879aab76463c3b6f6e122d1922820ea2f3bba4843899278d9dd4374aad19b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-ecclesiastes/jfb.x.xxi.xiii.html",
+   "work": "jfb-ecclesiastes",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xxi.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c5bafebd958adb3566eb7c3913bc80496dfa196e6a64d69799042e38507a6083",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/bridges-ecclesiastes/expositionofbook00brid_0.txt",
+   "work": "bridges-ecclesiastes",
+   "url": "https://archive.org/download/expositionofbook00brid_0/expositionofbook00brid_0_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "e2d235bc1c788b23a04b1237b070ec4d9f2889665bc119e45b8e43fd3ae95301",
+   "extract": "The scan's full text, as downloaded."
   }
  ]
 }
