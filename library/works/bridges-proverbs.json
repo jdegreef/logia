@@ -1,0 +1,18 @@
+{
+ "id": "bridges-proverbs",
+ "author": "bridges",
+ "title": "An Exposition of the Book of Proverbs",
+ "divisions": "verse",
+ "edition": "Charles Bridges, An Exposition of the Book of Proverbs (first published London, 1846); New York: Robert Carter & Brothers, [1865?]; text from archive.org djvu OCR",
+ "original_language": "English",
+ "translation": null,
+ "published": 1846,
+ "full_text_url": "https://archive.org/details/expositionprover00briduoft",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); Charles Bridges died in 1869"
+ },
+ "source_kind": "scan",
+ "notes": "Not on CCEL; the text is archive.org OCR of the Robert Carter & Brothers edition (expositionprover00briduoft, University of Toronto copy; title page 'New York: Robert Carter & Brothers'). Bridges prints the verses he expounds ('7. The fear of the Lord is the beginning of knowledge...') and then his exposition; everything after a printed passage, until the next one, is on its verses, in entries of up to about 350 words, and a paragraph cut between entries is marked with ' ...'. The printed verses are found by their numbers, checked against the King James text that Henry prints, and are left out themselves, as are the running heads, page numbers, the footnotes at each page's foot and the footnote marks in the text. Lines are joined and a word broken at a line end is joined again where the OCR dropped its hyphen. Where the OCR misread a verse number, the passage is placed after the one before it. Other OCR slips are left as read ('Hainan' for 'Haman', a word left broken, a stray mark); the Preface and Index are left out.",
+ "status": "ai_draft"
+}
