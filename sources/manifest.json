@@ -5175,6 +5175,24 @@
    "kind": "scan",
    "download_sha256": "0e0ed911dba3204f323033a116bfc51ac707f7fd974f2f85cd4836a45e3e7a4c",
    "extract": "Characters 31574-1445058 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/godet-romans/commentaryonstp01cusigoog.txt",
+   "work": "godet-romans",
+   "url": "https://archive.org/stream/commentaryonstp01cusigoog/commentaryonstp01cusigoog_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "73dadefad2a74f9d1b36e457946d6ee3db8c09f17cf5f9c9843d3c1a2e993588",
+   "extract": "Characters 304283-1124695 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/godet-romans/commentaryonstp00cusigoog.txt",
+   "work": "godet-romans",
+   "url": "https://archive.org/stream/commentaryonstp00cusigoog/commentaryonstp00cusigoog_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "8a14d561d0e1f176b1165e95c129d6209d3e90cbae7dec9e9c730e9abb797c00",
+   "extract": "Characters 7470-1215179 of the scan's full text (the pages quoted, with a margin)."
   }
  ]
 }
