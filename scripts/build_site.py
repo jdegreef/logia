@@ -664,11 +664,11 @@ def site_footer(lib):
             f'<li><a class="book-chip" href="/{c.lower()}/">{e(lib.books[c]["en"])} '
             f'<span class="lg-chip-n">{e(t("footer.chapters_done", n=sum(1 for b, _c in cov if b == c), total=lib.books[c]["chapters"]))}</span></a></li>'
             for c in started) or f'<li class="lg-quiet">{e(t("footer.none_yet"))}</li>'
-        tiers.append(f'<section class="testament" aria-labelledby="foot-{key}"><div class="testament-head">'
+        tiers.append(f'<div class="testament" role="group" aria-labelledby="foot-{key}"><div class="testament-head">'
                      f'<h3 id="foot-{key}">{e(t("testaments." + key))}</h3>'
                      f'<span>{e(t("footer.books_done", n=len(started), total=len(part)))}</span></div>'
                      f'<span class="lg-meter" aria-hidden="true"><span style="width:{100 * len(started) / len(part):.1f}%"></span></span>'
-                     f'<ul class="book-chips">{chips}</ul></section>')
+                     f'<ul class="book-chips">{chips}</ul></div>')
 
     def links(pairs):
         return "".join(f'<li><a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(label)}</a></li>'
@@ -1219,7 +1219,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     text_data = {k: v for k, v in bible.items() if k not in ("records", "words")}
     data = {**text_data, "records": records, "wordCounts": {v: len(ws) for v, ws in bible["words"].items()},
             "panel": digest_url(f"/panel/{book}.{chapter}.json", panel),
-            "comm": comm_url, "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS,
+            "comm": comm_url, "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS, "issues": GITHUB_URL + "/issues/new",
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "related": lib.related(book, chapter, bible),
@@ -2071,8 +2071,8 @@ def work_chapter_page(lib, wid, book, chapter, comments):
             last = min(ev if ech == ch else max(text), v + 2)
             words = " ".join(f'<sup>{x}</sup>{e(text[x])}' for x in range(v, last + 1) if x in text)
             more = " …" if last < (ev if ech == ch else max(text)) else ""
-            side = (f'<aside class="lg-side"><p class="label">{e(ref)} · {e(t("work.bible_text"))}</p>'
-                    f'<p class="lg-side-text">{words}{more}</p></aside>') if words else ""
+            side = (f'<div class="lg-side"><p class="label">{e(ref)} · {e(t("work.bible_text"))}</p>'
+                    f'<p class="lg-side-text">{words}{more}</p></div>') if words else ""
             label = (f'<p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
                      f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>')
         full.append(f'<article class="lg-excerpt lg-excerpt-side" id="{e(c["id"])}">{label}{heading}<div class="lg-text">{paras}</div>{side}</article>')
