@@ -17091,6 +17091,1581 @@
    "kind": "digital",
    "download_sha256": "1ac6ccb26da117362edde94c192c3f20034c6f0bf19af19718cd2715d5e67f39",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.I_1.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.I_1.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fac66723b18dcbc571eaad748f20631129a06b12a3a7c56b3efdb57bb52b66d6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.II_1.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.II_1.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "48a4f6a2d0d4c1f86adcd466d5d50eb67c93937553ff8c5d6bb3d103955a14e4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.III_1.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.III_1.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a1c03bfa524a9fac2af8e684cab1f8cad46658d83ae9fe8b30fa423d918f9939",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.IV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.IV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "669f8cc26f6d891dbaff6dc03b2bee88d3d6a9cc7f8709438f80bd3b695b56d0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.V.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.V.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "70926d574f6f6666d73a54ff9c094292c16dcf3f59277443dfac7c8661a54d1f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.VI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.VI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "84714bf46bc5110450489cee984a8e8b99ed480220682b9a863eb3d5558d89b6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.VII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.VII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "653aa2f5f82ac7b2b881b0fa8996abc6674f2dbcaf9fcb540d2c60e80a70e5e7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.VIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.VIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dfd53ec2d3cb84571afefbf3038a5e01a337c8253a350d9df8faa33fb490fc95",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.IX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.IX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7cdae0598c0013fa3f42a5b94718adf4fe1887da184e3f657b2a5258b4ec0703",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.X.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.X.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8c4679a53d7110bd50bbc6cac35c6016304c98e6e8ed955bdc7856e3581c750e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "70357f9be458ea31128bce7492882dd15b34526a18b06b00244eae5709824ba4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b116aaa799a7f437549a7ea54e1e6879171664275bc1870b3c9399ca698a2703",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1d691848c34875e360210f3dff968556f64cc11add7bcd8d5af59e7660f86651",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2aa2c7ce350648950551ca383731dc581e835bda423841f3c2766db1523f0331",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "128741b79ff1caeb23640af3fa49a846575c18e99d1cd2664fc3cfbd9add25a4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "85bff16a74b74c4e05a5a7ddcfae9393e18011290e152874095f15a752d8eefd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "74613e46bdacfe25728d0bc5810ef23647e7e6144d8ef12a8e1e7f20bc089da3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c9126eb817dde789ef1b1e2d15b2ef96b2a69a9b7c1c351ee1c9a3d80cc98825",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "99f122fd8f6b27e30abaed9fe298b654f93d49622e876f97fc521a0eb21a47e0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5ccafe111e7a2e4a5e7bfd36be07df91c2005daf64694459fba24fc6f44dda2f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a436cc88ab1a7b1734fdc50838ffde97222055c0cef724b3d7f433d2a876a994",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "69215fa76db56b3c004babb331e76afd607dbb55cce81a59107b897e1b1bf967",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2540caeb51155ea42831fc75cb2cec637ea9e66634e26c8ea86dec8c9653a899",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "07cf5911fd35f52bb256916bf264fb0d01c2db72a64b905160ef310602210d52",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7d370f99fb3f31042b28441f72462235aa4aff6e2c0c0e93ef85d12afc712a3e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cc67dd3dd4585dd4bf18d02d83f38079387811adf1297539106644455d4e8c74",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a51ad1c9ac797508c7fd9e2622f1f3b715d2ec579cbbb6e3b38e7113deac238d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "756dc2bb1c3c4b3b1249f826e58b140c5e5f386cf4c25151ec9692d5d880f6ee",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1484157e4bf711849e2373a2bb773769f2338eb33fee31cc6176d4c636439c75",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a1609dd21b91fea48c85aab3babab8410762805232c50e4b1fc2b8c6b08d0426",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fc6ab4bfcb8378fc3466aa9c602182926aa8f92711327c52f4de402238d441b0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fbd51b9cfbba7509394db004fbf781316a1e1c834ab2ec47e567fcde8699153e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "25ae673caf2ee4b53f6271bd0b9e8b6f147072009b647d9cf2c00f7b35587700",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c22ba02ee6ba1bde151d342cf173d3b07935b62f8bfe3dd1afb2d60283f4fc1e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "564aecc87d3fcb4daed0d9d9c473ec011c0181ea327ac67c1121f4bd99d8c13e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1330a3f98e6cfa1b3fba5479ac12f52f14f0359140a38331d84cba69a59cd907",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXVII.1.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXVII.1.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ebee05a35c8d7a5100ecb46e544cf4b6ce3f8e1b76385cffe08dc180411250f5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXVII.2.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXVII.2.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fe158e9b36d252c368cc37099e3ba91fb97f6d6899283031bad18305bbfbc442",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXVII.3.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXVII.3.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6f2fa194ea0874acba8b41484ae1478f82ffb6b8cada678f9ae1ab9c3d60b6a4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "477488531500190d1679cc21a86fd1c5d4fb1eb0e173286c79595f9602a0ca11",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XXXIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XXXIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "10673a5933dfabdcdd97475820e7aed9be8221826e30528116387ff6044d460f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XL.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XL.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b7128463588225857613e116ccc1d9d5fccf6138859f2b7091e41f545a0df114",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "550cb13d065715c7648df9894a932981550ac2202ef36770ae79adc269dd4c8c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c9123de7a69e3e99b0d8618bcdd696fe25f2d233bd07ba32f3f9687c26b74af8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a016b1f933da0becbeae74367c57ff3b8df3a0953e4f3f1b92771f0a41c9475b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b574a22e8ab573dd078a7b3735181a5e2f56398e1051cc96cf5ae2be88d758b3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d8c9e68e5a7e8aa920f8766f8482a1720196f4bec6db94c0953830f29a0c7287",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2cb11fbc32f2abf1869ad4779accb793dde36616286ea46668584cf52263d225",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6cebdaddc9436c2b2a0593ba3a253166b41c528203ea8886e9340573ecc693b1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d596617f6fe429b50a0a4570cae3117190db99c6066fd3fce47dfef59a8206a0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLIX.1.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLIX.1.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4d2d3dd193b27c43ecc431e1d61117b46229d23e055ba0344196f4c75cef669e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XLIX.2.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XLIX.2.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cfd3c054a5990df4b4308eab433777a81998af1b8a0ea60e631900177885c96c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.L.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.L.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bae1ef23023275864a7c86c2005654bb83382b8d46ed2248bc12c7cd8b1c6d93",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "42ec1fc6dce63c1aed2037c2b9bf4213aaef63b758d6def20475d68b5f3f9d96",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8d5941fd165ce6707ef0ac9d2832a38fd998437ee74ca5bbf31a1a1d9cca883a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "144774cc37ea865f7433c8a251046b5131d72b800cf708838f0040d76c02faaa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fc0f80598261bd1411aa5c7445c7f6f188601f95823ad090b78a8b7c2cd95bda",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0a763acac677127ccaa0d7c1fe74b27933a86059efbe1a8661e02aef389426d6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "43f5bc604611fb2748295ad03c5b7e21c9cc62b1c425af871d312f8981230607",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "01b88a0a8b547a5470f8e9be4ac28ab6c327aee12a6b1f923863f663e62c1c1c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "401888aba2d410b951f088eafce370a12fbdf02a3e2641daa580d6140fe9b203",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LIX.1.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LIX.1.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "026a3277799debb1542c2972680e6f89b5772c30fad9dd3d94189e4a5c7be152",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LIX.2.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LIX.2.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e51b28289dd9da7ea23c700f88987a631c24e0c3b56494ead91ffb2d5b1600da",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "16fc3014dbb8cfbcd3c78e937e3c46b141bafcc43df8167a716fba81a4470353",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2e496c36f5c02243f8a0deef8a0d4363d7d2367e26db24981d544bbf79c7f4f4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7d610f0e39de715c91074c2553d14e9f72191091128b816e216d18d249efa6eb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b23994c1601637885e39cd2a11840d70bef10df772ab2c202b050dfc446351b9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fcfefe9926ec67c5722457f1dad92b6d75a70eda6c3fd471fd267bcd983596ad",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d904a033998a23f8b3adeebbd9e287160f48df8f987a386c050d4c1717c0dfa5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4e1805805fe3f8e0a156284924d5d96763a0fa345662090089ef89506bcb6081",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c646b0b3391b802dc8463c42d1f7d452b0b27e7e50c9c04fb28b649c8a6936eb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8995ed4575c63f77459d7185585ea9325c1e590d6e9bf3bbe5c8d73459f8f630",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "42032c91f8d8b8562b8cb71319ff97397fae822aa270d16840c8ebf233c3e814",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "872973c9a57b4d7e5c5811e94fcefd1f7fbc61855eb7adee861cfcdb9e5d875d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3124b3291d05ef0d9a2a26d185c0f3197f8a347cef41cf8b997675e7aa31015a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aaeead04b8b9b29ebd04db0cea4539ea533ea011831219c7196494d3341b3a0e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d4c4913379bce1abdf819aa52d691f874012fa1a0bfed0b424038586c4aa0e77",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aa900c23e594b2a6fd7da381b4a29d56e108c7c06ceee72a0150fd5f6e159e25",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f09e3505aa27558b3c81f6a642b545af8cbd4c1578b320d1877f988ef33a7626",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6ad00d4357961999d80a103e81b758211a006d55c7686884745fc61a1055d451",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "44647085db0d5531a6bf3ac6fc023aeec33339ce914f2f1081ecd66c66556ee8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1611e2b3c96f2d7ad5066ebf347cbd40a25eaf48928a72fc0065bdf30974819d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4afebe243a6c1409ed258a1033d9516f4d24b281084db6d9f507719852f76452",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b5a7a8417fe0d8f0f749549facd887359947e9d2acb3684a1fb40b57987d4257",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "753a6cdb2fffc19a2deba6e5a120ce5e58ae1f630c729ba10bca183071735053",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d0c8d17f21916470923e0ee4771137b4464cb7a4e7e5a0025593bd8e183ce8a4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "30960992df6723887042f9bd795f2944db2dfeb090098885a43172e286ae2aa2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2a0a1fb63f9bb68cdf399579c661548a3b2a78d22f07c110c0e40607689a542c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "90ecc839208171b8de8c550e29582678512ab79110371bba93ac7156f21fb314",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "550f83c371f81bbc2888a47889e57e3edb34ad7f8e0d4bc264ee9c6a2dd1bcc5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fbae4482273c2a39a6a8102b34d5b655f734ab88d2318c1813b9cd6063a9c283",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a2e93a2dd8ace04c6162fc89eb24941ab016182ac1c5145ccd64639ccc8e90e5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.LXXXIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.LXXXIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c8fbb254556abae7df753f0c9003b5b506793deae71dba4538b6f50b79cbb6b7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XC.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XC.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4ff6b2d24cfa138305f092ee6e460a52515e2fb8f5c6c85ccb117d63658efaf4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "45064a090b2285e906ca1ea186abf634c175897f25bac8dcfa14def3213aff2c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "67f2e6bd26f939d04b77eb059a403ce6af13d865ca96c1a8341f696c02a6bb8d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "399c981c1dbed38fb754b04ca1eb7cb8c4e6f811637c5ab4132197ce3d128f2e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7ce24a14af2533e3ef062684a9600057e3fa66811736939e1df1fd5424c33e20",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e82640500da49ecaa5c7666cc89514c37ed12b9d2c10c28e8a5d168b8335780e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5269391cf2946c7c55cd0d38b2bc3e999e463c9f684f97bb54943a50d6cb52ed",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cdbe88c30b52ecb209a69e7596054a706b0b8a018109680880e31ca8df196885",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a42dc2a68465ac427369c3ff21505278af50b087e203fde38625bec506a006bb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.XCIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.XCIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6bf95abf30c5683a160bd3e9a7e0f15639d55171744b86288dc6401cd358f8dc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.C.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.C.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3f6c3c71663a5a0b68a55caddb5c7adeabd1e715f778bfe17be7bf210986cc27",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "db2313bead0367ef3a6cc3fd34f8019afe4578abe3e5a67f0fffb27fb40278cb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dbb3f8bc8f0074f7e5fa2da20b7c54ae7d896ae71f2205b8912873854a2c98a5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ff55c91a9569b6072b41940d7eeb2f0759bcd1347955f383b0e87c76e296f03f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5123ecd0a710fd0b2d259347c99b00e223ce232a046752e583493a6009ed139e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "676a73e3095766073ba11c43b21d0273f9cfaca73964e463c77cf2db0a2b5e52",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ff7cbbf227484f776cf477ce4169d1ea8d34cbc16dfaedc526412d6ad3591a6e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c7e70ff14552182a3fdc96e04e1b135b06612f7d51e588b537ce36eec0df25a2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d850ae99c9e6f3bdf3f47e84aff2612f36dcfb3f8a29c6ade0d970f155ff01d1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "91dd0a1a4384ea033d92f6e89b4e86b1fe934120adb31a32d227e01e9cc03dda",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ab69955d33f5f3b0b73306f0687a8b942b1d34758acd9b5abe3736dd659b2b9d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7c8c5e28e182806f5591b68e608da4c64755245f3b90b7c3589ac1288d97696e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "06c900c6976eb14ba984d4d996244f4e0a85f83aabcb035c5f5e90104f87d726",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0a4766b6701d0d82f5a3ccba7d78d3944ff7b04f1115b6a938c46f899643f980",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1ff044b1b8be80c6a5d88e934f66e0a24b25931f5a62162b118645da1e7f5897",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c858ee8a295526e33673f02fdc579861568120763f0082e59949dfab6e4b1cc5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a869c05b9624b32b5a027f8b75c1c481fa95b332273ab9131d4bc2aa5ae9f728",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4e9868859a3ba4fc5faaf50bc588b50aebfd3bde65a92aca99a9ff6eface7d9b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8eb350de52c8598f0829f406d512a2d50f0a9f21fd19e0a1e34fd11b6e373652",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.i.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "30c65880deb374de491197b7bf3f277780a5ebc83e5759176d82d16b0209b215",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.ii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e229fa31a870f7cad80946926104cbfdb908dc04ba78e0d4a2e489c2eab6aa70",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.iii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d78e380333292c88f76743a16bc3c60ce8e6a743375a7d9a957326a2d08b9b54",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.iv.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cd25bf53e0bbdcc2ef8f6dd2a0319ff93b1361a4a778e85af8fe145b00b20a65",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.v.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3fef4150df708fd9ac85b8c6d129cbfbcf14e7fccba4b2bc74bd347cae9e0be2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.vi.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2911eef3edf205ca75f4b5f83921ae0f08ea183cd5ca90b40f34a5b07127230d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.vii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7ef65f24cdd6fbd1ce3b2c11f9f123d9e2c8fde4c4fa2dc9538af623ef14c52c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.viii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "16f7a8e770baeffaad6e62fd0e449b60c4ff6b04dd6daf0f3b74e9bab07a9b1f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.ix.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0b6727962df6e60b5e6ebbccfb9419b46f04618431046a199271d4a6f16e97c5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.x.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "67dcfbf9b96efe688888709e7e0cd9933ee1d65dc7728e2d6d4b5dfd41f3e6cc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xi.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3d291581ac1663c13a6a01d6c4711be96eeedd3ae12689f89b2593c35036fe46",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6fd26113eec735a88fc8234d014665b655715dcb124dd025328c8ac2993984bb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xiii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "85c1a3eb4bf5f41416ecd6f585215ce58092ebb1ca4b8bd245d5eaf7be7200ec",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xiv.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fbb8603362332a7ca38377fd1ee868235fbcadc7f7dcf357fb4106e8ce0ada1f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xv.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "07020e17d9681ef7534987ca17a2d11ae4727bfb7a69c0bb0f405265a02d7fc6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xvi.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d6caf2e128a69fcaf630afd60c675ff4d422762a99afa4303b7a03561aae3d76",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xvii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "edb6d2e3e6260991837fb1e0809b9e0421333a50bbf5675b9c8bec711a46e788",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xviii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "52d0b54e5efe810a869f56f8b005f2fb66a7501abae7d3144ce199a530bfb4f4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xix.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "25360b84a5eabd8dc6821cf59ad22a7a6cd14c94b9f69aa296084a50ef6dc5d6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xx.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6ecb95957f0d852d858fd7f214eb610d4dd3eb5c02ed3d881023a3c9cd0a01a3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xxi.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "48110e48202c414a5aafed9e45bb3ef19e0d4e3bc9412e8bb0386c36450e18b1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXIX.xxii.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXIX.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "efa5e22349a4ee81ea204a97a341a210974c9549eecf2617c8a421a7c00afa2d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c9de5ab5712d2d8e3de3d20b4adde830a77a0343e8cbc6c0b0d0c5de38c5d0db",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "eeda63eafdd382566dbe28eac84650f61106fb2d7d3aa834be6842cc19300b7b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "47a6421780b387296f7ae995fa0d919e39994399b11aeec5b1666a59295a0297",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d6fad96ddedf35cc58be19d4901606254b2bc3aad5fe7fac993ef34befc4167a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fbfb4a4ff1a5e7a0781f0cb441266cecc3c49e2b725268c628d60c316319f843",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c275f5f0b5c8ca3a8ae1a17be22eb68d9cffb713e748cf98374740ee64827a39",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b4ea24dc930a930cdb1b825f47cb2e3096fbd165b27aae26cda520b5489ed706",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bfbde81445b2f07a7d6111fae5cbedf43a3cb4dd7fb3915da180073a327843fb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8c05928b4dd440c90bd1019ac04ba708a4c059bd5fd75075a006cdbf5c31a2a7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7ad28d02da4775349f703a923dcf372e42083d903db6840aeb656c4ebaa3cea9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "533dda0ab88ea50f751fb57013928599f7d26d3e40fdd87bef378c44d1a84605",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "052c17e6b5960ae291ec77a8c0c99492288d48b6e65242f294807f8db560be05",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "01f4d728a8ccb6dd2cbdb352a7e60e12b6227e033eadd400028dc430a1f09e7c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cb4dfb534157a6834ddadae417a71cfa0b4a94e99ac1018dde0f30a94ba163c8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2b6e236eccdb148068043da0fd7a93daa904fcad927c8ef6d1f435e43d12781b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4b351501c94a5b20420f67e2bcc683c08d8b5dc721607db5f92c01c80dfaa09f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "daab9f06bbb0d2a802ffb6831c5c5bd938d6e930375490640a7b1c3c2f1cc0c0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "de931377dd7abfb89388eca9ac52025bc5fc89b98d1a36693fb372b41b6a1de5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2c8de575f3bcd3a53043d87b2972905ce9c2fce336c1ff8f705e6f960c02c356",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXXXIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXXXIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e50ebe5d1f607f921d64a4905aeba7c570737782c1394b10708581c8403b85d1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXL.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXL.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1695b26ffc8f4515d5e03dfaa17527bab30eab47850cceb9727b9d9e879cadfb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3179614a3012cb47eae583c281a431282c302d2e2ad145db24919f5a64ef9d03",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ccd6d707fce7ef3a4be884cc5d10af3c830e925059fc9e8dd5f255dc8f53e599",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "11548f986b46d1089e83ca0e166043ac19718c6966ef8dcc5072dabbcedbea3b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLIV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLIV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fad6dfce0a60adfa9f865056940a581dd1426a539ad8599812dde0d17375f254",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLV.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLV.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e1777cec51becce08d5f2de0a24a4b793999aae581f0cae483450bce8ff4b813",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLVI.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLVI.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "db7fd7b7997a91a9ac6229b689354b277fe92abe385d4adc55b5fd647c1c040b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLVII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLVII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c0e4dd7547188e08924c479b540901370d43f2ca386c2b569de5b35d4e5017af",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLVIII.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLVIII.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1ff7c2cb84b20e35ad8b8a7793b7b440f3ef831cf6131c950f6f470463c5cf00",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CXLIX.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CXLIX.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2183b049130f2f5d37d786ee4718727fb67f59dc4327de2cae0e970e8002a65f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/augustine-psalms/npnf108.ii.CL.html",
+   "work": "augustine-psalms",
+   "url": "https://ccel.org/ccel/schaff/npnf108/npnf108.ii.CL.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ff0823446a84422775344f50f63949949aa339c83cbf0b23528d88e7e16875b6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
