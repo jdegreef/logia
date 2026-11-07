@@ -8793,6 +8793,1356 @@
    "kind": "digital",
    "download_sha256": "d6312e5ee0bc053bd54cc3894ae4db3efd88d0c1d954d7ae91d2bd854817411c",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.ii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c84aadf0688862dc893147fa82b9a99221c79eb25ecdc0ca0cb8090ddde62cae",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.iii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c825c9715a996fbb407ff25eb1d14261c458cd033d351cfaab9e522c7e47d7b6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.iv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9a9be932045cd53fdbb0eecc432f635e241cd78007efe9218e5e531b94682219",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.v.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5a2613a5fabdb562bad1cc020838b09e1168bf732dfe3aa8e9566c68a4cd4c58",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.vi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4af341ad30e1edaf9337ef2b7e05a1480e78f84f8b682a7d41476d2cc3894e2d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.vii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "600f10a5a95c2836012216b14803be82f3090a6c7127412974fbac3874fc4915",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.viii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "01b98c2902c19f88f4fa9e528c4c018992bee56e9ea1c02e28ff1972bb9c61fa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.ix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "007f6ec6ac9be0eba83b975ed7384eee4b7089145fbc6d9b3edf2c02f18b3b82",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.x.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5adbd65b1d709fff478c5e7893fd8a48796cfcc1b4c2741b8d3278b30de4f2e5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6454833d66b062d24b1e0c6bf79e5fb23c16a0b00c9f057694a933cca5c34257",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d027f99282c9d4810cbb311f389343f0d562d69e9679131594c24331d5d92c69",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "46cbbcb4722313239152df6feed7313795550121b01723fd8629645e65016742",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2379cfc6738673c5b8c96a5df1fd38f131dcc6d6053001beb29c9f1a8f9a3ed5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3748d1c03ffeb97e8eb815440c586b9c0fd770189de84b6319f2ea5a2de2f321",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6dfbf922f5723c663ca7f65e7678343a467e85993b38383894528852a9925a36",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "12fbfd95458f1e26550eaac1044861ec546a1c2ad15ec993a22e5e177bf9a2ce",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3da5c6c19797bcc805e09ee86aba60581df58367e5737f253cb3a539a63b9052",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "76722bf322a057bf6a82a3da26e7a722a7845cfc969a2120579d5ea9d1271af6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "508ac31e8e4745a3c2b3e4bc49ba19c9bab47116b23c17a53c2e8c44f46c0238",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "af71ea5bf8924f8ffb4dc48f2ad153b0dc87ba294bc1f3054e4858dd8b6f6345",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "299c793ee8fbf5d0f9434f204c7c6b85e5e517503da08539c3d9ced2a565ffd0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b94d711b1aa59400ff51310de41e99141afebf9f5a45708feefe8805e7daefcb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c01ae97598352aefcb7964767fe6cad2027bb41f9457875d2c053b990a4986dd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7e68f80ecef33d73919659aa51457f0d8dc28e7dbe137fbc864586b36541091c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e02b1e305469f30224e9718959ef9ea3943ec0907e6ccfcf947480b9b9590877",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "afafe5111d9ec32ebfac9b9707f63dc0ba3ce0dd36be52273621e5ee41e2694b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1517ea1d3b940084d5dd3b07bf898be3367e914e5339ff20b84c8e2092cd487f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5ff0749f5feccfd2fcef23895784ff99d5e7bd780bb78b2a77fcde0009c22944",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "662b48a832ecf661ef100ddd0df74ec9a76efed2537bee3201c9259c6e1f808b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1715a82b7c3af56749bbe75cebfd733525d48fdd195c1cc02cc7346180f405a9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dbdf7e26c8d5937ba3fd4bbc3f76c2c121349cb9ba454b405a685e58d6896af8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f00c3ad096d1f3e55d0779ac4829d23ed98f3597387cf2106de384775bf02642",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "63e3da68344e977aca81caa0ceb6e28d18827fb6482a7c2f6f2afe4f20825b82",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ccd4f4eb00fc219e9b1a9463d8abcc447afa14fe716a7e109ffa44032d5283de",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f81e22285fad1c563a70a649628b0ba98d7a0c9ffd701db9b0468627df0c2dd2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4bf13d97a2b38ae7c4f35d8cb6019a8ee8dd5387000ce8393bdc98edcc130bb2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3c90151520c9c88228d9c38e63ab196bca3a6f2bb579fad72d88c5fb93f09973",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xxxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6cfcd9d51815051ce1b5906f66e83756c0c2dcfbf7383e8cb908f5c80efa6ce4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xl.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xl.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1dcb8d38463b551cdfa26f9894b9f81ed3b48b44e7183824ce512473af79dc57",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xli.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xli.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fc61e3f480ab5232ae70eaf82d62068ded715673db65571347cd3607b566c428",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xlii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xlii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4214aaa9745844dd54e93f15c08db53719c0b775ec19bffef72eb0f94f687884",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xliii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xliii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "51a221c3916306aef639455c154ad72c8b35e32ef921e5f84c2878bcf88dbd33",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xliv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xliv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2dd9263a430ffef1db8f0911bffb80c12e4e9d949a36eee20ecbe60146de9be5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xlv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xlv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "804f0adf389151de6abcda3737ef8e150aac5ae76d341fda47d13b40a61197dc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xlvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xlvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fb0b27c5173888b795483db5966bcf84d4e6fb5eb84b934992215b4e6a220be7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xlvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xlvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c92ad3b9e43f6e5eb98555015bcb8ed1ab3e79b12a31451686986426fb02b3f8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xlviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xlviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ae103a091563abd48893b86e572007b4b999dd0b27d11c5b6879e4af933ae192",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xlix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xlix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "318fa1628b35bbad831e2cc35e9eb9e227fc9d0de52e03ccb7e24a019eb598cd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.l.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.l.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "764291f82c9b09a4ba2e977798a460c6547a1d2690540e5614914bc107e72a5e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.li.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.li.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f798a4048fdb57e260ac6acdf05822f97a159a25dc2b13498b7e01485a6e11b2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2cdddc5dd110167c3e81d8493c6f966675dd7f7cb600f855f4699464ab4c3301",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.liii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.liii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3187bc8e7b6020d1008ec4ef7a450d4d182ee73f6034c0e5e5337df3c9e4e0d1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.liv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.liv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e3364752f83ca3adb1bbb5e078a6fecb74cbbc67bfb8ac775e6f1a4b7f08a80c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d82456500e1f9880d60365faa45c56a08970ee7bbac391329ade57fe6cf58c1f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b19f8d9f93cb6d121c7118940fa14573ccc83d25d4391a500ac14e9e85ce18b8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0b9ef9aed6458a4ef64321d22cc41dcc4042cbad33bedf316dc502c136fad76f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "505ea5e0ea5e542c8d645b7488a7fbf2b1be81c2f8d7a32c55377ade2e224bb0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8ac1d1db2520e98ddab90ef3c15007df79770e3f695904c68340181b48792e0c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1cae343da669dc5fdad50bfe74a8264c4e8ac17d39c2e3df3c1658a295a07c80",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c9ab60a31a86c1548d20dbd86b0ac90360b9035c5d3c5fbff4cf25a550c4038e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9baacf6b90af7480a1f2bd9fcf4d60d43b1b55a4e642af6a66d5e4a5823d9048",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5915fef61108ee10f13b5ad4f4398681946651fd635b7cc61522770b199a0eb7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8dbe756a972388cd319b8f0683920ce5a9df204351d972a731571babb63096a7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c4d6b300f7a05c461c6ad5464d2c38cdfd2d6da4e36a71a7e3b49587250c3ef6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "685269aa23bd0ea11d160ba49c601a8db98b60a878d60b5fb048013b9e8df729",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1b43e198513d40a46db23daed50e3344f580ea15040da0c217c62bfdf07c59e6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4cb881adf3e1450f3a2490c8c7978c8401b469b12d1adccc28315449e6f16f26",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "472f2d7c9200dae5ea02047f131deb0dde92693cf22afef5cada05574562eff9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b73f4bc8c0e0b7777e554af131206063f73c3d8df9f74e83e9e66ebc60edc1fd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "33b72e6d12988f67928c284fb7ebe253fbdc45e0d05ef76e3dbb0ee5f62f4b94",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d6db7b8f916ee6e12a324427c29b33136b950fecdecadc8e79580ff3e09083e1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "303d3b03bcc7358d3724c51a6562819d63e271283041539a4b986f45b67d516f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "028c27d5317afc9bb955289ce75ac167d63f51dab67ff63dec3a50a698a529ed",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b79a8dfcce9b1710d6720b46309b75553aacb64ae336141193db67b8490391b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "655d265e4925c8bc34474a3f39539026fc55696b8c77a4fa713e84304c10ae1d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c72734f10386e8716a3ce78325900eee4dd8cfee5071dc26def645b329efc099",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "41cf6247d7122c265ac10d306cc7b267550df7fa9d31166384b21c496481b2c7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7beec216d9ac946718512d238bf0185ffbe3337ce774319863c27cef67aa3592",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2899e6e2cb25cdc08a7eaa6bd2b525f7b388de769f11e38048b067775d55a57a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1376e6bd7aa3af7e89dd5fb32494fb06e53226fd31c787cec669badf1549537a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d814583a3917404d7655cdaa613b39bb8ed22bf300315094543bd91c23cf807c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "940e22013e7805db966cecd3fd040beded441ac0d9c14ee7199072d00f8414ca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8eb7cd44502f2c6bb020afdea09cae51bbfc234edf2e3088fe0626af0ab370c2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1d79fa53146d0ef26ad71b00e78cd5e1a010f83b8ca21d6aaf5bf606471cf150",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "57b9f94445b001579525d6357cf8e8aecb156064e16bf256dd4a8a1f51c4f1a5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "09eb129209561040f97db10e99c7a418be5cd85dae54bac33a9e129ece95c0d6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aecbfbe039679822213aae9fb758b4f165414f96ffd2620a4f1133944c31402d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.lxxxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.lxxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "06c3d98c45c7bc9c8e49fc51bf33023906d17b03db7ec183f23a56638203da9c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xc.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xc.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6e4f7238bf4282b184354bef6f1abe4a2a1842e46a0038763fd2a69307eb936f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xci.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xci.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "32e114787f1227e0f22384049a8889ea6b25e8a7bfba20870a6bac89d71d1633",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xcii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xcii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bf00e3d3bf04fcf61cc20cd3abe48ddffe10eac983350eabca33323241a7e242",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xciii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xciii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6eaa717f4dcffdb853c951979f77bc9610ec72d027f73ee5d38d3e2e68e4165e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xciv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xciv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a3a06424decc4f9e901caa6504eaaae1ae86b20d1a359b31fa941bf42ff8aedc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xcv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xcv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "11289a157b7cc3250c3569ebf44525a878b8f30a31fbeac847c68a3e95153bb6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xcvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xcvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8818acfed357d8e423d1823a1ccedb48d929ad128296a5d1659223725c280afe",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xcvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xcvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7493140d07fca0ffcfc9904dd49039f79979e50d1b58a0dcaab5ef91eecd4de6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xcviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xcviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9a005c2eccfc3c9699e2a3003a3e701b5ae86405fb79f53c6aaab0bd88870ed6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.xcix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.xcix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3f190042c5979e189471100c000513ace205e6db16cfa9ddd1c9ce8528c115d4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.c.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.c.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b89befd2d829a32e400391a25c1aed8cbc8dd0724228438bb241fb14702130f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.ci.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.ci.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a54e4e45c3a4b1d5852941c8194977e1910a1d48f1f96052b782158f3283a209",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "defabe5306093599e6a2cb99696eb7708f0d39b3ef1f388e97b54d63fe375ba6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.ciii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.ciii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "37ffd4e46ca5924ea7d9df58adb6fd07a03c62d13b265a0a109c08200bd6d0ba",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.civ.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.civ.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "071baa3f0174b4bb0babc9a21701b0efbfb6da8ac2142706e46686901284a3be",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8c821bab4995721cb3b1c8da94614519cd4947750fa3e7a56a78477cb8f5985e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "95bc69d10075eaff82e3fc01b03dedd20205c0c975debec1276543b05b1a884e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8906a62865f5c02b3b8dd203e8c1e631def8aa0ed41164f6a5d3a8c3f9f27090",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7de66473c07d99824f68d6a0da9da015500971192687dd133b7fec1d867ff378",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8abf01d65b538e60dc2e24b35c127ffdc131e6125231940526dd964228f56425",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e508397f3ca4da1ddcf63673bfa67450b71298620bc3b1beee046ddb7c05493d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "64b11d9c2daa3fd3b23bfd1287a42a3a00371aa2ccdd59badd35f7cb3c0fb1f7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ec19b50f14ecae1538f860ed08657a8a47081c860f0387af6d65fe8ec9692656",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "34637516eef87058f3400ee3f8b88df5d0da6c3dd9d0df273e192f11bb70607c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7090bb3e8b8893ce90bf3286e853f4bdfd26c60171b1e5365cda73dd1b9c1ff6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "73bb2d07f24c2a684593252d3afca2ab17602f23f453d57c6d635d7fa5ffffed",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0d52292eabc666a94bc4d01ebb126a9353fd3e4f288a9cf11baacf7e9be3c89d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1c1a24891f5491c509dfcc3444f69005cc938a2c42a31b0abaf7d7f82c52ef0d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f94fb6da2efa77f379fa3526043eb78366dc63b3815789d1eb3189072f769828",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1d57e3e85c9f27bc937ae4b3fa7b5a1d5e9aa25cfc29c76b03b485cb1f6ed1d2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6bf9a102e104b79d3b749f409eec31d037a3d53c9e2fb5b52064f75eb7856538",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6270eff4d83b814debf1235f4efbe6ab58d9cc6000388dbeb5ea83dbc747a7d1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7c7021e1570e73a1ea790a9d6c395779415b5d5c77482732838de571af266cb0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "782ed51bc9b9e8577dad172910a4d273cde1f71a875015c4cc4a2c3fef4d9a75",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d074fa11055a5de9b26b6fef19459f7ac367e00be88cd766f97bdfa3934d55a1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4da51bf308fea311a536fa1b86a04167d8ced1936b082d65c65945e9d3d74f8a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "33db9144578bc9c1a12e6d1dd6a9d8dd574b8b814bdd75cf14d3a7c59f159628",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f21eb4ec265bde0363e293d23c9af2a486ad85c2b27037e2394ab8d632997cb8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3b39aee710ca89010a352103c5ee241c7a082cb0b0933ff170876d58e7361c75",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "11c97dcb18295de73721fb4625507570d6d4aedd88f9847bce5c82a2de2f0cd8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxx.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "155f6d0e7dc86fac0faf3667419741304e6b4c435608618687fd8d6fc18fddf6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b71cb425201b934534b119ed54774e7a2d21ca6cc14296013c659337d61de98",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0e428df0755e627ba415054e0efa16891e72a5cc868ba24f07e58cd5ddf19f51",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxiii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5dc6fa04489c63cc1ddc944ef42a5eb58aea52849467aa4d7dcabc5e4c068d51",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxiv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "45be68d4b3f30e8062e81e55a4d6708aa000b5712953a5f762b00adbdc62778e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5cfa1c1f99ee061016965ec800062c051f195ff2cb43af2ee2741b40dfa698da",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "40256ffd83ecc79f7c0f9a753fb49212a9968b50d9302b7230241d019cd6b98b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "62740c69ae793f6c291719a4326564627fe508014d426529bd083ffbd49c3d06",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b508321f0266ec7ce9b37be7bffc82d894e53a8c99053dcb8a14e6a0179b583",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxxxix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cb17159ed7e4118927cd0da0ce63fb6640f267e946c08b8d542fed19f898f974",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxl.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxl.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2928f15c11f5d05f86eadc98421d245c2da2f60b32ac10d488193bec061993de",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxli.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxli.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e17706b6da386f8c72464af44b13ccf5de6cc87069de89b779cfa6af518fc38b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxlii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxlii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "39abbd2fb3cf88d97d9969087c31e74905c2460df9f8468f08cae1e608837a9e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxliii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxliii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6c3f8d6348ca6b1c49a4947d372d83b4e2b1d16c5e8d0dc00cef6eeb9c748aac",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxliv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxliv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4df9eeb571d1cfdb1f1c57cf1ddc282016ac7a6401bcb14cc720c71459f1b2e9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxlv.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxlv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e735fdc0de7a97f29668680346f84789b925c38c13497f4ca272253651322bf1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxlvi.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxlvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "016030dad27ca7e7170d730f9d5438dd77e6abfee9772c6816306f64aa8211b8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxlvii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxlvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5b62378a10d666a40abe6b294a576660e3de1fd7f5722b96ad9e49a1c137a155",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxlviii.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxlviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "deb06e3f7553ac5f7962ddd13d6590e2568c78a0aba2bda9eda25bceadb38c9c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cxlix.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cxlix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "83ef2b3bfc96c715dc33f4f7a91eba4c3940e673ae2de0b5083f9c823ba2cfc1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cl.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cl.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "679e00d2e8a8bfad88d3a029c4cc8a9fa8d4e500c9c56147c4d3c93b2da024ce",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-psalms/mhc3.Ps.cli.html",
+   "work": "henry-psalms",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Ps.cli.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e405e389795d0a4b8745fd27d6f7e52b2b835c970904c602cff709cbc0a42e9e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
