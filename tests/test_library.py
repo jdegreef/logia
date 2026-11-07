@@ -385,6 +385,16 @@ class Site(unittest.TestCase):
         t2 = text("augustine", 2)
         self.assertEqual(t2["verses"], {"start": "JHN.1.6", "end": "JHN.1.14"})
         self.assertEqual({p["verse"] for p in t2["paragraphs"]}, {None})
+        # Romans, Homily XVIII prints its verse line ("Rom. X. 14, 15") above its title.
+        self.assertEqual(text("chrysostom-romans", 18)["verses"]["start"], "ROM.10.14")
+        # "Chap. x. ver. 1." says where a homily goes on into the next chapter (Homily LIX, John 9:34 to 10:12).
+        h59 = text("chrysostom", 59)
+        self.assertEqual(h59["verses"], {"start": "JHN.9.34", "end": "JHN.10.12"})
+        self.assertEqual([p["verse"] for p in h59["paragraphs"] if p["text"].startswith("Chap. x.")], ["JHN.10.1"])
+        # On such a page a mark before where the text began is a misprint, left unplaced
+        # (Romans, Homily VI prints "Ver. 12." over 2:28).
+        h6 = text("chrysostom-romans", 6)
+        self.assertEqual([p["verse"] for p in h6["paragraphs"] if p["text"].startswith("Ver. 12.")], [None])
 
     def test_the_reader_lists_whole_texts_on_a_verse(self):
         with open(os.path.join(build_site.SITE, "jhn", "1", "index.html"), encoding="utf-8") as f:

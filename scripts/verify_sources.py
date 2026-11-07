@@ -82,8 +82,13 @@ def source_letters(path):
 
 
 def source_original(path):
-    """The source as written, for finding Greek and Hebrew words in it."""
-    return unicodedata.normalize("NFC", html.unescape(open(path, encoding="utf-8").read()))
+    """The source as written, for finding Greek and Hebrew words in it. In
+    an HTML page the tags are taken out: CCEL sometimes splits a Greek word
+    with one ('ἀ<span class="Greek">πολυτρώσεως</span>')."""
+    text = open(path, encoding="utf-8").read()
+    if path.endswith((".html", ".htm")):
+        text = re.sub(r"<[^>]*>", "", text)
+    return unicodedata.normalize("NFC", html.unescape(text))
 
 
 def check_original(excerpt, raw):
