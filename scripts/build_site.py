@@ -1820,6 +1820,12 @@ def timeline(lib):
             f'<figcaption class="lg-quiet" id="tl-cap">{e(t("commentators.timeline_note", a=lo, b=hi))}</figcaption></figure>')
 
 
+def name_initials(a):
+    """"JC" for John Chrysostom: the first and last capitals of a name."""
+    caps = "".join(w[0] for w in a["name"].replace(".", " ").split() if w[0].isupper())
+    return caps[0] + caps[-1] if len(caps) > 1 else caps
+
+
 def commentators_page(lib):
     # Each commentator as a card in one grid: their initials in their era's
     # colour, dates and tradition, the first words of their first excerpt,
@@ -1848,8 +1854,7 @@ def commentators_page(lib):
             f'{e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=book_verses[b]))}</span>'
             for b, vs in verses.get(a["id"], {}).items())
         langs = " · ".join(dict.fromkeys(lib.works[w]["original_language"] for w in works))
-        initials = "".join(w[0] for w in a["name"].replace(".", " ").split() if w[0].isupper())
-        initials = initials[0] + initials[-1] if len(initials) > 1 else initials
+        initials = name_initials(a)
         cards.append(
             f'<li><a class="lg-person lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/">'
             f'<span class="lg-mono" aria-hidden="true">{e(initials)}</span>'
@@ -1866,36 +1871,62 @@ def commentators_page(lib):
     return page(lib, t("commentators.title"), body, "/commentators/", current="/commentators/")
 
 
+def reading_minutes(text):
+    """Minutes to read an excerpt aloud or slowly, at about 200 words a minute."""
+    return max(1, round(len(text.split()) / 200))
+
+
 def excerpt_list(lib, comments, show_work=False):
     """Excerpts grouped by chapter, each chapter closed but the first, with a
-    bar of the chapters above them: one row per verse or range, its first
-    words, how many passages there are, and a link to the verse in the reader."""
+    bar of the chapters above them, each shaded by how much is said on it:
+    one row per verse or range, the verse as the Open Word Bible has it, the
+    excerpt's first words, where it sits in its work, and links to read it."""
     out, rows = [], {}
     for c in comments:
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
         rows.setdefault((b, ch), {}).setdefault((v, ech, ev, c["work"] if show_work else ""), []).append(c)
-    bar = "".join(f'<a href="#ch-{b.lower()}-{ch}">{e(lib.books[b]["en"]) + " " if len({x for x, _y in rows}) > 1 else ""}{ch}</a>'
+    words = {k: sum(len(c["text"].split()) for cs in g.values() for c in cs) for k, g in rows.items()}
+    most = max(words.values(), default=1)
+    several = len({x for x, _y in rows}) > 1
+    bar = "".join(f'<a href="#ch-{b.lower()}-{ch}" style="--depth:{8 + 32 * words[(b, ch)] / most:.0f}%" '
+                  f'title="{e(t("commentators.chapter_words", chapter=lib.books[b]["en"] + f" {ch}", n=f"{words[(b, ch)]:,}"))}">'
+                  f'{e(lib.books[b]["en"]) + " " if several else ""}{ch}</a>'
                   for b, ch in rows)
-    out.append(f'<nav class="lg-chbar" aria-label="{e(t("commentators.chapters"))}">{bar}</nav>')
-    works = {c["work"] for c in comments}
+    out.append(f'<nav class="lg-chbar lg-chbar-depth" aria-label="{e(t("commentators.chapters"))}">{bar}</nav>')
     for n, ((b, ch), group) in enumerate(rows.items()):
         name = f'{lib.books[b]["en"]} {ch}'
         passages = sum(len(cs) for cs in group.values())
+        works = {c["work"] for cs in group.values() for c in cs}
         whole = (f'<p class="lg-chlink"><a href="{work_chapter_url(next(iter(works)), b, ch)}">'
                  f'{e(t("commentators.in_order", chapter=name))} {icon("arrow", 15)}</a></p>' if len(works) == 1 else "")
         out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}"{" open" if n == 0 else ""}><summary><b>{e(name)}</b>'
                    f'<span class="lg-quiet">{e(t("commentators.passages", n=passages))}</span>{icon("chevron", 16, "icon lg-caret")}</summary>'
                    f'{whole}<ul class="lg-excerpts">')
+        plain = lib.plain(b, ch)
         for (v, ech, ev, work), cs in group.items():
             ref = f"{ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "") if ech == ch else f"{ch}:{v}–{ech}:{ev}"
             more = f'<span class="lg-quiet">{e(t("commentators.passages", n=len(cs)))}</span>' if len(cs) > 1 else ""
             title = f'<span class="lg-quiet">{e(lib.works[work]["title"])}</span>' if work else ""
-            h = cs[0]["heading"]
-            lead = re.sub(r"^\s*\d+\.\s*", "", cs[0]["text"]).lower()
+            c = cs[0]
+            h = c["heading"]
+            lead = re.sub(r"^\s*\d+\.\s*", "", c["text"]).lower()
             lemma = f'<i>{e(h)}</i> ' if h and not lead.startswith(h.lower().strip(" .")) else ""
-            out.append(f'<li><p class="lg-ex-ref"><a href="{chapter_url(b, ch)}#v{v}" title="{e(lib.books[b]["en"])} {e(ref)}"><b>{e(ref)}</b></a>{more}</p>'
-                       f'<div>{title}<p>{lemma}{e(snippet(cs[0]["text"]))}</p></div></li>')
+            verse = snippet(plain.get(v, ""), 24)
+            verse = (f'<p class="lg-ex-verse">{e(verse)}{" …" if (ech, ev) != (ch, v) and not verse.endswith("…") else ""}</p>'
+                     if verse else "")
+            w = lib.works[c["work"]]
+            meta = [e(locus_label(w, c["locus"]))] if c.get("locus") else []
+            meta.append(e(t("commentators.minutes", n=reading_minutes(c["text"]))))
+            if lib.in_full.get(c["id"]):
+                meta.append(f'<a href="{lib.in_full[c["id"]]}">{e(t("commentators.from_here", division=w["divisions"][0].lower()))}</a>')
+            else:
+                meta.append(f'<a href="{excerpt_href(lib, c)}">{e(t("commentators.read_it"))}</a>')
+            last = ev if ech == ch else max(lib.verses(b, ch))
+            out.append(f'<li data-from="{v}" data-to="{last}"><p class="lg-ex-ref"><a href="{chapter_url(b, ch)}#v{v}" '
+                       f'title="{e(lib.books[b]["en"])} {e(ref)}"><b>{e(ref)}</b></a>{more}</p>'
+                       f'<div>{title}{verse}<p>{lemma}{e(snippet(c["text"]))}</p>'
+                       f'<p class="lg-ex-meta">{" · ".join(meta)}</p></div></li>')
         out.append("</ul></details>")
     return "".join(out)
 
@@ -1922,47 +1953,219 @@ def missing_verses(lib, author, book, covered):
             f'<p>{e(lib.books[book]["en"])} {links}</p></details>')
 
 
-def author_page(lib, author):
-    works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
-    comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
-    bio = "".join(f"<p>{e(p)}</p>" for p in author["bio"].split("\n\n"))
-    draft = f'<p><span class="lg-pill lg-pill-draft">{e(t("commentators.bio_draft"))}</span></p>' if author["bio_status"] == "ai_draft" else ""
-    # The facts beside the biography: when they lived, their tradition, the
-    # language they wrote in, their works here and how much they cover.
-    facts = [(t("commentators.lived"), author["dates"]), (t("commentators.era"), t("eras." + author["era"])),
-             (t("commentators.tradition"), author["tradition"]),
-             (t("work.original"), " · ".join(dict.fromkeys(lib.works[w]["original_language"] for w in works)))]
-    for w in works:
-        x = lib.works[w]
-        facts.append((t("commentators.work"), f'<a href="/works/{w}/"><i>{e(x["title"])}</i></a>'
-                      + (f'<span class="lg-quiet">{e(short_edition(x["edition"]))}</span>' if x["edition"] else "")))
+def author_covered(lib, comments):
+    """{book: {(chapter, verse)}} that the excerpts comment on."""
     covered = {}
     for c in comments:
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
         covered.setdefault(b, set()).update((ch, x) for x in lib.verses(b, ch) if v <= x and (ech != ch or x <= ev))
+    return covered
+
+
+def coverage_map(lib, author, book, covered):
+    """A book as rows of chapters and squares of verses, the verses with no
+    comment left open, and the list of them beneath."""
+    rows = []
+    for bb, ch in lib.chapters:
+        if bb != book:
+            continue
+        cells = "".join('<i></i>' if (ch, v) in covered else
+                        f'<i class="lg-nc" title="{e(lib.books[book]["en"])} {ch}:{v}"></i>' for v in lib.verses(book, ch))
+        rows.append(f'<li><a href="#ch-{book.lower()}-{ch}">{ch}</a><span>{cells}</span></li>')
+    return (f'<div class="lg-cov-map"><h3 class="label">{e(t("commentators.map", book=lib.books[book]["en"]))}</h3>'
+            f'<ol>{"".join(rows)}</ol>{missing_verses(lib, author, book, covered)}</div>')
+
+
+def start_here(lib, comments, n=3):
+    """The author's excerpts on the verses the most works in Logia comment
+    on, one a chapter, the Catena's quotations and length breaking ties."""
+    seen, out = set(), []
+    for c in sorted(comments, key=lambda c: (-len(lib.voices_on.get(ref_parts(c["start"]), [])),
+                                             -len(c["quoted_in"]), -len(c["text"].split()), order_key(c))):
+        b, ch, _v = ref_parts(c["start"])
+        if (b, ch) in seen:
+            continue
+        seen.add((b, ch))
+        out.append(c)
+        if len(out) == n:
+            break
+    return sorted(out, key=order_key)
+
+
+def count_bars(rows, top):
+    """Rows of (label html, n) as bars against top."""
+    return "".join(f'<li><span>{label}</span><span class="lg-hbar"><span style="width:{100 * n / top:.1f}%"></span></span>'
+                   f'<span class="lg-quiet">{n:,}</span></li>' for label, n in rows)
+
+
+def author_page(lib, author):
+    works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
+    comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
+    name, short = author["name"], short_name(author)
+    bio = "".join(f"<p>{e(p)}</p>" for p in author["bio"].split("\n\n"))
+    draft = f'<p><span class="lg-pill lg-pill-draft">{e(t("commentators.bio_draft"))}</span></p>' if author["bio_status"] == "ai_draft" else ""
+    langs = " · ".join(dict.fromkeys(lib.works[w]["original_language"] for w in works))
+    covered = author_covered(lib, comments)
+    totals = {b: sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b) for b in covered}
+    # The facts beside the biography: when they lived, their tradition, the
+    # language they wrote in, their works here and how much they cover.
+    facts = [(t("commentators.lived"), author["dates"]), (t("commentators.era"), t("eras." + author["era"])),
+             (t("commentators.tradition"), author["tradition"]), (t("work.original"), langs)]
+    for w in works:
+        x = lib.works[w]
+        facts.append((t("commentators.work"), f'<a href="/works/{w}/"><i>{e(x["title"])}</i></a>'
+                      + (f'<span class="lg-quiet">{e(short_edition(x["edition"]))}</span>' if x["edition"] else "")))
     for b, vs in covered.items():
-        total = sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b)
-        facts.append((t("commentators.covers"), f'<span class="lg-meter"><span style="width:{100 * len(vs) / total:.0f}%"></span></span>'
-                      + e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=total))
-                      + missing_verses(lib, author, b, vs)))
+        facts.append((t("commentators.covers"), f'<span class="lg-meter"><span style="width:{100 * len(vs) / totals[b]:.0f}%"></span></span>'
+                      + e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=totals[b]))))
     dl = "".join(f"<div><dt>{e(k)}</dt><dd>{v if k in (t('commentators.work'), t('commentators.covers')) else e(v)}</dd></div>"
                  for k, v in facts)
+    # The same facts in a line under the name, for a phone, where the card
+    # falls below the biography.
+    wholes = [w for w in works if lib.texts.get(w)]
+    chips = [langs] + [t("commentators.in_full", n=len(lib.texts[w]), divisions=plural(lib.works[w]["divisions"][0]).lower(),
+                         book=lib.books[lib.texts[w][0]["verses"]["start"].split(".")[0]]["en"]) for w in wholes]
+    chips += [t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=totals[b]) for b, vs in covered.items()]
+    chips = "".join(f'<li>{e(x)}</li>' for x in chips)
+
+    # Start here: three passages to read first.
+    starts = "".join(
+        f'<li><a href="{excerpt_href(lib, c)}"><b>{e(scripture.label(c["start"], c["end"]))}</b>'
+        f'<span class="lg-start-text">{e(snippet(c["text"], 30))}</span>'
+        f'<span class="lg-quiet">{e(locus_label(lib.works[c["work"]], c["locus"]) if c.get("locus") else lib.works[c["work"]]["title"])}</span></a></li>'
+        for c in start_here(lib, comments))
+    start = (f'<section class="lg-block lg-start"><h2>{e(t("commentators.start_here"))}</h2>'
+             f'<p class="lg-quiet">{e(t("commentators.start_note", name=short))}</p><ul>{starts}</ul></section>' if starts else "")
+
+    # Verse by verse, or each homily whole; a box that goes to a verse.
+    books_here = list(covered)
+    first = comments[0] if comments else None
+    example = (f'{lib.books[books_here[-1]]["en"]} ' if len(books_here) > 1 else "") + "3:16"
+    names = {b: [lib.books[b]["en"].lower(), b.lower()] for b in books_here}
+    jump = (f'<form class="lg-goto" data-books="{e(json.dumps(names))}" data-none="{e(t("commentators.jump_none", name=short))}">'
+            f'<label for="jump-{author["id"]}">{e(t("commentators.jump_label"))}</label>'
+            f'<input id="jump-{author["id"]}" type="text" inputmode="text" autocomplete="off" placeholder="{e(example)}" '
+            f'aria-describedby="jump-{author["id"]}-hint">'
+            f'<button type="submit" class="button ghost">{e(t("commentators.jump_go"))}</button>'
+            f'<span class="lg-quiet" id="jump-{author["id"]}-hint" role="status">{e(t("commentators.jump_hint", example=example))}</span></form>'
+            if first else "")
+    by_verse = excerpt_list(lib, comments, show_work=len(works) > 1)
+    if wholes:
+        division = lib.works[wholes[0]]["divisions"][0].lower()
+        lists = "".join((f'<h3 class="label">{e(lib.works[w]["title"])}</h3>' if len(wholes) > 1 else "")
+                        + f'<ul class="lg-wholes">{wholes_list(lib, w)}</ul>' for w in wholes)
+        aid = author["id"]
+        tabs = (f'<div class="lg-tabs" role="tablist" hidden>'
+                f'<button type="button" role="tab" id="tab-{aid}-v" aria-controls="by-verse" aria-selected="true">{e(t("commentators.by_verse"))}</button>'
+                f'<button type="button" role="tab" id="tab-{aid}-w" aria-controls="by-whole" aria-selected="false">'
+                f'{e(t("commentators.by_division", division=division))}</button></div>')
+        says = (f'{tabs}<div id="by-verse" role="tabpanel" aria-labelledby="tab-{aid}-v">{jump}{by_verse}</div>'
+                f'<div id="by-whole" role="tabpanel" aria-labelledby="tab-{aid}-w">'
+                f'<h3 class="lg-tab-title">{e(t("commentators.by_division", division=division))}</h3>'
+                f'<p class="lg-quiet">{e(t("commentators.whole_note", division=division))}</p>{lists}</div>')
+    else:
+        says = jump + by_verse
+
+    # The shape of the work: what it covers, the Scripture it cites, where it
+    # says the most.
+    maps = "".join(coverage_map(lib, author, b, vs) for b, vs in covered.items())
+    cited = {}
+    for c in comments:
+        here = c["start"].split(".")[0]
+        for x in c["cites"]:
+            b = x["start"].split(".")[0]
+            if b != here and b in lib.books:
+                cited[b] = cited.get(b, 0) + 1
+    top_cited = sorted(cited.items(), key=lambda kv: (-kv[1], list(lib.books).index(kv[0])))[:6]
+    cites = (f'<div><h3 class="label">{e(t("commentators.cited", name=short))}</h3><ul class="lg-pbars">'
+             + count_bars([(e(lib.books[b]["en"]), n) for b, n in top_cited], top_cited[0][1])
+             + f'</ul><p class="lg-quiet">{e(t("commentators.cited_note"))}</p></div>' if top_cited else "")
+    longest = sorted(comments, key=lambda c: (-len(c["text"].split()), order_key(c)))[:5]
+    longest = "".join(f'<li><a href="{excerpt_href(lib, c)}"><b>{e(scripture.label(c["start"], c["end"]))}</b>'
+                      f'<span>{e(snippet(c["text"], 12))}</span></a>'
+                      f'<span class="lg-quiet">{e(t("commentators.words", n=f"{len(c['text'].split()):,}"))}</span></li>' for c in longest)
+    shape = (f'<section class="lg-block" id="shape"><h2>{e(t("commentators.shape"))}</h2>'
+             f'<p class="lg-quiet">{e(t("commentators.map_note"))}</p><div class="lg-cov-maps">{maps}</div>'
+             f'<div class="lg-shape">{cites}<div><h3 class="label">{e(t("commentators.longest", name=short))}</h3>'
+             f'<ol class="lg-longest">{longest}</ol></div></div></section>' if comments else "")
+
+    # Read alongside: who comments on the same verses, and how often the
+    # Catena quotes them.
+    mine = {k for k, ws in lib.voices_on.items() if any(w in works for w in ws)}
+    others = []
+    for a in lib.ordered_authors():
+        if a["id"] == author["id"]:
+            continue
+        n = sum(1 for k in mine if any(lib.works[w]["author"] == a["id"] for w in lib.voices_on[k]))
+        if n:
+            others.append((f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>', n))
+    others.sort(key=lambda r: -r[1])
+    quoted = sum(1 for c in lib.comments for q in c["quotes"] if q["work"] in works)
+    catena = (f'<p class="lg-catq"><b>{quoted:,}</b> <span>{e(t("commentators.catena"))} '
+              f'<a href="/works/catena/fathers/">{e(t("commentators.catena_link"))}</a></span></p>' if quoted and "catena" in lib.works else "")
+    alongside = (f'<section class="lg-block" id="alongside"><h2>{e(t("commentators.alongside"))}</h2>'
+                 f'<p class="lg-quiet">{e(t("commentators.alongside_note", name=short))}</p>'
+                 f'<ul class="lg-pbars lg-bars-gold">{count_bars(others, len(mine))}</ul>{catena}</section>' if others else "")
+
+    # About the text: each work's edition, rights and citation.
+    about = "".join(
+        f'<div class="lg-about-work"><h3><a href="/works/{w}/"><i>{e(lib.works[w]["title"])}</i></a></h3>'
+        f'<p>{e(lib.works[w]["translation"] or lib.works[w]["edition"])}</p>'
+        f'<p class="lg-pills">{rights_pills(lib.works[w])}</p>{cite_box(author, lib.works[w])}'
+        f'<p class="lg-about-links"><a href="{e(lib.works[w]["full_text_url"])}" rel="noopener">{e(t("commentators.full_text"))} ↗</a> · '
+        f'<a href="/open-data/">{e(t("commentators.open_data"))}</a></p></div>' for w in works)
+    about = f'<section class="lg-block" id="about-text"><h2>{e(t("commentators.about_text"))}</h2><div class="lg-about-works">{about}</div></section>'
+
+    era = ERAS.index(author["era"])
     body = f"""
-<div class="lg-profile lg-era-{ERAS.index(author["era"])}">
-<div class="lg-profile-main"><header class="page-head lg-person-head"><p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · <a href="{era_url(author["era"])}">{e(t("eras." + author["era"]))}</a></p>
-<h1>{e(author["name"])}</h1><p class="dek">{e(author["dates"])} · {e(author["tradition"])}</p></header>
+<div class="lg-profile lg-era-{era}">
+<div class="lg-profile-main"><header class="page-head lg-person-head"><span class="lg-mono" aria-hidden="true">{e(name_initials(author))}</span><div>
+<p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · <a href="{era_url(author["era"])}">{e(t("eras." + author["era"]))}</a></p>
+<h1>{e(name)}</h1><p class="dek">{e(author["dates"])} · {e(author["tradition"])}</p><ul class="lg-chips">{chips}</ul></div></header>
 <section class="prose lg-bio">{bio}{draft}</section></div>
 <dl class="lg-facts-card">{dl}</dl></div>
-<section class="lg-block"><h2>{e(t("commentators.comments_on", name=author["name"]))}</h2>{excerpt_list(lib, comments, show_work=len(works) > 1)}</section>"""
+{start}
+<section class="lg-block" id="says"><h2>{e(t("commentators.comments_on", name=name))}</h2>{says}</section>
+{shape}{alongside}{about}"""
     books = " · ".join(lib.books[b]["en"] for b in covered)
-    person = {"@context": "https://schema.org", "@type": "Person", "name": author["name"],
-              "url": SITE_URL + f'/commentators/{author["id"]}/', "description": author["bio"].split("\n\n")[0]}
-    crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (author["name"], f'/commentators/{author["id"]}/'))
-    return page(lib, author["name"], body, f'/commentators/{author["id"]}/', current="/commentators/",
-                head_title=t("commentators.head_title", name=author["name"], books=books) if books else None,
+    person = {"@context": "https://schema.org", "@type": "Person", "name": name,
+              "url": SITE_URL + f'/commentators/{author["id"]}/', "description": author["bio"].split("\n\n")[0],
+              "deathDate": f'{author["died"]:04d}'}
+    if not author["dates"].lstrip().startswith("c."):
+        person["birthDate"] = f"{born(author):04d}"
+    crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (name, f'/commentators/{author["id"]}/'))
+    return page(lib, name, body, f'/commentators/{author["id"]}/', current="/commentators/",
+                head_title=t("commentators.head_title", name=name, books=books) if books else None,
                 ld=(person, crumbs),
                 description=author["bio"].split("\n\n")[0])
+
+
+def rights_pills(w):
+    """A work's rights, said plainly: its status in the US and worldwide as pills."""
+    r = w["rights"]
+    us = r["basis"].lower().startswith("public domain")
+    world = r["worldwide"].lower().startswith("public domain")
+    return (f'<span class="lg-pill {"lg-pill-ok" if us else "lg-pill-draft"}">{e(t("work.rights_us" if us else "work.rights_us_check"))}</span> '
+            f'<span class="lg-pill {"lg-pill-ok" if world else "lg-pill-draft"}">'
+            f'{e(t("work.rights_world" if world else "work.rights_world_check"))}</span>')
+
+
+def cite_box(a, w):
+    """The edition as a citation gives it (up to its first note in brackets
+    or after a semicolon, which name the scan or the series), with a copy button."""
+    edition = re.match(r"^[^;(]+", w["edition"])[0].strip().rstrip(",.")
+    citation = t("work.citation", name=a["name"], title=w["title"], edition=edition)
+    return (f'<div class="lg-cite-box"><p class="label">{e(t("work.cite"))}</p><p class="lg-cite-text">{e(citation)}</p>'
+            f'<button type="button" class="button ghost lg-copy" data-copy="{e(citation)}" data-done="{e(t("work.cite_copied"))}">'
+            f'{e(t("work.cite_copy"))}</button></div>')
+
+
+def wholes_list(lib, wid):
+    """A work's whole homilies or tractates, in order, each with its opening."""
+    w = lib.works[wid]
+    return "".join(f'<li><a href="/works/{wid}/{x["locus"]}/"><b>{e(locus_label(w, x["locus"]))}</b></a>'
+                   f'<span class="lg-quiet">{e(text_lead(x))}</span></li>' for x in lib.texts.get(wid, []))
 
 
 def work_page(lib, wid):
@@ -1976,30 +2179,15 @@ def work_page(lib, wid):
     facts += [(t("work.published"), str(w["published"])), (t("work.source"), source),
               (t("work.in_logia"), t("work.excerpts", n=len(comments)))]
     dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
-    # Rights, said plainly: the status in the US and worldwide as pills, and
-    # the record's own words beneath.
     r = w["rights"]
-    us = r["basis"].lower().startswith("public domain")
-    world = r["worldwide"].lower()
-    pills = (f'<span class="lg-pill {"lg-pill-ok" if us else "lg-pill-draft"}">{e(t("work.rights_us" if us else "work.rights_us_check"))}</span> '
-             f'<span class="lg-pill {"lg-pill-ok" if world.startswith("public domain") else "lg-pill-draft"}">'
-             f'{e(t("work.rights_world" if world.startswith("public domain") else "work.rights_world_check"))}</span>')
-    dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{pills}</span>'
+    dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{rights_pills(w)}</span>'
            f'<span class="lg-quiet lg-rights-note">{e(r["basis"])}; {e(r["worldwide"])}</span></dd>')
-    # The edition as a citation gives it: up to its first note in brackets
-    # or after a semicolon (which name the scan or the series).
-    edition = re.match(r"^[^;(]+", w["edition"])[0].strip().rstrip(",.")
-    citation = t("work.citation", name=a["name"], title=w["title"], edition=edition)
-    cite = (f'<div class="lg-cite-box"><p class="label">{e(t("work.cite"))}</p><p class="lg-cite-text">{e(citation)}</p>'
-            f'<button type="button" class="button ghost lg-copy" data-copy="{e(citation)}" data-done="{e(t("work.cite_copied"))}">'
-            f'{e(t("work.cite_copy"))}</button></div>')
+    cite = cite_box(a, w)
     contents = work_contents(lib, wid, comments)
     texts = lib.texts.get(wid, [])
     whole = ""
     if texts:
-        items = "".join(
-            f'<li><a href="/works/{wid}/{x["locus"]}/"><b>{e(locus_label(w, x["locus"]))}</b></a>'
-            f'<span class="lg-quiet">{e(text_lead(x))}</span></li>' for x in texts)
+        items = wholes_list(lib, wid)
         verses = []
         for x in texts:
             b, c, a1 = scripture.parse(x["verses"]["start"])
