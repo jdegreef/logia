@@ -468,8 +468,8 @@ class Site(unittest.TestCase):
 
     def test_a_verse_page_has_breadcrumbs_and_its_own_description(self):
         text = self.read(os.path.join("jhn", "3", "16", "index.html"))
-        ld = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1])
-        self.assertEqual(ld["@type"], "BreadcrumbList")
+        data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1])
+        ld = next(x for x in data["@graph"] if x["@type"] == "BreadcrumbList")
         self.assertEqual([x["item"] for x in ld["itemListElement"]][-2:],
                          ["https://logia.faith/jhn/3/", "https://logia.faith/jhn/3/16/"])
         self.assertIn('<link rel="canonical" href="https://logia.faith/jhn/3/16/">', text)
@@ -669,6 +669,60 @@ class Site(unittest.TestCase):
         self.assertIn('href="/jhn/3/16/"', text)
         self.assertIn('id="vpage"', text)
         self.assertNotIn('id="by-verse"', self.read(os.path.join("act", "1", "index.html")))
+
+    # --- Search engines and answer engines ---
+
+    def test_pages_with_only_the_bible_text_stay_out_of_search(self):
+        sitemap = self.read("sitemap.xml")
+        for page in ("gen/1/index.html", "gen/index.html", "act/1/index.html"):
+            self.assertIn('<meta name="robots" content="noindex">', self.read(page), page)
+            self.assertNotIn(f"<loc>https://logia.faith/{page[:-len('index.html')]}</loc>", sitemap)
+        for page in ("jhn/3/index.html", "jhn/index.html", "rom/8/index.html", "jhn/3/16/index.html"):
+            self.assertNotIn('content="noindex"', self.read(page), page)
+            self.assertIn(f"<loc>https://logia.faith/{page[:-len('index.html')]}</loc>", sitemap)
+        lib = build_site.Library()
+        indexed = {c for c in lib.chapters if build_site.indexed(lib, build_site.chapter_url(*c))}
+        self.assertEqual(indexed, set(lib.coverage()))
+
+    def test_robots_welcomes_the_answer_engines_in_one_group(self):
+        text = self.read("robots.txt")
+        group = text.split("\n\n")[0]
+        for name in ("*",) + build_site.AI_CRAWLERS:
+            self.assertIn(f"User-agent: {name}\n", group)
+        self.assertIn("Disallow: /saved/", group)
+        self.assertIn("Sitemap: https://logia.faith/sitemap.xml", text)
+
+    def test_llms_txt_describes_the_library_and_links_only_to_pages(self):
+        lib = build_site.Library()
+        text = self.read("llms.txt")
+        self.assertTrue(text.startswith("# Logia\n"))
+        self.assertIn(f"{len(lib.comments):,} excerpts", text)
+        for a in lib.authors.values():
+            self.assertIn(f"/commentators/{a['id']}/", text)
+        for href in re.findall(r"https://logia\.faith(/[^\s)]*)", text):
+            path = os.path.join(build_site.SITE, href.strip("/").rstrip(".:"))
+            self.assertTrue(os.path.isfile(path) or os.path.isfile(os.path.join(path, "index.html")), href)
+
+    def test_a_verse_page_marks_its_excerpts_as_quotations(self):
+        lib = build_site.Library()
+        text = self.read(os.path.join("jhn", "3", "16", "index.html"))
+        ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1]
+        data = json.loads(ld.replace("<\\/", "</"))
+        page = next(x for x in data["@graph"] if x["@type"] == "WebPage")
+        quotes = page["hasPart"]
+        self.assertEqual({q["url"].split("#")[1] for q in quotes},
+                         {c["id"] for c in lib.comments if c["start"] == "JHN.3.16"})
+        for q in quotes:
+            self.assertEqual(q["@type"], "Quotation")
+            self.assertTrue(q["creator"]["name"] and q["isPartOf"]["datePublished"])
+            self.assertTrue(q["isBasedOn"].startswith("http"))
+        self.assertIn("BreadcrumbList", [x["@type"] for x in data["@graph"]])
+
+    def test_the_sitemap_dates_bible_pages_when_the_history_is_here(self):
+        dates = build_site.git_dates()
+        if not dates:
+            self.skipTest("no full git history")
+        self.assertRegex(self.read("sitemap.xml"), r"<loc>https://logia\.faith/jhn/3/16/</loc><lastmod>\d{4}-\d\d-\d\d</lastmod>")
 
     def test_corrections_are_applied(self):
         lib = build_site.Library()
