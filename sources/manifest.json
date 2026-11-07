@@ -3582,6 +3582,1149 @@
    "kind": "scan",
    "download_sha256": "cd6ec0c86f8dc3c6f9144b2bd541cce0196ce16d9180adbeefbcbc85af65977c",
    "extract": "Characters 157032-1555466 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.v.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.v.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aa081285c7ea8eea38a2b50ab94512b198e357dafcdb8784fbd4739fede79882",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.v.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.v.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d5b8b8867c7aa75db0e96c466d5e0326392f1167ed6928b75c7091fb8bbef840",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.v.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.v.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0a1183cc1e4ae48dd4f81aa6c353b8f4fd7e8bee92330d130d3e29abb0eef947",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.v.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.v.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aba0ae55b25b616faa22f4e716cac034e2cd2db188ade3ff73b6761d4d470d6a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.v.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.v.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "35981c26909539e885c67d7e2271bac1ea2c78b6a87fb0246229a2084e3ee9eb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.v.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.v.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dcb01a1579ceecddebf822f5ffae30905d968ae9fc93a6e12dbe60ed8953071d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.v.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.v.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5c1fc624f06f181e68d5ef72b6b34f29ab608ec2823d2e0e7bbc82abc0f85459",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vi.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9af6f0e2f24e053c5912d2378353c321ac8d20cb01f0abba75eab9656609cdf1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vi.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dae2a16ea00c2dede4ab88d748309fb3b4c090ab4230feedad5ec356c44588f1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vi.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9ca1a4f8eb02a8e8e1838e00a033e3267a666e124d4ffc83a371ed138cfef047",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vi.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "723dc34dcb46bab75b67fbcac75750de9a625efde53190b6a3c0ce760b612ba8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vi.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vi.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2997cca0a51a8c94ae583e8916dedc660319f1c36538c75f5dfea47d3c115f90",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vi.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vi.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6cd277af46c6a98f7df4daf187ad00d547c93949f242aaf33894e7f2b63bff0a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d54c3dcd260bc87e9df73c32033479b90bdf23a06965334e05705a5715f47685",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "05527b03455f0046cbd3cdc202423ddd9a0167608e2a648d8ef26c02b02d29ff",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ec09fa9e3557de85644a60ef295fd3c7f21beadb98936313e7ed23f6118e75d8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ed7d13bfab13c9af7b596ace0d8cbc2145f15d73fab1fc08efce569e70528eb4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bee1153ead79bbe6eb88018400ab5826a4384e90dc13f859b5770484368d6174",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2f0d02a7023fc8e8ba3c7ed03b4976d2ec1c9148acb89eaac7efe34ec67463ca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bc2cfd8c75fb0790a3eb347321df40e9992c4d402565c6864bbb01f9b36c3a32",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "59ec98596a7b9d29566e7482c032b39af58f8e3654990bd4f4b0f5c46e3fb51d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.ix.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f3518b0f9ffb5e45ed5a1fdf8283bd9ccbcbd61e7b40e8f3381c2d831da27e58",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.x.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d86a1c6bb36de16daa54b5736dc228283d9d89bbcef14cabf93048b0dfa716c5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.vii.xi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.vii.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5ebe6c45064c7a4056263e77ab2c403012352d09d77c79cdaba43a3b5e29d9b1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cbe52d95c7a3edd71ddceacfa7cf22c860fd91c407244341530e13a03ff1ed99",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c48dc558ebd39e2ac5f9ac1cfd4b672222d4298faa563e386ba8f4e53f038f80",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3c2c9039fa0b943af3d9152c651d274302c99a41ab57e5cdf1b61a8071e032a8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e4b4bb4a2ca50f37dbc28f69ea3d850d89e21b5a0f5388d749afa94ba34cc995",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3aa1b706d72a4e7f385904d02c06eb86331952ee7ecbacf34f546b3f7a9fd99f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d43811a5ade06a76b6477fdb7f01a199386ff1065d1517209dd63668e9b56027",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5f43623a015db9c18337e63624539262eaff31caa86a3b063309d43d57876bd8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9fccf94c80584e8d7757cc24214a8279c48daf1138d37a4a46e65c3bb9272de4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.ix.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9e73bc0932a69773126afbaef66812b8e1432eaa658b1e105330def07da3a233",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.x.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8c95422825b7f409e556d5d9d8c1df2e4704a7128ebeefd09db4cc8aad26c3bb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.viii.xi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.viii.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3d872b8c113d1eb62dccda41bffaaa6094607d076e70b1f9b1dcd3ef31a3b854",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d36f3d7adfc626d44c744aaec5f237debe71cd91c69c3ef69e360243dad3040b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "78462385597ee7521bfc4f3375d1f6cef09697b96010ae3344a31cdc377f6e60",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0affc492592641b424fe84066248503f9f3ccb447d8f06c4afde267081a9c8e4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5da1d50e404b31ef64893af990791d22f4ceb06291196e9d9e6663688749de83",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a28a837f571cca76aa57e0a225a8866e630ad0d142899dd9bd66b2b6e2883c16",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5151fb0684394292aaa64f5d202855fd301529e9bbf331cd7eed3ae850aae7b0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d16f3b6446dd33c1f9e16b40da8f5b58e86c60d4c1500e8d901abc340bbdf62e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "999f9be4e7c88cc44baa330e927349c17e730ec2400811a46df5a3010a883e8e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.ix.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "77934a715e0500ed3743930ee0b6043a144d8b09bcf5816f77846c2a4bd63dc7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.x.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a247bf36311039c27687aadb0447cb5538ad757e36aa929aa21d2f7f64fa03c9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.xi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b21db911521beb6c6f66f948e8d8926a9748ce991cba7acfb6becf206c4d59e3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.ix.xii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.ix.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2223e118a36ba4d9da055b92c3ea8748d281c6c085afcfa7958df6d9b9cbc1a0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ebbe24c91bc34bcd8f5dfb54b9ef63e878d47ec60b0d7e0a2fb245568ec6bfdf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d46f26770f44981ec488da675b740ecc768afc335714e8216acf6caeadcec34e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5ab4bbd494ddc9c8a6efc4f6e32c223fb0a53cb4afa3d23821b45b32aff9c43b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "871db9afafb2a1acaa5666bb786cd9795d46da81d5bfe61d37e6ff14bfdec937",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0a651b86610fa0f5770b175ec994d200ccf97654132558b9ccf20f81edf7dee8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7f4e0d3577de72b87db9f2e27e94a4c88364e320b16fdb8f55cd88f800d5fcff",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "01c6644e29dce21b22775bf8b09fa3d0cfd86c81f8af78dd716b9a19e3f7db83",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.x.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.x.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3e95b071898de308d24ec4a164b337bdeecb8978e94e69e35282edb97323e19b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4ce452c9a8af1956792be2edb63d5650845ec05f7bd1d1dba4230d89ed993687",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "33b7fd6f75c887bb55e401ccb2a382c338d1333eab73f48a17a181a120679648",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7221440866db9a3daed2149aebf4e950048401953a58de17ca6051e609c5900c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "83a2e738af17b8f5ec283000edc8c721f170317cb1aa14f56143a999067cb38e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5cfac0019e947aec33991032eea049c097631e7d1ed7c0253792dfd23078c598",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3742ecb6cc5d5910da815dece9be0758ef20aad69bcc08dca2e6fef9a056ff29",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "77c616e34eb9457bac6d542ca804b175dbc8563bbba3350650d679f2a94a6a7f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2f1a8c153069948b4b208b26f11273a32501e1b2d643244d97abd5999b9c49e4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xi.ix.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xi.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a4183b6fafc147100a24e99d5df6c33d0e7dff7888dfcba838d1fd0eea554139",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5f89a50cb7c97c750a25c1d519466f52c3a0f7e50ce5b3dec7d67faa81d4e81a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bf2eb84d7dfbbc7b7a5d7106c9a0a4624608571d2c8144401b6f6105bfd500cf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ef1a83a2249d3bccb0c2585176fdc53e431e4269beff380d4a8852dd65445fe4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f48c5fdc8d7f806082dac31d0bf1d8c0445971b8e3d38c405d9059c414ba56b5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1ce4d784e15e86b6a5a27774203096c0375896831b941e8c3f21fb78d85e5955",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "deef5bc91d20706d9a850d6a480d2f26dcffaebeead0342cfa978e6a1ab55976",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "df692791680d4731f57fa218d2620621dfc9f449f8a4286b9eed1a1434c9348e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9779756ddfe437e0ca468c2cef92f82655315419d63bf6929872d90e01dd6d83",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.ix.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4eed4f04a75a1270c1ac769c16d9bbb0bc28eac14697c030262885c822af378b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.x.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ab14d8dc7b70c4f31f0c3a7c1f38c7f9a20171a6436edb37bc0aea056fd5aafb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.xi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "44d8f9c8cde752e67066e603fe6b8efcaa1c9bec291a738d9f5a9def545cc9e7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xii.xii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xii.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a0e7e22acb8a5deed9ea9cdfa98e232ebcb7e3c5d3b6fab4a236e84d0298f12c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0a85c4c3de7c42235e929d416677af41b8cc1dc54d793c6b31d599b9c7909444",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fa29687eca92333ac1c07eef22c5862920bd4da1c12bb67e7833872be4216bec",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "59d331943b3490d50698a973fc7f3dbbf5b771355dc413d89dc904e3c50d64f5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b52d30171a677ae000c7ae8f08eec01d64816b2ac7a3c9c3e29cde65f9527daf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4c0113c28e76e5c908bbec0cc6c01e8958d12af0202b8054f57eaed43aa88820",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e589646567bf67cef736d0d89cda813c3a6345402f041e00b01d8c5a24a983ff",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7ac0c89cd16cf171d458f0d017d9bbc1f2408b660289589184fdf3fcda2e8d3b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiii.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiii.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "411f73486470fd3fc14e33d497ad5da3a82e5e847dae1422cf2c7dac8ab4f4e0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiv.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiv.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "21d5672f3a54afbc89a92593467ed6a45e611b9fea437d2d9cd3c2d1c45d1649",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiv.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiv.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2fbc21e690f2bea9c2e948aa67dad4c1f7abe5d92ac941b4c183a3f60670dca7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiv.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiv.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c13152991ec153bbd8c8a28b80d09dd743cfcf189ed19efcce510ad5b9fd6e17",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiv.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiv.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "52b3e4db50bbe7fdca6c73049c1fb9f34efad60aa3aa2dafa67f1d39c1e94f11",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xiv.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xiv.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0f444d09d56132a85c94903a76cb9e2721de58b0a9c352cd23d7a86794cd2af0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "90bbb1d409f52453c571bb5ceca7c15fbd07dbf6d6fa0641ebb3e45babaea48b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e73eb7fdc589597be4a06999258531499c8d94c977b36fabcb1cd17e7beaa76f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "84c89c69a04295cdae30ff24752be684afefd6e2a96fc028d0d244e7ebcb8e3a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "76c2cfadbe142f49565def0a66b39f81740eee043a44e294956b51d1925ba790",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "84520377c514ead623a8277a13dc4d889231c1ae4ffa6fc1d5c8cea158dd1947",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4f842c2fc757ab945779bacde16cf91ede0fab3641903b79a47c537c3e28ee48",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "400549efd04fbf7b8e757d60daa743e7a0bf1eeb370cbc29cd866b31704a0106",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xv.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xv.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aa48d290d973d150a5a4b4b2706c47a2314c3758b556dc48a1a27c43f16a014a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvi.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "73ffecd8f45e0e90d195757dc408c53a4d17bdadf8e9049da9a5c74b2ad53857",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvi.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3503d8b2a8909b85db2d1adc8fbc46381eaf9a03175ecd8a3ba9fd49ce24c5a9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvi.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ccdd41c9a0edfda2f1216586c891ad77227281870bfc358055d39e8cab3e0140",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvi.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "692caed160e0a14f94929a23ae96e955840e524c04ac7cc54c915924b1e4ec29",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvi.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvi.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0a0bb2bcb4c62789dc1628f2ef126e7cdca4255c9aaa3ca523168721d97ea904",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvi.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvi.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aa350d7b04ed24f49d6800510d57c19f518356692b5c8047423b91f4c14ee5c2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvi.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvi.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "84765dff79ebce3dcd1f2657c03d6f6705e600db3e6d69e934a044e41d97c477",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvii.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b496241fe842e4b68d3f6a0b045b2b6474ffbf40c18de3fc4487124ba32f4247",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvii.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "83d254278dc7a3307c350fb816eed090cd83164215cb090ee17da945a4e81ffa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvii.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7831540a40908c6a12b6e66ca6b1c4f63f7084e108492a6302b6662ecab7be92",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvii.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "714c4188d674b4e19ec1631abc93e4b2883d58c46f3968a2f94cde67ec89a296",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xvii.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xvii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "60602cf23031ec313a633bf2db2f7b528c2ec627aafa845512dec1ce4baaaa7b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xviii.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xviii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9624eca011144611a08076429334784ece7387151d18c35cd22a2a5a9c775ca8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xviii.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xviii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "384dc660c3db2a53e072e85998d3c4da4d1fe2fa7a9dec0c4e2ba3af3c3fed37",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xviii.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xviii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fdfb76566c2d8f584e6db05518561bbc86ba5c779a1c74a424b459acd3ec20d7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xviii.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xviii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b3fd2ee027240380071214fce62ab9081af2c5b6573fce9434050263b9748130",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xviii.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xviii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6fcf937c3b639a70811ef3f32e72e588f5675c1ed0d574dc600665ff4182e191",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xviii.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xviii.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "06f492126160c35344c75420de58aa41c9077bff8fecca9ede7b4163651cf61e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xviii.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xviii.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "80776147d6f350d56cd70eaffd908d5d9d8746e0de1f9d81aac422305ebd6d6e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2e20828590710602a1cc40da46fa010136e2fd3bb0d3822f2225497697c18f59",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5b208a2cbfe23def8101c06584b8dc893621e903ac12ae58fb52bfb50f1b3bfd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "756511a6a6010fda6937e41f2d1170ee495f25df9eec6edc817835ab94428be9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.iv.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d89bfcb573251f3a54f528f56723f2406024ffb5e490cf04aa01dca4a1568499",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.v.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e22396012682867023ba962ac960655fd2fa269daf7ab3516cd0deca11facc37",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.vi.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2de1ca0deb93d01516cc6355490afccdb25f6806e9cf4b38eef9df61bc4db560",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.vii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "be51fbad13485931a224ce9a5704b0fed8e3af1faae11b7aea7b78a094478247",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xix.viii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xix.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1808dcb64929245072b814f8cbdfbcb7b54dc6ea21d726a82f1adc576846b672",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xx.i.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xx.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1702d03fb33c80ccd95d8d36a3785be4c4db1645864976a002b4a1994470723f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xx.ii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xx.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "adb42655beca40c01045abf9d82f075165338024dd3032034259bd949460acd4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/calvin-romans/calcom38.xx.iii.html",
+   "work": "calvin-romans",
+   "url": "https://www.ccel.org/ccel/calvin/calcom38.xx.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a9c42f26e3c702dbcad1d351224212a7e7307f1eef1479db502f2a4194659dbf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }

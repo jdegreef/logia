@@ -308,7 +308,7 @@ class Site(unittest.TestCase):
         text = self.read("jhn/3/index.html")
         self.assertIn('class="lg-in-order"', text)
         self.assertIn('href="/works/westcott/jhn/3/"', text)
-        self.assertNotIn('class="lg-in-order"', self.read("rom/8/index.html"))
+        self.assertNotIn('class="lg-in-order"', self.read("act/8/index.html"))
 
     def test_pages_carry_a_share_card_and_data_for_search_engines(self):
         home = self.read("index.html")
