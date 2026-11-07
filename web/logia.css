@@ -740,3 +740,12 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-era-verse > p { margin: 0 0 8px; font-style: italic; }
 .lg-era-says { list-style: none; margin: 0; padding: 0; }
 .lg-era-says li { margin: 6px 0; line-height: 1.55; }
+
+/* Guides (library/guides/): Logia's own writing, marked as a draft. */
+.lg-guide-draft { font-size: 13.5px; color: var(--muted); }
+.lg-guide-toc { margin: 0; padding-left: 20px; columns: 2 260px; }
+.lg-guide-toc li { margin: 3px 0; }
+.lg-guide-topic h2 { margin-bottom: 2px; }
+.lg-guide-verse { margin: 8px 0 12px; }
+.lg-guide-verse p { font-style: italic; }
+.lg-era-says .lg-quiet { font-size: 13px; }

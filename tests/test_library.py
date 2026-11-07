@@ -608,6 +608,19 @@ class Site(unittest.TestCase):
             self.assertIn(build_site.excerpt_href(lib, c), text)
         self.assertIn('href="/commentators/era/early-church/"', self.read(os.path.join("commentators", "index.html")))
 
+    def test_the_guides_are_drafts_that_link_each_commentator(self):
+        lib = build_site.Library()
+        for g in build_site.guides():
+            self.assertEqual(g["status"], "ai_draft")   # only a person marks one reviewed
+            self.assertIsNone(g["reviewed_by"])
+            text = self.read(os.path.join(g["path"].strip("/"), "index.html"))
+            self.assertIn("A draft awaiting review", text)
+            for x in g.get("topics", []):
+                for w in lib.voices_on[build_site.ref_parts(x["focus"])]:
+                    c = build_site.first_on(lib, {w}, x["focus"])
+                    self.assertIn(build_site.excerpt_href(lib, c), text)
+        self.assertIn('href="/jhn/traditions/"', self.read(os.path.join("jhn", "index.html")))
+
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))
         self.assertIn('href="/jhn/3/16/"', text)

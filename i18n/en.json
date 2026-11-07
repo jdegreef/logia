@@ -833,5 +833,12 @@
     "verses_title": "The {n} verses they say most on",
     "columns": ["Verse", "Excerpts", "The verse"],
     "chapters_title": "Excerpts on each chapter"
+  },
+  "guide": {
+    "eyebrow": "Guide",
+    "draft": "A draft awaiting review",
+    "draft_note": "Logia wrote this page; it is not commentary. It is a draft until a named reviewer approves it.",
+    "voices": "What the commentators say on {ref}",
+    "traditions_link": "Where the traditions read {book} differently"
   }
 }
