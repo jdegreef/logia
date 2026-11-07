@@ -326,6 +326,26 @@ class Site(unittest.TestCase):
         self.assertRegex(text, r'class="lg-missing"><summary>Verses with no comment from Calvin \(\d+\)</summary>')
         self.assertNotIn("lg-missing", self.read("commentators/ryle/index.html"))
 
+    def test_a_commentator_page_opens_ways_into_the_work(self):
+        text = self.read("commentators/chrysostom/index.html")
+        # Three passages to start with, the verse beside each row, where each
+        # sits in its homily, and the homilies themselves as a second tab.
+        self.assertEqual(text.count('class="lg-start-text"'), 3)
+        self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', text)
+        self.assertIn("Read the homily from here", text)
+        self.assertIn('aria-controls="by-whole"', text)
+        self.assertIn('href="/works/chrysostom/88/"', text)
+        self.assertIn('class="lg-goto"', text)
+        # The shape of the work, who reads the same verses, and the text's record.
+        self.assertIn("John, verse by verse", text)
+        self.assertIn('class="lg-nc" title="John 4:30"', text)
+        self.assertIn('href="/commentators/augustine/"', text)
+        self.assertIn('href="/works/catena/fathers/"', text)
+        self.assertIn('class="lg-cite-box"', text)
+        self.assertIn('"deathDate":"0407"', text)
+        # A commentator with no whole texts has no tabs.
+        self.assertNotIn('class="lg-tabs"', self.read("commentators/calvin/index.html"))
+
     def test_accounts_are_open_word_bible_s(self):
         text = self.read("index.html")
         self.assertIn('<meta name="logia-api" content="https://api.openwordbible.org">', text)

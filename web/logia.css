@@ -573,6 +573,82 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-pill-draft { color: var(--gold); background: color-mix(in srgb, var(--gold) 14%, transparent); }
 @media (max-width: 880px) { .lg-profile { grid-template-columns: minmax(0, 1fr); } .lg-facts-card { margin-top: 0; } }
 .lg-profile .page-head { padding-bottom: 12px; } .lg-profile .lg-bio { padding-top: 0; }
+.lg-person-head { display: flex; gap: 18px; align-items: flex-start; }
+.lg-person-head > div { min-width: 0; }
+.lg-person-head .lg-mono { width: 64px; height: 64px; margin-top: 4px; font-size: 24px; letter-spacing: .03em; color: var(--bg); background: var(--era); border: 0; }
+.lg-chips { display: none; list-style: none; padding: 0; margin: 12px 0 0; flex-wrap: wrap; gap: 6px; }
+.lg-chips li { font-size: 12.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); }
+@media (max-width: 880px) { .lg-chips { display: flex; } }
+@media (max-width: 560px) { .lg-person-head .lg-mono { width: 48px; height: 48px; font-size: 18px; } .lg-person-head { gap: 12px; } }
+
+/* Start here: three passages to read first. */
+.lg-start ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.lg-start a { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 14px 16px; border: 1px solid var(--line);
+  border-radius: var(--radius-sm); background: var(--surface); color: var(--text); text-decoration: none; }
+.lg-start a:hover { border-color: var(--accent); }
+.lg-start b { color: var(--accent); font-size: 14px; }
+.lg-start-text { font-family: var(--serif); font-size: 16px; line-height: 1.5; }
+.lg-start .lg-quiet { font-size: 12.5px; margin-top: auto; }
+
+/* Verse by verse: the box that goes to a verse, the tabs, each chapter
+   shaded in the bar by how much is said on it, and each row's verse. */
+.lg-goto { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 12px; }
+.lg-goto label { font-weight: 600; font-size: 14px; }
+.lg-goto input { width: 11em; max-width: 100%; padding: 7px 12px; border: 1px solid var(--line-strong); border-radius: 999px;
+  background: var(--surface); color: var(--text); font: inherit; font-size: 15px; }
+.lg-goto .lg-quiet { font-size: 13px; flex-basis: 100%; }
+.lg-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin: 0 0 16px; }
+.lg-tabs button { padding: 8px 14px; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: none;
+  color: var(--muted); font: 600 15px var(--sans); cursor: pointer; }
+.lg-tabs button[aria-selected="true"] { color: var(--text); border-color: var(--accent); }
+.lg-tabs button:hover { color: var(--accent); }
+.lg-tab-title { font-family: var(--display); font-weight: 600; font-size: 20px; margin: 32px 0 4px; }
+.lg-tabbed .lg-tab-title { display: none; }
+.lg-chbar-depth { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
+.lg-chbar-depth a { flex: none; background: color-mix(in srgb, var(--accent) var(--depth, 0%), var(--surface)); }
+.lg-ch .lg-excerpts p.lg-ex-verse { margin: 0 0 6px; padding-left: 10px; border-left: 2px solid var(--gold); font-size: 14.5px; color: var(--muted); }
+.lg-ch .lg-excerpts p.lg-ex-meta { margin: 6px 0 0; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
+.lg-ex-meta a { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 2px; }
+.lg-ch .lg-excerpts li.lg-hit { background: color-mix(in srgb, var(--mark) 60%, transparent); }
+
+/* The shape of the work: a map of the verses, the Scripture cited, the
+   longest passages. */
+.lg-cov-maps { display: grid; gap: 24px 40px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); margin-top: 12px; }
+.lg-cov-map ol { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 3px; }
+.lg-cov-map li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; align-items: center; }
+.lg-cov-map li > a { font-size: 11.5px; color: var(--muted); text-decoration: none; font-variant-numeric: tabular-nums; text-align: right; }
+.lg-cov-map li > a:hover { color: var(--accent); }
+.lg-cov-map li > span { display: flex; gap: 2px; min-width: 0; overflow: hidden; }
+@media (max-width: 560px) { .lg-cov-map li > span { gap: 1px; } }
+.lg-cov-map i { flex: 1 1 0; min-width: 0; max-width: 10px; height: 10px; border-radius: 2px; background: var(--accent); }
+.lg-cov-map i.lg-nc { background: transparent; box-shadow: inset 0 0 0 1px var(--line-strong); }
+.lg-shape { display: grid; gap: 24px 40px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); margin-top: 28px; }
+.lg-pbars { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 6px; max-width: 560px; }
+.lg-pbars li { display: grid; grid-template-columns: minmax(0, 9em) minmax(0, 1fr) 3.5em; gap: 10px; align-items: center; font-size: 14px; }
+.lg-pbars li > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lg-pbars li > span:first-child a { text-decoration: none; }
+.lg-pbars li > .lg-quiet { text-align: right; font-variant-numeric: tabular-nums; font-size: 13px; }
+.lg-hbar { display: block; height: 9px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.lg-hbar > span { display: block; height: 100%; background: var(--accent); }
+.lg-bars-gold .lg-hbar > span { background: var(--gold); }
+.lg-longest { list-style: none; padding: 0; margin: 8px 0 0; }
+.lg-longest li { display: flex; gap: 12px; align-items: baseline; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.lg-longest a { display: flex; gap: 10px; align-items: baseline; min-width: 0; text-decoration: none; color: var(--text); }
+.lg-longest a b { color: var(--accent); font-size: 14px; white-space: nowrap; }
+.lg-longest a span { font-family: var(--serif); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lg-longest a:hover span { color: var(--accent); }
+.lg-longest .lg-quiet { font-size: 12.5px; white-space: nowrap; }
+.lg-catq { display: flex; gap: 12px; align-items: baseline; margin: 20px 0 0; padding: 14px 16px; border-radius: 10px; background: var(--surface-2); max-width: 720px; }
+.lg-catq b { font-family: var(--display); font-size: 30px; font-weight: 600; color: var(--accent); line-height: 1; }
+
+/* About the text: each work's edition, rights and citation. */
+.lg-about-works { display: grid; gap: 20px 40px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); }
+.lg-about-work h3 { font-family: var(--display); font-weight: 600; font-size: 19px; margin: 0; }
+.lg-about-work h3 a { text-decoration: none; }
+.lg-about-work > p { margin: 8px 0 0; }
+.lg-about-work .lg-pills { margin: 10px 0 12px; }
+.lg-about-links { font-size: 14px; }
 
 /* A work's chapter page: the verse being commented on in the margin, beside
    the excerpt, on a wide screen; above it on a narrow one. */
