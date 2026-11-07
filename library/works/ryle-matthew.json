@@ -1,0 +1,18 @@
+{
+ "id": "ryle-matthew",
+ "author": "ryle",
+ "title": "Expository Thoughts on the Gospels: St. Matthew",
+ "divisions": "verse",
+ "edition": "Expository Thoughts on the Gospels, for Family and Private Use: St. Matthew (first published London, 1856); CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1856,
+ "full_text_url": "https://www.ccel.org/ccel/ryle/matthew.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: J. C. Ryle died in 1900; CCEL does not name the printing it transcribed, so which edition the text follows is still to confirm"
+ },
+ "source_kind": "digital",
+ "notes": "Matthew 1–28 are CCEL ryle/matthew ii.i–xxviii.ii, one page for each of Ryle's 93 sections. Ryle on Matthew is expository thoughts only, with no verse notes, so each section is kept whole, paragraph by paragraph in the order printed, in entries of up to about 350 words on the section's verses; a paragraph cut between entries is marked with ' ...'. The section headings (the verses each section covers) are not repeated in the entries.",
+ "status": "ai_draft"
+}

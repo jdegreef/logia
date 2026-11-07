@@ -7956,6 +7956,843 @@
    "kind": "digital",
    "download_sha256": "fd4b2b293d11d9f38aefa9b8e54ad1e02e73378c82306bce5ed565057cffa66d",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.ii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.ii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f403ed6a30d8f1e2232409207b01afe88b4914e1b5645be094cea5976f0e0f45",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.ii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.ii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dc4cb6843c1a3bb6a28ab1ae0489bc92b769ab5c3933b825bb7f5be229ee18d5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.iii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.iii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4bc6c66fc2d960c296c6a034e12a50871095f6eb07c847e3671f301e3b058e95",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.iii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.iii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bc0bb2d7fdc650f71c3948085142528a0024f30bd96d8e35dbc13ec1605a8706",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.iv.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.iv.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "30131be14fa9248e5b5d9af51ebee87357e08e306d43178e47039de92d8caec9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.iv.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.iv.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7e16b87480661d5ce90ff36b486f04628220cf57df836bf46eca0d8ec6513a57",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.v.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.v.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "58e21b732b220337136bf07042540a2420b2bed97003319b7f23d933e1ce0ed0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.v.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.v.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c2dec3007d21b61b07ad678688763ae9d13d0baabeb67e7d89feb3e40985c189",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vi.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d26dca90d0645252e6a1af7bdf6f872eec2397d8312d9cee99089d788b62daca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vi.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e28a7ef285aeec8d54204e72750e075cab73c4930f4f437d7c936fcfb14c3ab8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vi.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b5cdb1f4e269b0a4420bdd45cf916fc1d31078e3780b248cbffc8b520d4b62a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vi.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "31c5054483bbf26f5733cb8e93a4ab7b3e33fa1ac86d520476bb3148edf6f805",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ca3289f526a37ae7f99f033af4eb26e84e90de85d51e2aaca8aa9756f1972982",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4875c5c90bde1f55c28c2872e7b0d06ffc3b7b5fe398bf4a4a7bfbeba5a44381",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ccc6eaae491be6210aa208f2df36971e13a95a50838796fa117fcdc8c4c81a5e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.vii.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.vii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4d7340d1160869436e9d252abc7778de13471949b5ce0dea7548d19d0250eea8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.viii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.viii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "64cc4d1efbf9559219bee4d80db11e2f383c7f29876f4c00be9861815be0844d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.viii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.viii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ef36fb2266f128317d5ad1c92126f02ce7e2a790289230d0bdd9d80d35fa28a8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.viii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.viii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1eee45915f96a0e5a0689097483c4a41c35e243035c30ed4e016325740b1e83a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.ix.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.ix.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "95390fbc1bf0f6c426706fcb2dc0d83f2fcdaf6a28afa0306c21da79f00e636c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.ix.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.ix.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c28e024bd39bbb50ae886e20ca6d6fb74d67b0e70e7cf415a13c9d0bc1786bc4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.ix.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.ix.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "93dd7b6750813ea59174d0e0d79231a3ea931219026cc2a6428aa70acfa64944",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.x.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.x.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "39c2b75a505671850f7bb73e376687bbefaaafc945347911aeac3fe678e6c775",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.x.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.x.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1f358c6dc0b2159382cf28cdcc9560052b919240bc8fdf0e594de4cf675fcfa0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.x.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.x.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "10b861b5dfef7c8ba68b65c3380c9f34a1c3287808965fcd5c9bb67fdb0713c6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xi.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4ddcaf54b99861811112939760cce0487afb22df0d750f33dfa3e903d7687e3c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xi.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ad4d64d8ae7015ed74e35fcb78ccf6de4cd78648b3379df853263e948d643682",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xi.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2f58a428f71991257a681fcf3c3ed6334215825c41311371c7bcdc624f918257",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xi.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a94081d6e755d0473871844470d159dc0c2ba075f95914f7ecbe6ca7046b0239",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f2b4df75272e0a9a42227631c2a2d59eee279489e3f4a2fd2d09577c869934f6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "60fc29ed8735500d104db64e79ff7fbce197e1cf199a9b124f3afe68bdbed87d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1b602fbf19f531e1100a9e2a343cb211d140fa495ddb8286a1b5cfb0c691cf11",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "714f404990a0e1582254226047e4ab8139da4a81b4f8625c784d71c3bb889df5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a593034041c8ab9304fd4af963cfb1349030d9aba6fa424f831a857a3de8acbf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6b3544d3f48fc27f449a2e3e682ad127898746b5367f26b4128fb166d4dd1ed2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiii.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "de5e2d066c7c6db1a16691a09e7fb704eb0cb1bdb7fc562b12c8729dcff2eced",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiv.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiv.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0bb3c3453ac28d2a3b0b595e9bc36ab8ee65f3424c018339ddc41bcfad289499",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiv.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiv.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b9251776ab8ef50c6323af29be87135e4724bb731f7e0da859c6172ef5f00a62",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiv.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiv.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "55f3701f4e9fa45c158464bda2b54c6b2a1dfc57b01491b2ff19a41c9fbf10fc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiv.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiv.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ef1a058b889521a9cba1ae37856fceb4c80525d8eeea01dc200ca32a7659b4ac",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xiv.v.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xiv.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d1970378cbaec4db194d3de0c1cd994ed7ea824115a4ba1ad15dd14e0a73cdae",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xv.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xv.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d25f4d8e282dcc64a9815d7b80cb39d8f80cef26370f63c8beef73608edb51c6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xv.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xv.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cfddc38e847ac4e2bf4c5efdc1f9574ba4ccc0fc9674e323c363a177aa6d0817",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xv.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xv.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "acce81bf43cc3a2df36a805589ced3624496a0d63d65e9c7369a7137ba079ab3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xv.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xv.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8a6c569db7580fca16fbe72ac7177bafc9cf84968a6dfcd02d0ff486e3799c0a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xvi.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xvi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f4e44f0a6be6c953a6050bf124f33c883e907beb66622050eaa201febfb9e1f6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xvi.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xvi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "64aded829c193621706407a9bd717dc620e33703e9ca191a7d8083545304bc41",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xvi.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xvi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e41bb0ffc5724ae460931130083bbdeed171525210ea85f2843c00a5d388e26e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xvi.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xvi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a28a1b1816a8a460aa44c24fc5161c8e32e028c2ec4c7895b089789ce6055bfd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xvii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xvii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ce9f73d17e6d886f0190e6832e233a0987327582bfcce645a109d7470a3f7fb2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xvii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xvii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "54cd5c6385e348c2c61bb11e058f746035ac956aa755b309bcd924422c5d85d8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xvii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xvii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5d3ee12c2f7cd2e85ffe5f1288c3a636a1931d65f4363389acf97d546b4976d8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xviii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xviii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "783a62b129583f99be0d706a82f42a3d3733e95c1f1ebf425fd437ca42665984",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xviii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xviii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "364a0f29338c1811b50c35e2297a119789789bb749f0941a1b7c2eff3f7cdbe4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xviii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xviii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6e7fa812b8d76edb3f855c366b8ad23627fc3b308be8420b06c4263e425dbd9e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xix.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xix.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "70a22916d800b4354e082b60032d54784418d5899a746df2f8aa10db67ae3453",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xix.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xix.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6b0cae336891eaf28e7cd573809704dcae769ca4611196dcba00e17f1b52dc42",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xix.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xix.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f5b56a24239f8b913e2ffef45bfcabd5ff89792ea150df01db8e9239ebb2507f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xx.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xx.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a401628d0a2f96b8c28b9c4d996844836f97781f9db32481e6bbd8e6a6d9e9f8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xx.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xx.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "02dabd29884434fc5e4d206720655414dd473b32077031efb5a04b0651468229",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xx.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xx.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2258e86a4effe54495aaca3089d7280f241a96364065e27930f3f855fab2b1fc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xx.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xx.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5648d7a4e783bb23c91c51a4658c9f2782948116d16a6ce74d0bc210f6a466de",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxi.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bbc5f845ae350983a1508a319d5ef41b675b51cb943770e5d4248fb9f1a46113",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxi.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4bac57d1563b2c7a17d4a5b283504fb29d92b2b6a194094a475e07db63207a92",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxi.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "698e956174f449fa813264d8bfe8639b04831d288ab542105f26f4b15c371a88",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxi.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "371b80c70280b0ee249e663a4b49cc97cf8cdd5cfe2217d001a5cf1614e89937",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e8ba320a9bc73ab6efd3f8ec865daaf7dcd5cbb714bdcd2a617be8ec9ffcd627",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2e8822f7beadc8fa9a7a3f447118964db8de535baa7df8827bba00242559194e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dc36b6b79b9a6ab1a2c88dd7ed42d82fa8d479bce23cbc17eebccf3e5c55d736",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxiii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxiii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9fc007f81d491b14991d1b81ada79c8b95ddf9f3f48f0e6d18647340026e4962",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxiii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxiii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1e8af0005b1c6c23c686817c3217423cdf8c3ccc7710575b22798047aa77a4ad",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxiii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxiii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0302be9be38c5afa7421d1c53615ef338189676f88f21b3a5aabd7022bf6c307",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxiv.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxiv.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "707fa1bc2656ec1308a8e90ab103ee8be5bc31d6c15c90d064484e6684ad1bb9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxiv.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxiv.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0944f5c5c5772825feb04efdf7a023309575667c2a8b9cf3c6b6d694f95ea8fb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxiv.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxiv.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "31fb80e8e8f9ff09d6396cb274477c07983acdc92868c33bfbc81e85d0614fdb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxiv.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxiv.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d87b43002b3486a9d86ccc39ed5bd7017e82f686528699eb810e220b2110bcfb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxv.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxv.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b39e818c34b735a10d9916717d657cb08aa6de74721933520ae5232888c4a724",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxv.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxv.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e8779d35ca4025db55cf63963b4014d3d11c3d5bd8243714c71bf78888220462",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxv.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxv.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fcf1b3365a764e99d35fab6ebc079cd7cad3368a4d04495ed6b24407e0c7e3fc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvi.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvi.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d9f36c544e7c2221df8be844fca03e39035708cc1ba5f87a48522765b82e9ae6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvi.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvi.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "831e146e3c433bf6812510bd29a0699ddf7e1e0d31fc4bbe4ed0344bfc13b193",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvi.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvi.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9508a3a8d61cd79bad77c687c56bc8634525ced19685adec476f9ad01e2a6058",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvi.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvi.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "711fa87e95abf877eff6a62e1e44f46c71c742693614d83596b8a440e147265e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvi.v.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvi.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a295f67fd36e746e8e98ba2f16efd4e5868191866fdcd6d6c6fc10df85ed4b40",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvi.vi.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvi.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d09059949a112dbd9fe19e6f49a6c20a7f3ddeab68d91653ed544607752f92db",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvi.vii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvi.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "915c6f87c5cf795d56fe6577cfcbd02251c18df4e96fe71d2d650a4a012cb1e6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0ee70b17a4703a172f18f7ca3b38296bfd6f697b5d109b722cd44646e452d5ca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e087ec73b240268ac54c37931aeb24457a4eb0df14430ca58371cf36c39383b4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvii.iii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4a409f9cc3444d00d161cf4bf18bc9d1dd5fea4ed398257eba8e5438063e4caf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvii.iv.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "45559ac7d004b69fa844fdaef624215673914bdd177e2e63c7b0856e102261c7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxvii.v.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxvii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "12baf7652be05eeedc2069da45fdbe4eb5ac6061d794bc951c5a139e28dbb2a0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxviii.i.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxviii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "51aab37b67e0c30747bfe9e9075edb51ef3c547116e90e2272c6094363f2df08",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/ryle-matthew/matthew.xxviii.ii.html",
+   "work": "ryle-matthew",
+   "url": "https://www.ccel.org/ccel/ryle/matthew.xxviii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d6312e5ee0bc053bd54cc3894ae4db3efd88d0c1d954d7ae91d2bd854817411c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
