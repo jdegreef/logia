@@ -1,0 +1,21 @@
+{
+ "id": "chrysostom-matthew",
+ "author": "chrysostom",
+ "title": "Homilies on the Gospel of Saint Matthew",
+ "divisions": [
+  "Homily",
+  "Section"
+ ],
+ "edition": "The Oxford Translation (Library of the Fathers), revised with notes by M. B. Riddle; edited by Philip Schaff; Nicene and Post-Nicene Fathers, Series 1, Vol. 10 (1888)",
+ "original_language": "Greek",
+ "translation": "The Oxford translation of the Library of the Fathers (Sir George Prevost, 1843-51), revised by M. B. Riddle; Nicene and Post-Nicene Fathers, Series 1, Vol. 10 (1888)",
+ "published": 1888,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf110.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years); Sir George Prevost died in 1893, M. B. Riddle in 1916, Philip Schaff in 1893"
+ },
+ "source_kind": "digital",
+ "notes": "Homilies II–XC are CCEL npnf110 sections iii.v onward. Homily I, a preface to the Gospels on no one verse, is not included. CCEL's pages for Homilies LII, LVII and LXXVIII run on, with no heading, into the homily after them (LIII and LIV, LVIII, LXXIX): a broken footnote there has swallowed the end of the one homily, the next one's heading and the start of its text. Only the first homily of each of those pages is saved and used, so Homilies LIII, LIV, LVIII and LXXIX (Matthew 15:32–16:28, 17:22–18:6 and 25:31–26:5) are not yet included. Each homily opens on the verses of its heading; a paragraph that opens with a quotation of the Gospel, which CCEL marks with a footnote naming its verses, opens an entry on those verses. Every paragraph of a homily's exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each homily's closing exhortation is left out, from the first sentence after the last verse mark that exhorts the hearers ('Let us then...'), in the last part of the homily; the whole homilies are in library/texts/. Homily XXXVII is headed 'Matt. X. 7, 8, 9.', a misprint: the Gospel it prints and expounds is Matthew 11:7-9, where its entries are. Homily LXXIV prints no verse heading; it opens on Matthew 23:29, the verse its first footnote names. Where a footnote has swallowed the words after it, the cut is marked ' ... '. The translator's footnotes and the notes on manuscript readings are left out, and a space is kept where a footnote mark stood between two words.",
+ "status": "ai_draft"
+}
