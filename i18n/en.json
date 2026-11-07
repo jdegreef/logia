@@ -840,5 +840,66 @@
     "draft_note": "Logia wrote this page; it is not commentary. It is a draft until a named reviewer approves it.",
     "voices": "What the commentators say on {ref}",
     "used": "In {n} excerpts; first in {who} on {ref}"
+  },
+
+  "llms": {
+    "holds": "It holds {excerpts} excerpts from {works} commentaries by {authors} commentators, on {books}, each tied to the verses it comments on.",
+    "rules": "Every excerpt is copied word for word from a public-domain edition (published in 1930 or earlier) and links to its source; nothing is paraphrased or summarised. Logia takes no side where Catholic, Orthodox and Protestant readings differ. The Bible text is the Open Word Bible (CC0), an AI draft awaiting human review. Logia's data is CC0.",
+    "addresses": "How pages are addressed",
+    "address_list": [
+      [
+        "/jhn/3/16/",
+        "one verse with everything on it: each commentator's excerpts in full, who cites the verse elsewhere, the whole homilies on it, the Greek words, translation notes and cross-references. Every verse with commentary has one (book code, chapter, verse)."
+      ],
+      [
+        "/jhn/3/",
+        "the chapter reader: the Bible text, with the commentary on each verse in a panel."
+      ],
+      [
+        "/jhn/",
+        "a book: its chapters and who comments on it."
+      ],
+      [
+        "/commentators/augustine/",
+        "a commentator: dates, tradition, a short biography and every comment."
+      ],
+      [
+        "/works/augustine/",
+        "a commentary: its edition, translator, rights and source, and every excerpt in order."
+      ],
+      [
+        "/downloads/logia-en.json",
+        "every excerpt as JSON, with its verses, work and source (also logia-en.csv)."
+      ]
+    ],
+    "books": "Books with commentary",
+    "book": "commentary on {n} of {chapters} chapters.",
+    "commentators": "Commentators",
+    "guides": "Guides (drafts for review)",
+    "more": "More",
+    "more_list": [
+      [
+        "/about/",
+        "About Logia and how each excerpt is checked against its source"
+      ],
+      [
+        "/open-data/",
+        "Open data: download the whole library"
+      ],
+      [
+        "/readings/",
+        "Readings for the church year"
+      ],
+      [
+        "/commentators/",
+        "Every commentator, by era"
+      ],
+      [
+        "/read/",
+        "Every book of the Bible"
+      ]
+    ],
+    "cite": "How to cite",
+    "cite_how": "Name the commentator, the work and the edition, then the Logia address of the verse, for example: John Chrysostom, Homilies on the Gospel of St. John, Homily 27 (Oxford translation), quoted at https://logia.faith/jhn/3/16/."
   }
 }
