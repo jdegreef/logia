@@ -18666,6 +18666,1356 @@
    "kind": "digital",
    "download_sha256": "ff0823446a84422775344f50f63949949aa339c83cbf0b23528d88e7e16875b6",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.ii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f7291c299313c93a7f91dfcfd8b4dfe925224a8c70ca7671e964f9944d08b18b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.iii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d071828f2ded26c9671d9edabe436aec4ccb8808524cb2dc2d3f64153a10a549",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.iv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5376aa87ff72ca5904a76ac46099e9122ccfac2e478d346ee4be1dfdc916ce67",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.v.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ea1c78cc51aca0946be098e7b0ce3dd02585e02e78e961938e3c5d30a6fb0209",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.vi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0d8a9898ae96fee01edddc4b8db5f5adefbe508ef84ff745e02a1c83bf3026d5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.vii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e439bc9fc5fe0b137f7fdeb5450b7c6ffd65efbdd611e87ace6dc42240a16227",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.viii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9e4339ce5611a4e44129693fe4d17e2c9287b4e6b140b845e2deaceb94aa6c1a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.ix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1b5a15a923ebce71eb3a18a80f03ad60d90b2b93474b2f9b9610753990c334e5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.x.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2694d477de475db32b6f51fb515aecaa6c285951e41bbfc364fe145bfaa9975a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "56276ed1fde7aa6b0f0ff835b2c4ea792acee4a26169a2b9a633dc39f9f0fc22",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "689e0a3bd2595a947de90506e57a80f03a3d76c2ef5ee126a403378eb75510fa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c41da9d114bf184000678dbd9cf856b9a16c13793b3483c6d1397b85b09e9bba",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "70cdd25e22721962941dbc9d37783ba16ff3ae5eaf525f5a29f142644173c376",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3b17854f5ae2fef5f4a44c1509014f13b035cfb41ef7189387a3d0faab3d4570",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "666c097c8e807f6fbcb2bb00d33ca8f970a29986a1855a8f84ddbbc7ce80ee23",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3a9a306644d3b3872dc0a607c5b08690aeeb19ce683e4f197cb8d37bde8c636a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "552ebe4957420c696427bde2f292bf1fe40172538d938f7321c8fbd16e0b0624",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "acb14caffd513f379a2198182b85c4bffe7dfd615d1bbfdce69b212418c7f834",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fc8e49447fe4ac86862c9438769f62eb9182bebfe51805c050da4b1e64bf992c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ab154f01703efe7919d1ffe0ed94224c97995b55ae9023b3aa21c0ba8bf272a8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d3d8c87e32acf1425892d74e1030f91165aaebd8ca4b16ebbe559614e83665d5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "983dd85fb20cc2a7a2e49db11d4bf633973b8ba37ef12be6c039601e66a7754b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bbc656a99c555a242befe2feed54603c623132b6c602520c0c41d858411de4b6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ea2740e986b174509c2126f8f1c9101bab4ac4c43b81125256ab0aa2cda9c98e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "89b64518eb4a207b0294cf3acb6555d6236be485294270d7be7c81ac48b61e62",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a4d8194ffee311ffbba6d8de502bcaf3ef5e8f70d795924733a60e3cb0085f7b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a868157573459091d899c59a54973b1a0da850639113a5dca85ace5db503fa82",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6f496dfe9b42877e74d4d5ad9a54b10b6a93aeaffb19d5df90024bf71942e02f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b15910d122a2fd4c567c7ef50eae4e458169ec0df463a4e354db9d4fef9e374d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0c89ab158b673f879efd496b1b4372afbcace0a80d16606ecc85b2e0fa47965c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4634f12cb176f3a0ec7119d5239af14e3b304ad34d524d2359b2f336fec79889",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "88bb89b4cff9af04321c14656c79ca50337dc35641a3dcfc0710e0e566c795c9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d87a9a728d9e347a53f52da1fb04cca1262c29dfb1c858b2a8da2dd943d0b50d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "db9984a3c94ff8ff2a8aad053fd5c177db91a617e7f4549625e2e509533cff29",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bb0489a4752c7e84c5719fcc20cd96f70f5cb7f0efb126884bd82445febf02a5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e7aad6d5e09a2fd3ff3cd957382e9465517709ab18372a206e7ea27f792d4eea",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4d527a0cc7af937984883524bd150a7f1484e0fbaaa1921e842a251c57777b77",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xxxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "009d8521de1d08606294623d5fa582e6c5776878d633a314a718d1ed9ad2de41",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xl.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xl.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "af4f06f87b5b7bb2b81b2222a53f5fb513a3afd8e6af49ea58a0178190b34fae",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xli.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xli.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "96503abea5dcb3a4ec72b728997f4a9ef35535ec7810e4356c77aae302b56ab3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xlii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xlii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "322686a58d84a81b824431d7025a184c5873f15f8b08ddef9684f7ced6417ffa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xliii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xliii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bf7c801d34d7b70f048e719c6dfc6aac4d1a53c9f6f8452678d1d7008a4d6614",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xliv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xliv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "760d2bf43609ebd4ea78830be2c3120a15bb7c1ddc2c027da60044511f87da26",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xlv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xlv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d4bb9746839418734b3b87f35660fef0abfdbc703ee454d71191deada0739019",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xlvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xlvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "14fbb6ee0f3572945f5b0293685bd63aaeee5a1ea20a8dca5d99935011000828",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xlvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xlvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6e759b973589939cbf151056d75ab670296ec065f751877d0f2d30da4cbd1f30",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xlviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xlviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d16ee025fcbf2dbb49d34dad429e0f4b0fb08cd4fbda6f06164a5efc49b8663a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xlix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xlix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "53a3b910f5c0d9fb188029c29e1c017fe08a302645a477fbf470446b993058c2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.l.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.l.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "92185b9f39830a7b188a6816bc190ca01a0a9ec5ff98419777c729d0f3b98cb5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.li.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.li.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "87095e690f7b0141fca1a8e43e8b0d329ea6b02333d2368deffe30b708367761",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "29d584a25e8eeabeea4a294f208ef90713e3461eef2126c0bf5c077800762a7b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.liii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.liii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fa799210d33a1e19efb85bcb8edf3c1eb67c17dbb5665ce3367eab491519af4c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.liv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.liv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e25e0c003037c91c7f51a84781a3d27f785b1a8f2d2244bd935bf021c68f4eb6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ef521cb47b06944c72e59086d4cf37c6e925083fc76e550272e2cb6ab3b361f5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "74777923470d23ce0fb82e07a8fbb9a3434609bbb94a93c426fc28c46c2c54f1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a395c3eb50fbc67b445de5268eb0475c164d5f14d068a9b1955aece53cee048a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3c428119d91af71983dd29b6d764c00dc0104ca84318a81ca2723a0d888954c8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8bcc3de50c83503dcb6199b8eda2a4f139f3f59ba44b5b57e20e3e295b334498",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "da8fdff7b31dd36766c3687645f036f9c12ddc6d8cde388998d4399e4b410c9b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6b389dbada336f43ea1e00f40379193a6956a49a953cb9bca80eb1b006eb19bf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d12a271953f743226d5c4379f42d3fe0de0d865f7659ef86bfd24f0cf7301d4e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2e5476e64e2c5241e969229b2f5d877caa4ef034a5e2653775f0120c6b6deb3b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "532e95d6937b63339288156621af9d2691bd57455336765491b92fb2201b5641",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "007b1887da06621618c077178af3b7e4da4d0d6e91729c078ba478cb4632c5f8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e146d4f1ffbc263a19bf8c42ff1ed20d7719b768c2cae7fc6c24bfba9f2dbd17",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0c02c73ea1ce0bcbe847cb55ab2b9a94a42731881b2bcce6683122121723ae62",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e3b1c969189adf4f99295bceb70b8bd28551637208b1e8b3c65f6bfe022d6ce7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2f9ad83d6b83a40c01cb08f3553143cab28d8808078df524355ca31374114c4a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b294c0a12f3641d691cf50f4ce4c9e1a574fb860b4aad2d05f8d78318a9c34b9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a75b50232532b6225a42ef26b2a26bc00cb09d25aa6b3855bfdf0fcdca51b70a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8a94bdb58a655dec7cafcfa1326e4a0425ee68e082021bb35fccef47762e5534",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "140f6ecbbbb068d6fd69701c764fa2a8a82535907b398193dc508762f094559f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ae389410cf8c6372f157f946e2ac78304ce74c83d0100421a787803a037caf22",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7e760f15ba291709205ff6fda58e8a97ca0966ea4a20521eb7a5407423faad6c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6351e2eb75c681808abc796fc26be02937a907a6f7e220a9cb6ba48a743edf96",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d33e3c60e448eaa6a50714f6ea6c81da31c2fcc797ff37075a6009e0cf721fd8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b5d5b6eae73ad43fd5c16fbb3ec0833a3d6e90b3d0980846418de1f1bcd7839d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d5122a2626b7f309c57e62c5116c5f69dd7818f3119fc60f20d1c76312ebd683",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e659312199ac227ee65741e78ae314406f1a6d6e0eb7428b23ee64c860c323da",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5daf688642d898fd1cf795bfb3cefbbdd7dc3be01518c72c5c6e0305e7865acd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4c6e618e8355081b74fd86d7de6bda638ff6cd715e768f5f700dddfafc9fe3b7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f67b5506b59fa9607d869f1890e1e1c5e5930b130422b347a10eddf41797d4b2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5a85c886fa04f84c77cedd838baed8bf236a3ec05ccc20d024bd26c20733927e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a5eb8475f9739dd4413fec5eaa4f35b97fc8076e6c2cd88d20411156d1cd8baa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c1282cd5e935749af154216dde9749c41013fc92421234026750580e182826fd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cdf21615b1763ade7b30a47daf21bf9165d9a2fbf36e0b5fd328d3778ccbbe4a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1bc35aef8e628252a574af07ea15ca14f51c32730257d524198825a298cc8d02",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.lxxxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.lxxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ff2797462454479d0e0bb97669bb96996fc9895799ea5a22a3e214b1f6ccf511",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xc.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xc.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5cfef8703fd3ed2346d1497d949aacf2f2d42ebb7938b93cf4dfc2098a4f99c3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xci.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xci.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4c0e172da917d78133c240f013d34a8493456da2b70f386f84c20dffd782fd87",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xcii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xcii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "938597b1b88217863f2cc80f441c598ff8ecb35a60207e7757a41f840b168aca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xciii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xciii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "40d0d61f1dff20464a8e9076c6fd15d68d51ece99bde18d2ff39a9c5cb7bdcf7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xciv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xciv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5692aa74eae57e2f88335f218dd9908f79cbc5e62774d5c3255598e96e5eb559",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xcv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xcv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9a4a42f09999591761d934e4fb95c25e8005b6fdb3149827f827f948058e5428",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xcvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xcvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "92659ce23107ba92062bc3f12843d280101ece62f943d5ff19bb5b8aaf8ee04d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xcvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xcvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1341556fe190d1e789094c70eb7b090620a58c81a4ef66a052901f2bd6df051e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xcviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xcviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2e68e0f6690b45d6f956ec4eb951da0fa75df4313053ee69c53fe7f94e977d3e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.xcix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.xcix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "28b4889674a8afa9244f5c91ec06a8e40d35ec72d447d3e76b3070be1c3c7942",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.c.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.c.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7ad3aa14893aaa04f0ab55a186d047a79a29d38569362daa7810c9530e29f761",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.ci.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.ci.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "44b5d998e14c00ff3feaef4034690d793c017a6701bebef5e90738faefe3f182",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "711a728e3d9fe4e8a5f9e2e416b5b26c777cd900d390e60d1d0b0244637f69ff",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.ciii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.ciii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e26c18ca5d6746c15b8c72cf04aa638591960785bbded08d9b797e780dde34d2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.civ.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.civ.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9dae6c95f5de934507e4efd6a3916c95831e9a3c97ff6a97871727bc7399a046",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "07e8bbcb7d00545f843193cf7ad9ca168286eadb3ef04730f9ada80347a246df",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4114a8e7d1a119014bc1c41ff4938f5ec121fb2cfa8e8e6e5f9a6441e0414cd8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "192f3e1c8b96e3bd9699ce20b2e8c38b0dae63740a4703710a77768cc412a5fe",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "83f8b75b99c6e754488838b36f780b24aeeea9f165c6ca80c6f64dd9f64639c6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "437b8b8002ab2f75f56abb987d4c877b4d6e64eb6668b179c665a6d0ddb8484d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "eb12462acb7098dd0f347092322ebd2652296de5d5d7ec73ece5d0e811bbae7f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2aad698099960c5d91caf918af29a307b607b17a61efe16589082cc9b5a48303",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "25d2fab8ef75d8e513276440522b0309abbca2de0651324aa6abe87efc6ef255",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0dfb4bcbe5acd243f96a6c89c77b8d8efcb08bf5ef55ea97fb6b02fd7060b411",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6addbbd5bdbac7e093251a5590be019d87763aaba22792cfc981a74df7bf94c0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4f8b8201510042b96c4211cd115d5921b7cf512c59aa0d7f522d399f4e13afff",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b63deddedb86b51feb019797b9f040b25d45bb91d4ab905fd0381485e66a1ec",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1f9b639a94214caebf2300cfdbcc76f9acaed267e7894d5a741114dad8d43ca1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e609ad9e5a1644d608b6e0776ee7829329636eb07cf79bf4619578819cc85a20",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b16ff35de4bfeacd61adf7b7587659ffd5e2590f376bf4ca8c5d5653e144d590",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4ead1eaf4b7f2a16c0e37a2e257f3f767eda9422804d33937de5fa5ab279f85b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fc9eb05c944e2ff4cb8fbc4fa1ace4dea169e751a2d827c8ae9a5b65b3659c17",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "aa37840d9df755c22a81f2a6bda73d6a045ad1b9d672e2b5256b3efcef1a2f08",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cce427108e62cb6740b2a20ef55074e3f8e6b7bb2a0ef68b8a5e0b1d1bd38a6c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "56875a4d6950e3041163a5d53397709d98b2b8163bec36e55181f1a122ffc813",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0d91ced33d48eff8d05c24d7742aae532a88e8225d74660343a05f5c7bf62db0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "496aac26e282dc8ecd9743f7e1ee60b512e20c16373ca952ebd5ce58fcb492c6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "48026f69902b5746be705a670846fd41ccadf61217d507f7d9f5c58ae27a4861",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3bfafd472e0a6970d32d89b128731c170ee9f2181a7662c9e1bc881346591db9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3682180410d8078e3b012ec62b3a079a009fa28a9f680b451c53dab362c02f56",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxx.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c82a4b23e04266e1d5d196f0a167918502f1f53ab5d50b57edac30da25e6ee3f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9244258beb69a2f006cbdd327ec842eff1352332fa3c436698b11bdfee25482d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "72e638533fa89b5a87a13ec52fd0d80213b8a69640122ca48ffa73c205de483c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxiii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fa039d8bc59ea8c64c553665e47ea1507fde7142d9709cca1ac4a2076b07691b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxiv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "65037e01c3f37fda7bd4010b0dc886d81b2751d02bf3acb74813aa54f7969b0d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1bbe96404292d5d7338de559c72a9fce2ac33387c6237b7da18be0c3c33d59d4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "649b05a55e2450f2aec29d791c9f5a00dced5f8e626d6bfb6e876f8b43e0b3b5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d9d63623bb8532c5e7a212e1a28e43524135c3f540e0be1ecbbf062542ab4e5a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e26e1524de9ab4ee1b3a6f0401831ba033c5e5384ba5cc2899c143cf031f650c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxxxix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxxxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0f2ac126700d087860655b7fd08df710796f8dcdd1ec8d7ca1fe0354ad5d8f8a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxl.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxl.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a987ae61d6eda9d46e8209ab4ea7688c29227560ee20964ccfa48c6f0721af6d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxli.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxli.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "db89468c952784f57966686ab614beb5982e718cb194b445cf1998f6836f5267",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxlii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxlii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "47e9cd66c744b33f34adc6dded9333954421f1a98f0dfb55bf2dc7df2f12ee58",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxliii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxliii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7f7d608e5f5af49823c15197165ea7b41e874cd7477139e3504bb2c4ddb8debb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxliv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxliv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7567f0934b7e08a4b02f1d3388802e90f3a274f2e4cd92c34fd0598ae51a8560",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxlv.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxlv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "35b004d117165944fc105c992f2b068105f54a7a39c65aafd5888434ec9cf542",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxlvi.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxlvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f7a15bc4b4aac31b3aa81989ecad0fc396a2e29b50ce0882076f4864659573c1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxlvii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxlvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "92eddef652f707c032300067ca5d497ddc2b7f6b95e569e73a37befdca0d8795",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxlviii.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxlviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e1c01f84cfc37b758aa0fb6dc91665dfe197625a819acc392deb6ad680de672f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cxlix.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cxlix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "edafd308f5b28194a6a249627283fb62166a2b46b557e53ca09e6b3321cd8f7b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cl.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cl.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f697cb7fbb86dd51eaed712b3283ced1bd88b6911acad9f6613d911acc367e90",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-psalms/jfb.x.xix.cli.html",
+   "work": "jfb-psalms",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xix.cli.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "33126c68bdbb3fd2fb5391e9e6b86750118dd9fc017d17036cd72fbe9f9f50e3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
