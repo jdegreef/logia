@@ -20016,6 +20016,573 @@
    "kind": "digital",
    "download_sha256": "33126c68bdbb3fd2fb5391e9e6b86750118dd9fc017d17036cd72fbe9f9f50e3",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.ii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dc7eca548e76bfd90143962934e487f1cca052d681190a5de415f5a59b4a3187",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.iii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e4f2a14a9655de7e98e878aff9e46ee3f743c387b5807212c705e1be10823200",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.iv.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cc1fa8f8d234ec62b16665439e0a30c101a7890cd577d4a058cbe607c1af4971",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.v.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b0e77d697d59ceec0d711c7314bb56fffd37ce3619c4889517e628f78221b67",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.vi.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "51f4d4c5ba15ddd828b2fb4ce504f47fc5594b8dd3a26d0d22f437c3675bee82",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.vii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ba5175e17795c06448f41f9977b793260bac88a9c25f41fd30769e2dbaf41c35",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.viii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4b450a346488c80b15edcc9c0a0dc8866d620419bd719118dd11d3a9f0b21f15",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.ix.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2108a6cc215e52280faa9d6dd361b7bd92178b383bb6864f45425d58210d44eb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.x.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a9f6680b277d5d766a91697d8ca38bbd9e2eb4978a536f71b78f7276288ef118",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xi.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "405230a81a0707fb9de87b48340fc2586c90f84c923a462543fba536b27a82e5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a5d88bcc5b92f9820d586bbcc2dbaa5696eef05dbbdc94dbd7f9b901f7deeb4f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xiii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d1f913aa24e1a703c511c881f68f73fa0bc03260cb8eda0cfa39e8cd2a1e1922",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xiv.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5ac35325ea17a3d2b7c87750e1fbea3118328a3efe3a15bc56d732db6e9ddd71",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xv.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d2b838fdff356b53a23dac66095103e3703d08e5788a3f702dedae1ddb58ec97",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xvi.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "36372d93cc66ac6d232e539b648497240695baff345d223dbfe5c06bd8d3f345",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xvii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fb748ccf8b7c6db2703b8f4e22f5e8dd70de3197d196179a3c42d37401b83304",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xviii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "02f087cb9e65b0a181a81280e93f473fa570e9af0cb4be04ad922e78768d064a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xix.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ee3ffbf7f8e4e1c776c0511350c3cb537fb615abf89ca1bbcab5913f4a57c3d0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xx.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "18599a133143fd027fda32018162f7a9985df29dc8d4c6b0727a64d0003a6736",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxi.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bf719918c2f4a100c9b94378ed56b7448fa89e965dc5ab3e36091bfe3b77dfca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "496a78abf8cea54d14dc3dce7114cde6fab9cf775d6ed31cefea3760dda15259",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxiii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "962b4a08f11860478f9e1438b04973f280f4a7d0a7a414a4d3994d9811d8853b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxiv.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e5f0f6ab207371b5b876995168713b9d096866efa946dd80ec52fdbe46d04ae2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxv.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b2031ad710dff96c1a82b6d287d7a307c1669f4f4d2d5fdca511f057efb39f79",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxvi.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3ce796551b9acfaa79565825f0852c660044fd5cbff790fd037dbff4f79b8bd2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxvii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e296b87e2210766d1c7f5451a23f9bfcb692210ac132daea0bf37e3e0001b7c2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxviii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2f857de26d5b5377e2c2273e19b0e124feb6b8af1b92751d381ee512fbeabcc4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxix.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f204cf826cb5a4aaced84d355c850e7a7a89414e9f75fe030db670c032c88325",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxx.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a3bc69388a3647f28b4c7fbfaa8be7282f941e3219f770fd21edacbbb93a4776",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxxi.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "da5ee127db4d36fc86971f7d2136b273fa6b3758a53eccd96034a32ad325bb4d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-proverbs/mhc3.Prov.xxxii.html",
+   "work": "henry-proverbs",
+   "url": "https://www.ccel.org/ccel/henry/mhc3.Prov.xxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "69cf08f0db8c5417ba1a369f6c07da60659dafb72ad656c0a96da6561d7572c8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.ii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1d894c1b7bbfcb4fee07b173f8a58652c6b1a0049aaeb34dfd7b2324d98de4ca",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.iii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f6145a3eaee6a17a86760a1208a5e1ad0e9ec967181353470c7367aa4eb43957",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.iv.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "693233e0a27a0876989396611da8aa0e8a9c29b1326f586807dd1e66c6f4166f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.v.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f299d15b7887013abf45bc1d87fed35c15265a6ff6f1fe378fa1b40777f84553",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.vi.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5cc8f21ed8567251579c9dc24b2c3677585e42b85ee010a8def7044e69f7b2b0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.vii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "acc8eefdc1c75f02c26ec038c6ce78e5be7ab5c5bf3f27680b8ea2d2e0807e73",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.viii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0d049fbf01718ff4dd845b015ef21c194ab44b50de05f872b282732693090553",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.ix.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9535ec09cf2cd77ebdd90ab0674871f1f088452e96d98b9b1dcebd4dcf770bdc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.x.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "98aecca5ac19ac3db5d8a5e47c9d1908065e9d1f26a051c4a374341b6693196c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xi.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "069eddd6c27bbcf873a574ff79d606544f3e3469eeca2dc98a9a30b9c250f8cd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "323b496260003f6715b5960b2a3d3794f41bf96dbd9f45e57b8ced53d885807a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xiii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4e84a582ae2d3171e59c4bebf7c109bdf30067434fbcabac40eb5c427e9c9ddb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xiv.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "51329e4d15070fa88cffc9f4d9b12dd246a15fb43a73848e00567d1daed1cf1b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xv.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bf788c91f2f1ddacb7d70a9a3a019fae3834eacf4f42e44610495e0cab53bd62",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xvi.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "36b01660482868107f48086d5abc7a43b0a1b022079cc0c21720ce2aa539a169",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xvii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6dd0a13ed14def30ebd18088d51cf5a529d0a43b087abce3462cff517885f704",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xviii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9b5c2cf192a02b39ecb76f90a1f43fadb173763640651b17a158772ad5271be0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xix.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7c3c525aef82b35fc3aaf64a0d3074555fc021b1ecacae378b53e9dfe6927ce3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xx.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "88dbc8255921e7396d7ee5fd446d31c75374aafadcb7d2808067d29e726eff73",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxi.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ae63ac0e20538d53d5b1eef8d7cd4f224a8db5316953673a6db7b60bd507fc00",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5722088d98a6c672ef6e27342ec3da6ae1b6d11117169bc3d8b9f2df63d7e58e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxiii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5d9bc6331e48368d5ad1902abc55464c1d409a29f07b88ab2710ed9da4638d61",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxiv.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "31d6d1418f05dce27ed22321d4c0bbaf2dd86a5f1c2bef3001e7a2322da18179",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxv.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e9a865bed8e1591eab04ada312817326502743f907b6d80484e1808ba8ff7185",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxvi.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0166e2343c2abc5993d1e603474d14f458127329eb8ee98a2490ed8447d1012a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxvii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "20e16a8c01b776a94b233f337acb806cd0c462ad165153e53813464439595dd2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxviii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bd26e95711156ba30ba143d1404a07acda68fb41e4349726b6ed78b31643f0b6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxix.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f9008a0e9c41dde895c5b50f44939fff951b98d6911fd9d8b0a853ce4d9ea23a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxx.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6a38cd458ddcf07f9d3663fa48df457412e9ce2c5741e49ad55a814c23e364cd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxxi.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6c05bc97357ac39b2341bce4db58c953be24575ffa58cc7ea703d403109fb4dc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/jfb-proverbs/jfb.x.xx.xxxii.html",
+   "work": "jfb-proverbs",
+   "url": "https://ccel.org/ccel/jamieson/jfb.x.xx.xxxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e1d9eba20caee7871875a7e86ebdc55b0aceaf7e5ee0c52585a7d550aa6c4924",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/bridges-proverbs/expositionprover00briduoft.txt",
+   "work": "bridges-proverbs",
+   "url": "https://archive.org/download/expositionprover00briduoft/expositionprover00briduoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "7e136c3088e3ba41c5abf4c30c945353ca3bd7a9d009f55fd94dc4737a7b3f11",
+   "extract": "The scan's full text, as downloaded."
   }
  ]
 }
