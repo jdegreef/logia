@@ -326,6 +326,11 @@ class Site(unittest.TestCase):
         self.assertRegex(text, r'class="lg-missing"><summary>Verses with no comment from Calvin \(\d+\)</summary>')
         self.assertNotIn("lg-missing", self.read("commentators/ryle/index.html"))
 
+    def test_the_reader_can_report_a_mistake_on_github(self):
+        text = self.read("jhn/3/index.html")
+        self.assertIn('"issues":"https://github.com/jdegreef/logia/issues/new"', text)
+        self.assertIn('"report":"Report a mistake"', text)
+
     def test_accounts_are_open_word_bible_s(self):
         text = self.read("index.html")
         self.assertIn('<meta name="logia-api" content="https://api.openwordbible.org">', text)

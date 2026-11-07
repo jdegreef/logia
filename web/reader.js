@@ -35,6 +35,7 @@
     share: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8M5 12.5v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>'
   };
   ICON.chevron = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+  ICON.flag = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg>';
   ICON.copy = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
   hiddenEras().forEach(function (e) { state.eras.delete(e); });
@@ -401,7 +402,22 @@
       '<button type="button" class="cx-act" data-act="cite" title="' + esc(U.copy_cite) + '">' + ICON.copy + '<span class="cx-act-label">' + esc(U.copy_cite) +
       "</span></button>" +
       '<button type="button" class="cx-act" data-act="share" title="' + esc(U.share) + '">' + ICON.share + '<span class="cx-act-label">' + esc(U.share) +
-      "</span></button></div>" + note;
+      "</span></button>" +
+      '<a class="cx-act" href="' + esc(reportUrl(w, v)) + '" target="_blank" rel="noopener" title="' + esc(U.report) + '">' + ICON.flag +
+      '<span class="cx-act-label">' + esc(U.report) + "</span></a></div>" + note;
+  }
+
+  // "Report a mistake": a new issue on GitHub, filled in with which excerpt,
+  // where it was copied from and this page, so a misreading can be checked
+  // against the printed page and fixed in library/corrections/.
+  function reportUrl(w, v) {
+    var es = entriesFor(w, v);
+    var page = location.origin + location.pathname + "#v" + v + "-" + w.work_id;
+    var title = fmt(U.report_title, { name: w.author, ref: REF(v) });
+    var body = fmt(U.report_body, {
+      ids: es.map(function (e) { return e.id; }).join(", "), title: w.title, edition: w.edition_short, ref: REF(v),
+      sources: es.map(function (e) { return e.source_url; }).filter(function (u, i, all) { return u && all.indexOf(u) === i; }).join(" "), url: page });
+    return DATA.issues + "?title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(body);
   }
 
   function signInNote(key) {
