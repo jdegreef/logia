@@ -5166,6 +5166,15 @@
    "kind": "scan",
    "download_sha256": "8ada21d36047cc38ee5e64e8208e8bd8a1f727f35dd929b76a382871fa1bccc8",
    "extract": "Characters 0-565433 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/hodge-romans/commentaryonepis0000char.txt",
+   "work": "hodge-romans",
+   "url": "https://archive.org/stream/commentaryonepis0000char/commentaryonepis0000char_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "0e0ed911dba3204f323033a116bfc51ac707f7fd974f2f85cd4836a45e3e7a4c",
+   "extract": "Characters 31574-1445058 of the scan's full text (the pages quoted, with a margin)."
   }
  ]
 }

@@ -1,0 +1,38 @@
+{
+ "work": "hodge-romans",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": " ¢o ",
+   "to": " to "
+  },
+  {
+   "from": " ¢he ",
+   "to": " the "
+  },
+  {
+   "from": " ¢hat",
+   "to": " that"
+  },
+  {
+   "from": " ¢his,",
+   "to": " this,"
+  },
+  {
+   "from": " ¢reated ",
+   "to": " treated "
+  },
+  {
+   "from": " ¢lass ",
+   "to": " class "
+  },
+  {
+   "from": " ¢ime ",
+   "to": " time "
+  },
+  {
+   "from": " ¢emporary.",
+   "to": " temporary."
+  }
+ ]
+}
