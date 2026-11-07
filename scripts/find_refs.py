@@ -299,9 +299,11 @@ def scan_citations(excerpt, book, chapter):
 
 # For each catena, the labels it prints before a quotation that the library
 # can follow to the quoted work: the library's source pages for that work.
-CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"}}
-# The Part II scans of the Catena (John 11-21) print the names in this form: "Aug.", "Chrys."
-LABEL = re.compile(r"\b(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
+CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"},
+           "catena-matthew": {"CHRYS": "chrysostom-matthew"}}
+# The Part II scans of the Catena (John 11-21), and CCEL's Matthew, print the names in
+# this form: "Aug.", "Chrys."; "Pseudo-Chrys." (the Opus Imperfectum) is not Chrysostom.
+LABEL = re.compile(r"(?<![\w-])(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
 STOPWORDS = set("""that this with which from have they their them there were been what when will would shall
 should these those than then thus also into upon unto said saith says hath doth more being because such only
 thing things other even very itself himself whom whose where while each some made make like after before same
@@ -518,16 +520,19 @@ def derive():
         if work in quoted and path.endswith(".html") and path not in pages:
             pages[path] = read_page(path)
     by_work = {(w, os.path.basename(p)): pages[p] for (w, _), p in paths.items() if w in quoted and p in pages}
-    candidates = paragraphs(by_work)
-    df = {}
-    for c in candidates:
-        for w in c[6]:
-            df[w] = df.get(w, 0) + 1
-    idf = {w: math.log(len(candidates) / n) for w, n in df.items()}
+    every = paragraphs(by_work)
     for data in comments.values():
         labels = CATENAS.get(data["work"])
         if not labels:
             continue
+        # word weights from the works this catena quotes only, so that adding
+        # another catena's works leaves its quotations as they were
+        candidates = [c for c in every if c[0] in labels.values()]
+        df = {}
+        for c in candidates:
+            for w in c[6]:
+                df[w] = df.get(w, 0) + 1
+        idf = {w: math.log(len(candidates) / n) for w, n in df.items()}
         rows = catena_quotations(data["entries"], labels, candidates, idf, held, text_spans())
         if rows:
             out = os.path.join(ROOT, "library", "quotations", data["work"], f"{data['book']}.json")

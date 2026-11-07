@@ -1,0 +1,8592 @@
+{
+ "work": "calvin-matthew",
+ "book": "MAT",
+ "citations": [
+  {
+   "in": "calvin-matthew.MAT.1.1-17.2",
+   "at": 555,
+   "text": "Judges 21:1",
+   "start": "JDG.21.1",
+   "end": "JDG.21.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.2",
+   "at": 1163,
+   "text": "Luke 1:5",
+   "start": "LUK.1.5",
+   "end": "LUK.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.2",
+   "at": 1487,
+   "text": "Numbers 36:6-9",
+   "start": "NUM.36.6",
+   "end": "NUM.36.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.5",
+   "at": 123,
+   "text": "Psalm 132:11",
+   "start": "PSA.132.11",
+   "end": "PSA.132.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.5",
+   "at": 331,
+   "text": "1 Chronicles 28:5",
+   "start": "1CH.28.5",
+   "end": "1CH.28.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.7",
+   "at": 70,
+   "text": "John 4:22",
+   "start": "JHN.4.22",
+   "end": "JHN.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.7",
+   "at": 376,
+   "text": "Ephesians 2:14",
+   "start": "EPH.2.14",
+   "end": "EPH.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.7",
+   "at": 1002,
+   "text": "Hebrews 5:9",
+   "start": "HEB.5.9",
+   "end": "HEB.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.7",
+   "at": 1191,
+   "text": "Hebrews 13:8",
+   "start": "HEB.13.8",
+   "end": "HEB.13.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.9",
+   "at": 617,
+   "text": "2 Kings 11:1",
+   "start": "2KI.11.1",
+   "end": "2KI.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.9",
+   "at": 1269,
+   "text": "2 Chronicles 22:11",
+   "start": "2CH.22.11",
+   "end": "2CH.22.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.10",
+   "at": 83,
+   "text": "2 Chronicles 23:3",
+   "start": "2CH.23.3",
+   "end": "2CH.23.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.11",
+   "at": 1441,
+   "text": "Galatians 4:4",
+   "start": "GAL.4.4",
+   "end": "GAL.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1-17.11",
+   "at": 1496,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1.1",
+   "at": 629,
+   "text": "Genesis 12:3",
+   "start": "GEN.12.3",
+   "end": "GEN.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1.1",
+   "at": 747,
+   "text": "2 Samuel 7:13",
+   "start": "2SA.7.13",
+   "end": "2SA.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1.1",
+   "at": 842,
+   "text": "Psalm 72:5",
+   "start": "PSA.72.5",
+   "end": "PSA.72.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.1.1",
+   "at": 911,
+   "text": "Psalm 89:29",
+   "start": "PSA.89.29",
+   "end": "PSA.89.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.3.1",
+   "at": 112,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.3.1",
+   "at": 321,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.3.1",
+   "at": 416,
+   "text": "Psalm 22:6",
+   "start": "PSA.22.6",
+   "end": "PSA.22.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.6.1",
+   "at": 507,
+   "text": "2 Samuel 7:16",
+   "start": "2SA.7.16",
+   "end": "2SA.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.6.1",
+   "at": 646,
+   "text": "1 Samuel 8:5",
+   "start": "1SA.8.5",
+   "end": "1SA.8.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.6.1",
+   "at": 1311,
+   "text": "2 Samuel 11:15",
+   "start": "2SA.11.15",
+   "end": "2SA.11.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.6.2",
+   "at": 1218,
+   "text": "1 Chronicles 3:17",
+   "start": "1CH.3.17",
+   "end": "1CH.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.6.2",
+   "at": 1237,
+   "text": "2 Kings 24:15",
+   "start": "2KI.24.15",
+   "end": "2KI.24.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.6.2",
+   "at": 1252,
+   "text": "Jeremiah 27:20",
+   "start": "JER.27.20",
+   "end": "JER.27.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.6.2",
+   "at": 1268,
+   "text": "28:4",
+   "start": "JER.28.4",
+   "end": "JER.28.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.12.1",
+   "at": 742,
+   "text": "Genesis 49:10",
+   "start": "GEN.49.10",
+   "end": "GEN.49.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.16.1",
+   "at": 859,
+   "text": "9:25, 26",
+   "start": "DAN.9.25",
+   "end": "DAN.9.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.18.1",
+   "at": 885,
+   "text": "Deuteronomy 22:23, 24",
+   "start": "DEU.22.23",
+   "end": "DEU.22.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.20.2",
+   "at": 399,
+   "text": "Numbers 12:6-8",
+   "start": "NUM.12.6",
+   "end": "NUM.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.21.3",
+   "at": 359,
+   "text": "Ephesians 2:12",
+   "start": "EPH.2.12",
+   "end": "EPH.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.21.4",
+   "at": 387,
+   "text": "1 Peter 2:24",
+   "start": "1PE.2.24",
+   "end": "1PE.2.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.21.4",
+   "at": 938,
+   "text": "Romans 11:17",
+   "start": "ROM.11.17",
+   "end": "ROM.11.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.21.4",
+   "at": 1064,
+   "text": "1 Corinthians 12:20",
+   "start": "1CO.12.20",
+   "end": "1CO.12.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.22.1",
+   "at": 475,
+   "text": "Isaiah 7:14",
+   "start": "ISA.7.14",
+   "end": "ISA.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.22.2",
+   "at": 846,
+   "text": "Isaiah 8:3",
+   "start": "ISA.8.3",
+   "end": "ISA.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.22.2",
+   "at": 1428,
+   "text": "Isaiah 7:11",
+   "start": "ISA.7.11",
+   "end": "ISA.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.22.3",
+   "at": 265,
+   "text": "Isaiah 7:13",
+   "start": "ISA.7.13",
+   "end": "ISA.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.22.5",
+   "at": 474,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.22.6",
+   "at": 1081,
+   "text": "Proverbs 30:19",
+   "start": "PRO.30.19",
+   "end": "PRO.30.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.23.1",
+   "at": 488,
+   "text": "Ephesians 2:17",
+   "start": "EPH.2.17",
+   "end": "EPH.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.23.1",
+   "at": 531,
+   "text": "Ephesians 2:15",
+   "start": "EPH.2.15",
+   "end": "EPH.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.23.1",
+   "at": 774,
+   "text": "Deuteronomy 7:21",
+   "start": "DEU.7.21",
+   "end": "DEU.7.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.23.1",
+   "at": 827,
+   "text": "Psalm 132:14",
+   "start": "PSA.132.14",
+   "end": "PSA.132.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.23.1",
+   "at": 1050,
+   "text": "Psalm 80:1",
+   "start": "PSA.80.1",
+   "end": "PSA.80.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.23.1",
+   "at": 1347,
+   "text": "Colossians 2:9",
+   "start": "COL.2.9",
+   "end": "COL.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.1.23.2",
+   "at": 497,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.1.3",
+   "at": 472,
+   "text": "verse 11",
+   "start": "MAT.2.11",
+   "end": "MAT.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.1.3",
+   "at": 1192,
+   "text": "Psalm 72:10",
+   "start": "PSA.72.10",
+   "end": "PSA.72.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.1.4",
+   "at": 95,
+   "text": "Genesis 1:1,16",
+   "start": "GEN.1.1",
+   "end": "GEN.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.1.4",
+   "at": 95,
+   "text": "Genesis 1:1,16",
+   "start": "GEN.1.16",
+   "end": "GEN.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.1.4",
+   "at": 138,
+   "text": "Job 26:13",
+   "start": "JOB.26.13",
+   "end": "JOB.26.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.4.1",
+   "at": 347,
+   "text": "Daniel 9:25",
+   "start": "DAN.9.25",
+   "end": "DAN.9.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.6.1",
+   "at": 1048,
+   "text": "1 Timothy 3:6",
+   "start": "1TI.3.6",
+   "end": "1TI.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.6.1",
+   "at": 1121,
+   "text": "Hebrews 5:12",
+   "start": "HEB.5.12",
+   "end": "HEB.5.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.7.1",
+   "at": 1729,
+   "text": "Amos 9:11",
+   "start": "AMO.9.11",
+   "end": "AMO.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.15.1",
+   "at": 409,
+   "text": "Hosea 11:1",
+   "start": "HOS.11.1",
+   "end": "HOS.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.15.2",
+   "at": 532,
+   "text": "Deuteronomy 32:9",
+   "start": "DEU.32.9",
+   "end": "DEU.32.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.15.2",
+   "at": 593,
+   "text": "1 Peter 2:9",
+   "start": "1PE.2.9",
+   "end": "1PE.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.15.2",
+   "at": 705,
+   "text": "Leviticus 26:11",
+   "start": "LEV.26.11",
+   "end": "LEV.26.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.18.1",
+   "at": 73,
+   "text": "Jeremiah 31:15",
+   "start": "JER.31.15",
+   "end": "JER.31.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.18.2",
+   "at": 268,
+   "text": "Jeremiah 31:16, 17",
+   "start": "JER.31.16",
+   "end": "JER.31.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.23.1",
+   "at": 517,
+   "text": "Numbers 6.",
+   "start": "NUM.6.1",
+   "end": "NUM.6.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.23.3",
+   "at": 194,
+   "text": "Judges 13:5",
+   "start": "JDG.13.5",
+   "end": "JDG.13.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.23.3",
+   "at": 1428,
+   "text": "Genesis 49:26",
+   "start": "GEN.49.26",
+   "end": "GEN.49.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.23.3",
+   "at": 1443,
+   "text": "Deuteronomy 33:16",
+   "start": "DEU.33.16",
+   "end": "DEU.33.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.2.1",
+   "at": 0,
+   "text": "Matthew 3:2",
+   "start": "MAT.3.2",
+   "end": "MAT.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.2.1",
+   "at": 1005,
+   "text": "Romans 6:4",
+   "start": "ROM.6.4",
+   "end": "ROM.6.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.2.1",
+   "at": 1338,
+   "text": "Ephesians 1:3",
+   "start": "EPH.1.3",
+   "end": "EPH.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.2.2",
+   "at": 862,
+   "text": "2 Corinthians 5:19",
+   "start": "2CO.5.19",
+   "end": "2CO.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.2.3",
+   "at": 1173,
+   "text": "Romans 6:6",
+   "start": "ROM.6.6",
+   "end": "ROM.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.3.1",
+   "at": 0,
+   "text": "Matthew 3:3",
+   "start": "MAT.3.3",
+   "end": "MAT.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.3.1",
+   "at": 438,
+   "text": "Isaiah 40:1",
+   "start": "ISA.40.1",
+   "end": "ISA.40.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.3.3",
+   "at": 820,
+   "text": "Isaiah 40:4",
+   "start": "ISA.40.4",
+   "end": "ISA.40.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.3.3",
+   "at": 1057,
+   "text": "Luke 3:6",
+   "start": "LUK.3.6",
+   "end": "LUK.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.4.1",
+   "at": 0,
+   "text": "Matthew 3:4",
+   "start": "MAT.3.4",
+   "end": "MAT.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.4.2",
+   "at": 1133,
+   "text": "Luke 7:33",
+   "start": "LUK.7.33",
+   "end": "LUK.7.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.4.2",
+   "at": 1146,
+   "text": "Matthew 3:6",
+   "start": "MAT.3.6",
+   "end": "MAT.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.4.2",
+   "at": 1159,
+   "text": "Mark 1:5",
+   "start": "MRK.1.5",
+   "end": "MRK.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.7.1",
+   "at": 0,
+   "text": "Matthew 3:7",
+   "start": "MAT.3.7",
+   "end": "MAT.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.7.2",
+   "at": 194,
+   "text": "Luke 3:7",
+   "start": "LUK.3.7",
+   "end": "LUK.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.7.2",
+   "at": 401,
+   "text": "1 Timothy 5:20",
+   "start": "1TI.5.20",
+   "end": "1TI.5.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.7.5",
+   "at": 462,
+   "text": "Romans 4:15",
+   "start": "ROM.4.15",
+   "end": "ROM.4.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.7.5",
+   "at": 506,
+   "text": "Romans 12:19",
+   "start": "ROM.12.19",
+   "end": "ROM.12.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.7.6",
+   "at": 0,
+   "text": "Matthew 3:8",
+   "start": "MAT.3.8",
+   "end": "MAT.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.7.6",
+   "at": 13,
+   "text": "Luke 3:8",
+   "start": "LUK.3.8",
+   "end": "LUK.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.1",
+   "at": 0,
+   "text": "Matthew 3:9",
+   "start": "MAT.3.9",
+   "end": "MAT.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.1",
+   "at": 53,
+   "text": "Luke 3:8",
+   "start": "LUK.3.8",
+   "end": "LUK.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.1",
+   "at": 1086,
+   "text": "John 8:33",
+   "start": "JHN.8.33",
+   "end": "JHN.8.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.2",
+   "at": 537,
+   "text": "John 7:49",
+   "start": "JHN.7.49",
+   "end": "JHN.7.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.4",
+   "at": 0,
+   "text": "Matthew 3:10",
+   "start": "MAT.3.10",
+   "end": "MAT.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.4",
+   "at": 14,
+   "text": "Luke 3:9",
+   "start": "LUK.3.9",
+   "end": "LUK.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.4",
+   "at": 974,
+   "text": "Luke 3:10",
+   "start": "LUK.3.10",
+   "end": "LUK.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.5",
+   "at": 359,
+   "text": "Matthew 23:23",
+   "start": "MAT.23.23",
+   "end": "MAT.23.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.5",
+   "at": 1434,
+   "text": "2 Corinthians 9:7",
+   "start": "2CO.9.7",
+   "end": "2CO.9.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.9.6",
+   "at": 887,
+   "text": "2 Corinthians 8:14",
+   "start": "2CO.8.14",
+   "end": "2CO.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.11.1",
+   "at": 0,
+   "text": "Matthew 3:11",
+   "start": "MAT.3.11",
+   "end": "MAT.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.12.3",
+   "at": 1089,
+   "text": "Isaiah 30:33",
+   "start": "ISA.30.33",
+   "end": "ISA.30.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.12.3",
+   "at": 1163,
+   "text": "Mark 9:44, 46, 48",
+   "start": "MRK.9.44",
+   "end": "MRK.9.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.12.3",
+   "at": 1163,
+   "text": "Mark 9:44, 46, 48",
+   "start": "MRK.9.46",
+   "end": "MRK.9.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.12.3",
+   "at": 1163,
+   "text": "Mark 9:44, 46, 48",
+   "start": "MRK.9.48",
+   "end": "MRK.9.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.13.1",
+   "at": 0,
+   "text": "Matthew 3:13",
+   "start": "MAT.3.13",
+   "end": "MAT.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.13.1",
+   "at": 400,
+   "text": "Romans 6:4",
+   "start": "ROM.6.4",
+   "end": "ROM.6.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.13.1",
+   "at": 523,
+   "text": "verse 15",
+   "start": "MAT.3.15",
+   "end": "MAT.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.14.1",
+   "at": 355,
+   "text": "1:15,33.",
+   "start": "JHN.1.15",
+   "end": "JHN.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.14.1",
+   "at": 650,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.16.1",
+   "at": 891,
+   "text": "Luke 3:21",
+   "start": "LUK.3.21",
+   "end": "LUK.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.16.2",
+   "at": 97,
+   "text": "John 3:34",
+   "start": "JHN.3.34",
+   "end": "JHN.3.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.16.2",
+   "at": 674,
+   "text": "Luke 3:23",
+   "start": "LUK.3.23",
+   "end": "LUK.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.16.2",
+   "at": 1248,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.16.4",
+   "at": 1249,
+   "text": "1 Corinthians 10:16",
+   "start": "1CO.10.16",
+   "end": "1CO.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.17.1",
+   "at": 763,
+   "text": "Ephesians 4:6",
+   "start": "EPH.4.6",
+   "end": "EPH.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.17.1",
+   "at": 1189,
+   "text": "Ephesians 1:5,6",
+   "start": "EPH.1.5",
+   "end": "EPH.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.17.1",
+   "at": 1625,
+   "text": "Ephesians 1:22",
+   "start": "EPH.1.22",
+   "end": "EPH.1.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.3.17.1",
+   "at": 1718,
+   "text": "Colossians 1:5",
+   "start": "COL.1.5",
+   "end": "COL.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.1.1",
+   "at": 0,
+   "text": "Matthew 4:1",
+   "start": "MAT.4.1",
+   "end": "MAT.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.1.1",
+   "at": 886,
+   "text": "Exodus 24:12",
+   "start": "EXO.24.12",
+   "end": "EXO.24.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.1.1",
+   "at": 1213,
+   "text": "2 Corinthians 3:7",
+   "start": "2CO.3.7",
+   "end": "2CO.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.1.7",
+   "at": 777,
+   "text": "Hebrews 4:15",
+   "start": "HEB.4.15",
+   "end": "HEB.4.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.3.1",
+   "at": 0,
+   "text": "Matthew 4:3",
+   "start": "MAT.4.3",
+   "end": "MAT.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.3.1",
+   "at": 371,
+   "text": "Genesis 22:1",
+   "start": "GEN.22.1",
+   "end": "GEN.22.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.3.1",
+   "at": 385,
+   "text": "Deuteronomy 13:3",
+   "start": "DEU.13.3",
+   "end": "DEU.13.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.4.2",
+   "at": 349,
+   "text": "Ephesians 6:16,17",
+   "start": "EPH.6.16",
+   "end": "EPH.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.4.3",
+   "at": 230,
+   "text": "Deuteronomy 8:3",
+   "start": "DEU.8.3",
+   "end": "DEU.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.4.3",
+   "at": 689,
+   "text": "Deuteronomy 8:3",
+   "start": "DEU.8.3",
+   "end": "DEU.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.4.3",
+   "at": 1144,
+   "text": "Genesis 2:7",
+   "start": "GEN.2.7",
+   "end": "GEN.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.4.3",
+   "at": 1305,
+   "text": "Hebrews 1:3",
+   "start": "HEB.1.3",
+   "end": "HEB.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.5.1",
+   "at": 0,
+   "text": "Matthew 4:5",
+   "start": "MAT.4.5",
+   "end": "MAT.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.5.3",
+   "at": 928,
+   "text": "Deuteronomy 28:57",
+   "start": "DEU.28.57",
+   "end": "DEU.28.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.6.2",
+   "at": 64,
+   "text": "Psalm 91:11",
+   "start": "PSA.91.11",
+   "end": "PSA.91.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.6.2",
+   "at": 688,
+   "text": "Psalm 91:11",
+   "start": "PSA.91.11",
+   "end": "PSA.91.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.8.1",
+   "at": 1770,
+   "text": "Matthew 6:11",
+   "start": "MAT.6.11",
+   "end": "MAT.6.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.10.1",
+   "at": 180,
+   "text": "Matthew 16:23",
+   "start": "MAT.16.23",
+   "end": "MAT.16.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.10.1",
+   "at": 483,
+   "text": "Deuteronomy 6:13",
+   "start": "DEU.6.13",
+   "end": "DEU.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.10.1",
+   "at": 501,
+   "text": "10:20",
+   "start": "DEU.10.20",
+   "end": "DEU.10.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.12.1",
+   "at": 0,
+   "text": "Matthew 4:12",
+   "start": "MAT.4.12",
+   "end": "MAT.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.13.2",
+   "at": 152,
+   "text": "2 Kings 15:29",
+   "start": "2KI.15.29",
+   "end": "2KI.15.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.13.2",
+   "at": 253,
+   "text": "2 Kings 18:9",
+   "start": "2KI.18.9",
+   "end": "2KI.18.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.13.2",
+   "at": 1206,
+   "text": "2 Kings 19: 36",
+   "start": "2KI.19.36",
+   "end": "2KI.19.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.13.2",
+   "at": 1723,
+   "text": "Malachi 4:2",
+   "start": "MAL.4.2",
+   "end": "MAL.4.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.13.2",
+   "at": 1802,
+   "text": "2 Timothy 1:10",
+   "start": "2TI.1.10",
+   "end": "2TI.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.13.3",
+   "at": 167,
+   "text": "Ephesians 5:14",
+   "start": "EPH.5.14",
+   "end": "EPH.5.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.18.1",
+   "at": 0,
+   "text": "Matthew 4:18",
+   "start": "MAT.4.18",
+   "end": "MAT.4.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.18.2",
+   "at": 938,
+   "text": "John 21:25",
+   "start": "JHN.21.25",
+   "end": "JHN.21.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.22.1",
+   "at": 0,
+   "text": "Matthew 4:22",
+   "start": "MAT.4.22",
+   "end": "MAT.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.23.1",
+   "at": 0,
+   "text": "Matthew 4:23",
+   "start": "MAT.4.23",
+   "end": "MAT.4.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.4.23.1",
+   "at": 111,
+   "text": "9:35",
+   "start": "MAT.9.35",
+   "end": "MAT.9.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.1.1",
+   "at": 0,
+   "text": "Matthew 5:1",
+   "start": "MAT.5.1",
+   "end": "MAT.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.1.1",
+   "at": 471,
+   "text": "Luke 6:17",
+   "start": "LUK.6.17",
+   "end": "LUK.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.3.1",
+   "at": 33,
+   "text": "Luke 6:20",
+   "start": "LUK.6.20",
+   "end": "LUK.6.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.5.1",
+   "at": 1159,
+   "text": "Ezekiel 32:27",
+   "start": "EZK.32.27",
+   "end": "EZK.32.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.5.1",
+   "at": 1325,
+   "text": "Psalm 17:8",
+   "start": "PSA.17.8",
+   "end": "PSA.17.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.9.1",
+   "at": 782,
+   "text": "Romans 15:33",
+   "start": "ROM.15.33",
+   "end": "ROM.15.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.10.1",
+   "at": 829,
+   "text": "1 Peter 3:13",
+   "start": "1PE.3.13",
+   "end": "1PE.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.10.2",
+   "at": 590,
+   "text": "2 Timothy 3:12",
+   "start": "2TI.3.12",
+   "end": "2TI.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.11.1",
+   "at": 43,
+   "text": "Luke 6:22",
+   "start": "LUK.6.22",
+   "end": "LUK.6.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.12.1",
+   "at": 715,
+   "text": "Luke 6:22",
+   "start": "LUK.6.22",
+   "end": "LUK.6.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.12.1",
+   "at": 830,
+   "text": "1 Peter 2:20",
+   "start": "1PE.2.20",
+   "end": "1PE.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.13.1",
+   "at": 0,
+   "text": "Matthew 5:13",
+   "start": "MAT.5.13",
+   "end": "MAT.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.17.1",
+   "at": 0,
+   "text": "Matthew 5:17",
+   "start": "MAT.5.17",
+   "end": "MAT.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.17.1",
+   "at": 246,
+   "text": "Matthew 12:28",
+   "start": "MAT.12.28",
+   "end": "MAT.12.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.17.3",
+   "at": 769,
+   "text": "Acts 21:21",
+   "start": "ACT.21.21",
+   "end": "ACT.21.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.17.4",
+   "at": 421,
+   "text": "Jeremiah 31:33, 34",
+   "start": "JER.31.33",
+   "end": "JER.31.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.18.1",
+   "at": 686,
+   "text": "1 Corinthians 13:8",
+   "start": "1CO.13.8",
+   "end": "1CO.13.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.19.2",
+   "at": 270,
+   "text": "Luke 7:28",
+   "start": "LUK.7.28",
+   "end": "LUK.7.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.20.1",
+   "at": 0,
+   "text": "Matthew 5:20",
+   "start": "MAT.5.20",
+   "end": "MAT.5.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.1",
+   "at": 1298,
+   "text": "Deuteronomy 6:5",
+   "start": "DEU.6.5",
+   "end": "DEU.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.1",
+   "at": 1315,
+   "text": "Leviticus 19:18",
+   "start": "LEV.19.18",
+   "end": "LEV.19.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.1",
+   "at": 1600,
+   "text": "Romans 8:3",
+   "start": "ROM.8.3",
+   "end": "ROM.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.1",
+   "at": 1905,
+   "text": "Deuteronomy 30:19",
+   "start": "DEU.30.19",
+   "end": "DEU.30.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.2",
+   "at": 213,
+   "text": "Deuteronomy 10:12",
+   "start": "DEU.10.12",
+   "end": "DEU.10.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.2",
+   "at": 337,
+   "text": "Leviticus 18:5",
+   "start": "LEV.18.5",
+   "end": "LEV.18.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.2",
+   "at": 353,
+   "text": "Romans 10:5",
+   "start": "ROM.10.5",
+   "end": "ROM.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.2",
+   "at": 366,
+   "text": "Galatians 3:12",
+   "start": "GAL.3.12",
+   "end": "GAL.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.2",
+   "at": 648,
+   "text": "Matthew 19:17",
+   "start": "MAT.19.17",
+   "end": "MAT.19.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.21.3",
+   "at": 1197,
+   "text": "Romans 13:10",
+   "start": "ROM.13.10",
+   "end": "ROM.13.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.22.1",
+   "at": 72,
+   "text": "Exodus 20:13",
+   "start": "EXO.20.13",
+   "end": "EXO.20.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.22.1",
+   "at": 86,
+   "text": "Leviticus 24:21",
+   "start": "LEV.24.21",
+   "end": "LEV.24.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.22.1",
+   "at": 103,
+   "text": "Numbers 35:16",
+   "start": "NUM.35.16",
+   "end": "NUM.35.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.22.2",
+   "at": 1543,
+   "text": "2 Chronicles 33:6",
+   "start": "2CH.33.6",
+   "end": "2CH.33.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.23.1",
+   "at": 0,
+   "text": "Matthew 5:23",
+   "start": "MAT.5.23",
+   "end": "MAT.5.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.23.1",
+   "at": 203,
+   "text": "Exodus 20:13",
+   "start": "EXO.20.13",
+   "end": "EXO.20.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.23.2",
+   "at": 932,
+   "text": "Romans 12:18",
+   "start": "ROM.12.18",
+   "end": "ROM.12.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.23.2",
+   "at": 1041,
+   "text": "Philippians 4:18",
+   "start": "PHP.4.18",
+   "end": "PHP.4.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.23.2",
+   "at": 1187,
+   "text": "1 Corinthians 13:3",
+   "start": "1CO.13.3",
+   "end": "1CO.13.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.25.2",
+   "at": 617,
+   "text": "James 2:13",
+   "start": "JAS.2.13",
+   "end": "JAS.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.27.1",
+   "at": 0,
+   "text": "Matthew 5:27",
+   "start": "MAT.5.27",
+   "end": "MAT.5.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.28.1",
+   "at": 418,
+   "text": "1 Corinthians 7:34",
+   "start": "1CO.7.34",
+   "end": "1CO.7.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.31.1",
+   "at": 0,
+   "text": "Matthew 5:31",
+   "start": "MAT.5.31",
+   "end": "MAT.5.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.31.1",
+   "at": 163,
+   "text": "Matthew 19:9",
+   "start": "MAT.19.9",
+   "end": "MAT.19.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.31.1",
+   "at": 700,
+   "text": "Deuteronomy 24:1",
+   "start": "DEU.24.1",
+   "end": "DEU.24.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.33.1",
+   "at": 322,
+   "text": "Exodus 20:7",
+   "start": "EXO.20.7",
+   "end": "EXO.20.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.34.1",
+   "at": 856,
+   "text": "Matthew 23:18",
+   "start": "MAT.23.18",
+   "end": "MAT.23.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.34.3",
+   "at": 551,
+   "text": "Deuteronomy 6:13",
+   "start": "DEU.6.13",
+   "end": "DEU.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.34.4",
+   "at": 165,
+   "text": "Hebrews 6:13",
+   "start": "HEB.6.13",
+   "end": "HEB.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.34.4",
+   "at": 236,
+   "text": "Leviticus 18:21",
+   "start": "LEV.18.21",
+   "end": "LEV.18.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.34.5",
+   "at": 31,
+   "text": "Isaiah 66:1",
+   "start": "ISA.66.1",
+   "end": "ISA.66.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.34.5",
+   "at": 447,
+   "text": "Isaiah 52:1",
+   "start": "ISA.52.1",
+   "end": "ISA.52.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.38.1",
+   "at": 0,
+   "text": "Matthew 5:38",
+   "start": "MAT.5.38",
+   "end": "MAT.5.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.38.1",
+   "at": 97,
+   "text": "Leviticus 24:20",
+   "start": "LEV.24.20",
+   "end": "LEV.24.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.39.1",
+   "at": 398,
+   "text": "Romans 12:21",
+   "start": "ROM.12.21",
+   "end": "ROM.12.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.40.1",
+   "at": 1487,
+   "text": "Hebrews 10:34",
+   "start": "HEB.10.34",
+   "end": "HEB.10.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.42.1",
+   "at": 0,
+   "text": "Matthew 5:42",
+   "start": "MAT.5.42",
+   "end": "MAT.5.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.43.1",
+   "at": 0,
+   "text": "Matthew 5:43",
+   "start": "MAT.5.43",
+   "end": "MAT.5.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.43.1",
+   "at": 736,
+   "text": "Genesis 29:14",
+   "start": "GEN.29.14",
+   "end": "GEN.29.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.44.1",
+   "at": 393,
+   "text": "Matthew 22:39",
+   "start": "MAT.22.39",
+   "end": "MAT.22.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.45.1",
+   "at": 1496,
+   "text": "Romans 8:16",
+   "start": "ROM.8.16",
+   "end": "ROM.8.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.45.1",
+   "at": 1520,
+   "text": "Ephesians 1:14",
+   "start": "EPH.1.14",
+   "end": "EPH.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.45.1",
+   "at": 1548,
+   "text": "Ephesians 4:30",
+   "start": "EPH.4.30",
+   "end": "EPH.4.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.4.2",
+   "at": 533,
+   "text": "2 Chronicles 6:1",
+   "start": "2CH.6.1",
+   "end": "2CH.6.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.9-13.1",
+   "at": 622,
+   "text": "Luke 11:1",
+   "start": "LUK.11.1",
+   "end": "LUK.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.9-13.2",
+   "at": 0,
+   "text": "Matthew 6:9",
+   "start": "MAT.6.9",
+   "end": "MAT.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.9-13.4",
+   "at": 1063,
+   "text": "Psalm 2:4",
+   "start": "PSA.2.4",
+   "end": "PSA.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.9-13.5",
+   "at": 197,
+   "text": "2 Chronicles 2:6",
+   "start": "2CH.2.6",
+   "end": "2CH.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.9-13.7",
+   "at": 1262,
+   "text": "John 3:33",
+   "start": "JHN.3.33",
+   "end": "JHN.3.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.10.2",
+   "at": 224,
+   "text": "Hebrews 10:13",
+   "start": "HEB.10.13",
+   "end": "HEB.10.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.10.3",
+   "at": 664,
+   "text": "Psalm 103:20",
+   "start": "PSA.103.20",
+   "end": "PSA.103.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.11.3",
+   "at": 1061,
+   "text": "Psalm 84:11",
+   "start": "PSA.84.11",
+   "end": "PSA.84.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.11.5",
+   "at": 1132,
+   "text": "Philippians 4:12",
+   "start": "PHP.4.12",
+   "end": "PHP.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.11.6",
+   "at": 892,
+   "text": "John 6:45",
+   "start": "JHN.6.45",
+   "end": "JHN.6.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.12.1",
+   "at": 306,
+   "text": "Isaiah 59:2",
+   "start": "ISA.59.2",
+   "end": "ISA.59.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.12.1",
+   "at": 370,
+   "text": "Isaiah 44:22",
+   "start": "ISA.44.22",
+   "end": "ISA.44.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.12.1",
+   "at": 477,
+   "text": "Lamentations 3:44",
+   "start": "LAM.3.44",
+   "end": "LAM.3.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.12.1",
+   "at": 705,
+   "text": "Ezekiel 16:63",
+   "start": "EZK.16.63",
+   "end": "EZK.16.63",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.12.1",
+   "at": 1039,
+   "text": "2 Corinthians 5:19",
+   "start": "2CO.5.19",
+   "end": "2CO.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.12.2",
+   "at": 84,
+   "text": "Romans 3:19",
+   "start": "ROM.3.19",
+   "end": "ROM.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.12.3",
+   "at": 946,
+   "text": "Romans 8:16",
+   "start": "ROM.8.16",
+   "end": "ROM.8.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.13.1",
+   "at": 1136,
+   "text": "Genesis 22:1",
+   "start": "GEN.22.1",
+   "end": "GEN.22.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.13.2",
+   "at": 360,
+   "text": "1:14",
+   "start": "JAS.1.14",
+   "end": "JAS.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.13.2",
+   "at": 740,
+   "text": "1 Samuel 16:14",
+   "start": "1SA.16.14",
+   "end": "1SA.16.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.13.2",
+   "at": 937,
+   "text": "Romans 1:28",
+   "start": "ROM.1.28",
+   "end": "ROM.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.19.1",
+   "at": 0,
+   "text": "Matthew 6:19",
+   "start": "MAT.6.19",
+   "end": "MAT.6.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.20.1",
+   "at": 946,
+   "text": "Proverbs 19:17",
+   "start": "PRO.19.17",
+   "end": "PRO.19.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.21.1",
+   "at": 1565,
+   "text": "Colossians 3:1",
+   "start": "COL.3.1",
+   "end": "COL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.22.1",
+   "at": 0,
+   "text": "Matthew 6:22",
+   "start": "MAT.6.22",
+   "end": "MAT.6.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.23.1",
+   "at": 803,
+   "text": "Isaiah 29:15",
+   "start": "ISA.29.15",
+   "end": "ISA.29.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.23.1",
+   "at": 1383,
+   "text": "Matthew 5:15",
+   "start": "MAT.5.15",
+   "end": "MAT.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.24.2",
+   "at": 468,
+   "text": "1 Chronicles 12:33",
+   "start": "1CH.12.33",
+   "end": "1CH.12.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.24.2",
+   "at": 488,
+   "text": "Psalm 12:2",
+   "start": "PSA.12.2",
+   "end": "PSA.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.25-30.1",
+   "at": 1084,
+   "text": "Psalm 127:2",
+   "start": "PSA.127.2",
+   "end": "PSA.127.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.25.1",
+   "at": 0,
+   "text": "Matthew 6:25",
+   "start": "MAT.6.25",
+   "end": "MAT.6.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.26.1",
+   "at": 467,
+   "text": "Hebrews 13:5",
+   "start": "HEB.13.5",
+   "end": "HEB.13.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.27.1",
+   "at": 415,
+   "text": "Jeremiah 10:23",
+   "start": "JER.10.23",
+   "end": "JER.10.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.32.1",
+   "at": 0,
+   "text": "Matthew 6:32",
+   "start": "MAT.6.32",
+   "end": "MAT.6.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.33.1",
+   "at": 0,
+   "text": "Matthew 6:33",
+   "start": "MAT.6.33",
+   "end": "MAT.6.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.33.1",
+   "at": 771,
+   "text": "Romans 14:17",
+   "start": "ROM.14.17",
+   "end": "ROM.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.1.1",
+   "at": 0,
+   "text": "Matthew 7:1",
+   "start": "MAT.7.1",
+   "end": "MAT.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.1.1",
+   "at": 1303,
+   "text": "James 3:1",
+   "start": "JAS.3.1",
+   "end": "JAS.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.1.3",
+   "at": 1176,
+   "text": "33:1",
+   "start": "ISA.33.1",
+   "end": "ISA.33.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.3.1",
+   "at": 0,
+   "text": "Matthew 7:3",
+   "start": "MAT.7.3",
+   "end": "MAT.7.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.6.1",
+   "at": 607,
+   "text": "Mark 16:15",
+   "start": "MRK.16.15",
+   "end": "MRK.16.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.6.1",
+   "at": 694,
+   "text": "2 Corinthians 2:16",
+   "start": "2CO.2.16",
+   "end": "2CO.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.6.1",
+   "at": 1754,
+   "text": "Matthew 15:27",
+   "start": "MAT.15.27",
+   "end": "MAT.15.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.7.1",
+   "at": 0,
+   "text": "Matthew 7:7",
+   "start": "MAT.7.7",
+   "end": "MAT.7.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.9.1",
+   "at": 530,
+   "text": "Ephesians 3:15",
+   "start": "EPH.3.15",
+   "end": "EPH.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.9.1",
+   "at": 859,
+   "text": "Isaiah 49:15",
+   "start": "ISA.49.15",
+   "end": "ISA.49.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.11.1",
+   "at": 1059,
+   "text": "James 4:3",
+   "start": "JAS.4.3",
+   "end": "JAS.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.11.1",
+   "at": 1376,
+   "text": "Matthew 6:33",
+   "start": "MAT.6.33",
+   "end": "MAT.6.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.11.1",
+   "at": 1670,
+   "text": "Romans 8:15",
+   "start": "ROM.8.15",
+   "end": "ROM.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.11.1",
+   "at": 1683,
+   "text": "Ephesians 1:14",
+   "start": "EPH.1.14",
+   "end": "EPH.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.12.1",
+   "at": 0,
+   "text": "Matthew 7:12",
+   "start": "MAT.7.12",
+   "end": "MAT.7.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.13.2",
+   "at": 242,
+   "text": "Matthew 5:3-12",
+   "start": "MAT.5.3",
+   "end": "MAT.5.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.15.1",
+   "at": 0,
+   "text": "Matthew 7:15",
+   "start": "MAT.7.15",
+   "end": "MAT.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.15.2",
+   "at": 99,
+   "text": "John 10:3, 5",
+   "start": "JHN.10.3",
+   "end": "JHN.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.15.2",
+   "at": 99,
+   "text": "John 10:3, 5",
+   "start": "JHN.10.5",
+   "end": "JHN.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.16.3",
+   "at": 75,
+   "text": "John 7:18",
+   "start": "JHN.7.18",
+   "end": "JHN.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.16.3",
+   "at": 827,
+   "text": "1 Timothy 3:1-7",
+   "start": "1TI.3.1",
+   "end": "1TI.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.21.1",
+   "at": 0,
+   "text": "Matthew 7:21",
+   "start": "MAT.7.21",
+   "end": "MAT.7.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.21.1",
+   "at": 1806,
+   "text": "John 6:40",
+   "start": "JHN.6.40",
+   "end": "JHN.6.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.23.2",
+   "at": 354,
+   "text": "2 Timothy 2:19",
+   "start": "2TI.2.19",
+   "end": "2TI.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.24.1",
+   "at": 0,
+   "text": "Matthew 7:24",
+   "start": "MAT.7.24",
+   "end": "MAT.7.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.24.1",
+   "at": 835,
+   "text": "Colossians 2:7",
+   "start": "COL.2.7",
+   "end": "COL.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.24.1",
+   "at": 926,
+   "text": "Ephesians 4:14",
+   "start": "EPH.4.14",
+   "end": "EPH.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.1.1",
+   "at": 0,
+   "text": "Matthew 8:1",
+   "start": "MAT.8.1",
+   "end": "MAT.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.3.1",
+   "at": 447,
+   "text": "Genesis 2:23",
+   "start": "GEN.2.23",
+   "end": "GEN.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.4.1",
+   "at": 346,
+   "text": "John 7:6",
+   "start": "JHN.7.6",
+   "end": "JHN.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.4.1",
+   "at": 921,
+   "text": "1 Samuel 15:22",
+   "start": "1SA.15.22",
+   "end": "1SA.15.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.4.2",
+   "at": 304,
+   "text": "Leviticus 14:2",
+   "start": "LEV.14.2",
+   "end": "LEV.14.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.4.4",
+   "at": 0,
+   "text": "Matthew 8:4",
+   "start": "MAT.8.4",
+   "end": "MAT.8.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.4.4",
+   "at": 13,
+   "text": "Mark 1:44",
+   "start": "MRK.1.44",
+   "end": "MRK.1.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.4.4",
+   "at": 189,
+   "text": "Psalm 122:4",
+   "start": "PSA.122.4",
+   "end": "PSA.122.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.5.1",
+   "at": 0,
+   "text": "Matthew 8:5",
+   "start": "MAT.8.5",
+   "end": "MAT.8.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.8.1",
+   "at": 0,
+   "text": "Matthew 8:8",
+   "start": "MAT.8.8",
+   "end": "MAT.8.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.8.2",
+   "at": 1026,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.9.1",
+   "at": 0,
+   "text": "Matthew 8:9",
+   "start": "MAT.8.9",
+   "end": "MAT.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.12.1",
+   "at": 669,
+   "text": "Romans 11:16",
+   "start": "ROM.11.16",
+   "end": "ROM.11.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.17.1",
+   "at": 0,
+   "text": "Matthew 8:17",
+   "start": "MAT.8.17",
+   "end": "MAT.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.17.1",
+   "at": 955,
+   "text": "John 8:12",
+   "start": "JHN.8.12",
+   "end": "JHN.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.17.1",
+   "at": 1051,
+   "text": "John 11:25",
+   "start": "JHN.11.25",
+   "end": "JHN.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.19.1",
+   "at": 0,
+   "text": "Matthew 8:19",
+   "start": "MAT.8.19",
+   "end": "MAT.8.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.23-27.1",
+   "at": 74,
+   "text": "Matthew 8:33",
+   "start": "MAT.8.33",
+   "end": "MAT.8.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.23-27.1",
+   "at": 753,
+   "text": "8:28",
+   "start": "MAT.8.28",
+   "end": "MAT.8.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.23.1",
+   "at": 0,
+   "text": "Matthew 8:23",
+   "start": "MAT.8.23",
+   "end": "MAT.8.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.28-34.1",
+   "at": 379,
+   "text": "Matthew 8:28",
+   "start": "MAT.8.28",
+   "end": "MAT.8.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.29.1",
+   "at": 0,
+   "text": "Matthew 8:29",
+   "start": "MAT.8.29",
+   "end": "MAT.8.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.29.3",
+   "at": 0,
+   "text": "Mark 5:9",
+   "start": "MRK.5.9",
+   "end": "MRK.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.31.1",
+   "at": 0,
+   "text": "Matthew 8:31",
+   "start": "MAT.8.31",
+   "end": "MAT.8.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.1.1",
+   "at": 0,
+   "text": "Matthew 9:1",
+   "start": "MAT.9.1",
+   "end": "MAT.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.2.3",
+   "at": 336,
+   "text": "Matthew 5:45",
+   "start": "MAT.5.45",
+   "end": "MAT.5.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.2.4",
+   "at": 1260,
+   "text": "Amos 5:19",
+   "start": "AMO.5.19",
+   "end": "AMO.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.3.1",
+   "at": 1098,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.4.1",
+   "at": 194,
+   "text": "1 Corinthians 2:11",
+   "start": "1CO.2.11",
+   "end": "1CO.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.5.1",
+   "at": 937,
+   "text": "John 5:28,29",
+   "start": "JHN.5.28",
+   "end": "JHN.5.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.8.1",
+   "at": 960,
+   "text": "1 Timothy 3:6",
+   "start": "1TI.3.6",
+   "end": "1TI.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.9.1",
+   "at": 0,
+   "text": "Matthew 9:9",
+   "start": "MAT.9.9",
+   "end": "MAT.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.9.1",
+   "at": 513,
+   "text": "1 Corinthians 2:6",
+   "start": "1CO.2.6",
+   "end": "1CO.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.9.1",
+   "at": 1350,
+   "text": "1 Timothy 1:15",
+   "start": "1TI.1.15",
+   "end": "1TI.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.11.1",
+   "at": 0,
+   "text": "Matthew 9:11",
+   "start": "MAT.9.11",
+   "end": "MAT.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.13.1",
+   "at": 381,
+   "text": "Hosea 6:6",
+   "start": "HOS.6.6",
+   "end": "HOS.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.14.1",
+   "at": 0,
+   "text": "Matthew 9:14",
+   "start": "MAT.9.14",
+   "end": "MAT.9.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.14.1",
+   "at": 1148,
+   "text": "Galatians 4:3",
+   "start": "GAL.4.3",
+   "end": "GAL.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.14.1",
+   "at": 1163,
+   "text": "Colossians 2:8",
+   "start": "COL.2.8",
+   "end": "COL.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.15.1",
+   "at": 438,
+   "text": "John 3:29",
+   "start": "JHN.3.29",
+   "end": "JHN.3.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.18.1",
+   "at": 0,
+   "text": "Matthew 9:18",
+   "start": "MAT.9.18",
+   "end": "MAT.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.18.3",
+   "at": 190,
+   "text": "Matthew 8:5-10",
+   "start": "MAT.8.5",
+   "end": "MAT.8.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.20.2",
+   "at": 969,
+   "text": "Romans 10:17",
+   "start": "ROM.10.17",
+   "end": "ROM.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.22.1",
+   "at": 0,
+   "text": "Matthew 9:22",
+   "start": "MAT.9.22",
+   "end": "MAT.9.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.27.1",
+   "at": 0,
+   "text": "Matthew 9:27",
+   "start": "MAT.9.27",
+   "end": "MAT.9.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.27.1",
+   "at": 167,
+   "text": "21:25",
+   "start": "JHN.21.25",
+   "end": "JHN.21.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.35.1",
+   "at": 0,
+   "text": "Matthew 9:35",
+   "start": "MAT.9.35",
+   "end": "MAT.9.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.36.1",
+   "at": 655,
+   "text": "Isaiah 56:10",
+   "start": "ISA.56.10",
+   "end": "ISA.56.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.37.1",
+   "at": 649,
+   "text": "2 Corinthians 2:13",
+   "start": "2CO.2.13",
+   "end": "2CO.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.1.1",
+   "at": 0,
+   "text": "Matthew 10:1",
+   "start": "MAT.10.1",
+   "end": "MAT.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.5.1",
+   "at": 608,
+   "text": "Romans 15:8",
+   "start": "ROM.15.8",
+   "end": "ROM.15.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.5.1",
+   "at": 1013,
+   "text": "Matthew 27:51",
+   "start": "MAT.27.51",
+   "end": "MAT.27.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.5.1",
+   "at": 1085,
+   "text": "Ephesians 2:14",
+   "start": "EPH.2.14",
+   "end": "EPH.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.6.1",
+   "at": 1128,
+   "text": "Matthew 8:12",
+   "start": "MAT.8.12",
+   "end": "MAT.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.8.2",
+   "at": 1006,
+   "text": "55:1",
+   "start": "ISA.55.1",
+   "end": "ISA.55.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.9.1",
+   "at": 0,
+   "text": "Matthew 10:9",
+   "start": "MAT.10.9",
+   "end": "MAT.10.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.9.1",
+   "at": 1823,
+   "text": "Genesis 32:10",
+   "start": "GEN.32.10",
+   "end": "GEN.32.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.14.1",
+   "at": 747,
+   "text": "2 Corinthians 2:15,16",
+   "start": "2CO.2.15",
+   "end": "2CO.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.16-20.1",
+   "at": 1504,
+   "text": "10:17",
+   "start": "LUK.10.17",
+   "end": "LUK.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.16.1",
+   "at": 0,
+   "text": "Matthew 10:16",
+   "start": "MAT.10.16",
+   "end": "MAT.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.21.1",
+   "at": 0,
+   "text": "Matthew 10:21",
+   "start": "MAT.10.21",
+   "end": "MAT.10.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.21.1",
+   "at": 876,
+   "text": "Deuteronomy 13:9",
+   "start": "DEU.13.9",
+   "end": "DEU.13.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.26.1",
+   "at": 0,
+   "text": "Matthew 10:26",
+   "start": "MAT.10.26",
+   "end": "MAT.10.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.28.1",
+   "at": 1137,
+   "text": "Psalm 49:12",
+   "start": "PSA.49.12",
+   "end": "PSA.49.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.29.1",
+   "at": 0,
+   "text": "Matthew 10:29",
+   "start": "MAT.10.29",
+   "end": "MAT.10.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.32.1",
+   "at": 0,
+   "text": "Matthew 10:32",
+   "start": "MAT.10.32",
+   "end": "MAT.10.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.37.1",
+   "at": 0,
+   "text": "Matthew 10:37",
+   "start": "MAT.10.37",
+   "end": "MAT.10.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.39.2",
+   "at": 285,
+   "text": "Psalm 49:18",
+   "start": "PSA.49.18",
+   "end": "PSA.49.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.40.1",
+   "at": 0,
+   "text": "Matthew 10:40",
+   "start": "MAT.10.40",
+   "end": "MAT.10.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.1.1",
+   "at": 0,
+   "text": "Matthew 11:1",
+   "start": "MAT.11.1",
+   "end": "MAT.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.2.1",
+   "at": 1648,
+   "text": "John 3:29",
+   "start": "JHN.3.29",
+   "end": "JHN.3.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.2.1",
+   "at": 1856,
+   "text": "2 Corinthians 11:2",
+   "start": "2CO.11.2",
+   "end": "2CO.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.6.1",
+   "at": 667,
+   "text": "1 Peter 2:8",
+   "start": "1PE.2.8",
+   "end": "1PE.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.7.1",
+   "at": 0,
+   "text": "Matthew 11:7",
+   "start": "MAT.11.7",
+   "end": "MAT.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.11.1",
+   "at": 557,
+   "text": "John 1:21",
+   "start": "JHN.1.21",
+   "end": "JHN.1.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.11.1",
+   "at": 1060,
+   "text": "Malachi 3:1",
+   "start": "MAL.3.1",
+   "end": "MAL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.13.1",
+   "at": 0,
+   "text": "Matthew 11:13",
+   "start": "MAT.11.13",
+   "end": "MAT.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.14.1",
+   "at": 209,
+   "text": "Malachi 4:5",
+   "start": "MAL.4.5",
+   "end": "MAL.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.20.1",
+   "at": 0,
+   "text": "Matthew 11:20",
+   "start": "MAT.11.20",
+   "end": "MAT.11.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.21.4",
+   "at": 993,
+   "text": "2:13",
+   "start": "JOL.2.13",
+   "end": "JOL.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.25.1",
+   "at": 0,
+   "text": "Matthew 11:25",
+   "start": "MAT.11.25",
+   "end": "MAT.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.25.6",
+   "at": 862,
+   "text": "1 Corinthians 1:27",
+   "start": "1CO.1.27",
+   "end": "1CO.1.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.26.1",
+   "at": 341,
+   "text": "Psalm 36:6",
+   "start": "PSA.36.6",
+   "end": "PSA.36.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.27.1",
+   "at": 661,
+   "text": "Ephesians 1:4",
+   "start": "EPH.1.4",
+   "end": "EPH.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.27.3",
+   "at": 684,
+   "text": "Colossians 2:9",
+   "start": "COL.2.9",
+   "end": "COL.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.11.28.1",
+   "at": 441,
+   "text": "Matthew 5:6",
+   "start": "MAT.5.6",
+   "end": "MAT.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.1.1",
+   "at": 0,
+   "text": "Matthew 12:1",
+   "start": "MAT.12.1",
+   "end": "MAT.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.1.1",
+   "at": 930,
+   "text": "Matthew 23:23",
+   "start": "MAT.23.23",
+   "end": "MAT.23.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.3.1",
+   "at": 0,
+   "text": "Matthew 12:3",
+   "start": "MAT.12.3",
+   "end": "MAT.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.3.1",
+   "at": 177,
+   "text": "1 Samuel 21:6",
+   "start": "1SA.21.6",
+   "end": "1SA.21.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.3.1",
+   "at": 1060,
+   "text": "Exodus 29:33",
+   "start": "EXO.29.33",
+   "end": "EXO.29.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.7.1",
+   "at": 300,
+   "text": "6:6",
+   "start": "HOS.6.6",
+   "end": "HOS.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.8.1",
+   "at": 158,
+   "text": "ver. 6",
+   "start": "MAT.12.6",
+   "end": "MAT.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.9.1",
+   "at": 0,
+   "text": "Matthew 12:9",
+   "start": "MAT.12.9",
+   "end": "MAT.12.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.9.1",
+   "at": 1480,
+   "text": "Matthew 23:23",
+   "start": "MAT.23.23",
+   "end": "MAT.23.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.11.1",
+   "at": 1409,
+   "text": "v. 18",
+   "start": "JHN.5.18",
+   "end": "JHN.5.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.14.1",
+   "at": 0,
+   "text": "Matthew 12:14",
+   "start": "MAT.12.14",
+   "end": "MAT.12.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.14.1",
+   "at": 916,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.14.1",
+   "at": 1186,
+   "text": "John 7:30",
+   "start": "JHN.7.30",
+   "end": "JHN.7.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.14.1",
+   "at": 1197,
+   "text": "8:20",
+   "start": "JHN.8.20",
+   "end": "JHN.8.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.16.1",
+   "at": 0,
+   "text": "Matthew 12:16",
+   "start": "MAT.12.16",
+   "end": "MAT.12.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.16.1",
+   "at": 1145,
+   "text": "Galatians 4:2",
+   "start": "GAL.4.2",
+   "end": "GAL.4.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.17.1",
+   "at": 472,
+   "text": "Hebrews 12:26",
+   "start": "HEB.12.26",
+   "end": "HEB.12.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.18.1",
+   "at": 930,
+   "text": "Hebrews 5:6",
+   "start": "HEB.5.6",
+   "end": "HEB.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.19.1",
+   "at": 1557,
+   "text": "Ephesians 4:14",
+   "start": "EPH.4.14",
+   "end": "EPH.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.22.1",
+   "at": 0,
+   "text": "Matthew 12:22",
+   "start": "MAT.12.22",
+   "end": "MAT.12.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.25.1",
+   "at": 0,
+   "text": "Matthew 12:25",
+   "start": "MAT.12.25",
+   "end": "MAT.12.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.27.1",
+   "at": 889,
+   "text": "19:19",
+   "start": "ACT.19.19",
+   "end": "ACT.19.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.31.2",
+   "at": 867,
+   "text": "Colossians 2:9",
+   "start": "COL.2.9",
+   "end": "COL.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.31.6",
+   "at": 1382,
+   "text": "Romans 1:28",
+   "start": "ROM.1.28",
+   "end": "ROM.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.36.1",
+   "at": 676,
+   "text": "Ephesians 5:16",
+   "start": "EPH.5.16",
+   "end": "EPH.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.36.1",
+   "at": 692,
+   "text": "Colossians 4:5",
+   "start": "COL.4.5",
+   "end": "COL.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.36.1",
+   "at": 1051,
+   "text": "Psalm 143:2",
+   "start": "PSA.143.2",
+   "end": "PSA.143.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.36.1",
+   "at": 1485,
+   "text": "James 1:26",
+   "start": "JAS.1.26",
+   "end": "JAS.1.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.39.1",
+   "at": 0,
+   "text": "Matthew 12:39",
+   "start": "MAT.12.39",
+   "end": "MAT.12.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.39.2",
+   "at": 255,
+   "text": "Judges 6:17",
+   "start": "JDG.6.17",
+   "end": "JDG.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.39.2",
+   "at": 490,
+   "text": "Isaiah 38:7,8",
+   "start": "ISA.38.7",
+   "end": "ISA.38.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.39.2",
+   "at": 598,
+   "text": "Isaiah 7:11",
+   "start": "ISA.7.11",
+   "end": "ISA.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.41.1",
+   "at": 0,
+   "text": "Matthew 12:41",
+   "start": "MAT.12.41",
+   "end": "MAT.12.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.42.1",
+   "at": 234,
+   "text": "2 Chronicles 9:1",
+   "start": "2CH.9.1",
+   "end": "2CH.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.43.4",
+   "at": 673,
+   "text": "1 Peter 5:8",
+   "start": "1PE.5.8",
+   "end": "1PE.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.48.1",
+   "at": 0,
+   "text": "Matthew 12:48",
+   "start": "MAT.12.48",
+   "end": "MAT.12.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.48.1",
+   "at": 1176,
+   "text": "2 Corinthians 5:16",
+   "start": "2CO.5.16",
+   "end": "2CO.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.12.50.1",
+   "at": 688,
+   "text": "John 6:40",
+   "start": "JHN.6.40",
+   "end": "JHN.6.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.2.1",
+   "at": 0,
+   "text": "Matthew 13:2",
+   "start": "MAT.13.2",
+   "end": "MAT.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.9.1",
+   "at": 547,
+   "text": "Psalm 40:7",
+   "start": "PSA.40.7",
+   "end": "PSA.40.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.11.1",
+   "at": 548,
+   "text": "Isaiah 45:19",
+   "start": "ISA.45.19",
+   "end": "ISA.45.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.11.1",
+   "at": 703,
+   "text": "Psalm 119:105,130",
+   "start": "PSA.119.105",
+   "end": "PSA.119.105",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.11.1",
+   "at": 703,
+   "text": "Psalm 119:105,130",
+   "start": "PSA.119.130",
+   "end": "PSA.119.130",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.11.1",
+   "at": 1176,
+   "text": "2 Corinthians 4:3,4",
+   "start": "2CO.4.3",
+   "end": "2CO.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.11.2",
+   "at": 975,
+   "text": "Isaiah 28:11",
+   "start": "ISA.28.11",
+   "end": "ISA.28.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.11.2",
+   "at": 989,
+   "text": "29:11",
+   "start": "ISA.29.11",
+   "end": "ISA.29.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.11.2",
+   "at": 1465,
+   "text": "2 Corinthians 2:15,16",
+   "start": "2CO.2.15",
+   "end": "2CO.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.12.1",
+   "at": 356,
+   "text": "Matthew 25:29",
+   "start": "MAT.25.29",
+   "end": "MAT.25.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.12.1",
+   "at": 676,
+   "text": "Psalm 138:8",
+   "start": "PSA.138.8",
+   "end": "PSA.138.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.14.1",
+   "at": 401,
+   "text": "Acts 28:26",
+   "start": "ACT.28.26",
+   "end": "ACT.28.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.14.1",
+   "at": 680,
+   "text": "11:7",
+   "start": "ROM.11.7",
+   "end": "ROM.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.14.2",
+   "at": 58,
+   "text": "12:38",
+   "start": "JHN.12.38",
+   "end": "JHN.12.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.14.3",
+   "at": 396,
+   "text": "Isaiah 6:10",
+   "start": "ISA.6.10",
+   "end": "ISA.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.14.3",
+   "at": 615,
+   "text": "Romans 1:28",
+   "start": "ROM.1.28",
+   "end": "ROM.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.15.1",
+   "at": 0,
+   "text": "Matthew 13:15",
+   "start": "MAT.13.15",
+   "end": "MAT.13.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.16.1",
+   "at": 0,
+   "text": "Matthew 13:16",
+   "start": "MAT.13.16",
+   "end": "MAT.13.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.16.1",
+   "at": 1298,
+   "text": "Isaiah 54:13",
+   "start": "ISA.54.13",
+   "end": "ISA.54.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.16.1",
+   "at": 1363,
+   "text": "Jeremiah 31:34",
+   "start": "JER.31.34",
+   "end": "JER.31.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.16.1",
+   "at": 1537,
+   "text": "John 20:29",
+   "start": "JHN.20.29",
+   "end": "JHN.20.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.19.1",
+   "at": 0,
+   "text": "Matthew 13:19",
+   "start": "MAT.13.19",
+   "end": "MAT.13.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.19.2",
+   "at": 583,
+   "text": "1:21",
+   "start": "JAS.1.21",
+   "end": "JAS.1.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.21.1",
+   "at": 921,
+   "text": "1 Peter 1:4",
+   "start": "1PE.1.4",
+   "end": "1PE.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.21.1",
+   "at": 1011,
+   "text": "Isaiah 40:8",
+   "start": "ISA.40.8",
+   "end": "ISA.40.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.21.1",
+   "at": 1024,
+   "text": "1 Peter 1:25",
+   "start": "1PE.1.25",
+   "end": "1PE.1.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.31-35.2",
+   "at": 605,
+   "text": "1 Corinthians 1:28",
+   "start": "1CO.1.28",
+   "end": "1CO.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.31-35.2",
+   "at": 1129,
+   "text": "Matthew 16:11",
+   "start": "MAT.16.11",
+   "end": "MAT.16.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.31-35.2",
+   "at": 1215,
+   "text": "1 Corinthians 5:6",
+   "start": "1CO.5.6",
+   "end": "1CO.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.34.1",
+   "at": 0,
+   "text": "Matthew 13:34",
+   "start": "MAT.13.34",
+   "end": "MAT.13.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.35.1",
+   "at": 575,
+   "text": "Psalm 78:2",
+   "start": "PSA.78.2",
+   "end": "PSA.78.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.39.1",
+   "at": 1543,
+   "text": "Luke 23:42",
+   "start": "LUK.23.42",
+   "end": "LUK.23.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.39.2",
+   "at": 220,
+   "text": "John 4:38",
+   "start": "JHN.4.38",
+   "end": "JHN.4.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.39.2",
+   "at": 359,
+   "text": "John 15:16",
+   "start": "JHN.15.16",
+   "end": "JHN.15.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.39.2",
+   "at": 472,
+   "text": "John 4:35",
+   "start": "JHN.4.35",
+   "end": "JHN.4.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.39.2",
+   "at": 553,
+   "text": "Matthew 9:37",
+   "start": "MAT.9.37",
+   "end": "MAT.9.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.39.2",
+   "at": 909,
+   "text": "Matthew 3:12",
+   "start": "MAT.3.12",
+   "end": "MAT.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.43.1",
+   "at": 1265,
+   "text": "12:3",
+   "start": "DAN.12.3",
+   "end": "DAN.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.43.3",
+   "at": 251,
+   "text": "Luke 17:21",
+   "start": "LUK.17.21",
+   "end": "LUK.17.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.46.1",
+   "at": 227,
+   "text": "55:1",
+   "start": "ISA.55.1",
+   "end": "ISA.55.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.47.1",
+   "at": 1257,
+   "text": "2 Timothy 2:19",
+   "start": "2TI.2.19",
+   "end": "2TI.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.53.1",
+   "at": 0,
+   "text": "Matthew 13:53",
+   "start": "MAT.13.53",
+   "end": "MAT.13.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.53.1",
+   "at": 392,
+   "text": "4:22",
+   "start": "LUK.4.22",
+   "end": "LUK.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.57.1",
+   "at": 134,
+   "text": "4:44",
+   "start": "JHN.4.44",
+   "end": "JHN.4.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.2.2",
+   "at": 391,
+   "text": "4:5,6",
+   "start": "MAL.4.5",
+   "end": "MAL.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.2.2",
+   "at": 1055,
+   "text": "1 Kings 17:1",
+   "start": "1KI.17.1",
+   "end": "1KI.17.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.6.1",
+   "at": 1781,
+   "text": "Job 1:5",
+   "start": "JOB.1.5",
+   "end": "JOB.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.13.1",
+   "at": 0,
+   "text": "Matthew 14:13",
+   "start": "MAT.14.13",
+   "end": "MAT.14.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.13.2",
+   "at": 636,
+   "text": "6:66, 12:37",
+   "start": "JHN.6.66",
+   "end": "JHN.6.66",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.16.1",
+   "at": 628,
+   "text": "Matthew 6:33",
+   "start": "MAT.6.33",
+   "end": "MAT.6.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.19.1",
+   "at": 381,
+   "text": "1 Timothy 4:5",
+   "start": "1TI.4.5",
+   "end": "1TI.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.22.1",
+   "at": 0,
+   "text": "Matthew 14:22",
+   "start": "MAT.14.22",
+   "end": "MAT.14.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.23.2",
+   "at": 1035,
+   "text": "1 Timothy 2:8",
+   "start": "1TI.2.8",
+   "end": "1TI.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.24.2",
+   "at": 911,
+   "text": "Deuteronomy 29:4",
+   "start": "DEU.29.4",
+   "end": "DEU.29.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.33.1",
+   "at": 413,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.34.1",
+   "at": 0,
+   "text": "Matthew 14:34",
+   "start": "MAT.14.34",
+   "end": "MAT.14.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.34.1",
+   "at": 1183,
+   "text": "53:4",
+   "start": "ISA.53.4",
+   "end": "ISA.53.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.14.34.2",
+   "at": 352,
+   "text": "Isaiah 42:3",
+   "start": "ISA.42.3",
+   "end": "ISA.42.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.1.1",
+   "at": 0,
+   "text": "Matthew 15:1",
+   "start": "MAT.15.1",
+   "end": "MAT.15.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.2.2",
+   "at": 271,
+   "text": "John 2:6",
+   "start": "JHN.2.6",
+   "end": "JHN.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.2.3",
+   "at": 413,
+   "text": "Leviticus 11:25,28",
+   "start": "LEV.11.25",
+   "end": "LEV.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.2.3",
+   "at": 413,
+   "text": "Leviticus 11:25,28",
+   "start": "LEV.11.28",
+   "end": "LEV.11.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.2.3",
+   "at": 528,
+   "text": "Leviticus 11:32",
+   "start": "LEV.11.32",
+   "end": "LEV.11.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.2.3",
+   "at": 780,
+   "text": "Colossians 2:23",
+   "start": "COL.2.23",
+   "end": "COL.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.3.2",
+   "at": 502,
+   "text": "Exodus 20:12",
+   "start": "EXO.20.12",
+   "end": "EXO.20.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.7.1",
+   "at": 819,
+   "text": "29:13",
+   "start": "ISA.29.13",
+   "end": "ISA.29.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.9.1",
+   "at": 371,
+   "text": "Colossians 2:23",
+   "start": "COL.2.23",
+   "end": "COL.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.9.2",
+   "at": 382,
+   "text": "1 Samuel 15:22,23",
+   "start": "1SA.15.22",
+   "end": "1SA.15.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.10.1",
+   "at": 0,
+   "text": "Matthew 15:10",
+   "start": "MAT.15.10",
+   "end": "MAT.15.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.10.1",
+   "at": 275,
+   "text": "Romans 14:17",
+   "start": "ROM.14.17",
+   "end": "ROM.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.13.2",
+   "at": 267,
+   "text": "Isaiah 60:21",
+   "start": "ISA.60.21",
+   "end": "ISA.60.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.13.2",
+   "at": 709,
+   "text": "2 Corinthians 2:16",
+   "start": "2CO.2.16",
+   "end": "2CO.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.14.1",
+   "at": 468,
+   "text": "1 Peter 2:8",
+   "start": "1PE.2.8",
+   "end": "1PE.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.14.2",
+   "at": 421,
+   "text": "Malachi 4:2",
+   "start": "MAL.4.2",
+   "end": "MAL.4.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.15.1",
+   "at": 0,
+   "text": "Matthew 15:15",
+   "start": "MAT.15.15",
+   "end": "MAT.15.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.19.2",
+   "at": 116,
+   "text": "7:2",
+   "start": "MRK.7.2",
+   "end": "MRK.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.21-28.2",
+   "at": 0,
+   "text": "Mark 7:24",
+   "start": "MRK.7.24",
+   "end": "MRK.7.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.22.1",
+   "at": 0,
+   "text": "Matthew 15:22",
+   "start": "MAT.15.22",
+   "end": "MAT.15.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.23.2",
+   "at": 430,
+   "text": "Romans 10:17",
+   "start": "ROM.10.17",
+   "end": "ROM.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.24.1",
+   "at": 593,
+   "text": "Matthew 10:5",
+   "start": "MAT.10.5",
+   "end": "MAT.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.24.1",
+   "at": 637,
+   "text": "Ephesians 2:14",
+   "start": "EPH.2.14",
+   "end": "EPH.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.24.2",
+   "at": 512,
+   "text": "Matthew 18:11",
+   "start": "MAT.18.11",
+   "end": "MAT.18.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.29.1",
+   "at": 0,
+   "text": "Matthew 15:29",
+   "start": "MAT.15.29",
+   "end": "MAT.15.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.32.1",
+   "at": 0,
+   "text": "Matthew 15:32",
+   "start": "MAT.15.32",
+   "end": "MAT.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.32.1",
+   "at": 780,
+   "text": "1 Samuel 14:6",
+   "start": "1SA.14.6",
+   "end": "1SA.14.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.15.32.1",
+   "at": 1022,
+   "text": "Leviticus 26:26",
+   "start": "LEV.26.26",
+   "end": "LEV.26.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.1.1",
+   "at": 0,
+   "text": "Matthew 16:1",
+   "start": "MAT.16.1",
+   "end": "MAT.16.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.2.1",
+   "at": 191,
+   "text": "Luke 19:44",
+   "start": "LUK.19.44",
+   "end": "LUK.19.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.4.1",
+   "at": 0,
+   "text": "Matthew 16:4",
+   "start": "MAT.16.4",
+   "end": "MAT.16.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.4.1",
+   "at": 79,
+   "text": "Matthew 12:38",
+   "start": "MAT.12.38",
+   "end": "MAT.12.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.5.1",
+   "at": 0,
+   "text": "Matthew 16:5",
+   "start": "MAT.16.5",
+   "end": "MAT.16.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.5.2",
+   "at": 1259,
+   "text": "5:3",
+   "start": "JER.5.3",
+   "end": "JER.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.5.5",
+   "at": 1172,
+   "text": "1 Corinthians 5:8",
+   "start": "1CO.5.8",
+   "end": "1CO.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.12.1",
+   "at": 154,
+   "text": "Matthew 13:33",
+   "start": "MAT.13.33",
+   "end": "MAT.13.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.12.1",
+   "at": 998,
+   "text": "2 Corinthians 11:3",
+   "start": "2CO.11.3",
+   "end": "2CO.11.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.13.1",
+   "at": 0,
+   "text": "Matthew 16:13",
+   "start": "MAT.16.13",
+   "end": "MAT.16.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.16.1",
+   "at": 735,
+   "text": "2:26",
+   "start": "LUK.2.26",
+   "end": "LUK.2.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.17.1",
+   "at": 133,
+   "text": "John 17:3",
+   "start": "JHN.17.3",
+   "end": "JHN.17.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.17.2",
+   "at": 709,
+   "text": "James 1:17",
+   "start": "JAS.1.17",
+   "end": "JAS.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.18.1",
+   "at": 232,
+   "text": "Matthew 10:2",
+   "start": "MAT.10.2",
+   "end": "MAT.10.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.18.1",
+   "at": 246,
+   "text": "John 1:42",
+   "start": "JHN.1.42",
+   "end": "JHN.1.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.18.2",
+   "at": 160,
+   "text": "1 Peter 2:5",
+   "start": "1PE.2.5",
+   "end": "1PE.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.18.2",
+   "at": 300,
+   "text": "l Corinthians 6:19",
+   "start": "1CO.6.19",
+   "end": "1CO.6.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.18.2",
+   "at": 388,
+   "text": "Ephesians 2:21",
+   "start": "EPH.2.21",
+   "end": "EPH.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.18.3",
+   "at": 293,
+   "text": "Ezekiel 43:7",
+   "start": "EZK.43.7",
+   "end": "EZK.43.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.18.4",
+   "at": 438,
+   "text": "1 John 5:4",
+   "start": "1JN.5.4",
+   "end": "1JN.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.1",
+   "at": 500,
+   "text": "Luke 11:52",
+   "start": "LUK.11.52",
+   "end": "LUK.11.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.1",
+   "at": 1361,
+   "text": "Matthew 10:5",
+   "start": "MAT.10.5",
+   "end": "MAT.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.2",
+   "at": 1050,
+   "text": "2 Corinthians 10:6",
+   "start": "2CO.10.6",
+   "end": "2CO.10.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.2",
+   "at": 1214,
+   "text": "Romans 1:16",
+   "start": "ROM.1.16",
+   "end": "ROM.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.3",
+   "at": 502,
+   "text": "2 Corinthians 4:7",
+   "start": "2CO.4.7",
+   "end": "2CO.4.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.3",
+   "at": 1223,
+   "text": "2 Corinthians 5:20",
+   "start": "2CO.5.20",
+   "end": "2CO.5.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.5",
+   "at": 163,
+   "text": "1 Corinthians 3:11",
+   "start": "1CO.3.11",
+   "end": "1CO.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.5",
+   "at": 183,
+   "text": "Ephesians 2:20",
+   "start": "EPH.2.20",
+   "end": "EPH.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.22.1",
+   "at": 0,
+   "text": "Matthew 16:22",
+   "start": "MAT.16.22",
+   "end": "MAT.16.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.22.2",
+   "at": 899,
+   "text": "Isaiah 42:3",
+   "start": "ISA.42.3",
+   "end": "ISA.42.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.23.1",
+   "at": 222,
+   "text": "4:8",
+   "start": "LUK.4.8",
+   "end": "LUK.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.24.1",
+   "at": 357,
+   "text": "Matthew 10:38",
+   "start": "MAT.10.38",
+   "end": "MAT.10.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.24.2",
+   "at": 1415,
+   "text": "1 Corinthians 3:18",
+   "start": "1CO.3.18",
+   "end": "1CO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.25.1",
+   "at": 859,
+   "text": "Matthew 10:39",
+   "start": "MAT.10.39",
+   "end": "MAT.10.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.27.3",
+   "at": 594,
+   "text": "Romans 3:24",
+   "start": "ROM.3.24",
+   "end": "ROM.3.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.1.1",
+   "at": 0,
+   "text": "Matthew 17:1",
+   "start": "MAT.17.1",
+   "end": "MAT.17.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.1.2",
+   "at": 567,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.1.2",
+   "at": 872,
+   "text": "Deuteronomy 17:6",
+   "start": "DEU.17.6",
+   "end": "DEU.17.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.2.1",
+   "at": 1198,
+   "text": "1 John 3:2",
+   "start": "1JN.3.2",
+   "end": "1JN.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.4.1",
+   "at": 490,
+   "text": "Psalm 16:11",
+   "start": "PSA.16.11",
+   "end": "PSA.16.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.5.2",
+   "at": 316,
+   "text": "Deuteronomy 4:15",
+   "start": "DEU.4.15",
+   "end": "DEU.4.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.5.5",
+   "at": 253,
+   "text": "Matthew 5:17",
+   "start": "MAT.5.17",
+   "end": "MAT.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.5.5",
+   "at": 533,
+   "text": "Hebrews 1:1",
+   "start": "HEB.1.1",
+   "end": "HEB.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.5.5",
+   "at": 916,
+   "text": "Matthew 23:8",
+   "start": "MAT.23.8",
+   "end": "MAT.23.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.9.1",
+   "at": 0,
+   "text": "Matthew 17:9",
+   "start": "MAT.17.9",
+   "end": "MAT.17.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.9.1",
+   "at": 479,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.10.1",
+   "at": 1192,
+   "text": "Zechariah 9:9",
+   "start": "ZEC.9.9",
+   "end": "ZEC.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.10.1",
+   "at": 1315,
+   "text": "Isaiah 53:3,4",
+   "start": "ISA.53.3",
+   "end": "ISA.53.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.10.2",
+   "at": 396,
+   "text": "Malachi 3:1",
+   "start": "MAL.3.1",
+   "end": "MAL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.10.2",
+   "at": 409,
+   "text": "4:5",
+   "start": "MAL.4.5",
+   "end": "MAL.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.11.1",
+   "at": 230,
+   "text": "4:5,6",
+   "start": "MAL.4.5",
+   "end": "MAL.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.11.1",
+   "at": 359,
+   "text": "1 Kings 17:1",
+   "start": "1KI.17.1",
+   "end": "1KI.17.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.17.1",
+   "at": 0,
+   "text": "Matthew 17:17",
+   "start": "MAT.17.17",
+   "end": "MAT.17.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.19.1",
+   "at": 0,
+   "text": "Matthew 17:19",
+   "start": "MAT.17.19",
+   "end": "MAT.17.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.19.1",
+   "at": 1475,
+   "text": "1 Corinthians 12:9",
+   "start": "1CO.12.9",
+   "end": "1CO.12.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.22.1",
+   "at": 0,
+   "text": "Matthew 17:22",
+   "start": "MAT.17.22",
+   "end": "MAT.17.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.24.1",
+   "at": 0,
+   "text": "Matthew 17:24",
+   "start": "MAT.17.24",
+   "end": "MAT.17.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.24.1",
+   "at": 245,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.17.24.1",
+   "at": 853,
+   "text": "Exodus 30:13",
+   "start": "EXO.30.13",
+   "end": "EXO.30.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.1.1",
+   "at": 0,
+   "text": "Matthew 18:1",
+   "start": "MAT.18.1",
+   "end": "MAT.18.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.1.3",
+   "at": 788,
+   "text": "Romans 12:10",
+   "start": "ROM.12.10",
+   "end": "ROM.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.2.1",
+   "at": 683,
+   "text": "1 Corinthians 14:20",
+   "start": "1CO.14.20",
+   "end": "1CO.14.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.2.1",
+   "at": 790,
+   "text": "Ephesians 4:13",
+   "start": "EPH.4.13",
+   "end": "EPH.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.6.1",
+   "at": 0,
+   "text": "Matthew 18:6",
+   "start": "MAT.18.6",
+   "end": "MAT.18.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.6.2",
+   "at": 905,
+   "text": "Romans 12:16",
+   "start": "ROM.12.16",
+   "end": "ROM.12.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.6.2",
+   "at": 977,
+   "text": "Romans 15:1",
+   "start": "ROM.15.1",
+   "end": "ROM.15.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.7.2",
+   "at": 601,
+   "text": "1 Corinthians 11:19",
+   "start": "1CO.11.19",
+   "end": "1CO.11.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.7.3",
+   "at": 855,
+   "text": "Matthew 5:29,30",
+   "start": "MAT.5.29",
+   "end": "MAT.5.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.10.2",
+   "at": 374,
+   "text": "Psalm 34:7",
+   "start": "PSA.34.7",
+   "end": "PSA.34.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.11.1",
+   "at": 0,
+   "text": "Matthew 18:11",
+   "start": "MAT.18.11",
+   "end": "MAT.18.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.15.1",
+   "at": 0,
+   "text": "Matthew 18:15",
+   "start": "MAT.18.15",
+   "end": "MAT.18.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.15.3",
+   "at": 471,
+   "text": "1 Timothy 5:20",
+   "start": "1TI.5.20",
+   "end": "1TI.5.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.16.3",
+   "at": 91,
+   "text": "1 Corinthians 5:5",
+   "start": "1CO.5.5",
+   "end": "1CO.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.16.3",
+   "at": 872,
+   "text": "Matthew 5:23",
+   "start": "MAT.5.23",
+   "end": "MAT.5.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.18.1",
+   "at": 98,
+   "text": "Matthew 16:19",
+   "start": "MAT.16.19",
+   "end": "MAT.16.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.18.1",
+   "at": 419,
+   "text": "2 Corinthians 2:15,16",
+   "start": "2CO.2.15",
+   "end": "2CO.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.18.2",
+   "at": 696,
+   "text": "Matthew 16:19",
+   "start": "MAT.16.19",
+   "end": "MAT.16.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.20.1",
+   "at": 232,
+   "text": "Psalm 73:24",
+   "start": "PSA.73.24",
+   "end": "PSA.73.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.18.21.1",
+   "at": 0,
+   "text": "Matthew 18:21",
+   "start": "MAT.18.21",
+   "end": "MAT.18.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.3.1",
+   "at": 0,
+   "text": "Matthew 19:3",
+   "start": "MAT.19.3",
+   "end": "MAT.19.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.3.1",
+   "at": 1112,
+   "text": "Job 5:13",
+   "start": "JOB.5.13",
+   "end": "JOB.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.4.2",
+   "at": 240,
+   "text": "2:15",
+   "start": "MAL.2.15",
+   "end": "MAL.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.9.3",
+   "at": 78,
+   "text": "1 Corinthians 7:2",
+   "start": "1CO.7.2",
+   "end": "1CO.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.9.3",
+   "at": 506,
+   "text": "1 Corinthians 7:12,15",
+   "start": "1CO.7.12",
+   "end": "1CO.7.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.9.3",
+   "at": 506,
+   "text": "1 Corinthians 7:12,15",
+   "start": "1CO.7.15",
+   "end": "1CO.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.9.5",
+   "at": 886,
+   "text": "1 Corinthians 7:11",
+   "start": "1CO.7.11",
+   "end": "1CO.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.13-15.1",
+   "at": 1442,
+   "text": "Hebrews 7:7",
+   "start": "HEB.7.7",
+   "end": "HEB.7.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.13.1",
+   "at": 0,
+   "text": "Matthew 19:13",
+   "start": "MAT.19.13",
+   "end": "MAT.19.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.16.1",
+   "at": 0,
+   "text": "Matthew 19:16",
+   "start": "MAT.19.16",
+   "end": "MAT.19.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.2",
+   "at": 609,
+   "text": "Leviticus 18:5",
+   "start": "LEV.18.5",
+   "end": "LEV.18.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.2",
+   "at": 713,
+   "text": "Deuteronomy 30:19",
+   "start": "DEU.30.19",
+   "end": "DEU.30.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.2",
+   "at": 971,
+   "text": "Romans 3:23",
+   "start": "ROM.3.23",
+   "end": "ROM.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.2",
+   "at": 1208,
+   "text": "Romans 10:5",
+   "start": "ROM.10.5",
+   "end": "ROM.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.2",
+   "at": 1255,
+   "text": "Romans 10:6",
+   "start": "ROM.10.6",
+   "end": "ROM.10.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.3",
+   "at": 772,
+   "text": "Romans 10:5",
+   "start": "ROM.10.5",
+   "end": "ROM.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.3",
+   "at": 1057,
+   "text": "Romans 2:13",
+   "start": "ROM.2.13",
+   "end": "ROM.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.17.4",
+   "at": 655,
+   "text": "1 Samuel 15:22",
+   "start": "1SA.15.22",
+   "end": "1SA.15.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.18.2",
+   "at": 644,
+   "text": "Romans 7:9",
+   "start": "ROM.7.9",
+   "end": "ROM.7.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.18.2",
+   "at": 1797,
+   "text": "Deuteronomy 30:15",
+   "start": "DEU.30.15",
+   "end": "DEU.30.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.22.1",
+   "at": 0,
+   "text": "Matthew 19:22",
+   "start": "MAT.19.22",
+   "end": "MAT.19.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.23.1",
+   "at": 0,
+   "text": "Matthew 19:23",
+   "start": "MAT.19.23",
+   "end": "MAT.19.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.27.1",
+   "at": 0,
+   "text": "Matthew 19:27",
+   "start": "MAT.19.27",
+   "end": "MAT.19.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.29.1",
+   "at": 0,
+   "text": "Matthew 19:29",
+   "start": "MAT.19.29",
+   "end": "MAT.19.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.29.2",
+   "at": 673,
+   "text": "Psalm 92:7",
+   "start": "PSA.92.7",
+   "end": "PSA.92.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.29.2",
+   "at": 739,
+   "text": "James 4:14",
+   "start": "JAS.4.14",
+   "end": "JAS.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.30.1",
+   "at": 411,
+   "text": "Galatians 3:3",
+   "start": "GAL.3.3",
+   "end": "GAL.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.30.1",
+   "at": 426,
+   "text": "5:7",
+   "start": "GAL.5.7",
+   "end": "GAL.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.30.1",
+   "at": 686,
+   "text": "1 Corinthians 9:24",
+   "start": "1CO.9.24",
+   "end": "1CO.9.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.19.30.1",
+   "at": 889,
+   "text": "Philippians 3:13,14",
+   "start": "PHP.3.13",
+   "end": "PHP.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.1-16.1",
+   "at": 1308,
+   "text": "Philippians 3:13",
+   "start": "PHP.3.13",
+   "end": "PHP.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.1.1",
+   "at": 0,
+   "text": "Matthew 20:1",
+   "start": "MAT.20.1",
+   "end": "MAT.20.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.1.1",
+   "at": 1272,
+   "text": "Leviticus 18:5",
+   "start": "LEV.18.5",
+   "end": "LEV.18.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.8.1",
+   "at": 409,
+   "text": "1 Thessalonians 4:15",
+   "start": "1TH.4.15",
+   "end": "1TH.4.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.17.1",
+   "at": 0,
+   "text": "Matthew 20:17",
+   "start": "MAT.20.17",
+   "end": "MAT.20.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.20.1",
+   "at": 0,
+   "text": "Matthew 20:20",
+   "start": "MAT.20.20",
+   "end": "MAT.20.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.22.4",
+   "at": 137,
+   "text": "Matthew 16:24",
+   "start": "MAT.16.24",
+   "end": "MAT.16.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.22.4",
+   "at": 178,
+   "text": "Romans 6:6",
+   "start": "ROM.6.6",
+   "end": "ROM.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.23.1",
+   "at": 427,
+   "text": "Romans 8:29",
+   "start": "ROM.8.29",
+   "end": "ROM.8.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.23.1",
+   "at": 440,
+   "text": "2 Corinthians 3:18",
+   "start": "2CO.3.18",
+   "end": "2CO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.23.2",
+   "at": 1233,
+   "text": "1 John 3:2",
+   "start": "1JN.3.2",
+   "end": "1JN.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.24.1",
+   "at": 0,
+   "text": "Matthew 20:24",
+   "start": "MAT.20.24",
+   "end": "MAT.20.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.25.3",
+   "at": 350,
+   "text": "Ephesians 4:11",
+   "start": "EPH.4.11",
+   "end": "EPH.4.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.28.1",
+   "at": 188,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.28.1",
+   "at": 740,
+   "text": "Philippians 2:9,10",
+   "start": "PHP.2.9",
+   "end": "PHP.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.28.2",
+   "at": 919,
+   "text": "Romans 5:15",
+   "start": "ROM.5.15",
+   "end": "ROM.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.29.1",
+   "at": 0,
+   "text": "Matthew 20:29",
+   "start": "MAT.20.29",
+   "end": "MAT.20.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.29.3",
+   "at": 208,
+   "text": "Matthew 8:28",
+   "start": "MAT.8.28",
+   "end": "MAT.8.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.29.3",
+   "at": 222,
+   "text": "Mark 5:2",
+   "start": "MRK.5.2",
+   "end": "MRK.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.29.3",
+   "at": 232,
+   "text": "Luke 8:27",
+   "start": "LUK.8.27",
+   "end": "LUK.8.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.20.34.2",
+   "at": 0,
+   "text": "Matthew 20:34",
+   "start": "MAT.20.34",
+   "end": "MAT.20.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.1.1",
+   "at": 0,
+   "text": "Matthew 21:1",
+   "start": "MAT.21.1",
+   "end": "MAT.21.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.1.1",
+   "at": 828,
+   "text": "9:9",
+   "start": "ZEC.9.9",
+   "end": "ZEC.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.2.1",
+   "at": 1554,
+   "text": "9:9",
+   "start": "ZEC.9.9",
+   "end": "ZEC.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.9.1",
+   "at": 58,
+   "text": "Psalm 118:25",
+   "start": "PSA.118.25",
+   "end": "PSA.118.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.9.3",
+   "at": 172,
+   "text": "Luke 2:14",
+   "start": "LUK.2.14",
+   "end": "LUK.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.10.1",
+   "at": 0,
+   "text": "Matthew 21:10",
+   "start": "MAT.21.10",
+   "end": "MAT.21.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.1",
+   "at": 86,
+   "text": "Isaiah 56:7",
+   "start": "ISA.56.7",
+   "end": "ISA.56.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.1",
+   "at": 118,
+   "text": "Jeremiah 7:11",
+   "start": "JER.7.11",
+   "end": "JER.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.2",
+   "at": 34,
+   "text": "Isaiah 2:2",
+   "start": "ISA.2.2",
+   "end": "ISA.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.2",
+   "at": 46,
+   "text": "Micah 4:2",
+   "start": "MIC.4.2",
+   "end": "MIC.4.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.2",
+   "at": 355,
+   "text": "Isaiah 19:18",
+   "start": "ISA.19.18",
+   "end": "ISA.19.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.2",
+   "at": 646,
+   "text": "Ezekiel 47:9",
+   "start": "EZK.47.9",
+   "end": "EZK.47.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.2",
+   "at": 726,
+   "text": "Zechariah 14:8",
+   "start": "ZEC.14.8",
+   "end": "ZEC.14.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.3",
+   "at": 84,
+   "text": "Jeremiah 7:11",
+   "start": "JER.7.11",
+   "end": "JER.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.13.3",
+   "at": 662,
+   "text": "Romans 1:25",
+   "start": "ROM.1.25",
+   "end": "ROM.1.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.15.2",
+   "at": 1298,
+   "text": "Malachi 2:7",
+   "start": "MAL.2.7",
+   "end": "MAL.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.16.1",
+   "at": 499,
+   "text": "Psalm 8:2",
+   "start": "PSA.8.2",
+   "end": "PSA.8.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.16.1",
+   "at": 1303,
+   "text": "Psalm 19:1, 2",
+   "start": "PSA.19.1",
+   "end": "PSA.19.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.23.1",
+   "at": 0,
+   "text": "Matthew 21:23",
+   "start": "MAT.21.23",
+   "end": "MAT.21.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.23.1",
+   "at": 934,
+   "text": "Psalm 110:4",
+   "start": "PSA.110.4",
+   "end": "PSA.110.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.23.2",
+   "at": 1691,
+   "text": "Malachi 3:1",
+   "start": "MAL.3.1",
+   "end": "MAL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.23.4",
+   "at": 616,
+   "text": "Luke 7:26, 28",
+   "start": "LUK.7.26",
+   "end": "LUK.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.23.4",
+   "at": 616,
+   "text": "Luke 7:26, 28",
+   "start": "LUK.7.28",
+   "end": "LUK.7.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.33.1",
+   "at": 0,
+   "text": "Matthew 21:33",
+   "start": "MAT.21.33",
+   "end": "MAT.21.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.33.2",
+   "at": 411,
+   "text": "5:4",
+   "start": "ISA.5.4",
+   "end": "ISA.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.33.2",
+   "at": 431,
+   "text": "2:21",
+   "start": "JER.2.21",
+   "end": "JER.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.33.2",
+   "at": 1212,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.33.3",
+   "at": 284,
+   "text": "60:21; 61:3",
+   "start": "ISA.60.21",
+   "end": "ISA.60.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.42.1",
+   "at": 792,
+   "text": "Psalm 118:22",
+   "start": "PSA.118.22",
+   "end": "PSA.118.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.42.3",
+   "at": 1228,
+   "text": "Isaiah 28:16",
+   "start": "ISA.28.16",
+   "end": "ISA.28.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.42.6",
+   "at": 239,
+   "text": "1 Corinthians 3:10, 11",
+   "start": "1CO.3.10",
+   "end": "1CO.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.21.43.1",
+   "at": 1310,
+   "text": "Romans 11:21",
+   "start": "ROM.11.21",
+   "end": "ROM.11.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.1.1",
+   "at": 0,
+   "text": "Matthew 22:1",
+   "start": "MAT.22.1",
+   "end": "MAT.22.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.2.3",
+   "at": 275,
+   "text": "Romans 10:4",
+   "start": "ROM.10.4",
+   "end": "ROM.10.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.9.1",
+   "at": 508,
+   "text": "Deuteronomy 32:21",
+   "start": "DEU.32.21",
+   "end": "DEU.32.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.9.1",
+   "at": 1257,
+   "text": "Romans 11:17",
+   "start": "ROM.11.17",
+   "end": "ROM.11.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.9.1",
+   "at": 1416,
+   "text": "Romans 11:21",
+   "start": "ROM.11.21",
+   "end": "ROM.11.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.11.1",
+   "at": 0,
+   "text": "Matthew 22:11",
+   "start": "MAT.22.11",
+   "end": "MAT.22.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.11.2",
+   "at": 452,
+   "text": "Colossians 3:9",
+   "start": "COL.3.9",
+   "end": "COL.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.11.2",
+   "at": 468,
+   "text": "Ephesians 4:22",
+   "start": "EPH.4.22",
+   "end": "EPH.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.11.2",
+   "at": 1013,
+   "text": "16:6-14",
+   "start": "EZK.16.6",
+   "end": "EZK.16.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.11.2",
+   "at": 1266,
+   "text": "Romans 13:14",
+   "start": "ROM.13.14",
+   "end": "ROM.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.11.2",
+   "at": 1280,
+   "text": "Galatians 3:27",
+   "start": "GAL.3.27",
+   "end": "GAL.3.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.14.1",
+   "at": 1014,
+   "text": "2 Timothy 2:19,20",
+   "start": "2TI.2.19",
+   "end": "2TI.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.15.1",
+   "at": 0,
+   "text": "Matthew 22:15",
+   "start": "MAT.22.15",
+   "end": "MAT.22.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.15.1",
+   "at": 572,
+   "text": "Exodus 30:13",
+   "start": "EXO.30.13",
+   "end": "EXO.30.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.16.1",
+   "at": 1357,
+   "text": "2 Corinthians 2:17",
+   "start": "2CO.2.17",
+   "end": "2CO.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.16.2",
+   "at": 388,
+   "text": "Galatians 1:10",
+   "start": "GAL.1.10",
+   "end": "GAL.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.16.2",
+   "at": 714,
+   "text": "Deuteronomy 1:16",
+   "start": "DEU.1.16",
+   "end": "DEU.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.16.2",
+   "at": 732,
+   "text": "16:19",
+   "start": "DEU.16.19",
+   "end": "DEU.16.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.16.2",
+   "at": 788,
+   "text": "John 7:24",
+   "start": "JHN.7.24",
+   "end": "JHN.7.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.21.1",
+   "at": 1184,
+   "text": "Romans 13:7",
+   "start": "ROM.13.7",
+   "end": "ROM.13.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.23.1",
+   "at": 0,
+   "text": "Matthew 22:23",
+   "start": "MAT.22.23",
+   "end": "MAT.22.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.23.2",
+   "at": 238,
+   "text": "Acts 23:8",
+   "start": "ACT.23.8",
+   "end": "ACT.23.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.24.1",
+   "at": 1063,
+   "text": "Deuteronomy 25:5",
+   "start": "DEU.25.5",
+   "end": "DEU.25.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.24.1",
+   "at": 1426,
+   "text": "Leviticus 18:16",
+   "start": "LEV.18.16",
+   "end": "LEV.18.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.29.1",
+   "at": 840,
+   "text": "Philippians 3:21",
+   "start": "PHP.3.21",
+   "end": "PHP.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.30.1",
+   "at": 1133,
+   "text": "Romans 8:15",
+   "start": "ROM.8.15",
+   "end": "ROM.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.30.1",
+   "at": 1146,
+   "text": "Galatians 4:6",
+   "start": "GAL.4.6",
+   "end": "GAL.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.30.1",
+   "at": 1325,
+   "text": "1 John 3:2",
+   "start": "1JN.3.2",
+   "end": "1JN.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.30.1",
+   "at": 1478,
+   "text": "Colossians 3:3",
+   "start": "COL.3.3",
+   "end": "COL.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.37.1",
+   "at": 0,
+   "text": "Matthew 22:37",
+   "start": "MAT.22.37",
+   "end": "MAT.22.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.37.2",
+   "at": 89,
+   "text": "Deuteronomy 6:5",
+   "start": "DEU.6.5",
+   "end": "DEU.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.39.1",
+   "at": 1438,
+   "text": "Colossians 3:14",
+   "start": "COL.3.14",
+   "end": "COL.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.39.1",
+   "at": 1511,
+   "text": "Romans 13:10",
+   "start": "ROM.13.10",
+   "end": "ROM.13.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.40.1",
+   "at": 0,
+   "text": "Matthew 22:40",
+   "start": "MAT.22.40",
+   "end": "MAT.22.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.40.1",
+   "at": 761,
+   "text": "Romans 13:10",
+   "start": "ROM.13.10",
+   "end": "ROM.13.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.42.1",
+   "at": 0,
+   "text": "Matthew 22:42",
+   "start": "MAT.22.42",
+   "end": "MAT.22.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.43.3",
+   "at": 622,
+   "text": "Isaiah 45:23",
+   "start": "ISA.45.23",
+   "end": "ISA.45.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.43.3",
+   "at": 708,
+   "text": "Isaiah 42:8",
+   "start": "ISA.42.8",
+   "end": "ISA.42.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.43.3",
+   "at": 902,
+   "text": "Romans 14:11",
+   "start": "ROM.14.11",
+   "end": "ROM.14.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.43.3",
+   "at": 916,
+   "text": "Philippians 2:9",
+   "start": "PHP.2.9",
+   "end": "PHP.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.22.43.3",
+   "at": 1176,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.1.1",
+   "at": 0,
+   "text": "Matthew 23:1",
+   "start": "MAT.23.1",
+   "end": "MAT.23.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.2.3",
+   "at": 908,
+   "text": "Nehemiah 8:4",
+   "start": "NEH.8.4",
+   "end": "NEH.8.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.2.4",
+   "at": 521,
+   "text": "Matthew 15:9",
+   "start": "MAT.15.9",
+   "end": "MAT.15.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.4.1",
+   "at": 959,
+   "text": "34:4",
+   "start": "EZK.34.4",
+   "end": "EZK.34.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.5.2",
+   "at": 344,
+   "text": "Deuteronomy 6:8",
+   "start": "DEU.6.8",
+   "end": "DEU.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.5.2",
+   "at": 600,
+   "text": "Deuteronomy 6:9",
+   "start": "DEU.6.9",
+   "end": "DEU.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.5.3",
+   "at": 220,
+   "text": "13:4",
+   "start": "ZEC.13.4",
+   "end": "ZEC.13.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.5.4",
+   "at": 203,
+   "text": "1 Timothy. 2:7",
+   "start": "1TI.2.7",
+   "end": "1TI.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.5.4",
+   "at": 800,
+   "text": "Matthew 17:5",
+   "start": "MAT.17.5",
+   "end": "MAT.17.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.9.1",
+   "at": 669,
+   "text": "Hebrews 12:5",
+   "start": "HEB.12.5",
+   "end": "HEB.12.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.9.1",
+   "at": 745,
+   "text": "1 Corinthians 4:15",
+   "start": "1CO.4.15",
+   "end": "1CO.4.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.9.1",
+   "at": 765,
+   "text": "Philippians 2:22",
+   "start": "PHP.2.22",
+   "end": "PHP.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.10.1",
+   "at": 396,
+   "text": "Ephesians 1:22",
+   "start": "EPH.1.22",
+   "end": "EPH.1.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.13.1",
+   "at": 0,
+   "text": "Matthew 23:13",
+   "start": "MAT.23.13",
+   "end": "MAT.23.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.13.1",
+   "at": 713,
+   "text": "Matthew 16:19",
+   "start": "MAT.16.19",
+   "end": "MAT.16.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.16.1",
+   "at": 0,
+   "text": "Matthew 23:16",
+   "start": "MAT.23.16",
+   "end": "MAT.23.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.23.1",
+   "at": 0,
+   "text": "Matthew 23:23",
+   "start": "MAT.23.23",
+   "end": "MAT.23.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.23.1",
+   "at": 1345,
+   "text": "Deuteronomy 27:26",
+   "start": "DEU.27.26",
+   "end": "DEU.27.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.23.1",
+   "at": 1364,
+   "text": "Galatians 3:10",
+   "start": "GAL.3.10",
+   "end": "GAL.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.29.1",
+   "at": 0,
+   "text": "Matthew 23:29",
+   "start": "MAT.23.29",
+   "end": "MAT.23.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.34.3",
+   "at": 567,
+   "text": "6:10",
+   "start": "ISA.6.10",
+   "end": "ISA.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.34.4",
+   "at": 455,
+   "text": "Romans 11:33",
+   "start": "ROM.11.33",
+   "end": "ROM.11.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.34.4",
+   "at": 908,
+   "text": "Isaiah 8:16",
+   "start": "ISA.8.16",
+   "end": "ISA.8.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.34.4",
+   "at": 1034,
+   "text": "Isaiah 1:9",
+   "start": "ISA.1.9",
+   "end": "ISA.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.34.4",
+   "at": 1046,
+   "text": "Romans 11:5",
+   "start": "ROM.11.5",
+   "end": "ROM.11.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.35.2",
+   "at": 37,
+   "text": "Genesis 4:8",
+   "start": "GEN.4.8",
+   "end": "GEN.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.35.3",
+   "at": 1056,
+   "text": "32:2",
+   "start": "JER.32.2",
+   "end": "JER.32.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.35.4",
+   "at": 186,
+   "text": "Zechariah 8:9",
+   "start": "ZEC.8.9",
+   "end": "ZEC.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.35.4",
+   "at": 326,
+   "text": "Zechariah 1:1",
+   "start": "ZEC.1.1",
+   "end": "ZEC.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.35.4",
+   "at": 916,
+   "text": "2 Chronicles 24:20, 21",
+   "start": "2CH.24.20",
+   "end": "2CH.24.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.35.5",
+   "at": 288,
+   "text": "1 Kings 8:64",
+   "start": "1KI.8.64",
+   "end": "1KI.8.64",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.35.5",
+   "at": 302,
+   "text": "18:30",
+   "start": "1KI.18.30",
+   "end": "1KI.18.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.37.1",
+   "at": 309,
+   "text": "Jeremiah 7:11",
+   "start": "JER.7.11",
+   "end": "JER.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.37.4",
+   "at": 173,
+   "text": "Luke 19:41",
+   "start": "LUK.19.41",
+   "end": "LUK.19.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.37.5",
+   "at": 554,
+   "text": "Deuteronomy 32:11",
+   "start": "DEU.32.11",
+   "end": "DEU.32.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.37.6",
+   "at": 97,
+   "text": "Isaiah 65:2",
+   "start": "ISA.65.2",
+   "end": "ISA.65.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.37.6",
+   "at": 143,
+   "text": "Jeremiah 7:13",
+   "start": "JER.7.13",
+   "end": "JER.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.37.7",
+   "at": 230,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.37.7",
+   "at": 580,
+   "text": "1 Corinthians 10:9",
+   "start": "1CO.10.9",
+   "end": "1CO.10.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.39.1",
+   "at": 224,
+   "text": "Isaiah 49:8",
+   "start": "ISA.49.8",
+   "end": "ISA.49.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.39.1",
+   "at": 237,
+   "text": "2 Corinthians 6:2",
+   "start": "2CO.6.2",
+   "end": "2CO.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.39.2",
+   "at": 734,
+   "text": "Matthew 1:25",
+   "start": "MAT.1.25",
+   "end": "MAT.1.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.39.2",
+   "at": 1478,
+   "text": "Zechariah 12:10",
+   "start": "ZEC.12.10",
+   "end": "ZEC.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.39.2",
+   "at": 1495,
+   "text": "John 19:37",
+   "start": "JHN.19.37",
+   "end": "JHN.19.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.1.1",
+   "at": 0,
+   "text": "Matthew 24:1",
+   "start": "MAT.24.1",
+   "end": "MAT.24.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.3.2",
+   "at": 778,
+   "text": "Acts 1:6",
+   "start": "ACT.1.6",
+   "end": "ACT.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.4.2",
+   "at": 502,
+   "text": "54:13",
+   "start": "ISA.54.13",
+   "end": "ISA.54.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.4.2",
+   "at": 694,
+   "text": "Joel 2:28",
+   "start": "JOL.2.28",
+   "end": "JOL.2.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.4.2",
+   "at": 923,
+   "text": "Jeremiah 31:34",
+   "start": "JER.31.34",
+   "end": "JER.31.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.4.2",
+   "at": 1057,
+   "text": "4:2",
+   "start": "MAL.4.2",
+   "end": "MAL.4.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.4.2",
+   "at": 1228,
+   "text": "John 4:25",
+   "start": "JHN.4.25",
+   "end": "JHN.4.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.9.1",
+   "at": 0,
+   "text": "Matthew 24:9",
+   "start": "MAT.24.9",
+   "end": "MAT.24.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.9.3",
+   "at": 686,
+   "text": "1 Peter 5:1",
+   "start": "1PE.5.1",
+   "end": "1PE.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.9.3",
+   "at": 791,
+   "text": "Philippians 1:17",
+   "start": "PHP.1.17",
+   "end": "PHP.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.10.1",
+   "at": 0,
+   "text": "Matthew 24:10",
+   "start": "MAT.24.10",
+   "end": "MAT.24.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.10.1",
+   "at": 230,
+   "text": "1 Peter 2:8",
+   "start": "1PE.2.8",
+   "end": "1PE.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.11.1",
+   "at": 373,
+   "text": "2 Peter 2:1",
+   "start": "2PE.2.1",
+   "end": "2PE.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.11.2",
+   "at": 1319,
+   "text": "2 Thessalonians 3:13",
+   "start": "2TH.3.13",
+   "end": "2TH.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.11.2",
+   "at": 1640,
+   "text": "2 Timothy 2:5",
+   "start": "2TI.2.5",
+   "end": "2TI.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.14.2",
+   "at": 149,
+   "text": "Acts 14:17",
+   "start": "ACT.14.17",
+   "end": "ACT.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.14.2",
+   "at": 389,
+   "text": "1 Timothy 2:6",
+   "start": "1TI.2.6",
+   "end": "1TI.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.15.1",
+   "at": 0,
+   "text": "Matthew 24:15",
+   "start": "MAT.24.15",
+   "end": "MAT.24.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.15.1",
+   "at": 411,
+   "text": "Romans 9:4",
+   "start": "ROM.9.4",
+   "end": "ROM.9.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.15.3",
+   "at": 1061,
+   "text": "Daniel 12:7",
+   "start": "DAN.12.7",
+   "end": "DAN.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.15.3",
+   "at": 1318,
+   "text": "Daniel 7:25",
+   "start": "DAN.7.25",
+   "end": "DAN.7.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.15.4",
+   "at": 819,
+   "text": "Daniel 9:27",
+   "start": "DAN.9.27",
+   "end": "DAN.9.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.16.3",
+   "at": 1213,
+   "text": "Isaiah 1:9",
+   "start": "ISA.1.9",
+   "end": "ISA.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.16.3",
+   "at": 1402,
+   "text": "Romans 9:29",
+   "start": "ROM.9.29",
+   "end": "ROM.9.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.16.5",
+   "at": 503,
+   "text": "Romans 11:5",
+   "start": "ROM.11.5",
+   "end": "ROM.11.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.24.1",
+   "at": 1310,
+   "text": "John 10:28",
+   "start": "JHN.10.28",
+   "end": "JHN.10.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.24.1",
+   "at": 1518,
+   "text": "1 Peter 1:5",
+   "start": "1PE.1.5",
+   "end": "1PE.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.25.1",
+   "at": 507,
+   "text": "1 Corinthians 10:13",
+   "start": "1CO.10.13",
+   "end": "1CO.10.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.26.1",
+   "at": 508,
+   "text": "John 12:35",
+   "start": "JHN.12.35",
+   "end": "JHN.12.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.29.1",
+   "at": 0,
+   "text": "Matthew 24:29",
+   "start": "MAT.24.29",
+   "end": "MAT.24.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.30.2",
+   "at": 24,
+   "text": "Zechariah 12:11-14",
+   "start": "ZEC.12.11",
+   "end": "ZEC.12.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.30.2",
+   "at": 457,
+   "text": "Zechariah 12:10",
+   "start": "ZEC.12.10",
+   "end": "ZEC.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.32.1",
+   "at": 0,
+   "text": "Matthew 24:32",
+   "start": "MAT.24.32",
+   "end": "MAT.24.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.32.2",
+   "at": 492,
+   "text": "Romans 14:17",
+   "start": "ROM.14.17",
+   "end": "ROM.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.36.3",
+   "at": 540,
+   "text": "John 21:17",
+   "start": "JHN.21.17",
+   "end": "JHN.21.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.36.3",
+   "at": 717,
+   "text": "Hebrews 2:17",
+   "start": "HEB.2.17",
+   "end": "HEB.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.36.4",
+   "at": 201,
+   "text": "Matthew 20:23",
+   "start": "MAT.20.23",
+   "end": "MAT.20.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.36.4",
+   "at": 216,
+   "text": "Mark 5:40",
+   "start": "MRK.5.40",
+   "end": "MRK.5.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.37.1",
+   "at": 0,
+   "text": "Matthew 24:37",
+   "start": "MAT.24.37",
+   "end": "MAT.24.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.39.1",
+   "at": 323,
+   "text": "Hebrews 11:7",
+   "start": "HEB.11.7",
+   "end": "HEB.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.39.1",
+   "at": 1679,
+   "text": "1 Peter 3:20, 21",
+   "start": "1PE.3.20",
+   "end": "1PE.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.40.1",
+   "at": 491,
+   "text": "Philippians 3:13",
+   "start": "PHP.3.13",
+   "end": "PHP.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.40.1",
+   "at": 613,
+   "text": "Genesis 19:26",
+   "start": "GEN.19.26",
+   "end": "GEN.19.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.43.1",
+   "at": 0,
+   "text": "Matthew 24:43",
+   "start": "MAT.24.43",
+   "end": "MAT.24.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.43.1",
+   "at": 545,
+   "text": "Matthew 25:1-12",
+   "start": "MAT.25.1",
+   "end": "MAT.25.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.24.44.1",
+   "at": 0,
+   "text": "Matthew 24:44",
+   "start": "MAT.24.44",
+   "end": "MAT.24.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.1.1",
+   "at": 0,
+   "text": "Matthew 25:1",
+   "start": "MAT.25.1",
+   "end": "MAT.25.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.2.1",
+   "at": 109,
+   "text": "Matthew 24:45",
+   "start": "MAT.24.45",
+   "end": "MAT.24.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.6.1",
+   "at": 270,
+   "text": "Revelation 22:20",
+   "start": "REV.22.20",
+   "end": "REV.22.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.15.1",
+   "at": 0,
+   "text": "Matthew 25:15",
+   "start": "MAT.25.15",
+   "end": "MAT.25.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.20.1",
+   "at": 1119,
+   "text": "Galatians 6:9",
+   "start": "GAL.6.9",
+   "end": "GAL.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.30.1",
+   "at": 89,
+   "text": "Matthew 8:12",
+   "start": "MAT.8.12",
+   "end": "MAT.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.31.1",
+   "at": 0,
+   "text": "Matthew 25:31",
+   "start": "MAT.25.31",
+   "end": "MAT.25.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.32.2",
+   "at": 303,
+   "text": "Ezekiel 34:18",
+   "start": "EZK.34.18",
+   "end": "EZK.34.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.34.1",
+   "at": 1074,
+   "text": "Genesis 24:31",
+   "start": "GEN.24.31",
+   "end": "GEN.24.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.34.3",
+   "at": 193,
+   "text": "Ephesians 1:4",
+   "start": "EPH.1.4",
+   "end": "EPH.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.35.1",
+   "at": 812,
+   "text": "2 Timothy 4:8",
+   "start": "2TI.4.8",
+   "end": "2TI.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.35.1",
+   "at": 1560,
+   "text": "Romans 8:30",
+   "start": "ROM.8.30",
+   "end": "ROM.8.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.35.3",
+   "at": 314,
+   "text": "Hosea 6:6",
+   "start": "HOS.6.6",
+   "end": "HOS.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.41.1",
+   "at": 441,
+   "text": "Isaiah 28:15",
+   "start": "ISA.28.15",
+   "end": "ISA.28.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.41.2",
+   "at": 453,
+   "text": "Isaiah 66:24",
+   "start": "ISA.66.24",
+   "end": "ISA.66.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.41.2",
+   "at": 681,
+   "text": "Isaiah 30:33",
+   "start": "ISA.30.33",
+   "end": "ISA.30.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.41.3",
+   "at": 450,
+   "text": "Ephesians 4:13",
+   "start": "EPH.4.13",
+   "end": "EPH.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.25.41.3",
+   "at": 466,
+   "text": "Colossians 2:19",
+   "start": "COL.2.19",
+   "end": "COL.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.3.1",
+   "at": 0,
+   "text": "Matthew 26:3",
+   "start": "MAT.26.3",
+   "end": "MAT.26.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.3.1",
+   "at": 646,
+   "text": "John 11:48",
+   "start": "JHN.11.48",
+   "end": "JHN.11.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.6.1",
+   "at": 722,
+   "text": "John 12:3",
+   "start": "JHN.12.3",
+   "end": "JHN.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.6.1",
+   "at": 905,
+   "text": "Matthew 26:6",
+   "start": "MAT.26.6",
+   "end": "MAT.26.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.6.1",
+   "at": 922,
+   "text": "Mark 14:3",
+   "start": "MRK.14.3",
+   "end": "MRK.14.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.8.1",
+   "at": 253,
+   "text": "John 12:4",
+   "start": "JHN.12.4",
+   "end": "JHN.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.8.1",
+   "at": 1777,
+   "text": "Romans 14:7, 10",
+   "start": "ROM.14.7",
+   "end": "ROM.14.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.8.1",
+   "at": 1777,
+   "text": "Romans 14:7, 10",
+   "start": "ROM.14.10",
+   "end": "ROM.14.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.10.2",
+   "at": 1486,
+   "text": "Isaiah 50:7",
+   "start": "ISA.50.7",
+   "end": "ISA.50.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.10.2",
+   "at": 1551,
+   "text": "1 Corinthians 4:3, 4",
+   "start": "1CO.4.3",
+   "end": "1CO.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.11.2",
+   "at": 1455,
+   "text": "12:7",
+   "start": "JHN.12.7",
+   "end": "JHN.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.14.1",
+   "at": 0,
+   "text": "Matthew 26:14",
+   "start": "MAT.26.14",
+   "end": "MAT.26.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.14.2",
+   "at": 1183,
+   "text": "1 Timothy 6:10",
+   "start": "1TI.6.10",
+   "end": "1TI.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.17.1",
+   "at": 277,
+   "text": "Exodus 12:18",
+   "start": "EXO.12.18",
+   "end": "EXO.12.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.17.1",
+   "at": 866,
+   "text": "John 19:14",
+   "start": "JHN.19.14",
+   "end": "JHN.19.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.17.1",
+   "at": 1013,
+   "text": "John 18:28",
+   "start": "JHN.18.28",
+   "end": "JHN.18.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.17.2",
+   "at": 698,
+   "text": "John 19:42",
+   "start": "JHN.19.42",
+   "end": "JHN.19.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.20.1",
+   "at": 240,
+   "text": "Exodus 12:11",
+   "start": "EXO.12.11",
+   "end": "EXO.12.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.21.1",
+   "at": 0,
+   "text": "Matthew 26:21",
+   "start": "MAT.26.21",
+   "end": "MAT.26.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.23.1",
+   "at": 572,
+   "text": "Psalm 41:10",
+   "start": "PSA.41.10",
+   "end": "PSA.41.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.24.3",
+   "at": 944,
+   "text": "Acts 2:25",
+   "start": "ACT.2.25",
+   "end": "ACT.2.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.24.3",
+   "at": 1106,
+   "text": "Acts 4:27, 28",
+   "start": "ACT.4.27",
+   "end": "ACT.4.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.24.4",
+   "at": 932,
+   "text": "Proverbs 16:4",
+   "start": "PRO.16.4",
+   "end": "PRO.16.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.26-30.1",
+   "at": 539,
+   "text": "Psalm 116:13",
+   "start": "PSA.116.13",
+   "end": "PSA.116.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.26.1",
+   "at": 0,
+   "text": "Matthew 26:26",
+   "start": "MAT.26.26",
+   "end": "MAT.26.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.26.6",
+   "at": 844,
+   "text": "1 Corinthians 10:4",
+   "start": "1CO.10.4",
+   "end": "1CO.10.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.26.6",
+   "at": 903,
+   "text": "John 1:32",
+   "start": "JHN.1.32",
+   "end": "JHN.1.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.27.1",
+   "at": 0,
+   "text": "Matthew 26:27",
+   "start": "MAT.26.27",
+   "end": "MAT.26.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.31.1",
+   "at": 0,
+   "text": "Matthew 26:31",
+   "start": "MAT.26.31",
+   "end": "MAT.26.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.31.2",
+   "at": 0,
+   "text": "Matthew 26:31",
+   "start": "MAT.26.31",
+   "end": "MAT.26.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.31.2",
+   "at": 682,
+   "text": "Zechariah 13:7",
+   "start": "ZEC.13.7",
+   "end": "ZEC.13.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.33.2",
+   "at": 836,
+   "text": "Philippians 2:12, 13",
+   "start": "PHP.2.12",
+   "end": "PHP.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.36.1",
+   "at": 0,
+   "text": "Matthew 26:36",
+   "start": "MAT.26.36",
+   "end": "MAT.26.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.36.1",
+   "at": 451,
+   "text": "18:2",
+   "start": "JHN.18.2",
+   "end": "JHN.18.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.37.2",
+   "at": 768,
+   "text": "John 1:1",
+   "start": "JHN.1.1",
+   "end": "JHN.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.37.2",
+   "at": 810,
+   "text": "John 11:25",
+   "start": "JHN.11.25",
+   "end": "JHN.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.37.2",
+   "at": 898,
+   "text": "John 1:14",
+   "start": "JHN.1.14",
+   "end": "JHN.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.38.1",
+   "at": 349,
+   "text": "4:9",
+   "start": "JON.4.9",
+   "end": "JON.4.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.39.4",
+   "at": 1095,
+   "text": "Exodus 32:33",
+   "start": "EXO.32.33",
+   "end": "EXO.32.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.39.4",
+   "at": 1152,
+   "text": "Romans 9:3",
+   "start": "ROM.9.3",
+   "end": "ROM.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.39.10",
+   "at": 289,
+   "text": "Hebrews 5:7",
+   "start": "HEB.5.7",
+   "end": "HEB.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.39.10",
+   "at": 795,
+   "text": "Acts 2:24",
+   "start": "ACT.2.24",
+   "end": "ACT.2.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.39.10",
+   "at": 1181,
+   "text": "Luke 22:44",
+   "start": "LUK.22.44",
+   "end": "LUK.22.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.40.1",
+   "at": 950,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.43.1",
+   "at": 1204,
+   "text": "Matthew 6:7",
+   "start": "MAT.6.7",
+   "end": "MAT.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.45.1",
+   "at": 0,
+   "text": "Matthew 26:45",
+   "start": "MAT.26.45",
+   "end": "MAT.26.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.46.1",
+   "at": 440,
+   "text": "Hebrews 5:7",
+   "start": "HEB.5.7",
+   "end": "HEB.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.50.2",
+   "at": 69,
+   "text": "2 Timothy 2:19",
+   "start": "2TI.2.19",
+   "end": "2TI.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.50.2",
+   "at": 133,
+   "text": "Psalm 2:12",
+   "start": "PSA.2.12",
+   "end": "PSA.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.51.1",
+   "at": 0,
+   "text": "Matthew 26:51",
+   "start": "MAT.26.51",
+   "end": "MAT.26.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.51.2",
+   "at": 65,
+   "text": "18:10",
+   "start": "JHN.18.10",
+   "end": "JHN.18.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.52.1",
+   "at": 993,
+   "text": "Matthew 5:39",
+   "start": "MAT.5.39",
+   "end": "MAT.5.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.53.2",
+   "at": 1350,
+   "text": "Hebrews 1:14",
+   "start": "HEB.1.14",
+   "end": "HEB.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.54.1",
+   "at": 1293,
+   "text": "Romans 15:4",
+   "start": "ROM.15.4",
+   "end": "ROM.15.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.55.1",
+   "at": 0,
+   "text": "Matthew 26:55",
+   "start": "MAT.26.55",
+   "end": "MAT.26.55",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.56.1",
+   "at": 546,
+   "text": "Luke 22:3",
+   "start": "LUK.22.3",
+   "end": "LUK.22.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.57-61.1",
+   "at": 447,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.57.1",
+   "at": 0,
+   "text": "Matthew 26:57",
+   "start": "MAT.26.57",
+   "end": "MAT.26.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.57.1",
+   "at": 260,
+   "text": "Deuteronomy 1:8",
+   "start": "DEU.1.8",
+   "end": "DEU.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.57.2",
+   "at": 1301,
+   "text": "Psalm 118:22",
+   "start": "PSA.118.22",
+   "end": "PSA.118.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.57.2",
+   "at": 1467,
+   "text": "Isaiah 8:14",
+   "start": "ISA.8.14",
+   "end": "ISA.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.59.1",
+   "at": 1275,
+   "text": "John 2:19",
+   "start": "JHN.2.19",
+   "end": "JHN.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.62.1",
+   "at": 0,
+   "text": "Matthew 26:62",
+   "start": "MAT.26.62",
+   "end": "MAT.26.62",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.69.1",
+   "at": 0,
+   "text": "Matthew 26:69",
+   "start": "MAT.26.69",
+   "end": "MAT.26.69",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.71.1",
+   "at": 542,
+   "text": "18:25",
+   "start": "JHN.18.25",
+   "end": "JHN.18.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.74.1",
+   "at": 727,
+   "text": "Matthew 12:31, 32",
+   "start": "MAT.12.31",
+   "end": "MAT.12.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.74.1",
+   "at": 924,
+   "text": "Matthew 10:39",
+   "start": "MAT.10.39",
+   "end": "MAT.10.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.74.1",
+   "at": 938,
+   "text": "Luke 12:9",
+   "start": "LUK.12.9",
+   "end": "LUK.12.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.75.2",
+   "at": 1555,
+   "text": "Daniel 9:3",
+   "start": "DAN.9.3",
+   "end": "DAN.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.75.2",
+   "at": 1567,
+   "text": "Jonah 3:6",
+   "start": "JON.3.6",
+   "end": "JON.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.1.1",
+   "at": 0,
+   "text": "Matthew 27:1",
+   "start": "MAT.27.1",
+   "end": "MAT.27.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.1.1",
+   "at": 988,
+   "text": "22:66",
+   "start": "LUK.22.26",
+   "end": "LUK.22.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.1.1",
+   "at": 1630,
+   "text": "Acts 7:59",
+   "start": "ACT.7.59",
+   "end": "ACT.7.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.3.1",
+   "at": 1418,
+   "text": "2 Corinthians 7:10",
+   "start": "2CO.7.10",
+   "end": "2CO.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.6.1",
+   "at": 246,
+   "text": "Mark 7:11",
+   "start": "MRK.7.11",
+   "end": "MRK.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.9.1",
+   "at": 285,
+   "text": "11:13",
+   "start": "ZEC.11.13",
+   "end": "ZEC.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.9.2",
+   "at": 30,
+   "text": "1 Timothy 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.11.1",
+   "at": 0,
+   "text": "Matthew 27:11",
+   "start": "MAT.27.11",
+   "end": "MAT.27.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.11.1",
+   "at": 425,
+   "text": "1 Corinthians 1:23",
+   "start": "1CO.1.23",
+   "end": "1CO.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.11.2",
+   "at": 1096,
+   "text": "Romans 8:15",
+   "start": "ROM.8.15",
+   "end": "ROM.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.11.4",
+   "at": 377,
+   "text": "18:36",
+   "start": "JHN.18.36",
+   "end": "JHN.18.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.11.5",
+   "at": 1104,
+   "text": "53:7",
+   "start": "ISA.53.7",
+   "end": "ISA.53.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.11.5",
+   "at": 1236,
+   "text": "1 Timothy 6:12",
+   "start": "1TI.6.12",
+   "end": "1TI.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.15.1",
+   "at": 0,
+   "text": "Matthew 27:15",
+   "start": "MAT.27.15",
+   "end": "MAT.27.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.22.1",
+   "at": 1208,
+   "text": "14:15",
+   "start": "JHN.14.15",
+   "end": "JHN.14.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.24.1",
+   "at": 0,
+   "text": "Matthew 27:24",
+   "start": "MAT.27.24",
+   "end": "MAT.27.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.25.2",
+   "at": 597,
+   "text": "15:13",
+   "start": "JHN.15.13",
+   "end": "JHN.15.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.27.2",
+   "at": 172,
+   "text": "Philippians 2:8-10",
+   "start": "PHP.2.8",
+   "end": "PHP.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.33.1",
+   "at": 0,
+   "text": "Matthew 27:33",
+   "start": "MAT.27.33",
+   "end": "MAT.27.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.33.1",
+   "at": 485,
+   "text": "13:12",
+   "start": "HEB.13.12",
+   "end": "HEB.13.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.33.1",
+   "at": 701,
+   "text": "Exodus 29:14",
+   "start": "EXO.29.14",
+   "end": "EXO.29.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.33.1",
+   "at": 715,
+   "text": "Leviticus 16:27",
+   "start": "LEV.16.27",
+   "end": "LEV.16.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.34.1",
+   "at": 579,
+   "text": "14:29",
+   "start": "JHN.14.29",
+   "end": "JHN.14.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.34.1",
+   "at": 1383,
+   "text": "Matthew 27:49",
+   "start": "MAT.27.49",
+   "end": "MAT.27.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.35.1",
+   "at": 272,
+   "text": "John 19:23",
+   "start": "JHN.19.23",
+   "end": "JHN.19.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.35.2",
+   "at": 197,
+   "text": "Psalm 22:18",
+   "start": "PSA.22.18",
+   "end": "PSA.22.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.35.3",
+   "at": 0,
+   "text": "Mark 15:25",
+   "start": "MRK.15.25",
+   "end": "MRK.15.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.35.3",
+   "at": 176,
+   "text": "14:14",
+   "start": "MRK.14.14",
+   "end": "MRK.14.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.35.3",
+   "at": 888,
+   "text": "14:15",
+   "start": "MRK.14.15",
+   "end": "MRK.14.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.37.1",
+   "at": 0,
+   "text": "Matthew 27:37",
+   "start": "MAT.27.37",
+   "end": "MAT.27.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.37.1",
+   "at": 117,
+   "text": "23:38",
+   "start": "LUK.23.38",
+   "end": "LUK.23.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.37.1",
+   "at": 216,
+   "text": "14:19-22",
+   "start": "JHN.14.19",
+   "end": "JHN.14.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.38.1",
+   "at": 546,
+   "text": "53:12",
+   "start": "ISA.53.12",
+   "end": "ISA.53.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.39.1",
+   "at": 0,
+   "text": "Matthew 27:39",
+   "start": "MAT.27.39",
+   "end": "MAT.27.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.39.1",
+   "at": 704,
+   "text": "Isaiah 53:4",
+   "start": "ISA.53.4",
+   "end": "ISA.53.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.39.1",
+   "at": 841,
+   "text": "Psalm 22:7",
+   "start": "PSA.22.7",
+   "end": "PSA.22.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.39.1",
+   "at": 1147,
+   "text": "Galatians 4:29",
+   "start": "GAL.4.29",
+   "end": "GAL.4.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.40.1",
+   "at": 430,
+   "text": "John 2:19",
+   "start": "JHN.2.19",
+   "end": "JHN.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.42.1",
+   "at": 217,
+   "text": "52:14; 53:2",
+   "start": "ISA.52.14",
+   "end": "ISA.52.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.42.1",
+   "at": 245,
+   "text": "13:7",
+   "start": "ZEC.13.7",
+   "end": "ZEC.13.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.43.1",
+   "at": 1460,
+   "text": "Hebrews 12:6",
+   "start": "HEB.12.6",
+   "end": "HEB.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.43.1",
+   "at": 1561,
+   "text": "Matthew 3:17",
+   "start": "MAT.3.17",
+   "end": "MAT.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.43.1",
+   "at": 1575,
+   "text": "17:5",
+   "start": "MAT.17.5",
+   "end": "MAT.17.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.45.1",
+   "at": 0,
+   "text": "Matthew 27:45",
+   "start": "MAT.27.45",
+   "end": "MAT.27.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.45.1",
+   "at": 256,
+   "text": "Philippians 2:7",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.45.2",
+   "at": 1437,
+   "text": "Matthew 13:14",
+   "start": "MAT.13.14",
+   "end": "MAT.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.46.1",
+   "at": 624,
+   "text": "53:3",
+   "start": "ISA.53.3",
+   "end": "ISA.53.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.50.1",
+   "at": 0,
+   "text": "Matthew 27:50",
+   "start": "MAT.27.50",
+   "end": "MAT.27.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.50.2",
+   "at": 55,
+   "text": "Psalm 31:5",
+   "start": "PSA.31.5",
+   "end": "PSA.31.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.50.3",
+   "at": 616,
+   "text": "Acts 7:59",
+   "start": "ACT.7.59",
+   "end": "ACT.7.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.1",
+   "at": 768,
+   "text": "Exodus 26:33",
+   "start": "EXO.26.33",
+   "end": "EXO.26.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.1",
+   "at": 782,
+   "text": "2 Chronicles 3:14",
+   "start": "2CH.3.14",
+   "end": "2CH.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.1",
+   "at": 873,
+   "text": "Colossians 2:14",
+   "start": "COL.2.14",
+   "end": "COL.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.1",
+   "at": 988,
+   "text": "1 Peter 2:9",
+   "start": "1PE.2.9",
+   "end": "1PE.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.2",
+   "at": 487,
+   "text": "Hebrews 9:14",
+   "start": "HEB.9.14",
+   "end": "HEB.9.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.4",
+   "at": 1132,
+   "text": "Colossians 1:18",
+   "start": "COL.1.18",
+   "end": "COL.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.4",
+   "at": 1191,
+   "text": "1 Corinthians 15:20",
+   "start": "1CO.15.20",
+   "end": "1CO.15.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.51.5",
+   "at": 473,
+   "text": "Colossians 3:3",
+   "start": "COL.3.3",
+   "end": "COL.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.53.1",
+   "at": 291,
+   "text": "Jeremiah 7:11",
+   "start": "JER.7.11",
+   "end": "JER.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.57.1",
+   "at": 0,
+   "text": "Matthew 27:57",
+   "start": "MAT.27.57",
+   "end": "MAT.27.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.57.1",
+   "at": 554,
+   "text": "19:39",
+   "start": "JHN.19.39",
+   "end": "JHN.19.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.59.1",
+   "at": 0,
+   "text": "Matthew 27:59",
+   "start": "MAT.27.59",
+   "end": "MAT.27.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.59.1",
+   "at": 182,
+   "text": "19:39",
+   "start": "JHN.19.39",
+   "end": "JHN.19.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.59.1",
+   "at": 720,
+   "text": "Colossians 1:18",
+   "start": "COL.1.18",
+   "end": "COL.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.59.1",
+   "at": 779,
+   "text": "1 Corinthians 15:20",
+   "start": "1CO.15.20",
+   "end": "1CO.15.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.62.1",
+   "at": 0,
+   "text": "Matthew 27:62",
+   "start": "MAT.27.62",
+   "end": "MAT.27.62",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.27.62.1",
+   "at": 943,
+   "text": "Job 5:12",
+   "start": "JOB.5.12",
+   "end": "JOB.5.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.1-7.1",
+   "at": 423,
+   "text": "1 Corinthians 15:14",
+   "start": "1CO.15.14",
+   "end": "1CO.15.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.2.1",
+   "at": 0,
+   "text": "Matthew 28:2",
+   "start": "MAT.28.2",
+   "end": "MAT.28.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.2.3",
+   "at": 96,
+   "text": "20:1-12",
+   "start": "JHN.20.1",
+   "end": "JHN.20.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.8.1",
+   "at": 0,
+   "text": "Matthew 28:8",
+   "start": "MAT.28.8",
+   "end": "MAT.28.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.8.1",
+   "at": 112,
+   "text": "20:2",
+   "start": "JHN.20.2",
+   "end": "JHN.20.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.8.3",
+   "at": 704,
+   "text": "Luke 8:2",
+   "start": "LUK.8.2",
+   "end": "LUK.8.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.9.1",
+   "at": 73,
+   "text": "20:17",
+   "start": "JHN.20.17",
+   "end": "JHN.20.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.10.2",
+   "at": 1368,
+   "text": "20:18",
+   "start": "JHN.20.18",
+   "end": "JHN.20.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.11.1",
+   "at": 0,
+   "text": "Matthew 28:11",
+   "start": "MAT.28.11",
+   "end": "MAT.28.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.15.2",
+   "at": 617,
+   "text": "6:9",
+   "start": "ISA.6.9",
+   "end": "ISA.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.16.1",
+   "at": 0,
+   "text": "Matthew 28:16",
+   "start": "MAT.28.16",
+   "end": "MAT.28.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.18.2",
+   "at": 1139,
+   "text": "Philippians 2:7, 9",
+   "start": "PHP.2.7",
+   "end": "PHP.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.18.2",
+   "at": 1139,
+   "text": "Philippians 2:7, 9",
+   "start": "PHP.2.9",
+   "end": "PHP.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.19.3",
+   "at": 332,
+   "text": "Ephesians 2:14",
+   "start": "EPH.2.14",
+   "end": "EPH.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.19.3",
+   "at": 729,
+   "text": "49:6",
+   "start": "ISA.49.6",
+   "end": "ISA.49.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.19.4",
+   "at": 192,
+   "text": "Ephesians 2:17, 19",
+   "start": "EPH.2.17",
+   "end": "EPH.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.19.4",
+   "at": 192,
+   "text": "Ephesians 2:17, 19",
+   "start": "EPH.2.19",
+   "end": "EPH.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.19.9",
+   "at": 0,
+   "text": "Mark 16:16",
+   "start": "MRK.16.16",
+   "end": "MRK.16.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.19.10",
+   "at": 1663,
+   "text": "John 14:12",
+   "start": "JHN.14.12",
+   "end": "JHN.14.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.19.11",
+   "at": 1497,
+   "text": "Matthew 24:24",
+   "start": "MAT.24.24",
+   "end": "MAT.24.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.28.20.1",
+   "at": 0,
+   "text": "Matthew 28:20",
+   "start": "MAT.28.20",
+   "end": "MAT.28.20",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}
