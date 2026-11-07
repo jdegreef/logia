@@ -13,7 +13,7 @@
   },
   {
    "in": "catena-matthew.MAT.1.1.3",
-   "at": 254,
+   "at": 637,
    "text": "Gen 22:18",
    "start": "GEN.22.18",
    "end": "GEN.22.18",
@@ -22,7 +22,7 @@
   },
   {
    "in": "catena-matthew.MAT.1.1.3",
-   "at": 329,
+   "at": 712,
    "text": "Ps 132:11",
    "start": "PSA.132.11",
    "end": "PSA.132.11",
@@ -31,7 +31,7 @@
   },
   {
    "in": "catena-matthew.MAT.1.1.3",
-   "at": 605,
+   "at": 988,
    "text": "Gen 15:9",
    "start": "GEN.15.9",
    "end": "GEN.15.9",
@@ -40,7 +40,7 @@
   },
   {
    "in": "catena-matthew.MAT.1.1.3",
-   "at": 715,
+   "at": 1098,
    "text": "Gen 20:7",
    "start": "GEN.20.7",
    "end": "GEN.20.7",
@@ -49,7 +49,7 @@
   },
   {
    "in": "catena-matthew.MAT.1.1.4",
-   "at": 577,
+   "at": 1124,
    "text": "John 1:1",
    "start": "JHN.1.1",
    "end": "JHN.1.1",
@@ -58,7 +58,7 @@
   },
   {
    "in": "catena-matthew.MAT.1.1.4",
-   "at": 837,
+   "at": 1384,
    "text": "John 17:5",
    "start": "JHN.17.5",
    "end": "JHN.17.5",
@@ -66,17 +66,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.1.4",
-   "at": 1265,
-   "text": "Phil 2:6",
-   "start": "PHP.2.6",
-   "end": "PHP.2.6",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "catena-matthew.MAT.1.1.5",
-   "at": 569,
+   "at": 969,
    "text": "John 14:23",
    "start": "JHN.14.23",
    "end": "JHN.14.23",
@@ -84,8 +75,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.1.7",
-   "at": 889,
+   "in": "catena-matthew.MAT.1.1.8",
+   "at": 491,
    "text": "Matt 4:17",
    "start": "MAT.4.17",
    "end": "MAT.4.17",
@@ -93,8 +84,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.1.7",
-   "at": 1267,
+   "in": "catena-matthew.MAT.1.1.8",
+   "at": 869,
    "text": "2 Tim 2:8",
    "start": "2TI.2.8",
    "end": "2TI.2.8",
@@ -102,8 +93,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.1.8",
-   "at": 993,
+   "in": "catena-matthew.MAT.1.1.9",
+   "at": 594,
    "text": "Matt 26:38",
    "start": "MAT.26.38",
    "end": "MAT.26.38",
@@ -111,8 +102,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.1.8",
-   "at": 1047,
+   "in": "catena-matthew.MAT.1.1.9",
+   "at": 648,
    "text": "John 10:18",
    "start": "JHN.10.18",
    "end": "JHN.10.18",
@@ -125,6 +116,15 @@
    "text": "John 1:29",
    "start": "JHN.1.29",
    "end": "JHN.1.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.1.2.3",
+   "at": 1008,
+   "text": "Ps 18:43",
+   "start": "PSA.18.43",
+   "end": "PSA.18.43",
    "found": "source",
    "status": "detected"
   },
@@ -210,8 +210,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.3-6.5",
-   "at": 1158,
+   "in": "catena-matthew.MAT.1.3-6.6",
+   "at": 115,
    "text": "John 12:32",
    "start": "JHN.12.32",
    "end": "JHN.12.32",
@@ -219,8 +219,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.3-6.5",
-   "at": 1272,
+   "in": "catena-matthew.MAT.1.3-6.6",
+   "at": 229,
    "text": "Matt 20:28",
    "start": "MAT.20.28",
    "end": "MAT.20.28",
@@ -228,8 +228,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.3-6.5",
-   "at": 1355,
+   "in": "catena-matthew.MAT.1.3-6.6",
+   "at": 312,
    "text": "Luke 12:49",
    "start": "LUK.12.49",
    "end": "LUK.12.49",
@@ -237,8 +237,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.3-6.5",
-   "at": 1442,
+   "in": "catena-matthew.MAT.1.3-6.6",
+   "at": 399,
    "text": "Ps 24:8",
    "start": "PSA.24.8",
    "end": "PSA.24.8",
@@ -246,8 +246,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.3-6.5",
-   "at": 1514,
+   "in": "catena-matthew.MAT.1.3-6.6",
+   "at": 471,
    "text": "Hag 2:7",
    "start": "HAG.2.7",
    "end": "HAG.2.7",
@@ -256,7 +256,16 @@
   },
   {
    "in": "catena-matthew.MAT.1.3-6.6",
-   "at": 1017,
+   "at": 567,
+   "text": "Ps. 45:3",
+   "start": "PSA.45.3",
+   "end": "PSA.45.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.1.3-6.7",
+   "at": 188,
    "text": "Gen 44:5",
    "start": "GEN.44.5",
    "end": "GEN.44.5",
@@ -300,17 +309,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 740,
-   "text": "Eph 2:14",
-   "start": "EPH.2.14",
-   "end": "EPH.2.14",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1072,
+   "in": "catena-matthew.MAT.1.8-11.6",
+   "at": 321,
    "text": "Matt 23:9",
    "start": "MAT.23.9",
    "end": "MAT.23.9",
@@ -318,17 +318,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1125,
-   "text": "John 13:13",
-   "start": "JHN.13.13",
-   "end": "JHN.13.13",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1243,
+   "in": "catena-matthew.MAT.1.8-11.7",
+   "at": 105,
    "text": "John 1:29",
    "start": "JHN.1.29",
    "end": "JHN.1.29",
@@ -336,8 +327,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1357,
+   "in": "catena-matthew.MAT.1.8-11.7",
+   "at": 219,
    "text": "John 5:22",
    "start": "JHN.5.22",
    "end": "JHN.5.22",
@@ -345,8 +336,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1497,
+   "in": "catena-matthew.MAT.1.8-11.7",
+   "at": 359,
    "text": "John 3:13",
    "start": "JHN.3.13",
    "end": "JHN.3.13",
@@ -354,26 +345,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1605,
-   "text": "Ps 118:14",
-   "start": "PSA.118.14",
-   "end": "PSA.118.14",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1716,
-   "text": "Rom 10:4",
-   "start": "ROM.10.4",
-   "end": "ROM.10.4",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.1.8-11.4",
-   "at": 1811,
+   "in": "catena-matthew.MAT.1.8-11.9",
+   "at": 84,
    "text": "Zech 1:3",
    "start": "ZEC.1.3",
    "end": "ZEC.1.3",
@@ -381,8 +354,17 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.5",
-   "at": 154,
+   "in": "catena-matthew.MAT.1.8-11.9",
+   "at": 169,
+   "text": "Matt 11:27",
+   "start": "MAT.11.27",
+   "end": "MAT.11.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.1.8-11.9",
+   "at": 336,
    "text": "John 16:33",
    "start": "JHN.16.33",
    "end": "JHN.16.33",
@@ -390,8 +372,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.5",
-   "at": 404,
+   "in": "catena-matthew.MAT.1.8-11.10",
+   "at": 105,
    "text": "Ps 145:17",
    "start": "PSA.145.17",
    "end": "PSA.145.17",
@@ -399,8 +381,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.5",
-   "at": 533,
+   "in": "catena-matthew.MAT.1.8-11.10",
+   "at": 234,
    "text": "Luke 22:44",
    "start": "LUK.22.44",
    "end": "LUK.22.44",
@@ -408,8 +390,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.5",
-   "at": 670,
+   "in": "catena-matthew.MAT.1.8-11.10",
+   "at": 371,
    "text": "Ps 141:2",
    "start": "PSA.141.2",
    "end": "PSA.141.2",
@@ -417,8 +399,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.8-11.5",
-   "at": 929,
+   "in": "catena-matthew.MAT.1.8-11.11",
+   "at": 159,
    "text": "John 14:3",
    "start": "JHN.14.3",
    "end": "JHN.14.3",
@@ -435,17 +417,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.1",
-   "at": 696,
-   "text": "John 18:36",
-   "start": "JHN.18.36",
-   "end": "JHN.18.36",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.1.12-15.2",
-   "at": 236,
+   "in": "catena-matthew.MAT.1.12-15.4",
+   "at": 899,
    "text": "1 Chron 3:17",
    "start": "1CH.3.17",
    "end": "1CH.3.17",
@@ -453,8 +426,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.2",
-   "at": 444,
+   "in": "catena-matthew.MAT.1.12-15.4",
+   "at": 1107,
    "text": "1 Tim 1:4",
    "start": "1TI.1.4",
    "end": "1TI.1.4",
@@ -462,8 +435,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.2",
-   "at": 1386,
+   "in": "catena-matthew.MAT.1.12-15.5",
+   "at": 395,
    "text": "John 11:25",
    "start": "JHN.11.25",
    "end": "JHN.11.25",
@@ -471,8 +444,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.2",
-   "at": 1439,
+   "in": "catena-matthew.MAT.1.12-15.5",
+   "at": 448,
    "text": "John 14:2",
    "start": "JHN.14.2",
    "end": "JHN.14.2",
@@ -480,8 +453,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.2",
-   "at": 1574,
+   "in": "catena-matthew.MAT.1.12-15.5",
+   "at": 583,
    "text": "John 17:11",
    "start": "JHN.17.11",
    "end": "JHN.17.11",
@@ -489,8 +462,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.2",
-   "at": 1722,
+   "in": "catena-matthew.MAT.1.12-15.5",
+   "at": 731,
    "text": "Matt 9:11",
    "start": "MAT.9.11",
    "end": "MAT.9.11",
@@ -498,17 +471,17 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.2",
-   "at": 1823,
-   "text": "John 10:30",
-   "start": "JHN.10.30",
-   "end": "JHN.10.30",
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 116,
+   "text": "John 6:54",
+   "start": "JHN.6.54",
+   "end": "JHN.6.54",
    "found": "source",
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.3",
-   "at": 84,
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 212,
    "text": "John 8:29",
    "start": "JHN.8.29",
    "end": "JHN.8.29",
@@ -516,8 +489,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.3",
-   "at": 223,
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 351,
    "text": "1 Pet 3:18",
    "start": "1PE.3.18",
    "end": "1PE.3.18",
@@ -525,8 +498,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.3",
-   "at": 358,
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 486,
    "text": "Matt 12:50",
    "start": "MAT.12.50",
    "end": "MAT.12.50",
@@ -534,8 +507,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.3",
-   "at": 457,
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 585,
    "text": "John 20:28",
    "start": "JHN.20.28",
    "end": "JHN.20.28",
@@ -543,8 +516,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.3",
-   "at": 655,
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 783,
    "text": "Eph 4:8",
    "start": "EPH.4.8",
    "end": "EPH.4.8",
@@ -552,8 +525,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.3",
-   "at": 732,
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 860,
    "text": "John 3:16",
    "start": "JHN.3.16",
    "end": "JHN.3.16",
@@ -561,8 +534,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.12-15.3",
-   "at": 943,
+   "in": "catena-matthew.MAT.1.12-15.6",
+   "at": 1071,
    "text": "Luke 10:19",
    "start": "LUK.10.19",
    "end": "LUK.10.19",
@@ -570,8 +543,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.1.18.7",
-   "at": 1098,
+   "in": "catena-matthew.MAT.1.18.9",
+   "at": 846,
    "text": "Luke 1:5",
    "start": "LUK.1.5",
    "end": "LUK.1.5",
@@ -813,8 +786,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.2.23.1",
-   "at": 920,
+   "in": "catena-matthew.MAT.2.23.2",
+   "at": 274,
    "text": "John 1:15",
    "start": "JHN.1.15",
    "end": "JHN.1.15",
@@ -944,15 +917,6 @@
    "text": "Luke 12:49",
    "start": "LUK.12.49",
    "end": "LUK.12.49",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.3.11.3",
-   "at": 1509,
-   "text": "1 Cor 3:13",
-   "start": "1CO.3.13",
-   "end": "1CO.3.13",
    "found": "source",
    "status": "detected"
   },
@@ -1227,8 +1191,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.5.26.1",
-   "at": 829,
+   "in": "catena-matthew.MAT.5.26.2",
+   "at": 271,
    "text": "Ps 110:1",
    "start": "PSA.110.1",
    "end": "PSA.110.1",
@@ -1533,8 +1497,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.6.10.3",
-   "at": 1516,
+   "in": "catena-matthew.MAT.6.10.4",
+   "at": 358,
    "text": "Rom 7:25",
    "start": "ROM.7.25",
    "end": "ROM.7.25",
@@ -1542,8 +1506,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.6.11.1",
-   "at": 938,
+   "in": "catena-matthew.MAT.6.11.2",
+   "at": 276,
    "text": "John 6:51",
    "start": "JHN.6.51",
    "end": "JHN.6.51",
@@ -1803,7 +1767,7 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.7.6.4",
+   "in": "catena-matthew.MAT.7.6.5",
    "at": 247,
    "text": "John 16:12",
    "start": "JHN.16.12",
@@ -3261,8 +3225,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.15.10.1",
-   "at": 1614,
+   "in": "catena-matthew.MAT.15.10.2",
+   "at": 489,
    "text": "Acts 10:15",
    "start": "ACT.10.15",
    "end": "ACT.10.15",
@@ -3324,8 +3288,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.15.31.1",
-   "at": 522,
+   "in": "catena-matthew.MAT.15.31.2",
+   "at": 225,
    "text": "Rom 11:25",
    "start": "ROM.11.25",
    "end": "ROM.11.25",
@@ -3540,8 +3504,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.18.7.1",
-   "at": 1586,
+   "in": "catena-matthew.MAT.18.7.2",
+   "at": 1226,
    "text": "1 Cor 11:19",
    "start": "1CO.11.19",
    "end": "1CO.11.19",
@@ -3756,7 +3720,7 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.19.28.2",
+   "in": "catena-matthew.MAT.19.28.3",
    "at": 905,
    "text": "Jer 18:9",
    "start": "JER.18.9",
@@ -3765,7 +3729,7 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.19.28.3",
+   "in": "catena-matthew.MAT.19.28.4",
    "at": 160,
    "text": "Matt 12:27",
    "start": "MAT.12.27",
@@ -3774,7 +3738,7 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.19.28.3",
+   "in": "catena-matthew.MAT.19.28.4",
    "at": 841,
    "text": "1 Cor 6:3",
    "start": "1CO.6.3",
@@ -3783,7 +3747,7 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.19.28.4",
+   "in": "catena-matthew.MAT.19.28.5",
    "at": 659,
    "text": "Ps 47:8",
    "start": "PSA.47.8",
@@ -4054,7 +4018,7 @@
   },
   {
    "in": "catena-matthew.MAT.21.41.3",
-   "at": 313,
+   "at": 854,
    "text": "Ps 2:8",
    "start": "PSA.2.8",
    "end": "PSA.2.8",
@@ -4062,8 +4026,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.21.41.4",
-   "at": 1761,
+   "in": "catena-matthew.MAT.21.41.5",
+   "at": 1212,
    "text": "Luke 20:16",
    "start": "LUK.20.16",
    "end": "LUK.20.16",
@@ -4071,7 +4035,7 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.21.41.6",
+   "in": "catena-matthew.MAT.21.41.7",
    "at": 1060,
    "text": "John 9:16",
    "start": "JHN.9.16",
@@ -4090,7 +4054,7 @@
   },
   {
    "in": "catena-matthew.MAT.22.11.7",
-   "at": 275,
+   "at": 801,
    "text": "Ps 24:1",
    "start": "PSA.24.1",
    "end": "PSA.24.1",
@@ -4098,8 +4062,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.22.11.7",
-   "at": 1621,
+   "in": "catena-matthew.MAT.22.11.8",
+   "at": 319,
    "text": "Rom 10:3",
    "start": "ROM.10.3",
    "end": "ROM.10.3",
@@ -4242,8 +4206,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.23.9.1",
-   "at": 788,
+   "in": "catena-matthew.MAT.23.9.2",
+   "at": 541,
    "text": "Eccles. xii. 7",
    "start": "ECC.12.7",
    "end": "ECC.12.7",
@@ -4391,15 +4355,6 @@
    "text": "Luke 21:20",
    "start": "LUK.21.20",
    "end": "LUK.21.20",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.24.21.1",
-   "at": 646,
-   "text": "Luke 21:23",
-   "start": "LUK.21.23",
-   "end": "LUK.21.23",
    "found": "source",
    "status": "detected"
   },
@@ -4701,8 +4656,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.25.1.2",
-   "at": 942,
+   "in": "catena-matthew.MAT.25.1.4",
+   "at": 156,
    "text": "Matt 5:16",
    "start": "MAT.5.16",
    "end": "MAT.5.16",
@@ -4710,8 +4665,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.25.1.2",
-   "at": 1413,
+   "in": "catena-matthew.MAT.25.1.4",
+   "at": 627,
    "text": "1 John 1:1",
    "start": "1JN.1.1",
    "end": "1JN.1.1",
@@ -4719,8 +4674,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.25.1.2",
-   "at": 1475,
+   "in": "catena-matthew.MAT.25.1.4",
+   "at": 689,
    "text": "Ps 34:8",
    "start": "PSA.34.8",
    "end": "PSA.34.8",
@@ -4945,7 +4900,7 @@
   },
   {
    "in": "catena-matthew.MAT.26.6.3",
-   "at": 802,
+   "at": 1481,
    "text": "John 11:2",
    "start": "JHN.11.2",
    "end": "JHN.11.2",
@@ -4954,7 +4909,7 @@
   },
   {
    "in": "catena-matthew.MAT.26.6.4",
-   "at": 1344,
+   "at": 1755,
    "text": "Matt 9:13",
    "start": "MAT.9.13",
    "end": "MAT.9.13",
@@ -4989,8 +4944,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.18.2",
-   "at": 721,
+   "in": "catena-matthew.MAT.26.18.3",
+   "at": 245,
    "text": "Gal 4:4",
    "start": "GAL.4.4",
    "end": "GAL.4.4",
@@ -4998,8 +4953,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.18.2",
-   "at": 1046,
+   "in": "catena-matthew.MAT.26.18.3",
+   "at": 570,
    "text": "1 Cor 5:8",
    "start": "1CO.5.8",
    "end": "1CO.5.8",
@@ -5034,8 +4989,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.26.2",
-   "at": 644,
+   "in": "catena-matthew.MAT.26.26.3",
+   "at": 1128,
    "text": "Ps 110:4",
    "start": "PSA.110.4",
    "end": "PSA.110.4",
@@ -5043,17 +4998,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.26.2",
-   "at": 704,
-   "text": "John 12:24",
-   "start": "JHN.12.24",
-   "end": "JHN.12.24",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.26.26.4",
-   "at": 924,
+   "in": "catena-matthew.MAT.26.26.8",
+   "at": 700,
    "text": "John 13:27",
    "start": "JHN.13.27",
    "end": "JHN.13.27",
@@ -5097,8 +5043,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.28.2",
-   "at": 1260,
+   "in": "catena-matthew.MAT.26.28.4",
+   "at": 96,
    "text": "Rev 17:15",
    "start": "REV.17.15",
    "end": "REV.17.15",
@@ -5115,8 +5061,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.30.1",
-   "at": 1059,
+   "in": "catena-matthew.MAT.26.30.2",
+   "at": 751,
    "text": "Ps 22:26",
    "start": "PSA.22.26",
    "end": "PSA.22.26",
@@ -5124,8 +5070,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.30.2",
-   "at": 1054,
+   "in": "catena-matthew.MAT.26.30.3",
+   "at": 682,
    "text": "1 Thess. 5:7",
    "start": "1TH.5.7",
    "end": "1TH.5.7",
@@ -5259,15 +5205,6 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.26.57.1",
-   "at": 283,
-   "text": "John 18:12",
-   "start": "JHN.18.12",
-   "end": "JHN.18.12",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "catena-matthew.MAT.26.60.1",
    "at": 1149,
    "text": "John 2:19",
@@ -5331,8 +5268,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.27.1.1",
-   "at": 907,
+   "in": "catena-matthew.MAT.27.1.2",
+   "at": 397,
    "text": "John 18:12",
    "start": "JHN.18.12",
    "end": "JHN.18.12",
@@ -5520,8 +5457,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.27.42.1",
-   "at": 370,
+   "in": "catena-matthew.MAT.27.42.3",
+   "at": 163,
    "text": "Matt 4:6",
    "start": "MAT.4.6",
    "end": "MAT.4.6",
@@ -5529,8 +5466,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.27.42.1",
-   "at": 946,
+   "in": "catena-matthew.MAT.27.42.3",
+   "at": 739,
    "text": "Is 50:6",
    "start": "ISA.50.6",
    "end": "ISA.50.6",
@@ -5538,8 +5475,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.27.42.1",
-   "at": 1032,
+   "in": "catena-matthew.MAT.27.42.3",
+   "at": 825,
    "text": "Ps 22:16",
    "start": "PSA.22.16",
    "end": "PSA.22.16",
@@ -5655,8 +5592,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.28.1.3",
-   "at": 643,
+   "in": "catena-matthew.MAT.28.1.4",
+   "at": 156,
    "text": "Matt 5:17",
    "start": "MAT.5.17",
    "end": "MAT.5.17",
@@ -5700,8 +5637,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.28.10.1",
-   "at": 1417,
+   "in": "catena-matthew.MAT.28.10.2",
+   "at": 805,
    "text": "John 3:2",
    "start": "JHN.3.2",
    "end": "JHN.3.2",
@@ -5718,8 +5655,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.28.16.1",
-   "at": 1381,
+   "in": "catena-matthew.MAT.28.16.2",
+   "at": 530,
    "text": "1 Cor 15:20",
    "start": "1CO.15.20",
    "end": "1CO.15.20",
@@ -5727,17 +5664,8 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.28.16.2",
-   "at": 1022,
-   "text": "John 21:14",
-   "start": "JHN.21.14",
-   "end": "JHN.21.14",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "catena-matthew.MAT.28.16.3",
-   "at": 315,
+   "at": 1108,
    "text": "Mark 16:14",
    "start": "MRK.16.14",
    "end": "MRK.16.14",
