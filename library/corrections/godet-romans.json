@@ -1,0 +1,110 @@
+{
+ "work": "godet-romans",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "Ood",
+   "to": "God"
+  },
+  {
+   "from": "Grod",
+   "to": "God"
+  },
+  {
+   "from": "Qod",
+   "to": "God"
+  },
+  {
+   "from": "Gk)d",
+   "to": "God"
+  },
+  {
+   "from": "Gk>d",
+   "to": "God"
+  },
+  {
+   "from": "Gkxl",
+   "to": "God"
+  },
+  {
+   "from": "Gh)d",
+   "to": "God"
+  },
+  {
+   "from": "Cfod",
+   "to": "God"
+  },
+  {
+   "from": "€rod",
+   "to": "God"
+  },
+  {
+   "from": "Bomans",
+   "to": "Romans"
+  },
+  {
+   "from": "Boman",
+   "to": "Roman"
+  },
+  {
+   "from": "Bome",
+   "to": "Rome"
+  },
+  {
+   "from": "Borne",
+   "to": "Rome"
+  },
+  {
+   "from": "Eome",
+   "to": "Rome"
+  },
+  {
+   "from": "&om",
+   "to": "from"
+  },
+  {
+   "from": "fix)m",
+   "to": "from"
+  },
+  {
+   "from": "fix>m",
+   "to": "from"
+  },
+  {
+   "from": "&ct",
+   "to": "fact"
+  },
+  {
+   "from": "o£",
+   "to": "of"
+  },
+  {
+   "from": "£ph.",
+   "to": "Eph."
+  },
+  {
+   "from": "itsel£ ",
+   "to": "itself. "
+  },
+  {
+   "from": "Jlesh",
+   "to": "flesh"
+  },
+  {
+   "from": " hy ",
+   "to": " by "
+  },
+  {
+   "from": "tJie",
+   "to": "the"
+  },
+  {
+   "from": "wiU",
+   "to": "will"
+  },
+  {
+   "from": "shaU",
+   "to": "shall"
+  }
+ ]
+}

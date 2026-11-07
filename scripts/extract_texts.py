@@ -40,12 +40,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # The verse a homily or tractate opens on, as its heading prints it.
 # "John i. 6", "John i. 28, 29", "John i. 35–37", "Chapter I. 33", "Chapter I. 32, 33", "Chapter I. 1–5",
-# "Rom. I. 1, 2", "Rom. III. 9–18",
+# "Rom. I. 1, 2", "Rom. III. 9–18", "Matt. V. 38, 39, 40.",
 # (or, for a tractate "on the same passage", the verses of the one before it).
 # "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX", "John xiii";
 # a stray full stop at the end ("Chapter XIII. 10–15.", "John xiii. 20 ."), "(continued)" after the
 # verses, and "and" before the next chapter ("Chapter XIX. 31–42, and XX. 1-9") are allowed.
-OPENS = re.compile(r"^(?:(?:John|Rom\.)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)(?:(?:[–-]|,\s*)(?P<v2>\d+))?"
+OPENS = re.compile(r"^(?:(?:John|Rom\.|Matt\.)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)"
+                   r"(?:(?:[–-]|,\s*)(?:\d+,\s*)*(?P<v2>\d+))?"
                    r"(?:;\s*(?P<ch2>[ivxl]+)\.\s+(?P<e>\d+)(?:[–-](?P<f>\d+))?)?"
                    r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"
                    # and on into the next chapter: "Chapter II. 23–25; III. 1–5"
@@ -53,6 +54,11 @@ OPENS = re.compile(r"^(?:(?:John|Rom\.)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)
                    r"(?:(?:;|,?\s+and)\s*(?P<CH2>[IVXL]+)(?:\.\s+(?P<c>\d+)(?:[–-](?P<d>\d+))?)?)?"
                    # or a whole chapter: "Chapter IX"
                    r"|Chapter\s+(?P<WH>[IVXL]+)\.?|John\s+(?P<wh>[ivxl]+)\.?)(?:\s*\(continued\))?\s*\.?$")
+# A page whose heading misprints its verses, or prints none, with the heading read
+# from the Gospel words the homily prints under it: Chrysostom on Matthew, Homily
+# XXXVII is headed "Matt. X. 7, 8, 9." over Matthew 11:7-9, and Homily LXXIV has
+# no verse heading over Matthew 23:29 (its first footnote names the verse).
+HEADING_FIX = {"npnf110.iii.XXXVII.html": "Matt. XI. 7, 8, 9.", "npnf110.iii.LXXI.html": "Matt. XXIII. 29."}
 # A tractate on the passage of the one before it: "on the same passage.", "again on the same passage."
 SAME = re.compile(r"^(?:again\s+)?on the same passage\.?$", re.I)
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13.",
@@ -114,6 +120,10 @@ def derive():
                 same = True
                 continue
             o = OPENS.match(words) or (before if chapter is None else None)
+            if chapter is None and source in HEADING_FIX and number is not None and words != title:
+                o = OPENS.match(HEADING_FIX[source])
+            elif o and source in HEADING_FIX:
+                o = None
             if o and book and chapter is None:
                 chapter = start_chapter = find_refs.scripture.roman(o["ch"] or o["CH"] or o["WH"] or o["wh"])
                 if o["WH"] or o["wh"]:
