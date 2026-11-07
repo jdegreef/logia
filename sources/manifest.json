@@ -5157,6 +5157,15 @@
    "kind": "digital",
    "download_sha256": "887d0f24ed776cd726ea04497407d0f238d2106089812f3a362b0040753eb79c",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/bengel-romans/gnomonofthenewte00benguoft.txt",
+   "work": "bengel-romans",
+   "url": "https://archive.org/stream/gnomonofthenewte00benguoft/gnomonofthenewte00benguoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "8ada21d36047cc38ee5e64e8208e8bd8a1f727f35dd929b76a382871fa1bccc8",
+   "extract": "Characters 0-565433 of the scan's full text (the pages quoted, with a margin)."
   }
  ]
 }
