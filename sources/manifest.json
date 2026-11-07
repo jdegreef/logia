@@ -5013,6 +5013,150 @@
    "kind": "digital",
    "download_sha256": "4ba64856187bbcc7dc2b5f9aacf2b13a4a13729d5316bcae0cf0e8159b359187",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.ii.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "63c61cadaa6d97ccaeb6ea8f1f02dda1402d21c816848b399ba22d54d8f01f9e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.iii.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "79b84caef0e56adb078b385b095b7781aea3257bcfabe668897062997ea9f005",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.iv.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "1eb3cd2aa23dc82dd6ad0a29aa9cb4bb67de733e3b89d123e7292a14ca542078",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.v.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "30167de7d4412f405c967e958c690533c42ff80dee69a0d6b3e711f7b86d2e54",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.vi.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "482b932de0491f15d94cca3089303a9f840bc780e717138b70432a05fb03a037",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.vii.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "42810fa3ee4865ec99fc740ebe63b91241308e979ec3e7b9709f203cb15a1d19",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.viii.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0b16602cd5b8199602dd6e9678c673f28669ca2b164be90a02314acc5345de7b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.ix.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b4e20a12316c7cbfd1293d7c52556b95be189d210bd677768e13c88505b717e9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.x.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "792daae94821f9505ae5ca6f863a0166f4ca252f957bd0860f9abae2aade9c56",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.xi.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "291b7fa7e7b1af2c58dbfa154a968d115db397ae32e8ee2fa0586fd2df4d46aa",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.xii.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "9899be7032668d30b7aba6c960ac1e2e05370f732f65a96bce9d95cbeb2690c2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.xiii.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fd31d9577129e079b66c4baadaf77fd2573f36a485d510f165634c8231bbc252",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.xiv.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c1faa24c81f8aaa408a56b37452b0ec9a252bf9dea4ab36dd6de999dd1772d69",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.xv.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "fad2f3a6670ee013b211350d924cb42f883c07a76b58ea67efdcc29bdf1e3c1c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.xvi.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b608456d4febe59df85af2210b3879d99b1338f11cf338fdbadc4624c591a351",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-romans/mhc6.Rom.xvii.html",
+   "work": "henry-romans",
+   "url": "https://www.ccel.org/ccel/henry/mhc6.Rom.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "887d0f24ed776cd726ea04497407d0f238d2106089812f3a362b0040753eb79c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
