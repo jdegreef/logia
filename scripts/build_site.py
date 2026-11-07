@@ -1109,7 +1109,7 @@ def book_page(lib, book):
 <h1>{e(name)}</h1><p class="dek">{e(t("book.dek", n=total, done=done))}</p>{start}</header>
 <section class="lg-block"><h2>{e(t("book.chapters"))}</h2><ol class="lg-toc">{"".join(rows)}</ol></section>
 {passages}{who}"""
-    return page(lib, name, body, f"/{book.lower()}/", current="/read/",
+    return page(lib, name, body, f"/{book.lower()}/", current="/read/", noindex=not indexed(lib, f"/{book.lower()}/"),
                 ld=(breadcrumbs((t("read.title"), "/read/"), (name, f"/{book.lower()}/")),))
 
 
@@ -1322,8 +1322,10 @@ def chapter_page(lib, book, chapter, all_chapters):
     names = [c["short_name"] or c["author"] for c in commentaries]
     names = ", ".join(names[:3]) if len(names) <= 3 else t("chapter.head_more", names=", ".join(names[:3]), n=len(names) - 3)
     head_title = t("chapter.head_title", book=name, chapter=chapter, names=names) if commentaries else None
+    # A chapter with no commentary is only the Bible text, which
+    # openwordbible.org publishes: it stays readable, out of search (indexed()).
     return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/", ld=(crumbs,), head_title=head_title,
-                description=description, scripts=("reader.js",), preload=(comm_url,) if comm_url else ()), panel, comm
+                description=description, noindex=not indexed(lib, chapter_url(book, chapter)), scripts=("reader.js",), preload=(comm_url,) if comm_url else ()), panel, comm
 
 
 # --- Verse pages --------------------------------------------------------------
@@ -1479,6 +1481,40 @@ def breadcrumbs_ld(items):
         for i, (name, path) in enumerate(items)]}, ensure_ascii=False).replace("</", "<\\/")
 
 
+def person_ld(author):
+    """schema.org Person for a commentator: their page, dates and tradition."""
+    out = {"@context": "https://schema.org", "@type": "Person", "name": author["name"],
+           "url": SITE_URL + f'/commentators/{author["id"]}/', "deathDate": str(author["died"])}
+    if re.match(r"\d{3,4}\s*[-–]", author["dates"]):      # "c. 347-407": the birth year is a guess
+        out["birthDate"] = str(born(author))
+    return out
+
+
+def work_ld(lib, wid):
+    """schema.org Book for a commentary: the edition Logia copies from."""
+    w = lib.works[wid]
+    return {"@type": "Book", "name": w["title"], "url": SITE_URL + f"/works/{wid}/", "bookEdition": w["edition"],
+            "datePublished": str(w["published"]), "inLanguage": LANG, "sameAs": w["full_text_url"],
+            "author": {"@type": "Person", "name": lib.author_of(wid)["name"]}}
+
+
+def verse_ld(lib, ref, path, voices, verse):
+    """schema.org data for a verse page: each excerpt printed on it in full
+    as a Quotation, by its commentator, from its edition."""
+    parts = []
+    for wid, cs in voices:
+        a = lib.author_of(wid)
+        creator = {k: v for k, v in person_ld(a).items() if k != "@context"}
+        for c in cs:
+            if ref_parts(c["start"])[2] != verse:
+                continue                    # printed in full on the verse it begins at
+            parts.append({"@type": "Quotation", "url": SITE_URL + path + "#" + c["id"],
+                          "text": opening_words(c, 60), "creator": creator, "isPartOf": work_ld(lib, wid),
+                          "isBasedOn": c["source_url"], "about": ref})
+    return {"@context": "https://schema.org", "@type": "WebPage", "name": ref, "url": SITE_URL + path,
+            "inLanguage": LANG, "isAccessibleForFree": True, "hasPart": parts}
+
+
 def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
     """A verse's page. cited_by is lib.cited_by for its whole chapter."""
     name = lib.books[book]["en"]
@@ -1534,8 +1570,8 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
              if i + 1 < len(pages_here) else "<span></span>"]
     owb_link = f'<a href="{OWB_SITE}{chapter_url(book, chapter)}" rel="noopener">Open Word Bible</a>'
     chapter_name = f"{name} {chapter}"
-    crumbs = [("Logia", "/"), (name, f"/{book.lower()}/"), (chapter_name, chapter_url(book, chapter)),
-              (ref, verse_url(book, chapter, verse))]
+    crumbs = breadcrumbs((name, f"/{book.lower()}/"), (chapter_name, chapter_url(book, chapter)),
+                         (ref, verse_url(book, chapter, verse)))
     body = f"""
 <article class="lg-verse">
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · <a href="{chapter_url(book, chapter)}">{e(t("chapter.eyebrow", chapter=chapter))}</a> · {e(lib.chapter_title(book, chapter))}</p>
@@ -1548,14 +1584,15 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 {cited_html}{whole_html}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
 <p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
 <nav class="lg-turns" aria-label="{e(t("verse.previous"))} / {e(t("verse.next"))}">{"".join(turns)}</nav>
-</article>
-<script type="application/ld+json">{breadcrumbs_ld(crumbs)}</script>"""
-    shown = names if len(names) <= 3 else names[:3]
-    title_names = name_list(shown) if len(names) <= 3 else t("verse.title_more", names=", ".join(shown), n=len(names) - 3)
+</article>"""
+    # Up to four names fit a title; "and 1 more" would be longer than the name.
+    shown = names if len(names) <= 4 else names[:3]
+    title_names = name_list(shown) if len(names) <= 4 else t("verse.title_more", names=", ".join(shown), n=len(names) - 3)
     description = (t("verse.description", ref=ref, text=snippet(text, 16), names=name_list(names)) if text
                    else t("verse.description_gap", ref=ref, names=name_list(names)))
     return page(lib, t("verse.title", ref=ref, names=title_names), body, verse_url(book, chapter, verse),
-                current="/read/", description=description)
+                current="/read/", description=description,
+                ld=(verse_ld(lib, ref, verse_url(book, chapter, verse), voices, verse), crumbs))
 
 
 def chapter_verse_nav(lib, book, chapter, verses):
@@ -1956,8 +1993,7 @@ def author_page(lib, author):
 <dl class="lg-facts-card">{dl}</dl></div>
 <section class="lg-block"><h2>{e(t("commentators.comments_on", name=author["name"]))}</h2>{excerpt_list(lib, comments, show_work=len(works) > 1)}</section>"""
     books = " · ".join(lib.books[b]["en"] for b in covered)
-    person = {"@context": "https://schema.org", "@type": "Person", "name": author["name"],
-              "url": SITE_URL + f'/commentators/{author["id"]}/', "description": author["bio"].split("\n\n")[0]}
+    person = {**person_ld(author), "description": author["bio"].split("\n\n")[0]}
     crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (author["name"], f'/commentators/{author["id"]}/'))
     return page(lib, author["name"], body, f'/commentators/{author["id"]}/', current="/commentators/",
                 head_title=t("commentators.head_title", name=author["name"], books=books) if books else None,
@@ -2916,6 +2952,104 @@ def open_data_page(lib, files):
 
 # --- Build --------------------------------------------------------------------
 
+# --- For search engines and answer engines ------------------------------------
+
+def indexed(lib, path):
+    """Whether a page is for search engines: every page but a book or a
+    chapter with no commentary, which is only the Open Word Bible's text."""
+    m = re.fullmatch(r"/([0-9a-z]{3})/(?:(\d+)/)?", path)
+    if not m or m[1].upper() not in lib.books:
+        return True
+    cov = lib.coverage()
+    book = m[1].upper()
+    return (book, int(m[2])) in cov if m[2] else any(b == book for b, _c in cov)
+
+
+# The crawlers of the answer engines, named so that robots.txt says plainly
+# they are welcome: Logia's data is CC0 and its texts are in the public domain.
+AI_CRAWLERS = ("GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User",
+               "PerplexityBot", "Google-Extended", "Applebot-Extended", "CCBot")
+
+
+def robots_txt():
+    # One group: a crawler named in a group of its own would follow only that group.
+    named = "".join(f"User-agent: {name}\n" for name in ("*",) + AI_CRAWLERS)
+    return f"{named}Allow: /\nDisallow: /signed-in/\nDisallow: /saved/\n\nSitemap: {SITE_URL}/sitemap.xml\n"
+
+
+def git_dates():
+    """{path in the repository: the date of the last commit that changed it},
+    or {} where the history is not all here (a shallow clone), since a date
+    taken from a partial history would be wrong."""
+    import subprocess
+    try:
+        shallow = subprocess.run(["git", "rev-parse", "--is-shallow-repository"], cwd=ROOT,
+                                 capture_output=True, text=True, check=True).stdout.strip()
+        if shallow != "false":
+            return {}
+        log = subprocess.run(["git", "log", "--format=%x00%cs", "--name-only", "--", "library", "bible"], cwd=ROOT,
+                             capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return {}
+    dates, when = {}, None
+    for line in log.splitlines():
+        if line.startswith("\0"):
+            when = line[1:]
+        elif line and when:
+            dates.setdefault(line, when)
+    return dates
+
+
+def last_changed(lib, path, dates):
+    """When the text of a Bible page last changed: its chapter of the Bible
+    or the commentary on its book (None for other pages)."""
+    m = re.fullmatch(r"/([0-9a-z]{3})/(\d+)/(?:\d+/)?", path)
+    if not dates or not m or m[1].upper() not in lib.books:
+        return None
+    book = m[1].upper()
+    files = [f"bible/owb/en/{book}.{m[2]}.json"] + [f"library/comments/{w}/{book}.json" for w in lib.works]
+    return max((dates[f] for f in files if f in dates), default=None)
+
+
+def sitemap_xml(lib, pages):
+    dates = git_dates()
+    rows = []
+    for p in pages:
+        if not indexed(lib, p):
+            continue
+        when = last_changed(lib, p, dates)
+        rows.append(f"<url><loc>{SITE_URL}{p}</loc>{f'<lastmod>{when}</lastmod>' if when else ''}</url>\n")
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + "".join(rows) + "</urlset>\n")
+
+
+def llms_txt(lib):
+    """/llms.txt: what Logia is and how its pages are addressed, for answer
+    engines (llmstxt.org). Every line comes from the catalog or the library."""
+    cov = lib.coverage()
+    books = [b for b in lib.books if any(x == b for x, _c in cov)]
+    L = CATALOG["llms"]
+    lines = ["# Logia", "", f"> {t('site.description')}", "",
+             t("llms.holds", excerpts=f"{len(lib.comments):,}", works=len(lib.works), authors=len(lib.authors),
+               books=name_list([lib.books[b]["en"] for b in books])), "", L["rules"], "",
+             f"## {L['addresses']}", ""]
+    lines += [f"- {SITE_URL}{path}: {text}" for path, text in L["address_list"]]
+    lines += ["", f"## {L['books']}", ""]
+    for b in books:
+        n = sum(1 for x, _c in cov if x == b)
+        lines.append(f"- [{lib.books[b]['en']}]({SITE_URL}/{b.lower()}/): "
+                     + t("llms.book", n=n, chapters=lib.books[b]["chapters"]))
+    lines += ["", f"## {L['commentators']}", ""]
+    for a in lib.ordered_authors():
+        lines.append(f"- [{a['name']}]({SITE_URL}/commentators/{a['id']}/) ({a['dates']}), {a['tradition']}")
+    lines += ["", f"## {L['guides']}", ""]
+    lines += [f"- [{g['title']}]({SITE_URL}{g['path']}): {g['description']}" for g in guides()]
+    lines += ["", f"## {L['more']}", ""]
+    lines += [f"- [{text}]({SITE_URL}{path})" for path, text in L["more_list"]]
+    lines += ["", f"## {L['cite']}", "", L["cite_how"], ""]
+    return "\n".join(lines)
+
+
 def write(rel, text):
     path = os.path.join(SITE, rel.strip("/"), "index.html") if not rel.endswith((".svg", ".xml", ".txt", ".html")) \
         else os.path.join(SITE, rel.strip("/"))
@@ -3022,10 +3156,9 @@ def build():
     for book, chapter in sorted(lib.coverage()):
         with open(os.path.join(SITE, "data", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
             json.dump(chapter_file(lib, book, chapter), f, ensure_ascii=False, separators=(",", ":"))
-    write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
-          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          + "".join(f"<url><loc>{SITE_URL}{p}</loc></url>\n" for p in pages) + "</urlset>\n")
-    write("/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+    write("/sitemap.xml", sitemap_xml(lib, pages))
+    write("/robots.txt", robots_txt())
+    write("/llms.txt", llms_txt(lib))
     print(f"site/: {len(pages)} pages ({len(lib.chapters)} chapters), {len(lib.works)} works, "
           f"{len(lib.authors)} commentators, {len(lib.comments)} excerpts")
 
