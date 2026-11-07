@@ -2,6 +2,7 @@
 
     python3 -m unittest discover -s tests -t .
 """
+import html
 import io
 import json
 import os
@@ -619,7 +620,14 @@ class Site(unittest.TestCase):
                 for w in lib.voices_on[build_site.ref_parts(x["focus"])]:
                     c = build_site.first_on(lib, {w}, x["focus"])
                     self.assertIn(build_site.excerpt_href(lib, c), text)
+            for grp in g.get("groups", []):
+                for x in grp["terms"]:
+                    self.assertIn(f"<dt>{html.escape(x['term'], quote=True)}</dt>", text)
+                    if x.get("link"):
+                        where = os.path.join(build_site.SITE, x["link"].strip("/"), "index.html")
+                        self.assertTrue(os.path.isfile(where), x["link"])
         self.assertIn('href="/jhn/traditions/"', self.read(os.path.join("jhn", "index.html")))
+        self.assertIn('href="/glossary/"', self.read(os.path.join("jhn", "index.html")))
 
     def test_a_chapter_page_links_to_its_verse_pages(self):
         text = self.read(os.path.join("jhn", "3", "index.html"))

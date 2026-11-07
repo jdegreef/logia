@@ -1,0 +1,231 @@
+{
+  "id": "glossary",
+  "path": "/glossary/",
+  "book": "JHN",
+  "status": "ai_draft",
+  "reviewed_by": null,
+  "title": "A glossary for reading the commentators",
+  "head_title": "Glossary: words in the commentaries on John explained",
+  "description": "The words the church fathers, Reformers and later commentators use on John that a reader today may not know, from Arians and the Dispensation to the Paraclete, each with where the commentators use it.",
+  "dek": "Words the commentators use that a reader today may not know: names of the heresies they answer, the kinds of books they wrote, and the words of John's own Gospel they explain.",
+  "intro": [
+    "Each entry says briefly what a word means as the commentators use it, then counts the excerpts in Logia in which it appears and links to the first of them, so the word can be read where it is used."
+  ],
+  "groups": [
+    {
+      "title": "Words from John's Gospel",
+      "terms": [
+        {
+          "term": "The Word (Logos)",
+          "match": "\\bLogos\\b|\\bthe Word\\b",
+          "see": "JHN.1.1",
+          "text": "John's name for the Son of God before he became man (John 1:1–14). Logos is the Greek for “word” or “reason”; the commentators often explain why John chose it."
+        },
+        {
+          "term": "Only-begotten",
+          "match": "(?i)only[- ]begotten",
+          "see": "JHN.1.14",
+          "text": "The older English rendering of the word John uses for the Son's unique relation to the Father (John 1:14, 1:18, 3:16), which newer translations give as “one and only”."
+        },
+        {
+          "term": "Paraclete, Comforter",
+          "match": "\\bParaclete\\b|\\bComforter\\b",
+          "see": "JHN.14.16",
+          "text": "John's name for the Holy Spirit in Jesus' last discourse (John 14–16), a Greek word for one called to stand beside another: helper, advocate, comforter."
+        },
+        {
+          "term": "Sign",
+          "match": "(?i)\\bsigns?\\b",
+          "see": "JHN.2.11",
+          "text": "John's word for Jesus' miracles, which point beyond themselves to who he is.",
+          "link": "/jhn/signs/",
+          "link_label": "The seven signs"
+        },
+        {
+          "term": "The hour",
+          "match": "(?i)\\b(?:mine|my|his) hour\\b",
+          "see": "JHN.2.4",
+          "text": "The time of Jesus' death and glorifying, which John says again and again “had not yet come” until the night before the cross (John 12:23, 13:1, 17:1)."
+        },
+        {
+          "term": "Glorify, glorification",
+          "match": "(?i)\\bglorif",
+          "see": "JHN.17.1",
+          "text": "In John, the showing of God's glory, above all in Jesus' death, resurrection and return to the Father."
+        },
+        {
+          "term": "The world",
+          "match": "(?i)\\bthe world\\b",
+          "see": "JHN.3.16",
+          "text": "In John, both everything God made and loves (John 3:16), and humanity turned away from God (John 15:18–19). Commentators often explain which is meant."
+        },
+        {
+          "term": "Feast of Tabernacles",
+          "match": "\\bTabernacles\\b",
+          "see": "JHN.7.2",
+          "text": "The autumn feast of booths, when Israel recalled its years in the wilderness; the setting of John 7–8."
+        },
+        {
+          "term": "Feast of Dedication",
+          "match": "\\bDedication\\b|\\bEncaenia\\b",
+          "see": "JHN.10.22",
+          "text": "The winter feast, now called Hanukkah, recalling the cleansing of the Temple in 164 BC; the setting of John 10:22–39. Some older writers call it the Encaenia."
+        },
+        {
+          "term": "Sanhedrin, council",
+          "match": "\\bSanhedrin\\b",
+          "see": "JHN.11.47",
+          "text": "The Jewish high council in Jerusalem, led by the high priest, which met to plan Jesus' death (John 11:47–53)."
+        }
+      ]
+    },
+    {
+      "title": "Teaching and the controversies the commentators answer",
+      "terms": [
+        {
+          "term": "Incarnation",
+          "match": "\\bIncarnation\\b",
+          "see": "JHN.1.14",
+          "text": "The Son of God becoming man, “the Word became flesh” (John 1:14)."
+        },
+        {
+          "term": "Dispensation, Economy",
+          "match": "\\bDispensation\\b|\\bEconomy\\b",
+          "see": "JHN.1.14",
+          "text": "In the Fathers' translators, God's ordering of salvation, and especially the Incarnation: the Son's taking flesh and all he did in it."
+        },
+        {
+          "term": "Consubstantial, of one substance",
+          "match": "(?i)consubstantial|one substance",
+          "see": "JHN.10.30",
+          "text": "The word of the Nicene Creed (AD 325) for the Son's being the same in being as the Father, which the commentators defend against the Arians."
+        },
+        {
+          "term": "Arians",
+          "match": "\\bArian",
+          "see": "JHN.1.1",
+          "text": "Followers of Arius, a priest of Alexandria (died 336), who taught that the Son was made by the Father and was not God as the Father is. The Council of Nicaea condemned the teaching; Augustine and Chrysostom answer it often."
+        },
+        {
+          "term": "Sabellians",
+          "match": "\\bSabelli",
+          "see": "JHN.10.30",
+          "text": "Followers of Sabellius (3rd century), who taught that Father, Son and Spirit are three names or modes of one person, not three persons."
+        },
+        {
+          "term": "Manichees",
+          "match": "\\bManich",
+          "see": "JHN.1.3",
+          "text": "Followers of Mani (died 274/277), who taught that the world comes from two first principles, good and evil. Augustine was one before his conversion and answers them often."
+        },
+        {
+          "term": "Pelagians",
+          "match": "\\bPelagian",
+          "see": "JHN.6.44",
+          "text": "Followers of Pelagius (died after 418), who taught that people can keep God's law and be good without the help of grace. Augustine wrote against them in his last years."
+        },
+        {
+          "term": "Donatists",
+          "match": "\\bDonatist",
+          "see": "JHN.1.33",
+          "text": "A separated church in North Africa in Augustine's day, which held that sacraments given by unworthy clergy were invalid. Augustine answers them in his tractates."
+        },
+        {
+          "term": "Sacrament",
+          "match": "(?i)\\bsacrament",
+          "see": "JHN.6.53",
+          "text": "A rite of the church through which, Christians believe, God gives grace, such as baptism and the Eucharist. The churches count and explain the sacraments differently.",
+          "link": "/jhn/traditions/",
+          "link_label": "Where the traditions read John differently"
+        },
+        {
+          "term": "Election, the elect",
+          "match": "(?i)\\belect(?:ion|ed)?\\b",
+          "see": "JHN.6.37",
+          "text": "God's choosing of those he saves. Augustine, Aquinas, Calvin and the Reformed tradition explain it differently from others; see where the traditions read John differently.",
+          "link": "/jhn/traditions/",
+          "link_label": "Where the traditions read John differently"
+        }
+      ]
+    },
+    {
+      "title": "Kinds of writing and the people who wrote",
+      "terms": [
+        {
+          "term": "The Fathers, patristic",
+          "match": "\\bFathers\\b|\\bpatristic",
+          "see": null,
+          "text": "The teachers of the early church, roughly from the end of the first century to the eighth, among them Chrysostom and Augustine. Patristic means “of the Fathers”.",
+          "link": "/commentators/era/early-church/",
+          "link_label": "John in the early church"
+        },
+        {
+          "term": "Homily",
+          "match": "(?i)\\bHomil",
+          "see": null,
+          "text": "A sermon explaining a passage of Scripture. Chrysostom's work on John is 88 homilies preached in Antioch.",
+          "link": "/works/chrysostom/",
+          "link_label": "Chrysostom's homilies"
+        },
+        {
+          "term": "Tractate",
+          "match": "\\bTractate",
+          "see": null,
+          "text": "A treatise or sermon on a text. Augustine's 124 tractates on John were preached to his congregation at Hippo.",
+          "link": "/works/augustine/",
+          "link_label": "Augustine's tractates"
+        },
+        {
+          "term": "Catena",
+          "match": "\\bCatena\\b",
+          "see": null,
+          "text": "Latin for “chain”: a commentary made of quotations from earlier writers linked verse by verse. Aquinas's Catena Aurea is the “golden chain”.",
+          "link": "/works/catena/fathers/",
+          "link_label": "Who Aquinas quotes in the Catena"
+        },
+        {
+          "term": "Gloss",
+          "match": "\\bGloss\\b",
+          "see": null,
+          "text": "A note explaining a word or verse. In the Catena, “Gloss” is the Glossa Ordinaria, the standard medieval notes on the Bible.",
+          "link": "/works/catena/fathers/",
+          "link_label": "Who Aquinas quotes in the Catena"
+        },
+        {
+          "term": "Vulgate",
+          "match": "\\bVulgate\\b",
+          "see": null,
+          "text": "The Latin Bible of the Western church, largely the translation of Jerome (died 420), which the medieval Latin writers, Aquinas among them, quote."
+        },
+        {
+          "term": "Septuagint, LXX",
+          "match": "\\bSeptuagint\\b|\\bLXX\\b",
+          "see": null,
+          "text": "The Greek translation of the Old Testament made before Christ, which the New Testament and the Greek Fathers often quote."
+        },
+        {
+          "term": "Authorised Version",
+          "match": "Authori[sz]ed Version|\\bA\\. ?V\\.",
+          "see": null,
+          "text": "The King James Bible of 1611, the English text Henry, Ryle and Westcott comment on."
+        },
+        {
+          "term": "Puritans",
+          "match": "\\bPuritan",
+          "see": null,
+          "text": "English Protestants of the 1500s and 1600s who sought a further reform of the Church of England; Matthew Henry grew up among their heirs.",
+          "link": "/commentators/era/1700s/",
+          "link_label": "John in the age of the Puritans"
+        },
+        {
+          "term": "Pietism",
+          "match": "\\bPietis",
+          "see": null,
+          "text": "A movement in German Lutheranism from the late 1600s that stressed personal faith, holy living and the study of Scripture; Bengel was among its scholars.",
+          "link": "/commentators/bengel/",
+          "link_label": "Bengel"
+        }
+      ]
+    }
+  ]
+}
