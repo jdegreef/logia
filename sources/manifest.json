@@ -5193,6 +5193,258 @@
    "kind": "scan",
    "download_sha256": "8a14d561d0e1f176b1165e95c129d6209d3e90cbae7dec9e9c730e9abb797c00",
    "extract": "Characters 7470-1215179 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.ii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "b6caecb7c72d8237aaaa8acf13111647f40847ad161be99d77b341afe833c5be",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.iii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cec0395c114305991f0f80df593128eadf61bab144a887089286027a72fa005c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.iv.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7ddd69b8bd392d69d269a04854b22b2870bdce95d94132c9baba0eff090bcf43",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.ix.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8e69625588c483c135228cb7a48cf3f8fda8f423f16d132f61e145bfd9e93ee1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.v.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "50460c64173d315e54fdd30c9c8a38b8444487dc1ca9ed61a63c2057e6fc18d3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.vi.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4f8103d49e8a786d6523991c8b9d1fe980422b0b8eac07429044b5956c192141",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.vii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "e8ccc2e4fc1e4b878b87f4e4ac8d9dfb95c7dfbe1f4d8008bca71bf72412761b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.viii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c57e610d2bf77c8eced973dca419dbe5398d470ef683c2bb72deef9daa4129f6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.x.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "355dc83c17eef9396732a5234d822bcc387bd30b3ce6892f8a04dfee7f1a1054",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xi.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2e617c1e51bcd923d9c7592a4a33ffd84d510180f2c221311d40f4168bc49994",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "96a8c118709899250064dbd8f21cfa54001a846caa6dc5dae95e25ea4d3384b5",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xiii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "4fb963b88259251835d5ae99b138eec26b8dcfede009ccef94f751f98d5cadd2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xiv.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "6c33d71142e15bee124e0f3b74dbf91b090d8d217b0bf0ed9520035195239a61",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xix.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7bcade9ae3bfe879273b28e0269236e667a84ac0a247b31073b4ed60389d53a7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xv.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bc841aa29f18df6bcd78bd302eaa21086441dcac988a998e88e2c1bf8d7d0f0b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xvi.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d6fec276e6cb6712b97f7cd717cda071eb435b09d69467160026f1ca711cfba3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xvii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "f994a173306a0e6d085462c643b66f139728778d7e8c9d7415cfbded80eacb75",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xviii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "41bca188ec4b6d06358653bc1a1fda1587d5fe3f9772eb12716a1615717f6432",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xx.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "5c997effb825eea43d5aff7a7bdb427df6d47550a7094123f6ad029b8f4e2895",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxi.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c7f399c36ecd6a1ada85a3e3b483f85abd27901d9e818710c2a95873fec8b69c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "7c515ecd43cbe1c89eb2ce8cad27a38db566642dd873e0a383508ea97346136b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxiii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ca518a0c3ca580159906a87467617bc7c4b42cfc339f3ac225e660016f68fc50",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxiv.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8eef2a8b0d76e85d473203bfe23876f8b972733b2d06fa9a0495400100833a0e",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxix.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "af745a2ea62003a31e68eedbc6ae08bd4bafd43dc8919c9f9a10e09448ab82ac",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxv.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "d482b7a38cd227823c276ead6fdebc69b9ce9c02a1a4354257afcd7d47de4cd6",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxvi.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8d096c8bba4aaa28dbc4de85b311361ded375d71725bcce1051b07b2de2b6d55",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxvii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bcc07204d0bcc10193b2176ff28849ea0456cdcce7bda3c02b22f9b1b00f71b8",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/henry-matthew/mhc5.Matt.xxviii.html",
+   "work": "henry-matthew",
+   "url": "https://www.ccel.org/ccel/henry/mhc5.Matt.xxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "24fcb71ea1de4bbed993dadcdae3855a18c6491dbc8c6e05c4dc09bd1d04f7ef",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
