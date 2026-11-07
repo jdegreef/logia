@@ -5445,6 +5445,258 @@
    "kind": "digital",
    "download_sha256": "24fcb71ea1de4bbed993dadcdae3855a18c6491dbc8c6e05c4dc09bd1d04f7ef",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.i.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.i.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "97168947cd93040c39a13cb7f8b196c34a9fc242adb1f033384b105a75a25d18",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.ii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.ii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "832f729b07fac7d068209c469b70b0ac8f815bb1e30ff8683cf08b842645ba13",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.iii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.iii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "3cb904d91cc8a048f2b5239265642a756b54f2d1cb46d1c4bf967a5c10feac6f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.iv.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.iv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2b18b774fa0f36b033ac635a8c85bbf26808c2a8125fd7d131f11ef4c1a5631a",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.ix.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.ix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "70e016c9dfc60c6a01de40ab237f8e320b46c888d3ebf131c3fb43c6a0c69e1d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.v.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.v.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0eee16bb4f0935c2eeabee9faec988cdfc8927394782611a82dfe35556b960a1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.vi.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.vi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ef29070d8815eea3329e56ff7267e9a5b5294337d39f5ff0cb305dcefba0ad5d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.vii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.vii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dc9b31107516c999a228fac1ed5047057ab35d9045e5a39c438fd53afbfcd8e3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.viii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.viii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "80d0e7b91cdc56fd17f5aaad8b7f1a78058115266bf7fc1b46b6da769b187cc0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.x.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.x.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "728ddcd5a236e8ac95768d188d8f234d253430a2a344205d0899f2245d42dab9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xi.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "0220a8abec1209a36fe436f912b922a9106cd453f329cf19cef648acb6a10c1b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c7e11ed8459eda21435d8cad135df6ed1cc680bbc0e6c9927413b23925a09c9f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xiii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "2c5ffdd1081f36021bb5ae4d23dd99c4a007170cd50113b3e6a405475f27e55b",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xiv.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "ab1674c63934c11728e3e7c8aec7827900eb84b939d2fdce3956ff13f31ad1e2",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xix.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xix.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "210b583fc9e332873c3b5564ba397c8daef6990828c0af3ca9b61812f85a5717",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xv.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "8357061e9bf83a028f8593955906dee6b5cb533bd5fac002b523369ff714afd3",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xvi.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a190c2b983bd33b8f511437e67d581e9848395e6c568230b4f059be09a7b329c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xvii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a76fb7580c7df0a33ad982c02eee000fe57c601df4a7611f1252a35787486f03",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xviii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "cad93a3274cdb3e882c1dde2e92030239146061af0f06b70a514b6daffe75aad",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xx.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xx.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "c9d9cbf1be3528a028d8a52bb53509d362250dda0a2effc7315cb97ee43d6f30",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxi.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a70cfc3ce53fb9183c705ab319bdc3fb2e08dd2ca8d62b3de576e99a64afa5cf",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "bd67e20bc545b8a90cc60e76db695fa6dc9ca808f145f064e865a6965829ac24",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxiii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxiii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "03be9ff140f11fcf365036bdb4127ee870d29a8f09f28ceaedf8c69692e4b683",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxiv.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxiv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "93a65d2103a481754eaf39ac550e747c9a217c5a703e0a405b2b76f15a43ecde",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxv.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxv.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "dd2e3c545559cb9602109a7f6ffff12a70be9b2dfc9d08ee26317a72639efc67",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxvi.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxvi.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "db34d0eadc6524a3b14dc728693ba5292ef894ff84c42881807113427755a0fc",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxvii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxvii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "63e090abef62b7a60feeeef9397ffcd123b01737f7b12f4294de903f3ecb43a4",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/catena-matthew/catena1.ii.xxviii.html",
+   "work": "catena-matthew",
+   "url": "https://www.ccel.org/ccel/aquinas/catena1.ii.xxviii.html",
+   "retrieved": "2026-11-07",
+   "kind": "digital",
+   "download_sha256": "a7668e1b1d29cab4c0293065e5282b133d465bf302805c1903f63dab6d3b6dff",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
   }
  ]
 }
