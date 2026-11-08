@@ -1,0 +1,26 @@
+name: Report a misreading
+description: A word in an excerpt that the scanner read wrong.
+title: "Misreading: "
+labels: ["misreading"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Verse and commentator
+      description: For example, John 1:1, Ryle.
+    validations:
+      required: true
+  - type: input
+    id: scan
+    attributes:
+      label: What Logia shows
+      description: The word or words as they appear on Logia.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: What the printed page says
+      description: As the page reads. A link to the scan page helps.
+    validations:
+      required: true

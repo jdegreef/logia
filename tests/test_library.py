@@ -254,7 +254,9 @@ class Site(unittest.TestCase):
         self.assertEqual([w["work_id"] for w in data["commentaries"]], [w["work_id"] for w in comm["commentaries"]])
         for short, full in zip(data["commentaries"], comm["commentaries"]):
             self.assertNotIn("excerpt", json.dumps(short))
-            self.assertEqual(short["entries"], [{"start": x["start"], "end": x["end"]} for x in full["entries"]])
+            self.assertEqual(short["entries"],
+                             [{"start": x["start"], "end": x["end"], "words": x["words"]} for x in full["entries"]])
+            self.assertTrue(all(x["words"] == len(x["excerpt"].split()) for x in full["entries"]))
             self.assertTrue(all(x["excerpt"] for x in full["entries"]))
         self.assertIn("citedBy", comm)
 
@@ -548,6 +550,21 @@ class Site(unittest.TestCase):
         self.assertIn('"@type":"Dataset"', text)
         self.assertIn('href="/open-data/"', self.read(os.path.join("about", "index.html")))
 
+    def test_the_about_page_shows_real_examples_from_the_library(self):
+        text = self.read(os.path.join("about", "index.html"))
+        lib = build_site.Library()
+        # The excerpt it follows through the checks is quoted as copied.
+        c = lib.by_id[build_site.ABOUT_EXAMPLE]
+        lead = next(p for p in c["text"].split("\n\n") if p.strip())
+        self.assertIn(build_site.e(" ".join(lead.split()[:12])), text)
+        # Each correction it shows is a real pair from library/corrections/.
+        for work, wrong in build_site.ABOUT_FIXES:
+            self.assertIn(wrong, dict(lib.fixes[work]))
+            self.assertIn(f"<del>{build_site.e(wrong)}</del>", text)
+        for key in build_site.t("about.h"):
+            self.assertIn(f'id="{key}"', text)
+        self.assertIn(f'{len(lib.comments):,}', text)
+
     def test_each_reading_has_a_page_and_the_readings_page_lists_them(self):
         readings = self.read(os.path.join("readings", "index.html"))
         for oid, _book, _start, _end, voices in build_site.occasions(build_site.Library()):
@@ -619,6 +636,14 @@ class Site(unittest.TestCase):
         lib = build_site.Library()
         labels = build_site.catena_labels(lib)
         self.assertGreater(len(labels["AUG."]), len(labels["BEDE."]))
+        # On the reader, each quotation's printed name is marked, both the
+        # John edition's "CHRYS." and the Matthew edition's "Jerome, ...:".
+        sp = build_site.catena_speakers("catena-matthew",
+                                        "Jerome, Ez, i. 5.: The face.\n\nRabanus: By this.\n\nThus: not a name.")
+        self.assertEqual([(x["at"], x["len"], x["who"]) for x in sp], [(0, 18, "jerome"), (30, 8, "rabanus")])
+        self.assertEqual(build_site.catena_speakers("chrysostom-matthew", "Jerome: x"), [])
+        self.assertTrue(all(x["who"] in build_site.CATALOG["catena"]["names"] for c in lib.comments
+                            for x in build_site.catena_speakers(c["work"], c["text"])))
         text = self.read(os.path.join("works", "catena", "fathers", "index.html"))
         self.assertIn(f'<span class="lg-bar-n">{len(labels["CHRYS."])}</span>', text)
         self.assertIn('href="/commentators/chrysostom/"', text)

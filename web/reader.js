@@ -39,10 +39,24 @@
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
   hiddenEras().forEach(function (e) { state.eras.delete(e); });
   // Whether a voice's card is open on the chosen verse (see commTab).
+  // A voice with nothing new since the verse before starts closed, while
+  // another voice has something new.
   function isOpen(work) {
     if (work in state.open) return state.open[work];
     if (fullExcerpts()) return true;
-    return works.filter(function (w) { return state.eras.has(w.era) && entriesFor(w, state.verse).length; }).length <= 2;
+    var shown = works.filter(function (w) { return state.eras.has(w.era) && entriesFor(w, state.verse).length; });
+    var fresh = shown.filter(function (w) { return !alsoBefore(w, state.verse); });
+    if (fresh.length && fresh.length < shown.length && alsoBefore(byId(work), state.verse)) return false;
+    return (fresh.length || shown.length) <= 2;
+  }
+  var byId = function (id) { return works.filter(function (w) { return w.work_id === id; })[0]; };
+  // The verse before this one in the text (past any the Bible leaves out).
+  function before(v) { var i = DATA.verses.indexOf(v); return i > 0 ? DATA.verses[i - 1] : null; }
+  // Whether everything a voice says on this verse was on the verse before:
+  // it comments on a passage the reader is stepping through (Calvin on 1:1-17).
+  function alsoBefore(w, v) {
+    var p = before(v), es = w ? entriesFor(w, v) : [];
+    return p !== null && es.length > 0 && es.every(function (e) { return e.start <= p; });
   }
   function level() { return Prefs ? Prefs.get("level") : "B"; }
 
@@ -117,15 +131,86 @@
         var n = works.filter(function (w) { return entriesFor(w, v).length; }).length;
         var label = n ? fmt(n === 1 ? U.verse_voices_one : U.verse_voices, { ref: REF(v), n: n }) : REF(v);
         out.push('<span class="cx-verse' + (v === state.verse ? " cx-on" : "") + (n ? " cx-has" : "") + (poem ? " cx-poem" : "") + '" data-v="' + v +
-          '" tabindex="0" role="button" aria-label="' + esc(label) + '"><span class="cx-vn">' + v + "</span>" +
-          (n ? '<span class="cx-vc" aria-hidden="true">' + n + "</span>" : "") + inner + "</span> ");
+          '" tabindex="0" role="button" aria-label="' + esc(label) + '" title="' + esc(heatTitle(v)) + '"><span class="cx-vn">' + v + "</span>" +
+          inner + "</span> ");
       });
     });
-    $("#text").innerHTML = out.join("");
+    $("#text").innerHTML = out.join("") + '<div class="cx-gutter" id="gutter"></div>';
     $("#text").classList.add("cx-ready");
+    drawGutter();
     document.querySelectorAll(".cx-levels button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.level === lv); });
     markTokens();
   }
+  // How much is written on a verse: every voice's excerpts that cover it.
+  function wordsOn(v) {
+    return works.reduce(function (n, w) {
+      return n + entriesFor(w, v).reduce(function (m, e) { return m + (e.words || 0); }, 0);
+    }, 0);
+  }
+  function heatTitle(v) {
+    var n = works.filter(function (w) { return entriesFor(w, v).length; }).length;
+    return n ? fmt(n === 1 ? U.heat_title_one : U.heat_title, { ref: REF(v), n: n, words: wordsOn(v).toLocaleString() }) : REF(v);
+  }
+  // Beside the text, a gold line darker where more is written on a verse
+  // and, further out, a bracket for each comment on a passage of three
+  // verses or more (Calvin, Henry and Ryle on Matthew 1:1-17); a bracket
+  // goes to its first verse. Drawn from where the verses fall on the page,
+  // so again when the text reflows.
+  function drawGutter() {
+    var g = $("#gutter"), box = $("#text");
+    if (!g || EMPTY) return;
+    var top0 = box.getBoundingClientRect().top;
+    var span = function (a, b) {
+      var first = box.querySelector('.cx-verse[data-v="' + a + '"]');
+      var lasts = box.querySelectorAll('.cx-verse[data-v="' + b + '"]');
+      if (!first || !lasts.length) return null;
+      var r1 = first.getClientRects(), r2 = lasts[lasts.length - 1].getClientRects();
+      if (!r1.length || !r2.length) return null;
+      return { top: r1[0].top - top0 + 3, bottom: r2[r2.length - 1].bottom - top0 - 3 };
+    };
+    var max = Math.max.apply(null, DATA.verses.map(wordsOn).concat([1]));
+    var h = "";
+    DATA.verses.forEach(function (v) {
+      var words = wordsOn(v), s = span(v, v);
+      if (!words || !s) return;
+      var r = words / max, lvl = r > 0.66 ? 3 : r > 0.33 ? 2 : 1;
+      h += '<i class="cx-heat cx-heat' + lvl + '" style="top:' + s.top + "px;height:" + Math.max(6, s.bottom - s.top) + 'px"></i>';
+    });
+    // One bracket for each passage, naming every voice that comments on it.
+    var spans = {};
+    works.forEach(function (w) {
+      w.entries.forEach(function (e) {
+        if (e.end - e.start < 2) return;
+        var k = e.start + "-" + e.end;
+        spans[k] = spans[k] || { a: e.start, b: e.end, names: [] };
+        var nm = w.short_name || w.author;
+        if (spans[k].names.indexOf(nm) < 0) spans[k].names.push(nm);
+      });
+    });
+    var lanes = [];
+    Object.keys(spans).map(function (k) { return spans[k]; })
+      .sort(function (x, y) { return x.a - y.a || (y.b - y.a) - (x.b - x.a); })
+      .forEach(function (p) {
+        var lane = 0;
+        while (lane < lanes.length && lanes[lane] >= p.a) lane++;
+        if (lane > 2) return;
+        lanes[lane] = p.b;
+        var s = span(p.a, p.b);
+        if (!s) return;
+        var label = fmt(U.passage, { names: p.names.join(", "), a: DATA.chapter + ":" + p.a, b: p.b });
+        h += '<button type="button" class="cx-brk cx-brk' + lane + '" data-v="' + p.a + '" style="top:' + s.top + "px;height:" +
+          (s.bottom - s.top) + 'px" title="' + esc(label) + '" aria-label="' + esc(label) + '"></button>';
+      });
+    g.innerHTML = h;
+  }
+  if (window.ResizeObserver) {
+    var lastW = 0;
+    new ResizeObserver(function (rs) {
+      var w = Math.round(rs[0].contentRect.width);
+      if (w !== lastW) { lastW = w; drawGutter(); }
+    }).observe($("#text"));
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { drawGutter(); });
   function markTokens() {
     document.querySelectorAll(".cx-w").forEach(function (el) {
       el.classList.toggle("cx-on", !!state.token && el.dataset.tok.split(" ").indexOf(state.token) >= 0);
@@ -248,10 +333,22 @@
   function paras(h) { return h.split(/\n\s*\n/).map(function (p) { return "<p>" + p.trim() + "</p>"; }).join(""); }
   // An excerpt's text with the Scripture it cites made into links
   // (library/citations, docs/references.md).
-  function linked(text, cites) {
+  // In a Catena excerpt, the name that opens each quotation (speakers, from
+  // catena_speakers in scripts/build_site.py) is set apart as it is printed.
+  function linked(text, cites, speakers) {
     var h = "", pos = 0;
-    (cites || []).slice().sort(function (a, b) { return a.at - b.at; }).forEach(function (c) {
+    (speakers || []).forEach(function (s) {
+      cites = (cites || []).filter(function (c) { return c.at + c.text.length <= s.at || c.at >= s.at + s.len; });
+    });
+    var marks = (cites || []).concat((speakers || []).map(function (s) { return { at: s.at, len: s.len, who: s.who }; }));
+    marks.sort(function (a, b) { return a.at - b.at; }).forEach(function (c) {
       if (c.at < pos) return;
+      if (c.who) {
+        var name = (U.fathers || {})[c.who] || "";
+        h += esc(text.slice(pos, c.at)) + '<span class="cx-speaker" title="' + esc(name) + '">' + esc(text.slice(c.at, c.at + c.len)) + "</span>";
+        pos = c.at + c.len;
+        return;
+      }
       var same = cites.filter(function (x) { return x.at === c.at; }).map(function (x) { return x.label; }).join(", ");
       var words = esc(text.slice(c.at, c.at + c.text.length));
       var ext = c.href && c.href.indexOf("http") === 0 ? ' target="_blank" rel="noopener"' : "";
@@ -317,8 +414,24 @@
       var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
       var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
         ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
-      return range + lemma + paras(linked(e.excerpt, e.cites)) + traced(e);
+      return range + lemma + paras(linked(e.excerpt, e.cites, e.speakers)) + traced(e);
     }).join("");
+  }
+  // Under a voice's name: how much it says here and where in the work, and
+  // for a Catena, the Fathers it quotes.
+  function facts(w, es, words) {
+    var bits = [fmt(es.length === 1 ? U.facts_one : U.facts, {
+      n: es.length, words: words.toLocaleString(), min: Math.max(1, Math.round(words / 230)) })];
+    var firsts = es.map(function (e) { return e.locus ? +e.locus.split(".")[0] : NaN; }).filter(function (n) { return !isNaN(n); });
+    if (firsts.length && Array.isArray(w.divisions) && w.divisions.length) {
+      var a = Math.min.apply(null, firsts), b = Math.max.apply(null, firsts);
+      bits.push(fmt(a === b ? U.facts_where : U.facts_where_range, { div: w.divisions[0], a: a, b: b }));
+    }
+    var who = [];
+    es.forEach(function (e) { (e.speakers || []).forEach(function (s) { if (who.indexOf(s.who) < 0) who.push(s.who); }); });
+    var names = who.map(function (k) { return (U.fathers || {})[k]; }).filter(Boolean);
+    var quoting = names.length ? '<div class="cx-quoting">' + esc(fmt(U.quoting, { names: names.join(", ") })) + "</div>" : "";
+    return '<div class="cx-facts">' + esc(bits.join(" · ")) + "</div>" + quoting;
   }
   function commTab() {
     var v = state.verse;
@@ -330,6 +443,7 @@
     if (COMM && shown.length > 1) {
       h += '<button type="button" class="cx-compare-btn" data-compare>' + ICON.columns + esc(U.compare) + "</button>";
     }
+    var shownOn = shown, fresh = shown.filter(function (w) { return !alsoBefore(w, v); });
     var any = false;
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
@@ -346,11 +460,17 @@
         // they want. With one or two voices, or "In full" chosen, all are open.
         var open = isOpen(w.work_id);
         var peek = es[0].excerpt.split(/\n\s*\n/)[0].split(/\s+/).slice(0, 48).join(" ");
+        var badge = fresh.length && fresh.length < shownOn.length
+          ? (alsoBefore(w, v)
+            ? '<span class="cx-also" title="' + esc(fmt(U.also_on_title, { ref: REF(before(v)) })) + '">' + esc(fmt(U.also_on, { ref: REF(before(v)) })) + "</span>"
+            : '<span class="cx-new">' + esc(U.new_here) + "</span>")
+          : "";
         h += '<section class="cx-card' + (open ? "" : " cx-shut") + '" id="c-' + w.work_id + '">' +
           '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
-          '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" +
+          '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" + badge +
           '<button type="button" class="cx-toggle" data-toggle="' + w.work_id + '" aria-expanded="' + open + '" aria-controls="cb-' + w.work_id +
           '" aria-label="' + esc(fmt(open ? U.hide_voice : U.show_voice, { name: w.author })) + '">' + ICON.chevron + "</button></div>" +
+          facts(w, es, words) +
           (open ? "" : '<button type="button" class="cx-peek" data-toggle="' + w.work_id + '">' + esc(peek) + "</button>") +
           '<div class="cx-body" id="cb-' + w.work_id + '"' + (open ? "" : " hidden") + ">" +
           '<div class="cx-work"><a href="' + w.work_url + '"><i>' + esc(w.title) + "</i></a> · " + esc(w.edition_short) + "</div>" +
@@ -588,6 +708,12 @@
   }
 
   $("#text").addEventListener("click", function (e) {
+    var brk = e.target.closest(".cx-brk");
+    if (brk) {
+      go(+brk.dataset.v); sheet("half");
+      keepInView(document.querySelector('.cx-verse[data-v="' + brk.dataset.v + '"]'));
+      return;
+    }
     var w = e.target.closest(".cx-w"), vs = e.target.closest(".cx-verse");
     if (!vs) return;
     var v = +vs.dataset.v;
