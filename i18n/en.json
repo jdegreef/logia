@@ -460,27 +460,168 @@
     "title": "About",
     "heading": "About Logia",
     "dek": "A free, open library of Christian commentary, set verse by verse beside Scripture.",
-    "steps": [
-      ["A public-domain edition", "A page scan on archive.org or a transcription on CCEL, published in 1930 or earlier."],
-      ["Its text, saved", "The page Logia copies from is kept in the repository, with its address and when it was fetched."],
-      ["Checked on every change", "A script finds each excerpt in its source: word for word, or in runs of six words for a scan."],
-      ["Misread letters, corrected", "Where a scan misread the printed page, the fix is a pair kept in the open data."],
-      ["Set beside its verse", "The excerpt appears on Logia beside the verse it comments on, linked to the full text."]
+    "stats": {
+      "excerpts": "excerpts",
+      "commentators": "commentators",
+      "works": "works",
+      "books": "books: {books}",
+      "fixes": "scan misreadings corrected"
+    },
+    "toc": "On this page",
+    "h": {
+      "what": "What it is",
+      "voices": "Who is in the library",
+      "library": "What's in the library",
+      "checked": "How excerpts are checked",
+      "bible": "The Bible text",
+      "languages": "Languages",
+      "open": "Open",
+      "cite": "Citing Logia",
+      "help": "Help build Logia",
+      "thanks": "With thanks",
+      "questions": "Questions"
+    },
+    "what": [
+      "Logia sets each verse of the Bible beside what the church has said about it, from the early church to the 1800s. It is free to read, free to share, and its data is open for anyone to build on, in the spirit of Sefaria's library of Jewish texts."
     ],
-    "fix": "A correction from {work}'s scan, one of {n}",
+    "example_label": "One verse, one voice",
+    "example_from": "From {title}, {year}.",
+    "example_whole": "Read the whole entry",
+    "example_more": "Read {ref} with {n} commentators",
+    "name_label": "The name",
+    "name_words": "ta logia tou theou",
+    "name_note": "These are the words of Romans 3:2 for “the oracles of God”, which the Open Word Bible renders “the very words of God”. Logia takes its name from them, and from Papias's lost *Exposition of the Logia of the Lord*, one of the first Christian commentaries.",
+    "name_more": "Read Romans 3:2 with its commentators",
+    "voices": "Logia takes no side where Catholic, Orthodox and Protestant readings differ. Each commentator's words are kept whole, even where they are harsh or dated: a note may explain, but nothing is cut silently.",
+    "traditions": "Traditions in the library so far",
+    "library_book": "Book",
+    "library_works": "Works",
+    "library_verses": "Verses with commentary",
+    "library_count": "{n} of {total}",
+    "recent": "Recently added",
+    "recent_row": "{title}, {year}",
+    "checked": "Every excerpt is copied from a public-domain edition and never rewritten. These are the five steps each one goes through, shown for one real excerpt.",
+    "steps": [
+      [
+        "A public-domain edition",
+        "A page scan on archive.org or a transcription on CCEL, published in 1930 or earlier."
+      ],
+      [
+        "Its text, saved",
+        "The page Logia copies from is kept in the repository, with its address and when it was fetched."
+      ],
+      [
+        "Checked on every change",
+        "A script finds each excerpt in its source: word for word, or in runs of six words for a scan."
+      ],
+      [
+        "Misread letters, corrected",
+        "Where a scan misread the printed page, the fix is a pair kept in the open data."
+      ],
+      [
+        "Set beside its verse",
+        "The excerpt appears on Logia beside the verse it comments on, linked to the full text."
+      ]
+    ],
+    "trail_title": "{name} on {ref}, step by step",
+    "trail_edition": "{edition}.",
+    "trail_saved": "{file}, fetched {date}.",
+    "trail_scan": "Found in its source in runs of six words, as a page scan.",
+    "trail_digital": "Found in its source word for word, as a transcription.",
+    "trail_fix": "The scan read “{a}”; the page reads “{b}”.",
+    "trail_nofix": "No misreadings in this one.",
+    "trail_placed": "Beside {ref}.",
+    "fixes_title": "Misreadings corrected, from four scans",
+    "fixes_work": "Work",
+    "fixes_scan": "The scan read",
+    "fixes_page": "The page reads",
+    "fixes_n": "Fixes in this work",
+    "fixes_all": "See every correction",
     "steps_note": "Every one of the {n} excerpts goes through these steps; {fixes} scan misreadings are corrected in all.",
-    "body": [
-      "## What it is",
-      "Logia sets each verse of the Bible beside what the church has said about it, from the early church to the 1800s. It is free to read, free to share, and its data is open for anyone to build on, in the spirit of Sefaria's library of Jewish texts.",
-      "The name comes from *ta logia tou theou*, “the oracles of God” (Romans 3:2), and from Papias's lost *Exposition of the Logia of the Lord*, one of the first Christian commentaries.",
-      "## How excerpts are checked",
-      "Every excerpt is copied from a public-domain edition, never rewritten, and the source text it came from is kept beside it. A script checks each excerpt against its source on every change: word for word for a transcription, and in runs of six words for a page scan, whose lines carry margin notes and running heads. Where a scan misread a letter (“Let ns” for “Let us”), the correction is listed openly and applied when the site is built.",
-      "## The Bible text",
-      "Logia reads the Open Word Bible, a CC0 translation from Hebrew and Greek with the reasoning behind every sentence. Logia never edits it: it is imported at a pinned version from the Open Word Bible's own repository.",
-      "## Languages",
-      "Logia starts in English. Each new language is translated from the best public-domain source, the original Greek, Latin or German where that is better than the English, and reviewed by native speakers before it is marked reviewed.",
-      "## Open",
-      "Logia's data and writing are CC0, its code is MIT, and everything is on GitHub."
+    "details": "The details",
+    "details_text": "Every excerpt is copied from a public-domain edition, never rewritten, and the source text it came from is kept beside it. A script checks each excerpt against its source on every change: word for word for a transcription, and in runs of six words for a page scan, whose lines carry margin notes and running heads. Where a scan misread a letter (“Let ns” for “Let us”), the correction is listed openly and applied when the site is built.",
+    "bible": [
+      "Logia reads the Open Word Bible, a CC0 translation from Hebrew and Greek with the reasoning behind every sentence. Logia never edits it: it is imported at a pinned version from the Open Word Bible's own repository."
+    ],
+    "languages": [
+      "Logia starts in English. Each new language is translated from the best public-domain source, the original Greek, Latin or German where that is better than the English, and reviewed by native speakers before it is marked reviewed."
+    ],
+    "open": [
+      [
+        "Data and writing",
+        "CC0",
+        "Copy, change and publish it, with no permission needed and no credit required."
+      ],
+      [
+        "Code",
+        "MIT",
+        "Build on the site's code, keeping its licence notice."
+      ],
+      [
+        "Bible text",
+        "CC0",
+        "The Open Word Bible, free in the same way."
+      ]
+    ],
+    "open_note": "The Greek and Hebrew word data and the cross-references carry their own licences, listed on the open data page.",
+    "github": "Everything on GitHub",
+    "cite": "To cite Logia as a whole:",
+    "citation": "Logia: a free library of Christian commentary. {url}",
+    "cite_note": "To quote one excerpt, use the Cite button beside it, which names the edition it was copied from.",
+    "help": "A script checks every excerpt, but people catch what scripts miss.",
+    "help_items": [
+      [
+        "Report a misreading",
+        "Seen a word the scanner got wrong? Tell us the verse and the word.",
+        "misreading.yml"
+      ],
+      [
+        "Suggest a commentary",
+        "Published in 1930 or earlier, with a scan or transcription online.",
+        "commentary.yml"
+      ],
+      [
+        "Offer to review a translation",
+        "When Logia adds a language, each translation is approved by a native speaker.",
+        "translation.yml"
+      ]
+    ],
+    "thanks": "Logia stands on the work of others.",
+    "thanks_scans": "Page scans of {works}.",
+    "thanks_texts": "Transcriptions of {works}.",
+    "thanks_owb": [
+      "The Open Word Bible",
+      "The Bible text."
+    ],
+    "thanks_sefaria": [
+      "Sefaria",
+      "The example of an open library of commentary, for Jewish texts."
+    ],
+    "hosts": {
+      "archive.org": "Internet Archive",
+      "www.ccel.org": "Christian Classics Ethereal Library"
+    },
+    "questions": [
+      [
+        "Why only books published in 1930 or earlier?",
+        "So that every text is in the public domain in the United States and free for anyone to copy. Most later commentaries are still under copyright. Each work's page records its edition and what is still to be confirmed for other countries."
+      ],
+      [
+        "Is the old wording changed?",
+        "No. Spelling, punctuation and the translator's English are kept as printed. Only plain misreadings by a scanner are fixed, and every fix is listed."
+      ],
+      [
+        "Is any of it written by AI?",
+        "No commentary is. Every excerpt is copied from its edition and checked against it by a script. Where Logia adds writing of its own, such as a guide or a biography, it is marked as a draft until a person reviews it."
+      ],
+      [
+        "Why isn't my favourite commentator here?",
+        "Logia adds one commentary at a time, and only from an edition published in 1930 or earlier with a readable scan or transcription. You can suggest one above."
+      ],
+      [
+        "Can I use Logia's text?",
+        "Yes. The commentaries are in the public domain and Logia's data is CC0, so you may copy them into a sermon, a class handout or an app without asking."
+      ]
     ]
   },
   "not_found": {

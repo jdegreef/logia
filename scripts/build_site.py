@@ -33,6 +33,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 from urllib.parse import quote
 
 import scripture
@@ -2582,40 +2583,247 @@ def chapter_file(lib, book, chapter):
         for w in lib.ordered_works(by_work)]}
 
 
-# The correction the About page shows, from library/corrections/.
-ABOUT_FIX = ("ryle", "Let ns")
+# The About page's real examples, read from the library: one excerpt
+# followed through the checks, the verse the name comes from, and a
+# correction from each of four scans (work, the scan's reading).
+ABOUT_EXAMPLE = "ryle.JHN.1.1.1"
+ABOUT_NAME_VERSE = "ROM.3.2"
+ABOUT_FIXES = (("ryle", "Let ns"), ("westcott", "which twos eternally"), ("bengel-romans", "of one mail"), ("godet-romans", "Bomans"))
+ABOUT_RECENT = 3
+
+
+def day_label(iso):
+    d = datetime.date.fromisoformat(iso)
+    return f"{d.day} {t('plan.months')[d.month - 1]} {d.year}"
+
+
+def manifest_files():
+    return load(os.path.join(ROOT, "sources", "manifest.json"))["files"]
+
+
+def works_added():
+    """{work: the day its record was first committed}, from the git history.
+    Empty where there is none to read (a shallow clone), and the page then
+    leaves the list out."""
+    try:
+        shallow = subprocess.run(["git", "rev-parse", "--is-shallow-repository"], cwd=ROOT, capture_output=True,
+                                 text=True, timeout=30).stdout.strip()
+        if shallow != "false":
+            return {}
+        out = subprocess.run(["git", "log", "--diff-filter=A", "--format=%ad", "--date=short", "--name-only", "--",
+                              "library/works/"], cwd=ROOT, capture_output=True, text=True, timeout=30).stdout
+    except (OSError, subprocess.SubprocessError):
+        return {}
+    added, day = {}, None
+    for line in out.splitlines():
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", line):
+            day = line
+        elif line.startswith("library/works/") and line.endswith(".json") and day:
+            added[os.path.basename(line)[:-5]] = day   # oldest last, so the first commit wins
+    return added
+
+
+def about_stats(lib):
+    """The library's size: excerpts, commentators, works, books and scan fixes."""
+    books = [lib.books[b]["en"] for b in lib.books if any(x == b for x, _c in lib.coverage())]
+    items = ((f"{len(lib.comments):,}", t("about.stats.excerpts")), (str(len(lib.authors)), t("about.stats.commentators")),
+             (str(len(lib.works)), t("about.stats.works")), (str(len(books)), t("about.stats.books", books=name_list(books))),
+             (f"{sum(len(v) for v in lib.fixes.values()):,}", t("about.stats.fixes")))
+    return '<ul class="lg-ab-stats">' + "".join(f"<li><b>{n}</b><span>{e(label)}</span></li>" for n, label in items) + "</ul>"
+
+
+def about_example(lib):
+    """A verse and the opening of one commentator's excerpt on it, as copied."""
+    c = lib.by_id.get(ABOUT_EXAMPLE)
+    if not c:
+        return ""
+    book, chapter, verse = ref_parts(c["start"])
+    a, w = lib.author_of(c["work"]), lib.works[c["work"]]
+    ref = f'{lib.books[book]["en"]} {chapter}:{verse}'
+    text = plain_verses(lib.bible(book, chapter)).get(verse, "")
+    lead = next(p for p in c["text"].split("\n\n") if p.strip())
+    n = len({x["work"] for x in lib.comments if x["start"] <= c["start"] <= x["end"] and ref_parts(x["start"])[0] == book})
+    href = chapter_url(book, chapter) + f"#v{verse}"
+    return (f'<figure class="lg-ab-example"><p class="eyebrow">{e(t("about.example_label"))}</p>'
+            f'<blockquote class="lg-ab-verse"><p>{e(text)}</p><footer><a href="{href}">{e(ref)}</a></footer></blockquote>'
+            f'<div class="lg-ab-voice"><p class="lg-ab-who"><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b></a> '
+            f'<span>{e(a["tradition"])} · {e(a["dates"])}</span></p>'
+            f'<p class="lg-ab-excerpt">{e(snippet(lead, 60))}</p>'
+            f'<p class="lg-quiet"><i>{e(t("about.example_from", title=w["title"], year=w["published"]))}</i> '
+            f'<a href="{excerpt_href(lib, c)}">{e(t("about.example_whole"))}</a></p></div>'
+            f'<p><a class="lg-more" href="{href}">{e(t("about.example_more", ref=ref, n=n))} {icon("arrow", 15)}</a></p></figure>')
+
+
+def about_name(lib):
+    """Where the name comes from, with the verse as the Open Word Bible reads it."""
+    book, chapter, verse = ref_parts(ABOUT_NAME_VERSE)
+    text = plain_verses(lib.bible(book, chapter)).get(verse, "") if (book, chapter) in lib.chapters else ""
+    href = lib.verse_link(ABOUT_NAME_VERSE)
+    note = re.sub(r"\*([^*]+)\*", r"<i>\1</i>", e(t("about.name_note")))
+    verse_html = (f'<p class="lg-ab-name-verse">{e(text)} <a href="{href}">{e(lib.books[book]["en"])} {chapter}:{verse}</a></p>'
+                  if text and href else "")
+    more = (f'<p><a class="lg-more" href="{href}">{e(t("about.name_more"))} {icon("arrow", 15)}</a></p>'
+            if href and href.startswith("/") else "")
+    return (f'<aside class="lg-ab-name"><p class="eyebrow">{e(t("about.name_label"))}</p>'
+            f'<p class="lg-ab-name-words"><i>{e(t("about.name_words"))}</i></p>{verse_html}<p>{note}</p>{more}</aside>')
+
+
+def about_voices(lib):
+    """The commentators on one line of centuries, and their traditions."""
+    traditions = "".join(f'<span class="lg-pill lg-pill-ok">{e(x)}</span>'
+                         for x in dict.fromkeys(a["tradition"] for a in lib.ordered_authors()))
+    return (f'<p>{e(t("about.voices"))}</p>{timeline(lib)}'
+            f'<p class="label lg-ab-label">{e(t("about.traditions"))}</p>'
+            f'<p class="lg-pills">{traditions}</p>')
+
+
+def about_library(lib):
+    """Each book with commentary: how many works, how many of its verses, and
+    the works fetched most recently."""
+    cov = lib.coverage()
+    rows = []
+    for book in lib.books:
+        chapters = [c for b, c in cov if b == book]
+        if not chapters:
+            continue
+        works = {c["work"] for c in lib.comments if ref_parts(c["start"])[0] == book}
+        done = sum(len(set(cov[(book, c)][1]) & set(chapter_verses(book, c))) for c in chapters)
+        total = sum(len(chapter_verses(b, c)) for b, c in lib.chapters if b == book)
+        rows.append(f'<tr><td><a href="/{book.lower()}/">{e(lib.books[book]["en"])}</a></td><td>{len(works)}</td>'
+                    f'<td>{e(t("about.library_count", n=f"{done:,}", total=f"{total:,}"))}</td></tr>')
+    table = (f'<div class="lg-table-wrap"><table class="lg-words lg-ab-books"><thead><tr><th>{e(t("about.library_book"))}</th>'
+             f'<th>{e(t("about.library_works"))}</th><th>{e(t("about.library_verses"))}</th></tr></thead>'
+             f'<tbody>{"".join(rows)}</tbody></table></div>')
+    added = works_added()
+    recent = sorted((w for w in added if w in lib.works), key=lambda w: (added[w], w), reverse=True)[:ABOUT_RECENT]
+    if not recent:
+        return table
+    items = "".join(f'<li><a href="/works/{w}/"><b>{e(lib.author_of(w)["name"])}</b> '
+                    f'<span>{e(t("about.recent_row", title=lib.works[w]["title"], year=lib.works[w]["published"]))}</span></a>'
+                    f'<span class="lg-quiet">{e(day_label(added[w]))}</span></li>' for w in recent)
+    return f'{table}<h3>{e(t("about.recent"))}</h3><ul class="lg-ab-recent">{items}</ul>'
+
+
+def about_trail(lib):
+    """The five steps, each shown for one real excerpt: its edition, the file
+    it was copied from, how it was checked, a correction in it and its verse."""
+    c = lib.by_id.get(ABOUT_EXAMPLE)
+    titles = t("about.steps")
+    if not c:
+        return "".join(f'<li><b>{e(a)}</b><span>{e(b)}</span></li>' for a, b in titles)
+    w = lib.works[c["work"]]
+    book, chapter, verse = ref_parts(c["start"])
+    ref = f'{lib.books[book]["en"]} {chapter}:{verse}'
+    src = c["sources"][0]
+    rec = next((f for f in manifest_files() if f["work"] == c["work"] and os.path.basename(f["path"]) == src), None)
+    with open(os.path.join(ROOT, "library", "comments", c["work"], f"{book}.json"), encoding="utf-8") as f:
+        raw = next(x["text"] for x in json.load(f)["entries"] if x["id"] == c["id"])
+    fix = next(((a, b) for a, b in lib.fixes.get(c["work"], []) if a.strip() and a in raw), None)
+    saved = (t("about.trail_saved", file=rec["path"], date=day_label(rec["retrieved"])) if rec else "")
+    examples = (t("about.trail_edition", edition=short_edition(w["edition"])),
+                saved,
+                t("about.trail_scan") if w.get("source_kind") == "scan" else t("about.trail_digital"),
+                t("about.trail_fix", a=fix[0], b=fix[1]) if fix else t("about.trail_nofix"),
+                t("about.trail_placed", ref=ref))
+    links = (w["full_text_url"], f'{GITHUB_URL}/blob/main/{rec["path"]}' if rec else "", "", "",
+             chapter_url(book, chapter) + f"#v{verse}")
+    steps = "".join(
+        f'<li><b>{e(a)}</b><span>{e(b)}</span>'
+        + (f'<a class="lg-ab-eg" href="{e(link)}">{e(x)}</a>' if link else f'<span class="lg-ab-eg">{e(x)}</span>') + '</li>'
+        for (a, b), x, link in zip(titles, examples, links))
+    return steps, t("about.trail_title", name=lib.author_of(c["work"])["name"], ref=ref)
 
 
 def checking_figure(lib):
-    """How an excerpt reaches Logia, step by step, and one real correction
-    pair as the build applies it."""
-    steps = "".join(f'<li><b>{e(title)}</b><span>{e(text)}</span></li>' for title, text in t("about.steps"))
-    work, wrong = ABOUT_FIX
-    right = dict(lib.fixes.get(work, [])).get(wrong)
-    fix = ""
-    if right:
-        fix = (f'<p class="lg-fix"><span class="label">{e(t("about.fix", work=lib.author_of(work)["name"], n=f"{len(lib.fixes[work]):,}"))}</span>'
-               f'<del>{e(wrong)}</del> {icon("arrow", 15)} <ins>{e(right)}</ins></p>')
+    """How an excerpt reaches Logia, step by step for one real excerpt, then
+    real correction pairs from four scans as the build applies them."""
+    trail = about_trail(lib)
+    steps, title = trail if isinstance(trail, tuple) else (trail, "")
+    rows = []
+    for work, wrong in ABOUT_FIXES:
+        right = dict(lib.fixes.get(work, [])).get(wrong)
+        if right and work in lib.works:
+            name = f'{short_name(lib.author_of(work))}, {lib.books[ref_parts(next(c["start"] for c in lib.comments if c["work"] == work))[0]]["en"]}'
+            rows.append(f'<tr><td><a href="/works/{work}/">{e(name)}</a></td><td><del>{e(wrong)}</del></td>'
+                        f'<td><ins>{e(right)}</ins></td><td>{len(lib.fixes[work]):,}</td></tr>')
+    fixes = ""
+    if rows:
+        fixes = (f'<h3>{e(t("about.fixes_title"))}</h3><div class="lg-table-wrap"><table class="lg-words lg-ab-fixes"><thead><tr>'
+                 f'<th>{e(t("about.fixes_work"))}</th><th>{e(t("about.fixes_scan"))}</th><th>{e(t("about.fixes_page"))}</th>'
+                 f'<th>{e(t("about.fixes_n"))}</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+                 f'<p><a class="lg-more" href="{GITHUB_URL}/tree/main/library/corrections" rel="noopener">{e(t("about.fixes_all"))} ↗</a></p>')
     total = sum(len(v) for v in lib.fixes.values())
-    return (f'<figure class="lg-steps-fig"><ol class="lg-steps">{steps}</ol>{fix}'
-            f'<figcaption class="lg-quiet">{e(t("about.steps_note", n=f"{len(lib.comments):,}", fixes=f"{total:,}"))}</figcaption></figure>')
+    cap = f'<p class="label lg-ab-label">{e(title)}</p>' if title else ""
+    return (f'<figure class="lg-steps-fig">{cap}<ol class="lg-steps">{steps}</ol>'
+            f'<figcaption class="lg-quiet">{e(t("about.steps_note", n=f"{len(lib.comments):,}", fixes=f"{total:,}"))}</figcaption></figure>'
+            f'{fixes}<details class="lg-ab-details"><summary>{e(t("about.details"))}</summary><p>{e(t("about.details_text"))}</p></details>')
+
+
+def about_open():
+    tiles = "".join(f'<li><b>{e(a)}</b><span class="lg-pill lg-pill-ok">{e(b)}</span><span>{e(c)}</span></li>'
+                    for a, b, c in t("about.open"))
+    return (f'<ul class="lg-ab-tiles">{tiles}</ul><p class="lg-quiet">{e(t("about.open_note"))}</p>'
+            f'<p class="lg-ab-actions"><a class="button" href="/open-data/">{e(t("open_data.about_link"))}</a> '
+            f'<a class="button ghost" href="{GITHUB_URL}" rel="noopener">{e(t("about.github"))} ↗</a></p>')
+
+
+def about_cite():
+    citation = t("about.citation", url=SITE_URL + "/")
+    return (f'<p>{e(t("about.cite"))}</p><div class="lg-cite-box"><p class="lg-cite-text">{e(citation)}</p>'
+            f'<button type="button" class="button ghost lg-copy" data-copy="{e(citation)}" data-done="{e(t("work.cite_copied"))}">'
+            f'{e(t("work.cite_copy"))}</button></div><p class="lg-quiet">{e(t("about.cite_note"))}</p>')
+
+
+def about_help():
+    items = "".join(f'<li><a href="{GITHUB_URL}/issues/new?template={e(tpl)}" rel="noopener"><b>{e(a)} ↗</b><span>{e(b)}</span></a></li>'
+                    for a, b, tpl in t("about.help_items"))
+    return f'<p>{e(t("about.help"))}</p><ul class="lg-ab-tiles lg-ab-help">{items}</ul>'
+
+
+def about_thanks(lib):
+    """The sites Logia's texts were copied from, with the works from each,
+    read from sources/manifest.json; then the Bible text and Sefaria."""
+    hosts = {}
+    for f in manifest_files():
+        if f["work"] in lib.works:
+            host = f["url"].split("/")[2]
+            hosts.setdefault(host, {}).setdefault(lib.works[f["work"]]["author"], f["work"])
+    names = t("about.hosts")
+    rows = []
+    for host, by in hosts.items():
+        kinds = {lib.works[w].get("source_kind") for w in by.values()}
+        who = name_list([short_name(a) for a in lib.ordered_authors() if a["id"] in by])
+        key = "about.thanks_scans" if kinds == {"scan"} else "about.thanks_texts"
+        rows.append(f'<tr><td><a href="https://{e(host)}/" rel="noopener">{e(names.get(host, host))}</a></td><td>{e(t(key, works=who))}</td></tr>')
+    for (name, what), url in ((t("about.thanks_owb"), OWB_SITE + "/"), (t("about.thanks_sefaria"), "https://www.sefaria.org/")):
+        rows.append(f'<tr><td><a href="{e(url)}" rel="noopener">{e(name)}</a></td><td>{e(what)}</td></tr>')
+    return (f'<p>{e(t("about.thanks"))}</p><div class="lg-table-wrap"><table class="lg-words lg-ab-thanks"><tbody>'
+            f'{"".join(rows)}</tbody></table></div>')
+
+
+def about_questions():
+    return "".join(f'<details class="lg-ab-details"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in t("about.questions"))
 
 
 def about_page(lib):
-    parts = []
-    for block in t("about.body"):
-        if block.startswith("## "):
-            title = block[3:]
-            anchor = ' id="checked"' if title == "How excerpts are checked" else ""
-            parts.append(f"<h2{anchor}>{e(title)}</h2>")
-            if anchor:
-                parts.append(checking_figure(lib))
-        else:
-            parts.append("<p>" + re.sub(r"\*([^*]+)\*", r"<i>\1</i>", e(block)) + "</p>")
+    sections = (("what", "".join(f"<p>{e(p)}</p>" for p in t("about.what")) + about_example(lib) + about_name(lib)),
+                ("voices", about_voices(lib)),
+                ("library", about_library(lib)),
+                ("checked", f'<p>{e(t("about.checked"))}</p>' + checking_figure(lib)),
+                ("bible", "".join(f"<p>{e(p)}</p>" for p in t("about.bible"))),
+                ("languages", "".join(f"<p>{e(p)}</p>" for p in t("about.languages"))),
+                ("open", about_open()),
+                ("cite", about_cite()),
+                ("help", about_help()),
+                ("thanks", about_thanks(lib)),
+                ("questions", about_questions()))
+    toc = "".join(f'<li><a href="#{k}">{e(t("about.h." + k))}</a></li>' for k, _ in sections)
+    parts = "".join(f'<section class="lg-ab-sec" id="{k}"><h2>{e(t("about.h." + k))}</h2>{html_}</section>' for k, html_ in sections)
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("about.title"))}</p>
-<h1>{e(t("about.heading"))}</h1><p class="dek">{e(t("about.dek"))}</p></header>
-<div class="prose">{"".join(parts)}<p><a class="lg-more" href="/open-data/">{e(t("open_data.about_link"))} {icon("arrow", 15)}</a></p></div>"""
+<h1>{e(t("about.heading"))}</h1><p class="dek">{e(t("about.dek"))}</p>{about_stats(lib)}</header>
+<nav class="lg-ab-toc" aria-label="{e(t("about.toc"))}"><p class="label">{e(t("about.toc"))}</p><ul>{toc}</ul></nav>
+<div class="prose lg-ab">{parts}</div>"""
     return page(lib, t("about.title"), body, "/about/", current="/about/")
 
 

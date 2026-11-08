@@ -550,6 +550,21 @@ class Site(unittest.TestCase):
         self.assertIn('"@type":"Dataset"', text)
         self.assertIn('href="/open-data/"', self.read(os.path.join("about", "index.html")))
 
+    def test_the_about_page_shows_real_examples_from_the_library(self):
+        text = self.read(os.path.join("about", "index.html"))
+        lib = build_site.Library()
+        # The excerpt it follows through the checks is quoted as copied.
+        c = lib.by_id[build_site.ABOUT_EXAMPLE]
+        lead = next(p for p in c["text"].split("\n\n") if p.strip())
+        self.assertIn(build_site.e(" ".join(lead.split()[:12])), text)
+        # Each correction it shows is a real pair from library/corrections/.
+        for work, wrong in build_site.ABOUT_FIXES:
+            self.assertIn(wrong, dict(lib.fixes[work]))
+            self.assertIn(f"<del>{build_site.e(wrong)}</del>", text)
+        for key in build_site.t("about.h"):
+            self.assertIn(f'id="{key}"', text)
+        self.assertIn(f'{len(lib.comments):,}', text)
+
     def test_each_reading_has_a_page_and_the_readings_page_lists_them(self):
         readings = self.read(os.path.join("readings", "index.html"))
         for oid, _book, _start, _end, voices in build_site.occasions(build_site.Library()):
