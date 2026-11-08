@@ -32,9 +32,10 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
 the whole Gospel of John with eight commentaries (Chrysostom, Augustine, the
 Catena Aurea, Calvin, Matthew Henry, Bengel, J. C. Ryle and Westcott), John
-Wesley's notes on the whole Gospel, and Origen's commentary on John 1:1–2:25,
-the only part of it with an English translation from 1930 or earlier: 9,272
-excerpts in all.
+Wesley's notes and Cornelius a Lapide's Great Commentary on the whole Gospel,
+Cyril of Alexandria's commentary (all but John 10:19–12:50, whose books are
+lost), and Origen's commentary on John 1:1–2:25, the only part of it with an
+English translation from 1930 or earlier: 10,390 excerpts in all.
 
 ## The site
 

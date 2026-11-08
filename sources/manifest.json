@@ -5171,6 +5171,114 @@
    "download_sha256": "eb5341dc439d1ba7fbd5f526f1d784f677365cf2af9e505b34568eb491a8707b",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans.",
    "part": "Book X"
+  },
+  {
+   "path": "sources/lapide/greatcommentaryo05lapi.txt",
+   "work": "lapide",
+   "url": "https://archive.org/stream/greatcommentaryo05lapi/greatcommentaryo05lapi_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "95ff9dc46d0f12957cbf2d121121646b86d0372a4c325b9b79ee013a6c806bc8",
+   "extract": "Characters 26575-1094038 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/lapide/greatcommentaryo06lapi.txt",
+   "work": "lapide",
+   "url": "https://archive.org/stream/greatcommentaryo06lapi/greatcommentaryo06lapi_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "f331e4181732690162ede402dfd62295e837c2063dbcc3b0d6ef1c4d066e84b0",
+   "extract": "Characters 275-857205 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_01_book1.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_01_book1.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "70ca894d357ee9ef586ae7178706b5c097fd7a520e2bdc0adee8804f62970cc2",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_02_book2.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_02_book2.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "e961469c8785d0368ed110cfd5607ad01d553dc10d595b4ea66aef78869b29bb",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_03_book3.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_03_book3.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "6ebfcaceb5257b74c04ee81649c3d4175c1206fd11ac7a67fc03c3f520171d4f",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_04_book4.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_04_book4.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "48e4995d591bdf35a839c77cc6e0877c2b1f4f298af49b03ba39c80f87f72883",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_05_book5.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_05_book5.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "4c7e0b2c22b5dd0f57ac802ba4da649c2badcd99b03da2f82ff874d7c95b2744",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_06_book6.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_06_book6.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "6db82317ed7253d414426f340a33e632fd11508ec9bf0c7bfbf7714b486e9619",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_09_book9.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_09_book9.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "5d7d63f593810c4d93458cbb2e7629d960174ceda28155ae25f1686ae8c520d5",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_10_book10.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_10_book10.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "4515261431251ec1722a84c8e1a4238e2cf665141a706bde5e12250a76660d84",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_11_book11.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_11_book11.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "542dd9a06c05eb5bcc7e4738d5353aaea63e9654ae7318112af9a75f0dacdb2a",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/cyril/cyril_on_john_12_book12.htm",
+   "work": "cyril",
+   "url": "https://www.tertullian.org/fathers/cyril_on_john_12_book12.htm",
+   "retrieved": "2026-11-08",
+   "kind": "digital",
+   "download_sha256": "ec1fa9b77bb3ba30fda6e305a835d4a2a1ddf5c7bf5bc795aa596f06dae595d0",
+   "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
   }
  ]
 }

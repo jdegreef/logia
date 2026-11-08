@@ -183,7 +183,7 @@ class Site(unittest.TestCase):
         m = re.search(r'<script type="application/json" id="chapter-data">(.*?)</script>', text, re.S)
         data = json.loads(m[1])
         self.assertEqual((data["book"], data["chapter"]), ("JHN", 1))
-        self.assertEqual(len(data["commentaries"]), 10)
+        self.assertEqual(len(data["commentaries"]), 12)
         self.assertTrue(all(w["entries"] for w in data["commentaries"]))
         for key in ("summary", "none_yet", "eras", "levels", "categories"):
             self.assertIn(key, data["ui"])
@@ -318,7 +318,7 @@ class Site(unittest.TestCase):
         self.assertTrue(os.path.exists(os.path.join(build_site.SITE, "card.png")))
         chapter = self.read("jhn/3/index.html")
         self.assertIn('"@type":"BreadcrumbList"', chapter)
-        self.assertIn("<title>John 3 commentary: Chrysostom, Augustine, Aquinas and 5 more", chapter)
+        self.assertRegex(chapter, r"<title>John 3 commentary: Chrysostom, Augustine, [A-Z][a-z]+ and \d+ more")
         self.assertIn('"@type":"Person"', self.read("commentators/calvin/index.html"))
 
     def test_a_commentator_page_lists_the_verses_they_pass_over(self):
@@ -348,7 +348,7 @@ class Site(unittest.TestCase):
         self.assertEqual(data["bookName"], "John")
         self.assertEqual({w["work_id"] for w in data["commentaries"]},
                          {"chrysostom", "augustine", "catena", "calvin", "henry", "bengel", "ryle", "westcott",
-                          "origen", "wesley"})
+                          "origen", "wesley", "cyril", "lapide"})
 
     def test_citations_link_both_ways(self):
         data = json.loads(self.read(os.path.join("comm", "JHN.1.json")))

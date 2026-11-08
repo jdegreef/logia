@@ -6,7 +6,8 @@ the passage was copied from (listed in sources/manifest.json). This script
 compares the two.
 
 - A digital source (a transcription such as CCEL's) must contain the excerpt
-  word for word. Footnotes, footnote markers and page numbers are ignored,
+  word for word. Footnotes, footnote markers (and any superscript) and page
+  numbers are ignored,
   since the brief for copying drops them, and a passage cut with "..." is
   checked piece by piece.
 - A whole homily or tractate (library/texts/, from scripts/extract_texts.py)
@@ -50,7 +51,8 @@ class _Text(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag in VOID:
             return
-        if self.depth or set((dict(attrs).get("class") or "").split()) & SKIP:
+        # A superscript is a footnote marker ("<sup>f</sup>" in tertullian.org pages).
+        if self.depth or tag == "sup" or set((dict(attrs).get("class") or "").split()) & SKIP:
             self.depth += 1
 
     def handle_endtag(self, tag):
