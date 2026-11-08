@@ -207,6 +207,34 @@
 .cx-xr a { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; text-decoration: none; background: var(--bg); font-size: 14px; }
 
 .cx-verse.cx-has .cx-vn { color: var(--gold); }
+/* Beside the text (web/reader.js, drawGutter): a gold line, darker where more
+   is written on a verse, and further out a bracket for each comment on a
+   whole passage, which goes to the passage's first verse. */
+.cx-text { position: relative; }
+.cx-gutter { position: absolute; top: 0; bottom: 0; left: 0; width: 0; pointer-events: none; }
+.cx-heat { position: absolute; left: -12px; width: 3px; border-radius: 2px; background: var(--gold); }
+.cx-heat1 { opacity: .18; }
+.cx-heat2 { opacity: .42; }
+.cx-heat3 { opacity: 1; }
+.cx-brk { position: absolute; width: 9px; padding: 0; border: 0; background: none; cursor: pointer; pointer-events: auto; }
+.cx-brk::before { content: ""; position: absolute; top: 0; bottom: 0; right: 3px; width: 3px; border: 1.5px solid var(--accent);
+  border-right: 0; border-radius: 4px 0 0 4px; opacity: .45; transition: opacity 150ms; }
+.cx-brk:hover::before, .cx-brk:focus-visible::before { opacity: 1; }
+.cx-brk:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.cx-brk0 { left: -27px; }
+.cx-brk1 { left: -36px; }
+.cx-brk2 { left: -45px; }
+@media (max-width: 1100px) { .cx-brk1, .cx-brk2 { display: none; } }
+@media (max-width: 560px) { .cx-heat { left: -9px; } .cx-brk { display: none; } }
+@media (prefers-reduced-motion: reduce) { .cx-brk::before { transition: none; } }
+/* On a card: how much a voice says here, the Fathers a Catena quotes, and
+   whether it says anything new since the verse before. */
+.cx-facts, .cx-quoting { font-family: var(--sans); font-size: 12.5px; color: var(--muted); margin: 2px 0 0; }
+.cx-quoting { font-style: italic; }
+.cx-speaker { font-family: var(--sans); font-size: .82em; font-weight: 700; letter-spacing: .01em; color: var(--accent); }
+.cx-new, .cx-also { font-family: var(--sans); font-size: 11px; font-weight: 700; border-radius: 4px; padding: 0 6px; white-space: nowrap; }
+.cx-new { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.cx-also { color: var(--muted); border: 1px dashed var(--line-strong); font-weight: 600; }
 /* How many voices comment on a verse (web/reader.js), and the chosen verse
    marked by a gold rule as well as its colour. */
 .cx-vc { display: inline-block; min-width: 1.45em; margin: 0 4px 0 0; padding: 0 .3em; border-radius: 999px; box-sizing: border-box;
@@ -709,6 +737,61 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-fix ins { text-decoration: none; color: var(--accent); background: var(--accent-soft); padding: 0 6px; border-radius: 4px; }
 .lg-fix .icon { color: var(--muted); }
 
+/* About: the library's size, a contents row, one verse and voice, the name,
+   one excerpt followed through the checks, licences, ways to help. */
+.lg-ab-stats { list-style: none; display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 28px 0 0; padding: 0; }
+.lg-ab-stats li { display: grid; gap: 2px; }
+.lg-ab-stats b { font-family: var(--display); font-weight: 600; font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.lg-ab-stats span { font-size: 13px; color: var(--muted); }
+.lg-ab-toc { max-width: 720px; padding: 12px 0; border-block: 1px solid var(--line); }
+.lg-ab-toc .label { margin: 0 0 6px; }
+.lg-ab-toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; padding: 0; font-size: 14.5px; }
+.lg-ab-toc a { text-decoration: none; }
+.lg-ab.prose { padding-top: 8px; }
+.lg-ab-sec { scroll-margin-top: 88px; }
+.lg-ab-sec h3 { font-family: var(--display); font-weight: 600; }
+.lg-ab-label { margin: 20px 0 8px; }
+.lg-ab-example { margin: 24px 0; display: grid; gap: 12px; }
+.lg-ab-example .eyebrow { margin: 0; }
+.lg-ab-verse { margin: 0; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.lg-ab-verse p { margin: 0 0 6px; font-family: var(--serif); font-size: 20px; line-height: 1.5; }
+.lg-ab-verse footer a { font-size: 14px; font-weight: 600; text-decoration: none; }
+.lg-ab-voice { padding: 4px 0 0 16px; border-left: 2px solid var(--gold); }
+.lg-ab-voice p { margin: 0 0 6px; }
+.lg-ab-who { font-size: 14px; }
+.lg-ab-who a { text-decoration: none; color: var(--text); }
+.lg-ab-who span { color: var(--muted); }
+.lg-ab-excerpt { font-family: var(--serif); font-size: 17.5px; line-height: 1.6; }
+.lg-ab-example .lg-quiet { font-size: 13.5px; }
+.lg-ab-name { margin: 8px 0 0; padding: 16px 18px; border-radius: var(--radius-sm); background: var(--surface-2); }
+.lg-ab-name .eyebrow { margin: 0 0 4px; color: var(--gold); }
+.lg-ab-name p { margin: 0 0 8px; }
+.lg-ab-name p:last-child { margin: 0; }
+.lg-ab-name-words { font-family: var(--display); font-size: 26px; line-height: 1.2; }
+.lg-ab-name-verse { font-family: var(--serif); font-size: 17px; }
+.lg-ab-name-verse a { font-family: var(--sans); font-size: 13.5px; font-weight: 600; text-decoration: none; margin-left: 4px; }
+.lg-steps .lg-ab-eg { margin-top: 6px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 12.5px; line-height: 1.45; color: var(--text); overflow-wrap: anywhere; }
+.lg-steps a.lg-ab-eg { color: var(--accent); text-decoration: none; }
+.lg-ab-fixes del { text-decoration-color: var(--wj); background: color-mix(in srgb, var(--wj) 12%, transparent); padding: 0 5px; border-radius: 4px; }
+.lg-ab-fixes ins { text-decoration: none; color: var(--accent); background: var(--accent-soft); padding: 0 5px; border-radius: 4px; }
+.lg-ab-fixes td:last-child, .lg-ab-books td:not(:first-child) { font-variant-numeric: tabular-nums; }
+.lg-ab-details { margin: 10px 0; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.lg-ab-details summary { cursor: pointer; font-weight: 600; }
+.lg-ab-details p { margin: 8px 0 2px; color: var(--muted); }
+.lg-ab-recent { list-style: none; padding: 0; margin: 0; }
+.lg-ab-recent li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; margin: 0; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.lg-ab-recent a { text-decoration: none; color: var(--text); min-width: 0; }
+.lg-ab-recent a span { font-family: var(--serif); font-style: italic; }
+.lg-ab-recent .lg-quiet { font-size: 13px; white-space: nowrap; }
+.lg-ab-tiles { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 10px; padding: 0; margin: 12px 0; }
+.lg-ab-tiles li { margin: 0; display: grid; gap: 6px; align-content: start; justify-items: start; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.lg-ab-tiles b { font-family: var(--display); font-weight: 600; font-size: 17px; }
+.lg-ab-tiles span:not(.lg-pill) { font-size: 14px; line-height: 1.5; color: var(--muted); }
+.lg-ab-help li { padding: 0; }
+.lg-ab-help a { display: grid; gap: 6px; padding: 14px 16px; text-decoration: none; color: var(--text); height: 100%; }
+.lg-ab-help a:hover b { color: var(--accent); }
+.lg-ab-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
 /* Saved, signed out: an example of a saved comment and a way to sign in. */
 .lg-saved-empty { max-width: 560px; margin: 8px 0 0; }
 .lg-saved-empty h2 { font-family: var(--display); font-weight: 600; font-size: 24px; margin: 24px 0 8px; text-wrap: balance; }
@@ -904,3 +987,85 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-nbrs .lg-next { text-align: right; grid-column: 2; }
 .lg-nbrs b { font-family: var(--serif); font-size: 18px; font-weight: 600; }
 .lg-nbrs .lg-quiet { font-size: 13px; }
+/* Home hero: the motto, the voices by name, the search with its "/" hint,
+   one row of ways to try it, the books to start in, and what Logia promises. */
+/* Small gold text: the light theme's gold is 3.4:1 on its page, so a deeper
+   gold of the same hue (4.9:1) there, and in sepia; the dark themes' gold already passes. */
+:root { --lg-gold-text: var(--gold); }
+:root:not([data-theme]), :root[data-theme="light"] { --lg-gold-text: #8f6418; }
+:root[data-theme="sepia"] { --lg-gold-text: #835c14; }
+@media (prefers-color-scheme: light) { :root[data-theme="auto"] { --lg-gold-text: #8f6418; } }
+.lg-hero { padding: 36px 0 28px; }
+.lg-hero::before {
+  background:
+    linear-gradient(to right, transparent calc(50% - 431px), color-mix(in srgb, var(--gold) 30%, transparent) calc(50% - 431px) calc(50% - 430px),
+      transparent calc(50% - 430px) calc(50% + 430px), color-mix(in srgb, var(--gold) 30%, transparent) calc(50% + 430px) calc(50% + 431px), transparent calc(50% + 431px)),
+    repeating-linear-gradient(to bottom, transparent 0 31px, color-mix(in srgb, var(--line-strong) 13%, transparent) 31px 32px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent); mask-image: linear-gradient(to bottom, #000 60%, transparent);
+}
+.lg-hero .eyebrow, .lg-votd .eyebrow { color: var(--lg-gold-text); }
+.lg-motto a { color: inherit; text-decoration: none; }
+.lg-motto a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.lg-hero h1 { margin-bottom: 14px; }
+.lg-hero .hero-sub { margin-bottom: 10px; font-size: 18px; }
+.lg-names { margin: 0 auto; max-width: 60ch; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 14px; font-size: 14.5px; }
+.lg-names a { display: inline-flex; align-items: center; gap: 6px; color: var(--text); text-decoration: none; }
+.lg-names a::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--era); }
+.lg-names a:hover { color: var(--accent); }
+.lg-hero .hero-search { margin-top: 22px; }
+.lg-kbd { align-self: center; font: 600 12px/1 ui-monospace, Menlo, Consolas, monospace; color: var(--muted); padding: 4px 7px;
+  border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 6px; background: var(--bg); }
+.lg-hero .hero-search:focus-within .lg-kbd { visibility: hidden; }
+@media (hover: none), (max-width: 560px) { .lg-kbd { display: none; } }
+.lg-try i { font-style: normal; font-size: 12px; color: var(--muted); }
+.lg-try a.lg-season { border-color: var(--gold); background: var(--mark); }
+.lg-try a.lg-season::before { content: "✦ "; color: var(--lg-gold-text); }
+.lg-books { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin: 18px 0 0; font-size: 14px; }
+.lg-books > span { color: var(--muted); }
+.lg-books .button { padding: 6px 14px; font-size: 14.5px; }
+.lg-books .button span { font-weight: 500; color: var(--muted); }
+.lg-books-all { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; text-decoration: none; }
+.lg-books-all:hover { text-decoration: underline; }
+.lg-trust { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; font-size: 13px; }
+.lg-trust a { color: var(--muted); text-decoration: none; }
+.lg-trust a::before { content: "✓ "; color: var(--lg-gold-text); font-weight: 700; }
+.lg-trust a:hover { color: var(--accent); }
+@media (max-width: 560px) {
+  .lg-hero { padding: 28px 0 20px; }
+  .lg-names { font-size: 13.5px; gap: 2px 10px; }
+  /* The chips in one line that scrolls sideways, so the hero stays short. */
+  .lg-try { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x proximity; margin-inline: -16px;
+    padding: 2px 16px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
+  .lg-try::-webkit-scrollbar { display: none; }
+  .lg-try > * { flex: none; white-space: nowrap; scroll-snap-align: start; }
+}
+
+/* Home: the verse card's tabs, a voice that opens in place, and the
+   initials of every voice on the verse. */
+.lg-votd-tabs { justify-content: center; flex-wrap: wrap; }
+.lg-votd.lg-tabbed .lg-votd-panel[hidden] { display: none; }
+.lg-votd-panel + .lg-votd-panel { margin-top: 28px; }
+.lg-votd.lg-tabbed .lg-votd-panel + .lg-votd-panel { margin-top: 0; }
+.lg-vv-more summary { list-style: none; cursor: pointer; }
+.lg-vv-more summary::-webkit-details-marker { display: none; }
+.lg-vv-more summary .lg-vv-text { display: inline; }
+.lg-vv-open { font-size: 13.5px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.lg-vv-more[open] summary { display: none; }
+.lg-vv-full { color: var(--text); }
+.lg-vv-src { margin: 8px 0 0; font-size: 13.5px; }
+.lg-vv-src a { display: inline-flex; align-items: center; gap: 4px; text-decoration: none; font-weight: 600; }
+.lg-vv-all { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 14px; }
+.lg-faces { display: inline-flex; }
+.lg-face { width: 28px; height: 28px; margin-left: -7px; border-radius: 50%; display: grid; place-items: center; font-size: 10.5px; font-weight: 700;
+  color: var(--bg); background: var(--era); border: 2px solid var(--surface); text-decoration: none; }
+.lg-face:first-child { margin-left: 0; }
+.lg-face-more { opacity: .45; }
+
+/* Home: three ways in by purpose. */
+.lg-doors ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.lg-door { height: 100%; display: grid; gap: 4px; align-content: start; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); color: var(--text); text-decoration: none; }
+.lg-door:hover { border-color: var(--accent); }
+.lg-door b { font-family: var(--display); font-weight: 600; font-size: 17px; }
+.lg-door > span { font-size: 14px; color: var(--muted); }
+.lg-door .lg-door-go { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; color: var(--accent); font-weight: 600; }

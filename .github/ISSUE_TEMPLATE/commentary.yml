@@ -1,0 +1,27 @@
+name: Suggest a commentary
+description: A public-domain commentary Logia could add.
+title: "Commentary: "
+labels: ["new work"]
+body:
+  - type: input
+    id: work
+    attributes:
+      label: Author and title
+    validations:
+      required: true
+  - type: input
+    id: edition
+    attributes:
+      label: Edition and year
+      description: Logia uses editions published in 1930 or earlier. Name the translator if it is a translation.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Where to read it
+      description: A scan on archive.org, or a transcription on CCEL or Project Gutenberg.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it would help

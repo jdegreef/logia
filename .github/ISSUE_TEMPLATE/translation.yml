@@ -1,0 +1,16 @@
+name: Offer to review a translation
+description: Help review Logia in another language.
+title: "Reviewer: "
+labels: ["translation"]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: About you
+      description: Is it your first language? Do you read Greek, Latin or German?
