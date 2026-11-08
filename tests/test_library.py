@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import build_site  # noqa: E402
 import extract_texts  # noqa: E402
 import find_refs  # noqa: E402
+import scripture  # noqa: E402
 import validate  # noqa: E402
 import verify_sources  # noqa: E402
 
@@ -86,6 +87,27 @@ class FindRefs(unittest.TestCase):
         self.assertEqual(loci["chrysostom.JHN.1.1.1"], "2.8")
         self.assertEqual(loci["chrysostom.JHN.1.18.3"], "15.3")       # the excerpt begins "[3.]"
         self.assertEqual(loci["augustine.JHN.1.1.1"], "1.5")          # the paragraph begins "5."
+
+
+class Versification(unittest.TestCase):
+    """English verse numbers, as the commentators print them, move to the Hebrew numbering of the Bible text."""
+
+    def test_a_psalm_title_is_its_first_verse(self):
+        self.assertEqual(scripture.from_english("PSA", 3, 1), [(3, 2)])
+        self.assertEqual(scripture.from_english("PSA", 51, 1), [(51, 3)])
+        self.assertEqual(scripture.title_verses("PSA", 51), [1, 2])
+        self.assertEqual(scripture.title_verses("PSA", 1), [])
+
+    def test_a_chapter_that_begins_elsewhere(self):
+        self.assertEqual(scripture.from_english("ECC", 5, 1), [(4, 17)])
+
+    def test_the_new_testament_is_unchanged(self):
+        self.assertEqual(scripture.from_english("MAT", 5, 3), [(5, 3)])
+
+    def test_the_psalms_commentaries_are_on_the_hebrew_verses(self):
+        entries = json.load(open(os.path.join(ROOT, "library", "comments", "augustine-psalms", "PSA.json")))["entries"]
+        on = {e["start"] for e in entries if "Have pity upon me, O God, after Thy great mercy” (ver. 1)" in e["text"]}
+        self.assertEqual(on, {"PSA.51.3"})       # Psalm 51:1 in English
 
 
 class Quotations(unittest.TestCase):
