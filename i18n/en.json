@@ -136,16 +136,38 @@
     "review": "Logia is new: its selection of excerpts, its verse tags and its biographies are drafts awaiting human review."
   },
   "home": {
-    "verse": "“They were entrusted with the oracles of God.” Romans 3:2",
+    "verse": "“Unto them were committed the oracles of God.” Romans 3:2",
     "title": "The Word, and what the church has said about it",
-    "season": "For Christmas:",
-    "season_link": "the church on John 1:1–14, the Christmas Day Gospel",
-    "readings_link": "readings from John through the year",
-    "lead": "Read a verse and hear the early church, the Middle Ages, the Reformers and the 1800s beside it, copied word for word from public-domain editions.",
+    "lead": "Read a verse and hear the church beside it, from the early church to the 1800s, copied word for word from public-domain editions.",
     "verse_voices": "A verse and its voices",
+    "motto_title": "Romans 3:2 in the King James Version. Paul’s word for “oracles” is logia, which gives this site its name.",
+    "christmas": "Christmas: {ref}",
+    "kind_chapter": "chapter",
+    "kind_commentator": "commentator",
+    "start_in": "Start reading",
+    "n_voices": "{n} voices",
+    "keep_reading": "Keep reading",
+    "read_whole": "All of {name} on this verse",
+    "trust": {
+      "free": "Free, with no ads",
+      "public": "Public-domain editions",
+      "copied": "Copied word for word",
+      "data": "Download it all"
+    },
+    "doors": {
+      "heading": "Where to begin",
+      "preach": "Preparing a sermon",
+      "preach_text": "The Gospel readings of the church year, with what each voice said on them.",
+      "preach_go": "Readings",
+      "study": "Studying a book",
+      "study_text": "A way to prepare a study or your own reading of a passage of John, step by step.",
+      "study_go": "Study John",
+      "devotion": "Reading day by day",
+      "devotion_text": "John in forty days, a few passages a day, each with its voices.",
+      "devotion_go": "Reading plan"
+    },
     "resume": "Continue at {ref}",
     "all_voices": "All {n} voices on {ref}",
-    "start": "Start with John 1",
     "browse": "Browse the books",
     "read_heading": "Start reading",
     "read_note": "Chapters in gold have commentary.",
@@ -170,7 +192,8 @@
       "chapter": "Chapter",
       "book": "{n} chapters",
       "none": "No verse, book or commentator by that name. Try “John 3:16”."
-    }
+    },
+    "key_hint": "Press / on any page to search"
   },
   "read": {
     "title": "Read",

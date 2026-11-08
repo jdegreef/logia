@@ -833,3 +833,86 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-gloss-links { font-size: 13.5px; }
 .lg-guide .lg-block .prose { padding-top: 0; }
 .lg-guide > .prose { padding-top: 16px; }
+
+/* Home hero: the motto, the voices by name, the search with its "/" hint,
+   one row of ways to try it, the books to start in, and what Logia promises. */
+/* Small gold text: the light theme's gold is 3.4:1 on its page, so a deeper
+   gold of the same hue (4.9:1) there, and in sepia; the dark themes' gold already passes. */
+:root { --lg-gold-text: var(--gold); }
+:root:not([data-theme]), :root[data-theme="light"] { --lg-gold-text: #8f6418; }
+:root[data-theme="sepia"] { --lg-gold-text: #835c14; }
+@media (prefers-color-scheme: light) { :root[data-theme="auto"] { --lg-gold-text: #8f6418; } }
+.lg-hero { padding: 36px 0 28px; }
+.lg-hero::before {
+  background:
+    linear-gradient(to right, transparent calc(50% - 431px), color-mix(in srgb, var(--gold) 30%, transparent) calc(50% - 431px) calc(50% - 430px),
+      transparent calc(50% - 430px) calc(50% + 430px), color-mix(in srgb, var(--gold) 30%, transparent) calc(50% + 430px) calc(50% + 431px), transparent calc(50% + 431px)),
+    repeating-linear-gradient(to bottom, transparent 0 31px, color-mix(in srgb, var(--line-strong) 13%, transparent) 31px 32px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent); mask-image: linear-gradient(to bottom, #000 60%, transparent);
+}
+.lg-hero .eyebrow, .lg-votd .eyebrow { color: var(--lg-gold-text); }
+.lg-motto a { color: inherit; text-decoration: none; }
+.lg-motto a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.lg-hero h1 { margin-bottom: 14px; }
+.lg-hero .hero-sub { margin-bottom: 10px; font-size: 18px; }
+.lg-names { margin: 0 auto; max-width: 60ch; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 14px; font-size: 14.5px; }
+.lg-names a { display: inline-flex; align-items: center; gap: 6px; color: var(--text); text-decoration: none; }
+.lg-names a::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--era); }
+.lg-names a:hover { color: var(--accent); }
+.lg-hero .hero-search { margin-top: 22px; }
+.lg-kbd { align-self: center; font: 600 12px/1 ui-monospace, Menlo, Consolas, monospace; color: var(--muted); padding: 4px 7px;
+  border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 6px; background: var(--bg); }
+.lg-hero .hero-search:focus-within .lg-kbd { visibility: hidden; }
+@media (hover: none), (max-width: 560px) { .lg-kbd { display: none; } }
+.lg-try i { font-style: normal; font-size: 12px; color: var(--muted); }
+.lg-try a.lg-season { border-color: var(--gold); background: var(--mark); }
+.lg-try a.lg-season::before { content: "✦ "; color: var(--lg-gold-text); }
+.lg-books { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin: 18px 0 0; font-size: 14px; }
+.lg-books > span { color: var(--muted); }
+.lg-books .button { padding: 6px 14px; font-size: 14.5px; }
+.lg-books .button span { font-weight: 500; color: var(--muted); }
+.lg-books-all { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; text-decoration: none; }
+.lg-books-all:hover { text-decoration: underline; }
+.lg-trust { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; font-size: 13px; }
+.lg-trust a { color: var(--muted); text-decoration: none; }
+.lg-trust a::before { content: "✓ "; color: var(--lg-gold-text); font-weight: 700; }
+.lg-trust a:hover { color: var(--accent); }
+@media (max-width: 560px) {
+  .lg-hero { padding: 28px 0 20px; }
+  .lg-names { font-size: 13.5px; gap: 2px 10px; }
+  /* The chips in one line that scrolls sideways, so the hero stays short. */
+  .lg-try { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x proximity; margin-inline: -16px;
+    padding: 2px 16px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
+  .lg-try::-webkit-scrollbar { display: none; }
+  .lg-try > * { flex: none; white-space: nowrap; scroll-snap-align: start; }
+}
+
+/* Home: the verse card's tabs, a voice that opens in place, and the
+   initials of every voice on the verse. */
+.lg-votd-tabs { justify-content: center; flex-wrap: wrap; }
+.lg-votd.lg-tabbed .lg-votd-panel[hidden] { display: none; }
+.lg-votd-panel + .lg-votd-panel { margin-top: 28px; }
+.lg-votd.lg-tabbed .lg-votd-panel + .lg-votd-panel { margin-top: 0; }
+.lg-vv-more summary { list-style: none; cursor: pointer; }
+.lg-vv-more summary::-webkit-details-marker { display: none; }
+.lg-vv-more summary .lg-vv-text { display: inline; }
+.lg-vv-open { font-size: 13.5px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.lg-vv-more[open] summary { display: none; }
+.lg-vv-full { color: var(--text); }
+.lg-vv-src { margin: 8px 0 0; font-size: 13.5px; }
+.lg-vv-src a { display: inline-flex; align-items: center; gap: 4px; text-decoration: none; font-weight: 600; }
+.lg-vv-all { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 14px; }
+.lg-faces { display: inline-flex; }
+.lg-face { width: 28px; height: 28px; margin-left: -7px; border-radius: 50%; display: grid; place-items: center; font-size: 10.5px; font-weight: 700;
+  color: var(--bg); background: var(--era); border: 2px solid var(--surface); text-decoration: none; }
+.lg-face:first-child { margin-left: 0; }
+.lg-face-more { opacity: .45; }
+
+/* Home: three ways in by purpose. */
+.lg-doors ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.lg-door { height: 100%; display: grid; gap: 4px; align-content: start; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); color: var(--text); text-decoration: none; }
+.lg-door:hover { border-color: var(--accent); }
+.lg-door b { font-family: var(--display); font-weight: 600; font-size: 17px; }
+.lg-door > span { font-size: 14px; color: var(--muted); }
+.lg-door .lg-door-go { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; color: var(--accent); font-weight: 600; }

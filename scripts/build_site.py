@@ -883,13 +883,15 @@ def search_json(lib):
     return json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
-def search_box(lib, sid, cls="hero-search"):
-    """A search box that goes to a verse, a book or a commentator."""
+def search_box(lib, sid, cls="hero-search", key_hint=False):
+    """A search box that goes to a verse, a book or a commentator (key_hint:
+    show that "/" focuses it)."""
     return (f'<form class="lg-search {cls}" role="search" action="/read/" autocomplete="off">'
             f'<span class="hero-search-ico" aria-hidden="true">{SEARCH_ICON}</span>'
             f'<input type="search" name="q" id="{sid}" placeholder="{e(t("search.placeholder"))}" aria-label="{e(t("search.label"))}" '
             f'role="combobox" aria-expanded="false" aria-controls="{sid}-list" aria-autocomplete="list">'
-            f'<button type="submit" class="button">{e(t("search.go"))}</button>'
+            + (f'<kbd class="lg-kbd" title="{e(t("search.key_hint"))}">/</kbd>' if key_hint else "")
+            + f'<button type="submit" class="button">{e(t("search.go"))}</button>'
             f'<ul class="lg-sugg" id="{sid}-list" role="listbox" aria-label="{e(t("search.label"))}" hidden></ul></form>'
             f'<script type="application/json" id="search-data">{search_json(lib)}</script>')
 
@@ -900,51 +902,161 @@ SEARCH_ICON = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stro
 
 # --- Pages --------------------------------------------------------------------
 
-# The verse the home page opens with, and the eras of the three voices shown
-# beside it: the earliest, the Reformation and the latest.
-HOME_VERSE = "JHN.3.16"
+# The verses the home page's card offers, one tab each (a book without
+# commentary yet is left out), and the eras of the three voices shown on
+# each: the earliest, the Reformation and the latest, then any other era
+# where a verse has fewer.
+HOME_VERSES = ("JHN.3.16", "MAT.5.3", "ROM.8.28")
 HOME_ERAS = ("Early church", "Reformation", "The 1800s")
 # Well-known passages the home page offers as a way in, by chapter.
 HOME_PASSAGES = (("JHN", 1), ("JHN", 3), ("JHN", 6), ("JHN", 10), ("JHN", 11), ("JHN", 14), ("JHN", 17), ("JHN", 20))
+# The hero's "Try" row: verses (one from each book), a chapter and a commentator.
+HOME_TRY = ("JHN.1.1", "MAT.5.3", "ROM.8.28")
+HOME_TRY_CHAPTER = ("ROM", 8)
+HOME_TRY_AUTHOR = "chrysostom"
+# The motto's verse: Romans 3:2, where Paul's word for "oracles" is logia.
+HOME_MOTTO = "ROM.3.2"
+# For Christmas, beside the Christmas Day Gospel (library/occasions.json):
+# Matthew's account of the birth, by its passages ((chapter, verse) start, end).
+HOME_CHRISTMAS_MAT = (((1, 18), (1, 25)),)
+
+
+def home_voices(lib, ref):
+    """Up to three works on a verse, by HOME_ERAS first, then the other eras
+    in order, and each one's first excerpt on that verse alone."""
+    on = [c for c in lib.comments if c["start"] == c["end"] == ref]
+    works = lib.ordered_works({c["work"] for c in on})
+    picked = []
+    for era in HOME_ERAS + tuple(x for x in ERAS if x not in HOME_ERAS):
+        for wid in works:
+            if len(picked) < 3 and wid not in picked and lib.author_of(wid)["era"] == era:
+                picked.append(wid)
+                break
+    picked.sort(key=lambda w: (ERAS.index(lib.author_of(w)["era"]), works.index(w)))
+    return on, works, [(w, min((c for c in on if c["work"] == w), key=lambda c: c["id"])) for w in picked]
+
+
+def home_verse_panel(lib, ref, pid):
+    """One verse on the home card: its text, three voices whose first words
+    open in place to their whole first paragraph, and the initials of every
+    voice on it."""
+    book, chapter, verse = ref_parts(ref)
+    text = plain_verses(lib.bible(book, chapter)).get(verse, "")
+    on, works, shown = home_voices(lib, ref)
+    voices = []
+    for wid, c in shown:
+        a = lib.author_of(wid)
+        paras = [p for p in c["text"].split("\n\n") if p.strip()]
+        lead = paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]
+        short = snippet(lead, 26)
+        # Opened, a voice shows up to 120 words of its paragraph, then links to the rest.
+        body = (f'<details class="lg-vv-more"><summary><span class="lg-vv-text">{e(short)}</span> '
+                f'<span class="lg-vv-open">{e(t("home.keep_reading"))}</span></summary>'
+                f'<p class="lg-vv-text lg-vv-full">{e(snippet(lead, 120))}</p>'
+                f'<p class="lg-vv-src"><a href="{excerpt_href(lib, c)}">{e(t("home.read_whole", name=short_name(a)))} {icon("arrow", 13)}</a></p></details>'
+                if short != lead else f'<p class="lg-vv-text">{e(lead)}</p>')
+        voices.append(f'<li><p class="lg-vv-who"><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b></a> '
+                      f'<span>{e(t("eras." + a["era"]))} · {e(a["dates"])}</span></p>{body}</li>')
+    href = chapter_url(book, chapter) + f"#v{verse}"
+    label = f'{lib.books[book]["en"]} {chapter}:{verse}'
+    shown_ids = {w for w, _c in shown}
+    authors = list(dict.fromkeys(lib.author_of(w)["id"] for w in works))
+    faces = "".join(
+        f'<a class="lg-face lg-era-{ERAS.index(a["era"])}{"" if any(lib.author_of(w)["id"] == a["id"] for w in shown_ids) else " lg-face-more"}" '
+        f'href="/commentators/{a["id"]}/" title="{e(a["name"])}">{e(name_initials(a))}</a>'
+        for a in (lib.authors[x] for x in authors))
+    return (f'<div class="lg-votd-panel" id="{pid}" role="tabpanel" aria-labelledby="{pid}-tab">'
+            f'<blockquote><p class="votd-text">{e(text)}</p></blockquote>'
+            f'<footer><a class="votd-ref" href="{href}">{e(label)}</a></footer>'
+            f'<ul class="lg-vv">{"".join(voices)}</ul>'
+            f'<p class="lg-vv-all"><span class="lg-faces" aria-hidden="true">{faces}</span>'
+            f'<a class="votd-why" href="{href}">{e(t("home.all_voices", n=len(authors), ref=label))} {icon("arrow", 15)}</a></p></div>')
 
 
 def home_verse(lib):
-    """The home page's verse, its text, and a few words from three voices on
-    it, copied from their excerpts as they read (a first paragraph that only
-    repeats the verse is passed over)."""
-    book, chapter, verse = ref_parts(HOME_VERSE)
-    if (book, chapter) not in lib.chapters:
+    """The home page's card: a verse from each book with commentary, as tabs,
+    each with a few words from three voices on it, copied from their
+    excerpts as they read (a first paragraph that only repeats the verse is
+    passed over)."""
+    refs = [r for r in HOME_VERSES if (ref_parts(r)[0], ref_parts(r)[1]) in lib.chapters
+            and any(c["start"] == c["end"] == r for c in lib.comments)]
+    if not refs:
         return ""
-    text = plain_verses(lib.bible(book, chapter)).get(verse, "")
-    on = [c for c in lib.comments if c["start"] == c["end"] == HOME_VERSE]
-    if not on:
-        return ""
-    voices = []
-    for era in HOME_ERAS:
-        for wid in lib.ordered_works({c["work"] for c in on}):
-            a = lib.author_of(wid)
-            if a["era"] != era:
-                continue
-            c = min((c for c in on if c["work"] == wid), key=lambda c: c["id"])
-            paras = [p for p in c["text"].split("\n\n") if p.strip()]
-            lead = paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]
-            voices.append(f'<li><p class="lg-vv-who"><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b></a> '
-                          f'<span>{e(t("eras." + era))} · {e(a["dates"])}</span></p>'
-                          f'<p class="lg-vv-text">{e(snippet(lead, 26))}</p></li>')
-            break
-    n = len({c["work"] for c in on})
-    href = chapter_url(book, chapter) + f"#v{verse}"
-    ref = f'{lib.books[book]["en"]} {chapter}:{verse}'
+    ids = [f'hv-{r.split(".")[0].lower()}' for r in refs]
+    tabs = ""
+    if len(refs) > 1:
+        tabs = ('<div class="lg-tabs lg-votd-tabs" role="tablist" hidden aria-label="' + e(t("home.verse_voices")) + '">'
+                + "".join(f'<button type="button" role="tab" id="{i}-tab" aria-controls="{i}" aria-selected="{"true" if not n else "false"}">'
+                          f'{e(lib.books[ref_parts(r)[0]]["en"])} {ref_parts(r)[1]}:{ref_parts(r)[2]}</button>'
+                          for n, (r, i) in enumerate(zip(refs, ids)))
+                + "</div>")
+    panels = "".join(home_verse_panel(lib, r, i) for r, i in zip(refs, ids))
     return (f'<section class="votd lg-votd" aria-labelledby="h-votd"><p class="eyebrow" id="h-votd">{e(t("home.verse_voices"))}</p>'
-            f'<blockquote><p class="votd-text">{e(text)}</p></blockquote>'
-            f'<footer><a class="votd-ref" href="{href}">{e(ref)}</a></footer>'
-            f'<ul class="lg-vv">{"".join(voices)}</ul>'
-            f'<p class="lg-vv-all"><a class="votd-why" href="{href}">{e(t("home.all_voices", n=n, ref=ref))} {icon("arrow", 15)}</a></p></section>')
+            f'{tabs}{panels}</section>')
+
+
+def home_doors(lib):
+    """Three ways in by purpose, each to a page that already exists."""
+    doors = (("preach", "/readings/"), ("study", "/jhn/study/"), ("devotion", "/jhn/lent/"))
+    items = "".join(f'<li><a class="lg-door" href="{href}"><b>{e(t(f"home.doors.{k}"))}</b>'
+                    f'<span>{e(t(f"home.doors.{k}_text"))}</span>'
+                    f'<span class="lg-door-go">{e(t(f"home.doors.{k}_go"))} {icon("arrow", 14)}</span></a></li>'
+                    for k, href in doors)
+    return (f'<section class="lg-block lg-doors" aria-labelledby="h-doors"><h2 id="h-doors">{e(t("home.doors.heading"))}</h2>'
+            f'<ul>{items}</ul></section>')
+
+
+def home_hero(lib, cov):
+    """The first screen: the motto, the headline, the voices by name, the
+    search, ways to try it, the books to start in, and what Logia promises."""
+    mb, mc, mv = ref_parts(HOME_MOTTO)
+    motto = e(t("home.verse"))
+    if (mb, mc) in cov:
+        motto = f'<a href="{chapter_url(mb, mc)}#v{mv}" title="{e(t("home.motto_title"))}">{motto}</a>'
+    names = " ".join(f'<a class="lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/">{e(short_name(a))}</a>'
+                     for a in lib.ordered_authors())
+    # Try: the season first, then a verse from each book, a chapter, a commentator.
+    xmas = next(((b, st, en) for oid, b, st, en, _v in occasions(lib) if oid == "christmas"), None)
+    season = [(t("home.christmas", ref=passage_ref(lib, *xmas)), t("occasions.christmas.path"))] if xmas else []
+    for (sc, sv), (ec, ev) in HOME_CHRISTMAS_MAT:
+        if ("MAT", sc) in cov:
+            season.append((t("home.christmas", ref=passage_ref(lib, "MAT", (sc, sv), (ec, ev))), passage_url("MAT", (sc, sv), (ec, ev))))
+    chips = [f'<a class="lg-season" href="{e(h)}">{e(x)}</a>' for x, h in season]
+    for r in HOME_TRY:
+        b, c, v = ref_parts(r)
+        if (b, c) in cov:
+            chips.append(f'<a href="{chapter_url(b, c)}#v{v}">{e(lib.books[b]["en"])} {c}:{v}</a>')
+    if HOME_TRY_CHAPTER in cov:
+        b, c = HOME_TRY_CHAPTER
+        chips.append(f'<a href="{chapter_url(b, c)}">{e(lib.books[b]["en"])} {c} <i>{e(t("home.kind_chapter"))}</i></a>')
+    if HOME_TRY_AUTHOR in lib.authors:
+        a = lib.authors[HOME_TRY_AUTHOR]
+        chips.append(f'<a href="/commentators/{a["id"]}/">{e(short_name(a))} <i>{e(t("home.kind_commentator"))}</i></a>')
+    # The books with commentary, each with how many voices it has.
+    books = ""
+    for book in dict.fromkeys(b for b, _c in sorted(cov, key=lambda bc: lib.chapters.index(bc))):
+        n = len({lib.author_of(c["work"])["id"] for c in lib.comments if c["start"].split(".")[0] == book})
+        first = min(c for b, c in cov if b == book)
+        books += (f'<a class="button ghost" href="{chapter_url(book, first)}">{e(lib.books[book]["en"])} '
+                  f'<span>{e(t("home.n_voices", n=n))}</span></a>')
+    trust = "".join(f'<li><a href="{h}">{e(t("home.trust." + k))}</a></li>'
+                    for k, h in (("free", "/about/"), ("public", "/about/"), ("copied", "/about/"), ("data", "/open-data/")))
+    return f"""
+<section class="hero lg-hero">
+<p class="eyebrow lg-motto">{motto}</p>
+<h1>{e(t("home.title"))}</h1>
+<p class="hero-sub">{e(t("home.lead"))}</p>
+<p class="lg-names">{names}</p>
+{search_box(lib, "home-q", key_hint=True)}
+<p class="hero-try lg-try"><span>{e(t("search.try"))}</span> {" ".join(chips)}</p>
+<p class="lg-books"><span>{e(t("home.start_in"))}</span> <a class="button" href="/" data-resume="{e(t("home.resume"))}" hidden></a>{books}
+<a class="lg-books-all" href="/read/">{e(t("home.browse"))} {icon("arrow", 14)}</a></p>
+<ul class="lg-trust">{trust}</ul>
+</section>"""
 
 
 def home_page(lib):
     cov = lib.coverage()
-    first = sorted(cov)[0] if cov else lib.chapters[0]
     # Start reading: each book with commentary as a strip of its chapters,
     # then a few well-known passages by their titles.
     strips = ""
@@ -964,18 +1076,9 @@ def home_page(lib):
             voices += (f'<section><h3 class="label">{e(t("eras." + era))}</h3><ul class="lg-people">'
                        + "".join(f'<li><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b> '
                                  f'<span>{e(a["dates"])}</span></a></li>' for a in people) + "</ul></section>")
-    body = f"""
-<section class="hero">
-<p class="eyebrow">{e(t("home.verse"))}</p>
-<h1>{e(t("home.title"))}</h1>
-<p class="hero-sub">{e(t("home.lead"))}</p>
-<p class="actions"><a class="button" href="/" data-resume="{e(t("home.resume"))}" hidden></a><a class="button" href="{chapter_url(*first)}">{e(t("home.start"))}</a>
-<a class="button ghost" href="/read/">{e(t("home.browse"))}</a></p>
-{search_box(lib, "home-q")}
-<p class="hero-try">{e(t("search.try"))} <a href="/jhn/1/#v1">John 1:1</a> <a href="/jhn/3/#v16">John 3:16</a> <a href="/jhn/11/#v25">John 11:25</a> <a href="/jhn/14/#v6">John 14:6</a></p>
-<p class="hero-try">{e(t("home.season"))} <a href="{e(t("occasions.christmas.path"))}">{e(t("home.season_link"))}</a> · <a href="/readings/">{e(t("home.readings_link"))}</a></p>
-</section>
+    body = f"""{home_hero(lib, cov)}
 {home_verse(lib)}
+{home_doors(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
 <p class="lg-quiet">{e(t("home.read_note"))}</p>{cards}</section>
 <section class="lg-block" aria-labelledby="h-voices"><h2 id="h-voices">{e(t("home.voices_heading"))}</h2>
@@ -2428,7 +2531,7 @@ def saved_page(lib):
     """The reader's saved comments; web/account.js fills it in. Signed out,
     it shows what saving does, with an excerpt as it would be kept."""
     sample = ""
-    on = sorted((c for c in lib.comments if c["start"] == c["end"] == HOME_VERSE), key=lambda c: (lib.ordered_works().index(c["work"]), c["id"]))
+    on = sorted((c for c in lib.comments if c["start"] == c["end"] == HOME_VERSES[0]), key=lambda c: (lib.ordered_works().index(c["work"]), c["id"]))
     calvin = [c for c in on if c["work"] == "calvin"] or on
     if calvin:
         c = calvin[0]
