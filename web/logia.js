@@ -1,5 +1,5 @@
 // Logia's own site script, beside the Open Word Bible's web/site.js: the
-// passage search (home, Read, page not found), "Continue reading" (the last
+// passage search (home, Read, page not found, and the footer), "Continue reading" (the last
 // verse read, kept by web/reader.js), and opening a closed <details> that a
 // link points into. The search reads its book names and commentators from
 // the page's #search-data (search_data in scripts/build_site.py).
@@ -11,6 +11,18 @@
   var fmt = function (s, vals) { return s.replace(/\{(\w+)\}/g, function (_, k) { return vals[k] !== undefined ? vals[k] : ""; }); };
   var holder = document.getElementById("search-data");
   var D = holder ? JSON.parse(holder.textContent) : null;
+  // A page without #search-data (all but home, Read and page not found) has
+  // only the footer's box, which loads the same data from /search.json when
+  // it is first used.
+  var waiting = null;
+  function withData(then) {
+    if (D) return then();
+    if (!waiting) {
+      waiting = fetch("/search.json").then(function (r) { return r.json(); })
+        .then(function (d) { D = d; }, function () { waiting = null; });
+    }
+    waiting.then(function () { if (D) then(); });
+  }
 
   // "John 3:16", "jn 3.16", "1 Cor 13", "Ps 23 4", "john3:16": a book (any
   // name or abbreviation in D.aliases, or the start of a book's name), then
@@ -82,7 +94,8 @@
       list.querySelectorAll("[role=option]").forEach(function (li, i) { li.setAttribute("aria-selected", i === at); });
       if (at >= 0) input.setAttribute("aria-activedescendant", list.id + "-" + at); else input.removeAttribute("aria-activedescendant");
     }
-    input.addEventListener("input", render);
+    input.addEventListener("focus", function () { withData(function () {}); });
+    input.addEventListener("input", function () { withData(render); });
     input.addEventListener("keydown", function (e) {
       if (!items.length) return;
       if (e.key === "ArrowDown") { at = (at + 1) % items.length; mark(); e.preventDefault(); }
@@ -91,11 +104,14 @@
     });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (!items.length) render();
-      if (items.length) location.href = items[Math.max(0, at)].href;
+      withData(function () {
+        if (!items.length) render();
+        if (items.length) location.href = items[Math.max(0, at)].href;
+      });
     });
     document.addEventListener("click", function (e) { if (!form.contains(e.target)) { list.hidden = true; input.setAttribute("aria-expanded", "false"); } });
-    // "/" focuses the search, as on many reading sites.
+    // "/" focuses the page's own search, as on many reading sites (not the footer's).
+    if (form.classList.contains("lg-foot-search")) return;
     document.addEventListener("keydown", function (e) {
       if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); input.focus(); }
     });
