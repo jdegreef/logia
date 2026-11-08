@@ -942,6 +942,62 @@ def home_verse(lib):
             f'<p class="lg-vv-all"><a class="votd-why" href="{href}">{e(t("home.all_voices", n=n, ref=ref))} {icon("arrow", 15)}</a></p></section>')
 
 
+def chapter_excerpts(lib, book):
+    """{chapter: excerpts that begin in it}, as the most-discussed page counts them."""
+    n = {}
+    for c in lib.comments:
+        b, ch, _v = ref_parts(c["start"])
+        if b == book:
+            n[ch] = n.get(ch, 0) + 1
+    return n
+
+
+def heat_pills(lib, book, cov):
+    """A book's chapter pills for the home page, each chapter with commentary
+    shaded in five steps by how many excerpts begin in it, darkest the most."""
+    counts = chapter_excerpts(lib, book)
+    peak = max(counts.values(), default=0)
+    have = {c for b, c in lib.chapters if b == book}
+    out = []
+    for n in range(1, lib.books[book]["chapters"] + 1):
+        label = f'{lib.books[book]["en"]} {n}'
+        if n in have and (book, n) in cov and peak:
+            k = counts.get(n, 0)
+            step = min(4, int(k / peak * 5)) if k else 0
+            out.append(f'<a class="chap lg-has lg-heat-{step}" href="{chapter_url(book, n)}" '
+                       f'title="{e(t("home.heat_title", ref=label, n=f"{k:,}"))}">{n}</a>')
+        elif n in have:
+            out.append(f'<a class="chap part" href="{chapter_url(book, n)}" title="{e(label + ": " + t("read.text_only_chapter"))}">{n}</a>')
+        else:
+            out.append(f'<span class="chap none" title="{e(label)}">{n}</span>')
+    return "".join(out)
+
+
+def home_top_verses(lib, per_book=2):
+    """The verses with the most excerpts in each book with commentary, counted
+    as its most-discussed page counts them, with links to those pages. Each
+    book gets its own rows, since the books have different numbers of
+    commentators."""
+    books = list(dict.fromkeys(b for b, _c in sorted(lib.coverage(), key=lambda bc: lib.chapters.index(bc))))
+    ranked = []
+    for book in books:
+        counts = sorted(verse_counts(lib, book).items(), key=lambda kv: (-kv[1], kv[0]))[:per_book]
+        ranked += [(n, book, ch, v) for (ch, v), n in counts]
+    if not ranked:
+        return ""
+    peak = max(r[0] for r in ranked)
+    rows = "".join(
+        f'<li><a href="{verse_url(book, ch, v)}">'
+        f'<span class="lg-top-ref">{e(verse_ref(lib, book, ch, v))}</span>'
+        f'<span class="lg-top-text">{e(snippet(chapter_plain(book, ch).get(v, ""), 12))}</span>'
+        f'<span class="lg-bar"><span style="width:{n / peak * 100:.1f}%"></span></span>'
+        f'<span class="lg-bar-n">{e(t("home.top_n", n=n))}</span></a></li>'
+        for n, book, ch, v in ranked)
+    links = " · ".join(f'<a href="/{b.lower()}/most-discussed/">{e(lib.books[b]["en"])}</a>' for b in books)
+    return (f'<h3 class="label lg-top-h">{e(t("home.top_heading"))}</h3><ul class="lg-top">{rows}</ul>'
+            f'<p class="lg-quiet lg-top-more">{e(t("home.top_more"))} {links}</p>')
+
+
 def home_page(lib):
     cov = lib.coverage()
     first = sorted(cov)[0] if cov else lib.chapters[0]
@@ -950,11 +1006,12 @@ def home_page(lib):
     strips = ""
     for book in dict.fromkeys(b for b, _c in sorted(cov, key=lambda bc: lib.chapters.index(bc))):
         strips += (f'<div class="lg-strip"><a class="lg-strip-book" href="/{book.lower()}/">{e(lib.books[book]["en"])}</a>'
-                   f'<div class="chap-pills">{chapter_pills(lib, book, cov)}</div></div>')
+                   f'<div class="chap-pills">{heat_pills(lib, book, cov)}</div></div>')
     famous = "".join(
         f'<li><a class="lg-card" href="{chapter_url(b, c)}"><span class="lg-card-ref">{e(lib.books[b]["en"])} {c}</span>'
         f'<b>{e(lib.chapter_title(b, c))}</b></a></li>'
         for b, c in HOME_PASSAGES if (b, c) in cov)
+    strips += home_top_verses(lib)
     cards = (f'{strips}<h3 class="label lg-famous-h">{e(t("home.famous"))}</h3><ul class="lg-cards lg-famous">{famous}</ul>'
              if famous else strips)
     voices = ""
@@ -977,7 +1034,7 @@ def home_page(lib):
 </section>
 {home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
-<p class="lg-quiet">{e(t("home.read_note"))}</p>{cards}</section>
+<p class="lg-quiet">{e(t("home.heat_note"))}</p>{cards}</section>
 <section class="lg-block" aria-labelledby="h-voices"><h2 id="h-voices">{e(t("home.voices_heading"))}</h2>
 <div class="lg-eras">{voices}</div>
 <p><a class="lg-more" href="/commentators/">{e(t("home.all_commentators"))} {icon("arrow", 15)}</a></p></section>
