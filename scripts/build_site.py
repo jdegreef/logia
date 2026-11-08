@@ -324,7 +324,8 @@ class Library:
                 "id": c["id"], "start": sv if sc == chapter else 1, "end": ev if ec == chapter else last_verse,
                 "heading": c["heading"], "excerpt": c["text"], "source_url": c["source_url"],
                 "locus": c.get("locus"), "cites": self.cites_for(c), "quotes": self.quote_rows(c),
-                "quotedIn": self.quoted_in_rows(c), "inFull": self.in_full.get(c["id"])})
+                "quotedIn": self.quoted_in_rows(c), "inFull": self.in_full.get(c["id"]),
+                "words": len(c["text"].split()), "speakers": catena_speakers(c["work"], c["text"])})
         return out
 
     # --- Links between texts (docs/references.md) ---
@@ -1237,13 +1238,15 @@ def panel_file(bible):
 # 815 KB of 860 KB), so it is a file of its own too, /comm/<BOOK>.<chapter>.json,
 # preloaded from the page's head so it downloads beside the page while the
 # Bible text is shown. The page keeps an index of who comments on which
-# verses: enough for the timeline, the summary and the gold verse numbers.
+# verses and how many words: enough for the timeline, the summary, the gold
+# line beside the text and the brackets for passages.
 INDEX_FIELDS = ("work_id", "author", "short_name", "era", "died")
 
 
 def comm_file(commentaries, cited_by):
     """The commentary file's text (None when there is nothing in it), and the page's index."""
-    index = [{**{k: w[k] for k in INDEX_FIELDS}, "entries": [{"start": x["start"], "end": x["end"]} for x in w["entries"]]}
+    index = [{**{k: w[k] for k in INDEX_FIELDS},
+              "entries": [{"start": x["start"], "end": x["end"], "words": x["words"]} for x in w["entries"]]}
              for w in commentaries]
     if not commentaries and not any(cited_by.values()):
         return None, index
@@ -1310,6 +1313,7 @@ def chapter_page(lib, book, chapter, all_chapters):
             "work_url": f"/works/{wid}/", "entries": sorted(by_work[wid], key=lambda x: (x["start"], x["end"]))})
     ui = dict(CATALOG["reader"])
     ui["eras"] = CATALOG["eras"]
+    ui["fathers"] = CATALOG["catena"]["names"]
     ui["levels"] = CATALOG["level"]
     hebrew = bible["source"] == "hbo"
     if hebrew:
@@ -2845,6 +2849,37 @@ CATENA_LABELS = {"AUG.": "augustine", "CHRYS.": "chrysostom", "THEOPHYL.": "theo
                  "ORIGEN.": "origen", "BEDE.": "bede", "GREG.": "greg", "HILARY.": "hilary", "BASIL.": "basil",
                  "HAYMO.": "haymo", "GLOSS.": "gloss", "JEROME.": "jerome"}
 CATENA_LABEL = re.compile(r"(?:^|(?<=[.;:?!\"”)\]] )|(?<=\n))(" + "|".join(re.escape(k) for k in CATENA_LABELS) + r")(?= )")
+
+
+# The Catena on Matthew (Oxford, 1841) opens each quotation on a new
+# paragraph with the Father's name and where the passage is, then a colon:
+# "Jerome, Ez, i. 5. Hier. Prolog. in Com. in Matt.: ...", "Rabanus: ...".
+# The names, as that edition abbreviates them; one it misprints is left alone.
+CATENA_NAMES = {
+    "Jerome": "jerome", "Chrys.": "chrysostom", "Chrys": "chrysostom", "Aug.": "augustine", "Aug": "augustine",
+    "Augustine": "augustine", "Aug. Serm.": "augustine", "Pseudo-Chrys.": "pseudo_chrysostom", "Remig.": "remigius",
+    "Remig": "remigius", "Remigius": "remigius", "Hilary": "hilary", "Hil.": "hilary", "Origen": "origen",
+    "Raban.": "rabanus", "Raban": "rabanus", "Rabanus": "rabanus", "Greg.": "greg", "Greg": "greg", "Gregory": "greg",
+    "Gloss.": "gloss", "Gloss": "gloss", "Gloss. Ordinaria": "gloss", "Gloss. Anselm": "gloss", "Ambrose": "ambrose",
+    "Leo": "leo", "Bede": "bede", "Pseudo-Aug.": "pseudo_augustine", "Cyprian": "cyprian",
+    "Pseudo-Origen": "pseudo_origen", "Chrysol.": "chrysologus", "Chrysol": "chrysologus",
+    "Chrysologus": "chrysologus", "Cassian": "cassian", "Haymo": "haymo", "Euseb.": "eusebius", "Cyril": "cyril",
+    "Isidore": "isidore", "Isid.": "isidore", "Damascenus": "damascene", "Damas.": "damascene",
+    "Damasc.": "damascene", "Theodotus": "theodotus", "Gregory Nyss.": "gregory_nyssa", "Anselm": "anselm",
+    "Josephus": "josephus", "Maximus": "maximus", "Gennadius": "gennadius", "Ambrosiaster": "ambrosiaster",
+    "Nemesius": "nemesius", "Dionysius": "dionysius", "Dionys.": "dionysius"}
+CATENA_HEAD = re.compile(r"(?:^|(?<=\n\n))([A-Z][A-Za-z\-]+\.?(?: [A-Z][A-Za-z]+\.?)?)(,[^:\n]{0,90})?:(?= )")
+
+
+def catena_speakers(work, text):
+    """Where each Father's name opens a quotation in a Catena excerpt, so the
+    reader can set it apart and name who is quoted: [{at, len, who}]."""
+    if not work.startswith("catena"):
+        return []
+    out = [{"at": m.start(1), "len": len(m.group(1)), "who": CATENA_LABELS[m.group(1)]} for m in CATENA_LABEL.finditer(text)]
+    out += [{"at": m.start(1), "len": m.end() - m.start(1), "who": CATENA_NAMES[m.group(1)]}
+            for m in CATENA_HEAD.finditer(text) if m.group(1) in CATENA_NAMES]
+    return sorted(out, key=lambda x: x["at"])
 
 
 def catena_labels(lib, work="catena"):
