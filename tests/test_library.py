@@ -254,7 +254,9 @@ class Site(unittest.TestCase):
         self.assertEqual([w["work_id"] for w in data["commentaries"]], [w["work_id"] for w in comm["commentaries"]])
         for short, full in zip(data["commentaries"], comm["commentaries"]):
             self.assertNotIn("excerpt", json.dumps(short))
-            self.assertEqual(short["entries"], [{"start": x["start"], "end": x["end"]} for x in full["entries"]])
+            self.assertEqual(short["entries"],
+                             [{"start": x["start"], "end": x["end"], "words": x["words"]} for x in full["entries"]])
+            self.assertTrue(all(x["words"] == len(x["excerpt"].split()) for x in full["entries"]))
             self.assertTrue(all(x["excerpt"] for x in full["entries"]))
         self.assertIn("citedBy", comm)
 
@@ -619,6 +621,14 @@ class Site(unittest.TestCase):
         lib = build_site.Library()
         labels = build_site.catena_labels(lib)
         self.assertGreater(len(labels["AUG."]), len(labels["BEDE."]))
+        # On the reader, each quotation's printed name is marked, both the
+        # John edition's "CHRYS." and the Matthew edition's "Jerome, ...:".
+        sp = build_site.catena_speakers("catena-matthew",
+                                        "Jerome, Ez, i. 5.: The face.\n\nRabanus: By this.\n\nThus: not a name.")
+        self.assertEqual([(x["at"], x["len"], x["who"]) for x in sp], [(0, 18, "jerome"), (30, 8, "rabanus")])
+        self.assertEqual(build_site.catena_speakers("chrysostom-matthew", "Jerome: x"), [])
+        self.assertTrue(all(x["who"] in build_site.CATALOG["catena"]["names"] for c in lib.comments
+                            for x in build_site.catena_speakers(c["work"], c["text"])))
         text = self.read(os.path.join("works", "catena", "fathers", "index.html"))
         self.assertIn(f'<span class="lg-bar-n">{len(labels["CHRYS."])}</span>', text)
         self.assertIn('href="/commentators/chrysostom/"', text)
