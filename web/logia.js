@@ -182,6 +182,26 @@
     bar.parentNode.classList.add("lg-tabbed");
     show(tabs[0]);
   });
+  // The commentators page: book chips that narrow the cards to those who
+  // comment on that book and dim the other lives on the timeline.
+  document.querySelectorAll(".lg-pick").forEach(function (pick) {
+    var chips = [].slice.call(pick.querySelectorAll("button"));
+    var cards = [].slice.call(pick.parentNode.querySelectorAll("li[data-books]"));
+    var rows = [].slice.call(document.querySelectorAll(".lg-tl-row[data-author]"));
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var book = chip.getAttribute("data-book"), shown = {};
+        chips.forEach(function (x) { x.setAttribute("aria-pressed", x === chip ? "true" : "false"); });
+        cards.forEach(function (li) {
+          var on = !book || li.getAttribute("data-books").split(" ").indexOf(book) >= 0;
+          li.hidden = !on;
+          if (on) shown[li.getAttribute("data-author")] = true;
+        });
+        rows.forEach(function (row) { row.classList.toggle("lg-tl-dim", !shown[row.getAttribute("data-author")]); });
+      });
+    });
+    pick.hidden = false;
+  });
   document.querySelectorAll(".lg-goto").forEach(function (form) {
     var books = JSON.parse(form.getAttribute("data-books"));
     var codes = Object.keys(books);
