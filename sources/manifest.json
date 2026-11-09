@@ -5810,6 +5810,24 @@
    "kind": "digital",
    "download_sha256": "a0fb6f9ed9e50a712f1f36821f88ca00c9d6367f8fcf731ccc34dfbee07285c1",
    "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/keil/pentateuch01keil.txt",
+   "work": "keil",
+   "url": "https://archive.org/stream/pentateuch01keil/pentateuch01keil_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "41a126b10f5eebf2c783f4d80181af9e581654d6642ea288e91ec6222665bb5c",
+   "extract": "Characters 87227-1214285 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/haydock/haydock-catholic-bible-comment-haydock-george-leo-3948.txt",
+   "work": "haydock",
+   "url": "https://archive.org/stream/haydock-catholic-bible-comment-haydock-george-leo-3948/Haydock%20Catholic%20Bible%20Comment%20-%20Haydock%2C%20George%20Leo_3948_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "762412dbcd2fe4ebf70c26915f8195311f7dfcc90c91bd21ab939c044afe047a",
+   "extract": "Characters 1596-300643 of the scan's full text (the pages quoted, with a margin)."
   }
  ]
 }

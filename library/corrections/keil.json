@@ -1,0 +1,66 @@
+{
+ "work": "keil",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "ichich",
+   "to": "which"
+  },
+  {
+   "from": "seiced",
+   "to": "sewed"
+  },
+  {
+   "from": "elause",
+   "to": "clause"
+  },
+  {
+   "from": "Delltzsch",
+   "to": "Delitzsch"
+  },
+  {
+   "from": "Dcdan",
+   "to": "Dedan"
+  },
+  {
+   "from": "Nlmrod",
+   "to": "Nimrod"
+  },
+  {
+   "from": "Horitcs",
+   "to": "Horites"
+  },
+  {
+   "from": "/ will",
+   "to": "I will"
+  },
+  {
+   "from": " Gai ",
+   "to": " Gal "
+  },
+  {
+   "from": "Shnr",
+   "to": "Shur"
+  },
+  {
+   "from": "searcli",
+   "to": "search"
+  },
+  {
+   "from": "ivhere",
+   "to": "where"
+  },
+  {
+   "from": "hoiv",
+   "to": "how"
+  },
+  {
+   "from": "Hengsteriberg",
+   "to": "Hengstenberg"
+  },
+  {
+   "from": "ivalk",
+   "to": "walk"
+  }
+ ]
+}
