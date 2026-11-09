@@ -125,9 +125,13 @@
     var last = null;
     try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
     if (!last || !last.href || last.href.charAt(0) !== "/") return;
+    // A book page offers to go on only in its own book, before its start button.
+    var only = a.getAttribute("data-resume-book");
+    if (only && last.href.indexOf(only) !== 0) return;
     a.href = last.href;
     a.textContent = fmt(a.getAttribute("data-resume"), { ref: last.ref });
     a.hidden = false;
+    if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
   });
 
   // Chapters already read: a dot on their chip (web/reader.js keeps the list).
@@ -137,7 +141,32 @@
     document.querySelectorAll("a.chap").forEach(function (a) {
       if (read.indexOf(a.getAttribute("href")) >= 0) a.classList.add("lg-read");
     });
+    // A book page: a tick on each chapter read, and how many.
+    document.querySelectorAll(".lg-toc-book > li > a").forEach(function (a) {
+      if (read.indexOf(a.getAttribute("href")) >= 0) a.parentNode.classList.add("lg-read");
+    });
+    document.querySelectorAll("[data-read-count]").forEach(function (p) {
+      var prefix = p.getAttribute("data-prefix");
+      var n = read.filter(function (h) { return /^\/[a-z0-9]+\/\d+\/$/.test(h) && h.indexOf(prefix) === 0; }).length;
+      if (!n) return;
+      p.textContent = fmt(p.getAttribute("data-read-count"), { n: n });
+      p.hidden = false;
+    });
   }
+
+  // A book page's "Go to a verse" box: "5:3", "5 3" or "5.3" opens the
+  // chapter at that verse.
+  document.querySelectorAll(".lg-verse-go").forEach(function (form) {
+    var verses = JSON.parse(form.getAttribute("data-verses"));
+    var input = form.querySelector("input"), note = form.querySelector("[role=status]");
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var m = input.value.trim().match(/(\d+)\s*[:.\s]\s*(\d+)$/) || input.value.trim().match(/^(\d+)$/);
+      var ch = m && +m[1], v = m && m[2] ? +m[2] : 1;
+      if (!m || !verses[ch] || v < 1 || v > verses[ch]) { note.textContent = form.getAttribute("data-none"); return; }
+      location.href = form.getAttribute("data-book") + ch + "/#v" + v;
+    });
+  });
 
   // A button that copies its data-copy text (a work's citation), and says so.
   document.querySelectorAll("[data-copy]").forEach(function (b) {
