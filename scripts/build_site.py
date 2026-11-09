@@ -1971,6 +1971,40 @@ def name_initials(a):
     return caps[0] + caps[-1] if len(caps) > 1 else caps
 
 
+# The verse the commentators page hears every voice on: the opening of John,
+# where most of them begin.
+VOICES_VERSE = "JHN.1.1"
+
+
+def one_verse(lib, ref=VOICES_VERSE):
+    """Every commentator on one verse, in the order they lived: the first
+    words of the excerpt that comments most closely on it, linked to the
+    whole excerpt, and a link to read them side by side in the reader."""
+    book, chapter, verse = ref_parts(ref)
+    if (book, chapter) not in lib.chapters:
+        return ""
+    rows = []
+    for a in lib.ordered_authors():
+        works = {w for w, x in lib.works.items() if x["author"] == a["id"]}
+        c = first_on(lib, works, ref)
+        if not c:
+            continue
+        paras = [p for p in c["text"].split("\n\n") if p.strip()]
+        lead = paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]
+        rows.append(f'<li class="lg-era-{ERAS.index(a["era"])}"><p class="lg-ov-who"><a href="/commentators/{a["id"]}/">'
+                    f'<b>{e(a["name"])}</b></a> <span>{e(a["dates"])}</span></p>'
+                    f'<p class="lg-ov-text"><a href="{excerpt_href(lib, c)}">“{e(snippet(lead, 30))}”</a></p></li>')
+    if len(rows) < 2:
+        return ""
+    label = f'{lib.books[book]["en"]} {chapter}:{verse}'
+    text = plain_verses(lib.bible(book, chapter)).get(verse, "")
+    href = chapter_url(book, chapter) + f"#v{verse}"
+    return (f'<section class="lg-block lg-ov" aria-labelledby="ov-h"><h2 id="ov-h">{e(t("commentators.one_verse", n=len(rows), ref=label))}</h2>'
+            f'<p class="lg-quiet">{e(t("commentators.one_verse_note"))}</p>'
+            f'<blockquote class="lg-ov-verse"><p>{e(text)}</p></blockquote><ol class="lg-ov-list">{"".join(rows)}</ol>'
+            f'<p><a class="lg-more" href="{href}">{e(t("commentators.one_verse_all", ref=label))} {icon("arrow", 15)}</a></p></section>')
+
+
 def commentators_page(lib):
     # Each commentator as a card in one grid: their initials in their era's
     # colour, dates and tradition, the first words of their first excerpt,
@@ -2012,7 +2046,8 @@ def commentators_page(lib):
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
 {timeline(lib)}
 <p class="lg-era-links">{e(t("era.by_era"))} {era_links(lib)}</p>
-{sections}"""
+{sections}
+{one_verse(lib)}"""
     return page(lib, t("commentators.title"), body, "/commentators/", current="/commentators/")
 
 
