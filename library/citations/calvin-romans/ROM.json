@@ -1576,6 +1576,42 @@
    "end": "1TI.5.11",
    "found": "source",
    "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.16.25-27.3",
+   "at": 1579,
+   "text": "1 Peter 1:12",
+   "start": "1PE.1.12",
+   "end": "1PE.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.16.25-27.4",
+   "at": 115,
+   "text": "Ephesians 3:9",
+   "start": "EPH.3.9",
+   "end": "EPH.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.16.25-27.4",
+   "at": 137,
+   "text": "Colossians 1:26",
+   "start": "COL.1.26",
+   "end": "COL.1.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.16.25-27.4",
+   "at": 949,
+   "text": "Malachi 4:2",
+   "start": "MAL.4.2",
+   "end": "MAL.4.2",
+   "found": "source",
+   "status": "detected"
   }
  ]
 }

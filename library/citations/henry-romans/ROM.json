@@ -12736,6 +12736,132 @@
    "end": "2TI.4.20",
    "found": "source",
    "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.25-27.1",
+   "at": 1026,
+   "text": "John xvii. 20",
+   "start": "JHN.17.20",
+   "end": "JHN.17.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.25-27.1",
+   "at": 1400,
+   "text": "Heb. ii. 3",
+   "start": "HEB.2.3",
+   "end": "HEB.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.25-27.2",
+   "at": 328,
+   "text": "1 Tim. iii. 16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.25-27.3",
+   "at": 371,
+   "text": "Eph. iii. 9",
+   "start": "EPH.3.9",
+   "end": "EPH.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.25-27.3",
+   "at": 698,
+   "text": "2 Cor. iii. 13",
+   "start": "2CO.3.13",
+   "end": "2CO.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.25-27.4",
+   "at": 1215,
+   "text": "Rev. x. 11",
+   "start": "REV.10.11",
+   "end": "REV.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.25-27.6",
+   "at": 560,
+   "text": "Acts vi. 7",
+   "start": "ACT.6.7",
+   "end": "ACT.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.27.1",
+   "at": 80,
+   "text": "v. 27",
+   "start": "ROM.16.27",
+   "end": "ROM.16.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.27.1",
+   "at": 584,
+   "text": "v. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.27.1",
+   "at": 1045,
+   "text": "Jude 24",
+   "start": "JUD.1.24",
+   "end": "JUD.1.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.27.1",
+   "at": 1312,
+   "text": "1 Pet. i. 5",
+   "start": "1PE.1.5",
+   "end": "1PE.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.27.1",
+   "at": 1325,
+   "text": "John x. 29",
+   "start": "JHN.10.29",
+   "end": "JHN.10.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.27.1",
+   "at": 1354,
+   "text": "v. 27",
+   "start": "ROM.16.27",
+   "end": "ROM.16.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-romans.ROM.16.27.2",
+   "at": 236,
+   "text": "James i. 17",
+   "start": "JAS.1.17",
+   "end": "JAS.1.17",
+   "found": "source",
+   "status": "detected"
   }
  ]
 }
