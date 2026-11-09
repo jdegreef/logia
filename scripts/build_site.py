@@ -2408,9 +2408,14 @@ def lent_page(lib, book, year):
     name = lib.books[book]["en"]
     dates = lent_days(year)
     days = plan_days(lib, book, len(dates))
+    # A passage has a page of its own only where there is commentary on it (Psalms,
+    # Job): the others are read in the chapter.
+    pages = {passage_url(book, s_, e_) for _h, s_, e_, _v in passages_with_commentary(lib, book)}
+    href = lambda s_, e_: (passage_url(book, s_, e_) if passage_url(book, s_, e_) in pages     # noqa: E731
+                           else f"{chapter_url(book, s_[0])}#v{s_[1]}")
     rows = []
     for i, (date, secs) in enumerate(zip(dates, days), 1):
-        links = " · ".join(f'<a href="{passage_url(book, s_, e_)}">{e(h)}</a> <span class="lg-quiet">{e(passage_ref(lib, book, s_, e_).replace(name + " ", ""))}</span>'
+        links = " · ".join(f'<a href="{href(s_, e_)}">{e(h)}</a> <span class="lg-quiet">{e(passage_ref(lib, book, s_, e_).replace(name + " ", ""))}</span>'
                            for h, s_, e_ in secs)
         special = ""
         if i == 1:

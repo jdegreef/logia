@@ -14,8 +14,9 @@ it, so it comes first. The rules in `CLAUDE.md` apply to every item: nothing
 here permits writing commentary, typing Greek or Hebrew, or marking work
 reviewed without a named human reviewer.
 
-Where Logia stands (November 2026): the Gospel of John, twelve commentaries
-(Origen on John 1–2 only, Cyril without 10:19–12:50), 10,390 excerpts, a chapter reader with Greek words
+Where Logia stands (November 2026): twenty commentaries, twelve on John and
+the rest on Genesis, Job, the Psalms, the Song of Songs and Galatians, 14,668
+excerpts, a chapter reader with Greek words
 and cross-references, and source checking.
 
 ## Phase 1: the data model

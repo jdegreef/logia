@@ -5882,6 +5882,51 @@
    "kind": "scan",
    "download_sha256": "ba518c43f73d2371c5968af223ad5720b3f0c8cb0ac03c8366d46e12f0614199",
    "extract": "Characters 111888-1800165 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/bernard/LifeAndWorksOfSaintBernardV4.txt",
+   "work": "bernard",
+   "url": "https://archive.org/stream/LifeAndWorksOfSaintBernardV4/LifeAndWorksOfSaintBernardV4_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "2045af7865c701bbacdc1c7b08e0674253ede5120fa1b92221601e5fdb8805cc",
+   "extract": "Characters 84543-1995188 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/gregory/moralsonbookofjo01greguoft.txt",
+   "work": "gregory",
+   "url": "https://archive.org/stream/moralsonbookofjo01greguoft/moralsonbookofjo01greguoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "7e7b7a2f1dbfe21398aa97fc607a04b13905c4a1ff745879d08bb225ceab662a",
+   "extract": "Characters 145985-1759689 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/gregory/moralsonbookofjo02greguoft.txt",
+   "work": "gregory",
+   "url": "https://archive.org/stream/moralsonbookofjo02greguoft/moralsonbookofjo02greguoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "3da8d7ed0ce154307f1d828eb9697b8195b21c3191eac73bd2987f8cf581b2be",
+   "extract": "Characters 5585-1663148 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/gregory/p1moralsonbookof03greguoft.txt",
+   "work": "gregory",
+   "url": "https://archive.org/stream/p1moralsonbookof03greguoft/p1moralsonbookof03greguoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "92f661e0a048a3e9bfe0f09677912488b3d31175198e5e90df5be41e4a474e22",
+   "extract": "Characters 25267-1028442 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/gregory/p2moralsonbookof03greguoft.txt",
+   "work": "gregory",
+   "url": "https://archive.org/stream/p2moralsonbookof03greguoft/p2moralsonbookof03greguoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "b9ff09398cfefb9f76adfb9e49fba105611c5b6bb5b183ba1fa945c6861bb403",
+   "extract": "Characters 3333-961650 of the scan's full text (the pages quoted, with a margin)."
   }
  ]
 }

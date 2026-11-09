@@ -1,0 +1,18 @@
+{
+ "id": "gregory",
+ "author": "gregory",
+ "title": "Morals on the Book of Job",
+ "divisions": "verse",
+ "edition": "Morals on the Book of Job, by S. Gregory the Great, translated with notes and indices (Library of Fathers of the Holy Catholic Church, Vols. 18, 21, 23 and 31). Oxford: John Henry Parker, 1844-1850; archive.org scans \"moralsonbookofjo01greguoft\", \"moralsonbookofjo02greguoft\", \"p1moralsonbookof03greguoft\" and \"p2moralsonbookof03greguoft\" (University of Toronto), djvu OCR text",
+ "original_language": "Latin",
+ "translation": "Library of the Fathers (Oxford, 1844-50); the volumes name no translator (to confirm: usually credited to James Bliss, with Charles Marriott)",
+ "published": 1844,
+ "full_text_url": "https://archive.org/details/moralsonbookofjo01greguoft",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: the translators' names and death dates (life + 70 years)"
+ },
+ "source_kind": "scan",
+ "notes": "Each excerpt runs from one of Gregory's lemmas (\"Ver. 5. And it was so ...\"), up to about 350 words and cut at a sentence end, and stops at the foot of the page, where the edition's notes on Latin readings begin. The lemmas print only the verse; the chapter of Job is the one, at or after the lemma before, whose verse of that number shares most words with the lemma (a lemma that matches no verse is left out). Gregory's chapter numbers in the margin are left out where the OCR runs them into the text. A sentence the OCR damaged is left out and marked \" ... \"; misreadings are corrected in library/corrections/gregory.json only where the same scan prints the word correctly many times.",
+ "status": "ai_draft"
+}

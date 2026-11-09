@@ -1,0 +1,18 @@
+{
+ "id": "bernard",
+ "author": "bernard",
+ "title": "Sermons on the Song of Songs (Cantica Canticorum)",
+ "divisions": "verse",
+ "edition": "Life and Works of Saint Bernard, Abbot of Clairvaux, edited by Dom John Mabillon, translated and edited with additional notes by Samuel J. Eales, Vol. IV: Cantica Canticorum, Eighty-six Sermons on the Song of Solomon. London: John Hodges, 1896; archive.org scan \"LifeAndWorksOfSaintBernardV4\" (Google), djvu OCR text",
+ "original_language": "Latin",
+ "translation": "Translated by Samuel J. Eales (Vol. IV, 1896)",
+ "published": 1896,
+ "full_text_url": "https://archive.org/details/LifeAndWorksOfSaintBernardV4",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Samuel J. Eales's death date (life + 70 years)"
+ },
+ "source_kind": "scan",
+ "notes": "The sermons reach only the opening verses of chapter 3. Each excerpt is the opening of one sermon, up to about 350 words and cut at a sentence end, set on the verse the volume's own table of sermons names (a few sermons whose heading the OCR garbles, or whose table entry it cannot read, are left out). The table numbers verses as the Vulgate does; in chapter 1 the Hebrew numbering the Open Word Bible follows counts the title as verse 1, so a sermon on \"Cant. i. 1\" is set on 1:2, and Sermon I, on the title, on 1:1. The OCR runs on from the heading into the first lines, so some excerpts begin a little into the sermon; a sentence the OCR damaged is left out and marked \" ... \".",
+ "status": "ai_draft"
+}
