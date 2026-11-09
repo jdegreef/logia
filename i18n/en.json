@@ -446,6 +446,8 @@
     "front_to_back": "Front to back",
     "front_to_back_note": "Every excerpt Logia holds from this work, a chapter to a page. Each links to its verse in the reader.",
     "contents": "Contents",
+    "also_on": "Also on {book} in Logia",
+    "also_on_note": "The other commentaries on {book} in the library, oldest first. Each sets its excerpts beside the same verses in the reader.",
     "bible_text": "Open Word Bible",
     "chapter_dek": "{n} excerpts on {name}, in order. Each links to its verse in the reader.",
     "chapter_description": "{name}, {title}, on {chapter}: {n} excerpts in Logia.",
