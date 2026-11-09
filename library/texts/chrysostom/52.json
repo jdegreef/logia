@@ -6,7 +6,7 @@
  "url": "https://www.ccel.org/ccel/schaff/npnf114.iv.liv.html",
  "verses": {
   "start": "JHN.7.45",
-  "end": "JHN.9.18"
+  "end": "JHN.8.19"
  },
  "paragraphs": [
   {
@@ -252,7 +252,7 @@
    "excerpts": [
     "chrysostom.JHN.8.12-13.1"
    ],
-   "verse": "JHN.7.52"
+   "verse": "JHN.8.12"
   },
   {
    "id": "iv.liv-p24",
@@ -262,7 +262,7 @@
    "excerpts": [
     "chrysostom.JHN.8.12-13.1"
    ],
-   "verse": "JHN.7.52"
+   "verse": "JHN.8.12"
   },
   {
    "id": "iv.liv-p25",
@@ -515,7 +515,7 @@
    "excerpts": [
     "chrysostom.JHN.8.18.1"
    ],
-   "verse": "JHN.9.18"
+   "verse": "JHN.8.18"
   },
   {
    "id": "iv.liv-p52",
@@ -532,7 +532,7 @@
    "excerpts": [
     "chrysostom.JHN.8.18.1"
    ],
-   "verse": "JHN.9.18"
+   "verse": "JHN.8.18"
   },
   {
    "id": "iv.liv-p53",
@@ -565,7 +565,7 @@
     }
    ],
    "excerpts": [],
-   "verse": "JHN.9.18"
+   "verse": "JHN.8.18"
   }
  ]
 }

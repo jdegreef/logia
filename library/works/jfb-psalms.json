@@ -1,0 +1,18 @@
+{
+ "id": "jfb-psalms",
+ "author": "fausset",
+ "title": "A Commentary, Critical and Explanatory, on the Old and New Testaments: Psalms",
+ "divisions": "verse",
+ "edition": "Robert Jamieson, A. R. Fausset and David Brown, Commentary Critical and Explanatory on the Whole Bible (1871); the books from Job to Malachi are Fausset's; CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1871,
+ "full_text_url": "https://www.ccel.org/ccel/jamieson/jfb.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); A. R. Fausset died in 1910"
+ },
+ "source_kind": "digital",
+ "notes": "Psalms 1-150 are CCEL jfb x.xix ii-cli, a page a psalm. Every note is kept, in the order printed. A note opens with its bold lemma: a verse number ('7.', '5, 6.' or '7-12.') places it on those verses, and a lemma of words alone ('blot out') goes on the verses of the note before. The summary that opens a psalm or section ('Ps 3:1-8. For the historical occasion...') is on the verses it names, and one on the whole psalm is on all its verses, its title too. Notes on the same verses are kept together in entries of up to about 350 words. JFB numbers the verses as English Bibles do; they are moved to the Hebrew numbering of the Bible text (Psalm 51:1 in English is Psalm 51:3 here). The psalm headings and the introduction to the book are left out.",
+ "status": "ai_draft"
+}

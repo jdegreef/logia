@@ -1,0 +1,18 @@
+{
+ "id": "keil-genesis",
+ "author": "keil",
+ "title": "Biblical Commentary on the Old Testament: The Pentateuch, Vol. I (Genesis)",
+ "divisions": "verse",
+ "edition": "C. F. Keil and F. Delitzsch, Biblical Commentary on the Old Testament, Vol. I: The Pentateuch, translated from the German by James Martin (Clark's Foreign Theological Library). Edinburgh: T. & T. Clark, 1866; archive.org scan \"pentateuch01keil\" (Princeton Theological Seminary Library), djvu OCR text",
+ "original_language": "German",
+ "translation": "Translated by the Rev. James Martin, B.A., of Nottingham (1864; this printing 1866)",
+ "published": 1866,
+ "full_text_url": "https://archive.org/details/pentateuch01keil",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: James Martin's death date (Keil died in 1888); life + 70 years"
+ },
+ "source_kind": "scan",
+ "notes": "The commentary on Genesis is by Keil. Keil discusses each passage as a whole and marks only some verses (\"Ver. 8.\", \"Vers. 11, 12.\"), so Logia has excerpts only where he does, 218 in all. Each excerpt runs from a verse mark, up to about 350 words and cut at a sentence end. The OCR turns Keil's Hebrew into noise: a sentence holding it is left out and marked \" ... \", and so is any other sentence with a word the scan prints nowhere else that is not English. Misreadings are corrected in library/corrections/keil.json only where the same scan prints the word correctly many times.",
+ "status": "ai_draft"
+}

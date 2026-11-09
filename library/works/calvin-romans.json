@@ -1,0 +1,18 @@
+{
+ "id": "calvin-romans",
+ "author": "calvin",
+ "title": "Commentaries on the Epistle of Paul the Apostle to the Romans",
+ "divisions": "verse",
+ "edition": "Calvin Translation Society, tr. and ed. John Owen, Edinburgh, 1849",
+ "original_language": "Latin",
+ "translation": "Translated and edited by the Rev. John Owen for the Calvin Translation Society (1849)",
+ "published": 1849,
+ "full_text_url": "https://www.ccel.org/ccel/calvin/calcom38.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years); John Owen, the translator, died in 1867"
+ },
+ "source_kind": "digital",
+ "notes": "Romans 1–16 are CCEL calcom38 chapters v–xx. Every comment paragraph is kept, in the order printed: each of Calvin's lemmas (the verse number or the italic words he comments on) opens an entry, with the paragraphs after it; a lemma's comment longer than about 350 words goes on in the next entry, and a paragraph cut between entries is marked with ' ...'. An entry is placed on the verse number Calvin prints, or else on the verse CCEL's Commentary mark puts it under; CCEL puts a few lemmas under the verse before the one they quote (the lemma 'Ye are the called of Jesus Christ', Romans 1:6, sits under 1:5). The Latin and English text Calvin prints before each section, and the translator's footnotes, are left out.",
+ "status": "ai_draft"
+}

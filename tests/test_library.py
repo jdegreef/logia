@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import build_site  # noqa: E402
 import extract_texts  # noqa: E402
 import find_refs  # noqa: E402
+import scripture  # noqa: E402
 import validate  # noqa: E402
 import verify_sources  # noqa: E402
 
@@ -86,6 +87,27 @@ class FindRefs(unittest.TestCase):
         self.assertEqual(loci["chrysostom.JHN.1.1.1"], "2.8")
         self.assertEqual(loci["chrysostom.JHN.1.18.3"], "15.3")       # the excerpt begins "[3.]"
         self.assertEqual(loci["augustine.JHN.1.1.1"], "1.5")          # the paragraph begins "5."
+
+
+class Versification(unittest.TestCase):
+    """English verse numbers, as the commentators print them, move to the Hebrew numbering of the Bible text."""
+
+    def test_a_psalm_title_is_its_first_verse(self):
+        self.assertEqual(scripture.from_english("PSA", 3, 1), [(3, 2)])
+        self.assertEqual(scripture.from_english("PSA", 51, 1), [(51, 3)])
+        self.assertEqual(scripture.title_verses("PSA", 51), [1, 2])
+        self.assertEqual(scripture.title_verses("PSA", 1), [])
+
+    def test_a_chapter_that_begins_elsewhere(self):
+        self.assertEqual(scripture.from_english("ECC", 5, 1), [(4, 17)])
+
+    def test_the_new_testament_is_unchanged(self):
+        self.assertEqual(scripture.from_english("MAT", 5, 3), [(5, 3)])
+
+    def test_the_psalms_commentaries_are_on_the_hebrew_verses(self):
+        entries = json.load(open(os.path.join(ROOT, "library", "comments", "augustine-psalms", "PSA.json")))["entries"]
+        on = {e["start"] for e in entries if "Have pity upon me, O God, after Thy great mercy” (ver. 1)" in e["text"]}
+        self.assertEqual(on, {"PSA.51.3"})       # Psalm 51:1 in English
 
 
 class Quotations(unittest.TestCase):
@@ -254,7 +276,9 @@ class Site(unittest.TestCase):
         self.assertEqual([w["work_id"] for w in data["commentaries"]], [w["work_id"] for w in comm["commentaries"]])
         for short, full in zip(data["commentaries"], comm["commentaries"]):
             self.assertNotIn("excerpt", json.dumps(short))
-            self.assertEqual(short["entries"], [{"start": x["start"], "end": x["end"]} for x in full["entries"]])
+            self.assertEqual(short["entries"],
+                             [{"start": x["start"], "end": x["end"], "words": x["words"]} for x in full["entries"]])
+            self.assertTrue(all(x["words"] == len(x["excerpt"].split()) for x in full["entries"]))
             self.assertTrue(all(x["excerpt"] for x in full["entries"]))
         self.assertIn("citedBy", comm)
 
@@ -308,7 +332,7 @@ class Site(unittest.TestCase):
         text = self.read("jhn/3/index.html")
         self.assertIn('class="lg-in-order"', text)
         self.assertIn('href="/works/westcott/jhn/3/"', text)
-        self.assertNotIn('class="lg-in-order"', self.read("rom/8/index.html"))
+        self.assertNotIn('class="lg-in-order"', self.read("act/8/index.html"))
 
     def test_pages_carry_a_share_card_and_data_for_search_engines(self):
         home = self.read("index.html")
@@ -325,6 +349,52 @@ class Site(unittest.TestCase):
         text = self.read("commentators/calvin/index.html")
         self.assertRegex(text, r'class="lg-missing"><summary>Verses with no comment from Calvin \(\d+\)</summary>')
         self.assertNotIn("lg-missing", self.read("commentators/ryle/index.html"))
+
+    def test_a_commentator_with_several_books_has_a_page_for_them(self):
+        text = self.read("commentators/calvin/index.html")
+        # The works as cards, the four numbers, the Bible strip, a passage in
+        # their words, a switch between books and the bar of sections.
+        self.assertIn('class="lg-wk-cards"', text)
+        self.assertIn('href="/works/calvin-romans/rom/1/">Read Romans 1</a>', text)
+        self.assertIn("hours to read them all", text)
+        self.assertEqual(text.count('class="lg-on"'), text.count('class="lg-bp"') - 1)
+        self.assertGreaterEqual(text.count('class="lg-on"'), 3)
+        self.assertIn('class="lg-own" data-quotes=', text)
+        self.assertIn('class="lg-bp" aria-pressed="false" data-book="ROM"', text)
+        self.assertIn('<nav class="lg-secbar"', text)
+        # Two readings from another era, the words used most, more on Logia,
+        # and the commentators either side in time.
+        self.assertIn('id="voices"', text)
+        self.assertIn('class="lg-vocab"', text)
+        self.assertIn('href="/commentators/era/reformation/"', text)
+        self.assertIn('class="lg-prev" href="/commentators/aquinas/"', text)
+        self.assertIn('class="lg-next" href="/commentators/henry/"', text)
+
+    def test_the_reader_can_report_a_mistake_on_github(self):
+        text = self.read("jhn/3/index.html")
+        self.assertIn('"issues":"https://github.com/jdegreef/logia/issues/new"', text)
+        self.assertIn('"report":"Report a mistake"', text)
+
+    def test_a_commentator_page_opens_ways_into_the_work(self):
+        text = self.read("commentators/chrysostom/index.html")
+        # Three passages to start with, the verse beside each row, where each
+        # sits in its homily, and the homilies themselves as a second tab.
+        start = text.split('id="start"', 1)[1].split("</section>", 1)[0]
+        self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 3)
+        self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', text)
+        self.assertIn("Read the homily from here", text)
+        self.assertIn('aria-controls="by-whole"', text)
+        self.assertIn('href="/works/chrysostom/88/"', text)
+        self.assertIn('class="lg-goto"', text)
+        # The shape of the work, who reads the same verses, and the text's record.
+        self.assertIn("John, verse by verse", text)
+        self.assertIn('class="lg-nc" title="John 4:30"', text)
+        self.assertIn('href="/commentators/augustine/"', text)
+        self.assertIn('href="/works/catena/fathers/"', text)
+        self.assertIn('class="lg-cite-box"', text)
+        self.assertIn('"deathDate":"0407"', text)
+        # A commentator with no whole texts has no tabs.
+        self.assertNotIn('class="lg-tabs"', self.read("commentators/calvin/index.html"))
 
     def test_accounts_are_open_word_bible_s(self):
         text = self.read("index.html")
@@ -386,6 +456,16 @@ class Site(unittest.TestCase):
         t2 = text("augustine", 2)
         self.assertEqual(t2["verses"], {"start": "JHN.1.6", "end": "JHN.1.14"})
         self.assertEqual({p["verse"] for p in t2["paragraphs"]}, {None})
+        # Romans, Homily XVIII prints its verse line ("Rom. X. 14, 15") above its title.
+        self.assertEqual(text("chrysostom-romans", 18)["verses"]["start"], "ROM.10.14")
+        # "Chap. x. ver. 1." says where a homily goes on into the next chapter (Homily LIX, John 9:34 to 10:12).
+        h59 = text("chrysostom", 59)
+        self.assertEqual(h59["verses"], {"start": "JHN.9.34", "end": "JHN.10.12"})
+        self.assertEqual([p["verse"] for p in h59["paragraphs"] if p["text"].startswith("Chap. x.")], ["JHN.10.1"])
+        # On such a page a mark before where the text began is a misprint, left unplaced
+        # (Romans, Homily VI prints "Ver. 12." over 2:28).
+        h6 = text("chrysostom-romans", 6)
+        self.assertEqual([p["verse"] for p in h6["paragraphs"] if p["text"].startswith("Ver. 12.")], [None])
 
     def test_a_book_of_origen_is_one_text_over_many_pages(self):
         # Each CCEL page of Origen's Commentary is one section; the manifest gives its book.
@@ -454,8 +534,8 @@ class Site(unittest.TestCase):
 
     def test_a_verse_page_has_breadcrumbs_and_its_own_description(self):
         text = self.read(os.path.join("jhn", "3", "16", "index.html"))
-        ld = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1])
-        self.assertEqual(ld["@type"], "BreadcrumbList")
+        data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1])
+        ld = next(x for x in data["@graph"] if x["@type"] == "BreadcrumbList")
         self.assertEqual([x["item"] for x in ld["itemListElement"]][-2:],
                          ["https://logia.faith/jhn/3/", "https://logia.faith/jhn/3/16/"])
         self.assertIn('<link rel="canonical" href="https://logia.faith/jhn/3/16/">', text)
@@ -534,6 +614,21 @@ class Site(unittest.TestCase):
         self.assertIn('"@type":"Dataset"', text)
         self.assertIn('href="/open-data/"', self.read(os.path.join("about", "index.html")))
 
+    def test_the_about_page_shows_real_examples_from_the_library(self):
+        text = self.read(os.path.join("about", "index.html"))
+        lib = build_site.Library()
+        # The excerpt it follows through the checks is quoted as copied.
+        c = lib.by_id[build_site.ABOUT_EXAMPLE]
+        lead = next(p for p in c["text"].split("\n\n") if p.strip())
+        self.assertIn(build_site.e(" ".join(lead.split()[:12])), text)
+        # Each correction it shows is a real pair from library/corrections/.
+        for work, wrong in build_site.ABOUT_FIXES:
+            self.assertIn(wrong, dict(lib.fixes[work]))
+            self.assertIn(f"<del>{build_site.e(wrong)}</del>", text)
+        for key in build_site.t("about.h"):
+            self.assertIn(f'id="{key}"', text)
+        self.assertIn(f'{len(lib.comments):,}', text)
+
     def test_each_reading_has_a_page_and_the_readings_page_lists_them(self):
         readings = self.read(os.path.join("readings", "index.html"))
         for oid, _book, _start, _end, voices in build_site.occasions(build_site.Library()):
@@ -605,6 +700,14 @@ class Site(unittest.TestCase):
         lib = build_site.Library()
         labels = build_site.catena_labels(lib)
         self.assertGreater(len(labels["AUG."]), len(labels["BEDE."]))
+        # On the reader, each quotation's printed name is marked, both the
+        # John edition's "CHRYS." and the Matthew edition's "Jerome, ...:".
+        sp = build_site.catena_speakers("catena-matthew",
+                                        "Jerome, Ez, i. 5.: The face.\n\nRabanus: By this.\n\nThus: not a name.")
+        self.assertEqual([(x["at"], x["len"], x["who"]) for x in sp], [(0, 18, "jerome"), (30, 8, "rabanus")])
+        self.assertEqual(build_site.catena_speakers("chrysostom-matthew", "Jerome: x"), [])
+        self.assertTrue(all(x["who"] in build_site.CATALOG["catena"]["names"] for c in lib.comments
+                            for x in build_site.catena_speakers(c["work"], c["text"])))
         text = self.read(os.path.join("works", "catena", "fathers", "index.html"))
         self.assertIn(f'<span class="lg-bar-n">{len(labels["CHRYS."])}</span>', text)
         self.assertIn('href="/commentators/chrysostom/"', text)
@@ -655,6 +758,60 @@ class Site(unittest.TestCase):
         self.assertIn('href="/jhn/3/16/"', text)
         self.assertIn('id="vpage"', text)
         self.assertNotIn('id="by-verse"', self.read(os.path.join("act", "1", "index.html")))
+
+    # --- Search engines and answer engines ---
+
+    def test_pages_with_only_the_bible_text_stay_out_of_search(self):
+        sitemap = self.read("sitemap.xml")
+        for page in ("gen/1/index.html", "gen/index.html", "act/1/index.html"):
+            self.assertIn('<meta name="robots" content="noindex">', self.read(page), page)
+            self.assertNotIn(f"<loc>https://logia.faith/{page[:-len('index.html')]}</loc>", sitemap)
+        for page in ("jhn/3/index.html", "jhn/index.html", "rom/8/index.html", "jhn/3/16/index.html"):
+            self.assertNotIn('content="noindex"', self.read(page), page)
+            self.assertIn(f"<loc>https://logia.faith/{page[:-len('index.html')]}</loc>", sitemap)
+        lib = build_site.Library()
+        indexed = {c for c in lib.chapters if build_site.indexed(lib, build_site.chapter_url(*c))}
+        self.assertEqual(indexed, set(lib.coverage()))
+
+    def test_robots_welcomes_the_answer_engines_in_one_group(self):
+        text = self.read("robots.txt")
+        group = text.split("\n\n")[0]
+        for name in ("*",) + build_site.AI_CRAWLERS:
+            self.assertIn(f"User-agent: {name}\n", group)
+        self.assertIn("Disallow: /saved/", group)
+        self.assertIn("Sitemap: https://logia.faith/sitemap.xml", text)
+
+    def test_llms_txt_describes_the_library_and_links_only_to_pages(self):
+        lib = build_site.Library()
+        text = self.read("llms.txt")
+        self.assertTrue(text.startswith("# Logia\n"))
+        self.assertIn(f"{len(lib.comments):,} excerpts", text)
+        for a in lib.authors.values():
+            self.assertIn(f"/commentators/{a['id']}/", text)
+        for href in re.findall(r"https://logia\.faith(/[^\s)]*)", text):
+            path = os.path.join(build_site.SITE, href.strip("/").rstrip(".:"))
+            self.assertTrue(os.path.isfile(path) or os.path.isfile(os.path.join(path, "index.html")), href)
+
+    def test_a_verse_page_marks_its_excerpts_as_quotations(self):
+        lib = build_site.Library()
+        text = self.read(os.path.join("jhn", "3", "16", "index.html"))
+        ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1]
+        data = json.loads(ld.replace("<\\/", "</"))
+        page = next(x for x in data["@graph"] if x["@type"] == "WebPage")
+        quotes = page["hasPart"]
+        self.assertEqual({q["url"].split("#")[1] for q in quotes},
+                         {c["id"] for c in lib.comments if c["start"] == "JHN.3.16"})
+        for q in quotes:
+            self.assertEqual(q["@type"], "Quotation")
+            self.assertTrue(q["creator"]["name"] and q["isPartOf"]["datePublished"])
+            self.assertTrue(q["isBasedOn"].startswith("http"))
+        self.assertIn("BreadcrumbList", [x["@type"] for x in data["@graph"]])
+
+    def test_the_sitemap_dates_bible_pages_when_the_history_is_here(self):
+        dates = build_site.git_dates()
+        if not dates:
+            self.skipTest("no full git history")
+        self.assertRegex(self.read("sitemap.xml"), r"<loc>https://logia\.faith/jhn/3/16/</loc><lastmod>\d{4}-\d\d-\d\d</lastmod>")
 
     def test_corrections_are_applied(self):
         lib = build_site.Library()

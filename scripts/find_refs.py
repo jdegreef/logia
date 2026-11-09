@@ -147,10 +147,12 @@ def span(page, excerpt):
     return page["at"][s], page["at"][e + len(tail) - 1] + 1
 
 
-def locus(page, start):
-    """'3.2' for homily or tractate 3, section 2, read from the page; for a
-    page that is one section of a book ("Book II", the page's `part`), the
-    book's number and the section number the page opens with."""
+def locus(page, start, depth=2):
+    """'3.2' for homily or tractate 3, section 2, read from the page; '3' for
+    a work divided into homilies only (`depth` 1: its translation prints no
+    section numbers); for a page that is one section of a book ("Book II",
+    the page's `part`), the book's number and the section number the page
+    opens with."""
     text = page["text"]
     if page.get("part"):
         number = scripture.roman(page["part"].split()[-1])
@@ -159,6 +161,8 @@ def locus(page, start):
         if not head or head.start() > start:
             return None
         number = scripture.roman(head[1])
+    if depth == 1:
+        return str(number)
     sections = [(m.start(), int(m[1])) for m in re.finditer(r"\[(\d+)\.\]", text)]
     if not sections:                         # numbered paragraphs: "5. Accordingly, brethren"
         sections = [(p, int(m[1])) for p in page["paras"] if (m := re.match(r"\s*(\d+)\.\s", text[p:p + 12]))]
@@ -303,9 +307,11 @@ def scan_citations(excerpt, book, chapter):
 
 # For each catena, the labels it prints before a quotation that the library
 # can follow to the quoted work: the library's source pages for that work.
-CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"}}
-# The Part II scans of the Catena (John 11-21) print the names in this form: "Aug.", "Chrys."
-LABEL = re.compile(r"\b(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
+CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"},
+           "catena-matthew": {"CHRYS": "chrysostom-matthew"}}
+# The Part II scans of the Catena (John 11-21), and CCEL's Matthew, print the names in
+# this form: "Aug.", "Chrys."; "Pseudo-Chrys." (the Opus Imperfectum) is not Chrysostom.
+LABEL = re.compile(r"(?<![\w-])(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
 STOPWORDS = set("""that this with which from have they their them there were been what when will would shall
 should these those than then thus also into upon unto said saith says hath doth more being because such only
 thing things other even very itself himself whom whose where while each some made make like after before same
@@ -499,7 +505,7 @@ def derive():
                     found = ccel_citations(pages[src], where, text)
                     held.setdefault((work["id"], os.path.basename(src)), []).append((*where, e["id"]))
                     if by_division:
-                        loc = locus(pages[src], where[0])
+                        loc = locus(pages[src], where[0], len(work["divisions"]))
                         if loc:
                             e = {**e, "locus": loc}
                         else:
@@ -524,16 +530,19 @@ def derive():
         if work in quoted and path.endswith(".html") and path not in pages:
             pages[path] = read_page(path, parts[path])
     by_work = {(w, os.path.basename(p)): pages[p] for (w, _), p in paths.items() if w in quoted and p in pages}
-    candidates = paragraphs(by_work)
-    df = {}
-    for c in candidates:
-        for w in c[6]:
-            df[w] = df.get(w, 0) + 1
-    idf = {w: math.log(len(candidates) / n) for w, n in df.items()}
+    every = paragraphs(by_work)
     for data in comments.values():
         labels = CATENAS.get(data["work"])
         if not labels:
             continue
+        # word weights from the works this catena quotes only, so that adding
+        # another catena's works leaves its quotations as they were
+        candidates = [c for c in every if c[0] in labels.values()]
+        df = {}
+        for c in candidates:
+            for w in c[6]:
+                df[w] = df.get(w, 0) + 1
+        idf = {w: math.log(len(candidates) / n) for w, n in df.items()}
         rows = catena_quotations(data["entries"], labels, candidates, idf, held, text_spans())
         if rows:
             out = os.path.join(ROOT, "library", "quotations", data["work"], f"{data['book']}.json")

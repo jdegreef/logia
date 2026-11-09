@@ -1,0 +1,218 @@
+{
+ "work": "bengel-romans",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "\\_",
+   "to": "["
+  },
+  {
+   "from": "~\\",
+   "to": "]"
+  },
+  {
+   "from": "bemnning",
+   "to": "beginning"
+  },
+  {
+   "from": "Afoses",
+   "to": "Moses"
+  },
+  {
+   "from": "of one mail",
+   "to": "of one man"
+  },
+  {
+   "from": "Mail, who",
+   "to": "Man, who"
+  },
+  {
+   "from": "of the I icing",
+   "to": "of the living"
+  },
+  {
+   "from": "Avas not",
+   "to": "was not"
+  },
+  {
+   "from": "arc quite",
+   "to": "are quite"
+  },
+  {
+   "from": "arc unknown",
+   "to": "are unknown"
+  },
+  {
+   "from": "Horn. xii.",
+   "to": "Rom. xii."
+  },
+  {
+   "from": "Horn. viii.",
+   "to": "Rom. viii."
+  },
+  {
+   "from": "ice have",
+   "to": "we have"
+  },
+  {
+   "from": "if ice were",
+   "to": "if we were"
+  },
+  {
+   "from": "have ice any",
+   "to": "have we any"
+  },
+  {
+   "from": "as ice owe",
+   "to": "as we owe"
+  },
+  {
+   "from": "as ice behave",
+   "to": "as we behave"
+  },
+  {
+   "from": "and ice glory",
+   "to": "and we glory"
+  },
+  {
+   "from": "ivith",
+   "to": "with"
+  },
+  {
+   "from": "ivill",
+   "to": "will"
+  },
+  {
+   "from": "tlie ",
+   "to": "the "
+  },
+  {
+   "from": "tliat",
+   "to": "that"
+  },
+  {
+   "from": "tliou",
+   "to": "thou"
+  },
+  {
+   "from": "wliich",
+   "to": "which"
+  },
+  {
+   "from": "knoivledge",
+   "to": "knowledge"
+  },
+  {
+   "from": "icasting",
+   "to": "wasting"
+  },
+  {
+   "from": "icas ",
+   "to": "was "
+  },
+  {
+   "from": "icere",
+   "to": "were"
+  },
+  {
+   "from": "ichat",
+   "to": "what"
+  },
+  {
+   "from": "icisdom",
+   "to": "wisdom"
+  },
+  {
+   "from": "icitli",
+   "to": "with"
+  },
+  {
+   "from": "icorketh",
+   "to": "worketh"
+  },
+  {
+   "from": "icorks",
+   "to": "works"
+  },
+  {
+   "from": "icrath",
+   "to": "wrath"
+  },
+  {
+   "from": "icrite",
+   "to": "write"
+  },
+  {
+   "from": "ivhere",
+   "to": "where"
+  },
+  {
+   "from": "ivhich",
+   "to": "which"
+  },
+  {
+   "from": "ivhole",
+   "to": "whole"
+  },
+  {
+   "from": "ivhorn",
+   "to": "whom"
+  },
+  {
+   "from": "ivickedness",
+   "to": "wickedness"
+  },
+  {
+   "from": "ivitness",
+   "to": "witness"
+  },
+  {
+   "from": "ivorks",
+   "to": "works"
+  },
+  {
+   "from": "ivritten",
+   "to": "written"
+  },
+  {
+   "from": "poicerless",
+   "to": "powerless"
+  },
+  {
+   "from": "poicer",
+   "to": "power"
+  },
+  {
+   "from": "qiiestion",
+   "to": "question"
+  },
+  {
+   "from": "sicear",
+   "to": "swear"
+  },
+  {
+   "from": "teacli",
+   "to": "teach"
+  },
+  {
+   "from": "toicards",
+   "to": "towards"
+  },
+  {
+   "from": "trutli",
+   "to": "truth"
+  },
+  {
+   "from": "worketli",
+   "to": "worketh"
+  },
+  {
+   "from": "wratli",
+   "to": "wrath"
+  },
+  {
+   "from": "Gains) a Corinthian",
+   "to": "Gaius) a Corinthian"
+  }
+ ]
+}

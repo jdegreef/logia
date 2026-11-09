@@ -6,7 +6,8 @@ the passage was copied from (listed in sources/manifest.json). This script
 compares the two.
 
 - A digital source (a transcription such as CCEL's) must contain the excerpt
-  word for word. Footnotes, footnote markers (and any superscript) and page
+  word for word. Footnotes, footnote markers (a superscript linked to a
+  note, or a single superscript letter standing apart from a word) and page
   numbers are ignored,
   since the brief for copying drops them, and a passage cut with "..." is
   checked piece by piece.
@@ -46,22 +47,38 @@ class _Text(HTMLParser):
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.out, self.depth = [], 0
+        self.out, self.depth, self.note_link, self.sup = [], 0, False, None
 
     def handle_starttag(self, tag, attrs):
         if tag in VOID:
             return
-        # A superscript is a footnote marker ("<sup>f</sup>" in tertullian.org pages).
-        if self.depth or tag == "sup" or set((dict(attrs).get("class") or "").split()) & SKIP:
+        # A superscript inside a link to a note is a footnote marker
+        # ('<A HREF="#1"><SUP>1</SUP></A>' in tertullian.org pages), and so is
+        # a lone letter after a space ('Battus <sup>i</sup>'); "CVI<sup>th</sup>" and
+        # "LIII<sup>d</sup>" are part of a word.
+        if tag == "a":
+            self.note_link = (dict(attrs).get("href") or "").startswith("#")
+        if tag == "sup" and not self.depth and not self.note_link:
+            self.sup = []
+            self.attached = bool(self.out) and self.out[-1][-1:].isalnum()
+            return
+        if self.depth or (tag == "sup" and self.note_link) or set((dict(attrs).get("class") or "").split()) & SKIP:
             self.depth += 1
 
     def handle_endtag(self, tag):
+        if tag == "a":
+            self.note_link = False
+        if tag == "sup" and self.sup is not None:
+            text, self.sup = "".join(self.sup), None
+            if len(text.strip()) > 1 or self.attached:     # "LIII<sup>d</sup>": an ordinal, part of the word
+                self.out.append(text)
+            return
         if tag not in VOID and self.depth:
             self.depth -= 1
 
     def handle_data(self, data):
         if not self.depth:
-            self.out.append(data)
+            (self.sup if self.sup is not None else self.out).append(data)
 
 
 def letters(text):
@@ -84,8 +101,13 @@ def source_letters(path):
 
 
 def source_original(path):
-    """The source as written, for finding Greek and Hebrew words in it."""
-    return unicodedata.normalize("NFC", html.unescape(open(path, encoding="utf-8").read()))
+    """The source as written, for finding Greek and Hebrew words in it. In
+    an HTML page the tags are taken out: CCEL sometimes splits a Greek word
+    with one ('ἀ<span class="Greek">πολυτρώσεως</span>')."""
+    text = open(path, encoding="utf-8").read()
+    if path.endswith((".html", ".htm")):
+        text = re.sub(r"<[^>]*>", "", text)
+    return unicodedata.normalize("NFC", html.unescape(text))
 
 
 def check_original(excerpt, raw):
