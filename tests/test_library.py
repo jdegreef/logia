@@ -350,6 +350,11 @@ class Site(unittest.TestCase):
         self.assertRegex(text, r'class="lg-missing"><summary>Verses with no comment from Calvin \(\d+\)</summary>')
         self.assertNotIn("lg-missing", self.read("commentators/ryle/index.html"))
 
+    def test_the_reader_can_report_a_mistake_on_github(self):
+        text = self.read("jhn/3/index.html")
+        self.assertIn('"issues":"https://github.com/jdegreef/logia/issues/new"', text)
+        self.assertIn('"report":"Report a mistake"', text)
+
     def test_a_commentator_page_opens_ways_into_the_work(self):
         text = self.read("commentators/chrysostom/index.html")
         # Three passages to start with, the verse beside each row, where each

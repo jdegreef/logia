@@ -666,11 +666,11 @@ def site_footer(lib):
             f'<li><a class="book-chip" href="/{c.lower()}/">{e(lib.books[c]["en"])} '
             f'<span class="lg-chip-n">{e(t("footer.chapters_done", n=sum(1 for b, _c in cov if b == c), total=lib.books[c]["chapters"]))}</span></a></li>'
             for c in started) or f'<li class="lg-quiet">{e(t("footer.none_yet"))}</li>'
-        tiers.append(f'<section class="testament" aria-labelledby="foot-{key}"><div class="testament-head">'
+        tiers.append(f'<div class="testament" role="group" aria-labelledby="foot-{key}"><div class="testament-head">'
                      f'<h3 id="foot-{key}">{e(t("testaments." + key))}</h3>'
                      f'<span>{e(t("footer.books_done", n=len(started), total=len(part)))}</span></div>'
                      f'<span class="lg-meter" aria-hidden="true"><span style="width:{100 * len(started) / len(part):.1f}%"></span></span>'
-                     f'<ul class="book-chips">{chips}</ul></section>')
+                     f'<ul class="book-chips">{chips}</ul></div>')
 
     def links(pairs):
         return "".join(f'<li><a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(label)}</a></li>'
@@ -965,7 +965,7 @@ def home_verse_panel(lib, ref, pid):
     authors = list(dict.fromkeys(lib.author_of(w)["id"] for w in works))
     faces = "".join(
         f'<a class="lg-face lg-era-{ERAS.index(a["era"])}{"" if any(lib.author_of(w)["id"] == a["id"] for w in shown_ids) else " lg-face-more"}" '
-        f'href="/commentators/{a["id"]}/" title="{e(a["name"])}">{e(name_initials(a))}</a>'
+        f'href="/commentators/{a["id"]}/" title="{e(a["name"])}" tabindex="-1">{e(name_initials(a))}</a>'
         for a in (lib.authors[x] for x in authors))
     return (f'<div class="lg-votd-panel" id="{pid}" role="tabpanel" aria-labelledby="{pid}-tab">'
             f'<blockquote><p class="votd-text">{e(text)}</p></blockquote>'
@@ -1327,7 +1327,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     text_data = {k: v for k, v in bible.items() if k not in ("records", "words")}
     data = {**text_data, "records": records, "wordCounts": {v: len(ws) for v, ws in bible["words"].items()},
             "panel": digest_url(f"/panel/{book}.{chapter}.json", panel),
-            "comm": comm_url, "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS,
+            "comm": comm_url, "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS, "issues": GITHUB_URL + "/issues/new",
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "related": lib.related(book, chapter, bible),
@@ -2404,8 +2404,8 @@ def work_chapter_page(lib, wid, book, chapter, comments):
             last = min(ev if ech == ch else max(text), v + 2)
             words = " ".join(f'<sup>{x}</sup>{e(text[x])}' for x in range(v, last + 1) if x in text)
             more = " …" if last < (ev if ech == ch else max(text)) else ""
-            side = (f'<aside class="lg-side"><p class="label">{e(ref)} · {e(t("work.bible_text"))}</p>'
-                    f'<p class="lg-side-text">{words}{more}</p></aside>') if words else ""
+            side = (f'<div class="lg-side"><p class="label">{e(ref)} · {e(t("work.bible_text"))}</p>'
+                    f'<p class="lg-side-text">{words}{more}</p></div>') if words else ""
             label = (f'<p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
                      f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>')
         full.append(f'<article class="lg-excerpt lg-excerpt-side" id="{e(c["id"])}">{label}{heading}<div class="lg-text">{paras}</div>{side}</article>')
@@ -2664,8 +2664,8 @@ def about_name(lib):
                   if text and href else "")
     more = (f'<p><a class="lg-more" href="{href}">{e(t("about.name_more"))} {icon("arrow", 15)}</a></p>'
             if href and href.startswith("/") else "")
-    return (f'<aside class="lg-ab-name"><p class="eyebrow">{e(t("about.name_label"))}</p>'
-            f'<p class="lg-ab-name-words"><i>{e(t("about.name_words"))}</i></p>{verse_html}<p>{note}</p>{more}</aside>')
+    return (f'<div class="lg-ab-name"><p class="eyebrow">{e(t("about.name_label"))}</p>'
+            f'<p class="lg-ab-name-words"><i>{e(t("about.name_words"))}</i></p>{verse_html}<p>{note}</p>{more}</div>')
 
 
 def about_voices(lib):
