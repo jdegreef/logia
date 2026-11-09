@@ -350,6 +350,26 @@ class Site(unittest.TestCase):
         self.assertRegex(text, r'class="lg-missing"><summary>Verses with no comment from Calvin \(\d+\)</summary>')
         self.assertNotIn("lg-missing", self.read("commentators/ryle/index.html"))
 
+    def test_a_commentator_with_several_books_has_a_page_for_them(self):
+        text = self.read("commentators/calvin/index.html")
+        # The works as cards, the four numbers, the Bible strip, a passage in
+        # their words, a switch between books and the bar of sections.
+        self.assertIn('class="lg-wk-cards"', text)
+        self.assertIn('href="/works/calvin-romans/rom/1/">Read Romans 1</a>', text)
+        self.assertIn("hours to read them all", text)
+        self.assertEqual(text.count('class="lg-on"'), text.count('class="lg-bp"') - 1)
+        self.assertGreaterEqual(text.count('class="lg-on"'), 3)
+        self.assertIn('class="lg-own" data-quotes=', text)
+        self.assertIn('class="lg-bp" aria-pressed="false" data-book="ROM"', text)
+        self.assertIn('<nav class="lg-secbar"', text)
+        # Two readings from another era, the words used most, more on Logia,
+        # and the commentators either side in time.
+        self.assertIn('id="voices"', text)
+        self.assertIn('class="lg-vocab"', text)
+        self.assertIn('href="/commentators/era/reformation/"', text)
+        self.assertIn('class="lg-prev" href="/commentators/aquinas/"', text)
+        self.assertIn('class="lg-next" href="/commentators/henry/"', text)
+
     def test_the_reader_can_report_a_mistake_on_github(self):
         text = self.read("jhn/3/index.html")
         self.assertIn('"issues":"https://github.com/jdegreef/logia/issues/new"', text)
@@ -359,7 +379,8 @@ class Site(unittest.TestCase):
         text = self.read("commentators/chrysostom/index.html")
         # Three passages to start with, the verse beside each row, where each
         # sits in its homily, and the homilies themselves as a second tab.
-        self.assertEqual(text.count('class="lg-start-text"'), 3)
+        start = text.split('id="start"', 1)[1].split("</section>", 1)[0]
+        self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 3)
         self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', text)
         self.assertIn("Read the homily from here", text)
         self.assertIn('aria-controls="by-whole"', text)
