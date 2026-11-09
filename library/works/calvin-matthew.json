@@ -1,0 +1,18 @@
+{
+ "id": "calvin-matthew",
+ "author": "calvin",
+ "title": "Commentary on a Harmony of the Evangelists, Matthew, Mark, and Luke: Matthew",
+ "divisions": "verse",
+ "edition": "Calvin Translation Society, tr. William Pringle, Edinburgh, 1845-46 (3 vols.); CCEL edition",
+ "original_language": "Latin",
+ "translation": "Translated from the original Latin, and collated with the author's French version, by the Rev. William Pringle for the Calvin Translation Society (1845-46)",
+ "published": 1846,
+ "full_text_url": "https://www.ccel.org/ccel/calvin/calcom31.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years), William Pringle's among them"
+ },
+ "source_kind": "digital",
+ "notes": "Calvin expounds Matthew, Mark and Luke together, section by section (CCEL calcom31 ix, calcom32 ii and calcom33 ii); the 166 sections whose heading names Matthew are used. Each of Calvin's lemmas (the bold verse mark, 'Matthew 9:18.' or '20.', or the italic words he comments on) opens an entry, with the paragraphs after it, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. A bold mark naming Matthew, or a bare verse number while Calvin is on Matthew, places the entry on that verse; a mark naming Mark or Luke turns to that Gospel, and what follows it until the next Matthew mark waits for that book. The paragraphs before a section's first mark are on the section's verses of Matthew. The Gospel text printed in columns above each section, and the translator's footnotes, are left out. Each entry's heading is the italic lemma as printed.",
+ "status": "ai_draft"
+}

@@ -1,0 +1,18 @@
+{
+ "id": "catena-matthew",
+ "author": "aquinas",
+ "title": "Catena Aurea: Commentary on the Four Gospels, Collected out of the Works of the Fathers. Vol. I: St. Matthew",
+ "divisions": "verse",
+ "edition": "Oxford: John Henry Parker, 1841-42 (Vol. I, Parts I-III), translation edited by John Henry Newman; CCEL edition",
+ "original_language": "Latin",
+ "translation": "The Oxford translation, edited by John Henry Newman, Vol. I (1841-42)",
+ "published": 1842,
+ "full_text_url": "https://www.ccel.org/ccel/aquinas/catena1.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years); John Henry Newman, the editor, died in 1890; the translators of the volume are to confirm"
+ },
+ "source_kind": "digital",
+ "notes": "Matthew 1–28 are CCEL catena1 ii.i–ii.xxviii. Each of the Catena's lemmas (the verses printed before the Fathers' comments) is followed by the Fathers' paragraphs, and every paragraph is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. A paragraph is placed on the verse of its lemma whose words it quotes, and one that quotes none on the verse of the paragraph before it (the first, on the lemma's first verse); a lemma the Catena prints as one range (1:3-6) keeps its range. The Fathers' attributions (Chrys., Aug., Jerome, Pseudo-Chrys., Gloss.) are kept as printed. The editors' bracketed notes ('[ed. note: ...]', '[marg. note: ...]') are left out, and the cut marked ' ... '; page numbers are left out. Each verse's first entry is headed with the lemma as printed.",
+ "status": "ai_draft"
+}

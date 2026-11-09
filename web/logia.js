@@ -156,12 +156,79 @@
     var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
   }
 
+  // A commentator's page: "By verse" and "By homily" as tabs (both show,
+  // one after the other, without script), and a box that goes to a verse
+  // ("3:16", "Romans 5:8"): it opens the chapter and marks the row.
+  document.querySelectorAll(".lg-tabs").forEach(function (bar) {
+    var tabs = [].slice.call(bar.querySelectorAll("[role=tab]"));
+    var show = function (tab) {
+      tabs.forEach(function (x) {
+        var on = x === tab;
+        x.setAttribute("aria-selected", on ? "true" : "false");
+        x.tabIndex = on ? 0 : -1;
+        document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
+      });
+    };
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { show(tab); });
+      tab.addEventListener("keydown", function (ev) {
+        var d = ev.key === "ArrowRight" ? 1 : ev.key === "ArrowLeft" ? -1 : 0;
+        if (!d) return;
+        var next = tabs[(i + d + tabs.length) % tabs.length];
+        show(next); next.focus();
+      });
+    });
+    bar.hidden = false;
+    bar.parentNode.classList.add("lg-tabbed");
+    show(tabs[0]);
+  });
+  document.querySelectorAll(".lg-goto").forEach(function (form) {
+    var books = JSON.parse(form.getAttribute("data-books"));
+    var codes = Object.keys(books);
+    var input = form.querySelector("input"), note = form.querySelector("[role=status]");
+    var hint = note.textContent;
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var m = input.value.trim().toLowerCase().match(/^(.*?)\s*(\d+)\s*[:.\s]\s*(\d+)$/);
+      var code = null;
+      if (m && !m[1]) code = codes[0];
+      else if (m) {
+        var name = m[1].replace(/[.\s]+/g, "");
+        codes.forEach(function (c) {
+          if (books[c].some(function (n) { return n.replace(/\s/g, "").indexOf(name) === 0; })) code = code || c;
+        });
+      }
+      var ch = code && document.getElementById("ch-" + code.toLowerCase() + "-" + (m && +m[2]));
+      var row = null;
+      if (ch) {
+        var v = +m[3];
+        [].forEach.call(ch.querySelectorAll("li[data-from]"), function (li) {
+          if (!row && +li.getAttribute("data-from") <= v && v <= +li.getAttribute("data-to")) row = li;
+        });
+      }
+      [].forEach.call(document.querySelectorAll(".lg-hit"), function (x) { x.classList.remove("lg-hit"); });
+      if (!row) { note.textContent = form.getAttribute("data-none"); return; }
+      note.textContent = hint;
+      ch.open = true;
+      row.classList.add("lg-hit");
+      row.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      var link = row.querySelector("a");
+      if (link) link.focus({ preventScroll: true });
+    });
+  });
+
   // A link to #id inside a closed <details> opens it.
   function openTarget() {
     var id = decodeURIComponent(location.hash.slice(1));
     var el = id && document.getElementById(id);
     if (!el) return;
-    for (var d = el; d; d = d.parentElement) if (d.tagName === "DETAILS") d.open = true;
+    for (var d = el; d; d = d.parentElement) {
+      if (d.tagName === "DETAILS") d.open = true;
+      if (d.hidden && d.getAttribute("role") === "tabpanel") {
+        var tab = document.querySelector('[aria-controls="' + d.id + '"]');
+        if (tab) tab.click();
+      }
+    }
     if (el.tagName === "DETAILS") el.open = true;
   }
   window.addEventListener("hashchange", openTarget);
