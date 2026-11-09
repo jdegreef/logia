@@ -444,7 +444,7 @@
     "in_logia": "In Logia",
     "excerpts": "{n} excerpts",
     "front_to_back": "Front to back",
-    "front_to_back_note": "Every excerpt Logia holds from this work, a chapter to a page. Each links to its verse in the reader.",
+    "front_to_back_note": "Every excerpt Logia holds from this work, a chapter to a page. Each chapter shows its heading in the Open Word Bible, the reading time at 230 words a minute, and a bar for how much the work says on it.",
     "contents": "Contents",
     "bible_text": "Open Word Bible",
     "chapter_dek": "{n} excerpts on {name}, in order. Each links to its verse in the reader.",

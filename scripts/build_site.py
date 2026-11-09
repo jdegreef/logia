@@ -2328,7 +2328,6 @@ def work_page(lib, wid):
     dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{rights_pills(w)}</span>'
            f'<span class="lg-quiet lg-rights-note">{e(r["basis"])}; {e(r["worldwide"])}</span></dd>')
     cite = cite_box(a, w)
-    contents = work_contents(lib, wid, comments)
     texts = lib.texts.get(wid, [])
     whole = ""
     if texts:
@@ -2355,9 +2354,25 @@ def work_page(lib, wid):
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
-<ol class="lg-contents">{contents}</ol></section>"""
+<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>"""
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+
+
+def work_tiles(lib, wid, comments):
+    """A work's chapters as tiles: the chapter's heading in the Open Word
+    Bible, how many excerpts and minutes of reading it holds, and a bar for
+    how much the work says on it beside its longest chapter."""
+    chapters = work_chapters(comments)
+    words = {k: sum(len(c["text"].split()) for c in cs) for k, cs in chapters.items()}
+    top = max(words.values(), default=1)
+    return "".join(
+        f'<li><a href="{work_chapter_url(wid, b, ch)}"><b>{e(lib.books[b]["en"])} {ch}</b>'
+        f'<span class="lg-tile-title">{e(lib.chapter_title(b, ch))}</span>'
+        f'<span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))} · {e(t("commentators.minutes", n=max(1, round(words[(b, ch)] / 230))))}</span>'
+        f'<span class="lg-tile-bar" title="{e(t("commentators.chapter_words", chapter=f"{lib.books[b]['en']} {ch}", n=f"{words[(b, ch)]:,}"))}">'
+        f'<span style="width:{100 * words[(b, ch)] / top:.0f}%"></span></span></a></li>'
+        for (b, ch), cs in chapters.items())
 
 
 def work_chapters(comments):
