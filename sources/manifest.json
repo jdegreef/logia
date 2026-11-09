@@ -5828,6 +5828,60 @@
    "kind": "scan",
    "download_sha256": "762412dbcd2fe4ebf70c26915f8195311f7dfcc90c91bd21ab939c044afe047a",
    "extract": "Characters 1596-300643 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/spurgeon/thetreasuryofdav01spuruoft.txt",
+   "work": "spurgeon",
+   "url": "https://archive.org/stream/thetreasuryofdav01spuruoft/thetreasuryofdav01spuruoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "ecb4d8ab887ee1d75e6c74bac3beb561de1f119b9ebde087bac1efa1e00b3227",
+   "extract": "Characters 26200-2272141 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/spurgeon/thetreasuryofdav02spuruoft.txt",
+   "work": "spurgeon",
+   "url": "https://archive.org/stream/thetreasuryofdav02spuruoft/thetreasuryofdav02spuruoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "4e950c614e28d50c0cc5603f6a0a53e1bef654b2f7498ae21c59df6af8ed0d61",
+   "extract": "Characters 28498-2532939 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/spurgeon/thetreasuryofdav03spuruoft.txt",
+   "work": "spurgeon",
+   "url": "https://archive.org/stream/thetreasuryofdav03spuruoft/thetreasuryofdav03spuruoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "79108e7137a91bbaa6caddd294eb33a0d016522a499b0eff25434ffb2fde6a89",
+   "extract": "Characters 28467-2533252 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/spurgeon/treasuryofdavid04spuruoft.txt",
+   "work": "spurgeon",
+   "url": "https://archive.org/stream/treasuryofdavid04spuruoft/treasuryofdavid04spuruoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "0c1c0bbc1bb6120cee9f3869347a466be797ee347c0bd290fe3ef2c56d46a516",
+   "extract": "Characters 32906-2534589 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/spurgeon/treasuryofdavid06spuruoft.txt",
+   "work": "spurgeon",
+   "url": "https://archive.org/stream/treasuryofdavid06spuruoft/treasuryofdavid06spuruoft_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "310e19a65e54641e3b908c702cf5943b090c5d535cb0a1ea3f6a85ec7f30851f",
+   "extract": "Characters 46519-2489632 of the scan's full text (the pages quoted, with a margin)."
+  },
+  {
+   "path": "sources/luther/cu31924029294141.txt",
+   "work": "luther",
+   "url": "https://archive.org/stream/cu31924029294141/cu31924029294141_djvu.txt",
+   "retrieved": "2026-11-07",
+   "kind": "scan",
+   "download_sha256": "ba518c43f73d2371c5968af223ad5720b3f0c8cb0ac03c8366d46e12f0614199",
+   "extract": "Characters 111888-1800165 of the scan's full text (the pages quoted, with a margin)."
   }
  ]
 }
