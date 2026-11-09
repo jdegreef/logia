@@ -2352,7 +2352,8 @@ def work_page(lib, wid):
 <header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 <p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
-<section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
+<details class="lg-record-fold" open><summary><b>{e(t("work.record"))}</b><span class="lg-quiet">{e(w["original_language"])} · {w["published"]} · {e(t("work.excerpts", n=f"{len(comments):,}"))}</span></summary>
+<section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section></details>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 <ol class="lg-contents">{contents}</ol></section>"""
@@ -2377,7 +2378,7 @@ def work_contents(lib, wid, comments, current=None):
     """A work's chapters, each linking to its page with how many excerpts it has."""
     return "".join(
         f'<li><a href="{work_chapter_url(wid, b, ch)}"{" aria-current=page" if (b, ch) == current else ""}>'
-        f'<span>{e(lib.books[b]["en"])} {ch}</span><span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))}</span></a></li>'
+        f'<span data-n="{ch}">{e(lib.books[b]["en"])} {ch}</span><span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))}</span></a></li>'
         for (b, ch), cs in work_chapters(comments).items())
 
 
