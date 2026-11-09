@@ -246,6 +246,70 @@
     });
   });
 
+  // A commentator's page: a passage in their words, a different one each
+  // day (the page shows the first without script), and another on request.
+  document.querySelectorAll(".lg-own[data-quotes]").forEach(function (fig) {
+    var pool = JSON.parse(fig.getAttribute("data-quotes"));
+    if (pool.length < 2) return;
+    var p = fig.querySelector("blockquote p"), meta = fig.querySelector(".lg-quiet");
+    var link = meta.querySelector("a"), work = meta.querySelector("i"), next = fig.querySelector(".lg-own-next");
+    var at = Math.floor(Date.now() / 864e5) % pool.length;
+    var show = function () {
+      var x = pool[at];
+      p.textContent = "“" + x.q + "”";
+      link.textContent = x.ref; link.href = x.href; work.textContent = x.work;
+    };
+    show();
+    next.hidden = false;
+    next.addEventListener("click", function () { at = (at + 1) % pool.length; show(); });
+  });
+
+  // One book or all of them: the switch hides the other books' rows, chapter
+  // bar, maps and start-here passages (with all, one passage from each book).
+  document.querySelectorAll(".lg-bookpick").forEach(function (pick) {
+    var buttons = [].slice.call(pick.querySelectorAll("button"));
+    var page = pick.closest(".lg-author") || document;
+    var set = function (book) {
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-book") === book)); });
+      [].forEach.call(page.querySelectorAll("[data-book]:not(button)"), function (el) {
+        var mine = !book || el.getAttribute("data-book") === book;
+        if (el.hasAttribute("data-rank")) mine = book ? mine : el.getAttribute("data-rank") === "0";
+        el.hidden = !mine;
+      });
+      try { sessionStorage.setItem("lg-book", book); } catch (err) { /* private window */ }
+    };
+    buttons.forEach(function (b) { b.addEventListener("click", function () { set(b.getAttribute("data-book")); }); });
+    pick.hidden = false;
+    var kept = null;
+    try { kept = sessionStorage.getItem("lg-book"); } catch (err) { /* private window */ }
+    if (kept && buttons.some(function (b) { return b.getAttribute("data-book") === kept; })) set(kept);
+  });
+
+  // The bar of sections: the one being read is marked, and the chapter bar
+  // below it sits under it.
+  document.querySelectorAll(".lg-secbar").forEach(function (bar) {
+    var strip = bar.querySelector(".lg-secbar-in"), links = [].slice.call(strip.querySelectorAll("a"));
+    var page = bar.closest(".lg-author");
+    var fit = function () { if (page) page.style.setProperty("--secbar-h", bar.offsetHeight + "px"); };
+    fit();
+    window.addEventListener("resize", fit);
+    if (!("IntersectionObserver" in window)) return;
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (x) { seen[x.target.id] = x.isIntersecting; });
+      var on = null;
+      links.forEach(function (a) { if (!on && seen[a.getAttribute("href").slice(1)]) on = a; });
+      links.forEach(function (a) {
+        if (a === on) { a.setAttribute("aria-current", "true"); strip.scrollLeft = a.offsetLeft - strip.offsetLeft - 16; }
+        else a.removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-120px 0px -55% 0px" });
+    links.forEach(function (a) {
+      var el = document.getElementById(a.getAttribute("href").slice(1));
+      if (el) io.observe(el);
+    });
+  });
+
   // A link to #id inside a closed <details> opens it.
   function openTarget() {
     var id = decodeURIComponent(location.hash.slice(1));
