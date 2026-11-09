@@ -367,8 +367,8 @@ class Site(unittest.TestCase):
         self.assertIn('id="voices"', text)
         self.assertIn('class="lg-vocab"', text)
         self.assertIn('href="/commentators/era/reformation/"', text)
-        self.assertIn('class="lg-prev" href="/commentators/aquinas/"', text)
-        self.assertIn('class="lg-next" href="/commentators/henry/"', text)
+        self.assertIn('class="lg-prev" href="/commentators/luther/"', text)
+        self.assertIn('class="lg-next" href="/commentators/lapide/"', text)
 
     def test_the_reader_can_report_a_mistake_on_github(self):
         text = self.read("jhn/3/index.html")
@@ -763,7 +763,7 @@ class Site(unittest.TestCase):
 
     def test_pages_with_only_the_bible_text_stay_out_of_search(self):
         sitemap = self.read("sitemap.xml")
-        for page in ("gen/1/index.html", "gen/index.html", "act/1/index.html"):
+        for page in ("exo/1/index.html", "exo/index.html", "act/1/index.html"):
             self.assertIn('<meta name="robots" content="noindex">', self.read(page), page)
             self.assertNotIn(f"<loc>https://logia.faith/{page[:-len('index.html')]}</loc>", sitemap)
         for page in ("jhn/3/index.html", "jhn/index.html", "rom/8/index.html", "jhn/3/16/index.html"):

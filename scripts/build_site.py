@@ -184,7 +184,10 @@ def chapter_url(book, chapter):
 def short_name(author):
     """"Chrysostom", "Augustine", "Aquinas": what the panel's summary calls them."""
     special = {"augustine": "Augustine", "aquinas": "Aquinas", "chrysostom": "Chrysostom"}
-    return special.get(author["id"], author["name"].split(" ")[-1])
+    name = author["name"]
+    if re.search(r" (?:of|the) ", name):        # "Basil of Caesarea", "Gregory the Great": the name, not the place
+        return special.get(author["id"], name.split(" ")[0])
+    return special.get(author["id"], name.split(" ")[-1])
 
 
 def short_edition(edition):
