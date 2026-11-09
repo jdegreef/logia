@@ -2296,6 +2296,21 @@ def rights_pills(w):
             f'{e(t("work.rights_world" if world else "work.rights_world_check"))}</span>')
 
 
+def rights_note(w):
+    """A work's rights in sentences: why it is free in the US, and what is
+    still to confirm for the rest of the world, from its rights record."""
+    r = w["rights"]
+    us = (t("work.rights_us_note", year=w["published"]) if r["basis"] == "public domain: published before 1931 (US)"
+          else r["basis"][:1].upper() + r["basis"][1:].rstrip(".") + ".")
+    world = r["worldwide"]
+    if world.startswith("to confirm: "):
+        rest = world[len("to confirm: "):]
+        world = t("work.rights_world_note", what=rest.rstrip("."))
+    else:
+        world = world[:1].upper() + world[1:].rstrip(".") + "."
+    return f"{us} {world}"
+
+
 def cite_box(a, w):
     """The edition as a citation gives it (up to its first note in brackets
     or after a semicolon, which name the scan or the series), with a copy button."""
@@ -2318,15 +2333,21 @@ def work_page(lib, wid):
     comments = sorted((c for c in lib.comments if c["work"] == wid), key=order_key)
     source = (t("work.source_scan", n=len(lib.fixes.get(wid, []))) if w["source_kind"] == "scan"
               else t("work.source_digital"))
-    facts = [(t("work.original"), w["original_language"]), (t("work.edition"), w["edition"])]
-    if w["translation"]:
-        facts.append((t("work.translation"), w["translation"]))
-    facts += [(t("work.published"), str(w["published"])), (t("work.source"), source),
-              (t("work.in_logia"), t("work.excerpts", n=len(comments)))]
+    # The record: the translation, or for a work written in English the
+    # edition (the citation beside it gives the edition in full), and the
+    # year only where that line doesn't already give it.
+    facts = [(t("work.original"), w["original_language"]),
+             (t("work.translation"), w["translation"]) if w["translation"] else (t("work.edition"), w["edition"])]
+    if str(w["published"]) not in facts[-1][1]:
+        facts.append((t("work.published"), str(w["published"])))
+    covered = author_covered(lib, comments)
+    on = "; ".join(t("work.on_verses", n=f"{len(vs):,}", total=f"{sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b):,}",
+                     book=lib.books[b]["en"]) for b, vs in covered.items())
+    facts += [(t("work.source"), source),
+              (t("work.in_logia"), t("work.excerpts", n=f"{len(comments):,}") + (f" {on}" if on else ""))]
     dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
-    r = w["rights"]
     dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{rights_pills(w)}</span>'
-           f'<span class="lg-quiet lg-rights-note">{e(r["basis"])}; {e(r["worldwide"])}</span></dd>')
+           f'<span class="lg-quiet lg-rights-note">{e(rights_note(w))}</span></dd>')
     cite = cite_box(a, w)
     contents = work_contents(lib, wid, comments)
     texts = lib.texts.get(wid, [])
