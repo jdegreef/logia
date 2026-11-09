@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import build_site  # noqa: E402
 import extract_texts  # noqa: E402
 import find_refs  # noqa: E402
+import scripture  # noqa: E402
 import validate  # noqa: E402
 import verify_sources  # noqa: E402
 
@@ -86,6 +87,27 @@ class FindRefs(unittest.TestCase):
         self.assertEqual(loci["chrysostom.JHN.1.1.1"], "2.8")
         self.assertEqual(loci["chrysostom.JHN.1.18.3"], "15.3")       # the excerpt begins "[3.]"
         self.assertEqual(loci["augustine.JHN.1.1.1"], "1.5")          # the paragraph begins "5."
+
+
+class Versification(unittest.TestCase):
+    """English verse numbers, as the commentators print them, move to the Hebrew numbering of the Bible text."""
+
+    def test_a_psalm_title_is_its_first_verse(self):
+        self.assertEqual(scripture.from_english("PSA", 3, 1), [(3, 2)])
+        self.assertEqual(scripture.from_english("PSA", 51, 1), [(51, 3)])
+        self.assertEqual(scripture.title_verses("PSA", 51), [1, 2])
+        self.assertEqual(scripture.title_verses("PSA", 1), [])
+
+    def test_a_chapter_that_begins_elsewhere(self):
+        self.assertEqual(scripture.from_english("ECC", 5, 1), [(4, 17)])
+
+    def test_the_new_testament_is_unchanged(self):
+        self.assertEqual(scripture.from_english("MAT", 5, 3), [(5, 3)])
+
+    def test_the_psalms_commentaries_are_on_the_hebrew_verses(self):
+        entries = json.load(open(os.path.join(ROOT, "library", "comments", "augustine-psalms", "PSA.json")))["entries"]
+        on = {e["start"] for e in entries if "Have pity upon me, O God, after Thy great mercy” (ver. 1)" in e["text"]}
+        self.assertEqual(on, {"PSA.51.3"})       # Psalm 51:1 in English
 
 
 class Quotations(unittest.TestCase):
@@ -335,7 +357,8 @@ class Site(unittest.TestCase):
         self.assertIn('class="lg-wk-cards"', text)
         self.assertIn('href="/works/calvin-romans/rom/1/">Read Romans 1</a>', text)
         self.assertIn("hours to read them all", text)
-        self.assertEqual(text.count('class="lg-on"'), 3)
+        self.assertEqual(text.count('class="lg-on"'), text.count('class="lg-bp"') - 1)
+        self.assertGreaterEqual(text.count('class="lg-on"'), 3)
         self.assertIn('class="lg-own" data-quotes=', text)
         self.assertIn('class="lg-bp" aria-pressed="false" data-book="ROM"', text)
         self.assertIn('<nav class="lg-secbar"', text)
@@ -346,6 +369,11 @@ class Site(unittest.TestCase):
         self.assertIn('href="/commentators/era/reformation/"', text)
         self.assertIn('class="lg-prev" href="/commentators/aquinas/"', text)
         self.assertIn('class="lg-next" href="/commentators/henry/"', text)
+
+    def test_the_reader_can_report_a_mistake_on_github(self):
+        text = self.read("jhn/3/index.html")
+        self.assertIn('"issues":"https://github.com/jdegreef/logia/issues/new"', text)
+        self.assertIn('"report":"Report a mistake"', text)
 
     def test_a_commentator_page_opens_ways_into_the_work(self):
         text = self.read("commentators/chrysostom/index.html")

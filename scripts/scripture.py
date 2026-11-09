@@ -111,3 +111,32 @@ def roman(s):
                 total, prev = (total - n, prev) if n < prev else (total + n, n)
             return total
     return None
+
+
+_VERSIFICATION = None
+
+
+def from_english(book, chapter, verse):
+    """The Open Word Bible verse ids that hold an English (KJV-numbered)
+    verse, as (chapter, verse) pairs. The Old Testament is numbered as the
+    Hebrew text is (bible/owb/versification.json, from the Open Word Bible):
+    Psalm 3:1 in English Bibles is PSA.3.2, the psalm's title being 3:1.
+    A verse numbered alike in both is returned as it is."""
+    global _VERSIFICATION
+    if _VERSIFICATION is None:
+        data = _load("versification.json")
+        _VERSIFICATION = {}
+        for heb, english in data["english"].items():
+            for en in english:
+                _VERSIFICATION.setdefault(en, []).append(tuple(int(x) for x in heb.split(".")[1:]))
+        for en in data["not_in_hebrew"]:
+            _VERSIFICATION.setdefault(en, [])
+    return _VERSIFICATION.get(f"{book}.{chapter}.{verse}", [(chapter, verse)])
+
+
+def title_verses(book, chapter):
+    """The Hebrew verses of a chapter that English Bibles do not number: a
+    psalm's title, printed above its verse 1 (PSA.51.1 and PSA.51.2)."""
+    data = _load("versification.json")
+    return [int(h.split(".")[2]) for h, english in data["english"].items()
+            if not english and h.startswith(f"{book}.{chapter}.")]
