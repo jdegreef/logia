@@ -15877,6 +15877,159 @@
    "end": "ACT.20.4",
    "found": "pattern",
    "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.25-27.1",
+   "at": 1098,
+   "text": "Acts xx. 31",
+   "start": "ACT.20.31",
+   "end": "ACT.20.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.25-27.2",
+   "at": 905,
+   "text": "2 Tim. ii. 8",
+   "start": "2TI.2.8",
+   "end": "2TI.2.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.25-27.3",
+   "at": 950,
+   "text": "1 Cor. xv. 11",
+   "start": "1CO.15.11",
+   "end": "1CO.15.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.25-27.4",
+   "at": 1279,
+   "text": "1 Cor. ii. 7",
+   "start": "1CO.2.7",
+   "end": "1CO.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.25-27.4",
+   "at": 1451,
+   "text": "xi. 25",
+   "start": "ROM.11.25",
+   "end": "ROM.11.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.25-27.5",
+   "at": 102,
+   "text": "1 Cor. ii. 7",
+   "start": "1CO.2.7",
+   "end": "1CO.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.1",
+   "at": 52,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.1",
+   "at": 190,
+   "text": "vv. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.1",
+   "at": 275,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.1",
+   "at": 448,
+   "text": "vv. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.1",
+   "at": 493,
+   "text": "ver. 27",
+   "start": "ROM.16.27",
+   "end": "ROM.16.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.1",
+   "at": 520,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.1",
+   "at": 737,
+   "text": "Eph. iv. 20, 21",
+   "start": "EPH.4.20",
+   "end": "EPH.4.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.2",
+   "at": 272,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.2",
+   "at": 1476,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.2",
+   "at": 1594,
+   "text": "Acts XX. 32",
+   "start": "ACT.20.32",
+   "end": "ACT.20.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.27.3",
+   "at": 48,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
   }
  ]
 }

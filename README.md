@@ -30,7 +30,7 @@ Christian commentaries.
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
-41 works by 25 commentators, 39,074 excerpts in all:
+41 works by 25 commentators, 39,110 excerpts in all:
 
 - **Genesis**: Basil's Hexaemeron (1:1–25), Keil, Haydock and Jamieson
   (Jamieson-Fausset-Brown).

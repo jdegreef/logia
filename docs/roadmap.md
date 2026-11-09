@@ -16,7 +16,7 @@ reviewed without a named human reviewer.
 
 Where Logia stands (November 2026): 41 works by 25 commentators on Genesis,
 Job, the Psalms, Proverbs, Ecclesiastes, the Song of Songs, Matthew, John,
-Romans and Galatians, 39,074 excerpts, a chapter reader with Greek words
+Romans and Galatians, 39,110 excerpts, a chapter reader with Greek words
 and cross-references, and source checking.
 
 ## Phase 1: the data model
