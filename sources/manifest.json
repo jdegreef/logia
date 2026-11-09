@@ -5279,6 +5279,537 @@
    "kind": "digital",
    "download_sha256": "ec1fa9b77bb3ba30fda6e305a835d4a2a1ddf5c7bf5bc795aa596f06dae595d0",
    "extract": "The whole page as downloaded: Roger Pearse's transcription (2005, placed in the public domain) of the 1874/1885 Library of the Fathers translation; page numbers in pb spans, footnotes and running titles at the end."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.ii.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.ii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "1a761b00abaa1cd4b7b7a4ae9e75e3c171c3281ca31be73011d570f5c46d4dba",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.iii.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.iii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "ad7d16d586346451b1f344d83d81405f859513255f6dddab6392e70dfb39fbb0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.iv.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.iv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "ee5d6104290d865d6f6737347e4ca29e0867b7203cc02815fefad90fb000220f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.v.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.v.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "52b5eced4cfd1b57e63b847f43c4caf7c66e448d2b9fe8944c08bc79fcb0870d",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.vi.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.vi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "32b4f7bdebadffb726885adaacfd4a356507c7fe5ca3d2b2e28357e8f8b7c3cd",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.vii.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.vii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "9bd1671fba12d8266555ac904b022ab62889d8f42ca3ad4faa32c7dd583a90d7",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.viii.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.viii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "6afb1c6e5328eb46bf44096f634849909cccc201133ba7d2e423017d8a781141",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.ix.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.ix.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "1cd60f0cd2163de9930d1eac14200fbc0d19f0f446a4bd75fe848b3f55864b10",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/basil/npnf208.viii.x.html",
+   "work": "basil",
+   "url": "https://www.ccel.org/ccel/schaff/npnf208.viii.x.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "ce8511c70eb354f0b74f287130f7bfe9bc3f383642f98b503f4124f8f20d9780",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in Note spans."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.i.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.i.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "815b11b799389063847d632146fef0f5170c054af9be83bafe3a470b889e367d",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.ii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.ii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "19316dc00166857efe8d6645d81245afac46b63c70ff668fa1ede14cce757762",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.iii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.iii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "d657ce85d467c8d486bb4f26ca6851ea5886f18e7878a60ea6084afd8f15a5d4",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.iv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.iv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "4d722fb62b71b4b4257dd405143a2039700f10a64ef9c3b16b21844fb783ad2b",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.v.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.v.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "261b5e3db03bea0372c36c866bb15f00ec55f3e900fed4d684e59cbc9e4d5c5c",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.vi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.vi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "55697082cbc053ad835838d8a39e0b032628243269bdbefdb5b01483afde211a",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.vii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.vii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "73a24777d92ecd2a69f67b902c0df8f094b9fe55241a3ba68e7845d6fc6aca49",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.viii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.viii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "abc50f85e603e3c57da56aed1c9db5e683bea5348065a352a44f61bf25e0d369",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.ix.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.ix.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "89195f46b265e8453a384df1ceae174dac251e2115c39557ad2d815b99570313",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.x.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.x.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "4ee37df4b21bd19749fedc8fb342053e7d818b33d73200ae08965b882d4a86f9",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "db97cfae17e6da7b07c2c0178d6d9485fe215aeadd6455b5877bdf94379721b0",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "0f4710c208da7be0e46cb92ab3db4bcd9bb27e333c3939df8780cb4adb68f40e",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xiii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xiii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "97e9fdb83ed093ad9c2f0086941db9fd1e389fd78cd5b9370501713b9dd50e9b",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xiv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xiv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "2fd3d154dc6d71e9869d8a8d94c553100ff7b267c15e4ada5037804a78e6c691",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "3b5dba3cc62a2fdc55dcd840895f56332c395444c4038e8e31d231dceffee9c3",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xvi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xvi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "44cfc530c9f70a7b0030012a35b595a0e60b6bc0d38566dfc1400a3c04c18d7d",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xvii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xvii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "895c4285a0c965f32e79aa021062006de389b00255131a3baf1b85a7cda6d574",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xviii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xviii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "409c00a352089a0250d637df658236b27c71a44b0a42d2d1180bcd4d50bfd096",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xix.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xix.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "4c2e8a1c194d281fe61b8b0864dcf1bf77359cfcf721cff6250cc9a9bafca678",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xx.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xx.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "cd6e708528a648fadb99e27632ef150b529aa610efb2a0536380d2df09e85f23",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "821bf478f546f8342f80ca9c4fdf57dcab6a8f2825da62600b1c0ede6e84d9e2",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "499240b29ccbb5aa42d9efe16057e9868c57f7b6e70bffbf733ed48b3ac41e28",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxiii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxiii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "c507340b7513761ff1e6eac127349321578572b06cfefcf5cbbbacdee86b7b73",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxiv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxiv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "28e52e05596d52eba34cc42c81f27d6711776795b67d5102775d8f3a61d2fff8",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "e952b4d7d6cf1a3d41c3209dc882c3e32f0acea0d053a72212c7a39b2b60bb8c",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxvi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxvi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "67c65e429fed3d07dfb05f12ab73315644e75d610de05ab25918400c1f145f80",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxvii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxvii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "b0a340ff5c9189ad9d9f510af7024e88bfcf234a95a8ef99208e2f379b64f8ca",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxviii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxviii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "e7ce8961adf7b7ec536caa498d371fabfc7a30648f0e03a264fe797355ccc456",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxix.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxix.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "63170f3c70318820674326b56a743797ae7d01139355dca579e8f8dbe2c97844",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxx.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxx.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "3a60b92b20e5e1976cbdf637ed55da8d9e643e6bc132fb558b4efd58cc1a4f0a",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "9f2a600c14bf8495448334e8a200302f5af9c578f8cdf810e14c289dafa6a9bf",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "dde6a3fc637930d9f1e3964600fa42e9794b26538f98920a1e9a213586383d45",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxiii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxiii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "1665d20e6fa23a37ddd32665ebfebd4cf25124640932621c580d08cee8df18ed",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxiv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxiv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "afc3822d7f4eea94347adcfb93e54dc317cc821ef75f1852b9e903407e2a26a2",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "1ba2ecfdcaf20291fb7f85fc3a8e2723e352047002cc7187fdbaf263acf885ea",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxvi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxvi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "47408e2a2655365ef4730e929cee83e6fa97d37e737641456c71dc996f4f62f9",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxvii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxvii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "d57fe733863b3d5d3245e2768bff8b8a2e963c1d47ef74fe8d16c17ece2d5e11",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxviii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxviii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "9399ccac7a2558ce0eadb55c9983fd009af190fa9f2f1fc4c9c550bdd76c77f6",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xxxix.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xxxix.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "4c87414200d72cf18de37f678104731809b1131b0e2c5e8c70695a0362a8838b",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xl.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xl.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "610f02c37a48c130d8a98d9a5f3af8b5c8c3965207673b0579af3050eb458594",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xli.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xli.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "72a6b537585e8187a87e08dd8d113297d983a7c2f0f9157714bbed5c49f3048a",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xlii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xlii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "640bac4b32d447acede019d97c3346baaa24f0e0e985f802147ac12bc2a1bb53",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xliii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xliii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "9495a0a995761057f7b56b81d29e48ae9329e3bc92e4e5121769df9a39479af8",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xliv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xliv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "2bf26598243e395e1ec8c44b3c36b73d88b52fcb0a66bb5621a20f890452d56d",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xlv.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xlv.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "cad9a13d0e4c6fee999f29040cefde61d3be8bb71c00390835a6ff081fab731c",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xlvi.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xlvi.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "d3ba971dfe64bb2827f1d1bde26a0655f77b16ea2782cb3b5d8f5eaa826f096a",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xlvii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xlvii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "41f50d5c9f1a5c54e485fb69be7e8a15d0f4cf090e0a27f3b8fe1fd956fc81bb",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xlviii.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xlviii.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "e53ef3a0b4e47731a87263610a4773b9df6d1d04585e8217bf143b096d7c68c3",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.xlix.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.xlix.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "1c398bae84f70182d05bc460e71e3c9f966eccd047d5e8760b1e66d880705fcf",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/jamieson/jfb.x.i.l.html",
+   "work": "jamieson",
+   "url": "https://www.ccel.org/ccel/jamieson/jfb.x.i.l.html",
+   "retrieved": "2026-11-09",
+   "kind": "digital",
+   "download_sha256": "a0fb6f9ed9e50a712f1f36821f88ca00c9d6367f8fcf731ccc34dfbee07285c1",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
   }
  ]
 }

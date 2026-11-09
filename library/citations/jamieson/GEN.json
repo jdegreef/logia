@@ -1,0 +1,3012 @@
+{
+ "work": "jamieson",
+ "book": "GEN",
+ "citations": [
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 126,
+   "text": "Pr 8:22",
+   "start": "PRO.8.22",
+   "end": "PRO.8.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 135,
+   "text": "23",
+   "start": "PRO.8.23",
+   "end": "PRO.8.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 537,
+   "text": "Pr 8:27",
+   "start": "PRO.8.27",
+   "end": "PRO.8.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 546,
+   "text": "Joh 1:3",
+   "start": "JHN.1.3",
+   "end": "JHN.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 555,
+   "text": "10",
+   "start": "JHN.1.10",
+   "end": "JHN.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 559,
+   "text": "Eph 3:9",
+   "start": "EPH.3.9",
+   "end": "EPH.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 568,
+   "text": "Heb 1:2",
+   "start": "HEB.1.2",
+   "end": "HEB.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 577,
+   "text": "Job 26:13",
+   "start": "JOB.26.13",
+   "end": "JOB.26.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 1054,
+   "text": "Ac 17:24",
+   "start": "ACT.17.24",
+   "end": "ACT.17.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.1.1",
+   "at": 1064,
+   "text": "Ro 11:36",
+   "start": "ROM.11.36",
+   "end": "ROM.11.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.2.1",
+   "at": 101,
+   "text": "Isa 34:11",
+   "start": "ISA.34.11",
+   "end": "ISA.34.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.9.1",
+   "at": 342,
+   "text": "Ps 104:6-9",
+   "start": "PSA.104.6",
+   "end": "PSA.104.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.9.1",
+   "at": 555,
+   "text": "Job 38:10",
+   "start": "JOB.38.10",
+   "end": "JOB.38.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.26.1",
+   "at": 784,
+   "text": "Ec 7:29",
+   "start": "ECC.7.29",
+   "end": "ECC.7.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.26.1",
+   "at": 1011,
+   "text": "Col 3:10",
+   "start": "COL.3.10",
+   "end": "COL.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.28.1",
+   "at": 338,
+   "text": "Ac 17:26",
+   "start": "ACT.17.26",
+   "end": "ACT.17.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.28.1",
+   "at": 448,
+   "text": "Ps 33:9",
+   "start": "PSA.33.9",
+   "end": "PSA.33.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.1.28.1",
+   "at": 548,
+   "text": "Ps 104:24",
+   "start": "PSA.104.24",
+   "end": "PSA.104.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.2.1",
+   "at": 82,
+   "text": "Isa 40:28",
+   "start": "ISA.40.28",
+   "end": "ISA.40.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.7.1",
+   "at": 430,
+   "text": "Ps 139:14",
+   "start": "PSA.139.14",
+   "end": "PSA.139.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.7.1",
+   "at": 872,
+   "text": "Ec 12:7",
+   "start": "ECC.12.7",
+   "end": "ECC.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.15.1",
+   "at": 188,
+   "text": "Ge 13:10",
+   "start": "GEN.13.10",
+   "end": "GEN.13.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.15.1",
+   "at": 198,
+   "text": "Eze 28:13",
+   "start": "EZK.28.13",
+   "end": "EZK.28.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.24.1",
+   "at": 193,
+   "text": "Mt 19:4",
+   "start": "MAT.19.4",
+   "end": "MAT.19.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.24.1",
+   "at": 202,
+   "text": "5",
+   "start": "MAT.19.5",
+   "end": "MAT.19.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.2.24.1",
+   "at": 205,
+   "text": "Eph 5:28",
+   "start": "EPH.5.28",
+   "end": "EPH.5.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.1.1",
+   "at": 422,
+   "text": "Re 20:2",
+   "start": "REV.20.2",
+   "end": "REV.20.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.1.1",
+   "at": 640,
+   "text": "Joh 8:44",
+   "start": "JHN.8.44",
+   "end": "JHN.8.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.1.1",
+   "at": 650,
+   "text": "2Co 11:3",
+   "start": "2CO.11.3",
+   "end": "2CO.11.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.1.1",
+   "at": 660,
+   "text": "1Jo 3:8",
+   "start": "1JN.3.8",
+   "end": "1JN.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.1.1",
+   "at": 669,
+   "text": "1Ti 2:14",
+   "start": "1TI.2.14",
+   "end": "1TI.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.1.1",
+   "at": 679,
+   "text": "Re 20:2",
+   "start": "REV.20.2",
+   "end": "REV.20.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.1.1",
+   "at": 739,
+   "text": "Mt 10:16",
+   "start": "MAT.10.16",
+   "end": "MAT.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.2.1",
+   "at": 453,
+   "text": "Ge 2:17",
+   "start": "GEN.2.17",
+   "end": "GEN.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.6.1",
+   "at": 396,
+   "text": "Jas 1:15",
+   "start": "JAS.1.15",
+   "end": "JAS.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.16.1",
+   "at": 211,
+   "text": "Ge 2:18",
+   "start": "GEN.2.18",
+   "end": "GEN.2.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.16.1",
+   "at": 220,
+   "text": "23",
+   "start": "GEN.2.23",
+   "end": "GEN.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.3.19.1",
+   "at": 713,
+   "text": "Ro 5:12",
+   "start": "ROM.5.12",
+   "end": "ROM.5.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.1.1",
+   "at": 353,
+   "text": "Ps 39:5",
+   "start": "PSA.39.5",
+   "end": "PSA.39.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.1.1",
+   "at": 496,
+   "text": "Ge 5:4",
+   "start": "GEN.5.4",
+   "end": "GEN.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.4.1",
+   "at": 294,
+   "text": "Ge 15:17",
+   "start": "GEN.15.17",
+   "end": "GEN.15.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.7.1",
+   "at": 347,
+   "text": "Ho 4:8",
+   "start": "HOS.4.8",
+   "end": "HOS.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.7.1",
+   "at": 355,
+   "text": "2Co 5:21",
+   "start": "2CO.5.21",
+   "end": "2CO.5.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.7.1",
+   "at": 365,
+   "text": "Heb 9:28",
+   "start": "HEB.9.28",
+   "end": "HEB.9.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.8.1",
+   "at": 179,
+   "text": "1Jo 3:12",
+   "start": "1JN.3.12",
+   "end": "1JN.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.4.16.1",
+   "at": 273,
+   "text": "Mt 12:45",
+   "start": "MAT.12.45",
+   "end": "MAT.12.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.1.1",
+   "at": 32,
+   "text": "Ge 11:4",
+   "start": "GEN.11.4",
+   "end": "GEN.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.5.1",
+   "at": 149,
+   "text": "Ge 5:5-32",
+   "start": "GEN.5.5",
+   "end": "GEN.5.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.5.1",
+   "at": 297,
+   "text": "Ge 5:23",
+   "start": "GEN.5.23",
+   "end": "GEN.5.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.5.1",
+   "at": 353,
+   "text": "Ge 5:27",
+   "start": "GEN.5.27",
+   "end": "GEN.5.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.24.1",
+   "at": 141,
+   "text": "Heb 11:5",
+   "start": "HEB.11.5",
+   "end": "HEB.11.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.24.1",
+   "at": 399,
+   "text": "Jude 14, 15",
+   "start": "JUD.1.14",
+   "end": "JUD.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.26.1",
+   "at": 79,
+   "text": "Ge 4:18",
+   "start": "GEN.4.18",
+   "end": "GEN.4.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.5.26.1",
+   "at": 205,
+   "text": "Ge 5:29",
+   "start": "GEN.5.29",
+   "end": "GEN.5.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.3.1",
+   "at": 177,
+   "text": "1Pe 3:20",
+   "start": "1PE.3.20",
+   "end": "1PE.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.3.1",
+   "at": 187,
+   "text": "2Pe 2:5",
+   "start": "2PE.2.5",
+   "end": "2PE.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.3.1",
+   "at": 196,
+   "text": "Jude 14",
+   "start": "JUD.1.14",
+   "end": "JUD.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.5-6.1",
+   "at": 57,
+   "text": "Mal 3:6",
+   "start": "MAL.3.6",
+   "end": "MAL.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.5-6.1",
+   "at": 66,
+   "text": "Jas 1:17",
+   "start": "JAS.1.17",
+   "end": "JAS.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.9.1",
+   "at": 159,
+   "text": "Ga 3:2",
+   "start": "GAL.3.2",
+   "end": "GAL.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.9.1",
+   "at": 167,
+   "text": "Heb 11:7",
+   "start": "HEB.11.7",
+   "end": "HEB.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.13.1",
+   "at": 385,
+   "text": "Heb 11:7",
+   "start": "HEB.11.7",
+   "end": "HEB.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.14.1",
+   "at": 42,
+   "text": "Ex 2:3",
+   "start": "EXO.2.3",
+   "end": "EXO.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.6.17-22.1",
+   "at": 115,
+   "text": "Ge 41:32",
+   "start": "GEN.41.32",
+   "end": "GEN.41.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.7.21.1",
+   "at": 226,
+   "text": "Ge 19:25",
+   "start": "GEN.19.25",
+   "end": "GEN.19.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.7.21.1",
+   "at": 236,
+   "text": "Ex 9:6",
+   "start": "EXO.9.6",
+   "end": "EXO.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.7.24.1",
+   "at": 283,
+   "text": "Eze 14:14",
+   "start": "EZK.14.14",
+   "end": "EZK.14.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.8.1.1",
+   "at": 292,
+   "text": "Mt 10:29",
+   "start": "MAT.10.29",
+   "end": "MAT.10.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.8.1.1",
+   "at": 455,
+   "text": "Ps 104:4",
+   "start": "PSA.104.4",
+   "end": "PSA.104.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.8.4.1",
+   "at": 199,
+   "text": "2Ki 19:37",
+   "start": "2KI.19.37",
+   "end": "2KI.19.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.8.4.1",
+   "at": 210,
+   "text": "Isa 37:38",
+   "start": "ISA.37.38",
+   "end": "ISA.37.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.8.15-16.1",
+   "at": 142,
+   "text": "Ge 8:19",
+   "start": "GEN.8.19",
+   "end": "GEN.8.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.8.21.1",
+   "at": 250,
+   "text": "Isa 54:9",
+   "start": "ISA.54.9",
+   "end": "ISA.54.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.8.22.1",
+   "at": 64,
+   "text": "2Pe 3:7",
+   "start": "2PE.3.7",
+   "end": "2PE.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.9.5.1",
+   "at": 151,
+   "text": "Ro 13:4",
+   "start": "ROM.13.4",
+   "end": "ROM.13.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.9.27.1",
+   "at": 539,
+   "text": "Isa 46:10",
+   "start": "ISA.46.10",
+   "end": "ISA.46.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.10.1.1",
+   "at": 314,
+   "text": "Ge 10:21",
+   "start": "GEN.10.21",
+   "end": "GEN.10.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.10.5.1",
+   "at": 113,
+   "text": "Isa 11:11",
+   "start": "ISA.11.11",
+   "end": "ISA.11.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.10.5.1",
+   "at": 124,
+   "text": "20:6",
+   "start": "ISA.20.6",
+   "end": "ISA.20.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.10.5.1",
+   "at": 130,
+   "text": "Jer 25:22",
+   "start": "JER.25.22",
+   "end": "JER.25.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.10.25.1",
+   "at": 66,
+   "text": "Ge 11:10-16",
+   "start": "GEN.11.10",
+   "end": "GEN.11.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.10.25.1",
+   "at": 398,
+   "text": "De 32:8",
+   "start": "DEU.32.8",
+   "end": "DEU.32.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.11.1.1",
+   "at": 357,
+   "text": "Ge 10:10",
+   "start": "GEN.10.10",
+   "end": "GEN.10.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.11.4.1",
+   "at": 92,
+   "text": "De 1:28",
+   "start": "DEU.1.28",
+   "end": "DEU.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.11.4.1",
+   "at": 101,
+   "text": "9:1-6",
+   "start": "DEU.9.1",
+   "end": "DEU.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.11.31.1",
+   "at": 49,
+   "text": "Ge 11:29",
+   "start": "GEN.11.29",
+   "end": "GEN.11.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.12.1.1",
+   "at": 529,
+   "text": "Ge 12:2",
+   "start": "GEN.12.2",
+   "end": "GEN.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.12.6.1",
+   "at": 78,
+   "text": "Ge 33:18",
+   "start": "GEN.33.18",
+   "end": "GEN.33.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.12.10.1",
+   "at": 167,
+   "text": "Heb 11:15",
+   "start": "HEB.11.15",
+   "end": "HEB.11.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.12.18-20.1",
+   "at": 157,
+   "text": "Ps 105:13",
+   "start": "PSA.105.13",
+   "end": "PSA.105.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.12.18-20.1",
+   "at": 168,
+   "text": "15",
+   "start": "PSA.105.15",
+   "end": "PSA.105.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.13.7.1",
+   "at": 377,
+   "text": "Ge 13:8",
+   "start": "GEN.13.8",
+   "end": "GEN.13.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.13.7.1",
+   "at": 616,
+   "text": "Mt 6:32",
+   "start": "MAT.6.32",
+   "end": "MAT.6.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.13.7.1",
+   "at": 625,
+   "text": "Ro 12:10",
+   "start": "ROM.12.10",
+   "end": "ROM.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.13.7.1",
+   "at": 635,
+   "text": "11",
+   "start": "ROM.12.11",
+   "end": "ROM.12.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.13.10.1",
+   "at": 109,
+   "text": "Ge 12:8",
+   "start": "GEN.12.8",
+   "end": "GEN.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.14.1.1",
+   "at": 497,
+   "text": "Ge 14:10",
+   "start": "GEN.14.10",
+   "end": "GEN.14.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.14.18.1",
+   "at": 392,
+   "text": "Heb 7:1",
+   "start": "HEB.7.1",
+   "end": "HEB.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.15.2.1",
+   "at": 98,
+   "text": "Ge 15:1",
+   "start": "GEN.15.1",
+   "end": "GEN.15.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.15.4.1",
+   "at": 196,
+   "text": "Ge 15:8",
+   "start": "GEN.15.8",
+   "end": "GEN.15.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.1.1",
+   "at": 80,
+   "text": "Ge 16:16",
+   "start": "GEN.16.16",
+   "end": "GEN.16.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.1.1",
+   "at": 510,
+   "text": "Ex 6:3",
+   "start": "EXO.6.3",
+   "end": "EXO.6.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.1.1",
+   "at": 569,
+   "text": "Ps 16:5",
+   "start": "PSA.16.5",
+   "end": "PSA.16.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.1.1",
+   "at": 578,
+   "text": "6",
+   "start": "PSA.16.6",
+   "end": "PSA.16.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.1.1",
+   "at": 581,
+   "text": "73:25",
+   "start": "PSA.73.25",
+   "end": "PSA.73.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.1.1",
+   "at": 632,
+   "text": "Ps 51:6",
+   "start": "PSA.51.6",
+   "end": "PSA.51.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.8.1",
+   "at": 98,
+   "text": "Ge 15:18",
+   "start": "GEN.15.18",
+   "end": "GEN.15.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.10.1",
+   "at": 184,
+   "text": "Ac 7:8",
+   "start": "ACT.7.8",
+   "end": "ACT.7.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.17.10.1",
+   "at": 192,
+   "text": "Ro 4:11",
+   "start": "ROM.4.11",
+   "end": "ROM.4.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.12.1",
+   "at": 231,
+   "text": "Ac 5:4",
+   "start": "ACT.5.4",
+   "end": "ACT.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.21.1",
+   "at": 226,
+   "text": "Eze 18:23",
+   "start": "EZK.18.23",
+   "end": "EZK.18.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.23.1",
+   "at": 178,
+   "text": "Pr 15:8",
+   "start": "PRO.15.8",
+   "end": "PRO.15.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.23.1",
+   "at": 187,
+   "text": "Jas 5:16",
+   "start": "JAS.5.16",
+   "end": "JAS.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.23.1",
+   "at": 267,
+   "text": "Ro 3:5",
+   "start": "ROM.3.5",
+   "end": "ROM.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.23.1",
+   "at": 275,
+   "text": "6",
+   "start": "ROM.3.6",
+   "end": "ROM.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.33.1",
+   "at": 211,
+   "text": "Lu 13:9",
+   "start": "LUK.13.9",
+   "end": "LUK.13.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.33.1",
+   "at": 288,
+   "text": "Jer 7:16",
+   "start": "JER.7.16",
+   "end": "JER.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.33.1",
+   "at": 298,
+   "text": "11:14",
+   "start": "JER.11.14",
+   "end": "JER.11.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.18.33.1",
+   "at": 441,
+   "text": "Ec 9:2",
+   "start": "ECC.9.2",
+   "end": "ECC.9.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.2.1",
+   "at": 98,
+   "text": "Ge 18:2-8",
+   "start": "GEN.18.2",
+   "end": "GEN.18.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.3.1",
+   "at": 117,
+   "text": "Ge 13:12",
+   "start": "GEN.13.12",
+   "end": "GEN.13.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.12-13.1",
+   "at": 125,
+   "text": "2Pe 2:8",
+   "start": "2PE.2.8",
+   "end": "2PE.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.22.1",
+   "at": 155,
+   "text": "Re 7:3",
+   "start": "REV.7.3",
+   "end": "REV.7.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.24.1",
+   "at": 593,
+   "text": "Job 1:16",
+   "start": "JOB.1.16",
+   "end": "JOB.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.24.1",
+   "at": 603,
+   "text": "18:15",
+   "start": "JOB.18.15",
+   "end": "JOB.18.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.26.1",
+   "at": 294,
+   "text": "Ge 19:17",
+   "start": "GEN.19.17",
+   "end": "GEN.19.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.27.1",
+   "at": 603,
+   "text": "De 29:23",
+   "start": "DEU.29.23",
+   "end": "DEU.29.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.27.1",
+   "at": 613,
+   "text": "Isa 13:19",
+   "start": "ISA.13.19",
+   "end": "ISA.13.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.27.1",
+   "at": 624,
+   "text": "Jude 7",
+   "start": "JUD.1.7",
+   "end": "JUD.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.29.1",
+   "at": 159,
+   "text": "De 4:24",
+   "start": "DEU.4.24",
+   "end": "DEU.4.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.19.29.1",
+   "at": 168,
+   "text": "Heb 12:29",
+   "start": "HEB.12.29",
+   "end": "HEB.12.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.20.2.1",
+   "at": 277,
+   "text": "Ge 12:13",
+   "start": "GEN.12.13",
+   "end": "GEN.12.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.20.12.1",
+   "at": 40,
+   "text": "Ge 11:31",
+   "start": "GEN.11.31",
+   "end": "GEN.11.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.20.12.1",
+   "at": 245,
+   "text": "Ge 12:11-13",
+   "start": "GEN.12.11",
+   "end": "GEN.12.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.20.12.1",
+   "at": 525,
+   "text": "Zec 8:16",
+   "start": "ZEC.8.16",
+   "end": "ZEC.8.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.21.3-4.1",
+   "at": 160,
+   "text": "Ge 17:19",
+   "start": "GEN.17.19",
+   "end": "GEN.17.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.21.10.1",
+   "at": 401,
+   "text": "Ga 4:24",
+   "start": "GAL.4.24",
+   "end": "GAL.4.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.21.19.1",
+   "at": 55,
+   "text": "Ge 16:11",
+   "start": "GEN.16.11",
+   "end": "GEN.16.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.21.20-21.1",
+   "at": 103,
+   "text": "Ge 16:12",
+   "start": "GEN.16.12",
+   "end": "GEN.16.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.21.20-21.1",
+   "at": 118,
+   "text": "Isa 48:19",
+   "start": "ISA.48.19",
+   "end": "ISA.48.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.21.20-21.1",
+   "at": 129,
+   "text": "1Pe 1:25",
+   "start": "1PE.1.25",
+   "end": "1PE.1.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.21.22.1",
+   "at": 55,
+   "text": "Ge 12:2",
+   "start": "GEN.12.2",
+   "end": "GEN.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.22.1.1",
+   "at": 44,
+   "text": "Jas 1:13",
+   "start": "JAS.1.13",
+   "end": "JAS.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.22.1.1",
+   "at": 118,
+   "text": "1Pe 1:7",
+   "start": "1PE.1.7",
+   "end": "1PE.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.22.2.1",
+   "at": 278,
+   "text": "Ga 1:16",
+   "start": "GAL.1.16",
+   "end": "GAL.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.22.4.1",
+   "at": 86,
+   "text": "Ge 22:5",
+   "start": "GEN.22.5",
+   "end": "GEN.22.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.22.4.1",
+   "at": 213,
+   "text": "Ge 22:6",
+   "start": "GEN.22.6",
+   "end": "GEN.22.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.22.4.1",
+   "at": 295,
+   "text": "Ge 22:7",
+   "start": "GEN.22.7",
+   "end": "GEN.22.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.22.11-12.1",
+   "at": 282,
+   "text": "Heb 11:17",
+   "start": "HEB.11.17",
+   "end": "HEB.11.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.23.3.1",
+   "at": 190,
+   "text": "Ac 7:5",
+   "start": "ACT.7.5",
+   "end": "ACT.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.1.1",
+   "at": 106,
+   "text": "1Ch 1:32",
+   "start": "1CH.1.32",
+   "end": "1CH.1.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.7.1",
+   "at": 216,
+   "text": "Jas 2:23",
+   "start": "JAS.2.23",
+   "end": "JAS.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.7.1",
+   "at": 293,
+   "text": "Ge 15:15",
+   "start": "GEN.15.15",
+   "end": "GEN.15.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.7.1",
+   "at": 439,
+   "text": "Mt 7:16",
+   "start": "MAT.7.16",
+   "end": "MAT.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.7.1",
+   "at": 482,
+   "text": "Lu 16:22",
+   "start": "LUK.16.22",
+   "end": "LUK.16.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.21.1",
+   "at": 219,
+   "text": "Ge 26:4",
+   "start": "GEN.26.4",
+   "end": "GEN.26.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.21.1",
+   "at": 268,
+   "text": "1Pe 3:7",
+   "start": "1PE.3.7",
+   "end": "1PE.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.21.1",
+   "at": 501,
+   "text": "Ro 9:12",
+   "start": "ROM.9.12",
+   "end": "ROM.9.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.31.1",
+   "at": 173,
+   "text": "Ex 4:22",
+   "start": "EXO.4.22",
+   "end": "EXO.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.32.1",
+   "at": 313,
+   "text": "Heb 12:16",
+   "start": "HEB.12.16",
+   "end": "HEB.12.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.32.1",
+   "at": 329,
+   "text": "Job 31:7",
+   "start": "JOB.31.7",
+   "end": "JOB.31.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.32.1",
+   "at": 339,
+   "text": "16",
+   "start": "JOB.31.16",
+   "end": "JOB.31.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.32.1",
+   "at": 343,
+   "text": "6:13",
+   "start": "JOB.6.13",
+   "end": "JOB.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.25.32.1",
+   "at": 349,
+   "text": "Php 3:19",
+   "start": "PHP.3.19",
+   "end": "PHP.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.26.12.1",
+   "at": 175,
+   "text": "Isa 65:13",
+   "start": "ISA.65.13",
+   "end": "ISA.65.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.26.12.1",
+   "at": 186,
+   "text": "Ps 37:19",
+   "start": "PSA.37.19",
+   "end": "PSA.37.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.26.12.1",
+   "at": 365,
+   "text": "Pr 27:4",
+   "start": "PRO.27.4",
+   "end": "PRO.27.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.26.12.1",
+   "at": 374,
+   "text": "Ec 4:4",
+   "start": "ECC.4.4",
+   "end": "ECC.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.26.26-33.1",
+   "at": 239,
+   "text": "Ge 12:2",
+   "start": "GEN.12.2",
+   "end": "GEN.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.26.26-33.1",
+   "at": 526,
+   "text": "Pr 16:7",
+   "start": "PRO.16.7",
+   "end": "PRO.16.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.26.34.1",
+   "at": 148,
+   "text": "Ge 24:3",
+   "start": "GEN.24.3",
+   "end": "GEN.24.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.27.4.1",
+   "at": 295,
+   "text": "Ge 18:7",
+   "start": "GEN.18.7",
+   "end": "GEN.18.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.27.4.1",
+   "at": 405,
+   "text": "Ge 25:23",
+   "start": "GEN.25.23",
+   "end": "GEN.25.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.27.6-10.1",
+   "at": 121,
+   "text": "Ge 25:23",
+   "start": "GEN.25.23",
+   "end": "GEN.25.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.27.28.1",
+   "at": 339,
+   "text": "Ne 9:25",
+   "start": "NEH.9.25",
+   "end": "NEH.9.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.27.28.1",
+   "at": 348,
+   "text": "35",
+   "start": "NEH.9.35",
+   "end": "NEH.9.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.27.39-40.1",
+   "at": 150,
+   "text": "Ge 27:28",
+   "start": "GEN.27.28",
+   "end": "GEN.27.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.27.39-40.1",
+   "at": 454,
+   "text": "2Ki 8:20",
+   "start": "2KI.8.20",
+   "end": "2KI.8.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.28.6-9.1",
+   "at": 162,
+   "text": "Mt 25:10",
+   "start": "MAT.25.10",
+   "end": "MAT.25.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.28.12.1",
+   "at": 927,
+   "text": "Ne 3:15",
+   "start": "NEH.3.15",
+   "end": "NEH.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.28.18-19.1",
+   "at": 326,
+   "text": "Ho 12:4",
+   "start": "HOS.12.4",
+   "end": "HOS.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.29.1.1",
+   "at": 224,
+   "text": "Ne 8:10",
+   "start": "NEH.8.10",
+   "end": "NEH.8.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.29.1.1",
+   "at": 366,
+   "text": "Jud 6:3",
+   "start": "JDG.6.3",
+   "end": "JDG.6.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.29.1.1",
+   "at": 375,
+   "text": "1Ki 4:30",
+   "start": "1KI.4.30",
+   "end": "1KI.4.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.29.1.1",
+   "at": 385,
+   "text": "Job 1:3",
+   "start": "JOB.1.3",
+   "end": "JOB.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.30.1.1",
+   "at": 467,
+   "text": "Ge 25:22",
+   "start": "GEN.25.22",
+   "end": "GEN.25.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.30.25.1",
+   "at": 273,
+   "text": "Heb 13:14",
+   "start": "HEB.13.14",
+   "end": "HEB.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.30.32.1",
+   "at": 676,
+   "text": "Ge 31:5-13",
+   "start": "GEN.31.5",
+   "end": "GEN.31.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.31.2.1",
+   "at": 452,
+   "text": "Ec 4:4",
+   "start": "ECC.4.4",
+   "end": "ECC.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.31.3.1",
+   "at": 276,
+   "text": "Ge 28:15",
+   "start": "GEN.28.15",
+   "end": "GEN.28.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.31.14.1",
+   "at": 309,
+   "text": "Ge 31:16",
+   "start": "GEN.31.16",
+   "end": "GEN.31.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.31.22-24.1",
+   "at": 774,
+   "text": "Ps 76:10",
+   "start": "PSA.76.10",
+   "end": "PSA.76.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.31.26-30.1",
+   "at": 75,
+   "text": "Ge 31:1",
+   "start": "GEN.31.1",
+   "end": "GEN.31.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.31.31-32.1",
+   "at": 312,
+   "text": "Ge 31:33",
+   "start": "GEN.31.33",
+   "end": "GEN.31.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.31.40.1",
+   "at": 382,
+   "text": "Eph 4:26",
+   "start": "EPH.4.26",
+   "end": "EPH.4.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.1.1",
+   "at": 207,
+   "text": "Ge 28:12",
+   "start": "GEN.28.12",
+   "end": "GEN.28.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.1.1",
+   "at": 346,
+   "text": "Ps 34:7",
+   "start": "PSA.34.7",
+   "end": "PSA.34.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.3.1",
+   "at": 406,
+   "text": "De 11:12",
+   "start": "DEU.11.12",
+   "end": "DEU.11.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.4.1",
+   "at": 427,
+   "text": "Ec 10:4",
+   "start": "ECC.10.4",
+   "end": "ECC.10.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.4.1",
+   "at": 505,
+   "text": "Ge 27:29",
+   "start": "GEN.27.29",
+   "end": "GEN.27.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.17.1",
+   "at": 92,
+   "text": "Ge 32:18",
+   "start": "GEN.32.18",
+   "end": "GEN.32.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.17.1",
+   "at": 102,
+   "text": "20",
+   "start": "GEN.32.20",
+   "end": "GEN.32.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.24-25.1",
+   "at": 81,
+   "text": "Ho 12:4",
+   "start": "HOS.12.4",
+   "end": "HOS.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.24-25.1",
+   "at": 99,
+   "text": "Ge 32:28",
+   "start": "GEN.32.28",
+   "end": "GEN.32.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.24-25.1",
+   "at": 109,
+   "text": "30",
+   "start": "GEN.32.30",
+   "end": "GEN.32.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.24-25.1",
+   "at": 113,
+   "text": "Ho 12:5",
+   "start": "HOS.12.5",
+   "end": "HOS.12.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.32.31.1",
+   "at": 152,
+   "text": "2Co 12:7",
+   "start": "2CO.12.7",
+   "end": "2CO.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.33.1.1",
+   "at": 269,
+   "text": "Ps 27:3",
+   "start": "PSA.27.3",
+   "end": "PSA.27.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.33.4.1",
+   "at": 472,
+   "text": "Pr 21:1",
+   "start": "PRO.21.1",
+   "end": "PRO.21.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.33.17.1",
+   "at": 291,
+   "text": "De 26:5",
+   "start": "DEU.26.5",
+   "end": "DEU.26.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.33.18.1",
+   "at": 182,
+   "text": "Ge 28:15",
+   "start": "GEN.28.15",
+   "end": "GEN.28.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.34.5.1",
+   "at": 412,
+   "text": "Ge 34:25",
+   "start": "GEN.34.25",
+   "end": "GEN.34.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.34.7.1",
+   "at": 224,
+   "text": "Eph 4:26",
+   "start": "EPH.4.26",
+   "end": "EPH.4.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.34.7.1",
+   "at": 266,
+   "text": "De 32:35",
+   "start": "DEU.32.35",
+   "end": "DEU.32.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.34.7.1",
+   "at": 276,
+   "text": "Ro 12:9",
+   "start": "ROM.12.9",
+   "end": "ROM.12.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.34.12.1",
+   "at": 142,
+   "text": "Ge 24:53",
+   "start": "GEN.24.53",
+   "end": "GEN.24.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.34.30.1",
+   "at": 605,
+   "text": "Ge 35:5",
+   "start": "GEN.35.5",
+   "end": "GEN.35.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.2.1",
+   "at": 426,
+   "text": "Ge 18:19",
+   "start": "GEN.18.19",
+   "end": "GEN.18.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.2.1",
+   "at": 696,
+   "text": "Ge 31:34",
+   "start": "GEN.31.34",
+   "end": "GEN.31.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.4.1",
+   "at": 98,
+   "text": "Ge 31:30",
+   "start": "GEN.31.30",
+   "end": "GEN.31.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.4.1",
+   "at": 334,
+   "text": "Ho 2:13",
+   "start": "HOS.2.13",
+   "end": "HOS.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.4.1",
+   "at": 1072,
+   "text": "Jud 9:37",
+   "start": "JDG.9.37",
+   "end": "JDG.9.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.6.1",
+   "at": 227,
+   "text": "Ge 28:19",
+   "start": "GEN.28.19",
+   "end": "GEN.28.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.8.1",
+   "at": 642,
+   "text": "1Ki 13:14",
+   "start": "1KI.13.14",
+   "end": "1KI.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.8.1",
+   "at": 911,
+   "text": "Ge 35:11",
+   "start": "GEN.35.11",
+   "end": "GEN.35.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.8.1",
+   "at": 921,
+   "text": "12",
+   "start": "GEN.35.12",
+   "end": "GEN.35.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.8.1",
+   "at": 1130,
+   "text": "Ge 35:14",
+   "start": "GEN.35.14",
+   "end": "GEN.35.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.16.1",
+   "at": 584,
+   "text": "Ge 35:18",
+   "start": "GEN.35.18",
+   "end": "GEN.35.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.26.1",
+   "at": 218,
+   "text": "Mt 19:28",
+   "start": "MAT.19.28",
+   "end": "MAT.19.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.26.1",
+   "at": 228,
+   "text": "Joh 20:24",
+   "start": "JHN.20.24",
+   "end": "JHN.20.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.35.26.1",
+   "at": 239,
+   "text": "Heb 11:13",
+   "start": "HEB.11.13",
+   "end": "HEB.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.1.1",
+   "at": 76,
+   "text": "Ge 2:4",
+   "start": "GEN.2.4",
+   "end": "GEN.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.1.1",
+   "at": 182,
+   "text": "Ge 25:25",
+   "start": "GEN.25.25",
+   "end": "GEN.25.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.1.1",
+   "at": 266,
+   "text": "Ge 25:30",
+   "start": "GEN.25.30",
+   "end": "GEN.25.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.1.1",
+   "at": 349,
+   "text": "Eze 25:12",
+   "start": "EZK.25.12",
+   "end": "EZK.25.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.2-3.1",
+   "at": 162,
+   "text": "Ge 28:9",
+   "start": "GEN.28.9",
+   "end": "GEN.28.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.2-3.1",
+   "at": 345,
+   "text": "Ge 26:34",
+   "start": "GEN.26.34",
+   "end": "GEN.26.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.2-3.1",
+   "at": 449,
+   "text": "Ge 11:29",
+   "start": "GEN.11.29",
+   "end": "GEN.11.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.6-7.1",
+   "at": 228,
+   "text": "Ge 27:39",
+   "start": "GEN.27.39",
+   "end": "GEN.27.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.6-7.1",
+   "at": 238,
+   "text": "40",
+   "start": "GEN.27.40",
+   "end": "GEN.27.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.36.8.1",
+   "at": 79,
+   "text": "Jos 24:4",
+   "start": "JOS.24.4",
+   "end": "JOS.24.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.37.1.1",
+   "at": 187,
+   "text": "Ge 35:27",
+   "start": "GEN.35.27",
+   "end": "GEN.35.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.37.3.1",
+   "at": 469,
+   "text": "Jud 5:30",
+   "start": "JDG.5.30",
+   "end": "JDG.5.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.37.3.1",
+   "at": 479,
+   "text": "2Sa 13:18",
+   "start": "2SA.13.18",
+   "end": "2SA.13.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.37.4.1",
+   "at": 70,
+   "text": "Ge 43:23",
+   "start": "GEN.43.23",
+   "end": "GEN.43.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.37.5.1",
+   "at": 352,
+   "text": "Ge 41:32",
+   "start": "GEN.41.32",
+   "end": "GEN.41.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.38.2.1",
+   "at": 68,
+   "text": "Ge 26:34",
+   "start": "GEN.26.34",
+   "end": "GEN.26.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.38.24.1",
+   "at": 230,
+   "text": "Le 21:9",
+   "start": "LEV.21.9",
+   "end": "LEV.21.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.38.24.1",
+   "at": 239,
+   "text": "Jud 15:6",
+   "start": "JDG.15.6",
+   "end": "JDG.15.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.38.24.1",
+   "at": 249,
+   "text": "Jer 29:22",
+   "start": "JER.29.22",
+   "end": "JER.29.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.39.5.1",
+   "at": 765,
+   "text": "Eph 6:7",
+   "start": "EPH.6.7",
+   "end": "EPH.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.39.5.1",
+   "at": 774,
+   "text": "Col 3:23",
+   "start": "COL.3.23",
+   "end": "COL.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.39.20.1",
+   "at": 212,
+   "text": "Ge 41:14",
+   "start": "GEN.41.14",
+   "end": "GEN.41.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.39.20.1",
+   "at": 535,
+   "text": "Ps 105:18",
+   "start": "PSA.105.18",
+   "end": "PSA.105.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.39.21-23.1",
+   "at": 138,
+   "text": "Ge 40:3",
+   "start": "GEN.40.3",
+   "end": "GEN.40.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.40.4.1",
+   "at": 335,
+   "text": "Ps 37:5",
+   "start": "PSA.37.5",
+   "end": "PSA.37.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.40.5-8.1",
+   "at": 100,
+   "text": "Ec 4:1",
+   "start": "ECC.4.1",
+   "end": "ECC.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.40.5-8.1",
+   "at": 108,
+   "text": "Ro 12:15",
+   "start": "ROM.12.15",
+   "end": "ROM.12.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.40.5-8.1",
+   "at": 118,
+   "text": "Php 2:4",
+   "start": "PHP.2.4",
+   "end": "PHP.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.40.5-8.1",
+   "at": 352,
+   "text": "Da 2:30",
+   "start": "DAN.2.30",
+   "end": "DAN.2.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.40.5-8.1",
+   "at": 361,
+   "text": "Isa 26:10",
+   "start": "ISA.26.10",
+   "end": "ISA.26.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.40.23.1",
+   "at": 178,
+   "text": "Am 6:6",
+   "start": "AMO.6.6",
+   "end": "AMO.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.41.8.1",
+   "at": 570,
+   "text": "Da 2:4",
+   "start": "DAN.2.4",
+   "end": "DAN.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.41.14.1",
+   "at": 74,
+   "text": "Ps 105:19",
+   "start": "PSA.105.19",
+   "end": "PSA.105.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.41.23.1",
+   "at": 241,
+   "text": "Eze 19:12",
+   "start": "EZK.19.12",
+   "end": "EZK.19.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.41.24.1",
+   "at": 94,
+   "text": "Ge 41:4",
+   "start": "GEN.41.4",
+   "end": "GEN.41.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.41.43.1",
+   "at": 149,
+   "text": "Ge 45:8",
+   "start": "GEN.45.8",
+   "end": "GEN.45.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.41.45.1",
+   "at": 541,
+   "text": "Eze 30:17",
+   "start": "EZK.30.17",
+   "end": "EZK.30.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.41.45.1",
+   "at": 575,
+   "text": "Jer 43:13",
+   "start": "JER.43.13",
+   "end": "JER.43.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.42.6.1",
+   "at": 532,
+   "text": "Ge 37:5-11",
+   "start": "GEN.37.5",
+   "end": "GEN.37.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.42.6.1",
+   "at": 708,
+   "text": "Isa 60:14",
+   "start": "ISA.60.14",
+   "end": "ISA.60.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.42.6.1",
+   "at": 719,
+   "text": "Re 3:9",
+   "start": "REV.3.9",
+   "end": "REV.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.42.15.1",
+   "at": 273,
+   "text": "Mt 5:34",
+   "start": "MAT.5.34",
+   "end": "MAT.5.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.42.37.1",
+   "at": 372,
+   "text": "Jas 4:13",
+   "start": "JAS.4.13",
+   "end": "JAS.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.42.37.1",
+   "at": 502,
+   "text": "Heb 12:7",
+   "start": "HEB.12.7",
+   "end": "HEB.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.42.37.1",
+   "at": 512,
+   "text": "8",
+   "start": "HEB.12.8",
+   "end": "HEB.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.2.1",
+   "at": 165,
+   "text": "Ge 42:15",
+   "start": "GEN.42.15",
+   "end": "GEN.42.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.11.1",
+   "at": 173,
+   "text": "Pr 21:14",
+   "start": "PRO.21.14",
+   "end": "PRO.21.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.11.1",
+   "at": 215,
+   "text": "Ge 37:25",
+   "start": "GEN.37.25",
+   "end": "GEN.37.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.16.1",
+   "at": 136,
+   "text": "Ge 39:5",
+   "start": "GEN.39.5",
+   "end": "GEN.39.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.16.1",
+   "at": 250,
+   "text": "Ge 31:54",
+   "start": "GEN.31.54",
+   "end": "GEN.31.54",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.16.1",
+   "at": 260,
+   "text": "1Sa 25:11",
+   "start": "1SA.25.11",
+   "end": "1SA.25.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.16.1",
+   "at": 271,
+   "text": "Pr 9:2",
+   "start": "PRO.9.2",
+   "end": "PRO.9.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.16.1",
+   "at": 279,
+   "text": "Mt 22:4",
+   "start": "MAT.22.4",
+   "end": "MAT.22.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.34.1",
+   "at": 602,
+   "text": "So 5:1",
+   "start": "SNG.5.1",
+   "end": "SNG.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.43.34.1",
+   "at": 610,
+   "text": "Joh 2:10",
+   "start": "JHN.2.10",
+   "end": "JHN.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.44.3.1",
+   "at": 120,
+   "text": "Ge 18:2",
+   "start": "GEN.18.2",
+   "end": "GEN.18.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.44.6-7.1",
+   "at": 332,
+   "text": "Ge 44:10",
+   "start": "GEN.44.10",
+   "end": "GEN.44.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.44.6-7.1",
+   "at": 342,
+   "text": "11",
+   "start": "GEN.44.11",
+   "end": "GEN.44.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.44.6-7.1",
+   "at": 438,
+   "text": "Ge 44:12",
+   "start": "GEN.44.12",
+   "end": "GEN.44.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.44.6-7.1",
+   "at": 531,
+   "text": "Ge 44:13",
+   "start": "GEN.44.13",
+   "end": "GEN.44.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.44.6-7.1",
+   "at": 575,
+   "text": "Ge 44:14",
+   "start": "GEN.44.14",
+   "end": "GEN.44.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.45.1.1",
+   "at": 684,
+   "text": "Ge 44:33",
+   "start": "GEN.44.33",
+   "end": "GEN.44.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.45.3.1",
+   "at": 688,
+   "text": "Ge 35:5-7",
+   "start": "GEN.35.5",
+   "end": "GEN.35.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.45.6.1",
+   "at": 147,
+   "text": "1Sa 8:12",
+   "start": "1SA.8.12",
+   "end": "1SA.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.45.6.1",
+   "at": 157,
+   "text": "Isa 30:24",
+   "start": "ISA.30.24",
+   "end": "ISA.30.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.45.6.1",
+   "at": 207,
+   "text": "Ge 41:57",
+   "start": "GEN.41.57",
+   "end": "GEN.41.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.1.1",
+   "at": 657,
+   "text": "Ge 21:33",
+   "start": "GEN.21.33",
+   "end": "GEN.21.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.1.1",
+   "at": 678,
+   "text": "Ge 26:25",
+   "start": "GEN.26.25",
+   "end": "GEN.26.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.2.1",
+   "at": 558,
+   "text": "Ge 15:13",
+   "start": "GEN.15.13",
+   "end": "GEN.15.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.2.1",
+   "at": 568,
+   "text": "26:2",
+   "start": "GEN.26.2",
+   "end": "GEN.26.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.3.1",
+   "at": 161,
+   "text": "Ex 1:5-7",
+   "start": "EXO.1.5",
+   "end": "EXO.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.8-27.1",
+   "at": 291,
+   "text": "Ac 7:14",
+   "start": "ACT.7.14",
+   "end": "ACT.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.8-27.1",
+   "at": 406,
+   "text": "1Ch 7:14-20",
+   "start": "1CH.7.14",
+   "end": "1CH.7.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.46.29-30.1",
+   "at": 570,
+   "text": "Ex 22:17",
+   "start": "EXO.22.17",
+   "end": "EXO.22.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.47.4.1",
+   "at": 101,
+   "text": "Ge 46:33",
+   "start": "GEN.46.33",
+   "end": "GEN.46.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.47.9.1",
+   "at": 106,
+   "text": "Ps 90:12",
+   "start": "PSA.90.12",
+   "end": "PSA.90.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.47.11.1",
+   "at": 497,
+   "text": "Ge 49:24",
+   "start": "GEN.49.24",
+   "end": "GEN.49.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.47.13-15.1",
+   "at": 97,
+   "text": "Ge 45:6",
+   "start": "GEN.45.6",
+   "end": "GEN.45.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.47.23-28.1",
+   "at": 72,
+   "text": "Ge 47:19",
+   "start": "GEN.47.19",
+   "end": "GEN.47.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.47.23-28.1",
+   "at": 82,
+   "text": "20",
+   "start": "GEN.47.20",
+   "end": "GEN.47.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.3-4.1",
+   "at": 118,
+   "text": "Ge 28:10-15",
+   "start": "GEN.28.10",
+   "end": "GEN.28.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.4.1",
+   "at": 75,
+   "text": "Ge 28:13-15",
+   "start": "GEN.28.13",
+   "end": "GEN.28.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.4.1",
+   "at": 88,
+   "text": "35:12",
+   "start": "GEN.35.12",
+   "end": "GEN.35.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.5.1",
+   "at": 193,
+   "text": "1Ch 5:1",
+   "start": "1CH.5.1",
+   "end": "1CH.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.5.1",
+   "at": 202,
+   "text": "2",
+   "start": "1CH.5.2",
+   "end": "1CH.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.9.1",
+   "at": 72,
+   "text": "Heb 11:21",
+   "start": "HEB.11.21",
+   "end": "HEB.11.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.22.1",
+   "at": 88,
+   "text": "Ge 33:18",
+   "start": "GEN.33.18",
+   "end": "GEN.33.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.22.1",
+   "at": 98,
+   "text": "Joh 4:5",
+   "start": "JHN.4.5",
+   "end": "JHN.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.22.1",
+   "at": 112,
+   "text": "Jos 16:1",
+   "start": "JOS.16.1",
+   "end": "JOS.16.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.48.22.1",
+   "at": 122,
+   "text": "20:7",
+   "start": "JOS.20.7",
+   "end": "JOS.20.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.10.1",
+   "at": 92,
+   "text": "Joh 17:3",
+   "start": "JHN.17.3",
+   "end": "JHN.17.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.10.1",
+   "at": 115,
+   "text": "Isa 11:1",
+   "start": "ISA.11.1",
+   "end": "ISA.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.10.1",
+   "at": 161,
+   "text": "Eph 2:14",
+   "start": "EPH.2.14",
+   "end": "EPH.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.10.1",
+   "at": 193,
+   "text": "Isa 11:10",
+   "start": "ISA.11.10",
+   "end": "ISA.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.10.1",
+   "at": 204,
+   "text": "Ro 15:12",
+   "start": "ROM.15.12",
+   "end": "ROM.15.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.22.1",
+   "at": 84,
+   "text": "Nu 1:33-35",
+   "start": "NUM.1.33",
+   "end": "NUM.1.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.22.1",
+   "at": 96,
+   "text": "Jos 17:17",
+   "start": "JOS.17.17",
+   "end": "JOS.17.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.22.1",
+   "at": 107,
+   "text": "De 33:17",
+   "start": "DEU.33.17",
+   "end": "DEU.33.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.27.1",
+   "at": 160,
+   "text": "Jud 19:1-20:48",
+   "start": "JDG.19.1",
+   "end": "JDG.20.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.49.29.1",
+   "at": 79,
+   "text": "Ge 47:31",
+   "start": "GEN.47.31",
+   "end": "GEN.47.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.50.1.1",
+   "at": 161,
+   "text": "Ge 46:4",
+   "start": "GEN.46.4",
+   "end": "GEN.46.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.50.22-23.1",
+   "at": 99,
+   "text": "Ge 41:46",
+   "start": "GEN.41.46",
+   "end": "GEN.41.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jamieson.GEN.50.26.1",
+   "at": 34,
+   "text": "Ge 50:2",
+   "start": "GEN.50.2",
+   "end": "GEN.50.2",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}

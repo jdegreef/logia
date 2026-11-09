@@ -32,6 +32,9 @@ on (`source`). Those pages print no verse headings or marks, so the text's
 verses are the span of the excerpts Logia takes from it, and a paragraph's
 verse is that of the excerpt that holds it.
 
+A homily whose heading names no verse (Basil's on Genesis 1, titled "On the
+Firmament.") takes, likewise, the span of the excerpts Logia takes from it.
+
 The book's title lines before the first homily or tractate heading (or,
 for a book, before its title: "Book II.", "Sixth Book.") are not part of
 it and are left out. scripts/verify_sources.py checks every paragraph
@@ -96,11 +99,12 @@ def derive():
         page = find_refs.read_page(path)
         text, starts = page["text"], page["paras"] + [len(page["text"])]
         source = os.path.basename(path)
-        held = []
+        held, held_refs = [], {}
         for c in glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json")):
             for e in load(c)["entries"]:
                 if e["sources"][0] == source and (where := find_refs.span(page, e["text"])):
                     held.append((*where, e["id"]))
+                    held_refs[e["id"]] = (e["start"], e["end"])
         comment_files = glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json"))
         books = {os.path.basename(c)[:-5] for c in comment_files}       # the book the work comments on
         book = books.pop() if len(books) == 1 else None
@@ -157,6 +161,14 @@ def derive():
         if dest in out:
             problems.append(f"{f['path']}: a second page for {work['id']} {number}")
             continue
+        if span is None and not same and held_refs:
+            # A homily that prints no verse (Basil's on Genesis 1): the span of the excerpts taken from it.
+            key = lambda ref: tuple(int(n) for n in ref.split(".")[1:])     # noqa: E731
+            first = min((a for a, _ in held_refs.values()), key=key)
+            last = max((b for _, b in held_refs.values()), key=key)
+            _, start_chapter, a = first.split(".")
+            _, chapter, b = last.split(".")
+            start_chapter, chapter, span = int(start_chapter), int(chapter), [int(a), int(b)]
         if span is None and not same:
             problems.append(f"{f['path']}: no heading names the verse it opens on")
             continue
