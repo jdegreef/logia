@@ -1,0 +1,924 @@
+{
+ "work": "luther-galatians",
+ "book": "GAL",
+ "citations": [
+  {
+   "in": "luther-galatians.GAL.1.2.1",
+   "at": 981,
+   "text": "John xi. 25",
+   "start": "JHN.11.25",
+   "end": "JHN.11.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.1.4.3",
+   "at": 781,
+   "text": "1 John iv. 10",
+   "start": "1JN.4.10",
+   "end": "1JN.4.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.1.6.1",
+   "at": 1039,
+   "text": "Gal. V. 10",
+   "start": "GAL.5.10",
+   "end": "GAL.5.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.1.10.1",
+   "at": 1109,
+   "text": "Eph. ii. 3",
+   "start": "EPH.2.3",
+   "end": "EPH.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.1.13.1",
+   "at": 929,
+   "text": "Acts xxvi. 1",
+   "start": "ACT.26.1",
+   "end": "ACT.26.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.1.15.1",
+   "at": 586,
+   "text": "Matt. xi. 43",
+   "start": "MAT.11.43",
+   "end": "MAT.11.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.3.1",
+   "at": 1122,
+   "text": "Rom. iv. 11",
+   "start": "ROM.4.11",
+   "end": "ROM.4.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.6.1",
+   "at": 177,
+   "text": "Levit. xix. 15",
+   "start": "LEV.19.15",
+   "end": "LEV.19.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.6.1",
+   "at": 284,
+   "text": "Rom. ii. 11",
+   "start": "ROM.2.11",
+   "end": "ROM.2.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.6.1",
+   "at": 298,
+   "text": "Acts x. 34",
+   "start": "ACT.10.34",
+   "end": "ACT.10.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.6.1",
+   "at": 311,
+   "text": "Eph. vi. 9",
+   "start": "EPH.6.9",
+   "end": "EPH.6.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.6.1",
+   "at": 324,
+   "text": "Col. iii. 25",
+   "start": "COL.3.25",
+   "end": "COL.3.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.7-8.1",
+   "at": 1210,
+   "text": "Acts x. 3",
+   "start": "ACT.10.3",
+   "end": "ACT.10.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.7-8.1",
+   "at": 1418,
+   "text": "Acts ix. 3",
+   "start": "ACT.9.3",
+   "end": "ACT.9.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.7-8.1",
+   "at": 1595,
+   "text": "Matt. xvi. 15",
+   "start": "MAT.16.15",
+   "end": "MAT.16.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.7-8.1",
+   "at": 1699,
+   "text": "Col. i. 13",
+   "start": "COL.1.13",
+   "end": "COL.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.8.1",
+   "at": 312,
+   "text": "Acts v. 15",
+   "start": "ACT.5.15",
+   "end": "ACT.5.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.8.1",
+   "at": 1002,
+   "text": "Acts xix. 11, 12",
+   "start": "ACT.19.11",
+   "end": "ACT.19.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.10.1",
+   "at": 402,
+   "text": "Isa. Ixi. 1",
+   "start": "ISA.61.1",
+   "end": "ISA.61.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.10.1",
+   "at": 416,
+   "text": "Matt. xi. 5",
+   "start": "MAT.11.5",
+   "end": "MAT.11.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.10.1",
+   "at": 430,
+   "text": "Luke iv. 26",
+   "start": "LUK.4.26",
+   "end": "LUK.4.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.10.1",
+   "at": 1578,
+   "text": "Matt. xxv. 35",
+   "start": "MAT.25.35",
+   "end": "MAT.25.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.10.2",
+   "at": 517,
+   "text": "Gen. xv. 6",
+   "start": "GEN.15.6",
+   "end": "GEN.15.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.10.2",
+   "at": 529,
+   "text": "Rom. iv. 3",
+   "start": "ROM.4.3",
+   "end": "ROM.4.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.12.1",
+   "at": 810,
+   "text": "1 Cor. ix. 19, 20, 21",
+   "start": "1CO.9.19",
+   "end": "1CO.9.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.15.1",
+   "at": 590,
+   "text": "Gen. xvii. 10",
+   "start": "GEN.17.10",
+   "end": "GEN.17.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.16.3",
+   "at": 397,
+   "text": "John iii. 6",
+   "start": "JHN.3.6",
+   "end": "JHN.3.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.2.17.3",
+   "at": 673,
+   "text": "Deut. iii. 4",
+   "start": "DEU.3.4",
+   "end": "DEU.3.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.6.1",
+   "at": 1114,
+   "text": "Rom. iv. 19, 20",
+   "start": "ROM.4.19",
+   "end": "ROM.4.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.7.1",
+   "at": 284,
+   "text": "Rom. ix. 7, 8",
+   "start": "ROM.9.7",
+   "end": "ROM.9.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.7.1",
+   "at": 887,
+   "text": "Acts ix. 15",
+   "start": "ACT.9.15",
+   "end": "ACT.9.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.8.1",
+   "at": 589,
+   "text": "Gen. xvii. 5",
+   "start": "GEN.17.5",
+   "end": "GEN.17.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.8.2",
+   "at": 390,
+   "text": "Gen. xxii. 3",
+   "start": "GEN.22.3",
+   "end": "GEN.22.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.8.2",
+   "at": 404,
+   "text": "Acts iii. 25",
+   "start": "ACT.3.25",
+   "end": "ACT.3.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.10.2",
+   "at": 139,
+   "text": "Deut. xxvii. 26",
+   "start": "DEU.27.26",
+   "end": "DEU.27.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.11.1",
+   "at": 122,
+   "text": "Hab. i. 4",
+   "start": "HAB.1.4",
+   "end": "HAB.1.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.11.1",
+   "at": 134,
+   "text": "Rom. i. 17",
+   "start": "ROM.1.17",
+   "end": "ROM.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.12.1",
+   "at": 269,
+   "text": "Deut. vi. 5",
+   "start": "DEU.6.5",
+   "end": "DEU.6.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.12.1",
+   "at": 283,
+   "text": "Matt. xxii. 37",
+   "start": "MAT.22.37",
+   "end": "MAT.22.37",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.12.1",
+   "at": 382,
+   "text": "Exod. xx. 6",
+   "start": "EXO.20.6",
+   "end": "EXO.20.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.12.1",
+   "at": 470,
+   "text": "Matt. xxii. 40",
+   "start": "MAT.22.40",
+   "end": "MAT.22.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.13.1",
+   "at": 85,
+   "text": "Deut. xxi. 23",
+   "start": "DEU.21.23",
+   "end": "DEU.21.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.16.2",
+   "at": 1039,
+   "text": "Rom. v. 20",
+   "start": "ROM.5.20",
+   "end": "ROM.5.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.19.1",
+   "at": 887,
+   "text": "Matt. xxii. 31",
+   "start": "MAT.22.31",
+   "end": "MAT.22.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.21.2",
+   "at": 487,
+   "text": "Gen. xii. 1",
+   "start": "GEN.12.1",
+   "end": "GEN.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.21.2",
+   "at": 501,
+   "text": "xv. 1, 12",
+   "start": "GEN.15.1",
+   "end": "GEN.15.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.21.2",
+   "at": 501,
+   "text": "xv. 1, 12",
+   "start": "GEN.15.12",
+   "end": "GEN.15.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.22.1",
+   "at": 899,
+   "text": "Gal. iii. 10",
+   "start": "GAL.3.10",
+   "end": "GAL.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.23.1",
+   "at": 976,
+   "text": "Exod. xx. 20",
+   "start": "EXO.20.20",
+   "end": "EXO.20.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.24.1",
+   "at": 660,
+   "text": "Exod. xvii. 4",
+   "start": "EXO.17.4",
+   "end": "EXO.17.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.26.1",
+   "at": 1230,
+   "text": "John i. 12",
+   "start": "JHN.1.12",
+   "end": "JHN.1.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.26.1",
+   "at": 1243,
+   "text": "Rom. viii. 16, 17",
+   "start": "ROM.8.16",
+   "end": "ROM.8.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.28.1",
+   "at": 900,
+   "text": "John i. 17",
+   "start": "JHN.1.17",
+   "end": "JHN.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.28.2",
+   "at": 708,
+   "text": "Eph. iv. 4",
+   "start": "EPH.4.4",
+   "end": "EPH.4.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.29.1",
+   "at": 1045,
+   "text": "Gen. xvii. 5",
+   "start": "GEN.17.5",
+   "end": "GEN.17.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.3.29.1",
+   "at": 1113,
+   "text": "Gen. xxii. 18",
+   "start": "GEN.22.18",
+   "end": "GEN.22.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.6.1",
+   "at": 273,
+   "text": "Matt. iii. 16",
+   "start": "MAT.3.16",
+   "end": "MAT.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.6.1",
+   "at": 358,
+   "text": "Acts ii. 3",
+   "start": "ACT.2.3",
+   "end": "ACT.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.6.1",
+   "at": 705,
+   "text": "1 Cor. xiv. 22",
+   "start": "1CO.14.22",
+   "end": "1CO.14.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.9.1",
+   "at": 635,
+   "text": "Gal iii. 9",
+   "start": "GAL.3.9",
+   "end": "GAL.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.9.1",
+   "at": 714,
+   "text": "Gal. iv. 7",
+   "start": "GAL.4.7",
+   "end": "GAL.4.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.9.2",
+   "at": 1043,
+   "text": "Luke X. 22",
+   "start": "LUK.10.22",
+   "end": "LUK.10.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.9.2",
+   "at": 1149,
+   "text": "Isa. liii. 11",
+   "start": "ISA.53.11",
+   "end": "ISA.53.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.9.3",
+   "at": 374,
+   "text": "Gal. iii. 19",
+   "start": "GAL.3.19",
+   "end": "GAL.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.10.1",
+   "at": 1380,
+   "text": "Luke xvii. 20",
+   "start": "LUK.17.20",
+   "end": "LUK.17.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.15.1",
+   "at": 244,
+   "text": "Luke i. 48",
+   "start": "LUK.1.48",
+   "end": "LUK.1.48",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.30.1",
+   "at": 155,
+   "text": "Gen. xxi. 10",
+   "start": "GEN.21.10",
+   "end": "GEN.21.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.31.1",
+   "at": 786,
+   "text": "Matt. XXV. 30",
+   "start": "MAT.25.30",
+   "end": "MAT.25.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.4.31.1",
+   "at": 1899,
+   "text": "Rom. ix. 23",
+   "start": "ROM.9.23",
+   "end": "ROM.9.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.1.1",
+   "at": 130,
+   "text": "1 Pet. v. 8, 9",
+   "start": "1PE.5.8",
+   "end": "1PE.5.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.4.2",
+   "at": 990,
+   "text": "John iii. 36",
+   "start": "JHN.3.36",
+   "end": "JHN.3.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.4.2",
+   "at": 1059,
+   "text": "John iii. 18",
+   "start": "JHN.3.18",
+   "end": "JHN.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.11.1",
+   "at": 330,
+   "text": "Acts xiii. 50",
+   "start": "ACT.13.50",
+   "end": "ACT.13.50",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.12.1",
+   "at": 763,
+   "text": "Gal. i. 8, 9",
+   "start": "GAL.1.8",
+   "end": "GAL.1.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.14.1",
+   "at": 238,
+   "text": "1 Cor. iii. 11",
+   "start": "1CO.3.11",
+   "end": "1CO.3.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.14.1",
+   "at": 598,
+   "text": "Lev. xix. 8",
+   "start": "LEV.19.8",
+   "end": "LEV.19.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.14.1",
+   "at": 1458,
+   "text": "I Cor. iii. 12, 13",
+   "start": "1CO.3.12",
+   "end": "1CO.3.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.18.1",
+   "at": 1475,
+   "text": "Gal. iv. 4",
+   "start": "GAL.4.4",
+   "end": "GAL.4.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.19.1",
+   "at": 307,
+   "text": "Matt. vii. 16",
+   "start": "MAT.7.16",
+   "end": "MAT.7.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.22.1",
+   "at": 699,
+   "text": "Rom. xii. 10",
+   "start": "ROM.12.10",
+   "end": "ROM.12.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.26.1",
+   "at": 883,
+   "text": "Rom. xiv. 16",
+   "start": "ROM.14.16",
+   "end": "ROM.14.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.5.26.1",
+   "at": 962,
+   "text": "2 Cor. vi. 3",
+   "start": "2CO.6.3",
+   "end": "2CO.6.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.1.1",
+   "at": 886,
+   "text": "Lev. vi. 3",
+   "start": "LEV.6.3",
+   "end": "LEV.6.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.1.2",
+   "at": 1229,
+   "text": "Matt. vii. 3",
+   "start": "MAT.7.3",
+   "end": "MAT.7.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.2.1",
+   "at": 644,
+   "text": "1 Cor. xiii. 4",
+   "start": "1CO.13.4",
+   "end": "1CO.13.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.2.1",
+   "at": 1206,
+   "text": "Rom. xiii. 9",
+   "start": "ROM.13.9",
+   "end": "ROM.13.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.4.1",
+   "at": 1952,
+   "text": "Phil. ii. 21",
+   "start": "PHP.2.21",
+   "end": "PHP.2.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.5.1",
+   "at": 789,
+   "text": "Rom. ii. 15",
+   "start": "ROM.2.15",
+   "end": "ROM.2.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.7.2",
+   "at": 851,
+   "text": "1 Cor. ix. 13, 14",
+   "start": "1CO.9.13",
+   "end": "1CO.9.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.10.1",
+   "at": 387,
+   "text": "John ix. 4",
+   "start": "JHN.9.4",
+   "end": "JHN.9.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.10.1",
+   "at": 613,
+   "text": "John xii. 35",
+   "start": "JHN.12.35",
+   "end": "JHN.12.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.13.1",
+   "at": 426,
+   "text": "Gen. xvii. 10, 14",
+   "start": "GEN.17.10",
+   "end": "GEN.17.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.13.1",
+   "at": 426,
+   "text": "Gen. xvii. 10, 14",
+   "start": "GEN.17.14",
+   "end": "GEN.17.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.13.1",
+   "at": 559,
+   "text": "Gen. xvii. 12",
+   "start": "GEN.17.12",
+   "end": "GEN.17.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.13.1",
+   "at": 1028,
+   "text": "Phil. ii. 21",
+   "start": "PHP.2.21",
+   "end": "PHP.2.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.14.2",
+   "at": 1749,
+   "text": "1 Cor. ii. 13",
+   "start": "1CO.2.13",
+   "end": "1CO.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.16.1",
+   "at": 336,
+   "text": "Eph. iv. 24",
+   "start": "EPH.4.24",
+   "end": "EPH.4.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.17.2",
+   "at": 822,
+   "text": "1 Cor. iv. 9",
+   "start": "1CO.4.9",
+   "end": "1CO.4.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.17.2",
+   "at": 1127,
+   "text": "1 Cor. iv. 11, 12, 13",
+   "start": "1CO.4.11",
+   "end": "1CO.4.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.17.2",
+   "at": 1328,
+   "text": "2 Cor. vi. 4, 5, 6",
+   "start": "2CO.6.4",
+   "end": "2CO.6.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.17.2",
+   "at": 1354,
+   "text": "2 Cor. xi. 23, 24, 25, 26",
+   "start": "2CO.11.23",
+   "end": "2CO.11.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "luther-galatians.GAL.6.18.1",
+   "at": 609,
+   "text": "I Tim. 1. 1",
+   "start": "1TI.1.1",
+   "end": "1TI.1.1",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}

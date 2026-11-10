@@ -6,7 +6,9 @@ the passage was copied from (listed in sources/manifest.json). This script
 compares the two.
 
 - A digital source (a transcription such as CCEL's) must contain the excerpt
-  word for word. Footnotes, footnote markers and page numbers are ignored,
+  word for word. Footnotes, footnote markers (a superscript linked to a
+  note, or a single superscript letter standing apart from a word) and page
+  numbers are ignored,
   since the brief for copying drops them, and a passage cut with "..." is
   checked piece by piece.
 - A whole homily or tractate (library/texts/, from scripts/extract_texts.py)
@@ -45,21 +47,38 @@ class _Text(HTMLParser):
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.out, self.depth = [], 0
+        self.out, self.depth, self.note_link, self.sup = [], 0, False, None
 
     def handle_starttag(self, tag, attrs):
         if tag in VOID:
             return
-        if self.depth or set((dict(attrs).get("class") or "").split()) & SKIP:
+        # A superscript inside a link to a note is a footnote marker
+        # ('<A HREF="#1"><SUP>1</SUP></A>' in tertullian.org pages), and so is
+        # a lone letter after a space ('Battus <sup>i</sup>'); "CVI<sup>th</sup>" and
+        # "LIII<sup>d</sup>" are part of a word.
+        if tag == "a":
+            self.note_link = (dict(attrs).get("href") or "").startswith("#")
+        if tag == "sup" and not self.depth and not self.note_link:
+            self.sup = []
+            self.attached = bool(self.out) and self.out[-1][-1:].isalnum()
+            return
+        if self.depth or (tag == "sup" and self.note_link) or set((dict(attrs).get("class") or "").split()) & SKIP:
             self.depth += 1
 
     def handle_endtag(self, tag):
+        if tag == "a":
+            self.note_link = False
+        if tag == "sup" and self.sup is not None:
+            text, self.sup = "".join(self.sup), None
+            if len(text.strip()) > 1 or self.attached:     # "LIII<sup>d</sup>": an ordinal, part of the word
+                self.out.append(text)
+            return
         if tag not in VOID and self.depth:
             self.depth -= 1
 
     def handle_data(self, data):
         if not self.depth:
-            self.out.append(data)
+            (self.sup if self.sup is not None else self.out).append(data)
 
 
 def letters(text):
@@ -176,10 +195,19 @@ def main(argv):
             bad += 1
             print(f"{os.path.relpath(path, ROOT)}: source {t['source']} is not in sources/manifest.json")
             continue
-        src = source_letters(os.path.join(ROOT, meta["path"]))
-        raw = source_original(os.path.join(ROOT, meta["path"]))
+        read = {}
         for para in t["paragraphs"]:
             paras += 1
+            key = para.get("source", t["source"])     # a book's text runs over several pages
+            meta = files.get(t["work"], {}).get(key)
+            if not meta:
+                bad += 1
+                print(f"{os.path.relpath(path, ROOT)}: {para['id']}: source {key} is not in sources/manifest.json")
+                continue
+            if key not in read:
+                read[key] = (source_letters(os.path.join(ROOT, meta["path"])),
+                             source_original(os.path.join(ROOT, meta["path"])))
+            src, raw = read[key]
             problem = check_digital(para["text"], src) or check_original(para["text"], raw)
             if problem:
                 bad += 1

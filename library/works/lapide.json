@@ -1,0 +1,18 @@
+{
+ "id": "lapide",
+ "author": "lapide",
+ "title": "The Great Commentary: S. John's Gospel",
+ "divisions": "verse",
+ "edition": "The Great Commentary of Cornelius à Lapide, translated by Thomas W. Mossman, assisted by various scholars, Vols. V (S. John's Gospel, chaps. I to XI, 3rd ed.) and VI (chaps. XII to XXI, 4th ed.). Edinburgh: John Grant, 1908; archive.org scans \"greatcommentaryo05lapi\" and \"greatcommentaryo06lapi\" (Princeton Theological Seminary Library), djvu OCR text",
+ "original_language": "Latin",
+ "translation": "English translation by Thomas W. Mossman and others (first published 1876-1887; these are the 1908 Edinburgh printings). Mossman translated John 1-6, James Bliss chapters 7-10, S. J. Eales chapter 11, a Mr. Macpherson chapter 13, and Mossman and Bliss the rest.",
+ "published": 1908,
+ "full_text_url": "https://archive.org/details/greatcommentaryo05lapi",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Mossman died in 1885; the death dates of James Bliss, S. J. Eales and Mr. Macpherson (life + 70 years)"
+ },
+ "source_kind": "scan",
+ "notes": "Vol. VI is at https://archive.org/details/greatcommentaryo06lapi. Mossman's translation abridges the Latin in places, as his notice to the reader says. Each excerpt opens Lapide's note on a verse (\"Ver. 19. — ...\", or the lemma where the note has no verse mark), up to about 350 words, cut at sentence ends; a verse whose mark the OCR garbles is left out. The OCR turns Lapide's Greek and Hebrew into noise: a sentence holding it is left out and marked \" ... \". Misreadings of italics (\"7vas\", \"ivhen\", \"/ say\") are corrected in library/corrections/lapide.json, each pair a word the scan misreads once that the same scan prints correctly many times. Headings are Lapide's lemmas, empty where the OCR garbles them.",
+ "status": "ai_draft"
+}
