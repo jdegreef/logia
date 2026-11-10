@@ -34,7 +34,6 @@ import json
 import os
 import re
 import shutil
-from collections import Counter
 import subprocess
 from urllib.parse import quote
 
