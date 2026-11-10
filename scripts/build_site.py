@@ -1479,7 +1479,7 @@ def book_page(lib, book):
           f'<button type="submit" class="button ghost">{e(t("commentators.jump_go"))}</button>'
           f'<span class="lg-quiet" id="go-{book.lower()}-hint" role="status">{e(t("book.go_hint", example=hint))}</span></form>' if have else "")
     if here and done == total:
-        dek = t("book.dek_full", n=total, excerpts=f"{len(here):,}", works=len(works),
+        dek = t("book.dek_full" if len(works) != 1 else "book.dek_full_one_work", n=total, excerpts=f"{len(here):,}", works=len(works),
                 h=book_hours(sum(words.values())))
     elif done:
         dek = t("book.dek", n=total, done=done)
@@ -4150,7 +4150,7 @@ def guide_page(lib, g):
                 links.append(f'<a href="{x["link"]}">{e(x["link_label"])}</a>')
             if hits:
                 first = hits[0]
-                links.append(f'<a href="{excerpt_href(lib, first)}">{e(t("guide.used", n=f"{len(hits):,}", who=short_name(lib.author_of(first["work"])), ref=scripture.label(first["start"], first["end"])))}</a>')
+                links.append(f'<a href="{excerpt_href(lib, first)}">{e(t("guide.used", n=len(hits), who=short_name(lib.author_of(first["work"])), ref=scripture.label(first["start"], first["end"])))}</a>')
             rows += (f'<div><dt>{e(x["term"])}</dt><dd><p>{e(x["text"])}</p>'
                      f'<p class="lg-quiet lg-gloss-links">{" · ".join(links)}</p></dd></div>')
         parts.append(f'<section class="lg-block" id="t{i}"><h2>{e(grp["title"])}</h2><dl class="lg-gloss">{rows}</dl></section>')
