@@ -183,6 +183,16 @@ def e(text):
     return html.escape(str(text), quote=True)
 
 
+def in_quotes(text):
+    """Text in curly quotation marks, escaped for HTML. When the text itself
+    opens with a quotation mark (an excerpt that starts by quoting the verse),
+    it gets no second one: “In the beginning…, not ““In the beginning…."""
+    text = str(text)
+    if text[:1] in "“\"‘'":
+        return e(text)
+    return f"“{e(text)}”"
+
+
 def icon(name, size=18, cls="icon"):
     return (f'<svg class="{cls}" width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
             f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
@@ -2467,7 +2477,7 @@ def one_verse(lib, ref=VOICES_VERSE):
         who = f' <span class="lg-ov-quoted">{e(t("commentators.quoted", name=quoted, author=short_name(a)))}</span>' if quoted else ""
         rows.append(f'<li class="lg-era-{ERAS.index(a["era"])}"><p class="lg-ov-who"><a href="/commentators/{a["id"]}/">'
                     f'<b>{e(a["name"])}</b></a> <span>{e(a["dates"])}</span></p>'
-                    f'<p class="lg-ov-text"><a href="{excerpt_href(lib, c)}">“{e(snippet(lead, 30))}”</a>{who}</p></li>')
+                    f'<p class="lg-ov-text"><a href="{excerpt_href(lib, c)}">{in_quotes(snippet(lead, 30))}</a>{who}</p></li>')
     if len(rows) < 2:
         return ""
     label = f'{lib.books[book]["en"]} {chapter}:{verse}'
@@ -2504,7 +2514,7 @@ def commentators_page(lib):
             on = t("commentators.on", ref=scripture.label(first["start"], first["end"]))
             if quoted:
                 on = t("commentators.quoted", name=quoted, author=short_name(a)) + " · " + on
-            quote = f'<p class="lg-pq">“{e(snippet(lead, 22))}” <span>{e(on)}</span></p>'
+            quote = f'<p class="lg-pq">{in_quotes(snippet(lead, 22))} <span>{e(on)}</span></p>'
         cov = "".join(
             f'<span class="lg-cov"><span class="lg-meter"><span style="width:{100 * len(vs) / book_verses[b]:.0f}%"></span></span>'
             f'{e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=book_verses[b]))}</span>'
@@ -2765,7 +2775,7 @@ def pair_side(who, quote, href):
     """One side of "two readings": who, their sentence, a link to the whole."""
     return (f'<div class="lg-pair-one"><p class="lg-pair-who"><a href="/commentators/{who["id"]}/">{e(who["name"])}</a>'
             f' <span class="lg-quiet">{e(who["dates"])}</span></p>'
-            f'<blockquote><p>“{e(quote)}”</p></blockquote><p class="lg-quiet"><a href="{href}">{e(t("commentators.read_it"))}</a></p></div>')
+            f'<blockquote><p>{in_quotes(quote)}</p></blockquote><p class="lg-quiet"><a href="{href}">{e(t("commentators.read_it"))}</a></p></div>')
 
 
 def neighbour_link(a, cls, key):
@@ -2865,7 +2875,7 @@ def author_page(lib, author):
         p0 = pool[0]
         words_q = (f'<figure class="lg-own" data-quotes="{e(json.dumps(pool, ensure_ascii=False))}">'
                    f'<figcaption class="label">{e(t("commentators.own_words", name=short))}</figcaption>'
-                   f'<blockquote><p>“{e(p0["q"])}”</p></blockquote>'
+                   f'<blockquote><p>{in_quotes(p0["q"])}</p></blockquote>'
                    f'<p class="lg-quiet"><a href="{e(p0["href"])}">{e(p0["ref"])}</a> · <i>{e(p0["work"])}</i>'
                    f' <button type="button" class="button ghost lg-own-next" hidden>{e(t("commentators.own_next"))}</button></p></figure>')
 
@@ -4151,7 +4161,7 @@ def era_page(lib, era, book="JHN"):
         for a in people:
             c = first_on(lib, {w for w in works if lib.works[w]["author"] == a["id"]}, ref)
             if c:
-                items += (f'<li><b>{e(short_name(a))}</b> “{e(opening_words(c))}” '
+                items += (f'<li><b>{e(short_name(a))}</b> {in_quotes(opening_words(c))} '
                           f'<a href="{excerpt_href(lib, c)}">{e(t("era.read_on"))}</a></li>')
         if items:
             samples += (f'<section class="lg-era-verse"><h3><a href="{verse_url(book, ch, v)}">{e(verse_ref(lib, book, ch, v))}</a></h3>'
@@ -4205,7 +4215,7 @@ def voices_list(lib, ref, works=None):
         if c:
             a = lib.author_of(w)
             items += (f'<li><b>{e(short_name(a))}</b> <span class="lg-quiet">{e(a["tradition"])}</span> '
-                      f'“{e(opening_words(c))}” <a href="{excerpt_href(lib, c)}">{e(t("era.read_on"))}</a></li>')
+                      f'{in_quotes(opening_words(c))} <a href="{excerpt_href(lib, c)}">{e(t("era.read_on"))}</a></li>')
     return f'<ul class="lg-era-says">{items}</ul>' if items else ""
 
 

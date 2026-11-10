@@ -176,6 +176,14 @@ class VerifyCatchesChanges(unittest.TestCase):
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
 
 
+class Quoting(unittest.TestCase):
+    def test_an_excerpt_that_opens_with_a_quote_gets_no_second_mark(self):
+        self.assertEqual(build_site.in_quotes("Now some"), "“Now some”")
+        self.assertEqual(build_site.in_quotes("“In the beginning was the Word.” It is"),
+                         "“In the beginning was the Word.” It is")
+        self.assertEqual(build_site.in_quotes("a < b"), "“a &lt; b”")
+
+
 class Counting(unittest.TestCase):
     def test_counter_and_owner_tags_are_off_unless_set(self):
         with mock.patch.multiple(build_site, GOATCOUNTER="", GOOGLE_VERIFY="", BING_VERIFY=""):

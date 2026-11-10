@@ -447,7 +447,8 @@
     var at = Math.floor(Date.now() / 864e5) % pool.length;
     var show = function () {
       var x = pool[at];
-      p.textContent = "“" + x.q + "”";
+      // As in_quotes() in build_site.py: no second mark when the passage opens with one.
+      p.textContent = /^[“"‘']/.test(x.q) ? x.q : "“" + x.q + "”";
       link.textContent = x.ref; link.href = x.href; work.textContent = x.work;
     };
     show();
