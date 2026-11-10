@@ -893,6 +893,8 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta property="og:image:alt" content="{e(t("site.card_alt"))}">
 <meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{json_ld(ld)}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 <meta name="logia-api" content="{API_URL}">
 <meta name="logia-owb" content="{OWB_SITE}">
 <meta name="theme-color" content="#f4eee3" media="(prefers-color-scheme: light)">
@@ -1476,13 +1478,17 @@ def book_page(lib, book):
         dek = t("book.dek", n=total, done=done)
     else:
         dek = t("book.dek_none", n=total)
+    keep = (f'<p class="lg-keep" data-keep="{e(json.dumps([chapter_url(book, c) for c in range(1, total + 1)]))}" '
+            f'data-saving="{e(t("book.keep_saving"))}" data-done="{e(t("book.keep_done", book=name))}" '
+            f'data-failed="{e(t("book.keep_failed"))}" hidden><button type="button" class="button ghost">'
+            f'{e(t("book.keep", book=name))}</button> <span class="lg-quiet" role="status">{e(t("book.keep_note"))}</span></p>')
     read = (f'<p class="lg-quiet lg-read-count" data-read-count="{e(t("book.read_count", total=len(have)))}" '
             f'data-prefix="/{book.lower()}/" hidden></p>' if have else "")
     bar = (f'<nav class="lg-book-bar" aria-label="{e(t("book.bar", book=name))}"><span class="lg-book-bar-name">{e(name)}</span>'
            f'<div class="chap-pills">{chapter_pills(lib, book, cov)}</div></nav>' if len(have) > 12 else "")
     body = f"""
 <header class="page-head"><p class="eyebrow"><a href="/read/">{e(t("read.title"))}</a> · <a href="/read/#{"ot" if testament == "old" else "nt"}">{e(t("testaments." + testament))}</a> · {e(t("canon." + canon_section(lib, book)))}</p>
-<h1>{e(name)}</h1><p class="dek">{e(dek)}</p>{start}{go}{read}</header>
+<h1>{e(name)}</h1><p class="dek">{e(dek)}</p>{start}{go}{read}{keep}</header>
 {bar}
 {ways}
 <section class="lg-block" id="passages" aria-labelledby="h-chapters"><h2 id="h-chapters">{e(t("book.chapters"))}</h2>
@@ -3294,6 +3300,44 @@ def saved_page(lib):
     return page(lib, t("account.saved_title"), body, "/saved/", noindex=True)
 
 
+def offline_page(lib):
+    """What the service worker (web/sw.js) shows for a page not saved on
+    this device when there is no connection. web/logia.js lists what is."""
+    body = f"""
+<header class="page-head"><h1>{e(t("offline.heading"))}</h1><p class="dek">{e(t("offline.dek"))}</p></header>
+<section class="lg-block" aria-labelledby="h-saved"><h2 id="h-saved">{e(t("offline.saved"))}</h2>
+<ul class="lg-offline-list" id="lg-offline-list" data-none="{e(t("offline.none"))}"></ul></section>
+<p class="actions"><a class="button" href="/">{e(t("offline.home"))}</a></p>"""
+    return page(lib, t("offline.title"), body, "/offline/", description=t("offline.dek"), noindex=True, canonical=False)
+
+
+APP_ICONS = (("icon-192.png", "192x192", "any"), ("icon-512.png", "512x512", "any"), ("maskable-512.png", "512x512", "maskable"))
+# The service worker keeps these from its first visit: the page frame and the
+# offline page (web/sw.js).
+SHELL_FONTS = ("/fonts/hanken-grotesk-latin-wght-normal.woff2", "/fonts/gentium-book-plus-latin-400-normal.woff2")
+
+
+def app_manifest():
+    """The web app manifest, so Logia can be installed to a home screen."""
+    return json.dumps({
+        "name": t("site.name"), "short_name": t("site.name"), "description": t("site.description"),
+        "lang": LANG, "start_url": "/", "scope": "/", "display": "standalone",
+        "background_color": "#faf6ef", "theme_color": "#f4eee3",
+        "icons": [{"src": f"/icons/{n}", "sizes": z, "type": "image/png", "purpose": p} for n, z, p in APP_ICONS],
+    }, ensure_ascii=False, indent=1) + "\n"
+
+
+def service_worker(offline_html):
+    """web/sw.js with its list of files to keep from the first visit, and a
+    version that changes whenever any of them does."""
+    shell = [asset(n) for n in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "reader.js")]
+    shell += ["/favicon.svg", "/offline/", *SHELL_FONTS]
+    version = hashlib.sha256((json.dumps(shell) + offline_html).encode()).hexdigest()[:10]
+    text = published("sw.js")
+    return text.replace("var SHELL = [];", f"var SHELL = {json.dumps(shell)};", 1).replace(
+        'var VERSION = "dev";', f'var VERSION = "{version}";', 1)
+
+
 def not_found_page(lib):
     """Served by Render for any address with no page (/404.html). It can be
     served at any depth, so every link on it is absolute; signing in from it
@@ -4350,6 +4394,7 @@ def build():
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
     shutil.copy(os.path.join(WEB, "card.png"), os.path.join(SITE, "card.png"))
+    shutil.copytree(os.path.join(WEB, "icons"), os.path.join(SITE, "icons"))
     pages = ["/"]
     write("/", home_page(lib))
     write("/read/", read_page(lib))
@@ -4437,6 +4482,12 @@ def build():
     write("/signed-in/", signed_in_page(lib))
     write("/saved/", saved_page(lib))
     write("/404.html", not_found_page(lib))
+    offline = offline_page(lib)
+    write("/offline/", offline)
+    with open(os.path.join(SITE, "manifest.webmanifest"), "w", encoding="utf-8") as f:
+        f.write(app_manifest())
+    with open(os.path.join(SITE, "sw.js"), "w", encoding="utf-8") as f:
+        f.write(service_worker(offline))
     os.makedirs(os.path.join(SITE, "data"))
     for book, chapter in sorted(lib.coverage()):
         with open(os.path.join(SITE, "data", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:

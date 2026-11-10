@@ -29,6 +29,11 @@ services:
       # so browsers may keep them a year. The fonts keep their names when
       # refreshed from the Open Word Bible, so they are kept a month. Pages
       # themselves are checked on every visit (Render's default).
+      # The service worker is checked on every visit, so a new build reaches
+      # readers at once (web/sw.js).
+      - path: /sw.js
+        name: Cache-Control
+        value: no-cache
       - path: /fonts/*
         name: Cache-Control
         value: public, max-age=2592000

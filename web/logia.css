@@ -1224,3 +1224,10 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
   .lg-top-text { grid-column: 1 / -1; grid-row: 2; }
   .lg-top .lg-bar { display: none; }
 }
+
+/* Offline: the button that keeps a book on the device, and the list on /offline/ (web/logia.js). */
+.lg-keep { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 12px 0 0; }
+.lg-keep[hidden] { display: none; }
+.lg-keep .lg-quiet { font-size: 13.5px; }
+.lg-offline-list { list-style: none; margin: 0; padding: 0; columns: 2 260px; column-gap: 28px; }
+.lg-offline-list li { padding: 5px 0; break-inside: avoid; border-bottom: 1px solid var(--line); }

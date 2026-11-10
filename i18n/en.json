@@ -241,6 +241,11 @@
     "text_only_chapter": "Bible text only"
   },
   "book": {
+    "keep": "Keep {book} for offline",
+    "keep_note": "Saves every chapter and its commentary on this device, for reading with no signal.",
+    "keep_saving": "Saving chapter {done} of {total}…",
+    "keep_done": "{book} is saved on this device. It opens with no connection.",
+    "keep_failed": "Some chapters didn't save. Try again with a better connection.",
     "eyebrow": "Book",
     "dek": "{n} chapters. Commentary so far on {done} of them.",
     "chapters": "Chapters",
@@ -744,6 +749,14 @@
         "Yes. The commentaries are in the public domain and Logia's data is CC0, so you may copy them into a sermon, a class handout or an app without asking."
       ]
     ]
+  },
+  "offline": {
+    "title": "Offline",
+    "heading": "You're offline",
+    "dek": "This page isn't saved on this device yet. Pages you have opened before, and books you have kept for offline, still open without a connection.",
+    "saved": "Saved on this device",
+    "none": "Nothing is saved yet. Logia keeps each page you open, and a book's page has a button to keep the whole book.",
+    "home": "Home"
   },
   "not_found": {
     "title": "Page not found",
