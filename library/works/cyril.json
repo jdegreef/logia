@@ -1,0 +1,18 @@
+{
+ "id": "cyril",
+ "author": "cyril",
+ "title": "Commentary on the Gospel according to S. John",
+ "divisions": "verse",
+ "edition": "Library of Fathers of the Holy Catholic Church, Vols. 43 (S. John I-VIII, translated by P. E. Pusey; Oxford: James Parker, 1874) and 48 (S. John IX-XXI, translated by Thomas Randell; London: Walter Smith, 1885); text from Roger Pearse's transcription at tertullian.org (2005)",
+ "original_language": "Greek",
+ "translation": "P. E. Pusey (1874) for Books 1-6 to John 8; Thomas Randell (1885) from John 9",
+ "published": 1874,
+ "full_text_url": "https://www.tertullian.org/fathers/index.htm#Cyril_of_Alexandria",
+ "rights": {
+  "basis": "public domain: published before 1931 (US); the online transcription is placed in the public domain by Roger Pearse",
+  "worldwide": "to confirm: P. E. Pusey died in 1880; Thomas Randell's death date (life + 70 years)"
+ },
+ "source_kind": "digital",
+ "notes": "Books 7 and 8 (John 10:19-12:50) are lost; the fragments Pusey printed in their place are of doubtful authenticity (Quasten, Patrology III) and are left out, so Logia has nothing from Cyril on John 10:19-12:50. Each excerpt is the start of Cyril's comment on one lemma, up to about 350 words and cut at a sentence end; the lemma (the verse as Cyril quotes it, numbered in the edition's margin) is the heading where it is short. Book 1 opens with three chapters on John 1:1, each set on that verse with its chapter title as heading.",
+ "status": "ai_draft"
+}

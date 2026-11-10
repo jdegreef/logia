@@ -1,0 +1,18 @@
+{
+ "id": "bridges-ecclesiastes",
+ "author": "bridges",
+ "title": "An Exposition of the Book of Ecclesiastes",
+ "divisions": "verse",
+ "edition": "Charles Bridges, An Exposition of the Book of Ecclesiastes (first published London, 1860); New York: Robert Carter & Brothers, 1860; text from archive.org djvu OCR",
+ "original_language": "English",
+ "translation": null,
+ "published": 1860,
+ "full_text_url": "https://archive.org/details/expositionofbook00brid_0",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); Charles Bridges died in 1869"
+ },
+ "source_kind": "scan",
+ "notes": "Not on CCEL; the text is archive.org OCR of the Robert Carter & Brothers edition of 1860 (expositionofbook00brid_0, Princeton Theological Seminary copy). Bridges prints the verses he expounds ('1. The words of the Preacher, the son of David...') and then his exposition; everything after a printed passage, until the next one, is on its verses, in entries of up to about 350 words, and a paragraph cut between entries is marked with ' ...'. The printed verses are found by their numbers, checked against the King James text that Henry prints, and are left out themselves, as are the running heads, page numbers, the footnotes at each page's foot and the footnote marks in the text. Lines are joined and a word broken at a line end is joined again where the OCR dropped its hyphen. Where the OCR misread a verse number, the passage is placed after the one before it. Other OCR slips are left as read (a word left broken, a stray mark); the Preface and Index are left out. Ecclesiastes numbers its verses as English Bibles do, but Logia's Bible text follows the Hebrew, where English 5:1 is 4:17 and chapter 5 runs one verse behind; each entry is moved to the Hebrew verses (bible/owb/versification.json), and a section that spans the chapter break is kept to the chapter that holds more of it.",
+ "status": "ai_draft"
+}

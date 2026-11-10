@@ -1,0 +1,7035 @@
+{
+ "work": "bridges-ecclesiastes",
+ "book": "ECC",
+ "citations": [
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.2",
+   "at": 1212,
+   "text": "xii. 9",
+   "start": "ECC.12.9",
+   "end": "ECC.12.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.2",
+   "at": 2007,
+   "text": "xii. 9, 10",
+   "start": "ECC.12.9",
+   "end": "ECC.12.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.3",
+   "at": 246,
+   "text": "2 Chron. vi. 13",
+   "start": "2CH.6.13",
+   "end": "2CH.6.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.3",
+   "at": 564,
+   "text": "Jer. ii. 13",
+   "start": "JER.2.13",
+   "end": "JER.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.3",
+   "at": 673,
+   "text": "Jer. ii. 13, 19",
+   "start": "JER.2.13",
+   "end": "JER.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.3",
+   "at": 673,
+   "text": "Jer. ii. 13, 19",
+   "start": "JER.2.19",
+   "end": "JER.2.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.3",
+   "at": 1074,
+   "text": "Prov. xxii. 6",
+   "start": "PRO.22.6",
+   "end": "PRO.22.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.3",
+   "at": 1479,
+   "text": "2 Sam. vii. 12-14",
+   "start": "2SA.7.12",
+   "end": "2SA.7.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.3",
+   "at": 1550,
+   "text": "Neh. xiii. 26",
+   "start": "NEH.13.26",
+   "end": "NEH.13.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.4",
+   "at": 188,
+   "text": "Matt. iv. 18-22",
+   "start": "MAT.4.18",
+   "end": "MAT.4.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.1.4",
+   "at": 342,
+   "text": "2 Cor. iv. 7",
+   "start": "2CO.4.7",
+   "end": "2CO.4.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.2.1",
+   "at": 1975,
+   "text": "Rom. viii. 20",
+   "start": "ROM.8.20",
+   "end": "ROM.8.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.2.2",
+   "at": 552,
+   "text": "Isa. xv. 14",
+   "start": "ISA.15.14",
+   "end": "ISA.15.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.2.3",
+   "at": 424,
+   "text": "v. 4",
+   "start": "ECC.1.4",
+   "end": "ECC.1.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.2.3",
+   "at": 1035,
+   "text": "2 Cor. iv. 18",
+   "start": "2CO.4.18",
+   "end": "2CO.4.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.3.1",
+   "at": 217,
+   "text": "Prov. xiv. 23",
+   "start": "PRO.14.23",
+   "end": "PRO.14.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.3.1",
+   "at": 1259,
+   "text": "Hab. ii. 13",
+   "start": "HAB.2.13",
+   "end": "HAB.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.3.1",
+   "at": 1713,
+   "text": "Matt. xvi. 26",
+   "start": "MAT.16.26",
+   "end": "MAT.16.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.3.2",
+   "at": 634,
+   "text": "Rom. vi. 21",
+   "start": "ROM.6.21",
+   "end": "ROM.6.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.3.2",
+   "at": 698,
+   "text": "Prov. xxiii. 5",
+   "start": "PRO.23.5",
+   "end": "PRO.23.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 847,
+   "text": "v. 13",
+   "start": "ECC.1.13",
+   "end": "ECC.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1127,
+   "text": "Ps. xxii. 30",
+   "start": "PSA.22.31",
+   "end": "PSA.22.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1304,
+   "text": "Ps. xix. 4-6",
+   "start": "PSA.19.5",
+   "end": "PSA.19.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1318,
+   "text": "civ. 19-22",
+   "start": "PSA.104.19",
+   "end": "PSA.104.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1405,
+   "text": "Ps. cxxxv. 7",
+   "start": "PSA.135.7",
+   "end": "PSA.135.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1419,
+   "text": "Jer. x. 18",
+   "start": "JER.10.18",
+   "end": "JER.10.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1560,
+   "text": "Ps. civ. 8",
+   "start": "PSA.104.8",
+   "end": "PSA.104.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1753,
+   "text": "John ix. 4",
+   "start": "JHN.9.4",
+   "end": "JHN.9.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.4-7.1",
+   "at": 1968,
+   "text": "Rev. xiv. 13",
+   "start": "REV.14.13",
+   "end": "REV.14.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.8.1",
+   "at": 920,
+   "text": "Prov. xxvii. 20",
+   "start": "PRO.27.20",
+   "end": "PRO.27.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.8.1",
+   "at": 937,
+   "text": "xxx. 15, 16",
+   "start": "PRO.30.15",
+   "end": "PRO.30.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.8.2",
+   "at": 219,
+   "text": "Matt. xi. 28",
+   "start": "MAT.11.28",
+   "end": "MAT.11.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.8.2",
+   "at": 630,
+   "text": "iv. 18, 14",
+   "start": "ECC.4.18",
+   "end": "ECC.4.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.8.2",
+   "at": 828,
+   "text": "Rev. vii. 16, 17",
+   "start": "REV.7.16",
+   "end": "REV.7.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.9-10.1",
+   "at": 561,
+   "text": "Heb. iv. 3",
+   "start": "HEB.4.3",
+   "end": "HEB.4.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.9-10.1",
+   "at": 692,
+   "text": "Ps. Ixxiv. 16",
+   "start": "PSA.74.16",
+   "end": "PSA.74.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.9-10.1",
+   "at": 708,
+   "text": "Jer. v. 24",
+   "start": "JER.5.24",
+   "end": "JER.5.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.9-10.1",
+   "at": 1829,
+   "text": "vv. 6, 7",
+   "start": "ECC.1.6",
+   "end": "ECC.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.9-10.2",
+   "at": 514,
+   "text": "2 Pet. i. 12-15",
+   "start": "2PE.1.12",
+   "end": "2PE.1.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.11.2",
+   "at": 983,
+   "text": "Ps. cxxxix. 1-6",
+   "start": "PSA.139.1",
+   "end": "PSA.139.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.12.1",
+   "at": 367,
+   "text": "Deut. iv. 7",
+   "start": "DEU.4.7",
+   "end": "DEU.4.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.13.2",
+   "at": 135,
+   "text": "vii. 29",
+   "start": "ECC.7.29",
+   "end": "ECC.7.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.13.2",
+   "at": 1356,
+   "text": "2 Tim. i. 12",
+   "start": "2TI.1.12",
+   "end": "2TI.1.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.13.2",
+   "at": 1518,
+   "text": "Ps. cxvi. 7",
+   "start": "PSA.116.7",
+   "end": "PSA.116.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.15.1",
+   "at": 403,
+   "text": "iii. 11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.15.1",
+   "at": 577,
+   "text": "Matt. v. 36",
+   "start": "MAT.5.36",
+   "end": "MAT.5.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.15.1",
+   "at": 590,
+   "text": "vi. 27",
+   "start": "MAT.6.27",
+   "end": "MAT.6.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.15.1",
+   "at": 1208,
+   "text": "vii. 13",
+   "start": "ECC.7.13",
+   "end": "ECC.7.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.15.2",
+   "at": 592,
+   "text": "Esth. v. 11-13",
+   "start": "EST.5.11",
+   "end": "EST.5.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.15.2",
+   "at": 788,
+   "text": "Isa. xlv. 9",
+   "start": "ISA.45.9",
+   "end": "ISA.45.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.15.2",
+   "at": 851,
+   "text": "Rom. viii. 7",
+   "start": "ROM.8.7",
+   "end": "ROM.8.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.16-18.2",
+   "at": 100,
+   "text": "Prov. xv. 24",
+   "start": "PRO.15.24",
+   "end": "PRO.15.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.1.16-18.3",
+   "at": 1701,
+   "text": "Ps. xxxvi. 9",
+   "start": "PSA.36.10",
+   "end": "PSA.36.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.1-2.2",
+   "at": 84,
+   "text": "Prov. iii. 18-18",
+   "start": "PRO.3.18",
+   "end": "PRO.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.1-2.2",
+   "at": 628,
+   "text": "Prov. xiv. 13",
+   "start": "PRO.14.13",
+   "end": "PRO.14.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.1-2.2",
+   "at": 649,
+   "text": "Isa. 1. 11",
+   "start": "ISA.1.11",
+   "end": "ISA.1.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.1-2.4",
+   "at": 1271,
+   "text": "Isa. xxxv. 10",
+   "start": "ISA.35.10",
+   "end": "ISA.35.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.1-2.4",
+   "at": 1440,
+   "text": "Cant. ii. 3",
+   "start": "SNG.2.3",
+   "end": "SNG.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.3.1",
+   "at": 1652,
+   "text": "Philip. ii. 12",
+   "start": "PHP.2.12",
+   "end": "PHP.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.3.2",
+   "at": 596,
+   "text": "Rom. xiii. 14",
+   "start": "ROM.13.14",
+   "end": "ROM.13.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.3.2",
+   "at": 670,
+   "text": "Prov. xxxi. 6, 7",
+   "start": "PRO.31.6",
+   "end": "PRO.31.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.3.2",
+   "at": 694,
+   "text": "Ps. civ. 15",
+   "start": "PSA.104.15",
+   "end": "PSA.104.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.3.2",
+   "at": 1115,
+   "text": "Col. iii. 5",
+   "start": "COL.3.5",
+   "end": "COL.3.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.3.2",
+   "at": 1196,
+   "text": "Prov. xx. 1",
+   "start": "PRO.20.1",
+   "end": "PRO.20.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.3.2",
+   "at": 1732,
+   "text": "Ps. iv. 6, 7",
+   "start": "PSA.4.7",
+   "end": "PSA.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.1",
+   "at": 356,
+   "text": "2 Cor. vi. 10",
+   "start": "2CO.6.10",
+   "end": "2CO.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.2",
+   "at": 271,
+   "text": "Dan. iv. 28",
+   "start": "DAN.4.25",
+   "end": "DAN.4.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.2",
+   "at": 350,
+   "text": "Cant. viii. 11",
+   "start": "SNG.8.11",
+   "end": "SNG.8.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.2",
+   "at": 366,
+   "text": "vi. 2",
+   "start": "SNG.6.2",
+   "end": "SNG.6.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.2",
+   "at": 373,
+   "text": "iv. 13",
+   "start": "SNG.4.13",
+   "end": "SNG.4.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.2",
+   "at": 908,
+   "text": "2 Sam. xix. 85",
+   "start": "2SA.19.85",
+   "end": "2SA.19.85",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.3",
+   "at": 365,
+   "text": "Isa. xliv. 20",
+   "start": "ISA.44.20",
+   "end": "ISA.44.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.3",
+   "at": 822,
+   "text": "Ps. cxix. 96, 3",
+   "start": "PSA.119.96",
+   "end": "PSA.119.96",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.4",
+   "at": 885,
+   "text": "Rev. ii. 7",
+   "start": "REV.2.7",
+   "end": "REV.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.12.1",
+   "at": 338,
+   "text": "i. 17",
+   "start": "ECC.1.17",
+   "end": "ECC.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.16.1",
+   "at": 911,
+   "text": "xii. 4",
+   "start": "ECC.12.4",
+   "end": "ECC.12.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.16.2",
+   "at": 178,
+   "text": "Prov. x. 7",
+   "start": "PRO.10.7",
+   "end": "PRO.10.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.16.2",
+   "at": 397,
+   "text": "Prov. xiv. 32",
+   "start": "PRO.14.32",
+   "end": "PRO.14.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.16.3",
+   "at": 1746,
+   "text": "Philip. i. 23",
+   "start": "PHP.1.23",
+   "end": "PHP.1.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.1",
+   "at": 497,
+   "text": "1 Chron. xxviii. 11-21",
+   "start": "1CH.28.11",
+   "end": "1CH.28.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.1",
+   "at": 522,
+   "text": "xxix. 1-22",
+   "start": "1CH.29.1",
+   "end": "1CH.29.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.1",
+   "at": 739,
+   "text": "Ps. xlix. 10",
+   "start": "PSA.49.11",
+   "end": "PSA.49.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.2",
+   "at": 541,
+   "text": "Ps. Ixxiii. 25",
+   "start": "PSA.73.25",
+   "end": "PSA.73.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.2",
+   "at": 1075,
+   "text": "John xiv. 27",
+   "start": "JHN.14.27",
+   "end": "JHN.14.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.3",
+   "at": 106,
+   "text": "v. 26",
+   "start": "ECC.2.26",
+   "end": "ECC.2.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.3",
+   "at": 113,
+   "text": "Deut. xxviii. 30-33",
+   "start": "DEU.28.30",
+   "end": "DEU.28.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.18-23.3",
+   "at": 860,
+   "text": "Isa. lv. 2",
+   "start": "ISA.55.2",
+   "end": "ISA.55.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.1",
+   "at": 114,
+   "text": "1 Cor. xv. 32",
+   "start": "1CO.15.32",
+   "end": "1CO.15.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.1",
+   "at": 651,
+   "text": "1 Tim. vi. 17",
+   "start": "1TI.6.17",
+   "end": "1TI.6.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.1",
+   "at": 672,
+   "text": "iv. 3-5",
+   "start": "ECC.4.3",
+   "end": "ECC.4.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.1",
+   "at": 681,
+   "text": "Deut. xvi. 11",
+   "start": "DEU.16.11",
+   "end": "DEU.16.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.2",
+   "at": 739,
+   "text": "Isa. xvii. 11",
+   "start": "ISA.17.11",
+   "end": "ISA.17.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.2",
+   "at": 1166,
+   "text": "1 Tim. vi. 6",
+   "start": "1TI.6.6",
+   "end": "1TI.6.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.2",
+   "at": 1371,
+   "text": "1 Tim. iv. 8",
+   "start": "1TI.4.8",
+   "end": "1TI.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.2",
+   "at": 1424,
+   "text": "Philip. iv. 11, 12",
+   "start": "PHP.4.11",
+   "end": "PHP.4.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.24-26.3",
+   "at": 447,
+   "text": "Prov. xi. 18",
+   "start": "PRO.11.18",
+   "end": "PRO.11.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.1",
+   "at": 1245,
+   "text": "Ezek. i. 15-21",
+   "start": "EZK.1.15",
+   "end": "EZK.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.1",
+   "at": 1497,
+   "text": "Eph. i. 8",
+   "start": "EPH.1.8",
+   "end": "EPH.1.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.2",
+   "at": 357,
+   "text": "Exod. xii. 41",
+   "start": "EXO.12.41",
+   "end": "EXO.12.41",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.2",
+   "at": 589,
+   "text": "Gal. iv. 4",
+   "start": "GAL.4.4",
+   "end": "GAL.4.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.2",
+   "at": 829,
+   "text": "1 Cor. i. 21",
+   "start": "1CO.1.21",
+   "end": "1CO.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.2",
+   "at": 1230,
+   "text": "Isa. xxx. 18",
+   "start": "ISA.30.18",
+   "end": "ISA.30.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.2",
+   "at": 1523,
+   "text": "Rom. viii. 28",
+   "start": "ROM.8.28",
+   "end": "ROM.8.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.1.2",
+   "at": 1711,
+   "text": "Ps. xxxi. 15",
+   "start": "PSA.31.16",
+   "end": "PSA.31.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.2",
+   "at": 552,
+   "text": "Philip. ii. 12",
+   "start": "PHP.2.12",
+   "end": "PHP.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.3",
+   "at": 135,
+   "text": "Gen. i. 26",
+   "start": "GEN.1.26",
+   "end": "GEN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.3",
+   "at": 276,
+   "text": "Gen. iii. 19",
+   "start": "GEN.3.19",
+   "end": "GEN.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.3",
+   "at": 290,
+   "text": "Heb. ix. 27",
+   "start": "HEB.9.27",
+   "end": "HEB.9.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.4",
+   "at": 41,
+   "text": "Ps. xxxvii. 23",
+   "start": "PSA.37.23",
+   "end": "PSA.37.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.4",
+   "at": 978,
+   "text": "2 Pet. i. 11",
+   "start": "2PE.1.11",
+   "end": "2PE.1.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.4",
+   "at": 1289,
+   "text": "Isa. lvii. 1",
+   "start": "ISA.57.1",
+   "end": "ISA.57.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.4",
+   "at": 1304,
+   "text": "Zeph. iii. 17",
+   "start": "ZEP.3.17",
+   "end": "ZEP.3.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.2.5",
+   "at": 310,
+   "text": "ii. 4",
+   "start": "ECC.2.4",
+   "end": "ECC.2.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.8.1",
+   "at": 496,
+   "text": "v. 7",
+   "start": "ECC.3.7",
+   "end": "ECC.3.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.8.1",
+   "at": 617,
+   "text": "v. 21",
+   "start": "ECC.3.21",
+   "end": "ECC.3.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.8.1",
+   "at": 629,
+   "text": "Matt. viii. 8",
+   "start": "MAT.8.8",
+   "end": "MAT.8.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.8.1",
+   "at": 1117,
+   "text": "2 Cor. v. 1",
+   "start": "2CO.5.1",
+   "end": "2CO.5.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.1",
+   "at": 388,
+   "text": "Isa. xxii. 12-14",
+   "start": "ISA.22.12",
+   "end": "ISA.22.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.1",
+   "at": 508,
+   "text": "Job. v. 7",
+   "start": "JOB.5.7",
+   "end": "JOB.5.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.1",
+   "at": 519,
+   "text": "xiv. 1",
+   "start": "JOB.14.1",
+   "end": "JOB.14.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.2",
+   "at": 289,
+   "text": "vv. 5, 6",
+   "start": "ECC.3.5",
+   "end": "ECC.3.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.2",
+   "at": 299,
+   "text": "Jer. xxxi. 13",
+   "start": "JER.31.13",
+   "end": "JER.31.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.2",
+   "at": 360,
+   "text": "Heb. xii. 11",
+   "start": "HEB.12.11",
+   "end": "HEB.12.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.2",
+   "at": 1452,
+   "text": "Ps. xxx. 5",
+   "start": "PSA.30.6",
+   "end": "PSA.30.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.2",
+   "at": 1464,
+   "text": "2 Cor. iv. 17",
+   "start": "2CO.4.17",
+   "end": "2CO.4.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.9.2",
+   "at": 1727,
+   "text": "Rev. xxi. 4",
+   "start": "REV.21.4",
+   "end": "REV.21.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.10.1",
+   "at": 298,
+   "text": "Gen. xxxi. 44",
+   "start": "GEN.31.44",
+   "end": "GEN.31.44",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.10.1",
+   "at": 388,
+   "text": "Josh. iv. 1-9",
+   "start": "JOS.4.1",
+   "end": "JOS.4.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.10.1",
+   "at": 551,
+   "text": "2 Sam. xviii. 17",
+   "start": "2SA.18.17",
+   "end": "2SA.18.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.10.1",
+   "at": 778,
+   "text": "1 Cor. vii. 3-5",
+   "start": "1CO.7.3",
+   "end": "1CO.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.10.1",
+   "at": 851,
+   "text": "Prov. xxiii. 24",
+   "start": "PRO.23.24",
+   "end": "PRO.23.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.10.1",
+   "at": 1111,
+   "text": "2 Sam. xiii. 14",
+   "start": "2SA.13.14",
+   "end": "2SA.13.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.11.1",
+   "at": 166,
+   "text": "Prov. x. 4, 5",
+   "start": "PRO.10.4",
+   "end": "PRO.10.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.11.1",
+   "at": 879,
+   "text": "Matt. xiii. 44-46",
+   "start": "MAT.13.44",
+   "end": "MAT.13.46",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.11.1",
+   "at": 1120,
+   "text": "Heb. x. 34",
+   "start": "HEB.10.34",
+   "end": "HEB.10.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.11.1",
+   "at": 1181,
+   "text": "Philip. iii. 7-9",
+   "start": "PHP.3.7",
+   "end": "PHP.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.1",
+   "at": 608,
+   "text": "1 Thess. iii. 3",
+   "start": "1TH.3.3",
+   "end": "1TH.3.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.1",
+   "at": 626,
+   "text": "v. 10",
+   "start": "1TH.5.10",
+   "end": "1TH.5.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.1",
+   "at": 743,
+   "text": "Heb. xii. 11",
+   "start": "HEB.12.11",
+   "end": "HEB.12.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.1",
+   "at": 762,
+   "text": "Rom. v. 3-5",
+   "start": "ROM.5.3",
+   "end": "ROM.5.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 798,
+   "text": "Matt. vii. 6",
+   "start": "MAT.7.6",
+   "end": "MAT.7.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 818,
+   "text": "Ps. xxxix. 2",
+   "start": "PSA.39.3",
+   "end": "PSA.39.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 937,
+   "text": "v. 18",
+   "start": "ECC.3.18",
+   "end": "ECC.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 950,
+   "text": "Mic. vii. 5",
+   "start": "MIC.7.5",
+   "end": "MIC.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 1104,
+   "text": "Prov. xxvi. 4",
+   "start": "PRO.26.4",
+   "end": "PRO.26.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 1249,
+   "text": "Lev. x. 3",
+   "start": "LEV.10.3",
+   "end": "LEV.10.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 1322,
+   "text": "Ps. xxxix. 9",
+   "start": "PSA.39.10",
+   "end": "PSA.39.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 1412,
+   "text": "Ps. xlvi. 10",
+   "start": "PSA.46.11",
+   "end": "PSA.46.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.2",
+   "at": 1503,
+   "text": "Lam. iii. 28",
+   "start": "LAM.3.28",
+   "end": "LAM.3.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 111,
+   "text": "Prov. xxvi. 5",
+   "start": "PRO.26.5",
+   "end": "PRO.26.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 156,
+   "text": "1 Thess. iv. 18",
+   "start": "1TH.4.18",
+   "end": "1TH.4.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 262,
+   "text": "Prov. x. 21",
+   "start": "PRO.10.21",
+   "end": "PRO.10.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 275,
+   "text": "Isa. 1. 4",
+   "start": "ISA.1.4",
+   "end": "ISA.1.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 345,
+   "text": "Prov. xxxi. 8",
+   "start": "PRO.31.8",
+   "end": "PRO.31.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 398,
+   "text": "Mal. iii. 26",
+   "start": "MAL.3.26",
+   "end": "MAL.3.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 472,
+   "text": "Prov. xv. 7",
+   "start": "PRO.15.7",
+   "end": "PRO.15.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 537,
+   "text": "v. 23",
+   "start": "ECC.3.23",
+   "end": "ECC.3.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 681,
+   "text": "Ps. xlv. 1, 2",
+   "start": "PSA.45.2",
+   "end": "PSA.45.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 778,
+   "text": "Matt. xii. 34",
+   "start": "MAT.12.34",
+   "end": "MAT.12.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 949,
+   "text": "Lam. ii. 10",
+   "start": "LAM.2.10",
+   "end": "LAM.2.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 983,
+   "text": "Prov. xxv. 20",
+   "start": "PRO.25.20",
+   "end": "PRO.25.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 1000,
+   "text": "Prov. xxvii. 5, 6, 1",
+   "start": "PRO.27.5",
+   "end": "PRO.27.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 1035,
+   "text": "Esth. iv. 18, 14",
+   "start": "EST.4.18",
+   "end": "EST.4.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.12.3",
+   "at": 1533,
+   "text": "Prov. xvi. 1",
+   "start": "PRO.16.1",
+   "end": "PRO.16.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.1",
+   "at": 748,
+   "text": "Matt. v. 48, 44",
+   "start": "MAT.5.48",
+   "end": "MAT.5.48",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.1",
+   "at": 1321,
+   "text": "Ps. cxix. 113, 128",
+   "start": "PSA.119.113",
+   "end": "PSA.119.113",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.1",
+   "at": 1321,
+   "text": "Ps. cxix. 113, 128",
+   "start": "PSA.119.128",
+   "end": "PSA.119.128",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.2",
+   "at": 199,
+   "text": "Gen. xiv. 14-17",
+   "start": "GEN.14.14",
+   "end": "GEN.14.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.2",
+   "at": 263,
+   "text": "2 Sam. x. 2-6",
+   "start": "2SA.10.2",
+   "end": "2SA.10.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.2",
+   "at": 512,
+   "text": "Ps. xlvi. 9",
+   "start": "PSA.46.10",
+   "end": "PSA.46.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.2",
+   "at": 1279,
+   "text": "Ezek. i. 18",
+   "start": "EZK.1.18",
+   "end": "EZK.1.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.2",
+   "at": 1484,
+   "text": "Ps. xlvi. 10",
+   "start": "PSA.46.11",
+   "end": "PSA.46.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.13.2",
+   "at": 1870,
+   "text": "Philip. iv. 11",
+   "start": "PHP.4.11",
+   "end": "PHP.4.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.14.2",
+   "at": 574,
+   "text": "Heb. iv. 9",
+   "start": "HEB.4.9",
+   "end": "HEB.4.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.14.2",
+   "at": 590,
+   "text": "1 Thess. iii, 3",
+   "start": "1TH.3.3",
+   "end": "1TH.3.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.14.2",
+   "at": 607,
+   "text": "Rev. vii. 14",
+   "start": "REV.7.14",
+   "end": "REV.7.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.15.1",
+   "at": 65,
+   "text": "Gen. i. 31",
+   "start": "GEN.1.31",
+   "end": "GEN.1.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.15.1",
+   "at": 978,
+   "text": "Gen. i. 2",
+   "start": "GEN.1.2",
+   "end": "GEN.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.15.3",
+   "at": 1,
+   "text": "Rom. xi. 38",
+   "start": "ROM.11.38",
+   "end": "ROM.11.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.16.2",
+   "at": 654,
+   "text": "2 Cor. ix. 11",
+   "start": "2CO.9.11",
+   "end": "2CO.9.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.16.2",
+   "at": 887,
+   "text": "Gen. xii. 3",
+   "start": "GEN.12.3",
+   "end": "GEN.12.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.16.2",
+   "at": 905,
+   "text": "Gal. iii. 9",
+   "start": "GAL.3.9",
+   "end": "GAL.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.16.2",
+   "at": 1228,
+   "text": "1 Tim. vi. 17, 18",
+   "start": "1TI.6.17",
+   "end": "1TI.6.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.16.2",
+   "at": 1318,
+   "text": "Neh. viii. 10-12",
+   "start": "NEH.8.10",
+   "end": "NEH.8.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.1",
+   "at": 471,
+   "text": "Ps. xxxiii. 11",
+   "start": "PSA.33.11",
+   "end": "PSA.33.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.1",
+   "at": 493,
+   "text": "Prov. xix. 21",
+   "start": "PRO.19.21",
+   "end": "PRO.19.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.1",
+   "at": 508,
+   "text": "xxi. 30",
+   "start": "PRO.21.30",
+   "end": "PRO.21.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.1",
+   "at": 679,
+   "text": "Zech. vi. 1",
+   "start": "ZEC.6.1",
+   "end": "ZEC.6.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.1",
+   "at": 809,
+   "text": "Isa. xlvi. 10",
+   "start": "ISA.46.10",
+   "end": "ISA.46.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.2",
+   "at": 998,
+   "text": "Isa. li. 6",
+   "start": "ISA.51.6",
+   "end": "ISA.51.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.2",
+   "at": 1238,
+   "text": "Rev. xv. 3, 4",
+   "start": "REV.15.3",
+   "end": "REV.15.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.3",
+   "at": 59,
+   "text": "i. 9, 10",
+   "start": "ECC.1.9",
+   "end": "ECC.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.3",
+   "at": 629,
+   "text": "1 Pet. iv. 12",
+   "start": "1PE.4.12",
+   "end": "1PE.4.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.3",
+   "at": 960,
+   "text": "1 Pet. v. 9",
+   "start": "1PE.5.9",
+   "end": "1PE.5.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.3",
+   "at": 973,
+   "text": "1 Cor. x. 13",
+   "start": "1CO.10.13",
+   "end": "1CO.10.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.17.3",
+   "at": 1295,
+   "text": "Ps. xxv. 10",
+   "start": "PSA.25.10",
+   "end": "PSA.25.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.1",
+   "at": 402,
+   "text": "Ps. lxxiii. 16, 17",
+   "start": "PSA.73.16",
+   "end": "PSA.73.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.1",
+   "at": 737,
+   "text": "1 Sam. iii. 13",
+   "start": "1SA.3.13",
+   "end": "1SA.3.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.1",
+   "at": 1432,
+   "text": "Ps. Ixxxii. 1-5",
+   "start": "PSA.82.1",
+   "end": "PSA.82.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.2",
+   "at": 182,
+   "text": "Gen. xviii. 25",
+   "start": "GEN.18.25",
+   "end": "GEN.18.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.2",
+   "at": 332,
+   "text": "Rev. vi. 9",
+   "start": "REV.6.9",
+   "end": "REV.6.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.2",
+   "at": 487,
+   "text": "2 Pet. iii. 18",
+   "start": "2PE.3.18",
+   "end": "2PE.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.2",
+   "at": 632,
+   "text": "Zech. xiv. 7",
+   "start": "ZEC.14.7",
+   "end": "ZEC.14.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18.2",
+   "at": 716,
+   "text": "Rev. xix. 1-6",
+   "start": "REV.19.1",
+   "end": "REV.19.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18-20.1",
+   "at": 1247,
+   "text": "Ps. xlix. 20",
+   "start": "PSA.49.21",
+   "end": "PSA.49.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.18-20.1",
+   "at": 1391,
+   "text": "Gen. ii. 7",
+   "start": "GEN.2.7",
+   "end": "GEN.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.21.1",
+   "at": 211,
+   "text": "xii. 7",
+   "start": "ECC.12.7",
+   "end": "ECC.12.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.21.1",
+   "at": 224,
+   "text": "Heb. xii. 9",
+   "start": "HEB.12.9",
+   "end": "HEB.12.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.21.1",
+   "at": 836,
+   "text": "Jer. xxiii. 24",
+   "start": "JER.23.24",
+   "end": "JER.23.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.21.1",
+   "at": 852,
+   "text": "Ps. ciii. 19",
+   "start": "PSA.103.19",
+   "end": "PSA.103.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.21.1",
+   "at": 1032,
+   "text": "2 Tim. i. 10",
+   "start": "2TI.1.10",
+   "end": "2TI.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.21.1",
+   "at": 1277,
+   "text": "Heb. xii. 23",
+   "start": "HEB.12.23",
+   "end": "HEB.12.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.22.1",
+   "at": 86,
+   "text": "1 Cor. xv. 32",
+   "start": "1CO.15.32",
+   "end": "1CO.15.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.22.1",
+   "at": 382,
+   "text": "Isa. lxiv. 5",
+   "start": "ISA.64.4",
+   "end": "ISA.64.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.22.1",
+   "at": 494,
+   "text": "2 Cor. i. 12",
+   "start": "2CO.1.12",
+   "end": "2CO.1.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.22.1",
+   "at": 508,
+   "text": "Gal. vi. 4",
+   "start": "GAL.6.4",
+   "end": "GAL.6.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.22.1",
+   "at": 909,
+   "text": "Matt. vi. 34",
+   "start": "MAT.6.34",
+   "end": "MAT.6.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 189,
+   "text": "Eph. iv. 16",
+   "start": "EPH.4.16",
+   "end": "EPH.4.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 207,
+   "text": "Phil. ii. 21",
+   "start": "PHP.2.21",
+   "end": "PHP.2.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 435,
+   "text": "iii. 16, 17",
+   "start": "ECC.3.16",
+   "end": "ECC.3.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 453,
+   "text": "Ps. xii. 8",
+   "start": "PSA.12.9",
+   "end": "PSA.12.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 465,
+   "text": "xciv. 20, 21",
+   "start": "PSA.94.20",
+   "end": "PSA.94.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 1217,
+   "text": "Exod. ii. 23",
+   "start": "EXO.2.23",
+   "end": "EXO.2.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 1232,
+   "text": "Deut. iv. 20",
+   "start": "DEU.4.20",
+   "end": "DEU.4.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 1646,
+   "text": "Ps. cxlii. 4",
+   "start": "PSA.142.5",
+   "end": "PSA.142.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 1666,
+   "text": "2 Tim. iv. 16",
+   "start": "2TI.4.16",
+   "end": "2TI.4.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.1",
+   "at": 1909,
+   "text": "Ps. Ixix. 20",
+   "start": "PSA.69.21",
+   "end": "PSA.69.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.2",
+   "at": 134,
+   "text": "Heb. xiii. 3",
+   "start": "HEB.13.3",
+   "end": "HEB.13.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.1-3.3",
+   "at": 180,
+   "text": "Isa. xxv. 8",
+   "start": "ISA.25.8",
+   "end": "ISA.25.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.4.2",
+   "at": 478,
+   "text": "Rev. viii. 10",
+   "start": "REV.8.10",
+   "end": "REV.8.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.4.3",
+   "at": 279,
+   "text": "1 Cor. xii. 26",
+   "start": "1CO.12.26",
+   "end": "1CO.12.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.4.3",
+   "at": 776,
+   "text": "Rev. xxi. 27",
+   "start": "REV.21.27",
+   "end": "REV.21.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.5-6.1",
+   "at": 452,
+   "text": "Prov. vi. 9",
+   "start": "PRO.6.9",
+   "end": "PRO.6.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.5-6.3",
+   "at": 1539,
+   "text": "Ps. xxxix. 6",
+   "start": "PSA.39.7",
+   "end": "PSA.39.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.5-6.4",
+   "at": 235,
+   "text": "Prov. xxvii. 20",
+   "start": "PRO.27.20",
+   "end": "PRO.27.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.5-6.4",
+   "at": 252,
+   "text": "Hab. ii. 5-9",
+   "start": "HAB.2.5",
+   "end": "HAB.2.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.5-6.4",
+   "at": 367,
+   "text": "1 Cor. vi. 19",
+   "start": "1CO.6.19",
+   "end": "1CO.6.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.5-6.4",
+   "at": 1576,
+   "text": "2 Cor. vi. 10",
+   "start": "2CO.6.10",
+   "end": "2CO.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.2",
+   "at": 175,
+   "text": "Gen. iv. 8",
+   "start": "GEN.4.8",
+   "end": "GEN.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.2",
+   "at": 187,
+   "text": "2 Sam. xiv. 6",
+   "start": "2SA.14.6",
+   "end": "2SA.14.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.2",
+   "at": 371,
+   "text": "2 Sam. x. 11",
+   "start": "2SA.10.11",
+   "end": "2SA.10.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.2",
+   "at": 385,
+   "text": "Jer. xli. 13, 14",
+   "start": "JER.41.13",
+   "end": "JER.41.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.2",
+   "at": 977,
+   "text": "Gen. ii. 18",
+   "start": "GEN.2.18",
+   "end": "GEN.2.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.2",
+   "at": 996,
+   "text": "Ps. Ixviii. 6",
+   "start": "PSA.68.7",
+   "end": "PSA.68.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.2",
+   "at": 1940,
+   "text": "Matt. x. 16",
+   "start": "MAT.10.16",
+   "end": "MAT.10.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.3",
+   "at": 729,
+   "text": "1 Cor. xii. 25",
+   "start": "1CO.12.25",
+   "end": "1CO.12.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.3",
+   "at": 997,
+   "text": "Eph. iv. 15, 16",
+   "start": "EPH.4.15",
+   "end": "EPH.4.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.3",
+   "at": 1588,
+   "text": "2 Cor. viii. 5",
+   "start": "2CO.8.5",
+   "end": "2CO.8.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.3",
+   "at": 1746,
+   "text": "Eph. iv. 16",
+   "start": "EPH.4.16",
+   "end": "EPH.4.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.4",
+   "at": 215,
+   "text": "Matt. xviii. 19",
+   "start": "MAT.18.19",
+   "end": "MAT.18.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.4",
+   "at": 254,
+   "text": "Gal. ii. 11-14",
+   "start": "GAL.2.11",
+   "end": "GAL.2.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.4",
+   "at": 271,
+   "text": "vi. 1",
+   "start": "GAL.6.1",
+   "end": "GAL.6.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.4",
+   "at": 329,
+   "text": "Heb. x. 24",
+   "start": "HEB.10.24",
+   "end": "HEB.10.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.9-12.4",
+   "at": 860,
+   "text": "Prov. xxvii. 9",
+   "start": "PRO.27.9",
+   "end": "PRO.27.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.13.2",
+   "at": 277,
+   "text": "1 Tim. iv. 12",
+   "start": "1TI.4.12",
+   "end": "1TI.4.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.13.2",
+   "at": 1100,
+   "text": "Dan. i. 6",
+   "start": "DAN.1.6",
+   "end": "DAN.1.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.13.2",
+   "at": 1449,
+   "text": "Lam. iv. 20",
+   "start": "LAM.4.20",
+   "end": "LAM.4.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.15-16.1",
+   "at": 638,
+   "text": "Ps. lxii. 9",
+   "start": "PSA.62.10",
+   "end": "PSA.62.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.15-16.1",
+   "at": 869,
+   "text": "2 Sam. xv. 6, 12, 13",
+   "start": "2SA.15.12",
+   "end": "2SA.15.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.15-16.1",
+   "at": 869,
+   "text": "2 Sam. xv. 6, 12, 13",
+   "start": "2SA.15.6",
+   "end": "2SA.15.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.15-16.2",
+   "at": 827,
+   "text": "Isa. ii. 22",
+   "start": "ISA.2.22",
+   "end": "ISA.2.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.1",
+   "at": 265,
+   "text": "Isa. lvi. 7",
+   "start": "ISA.56.7",
+   "end": "ISA.56.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.1",
+   "at": 1159,
+   "text": "Ps. Ixxxix. 7",
+   "start": "PSA.89.8",
+   "end": "PSA.89.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.1",
+   "at": 1355,
+   "text": "Ps. v. 7",
+   "start": "PSA.5.8",
+   "end": "PSA.5.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.2",
+   "at": 265,
+   "text": "1 Pet. i. 18",
+   "start": "1PE.1.18",
+   "end": "1PE.1.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.2",
+   "at": 507,
+   "text": "Heb. ix. 24",
+   "start": "HEB.9.24",
+   "end": "HEB.9.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.4",
+   "at": 211,
+   "text": "Heb. iv. 2",
+   "start": "HEB.4.2",
+   "end": "HEB.4.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.4",
+   "at": 1663,
+   "text": "Isa. i. 18",
+   "start": "ISA.1.18",
+   "end": "ISA.1.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.4",
+   "at": 1675,
+   "text": "Matt. xv. 7-9",
+   "start": "MAT.15.7",
+   "end": "MAT.15.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.5",
+   "at": 114,
+   "text": "Hos. vii. 2",
+   "start": "HOS.7.2",
+   "end": "HOS.7.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.4.17.5",
+   "at": 265,
+   "text": "Prov. xv. 8",
+   "start": "PRO.15.8",
+   "end": "PRO.15.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.1",
+   "at": 1259,
+   "text": "Rom. viii. 26, 27",
+   "start": "ROM.8.26",
+   "end": "ROM.8.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.2",
+   "at": 1731,
+   "text": "Heb. xii. 28, 29",
+   "start": "HEB.12.28",
+   "end": "HEB.12.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.2",
+   "at": 1754,
+   "text": "Deut. iv. 24",
+   "start": "DEU.4.24",
+   "end": "DEU.4.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.3",
+   "at": 1240,
+   "text": "Prov. x. 19",
+   "start": "PRO.10.19",
+   "end": "PRO.10.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.4",
+   "at": 367,
+   "text": "Isa. xxxviii. 14",
+   "start": "ISA.38.14",
+   "end": "ISA.38.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.4",
+   "at": 417,
+   "text": "Ps. vi. 6",
+   "start": "PSA.6.7",
+   "end": "PSA.6.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.4",
+   "at": 428,
+   "text": "Lam. iii. 56",
+   "start": "LAM.3.56",
+   "end": "LAM.3.56",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.1-2.4",
+   "at": 866,
+   "text": "Rom. viii. 26",
+   "start": "ROM.8.26",
+   "end": "ROM.8.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.2",
+   "at": 70,
+   "text": "1 Thess. v. 17",
+   "start": "1TH.5.17",
+   "end": "1TH.5.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.2",
+   "at": 1208,
+   "text": "Heb. ix. 19, 20",
+   "start": "HEB.9.19",
+   "end": "HEB.9.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.2",
+   "at": 1369,
+   "text": "1 Pet. i. 21",
+   "start": "1PE.1.21",
+   "end": "1PE.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.3",
+   "at": 202,
+   "text": "Deut. xxiii. 21",
+   "start": "DEU.23.22",
+   "end": "DEU.23.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.3",
+   "at": 219,
+   "text": "Ps. lxxvi. 11",
+   "start": "PSA.76.12",
+   "end": "PSA.76.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.3",
+   "at": 458,
+   "text": "1 Sam. i. 11",
+   "start": "1SA.1.11",
+   "end": "1SA.1.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.4",
+   "at": 219,
+   "text": "Matt. xiv. 9",
+   "start": "MAT.14.9",
+   "end": "MAT.14.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.5",
+   "at": 219,
+   "text": "Judg. xi. 30",
+   "start": "JDG.11.30",
+   "end": "JDG.11.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.5",
+   "at": 233,
+   "text": "1 Sam. xiv. 24",
+   "start": "1SA.14.24",
+   "end": "1SA.14.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.5",
+   "at": 426,
+   "text": "v. 4",
+   "start": "ECC.5.3",
+   "end": "ECC.5.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.5",
+   "at": 758,
+   "text": "1 Sam. ii. 13",
+   "start": "1SA.2.13",
+   "end": "1SA.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.6",
+   "at": 276,
+   "text": "Prov. xx. 25",
+   "start": "PRO.20.25",
+   "end": "PRO.20.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.6",
+   "at": 443,
+   "text": "Ps. xciv. 11",
+   "start": "PSA.94.11",
+   "end": "PSA.94.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.6",
+   "at": 857,
+   "text": "Isa. viii. 18",
+   "start": "ISA.8.18",
+   "end": "ISA.8.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.6",
+   "at": 1091,
+   "text": "Rom. xii. 1",
+   "start": "ROM.12.1",
+   "end": "ROM.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.6",
+   "at": 1104,
+   "text": "1 Pet. ii. 5",
+   "start": "1PE.2.5",
+   "end": "1PE.2.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.3-6.6",
+   "at": 1180,
+   "text": "Heb. xiii. 15",
+   "start": "HEB.13.15",
+   "end": "HEB.13.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.1",
+   "at": 607,
+   "text": "Jer. xii. 1",
+   "start": "JER.12.1",
+   "end": "JER.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.1",
+   "at": 1169,
+   "text": "Ps. x. 11-14",
+   "start": "PSA.10.11",
+   "end": "PSA.10.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.1",
+   "at": 1183,
+   "text": "xii. 5",
+   "start": "PSA.12.6",
+   "end": "PSA.12.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.1",
+   "at": 1191,
+   "text": "Prov. xxii. 12, 13",
+   "start": "PRO.22.12",
+   "end": "PRO.22.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.1",
+   "at": 1436,
+   "text": "Exod. iii. 7-9",
+   "start": "EXO.3.7",
+   "end": "EXO.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.1",
+   "at": 1594,
+   "text": "Ps. Ixxii. 12-14",
+   "start": "PSA.72.12",
+   "end": "PSA.72.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.2",
+   "at": 554,
+   "text": "Tit. ii. 13",
+   "start": "TIT.2.13",
+   "end": "TIT.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.2",
+   "at": 567,
+   "text": "Mal. iii. 5",
+   "start": "MAL.3.5",
+   "end": "MAL.3.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.2",
+   "at": 580,
+   "text": "iv. 1-8",
+   "start": "MAL.3.19",
+   "end": "MAL.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.7.2",
+   "at": 662,
+   "text": "2 Thess. i. 7",
+   "start": "2TH.1.7",
+   "end": "2TH.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.8.2",
+   "at": 169,
+   "text": "Prov. xxii. 2",
+   "start": "PRO.22.2",
+   "end": "PRO.22.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.8.2",
+   "at": 296,
+   "text": "Gen. iii. 17",
+   "start": "GEN.3.17",
+   "end": "GEN.3.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.8.2",
+   "at": 1508,
+   "text": "Gen. iii. 4",
+   "start": "GEN.3.4",
+   "end": "GEN.3.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.8.2",
+   "at": 1658,
+   "text": "1 Cor. xii. 21",
+   "start": "1CO.12.21",
+   "end": "1CO.12.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.8.2",
+   "at": 1796,
+   "text": "Eph. iv. 15, 16",
+   "start": "EPH.4.15",
+   "end": "EPH.4.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.9-11.1",
+   "at": 1155,
+   "text": "Gen. xiii. 2",
+   "start": "GEN.13.2",
+   "end": "GEN.13.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.9-11.1",
+   "at": 1169,
+   "text": "xxiv. 2",
+   "start": "GEN.24.2",
+   "end": "GEN.24.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.9-11.1",
+   "at": 1183,
+   "text": "Heb. xi. 9",
+   "start": "HEB.11.9",
+   "end": "HEB.11.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.9-11.1",
+   "at": 1496,
+   "text": "Hab. ii. 5",
+   "start": "HAB.2.5",
+   "end": "HAB.2.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.9-11.1",
+   "at": 1514,
+   "text": "Isa. v. 8",
+   "start": "ISA.5.8",
+   "end": "ISA.5.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.9-11.2",
+   "at": 727,
+   "text": "1 Tim. vi. 11",
+   "start": "1TI.6.11",
+   "end": "1TI.6.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.9-11.4",
+   "at": 643,
+   "text": "1 Tim. vi. 10",
+   "start": "1TI.6.10",
+   "end": "1TI.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.12-16.2",
+   "at": 210,
+   "text": "Gal. vi. 7",
+   "start": "GAL.6.7",
+   "end": "GAL.6.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.12-16.2",
+   "at": 547,
+   "text": "1 Tim. vi. 9, 10",
+   "start": "1TI.6.9",
+   "end": "1TI.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.12-16.2",
+   "at": 1082,
+   "text": "1 Tim. vi. 7",
+   "start": "1TI.6.7",
+   "end": "1TI.6.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.12-16.2",
+   "at": 1441,
+   "text": "Hos. viii. 7",
+   "start": "HOS.8.7",
+   "end": "HOS.8.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.12-16.2",
+   "at": 1455,
+   "text": "xii. 1",
+   "start": "HOS.12.2",
+   "end": "HOS.12.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.12-16.2",
+   "at": 2277,
+   "text": "Ps. xlix. 19",
+   "start": "PSA.49.20",
+   "end": "PSA.49.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.1",
+   "at": 605,
+   "text": "1 Cor. iii. 22",
+   "start": "1CO.3.22",
+   "end": "1CO.3.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.1",
+   "at": 1163,
+   "text": "1 Tim. vi. 17",
+   "start": "1TI.6.17",
+   "end": "1TI.6.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.2",
+   "at": 707,
+   "text": "Matt. xix. 23",
+   "start": "MAT.19.23",
+   "end": "MAT.19.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.2",
+   "at": 792,
+   "text": "1 Tim. vi. 9, 10",
+   "start": "1TI.6.9",
+   "end": "1TI.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.3",
+   "at": 342,
+   "text": "Gen. xlvii. 9",
+   "start": "GEN.47.9",
+   "end": "GEN.47.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.3",
+   "at": 468,
+   "text": "Isa. xxxv. 10",
+   "start": "ISA.35.10",
+   "end": "ISA.35.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.3",
+   "at": 571,
+   "text": "2 Cor. iv. 17",
+   "start": "2CO.4.17",
+   "end": "2CO.4.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.5.17-19.3",
+   "at": 662,
+   "text": "Ps. xvi. 11",
+   "start": "PSA.16.11",
+   "end": "PSA.16.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.1-2.1",
+   "at": 887,
+   "text": "Matt. xxv. 29",
+   "start": "MAT.25.29",
+   "end": "MAT.25.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.1-2.1",
+   "at": 1220,
+   "text": "Ps. xxxix. 6",
+   "start": "PSA.39.7",
+   "end": "PSA.39.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.3-6.2",
+   "at": 1197,
+   "text": "iii. 20",
+   "start": "ECC.3.20",
+   "end": "ECC.3.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.3-6.3",
+   "at": 764,
+   "text": "Matt. xxvi. 24",
+   "start": "MAT.26.24",
+   "end": "MAT.26.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.7-8.1",
+   "at": 478,
+   "text": "Prov. xvi. 26",
+   "start": "PRO.16.26",
+   "end": "PRO.16.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.7-8.1",
+   "at": 995,
+   "text": "Prov. xxx. 15",
+   "start": "PRO.30.15",
+   "end": "PRO.30.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.7-8.1",
+   "at": 1216,
+   "text": "ii. 13",
+   "start": "ECC.2.13",
+   "end": "ECC.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.9.1",
+   "at": 1004,
+   "text": "Ps. Ixxiii. 25",
+   "start": "PSA.73.25",
+   "end": "PSA.73.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.9.1",
+   "at": 1267,
+   "text": "Philip. iii. 20",
+   "start": "PHP.3.20",
+   "end": "PHP.3.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.9.1",
+   "at": 1406,
+   "text": "Prov. xv. 24",
+   "start": "PRO.15.24",
+   "end": "PRO.15.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.9.2",
+   "at": 877,
+   "text": "Rom. viii. 37",
+   "start": "ROM.8.37",
+   "end": "ROM.8.37",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.10.1",
+   "at": 372,
+   "text": "Ps. xxxix. 5",
+   "start": "PSA.39.6",
+   "end": "PSA.39.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.10.1",
+   "at": 1392,
+   "text": "Isa. xlv. 9",
+   "start": "ISA.45.9",
+   "end": "ISA.45.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.10.1",
+   "at": 1514,
+   "text": "Rom. ix. 20",
+   "start": "ROM.9.20",
+   "end": "ROM.9.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.11-12.1",
+   "at": 369,
+   "text": "1 Cor. xv. 47",
+   "start": "1CO.15.47",
+   "end": "1CO.15.47",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.11-12.1",
+   "at": 1036,
+   "text": "i. 2, 3",
+   "start": "ECC.1.2",
+   "end": "ECC.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.11-12.2",
+   "at": 345,
+   "text": "Ps. iv. 6",
+   "start": "PSA.4.7",
+   "end": "PSA.4.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.11-12.2",
+   "at": 589,
+   "text": "Rev. iii. 12",
+   "start": "REV.3.12",
+   "end": "REV.3.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.1",
+   "at": 541,
+   "text": "Prov. x. 7",
+   "start": "PRO.10.7",
+   "end": "PRO.10.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.1",
+   "at": 1100,
+   "text": "1 Cor. iv. 18",
+   "start": "1CO.4.18",
+   "end": "1CO.4.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.1",
+   "at": 1115,
+   "text": "Heb. xi. 38",
+   "start": "HEB.11.38",
+   "end": "HEB.11.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 236,
+   "text": "Matt. xxvi. 24",
+   "start": "MAT.26.24",
+   "end": "MAT.26.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 252,
+   "text": "Rev. xxi. 8",
+   "start": "REV.21.8",
+   "end": "REV.21.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 413,
+   "text": "Rev. xiii. 8",
+   "start": "REV.13.8",
+   "end": "REV.13.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 427,
+   "text": "Eph. iv. 30",
+   "start": "EPH.4.30",
+   "end": "EPH.4.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 833,
+   "text": "Rev. xiv. 13",
+   "start": "REV.14.13",
+   "end": "REV.14.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 1023,
+   "text": "2 Cor. v. 6-8",
+   "start": "2CO.5.6",
+   "end": "2CO.5.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 1148,
+   "text": "Philip. i. 21, 23",
+   "start": "PHP.1.21",
+   "end": "PHP.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 1148,
+   "text": "Philip. i. 21, 23",
+   "start": "PHP.1.23",
+   "end": "PHP.1.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.1.3",
+   "at": 1193,
+   "text": "Job. v. 7",
+   "start": "JOB.5.7",
+   "end": "JOB.5.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.2.1",
+   "at": 827,
+   "text": "xi. 8",
+   "start": "ECC.11.8",
+   "end": "ECC.11.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.2.1",
+   "at": 1373,
+   "text": "Rev. iii. 19",
+   "start": "REV.3.19",
+   "end": "REV.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.2.2",
+   "at": 277,
+   "text": "Josh. xxiii. 14",
+   "start": "JOS.23.14",
+   "end": "JOS.23.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.2.2",
+   "at": 294,
+   "text": "Heb. ix. 17",
+   "start": "HEB.9.17",
+   "end": "HEB.9.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.1",
+   "at": 823,
+   "text": "1 Pet. i. 6",
+   "start": "1PE.1.6",
+   "end": "1PE.1.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.1",
+   "at": 1534,
+   "text": "2 Cor. iv. 13",
+   "start": "2CO.4.13",
+   "end": "2CO.4.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.2",
+   "at": 286,
+   "text": "Ps. cxix. 54",
+   "start": "PSA.119.54",
+   "end": "PSA.119.54",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.2",
+   "at": 523,
+   "text": "Rom. viii. 28",
+   "start": "ROM.8.28",
+   "end": "ROM.8.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.2",
+   "at": 1049,
+   "text": "2 Cor. ii. 14",
+   "start": "2CO.2.14",
+   "end": "2CO.2.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.3",
+   "at": 779,
+   "text": "Heb. v. 8",
+   "start": "HEB.5.8",
+   "end": "HEB.5.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.4",
+   "at": 797,
+   "text": "Isa. lx. 20",
+   "start": "ISA.60.20",
+   "end": "ISA.60.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.4",
+   "at": 932,
+   "text": "Rev. xxi. 4",
+   "start": "REV.21.4",
+   "end": "REV.21.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.4",
+   "at": 1236,
+   "text": "Gen. xlix. 6",
+   "start": "GEN.49.6",
+   "end": "GEN.49.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.8.4",
+   "at": 1347,
+   "text": "Prov. xiv. 13",
+   "start": "PRO.14.13",
+   "end": "PRO.14.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.1",
+   "at": 474,
+   "text": "Prov. xxvii. 5, 6",
+   "start": "PRO.27.5",
+   "end": "PRO.27.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.2",
+   "at": 62,
+   "text": "Prov. xxv. 12",
+   "start": "PRO.25.12",
+   "end": "PRO.25.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.2",
+   "at": 314,
+   "text": "1 Sam. xxv. 32, 33",
+   "start": "1SA.25.32",
+   "end": "1SA.25.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.2",
+   "at": 400,
+   "text": "Prov. xv. 32",
+   "start": "PRO.15.32",
+   "end": "PRO.15.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.2",
+   "at": 995,
+   "text": "Ps. lviii. 9",
+   "start": "PSA.58.10",
+   "end": "PSA.58.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.3",
+   "at": 118,
+   "text": "iii. 16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.3",
+   "at": 134,
+   "text": "v. 8",
+   "start": "ECC.7.8",
+   "end": "ECC.7.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.3",
+   "at": 667,
+   "text": "Exod. v. 21",
+   "start": "EXO.5.21",
+   "end": "EXO.5.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.4",
+   "at": 332,
+   "text": "Prov. xvii. 23",
+   "start": "PRO.17.23",
+   "end": "PRO.17.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.4",
+   "at": 429,
+   "text": "Exod. xxiii. 8",
+   "start": "EXO.23.8",
+   "end": "EXO.23.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.4",
+   "at": 677,
+   "text": "2 Sam. xxiii. 3",
+   "start": "2SA.23.3",
+   "end": "2SA.23.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.9.4",
+   "at": 978,
+   "text": "Philip. iv. 8",
+   "start": "PHP.4.8",
+   "end": "PHP.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.1",
+   "at": 2,
+   "text": "Jer. xx. 7-18",
+   "start": "JER.20.7",
+   "end": "JER.20.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.1",
+   "at": 41,
+   "text": "Deut. xxviii. 32-34",
+   "start": "DEU.28.32",
+   "end": "DEU.28.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.1",
+   "at": 348,
+   "text": "v. 1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.1",
+   "at": 400,
+   "text": "Prov. xx. 21",
+   "start": "PRO.20.21",
+   "end": "PRO.20.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.2",
+   "at": 383,
+   "text": "Gen. xlii. 36",
+   "start": "GEN.42.36",
+   "end": "GEN.42.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.2",
+   "at": 510,
+   "text": "Deut. viii. 16",
+   "start": "DEU.8.16",
+   "end": "DEU.8.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.2",
+   "at": 774,
+   "text": "v. 11",
+   "start": "ECC.7.11",
+   "end": "ECC.7.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.4",
+   "at": 689,
+   "text": "Jer. xxix. 11",
+   "start": "JER.29.11",
+   "end": "JER.29.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.4",
+   "at": 746,
+   "text": "Heb. x. 36",
+   "start": "HEB.10.36",
+   "end": "HEB.10.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.5",
+   "at": 148,
+   "text": "Heb. x. 34",
+   "start": "HEB.10.34",
+   "end": "HEB.10.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.10.5",
+   "at": 395,
+   "text": "Ps. cxxvi. 5",
+   "start": "PSA.126.5",
+   "end": "PSA.126.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.11.1",
+   "at": 198,
+   "text": "Eph. iv. 26",
+   "start": "EPH.4.26",
+   "end": "EPH.4.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.11.1",
+   "at": 263,
+   "text": "Nah. i. 2",
+   "start": "NAM.1.2",
+   "end": "NAM.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.11.1",
+   "at": 475,
+   "text": "Exod. xxxii. 19",
+   "start": "EXO.32.19",
+   "end": "EXO.32.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.11.2",
+   "at": 1093,
+   "text": "Philip. iv. 13",
+   "start": "PHP.4.13",
+   "end": "PHP.4.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.11.2",
+   "at": 1302,
+   "text": "Matt. v. 16",
+   "start": "MAT.5.16",
+   "end": "MAT.5.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.11.3",
+   "at": 586,
+   "text": "2 Cor. iii. 18",
+   "start": "2CO.3.18",
+   "end": "2CO.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.12.1",
+   "at": 595,
+   "text": "1 Cor. xi. 28",
+   "start": "1CO.11.28",
+   "end": "1CO.11.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.12.1",
+   "at": 610,
+   "text": "Gal. vi. 4",
+   "start": "GAL.6.4",
+   "end": "GAL.6.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.12.1",
+   "at": 1894,
+   "text": "i. 9",
+   "start": "ECC.1.9",
+   "end": "ECC.1.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.12.3",
+   "at": 1065,
+   "text": "Rom. xiii. 11",
+   "start": "ROM.13.11",
+   "end": "ROM.13.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.13.1",
+   "at": 854,
+   "text": "Prov. xix. 4",
+   "start": "PRO.19.4",
+   "end": "PRO.19.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.13.1",
+   "at": 868,
+   "text": "x. 19",
+   "start": "PRO.10.19",
+   "end": "PRO.10.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.13.1",
+   "at": 1332,
+   "text": "Prov. viii. 35",
+   "start": "PRO.8.35",
+   "end": "PRO.8.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.13.2",
+   "at": 275,
+   "text": "v. 20",
+   "start": "ECC.7.20",
+   "end": "ECC.7.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.13.4",
+   "at": 124,
+   "text": "Ps. cxi. 2, 3",
+   "start": "PSA.111.2",
+   "end": "PSA.111.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.1",
+   "at": 399,
+   "text": "Eph. i. 8",
+   "start": "EPH.1.8",
+   "end": "EPH.1.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.1",
+   "at": 456,
+   "text": "1 Tim. vi. 17",
+   "start": "1TI.6.17",
+   "end": "1TI.6.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.1",
+   "at": 969,
+   "text": "Deut. xxviii. 46, 47",
+   "start": "DEU.28.46",
+   "end": "DEU.28.47",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.1",
+   "at": 1402,
+   "text": "Ps. ii. 11",
+   "start": "PSA.2.11",
+   "end": "PSA.2.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 57,
+   "text": "Deut. viii. 5",
+   "start": "DEU.8.5",
+   "end": "DEU.8.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 103,
+   "text": "Ps. xxxix. 11",
+   "start": "PSA.39.12",
+   "end": "PSA.39.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 160,
+   "text": "Ps. 1. 15",
+   "start": "PSA.1.15",
+   "end": "PSA.1.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 171,
+   "text": "Ixxxvi. 7",
+   "start": "PSA.86.7",
+   "end": "PSA.86.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 232,
+   "text": "Ps. xciv. 12, 13",
+   "start": "PSA.94.12",
+   "end": "PSA.94.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 290,
+   "text": "1 Cor. x. 13",
+   "start": "1CO.10.13",
+   "end": "1CO.10.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 726,
+   "text": "Heb. xii: 10",
+   "start": "HEB.12.10",
+   "end": "HEB.12.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 762,
+   "text": "Heb. xii. 11",
+   "start": "HEB.12.11",
+   "end": "HEB.12.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 776,
+   "text": "Zech. xiii. 9",
+   "start": "ZEC.13.9",
+   "end": "ZEC.13.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 791,
+   "text": "Rev. vii. 14",
+   "start": "REV.7.14",
+   "end": "REV.7.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 822,
+   "text": "Ps. Ixxiv. 17",
+   "start": "PSA.74.17",
+   "end": "PSA.74.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 919,
+   "text": "Gen. viii. 22",
+   "start": "GEN.8.22",
+   "end": "GEN.8.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 1252,
+   "text": "Isa. lvii. 16",
+   "start": "ISA.57.16",
+   "end": "ISA.57.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 1441,
+   "text": "Ps. xc. 15",
+   "start": "PSA.90.15",
+   "end": "PSA.90.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.3",
+   "at": 1483,
+   "text": "Deut. xxxii. 4",
+   "start": "DEU.32.4",
+   "end": "DEU.32.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.4",
+   "at": 431,
+   "text": "Gen. xxxii. 10",
+   "start": "GEN.32.11",
+   "end": "GEN.32.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.4",
+   "at": 936,
+   "text": "ix. 2",
+   "start": "ECC.9.2",
+   "end": "ECC.9.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.14.5",
+   "at": 848,
+   "text": "Ps. lxxxix. 30-35",
+   "start": "PSA.89.31",
+   "end": "PSA.89.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 281,
+   "text": "iv. 1-4",
+   "start": "ECC.4.1",
+   "end": "ECC.4.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 290,
+   "text": "v. 8",
+   "start": "ECC.7.8",
+   "end": "ECC.7.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 395,
+   "text": "Jer. xii. 1",
+   "start": "JER.12.1",
+   "end": "JER.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 494,
+   "text": "Gen. iv. 8",
+   "start": "GEN.4.8",
+   "end": "GEN.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 627,
+   "text": "Matt. xxiii. 35",
+   "start": "MAT.23.35",
+   "end": "MAT.23.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 649,
+   "text": "Isa. lix. 15",
+   "start": "ISA.59.15",
+   "end": "ISA.59.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 889,
+   "text": "Ps. lv. 23",
+   "start": "PSA.55.24",
+   "end": "PSA.55.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 974,
+   "text": "Isa. iii. 10",
+   "start": "ISA.3.10",
+   "end": "ISA.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 1161,
+   "text": "Isa. lvii. 1",
+   "start": "ISA.57.1",
+   "end": "ISA.57.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.1",
+   "at": 1481,
+   "text": "Rom. ix. 22",
+   "start": "ROM.9.22",
+   "end": "ROM.9.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.2",
+   "at": 189,
+   "text": "Ps. Ixxiii. 16-20",
+   "start": "PSA.73.16",
+   "end": "PSA.73.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.2",
+   "at": 442,
+   "text": "Ps. xcvii. 2",
+   "start": "PSA.97.2",
+   "end": "PSA.97.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.15.2",
+   "at": 603,
+   "text": "Rev. xix. 6",
+   "start": "REV.19.6",
+   "end": "REV.19.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.2",
+   "at": 210,
+   "text": "Rom. vii. 18",
+   "start": "ROM.7.18",
+   "end": "ROM.7.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.3",
+   "at": 1995,
+   "text": "Ps. ci. 2",
+   "start": "PSA.101.2",
+   "end": "PSA.101.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.4",
+   "at": 1095,
+   "text": "Prov. xvi. 18",
+   "start": "PRO.16.18",
+   "end": "PRO.16.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.4",
+   "at": 1448,
+   "text": "Deut. xxix. 29",
+   "start": "DEU.29.28",
+   "end": "DEU.29.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.4",
+   "at": 1464,
+   "text": "Col. ii. 18",
+   "start": "COL.2.18",
+   "end": "COL.2.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.5",
+   "at": 211,
+   "text": "Hab. i. 18",
+   "start": "HAB.1.18",
+   "end": "HAB.1.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.5",
+   "at": 229,
+   "text": "Ps. v. 4",
+   "start": "PSA.5.5",
+   "end": "PSA.5.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.5",
+   "at": 583,
+   "text": "1 Cor. iv. 6",
+   "start": "1CO.4.6",
+   "end": "1CO.4.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.6",
+   "at": 163,
+   "text": "Esth. vii. 10",
+   "start": "EST.7.10",
+   "end": "EST.7.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.6",
+   "at": 396,
+   "text": "Job. xv. 25, 26",
+   "start": "JOB.15.25",
+   "end": "JOB.15.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.7",
+   "at": 116,
+   "text": "Heb. xii. 13",
+   "start": "HEB.12.13",
+   "end": "HEB.12.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.8",
+   "at": 138,
+   "text": "Prov. xiv. 26",
+   "start": "PRO.14.26",
+   "end": "PRO.14.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.16-18.8",
+   "at": 878,
+   "text": "1 Cor. iii. 13",
+   "start": "1CO.3.13",
+   "end": "1CO.3.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 120,
+   "text": "vv. 11, 12",
+   "start": "ECC.7.11",
+   "end": "ECC.7.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 623,
+   "text": "ix. 16",
+   "start": "ECC.9.16",
+   "end": "ECC.9.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 822,
+   "text": "Prov. xxiv. 5",
+   "start": "PRO.24.5",
+   "end": "PRO.24.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 1071,
+   "text": "2 Chron. xvi. 9",
+   "start": "2CH.16.9",
+   "end": "2CH.16.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 1328,
+   "text": "Gen. xxxi. 7",
+   "start": "GEN.31.7",
+   "end": "GEN.31.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 1342,
+   "text": "Num. xiv. 22",
+   "start": "NUM.14.22",
+   "end": "NUM.14.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 1385,
+   "text": "Ps. xxvii. 1-3",
+   "start": "PSA.27.1",
+   "end": "PSA.27.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 1572,
+   "text": "Zech. xii. 8",
+   "start": "ZEC.12.8",
+   "end": "ZEC.12.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.1",
+   "at": 1586,
+   "text": "1 Sam. xvii. 39",
+   "start": "1SA.17.39",
+   "end": "1SA.17.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.2",
+   "at": 358,
+   "text": "Heb. xii. 23",
+   "start": "HEB.12.23",
+   "end": "HEB.12.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.2",
+   "at": 545,
+   "text": "Isa. Ixiv. 6",
+   "start": "ISA.64.5",
+   "end": "ISA.64.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.19-20.3",
+   "at": 469,
+   "text": "Rev. viii. 3, 4",
+   "start": "REV.8.3",
+   "end": "REV.8.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.21-22.1",
+   "at": 863,
+   "text": "1 Sam. x. 27",
+   "start": "1SA.10.27",
+   "end": "1SA.10.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.21-22.1",
+   "at": 1000,
+   "text": "Ps. xxxviii. 13, 14",
+   "start": "PSA.38.14",
+   "end": "PSA.38.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.21-22.2",
+   "at": 1006,
+   "text": "Tit. iii. 2",
+   "start": "TIT.3.2",
+   "end": "TIT.3.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.1",
+   "at": 565,
+   "text": "Ps. cxxxix. 6",
+   "start": "PSA.139.6",
+   "end": "PSA.139.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.1",
+   "at": 835,
+   "text": "Ps. xcii. 5",
+   "start": "PSA.92.6",
+   "end": "PSA.92.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.1",
+   "at": 867,
+   "text": "Rom. xi. 33",
+   "start": "ROM.11.33",
+   "end": "ROM.11.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.1",
+   "at": 1224,
+   "text": "1 Pet. i. 12",
+   "start": "1PE.1.12",
+   "end": "1PE.1.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.2",
+   "at": 141,
+   "text": "Gen. xxxiv. 7",
+   "start": "GEN.34.7",
+   "end": "GEN.34.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.2",
+   "at": 299,
+   "text": "Hos. iv. 11",
+   "start": "HOS.4.11",
+   "end": "HOS.4.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.2",
+   "at": 553,
+   "text": "i. 13-17",
+   "start": "ECC.1.13",
+   "end": "ECC.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.2",
+   "at": 943,
+   "text": "Ps. xix. 13",
+   "start": "PSA.19.14",
+   "end": "PSA.19.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.2",
+   "at": 1098,
+   "text": "v. 18",
+   "start": "ECC.7.18",
+   "end": "ECC.7.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.26.1",
+   "at": 703,
+   "text": "Neh. xiii. 16",
+   "start": "NEH.13.16",
+   "end": "NEH.13.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27.1",
+   "at": 273,
+   "text": "Gen. xxxix. 9, 10",
+   "start": "GEN.39.9",
+   "end": "GEN.39.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27.1",
+   "at": 626,
+   "text": "Prov. ii. 19",
+   "start": "PRO.2.19",
+   "end": "PRO.2.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27.1",
+   "at": 641,
+   "text": "xxii. 14",
+   "start": "PRO.22.14",
+   "end": "PRO.22.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27.1",
+   "at": 734,
+   "text": "1 Sam. xv. 32",
+   "start": "1SA.15.32",
+   "end": "1SA.15.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27.1",
+   "at": 863,
+   "text": "Prov. v. 4",
+   "start": "PRO.5.4",
+   "end": "PRO.5.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27.2",
+   "at": 480,
+   "text": "1 Cor. ix. 27",
+   "start": "1CO.9.27",
+   "end": "1CO.9.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27-28.1",
+   "at": 514,
+   "text": "Ps. ci. 6",
+   "start": "PSA.101.6",
+   "end": "PSA.101.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27-28.1",
+   "at": 1040,
+   "text": "v. 1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27-28.1",
+   "at": 1135,
+   "text": "v. 10",
+   "start": "ECC.7.10",
+   "end": "ECC.7.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.2",
+   "at": 127,
+   "text": "Ps. xlix. 12",
+   "start": "PSA.49.13",
+   "end": "PSA.49.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.2",
+   "at": 141,
+   "text": "Lam. iv. 1",
+   "start": "LAM.4.1",
+   "end": "LAM.4.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.2",
+   "at": 1148,
+   "text": "Matt. xiii. 28",
+   "start": "MAT.13.28",
+   "end": "MAT.13.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.4",
+   "at": 1068,
+   "text": "Isa. ii. 6",
+   "start": "ISA.2.6",
+   "end": "ISA.2.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.5",
+   "at": 1020,
+   "text": "2 Pet. iii. 13",
+   "start": "2PE.3.13",
+   "end": "2PE.3.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.5",
+   "at": 1037,
+   "text": "Rev. xxi. 1-4",
+   "start": "REV.21.1",
+   "end": "REV.21.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.1.1",
+   "at": 67,
+   "text": "vii. 25",
+   "start": "ECC.7.25",
+   "end": "ECC.7.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.1.1",
+   "at": 739,
+   "text": "1 Cor. xii. 10",
+   "start": "1CO.12.10",
+   "end": "1CO.12.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.1.2",
+   "at": 252,
+   "text": "Ex. xxxiv. 29",
+   "start": "EXO.34.29",
+   "end": "EXO.34.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.1.2",
+   "at": 383,
+   "text": "Ps. cxlix. 4",
+   "start": "PSA.149.4",
+   "end": "PSA.149.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.1.3",
+   "at": 1316,
+   "text": "Num. xii. 3",
+   "start": "NUM.12.3",
+   "end": "NUM.12.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.1.3",
+   "at": 1559,
+   "text": "Matt. xi. 29",
+   "start": "MAT.11.29",
+   "end": "MAT.11.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.1",
+   "at": 152,
+   "text": "Tit. iii. 1",
+   "start": "TIT.3.1",
+   "end": "TIT.3.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.1",
+   "at": 300,
+   "text": "Matt. xxii. 21",
+   "start": "MAT.22.21",
+   "end": "MAT.22.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.1",
+   "at": 440,
+   "text": "Ps. ciii. 20, 21",
+   "start": "PSA.103.20",
+   "end": "PSA.103.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.1",
+   "at": 1187,
+   "text": "Rom. xiii. 1-5",
+   "start": "ROM.13.1",
+   "end": "ROM.13.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.1",
+   "at": 1209,
+   "text": "1 Pet. ii, 13",
+   "start": "1PE.2.13",
+   "end": "1PE.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.2",
+   "at": 153,
+   "text": "Dan. iii. 16-18",
+   "start": "DAN.3.16",
+   "end": "DAN.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.2",
+   "at": 171,
+   "text": "vi. 10",
+   "start": "DAN.6.11",
+   "end": "DAN.6.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.2",
+   "at": 193,
+   "text": "v. 29",
+   "start": "ECC.8.29",
+   "end": "ECC.8.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.2",
+   "at": 539,
+   "text": "Ps. cxix. 106",
+   "start": "PSA.119.106",
+   "end": "PSA.119.106",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.2.2",
+   "at": 559,
+   "text": "1 Cor. vi. 19, 20",
+   "start": "1CO.6.19",
+   "end": "1CO.6.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.1",
+   "at": 841,
+   "text": "Matt. xiv. 9, 10",
+   "start": "MAT.14.9",
+   "end": "MAT.14.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.1",
+   "at": 1491,
+   "text": "v. 1-8",
+   "start": "ECC.8.1",
+   "end": "ECC.8.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.2",
+   "at": 953,
+   "text": "Rom. xiii. 1-7",
+   "start": "ROM.13.1",
+   "end": "ROM.13.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.2",
+   "at": 1336,
+   "text": "Dan. iv. 85",
+   "start": "DAN.4.85",
+   "end": "DAN.4.85",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.2",
+   "at": 1355,
+   "text": "Job. ix. 12",
+   "start": "JOB.9.12",
+   "end": "JOB.9.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.3",
+   "at": 1093,
+   "text": "Isa. lxiv. 5",
+   "start": "ISA.64.4",
+   "end": "ISA.64.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.3",
+   "at": 1113,
+   "text": "Ps. cxix. 55, 56",
+   "start": "PSA.119.55",
+   "end": "PSA.119.56",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.4",
+   "at": 284,
+   "text": "1 Cor. iii. 9",
+   "start": "1CO.3.9",
+   "end": "1CO.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.4",
+   "at": 428,
+   "text": "Prov. xv. 23",
+   "start": "PRO.15.23",
+   "end": "PRO.15.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.4",
+   "at": 442,
+   "text": "xxv. 11",
+   "start": "PRO.25.11",
+   "end": "PRO.25.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.4",
+   "at": 480,
+   "text": "2 Tim. iv. 2",
+   "start": "2TI.4.2",
+   "end": "2TI.4.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.8.4",
+   "at": 1503,
+   "text": "Ps. cxix. 66",
+   "start": "PSA.119.66",
+   "end": "PSA.119.66",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.9.2",
+   "at": 377,
+   "text": "Matt. xxv. 10",
+   "start": "MAT.25.10",
+   "end": "MAT.25.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.9.3",
+   "at": 515,
+   "text": "Rom. viii. 28",
+   "start": "ROM.8.28",
+   "end": "ROM.8.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.9.3",
+   "at": 843,
+   "text": "1 Cor. iii. 22",
+   "start": "1CO.3.22",
+   "end": "1CO.3.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.1",
+   "at": 109,
+   "text": "iii. 1, 2",
+   "start": "ECC.3.1",
+   "end": "ECC.3.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.2",
+   "at": 773,
+   "text": "Heb. ix. 27",
+   "start": "HEB.9.27",
+   "end": "HEB.9.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.2",
+   "at": 1028,
+   "text": "Ps. lii. 7",
+   "start": "PSA.52.9",
+   "end": "PSA.52.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.2",
+   "at": 1272,
+   "text": "Isa. xxviii. 14-18",
+   "start": "ISA.28.14",
+   "end": "ISA.28.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.2",
+   "at": 1292,
+   "text": "Prov. xiv. 32",
+   "start": "PRO.14.32",
+   "end": "PRO.14.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.3",
+   "at": 216,
+   "text": "Ps. xxiii. 1-4",
+   "start": "PSA.23.1",
+   "end": "PSA.23.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.3",
+   "at": 265,
+   "text": "Heb. ii. 10",
+   "start": "HEB.2.10",
+   "end": "HEB.2.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.3",
+   "at": 375,
+   "text": "2 Tim. i. 10",
+   "start": "2TI.1.10",
+   "end": "2TI.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.3",
+   "at": 444,
+   "text": "Heb. ii. 14",
+   "start": "HEB.2.14",
+   "end": "HEB.2.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.3",
+   "at": 879,
+   "text": "Isa. xxv. 8",
+   "start": "ISA.25.8",
+   "end": "ISA.25.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.10.3",
+   "at": 892,
+   "text": "1 Cor. xv. 55-57",
+   "start": "1CO.15.55",
+   "end": "1CO.15.57",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.1",
+   "at": 1250,
+   "text": "Exod. ix. 16",
+   "start": "EXO.9.16",
+   "end": "EXO.9.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.2",
+   "at": 521,
+   "text": "Prov. x. 7",
+   "start": "PRO.10.7",
+   "end": "PRO.10.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.2",
+   "at": 1093,
+   "text": "Ps. Ixxxii. 1",
+   "start": "PSA.82.1",
+   "end": "PSA.82.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.2",
+   "at": 1108,
+   "text": "Deut. i. 17",
+   "start": "DEU.1.17",
+   "end": "DEU.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.2",
+   "at": 1121,
+   "text": "2 Chron. xix. 6",
+   "start": "2CH.19.6",
+   "end": "2CH.19.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.2",
+   "at": 1425,
+   "text": "Ps. xxxvii. 35, 36",
+   "start": "PSA.37.35",
+   "end": "PSA.37.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.3",
+   "at": 532,
+   "text": "Gen. ii. 17",
+   "start": "GEN.2.17",
+   "end": "GEN.2.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.3",
+   "at": 607,
+   "text": "1 Pet. iii. 20",
+   "start": "1PE.3.20",
+   "end": "1PE.3.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.3",
+   "at": 628,
+   "text": "Gen. vi. 3",
+   "start": "GEN.6.3",
+   "end": "GEN.6.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.3",
+   "at": 1355,
+   "text": "1 Tim. 1. 13-16",
+   "start": "1TI.1.13",
+   "end": "1TI.1.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.4",
+   "at": 396,
+   "text": "Ps. x. 18",
+   "start": "PSA.10.18",
+   "end": "PSA.10.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.5",
+   "at": 1443,
+   "text": "Rom. ii. 4",
+   "start": "ROM.2.4",
+   "end": "ROM.2.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.7",
+   "at": 216,
+   "text": "Rom. ix. 22",
+   "start": "ROM.9.22",
+   "end": "ROM.9.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.7",
+   "at": 292,
+   "text": "2 Pet. iii. 9",
+   "start": "2PE.3.9",
+   "end": "2PE.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.11.7",
+   "at": 371,
+   "text": "1 Tim. i. 16",
+   "start": "1TI.1.16",
+   "end": "1TI.1.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.1",
+   "at": 565,
+   "text": "2 Pet. iii. 15",
+   "start": "2PE.3.15",
+   "end": "2PE.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.1",
+   "at": 789,
+   "text": "Mal. iii. 18",
+   "start": "MAL.3.18",
+   "end": "MAL.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 436,
+   "text": "Gen. xxxvii. 24",
+   "start": "GEN.37.24",
+   "end": "GEN.37.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 478,
+   "text": "ii. 8",
+   "start": "ECC.2.8",
+   "end": "ECC.2.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 722,
+   "text": "Ps. xxxiv. 19",
+   "start": "PSA.34.20",
+   "end": "PSA.34.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 1493,
+   "text": "2 Cor. v. 8",
+   "start": "2CO.5.8",
+   "end": "2CO.5.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 1506,
+   "text": "1 Thess. iv. 17",
+   "start": "1TH.4.17",
+   "end": "1TH.4.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 1537,
+   "text": "Ps. xvii. 15",
+   "start": "PSA.17.15",
+   "end": "PSA.17.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 1588,
+   "text": "Matt. xxv. 24",
+   "start": "MAT.25.24",
+   "end": "MAT.25.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.2",
+   "at": 1658,
+   "text": "Rev. iii. 21",
+   "start": "REV.3.21",
+   "end": "REV.3.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.3",
+   "at": 1070,
+   "text": "Prov. xiv. 32",
+   "start": "PRO.14.32",
+   "end": "PRO.14.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.3",
+   "at": 1433,
+   "text": "Matt. xxvi. 26-30",
+   "start": "MAT.26.26",
+   "end": "MAT.26.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.3",
+   "at": 1554,
+   "text": "Heb. ii. 3",
+   "start": "HEB.2.3",
+   "end": "HEB.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.5",
+   "at": 305,
+   "text": "1 Tim. iv. 8",
+   "start": "1TI.4.8",
+   "end": "1TI.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.5",
+   "at": 602,
+   "text": "Exod. x. 15",
+   "start": "EXO.10.15",
+   "end": "EXO.10.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.12-13.5",
+   "at": 971,
+   "text": "2 Tim. iv. 7, 8",
+   "start": "2TI.4.7",
+   "end": "2TI.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.14-15.1",
+   "at": 271,
+   "text": "ix. 1",
+   "start": "ECC.9.1",
+   "end": "ECC.9.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.14-15.2",
+   "at": 525,
+   "text": "1 Tim. iv. 3-5",
+   "start": "1TI.4.3",
+   "end": "1TI.4.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.14-15.2",
+   "at": 757,
+   "text": "Gen. xxxiii. 5",
+   "start": "GEN.33.5",
+   "end": "GEN.33.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.16.1",
+   "at": 885,
+   "text": "Rom. xi. 33",
+   "start": "ROM.11.33",
+   "end": "ROM.11.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.16.2",
+   "at": 368,
+   "text": "Ps. xlvi. 10",
+   "start": "PSA.46.11",
+   "end": "PSA.46.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.8.16.4",
+   "at": 441,
+   "text": "Ps. cxii. 4",
+   "start": "PSA.112.4",
+   "end": "PSA.112.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.1-2.1",
+   "at": 317,
+   "text": "Ps. xlvi. 10",
+   "start": "PSA.46.11",
+   "end": "PSA.46.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.1-2.1",
+   "at": 805,
+   "text": "Deut. xxxiii. 3",
+   "start": "DEU.33.3",
+   "end": "DEU.33.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.1-2.1",
+   "at": 1358,
+   "text": "Mal. iii. 16",
+   "start": "MAL.3.16",
+   "end": "MAL.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.1-2.2",
+   "at": 497,
+   "text": "Gen. xiii. 2",
+   "start": "GEN.13.2",
+   "end": "GEN.13.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.3.2",
+   "at": 402,
+   "text": "Rom. ix. 19",
+   "start": "ROM.9.19",
+   "end": "ROM.9.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.3.2",
+   "at": 1632,
+   "text": "Heb. x. 31",
+   "start": "HEB.10.31",
+   "end": "HEB.10.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.3.3",
+   "at": 1549,
+   "text": "Matt. xxii. 11",
+   "start": "MAT.22.11",
+   "end": "MAT.22.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.4-6.1",
+   "at": 833,
+   "text": "iv. 2, 3",
+   "start": "ECC.4.2",
+   "end": "ECC.4.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.4-6.1",
+   "at": 849,
+   "text": "Isa. xiv. 9-12",
+   "start": "ISA.14.9",
+   "end": "ISA.14.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.4-6.1",
+   "at": 936,
+   "text": "Phil. iii, 2",
+   "start": "PHP.3.2",
+   "end": "PHP.3.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.4-6.1",
+   "at": 987,
+   "text": "Prov xxx. 30",
+   "start": "PRO.30.30",
+   "end": "PRO.30.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.4-6.1",
+   "at": 1378,
+   "text": "Phil. i. 21",
+   "start": "PHP.1.21",
+   "end": "PHP.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.4-6.2",
+   "at": 135,
+   "text": "Ps. xvii. 14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.4-6.2",
+   "at": 360,
+   "text": "1 Pet. i. 3, 4",
+   "start": "1PE.1.3",
+   "end": "1PE.1.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.1",
+   "at": 323,
+   "text": "Heb. vi. 19",
+   "start": "HEB.6.19",
+   "end": "HEB.6.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.1",
+   "at": 445,
+   "text": "1 Pet. i. 6",
+   "start": "1PE.1.6",
+   "end": "1PE.1.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.2",
+   "at": 103,
+   "text": "iii. 4",
+   "start": "ECC.3.4",
+   "end": "ECC.3.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.2",
+   "at": 164,
+   "text": "1 Cor. vii. 30",
+   "start": "1CO.7.30",
+   "end": "1CO.7.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.2",
+   "at": 238,
+   "text": "Dan. x. 2",
+   "start": "DAN.10.2",
+   "end": "DAN.10.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.2",
+   "at": 650,
+   "text": "1 Thess. v. 16",
+   "start": "1TH.5.16",
+   "end": "1TH.5.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.2",
+   "at": 1275,
+   "text": "Isa. Ixi. 3",
+   "start": "ISA.61.3",
+   "end": "ISA.61.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.2",
+   "at": 1457,
+   "text": "Isa. lviii. 5",
+   "start": "ISA.58.5",
+   "end": "ISA.58.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.3",
+   "at": 412,
+   "text": "Gen. xxvi. 8",
+   "start": "GEN.26.8",
+   "end": "GEN.26.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.3",
+   "at": 432,
+   "text": "v. 19",
+   "start": "ECC.9.19",
+   "end": "ECC.9.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.3",
+   "at": 631,
+   "text": "Gen. ii. 18",
+   "start": "GEN.2.18",
+   "end": "GEN.2.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.3",
+   "at": 761,
+   "text": "Heb. xiii. 4",
+   "start": "HEB.13.4",
+   "end": "HEB.13.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.3",
+   "at": 988,
+   "text": "Prov. v. 5",
+   "start": "PRO.5.5",
+   "end": "PRO.5.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.3",
+   "at": 1683,
+   "text": "Prov. xix. 14",
+   "start": "PRO.19.14",
+   "end": "PRO.19.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.4",
+   "at": 162,
+   "text": "Gen. xlvii. 9",
+   "start": "GEN.47.9",
+   "end": "GEN.47.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.7-9.4",
+   "at": 937,
+   "text": "1 Cor. vii. 29",
+   "start": "1CO.7.29",
+   "end": "1CO.7.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.10.2",
+   "at": 84,
+   "text": "Rom. xii. 11",
+   "start": "ROM.12.11",
+   "end": "ROM.12.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.10.3",
+   "at": 126,
+   "text": "Phil. ii. 12",
+   "start": "PHP.2.12",
+   "end": "PHP.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.10.3",
+   "at": 222,
+   "text": "1 Cor. vi. 20",
+   "start": "1CO.6.20",
+   "end": "1CO.6.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.10.4",
+   "at": 465,
+   "text": "Prov. x. 29",
+   "start": "PRO.10.29",
+   "end": "PRO.10.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.10.4",
+   "at": 478,
+   "text": "Isa. xl. 29-31",
+   "start": "ISA.40.29",
+   "end": "ISA.40.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.10.5",
+   "at": 996,
+   "text": "John xi. 9",
+   "start": "JHN.11.9",
+   "end": "JHN.11.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.10.5",
+   "at": 1540,
+   "text": "Hos. xiii. 9",
+   "start": "HOS.13.9",
+   "end": "HOS.13.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.11.1",
+   "at": 180,
+   "text": "Philip. ii. 12",
+   "start": "PHP.2.12",
+   "end": "PHP.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.11.1",
+   "at": 1487,
+   "text": "Hab. i. 16",
+   "start": "HAB.1.16",
+   "end": "HAB.1.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.11.2",
+   "at": 668,
+   "text": "Eph. i. 11",
+   "start": "EPH.1.11",
+   "end": "EPH.1.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.11.2",
+   "at": 1261,
+   "text": "1 Cor. ix. 26",
+   "start": "1CO.9.26",
+   "end": "1CO.9.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.11.2",
+   "at": 1544,
+   "text": "vv. 35-43",
+   "start": "ECC.9.35",
+   "end": "ECC.9.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.13-16.1",
+   "at": 940,
+   "text": "2 Sam. xx. 14-22",
+   "start": "2SA.20.14",
+   "end": "2SA.20.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.13-16.2",
+   "at": 607,
+   "text": "ver. 11",
+   "start": "ECC.9.11",
+   "end": "ECC.9.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.13-16.2",
+   "at": 1543,
+   "text": "1 Thess. i. 10",
+   "start": "1TH.1.10",
+   "end": "1TH.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.17-18.1",
+   "at": 1072,
+   "text": "Matt. xii. 18",
+   "start": "MAT.12.18",
+   "end": "MAT.12.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.17-18.1",
+   "at": 1261,
+   "text": "Ps. Ixxii. 6",
+   "start": "PSA.72.6",
+   "end": "PSA.72.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.17-18.3",
+   "at": 132,
+   "text": "1 Cor. xv. 33",
+   "start": "1CO.15.33",
+   "end": "1CO.15.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.17-18.3",
+   "at": 495,
+   "text": "1 Cor. v. 6",
+   "start": "1CO.5.6",
+   "end": "1CO.5.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.17-18.3",
+   "at": 590,
+   "text": "Heb. xii. 15",
+   "start": "HEB.12.15",
+   "end": "HEB.12.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.9.17-18.3",
+   "at": 1413,
+   "text": "Zech. xiii. 1",
+   "start": "ZEC.13.1",
+   "end": "ZEC.13.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.1.1",
+   "at": 797,
+   "text": "1 Cor. v. 6",
+   "start": "1CO.5.6",
+   "end": "1CO.5.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.1.1",
+   "at": 1785,
+   "text": "Phil. i. 10",
+   "start": "PHP.1.10",
+   "end": "PHP.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.1.1",
+   "at": 1798,
+   "text": "ii. 15, 16",
+   "start": "PHP.2.15",
+   "end": "PHP.2.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.1.1",
+   "at": 1810,
+   "text": "iv. 8",
+   "start": "PHP.4.8",
+   "end": "PHP.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.1.2",
+   "at": 1508,
+   "text": "Rev. xvi. 15",
+   "start": "REV.16.15",
+   "end": "REV.16.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.2-3.1",
+   "at": 166,
+   "text": "ii. 14",
+   "start": "ECC.2.14",
+   "end": "ECC.2.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.2-3.3",
+   "at": 147,
+   "text": "Gen. xxxiii. 13",
+   "start": "GEN.33.13",
+   "end": "GEN.33.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.2-3.3",
+   "at": 197,
+   "text": "Exod. xviii. 17-24",
+   "start": "EXO.18.17",
+   "end": "EXO.18.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.2-3.3",
+   "at": 272,
+   "text": "1 Sam. xxv. 20-35",
+   "start": "1SA.25.20",
+   "end": "1SA.25.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.4.1",
+   "at": 214,
+   "text": "1 Pet. ii. 18",
+   "start": "1PE.2.18",
+   "end": "1PE.2.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.4.1",
+   "at": 515,
+   "text": "1 Sam. xx. 34, 42",
+   "start": "1SA.20.34",
+   "end": "1SA.20.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.4.1",
+   "at": 515,
+   "text": "1 Sam. xx. 34, 42",
+   "start": "1SA.21.1",
+   "end": "1SA.21.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.4.1",
+   "at": 1541,
+   "text": "Prov. xvi. 82",
+   "start": "PRO.16.82",
+   "end": "PRO.16.82",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.4.2",
+   "at": 627,
+   "text": "Col. iii. 12-15",
+   "start": "COL.3.12",
+   "end": "COL.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.5-7.1",
+   "at": 1461,
+   "text": "Esth. vi. 8, 9",
+   "start": "EST.6.8",
+   "end": "EST.6.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.5-7.2",
+   "at": 1694,
+   "text": "Jer. xlv. 5",
+   "start": "JER.45.5",
+   "end": "JER.45.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.10.1",
+   "at": 1117,
+   "text": "Matt. xi. 12",
+   "start": "MAT.11.12",
+   "end": "MAT.11.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.10.2",
+   "at": 364,
+   "text": "Isa. xl. 29",
+   "start": "ISA.40.29",
+   "end": "ISA.40.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.11.1",
+   "at": 657,
+   "text": "Mic. vii. 5",
+   "start": "MIC.7.5",
+   "end": "MIC.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.11.1",
+   "at": 1179,
+   "text": "2 Tim. iv. 3",
+   "start": "2TI.4.3",
+   "end": "2TI.4.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.11.1",
+   "at": 1450,
+   "text": "Ps. xii. 4",
+   "start": "PSA.12.5",
+   "end": "PSA.12.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.11.1",
+   "at": 1656,
+   "text": "Tit. ii. 10",
+   "start": "TIT.2.10",
+   "end": "TIT.2.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.1",
+   "at": 1368,
+   "text": "Ps. xlv. 2",
+   "start": "PSA.45.3",
+   "end": "PSA.45.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.2",
+   "at": 380,
+   "text": "Gen. xxxiii. 1-16",
+   "start": "GEN.33.1",
+   "end": "GEN.33.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.2",
+   "at": 475,
+   "text": "1 Sam. xxv. 22-35",
+   "start": "1SA.25.22",
+   "end": "1SA.25.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.3",
+   "at": 340,
+   "text": "Ps. Ixiv. 8",
+   "start": "PSA.64.9",
+   "end": "PSA.64.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.3",
+   "at": 406,
+   "text": "Prov. x. 9",
+   "start": "PRO.10.9",
+   "end": "PRO.10.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.3",
+   "at": 638,
+   "text": "Ps. ii. 1-4",
+   "start": "PSA.2.1",
+   "end": "PSA.2.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.4",
+   "at": 804,
+   "text": "Rev. iii. 18",
+   "start": "REV.3.18",
+   "end": "REV.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.4",
+   "at": 1502,
+   "text": "Prov. xxii. 15",
+   "start": "PRO.22.15",
+   "end": "PRO.22.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.16-17.1",
+   "at": 1001,
+   "text": "Isa. iii. 4",
+   "start": "ISA.3.4",
+   "end": "ISA.3.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.16-17.1",
+   "at": 1262,
+   "text": "Hos. vii. 3-5",
+   "start": "HOS.7.3",
+   "end": "HOS.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.16-17.2",
+   "at": 627,
+   "text": "Isa. xxxii. 1",
+   "start": "ISA.32.1",
+   "end": "ISA.32.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.16-17.2",
+   "at": 917,
+   "text": "Rom. xiii. 14",
+   "start": "ROM.13.14",
+   "end": "ROM.13.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.16-17.2",
+   "at": 1228,
+   "text": "Prov. xxxi. 4",
+   "start": "PRO.31.4",
+   "end": "PRO.31.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.18.1",
+   "at": 202,
+   "text": "Prov. xxiii. 21",
+   "start": "PRO.23.21",
+   "end": "PRO.23.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.18.4",
+   "at": 660,
+   "text": "Hos. vii. 9",
+   "start": "HOS.7.9",
+   "end": "HOS.7.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.19.2",
+   "at": 234,
+   "text": "Philip. iii. 19",
+   "start": "PHP.3.19",
+   "end": "PHP.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.19.2",
+   "at": 615,
+   "text": "Ps. xvi. 5",
+   "start": "PSA.16.5",
+   "end": "PSA.16.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.20.1",
+   "at": 625,
+   "text": "Exod. xxii. 28",
+   "start": "EXO.22.27",
+   "end": "EXO.22.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.20.1",
+   "at": 860,
+   "text": "2 Pet. ii. 10",
+   "start": "2PE.2.10",
+   "end": "2PE.2.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.20.1",
+   "at": 1152,
+   "text": "Esth. ii. 21-23",
+   "start": "EST.2.21",
+   "end": "EST.2.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.20.1",
+   "at": 1468,
+   "text": "Hab. ii. 11",
+   "start": "HAB.2.11",
+   "end": "HAB.2.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.20.3",
+   "at": 225,
+   "text": "Ezek. xi. 5",
+   "start": "EZK.11.5",
+   "end": "EZK.11.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.20.3",
+   "at": 350,
+   "text": "Ps. ii. 12",
+   "start": "PSA.2.12",
+   "end": "PSA.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.1",
+   "at": 307,
+   "text": "2 Cor. i. 20",
+   "start": "2CO.1.20",
+   "end": "2CO.1.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.1",
+   "at": 1169,
+   "text": "Prov. xix. 17",
+   "start": "PRO.19.17",
+   "end": "PRO.19.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.1",
+   "at": 1463,
+   "text": "Heb. vi. 10",
+   "start": "HEB.6.10",
+   "end": "HEB.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.2",
+   "at": 494,
+   "text": "Matt. xiii. 8",
+   "start": "MAT.13.8",
+   "end": "MAT.13.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.2",
+   "at": 743,
+   "text": "Isa. xxxii. 20",
+   "start": "ISA.32.20",
+   "end": "ISA.32.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.2",
+   "at": 916,
+   "text": "Ps. Ixxiv. 9",
+   "start": "PSA.74.9",
+   "end": "PSA.74.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.2",
+   "at": 930,
+   "text": "xxxv. 13",
+   "start": "PSA.35.13",
+   "end": "PSA.35.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.2",
+   "at": 1391,
+   "text": "1 Thess. ii. 19, 20",
+   "start": "1TH.2.19",
+   "end": "1TH.2.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.3",
+   "at": 714,
+   "text": "Gal. vi. 9",
+   "start": "GAL.6.9",
+   "end": "GAL.6.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.4",
+   "at": 686,
+   "text": "Gal. vi. 9",
+   "start": "GAL.6.9",
+   "end": "GAL.6.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.1.4",
+   "at": 698,
+   "text": "Hab. ii. 3",
+   "start": "HAB.2.3",
+   "end": "HAB.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.2.1",
+   "at": 156,
+   "text": "Gal. vi. 10",
+   "start": "GAL.6.10",
+   "end": "GAL.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.2.1",
+   "at": 383,
+   "text": "1 Cor. xvi. 2",
+   "start": "1CO.16.2",
+   "end": "1CO.16.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.2.3",
+   "at": 714,
+   "text": "Prov. xiii. 24",
+   "start": "PRO.13.24",
+   "end": "PRO.13.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.2.3",
+   "at": 730,
+   "text": "Ps. cxii. 9",
+   "start": "PSA.112.9",
+   "end": "PSA.112.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.2.3",
+   "at": 1193,
+   "text": "Prov. iii. 9",
+   "start": "PRO.3.9",
+   "end": "PRO.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.2.3",
+   "at": 1324,
+   "text": "Isa. xli. 8",
+   "start": "ISA.41.8",
+   "end": "ISA.41.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.3.1",
+   "at": 338,
+   "text": "Gen. xii. 2",
+   "start": "GEN.12.2",
+   "end": "GEN.12.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.3.1",
+   "at": 1312,
+   "text": "Matt. xxv. 40",
+   "start": "MAT.25.40",
+   "end": "MAT.25.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.3.1",
+   "at": 1905,
+   "text": "Rev. xxii. 11",
+   "start": "REV.22.11",
+   "end": "REV.22.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.4.1",
+   "at": 1328,
+   "text": "Prov. xx. 4",
+   "start": "PRO.20.4",
+   "end": "PRO.20.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.4.2",
+   "at": 742,
+   "text": "Heb. iii. 12, 18",
+   "start": "HEB.3.12",
+   "end": "HEB.3.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.4.2",
+   "at": 742,
+   "text": "Heb. iii. 12, 18",
+   "start": "HEB.3.18",
+   "end": "HEB.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.4.2",
+   "at": 1373,
+   "text": "Prov. xv. 19",
+   "start": "PRO.15.19",
+   "end": "PRO.15.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.4.3",
+   "at": 1050,
+   "text": "1 Pet. ii. 7",
+   "start": "1PE.2.7",
+   "end": "1PE.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.5.2",
+   "at": 232,
+   "text": "v. 9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.6.1",
+   "at": 140,
+   "text": "Hos. x. 12",
+   "start": "HOS.10.12",
+   "end": "HOS.10.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.6.1",
+   "at": 239,
+   "text": "2 Tim. iv. 2",
+   "start": "2TI.4.2",
+   "end": "2TI.4.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.6.1",
+   "at": 1250,
+   "text": "Gal. vi. 9",
+   "start": "GAL.6.9",
+   "end": "GAL.6.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.6.1",
+   "at": 1449,
+   "text": "Prov. xi. 18",
+   "start": "PRO.11.18",
+   "end": "PRO.11.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 466,
+   "text": "Mal. iv. 2",
+   "start": "MAL.3.20",
+   "end": "MAL.3.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 805,
+   "text": "xii. 1",
+   "start": "ECC.12.1",
+   "end": "ECC.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 1055,
+   "text": "Job. x. 21, 22",
+   "start": "JOB.10.21",
+   "end": "JOB.10.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 1338,
+   "text": "Psalms xlix. 19",
+   "start": "PSA.49.20",
+   "end": "PSA.49.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 1355,
+   "text": "2 Thess. i. 9",
+   "start": "2TH.1.9",
+   "end": "2TH.1.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 1428,
+   "text": "Matt. xxii. 13",
+   "start": "MAT.22.13",
+   "end": "MAT.22.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 1889,
+   "text": "Luke vi. 21, 23, 24, 25",
+   "start": "LUK.6.21",
+   "end": "LUK.6.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 1889,
+   "text": "Luke vi. 21, 23, 24, 25",
+   "start": "LUK.6.23",
+   "end": "LUK.6.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 2091,
+   "text": "Matt. xiii. 47",
+   "start": "MAT.13.47",
+   "end": "MAT.13.47",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 2256,
+   "text": "Ps. xvi. 2",
+   "start": "PSA.16.2",
+   "end": "PSA.16.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.7.3",
+   "at": 2268,
+   "text": "lxxxvii. 7",
+   "start": "PSA.87.7",
+   "end": "PSA.87.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.9-10.1",
+   "at": 968,
+   "text": "Num. xv. 39",
+   "start": "NUM.15.39",
+   "end": "NUM.15.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.9-10.1",
+   "at": 981,
+   "text": "Deut. xxix. 19",
+   "start": "DEU.29.18",
+   "end": "DEU.29.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.9-10.1",
+   "at": 1039,
+   "text": "Eccl. vii. 1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.9-10.2",
+   "at": 1223,
+   "text": "2 Tim. ii. 22",
+   "start": "2TI.2.22",
+   "end": "2TI.2.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.11.9-10.4",
+   "at": 1080,
+   "text": "Rev. xx. 11, 12",
+   "start": "REV.20.11",
+   "end": "REV.20.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.1",
+   "at": 492,
+   "text": "Zech. xii. 1",
+   "start": "ZEC.12.1",
+   "end": "ZEC.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.1",
+   "at": 1455,
+   "text": "Rom. i. 28",
+   "start": "ROM.1.28",
+   "end": "ROM.1.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.2",
+   "at": 510,
+   "text": "Gen. i. 26",
+   "start": "GEN.1.26",
+   "end": "GEN.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.2",
+   "at": 537,
+   "text": "Ps. cxlix. 2",
+   "start": "PSA.149.2",
+   "end": "PSA.149.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.2",
+   "at": 551,
+   "text": "Isa. liv. 5",
+   "start": "ISA.54.5",
+   "end": "ISA.54.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.2",
+   "at": 906,
+   "text": "Ps. civ. 30",
+   "start": "PSA.104.30",
+   "end": "PSA.104.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.2",
+   "at": 1383,
+   "text": "Ps. xvi. 8",
+   "start": "PSA.16.8",
+   "end": "PSA.16.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.3",
+   "at": 1256,
+   "text": "Prov. x. 5",
+   "start": "PRO.10.5",
+   "end": "PRO.10.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.3",
+   "at": 1646,
+   "text": "2 Sam. xix. 35",
+   "start": "2SA.19.36",
+   "end": "2SA.19.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.4",
+   "at": 567,
+   "text": "2 Cor. v. 1",
+   "start": "2CO.5.1",
+   "end": "2CO.5.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.1.5",
+   "at": 562,
+   "text": "Prov. xvi. 31",
+   "start": "PRO.16.31",
+   "end": "PRO.16.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.2",
+   "at": 105,
+   "text": "2 Cor. v. 1",
+   "start": "2CO.5.1",
+   "end": "2CO.5.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.2",
+   "at": 465,
+   "text": "Isa. xxxv. 3",
+   "start": "ISA.35.3",
+   "end": "ISA.35.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.2",
+   "at": 702,
+   "text": "Zech. viii. 4",
+   "start": "ZEC.8.4",
+   "end": "ZEC.8.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.3",
+   "at": 143,
+   "text": "Ps. civ. 23",
+   "start": "PSA.104.23",
+   "end": "PSA.104.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.4",
+   "at": 418,
+   "text": "Ps. xc. 10",
+   "start": "PSA.90.10",
+   "end": "PSA.90.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.5",
+   "at": 653,
+   "text": "v. 1",
+   "start": "ECC.12.1",
+   "end": "ECC.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.6",
+   "at": 520,
+   "text": "Ps lxxi. 17",
+   "start": "PSA.71.17",
+   "end": "PSA.71.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.3-6.6",
+   "at": 763,
+   "text": "Isa. xlv. 3",
+   "start": "ISA.45.3",
+   "end": "ISA.45.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.1",
+   "at": 821,
+   "text": "Gen. ii. 7",
+   "start": "GEN.2.7",
+   "end": "GEN.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.1",
+   "at": 996,
+   "text": "Gen. iii. 19",
+   "start": "GEN.3.19",
+   "end": "GEN.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.1",
+   "at": 1169,
+   "text": "Ps. civ. 29",
+   "start": "PSA.104.29",
+   "end": "PSA.104.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.2",
+   "at": 985,
+   "text": "Rom. viii. 23",
+   "start": "ROM.8.23",
+   "end": "ROM.8.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.2",
+   "at": 1007,
+   "text": "Isa. xxv. 8",
+   "start": "ISA.25.8",
+   "end": "ISA.25.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.2",
+   "at": 1188,
+   "text": "Gen. ii. 7",
+   "start": "GEN.2.7",
+   "end": "GEN.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.3",
+   "at": 1069,
+   "text": "2 Cor. v. 6-8",
+   "start": "2CO.5.6",
+   "end": "2CO.5.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.4",
+   "at": 1062,
+   "text": "Tit. ii. 13",
+   "start": "TIT.2.13",
+   "end": "TIT.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.4",
+   "at": 1479,
+   "text": "1 Sam. xx. 3",
+   "start": "1SA.20.3",
+   "end": "1SA.20.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.7.4",
+   "at": 1826,
+   "text": "Ezek. xxxiii. 11",
+   "start": "EZK.33.11",
+   "end": "EZK.33.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.8.1",
+   "at": 147,
+   "text": "i. 2",
+   "start": "ECC.1.2",
+   "end": "ECC.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.9.1",
+   "at": 453,
+   "text": "Matt. vi. 23",
+   "start": "MAT.6.23",
+   "end": "MAT.6.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.9.1",
+   "at": 1712,
+   "text": "Matt. xiii. 52",
+   "start": "MAT.13.52",
+   "end": "MAT.13.52",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.9.1",
+   "at": 1815,
+   "text": "2 Tim. iv. 5",
+   "start": "2TI.4.5",
+   "end": "2TI.4.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.9.2",
+   "at": 409,
+   "text": "Col. iii. 16",
+   "start": "COL.3.16",
+   "end": "COL.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.10.1",
+   "at": 346,
+   "text": "Rom. xv. 2",
+   "start": "ROM.15.2",
+   "end": "ROM.15.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.10.1",
+   "at": 815,
+   "text": "Prov. xv. 23",
+   "start": "PRO.15.23",
+   "end": "PRO.15.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.10.1",
+   "at": 829,
+   "text": "xxv. 11",
+   "start": "PRO.25.11",
+   "end": "PRO.25.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.10.1",
+   "at": 2266,
+   "text": "2 Cor. ii. 17",
+   "start": "2CO.2.17",
+   "end": "2CO.2.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.10.1",
+   "at": 2281,
+   "text": "iv. 2",
+   "start": "2CO.4.2",
+   "end": "2CO.4.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.10.2",
+   "at": 855,
+   "text": "1 Cor. x. 33",
+   "start": "1CO.10.33",
+   "end": "1CO.10.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.11.3",
+   "at": 873,
+   "text": "Matt. xii. 45",
+   "start": "MAT.12.45",
+   "end": "MAT.12.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.12.1",
+   "at": 406,
+   "text": "Ps. cxix. 24",
+   "start": "PSA.119.24",
+   "end": "PSA.119.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.12.1",
+   "at": 538,
+   "text": "2 Tim. iii. 17",
+   "start": "2TI.3.17",
+   "end": "2TI.3.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.13.1",
+   "at": 159,
+   "text": "2 Tim. iii. 15",
+   "start": "2TI.3.15",
+   "end": "2TI.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.13.2",
+   "at": 528,
+   "text": "Jer. xxxii. 40",
+   "start": "JER.32.40",
+   "end": "JER.32.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.13.4",
+   "at": 544,
+   "text": "v. 10",
+   "start": "ECC.12.10",
+   "end": "ECC.12.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.13.4",
+   "at": 1016,
+   "text": "vii. 1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.1",
+   "at": 612,
+   "text": "1 Cor. iv. 5",
+   "start": "1CO.4.5",
+   "end": "1CO.4.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.1",
+   "at": 928,
+   "text": "v. 22",
+   "start": "ECC.12.22",
+   "end": "ECC.12.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.1",
+   "at": 1337,
+   "text": "Rev. xx. 11, 12",
+   "start": "REV.20.11",
+   "end": "REV.20.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.1",
+   "at": 1804,
+   "text": "2 Cor. v. 10",
+   "start": "2CO.5.10",
+   "end": "2CO.5.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.1",
+   "at": 1818,
+   "text": "Rom. xiv. 10-12",
+   "start": "ROM.14.10",
+   "end": "ROM.14.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.2",
+   "at": 859,
+   "text": "Matt. xii. 36",
+   "start": "MAT.12.36",
+   "end": "MAT.12.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.2",
+   "at": 1439,
+   "text": "Rom. ii. 5",
+   "start": "ROM.2.5",
+   "end": "ROM.2.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.3",
+   "at": 404,
+   "text": "Mal. iii. 18",
+   "start": "MAL.3.18",
+   "end": "MAL.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.3",
+   "at": 585,
+   "text": "Ps. i. 5",
+   "start": "PSA.1.5",
+   "end": "PSA.1.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.3",
+   "at": 984,
+   "text": "Ps. xc. 8",
+   "start": "PSA.90.8",
+   "end": "PSA.90.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.3",
+   "at": 1680,
+   "text": "Rev. xxii. 20",
+   "start": "REV.22.20",
+   "end": "REV.22.20",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}

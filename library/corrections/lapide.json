@@ -1,0 +1,426 @@
+{
+ "work": "lapide",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "difticult",
+   "to": "difficult"
+  },
+  {
+   "from": "7vho",
+   "to": "who"
+  },
+  {
+   "from": "poiver",
+   "to": "power"
+  },
+  {
+   "from": " 7vere ",
+   "to": " were "
+  },
+  {
+   "from": "ans7vered",
+   "to": "answered"
+  },
+  {
+   "from": "/ knew",
+   "to": "I knew"
+  },
+  {
+   "from": "Cliristian",
+   "to": "Christian"
+  },
+  {
+   "from": "Lainb",
+   "to": "Lamb"
+  },
+  {
+   "from": "Natlianael",
+   "to": "Nathanael"
+  },
+  {
+   "from": "po7ver",
+   "to": "power"
+  },
+  {
+   "from": " 7vith ",
+   "to": " with "
+  },
+  {
+   "from": "Nazaretli",
+   "to": "Nazareth"
+  },
+  {
+   "from": "Caria",
+   "to": "Cana"
+  },
+  {
+   "from": " ivere ",
+   "to": " were "
+  },
+  {
+   "from": " 7vas ",
+   "to": " was "
+  },
+  {
+   "from": "Nicodenius",
+   "to": "Nicodemus"
+  },
+  {
+   "from": "7vhere",
+   "to": "where"
+  },
+  {
+   "from": "judginent",
+   "to": "judgment"
+  },
+  {
+   "from": "7uoman",
+   "to": "woman"
+  },
+  {
+   "from": " Arf ",
+   "to": " Art "
+  },
+  {
+   "from": "7vater",
+   "to": "water"
+  },
+  {
+   "from": " slie ",
+   "to": " she "
+  },
+  {
+   "from": "conieth",
+   "to": "cometh"
+  },
+  {
+   "from": "/ am",
+   "to": "I am"
+  },
+  {
+   "from": "7vork",
+   "to": "work"
+  },
+  {
+   "from": "/ know",
+   "to": "I know"
+  },
+  {
+   "from": "/ have",
+   "to": "I have"
+  },
+  {
+   "from": "Viilg",
+   "to": "Vulg"
+  },
+  {
+   "from": "tiiee",
+   "to": "thee"
+  },
+  {
+   "from": "7vorse",
+   "to": "worse"
+  },
+  {
+   "from": "Chrysostorn",
+   "to": "Chrysostom"
+  },
+  {
+   "from": "tiiese",
+   "to": "these"
+  },
+  {
+   "from": "ariother",
+   "to": "another"
+  },
+  {
+   "from": "/ will",
+   "to": "I will"
+  },
+  {
+   "from": " Hoiv ",
+   "to": " How "
+  },
+  {
+   "from": " lieaven ",
+   "to": " heaven "
+  },
+  {
+   "from": "Avhile",
+   "to": "While"
+  },
+  {
+   "from": "fiow",
+   "to": "flow"
+  },
+  {
+   "from": "/ and",
+   "to": "I and"
+  },
+  {
+   "from": "tliought",
+   "to": "thought"
+  },
+  {
+   "from": "/ who",
+   "to": "I who"
+  },
+  {
+   "from": "througli",
+   "to": "through"
+  },
+  {
+   "from": "/ seek",
+   "to": "I seek"
+  },
+  {
+   "from": "comnion",
+   "to": "common"
+  },
+  {
+   "from": "/ must",
+   "to": "I must"
+  },
+  {
+   "from": "7vhen",
+   "to": "when"
+  },
+  {
+   "from": "sliepherd",
+   "to": "shepherd"
+  },
+  {
+   "from": "7vhat",
+   "to": "what"
+  },
+  {
+   "from": "Churcli",
+   "to": "Church"
+  },
+  {
+   "from": "do7vn",
+   "to": "down"
+  },
+  {
+   "from": "eftect",
+   "to": "effect"
+  },
+  {
+   "from": "Templo",
+   "to": "Temple"
+  },
+  {
+   "from": "tliinks",
+   "to": "thinks"
+  },
+  {
+   "from": "wliither",
+   "to": "whither"
+  },
+  {
+   "from": "Epli",
+   "to": "Eph"
+  },
+  {
+   "from": " wlien ",
+   "to": " when "
+  },
+  {
+   "from": "7uas",
+   "to": "was"
+  },
+  {
+   "from": "sa7v",
+   "to": "saw"
+  },
+  {
+   "from": "sometliing",
+   "to": "something"
+  },
+  {
+   "from": "wlience",
+   "to": "whence"
+  },
+  {
+   "from": "7vill",
+   "to": "will"
+  },
+  {
+   "from": "aivay",
+   "to": "away"
+  },
+  {
+   "from": " hoiv ",
+   "to": " how "
+  },
+  {
+   "from": "7vorld",
+   "to": "world"
+  },
+  {
+   "from": "lieavenly",
+   "to": "heavenly"
+  },
+  {
+   "from": "Theretore",
+   "to": "Therefore"
+  },
+  {
+   "from": "Knoiving",
+   "to": "Knowing"
+  },
+  {
+   "from": "Fatiier",
+   "to": "Father"
+  },
+  {
+   "from": "flesli",
+   "to": "flesh"
+  },
+  {
+   "from": "7vashed",
+   "to": "washed"
+  },
+  {
+   "from": "/ speak",
+   "to": "I speak"
+  },
+  {
+   "from": "ivhen",
+   "to": "when"
+  },
+  {
+   "from": "/ say",
+   "to": "I say"
+  },
+  {
+   "from": "7vhy",
+   "to": "why"
+  },
+  {
+   "from": "niglit",
+   "to": "night"
+  },
+  {
+   "from": "triumpli",
+   "to": "triumph"
+  },
+  {
+   "from": "helieveth",
+   "to": "believeth"
+  },
+  {
+   "from": "froin",
+   "to": "from"
+  },
+  {
+   "from": "/ live",
+   "to": "I live"
+  },
+  {
+   "from": "kno7v",
+   "to": "know"
+  },
+  {
+   "from": "sceth",
+   "to": "seeth"
+  },
+  {
+   "from": "tiiere",
+   "to": "there"
+  },
+  {
+   "from": "partiy",
+   "to": "partly"
+  },
+  {
+   "from": "7vord",
+   "to": "word"
+  },
+  {
+   "from": "7vritten",
+   "to": "written"
+  },
+  {
+   "from": "suftering",
+   "to": "suffering"
+  },
+  {
+   "from": "/ came",
+   "to": "I came"
+  },
+  {
+   "from": "7vhich",
+   "to": "which"
+  },
+  {
+   "from": "No7v",
+   "to": "Now"
+  },
+  {
+   "from": " ali ",
+   "to": " all "
+  },
+  {
+   "from": "ivith",
+   "to": "with"
+  },
+  {
+   "from": "7vithout",
+   "to": "without"
+  },
+  {
+   "from": "7uoven",
+   "to": "woven"
+  },
+  {
+   "from": "whorn",
+   "to": "whom"
+  },
+  {
+   "from": "/ thirst",
+   "to": "I thirst"
+  },
+  {
+   "from": "liumble",
+   "to": "humble"
+  },
+  {
+   "from": "poiinds",
+   "to": "pounds"
+  },
+  {
+   "from": "ivent",
+   "to": "went"
+  },
+  {
+   "from": "kiiew",
+   "to": "knew"
+  },
+  {
+   "from": "7veepest",
+   "to": "weepest"
+  },
+  {
+   "from": "7veek",
+   "to": "week"
+  },
+  {
+   "from": "botli",
+   "to": "both"
+  },
+  {
+   "from": "nnto",
+   "to": "unto"
+  },
+  {
+   "from": "sucli",
+   "to": "such"
+  },
+  {
+   "from": "hi the beginning, &c.",
+   "to": "In the beginning, &c."
+  }
+ ]
+}
