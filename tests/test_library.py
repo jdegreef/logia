@@ -10,6 +10,7 @@ import re
 import sys
 import unicodedata
 import unittest
+from unittest import mock
 from contextlib import redirect_stdout
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -173,6 +174,17 @@ class VerifyCatchesChanges(unittest.TestCase):
         bare = "".join(c for c in unicodedata.normalize("NFD", word) if not unicodedata.combining(c))
         self.assertNotEqual(bare, word)
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
+
+
+class Counting(unittest.TestCase):
+    def test_counter_and_owner_tags_are_off_unless_set(self):
+        with mock.patch.multiple(build_site, GOATCOUNTER="", GOOGLE_VERIFY="", BING_VERIFY=""):
+            self.assertEqual(build_site.counter_script(), "")
+            self.assertEqual(build_site.site_owner_meta(), "")
+        with mock.patch.multiple(build_site, GOATCOUNTER="logia", GOOGLE_VERIFY="abc", BING_VERIFY=""):
+            self.assertIn('data-goatcounter="https://logia.goatcounter.com/count"', build_site.counter_script())
+            self.assertEqual(build_site.counter_script(noindex=True), "")
+            self.assertEqual(build_site.site_owner_meta(), '\n<meta name="google-site-verification" content="abc">')
 
 
 class Site(unittest.TestCase):
