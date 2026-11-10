@@ -893,6 +893,8 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta property="og:image:alt" content="{e(t("site.card_alt"))}">
 <meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{json_ld(ld)}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 <meta name="logia-api" content="{API_URL}">
 <meta name="logia-owb" content="{OWB_SITE}">
 <meta name="theme-color" content="#f4eee3" media="(prefers-color-scheme: light)">
@@ -1476,13 +1478,17 @@ def book_page(lib, book):
         dek = t("book.dek", n=total, done=done)
     else:
         dek = t("book.dek_none", n=total)
+    keep = (f'<p class="lg-keep" data-keep="{e(json.dumps([chapter_url(book, c) for c in range(1, total + 1)]))}" '
+            f'data-saving="{e(t("book.keep_saving"))}" data-done="{e(t("book.keep_done", book=name))}" '
+            f'data-failed="{e(t("book.keep_failed"))}" hidden><button type="button" class="button ghost">'
+            f'{e(t("book.keep", book=name))}</button> <span class="lg-quiet" role="status">{e(t("book.keep_note"))}</span></p>')
     read = (f'<p class="lg-quiet lg-read-count" data-read-count="{e(t("book.read_count", total=len(have)))}" '
             f'data-prefix="/{book.lower()}/" hidden></p>' if have else "")
     bar = (f'<nav class="lg-book-bar" aria-label="{e(t("book.bar", book=name))}"><span class="lg-book-bar-name">{e(name)}</span>'
            f'<div class="chap-pills">{chapter_pills(lib, book, cov)}</div></nav>' if len(have) > 12 else "")
     body = f"""
 <header class="page-head"><p class="eyebrow"><a href="/read/">{e(t("read.title"))}</a> · <a href="/read/#{"ot" if testament == "old" else "nt"}">{e(t("testaments." + testament))}</a> · {e(t("canon." + canon_section(lib, book)))}</p>
-<h1>{e(name)}</h1><p class="dek">{e(dek)}</p>{start}{go}{read}</header>
+<h1>{e(name)}</h1><p class="dek">{e(dek)}</p>{start}{go}{read}{keep}</header>
 {bar}
 {ways}
 <section class="lg-block" id="passages" aria-labelledby="h-chapters"><h2 id="h-chapters">{e(t("book.chapters"))}</h2>
@@ -3072,7 +3078,8 @@ def work_page(lib, wid):
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section></details>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
-<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>"""
+<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>
+{also_on(lib, wid, comments)}"""
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
 
@@ -3091,6 +3098,26 @@ def work_tiles(lib, wid, comments):
         f'<span class="lg-tile-bar" title="{e(t("commentators.chapter_words", chapter=f"{lib.books[b]['en']} {ch}", n=f"{words[(b, ch)]:,}"))}">'
         f'<span style="width:{100 * words[(b, ch)] / top:.0f}%"></span></span></a></li>'
         for (b, ch), cs in chapters.items())
+
+def also_on(lib, wid, comments):
+    """The other works in Logia on the same books, oldest first, each with
+    its author, era and how many excerpts it has on those books."""
+    books = list(dict.fromkeys(ref_parts(c["start"])[0] for c in comments))
+    counts = Counter((c["work"], ref_parts(c["start"])[0]) for c in lib.comments
+                     if c["work"] != wid and ref_parts(c["start"])[0] in books)
+    sections = []
+    for b in books:
+        rows = "".join(
+            f'<li><span class="lg-also-who"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a>'
+            f'<span class="lg-quiet">{e(a["dates"])} · {e(t("eras." + a["era"]))}</span></span>'
+            f'<a href="/works/{x}/"><i>{e(lib.works[x]["title"])}</i></a>'
+            f'<span class="lg-quiet">{e(t("work.excerpts", n=f"{counts[(x, b)]:,}"))}</span></li>'
+            for x in lib.ordered_works([x for x in lib.works if counts[(x, b)]]) for a in [lib.author_of(x)])
+        if rows:
+            sections.append(f'<section class="lg-block" id="also-{b.lower()}"><h2>{e(t("work.also_on", book=lib.books[b]["en"]))}</h2>'
+                            f'<p class="lg-quiet">{e(t("work.also_on_note", book=lib.books[b]["en"]))}</p>'
+                            f'<ul class="lg-also">{rows}</ul></section>')
+    return "".join(sections)
 
 
 def work_chapters(comments):
@@ -3293,6 +3320,44 @@ def saved_page(lib):
 <p class="actions"><a class="button" href="{e(href)}" data-login>{icon("user")} {e(t("account.saved_empty_sign_in"))}</a>
 <a class="button ghost" href="/jhn/3/#v16">{e(t("account.saved_empty_try"))}</a></p></div></section>"""
     return page(lib, t("account.saved_title"), body, "/saved/", noindex=True)
+
+
+def offline_page(lib):
+    """What the service worker (web/sw.js) shows for a page not saved on
+    this device when there is no connection. web/logia.js lists what is."""
+    body = f"""
+<header class="page-head"><h1>{e(t("offline.heading"))}</h1><p class="dek">{e(t("offline.dek"))}</p></header>
+<section class="lg-block" aria-labelledby="h-saved"><h2 id="h-saved">{e(t("offline.saved"))}</h2>
+<ul class="lg-offline-list" id="lg-offline-list" data-none="{e(t("offline.none"))}"></ul></section>
+<p class="actions"><a class="button" href="/">{e(t("offline.home"))}</a></p>"""
+    return page(lib, t("offline.title"), body, "/offline/", description=t("offline.dek"), noindex=True, canonical=False)
+
+
+APP_ICONS = (("icon-192.png", "192x192", "any"), ("icon-512.png", "512x512", "any"), ("maskable-512.png", "512x512", "maskable"))
+# The service worker keeps these from its first visit: the page frame and the
+# offline page (web/sw.js).
+SHELL_FONTS = ("/fonts/hanken-grotesk-latin-wght-normal.woff2", "/fonts/gentium-book-plus-latin-400-normal.woff2")
+
+
+def app_manifest():
+    """The web app manifest, so Logia can be installed to a home screen."""
+    return json.dumps({
+        "name": t("site.name"), "short_name": t("site.name"), "description": t("site.description"),
+        "lang": LANG, "start_url": "/", "scope": "/", "display": "standalone",
+        "background_color": "#faf6ef", "theme_color": "#f4eee3",
+        "icons": [{"src": f"/icons/{n}", "sizes": z, "type": "image/png", "purpose": p} for n, z, p in APP_ICONS],
+    }, ensure_ascii=False, indent=1) + "\n"
+
+
+def service_worker(offline_html):
+    """web/sw.js with its list of files to keep from the first visit, and a
+    version that changes whenever any of them does."""
+    shell = [asset(n) for n in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "reader.js")]
+    shell += ["/favicon.svg", "/offline/", *SHELL_FONTS]
+    version = hashlib.sha256((json.dumps(shell) + offline_html).encode()).hexdigest()[:10]
+    text = published("sw.js")
+    return text.replace("var SHELL = [];", f"var SHELL = {json.dumps(shell)};", 1).replace(
+        'var VERSION = "dev";', f'var VERSION = "{version}";', 1)
 
 
 def not_found_page(lib):
@@ -4351,6 +4416,7 @@ def build():
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
     shutil.copy(os.path.join(WEB, "card.png"), os.path.join(SITE, "card.png"))
+    shutil.copytree(os.path.join(WEB, "icons"), os.path.join(SITE, "icons"))
     pages = ["/"]
     write("/", home_page(lib))
     write("/read/", read_page(lib))
@@ -4438,6 +4504,12 @@ def build():
     write("/signed-in/", signed_in_page(lib))
     write("/saved/", saved_page(lib))
     write("/404.html", not_found_page(lib))
+    offline = offline_page(lib)
+    write("/offline/", offline)
+    with open(os.path.join(SITE, "manifest.webmanifest"), "w", encoding="utf-8") as f:
+        f.write(app_manifest())
+    with open(os.path.join(SITE, "sw.js"), "w", encoding="utf-8") as f:
+        f.write(service_worker(offline))
     os.makedirs(os.path.join(SITE, "data"))
     for book, chapter in sorted(lib.coverage()):
         with open(os.path.join(SITE, "data", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
