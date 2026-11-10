@@ -136,6 +136,11 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-dot:hover { background: var(--lg-gold-ink); color: var(--bg); }
 .cx-dot.cx-cur { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
 .cx-dot.cx-off { opacity: .4; border-style: dashed; cursor: default; background: var(--surface); }
+/* The voices that don't fit in three lanes, folded into one pill at the top
+   right of the line. */
+.cx-dot.cx-more { left: auto; right: -12px; bottom: auto; top: 0; transform: none; border-color: var(--accent);
+  background: var(--accent-soft); color: var(--accent); }
+.cx-dot.cx-more::after { display: none; }
 .cx-dot.cx-off:hover { color: var(--text); }
 
 .cx-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
