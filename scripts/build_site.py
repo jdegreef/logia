@@ -671,53 +671,88 @@ def site_header(lib, current, path):
 </div></header>"""
 
 
+# The sources of the Bible text and its word data, credited in the footer
+# with a link each (CC BY asks for attribution): (catalog key, address).
+FOOT_SOURCES = (("owb", OWB_SITE + "/"), ("sblgnt", "https://sblgnt.com/"),
+                ("wlc", "https://tanach.us/"), ("macula", "https://github.com/Clear-Bible"),
+                ("oshb", "https://hb.openscriptures.org/"),
+                ("openbible", "https://www.openbible.info/labs/cross-references/"),
+                ("commentary", "/about/#checked"))
+
+_FOOTER = {}
+
+
 def site_footer(lib):
-    cov = lib.coverage()
+    """The footer is the same on every page, so it is built once."""
+    if id(lib) not in _FOOTER:
+        _FOOTER.clear()
+        _FOOTER[id(lib)] = build_footer(lib)
+    return _FOOTER[id(lib)]
 
-    # How much of each testament has commentary: the books that have some,
-    # each with its chapters done, and a bar of books out of the testament's.
-    codes = list(lib.books)
-    tiers = []
-    for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
-        started = [c for c in part if any(b == c for b, _c in cov)]
-        chips = "".join(
-            f'<li><a class="book-chip" href="/{c.lower()}/">{e(lib.books[c]["en"])} '
-            f'<span class="lg-chip-n">{e(t("footer.chapters_done", n=sum(1 for b, _c in cov if b == c), total=lib.books[c]["chapters"]))}</span></a></li>'
-            for c in started) or f'<li class="lg-quiet">{e(t("footer.none_yet"))}</li>'
-        tiers.append(f'<div class="testament" role="group" aria-labelledby="foot-{key}"><div class="testament-head">'
-                     f'<h3 id="foot-{key}">{e(t("testaments." + key))}</h3>'
-                     f'<span>{e(t("footer.books_done", n=len(started), total=len(part)))}</span></div>'
-                     f'<span class="lg-meter" aria-hidden="true"><span style="width:{100 * len(started) / len(part):.1f}%"></span></span>'
-                     f'<ul class="book-chips">{chips}</ul></div>')
 
+def build_footer(lib):
     def links(pairs):
         return "".join(f'<li><a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(label)}</a></li>'
                        for href, label in pairs)
 
-    read = [("/read/", t("nav.all_books"))] + [(f"/{b.lower()}/", lib.books[b]["en"])
-                                               for b in dict.fromkeys(b for b, _c in sorted(cov))][:4]
-    read += [("/topics/", t("nav.topics")), ("/readings/", t("nav.readings")), ("/sheets/", t("nav.sheets"))]
-    people = [("/commentators/", t("nav.all_commentators"))]
-    project = [("/about/", t("nav.about_logia")), ("/about/#checked", t("nav.checked")),
-               ("/ai/", t("nav.ai")), ("/new/", t("nav.new")), ("/explore/", t("nav.explore")), ("/linker/", t("nav.linker")),
-               (OWB_SITE + "/", t("nav.owb")), (GITHUB_URL, t("nav.source")),
-               (GITHUB_URL + "/issues/new", t("footer.report"))]
+    def column(key, pairs, extra=""):
+        return (f'<nav aria-labelledby="foot-{key}"><h2 id="foot-{key}">{e(t("footer." + key))}</h2>'
+                f'<ul>{links(pairs)}</ul>{extra}</nav>')
+
+    books = list(dict.fromkeys(b for b, _c in sorted(lib.coverage(), key=lambda bc: list(lib.books).index(bc[0]))))
+    read = ([("/read/", t("footer.all_books"))] + [(f"/{b.lower()}/", lib.books[b]["en"]) for b in books]
+            + [("/readings/", t("footer.readings")), ("/topics/", t("nav.topics")), ("/sheets/", t("nav.sheets"))])
+    explore = ([(f"/{b.lower()}/most-discussed/", t("footer.most_in", book=lib.books[b]["en"])) for b in books]
+               + [(g["path"], g["title"]) for g in guides()]
+               + [("/explore/", t("nav.explore")), ("/new/", t("nav.new"))])
+    people = [("/commentators/", t("nav.all_commentators"))] + [
+        (era_url(era), t("eras." + era)) for era in ERAS if any(a["era"] == era for a in lib.authors.values())]
+    data = [("/open-data/", t("footer.open_data"))] + [
+        (f"/downloads/logia-{LANG}.{x}", t("footer.download", kind=x.upper())) for x in ("json", "csv")] + [
+        (GITHUB_URL, t("nav.source"))]
+    about = [("/about/", t("nav.about_logia")), ("/about/#checked", t("nav.checked")),
+             ("/ai/", t("nav.ai")), ("/linker/", t("nav.linker")),
+             (OWB_SITE + "/", t("nav.owb")), (GITHUB_URL + "/issues/new", t("footer.report"))]
+
+    # The library in three numbers, counted at build time.
+    stats = "".join(f'<div><dt>{n:,}</dt><dd>{e(t("footer.stat_" + key))}</dd></div>' for key, n in (
+        ("excerpts", len(lib.comments)), ("commentators", len(lib.authors)), ("verses", len(lib.voices_on))))
+
+    # Each book's three most-discussed verses, as on its most-discussed page.
+    most = ""
+    for b in books:
+        ranked = sorted(verse_counts(lib, b).items(), key=lambda kv: (-kv[1], kv[0]))[:3]
+        chips = "".join(f'<li><a class="book-chip" href="{verse_url(b, ch, v)}">{e(verse_ref(lib, b, ch, v))} '
+                        f'<span class="lg-chip-n" title="{e(t("footer.excerpts_title", n=n))}">{n}</span></a></li>'
+                        for (ch, v), n in ranked)
+        most += f'<ul class="book-chips">{chips}</ul>'
+
+    sources = " · ".join(f'<a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(t("footer.sources." + key))}</a>'
+                         for key, href in FOOT_SOURCES)
+    find = e(t("footer.find"))
     return f"""<footer class="site"><div class="wrap">
-<div class="foot-top"><div class="foot-about">
+<div class="foot-top lg-foot-top"><div class="foot-about">
 <a class="brand" href="/">{MARK}<span class="brand-name">Logia</span></a>
 <p>{e(t("site.tagline"))}</p>
-<p class="foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("site.licence"))}</p>
+<form class="lg-search foot-search lg-foot-search" role="search" action="/read/" autocomplete="off">
+<input type="search" name="q" id="foot-q" placeholder="{e(t("search.placeholder"))}" aria-label="{find}" role="combobox" aria-expanded="false" aria-controls="foot-q-list" aria-autocomplete="list">
+<button type="submit" class="button">{e(t("search.go"))}</button>
+<ul class="lg-sugg" id="foot-q-list" role="listbox" aria-label="{find}" hidden></ul></form>
+<p class="lg-foot-actions"><a class="foot-resume" href="/" data-resume="{e(t("home.resume"))}" hidden></a>
+<a class="lg-foot-up" href="#">{e(t("footer.top"))}</a></p>
 </div>
-<nav class="foot-books" aria-labelledby="foot-read"><h2 id="foot-read">{e(t("footer.books_with"))}</h2>
-<div class="testaments">{"".join(tiers)}</div>
-<p class="lg-quiet lg-foot-note">{e(t("footer.every_book"))} <a href="/read/">{e(t("footer.all_books"))}</a></p></nav></div>
-<div class="foot-grid">
-<nav aria-labelledby="foot-r"><h2 id="foot-r">{e(t("footer.read"))}</h2><ul>{links(read)}</ul></nav>
-<nav aria-labelledby="foot-c"><h2 id="foot-c">{e(t("footer.commentators"))}</h2><ul>{links(people)}</ul>
-<p class="lg-foot-names">{" · ".join(f'<a href="/commentators/{a["id"]}/">{e(short_name(a))}</a>' for a in lib.ordered_authors())}</p></nav>
-<nav aria-labelledby="foot-p"><h2 id="foot-p">{e(t("footer.project"))}</h2><ul>{links(project)}</ul></nav>
+<section class="lg-foot-library" aria-labelledby="foot-library"><h2 id="foot-library">{e(t("footer.library"))}</h2>
+<dl class="lg-foot-stats">{stats}</dl>
+<h2 class="lg-foot-most">{e(t("footer.most"))}</h2>{most}</section></div>
+<div class="foot-grid lg-foot-grid">
+{column("read", read)}
+{column("explore", explore)}
+{column("commentators", people)}
+{column("data", data, f'<p class="foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("footer.cc0"))}</p>')}
+{column("project", about)}
 </div>
-<div class="foot-base"><p class="foot-review">{e(t("footer.review"))}</p><p>{e(t("footer.licences"))}</p></div>
+<div class="foot-base"><p class="foot-review"><span>{e(t("footer.review"))} <a href="/about/#checked">{e(t("footer.help_review"))}</a></span></p>
+<p class="lg-foot-sources">{e(t("footer.sources_label"))} {sources}</p></div>
 </div></footer>"""
 
 
@@ -2935,7 +2970,6 @@ def work_page(lib, wid):
         for c in work_start_here(lib, comments))
     start = (f'<section class="lg-block lg-start lg-work-start"><h2>{e(t("work.start_here"))}</h2>'
              f'<p class="lg-quiet">{e(t("work.start_note"))}</p><ul>{starts}</ul></section>' if starts else "")
-    contents = work_contents(lib, wid, comments)
     texts = lib.texts.get(wid, [])
     whole = ""
     if texts:
@@ -2963,9 +2997,25 @@ def work_page(lib, wid):
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
-<ol class="lg-contents">{contents}</ol></section>"""
+<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>"""
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+
+
+def work_tiles(lib, wid, comments):
+    """A work's chapters as tiles: the chapter's heading in the Open Word
+    Bible, how many excerpts and minutes of reading it holds, and a bar for
+    how much the work says on it beside its longest chapter."""
+    chapters = work_chapters(comments)
+    words = {k: sum(len(c["text"].split()) for c in cs) for k, cs in chapters.items()}
+    top = max(words.values(), default=1)
+    return "".join(
+        f'<li><a href="{work_chapter_url(wid, b, ch)}"><b>{e(lib.books[b]["en"])} {ch}</b>'
+        f'<span class="lg-tile-title">{e(lib.chapter_title(b, ch))}</span>'
+        f'<span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))} · {e(t("commentators.minutes", n=max(1, round(words[(b, ch)] / 230))))}</span>'
+        f'<span class="lg-tile-bar" title="{e(t("commentators.chapter_words", chapter=f"{lib.books[b]['en']} {ch}", n=f"{words[(b, ch)]:,}"))}">'
+        f'<span style="width:{100 * words[(b, ch)] / top:.0f}%"></span></span></a></li>'
+        for (b, ch), cs in chapters.items())
 
 
 def work_chapters(comments):
@@ -4832,6 +4882,10 @@ def build():
     for name, text in files.items():
         with open(os.path.join(SITE, "downloads", name), "w", encoding="utf-8") as f:
             f.write(text)
+    # The search's book names and commentators, for the footer's box on pages
+    # that don't carry them (web/logia.js).
+    with open(os.path.join(SITE, "search.json"), "w", encoding="utf-8") as f:
+        f.write(search_json(lib).replace("<\\/", "</"))
     write("/open-data/", open_data_page(lib, files))
     pages.append("/open-data/")
     write("/signed-in/", signed_in_page(lib))
