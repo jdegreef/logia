@@ -396,4 +396,74 @@
   }
   window.addEventListener("hashchange", openTarget);
   openTarget();
+  // Offline (web/sw.js): register the service worker, the "Keep this book
+  // for offline" button on a book's page, and the list on /offline/ of what
+  // this device holds. Cache names match web/sw.js.
+  var canKeep = "serviceWorker" in navigator && "caches" in window &&
+    (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1");
+  if (canKeep) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () { /* not available here */ });
+    });
+  }
+
+  var keepBox = document.querySelector("[data-keep]");
+  if (keepBox && canKeep) {
+    var keepUrls = JSON.parse(keepBox.getAttribute("data-keep"));
+    var keepBtn = keepBox.querySelector("button");
+    var keepSay = keepBox.querySelector("[role=status]");
+    var keepDone = function () { keepBtn.hidden = true; keepSay.textContent = keepBox.getAttribute("data-done"); };
+    keepBox.hidden = false;
+    caches.open("logia-kept").then(function (c) {
+      return Promise.all([c.match(keepUrls[0]), c.match(keepUrls[keepUrls.length - 1])]);
+    }).then(function (hits) { if (hits[0] && hits[1]) keepDone(); }).catch(function () { /* ignore */ });
+    keepBtn.addEventListener("click", function () {
+      keepBtn.disabled = true;
+      var failed = 0;
+      caches.open("logia-kept").then(function (cache) {
+        var one = function (i) {
+          if (i >= keepUrls.length) return Promise.resolve();
+          keepSay.textContent = fmt(keepBox.getAttribute("data-saving"), { done: i + 1, total: keepUrls.length });
+          return fetch(keepUrls[i]).then(function (res) {
+            if (!res.ok) throw new Error(res.status);
+            return res.clone().text().then(function (html) {
+              var m = html.match(/<script type="application\/json" id="chapter-data">([\s\S]*?)<\/script>/);
+              var data = m ? JSON.parse(m[1]) : {};
+              var files = [data.panel, data.comm].filter(Boolean);
+              return Promise.all(files.map(function (u) { return cache.add(u); })).then(function () { return cache.put(keepUrls[i], res); });
+            });
+          }).catch(function () { failed++; }).then(function () { return one(i + 1); });
+        };
+        return one(0);
+      }).then(function () {
+        keepBtn.disabled = false;
+        if (failed) keepSay.textContent = keepBox.getAttribute("data-failed");
+        else keepDone();
+      });
+    });
+  }
+
+  var offlineList = document.getElementById("lg-offline-list");
+  if (offlineList && "caches" in window) {
+    Promise.all(["logia-kept", "logia-pages"].map(function (name) {
+      return caches.open(name).then(function (c) {
+        return c.keys().then(function (keys) {
+          return Promise.all(keys.reverse().map(function (k) {
+            return c.match(k).then(function (res) { return res.text(); }).then(function (html) {
+              var m = html.match(/<title>([^<]*)<\/title>/);
+              return { href: new URL(k.url).pathname, title: m ? m[1].replace(/ · Logia$/, "") : new URL(k.url).pathname };
+            });
+          }));
+        });
+      });
+    })).then(function (lists) {
+      var seen = {}, rows = [];
+      lists[0].concat(lists[1]).forEach(function (p) {
+        if (seen[p.href] || p.href === "/offline/" || !/\/$/.test(p.href)) return;
+        seen[p.href] = 1;
+        rows.push('<li><a href="' + esc(p.href) + '">' + p.title + "</a></li>");
+      });
+      offlineList.innerHTML = rows.length ? rows.join("") : "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>";
+    }).catch(function () { offlineList.innerHTML = "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>"; });
+  }
 })();

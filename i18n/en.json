@@ -241,6 +241,11 @@
     "text_only_chapter": "Bible text only"
   },
   "book": {
+    "keep": "Keep {book} for offline",
+    "keep_note": "Saves every chapter and its commentary on this device, for reading with no signal.",
+    "keep_saving": "Saving chapter {done} of {total}…",
+    "keep_done": "{book} is saved on this device. It opens with no connection.",
+    "keep_failed": "Some chapters didn't save. Try again with a better connection.",
     "eyebrow": "Book",
     "dek": "{n} chapters. Commentary so far on {done} of them.",
     "chapters": "Chapters",
@@ -254,6 +259,7 @@
     "on": "on {ref}",
     "quoted": "{name}, quoted by {author}",
     "wrote_in": "Wrote in {lang}",
+    "size": "{n} excerpts · {words} words · about {hours} hours to read",
     "one_verse": "{n} voices on {ref}",
     "one_verse_note": "The first words each commentator in Logia writes on the verse, in the order they lived. Each opens the whole comment.",
     "one_verse_all": "Read them side by side at {ref}",
@@ -439,6 +445,7 @@
     "on": "on {ref}",
     "quoted": "{name}, quoted by {author}",
     "wrote_in": "Wrote in {lang}",
+    "size": "{n} excerpts · {words} words · about {hours} hours to read",
     "one_verse": "{n} voices on {ref}",
     "one_verse_note": "The first words each commentator in Logia writes on the verse, in the order they lived. Each opens the whole comment.",
     "one_verse_all": "Read them side by side at {ref}",
@@ -556,6 +563,8 @@
     "front_to_back": "Front to back",
     "front_to_back_note": "Every excerpt Logia holds from this work, a chapter to a page. Each chapter shows its heading in the Open Word Bible, the reading time at 230 words a minute, and a bar for how much the work says on it.",
     "contents": "Contents",
+    "also_on": "Also on {book} in Logia",
+    "also_on_note": "The other commentaries on {book} in the library, oldest first. Each sets its excerpts beside the same verses in the reader.",
     "start_here": "Start here",
     "start_note": "Three passages to begin with, on verses that Logia's commentators say the most about.",
     "start_voices": "{n} works in Logia comment on this verse",
@@ -590,6 +599,7 @@
       "bible": "The Bible text",
       "languages": "Languages",
       "open": "Open",
+      "privacy": "Privacy",
       "cite": "Citing Logia",
       "help": "Help build Logia",
       "thanks": "With thanks",
@@ -660,6 +670,10 @@
     "languages": [
       "Logia starts in English. Each new language is translated from the best public-domain source, the original Greek, Latin or German where that is better than the English, and reviewed by native speakers before it is marked reviewed."
     ],
+    "privacy": [
+      "Reading Logia needs no account, and Logia sets no cookies of its own. If you sign in to save or like comments, you use your Open Word Bible account, and what you save is kept there."
+    ],
+    "privacy_counter": "To learn which books and pages people read, Logia counts visits with GoatCounter. It sets no cookies, keeps no IP addresses and builds no profile of anyone; it records only the page, the site you came from, and your browser, screen size and country in general terms.",
     "open": [
       [
         "Data and writing",
@@ -737,6 +751,14 @@
         "Yes. The commentaries are in the public domain and Logia's data is CC0, so you may copy them into a sermon, a class handout or an app without asking."
       ]
     ]
+  },
+  "offline": {
+    "title": "Offline",
+    "heading": "You're offline",
+    "dek": "This page isn't saved on this device yet. Pages you have opened before, and books you have kept for offline, still open without a connection.",
+    "saved": "Saved on this device",
+    "none": "Nothing is saved yet. Logia keeps each page you open, and a book's page has a button to keep the whole book.",
+    "home": "Home"
   },
   "not_found": {
     "title": "Page not found",
