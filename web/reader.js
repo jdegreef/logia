@@ -721,6 +721,8 @@
     catch (err) { /* storage blocked */ }
     var cur = location.hash.match(/^#v(\d+)/);
     if (!cur || +cur[1] !== state.verse) history.replaceState(null, "", "#v" + state.verse);
+    // Moving to another verse while listening reads from there.
+    if (listen && listen.on && !listen.moving) listenFrom(state.verse);
   }
 
   $("#text").addEventListener("click", function (e) {
@@ -939,5 +941,95 @@
   if (Account && works.length) {
     Account.likeCounts(CHAPTER).then(function (counts) { state.counts = counts || {}; if (state.tab === "comm") refresh(); });
     Account.marks().then(function (m) { if (m) { state.marks = m; if (state.tab === "comm") refresh(); } });
+  }
+  // Listen: the browser's own speech reads the verse, then each voice the
+  // panel shows on it (in its era order, within the eras chosen), then goes
+  // on to the next verse until the chapter ends or the reader presses Stop.
+  // An excerpt already read for an earlier verse is not read again.
+  var listen = { on: false, moving: false, run: 0, said: {} };
+  function listenFrom(v) { listen.run++; speechSynthesis.cancel(); listenVerse(v, listen.run); }
+  function speakable(text) {
+    // Short pieces: some browsers stop an utterance after about 15 seconds.
+    var out = [];
+    flat(text).replace(/\s+/g, " ").trim().split(/(?<=[.;:!?])\s+/).forEach(function (s) {
+      while (s.length > 240) {
+        var cut = s.lastIndexOf(", ", 240); if (cut < 80) cut = s.lastIndexOf(" ", 240);
+        out.push(s.slice(0, cut + 1)); s = s.slice(cut + 1).trim();
+      }
+      if (!s) return;
+      // "Ver." or "16." alone would be read as a sentence of its own.
+      if (out.length && out[out.length - 1].length < 40) out[out.length - 1] += " " + s;
+      else out.push(s);
+    });
+    return out;
+  }
+  function listenVerse(v, run) {
+    if (!COMM) { loadComm(); if (commLoad) commLoad.then(function () { if (run === listen.run) listenVerse(v, run); }); return; }
+    if (state.tab !== "comm") { state.tab = "comm"; refresh(); }
+    var queue = speakable(REF(v) + ". " + verseText(v)).map(function (t) { return { text: t }; });
+    ERAS.forEach(function (era) {
+      if (!state.eras.has(era)) return;
+      works.filter(function (w) { return w.era === era; }).forEach(function (w) {
+        var es = entriesFor(w, v).filter(function (e) { return !listen.said[w.work_id + ":" + e.start + ":" + e.excerpt.length]; });
+        if (!es.length) return;
+        queue.push({ text: w.author + ", " + w.title + ".", work: w.work_id });
+        es.forEach(function (e) {
+          listen.said[w.work_id + ":" + e.start + ":" + e.excerpt.length] = 1;
+          speakable(e.excerpt).forEach(function (t) { queue.push({ text: t, work: w.work_id }); });
+        });
+      });
+    });
+    var lang = document.documentElement.lang || "en";
+    var voice = speechSynthesis.getVoices().filter(function (x) { return x.lang && x.lang.indexOf(lang) === 0; })
+      .sort(function (a, b) { return (b.localService ? 1 : 0) - (a.localService ? 1 : 0); })[0];
+    var i = 0, card = null;
+    var mark = function (work) {
+      if (card) card.classList.remove("cx-speaking");
+      card = work ? document.getElementById("c-" + work) : null;
+      if (!card) return;
+      card.classList.add("cx-speaking");
+      if (card.classList.contains("cx-shut")) { var tg = card.querySelector("[data-toggle]"); if (tg) tg.click(); card = document.getElementById("c-" + work); card.classList.add("cx-speaking"); }
+      card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    };
+    var next = function () {
+      if (run !== listen.run) return;
+      if (i >= queue.length) {
+        mark(null);
+        var at = DATA.verses.indexOf(v);
+        if (at >= 0 && at < DATA.verses.length - 1) {
+          listen.moving = true; go(DATA.verses[at + 1]); listen.moving = false;
+          keepInView(document.querySelector('.cx-verse[data-v="' + state.verse + '"]'));
+          listenVerse(state.verse, run);
+        } else listenStop();
+        return;
+      }
+      var item = queue[i++];
+      if (item.work !== (card && card.id.slice(2))) mark(item.work);
+      var u = new SpeechSynthesisUtterance(item.text);
+      u.lang = lang; if (voice) u.voice = voice;
+      u.onend = next;
+      u.onerror = function (ev) { if (ev.error !== "interrupted" && ev.error !== "canceled") next(); };
+      speechSynthesis.speak(u);
+    };
+    next();
+  }
+  function listenShow() {
+    var b = $("#listen");
+    b.setAttribute("aria-pressed", listen.on);
+    b.querySelector("span").textContent = listen.on ? U.listen_stop : U.listen;
+  }
+  function listenStop() {
+    listen.on = false; listen.run++; listen.said = {};
+    speechSynthesis.cancel();
+    document.querySelectorAll(".cx-speaking").forEach(function (el) { el.classList.remove("cx-speaking"); });
+    listenShow();
+  }
+  if ("speechSynthesis" in window && $("#listen")) {
+    $("#listen").hidden = false;
+    $("#listen").addEventListener("click", function () {
+      if (listen.on) { listenStop(); return; }
+      listen.on = true; listen.said = {}; listenShow(); listenFrom(state.verse);
+    });
+    window.addEventListener("pagehide", function () { speechSynthesis.cancel(); });
   }
 })();

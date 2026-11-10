@@ -1169,3 +1169,9 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
   .lg-top-text { grid-column: 1 / -1; grid-row: 2; }
   .lg-top .lg-bar { display: none; }
 }
+
+/* Listen (web/reader.js): the button beside the verse arrows, and the voice being read. */
+.cx-nav .cx-listen { width: auto; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; font: 600 13px/1 var(--sans); color: var(--text); }
+.cx-nav .cx-listen[hidden] { display: none; }
+.cx-nav .cx-listen[aria-pressed="true"] { border-color: var(--lg-gold-ink); color: var(--lg-gold-ink); }
+.cx-card.cx-speaking { background: color-mix(in srgb, var(--gold) 9%, transparent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 9%, transparent); border-radius: 2px; }
