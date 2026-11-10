@@ -2203,27 +2203,77 @@ def born(author):
     return int(m[1]) if m else author["died"] - 60
 
 
+def timeline_fold(lib, authors=None):
+    """The longest run of centuries with nobody in it, as (from, to), to be
+    folded out of the timeline; None when no gap is over 400 years. The fold
+    starts a century after one life ends and stops 75 years before the next
+    begins, rounded to whole centuries, so it shrinks as commentators come."""
+    lives = sorted((born(a), a["died"]) for a in lib.authors.values() if authors is None or a["id"] in authors)
+    best, end = None, None
+    for b, d in lives:
+        if end is not None and b - end > 400:
+            a, z = -(-(end + 100) // 100) * 100, (b - 75) // 100 * 100
+            if z > a and (best is None or z - a > best[1] - best[0]):
+                best = (a, z)
+        end = d if end is None else max(end, d)
+    return best
+
+
+# How much of the timeline's width the folded centuries keep, in percent.
+FOLD_WIDTH = 3.0
+
+
 def timeline(lib, authors=None):
     """Each commentator's lifetime (or only those of authors, by id) as a bar
-    on one line of centuries, over the eras, each bar linking to their page."""
+    on one line of centuries, over the eras, each bar linking to their page.
+    Empty centuries are folded into a narrow hatched strip, and on a phone the
+    chart runs down the page."""
     lo, hi = TIMELINE
-    pos = lambda y: (y - lo) / (hi - lo) * 100  # noqa: E731
+    fold = timeline_fold(lib, authors)
+    if fold:
+        fa, fb = fold
+        per = (100 - FOLD_WIDTH) / ((hi - lo) - (fb - fa))
+
+        def pos(y):
+            if y <= fa:
+                return (y - lo) * per
+            if y < fb:
+                return (fa - lo) * per + (y - fa) / (fb - fa) * FOLD_WIDTH
+            return (fa - lo) * per + FOLD_WIDTH + (y - fb) * per
+    else:
+        pos = lambda y: (y - lo) / (hi - lo) * 100  # noqa: E731
+    spans = [(era, a, b) for era, a, b in ERA_SPANS]
+    if fold:  # an era starting in the fold is drawn from its far side, so its name shows
+        spans = [(era, fb if fa <= a < fb else a, fa if fa < b <= fb else b) for era, a, b in spans]
     bands = "".join(f'<span class="lg-tl-band" style="left:{pos(a):.2f}%;width:{pos(b) - pos(a):.2f}%">'
-                    f'<span>{e(t("eras." + era))}</span></span>' for era, a, b in ERA_SPANS)
-    ticks = "".join(f'<span class="lg-tl-tick" style="left:{pos(y):.2f}%">{y}</span>' for y in range(400, hi, 300))
-    rows = []
+                    f'<span>{e(t("eras." + era))}</span></span>' for era, a, b in spans if b > a)
+    if fold:
+        bands += f'<span class="lg-tl-fold" style="left:{pos(fa):.2f}%;width:{FOLD_WIDTH:.2f}%"></span>'
+    years = [y for y in range(400, hi, 200) if not (fold and fa - 100 < y < fb + 100)]
+    ticks = "".join(f'<span class="lg-tl-tick" style="left:{pos(y):.2f}%">{y}</span>' for y in years)
+    if fold:
+        ticks += f'<span class="lg-tl-tick lg-tl-brk" style="left:{pos(fa) + FOLD_WIDTH / 2:.2f}%">≈</span>'
+    rows, folded = [], False
     for a in lib.ordered_authors():
         if authors is not None and a["id"] not in authors:
             continue
         b, d = born(a), a["died"]
+        if fold and not folded and b >= fb:
+            folded = True
+            row = "commentators.timeline_fold_row" if authors is None else "commentators.timeline_fold_row_some"
+            rows.append(f'<li class="lg-tl-foldrow">{e(t(row, a=fa, b=fb))}</li>')
         flip = pos(d) > 62
         rows.append(f'<li class="lg-tl-row" data-author="{a["id"]}"><a class="lg-tl-life lg-era-{ERAS.index(a["era"])}{" lg-tl-flip" if flip else ""}" '
                     f'href="/commentators/{a["id"]}/" style="left:{pos(b):.2f}%;width:{max(pos(d) - pos(b), .6):.2f}%">'
                     f'<span class="lg-tl-name"><b>{e(a["name"])}</b> {e(a["dates"])}</span></a></li>')
+    note = e(t("commentators.timeline_note", a=lo, b=hi))
+    if fold:
+        key = "commentators.timeline_fold" if authors is None else "commentators.timeline_fold_some"
+        note += f' <span class="lg-tl-foldnote">{e(t(key, a=fa, b=fb))}</span>'
     return (f'<figure class="lg-tl" aria-labelledby="tl-cap"><div class="lg-tl-scroll"><div class="lg-tl-in">'
             f'<div class="lg-tl-bands" aria-hidden="true">{bands}</div><ol class="lg-tl-rows">{"".join(rows)}</ol>'
             f'<div class="lg-tl-axis" aria-hidden="true">{ticks}</div></div></div>'
-            f'<figcaption class="lg-quiet" id="tl-cap">{e(t("commentators.timeline_note", a=lo, b=hi))}</figcaption></figure>')
+            f'<figcaption class="lg-quiet" id="tl-cap">{note}</figcaption></figure>')
 
 
 # What a card's quotation leaves off the front of a paragraph: the

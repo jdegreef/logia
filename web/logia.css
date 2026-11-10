@@ -607,6 +607,28 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-tl-axis { position: absolute; left: 0; right: 0; bottom: 0; height: 24px; border-top: 1px solid var(--line-strong); }
 .lg-tl-tick { position: absolute; top: 6px; transform: translateX(-50%); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .lg-tl figcaption { margin-top: 8px; }
+/* The folded centuries: a hatched strip, marked ≈ on the axis. */
+.lg-tl-fold { position: absolute; top: 0; bottom: 0;
+  background: repeating-linear-gradient(135deg, transparent 0 5px, var(--line) 5px 6px); border-left: 1px solid var(--line); }
+.lg-tl-brk { color: var(--gold); font-weight: 700; }
+.lg-tl-foldrow { display: none; }
+/* On a phone the timeline runs down the page: a dot for each life on one
+   line, the folded centuries as one quiet row, and nothing to scroll sideways. */
+@media (max-width: 600px) {
+  .lg-tl-in { min-width: 0; padding: 0; }
+  .lg-tl-bands, .lg-tl-axis, .lg-tl-foldnote { display: none; }
+  .lg-tl-rows { gap: 0; margin-left: 5px; border-left: 1px solid var(--line-strong); }
+  .lg-tl-row { height: auto; }
+  .lg-tl-life { position: relative; display: block; left: auto !important; width: auto !important; height: auto; padding: 5px 0 5px 18px;
+    background: none; border-radius: 0; }
+  .lg-tl-life::before { content: ""; position: absolute; left: -6px; top: 50%; width: 11px; height: 11px; margin-top: -5.5px;
+    border-radius: 50%; background: var(--era); }
+  .lg-tl-life:hover, .lg-tl-life:focus-visible { box-shadow: none; }
+  .lg-tl-name, .lg-tl-flip .lg-tl-name { position: static; transform: none; white-space: normal; }
+  .lg-tl-foldrow { display: block; position: relative; padding: 8px 0 8px 18px; font-size: 12.5px; font-style: italic; color: var(--muted); }
+  .lg-tl-foldrow::before { content: ""; position: absolute; left: -6px; top: 50%; width: 9px; height: 9px; margin-top: -5.5px;
+    border-radius: 50%; border: 1px dashed var(--line-strong); background: var(--bg); }
+}
 
 /* The commentators' cards (/commentators/). */
 .lg-people-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
