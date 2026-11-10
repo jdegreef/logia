@@ -342,6 +342,9 @@
     "by_verse_note": "Each verse with commentary has a page of its own: every voice on it in full, its Greek words, translation notes and cross-references."
   },
   "reader": {
+    "listen": "Listen",
+    "listen_stop": "Stop",
+    "listen_title": "Read this verse and its commentary aloud, then go on to the next verse",
     "summary": "{n} voices from {eras} eras, {first} to {last}",
     "summary_one": "1 voice: {first}",
     "verse_voices": "{ref}: {n} voices comment on it",
