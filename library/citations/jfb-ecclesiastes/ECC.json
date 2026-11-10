@@ -1,0 +1,7953 @@
+{
+ "work": "jfb-ecclesiastes",
+ "book": "ECC",
+ "citations": [
+  {
+   "in": "jfb-ecclesiastes.ECC.1.1-18.1",
+   "at": 0,
+   "text": "Ec 1:1-18",
+   "start": "ECC.1.1",
+   "end": "ECC.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.1.1",
+   "at": 192,
+   "text": "Ec 1:12",
+   "start": "ECC.1.12",
+   "end": "ECC.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 135,
+   "text": "Ex 26:33",
+   "start": "EXO.26.33",
+   "end": "EXO.26.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 169,
+   "text": "Ge 9:25",
+   "start": "GEN.9.25",
+   "end": "GEN.9.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 345,
+   "text": "1Ti 4:4",
+   "start": "1TI.4.4",
+   "end": "1TI.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 354,
+   "text": "5",
+   "start": "1TI.4.5",
+   "end": "1TI.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 436,
+   "text": "Ps 39:5",
+   "start": "PSA.39.6",
+   "end": "PSA.39.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 445,
+   "text": "6",
+   "start": "PSA.39.7",
+   "end": "PSA.39.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 448,
+   "text": "62:9",
+   "start": "PSA.62.10",
+   "end": "PSA.62.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.2.1",
+   "at": 454,
+   "text": "Mt 6:33",
+   "start": "MAT.6.33",
+   "end": "MAT.6.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.3.1",
+   "at": 69,
+   "text": "Mt 16:26",
+   "start": "MAT.16.26",
+   "end": "MAT.16.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.3.1",
+   "at": 121,
+   "text": "Ge 2:15",
+   "start": "GEN.2.15",
+   "end": "GEN.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.3.1",
+   "at": 130,
+   "text": "3:19",
+   "start": "GEN.3.19",
+   "end": "GEN.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.3.1",
+   "at": 136,
+   "text": "Pr 14:23",
+   "start": "PRO.14.23",
+   "end": "PRO.14.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.4.1",
+   "at": 21,
+   "text": "Ps 104:5",
+   "start": "PSA.104.5",
+   "end": "PSA.104.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.5.1",
+   "at": 4,
+   "text": "Ps 19:5",
+   "start": "PSA.19.6",
+   "end": "PSA.19.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.5.1",
+   "at": 13,
+   "text": "6",
+   "start": "PSA.19.7",
+   "end": "PSA.19.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.5.1",
+   "at": 81,
+   "text": "Ps 19:5",
+   "start": "PSA.19.6",
+   "end": "PSA.19.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.8.1",
+   "at": 287,
+   "text": "Ec 1:3",
+   "start": "ECC.1.3",
+   "end": "ECC.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.8.1",
+   "at": 390,
+   "text": "Ec 1:9",
+   "start": "ECC.1.9",
+   "end": "ECC.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.8.1",
+   "at": 570,
+   "text": "Ec 6:7",
+   "start": "ECC.6.7",
+   "end": "ECC.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.8.1",
+   "at": 578,
+   "text": "Pr 27:20",
+   "start": "PRO.27.20",
+   "end": "PRO.27.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.8.1",
+   "at": 689,
+   "text": "Joh 4:13",
+   "start": "JHN.4.13",
+   "end": "JHN.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.8.1",
+   "at": 699,
+   "text": "14",
+   "start": "JHN.4.14",
+   "end": "JHN.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.9.1",
+   "at": 40,
+   "text": "Nu 11:6",
+   "start": "NUM.11.6",
+   "end": "NUM.11.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.10.1",
+   "at": 267,
+   "text": "1Ch 16:33",
+   "start": "1CH.16.33",
+   "end": "1CH.16.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.11.1",
+   "at": 268,
+   "text": "Ec 1:4",
+   "start": "ECC.1.4",
+   "end": "ECC.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.11.1",
+   "at": 370,
+   "text": "Ec 1:4",
+   "start": "ECC.1.4",
+   "end": "ECC.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.12.1",
+   "at": 18,
+   "text": "Ec 1:1",
+   "start": "ECC.1.1",
+   "end": "ECC.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.13.1",
+   "at": 137,
+   "text": "Ec 2:12",
+   "start": "ECC.2.12",
+   "end": "ECC.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.13.1",
+   "at": 335,
+   "text": "Ge 3:19",
+   "start": "GEN.3.19",
+   "end": "GEN.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.14.1",
+   "at": 90,
+   "text": "Ec 1:13",
+   "start": "ECC.1.13",
+   "end": "ECC.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.14.1",
+   "at": 141,
+   "text": "Ec 1:18",
+   "start": "ECC.1.18",
+   "end": "ECC.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.14.1",
+   "at": 172,
+   "text": "Ec 1:15",
+   "start": "ECC.1.15",
+   "end": "ECC.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.14.1",
+   "at": 272,
+   "text": "Ec 5:16",
+   "start": "ECC.5.15",
+   "end": "ECC.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.14.1",
+   "at": 281,
+   "text": "Ho 12:1",
+   "start": "HOS.12.2",
+   "end": "HOS.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.15.1",
+   "at": 19,
+   "text": "Ec 1:13",
+   "start": "ECC.1.13",
+   "end": "ECC.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.15.1",
+   "at": 130,
+   "text": "Ec 7:13",
+   "start": "ECC.7.13",
+   "end": "ECC.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.15.1",
+   "at": 180,
+   "text": "Isa 40:4",
+   "start": "ISA.40.4",
+   "end": "ISA.40.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.15.1",
+   "at": 190,
+   "text": "45:2",
+   "start": "ISA.45.2",
+   "end": "ISA.45.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.15.1",
+   "at": 207,
+   "text": "Da 5:27",
+   "start": "DAN.5.27",
+   "end": "DAN.5.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.16.1",
+   "at": 27,
+   "text": "Ge 24:45",
+   "start": "GEN.24.45",
+   "end": "GEN.24.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.16.1",
+   "at": 333,
+   "text": "Lu 13:34",
+   "start": "LUK.13.34",
+   "end": "LUK.13.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.16.1",
+   "at": 368,
+   "text": "Mt 11:19",
+   "start": "MAT.11.19",
+   "end": "MAT.11.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.16.1",
+   "at": 378,
+   "text": "12:42",
+   "start": "MAT.12.42",
+   "end": "MAT.12.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.16.1",
+   "at": 427,
+   "text": "Jer 2:31",
+   "start": "JER.2.31",
+   "end": "JER.2.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.17.1",
+   "at": 142,
+   "text": "Ec 2:12",
+   "start": "ECC.2.12",
+   "end": "ECC.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.17.1",
+   "at": 151,
+   "text": "7:25",
+   "start": "ECC.7.25",
+   "end": "ECC.7.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.17.1",
+   "at": 396,
+   "text": "1Ti 6:20",
+   "start": "1TI.6.20",
+   "end": "1TI.6.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.18.1",
+   "at": 132,
+   "text": "Ec 1:13",
+   "start": "ECC.1.13",
+   "end": "ECC.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.1.18.1",
+   "at": 141,
+   "text": "17",
+   "start": "ECC.1.17",
+   "end": "ECC.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.1-26.1",
+   "at": 0,
+   "text": "Ec 2:1-26",
+   "start": "ECC.2.1",
+   "end": "ECC.2.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.1-26.1",
+   "at": 88,
+   "text": "Ec 3:9",
+   "start": "ECC.3.9",
+   "end": "ECC.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.1.1",
+   "at": 19,
+   "text": "Lu 12:19",
+   "start": "LUK.12.19",
+   "end": "LUK.12.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.2.1",
+   "at": 54,
+   "text": "Job 8:21",
+   "start": "JOB.8.21",
+   "end": "JOB.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.2.1",
+   "at": 200,
+   "text": "Ec 7:6",
+   "start": "ECC.7.6",
+   "end": "ECC.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 36,
+   "text": "Ec 2:1",
+   "start": "ECC.2.1",
+   "end": "ECC.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 44,
+   "text": "2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 255,
+   "text": "Ro 6:16",
+   "start": "ROM.6.16",
+   "end": "ROM.6.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 264,
+   "text": "19",
+   "start": "ROM.6.19",
+   "end": "ROM.6.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 268,
+   "text": "1Co 12:2",
+   "start": "1CO.12.2",
+   "end": "1CO.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 298,
+   "text": "2Pe 2:18",
+   "start": "2PE.2.18",
+   "end": "2PE.2.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 308,
+   "text": "19",
+   "start": "2PE.2.19",
+   "end": "2PE.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 497,
+   "text": "Ec 2:9",
+   "start": "ECC.2.9",
+   "end": "ECC.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 583,
+   "text": "Ec 2:2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.3-11.1",
+   "at": 626,
+   "text": "Ec 6:12",
+   "start": "ECC.6.12",
+   "end": "ECC.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.4.1",
+   "at": 15,
+   "text": "9:1",
+   "start": "1KI.9.1",
+   "end": "1KI.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.4.1",
+   "at": 20,
+   "text": "19",
+   "start": "1KI.9.19",
+   "end": "1KI.9.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.4.1",
+   "at": 24,
+   "text": "10:18",
+   "start": "1KI.10.18",
+   "end": "1KI.10.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.6.1",
+   "at": 46,
+   "text": "Ge 2:10",
+   "start": "GEN.2.10",
+   "end": "GEN.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.6.1",
+   "at": 55,
+   "text": "Ne 2:14",
+   "start": "NEH.2.14",
+   "end": "NEH.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.6.1",
+   "at": 64,
+   "text": "Isa 1:30",
+   "start": "ISA.1.30",
+   "end": "ISA.1.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 85,
+   "text": "Ge 14:14",
+   "start": "GEN.14.14",
+   "end": "GEN.14.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 95,
+   "text": "15:2",
+   "start": "GEN.15.2",
+   "end": "GEN.15.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 101,
+   "text": "3",
+   "start": "GEN.15.3",
+   "end": "GEN.15.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 104,
+   "text": "17:12",
+   "start": "GEN.17.12",
+   "end": "GEN.17.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 111,
+   "text": "13",
+   "start": "GEN.17.13",
+   "end": "GEN.17.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 115,
+   "text": "27",
+   "start": "GEN.17.27",
+   "end": "GEN.17.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 119,
+   "text": "Jer 2:14",
+   "start": "JER.2.14",
+   "end": "JER.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 164,
+   "text": "Ex 23:12",
+   "start": "EXO.23.12",
+   "end": "EXO.23.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.7.1",
+   "at": 182,
+   "text": "Ge 12:16",
+   "start": "GEN.12.16",
+   "end": "GEN.12.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 15,
+   "text": "2Ch 1:15",
+   "start": "2CH.1.15",
+   "end": "2CH.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 25,
+   "text": "9:20",
+   "start": "2CH.9.20",
+   "end": "2CH.9.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 118,
+   "text": "1Ki 4:21",
+   "start": "1KI.5.1",
+   "end": "1KI.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 128,
+   "text": "24",
+   "start": "1KI.5.4",
+   "end": "1KI.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 205,
+   "text": "Pr 3:14",
+   "start": "PRO.3.14",
+   "end": "PRO.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 214,
+   "text": "15",
+   "start": "PRO.3.15",
+   "end": "PRO.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 238,
+   "text": "2Sa 19:35",
+   "start": "2SA.19.36",
+   "end": "2SA.19.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 310,
+   "text": "Isa 5:12",
+   "start": "ISA.5.12",
+   "end": "ISA.5.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 320,
+   "text": "Am 6:5",
+   "start": "AMO.6.5",
+   "end": "AMO.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 328,
+   "text": "6",
+   "start": "AMO.6.6",
+   "end": "AMO.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 418,
+   "text": "Es 1:9",
+   "start": "EST.1.9",
+   "end": "EST.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 447,
+   "text": "1Ki 3:1",
+   "start": "1KI.3.1",
+   "end": "1KI.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 526,
+   "text": "1Ki 11:3",
+   "start": "1KI.11.3",
+   "end": "1KI.11.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 536,
+   "text": "Ps 45:10",
+   "start": "PSA.45.11",
+   "end": "PSA.45.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.8.1",
+   "at": 546,
+   "text": "So 6:8",
+   "start": "SNG.6.8",
+   "end": "SNG.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.9.1",
+   "at": 18,
+   "text": "Ge 24:35",
+   "start": "GEN.24.35",
+   "end": "GEN.24.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.9.1",
+   "at": 28,
+   "text": "Job 1:3",
+   "start": "JOB.1.3",
+   "end": "JOB.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.9.1",
+   "at": 41,
+   "text": "1Ki 10:23",
+   "start": "1KI.10.23",
+   "end": "1KI.10.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.10.1",
+   "at": 104,
+   "text": "Ec 3:22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.10.1",
+   "at": 113,
+   "text": "5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.10.1",
+   "at": 119,
+   "text": "9:9",
+   "start": "ECC.9.9",
+   "end": "ECC.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.11.1",
+   "at": 161,
+   "text": "Ec 2:9",
+   "start": "ECC.2.9",
+   "end": "ECC.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 35,
+   "text": "Ec 1:12-18",
+   "start": "ECC.1.12",
+   "end": "ECC.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 77,
+   "text": "Ec 2:1-11",
+   "start": "ECC.2.1",
+   "end": "ECC.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 111,
+   "text": "Ec 2:12",
+   "start": "ECC.2.12",
+   "end": "ECC.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 176,
+   "text": "Ec 2:13",
+   "start": "ECC.2.13",
+   "end": "ECC.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 185,
+   "text": "14",
+   "start": "ECC.2.14",
+   "end": "ECC.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 230,
+   "text": "Ec 2:14-16",
+   "start": "ECC.2.14",
+   "end": "ECC.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 350,
+   "text": "Ec 2:18",
+   "start": "ECC.2.18",
+   "end": "ECC.2.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 359,
+   "text": "19",
+   "start": "ECC.2.19",
+   "end": "ECC.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 363,
+   "text": "21",
+   "start": "ECC.2.21",
+   "end": "ECC.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 403,
+   "text": "Ec 2:22",
+   "start": "ECC.2.22",
+   "end": "ECC.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 412,
+   "text": "23",
+   "start": "ECC.2.23",
+   "end": "ECC.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.12.1",
+   "at": 454,
+   "text": "Ec 1:9",
+   "start": "ECC.1.9",
+   "end": "ECC.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.13-14.1",
+   "at": 9,
+   "text": "Pr 17:24",
+   "start": "PRO.17.24",
+   "end": "PRO.17.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.15.1",
+   "at": 41,
+   "text": "2Ch 1:10",
+   "start": "2CH.1.10",
+   "end": "2CH.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.15.1",
+   "at": 173,
+   "text": "Job 28:28",
+   "start": "JOB.28.28",
+   "end": "JOB.28.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.16.1",
+   "at": 44,
+   "text": "Ge 11:4",
+   "start": "GEN.11.4",
+   "end": "GEN.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.16.1",
+   "at": 85,
+   "text": "Ps 112:6",
+   "start": "PSA.112.6",
+   "end": "PSA.112.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.16.1",
+   "at": 95,
+   "text": "Pr 10:7",
+   "start": "PRO.10.7",
+   "end": "PRO.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.17.1",
+   "at": 133,
+   "text": "Ho 2:6",
+   "start": "HOS.2.8",
+   "end": "HOS.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.17.1",
+   "at": 141,
+   "text": "7",
+   "start": "HOS.2.9",
+   "end": "HOS.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.17.1",
+   "at": 144,
+   "text": "Lu 15:17",
+   "start": "LUK.15.17",
+   "end": "LUK.15.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.17.1",
+   "at": 154,
+   "text": "18",
+   "start": "LUK.15.18",
+   "end": "LUK.15.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.18-19.1",
+   "at": 367,
+   "text": "1Ch 28:9",
+   "start": "1CH.28.9",
+   "end": "1CH.28.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.21.1",
+   "at": 92,
+   "text": "Ec 11:6",
+   "start": "ECC.11.6",
+   "end": "ECC.11.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.22.1",
+   "at": 25,
+   "text": "Ec 2:21",
+   "start": "ECC.2.21",
+   "end": "ECC.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 289,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 298,
+   "text": "22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 547,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 556,
+   "text": "22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 560,
+   "text": "5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 566,
+   "text": "19",
+   "start": "ECC.5.18",
+   "end": "ECC.5.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 969,
+   "text": "Ps 4:6",
+   "start": "PSA.4.7",
+   "end": "PSA.4.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.24.1",
+   "at": 977,
+   "text": "Isa 57:19-21",
+   "start": "ISA.57.19",
+   "end": "ISA.57.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.25.1",
+   "at": 30,
+   "text": "Pr 7:23",
+   "start": "PRO.7.23",
+   "end": "PRO.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.25.1",
+   "at": 39,
+   "text": "19:2",
+   "start": "PRO.19.2",
+   "end": "PRO.19.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 79,
+   "text": "Job 27:16",
+   "start": "JOB.27.16",
+   "end": "JOB.27.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 90,
+   "text": "17",
+   "start": "JOB.27.17",
+   "end": "JOB.27.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 94,
+   "text": "Pr 13:22",
+   "start": "PRO.13.22",
+   "end": "PRO.13.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 104,
+   "text": "28:8",
+   "start": "PRO.28.8",
+   "end": "PRO.28.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 259,
+   "text": "Ps 84:11",
+   "start": "PSA.84.12",
+   "end": "PSA.84.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 269,
+   "text": "Mt 5:5",
+   "start": "MAT.5.5",
+   "end": "MAT.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 277,
+   "text": "Mr 10:29",
+   "start": "MRK.10.29",
+   "end": "MRK.10.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 287,
+   "text": "30",
+   "start": "MRK.10.30",
+   "end": "MRK.10.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 291,
+   "text": "Ro 8:28",
+   "start": "ROM.8.28",
+   "end": "ROM.8.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 300,
+   "text": "1Ti 4:8",
+   "start": "1TI.4.8",
+   "end": "1TI.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 469,
+   "text": "2Ch 1:11",
+   "start": "2CH.1.11",
+   "end": "2CH.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.2.26.1",
+   "at": 479,
+   "text": "12",
+   "start": "2CH.1.12",
+   "end": "2CH.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1-22.1",
+   "at": 0,
+   "text": "Ec 3:1-22",
+   "start": "ECC.3.1",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1-22.1",
+   "at": 81,
+   "text": "Ec 3:1-8",
+   "start": "ECC.3.1",
+   "end": "ECC.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1-22.1",
+   "at": 196,
+   "text": "Ec 3:9",
+   "start": "ECC.3.9",
+   "end": "ECC.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1-22.1",
+   "at": 204,
+   "text": "10",
+   "start": "ECC.3.10",
+   "end": "ECC.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1-22.1",
+   "at": 296,
+   "text": "Ec 3:11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1-22.1",
+   "at": 375,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1-22.1",
+   "at": 384,
+   "text": "13",
+   "start": "ECC.3.13",
+   "end": "ECC.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1.1",
+   "at": 89,
+   "text": "Ec 1:5-7",
+   "start": "ECC.1.5",
+   "end": "ECC.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1.1",
+   "at": 236,
+   "text": "Ec 3:2",
+   "start": "ECC.3.2",
+   "end": "ECC.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1.1",
+   "at": 396,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.1.1",
+   "at": 471,
+   "text": "1Co 7:31",
+   "start": "1CO.7.31",
+   "end": "1CO.7.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.2.1",
+   "at": 16,
+   "text": "Ps 31:15",
+   "start": "PSA.31.16",
+   "end": "PSA.31.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.2.1",
+   "at": 26,
+   "text": "Heb 9:27",
+   "start": "HEB.9.27",
+   "end": "HEB.9.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.2.1",
+   "at": 410,
+   "text": "Jer 18:7",
+   "start": "JER.18.7",
+   "end": "JER.18.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.2.1",
+   "at": 420,
+   "text": "9",
+   "start": "JER.18.9",
+   "end": "JER.18.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.2.1",
+   "at": 423,
+   "text": "Am 9:15",
+   "start": "AMO.9.15",
+   "end": "AMO.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.3.1",
+   "at": 191,
+   "text": "Isa 38:5",
+   "start": "ISA.38.5",
+   "end": "ISA.38.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.3.1",
+   "at": 201,
+   "text": "21",
+   "start": "ISA.38.21",
+   "end": "ISA.38.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.3.1",
+   "at": 219,
+   "text": "De 32:39",
+   "start": "DEU.32.39",
+   "end": "DEU.32.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.3.1",
+   "at": 229,
+   "text": "Ho 6:1",
+   "start": "HOS.6.1",
+   "end": "HOS.6.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.3.1",
+   "at": 250,
+   "text": "Ps 147:3",
+   "start": "PSA.147.3",
+   "end": "PSA.147.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.3.1",
+   "at": 260,
+   "text": "Isa 57:19",
+   "start": "ISA.57.19",
+   "end": "ISA.57.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.3.1",
+   "at": 495,
+   "text": "Am 9:11",
+   "start": "AMO.9.11",
+   "end": "AMO.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.4.1",
+   "at": 31,
+   "text": "Ge 23:2",
+   "start": "GEN.23.2",
+   "end": "GEN.23.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.4.1",
+   "at": 73,
+   "text": "2Sa 6:12-14",
+   "start": "2SA.6.12",
+   "end": "2SA.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.4.1",
+   "at": 86,
+   "text": "Ps 30:11",
+   "start": "PSA.30.12",
+   "end": "PSA.30.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.4.1",
+   "at": 110,
+   "text": "Mt 9:15",
+   "start": "MAT.9.15",
+   "end": "MAT.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.4.1",
+   "at": 119,
+   "text": "Lu 6:21",
+   "start": "LUK.6.21",
+   "end": "LUK.6.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.4.1",
+   "at": 128,
+   "text": "15:25",
+   "start": "LUK.15.25",
+   "end": "LUK.15.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 52,
+   "text": "Isa 5:2",
+   "start": "ISA.5.2",
+   "end": "ISA.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 189,
+   "text": "Eph 2:19",
+   "start": "EPH.2.19",
+   "end": "EPH.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 199,
+   "text": "20",
+   "start": "EPH.2.20",
+   "end": "EPH.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 229,
+   "text": "Mt 3:9",
+   "start": "MAT.3.9",
+   "end": "MAT.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 270,
+   "text": "Ps 102:13",
+   "start": "PSA.102.14",
+   "end": "PSA.102.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 281,
+   "text": "14",
+   "start": "PSA.102.15",
+   "end": "PSA.102.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 285,
+   "text": "Zec 9:16",
+   "start": "ZEC.9.16",
+   "end": "ZEC.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.5.1",
+   "at": 318,
+   "text": "Joe 2:16",
+   "start": "JOL.2.16",
+   "end": "JOL.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.6.1",
+   "at": 59,
+   "text": "Eph 4:23",
+   "start": "EPH.4.23",
+   "end": "EPH.4.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.6.1",
+   "at": 175,
+   "text": "2Th 3:10",
+   "start": "2TH.3.10",
+   "end": "2TH.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.6.1",
+   "at": 209,
+   "text": "Pr 11:24",
+   "start": "PRO.11.24",
+   "end": "PRO.11.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.6.1",
+   "at": 278,
+   "text": "Mr 9:43",
+   "start": "MRK.9.43",
+   "end": "MRK.9.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 31,
+   "text": "Joe 2:13",
+   "start": "JOL.2.13",
+   "end": "JOL.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 124,
+   "text": "1Ki 11:30",
+   "start": "1KI.11.30",
+   "end": "1KI.11.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 135,
+   "text": "31",
+   "start": "1KI.11.31",
+   "end": "1KI.11.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 174,
+   "text": "Eze 37:15",
+   "start": "EZK.37.15",
+   "end": "EZK.37.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 185,
+   "text": "22",
+   "start": "EZK.37.22",
+   "end": "EZK.37.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 200,
+   "text": "Am 5:13",
+   "start": "AMO.5.13",
+   "end": "AMO.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 255,
+   "text": "Job 2:13",
+   "start": "JOB.2.13",
+   "end": "JOB.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.7.1",
+   "at": 309,
+   "text": "Le 10:3",
+   "start": "LEV.10.3",
+   "end": "LEV.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.8.1",
+   "at": 33,
+   "text": "Lu 14:26",
+   "start": "LUK.14.26",
+   "end": "LUK.14.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 364,
+   "text": "Ec 3:2",
+   "start": "ECC.3.2",
+   "end": "ECC.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 396,
+   "text": "Ec 2:5",
+   "start": "ECC.2.5",
+   "end": "ECC.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 414,
+   "text": "Ec 3:4",
+   "start": "ECC.3.4",
+   "end": "ECC.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 426,
+   "text": "Ec 2:1",
+   "start": "ECC.2.1",
+   "end": "ECC.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 434,
+   "text": "2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 491,
+   "text": "Ec 3:3",
+   "start": "ECC.3.3",
+   "end": "ECC.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 499,
+   "text": "5",
+   "start": "ECC.3.5",
+   "end": "ECC.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 522,
+   "text": "Ec 2:4",
+   "start": "ECC.2.4",
+   "end": "ECC.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 576,
+   "text": "Ec 2:8",
+   "start": "ECC.2.8",
+   "end": "ECC.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 615,
+   "text": "Ec 3:5",
+   "start": "ECC.3.5",
+   "end": "ECC.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 623,
+   "text": "6",
+   "start": "ECC.3.6",
+   "end": "ECC.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.9.1",
+   "at": 647,
+   "text": "Ec 2:8",
+   "start": "ECC.2.8",
+   "end": "ECC.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 44,
+   "text": "Ps 1:3",
+   "start": "PSA.1.3",
+   "end": "PSA.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 143,
+   "text": "Ec 3:9",
+   "start": "ECC.3.9",
+   "end": "ECC.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 299,
+   "text": "Ro 1:19",
+   "start": "ROM.1.19",
+   "end": "ROM.1.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 308,
+   "text": "20",
+   "start": "ROM.1.20",
+   "end": "ROM.1.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 474,
+   "text": "Ec 8:17",
+   "start": "ECC.8.17",
+   "end": "ECC.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 483,
+   "text": "Job 26:14",
+   "start": "JOB.26.14",
+   "end": "JOB.26.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 494,
+   "text": "Ro 11:33",
+   "start": "ROM.11.33",
+   "end": "ROM.11.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.11.1",
+   "at": 504,
+   "text": "Re 15:4",
+   "start": "REV.15.4",
+   "end": "REV.15.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.12.1",
+   "at": 28,
+   "text": "Ec 3:11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.12.1",
+   "at": 245,
+   "text": "Ga 6:9",
+   "start": "GAL.6.9",
+   "end": "GAL.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.12.1",
+   "at": 253,
+   "text": "10",
+   "start": "GAL.6.10",
+   "end": "GAL.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.12.1",
+   "at": 295,
+   "text": "Php 4:4",
+   "start": "PHP.4.4",
+   "end": "PHP.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.13.1",
+   "at": 78,
+   "text": "Ec 3:22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.13.1",
+   "at": 87,
+   "text": "5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.13.1",
+   "at": 209,
+   "text": "Ac 2:46",
+   "start": "ACT.2.46",
+   "end": "ACT.2.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.13.1",
+   "at": 218,
+   "text": "1Co 10:31",
+   "start": "1CO.10.31",
+   "end": "1CO.10.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 15,
+   "text": "2Sa 23:5",
+   "start": "2SA.23.5",
+   "end": "2SA.23.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 25,
+   "text": "Ps 89:34",
+   "start": "PSA.89.35",
+   "end": "PSA.89.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 35,
+   "text": "Mt 24:35",
+   "start": "MAT.24.35",
+   "end": "MAT.24.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 45,
+   "text": "Jas 1:17",
+   "start": "JAS.1.17",
+   "end": "JAS.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 104,
+   "text": "Ec 2:15-18",
+   "start": "ECC.2.15",
+   "end": "ECC.2.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 188,
+   "text": "Ec 1:15",
+   "start": "ECC.1.15",
+   "end": "ECC.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 197,
+   "text": "7:13",
+   "start": "ECC.7.13",
+   "end": "ECC.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 357,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.14.1",
+   "at": 366,
+   "text": "13",
+   "start": "ECC.3.13",
+   "end": "ECC.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.15.1",
+   "at": 18,
+   "text": "Ec 1:9",
+   "start": "ECC.1.9",
+   "end": "ECC.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.15.1",
+   "at": 118,
+   "text": "Ec 3:14",
+   "start": "ECC.3.14",
+   "end": "ECC.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.15.1",
+   "at": 423,
+   "text": "Ec 3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.15.1",
+   "at": 432,
+   "text": "17",
+   "start": "ECC.3.17",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.17.1",
+   "at": 319,
+   "text": "Ec 3:11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.17.1",
+   "at": 328,
+   "text": "Ps 97:2",
+   "start": "PSA.97.2",
+   "end": "PSA.97.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.17.1",
+   "at": 556,
+   "text": "Job 3:17-19",
+   "start": "JOB.3.17",
+   "end": "JOB.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.17.1",
+   "at": 675,
+   "text": "Ec 3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.18.1",
+   "at": 649,
+   "text": "Ps 49:12",
+   "start": "PSA.49.13",
+   "end": "PSA.49.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.18.1",
+   "at": 659,
+   "text": "20",
+   "start": "PSA.49.21",
+   "end": "PSA.49.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 248,
+   "text": "Ec 8:11",
+   "start": "ECC.8.11",
+   "end": "ECC.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 257,
+   "text": "Ps 55:19",
+   "start": "PSA.55.20",
+   "end": "PSA.55.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 267,
+   "text": "2Pe 3:3",
+   "start": "2PE.3.3",
+   "end": "2PE.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 275,
+   "text": "4",
+   "start": "2PE.3.4",
+   "end": "2PE.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 313,
+   "text": "Ec 3:18",
+   "start": "ECC.3.18",
+   "end": "ECC.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 322,
+   "text": "Jude 10",
+   "start": "JUD.1.10",
+   "end": "JUD.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 533,
+   "text": "Ec 3:21",
+   "start": "ECC.3.21",
+   "end": "ECC.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 545,
+   "text": "Ec 3:19",
+   "start": "ECC.3.19",
+   "end": "ECC.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 554,
+   "text": "20",
+   "start": "ECC.3.20",
+   "end": "ECC.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 781,
+   "text": "Ec 3:21",
+   "start": "ECC.3.21",
+   "end": "ECC.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.19.1",
+   "at": 873,
+   "text": "Ec 3:17",
+   "start": "ECC.3.17",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.21.1",
+   "at": 62,
+   "text": "Ec 12:7",
+   "start": "ECC.12.7",
+   "end": "ECC.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.21.1",
+   "at": 270,
+   "text": "Isa 53:1",
+   "start": "ISA.53.1",
+   "end": "ISA.53.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 13,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 22,
+   "text": "5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 167,
+   "text": "Ec 11:9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 210,
+   "text": "Ec 2:23",
+   "start": "ECC.2.23",
+   "end": "ECC.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 219,
+   "text": "5:10-17",
+   "start": "ECC.5.9",
+   "end": "ECC.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 319,
+   "text": "Ec 2:1",
+   "start": "ECC.2.1",
+   "end": "ECC.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 327,
+   "text": "Lu 16:25",
+   "start": "LUK.16.25",
+   "end": "LUK.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.3.22.1",
+   "at": 407,
+   "text": "Ec 3:11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.1.1",
+   "at": 46,
+   "text": "Ec 3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.1.1",
+   "at": 55,
+   "text": "Job 35:9",
+   "start": "JOB.35.9",
+   "end": "JOB.35.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 140,
+   "text": "Ec 3:17",
+   "start": "ECC.3.17",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 149,
+   "text": "19",
+   "start": "ECC.3.19",
+   "end": "ECC.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 289,
+   "text": "Ec 7:1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 303,
+   "text": "Job 3:12",
+   "start": "JOB.3.12",
+   "end": "JOB.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 313,
+   "text": "21:7",
+   "start": "JOB.21.7",
+   "end": "JOB.21.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 327,
+   "text": "Ps 73:3",
+   "start": "PSA.73.3",
+   "end": "PSA.73.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 352,
+   "text": "Jer 12:1",
+   "start": "JER.12.1",
+   "end": "JER.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 373,
+   "text": "Hab 1:13",
+   "start": "HAB.1.13",
+   "end": "HAB.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 509,
+   "text": "Ps 73:17",
+   "start": "PSA.73.17",
+   "end": "PSA.73.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 519,
+   "text": "Hab 2:20",
+   "start": "HAB.2.20",
+   "end": "HAB.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 529,
+   "text": "3:17",
+   "start": "HAB.3.17",
+   "end": "HAB.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 535,
+   "text": "18",
+   "start": "HAB.3.18",
+   "end": "HAB.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 678,
+   "text": "Ro 2:15",
+   "start": "ROM.2.15",
+   "end": "ROM.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.2.1",
+   "at": 787,
+   "text": "Ps 92:7-12",
+   "start": "PSA.92.8",
+   "end": "PSA.92.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.4.1",
+   "at": 38,
+   "text": "Ec 2:21",
+   "start": "ECC.2.21",
+   "end": "ECC.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.4.1",
+   "at": 129,
+   "text": "Ec 4:1",
+   "start": "ECC.4.1",
+   "end": "ECC.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.5.1",
+   "at": 125,
+   "text": "Pr 6:10",
+   "start": "PRO.6.10",
+   "end": "PRO.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.5.1",
+   "at": 134,
+   "text": "24:33",
+   "start": "PRO.24.33",
+   "end": "PRO.24.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.6.1",
+   "at": 191,
+   "text": "Ec 4:5",
+   "start": "ECC.4.5",
+   "end": "ECC.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.6.1",
+   "at": 239,
+   "text": "Ec 4:8",
+   "start": "ECC.4.8",
+   "end": "ECC.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.8.1",
+   "at": 71,
+   "text": "De 25:5-10",
+   "start": "DEU.25.5",
+   "end": "DEU.25.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.8.1",
+   "at": 90,
+   "text": "Ec 1:8",
+   "start": "ECC.1.8",
+   "end": "ECC.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.9.1",
+   "at": 25,
+   "text": "Ec 4:8",
+   "start": "ECC.4.8",
+   "end": "ECC.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.9.1",
+   "at": 147,
+   "text": "Ge 2:18",
+   "start": "GEN.2.18",
+   "end": "GEN.2.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.11.1",
+   "at": 12,
+   "text": "1Ki 1:1",
+   "start": "1KI.1.1",
+   "end": "1KI.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.11.1",
+   "at": 150,
+   "text": "Lu 24:32",
+   "start": "LUK.24.32",
+   "end": "LUK.24.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.12.1",
+   "at": 110,
+   "text": "Pr 11:14",
+   "start": "PRO.11.14",
+   "end": "PRO.11.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.12.1",
+   "at": 136,
+   "text": "Lu 10:1",
+   "start": "LUK.10.1",
+   "end": "LUK.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.12.1",
+   "at": 145,
+   "text": "Col 2:2",
+   "start": "COL.2.2",
+   "end": "COL.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.12.1",
+   "at": 154,
+   "text": "19",
+   "start": "COL.2.19",
+   "end": "COL.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.13.1",
+   "at": 26,
+   "text": "Ec 4:12",
+   "start": "ECC.4.12",
+   "end": "ECC.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.13.1",
+   "at": 352,
+   "text": "1Ki 11:26-40",
+   "start": "1KI.11.26",
+   "end": "1KI.11.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.13.1",
+   "at": 608,
+   "text": "1Ki 3:14",
+   "start": "1KI.3.14",
+   "end": "1KI.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.13.1",
+   "at": 618,
+   "text": "9:2-9",
+   "start": "1KI.9.2",
+   "end": "1KI.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.14.1",
+   "at": 300,
+   "text": "1Ki 11:40",
+   "start": "1KI.11.40",
+   "end": "1KI.11.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.16.1",
+   "at": 131,
+   "text": "2Sa 15:6",
+   "start": "2SA.15.6",
+   "end": "2SA.15.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.16.1",
+   "at": 141,
+   "text": "20:1",
+   "start": "2SA.20.1",
+   "end": "2SA.20.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 60,
+   "text": "Ec 5:7",
+   "start": "ECC.5.6",
+   "end": "ECC.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 379,
+   "text": "Ex 3:5",
+   "start": "EXO.3.5",
+   "end": "EXO.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 387,
+   "text": "Jos 5:15",
+   "start": "JOS.5.15",
+   "end": "JOS.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 493,
+   "text": "Ex 23:14",
+   "start": "EXO.23.14",
+   "end": "EXO.23.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 503,
+   "text": "17",
+   "start": "EXO.23.17",
+   "end": "EXO.23.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 685,
+   "text": "Ps 51:16",
+   "start": "PSA.51.18",
+   "end": "PSA.51.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 695,
+   "text": "17",
+   "start": "PSA.51.19",
+   "end": "PSA.51.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 699,
+   "text": "Pr 21:3",
+   "start": "PRO.21.3",
+   "end": "PRO.21.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 708,
+   "text": "Jer 6:20",
+   "start": "JER.6.20",
+   "end": "JER.6.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 718,
+   "text": "7:21-23",
+   "start": "JER.7.21",
+   "end": "JER.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 727,
+   "text": "14:12",
+   "start": "JER.14.12",
+   "end": "JER.14.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 734,
+   "text": "Am 5:21-24",
+   "start": "AMO.5.21",
+   "end": "AMO.5.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 812,
+   "text": "Ec 7:12",
+   "start": "ECC.7.12",
+   "end": "ECC.7.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 872,
+   "text": "De 10:12",
+   "start": "DEU.10.12",
+   "end": "DEU.10.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 950,
+   "text": "1Ki 8:63",
+   "start": "1KI.8.63",
+   "end": "1KI.8.63",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 964,
+   "text": "Ec 11:4",
+   "start": "ECC.11.4",
+   "end": "ECC.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 973,
+   "text": "6",
+   "start": "ECC.11.6",
+   "end": "ECC.11.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 1126,
+   "text": "Nu 15:30",
+   "start": "NUM.15.30",
+   "end": "NUM.15.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.4.17.1",
+   "at": 1136,
+   "text": "31",
+   "start": "NUM.15.31",
+   "end": "NUM.15.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.1.1",
+   "at": 63,
+   "text": "Ec 5:1",
+   "start": "ECC.4.17",
+   "end": "ECC.4.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.1.1",
+   "at": 95,
+   "text": "Ec 5:1",
+   "start": "ECC.4.17",
+   "end": "ECC.4.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.1.1",
+   "at": 151,
+   "text": "Isa 1:12",
+   "start": "ISA.1.12",
+   "end": "ISA.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.1.1",
+   "at": 165,
+   "text": "Ec 5:4-6",
+   "start": "ECC.5.3",
+   "end": "ECC.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.1.1",
+   "at": 225,
+   "text": "Ec 5:6",
+   "start": "ECC.5.5",
+   "end": "ECC.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.2.1",
+   "at": 174,
+   "text": "Ec 10:14",
+   "start": "ECC.10.14",
+   "end": "ECC.10.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.2.1",
+   "at": 209,
+   "text": "Ec 5:7",
+   "start": "ECC.5.6",
+   "end": "ECC.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.2.1",
+   "at": 305,
+   "text": "Ps 73:20",
+   "start": "PSA.73.20",
+   "end": "PSA.73.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.2.1",
+   "at": 424,
+   "text": "Mt 6:7",
+   "start": "MAT.6.7",
+   "end": "MAT.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.3.1",
+   "at": 58,
+   "text": "Ec 5:2",
+   "start": "ECC.5.1",
+   "end": "ECC.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.3.1",
+   "at": 66,
+   "text": "3",
+   "start": "ECC.5.2",
+   "end": "ECC.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.3.1",
+   "at": 138,
+   "text": "Jud 11:35",
+   "start": "JDG.11.35",
+   "end": "JDG.11.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.3.1",
+   "at": 149,
+   "text": "1Sa 14:24",
+   "start": "1SA.14.24",
+   "end": "1SA.14.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.3.1",
+   "at": 189,
+   "text": "Ps 76:11",
+   "start": "PSA.76.12",
+   "end": "PSA.76.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.3.1",
+   "at": 234,
+   "text": "Ex 12:41",
+   "start": "EXO.12.41",
+   "end": "EXO.12.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.3.1",
+   "at": 244,
+   "text": "51",
+   "start": "EXO.12.51",
+   "end": "EXO.12.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 106,
+   "text": "Ec 2:3",
+   "start": "ECC.2.3",
+   "end": "ECC.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 147,
+   "text": "Pr 20:25",
+   "start": "PRO.20.25",
+   "end": "PRO.20.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 189,
+   "text": "Job 33:23",
+   "start": "JOB.33.23",
+   "end": "JOB.33.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 211,
+   "text": "Re 1:20",
+   "start": "REV.1.20",
+   "end": "REV.1.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 242,
+   "text": "Mal 2:7",
+   "start": "MAL.2.7",
+   "end": "MAL.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 304,
+   "text": "Le 5:4",
+   "start": "LEV.5.4",
+   "end": "LEV.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 312,
+   "text": "5",
+   "start": "LEV.5.5",
+   "end": "LEV.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 460,
+   "text": "Mal 3:1",
+   "start": "MAL.3.1",
+   "end": "MAL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 510,
+   "text": "1Co 11:10",
+   "start": "1CO.11.10",
+   "end": "1CO.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.5.1",
+   "at": 521,
+   "text": "1Ti 5:21",
+   "start": "1TI.5.21",
+   "end": "1TI.5.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.6.1",
+   "at": 11,
+   "text": "Ec 5:3",
+   "start": "ECC.5.2",
+   "end": "ECC.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.7.1",
+   "at": 9,
+   "text": "Ec 3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.7.1",
+   "at": 108,
+   "text": "Ec 5:1-6",
+   "start": "ECC.4.17",
+   "end": "ECC.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.7.1",
+   "at": 335,
+   "text": "1Ki 12:4",
+   "start": "1KI.12.4",
+   "end": "1KI.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.7.1",
+   "at": 397,
+   "text": "Isa 53:10",
+   "start": "ISA.53.10",
+   "end": "ISA.53.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.7.1",
+   "at": 631,
+   "text": "Da 7:18",
+   "start": "DAN.7.18",
+   "end": "DAN.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.7.1",
+   "at": 653,
+   "text": "2Ch 16:9",
+   "start": "2CH.16.9",
+   "end": "2CH.16.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.8.1",
+   "at": 145,
+   "text": "2Ch 26:10",
+   "start": "2CH.26.10",
+   "end": "2CH.26.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.8.1",
+   "at": 272,
+   "text": "Pr 22:22",
+   "start": "PRO.22.22",
+   "end": "PRO.22.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.8.1",
+   "at": 282,
+   "text": "23",
+   "start": "PRO.22.23",
+   "end": "PRO.22.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.9.1",
+   "at": 195,
+   "text": "Ec 4:1",
+   "start": "ECC.4.1",
+   "end": "ECC.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.9.1",
+   "at": 206,
+   "text": "Ec 4:5",
+   "start": "ECC.4.5",
+   "end": "ECC.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.11.1",
+   "at": 93,
+   "text": "Ec 4:6",
+   "start": "ECC.4.6",
+   "end": "ECC.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.11.1",
+   "at": 225,
+   "text": "Ec 4:5",
+   "start": "ECC.4.5",
+   "end": "ECC.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.12-13.1",
+   "at": 54,
+   "text": "Pr 11:31",
+   "start": "PRO.11.31",
+   "end": "PRO.11.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.12-13.1",
+   "at": 273,
+   "text": "Ec 2:19",
+   "start": "ECC.2.19",
+   "end": "ECC.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.12-13.1",
+   "at": 282,
+   "text": "23",
+   "start": "ECC.2.23",
+   "end": "ECC.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.15.1",
+   "at": 107,
+   "text": "Ps 49:17",
+   "start": "PSA.49.18",
+   "end": "PSA.49.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.15.1",
+   "at": 142,
+   "text": "Ho 12:1",
+   "start": "HOS.12.2",
+   "end": "HOS.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.16.1",
+   "at": 72,
+   "text": "Ec 5:11",
+   "start": "ECC.5.10",
+   "end": "ECC.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.16.1",
+   "at": 81,
+   "text": "12",
+   "start": "ECC.5.11",
+   "end": "ECC.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.16.1",
+   "at": 85,
+   "text": "18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.16.1",
+   "at": 140,
+   "text": "Ec 8:1",
+   "start": "ECC.8.1",
+   "end": "ECC.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.16.1",
+   "at": 148,
+   "text": "Pr 16:15",
+   "start": "PRO.16.15",
+   "end": "PRO.16.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.17.1",
+   "at": 30,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.17.1",
+   "at": 39,
+   "text": "13",
+   "start": "ECC.3.13",
+   "end": "ECC.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.17.1",
+   "at": 43,
+   "text": "22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.17.1",
+   "at": 329,
+   "text": "1Co 7:31",
+   "start": "1CO.7.31",
+   "end": "1CO.7.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.18.1",
+   "at": 7,
+   "text": "Ec 5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.18.1",
+   "at": 45,
+   "text": "Ec 5:12",
+   "start": "ECC.5.11",
+   "end": "ECC.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.18.1",
+   "at": 58,
+   "text": "Ec 5:19",
+   "start": "ECC.5.18",
+   "end": "ECC.5.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.18.1",
+   "at": 122,
+   "text": "Ec 5:8",
+   "start": "ECC.5.7",
+   "end": "ECC.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.18.1",
+   "at": 198,
+   "text": "Ec 6:2",
+   "start": "ECC.6.2",
+   "end": "ECC.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.5.19.1",
+   "at": 84,
+   "text": "Ec 2:11",
+   "start": "ECC.2.11",
+   "end": "ECC.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.2.1",
+   "at": 119,
+   "text": "Ec 5:19",
+   "start": "ECC.5.18",
+   "end": "ECC.5.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.2.1",
+   "at": 217,
+   "text": "Ec 5:8",
+   "start": "ECC.5.7",
+   "end": "ECC.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.2.1",
+   "at": 225,
+   "text": "10",
+   "start": "ECC.5.9",
+   "end": "ECC.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.2.1",
+   "at": 282,
+   "text": "Jer 51:51",
+   "start": "JER.51.51",
+   "end": "JER.51.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.2.1",
+   "at": 293,
+   "text": "La 5:2",
+   "start": "LAM.5.2",
+   "end": "LAM.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.2.1",
+   "at": 301,
+   "text": "Ho 7:9",
+   "start": "HOS.7.9",
+   "end": "HOS.7.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.2.1",
+   "at": 480,
+   "text": "Ec 2:26",
+   "start": "ECC.2.26",
+   "end": "ECC.2.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.3.1",
+   "at": 80,
+   "text": "2Ki 10:1",
+   "start": "2KI.10.1",
+   "end": "2KI.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.3.1",
+   "at": 139,
+   "text": "Ec 6:2",
+   "start": "ECC.6.2",
+   "end": "ECC.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.3.1",
+   "at": 220,
+   "text": "Ge 47:9",
+   "start": "GEN.47.9",
+   "end": "GEN.47.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.3.1",
+   "at": 311,
+   "text": "2Ki 9:26",
+   "start": "2KI.9.26",
+   "end": "2KI.9.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.3.1",
+   "at": 321,
+   "text": "35",
+   "start": "2KI.9.35",
+   "end": "2KI.9.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.7.1",
+   "at": 45,
+   "text": "Ec 6:3-6",
+   "start": "ECC.6.3",
+   "end": "ECC.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.8.1",
+   "at": 342,
+   "text": "Ec 5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.8.1",
+   "at": 351,
+   "text": "19",
+   "start": "ECC.5.18",
+   "end": "ECC.5.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.9.1",
+   "at": 29,
+   "text": "Ec 6:8",
+   "start": "ECC.6.8",
+   "end": "ECC.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.9.1",
+   "at": 199,
+   "text": "Ps 73:9",
+   "start": "PSA.73.9",
+   "end": "PSA.73.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.9.1",
+   "at": 280,
+   "text": "Ec 6:7",
+   "start": "ECC.6.7",
+   "end": "ECC.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.9.1",
+   "at": 288,
+   "text": "Heb 13:5",
+   "start": "HEB.13.5",
+   "end": "HEB.13.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.10.1",
+   "at": 78,
+   "text": "Ec 6:12",
+   "start": "ECC.6.12",
+   "end": "ECC.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.10.1",
+   "at": 227,
+   "text": "Ec 1:9",
+   "start": "ECC.1.9",
+   "end": "ECC.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.10.1",
+   "at": 235,
+   "text": "3:15",
+   "start": "ECC.3.15",
+   "end": "ECC.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.12.1",
+   "at": 168,
+   "text": "Ec 3:22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.12.1",
+   "at": 177,
+   "text": "8:7",
+   "start": "ECC.8.7",
+   "end": "ECC.8.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.12.1",
+   "at": 233,
+   "text": "Ec 6:10",
+   "start": "ECC.6.10",
+   "end": "ECC.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.6.12.1",
+   "at": 591,
+   "text": "Ec 7:1-29",
+   "start": "ECC.7.1",
+   "end": "ECC.7.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.1.1",
+   "at": 11,
+   "text": "Ec 6:12",
+   "start": "ECC.6.12",
+   "end": "ECC.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.1.1",
+   "at": 175,
+   "text": "Isa 9:6",
+   "start": "ISA.9.5",
+   "end": "ISA.9.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.1.1",
+   "at": 590,
+   "text": "Re 3:12",
+   "start": "REV.3.12",
+   "end": "REV.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.1.1",
+   "at": 746,
+   "text": "Isa 56:5",
+   "start": "ISA.56.5",
+   "end": "ISA.56.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.1.1",
+   "at": 756,
+   "text": "Mr 14:3-9",
+   "start": "MRK.14.3",
+   "end": "MRK.14.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.1.1",
+   "at": 847,
+   "text": "So 1:3",
+   "start": "SNG.1.3",
+   "end": "SNG.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.1.1",
+   "at": 1072,
+   "text": "Php 1:23",
+   "start": "PHP.1.23",
+   "end": "PHP.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.2.1",
+   "at": 81,
+   "text": "Ec 3:13",
+   "start": "ECC.3.13",
+   "end": "ECC.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.2.1",
+   "at": 90,
+   "text": "5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.2.1",
+   "at": 221,
+   "text": "Ec 1:4",
+   "start": "ECC.1.4",
+   "end": "ECC.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.2.1",
+   "at": 229,
+   "text": "5",
+   "start": "ECC.1.5",
+   "end": "ECC.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.3.1",
+   "at": 86,
+   "text": "Ec 2:2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.3.1",
+   "at": 121,
+   "text": "Ps 126:5",
+   "start": "PSA.126.5",
+   "end": "PSA.126.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.3.1",
+   "at": 131,
+   "text": "6",
+   "start": "PSA.126.6",
+   "end": "PSA.126.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.3.1",
+   "at": 134,
+   "text": "2Co 4:17",
+   "start": "2CO.4.17",
+   "end": "2CO.4.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.3.1",
+   "at": 144,
+   "text": "Heb 12:10",
+   "start": "HEB.12.10",
+   "end": "HEB.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.3.1",
+   "at": 155,
+   "text": "11",
+   "start": "HEB.12.11",
+   "end": "HEB.12.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.3.1",
+   "at": 299,
+   "text": "Ec 11:9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.5.1",
+   "at": 4,
+   "text": "Ps 141:4",
+   "start": "PSA.141.4",
+   "end": "PSA.141.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.5.1",
+   "at": 14,
+   "text": "5",
+   "start": "PSA.141.5",
+   "end": "PSA.141.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.6.1",
+   "at": 128,
+   "text": "Joe 2:5",
+   "start": "JOL.2.5",
+   "end": "JOL.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.6.1",
+   "at": 299,
+   "text": "2Sa 23:6",
+   "start": "2SA.23.6",
+   "end": "2SA.23.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.6.1",
+   "at": 309,
+   "text": "Na 1:10",
+   "start": "NAM.1.10",
+   "end": "NAM.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 37,
+   "text": "Ec 3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 46,
+   "text": "5:8",
+   "start": "ECC.5.7",
+   "end": "ECC.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 72,
+   "text": "Ec 7:4-6",
+   "start": "ECC.7.4",
+   "end": "ECC.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 257,
+   "text": "Ec 7:5",
+   "start": "ECC.7.5",
+   "end": "ECC.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 264,
+   "text": "6",
+   "start": "ECC.7.6",
+   "end": "ECC.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 347,
+   "text": "Ec 5:8",
+   "start": "ECC.5.7",
+   "end": "ECC.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 441,
+   "text": "Ec 3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 518,
+   "text": "Job 12:6",
+   "start": "JOB.12.6",
+   "end": "JOB.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 528,
+   "text": "21:6",
+   "start": "JOB.21.6",
+   "end": "JOB.21.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 534,
+   "text": "7",
+   "start": "JOB.21.7",
+   "end": "JOB.21.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.7.1",
+   "at": 537,
+   "text": "24:1",
+   "start": "JOB.24.1",
+   "end": "JOB.24.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.8.1",
+   "at": 18,
+   "text": "Ec 7:7",
+   "start": "ECC.7.7",
+   "end": "ECC.7.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.8.1",
+   "at": 229,
+   "text": "Ro 5:3",
+   "start": "ROM.5.3",
+   "end": "ROM.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.8.1",
+   "at": 355,
+   "text": "Ps 73:2",
+   "start": "PSA.73.2",
+   "end": "PSA.73.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.8.1",
+   "at": 364,
+   "text": "3",
+   "start": "PSA.73.3",
+   "end": "PSA.73.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.8.1",
+   "at": 367,
+   "text": "12-14",
+   "start": "PSA.73.12",
+   "end": "PSA.73.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.8.1",
+   "at": 374,
+   "text": "17-26",
+   "start": "PSA.73.17",
+   "end": "PSA.73.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.9.1",
+   "at": 60,
+   "text": "Ec 5:2",
+   "start": "ECC.5.1",
+   "end": "ECC.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.10.1",
+   "at": 102,
+   "text": "Job 29:2-5",
+   "start": "JOB.29.2",
+   "end": "JOB.29.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.11.1",
+   "at": 190,
+   "text": "Ec 11:7",
+   "start": "ECC.11.7",
+   "end": "ECC.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.11.1",
+   "at": 199,
+   "text": "Job 3:16",
+   "start": "JOB.3.16",
+   "end": "JOB.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.12.1",
+   "at": 55,
+   "text": "Isa 30:2",
+   "start": "ISA.30.2",
+   "end": "ISA.30.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.12.1",
+   "at": 327,
+   "text": "Pr 3:18",
+   "start": "PRO.3.18",
+   "end": "PRO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.12.1",
+   "at": 336,
+   "text": "Joh 17:3",
+   "start": "JHN.17.3",
+   "end": "JHN.17.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.12.1",
+   "at": 346,
+   "text": "2Pe 1:3",
+   "start": "2PE.1.3",
+   "end": "2PE.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.12.1",
+   "at": 498,
+   "text": "Ec 7:10",
+   "start": "ECC.7.10",
+   "end": "ECC.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.13.1",
+   "at": 181,
+   "text": "Ec 1:15",
+   "start": "ECC.1.15",
+   "end": "ECC.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.14.1",
+   "at": 26,
+   "text": "Ec 7:13",
+   "start": "ECC.7.13",
+   "end": "ECC.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.14.1",
+   "at": 321,
+   "text": "Ec 7:8",
+   "start": "ECC.7.8",
+   "end": "ECC.7.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.14.1",
+   "at": 451,
+   "text": "Ec 7:13",
+   "start": "ECC.7.13",
+   "end": "ECC.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.14.1",
+   "at": 504,
+   "text": "Ec 7:10",
+   "start": "ECC.7.10",
+   "end": "ECC.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.15.1",
+   "at": 81,
+   "text": "Ec 8:14",
+   "start": "ECC.8.14",
+   "end": "ECC.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.15.1",
+   "at": 90,
+   "text": "Job 21:7",
+   "start": "JOB.21.7",
+   "end": "JOB.21.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.15.1",
+   "at": 120,
+   "text": "1Ki 21:13",
+   "start": "1KI.21.13",
+   "end": "1KI.21.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.15.1",
+   "at": 160,
+   "text": "Joh 10:28",
+   "start": "JHN.10.28",
+   "end": "JHN.10.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.15.1",
+   "at": 183,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 17,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 69,
+   "text": "Ec 7:17",
+   "start": "ECC.7.17",
+   "end": "ECC.7.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 119,
+   "text": "1Co 15:32",
+   "start": "1CO.15.32",
+   "end": "1CO.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 156,
+   "text": "1Co 15:33",
+   "start": "1CO.15.33",
+   "end": "1CO.15.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 513,
+   "text": "Ec 7:18",
+   "start": "ECC.7.18",
+   "end": "ECC.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 522,
+   "text": "5:3",
+   "start": "ECC.5.2",
+   "end": "ECC.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 527,
+   "text": "7",
+   "start": "ECC.5.6",
+   "end": "ECC.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 530,
+   "text": "Mt 6:1-7",
+   "start": "MAT.6.1",
+   "end": "MAT.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 540,
+   "text": "9:14",
+   "start": "MAT.9.14",
+   "end": "MAT.9.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 546,
+   "text": "23:23",
+   "start": "MAT.23.23",
+   "end": "MAT.23.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 553,
+   "text": "24",
+   "start": "MAT.23.24",
+   "end": "MAT.23.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 557,
+   "text": "Ro 10:3",
+   "start": "ROM.10.3",
+   "end": "ROM.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 566,
+   "text": "1Ti 4:3",
+   "start": "1TI.4.3",
+   "end": "1TI.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 588,
+   "text": "Job 11:12",
+   "start": "JOB.11.12",
+   "end": "JOB.11.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 599,
+   "text": "Ro 12:3",
+   "start": "ROM.12.3",
+   "end": "ROM.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 608,
+   "text": "16",
+   "start": "ROM.12.16",
+   "end": "ROM.12.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 855,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.16.1",
+   "at": 918,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.17.1",
+   "at": 179,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.17.1",
+   "at": 341,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.17.1",
+   "at": 436,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.17.1",
+   "at": 547,
+   "text": "Ro 2:5",
+   "start": "ROM.2.5",
+   "end": "ROM.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.17.1",
+   "at": 714,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.18.1",
+   "at": 43,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.18.1",
+   "at": 52,
+   "text": "17",
+   "start": "ECC.7.17",
+   "end": "ECC.7.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.19.1",
+   "at": 62,
+   "text": "2Ti 3:15",
+   "start": "2TI.3.15",
+   "end": "2TI.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.19.1",
+   "at": 126,
+   "text": "Ec 7:12",
+   "start": "ECC.7.12",
+   "end": "ECC.7.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.19.1",
+   "at": 135,
+   "text": "9:13-18",
+   "start": "ECC.9.13",
+   "end": "ECC.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.19.1",
+   "at": 144,
+   "text": "Pr 21:22",
+   "start": "PRO.21.22",
+   "end": "PRO.21.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.19.1",
+   "at": 154,
+   "text": "24:5",
+   "start": "PRO.24.5",
+   "end": "PRO.24.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.20.1",
+   "at": 17,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.21.1",
+   "at": 154,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.21.1",
+   "at": 163,
+   "text": "Lu 18:9",
+   "start": "LUK.18.9",
+   "end": "LUK.18.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.21.1",
+   "at": 172,
+   "text": "11",
+   "start": "LUK.18.11",
+   "end": "LUK.18.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.21.1",
+   "at": 210,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.21.1",
+   "at": 219,
+   "text": "16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.23.1",
+   "at": 35,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.23.1",
+   "at": 44,
+   "text": "Ec 7:15-22",
+   "start": "ECC.7.15",
+   "end": "ECC.7.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 88,
+   "text": "Ec 7:18",
+   "start": "ECC.7.18",
+   "end": "ECC.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 97,
+   "text": "De 30:12",
+   "start": "DEU.30.12",
+   "end": "DEU.30.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 107,
+   "text": "13",
+   "start": "DEU.30.13",
+   "end": "DEU.30.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 111,
+   "text": "Job 11:7",
+   "start": "JOB.11.7",
+   "end": "JOB.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 121,
+   "text": "8",
+   "start": "JOB.11.8",
+   "end": "JOB.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 124,
+   "text": "28:12-20",
+   "start": "JOB.28.12",
+   "end": "JOB.28.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 134,
+   "text": "28",
+   "start": "JOB.28.28",
+   "end": "JOB.28.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.24.1",
+   "at": 138,
+   "text": "Ps 64:6",
+   "start": "PSA.64.7",
+   "end": "PSA.64.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.25.1",
+   "at": 255,
+   "text": "Ec 1:17",
+   "start": "ECC.1.17",
+   "end": "ECC.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.25.1",
+   "at": 264,
+   "text": "2:12",
+   "start": "ECC.2.12",
+   "end": "ECC.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 123,
+   "text": "1Ki 11:3",
+   "start": "1KI.11.3",
+   "end": "1KI.11.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 133,
+   "text": "4",
+   "start": "1KI.11.4",
+   "end": "1KI.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 136,
+   "text": "Pr 5:3",
+   "start": "PRO.5.3",
+   "end": "PRO.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 144,
+   "text": "4",
+   "start": "PRO.5.4",
+   "end": "PRO.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 147,
+   "text": "22:14",
+   "start": "PRO.22.14",
+   "end": "PRO.22.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 278,
+   "text": "Ge 39:2",
+   "start": "GEN.39.2",
+   "end": "GEN.39.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 287,
+   "text": "3",
+   "start": "GEN.39.3",
+   "end": "GEN.39.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.26.1",
+   "at": 290,
+   "text": "9",
+   "start": "GEN.39.9",
+   "end": "GEN.39.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.27.1",
+   "at": 33,
+   "text": "Ec 7:28",
+   "start": "ECC.7.28",
+   "end": "ECC.7.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.27.1",
+   "at": 151,
+   "text": "Ec 7:28",
+   "start": "ECC.7.28",
+   "end": "ECC.7.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.28.1",
+   "at": 200,
+   "text": "Job 33:23",
+   "start": "JOB.33.23",
+   "end": "JOB.33.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.28.1",
+   "at": 211,
+   "text": "Ps 12:1",
+   "start": "PSA.12.2",
+   "end": "PSA.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.28.1",
+   "at": 321,
+   "text": "So 5:10",
+   "start": "SNG.5.10",
+   "end": "SNG.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.28.1",
+   "at": 611,
+   "text": "Ec 7:26",
+   "start": "ECC.7.26",
+   "end": "ECC.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.28.1",
+   "at": 667,
+   "text": "Pr 12:4",
+   "start": "PRO.12.4",
+   "end": "PRO.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.28.1",
+   "at": 676,
+   "text": "31:10",
+   "start": "PRO.31.10",
+   "end": "PRO.31.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.29.1",
+   "at": 267,
+   "text": "Ge 2:1-3:24",
+   "start": "GEN.2.1",
+   "end": "GEN.3.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.29.1",
+   "at": 344,
+   "text": "Ec 7:26",
+   "start": "ECC.7.26",
+   "end": "ECC.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.29.1",
+   "at": 478,
+   "text": "Mt 19:4",
+   "start": "MAT.19.4",
+   "end": "MAT.19.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.29.1",
+   "at": 487,
+   "text": "5",
+   "start": "MAT.19.5",
+   "end": "MAT.19.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.7.29.1",
+   "at": 490,
+   "text": "6",
+   "start": "MAT.19.6",
+   "end": "MAT.19.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 36,
+   "text": "Ec 7:11",
+   "start": "ECC.7.11",
+   "end": "ECC.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 180,
+   "text": "Ec 7:8",
+   "start": "ECC.7.8",
+   "end": "ECC.7.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 188,
+   "text": "13",
+   "start": "ECC.7.13",
+   "end": "ECC.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 192,
+   "text": "14",
+   "start": "ECC.7.14",
+   "end": "ECC.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 233,
+   "text": "Ec 7:29",
+   "start": "ECC.7.29",
+   "end": "ECC.7.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 242,
+   "text": "Pr 1:6",
+   "start": "PRO.1.6",
+   "end": "PRO.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 267,
+   "text": "Ec 7:14",
+   "start": "ECC.7.14",
+   "end": "ECC.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 276,
+   "text": "Ac 6:15",
+   "start": "ACT.6.15",
+   "end": "ACT.6.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 393,
+   "text": "Ex 34:29",
+   "start": "EXO.34.29",
+   "end": "EXO.34.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 403,
+   "text": "30",
+   "start": "EXO.34.30",
+   "end": "EXO.34.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 490,
+   "text": "Jas 3:17",
+   "start": "JAS.3.17",
+   "end": "JAS.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 645,
+   "text": "Pr 4:18",
+   "start": "PRO.4.18",
+   "end": "PRO.4.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 681,
+   "text": "Ec 7:19",
+   "start": "ECC.7.19",
+   "end": "ECC.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 690,
+   "text": "Isa 40:31",
+   "start": "ISA.40.31",
+   "end": "ISA.40.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.1.1",
+   "at": 701,
+   "text": "2Co 3:18",
+   "start": "2CO.3.18",
+   "end": "2CO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.2.1",
+   "at": 71,
+   "text": "Ec 8:3",
+   "start": "ECC.8.3",
+   "end": "ECC.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.2.1",
+   "at": 79,
+   "text": "4",
+   "start": "ECC.8.4",
+   "end": "ECC.8.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.2.1",
+   "at": 230,
+   "text": "Ps 89:35",
+   "start": "PSA.89.36",
+   "end": "PSA.89.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.2.1",
+   "at": 261,
+   "text": "Ps 89:36",
+   "start": "PSA.89.37",
+   "end": "PSA.89.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.2.1",
+   "at": 329,
+   "text": "Ps 89:30-32",
+   "start": "PSA.89.31",
+   "end": "PSA.89.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.3.1",
+   "at": 192,
+   "text": "Ps 139:7",
+   "start": "PSA.139.7",
+   "end": "PSA.139.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.3.1",
+   "at": 255,
+   "text": "Ec 8:1",
+   "start": "ECC.8.1",
+   "end": "ECC.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.3.1",
+   "at": 263,
+   "text": "Joh 8:33-36",
+   "start": "JHN.8.33",
+   "end": "JHN.8.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.3.1",
+   "at": 276,
+   "text": "Ro 8:2",
+   "start": "ROM.8.2",
+   "end": "ROM.8.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.3.1",
+   "at": 284,
+   "text": "1Jo 4:18",
+   "start": "1JN.4.18",
+   "end": "1JN.4.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.3.1",
+   "at": 396,
+   "text": "Job 23:13",
+   "start": "JOB.23.13",
+   "end": "JOB.23.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.3.1",
+   "at": 407,
+   "text": "Ps 115:3",
+   "start": "PSA.115.3",
+   "end": "PSA.115.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.4.1",
+   "at": 53,
+   "text": "Ro 1:16",
+   "start": "ROM.1.16",
+   "end": "ROM.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.4.1",
+   "at": 62,
+   "text": "Heb 4:12",
+   "start": "HEB.4.12",
+   "end": "HEB.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.4.1",
+   "at": 109,
+   "text": "Isa 45:9",
+   "start": "ISA.45.9",
+   "end": "ISA.45.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.4.1",
+   "at": 119,
+   "text": "Da 4:35",
+   "start": "DAN.4.32",
+   "end": "DAN.4.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.5.1",
+   "at": 118,
+   "text": "Ec 3:1-11",
+   "start": "ECC.3.1",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.5.1",
+   "at": 248,
+   "text": "Ec 3:17",
+   "start": "ECC.3.17",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.5.1",
+   "at": 310,
+   "text": "Ec 8:3",
+   "start": "ECC.8.3",
+   "end": "ECC.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.7.1",
+   "at": 98,
+   "text": "2Co 6:2",
+   "start": "2CO.6.2",
+   "end": "2CO.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.7.1",
+   "at": 146,
+   "text": "Ec 3:22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.7.1",
+   "at": 155,
+   "text": "6:12",
+   "start": "ECC.6.12",
+   "end": "ECC.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.7.1",
+   "at": 161,
+   "text": "9:12",
+   "start": "ECC.9.12",
+   "end": "ECC.9.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.7.1",
+   "at": 216,
+   "text": "Ec 3:1",
+   "start": "ECC.3.1",
+   "end": "ECC.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.7.1",
+   "at": 325,
+   "text": "1Th 5:2-4",
+   "start": "1TH.5.2",
+   "end": "1TH.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.8.1",
+   "at": 28,
+   "text": "Ec 3:19",
+   "start": "ECC.3.19",
+   "end": "ECC.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.8.1",
+   "at": 99,
+   "text": "Pr 30:4",
+   "start": "PRO.30.4",
+   "end": "PRO.30.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.8.1",
+   "at": 177,
+   "text": "Ec 8:6",
+   "start": "ECC.8.6",
+   "end": "ECC.8.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.8.1",
+   "at": 185,
+   "text": "7",
+   "start": "ECC.8.7",
+   "end": "ECC.8.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.8.1",
+   "at": 277,
+   "text": "Nu 1:3",
+   "start": "NUM.1.3",
+   "end": "NUM.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.8.1",
+   "at": 310,
+   "text": "De 20:5-8",
+   "start": "DEU.20.5",
+   "end": "DEU.20.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.9.1",
+   "at": 96,
+   "text": "1Ki 12:1-33",
+   "start": "1KI.12.1",
+   "end": "1KI.12.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.9.1",
+   "at": 216,
+   "text": "Ec 8:8",
+   "start": "ECC.8.8",
+   "end": "ECC.8.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.9.1",
+   "at": 255,
+   "text": "Ec 8:6",
+   "start": "ECC.8.6",
+   "end": "ECC.8.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 31,
+   "text": "Ec 8:9",
+   "start": "ECC.8.9",
+   "end": "ECC.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 101,
+   "text": "Jer 22:19",
+   "start": "JER.22.19",
+   "end": "JER.22.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 214,
+   "text": "Lu 16:22",
+   "start": "LUK.16.22",
+   "end": "LUK.16.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 224,
+   "text": "23",
+   "start": "LUK.16.23",
+   "end": "LUK.16.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 359,
+   "text": "Ps 82:1-6",
+   "start": "PSA.82.1",
+   "end": "PSA.82.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 608,
+   "text": "Ex 21:14",
+   "start": "EXO.21.14",
+   "end": "EXO.21.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 618,
+   "text": "1Ki 2:28",
+   "start": "1KI.2.28",
+   "end": "1KI.2.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 628,
+   "text": "31",
+   "start": "1KI.2.31",
+   "end": "1KI.2.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.10.1",
+   "at": 813,
+   "text": "Ec 8:9",
+   "start": "ECC.8.9",
+   "end": "ECC.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.11.1",
+   "at": 73,
+   "text": "Mt 24:48-51",
+   "start": "MAT.24.48",
+   "end": "MAT.24.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.11.1",
+   "at": 86,
+   "text": "2Pe 3:8",
+   "start": "2PE.3.8",
+   "end": "2PE.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.11.1",
+   "at": 95,
+   "text": "9",
+   "start": "2PE.3.9",
+   "end": "2PE.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.11.1",
+   "at": 180,
+   "text": "Ps 55:19",
+   "start": "PSA.55.20",
+   "end": "PSA.55.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.11.1",
+   "at": 303,
+   "text": "Ro 2:4",
+   "start": "ROM.2.4",
+   "end": "ROM.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.12.1",
+   "at": 62,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.13.1",
+   "at": 52,
+   "text": "Ec 8:12",
+   "start": "ECC.8.12",
+   "end": "ECC.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.13.1",
+   "at": 239,
+   "text": "Ec 8:11",
+   "start": "ECC.8.11",
+   "end": "ECC.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.13.1",
+   "at": 524,
+   "text": "Ec 6:12",
+   "start": "ECC.6.12",
+   "end": "ECC.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 81,
+   "text": "Ec 3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 90,
+   "text": "7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 428,
+   "text": "Ec 8:10",
+   "start": "ECC.8.10",
+   "end": "ECC.8.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 516,
+   "text": "Ec 8:14",
+   "start": "ECC.8.14",
+   "end": "ECC.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 525,
+   "text": "15",
+   "start": "ECC.8.15",
+   "end": "ECC.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 690,
+   "text": "Ec 2:2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 698,
+   "text": "7:2",
+   "start": "ECC.7.2",
+   "end": "ECC.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 740,
+   "text": "Ec 3:12",
+   "start": "ECC.3.12",
+   "end": "ECC.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 749,
+   "text": "5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 755,
+   "text": "7:18",
+   "start": "ECC.7.18",
+   "end": "ECC.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 761,
+   "text": "9:7",
+   "start": "ECC.9.7",
+   "end": "ECC.9.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.14.1",
+   "at": 823,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.15.1",
+   "at": 312,
+   "text": "1Co 15:32",
+   "start": "1CO.15.32",
+   "end": "1CO.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 13,
+   "text": "Ec 8:14",
+   "start": "ECC.8.14",
+   "end": "ECC.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 22,
+   "text": "15",
+   "start": "ECC.8.15",
+   "end": "ECC.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 166,
+   "text": "Ec 8:17",
+   "start": "ECC.8.17",
+   "end": "ECC.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 307,
+   "text": "Ec 8:14",
+   "start": "ECC.8.14",
+   "end": "ECC.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 316,
+   "text": "Ec 3:11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 325,
+   "text": "Job 5:9",
+   "start": "JOB.5.9",
+   "end": "JOB.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 334,
+   "text": "Ro 11:33",
+   "start": "ROM.11.33",
+   "end": "ROM.11.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 456,
+   "text": "Ps 73:16",
+   "start": "PSA.73.16",
+   "end": "PSA.73.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 523,
+   "text": "Ec 9:1",
+   "start": "ECC.9.1",
+   "end": "ECC.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.8.16.1",
+   "at": 545,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.1.1",
+   "at": 261,
+   "text": "Ec 8:14",
+   "start": "ECC.8.14",
+   "end": "ECC.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.1.1",
+   "at": 270,
+   "text": "17",
+   "start": "ECC.8.17",
+   "end": "ECC.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.1.1",
+   "at": 321,
+   "text": "Ec 9:6",
+   "start": "ECC.9.6",
+   "end": "ECC.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.1.1",
+   "at": 553,
+   "text": "Ps 76:10",
+   "start": "PSA.76.11",
+   "end": "PSA.76.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.1.1",
+   "at": 563,
+   "text": "Pr 16:7",
+   "start": "PRO.16.7",
+   "end": "PRO.16.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.2.1",
+   "at": 56,
+   "text": "Ec 9:2-10",
+   "start": "ECC.9.2",
+   "end": "ECC.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.2.1",
+   "at": 224,
+   "text": "Ec 2:14",
+   "start": "ECC.2.14",
+   "end": "ECC.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.2.1",
+   "at": 233,
+   "text": "3:20",
+   "start": "ECC.3.20",
+   "end": "ECC.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.2.1",
+   "at": 239,
+   "text": "8:14",
+   "start": "ECC.8.14",
+   "end": "ECC.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.4.1",
+   "at": 179,
+   "text": "Job 14:7",
+   "start": "JOB.14.7",
+   "end": "JOB.14.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.4.1",
+   "at": 266,
+   "text": "1Sa 24:14",
+   "start": "1SA.24.15",
+   "end": "1SA.24.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.4.1",
+   "at": 308,
+   "text": "Pr 30:30",
+   "start": "PRO.30.30",
+   "end": "PRO.30.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 122,
+   "text": "Ec 7:1-4",
+   "start": "ECC.7.1",
+   "end": "ECC.7.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 132,
+   "text": "Ps 90:12",
+   "start": "PSA.90.12",
+   "end": "PSA.90.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 241,
+   "text": "Job 14:21",
+   "start": "JOB.14.21",
+   "end": "JOB.14.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 252,
+   "text": "Isa 63:16",
+   "start": "ISA.63.16",
+   "end": "ISA.63.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 402,
+   "text": "Ec 2:18-22",
+   "start": "ECC.2.18",
+   "end": "ECC.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 414,
+   "text": "4:9",
+   "start": "ECC.4.9",
+   "end": "ECC.4.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 450,
+   "text": "Ps 112:6",
+   "start": "PSA.112.6",
+   "end": "PSA.112.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 460,
+   "text": "Mal 3:16",
+   "start": "MAL.3.16",
+   "end": "MAL.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.5.1",
+   "at": 537,
+   "text": "Ps 49:11",
+   "start": "PSA.49.12",
+   "end": "PSA.49.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.6.1",
+   "at": 41,
+   "text": "Ec 9:1",
+   "start": "ECC.9.1",
+   "end": "ECC.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.6.1",
+   "at": 56,
+   "text": "Ec 9:1",
+   "start": "ECC.9.1",
+   "end": "ECC.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.6.1",
+   "at": 116,
+   "text": "Eze 32:27",
+   "start": "EZK.32.27",
+   "end": "EZK.32.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.6.1",
+   "at": 127,
+   "text": "Re 22:11",
+   "start": "REV.22.11",
+   "end": "REV.22.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.6.1",
+   "at": 495,
+   "text": "Ec 9:1",
+   "start": "ECC.9.1",
+   "end": "ECC.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.6.1",
+   "at": 549,
+   "text": "Ps 17:14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.7.1",
+   "at": 51,
+   "text": "Ec 9:1",
+   "start": "ECC.9.1",
+   "end": "ECC.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.7.1",
+   "at": 175,
+   "text": "Ge 4:4",
+   "start": "GEN.4.4",
+   "end": "GEN.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.7.1",
+   "at": 251,
+   "text": "Ec 3:13",
+   "start": "ECC.3.13",
+   "end": "ECC.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.7.1",
+   "at": 260,
+   "text": "5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 26,
+   "text": "Isa 61:3",
+   "start": "ISA.61.3",
+   "end": "ISA.61.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 141,
+   "text": "Mt 6:29",
+   "start": "MAT.6.29",
+   "end": "MAT.6.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 237,
+   "text": "Re 3:18",
+   "start": "REV.3.18",
+   "end": "REV.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 246,
+   "text": "7:14",
+   "start": "REV.7.14",
+   "end": "REV.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 264,
+   "text": "Ps 23:5",
+   "start": "PSA.23.5",
+   "end": "PSA.23.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 304,
+   "text": "2Sa 14:2",
+   "start": "2SA.14.2",
+   "end": "2SA.14.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 314,
+   "text": "Ps 45:7",
+   "start": "PSA.45.8",
+   "end": "PSA.45.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 323,
+   "text": "Mt 6:17",
+   "start": "MAT.6.17",
+   "end": "MAT.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.8.1",
+   "at": 348,
+   "text": "Ec 7:1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.9.1",
+   "at": 92,
+   "text": "Ec 7:26",
+   "start": "ECC.7.26",
+   "end": "ECC.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.9.1",
+   "at": 101,
+   "text": "28",
+   "start": "ECC.7.28",
+   "end": "ECC.7.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.10.1",
+   "at": 178,
+   "text": "1Sa 10:7",
+   "start": "1SA.10.7",
+   "end": "1SA.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.10.1",
+   "at": 219,
+   "text": "De 6:5",
+   "start": "DEU.6.5",
+   "end": "DEU.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.10.1",
+   "at": 227,
+   "text": "Jer 48:10",
+   "start": "JER.48.10",
+   "end": "JER.48.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.10.1",
+   "at": 272,
+   "text": "Joh 9:4",
+   "start": "JHN.9.4",
+   "end": "JHN.9.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.10.1",
+   "at": 281,
+   "text": "Re 14:13",
+   "start": "REV.14.13",
+   "end": "REV.14.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 40,
+   "text": "Ec 9:7-9",
+   "start": "ECC.9.7",
+   "end": "ECC.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 103,
+   "text": "Ec 3:1",
+   "start": "ECC.3.1",
+   "end": "ECC.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 202,
+   "text": "Ec 8:17",
+   "start": "ECC.8.17",
+   "end": "ECC.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 275,
+   "text": "Ec 9:10",
+   "start": "ECC.9.10",
+   "end": "ECC.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 353,
+   "text": "Ec 9:1",
+   "start": "ECC.9.1",
+   "end": "ECC.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 388,
+   "text": "2Sa 18:23",
+   "start": "2SA.18.23",
+   "end": "2SA.18.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 413,
+   "text": "Zep 3:19",
+   "start": "ZEP.3.19",
+   "end": "ZEP.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 423,
+   "text": "Ro 9:16",
+   "start": "ROM.9.16",
+   "end": "ROM.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 460,
+   "text": "1Sa 17:47",
+   "start": "1SA.17.47",
+   "end": "1SA.17.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 471,
+   "text": "2Ch 14:9",
+   "start": "2CH.14.8",
+   "end": "2CH.14.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 481,
+   "text": "11",
+   "start": "2CH.14.10",
+   "end": "2CH.14.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 485,
+   "text": "15",
+   "start": "2CH.14.14",
+   "end": "2CH.14.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 489,
+   "text": "Ps 33:16",
+   "start": "PSA.33.16",
+   "end": "PSA.33.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.11.1",
+   "at": 612,
+   "text": "Ec 3:11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.12.1",
+   "at": 31,
+   "text": "Ec 7:15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.12.1",
+   "at": 40,
+   "text": "Isa 13:22",
+   "start": "ISA.13.22",
+   "end": "ISA.13.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.12.1",
+   "at": 152,
+   "text": "Ec 9:10",
+   "start": "ECC.9.10",
+   "end": "ECC.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.12.1",
+   "at": 308,
+   "text": "Lu 21:35",
+   "start": "LUK.21.35",
+   "end": "LUK.21.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.16.1",
+   "at": 28,
+   "text": "Ec 7:19",
+   "start": "ECC.7.19",
+   "end": "ECC.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.16.1",
+   "at": 37,
+   "text": "Pr 21:22",
+   "start": "PRO.21.22",
+   "end": "PRO.21.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.16.1",
+   "at": 47,
+   "text": "24:5",
+   "start": "PRO.24.5",
+   "end": "PRO.24.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.16.1",
+   "at": 115,
+   "text": "Ec 9:15",
+   "start": "ECC.9.15",
+   "end": "ECC.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.17.1",
+   "at": 76,
+   "text": "Ec 9:16",
+   "start": "ECC.9.16",
+   "end": "ECC.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.17.1",
+   "at": 168,
+   "text": "Ec 9:15",
+   "start": "ECC.9.15",
+   "end": "ECC.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.17.1",
+   "at": 239,
+   "text": "Ec 9:14",
+   "start": "ECC.9.14",
+   "end": "ECC.9.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 67,
+   "text": "Ec 9:16",
+   "start": "ECC.9.16",
+   "end": "ECC.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 76,
+   "text": "7:19",
+   "start": "ECC.7.19",
+   "end": "ECC.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 164,
+   "text": "Ec 10:1",
+   "start": "ECC.10.1",
+   "end": "ECC.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 173,
+   "text": "Jas 2:10",
+   "start": "JAS.2.10",
+   "end": "JAS.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 325,
+   "text": "Lu 12:32",
+   "start": "LUK.12.32",
+   "end": "LUK.12.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 335,
+   "text": "Heb 12:22",
+   "start": "HEB.12.22",
+   "end": "HEB.12.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 372,
+   "text": "Joh 12:31",
+   "start": "JHN.12.31",
+   "end": "JHN.12.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 426,
+   "text": "Isa 53:2",
+   "start": "ISA.53.2",
+   "end": "ISA.53.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 436,
+   "text": "3",
+   "start": "ISA.53.3",
+   "end": "ISA.53.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 439,
+   "text": "Mr 6:3",
+   "start": "MRK.6.3",
+   "end": "MRK.6.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 447,
+   "text": "2Co 8:9",
+   "start": "2CO.8.9",
+   "end": "2CO.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 456,
+   "text": "Eph 1:7",
+   "start": "EPH.1.7",
+   "end": "EPH.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.9.18.1",
+   "at": 465,
+   "text": "8",
+   "start": "EPH.1.8",
+   "end": "EPH.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 16,
+   "text": "Ec 9:18",
+   "start": "ECC.9.18",
+   "end": "ECC.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 72,
+   "text": "2Sa 12:14",
+   "start": "2SA.12.14",
+   "end": "2SA.12.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 93,
+   "text": "1Ki 11:1-43",
+   "start": "1KI.11.1",
+   "end": "1KI.11.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 120,
+   "text": "2Ch 18:1-34",
+   "start": "2CH.18.1",
+   "end": "2CH.18.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 133,
+   "text": "19:2",
+   "start": "2CH.19.2",
+   "end": "2CH.19.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 148,
+   "text": "2Ch 35:22",
+   "start": "2CH.35.22",
+   "end": "2CH.35.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 566,
+   "text": "1Co 5:6",
+   "start": "1CO.5.6",
+   "end": "1CO.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 653,
+   "text": "Ec 7:1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.1.1",
+   "at": 661,
+   "text": "Ge 34:30",
+   "start": "GEN.34.30",
+   "end": "GEN.34.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.2.1",
+   "at": 4,
+   "text": "Ec 2:14",
+   "start": "ECC.2.14",
+   "end": "ECC.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.3.1",
+   "at": 60,
+   "text": "Pr 6:12-14",
+   "start": "PRO.6.12",
+   "end": "PRO.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.4.1",
+   "at": 38,
+   "text": "Pr 15:1",
+   "start": "PRO.15.1",
+   "end": "PRO.15.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.6.1",
+   "at": 158,
+   "text": "Isa 32:5",
+   "start": "ISA.32.5",
+   "end": "ISA.32.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.7.1",
+   "at": 58,
+   "text": "Jer 17:25",
+   "start": "JER.17.25",
+   "end": "JER.17.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.8.1",
+   "at": 104,
+   "text": "Ec 8:9",
+   "start": "ECC.8.9",
+   "end": "ECC.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.8.1",
+   "at": 163,
+   "text": "Es 7:10",
+   "start": "EST.7.10",
+   "end": "EST.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.8.1",
+   "at": 172,
+   "text": "Ps 7:15",
+   "start": "PSA.7.16",
+   "end": "PSA.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.8.1",
+   "at": 181,
+   "text": "Pr 26:27",
+   "start": "PRO.26.27",
+   "end": "PRO.26.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.8.1",
+   "at": 366,
+   "text": "Ps 80:12",
+   "start": "PSA.80.13",
+   "end": "PSA.80.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.10.1",
+   "at": 37,
+   "text": "Ec 10:9",
+   "start": "ECC.10.9",
+   "end": "ECC.10.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.10.1",
+   "at": 87,
+   "text": "Ec 10:6",
+   "start": "ECC.10.6",
+   "end": "ECC.10.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.10.1",
+   "at": 403,
+   "text": "1Ki 12:1-33",
+   "start": "1KI.12.1",
+   "end": "1KI.12.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.11.1",
+   "at": 149,
+   "text": "Ps 58:4",
+   "start": "PSA.58.5",
+   "end": "PSA.58.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.11.1",
+   "at": 158,
+   "text": "5",
+   "start": "PSA.58.6",
+   "end": "PSA.58.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.11.1",
+   "at": 222,
+   "text": "Ec 10:12",
+   "start": "ECC.10.12",
+   "end": "ECC.10.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.11.1",
+   "at": 303,
+   "text": "Ec 10:10",
+   "start": "ECC.10.10",
+   "end": "ECC.10.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.11.1",
+   "at": 561,
+   "text": "Ec 10:8-10",
+   "start": "ECC.10.8",
+   "end": "ECC.10.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.11.1",
+   "at": 592,
+   "text": "Ec 10:11",
+   "start": "ECC.10.11",
+   "end": "ECC.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.12.1",
+   "at": 64,
+   "text": "Ec 10:11",
+   "start": "ECC.10.11",
+   "end": "ECC.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.14.1",
+   "at": 19,
+   "text": "Ec 5:2",
+   "start": "ECC.5.1",
+   "end": "ECC.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.14.1",
+   "at": 62,
+   "text": "Ec 3:22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.14.1",
+   "at": 71,
+   "text": "6:12",
+   "start": "ECC.6.12",
+   "end": "ECC.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.14.1",
+   "at": 77,
+   "text": "8:7",
+   "start": "ECC.8.7",
+   "end": "ECC.8.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.14.1",
+   "at": 82,
+   "text": "11:2",
+   "start": "ECC.11.2",
+   "end": "ECC.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.14.1",
+   "at": 88,
+   "text": "Pr 27:1",
+   "start": "PRO.27.1",
+   "end": "PRO.27.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 23,
+   "text": "Isa 55:2",
+   "start": "ISA.55.2",
+   "end": "ISA.55.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 33,
+   "text": "Hab 2:13",
+   "start": "HAB.2.13",
+   "end": "HAB.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 131,
+   "text": "Ec 10:3",
+   "start": "ECC.10.3",
+   "end": "ECC.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 173,
+   "text": "Ps 107:7",
+   "start": "PSA.107.7",
+   "end": "PSA.107.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 183,
+   "text": "Mt 7:13",
+   "start": "MAT.7.13",
+   "end": "MAT.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 192,
+   "text": "14",
+   "start": "MAT.7.14",
+   "end": "MAT.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 213,
+   "text": "Ec 10:15",
+   "start": "ECC.10.15",
+   "end": "ECC.10.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.15.1",
+   "at": 312,
+   "text": "Ec 10:4-7",
+   "start": "ECC.10.4",
+   "end": "ECC.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.16.1",
+   "at": 206,
+   "text": "Jer 21:12",
+   "start": "JER.21.12",
+   "end": "JER.21.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.16.1",
+   "at": 243,
+   "text": "Isa 5:11",
+   "start": "ISA.5.11",
+   "end": "ISA.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.17.1",
+   "at": 73,
+   "text": "So 7:1",
+   "start": "SNG.7.2",
+   "end": "SNG.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.17.1",
+   "at": 81,
+   "text": "Isa 32:5",
+   "start": "ISA.32.5",
+   "end": "ISA.32.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.17.1",
+   "at": 91,
+   "text": "8",
+   "start": "ISA.32.8",
+   "end": "ISA.32.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.17.1",
+   "at": 111,
+   "text": "Ec 3:1",
+   "start": "ECC.3.1",
+   "end": "ECC.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.18.1",
+   "at": 75,
+   "text": "Ec 10:16",
+   "start": "ECC.10.16",
+   "end": "ECC.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.18.1",
+   "at": 85,
+   "text": "Isa 3:6",
+   "start": "ISA.3.6",
+   "end": "ISA.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.18.1",
+   "at": 94,
+   "text": "Am 9:11",
+   "start": "AMO.9.11",
+   "end": "AMO.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.18.1",
+   "at": 112,
+   "text": "Ec 4:5",
+   "start": "ECC.4.5",
+   "end": "ECC.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.18.1",
+   "at": 120,
+   "text": "Pr 6:10",
+   "start": "PRO.6.10",
+   "end": "PRO.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 17,
+   "text": "Ec 10:18",
+   "start": "ECC.10.18",
+   "end": "ECC.10.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 149,
+   "text": "Ec 10:16",
+   "start": "ECC.10.16",
+   "end": "ECC.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 193,
+   "text": "Ps 104:15",
+   "start": "PSA.104.15",
+   "end": "PSA.104.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 388,
+   "text": "Ec 10:5",
+   "start": "ECC.10.5",
+   "end": "ECC.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 397,
+   "text": "6",
+   "start": "ECC.10.6",
+   "end": "ECC.10.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 400,
+   "text": "3:16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 406,
+   "text": "Isa 1:23",
+   "start": "ISA.1.23",
+   "end": "ISA.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 416,
+   "text": "5:23",
+   "start": "ISA.5.23",
+   "end": "ISA.5.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.19.1",
+   "at": 592,
+   "text": "1Ki 12:4",
+   "start": "1KI.12.4",
+   "end": "1KI.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.20.1",
+   "at": 189,
+   "text": "Ps 139:1-24",
+   "start": "PSA.139.1",
+   "end": "PSA.139.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.20.1",
+   "at": 305,
+   "text": "2Ki 6:12",
+   "start": "2KI.6.12",
+   "end": "2KI.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.20.1",
+   "at": 358,
+   "text": "Hab 2:11",
+   "start": "HAB.2.11",
+   "end": "HAB.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.20.1",
+   "at": 368,
+   "text": "Lu 19:40",
+   "start": "LUK.19.40",
+   "end": "LUK.19.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.10.20.1",
+   "at": 571,
+   "text": "Job 28:21",
+   "start": "JOB.28.21",
+   "end": "JOB.28.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.1.1",
+   "at": 3,
+   "text": "Ec 11:2",
+   "start": "ECC.11.2",
+   "end": "ECC.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.1.1",
+   "at": 170,
+   "text": "Ec 9:10",
+   "start": "ECC.9.10",
+   "end": "ECC.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.1.1",
+   "at": 383,
+   "text": "Isa 32:20",
+   "start": "ISA.32.20",
+   "end": "ISA.32.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.1.1",
+   "at": 427,
+   "text": "Ec 11:2",
+   "start": "ECC.11.2",
+   "end": "ECC.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.1.1",
+   "at": 436,
+   "text": "Re 17:15",
+   "start": "REV.17.15",
+   "end": "REV.17.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.2.1",
+   "at": 117,
+   "text": "Ec 11:1",
+   "start": "ECC.11.1",
+   "end": "ECC.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.2.1",
+   "at": 159,
+   "text": "Job 5:19",
+   "start": "JOB.5.19",
+   "end": "JOB.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.2.1",
+   "at": 169,
+   "text": "Mic 5:5",
+   "start": "MIC.5.4",
+   "end": "MIC.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.2.1",
+   "at": 285,
+   "text": "Lu 16:9",
+   "start": "LUK.16.9",
+   "end": "LUK.16.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.3.1",
+   "at": 31,
+   "text": "Ec 11:2",
+   "start": "ECC.11.2",
+   "end": "ECC.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.3.1",
+   "at": 201,
+   "text": "Ec 11:4",
+   "start": "ECC.11.4",
+   "end": "ECC.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.3.1",
+   "at": 400,
+   "text": "Re 22:11",
+   "start": "REV.22.11",
+   "end": "REV.22.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.3.1",
+   "at": 410,
+   "text": "14",
+   "start": "REV.22.14",
+   "end": "REV.22.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.3.1",
+   "at": 414,
+   "text": "15",
+   "start": "REV.22.15",
+   "end": "REV.22.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.4.1",
+   "at": 124,
+   "text": "Ec 9:10",
+   "start": "ECC.9.10",
+   "end": "ECC.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.4.1",
+   "at": 140,
+   "text": "Ec 11:1",
+   "start": "ECC.11.1",
+   "end": "ECC.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.4.1",
+   "at": 225,
+   "text": "Ps 126:5",
+   "start": "PSA.126.5",
+   "end": "PSA.126.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.4.1",
+   "at": 235,
+   "text": "6",
+   "start": "PSA.126.6",
+   "end": "PSA.126.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.5.1",
+   "at": 166,
+   "text": "Ec 1:6",
+   "start": "ECC.1.6",
+   "end": "ECC.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.5.1",
+   "at": 174,
+   "text": "Joh 3:8",
+   "start": "JHN.3.8",
+   "end": "JHN.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.5.1",
+   "at": 199,
+   "text": "Job 10:8",
+   "start": "JOB.10.8",
+   "end": "JOB.10.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.5.1",
+   "at": 209,
+   "text": "9",
+   "start": "JOB.10.9",
+   "end": "JOB.10.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.5.1",
+   "at": 212,
+   "text": "Ps 139:15",
+   "start": "PSA.139.15",
+   "end": "PSA.139.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.5.1",
+   "at": 223,
+   "text": "16",
+   "start": "PSA.139.16",
+   "end": "PSA.139.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.6.1",
+   "at": 114,
+   "text": "Ho 10:12",
+   "start": "HOS.10.12",
+   "end": "HOS.10.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.6.1",
+   "at": 124,
+   "text": "2Co 9:10",
+   "start": "2CO.9.10",
+   "end": "2CO.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.6.1",
+   "at": 134,
+   "text": "Ga 6:7",
+   "start": "GAL.6.7",
+   "end": "GAL.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.6.1",
+   "at": 153,
+   "text": "Isa 55:10",
+   "start": "ISA.55.10",
+   "end": "ISA.55.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.6.1",
+   "at": 164,
+   "text": "11",
+   "start": "ISA.55.11",
+   "end": "ISA.55.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.7.1",
+   "at": 18,
+   "text": "Ec 7:11",
+   "start": "ECC.7.11",
+   "end": "ECC.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.7.1",
+   "at": 27,
+   "text": "Ps 49:19",
+   "start": "PSA.49.20",
+   "end": "PSA.49.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.8.1",
+   "at": 143,
+   "text": "Job 10:21",
+   "start": "JOB.10.21",
+   "end": "JOB.10.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.8.1",
+   "at": 154,
+   "text": "22",
+   "start": "JOB.10.22",
+   "end": "JOB.10.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.8.1",
+   "at": 158,
+   "text": "Ps 88:12",
+   "start": "PSA.88.13",
+   "end": "PSA.88.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.8.1",
+   "at": 204,
+   "text": "Ec 11:2",
+   "start": "ECC.11.2",
+   "end": "ECC.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.9.1",
+   "at": 92,
+   "text": "Ec 2:2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.9.1",
+   "at": 100,
+   "text": "7:2",
+   "start": "ECC.7.2",
+   "end": "ECC.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.9.1",
+   "at": 127,
+   "text": "Ec 5:18",
+   "start": "ECC.5.17",
+   "end": "ECC.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.9.1",
+   "at": 196,
+   "text": "Ec 3:17",
+   "start": "ECC.3.17",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.9.1",
+   "at": 205,
+   "text": "12:14",
+   "start": "ECC.12.14",
+   "end": "ECC.12.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.9.1",
+   "at": 282,
+   "text": "Ec 11:10",
+   "start": "ECC.11.10",
+   "end": "ECC.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.10.1",
+   "at": 98,
+   "text": "Ec 11:9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.10.1",
+   "at": 211,
+   "text": "Ec 11:9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.10.1",
+   "at": 388,
+   "text": "Ec 11:9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.11.10.1",
+   "at": 554,
+   "text": "Ec 12:1",
+   "start": "ECC.12.1",
+   "end": "ECC.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 6,
+   "text": "Ec 11:9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 15,
+   "text": "10",
+   "start": "ECC.11.10",
+   "end": "ECC.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 189,
+   "text": "Ps 100:3",
+   "start": "PSA.100.3",
+   "end": "PSA.100.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 236,
+   "text": "Mr 12:30",
+   "start": "MRK.12.30",
+   "end": "MRK.12.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 299,
+   "text": "Pr 8:17",
+   "start": "PRO.8.17",
+   "end": "PRO.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 308,
+   "text": "22:6",
+   "start": "PRO.22.6",
+   "end": "PRO.22.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 314,
+   "text": "Jer 3:4",
+   "start": "JER.3.4",
+   "end": "JER.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 323,
+   "text": "La 3:27",
+   "start": "LAM.3.27",
+   "end": "LAM.3.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 408,
+   "text": "Ge 1:26",
+   "start": "GEN.1.26",
+   "end": "GEN.1.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 438,
+   "text": "Isa 54:5",
+   "start": "ISA.54.5",
+   "end": "ISA.54.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 484,
+   "text": "Pr 8:26",
+   "start": "PRO.8.26",
+   "end": "PRO.8.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 590,
+   "text": "Ec 11:2",
+   "start": "ECC.11.2",
+   "end": "ECC.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 599,
+   "text": "8",
+   "start": "ECC.11.8",
+   "end": "ECC.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 635,
+   "text": "2Sa 19:35",
+   "start": "2SA.19.36",
+   "end": "2SA.19.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.1.1",
+   "at": 646,
+   "text": "Ps 90:10",
+   "start": "PSA.90.10",
+   "end": "PSA.90.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.2.1",
+   "at": 33,
+   "text": "Jer 13:16",
+   "start": "JER.13.16",
+   "end": "JER.13.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.2.1",
+   "at": 117,
+   "text": "Isa 13:10",
+   "start": "ISA.13.10",
+   "end": "ISA.13.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.2.1",
+   "at": 128,
+   "text": "30:26",
+   "start": "ISA.30.26",
+   "end": "ISA.30.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.3.1",
+   "at": 100,
+   "text": "Ge 49:24",
+   "start": "GEN.49.24",
+   "end": "GEN.49.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.3.1",
+   "at": 110,
+   "text": "Job 4:19",
+   "start": "JOB.4.19",
+   "end": "JOB.4.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.3.1",
+   "at": 120,
+   "text": "2Co 5:1",
+   "start": "2CO.5.1",
+   "end": "2CO.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.3.1",
+   "at": 166,
+   "text": "Jud 16:25",
+   "start": "JDG.16.25",
+   "end": "JDG.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.3.1",
+   "at": 177,
+   "text": "30",
+   "start": "JDG.16.30",
+   "end": "JDG.16.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.3.1",
+   "at": 227,
+   "text": "So 5:15",
+   "start": "SNG.5.15",
+   "end": "SNG.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.3.1",
+   "at": 260,
+   "text": "Ps 147:10",
+   "start": "PSA.147.10",
+   "end": "PSA.147.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.4.1",
+   "at": 136,
+   "text": "Job 41:14",
+   "start": "JOB.41.6",
+   "end": "JOB.41.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.4.1",
+   "at": 147,
+   "text": "Ps 141:3",
+   "start": "PSA.141.3",
+   "end": "PSA.141.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.4.1",
+   "at": 157,
+   "text": "Mic 7:5",
+   "start": "MIC.7.5",
+   "end": "MIC.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.4.1",
+   "at": 571,
+   "text": "Job 7:4",
+   "start": "JOB.7.4",
+   "end": "JOB.7.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.5.1",
+   "at": 1259,
+   "text": "Job 16:22",
+   "start": "JOB.16.22",
+   "end": "JOB.16.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.5.1",
+   "at": 1270,
+   "text": "17:13",
+   "start": "JOB.17.13",
+   "end": "JOB.17.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.5.1",
+   "at": 1289,
+   "text": "Jer 9:17-20",
+   "start": "JER.9.16",
+   "end": "JER.9.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.6.1",
+   "at": 44,
+   "text": "Ec 12:1-5",
+   "start": "ECC.12.1",
+   "end": "ECC.12.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.6.1",
+   "at": 1263,
+   "text": "Ge 15:15",
+   "start": "GEN.15.15",
+   "end": "GEN.15.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.6.1",
+   "at": 1273,
+   "text": "Job 5:26",
+   "start": "JOB.5.26",
+   "end": "JOB.5.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.8-12.1",
+   "at": 103,
+   "text": "Ec 1:2",
+   "start": "ECC.1.2",
+   "end": "ECC.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.9.1",
+   "at": 282,
+   "text": "1Ki 4:34",
+   "start": "1KI.5.14",
+   "end": "1KI.5.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.11.1",
+   "at": 41,
+   "text": "Ac 2:37",
+   "start": "ACT.2.37",
+   "end": "ACT.2.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.11.1",
+   "at": 50,
+   "text": "9:5",
+   "start": "ACT.9.5",
+   "end": "ACT.9.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.11.1",
+   "at": 55,
+   "text": "Heb 4:12",
+   "start": "HEB.4.12",
+   "end": "HEB.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.11.1",
+   "at": 341,
+   "text": "Pr 25:1",
+   "start": "PRO.25.1",
+   "end": "PRO.25.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.11.1",
+   "at": 473,
+   "text": "Eze 37:24",
+   "start": "EZK.37.24",
+   "end": "EZK.37.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.11.1",
+   "at": 627,
+   "text": "1Pe 5:2-4",
+   "start": "1PE.5.2",
+   "end": "1PE.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.12.1",
+   "at": 12,
+   "text": "Ec 1:18",
+   "start": "ECC.1.18",
+   "end": "ECC.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 139,
+   "text": "Ec 7:16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 148,
+   "text": "18",
+   "start": "ECC.7.18",
+   "end": "ECC.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 191,
+   "text": "Ec 8:12",
+   "start": "ECC.8.12",
+   "end": "ECC.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 200,
+   "text": "13",
+   "start": "ECC.8.13",
+   "end": "ECC.8.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 219,
+   "text": "Ec 2:2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 227,
+   "text": "7:2-5",
+   "start": "ECC.7.2",
+   "end": "ECC.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 263,
+   "text": "Ec 8:13",
+   "start": "ECC.8.13",
+   "end": "ECC.8.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 272,
+   "text": "17",
+   "start": "ECC.8.17",
+   "end": "ECC.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 305,
+   "text": "Ec 11:9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 314,
+   "text": "12:1",
+   "start": "ECC.12.1",
+   "end": "ECC.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-ecclesiastes.ECC.12.13.1",
+   "at": 540,
+   "text": "1Jo 3:22-24",
+   "start": "1JN.3.22",
+   "end": "1JN.3.24",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}

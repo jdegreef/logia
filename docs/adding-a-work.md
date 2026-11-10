@@ -20,6 +20,10 @@ under `sources/<work>/`: a CCEL page's `book-content` block, or the stretch of
 a scan's full text that holds the passage, with some margin on each side. Add
 a row to `sources/manifest.json` with the URL, the date, `kind` (`digital` or
 `scan`), the SHA-256 of the full download and a note on what the extract is.
+Where each CCEL page is one section of a book and the page does not name the
+book (Origen's Commentary on John), add `"part": "Book II"`, as CCEL's table
+of contents gives it, so the section's locus and the book's whole text can
+be read.
 
 ## 3. Write the author and work records
 

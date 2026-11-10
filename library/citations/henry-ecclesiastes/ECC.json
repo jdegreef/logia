@@ -1,0 +1,4686 @@
+{
+ "work": "henry-ecclesiastes",
+ "book": "ECC",
+ "citations": [
+  {
+   "in": "henry-ecclesiastes.ECC.1.1-3.1",
+   "at": 795,
+   "text": "Neh. xiii. 26",
+   "start": "NEH.13.26",
+   "end": "NEH.13.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.1-3.2",
+   "at": 846,
+   "text": "Jer. iii. 13",
+   "start": "JER.3.13",
+   "end": "JER.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.1-3.3",
+   "at": 488,
+   "text": "1 Kings viii. 2",
+   "start": "1KI.8.2",
+   "end": "1KI.8.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.1-3.3",
+   "at": 614,
+   "text": "v. 12",
+   "start": "ECC.1.12",
+   "end": "ECC.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.1-3.4",
+   "at": 526,
+   "text": "Jer. xxii. 15-17",
+   "start": "JER.22.15",
+   "end": "JER.22.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.1-3.4",
+   "at": 985,
+   "text": "Ps. lxxxix. 34",
+   "start": "PSA.89.35",
+   "end": "PSA.89.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.1",
+   "at": 290,
+   "text": "v. 2",
+   "start": "ECC.1.2",
+   "end": "ECC.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.1",
+   "at": 678,
+   "text": "1 John ii. 16",
+   "start": "1JN.2.16",
+   "end": "1JN.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.1",
+   "at": 1012,
+   "text": "Ps. xxxix. 5, 6",
+   "start": "PSA.39.6",
+   "end": "PSA.39.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.1",
+   "at": 1097,
+   "text": "Ps. lxxxix. 47",
+   "start": "PSA.89.48",
+   "end": "PSA.89.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.1",
+   "at": 1536,
+   "text": "Ps. iv. 2",
+   "start": "PSA.4.3",
+   "end": "PSA.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.1",
+   "at": 1577,
+   "text": "Ps. xxiv. 4",
+   "start": "PSA.24.4",
+   "end": "PSA.24.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.2",
+   "at": 806,
+   "text": "Job xxxiii. 14",
+   "start": "JOB.33.14",
+   "end": "JOB.33.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.2",
+   "at": 1293,
+   "text": "1 Kings iv. 33",
+   "start": "1KI.5.13",
+   "end": "1KI.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.2.2",
+   "at": 1441,
+   "text": "Ps. xvii. 14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.3.1",
+   "at": 143,
+   "text": "v. 3",
+   "start": "ECC.1.3",
+   "end": "ECC.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.3.1",
+   "at": 901,
+   "text": "Matt. xx. 12",
+   "start": "MAT.20.12",
+   "end": "MAT.20.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.3.1",
+   "at": 1124,
+   "text": "Prov. xiv. 23",
+   "start": "PRO.14.23",
+   "end": "PRO.14.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.3.2",
+   "at": 232,
+   "text": "Prov. xxii. 5",
+   "start": "PRO.22.5",
+   "end": "PRO.22.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.3.2",
+   "at": 713,
+   "text": "Luke xii. 15",
+   "start": "LUK.12.15",
+   "end": "LUK.12.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.2",
+   "at": 680,
+   "text": "Job xiv. 7, 12",
+   "start": "JOB.14.7",
+   "end": "JOB.14.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.2",
+   "at": 680,
+   "text": "Job xiv. 7, 12",
+   "start": "JOB.14.12",
+   "end": "JOB.14.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.2",
+   "at": 995,
+   "text": "v. 5",
+   "start": "ECC.1.5",
+   "end": "ECC.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.2",
+   "at": 1040,
+   "text": "v. 6",
+   "start": "ECC.1.6",
+   "end": "ECC.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.2",
+   "at": 1090,
+   "text": "v. 7",
+   "start": "ECC.1.7",
+   "end": "ECC.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.2",
+   "at": 1267,
+   "text": "v. 8",
+   "start": "ECC.1.8",
+   "end": "ECC.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.3",
+   "at": 671,
+   "text": "Job xx. 17",
+   "start": "JOB.20.17",
+   "end": "JOB.20.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.4-8.3",
+   "at": 871,
+   "text": "2 Pet. iii. 4",
+   "start": "2PE.3.4",
+   "end": "2PE.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.2",
+   "at": 707,
+   "text": "v. 9",
+   "start": "ECC.1.9",
+   "end": "ECC.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.2",
+   "at": 729,
+   "text": "v. 10",
+   "start": "ECC.1.10",
+   "end": "ECC.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.2",
+   "at": 1333,
+   "text": "Heb. iv. 3",
+   "start": "HEB.4.3",
+   "end": "HEB.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.4",
+   "at": 713,
+   "text": "John viii. 8, 9",
+   "start": "JHN.8.8",
+   "end": "JHN.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.4",
+   "at": 730,
+   "text": "vi. 49",
+   "start": "JHN.6.49",
+   "end": "JHN.6.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.4",
+   "at": 967,
+   "text": "2 Cor. v. 17",
+   "start": "2CO.5.17",
+   "end": "2CO.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.4",
+   "at": 1047,
+   "text": "Rev. xxi. 5",
+   "start": "REV.21.5",
+   "end": "REV.21.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.4",
+   "at": 1142,
+   "text": "Luke xx. 35",
+   "start": "LUK.20.35",
+   "end": "LUK.20.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.9-11.5",
+   "at": 361,
+   "text": "Ps. xlix. 11",
+   "start": "PSA.49.12",
+   "end": "PSA.49.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.12-18.2",
+   "at": 319,
+   "text": "v. 12",
+   "start": "ECC.1.12",
+   "end": "ECC.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.12-18.2",
+   "at": 459,
+   "text": "Deut. iv. 6",
+   "start": "DEU.4.6",
+   "end": "DEU.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.12-18.3",
+   "at": 276,
+   "text": "v. 13",
+   "start": "ECC.1.13",
+   "end": "ECC.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.12-18.4",
+   "at": 225,
+   "text": "v. 14",
+   "start": "ECC.1.14",
+   "end": "ECC.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.12-18.5",
+   "at": 393,
+   "text": "Prov. ii. 10, 11",
+   "start": "PRO.2.10",
+   "end": "PRO.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.12-18.5",
+   "at": 411,
+   "text": "xxii. 18",
+   "start": "PRO.22.18",
+   "end": "PRO.22.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.12-18.5",
+   "at": 578,
+   "text": "v. 17",
+   "start": "ECC.1.17",
+   "end": "ECC.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.13.1",
+   "at": 223,
+   "text": "v. 13",
+   "start": "ECC.1.13",
+   "end": "ECC.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.14.1",
+   "at": 158,
+   "text": "v. 14",
+   "start": "ECC.1.14",
+   "end": "ECC.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.14.1",
+   "at": 405,
+   "text": "v. 2",
+   "start": "ECC.1.2",
+   "end": "ECC.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.14.1",
+   "at": 615,
+   "text": "Hos. xii. 1",
+   "start": "HOS.12.2",
+   "end": "HOS.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.14.1",
+   "at": 1248,
+   "text": "v. 17",
+   "start": "ECC.1.17",
+   "end": "ECC.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.15.1",
+   "at": 153,
+   "text": "v. 15",
+   "start": "ECC.1.15",
+   "end": "ECC.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.1.18.1",
+   "at": 136,
+   "text": "v. 18",
+   "start": "ECC.1.18",
+   "end": "ECC.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.2",
+   "at": 503,
+   "text": "v. 1",
+   "start": "ECC.2.1",
+   "end": "ECC.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.3",
+   "at": 481,
+   "text": "v. 2",
+   "start": "ECC.2.2",
+   "end": "ECC.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.4",
+   "at": 139,
+   "text": "Job xxi. 12, 14",
+   "start": "JOB.21.12",
+   "end": "JOB.21.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.4",
+   "at": 139,
+   "text": "Job xxi. 12, 14",
+   "start": "JOB.21.14",
+   "end": "JOB.21.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.5",
+   "at": 594,
+   "text": "Matt. vi. 33",
+   "start": "MAT.6.33",
+   "end": "MAT.6.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.5",
+   "at": 628,
+   "text": "Hag. i. 4",
+   "start": "HAG.1.4",
+   "end": "HAG.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.5",
+   "at": 838,
+   "text": "1 Kings ix. 15-19",
+   "start": "1KI.9.15",
+   "end": "1KI.9.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.1-11.5",
+   "at": 1010,
+   "text": "v. 3",
+   "start": "ECC.2.3",
+   "end": "ECC.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.3.1",
+   "at": 123,
+   "text": "v. 3",
+   "start": "ECC.2.3",
+   "end": "ECC.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.3.1",
+   "at": 1055,
+   "text": "1 Tim. v. 23",
+   "start": "1TI.5.23",
+   "end": "1TI.5.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.5.1",
+   "at": 205,
+   "text": "v. 5",
+   "start": "ECC.2.5",
+   "end": "ECC.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.6.1",
+   "at": 157,
+   "text": "v. 6",
+   "start": "ECC.2.6",
+   "end": "ECC.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.6.1",
+   "at": 282,
+   "text": "Josh. xv. 19",
+   "start": "JOS.15.19",
+   "end": "JOS.15.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.7.1",
+   "at": 228,
+   "text": "v. 7",
+   "start": "ECC.2.7",
+   "end": "ECC.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.7.1",
+   "at": 309,
+   "text": "Ezra ii. 58",
+   "start": "EZR.2.58",
+   "end": "EZR.2.58",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.7.1",
+   "at": 588,
+   "text": "1 Chron. xxvii. 29, 31",
+   "start": "1CH.27.29",
+   "end": "1CH.27.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.7.1",
+   "at": 588,
+   "text": "1 Chron. xxvii. 29, 31",
+   "start": "1CH.27.31",
+   "end": "1CH.27.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.7.1",
+   "at": 1261,
+   "text": "1 Kings x. 27",
+   "start": "1KI.10.27",
+   "end": "1KI.10.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.7.3",
+   "at": 433,
+   "text": "v. 9",
+   "start": "ECC.2.9",
+   "end": "ECC.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.11.1",
+   "at": 70,
+   "text": "v. 11",
+   "start": "ECC.2.11",
+   "end": "ECC.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.1",
+   "at": 299,
+   "text": "ch. i. 17",
+   "start": "ECC.1.17",
+   "end": "ECC.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.1",
+   "at": 1555,
+   "text": "John iv. 37, 38",
+   "start": "JHN.4.37",
+   "end": "JHN.4.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.2",
+   "at": 1221,
+   "text": "v. 14",
+   "start": "ECC.2.14",
+   "end": "ECC.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.3",
+   "at": 431,
+   "text": "v. 14",
+   "start": "ECC.2.14",
+   "end": "ECC.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.3",
+   "at": 705,
+   "text": "Ps. xlix. 12",
+   "start": "PSA.49.13",
+   "end": "PSA.49.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.3",
+   "at": 723,
+   "text": "ch. ix. 11",
+   "start": "ECC.9.11",
+   "end": "ECC.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.3",
+   "at": 1020,
+   "text": "v. 15",
+   "start": "ECC.2.15",
+   "end": "ECC.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.4",
+   "at": 226,
+   "text": "Ps. lxx. 10",
+   "start": "PSA.70.10",
+   "end": "PSA.70.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.4",
+   "at": 591,
+   "text": "v. 16",
+   "start": "ECC.2.16",
+   "end": "ECC.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.5",
+   "at": 243,
+   "text": "ch. viii. 10",
+   "start": "ECC.8.10",
+   "end": "ECC.8.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.12-16.5",
+   "at": 332,
+   "text": "ch. ix. 15",
+   "start": "ECC.9.15",
+   "end": "ECC.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-20.1",
+   "at": 80,
+   "text": "v. 17-20",
+   "start": "ECC.2.17",
+   "end": "ECC.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-20.1",
+   "at": 600,
+   "text": "John vi. 27",
+   "start": "JHN.6.27",
+   "end": "JHN.6.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-20.1",
+   "at": 613,
+   "text": "Isa. lv. 2",
+   "start": "ISA.55.2",
+   "end": "ISA.55.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-20.1",
+   "at": 872,
+   "text": "v. 21",
+   "start": "ECC.2.21",
+   "end": "ECC.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-20.1",
+   "at": 1216,
+   "text": "v. 19",
+   "start": "ECC.2.19",
+   "end": "ECC.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-26.2",
+   "at": 574,
+   "text": "Luke xiv. 26",
+   "start": "LUK.14.26",
+   "end": "LUK.14.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-26.2",
+   "at": 858,
+   "text": "v. 20",
+   "start": "ECC.2.20",
+   "end": "ECC.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17-26.2",
+   "at": 1640,
+   "text": "v. 17",
+   "start": "ECC.2.17",
+   "end": "ECC.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.1",
+   "at": 216,
+   "text": "v. 17",
+   "start": "ECC.2.17",
+   "end": "ECC.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.1",
+   "at": 559,
+   "text": "Gen. v. 29",
+   "start": "GEN.5.29",
+   "end": "GEN.5.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.1",
+   "at": 765,
+   "text": "v. 22",
+   "start": "ECC.2.22",
+   "end": "ECC.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.1",
+   "at": 938,
+   "text": "v. 23",
+   "start": "ECC.2.23",
+   "end": "ECC.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.1",
+   "at": 1519,
+   "text": "Matt. xi. 28",
+   "start": "MAT.11.28",
+   "end": "MAT.11.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.2",
+   "at": 435,
+   "text": "v. 17",
+   "start": "ECC.2.17",
+   "end": "ECC.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.2",
+   "at": 472,
+   "text": "v. 19, 23",
+   "start": "ECC.2.19",
+   "end": "ECC.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.2",
+   "at": 520,
+   "text": "v. 21",
+   "start": "ECC.2.21",
+   "end": "ECC.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.3",
+   "at": 504,
+   "text": "Job vii. 10",
+   "start": "JOB.7.10",
+   "end": "JOB.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.3",
+   "at": 569,
+   "text": "Luke xvi. 25",
+   "start": "LUK.16.25",
+   "end": "LUK.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.4",
+   "at": 303,
+   "text": "v. 21",
+   "start": "ECC.2.21",
+   "end": "ECC.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.17.5",
+   "at": 354,
+   "text": "v. 22",
+   "start": "ECC.2.22",
+   "end": "ECC.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.24-26.1",
+   "at": 194,
+   "text": "v. 24-26",
+   "start": "ECC.2.24",
+   "end": "ECC.2.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.24-26.2",
+   "at": 447,
+   "text": "v. 26",
+   "start": "ECC.2.26",
+   "end": "ECC.2.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.24-26.2",
+   "at": 884,
+   "text": "v. 25",
+   "start": "ECC.2.25",
+   "end": "ECC.2.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.25.1",
+   "at": 214,
+   "text": "v. 25",
+   "start": "ECC.2.25",
+   "end": "ECC.2.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.25.2",
+   "at": 486,
+   "text": "Hab. ii. 6",
+   "start": "HAB.2.6",
+   "end": "HAB.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.2.25.2",
+   "at": 563,
+   "text": "Jam. v. 3",
+   "start": "JAS.5.3",
+   "end": "JAS.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.1",
+   "at": 342,
+   "text": "Jam. iii. 6",
+   "start": "JAS.3.6",
+   "end": "JAS.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.1",
+   "at": 1118,
+   "text": "ch. ii. 24",
+   "start": "ECC.2.24",
+   "end": "ECC.2.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1.1",
+   "at": 70,
+   "text": "v. 1",
+   "start": "ECC.3.1",
+   "end": "ECC.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.2",
+   "at": 646,
+   "text": "Acts xvii. 26",
+   "start": "ACT.17.26",
+   "end": "ACT.17.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.2",
+   "at": 993,
+   "text": "Job xiv. 13",
+   "start": "JOB.14.13",
+   "end": "JOB.14.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.2",
+   "at": 1315,
+   "text": "Jer. xviii. 7, 9",
+   "start": "JER.18.7",
+   "end": "JER.18.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.2",
+   "at": 1315,
+   "text": "Jer. xviii. 7, 9",
+   "start": "JER.18.9",
+   "end": "JER.18.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.3",
+   "at": 166,
+   "text": "Hos. vi. 1, 2",
+   "start": "HOS.6.1",
+   "end": "HOS.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.3",
+   "at": 245,
+   "text": "Ps. xc. 15",
+   "start": "PSA.90.15",
+   "end": "PSA.90.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.3",
+   "at": 713,
+   "text": "Ps. cii. 13, 16",
+   "start": "PSA.102.14",
+   "end": "PSA.102.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.3",
+   "at": 713,
+   "text": "Ps. cii. 13, 16",
+   "start": "PSA.102.17",
+   "end": "PSA.102.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.3",
+   "at": 1140,
+   "text": "Isa. xxii. 12, 13",
+   "start": "ISA.22.12",
+   "end": "ISA.22.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.3",
+   "at": 1159,
+   "text": "Ezek. xxi. 10",
+   "start": "EZK.21.15",
+   "end": "EZK.21.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.4",
+   "at": 386,
+   "text": "v. 5",
+   "start": "ECC.3.5",
+   "end": "ECC.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.4",
+   "at": 442,
+   "text": "Luke xii. 4",
+   "start": "LUK.12.4",
+   "end": "LUK.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.4",
+   "at": 933,
+   "text": "1 Cor. vii. 3-5",
+   "start": "1CO.7.3",
+   "end": "1CO.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.4",
+   "at": 950,
+   "text": "Joel ii. 16",
+   "start": "JOL.2.16",
+   "end": "JOL.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.5",
+   "at": 620,
+   "text": "Matt. x. 37, 38",
+   "start": "MAT.10.37",
+   "end": "MAT.10.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.6",
+   "at": 101,
+   "text": "Amos v. 13",
+   "start": "AMO.5.13",
+   "end": "AMO.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.6",
+   "at": 220,
+   "text": "Ps. xxxix. 2",
+   "start": "PSA.39.3",
+   "end": "PSA.39.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.1-10.6",
+   "at": 1194,
+   "text": "Ps. xlvi. 9",
+   "start": "PSA.46.10",
+   "end": "PSA.46.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.9.1",
+   "at": 211,
+   "text": "v. 9",
+   "start": "ECC.3.9",
+   "end": "ECC.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.9.1",
+   "at": 837,
+   "text": "v. 10",
+   "start": "ECC.3.10",
+   "end": "ECC.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.9.1",
+   "at": 1161,
+   "text": "Phil. iv. 12",
+   "start": "PHP.4.12",
+   "end": "PHP.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.11.1",
+   "at": 165,
+   "text": "v. 11",
+   "start": "ECC.3.11",
+   "end": "ECC.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.11-15.4",
+   "at": 537,
+   "text": "v. 14",
+   "start": "ECC.3.14",
+   "end": "ECC.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.11-15.4",
+   "at": 1390,
+   "text": "Deut. iv. 2",
+   "start": "DEU.4.2",
+   "end": "DEU.4.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.11-15.6",
+   "at": 353,
+   "text": "v. 15",
+   "start": "ECC.3.15",
+   "end": "ECC.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.11-15.6",
+   "at": 1443,
+   "text": "Ps. xxx. 7",
+   "start": "PSA.30.8",
+   "end": "PSA.30.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.12-13.1",
+   "at": 241,
+   "text": "v. 12, 13",
+   "start": "ECC.3.12",
+   "end": "ECC.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.16.1",
+   "at": 223,
+   "text": "v. 16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.16.1",
+   "at": 856,
+   "text": "Ps. xlix. 20",
+   "start": "PSA.49.21",
+   "end": "PSA.49.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.16-22.2",
+   "at": 1254,
+   "text": "Ps. ix. 20",
+   "start": "PSA.9.21",
+   "end": "PSA.9.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.17.1",
+   "at": 192,
+   "text": "v. 17",
+   "start": "ECC.3.17",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.17.1",
+   "at": 613,
+   "text": "Isa. x. 1",
+   "start": "ISA.10.1",
+   "end": "ISA.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.17.1",
+   "at": 737,
+   "text": "Ps. xcii. 7",
+   "start": "PSA.92.8",
+   "end": "PSA.92.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.17.1",
+   "at": 1143,
+   "text": "Ps. xxxvii. 13",
+   "start": "PSA.37.13",
+   "end": "PSA.37.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.1",
+   "at": 271,
+   "text": "v. 19",
+   "start": "ECC.3.19",
+   "end": "ECC.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.1",
+   "at": 366,
+   "text": "v. 16",
+   "start": "ECC.3.16",
+   "end": "ECC.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.1",
+   "at": 430,
+   "text": "v. 17",
+   "start": "ECC.3.17",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.1",
+   "at": 734,
+   "text": "Ps. xlix. 14",
+   "start": "PSA.49.15",
+   "end": "PSA.49.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.1",
+   "at": 1018,
+   "text": "v. 19",
+   "start": "ECC.3.19",
+   "end": "ECC.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.2",
+   "at": 206,
+   "text": "Gen. vii. 22",
+   "start": "GEN.7.22",
+   "end": "GEN.7.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.2",
+   "at": 574,
+   "text": "Jer. xxii. 19",
+   "start": "JER.22.19",
+   "end": "JER.22.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.3",
+   "at": 250,
+   "text": "Ps. xlix. 15",
+   "start": "PSA.49.16",
+   "end": "PSA.49.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.19.3",
+   "at": 1339,
+   "text": "Isa. liii. 1",
+   "start": "ISA.53.1",
+   "end": "ISA.53.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.22.1",
+   "at": 31,
+   "text": "v. 22",
+   "start": "ECC.3.22",
+   "end": "ECC.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.22.1",
+   "at": 396,
+   "text": "Gal. vi. 4",
+   "start": "GAL.6.4",
+   "end": "GAL.6.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.22.1",
+   "at": 475,
+   "text": "2 Cor. i. 12",
+   "start": "2CO.1.12",
+   "end": "2CO.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.22.1",
+   "at": 802,
+   "text": "Ps. xvii. 14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.22.1",
+   "at": 872,
+   "text": "Luke xii. 19",
+   "start": "LUK.12.19",
+   "end": "LUK.12.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.3.22.1",
+   "at": 1322,
+   "text": "Job xiv. 21",
+   "start": "JOB.14.21",
+   "end": "JOB.14.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.1-3.1",
+   "at": 26,
+   "text": "1 Kings iv. 29",
+   "start": "1KI.5.9",
+   "end": "1KI.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.1-3.1",
+   "at": 249,
+   "text": "ch. iii. 16, 17",
+   "start": "ECC.3.16",
+   "end": "ECC.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.1.1",
+   "at": 36,
+   "text": "v. 1",
+   "start": "ECC.4.1",
+   "end": "ECC.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.1.1",
+   "at": 1260,
+   "text": "ch. xvi. 20; xxx. 28",
+   "start": "JOB.16.20",
+   "end": "JOB.16.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.2-3.1",
+   "at": 198,
+   "text": "v. 2, 3",
+   "start": "ECC.4.2",
+   "end": "ECC.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.2-3.1",
+   "at": 424,
+   "text": "Acts xx. 24",
+   "start": "ACT.20.24",
+   "end": "ACT.20.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.2-3.1",
+   "at": 437,
+   "text": "Phil. i. 23",
+   "start": "PHP.1.23",
+   "end": "PHP.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.2-3.1",
+   "at": 1304,
+   "text": "Job iii. 20, 21",
+   "start": "JOB.3.20",
+   "end": "JOB.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.2-3.1",
+   "at": 1330,
+   "text": "Rev. xiv. 13",
+   "start": "REV.14.13",
+   "end": "REV.14.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.4.1",
+   "at": 109,
+   "text": "v. 4",
+   "start": "ECC.4.4",
+   "end": "ECC.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.4.1",
+   "at": 1111,
+   "text": "Prov. xxvii. 4",
+   "start": "PRO.27.4",
+   "end": "PRO.27.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.5.1",
+   "at": 91,
+   "text": "v. 5",
+   "start": "ECC.4.5",
+   "end": "ECC.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.5.1",
+   "at": 882,
+   "text": "v. 6",
+   "start": "ECC.4.6",
+   "end": "ECC.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.5.1",
+   "at": 1362,
+   "text": "Prov. xxvi. 16",
+   "start": "PRO.26.16",
+   "end": "PRO.26.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.7-8.1",
+   "at": 288,
+   "text": "v. 7, 8",
+   "start": "ECC.4.7",
+   "end": "ECC.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.7-8.1",
+   "at": 1157,
+   "text": "Ps. cxxvii. 2",
+   "start": "PSA.127.2",
+   "end": "PSA.127.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.7-8.1",
+   "at": 1288,
+   "text": "1 John ii. 16",
+   "start": "1JN.2.16",
+   "end": "1JN.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.7-8.1",
+   "at": 1387,
+   "text": "Eccl. v. 11",
+   "start": "ECC.5.10",
+   "end": "ECC.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.7-12.1",
+   "at": 191,
+   "text": "Gen. ii. 18",
+   "start": "GEN.2.18",
+   "end": "GEN.2.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.7-12.3",
+   "at": 130,
+   "text": "2 Sam. x. 11",
+   "start": "2SA.10.11",
+   "end": "2SA.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.13-16.1",
+   "at": 211,
+   "text": "Prov. xxvii. 24",
+   "start": "PRO.27.24",
+   "end": "PRO.27.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.13-14.1",
+   "at": 46,
+   "text": "v. 13, 14",
+   "start": "ECC.4.13",
+   "end": "ECC.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.13-14.1",
+   "at": 1291,
+   "text": "v. 14",
+   "start": "ECC.4.14",
+   "end": "ECC.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.13-14.2",
+   "at": 85,
+   "text": "Ps. cxiii. 7, 8",
+   "start": "PSA.113.7",
+   "end": "PSA.113.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.15-16.1",
+   "at": 161,
+   "text": "two verses",
+   "start": "ECC.4.15",
+   "end": "ECC.4.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.4.15-16.1",
+   "at": 332,
+   "text": "v. 13",
+   "start": "ECC.4.12",
+   "end": "ECC.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.1",
+   "at": 461,
+   "text": "ch. ii. 4",
+   "start": "ECC.2.4",
+   "end": "ECC.2.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.1",
+   "at": 820,
+   "text": "Ps. lxxiii. 17",
+   "start": "PSA.73.17",
+   "end": "PSA.73.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.2",
+   "at": 345,
+   "text": "Prov. xxv. 17",
+   "start": "PRO.25.17",
+   "end": "PRO.25.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.2",
+   "at": 687,
+   "text": "Prov. xix. 2",
+   "start": "PRO.19.2",
+   "end": "PRO.19.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.2",
+   "at": 1017,
+   "text": "Exod. iii. 5",
+   "start": "EXO.3.5",
+   "end": "EXO.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.2",
+   "at": 1031,
+   "text": "Josh. v. 15",
+   "start": "JOS.5.15",
+   "end": "JOS.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.3",
+   "at": 166,
+   "text": "Prov. xv. 8",
+   "start": "PRO.15.8",
+   "end": "PRO.15.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.4",
+   "at": 635,
+   "text": "1 Sam. xv. 22",
+   "start": "1SA.15.22",
+   "end": "1SA.15.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1-2.4",
+   "at": 650,
+   "text": "Isa. i. 15, 16",
+   "start": "ISA.1.15",
+   "end": "ISA.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.1",
+   "at": 88,
+   "text": "v. 2",
+   "start": "ECC.5.1",
+   "end": "ECC.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.1",
+   "at": 1167,
+   "text": "Matt. xv. 8, 9",
+   "start": "MAT.15.8",
+   "end": "MAT.15.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.2",
+   "at": 1034,
+   "text": "Job ix. 14",
+   "start": "JOB.9.14",
+   "end": "JOB.9.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.2",
+   "at": 1291,
+   "text": "Matt. vi. 7",
+   "start": "MAT.6.7",
+   "end": "MAT.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.3",
+   "at": 96,
+   "text": "v. 3",
+   "start": "ECC.5.2",
+   "end": "ECC.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.3",
+   "at": 561,
+   "text": "ch. x. 11",
+   "start": "ECC.10.11",
+   "end": "ECC.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.3",
+   "at": 643,
+   "text": "Prov. x. 8, 10",
+   "start": "PRO.10.8",
+   "end": "PRO.10.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.1.3",
+   "at": 643,
+   "text": "Prov. x. 8, 10",
+   "start": "PRO.10.10",
+   "end": "PRO.10.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.3-7.1",
+   "at": 128,
+   "text": "Num. xxx. 2",
+   "start": "NUM.30.3",
+   "end": "NUM.30.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.3-7.1",
+   "at": 478,
+   "text": "Ps. lxvi. 14",
+   "start": "PSA.66.14",
+   "end": "PSA.66.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.3-7.1",
+   "at": 526,
+   "text": "1 Sam. i. 11",
+   "start": "1SA.1.11",
+   "end": "1SA.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.3-7.1",
+   "at": 930,
+   "text": "Lev. xxvii. 10",
+   "start": "LEV.27.10",
+   "end": "LEV.27.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.5.1",
+   "at": 113,
+   "text": "v. 6",
+   "start": "ECC.5.5",
+   "end": "ECC.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.5.2",
+   "at": 255,
+   "text": "Exod. xxiii. 20, 21",
+   "start": "EXO.23.20",
+   "end": "EXO.23.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.6.1",
+   "at": 33,
+   "text": "v. 7",
+   "start": "ECC.5.6",
+   "end": "ECC.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.6.1",
+   "at": 191,
+   "text": "Jer. xxiii. 25, 26",
+   "start": "JER.23.25",
+   "end": "JER.23.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.7.1",
+   "at": 44,
+   "text": "v. 8",
+   "start": "ECC.5.7",
+   "end": "ECC.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.7.1",
+   "at": 1265,
+   "text": "Exod. xviii. 11",
+   "start": "EXO.18.11",
+   "end": "EXO.18.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.7.1",
+   "at": 1396,
+   "text": "Num. xxiv. 7",
+   "start": "NUM.24.7",
+   "end": "NUM.24.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.7.2",
+   "at": 280,
+   "text": "Job xxiv. 23",
+   "start": "JOB.24.23",
+   "end": "JOB.24.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.7.2",
+   "at": 727,
+   "text": "Dan. vi. 2",
+   "start": "DAN.6.3",
+   "end": "DAN.6.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.8.1",
+   "at": 109,
+   "text": "v. 9",
+   "start": "ECC.5.8",
+   "end": "ECC.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.8.1",
+   "at": 217,
+   "text": "Job xxviii. 5",
+   "start": "JOB.28.5",
+   "end": "JOB.28.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.8.1",
+   "at": 343,
+   "text": "Ps. lxviii. 6",
+   "start": "PSA.68.7",
+   "end": "PSA.68.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.8.1",
+   "at": 1536,
+   "text": "Deut. xxxiii. 19",
+   "start": "DEU.33.19",
+   "end": "DEU.33.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.8-16.2",
+   "at": 184,
+   "text": "Luke xii. 15",
+   "start": "LUK.12.15",
+   "end": "LUK.12.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.9.1",
+   "at": 47,
+   "text": "v. 10",
+   "start": "ECC.5.9",
+   "end": "ECC.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.9.1",
+   "at": 397,
+   "text": "Hab. ii. 5",
+   "start": "HAB.2.5",
+   "end": "HAB.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.9.1",
+   "at": 450,
+   "text": "Isa. v. 8",
+   "start": "ISA.5.8",
+   "end": "ISA.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.9.1",
+   "at": 1295,
+   "text": "Isa. lv. 2",
+   "start": "ISA.55.2",
+   "end": "ISA.55.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.10.1",
+   "at": 188,
+   "text": "v. 11",
+   "start": "ECC.5.10",
+   "end": "ECC.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.11.1",
+   "at": 103,
+   "text": "v. 12",
+   "start": "ECC.5.11",
+   "end": "ECC.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.11.1",
+   "at": 1292,
+   "text": "Luke xii. 17",
+   "start": "LUK.12.17",
+   "end": "LUK.12.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.12.1",
+   "at": 106,
+   "text": "v. 13",
+   "start": "ECC.5.12",
+   "end": "ECC.5.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.13.1",
+   "at": 83,
+   "text": "v. 14",
+   "start": "ECC.5.13",
+   "end": "ECC.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.14-15.1",
+   "at": 79,
+   "text": "v. 15, 16",
+   "start": "ECC.5.14",
+   "end": "ECC.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.14-15.1",
+   "at": 340,
+   "text": "Job i. 21",
+   "start": "JOB.1.21",
+   "end": "JOB.1.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.14-15.1",
+   "at": 351,
+   "text": "Ps. xlix. 17",
+   "start": "PSA.49.18",
+   "end": "PSA.49.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.14-15.1",
+   "at": 445,
+   "text": "1 Tim. vi. 7",
+   "start": "1TI.6.7",
+   "end": "1TI.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.14-15.2",
+   "at": 602,
+   "text": "Hos. xii. 1",
+   "start": "HOS.12.2",
+   "end": "HOS.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.16.1",
+   "at": 124,
+   "text": "v. 17",
+   "start": "ECC.5.16",
+   "end": "ECC.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.16.1",
+   "at": 386,
+   "text": "Ps. cxxvii. 2",
+   "start": "PSA.127.2",
+   "end": "PSA.127.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.17-19.1",
+   "at": 249,
+   "text": "ch. ii. 24; iii. 22",
+   "start": "ECC.2.24",
+   "end": "ECC.2.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.17-19.1",
+   "at": 1165,
+   "text": "Job xiv. 5",
+   "start": "JOB.14.5",
+   "end": "JOB.14.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.5.17-19.3",
+   "at": 479,
+   "text": "v. 20",
+   "start": "ECC.5.19",
+   "end": "ECC.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.1",
+   "at": 381,
+   "text": "v. 1",
+   "start": "ECC.6.1",
+   "end": "ECC.6.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.3",
+   "at": 35,
+   "text": "Hos. vii. 9",
+   "start": "HOS.7.9",
+   "end": "HOS.7.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.3",
+   "at": 48,
+   "text": "Prov. v. 10",
+   "start": "PRO.5.10",
+   "end": "PRO.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.3",
+   "at": 525,
+   "text": "v. 3",
+   "start": "ECC.6.3",
+   "end": "ECC.6.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.3",
+   "at": 737,
+   "text": "v. 6",
+   "start": "ECC.6.6",
+   "end": "ECC.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.5",
+   "at": 390,
+   "text": "Job iii. 16",
+   "start": "JOB.3.16",
+   "end": "JOB.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.5",
+   "at": 621,
+   "text": "v. 4, 5",
+   "start": "ECC.6.4",
+   "end": "ECC.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.1-6.5",
+   "at": 972,
+   "text": "v. 5",
+   "start": "ECC.6.5",
+   "end": "ECC.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.2.1",
+   "at": 162,
+   "text": "v. 2",
+   "start": "ECC.6.2",
+   "end": "ECC.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.2.1",
+   "at": 1027,
+   "text": "Ps. lxxiii. 7",
+   "start": "PSA.73.7",
+   "end": "PSA.73.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.2.1",
+   "at": 1222,
+   "text": "Ps. xvii. 14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.2.1",
+   "at": 1584,
+   "text": "Ps. xvii. 14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.6.1",
+   "at": 118,
+   "text": "v. 6",
+   "start": "ECC.6.6",
+   "end": "ECC.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.6.1",
+   "at": 221,
+   "text": "ch. iii. 20",
+   "start": "ECC.3.20",
+   "end": "ECC.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.7.1",
+   "at": 231,
+   "text": "v. 7",
+   "start": "ECC.6.7",
+   "end": "ECC.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.7.1",
+   "at": 302,
+   "text": "Prov. xvi. 26",
+   "start": "PRO.16.26",
+   "end": "PRO.16.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.7-10.1",
+   "at": 281,
+   "text": "ch. v. 10",
+   "start": "ECC.5.9",
+   "end": "ECC.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.7-10.1",
+   "at": 840,
+   "text": "Ps. cvi. 15",
+   "start": "PSA.106.15",
+   "end": "PSA.106.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.7-10.3",
+   "at": 426,
+   "text": "Gen. v. 2",
+   "start": "GEN.5.2",
+   "end": "GEN.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.7-10.3",
+   "at": 801,
+   "text": "Ps. ix. 20",
+   "start": "PSA.9.21",
+   "end": "PSA.9.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.7-10.4",
+   "at": 540,
+   "text": "Job xxxiii. 12",
+   "start": "JOB.33.12",
+   "end": "JOB.33.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.8.1",
+   "at": 202,
+   "text": "v. 8",
+   "start": "ECC.6.8",
+   "end": "ECC.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.9.1",
+   "at": 106,
+   "text": "v. 9",
+   "start": "ECC.6.9",
+   "end": "ECC.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.6.10.1",
+   "at": 202,
+   "text": "v. 10",
+   "start": "ECC.6.10",
+   "end": "ECC.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.1.1",
+   "at": 257,
+   "text": "v. 1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.1.1",
+   "at": 780,
+   "text": "Prov. xxi. 1",
+   "start": "PRO.21.1",
+   "end": "PRO.21.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.1.1",
+   "at": 1171,
+   "text": "Matt. xxvi. 13",
+   "start": "MAT.26.13",
+   "end": "MAT.26.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.2.1",
+   "at": 79,
+   "text": "v. 2",
+   "start": "ECC.7.2",
+   "end": "ECC.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.3.1",
+   "at": 98,
+   "text": "v. 3",
+   "start": "ECC.7.3",
+   "end": "ECC.7.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.3.1",
+   "at": 1439,
+   "text": "Job xxi. 12, 14",
+   "start": "JOB.21.12",
+   "end": "JOB.21.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.3.1",
+   "at": 1439,
+   "text": "Job xxi. 12, 14",
+   "start": "JOB.21.14",
+   "end": "JOB.21.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.3.1",
+   "at": 1531,
+   "text": "Amos vi. 5, 6",
+   "start": "AMO.6.5",
+   "end": "AMO.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.4.1",
+   "at": 34,
+   "text": "v. 4",
+   "start": "ECC.7.4",
+   "end": "ECC.7.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.5.1",
+   "at": 143,
+   "text": "v. 5",
+   "start": "ECC.7.5",
+   "end": "ECC.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.5.1",
+   "at": 495,
+   "text": "Prov. vi. 23",
+   "start": "PRO.6.23",
+   "end": "PRO.6.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.7.1",
+   "at": 242,
+   "text": "v. 7",
+   "start": "ECC.7.7",
+   "end": "ECC.7.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.7.1",
+   "at": 703,
+   "text": "Ps. cxxv. 3",
+   "start": "PSA.125.3",
+   "end": "PSA.125.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.7.2",
+   "at": 174,
+   "text": "v. 7",
+   "start": "ECC.7.7",
+   "end": "ECC.7.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.9.1",
+   "at": 53,
+   "text": "v. 9",
+   "start": "ECC.7.9",
+   "end": "ECC.7.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.10.1",
+   "at": 43,
+   "text": "v. 10",
+   "start": "ECC.7.10",
+   "end": "ECC.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.11-22.2",
+   "at": 979,
+   "text": "Luke xvi. 9",
+   "start": "LUK.16.9",
+   "end": "LUK.16.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.11-22.2",
+   "at": 1436,
+   "text": "ch. xi. 7",
+   "start": "ECC.11.7",
+   "end": "ECC.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.11-22.3",
+   "at": 87,
+   "text": "John xi. 9",
+   "start": "JHN.11.9",
+   "end": "JHN.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.11-22.4",
+   "at": 66,
+   "text": "v. 19",
+   "start": "ECC.7.19",
+   "end": "ECC.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.13.1",
+   "at": 168,
+   "text": "v. 13",
+   "start": "ECC.7.13",
+   "end": "ECC.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.14.1",
+   "at": 141,
+   "text": "v. 14",
+   "start": "ECC.7.14",
+   "end": "ECC.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.14.1",
+   "at": 573,
+   "text": "Isa. xiv. 7",
+   "start": "ISA.14.7",
+   "end": "ISA.14.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.14.2",
+   "at": 660,
+   "text": "Hag. i. 5",
+   "start": "HAG.1.5",
+   "end": "HAG.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.15.1",
+   "at": 141,
+   "text": "v. 15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.15.1",
+   "at": 1391,
+   "text": "Job xxi. 7",
+   "start": "JOB.21.7",
+   "end": "JOB.21.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.15.2",
+   "at": 491,
+   "text": "v. 16",
+   "start": "ECC.7.16",
+   "end": "ECC.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.15.3",
+   "at": 400,
+   "text": "v. 15",
+   "start": "ECC.7.15",
+   "end": "ECC.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.15.3",
+   "at": 511,
+   "text": "v. 17",
+   "start": "ECC.7.17",
+   "end": "ECC.7.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.18.1",
+   "at": 144,
+   "text": "v. 18",
+   "start": "ECC.7.18",
+   "end": "ECC.7.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.18.1",
+   "at": 1455,
+   "text": "Ps. xxxvii. 23, 24",
+   "start": "PSA.37.23",
+   "end": "PSA.37.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.19.1",
+   "at": 256,
+   "text": "v. 19",
+   "start": "ECC.7.19",
+   "end": "ECC.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.19.1",
+   "at": 550,
+   "text": "v. 20",
+   "start": "ECC.7.20",
+   "end": "ECC.7.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.19.1",
+   "at": 589,
+   "text": "1 Kings viii. 46",
+   "start": "1KI.8.46",
+   "end": "1KI.8.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.19.1",
+   "at": 625,
+   "text": "Prov. xx. 9",
+   "start": "PRO.20.9",
+   "end": "PRO.20.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.19.1",
+   "at": 1481,
+   "text": "Heb. xii. 23",
+   "start": "HEB.12.23",
+   "end": "HEB.12.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.21.1",
+   "at": 193,
+   "text": "v. 21",
+   "start": "ECC.7.21",
+   "end": "ECC.7.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.21.1",
+   "at": 388,
+   "text": "Ps. xxxviii. 13, 14",
+   "start": "PSA.38.14",
+   "end": "PSA.38.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.21.1",
+   "at": 957,
+   "text": "Prov. xxix. 12",
+   "start": "PRO.29.12",
+   "end": "PRO.29.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.22.1",
+   "at": 47,
+   "text": "v. 22",
+   "start": "ECC.7.22",
+   "end": "ECC.7.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.1",
+   "at": 580,
+   "text": "v. 23",
+   "start": "ECC.7.23",
+   "end": "ECC.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.2",
+   "at": 447,
+   "text": "Prov. xviii. 1",
+   "start": "PRO.18.1",
+   "end": "PRO.18.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.2",
+   "at": 689,
+   "text": "ch. ii. 3",
+   "start": "ECC.2.3",
+   "end": "ECC.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.2",
+   "at": 1019,
+   "text": "v. 25",
+   "start": "ECC.7.25",
+   "end": "ECC.7.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.4",
+   "at": 572,
+   "text": "Job xi. 8",
+   "start": "JOB.11.8",
+   "end": "JOB.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.4",
+   "at": 686,
+   "text": "Prov. viii. 9",
+   "start": "PRO.8.9",
+   "end": "PRO.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 784,
+   "text": "Rom. vii. 7",
+   "start": "ROM.7.7",
+   "end": "ROM.7.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 1667,
+   "text": "Gen. xxxiv. 7",
+   "start": "GEN.34.7",
+   "end": "GEN.34.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 1682,
+   "text": "Deut. xxii. 21",
+   "start": "DEU.22.21",
+   "end": "DEU.22.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 1698,
+   "text": "Judg. xx. 6",
+   "start": "JDG.20.6",
+   "end": "JDG.20.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 1711,
+   "text": "2 Sam. xiii. 12",
+   "start": "2SA.13.12",
+   "end": "2SA.13.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 1884,
+   "text": "Gen. xxxix. 9",
+   "start": "GEN.39.9",
+   "end": "GEN.39.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 2112,
+   "text": "Jer. iv. 18",
+   "start": "JER.4.18",
+   "end": "JER.4.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.5",
+   "at": 2125,
+   "text": "Zech. v. 8",
+   "start": "ZEC.5.8",
+   "end": "ZEC.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.6",
+   "at": 171,
+   "text": "1 Kings xi. 1",
+   "start": "1KI.11.1",
+   "end": "1KI.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.6",
+   "at": 980,
+   "text": "Prov. v. 9, 11",
+   "start": "PRO.5.9",
+   "end": "PRO.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.6",
+   "at": 980,
+   "text": "Prov. v. 9, 11",
+   "start": "PRO.5.11",
+   "end": "PRO.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.7",
+   "at": 358,
+   "text": "Prov. v. 22",
+   "start": "PRO.5.22",
+   "end": "PRO.5.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.7",
+   "at": 1013,
+   "text": "Lev. xviii. 30",
+   "start": "LEV.18.30",
+   "end": "LEV.18.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.7",
+   "at": 1400,
+   "text": "Rom. i. 26, 28",
+   "start": "ROM.1.26",
+   "end": "ROM.1.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.7",
+   "at": 1400,
+   "text": "Rom. i. 26, 28",
+   "start": "ROM.1.28",
+   "end": "ROM.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.23-29.7",
+   "at": 1416,
+   "text": "Eph. iv. 18, 19",
+   "start": "EPH.4.18",
+   "end": "EPH.4.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.1",
+   "at": 178,
+   "text": "Ps. li. 5",
+   "start": "PSA.51.7",
+   "end": "PSA.51.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.1",
+   "at": 297,
+   "text": "v. 27",
+   "start": "ECC.7.27",
+   "end": "ECC.7.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.1",
+   "at": 1112,
+   "text": "Job xxxiv. 32",
+   "start": "JOB.34.32",
+   "end": "JOB.34.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.1",
+   "at": 1207,
+   "text": "v. 28",
+   "start": "ECC.7.28",
+   "end": "ECC.7.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.1",
+   "at": 1496,
+   "text": "Jer. xvii. 9, 10",
+   "start": "JER.17.9",
+   "end": "JER.17.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.2",
+   "at": 4,
+   "text": "Ps. xix. 12",
+   "start": "PSA.19.13",
+   "end": "PSA.19.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.2",
+   "at": 179,
+   "text": "Job ix. 3",
+   "start": "JOB.9.3",
+   "end": "JOB.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.2",
+   "at": 746,
+   "text": "v. 20",
+   "start": "ECC.7.20",
+   "end": "ECC.7.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.2",
+   "at": 1219,
+   "text": "Acts xvii. 4, 12",
+   "start": "ACT.17.4",
+   "end": "ACT.17.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.2",
+   "at": 1219,
+   "text": "Acts xvii. 4, 12",
+   "start": "ACT.17.12",
+   "end": "ACT.17.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.3",
+   "at": 149,
+   "text": "Prov. ii. 12, 16",
+   "start": "PRO.2.12",
+   "end": "PRO.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.3",
+   "at": 149,
+   "text": "Prov. ii. 12, 16",
+   "start": "PRO.2.16",
+   "end": "PRO.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.3",
+   "at": 167,
+   "text": "iv. 14",
+   "start": "PRO.4.14",
+   "end": "PRO.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.3",
+   "at": 175,
+   "text": "v. 3",
+   "start": "PRO.5.3",
+   "end": "PRO.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.3",
+   "at": 416,
+   "text": "Prov. ix. 13",
+   "start": "PRO.9.13",
+   "end": "PRO.9.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.3",
+   "at": 843,
+   "text": "v. 20",
+   "start": "ECC.7.20",
+   "end": "ECC.7.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.4",
+   "at": 407,
+   "text": "Gen. iii. 5",
+   "start": "GEN.3.5",
+   "end": "GEN.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.7.27.4",
+   "at": 1183,
+   "text": "v. 28",
+   "start": "ECC.7.28",
+   "end": "ECC.7.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1.1",
+   "at": 35,
+   "text": "v. 1",
+   "start": "ECC.8.1",
+   "end": "ECC.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1.1",
+   "at": 840,
+   "text": "1 Chron. xii. 32",
+   "start": "1CH.12.33",
+   "end": "1CH.12.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1.1",
+   "at": 1124,
+   "text": "Job xxix. 7",
+   "start": "JOB.29.7",
+   "end": "JOB.29.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.2",
+   "at": 352,
+   "text": "v. 3",
+   "start": "ECC.8.3",
+   "end": "ECC.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.2",
+   "at": 428,
+   "text": "ch. x. 4",
+   "start": "ECC.10.4",
+   "end": "ECC.10.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.3",
+   "at": 370,
+   "text": "v. 5",
+   "start": "ECC.8.5",
+   "end": "ECC.8.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.4",
+   "at": 136,
+   "text": "Rom. xiii. 1",
+   "start": "ROM.13.1",
+   "end": "ROM.13.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.4",
+   "at": 431,
+   "text": "2 Chron. xxiii. 16",
+   "start": "2CH.23.16",
+   "end": "2CH.23.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.4",
+   "at": 556,
+   "text": "1 Chron. xi. 3",
+   "start": "1CH.11.3",
+   "end": "1CH.11.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.4",
+   "at": 1042,
+   "text": "v. 4",
+   "start": "ECC.8.4",
+   "end": "ECC.8.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.1-5.4",
+   "at": 1795,
+   "text": "Rom. xiii. 3",
+   "start": "ROM.13.3",
+   "end": "ROM.13.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.6-8.1",
+   "at": 18,
+   "text": "v. 5",
+   "start": "ECC.8.5",
+   "end": "ECC.8.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.6-8.1",
+   "at": 930,
+   "text": "v. 7",
+   "start": "ECC.8.7",
+   "end": "ECC.8.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.6-8.2",
+   "at": 777,
+   "text": "v. 8",
+   "start": "ECC.8.8",
+   "end": "ECC.8.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.6-8.3",
+   "at": 657,
+   "text": "Deut. xx. 5, 8",
+   "start": "DEU.20.5",
+   "end": "DEU.20.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.6-8.3",
+   "at": 657,
+   "text": "Deut. xx. 5, 8",
+   "start": "DEU.20.8",
+   "end": "DEU.20.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.6-8.3",
+   "at": 1511,
+   "text": "Ps. lii. 7",
+   "start": "PSA.52.9",
+   "end": "PSA.52.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.9.1",
+   "at": 37,
+   "text": "v. 9",
+   "start": "ECC.8.9",
+   "end": "ECC.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.9.1",
+   "at": 342,
+   "text": "Rom. xiii. 14",
+   "start": "ROM.13.14",
+   "end": "ROM.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.10.1",
+   "at": 77,
+   "text": "v. 10",
+   "start": "ECC.8.10",
+   "end": "ECC.8.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.10.1",
+   "at": 293,
+   "text": "Deut. i. 17",
+   "start": "DEU.1.17",
+   "end": "DEU.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.10.1",
+   "at": 336,
+   "text": "Ps. lxxxii. 1",
+   "start": "PSA.82.1",
+   "end": "PSA.82.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.10.1",
+   "at": 385,
+   "text": "2 Chron. xix. 6",
+   "start": "2CH.19.6",
+   "end": "2CH.19.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.10.1",
+   "at": 1250,
+   "text": "Ps. xlix. 17",
+   "start": "PSA.49.18",
+   "end": "PSA.49.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.11.1",
+   "at": 76,
+   "text": "v. 11",
+   "start": "ECC.8.11",
+   "end": "ECC.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.11.3",
+   "at": 549,
+   "text": "Isa. iii. 10, 11",
+   "start": "ISA.3.10",
+   "end": "ISA.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.11.3",
+   "at": 1244,
+   "text": "Ps. lv. 23",
+   "start": "PSA.55.24",
+   "end": "PSA.55.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.11.3",
+   "at": 1286,
+   "text": "v. 12",
+   "start": "ECC.8.12",
+   "end": "ECC.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.14.1",
+   "at": 121,
+   "text": "v. 14",
+   "start": "ECC.8.14",
+   "end": "ECC.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.15.1",
+   "at": 273,
+   "text": "v. 15",
+   "start": "ECC.8.15",
+   "end": "ECC.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.8.16-17.1",
+   "at": 281,
+   "text": "v. 16, 17",
+   "start": "ECC.8.16",
+   "end": "ECC.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.1",
+   "at": 1174,
+   "text": "these verses",
+   "start": "ECC.9.1",
+   "end": "ECC.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.2",
+   "at": 381,
+   "text": "Job xxiv. 1",
+   "start": "JOB.24.1",
+   "end": "JOB.24.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.2",
+   "at": 439,
+   "text": "Jer. xii. 1",
+   "start": "JER.12.1",
+   "end": "JER.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.2",
+   "at": 491,
+   "text": "Hab. i. 13",
+   "start": "HAB.1.13",
+   "end": "HAB.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.2",
+   "at": 577,
+   "text": "Ps. lxxiii. 1",
+   "start": "PSA.73.1",
+   "end": "PSA.73.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.3",
+   "at": 1470,
+   "text": "v. 13",
+   "start": "ECC.9.13",
+   "end": "ECC.9.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.5",
+   "at": 303,
+   "text": "Jer. xxiv. 1",
+   "start": "JER.24.1",
+   "end": "JER.24.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.6",
+   "at": 648,
+   "text": "Jer. l. 38",
+   "start": "JER.50.38",
+   "end": "JER.50.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.6",
+   "at": 691,
+   "text": "Acts xxvi. 11",
+   "start": "ACT.26.11",
+   "end": "ACT.26.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.1-3.6",
+   "at": 766,
+   "text": "Luke xv. 17",
+   "start": "LUK.15.17",
+   "end": "LUK.15.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.3.1",
+   "at": 168,
+   "text": "v. 3",
+   "start": "ECC.9.3",
+   "end": "ECC.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.3.1",
+   "at": 427,
+   "text": "ch. viii. 11",
+   "start": "ECC.8.11",
+   "end": "ECC.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.1",
+   "at": 63,
+   "text": "ch. iv. 2",
+   "start": "ECC.4.2",
+   "end": "ECC.4.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-6.1",
+   "at": 76,
+   "text": "v. 4-6",
+   "start": "ECC.9.4",
+   "end": "ECC.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-6.1",
+   "at": 580,
+   "text": "v. 3",
+   "start": "ECC.9.3",
+   "end": "ECC.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-6.2",
+   "at": 831,
+   "text": "Job x. 22",
+   "start": "JOB.10.22",
+   "end": "JOB.10.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-6.2",
+   "at": 1128,
+   "text": "John vi. 27",
+   "start": "JHN.6.27",
+   "end": "JHN.6.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-6.2",
+   "at": 1141,
+   "text": "1 Cor. vi. 13",
+   "start": "1CO.6.13",
+   "end": "1CO.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-6.2",
+   "at": 1172,
+   "text": "v. 6",
+   "start": "ECC.9.6",
+   "end": "ECC.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-6.3",
+   "at": 204,
+   "text": "Ps. xvii. 14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.3",
+   "at": 850,
+   "text": "Deut. xxvi. 14",
+   "start": "DEU.26.14",
+   "end": "DEU.26.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.3",
+   "at": 921,
+   "text": "Acts ii. 46",
+   "start": "ACT.2.46",
+   "end": "ACT.2.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.3",
+   "at": 938,
+   "text": "Deut. xxviii. 47",
+   "start": "DEU.28.47",
+   "end": "DEU.28.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.3",
+   "at": 1501,
+   "text": "v. 8",
+   "start": "ECC.9.8",
+   "end": "ECC.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.4",
+   "at": 304,
+   "text": "Rev. iii. 4",
+   "start": "REV.3.4",
+   "end": "REV.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.4",
+   "at": 457,
+   "text": "Matt. xxvi. 7",
+   "start": "MAT.26.7",
+   "end": "MAT.26.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.4",
+   "at": 535,
+   "text": "Ps. xxiii. 5",
+   "start": "PSA.23.5",
+   "end": "PSA.23.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.4",
+   "at": 1551,
+   "text": "Prov. v. 19",
+   "start": "PRO.5.19",
+   "end": "PRO.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.5",
+   "at": 319,
+   "text": "Hos. ix. 1",
+   "start": "HOS.9.1",
+   "end": "HOS.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.6",
+   "at": 228,
+   "text": "Luke xii. 19",
+   "start": "LUK.12.19",
+   "end": "LUK.12.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.6",
+   "at": 353,
+   "text": "v. 10",
+   "start": "ECC.9.10",
+   "end": "ECC.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.6",
+   "at": 581,
+   "text": "Eccl. ii. 3",
+   "start": "ECC.2.3",
+   "end": "ECC.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.6",
+   "at": 1078,
+   "text": "Prov. xvii. 16",
+   "start": "PRO.17.16",
+   "end": "PRO.17.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.4-10.7",
+   "at": 146,
+   "text": "John ix. 4",
+   "start": "JHN.9.4",
+   "end": "JHN.9.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.11-12.1",
+   "at": 291,
+   "text": "v. 10",
+   "start": "ECC.9.10",
+   "end": "ECC.9.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.11.1",
+   "at": 64,
+   "text": "v. 11",
+   "start": "ECC.9.11",
+   "end": "ECC.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.11.3",
+   "at": 293,
+   "text": "Ps. xxxi. 15",
+   "start": "PSA.31.16",
+   "end": "PSA.31.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.11.3",
+   "at": 587,
+   "text": "Ps. xliv. 3",
+   "start": "PSA.44.4",
+   "end": "PSA.44.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.12.1",
+   "at": 69,
+   "text": "v. 12",
+   "start": "ECC.9.12",
+   "end": "ECC.9.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.13-18.1",
+   "at": 208,
+   "text": "v. 11",
+   "start": "ECC.9.11",
+   "end": "ECC.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.13-18.1",
+   "at": 429,
+   "text": "ch. ii. 13",
+   "start": "ECC.2.13",
+   "end": "ECC.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.13-18.1",
+   "at": 979,
+   "text": "v. 13",
+   "start": "ECC.9.13",
+   "end": "ECC.9.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.14.1",
+   "at": 193,
+   "text": "v. 14",
+   "start": "ECC.9.14",
+   "end": "ECC.9.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.14.1",
+   "at": 1355,
+   "text": "Isa. v. 8",
+   "start": "ISA.5.8",
+   "end": "ISA.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.14.2",
+   "at": 433,
+   "text": "Judg. xi. 7",
+   "start": "JDG.11.7",
+   "end": "JDG.11.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.14.2",
+   "at": 714,
+   "text": "2 Sam. xx. 16",
+   "start": "2SA.20.16",
+   "end": "2SA.20.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.16.1",
+   "at": 247,
+   "text": "v. 16",
+   "start": "ECC.9.16",
+   "end": "ECC.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.16.1",
+   "at": 612,
+   "text": "v. 18",
+   "start": "ECC.9.18",
+   "end": "ECC.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.16.1",
+   "at": 1049,
+   "text": "v. 17",
+   "start": "ECC.9.17",
+   "end": "ECC.9.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.9.16.2",
+   "at": 816,
+   "text": "v. 16",
+   "start": "ECC.9.16",
+   "end": "ECC.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.1-3.2",
+   "at": 376,
+   "text": "v. 3",
+   "start": "ECC.10.3",
+   "end": "ECC.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.2.1",
+   "at": 88,
+   "text": "v. 2",
+   "start": "ECC.10.2",
+   "end": "ECC.10.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4.1",
+   "at": 92,
+   "text": "v. 4",
+   "start": "ECC.10.4",
+   "end": "ECC.10.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.2",
+   "at": 303,
+   "text": "v. 5",
+   "start": "ECC.10.5",
+   "end": "ECC.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.2",
+   "at": 858,
+   "text": "v. 6",
+   "start": "ECC.10.6",
+   "end": "ECC.10.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.2",
+   "at": 1103,
+   "text": "v. 7",
+   "start": "ECC.10.7",
+   "end": "ECC.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.4",
+   "at": 980,
+   "text": "Acts xxviii. 3",
+   "start": "ACT.28.3",
+   "end": "ACT.28.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.4",
+   "at": 1917,
+   "text": "v. 10",
+   "start": "ECC.10.10",
+   "end": "ECC.10.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.5",
+   "at": 1024,
+   "text": "v. 10",
+   "start": "ECC.10.10",
+   "end": "ECC.10.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.5",
+   "at": 1465,
+   "text": "Ps. lii. 2",
+   "start": "PSA.52.4",
+   "end": "PSA.52.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.6",
+   "at": 111,
+   "text": "v. 11",
+   "start": "ECC.10.11",
+   "end": "ECC.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.6",
+   "at": 241,
+   "text": "Ps. lviii. 4, 5",
+   "start": "PSA.58.5",
+   "end": "PSA.58.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.4-11.6",
+   "at": 816,
+   "text": "Prov. xxv. 15",
+   "start": "PRO.25.15",
+   "end": "PRO.25.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.12-15.2",
+   "at": 631,
+   "text": "1 Kings ii. 23",
+   "start": "1KI.2.23",
+   "end": "1KI.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.12-15.2",
+   "at": 712,
+   "text": "Ps. lxiv. 8",
+   "start": "PSA.64.9",
+   "end": "PSA.64.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.12-15.3",
+   "at": 403,
+   "text": "v. 14",
+   "start": "ECC.10.14",
+   "end": "ECC.10.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.12-15.3",
+   "at": 1188,
+   "text": "Prov. xxvii. 1",
+   "start": "PRO.27.1",
+   "end": "PRO.27.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.15.1",
+   "at": 48,
+   "text": "Matt. vi. 7",
+   "start": "MAT.6.7",
+   "end": "MAT.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.15.1",
+   "at": 105,
+   "text": "v. 15",
+   "start": "ECC.10.15",
+   "end": "ECC.10.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.15.1",
+   "at": 457,
+   "text": "Hab. ii. 13",
+   "start": "HAB.2.13",
+   "end": "HAB.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.15.1",
+   "at": 470,
+   "text": "Isa. lv. 2",
+   "start": "ISA.55.2",
+   "end": "ISA.55.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.15.1",
+   "at": 1604,
+   "text": "Isa. xxxv. 8",
+   "start": "ISA.35.8",
+   "end": "ISA.35.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.16.1",
+   "at": 256,
+   "text": "v. 16",
+   "start": "ECC.10.16",
+   "end": "ECC.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.16.1",
+   "at": 787,
+   "text": "2 Chron. xiii. 7",
+   "start": "2CH.13.7",
+   "end": "2CH.13.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.16.2",
+   "at": 120,
+   "text": "v. 17",
+   "start": "ECC.10.17",
+   "end": "ECC.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.16.2",
+   "at": 717,
+   "text": "Ps. cxlv. 15",
+   "start": "PSA.145.15",
+   "end": "PSA.145.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.16.2",
+   "at": 1110,
+   "text": "Isa. xxviii. 7",
+   "start": "ISA.28.7",
+   "end": "ISA.28.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.16.2",
+   "at": 1158,
+   "text": "Prov. xxxi. 5",
+   "start": "PRO.31.5",
+   "end": "PRO.31.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.18.1",
+   "at": 80,
+   "text": "v. 18",
+   "start": "ECC.10.18",
+   "end": "ECC.10.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.19.1",
+   "at": 117,
+   "text": "v. 19",
+   "start": "ECC.10.19",
+   "end": "ECC.10.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.10.20.1",
+   "at": 247,
+   "text": "v. 20",
+   "start": "ECC.10.20",
+   "end": "ECC.10.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.1",
+   "at": 315,
+   "text": "v. 1",
+   "start": "ECC.11.1",
+   "end": "ECC.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.1",
+   "at": 736,
+   "text": "Isa. xxxii. 20",
+   "start": "ISA.32.20",
+   "end": "ISA.32.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.1",
+   "at": 789,
+   "text": "Gal. vi. 7",
+   "start": "GAL.6.7",
+   "end": "GAL.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.1",
+   "at": 838,
+   "text": "Isa. xxiii. 3",
+   "start": "ISA.23.3",
+   "end": "ISA.23.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.1",
+   "at": 899,
+   "text": "Rev. xvi. 5",
+   "start": "REV.16.5",
+   "end": "REV.16.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.1",
+   "at": 1142,
+   "text": "Isa. lviii. 7",
+   "start": "ISA.58.7",
+   "end": "ISA.58.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.1",
+   "at": 1430,
+   "text": "ch. xxxi. 17",
+   "start": "JOB.31.17",
+   "end": "JOB.31.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.2",
+   "at": 266,
+   "text": "Luke vi. 38",
+   "start": "LUK.6.38",
+   "end": "LUK.6.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1.2",
+   "at": 400,
+   "text": "Neh. viii. 10",
+   "start": "NEH.8.10",
+   "end": "NEH.8.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1-6.3",
+   "at": 348,
+   "text": "1 Sam. xxv. 11",
+   "start": "1SA.25.11",
+   "end": "1SA.25.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1-6.3",
+   "at": 690,
+   "text": "Job xxxvii. 11",
+   "start": "JOB.37.11",
+   "end": "JOB.37.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1-6.3",
+   "at": 1112,
+   "text": "Jam. ii. 15, 16",
+   "start": "JAS.2.15",
+   "end": "JAS.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1-6.5",
+   "at": 532,
+   "text": "v. 4",
+   "start": "ECC.11.4",
+   "end": "ECC.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.1-6.7",
+   "at": 900,
+   "text": "Matt. vi. 25",
+   "start": "MAT.6.25",
+   "end": "MAT.6.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.6.1",
+   "at": 187,
+   "text": "v. 6",
+   "start": "ECC.11.6",
+   "end": "ECC.11.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.6.1",
+   "at": 1217,
+   "text": "Gal. vi. 9",
+   "start": "GAL.6.9",
+   "end": "GAL.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.7-8.1",
+   "at": 96,
+   "text": "v. 7, 8",
+   "start": "ECC.11.7",
+   "end": "ECC.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.7-8.1",
+   "at": 708,
+   "text": "Job iii. 20, 23",
+   "start": "JOB.3.20",
+   "end": "JOB.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.7-8.1",
+   "at": 708,
+   "text": "Job iii. 20, 23",
+   "start": "JOB.3.23",
+   "end": "JOB.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.7-8.3",
+   "at": 92,
+   "text": "Job x. 21",
+   "start": "JOB.10.21",
+   "end": "JOB.10.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.7-8.3",
+   "at": 360,
+   "text": "Job xiv. 12",
+   "start": "JOB.14.12",
+   "end": "JOB.14.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.8.1",
+   "at": 257,
+   "text": "v. 8",
+   "start": "ECC.11.8",
+   "end": "ECC.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.9-10.1",
+   "at": 103,
+   "text": "v. 9, 10",
+   "start": "ECC.11.9",
+   "end": "ECC.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.10.1",
+   "at": 61,
+   "text": "v. 10",
+   "start": "ECC.11.10",
+   "end": "ECC.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.11.10.1",
+   "at": 1047,
+   "text": "v. 9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.1",
+   "at": 1300,
+   "text": "Job xxxv. 10",
+   "start": "JOB.35.10",
+   "end": "JOB.35.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.2",
+   "at": 1025,
+   "text": "2 Sam. xix. 35",
+   "start": "2SA.19.36",
+   "end": "2SA.19.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.5",
+   "at": 906,
+   "text": "Zech. viii. 4",
+   "start": "ZEC.8.4",
+   "end": "ZEC.8.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.5",
+   "at": 965,
+   "text": "Ps. cxlvii. 10",
+   "start": "PSA.147.10",
+   "end": "PSA.147.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.6",
+   "at": 92,
+   "text": "Gen. xxvii. 1",
+   "start": "GEN.27.1",
+   "end": "GEN.27.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.6",
+   "at": 122,
+   "text": "1 Kings xiv. 4",
+   "start": "1KI.14.4",
+   "end": "1KI.14.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.7",
+   "at": 194,
+   "text": "ch. ii. 8",
+   "start": "ECC.2.8",
+   "end": "ECC.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.7",
+   "at": 1665,
+   "text": "Dan. xi. 37",
+   "start": "DAN.11.37",
+   "end": "DAN.11.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.9",
+   "at": 882,
+   "text": "v. 7",
+   "start": "ECC.12.7",
+   "end": "ECC.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.10",
+   "at": 978,
+   "text": "v. 6",
+   "start": "ECC.12.6",
+   "end": "ECC.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.11",
+   "at": 518,
+   "text": "v. 7",
+   "start": "ECC.12.7",
+   "end": "ECC.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.11",
+   "at": 989,
+   "text": "Gen. iii. 19",
+   "start": "GEN.3.19",
+   "end": "GEN.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.11",
+   "at": 1224,
+   "text": "Rom. vi. 12",
+   "start": "ROM.6.12",
+   "end": "ROM.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.11",
+   "at": 1411,
+   "text": "Gen. ii. 7",
+   "start": "GEN.2.7",
+   "end": "GEN.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.12",
+   "at": 198,
+   "text": "Ps. xlix. 15",
+   "start": "PSA.49.16",
+   "end": "PSA.49.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.12",
+   "at": 530,
+   "text": "1 Pet. iii. 19",
+   "start": "1PE.3.19",
+   "end": "1PE.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.1-7.12",
+   "at": 579,
+   "text": "Luke xxiii. 43",
+   "start": "LUK.23.43",
+   "end": "LUK.23.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.8.1",
+   "at": 24,
+   "text": "v. 8",
+   "start": "ECC.12.8",
+   "end": "ECC.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.8-12.2",
+   "at": 1580,
+   "text": "2 Chron. xxx. 22",
+   "start": "2CH.30.22",
+   "end": "2CH.30.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.10.1",
+   "at": 141,
+   "text": "v. 10",
+   "start": "ECC.12.10",
+   "end": "ECC.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.10.1",
+   "at": 431,
+   "text": "1 Cor. x. 33",
+   "start": "1CO.10.33",
+   "end": "1CO.10.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.10.1",
+   "at": 1040,
+   "text": "Isa. xxx. 10",
+   "start": "ISA.30.10",
+   "end": "ISA.30.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.11.1",
+   "at": 145,
+   "text": "v. 11",
+   "start": "ECC.12.11",
+   "end": "ECC.12.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.11.1",
+   "at": 565,
+   "text": "Acts ii. 37",
+   "start": "ACT.2.37",
+   "end": "ACT.2.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.11.1",
+   "at": 1260,
+   "text": "Ezra ix. 8",
+   "start": "EZR.9.8",
+   "end": "EZR.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.11.2",
+   "at": 971,
+   "text": "Jer. xxiii. 29",
+   "start": "JER.23.29",
+   "end": "JER.23.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.11.2",
+   "at": 1264,
+   "text": "Ps. lxxx. 1",
+   "start": "PSA.80.2",
+   "end": "PSA.80.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.12.1",
+   "at": 220,
+   "text": "v. 12",
+   "start": "ECC.12.12",
+   "end": "ECC.12.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.12.1",
+   "at": 779,
+   "text": "John xxi. 25",
+   "start": "JHN.21.25",
+   "end": "JHN.21.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.12.2",
+   "at": 575,
+   "text": "Tit. ii. 11, 12",
+   "start": "TIT.2.11",
+   "end": "TIT.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.13-14.1",
+   "at": 111,
+   "text": "ch. ii. 3",
+   "start": "ECC.2.3",
+   "end": "ECC.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.13-14.1",
+   "at": 390,
+   "text": "Job xxviii. 28",
+   "start": "JOB.28.28",
+   "end": "JOB.28.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.13-14.1",
+   "at": 882,
+   "text": "Rom. ii. 21",
+   "start": "ROM.2.21",
+   "end": "ROM.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.13-14.1",
+   "at": 1048,
+   "text": "Deut. vi. 4",
+   "start": "DEU.6.4",
+   "end": "DEU.6.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.13-14.2",
+   "at": 419,
+   "text": "Rev. xiv. 7",
+   "start": "REV.14.7",
+   "end": "REV.14.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.13-14.2",
+   "at": 559,
+   "text": "Isa. xxix. 13",
+   "start": "ISA.29.13",
+   "end": "ISA.29.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.14.1",
+   "at": 36,
+   "text": "v. 14",
+   "start": "ECC.12.14",
+   "end": "ECC.12.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.14.1",
+   "at": 253,
+   "text": "ch. xi. 9",
+   "start": "ECC.11.9",
+   "end": "ECC.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "henry-ecclesiastes.ECC.12.14.1",
+   "at": 1034,
+   "text": "Rom. ii. 16",
+   "start": "ROM.2.16",
+   "end": "ROM.2.16",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}
