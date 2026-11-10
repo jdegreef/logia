@@ -172,6 +172,7 @@ def icon(name, size=18, cls="icon"):
             f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
 
 
+@functools.lru_cache(maxsize=None)
 def ref_parts(ref):
     book, chapter, verse = ref.split(".")
     return book, int(chapter), int(verse)
@@ -326,11 +327,9 @@ class Library:
         with what the reader shows beside it: the Scripture it cites, the
         Fathers it quotes or that quote it, and its place in a whole text."""
         out = {}
-        for c in self.comments:
+        for c in self.by_chapter.get((book, chapter), []):
             sb, sc, sv = ref_parts(c["start"])
             eb, ec, ev = ref_parts(c["end"])
-            if sb != book or not (sc <= chapter <= ec):
-                continue
             out.setdefault(c["work"], []).append({
                 "id": c["id"], "start": sv if sc == chapter else 1, "end": ev if ec == chapter else last_verse,
                 "heading": c["heading"], "excerpt": c["text"], "source_url": c["source_url"],
@@ -393,7 +392,9 @@ class Library:
                 _, ec, ev = scripture.parse(x["verses"]["end"])
                 if sb != b or not (sc, sv) <= (ch, v) <= (ec, ev):
                     continue
-                para = next((p for p in x["paragraphs"] if p["verse"] == ref), None)
+                # Only a paragraph the text's page shows has an id to link to:
+                # the title and the short headings under it are shown as the head.
+                para = next((p for p in text_body(x) if p["verse"] == ref), None)
                 where = locus_label(w, para["locus"] if para and para["locus"].split(".")[-1] != "1" else x["locus"])
                 out.append({"author": a["name"], "short": short_name(a), "work_id": wid, "where": where,
                             "href": f"/works/{wid}/{x['locus']}/" + (f"#{para['id']}" if para else "")})
@@ -404,29 +405,43 @@ class Library:
         commenting on another verse]}."""
         first, last = verses[0], verses[-1]
         out = {str(v): [] for v in verses}
-        for c in self.comments:
+        for c, x in self.cites_by_chapter.get((book, chapter), []):
             cb, cc, cv = ref_parts(c["start"])
             _, ec, ev = ref_parts(c["end"])
-            for x in c["cites"]:
-                b, ch, v = scripture.parse(x["start"])
-                _, ch2, v2 = scripture.parse(x["end"])
-                if b != book or not (ch <= chapter <= ch2):
+            b, ch, v = scripture.parse(x["start"])
+            _, ch2, v2 = scripture.parse(x["end"])
+            for verse in range(v if ch == chapter else first, (v2 if ch2 == chapter else last) + 1):
+                rows = out.get(str(verse))
+                if rows is None or (cb == book and (cc, cv) <= (chapter, verse) <= (ec, ev)):
+                    continue                 # not in this chapter, or already on the verse
+                if any(r["id"] == c["id"] for r in rows):
                     continue
-                for verse in range(v if ch == chapter else first, (v2 if ch2 == chapter else last) + 1):
-                    rows = out.get(str(verse))
-                    if rows is None or (cb == book and (cc, cv) <= (chapter, verse) <= (ec, ev)):
-                        continue                 # not in this chapter, or already on the verse
-                    if any(r["id"] == c["id"] for r in rows):
-                        continue
-                    a = self.author_of(c["work"])
-                    rows.append({"id": c["id"], "author": a["name"], "author_dates": a["dates"],
-                                 "tradition": a["tradition"], "era": a["era"], "died": a["died"],
-                                 "ref": scripture.label(c["start"], c["end"]),
-                                 "href": self.verse_link(c["start"], c["work"]) or self.works[c["work"]]["full_text_url"],
-                                 "text": x["text"], "snippet": cite_snippet(c["text"], x["at"], len(x["text"]))})
+                a = self.author_of(c["work"])
+                rows.append({"id": c["id"], "author": a["name"], "author_dates": a["dates"],
+                             "tradition": a["tradition"], "era": a["era"], "died": a["died"],
+                             "ref": scripture.label(c["start"], c["end"]),
+                             "href": self.verse_link(c["start"], c["work"]) or self.works[c["work"]]["full_text_url"],
+                             "text": x["text"], "snippet": cite_snippet(c["text"], x["at"], len(x["text"]))})
         for rows in out.values():
             rows.sort(key=lambda r: (ERAS.index(r["era"]), r["died"]))
         return out
+
+    @functools.cached_property
+    def cites_by_chapter(self):
+        """{(book, chapter): [(excerpt, citation)]} for every citation of a
+        chapter, in the library's order, so cited_by need not scan them all."""
+        out = {}
+        for c in self.comments:
+            for x in c["cites"]:
+                b, ch, _v = scripture.parse(x["start"])
+                _, ch2, _v2 = scripture.parse(x["end"])
+                for n in range(ch, ch2 + 1):
+                    out.setdefault((b, n), []).append((c, x))
+        return out
+
+    def comments_in_book(self, book):
+        """The excerpts on any chapter of a book."""
+        return [c for (b, _ch), cs in self.by_chapter.items() if b == book for c in cs]
 
     def comments_in(self, book, chapter):
         """The excerpts on a chapter of a book."""
@@ -578,6 +593,7 @@ def prefs_menu():
             + theme + "".join(rows) + "</div></div>")
 
 
+@functools.cache
 def nav_menus(lib):
     def row(href, title, note="", ico=None, ext=False, current=False):
         lead = f'<span class="dd-ico">{icon(ico)}</span>' if ico else ""
@@ -2426,13 +2442,17 @@ def author_covered(lib, comments):
 def coverage_map(lib, author, book, covered):
     """A book as rows of chapters and squares of verses, the verses with no
     comment left open, and the list of them beneath."""
+    works = {w for w, x in lib.works.items() if x["author"] == author["id"]}
+    starts = {ref_parts(c["start"])[1] for c in lib.comments_in_book(book) if c["work"] in works and ref_parts(c["start"])[0] == book}
     rows = []
     for bb, ch in lib.chapters:
         if bb != book:
             continue
         cells = "".join('<i></i>' if (ch, v) in covered else
                         f'<i class="lg-nc" title="{e(lib.books[book]["en"])} {ch}:{v}"></i>' for v in lib.verses(book, ch))
-        rows.append(f'<li><a href="#ch-{book.lower()}-{ch}">{ch}</a><span>{cells}</span></li>')
+        # The chapters with a section below (where an excerpt starts) link to it.
+        num = f'<a href="#ch-{book.lower()}-{ch}">{ch}</a>' if ch in starts else f"<b>{ch}</b>"
+        rows.append(f'<li>{num}<span>{cells}</span></li>')
     return (f'<div class="lg-cov-map" data-book="{book}"><h3 class="label">{e(t("commentators.map", book=lib.books[book]["en"]))}</h3>'
             f'<ol>{"".join(rows)}</ol>{missing_verses(lib, author, book, covered)}</div>')
 
@@ -3071,6 +3091,13 @@ def text_lead(x):
     return " · ".join(out)
 
 
+def text_body(x):
+    """A whole text's paragraphs after its title and the headings under it:
+    the ones its page sets out, each with its id."""
+    lead = text_lead(x)
+    return x["paragraphs"][1 + (lead.count(" · ") + 1 if lead else 0):]
+
+
 def linked_html(lib, text, cites):
     """Text with the Scripture it cites made into links."""
     h, pos = [], 0
@@ -3093,7 +3120,7 @@ def text_page(lib, wid, x):
     w, a = lib.works[wid], lib.author_of(wid)
     name = locus_label(w, x["locus"])
     lead = text_lead(x)
-    paras = x["paragraphs"][1 + (lead.count(" · ") + 1 if lead else 0):]
+    paras = text_body(x)
     quoted = {}
     for c in lib.comments:
         for q in c["quotes"]:
