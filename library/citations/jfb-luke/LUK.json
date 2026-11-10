@@ -1,0 +1,8034 @@
+{
+ "work": "jfb-luke",
+ "book": "LUK",
+ "citations": [
+  {
+   "in": "jfb-luke.LUK.1.1-4.1",
+   "at": 0,
+   "text": "Lu 1:1-4",
+   "start": "LUK.1.1",
+   "end": "LUK.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.3.1",
+   "at": 600,
+   "text": "Ac 22:26",
+   "start": "ACT.22.26",
+   "end": "ACT.22.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.3.1",
+   "at": 610,
+   "text": "24:3",
+   "start": "ACT.24.3",
+   "end": "ACT.24.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.3.1",
+   "at": 616,
+   "text": "26:25",
+   "start": "ACT.26.25",
+   "end": "ACT.26.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.5-25.1",
+   "at": 0,
+   "text": "Lu 1:5-25",
+   "start": "LUK.1.5",
+   "end": "LUK.1.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.5.1",
+   "at": 17,
+   "text": "Mt 2:1",
+   "start": "MAT.2.1",
+   "end": "MAT.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.5.1",
+   "at": 143,
+   "text": "1Ch 24:1",
+   "start": "1CH.24.1",
+   "end": "1CH.24.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.5.1",
+   "at": 153,
+   "text": "4",
+   "start": "1CH.24.4",
+   "end": "1CH.24.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.5.1",
+   "at": 156,
+   "text": "10",
+   "start": "1CH.24.10",
+   "end": "1CH.24.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.5.1",
+   "at": 218,
+   "text": "Ezr 2:34-39",
+   "start": "EZR.2.34",
+   "end": "EZR.2.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.6.1",
+   "at": 129,
+   "text": "Eze 11:20",
+   "start": "EZK.11.20",
+   "end": "EZK.11.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.6.1",
+   "at": 140,
+   "text": "Heb 9:1",
+   "start": "HEB.9.1",
+   "end": "HEB.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.6.1",
+   "at": 248,
+   "text": "Mr 12:33",
+   "start": "MRK.12.33",
+   "end": "MRK.12.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.9.1",
+   "at": 490,
+   "text": "Re 8:3",
+   "start": "REV.8.3",
+   "end": "REV.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.10.1",
+   "at": 418,
+   "text": "Le 16:12",
+   "start": "LEV.16.12",
+   "end": "LEV.16.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.10.1",
+   "at": 428,
+   "text": "13",
+   "start": "LEV.16.13",
+   "end": "LEV.16.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.10.1",
+   "at": 579,
+   "text": "Ps 141:2",
+   "start": "PSA.141.2",
+   "end": "PSA.141.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.10.1",
+   "at": 589,
+   "text": "Re 8:3",
+   "start": "REV.8.3",
+   "end": "REV.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.10.1",
+   "at": 775,
+   "text": "Eph 5:2",
+   "start": "EPH.5.2",
+   "end": "EPH.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.11.1",
+   "at": 225,
+   "text": "Mt 25:33",
+   "start": "MAT.25.33",
+   "end": "MAT.25.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.14.1",
+   "at": 31,
+   "text": "Lu 1:58",
+   "start": "LUK.1.58",
+   "end": "LUK.1.58",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.14.1",
+   "at": 40,
+   "text": "66",
+   "start": "LUK.1.66",
+   "end": "LUK.1.66",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.15.1",
+   "at": 98,
+   "text": "Mt 11:10",
+   "start": "MAT.11.10",
+   "end": "MAT.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.15.1",
+   "at": 108,
+   "text": "11",
+   "start": "MAT.11.11",
+   "end": "MAT.11.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.15.1",
+   "at": 202,
+   "text": "Nu 6:2",
+   "start": "NUM.6.2",
+   "end": "NUM.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.15.1",
+   "at": 566,
+   "text": "Jud 13:7",
+   "start": "JDG.13.7",
+   "end": "JDG.13.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.15.1",
+   "at": 585,
+   "text": "1Sa 1:11",
+   "start": "1SA.1.11",
+   "end": "1SA.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.15.1",
+   "at": 927,
+   "text": "Heb 7:26",
+   "start": "HEB.7.26",
+   "end": "HEB.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.16-17.1",
+   "at": 67,
+   "text": "Mal 4:6",
+   "start": "MAL.3.24",
+   "end": "MAL.3.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.16-17.1",
+   "at": 147,
+   "text": "1Ki 18:37",
+   "start": "1KI.18.37",
+   "end": "1KI.18.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.17.1",
+   "at": 44,
+   "text": "Lu 1:16",
+   "start": "LUK.1.16",
+   "end": "LUK.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.17.1",
+   "at": 77,
+   "text": "Mal 3:1",
+   "start": "MAL.3.1",
+   "end": "MAL.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.17.1",
+   "at": 89,
+   "text": "Isa 40:3",
+   "start": "ISA.40.3",
+   "end": "ISA.40.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.17.1",
+   "at": 372,
+   "text": "Joh 10:41",
+   "start": "JHN.10.41",
+   "end": "JHN.10.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.17.1",
+   "at": 1328,
+   "text": "1Ki 18:36",
+   "start": "1KI.18.36",
+   "end": "1KI.18.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.17.1",
+   "at": 1339,
+   "text": "37",
+   "start": "1KI.18.37",
+   "end": "1KI.18.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.19.1",
+   "at": 93,
+   "text": "Da 9:21",
+   "start": "DAN.9.21",
+   "end": "DAN.9.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.19.1",
+   "at": 115,
+   "text": "Lu 1:26",
+   "start": "LUK.1.26",
+   "end": "LUK.1.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.20.1",
+   "at": 64,
+   "text": "Lu 1:64",
+   "start": "LUK.1.64",
+   "end": "LUK.1.64",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.21.1",
+   "at": 54,
+   "text": "Nu 6:23-27",
+   "start": "NUM.6.23",
+   "end": "NUM.6.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.26-38.1",
+   "at": 0,
+   "text": "Lu 1:26-38",
+   "start": "LUK.1.26",
+   "end": "LUK.1.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.28.1",
+   "at": 53,
+   "text": "Eph 1:6",
+   "start": "EPH.1.6",
+   "end": "EPH.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.28.1",
+   "at": 88,
+   "text": "Lu 1:30",
+   "start": "LUK.1.30",
+   "end": "LUK.1.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.31.1",
+   "at": 75,
+   "text": "Isa 7:14",
+   "start": "ISA.7.14",
+   "end": "ISA.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.35.1",
+   "at": 23,
+   "text": "Mt 1:18",
+   "start": "MAT.1.18",
+   "end": "MAT.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.37.1",
+   "at": 78,
+   "text": "Ge 18:14",
+   "start": "GEN.18.14",
+   "end": "GEN.18.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.39-56.1",
+   "at": 0,
+   "text": "Lu 1:39-56",
+   "start": "LUK.1.39",
+   "end": "LUK.1.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.41.1",
+   "at": 21,
+   "text": "Lu 1:44",
+   "start": "LUK.1.44",
+   "end": "LUK.1.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.43.1",
+   "at": 55,
+   "text": "Lu 20:42",
+   "start": "LUK.20.42",
+   "end": "LUK.20.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.43.1",
+   "at": 65,
+   "text": "Joh 20:28",
+   "start": "JHN.20.28",
+   "end": "JHN.20.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.46-55.1",
+   "at": 1134,
+   "text": "1Sa 2:10",
+   "start": "1SA.2.10",
+   "end": "1SA.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.54.1",
+   "at": 19,
+   "text": "Ps 89:19",
+   "start": "PSA.89.20",
+   "end": "PSA.89.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.55.1",
+   "at": 100,
+   "text": "Mic 7:20",
+   "start": "MIC.7.20",
+   "end": "MIC.7.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.55.1",
+   "at": 110,
+   "text": "Ps 98:3",
+   "start": "PSA.98.3",
+   "end": "PSA.98.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.57-80.1",
+   "at": 0,
+   "text": "Lu 1:57-80",
+   "start": "LUK.1.57",
+   "end": "LUK.1.80",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.59.1",
+   "at": 24,
+   "text": "Ge 17:12",
+   "start": "GEN.17.12",
+   "end": "GEN.17.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.59.1",
+   "at": 108,
+   "text": "Joh 7:23",
+   "start": "JHN.7.23",
+   "end": "JHN.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.59.1",
+   "at": 126,
+   "text": "Php 3:5",
+   "start": "PHP.3.5",
+   "end": "PHP.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.59.1",
+   "at": 309,
+   "text": "Ge 21:3",
+   "start": "GEN.21.3",
+   "end": "GEN.21.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.59.1",
+   "at": 318,
+   "text": "4",
+   "start": "GEN.21.4",
+   "end": "GEN.21.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.66.1",
+   "at": 104,
+   "text": "1Ki 18:46",
+   "start": "1KI.18.46",
+   "end": "1KI.18.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.66.1",
+   "at": 115,
+   "text": "2Ki 3:15",
+   "start": "2KI.3.15",
+   "end": "2KI.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.68-79.1",
+   "at": 348,
+   "text": "Mt 15:31",
+   "start": "MAT.15.31",
+   "end": "MAT.15.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.68-79.1",
+   "at": 599,
+   "text": "Lu 1:71",
+   "start": "LUK.1.71",
+   "end": "LUK.1.71",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.68-79.1",
+   "at": 608,
+   "text": "74",
+   "start": "LUK.1.74",
+   "end": "LUK.1.74",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.69.1",
+   "at": 142,
+   "text": "Lu 2:30",
+   "start": "LUK.2.30",
+   "end": "LUK.2.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.69.1",
+   "at": 227,
+   "text": "Ps 18:2",
+   "start": "PSA.18.3",
+   "end": "PSA.18.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.69.1",
+   "at": 236,
+   "text": "75:10",
+   "start": "PSA.75.11",
+   "end": "PSA.75.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.69.1",
+   "at": 243,
+   "text": "132:17",
+   "start": "PSA.132.17",
+   "end": "PSA.132.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.74-75.1",
+   "at": 174,
+   "text": "Lu 1:68",
+   "start": "LUK.1.68",
+   "end": "LUK.1.68",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.74-75.1",
+   "at": 358,
+   "text": "Lu 1:75",
+   "start": "LUK.1.75",
+   "end": "LUK.1.75",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.74-75.1",
+   "at": 399,
+   "text": "Ps 56:13",
+   "start": "PSA.56.14",
+   "end": "PSA.56.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.77.1",
+   "at": 262,
+   "text": "Lu 1:69",
+   "start": "LUK.1.69",
+   "end": "LUK.1.69",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.77.1",
+   "at": 274,
+   "text": "Lu 2:30",
+   "start": "LUK.2.30",
+   "end": "LUK.2.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.78.1",
+   "at": 178,
+   "text": "Mal 4:2",
+   "start": "MAL.3.20",
+   "end": "MAL.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.79.1",
+   "at": 13,
+   "text": "Isa 9:2",
+   "start": "ISA.9.1",
+   "end": "ISA.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.79.1",
+   "at": 22,
+   "text": "Mt 4:13-17",
+   "start": "MAT.4.13",
+   "end": "MAT.4.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.79.1",
+   "at": 221,
+   "text": "Lu 1:1-4",
+   "start": "LUK.1.1",
+   "end": "LUK.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.1.80.1",
+   "at": 269,
+   "text": "Mt 3:1",
+   "start": "MAT.3.1",
+   "end": "MAT.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.1-7.1",
+   "at": 0,
+   "text": "Lu 2:1-7",
+   "start": "LUK.2.1",
+   "end": "LUK.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.2.1",
+   "at": 268,
+   "text": "Ac 5:37",
+   "start": "ACT.5.37",
+   "end": "ACT.5.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.2.1",
+   "at": 687,
+   "text": "Joh 1:15",
+   "start": "JHN.1.15",
+   "end": "JHN.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.2.1",
+   "at": 697,
+   "text": "15:18",
+   "start": "JHN.15.18",
+   "end": "JHN.15.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.4-5.1",
+   "at": 72,
+   "text": "1Sa 16:1",
+   "start": "1SA.16.1",
+   "end": "1SA.16.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.6.1",
+   "at": 441,
+   "text": "Ps 118:23",
+   "start": "PSA.118.23",
+   "end": "PSA.118.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.7.1",
+   "at": 17,
+   "text": "Mt 1:25",
+   "start": "MAT.1.25",
+   "end": "MAT.1.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.7.1",
+   "at": 266,
+   "text": "2Co 8:9",
+   "start": "2CO.8.9",
+   "end": "2CO.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.7.1",
+   "at": 824,
+   "text": "Joh 1:11",
+   "start": "JHN.1.11",
+   "end": "JHN.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.8-20.1",
+   "at": 0,
+   "text": "Lu 2:8-20",
+   "start": "LUK.2.8",
+   "end": "LUK.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.8.1",
+   "at": 560,
+   "text": "Lu 2:25",
+   "start": "LUK.2.25",
+   "end": "LUK.2.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.8.1",
+   "at": 1242,
+   "text": "Joh 1:48",
+   "start": "JHN.1.48",
+   "end": "JHN.1.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.8.1",
+   "at": 1434,
+   "text": "Re 1:10",
+   "start": "REV.1.10",
+   "end": "REV.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.9.1",
+   "at": 147,
+   "text": "Da 10:7",
+   "start": "DAN.10.7",
+   "end": "DAN.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.9.1",
+   "at": 156,
+   "text": "8",
+   "start": "DAN.10.8",
+   "end": "DAN.10.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.9.1",
+   "at": 159,
+   "text": "Lu 1:12",
+   "start": "LUK.1.12",
+   "end": "LUK.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.9.1",
+   "at": 168,
+   "text": "Re 1:17",
+   "start": "REV.1.17",
+   "end": "REV.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.11.1",
+   "at": 70,
+   "text": "Isa 9:6",
+   "start": "ISA.9.5",
+   "end": "ISA.9.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.11.1",
+   "at": 146,
+   "text": "Joh 1:14",
+   "start": "JHN.1.14",
+   "end": "JHN.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.14.1",
+   "at": 461,
+   "text": "Isa 9:6",
+   "start": "ISA.9.5",
+   "end": "ISA.9.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.14.1",
+   "at": 792,
+   "text": "Heb 1:3",
+   "start": "HEB.1.3",
+   "end": "HEB.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.14.1",
+   "at": 801,
+   "text": "4",
+   "start": "HEB.1.4",
+   "end": "HEB.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.14.1",
+   "at": 1154,
+   "text": "Mt 3:17",
+   "start": "MAT.3.17",
+   "end": "MAT.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.15.1",
+   "at": 404,
+   "text": "Lu 2:8",
+   "start": "LUK.2.8",
+   "end": "LUK.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.16.1",
+   "at": 23,
+   "text": "Lu 1:39",
+   "start": "LUK.1.39",
+   "end": "LUK.1.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.16.1",
+   "at": 32,
+   "text": "Mt 28:8",
+   "start": "MAT.28.8",
+   "end": "MAT.28.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.16.1",
+   "at": 53,
+   "text": "Joh 4:28",
+   "start": "JHN.4.28",
+   "end": "JHN.4.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.17.1",
+   "at": 43,
+   "text": "Lu 2:20",
+   "start": "LUK.2.20",
+   "end": "LUK.2.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.20.1",
+   "at": 86,
+   "text": "Lu 2:13",
+   "start": "LUK.2.13",
+   "end": "LUK.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.20.1",
+   "at": 103,
+   "text": "Lu 19:37",
+   "start": "LUK.19.37",
+   "end": "LUK.19.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.20.1",
+   "at": 117,
+   "text": "Lu 24:53",
+   "start": "LUK.24.53",
+   "end": "LUK.24.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 0,
+   "text": "Lu 2:21",
+   "start": "LUK.2.21",
+   "end": "LUK.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 162,
+   "text": "Mt 1:21",
+   "start": "MAT.1.21",
+   "end": "MAT.1.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 171,
+   "text": "Ac 13:23",
+   "start": "ACT.13.23",
+   "end": "ACT.13.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 554,
+   "text": "Col 2:11",
+   "start": "COL.2.11",
+   "end": "COL.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 662,
+   "text": "Mt 3:15",
+   "start": "MAT.3.15",
+   "end": "MAT.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 840,
+   "text": "Ga 5:3",
+   "start": "GAL.5.3",
+   "end": "GAL.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 1157,
+   "text": "Ga 4:4",
+   "start": "GAL.4.4",
+   "end": "GAL.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 1165,
+   "text": "5",
+   "start": "GAL.4.5",
+   "end": "GAL.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.21.1",
+   "at": 1369,
+   "text": "Ga 3:13",
+   "start": "GAL.3.13",
+   "end": "GAL.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-40.1",
+   "at": 0,
+   "text": "Lu 2:22-40",
+   "start": "LUK.2.22",
+   "end": "LUK.2.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.1",
+   "at": 227,
+   "text": "Le 12:2",
+   "start": "LEV.12.2",
+   "end": "LEV.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.1",
+   "at": 236,
+   "text": "4",
+   "start": "LEV.12.4",
+   "end": "LEV.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.1",
+   "at": 649,
+   "text": "Le 12:6-8",
+   "start": "LEV.12.6",
+   "end": "LEV.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.1",
+   "at": 660,
+   "text": "5:7-11",
+   "start": "LEV.5.7",
+   "end": "LEV.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.1",
+   "at": 815,
+   "text": "2Co 8:9",
+   "start": "2CO.8.9",
+   "end": "2CO.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.1",
+   "at": 1134,
+   "text": "Ex 13:2",
+   "start": "EXO.13.2",
+   "end": "EXO.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.1",
+   "at": 1265,
+   "text": "Nu 3:11-38",
+   "start": "NUM.3.11",
+   "end": "NUM.3.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.2",
+   "at": 389,
+   "text": "1Pe 1:18",
+   "start": "1PE.1.18",
+   "end": "1PE.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.22-24.2",
+   "at": 399,
+   "text": "19",
+   "start": "1PE.1.19",
+   "end": "1PE.1.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.30.1",
+   "at": 232,
+   "text": "Joh 1:14",
+   "start": "JHN.1.14",
+   "end": "JHN.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.36.1",
+   "at": 429,
+   "text": "Ro 11:1",
+   "start": "ROM.11.1",
+   "end": "ROM.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.36.1",
+   "at": 438,
+   "text": "Heb 7:14",
+   "start": "HEB.7.14",
+   "end": "HEB.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.36.1",
+   "at": 534,
+   "text": "Lu 2:36",
+   "start": "LUK.2.36",
+   "end": "LUK.2.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.37.1",
+   "at": 140,
+   "text": "Ps 134:1",
+   "start": "PSA.134.1",
+   "end": "PSA.134.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.37.1",
+   "at": 150,
+   "text": "2",
+   "start": "PSA.134.2",
+   "end": "PSA.134.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.37.1",
+   "at": 199,
+   "text": "1Ti 5:5",
+   "start": "1TI.5.5",
+   "end": "1TI.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.39.1",
+   "at": 136,
+   "text": "Mt 2:13-23",
+   "start": "MAT.2.13",
+   "end": "MAT.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.41-52.1",
+   "at": 0,
+   "text": "Lu 2:41-52",
+   "start": "LUK.2.41",
+   "end": "LUK.2.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.1",
+   "at": 116,
+   "text": "Ex 23:14-17",
+   "start": "EXO.23.14",
+   "end": "EXO.23.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.1",
+   "at": 200,
+   "text": "1Sa 1:7",
+   "start": "1SA.1.7",
+   "end": "1SA.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.2",
+   "at": 543,
+   "text": "Ps 26:8",
+   "start": "PSA.26.8",
+   "end": "PSA.26.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.2",
+   "at": 1104,
+   "text": "Ps 42:1",
+   "start": "PSA.42.2",
+   "end": "PSA.42.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.2",
+   "at": 1113,
+   "text": "87:2",
+   "start": "PSA.87.2",
+   "end": "PSA.87.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.2",
+   "at": 1119,
+   "text": "122:1",
+   "start": "PSA.122.1",
+   "end": "PSA.122.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.2",
+   "at": 1126,
+   "text": "2",
+   "start": "PSA.122.2",
+   "end": "PSA.122.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.2",
+   "at": 1456,
+   "text": "Ps 48:2",
+   "start": "PSA.48.3",
+   "end": "PSA.48.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.42.2",
+   "at": 1465,
+   "text": "50:2",
+   "start": "PSA.50.2",
+   "end": "PSA.50.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.45-46.1",
+   "at": 184,
+   "text": "Lu 1:9",
+   "start": "LUK.1.9",
+   "end": "LUK.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.46.1",
+   "at": 486,
+   "text": "Lu 2:52",
+   "start": "LUK.2.52",
+   "end": "LUK.2.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.46.1",
+   "at": 792,
+   "text": "Ps 119:20",
+   "start": "PSA.119.20",
+   "end": "PSA.119.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.49.1",
+   "at": 1048,
+   "text": "So 1:4",
+   "start": "SNG.1.4",
+   "end": "SNG.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.49.1",
+   "at": 1056,
+   "text": "2:6",
+   "start": "SNG.2.6",
+   "end": "SNG.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.50-51.1",
+   "at": 206,
+   "text": "Joh 14:4",
+   "start": "JHN.14.4",
+   "end": "JHN.14.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.50-51.1",
+   "at": 688,
+   "text": "Joh 2:12",
+   "start": "JHN.2.12",
+   "end": "JHN.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.2.52.1",
+   "at": 11,
+   "text": "Lu 2:40",
+   "start": "LUK.2.40",
+   "end": "LUK.2.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-20.1",
+   "at": 0,
+   "text": "Lu 3:1-20",
+   "start": "LUK.3.1",
+   "end": "LUK.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-20.1",
+   "at": 66,
+   "text": "Mt 3:1-12",
+   "start": "MAT.3.1",
+   "end": "MAT.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-20.1",
+   "at": 77,
+   "text": "Mr 6:17",
+   "start": "MRK.6.17",
+   "end": "MRK.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-2.1",
+   "at": 151,
+   "text": "Lu 3:23",
+   "start": "LUK.3.23",
+   "end": "LUK.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-2.1",
+   "at": 431,
+   "text": "Lu 1:3",
+   "start": "LUK.1.3",
+   "end": "LUK.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-2.1",
+   "at": 501,
+   "text": "Mt 3:1",
+   "start": "MAT.3.1",
+   "end": "MAT.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-2.1",
+   "at": 1074,
+   "text": "Mr 6:14",
+   "start": "MRK.6.14",
+   "end": "MRK.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-2.1",
+   "at": 1198,
+   "text": "Mr 6:17",
+   "start": "MRK.6.17",
+   "end": "MRK.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.1-2.1",
+   "at": 1291,
+   "text": "1Ch 1:31",
+   "start": "1CH.1.31",
+   "end": "1CH.1.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.2.1",
+   "at": 204,
+   "text": "Joh 18:13",
+   "start": "JHN.18.13",
+   "end": "JHN.18.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.2.1",
+   "at": 215,
+   "text": "Ac 4:6",
+   "start": "ACT.4.6",
+   "end": "ACT.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.2.1",
+   "at": 287,
+   "text": "2Sa 15:35",
+   "start": "2SA.15.35",
+   "end": "2SA.15.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.2.1",
+   "at": 359,
+   "text": "2Ki 25:18",
+   "start": "2KI.25.18",
+   "end": "2KI.25.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.2.1",
+   "at": 384,
+   "text": "Mt 3:1",
+   "start": "MAT.3.1",
+   "end": "MAT.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.6.1",
+   "at": 59,
+   "text": "Isa 40:5",
+   "start": "ISA.40.5",
+   "end": "ISA.40.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.6.1",
+   "at": 222,
+   "text": "Ps 98:3",
+   "start": "PSA.98.3",
+   "end": "PSA.98.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.6.1",
+   "at": 231,
+   "text": "Isa 11:10",
+   "start": "ISA.11.10",
+   "end": "ISA.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.6.1",
+   "at": 242,
+   "text": "49:6",
+   "start": "ISA.49.6",
+   "end": "ISA.49.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.6.1",
+   "at": 248,
+   "text": "52:10",
+   "start": "ISA.52.10",
+   "end": "ISA.52.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.6.1",
+   "at": 255,
+   "text": "Lu 2:31",
+   "start": "LUK.2.31",
+   "end": "LUK.2.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.6.1",
+   "at": 264,
+   "text": "32",
+   "start": "LUK.2.32",
+   "end": "LUK.2.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.13.1",
+   "at": 98,
+   "text": "Lu 19:2",
+   "start": "LUK.19.2",
+   "end": "LUK.19.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.13.1",
+   "at": 107,
+   "text": "Lu 19:8",
+   "start": "LUK.19.8",
+   "end": "LUK.19.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.14.1",
+   "at": 167,
+   "text": "Mt 3:10",
+   "start": "MAT.3.10",
+   "end": "MAT.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.16.1",
+   "at": 63,
+   "text": "Joh 1:19",
+   "start": "JHN.1.19",
+   "end": "JHN.1.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.16.1",
+   "at": 234,
+   "text": "Mt 3:10",
+   "start": "MAT.3.10",
+   "end": "MAT.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.18.1",
+   "at": 46,
+   "text": "Joh 1:29",
+   "start": "JHN.1.29",
+   "end": "JHN.1.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.18.1",
+   "at": 56,
+   "text": "33",
+   "start": "JHN.1.33",
+   "end": "JHN.1.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.18.1",
+   "at": 60,
+   "text": "34",
+   "start": "JHN.1.34",
+   "end": "JHN.1.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.18.1",
+   "at": 64,
+   "text": "3:27-36",
+   "start": "JHN.3.27",
+   "end": "JHN.3.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.19-20.1",
+   "at": 30,
+   "text": "Mr 6:14",
+   "start": "MRK.6.14",
+   "end": "MRK.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.19-20.1",
+   "at": 56,
+   "text": "Mt 3:12",
+   "start": "MAT.3.12",
+   "end": "MAT.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.21.1",
+   "at": 0,
+   "text": "Lu 3:21",
+   "start": "LUK.3.21",
+   "end": "LUK.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.21.1",
+   "at": 9,
+   "text": "22",
+   "start": "LUK.3.22",
+   "end": "LUK.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.21.1",
+   "at": 71,
+   "text": "Mt 3:13-17",
+   "start": "MAT.3.13",
+   "end": "MAT.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.21.1",
+   "at": 251,
+   "text": "Lu 19:30",
+   "start": "LUK.19.30",
+   "end": "LUK.19.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.21.1",
+   "at": 319,
+   "text": "Joh 19:41",
+   "start": "JHN.19.41",
+   "end": "JHN.19.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.23-38.1",
+   "at": 0,
+   "text": "Lu 3:23-38",
+   "start": "LUK.3.23",
+   "end": "LUK.3.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.23.2",
+   "at": 908,
+   "text": "Lu 1:2-32",
+   "start": "LUK.1.2",
+   "end": "LUK.1.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.23.2",
+   "at": 930,
+   "text": "Lu 2:5",
+   "start": "LUK.2.5",
+   "end": "LUK.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.23.2",
+   "at": 1374,
+   "text": "Ru 1:11",
+   "start": "RUT.1.11",
+   "end": "RUT.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.23.2",
+   "at": 1383,
+   "text": "12",
+   "start": "RUT.1.12",
+   "end": "RUT.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.24-30.1",
+   "at": 35,
+   "text": "Mt 1:13-15",
+   "start": "MAT.1.13",
+   "end": "MAT.1.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.24-30.1",
+   "at": 51,
+   "text": "Lu 3:27",
+   "start": "LUK.3.27",
+   "end": "LUK.3.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.3.24-30.1",
+   "at": 98,
+   "text": "Mt 1:12",
+   "start": "MAT.1.12",
+   "end": "MAT.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.1-13.1",
+   "at": 0,
+   "text": "Lu 4:1-13",
+   "start": "LUK.4.1",
+   "end": "LUK.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.14-32.1",
+   "at": 0,
+   "text": "Lu 4:14-32",
+   "start": "LUK.4.14",
+   "end": "LUK.4.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.14-32.1",
+   "at": 217,
+   "text": "Joh 1:29-4:54",
+   "start": "JHN.1.29",
+   "end": "JHN.4.54",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.14-32.1",
+   "at": 279,
+   "text": "Joh 3:24",
+   "start": "JHN.3.24",
+   "end": "JHN.3.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.14-32.1",
+   "at": 355,
+   "text": "Mt 4:12",
+   "start": "MAT.4.12",
+   "end": "MAT.4.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.14-32.1",
+   "at": 364,
+   "text": "13",
+   "start": "MAT.4.13",
+   "end": "MAT.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.14-32.1",
+   "at": 420,
+   "text": "Mt 13:54-58",
+   "start": "MAT.13.54",
+   "end": "MAT.13.58",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.14-32.1",
+   "at": 437,
+   "text": "Mr 6:1-6",
+   "start": "MRK.6.1",
+   "end": "MRK.6.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.16.1",
+   "at": 30,
+   "text": "Ac 17:2",
+   "start": "ACT.17.2",
+   "end": "ACT.17.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.18-19.1",
+   "at": 67,
+   "text": "Isa 53:1-12",
+   "start": "ISA.53.1",
+   "end": "ISA.53.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.18-19.1",
+   "at": 956,
+   "text": "Isa 49:1-26",
+   "start": "ISA.49.1",
+   "end": "ISA.49.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.19.1",
+   "at": 53,
+   "text": "Le 25:10",
+   "start": "LEV.25.10",
+   "end": "LEV.25.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.19.1",
+   "at": 127,
+   "text": "Isa 49:8",
+   "start": "ISA.49.8",
+   "end": "ISA.49.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.19.1",
+   "at": 137,
+   "text": "2Co 6:2",
+   "start": "2CO.6.2",
+   "end": "2CO.6.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.19.1",
+   "at": 536,
+   "text": "Joh 3:17",
+   "start": "JHN.3.17",
+   "end": "JHN.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.22.1",
+   "at": 119,
+   "text": "Ps 45:2",
+   "start": "PSA.45.3",
+   "end": "PSA.45.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.22.1",
+   "at": 155,
+   "text": "Mt 13:54-56",
+   "start": "MAT.13.54",
+   "end": "MAT.13.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.23.1",
+   "at": 623,
+   "text": "Mr 6:5",
+   "start": "MRK.6.5",
+   "end": "MRK.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.24.1",
+   "at": 439,
+   "text": "Mt 7:6",
+   "start": "MAT.7.6",
+   "end": "MAT.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.25-27.1",
+   "at": 575,
+   "text": "Jas 5:17",
+   "start": "JAS.5.17",
+   "end": "JAS.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.25-27.1",
+   "at": 706,
+   "text": "1Ki 18:1",
+   "start": "1KI.18.1",
+   "end": "1KI.18.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.26-27.1",
+   "at": 43,
+   "text": "Mr 13:32",
+   "start": "MRK.13.32",
+   "end": "MRK.13.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.26-27.1",
+   "at": 83,
+   "text": "1Ki 17:9",
+   "start": "1KI.17.9",
+   "end": "1KI.17.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.29.1",
+   "at": 262,
+   "text": "2Ch 25:12",
+   "start": "2CH.25.12",
+   "end": "2CH.25.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.29.1",
+   "at": 273,
+   "text": "2Ki 9:33",
+   "start": "2KI.9.33",
+   "end": "2KI.9.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.31.1",
+   "at": 52,
+   "text": "Mt 4:13",
+   "start": "MAT.4.13",
+   "end": "MAT.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.33-37.1",
+   "at": 0,
+   "text": "Lu 4:33-37",
+   "start": "LUK.4.33",
+   "end": "LUK.4.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.33.1",
+   "at": 133,
+   "text": "Mt 8:29",
+   "start": "MAT.8.29",
+   "end": "MAT.8.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.35.1",
+   "at": 30,
+   "text": "Lu 4:41",
+   "start": "LUK.4.41",
+   "end": "LUK.4.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.38-41.1",
+   "at": 0,
+   "text": "Lu 4:38-41",
+   "start": "LUK.4.38",
+   "end": "LUK.4.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.41.1",
+   "at": 304,
+   "text": "Mt 12:24",
+   "start": "MAT.12.24",
+   "end": "MAT.12.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.42-44.1",
+   "at": 0,
+   "text": "Lu 4:42-44",
+   "start": "LUK.4.42",
+   "end": "LUK.4.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.4.42-44.1",
+   "at": 118,
+   "text": "Mr 1:35-39",
+   "start": "MRK.1.35",
+   "end": "MRK.1.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.1-11.1",
+   "at": 0,
+   "text": "Lu 5:1-11",
+   "start": "LUK.5.1",
+   "end": "LUK.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.1-11.1",
+   "at": 116,
+   "text": "Joh 1:35-42",
+   "start": "JHN.1.35",
+   "end": "JHN.1.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.1-11.1",
+   "at": 159,
+   "text": "Mt 4:18-22",
+   "start": "MAT.4.18",
+   "end": "MAT.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.5.1",
+   "at": 132,
+   "text": "Joh 21:3",
+   "start": "JHN.21.3",
+   "end": "JHN.21.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.6.1",
+   "at": 67,
+   "text": "Lu 5:7",
+   "start": "LUK.5.7",
+   "end": "LUK.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.8.1",
+   "at": 96,
+   "text": "Joh 6:68",
+   "start": "JHN.6.68",
+   "end": "JHN.6.68",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.11.1",
+   "at": 38,
+   "text": "Mt 4:20",
+   "start": "MAT.4.20",
+   "end": "MAT.4.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.11.1",
+   "at": 135,
+   "text": "Joh 21:3",
+   "start": "JHN.21.3",
+   "end": "JHN.21.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.12-16.1",
+   "at": 0,
+   "text": "Lu 5:12-16",
+   "start": "LUK.5.12",
+   "end": "LUK.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.17-26.1",
+   "at": 0,
+   "text": "Lu 5:17-26",
+   "start": "LUK.5.17",
+   "end": "LUK.5.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.27-32.1",
+   "at": 0,
+   "text": "Lu 5:27-32",
+   "start": "LUK.5.27",
+   "end": "LUK.5.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.27-32.1",
+   "at": 44,
+   "text": "Mt 9:9-13",
+   "start": "MAT.9.9",
+   "end": "MAT.9.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.33-39.1",
+   "at": 0,
+   "text": "Lu 5:33-39",
+   "start": "LUK.5.33",
+   "end": "LUK.5.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.33-39.1",
+   "at": 30,
+   "text": "Mt 9:14-17",
+   "start": "MAT.9.14",
+   "end": "MAT.9.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.33-39.1",
+   "at": 75,
+   "text": "Lu 5:36-38",
+   "start": "LUK.5.36",
+   "end": "LUK.5.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.5.33-39.1",
+   "at": 498,
+   "text": "Lu 5:39",
+   "start": "LUK.5.39",
+   "end": "LUK.5.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.1-5.1",
+   "at": 0,
+   "text": "Lu 6:1-5",
+   "start": "LUK.6.1",
+   "end": "LUK.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.1-5.1",
+   "at": 54,
+   "text": "Mt 12:1-8",
+   "start": "MAT.12.1",
+   "end": "MAT.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.5.1",
+   "at": 34,
+   "text": "Mt 12:8",
+   "start": "MAT.12.8",
+   "end": "MAT.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.6-11.1",
+   "at": 0,
+   "text": "Lu 6:6-11",
+   "start": "LUK.6.6",
+   "end": "LUK.6.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.6-11.1",
+   "at": 42,
+   "text": "Mt 12:9-15",
+   "start": "MAT.12.9",
+   "end": "MAT.12.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.7.1",
+   "at": 36,
+   "text": "Mt 12:9",
+   "start": "MAT.12.9",
+   "end": "MAT.12.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.7.1",
+   "at": 158,
+   "text": "Lu 6:9",
+   "start": "LUK.6.9",
+   "end": "LUK.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.12-49.1",
+   "at": 0,
+   "text": "Lu 6:12-49",
+   "start": "LUK.6.12",
+   "end": "LUK.6.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.12-13.1",
+   "at": 290,
+   "text": "Mt 9:37",
+   "start": "MAT.9.37",
+   "end": "MAT.9.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.12-13.1",
+   "at": 299,
+   "text": "Mt 10:1",
+   "start": "MAT.10.1",
+   "end": "MAT.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.17.1",
+   "at": 210,
+   "text": "Mt 5:1",
+   "start": "MAT.5.1",
+   "end": "MAT.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.20-21.1",
+   "at": 146,
+   "text": "Mt 5:3",
+   "start": "MAT.5.3",
+   "end": "MAT.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.20-21.1",
+   "at": 154,
+   "text": "6",
+   "start": "MAT.5.6",
+   "end": "MAT.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.22.1",
+   "at": 152,
+   "text": "Mt 5:11",
+   "start": "MAT.5.11",
+   "end": "MAT.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.22.1",
+   "at": 227,
+   "text": "Lu 6:10",
+   "start": "LUK.6.10",
+   "end": "LUK.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.24-25.1",
+   "at": 151,
+   "text": "Lu 16:25",
+   "start": "LUK.16.25",
+   "end": "LUK.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.26.1",
+   "at": 85,
+   "text": "Mic 2:11",
+   "start": "MIC.2.11",
+   "end": "MIC.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.27-36.1",
+   "at": 15,
+   "text": "Mt 5:44-48",
+   "start": "MAT.5.44",
+   "end": "MAT.5.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.27-36.1",
+   "at": 27,
+   "text": "Mt 7:12",
+   "start": "MAT.7.12",
+   "end": "MAT.7.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.37-38.1",
+   "at": 15,
+   "text": "Mt 7:1",
+   "start": "MAT.7.1",
+   "end": "MAT.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.6.37-38.1",
+   "at": 23,
+   "text": "2",
+   "start": "MAT.7.2",
+   "end": "MAT.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.1-10.1",
+   "at": 0,
+   "text": "Lu 7:1-10",
+   "start": "LUK.7.1",
+   "end": "LUK.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.11-17.1",
+   "at": 0,
+   "text": "Lu 7:11-17",
+   "start": "LUK.7.11",
+   "end": "LUK.7.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.16.1",
+   "at": 78,
+   "text": "1Ki 17:17-24",
+   "start": "1KI.17.17",
+   "end": "1KI.17.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.16.1",
+   "at": 92,
+   "text": "2Ki 4:32-37",
+   "start": "2KI.4.32",
+   "end": "2KI.4.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.18-35.1",
+   "at": 0,
+   "text": "Lu 7:18-35",
+   "start": "LUK.7.18",
+   "end": "LUK.7.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.29-30.1",
+   "at": 372,
+   "text": "Lu 1:16",
+   "start": "LUK.1.16",
+   "end": "LUK.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.29-30.1",
+   "at": 381,
+   "text": "17",
+   "start": "LUK.1.17",
+   "end": "LUK.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.36-50.1",
+   "at": 0,
+   "text": "Lu 7:36-50",
+   "start": "LUK.7.36",
+   "end": "LUK.7.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.37-38.1",
+   "at": 187,
+   "text": "Lu 8:2",
+   "start": "LUK.8.2",
+   "end": "LUK.8.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.37-38.1",
+   "at": 271,
+   "text": "Joh 12:5",
+   "start": "JHN.12.5",
+   "end": "JHN.12.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.38.1",
+   "at": 563,
+   "text": "Lu 7:45",
+   "start": "LUK.7.45",
+   "end": "LUK.7.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.38.1",
+   "at": 698,
+   "text": "Lu 7:47",
+   "start": "LUK.7.47",
+   "end": "LUK.7.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.7.38.1",
+   "at": 1269,
+   "text": "Lu 7:45",
+   "start": "LUK.7.45",
+   "end": "LUK.7.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.1-3.1",
+   "at": 0,
+   "text": "Lu 8:1-3",
+   "start": "LUK.8.1",
+   "end": "LUK.8.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.2.1",
+   "at": 559,
+   "text": "1Co 9:11",
+   "start": "1CO.9.11",
+   "end": "1CO.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.2.1",
+   "at": 659,
+   "text": "Ro 11:33",
+   "start": "ROM.11.33",
+   "end": "ROM.11.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.2.1",
+   "at": 753,
+   "text": "Mt 15:39",
+   "start": "MAT.15.39",
+   "end": "MAT.15.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.2.1",
+   "at": 770,
+   "text": "Mr 8:10",
+   "start": "MRK.8.10",
+   "end": "MRK.8.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.2.1",
+   "at": 821,
+   "text": "Mr 16:9",
+   "start": "MRK.16.9",
+   "end": "MRK.16.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.2.1",
+   "at": 923,
+   "text": "Lu 7:37",
+   "start": "LUK.7.37",
+   "end": "LUK.7.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.3.1",
+   "at": 130,
+   "text": "Mr 6:14",
+   "start": "MRK.6.14",
+   "end": "MRK.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.3.1",
+   "at": 955,
+   "text": "Mr 14:9",
+   "start": "MRK.14.9",
+   "end": "MRK.14.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.4-18.1",
+   "at": 0,
+   "text": "Lu 8:4-18",
+   "start": "LUK.8.4",
+   "end": "LUK.8.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.4-18.1",
+   "at": 42,
+   "text": "Mr 4:3-9",
+   "start": "MRK.4.3",
+   "end": "MRK.4.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.16.1",
+   "at": 24,
+   "text": "Mt 5:15",
+   "start": "MAT.5.15",
+   "end": "MAT.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.18.1",
+   "at": 14,
+   "text": "Mr 4:24",
+   "start": "MRK.4.24",
+   "end": "MRK.4.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.18.1",
+   "at": 166,
+   "text": "Mt 13:12",
+   "start": "MAT.13.12",
+   "end": "MAT.13.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.19-21.1",
+   "at": 0,
+   "text": "Lu 8:19-21",
+   "start": "LUK.8.19",
+   "end": "LUK.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.22-25.1",
+   "at": 0,
+   "text": "Lu 8:22-25",
+   "start": "LUK.8.22",
+   "end": "LUK.8.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.22-25.1",
+   "at": 64,
+   "text": "Mt 8:23-27",
+   "start": "MAT.8.23",
+   "end": "MAT.8.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.26-39.1",
+   "at": 0,
+   "text": "Lu 8:26-39",
+   "start": "LUK.8.26",
+   "end": "LUK.8.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.26-39.1",
+   "at": 48,
+   "text": "Mt 8:28-34",
+   "start": "MAT.8.28",
+   "end": "MAT.8.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.40-56.1",
+   "at": 0,
+   "text": "Lu 8:40-56",
+   "start": "LUK.8.40",
+   "end": "LUK.8.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.40-56.1",
+   "at": 72,
+   "text": "Mt 9:18-26",
+   "start": "MAT.9.18",
+   "end": "MAT.9.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.40.1",
+   "at": 89,
+   "text": "Mt 13:1-58",
+   "start": "MAT.13.1",
+   "end": "MAT.13.58",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.8.40.1",
+   "at": 109,
+   "text": "Mr 4:36",
+   "start": "MRK.4.36",
+   "end": "MRK.4.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.1-6.1",
+   "at": 0,
+   "text": "Lu 9:1-6",
+   "start": "LUK.9.1",
+   "end": "LUK.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.7-9.1",
+   "at": 0,
+   "text": "Lu 9:7-9",
+   "start": "LUK.9.7",
+   "end": "LUK.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.10-17.1",
+   "at": 0,
+   "text": "Lu 9:10-17",
+   "start": "LUK.9.10",
+   "end": "LUK.9.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.18-27.1",
+   "at": 0,
+   "text": "Lu 9:18-27",
+   "start": "LUK.9.18",
+   "end": "LUK.9.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.18-27.1",
+   "at": 147,
+   "text": "Mt 16:13-28",
+   "start": "MAT.16.13",
+   "end": "MAT.16.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.24.1",
+   "at": 159,
+   "text": "Mt 8:22",
+   "start": "MAT.8.22",
+   "end": "MAT.8.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.26.1",
+   "at": 366,
+   "text": "Zec 3:5",
+   "start": "ZEC.3.5",
+   "end": "ZEC.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.26.1",
+   "at": 375,
+   "text": "Jer 6:15",
+   "start": "JER.6.15",
+   "end": "JER.6.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.26.1",
+   "at": 385,
+   "text": "3:3",
+   "start": "JER.3.3",
+   "end": "JER.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.26.1",
+   "at": 894,
+   "text": "Da 12:2",
+   "start": "DAN.12.2",
+   "end": "DAN.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.27.1",
+   "at": 82,
+   "text": "Mr 9:1",
+   "start": "MRK.9.1",
+   "end": "MRK.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.27.1",
+   "at": 138,
+   "text": "Mt 16:28",
+   "start": "MAT.16.28",
+   "end": "MAT.16.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.28-36.1",
+   "at": 0,
+   "text": "Lu 9:28-36",
+   "start": "LUK.9.28",
+   "end": "LUK.9.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.28.1",
+   "at": 136,
+   "text": "Mt 17:1",
+   "start": "MAT.17.1",
+   "end": "MAT.17.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.28.1",
+   "at": 145,
+   "text": "Mr 9:2",
+   "start": "MRK.9.2",
+   "end": "MRK.9.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.28.1",
+   "at": 607,
+   "text": "Mr 5:37",
+   "start": "MRK.5.37",
+   "end": "MRK.5.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.28.1",
+   "at": 667,
+   "text": "Mr 14:33",
+   "start": "MRK.14.33",
+   "end": "MRK.14.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.28.1",
+   "at": 875,
+   "text": "Mt 16:13",
+   "start": "MAT.16.13",
+   "end": "MAT.16.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.29.1",
+   "at": 564,
+   "text": "2Co 3:18",
+   "start": "2CO.3.18",
+   "end": "2CO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.29.1",
+   "at": 579,
+   "text": "Ex 34:29-35",
+   "start": "EXO.34.29",
+   "end": "EXO.34.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.29.1",
+   "at": 660,
+   "text": "Mt 17:2",
+   "start": "MAT.17.2",
+   "end": "MAT.17.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.29.1",
+   "at": 685,
+   "text": "Mr 9:3",
+   "start": "MRK.9.3",
+   "end": "MRK.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.29.1",
+   "at": 790,
+   "text": "Mr 9:3",
+   "start": "MRK.9.3",
+   "end": "MRK.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.30-31.1",
+   "at": 185,
+   "text": "Ac 1:10",
+   "start": "ACT.1.10",
+   "end": "ACT.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.30-31.1",
+   "at": 194,
+   "text": "Mr 16:5",
+   "start": "MRK.16.5",
+   "end": "MRK.16.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.31.1",
+   "at": 352,
+   "text": "2Pe 1:15-18",
+   "start": "2PE.1.15",
+   "end": "2PE.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.31.2",
+   "at": 156,
+   "text": "Lu 2:11",
+   "start": "LUK.2.11",
+   "end": "LUK.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.32.1",
+   "at": 413,
+   "text": "Lu 9:37",
+   "start": "LUK.9.37",
+   "end": "LUK.9.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.34-35.1",
+   "at": 77,
+   "text": "Mt 23:39",
+   "start": "MAT.23.39",
+   "end": "MAT.23.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.34-35.1",
+   "at": 209,
+   "text": "2Pe 1:17",
+   "start": "2PE.1.17",
+   "end": "2PE.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.37-45.1",
+   "at": 0,
+   "text": "Lu 9:37-45",
+   "start": "LUK.9.37",
+   "end": "LUK.9.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.43-45.1",
+   "at": 183,
+   "text": "Mt 17:22",
+   "start": "MAT.17.22",
+   "end": "MAT.17.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.43-45.1",
+   "at": 197,
+   "text": "Mr 9:30",
+   "start": "MRK.9.30",
+   "end": "MRK.9.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.44.1",
+   "at": 498,
+   "text": "Mt 17:22",
+   "start": "MAT.17.22",
+   "end": "MAT.17.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.46-48.1",
+   "at": 0,
+   "text": "Lu 9:46-48",
+   "start": "LUK.9.46",
+   "end": "LUK.9.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.49-50.1",
+   "at": 114,
+   "text": "Lu 9:48",
+   "start": "LUK.9.48",
+   "end": "LUK.9.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.49-50.1",
+   "at": 490,
+   "text": "Mr 9:39",
+   "start": "MRK.9.39",
+   "end": "MRK.9.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.49-50.1",
+   "at": 1143,
+   "text": "Ac 24:14",
+   "start": "ACT.24.14",
+   "end": "ACT.24.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.51-56.1",
+   "at": 0,
+   "text": "Lu 9:51-56",
+   "start": "LUK.9.51",
+   "end": "LUK.9.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.51.1",
+   "at": 774,
+   "text": "Isa 50:7",
+   "start": "ISA.50.7",
+   "end": "ISA.50.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.51.1",
+   "at": 906,
+   "text": "Joh 7:2",
+   "start": "JHN.7.2",
+   "end": "JHN.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.51.1",
+   "at": 915,
+   "text": "10",
+   "start": "JHN.7.10",
+   "end": "JHN.7.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.51.1",
+   "at": 919,
+   "text": "10:22",
+   "start": "JHN.10.22",
+   "end": "JHN.10.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.51.1",
+   "at": 926,
+   "text": "23",
+   "start": "JHN.10.23",
+   "end": "JHN.10.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.54.1",
+   "at": 87,
+   "text": "Mr 3:17",
+   "start": "MRK.3.17",
+   "end": "MRK.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.54.1",
+   "at": 252,
+   "text": "Lu 9:49",
+   "start": "LUK.9.49",
+   "end": "LUK.9.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.54.1",
+   "at": 261,
+   "text": "50",
+   "start": "LUK.9.50",
+   "end": "LUK.9.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.54.1",
+   "at": 378,
+   "text": "Mr 10:38-40",
+   "start": "MRK.10.38",
+   "end": "MRK.10.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.54.1",
+   "at": 395,
+   "text": "Ac 12:2",
+   "start": "ACT.12.2",
+   "end": "ACT.12.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.54.1",
+   "at": 496,
+   "text": "2Jo 5",
+   "start": "2JN.1.5",
+   "end": "2JN.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.54.1",
+   "at": 506,
+   "text": "3Jo 10",
+   "start": "3JN.1.10",
+   "end": "3JN.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.55-56.1",
+   "at": 274,
+   "text": "Lu 9:56",
+   "start": "LUK.9.56",
+   "end": "LUK.9.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 0,
+   "text": "Lu 9:57-62",
+   "start": "LUK.9.57",
+   "end": "LUK.9.62",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 79,
+   "text": "Lu 9:57",
+   "start": "LUK.9.57",
+   "end": "LUK.9.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 88,
+   "text": "58",
+   "start": "LUK.9.58",
+   "end": "LUK.9.58",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 102,
+   "text": "Mt 8:19",
+   "start": "MAT.8.19",
+   "end": "MAT.8.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 111,
+   "text": "20",
+   "start": "MAT.8.20",
+   "end": "MAT.8.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 147,
+   "text": "Lu 9:59",
+   "start": "LUK.9.59",
+   "end": "LUK.9.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 156,
+   "text": "60",
+   "start": "LUK.9.60",
+   "end": "LUK.9.60",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.57-62.1",
+   "at": 170,
+   "text": "Mt 8:21",
+   "start": "MAT.8.21",
+   "end": "MAT.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.61.1",
+   "at": 247,
+   "text": "1Ki 19:19-21",
+   "start": "1KI.19.19",
+   "end": "1KI.19.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.62.1",
+   "at": 383,
+   "text": "Ge 19:26",
+   "start": "GEN.19.26",
+   "end": "GEN.19.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.9.62.1",
+   "at": 404,
+   "text": "Lu 17:32",
+   "start": "LUK.17.32",
+   "end": "LUK.17.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.1-24.1",
+   "at": 0,
+   "text": "Lu 10:1-24",
+   "start": "LUK.10.1",
+   "end": "LUK.10.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.1.1",
+   "at": 256,
+   "text": "Nu 11:24",
+   "start": "NUM.11.24",
+   "end": "NUM.11.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.1.1",
+   "at": 266,
+   "text": "25",
+   "start": "NUM.11.25",
+   "end": "NUM.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.1.1",
+   "at": 551,
+   "text": "Lu 10:1",
+   "start": "LUK.10.1",
+   "end": "LUK.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.2.1",
+   "at": 28,
+   "text": "Mt 9:37",
+   "start": "MAT.9.37",
+   "end": "MAT.9.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.12-15.1",
+   "at": 15,
+   "text": "Mt 11:20-24",
+   "start": "MAT.11.20",
+   "end": "MAT.11.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.17.1",
+   "at": 207,
+   "text": "Lu 9:1",
+   "start": "LUK.9.1",
+   "end": "LUK.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.18.1",
+   "at": 1324,
+   "text": "Joh 12:31",
+   "start": "JHN.12.31",
+   "end": "JHN.12.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.19.1",
+   "at": 259,
+   "text": "Mr 16:17",
+   "start": "MRK.16.17",
+   "end": "MRK.16.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.19.1",
+   "at": 269,
+   "text": "18",
+   "start": "MRK.16.18",
+   "end": "MRK.16.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.19.1",
+   "at": 273,
+   "text": "Ac 28:5",
+   "start": "ACT.28.5",
+   "end": "ACT.28.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.19.1",
+   "at": 600,
+   "text": "1Jo 5:4",
+   "start": "1JN.5.4",
+   "end": "1JN.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.21-22.1",
+   "at": 116,
+   "text": "Mt 11:25-27",
+   "start": "MAT.11.25",
+   "end": "MAT.11.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.21-22.1",
+   "at": 953,
+   "text": "1Pe 1:12",
+   "start": "1PE.1.12",
+   "end": "1PE.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.25-37.1",
+   "at": 0,
+   "text": "Lu 10:25-37",
+   "start": "LUK.10.25",
+   "end": "LUK.10.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.31-32.1",
+   "at": 554,
+   "text": "De 22:4",
+   "start": "DEU.22.4",
+   "end": "DEU.22.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.31-32.1",
+   "at": 563,
+   "text": "Ex 23:4",
+   "start": "EXO.23.4",
+   "end": "EXO.23.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.31-32.1",
+   "at": 572,
+   "text": "5",
+   "start": "EXO.23.5",
+   "end": "EXO.23.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.33.1",
+   "at": 102,
+   "text": "Joh 8:48",
+   "start": "JHN.8.48",
+   "end": "JHN.8.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.33.1",
+   "at": 119,
+   "text": "Lu 17:18",
+   "start": "LUK.17.18",
+   "end": "LUK.17.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.33.1",
+   "at": 649,
+   "text": "Joh 4:9",
+   "start": "JHN.4.9",
+   "end": "JHN.4.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.34.1",
+   "at": 68,
+   "text": "Isa 1:6",
+   "start": "ISA.1.6",
+   "end": "ISA.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.37.1",
+   "at": 759,
+   "text": "Eze 34:4",
+   "start": "EZK.34.4",
+   "end": "EZK.34.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.37.1",
+   "at": 807,
+   "text": "Isa 61:1",
+   "start": "ISA.61.1",
+   "end": "ISA.61.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.38-42.1",
+   "at": 0,
+   "text": "Lu 10:38-42",
+   "start": "LUK.10.38",
+   "end": "LUK.10.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.38.1",
+   "at": 29,
+   "text": "Joh 11:1",
+   "start": "JHN.11.1",
+   "end": "JHN.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.39.1",
+   "at": 210,
+   "text": "Ac 22:3",
+   "start": "ACT.22.3",
+   "end": "ACT.22.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.41.1",
+   "at": 266,
+   "text": "Lu 10:40",
+   "start": "LUK.10.40",
+   "end": "LUK.10.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.42.1",
+   "at": 446,
+   "text": "Heb 11:25",
+   "start": "HEB.11.25",
+   "end": "HEB.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.42.1",
+   "at": 472,
+   "text": "Jos 24:15",
+   "start": "JOS.24.15",
+   "end": "JOS.24.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.10.42.1",
+   "at": 497,
+   "text": "Ps 119:30",
+   "start": "PSA.119.30",
+   "end": "PSA.119.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.1-13.1",
+   "at": 0,
+   "text": "Lu 11:1-13",
+   "start": "LUK.11.1",
+   "end": "LUK.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.13.1",
+   "at": 32,
+   "text": "Mt 7:11",
+   "start": "MAT.7.11",
+   "end": "MAT.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.14-36.1",
+   "at": 0,
+   "text": "Lu 11:14-36",
+   "start": "LUK.11.14",
+   "end": "LUK.11.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.20.1",
+   "at": 43,
+   "text": "Mt 12:28",
+   "start": "MAT.12.28",
+   "end": "MAT.12.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.22.1",
+   "at": 488,
+   "text": "Lu 11:24-26",
+   "start": "LUK.11.24",
+   "end": "LUK.11.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.22.1",
+   "at": 538,
+   "text": "Mt 12:43-45",
+   "start": "MAT.12.43",
+   "end": "MAT.12.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.22.1",
+   "at": 740,
+   "text": "Mt 12:44",
+   "start": "MAT.12.44",
+   "end": "MAT.12.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.22.1",
+   "at": 874,
+   "text": "Lu 11:23",
+   "start": "LUK.11.23",
+   "end": "LUK.11.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.27-28.1",
+   "at": 287,
+   "text": "Lu 1:28",
+   "start": "LUK.1.28",
+   "end": "LUK.1.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.27-28.1",
+   "at": 296,
+   "text": "42",
+   "start": "LUK.1.42",
+   "end": "LUK.1.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.27-28.1",
+   "at": 473,
+   "text": "Mt 12:49",
+   "start": "MAT.12.49",
+   "end": "MAT.12.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.27-28.1",
+   "at": 483,
+   "text": "50",
+   "start": "MAT.12.50",
+   "end": "MAT.12.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.33-36.1",
+   "at": 15,
+   "text": "Mt 5:14-16",
+   "start": "MAT.5.14",
+   "end": "MAT.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.33-36.1",
+   "at": 27,
+   "text": "Mt 6:22",
+   "start": "MAT.6.22",
+   "end": "MAT.6.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.33-36.1",
+   "at": 36,
+   "text": "23",
+   "start": "MAT.6.23",
+   "end": "MAT.6.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.33-36.1",
+   "at": 45,
+   "text": "Lu 11:36",
+   "start": "LUK.11.36",
+   "end": "LUK.11.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.37-54.1",
+   "at": 0,
+   "text": "Lu 11:37-54",
+   "start": "LUK.11.37",
+   "end": "LUK.11.54",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.41.1",
+   "at": 156,
+   "text": "Lu 16:14",
+   "start": "LUK.16.14",
+   "end": "LUK.16.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.41.1",
+   "at": 166,
+   "text": "Mt 23:14",
+   "start": "MAT.23.14",
+   "end": "MAT.23.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.42.1",
+   "at": 32,
+   "text": "Le 27:30",
+   "start": "LEV.27.30",
+   "end": "LEV.27.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.42.1",
+   "at": 234,
+   "text": "Mt 23:25",
+   "start": "MAT.23.25",
+   "end": "MAT.23.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.42.1",
+   "at": 294,
+   "text": "Mic 6:6-8",
+   "start": "MIC.6.6",
+   "end": "MIC.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.42.1",
+   "at": 425,
+   "text": "Mr 12:29",
+   "start": "MRK.12.29",
+   "end": "MRK.12.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.42.1",
+   "at": 435,
+   "text": "Mr 12:32",
+   "start": "MRK.12.32",
+   "end": "MRK.12.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.42.1",
+   "at": 445,
+   "text": "33",
+   "start": "MRK.12.33",
+   "end": "MRK.12.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.43.1",
+   "at": 28,
+   "text": "Lu 14:7-11",
+   "start": "LUK.14.7",
+   "end": "LUK.14.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.44.1",
+   "at": 286,
+   "text": "Ps 5:9",
+   "start": "PSA.5.10",
+   "end": "PSA.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.44.1",
+   "at": 294,
+   "text": "Ro 3:13",
+   "start": "ROM.3.13",
+   "end": "ROM.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.46.1",
+   "at": 113,
+   "text": "Ac 15:10",
+   "start": "ACT.15.10",
+   "end": "ACT.15.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.47-48.1",
+   "at": 388,
+   "text": "Mt 23:29",
+   "start": "MAT.23.29",
+   "end": "MAT.23.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.47-48.1",
+   "at": 398,
+   "text": "30",
+   "start": "MAT.23.30",
+   "end": "MAT.23.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.49-51.1",
+   "at": 67,
+   "text": "Mt 23:34",
+   "start": "MAT.23.34",
+   "end": "MAT.23.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.50.1",
+   "at": 130,
+   "text": "Ge 15:16",
+   "start": "GEN.15.16",
+   "end": "GEN.15.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.50.1",
+   "at": 567,
+   "text": "Mt 23:34",
+   "start": "MAT.23.34",
+   "end": "MAT.23.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.51.1",
+   "at": 81,
+   "text": "2Ch 24:20-22",
+   "start": "2CH.24.20",
+   "end": "2CH.24.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.52.1",
+   "at": 99,
+   "text": "Mt 23:13",
+   "start": "MAT.23.13",
+   "end": "MAT.23.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.11.52.1",
+   "at": 241,
+   "text": "Joh 17:3",
+   "start": "JHN.17.3",
+   "end": "JHN.17.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.1-12.1",
+   "at": 0,
+   "text": "Lu 12:1-12",
+   "start": "LUK.12.1",
+   "end": "LUK.12.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.1-3.1",
+   "at": 386,
+   "text": "Lu 12:54",
+   "start": "LUK.12.54",
+   "end": "LUK.12.54",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.6-7.1",
+   "at": 34,
+   "text": "Mt 10:29",
+   "start": "MAT.10.29",
+   "end": "MAT.10.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.13-53.1",
+   "at": 0,
+   "text": "Lu 12:13-53",
+   "start": "LUK.12.13",
+   "end": "LUK.12.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.14.1",
+   "at": 64,
+   "text": "Lu 12:4",
+   "start": "LUK.12.4",
+   "end": "LUK.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.14.1",
+   "at": 149,
+   "text": "Ex 2:14",
+   "start": "EXO.2.14",
+   "end": "EXO.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.15.1",
+   "at": 40,
+   "text": "Lu 12:1",
+   "start": "LUK.12.1",
+   "end": "LUK.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.16-19.1",
+   "at": 65,
+   "text": "Lu 12:20",
+   "start": "LUK.12.20",
+   "end": "LUK.12.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.20-21.1",
+   "at": 377,
+   "text": "Ps 39:6",
+   "start": "PSA.39.7",
+   "end": "PSA.39.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.21.1",
+   "at": 216,
+   "text": "Ps 30:5",
+   "start": "PSA.30.6",
+   "end": "PSA.30.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.21.1",
+   "at": 247,
+   "text": "2Pe 1:1",
+   "start": "2PE.1.1",
+   "end": "2PE.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.21.1",
+   "at": 256,
+   "text": "Jas 2:5",
+   "start": "JAS.2.5",
+   "end": "JAS.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.21.1",
+   "at": 281,
+   "text": "1Ti 6:18",
+   "start": "1TI.6.18",
+   "end": "1TI.6.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.21.1",
+   "at": 331,
+   "text": "Pr 8:11",
+   "start": "PRO.8.11",
+   "end": "PRO.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.32.1",
+   "at": 581,
+   "text": "Lu 12:31",
+   "start": "LUK.12.31",
+   "end": "LUK.12.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.33-34.1",
+   "at": 57,
+   "text": "Mt 6:19-21",
+   "start": "MAT.6.19",
+   "end": "MAT.6.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.35-40.1",
+   "at": 95,
+   "text": "2Ki 4:29",
+   "start": "2KI.4.29",
+   "end": "2KI.4.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.35-40.1",
+   "at": 105,
+   "text": "Ac 12:8",
+   "start": "ACT.12.8",
+   "end": "ACT.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.46.1",
+   "at": 68,
+   "text": "Heb 11:37",
+   "start": "HEB.11.37",
+   "end": "HEB.11.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.46.1",
+   "at": 95,
+   "text": "1Sa 15:33",
+   "start": "1SA.15.33",
+   "end": "1SA.15.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.46.1",
+   "at": 106,
+   "text": "Da 2:5",
+   "start": "DAN.2.5",
+   "end": "DAN.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.46.1",
+   "at": 173,
+   "text": "Mt 24:51",
+   "start": "MAT.24.51",
+   "end": "MAT.24.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.49-53.1",
+   "at": 120,
+   "text": "Mt 3:11",
+   "start": "MAT.3.11",
+   "end": "MAT.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.50.1",
+   "at": 200,
+   "text": "Lu 12:49",
+   "start": "LUK.12.49",
+   "end": "LUK.12.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.51.1",
+   "at": 76,
+   "text": "Mt 10:34-36",
+   "start": "MAT.10.34",
+   "end": "MAT.10.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.54-59.1",
+   "at": 0,
+   "text": "Lu 12:54-59",
+   "start": "LUK.12.54",
+   "end": "LUK.12.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.58.1",
+   "at": 33,
+   "text": "Mt 5:25",
+   "start": "MAT.5.25",
+   "end": "MAT.5.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.12.58.1",
+   "at": 42,
+   "text": "26",
+   "start": "MAT.5.26",
+   "end": "MAT.5.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.1-9.1",
+   "at": 0,
+   "text": "Lu 13:1-9",
+   "start": "LUK.13.1",
+   "end": "LUK.13.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.1-3.1",
+   "at": 177,
+   "text": "Ac 5:37",
+   "start": "ACT.5.37",
+   "end": "ACT.5.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.6-9.1",
+   "at": 157,
+   "text": "Isa 5:1-7",
+   "start": "ISA.5.1",
+   "end": "ISA.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.6-9.1",
+   "at": 168,
+   "text": "Joh 15:1-8",
+   "start": "JHN.15.1",
+   "end": "JHN.15.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.6-9.1",
+   "at": 416,
+   "text": "Mt 21:33",
+   "start": "MAT.21.33",
+   "end": "MAT.21.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.6-9.1",
+   "at": 426,
+   "text": "34",
+   "start": "MAT.21.34",
+   "end": "MAT.21.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.6-9.1",
+   "at": 434,
+   "text": "Isa 5:2",
+   "start": "ISA.5.2",
+   "end": "ISA.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.8.1",
+   "at": 105,
+   "text": "Lu 13:34",
+   "start": "LUK.13.34",
+   "end": "LUK.13.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.9.1",
+   "at": 70,
+   "text": "Lu 23:42",
+   "start": "LUK.23.42",
+   "end": "LUK.23.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.9.1",
+   "at": 80,
+   "text": "43",
+   "start": "LUK.23.43",
+   "end": "LUK.23.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.9.1",
+   "at": 250,
+   "text": "Pr 1:24-31",
+   "start": "PRO.1.24",
+   "end": "PRO.1.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.10-17.1",
+   "at": 0,
+   "text": "Lu 13:10-17",
+   "start": "LUK.13.10",
+   "end": "LUK.13.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.11.1",
+   "at": 32,
+   "text": "Lu 13:17",
+   "start": "LUK.13.17",
+   "end": "LUK.13.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.14.1",
+   "at": 102,
+   "text": "Mt 21:15",
+   "start": "MAT.21.15",
+   "end": "MAT.21.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.15.1",
+   "at": 21,
+   "text": "Lu 10:1",
+   "start": "LUK.10.1",
+   "end": "LUK.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.15.1",
+   "at": 136,
+   "text": "Mt 12:9-13",
+   "start": "MAT.12.9",
+   "end": "MAT.12.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.18-30.1",
+   "at": 0,
+   "text": "Lu 13:18-30",
+   "start": "LUK.13.18",
+   "end": "LUK.13.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.18-21.1",
+   "at": 37,
+   "text": "Mr 4:30-32",
+   "start": "MRK.4.30",
+   "end": "MRK.4.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.18-21.1",
+   "at": 522,
+   "text": "1Th 5:23",
+   "start": "1TH.5.23",
+   "end": "1TH.5.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.18-21.1",
+   "at": 605,
+   "text": "Ge 10:32",
+   "start": "GEN.10.32",
+   "end": "GEN.10.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.24.1",
+   "at": 214,
+   "text": "Mt 7:13",
+   "start": "MAT.7.13",
+   "end": "MAT.7.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.24.1",
+   "at": 223,
+   "text": "14",
+   "start": "MAT.7.14",
+   "end": "MAT.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.26-27.1",
+   "at": 36,
+   "text": "Mt 7:22",
+   "start": "MAT.7.22",
+   "end": "MAT.7.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.26-27.1",
+   "at": 45,
+   "text": "23",
+   "start": "MAT.7.23",
+   "end": "MAT.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.26-27.1",
+   "at": 121,
+   "text": "Mt 7:22",
+   "start": "MAT.7.22",
+   "end": "MAT.7.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.27.1",
+   "at": 34,
+   "text": "Mt 7:23",
+   "start": "MAT.7.23",
+   "end": "MAT.7.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.28-29.1",
+   "at": 13,
+   "text": "Mt 8:11",
+   "start": "MAT.8.11",
+   "end": "MAT.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.28-29.1",
+   "at": 22,
+   "text": "12",
+   "start": "MAT.8.12",
+   "end": "MAT.8.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.31-35.1",
+   "at": 0,
+   "text": "Lu 13:31-35",
+   "start": "LUK.13.31",
+   "end": "LUK.13.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.31.1",
+   "at": 154,
+   "text": "Lu 13:22",
+   "start": "LUK.13.22",
+   "end": "LUK.13.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.31.1",
+   "at": 239,
+   "text": "Mr 6:14",
+   "start": "MRK.6.14",
+   "end": "MRK.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.32.1",
+   "at": 957,
+   "text": "Lu 22:37",
+   "start": "LUK.22.37",
+   "end": "LUK.22.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.13.34-35.1",
+   "at": 33,
+   "text": "Mt 23:37",
+   "start": "MAT.23.37",
+   "end": "MAT.23.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.1-24.1",
+   "at": 0,
+   "text": "Lu 14:1-24",
+   "start": "LUK.14.1",
+   "end": "LUK.14.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.7-11.1",
+   "at": 148,
+   "text": "Lu 14:11",
+   "start": "LUK.14.11",
+   "end": "LUK.14.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.10.1",
+   "at": 61,
+   "text": "Lu 14:9",
+   "start": "LUK.14.9",
+   "end": "LUK.14.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.10.1",
+   "at": 139,
+   "text": "Pr 25:6",
+   "start": "PRO.25.6",
+   "end": "PRO.25.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.10.1",
+   "at": 148,
+   "text": "7",
+   "start": "PRO.25.7",
+   "end": "PRO.25.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.13.1",
+   "at": 44,
+   "text": "Lu 14:21",
+   "start": "LUK.14.21",
+   "end": "LUK.14.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.15-24.1",
+   "at": 719,
+   "text": "Nu 23:10",
+   "start": "NUM.23.10",
+   "end": "NUM.23.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.16.1",
+   "at": 28,
+   "text": "Isa 25:6",
+   "start": "ISA.25.6",
+   "end": "ISA.25.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.16.1",
+   "at": 81,
+   "text": "Mt 22:3",
+   "start": "MAT.22.3",
+   "end": "MAT.22.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.18.1",
+   "at": 38,
+   "text": "Mt 22:5",
+   "start": "MAT.22.5",
+   "end": "MAT.22.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.18.1",
+   "at": 131,
+   "text": "Lu 14:18",
+   "start": "LUK.14.18",
+   "end": "LUK.14.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.18.1",
+   "at": 173,
+   "text": "Lu 14:19",
+   "start": "LUK.14.19",
+   "end": "LUK.14.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.18.1",
+   "at": 218,
+   "text": "Lu 14:20",
+   "start": "LUK.14.20",
+   "end": "LUK.14.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.18.1",
+   "at": 253,
+   "text": "Mt 13:22",
+   "start": "MAT.13.22",
+   "end": "MAT.13.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.18.1",
+   "at": 266,
+   "text": "Lu 8:14",
+   "start": "LUK.8.14",
+   "end": "LUK.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.21.1",
+   "at": 39,
+   "text": "Isa 53:1",
+   "start": "ISA.53.1",
+   "end": "ISA.53.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.21.1",
+   "at": 263,
+   "text": "Eze 33:11",
+   "start": "EZK.33.11",
+   "end": "EZK.33.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.22.1",
+   "at": 79,
+   "text": "Mt 21:32",
+   "start": "MAT.21.32",
+   "end": "MAT.21.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.22.1",
+   "at": 89,
+   "text": "Mr 12:37",
+   "start": "MRK.12.37",
+   "end": "MRK.12.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.22.1",
+   "at": 112,
+   "text": "Joh 7:48",
+   "start": "JHN.7.48",
+   "end": "JHN.7.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.22.1",
+   "at": 122,
+   "text": "49",
+   "start": "JHN.7.49",
+   "end": "JHN.7.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.23.1",
+   "at": 298,
+   "text": "Eph 2:12",
+   "start": "EPH.2.12",
+   "end": "EPH.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.24.1",
+   "at": 369,
+   "text": "Pr 1:24-33",
+   "start": "PRO.1.24",
+   "end": "PRO.1.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.25-35.1",
+   "at": 0,
+   "text": "Lu 14:25-35",
+   "start": "LUK.14.25",
+   "end": "LUK.14.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.25.1",
+   "at": 162,
+   "text": "Lu 2:44",
+   "start": "LUK.2.44",
+   "end": "LUK.2.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.26-27.1",
+   "at": 32,
+   "text": "Mt 10:34-36",
+   "start": "MAT.10.34",
+   "end": "MAT.10.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.28-33.1",
+   "at": 983,
+   "text": "Lu 14:32",
+   "start": "LUK.14.32",
+   "end": "LUK.14.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.28-33.1",
+   "at": 1039,
+   "text": "Re 3:15",
+   "start": "REV.3.15",
+   "end": "REV.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.28-33.1",
+   "at": 1228,
+   "text": "1Jo 5:4",
+   "start": "1JN.5.4",
+   "end": "1JN.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.28-33.1",
+   "at": 1311,
+   "text": "Heb 11:34",
+   "start": "HEB.11.34",
+   "end": "HEB.11.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.28-33.1",
+   "at": 1322,
+   "text": "1Pe 1:5",
+   "start": "1PE.1.5",
+   "end": "1PE.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.14.34-35.1",
+   "at": 26,
+   "text": "Mt 5:13-16",
+   "start": "MAT.5.13",
+   "end": "MAT.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.1-32.1",
+   "at": 0,
+   "text": "Lu 15:1-32",
+   "start": "LUK.15.1",
+   "end": "LUK.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.3-7.1",
+   "at": 0,
+   "text": "Lu 15:3-7",
+   "start": "LUK.15.3",
+   "end": "LUK.15.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.3-7.1",
+   "at": 53,
+   "text": "Mt 18:12-14",
+   "start": "MAT.18.12",
+   "end": "MAT.18.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.7.1",
+   "at": 319,
+   "text": "Lu 15:29",
+   "start": "LUK.15.29",
+   "end": "LUK.15.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.7.1",
+   "at": 329,
+   "text": "Lu 15:31",
+   "start": "LUK.15.31",
+   "end": "LUK.15.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.8-10.1",
+   "at": 0,
+   "text": "Lu 15:8-10",
+   "start": "LUK.15.8",
+   "end": "LUK.15.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.10.1",
+   "at": 327,
+   "text": "Zec 8:17",
+   "start": "ZEC.8.17",
+   "end": "ZEC.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.11-32.1",
+   "at": 0,
+   "text": "Lu 15:11-32",
+   "start": "LUK.15.11",
+   "end": "LUK.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.13.1",
+   "at": 223,
+   "text": "Isa 55:2",
+   "start": "ISA.55.2",
+   "end": "ISA.55.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.13.1",
+   "at": 252,
+   "text": "Isa 9:10",
+   "start": "ISA.9.9",
+   "end": "ISA.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.13.1",
+   "at": 262,
+   "text": "57:10",
+   "start": "ISA.57.10",
+   "end": "ISA.57.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.13.1",
+   "at": 269,
+   "text": "Am 4:6-10",
+   "start": "AMO.4.6",
+   "end": "AMO.4.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.13.1",
+   "at": 298,
+   "text": "Lu 15:30",
+   "start": "LUK.15.30",
+   "end": "LUK.15.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.13.1",
+   "at": 590,
+   "text": "Jer 3:1-15",
+   "start": "JER.3.1",
+   "end": "JER.3.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.13.1",
+   "at": 602,
+   "text": "Eze 16:1-17:24",
+   "start": "EZK.16.1",
+   "end": "EZK.17.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.14.1",
+   "at": 334,
+   "text": "Jud 5:20",
+   "start": "JDG.5.20",
+   "end": "JDG.5.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.16.1",
+   "at": 338,
+   "text": "Jer 30:14",
+   "start": "JER.30.14",
+   "end": "JER.30.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.16.1",
+   "at": 530,
+   "text": "2Ch 12:8",
+   "start": "2CH.12.8",
+   "end": "2CH.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.16.1",
+   "at": 540,
+   "text": "33:11-13",
+   "start": "2CH.33.11",
+   "end": "2CH.33.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.17.1",
+   "at": 58,
+   "text": "Ec 9:3",
+   "start": "ECC.9.3",
+   "end": "ECC.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.18.1",
+   "at": 1004,
+   "text": "Php 2:13",
+   "start": "PHP.2.13",
+   "end": "PHP.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.20.1",
+   "at": 457,
+   "text": "Jer 31:20",
+   "start": "JER.31.20",
+   "end": "JER.31.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.21.1",
+   "at": 94,
+   "text": "Eze 16:63",
+   "start": "EZK.16.63",
+   "end": "EZK.16.63",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.22.1",
+   "at": 218,
+   "text": "Lu 15:18",
+   "start": "LUK.15.18",
+   "end": "LUK.15.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.22.1",
+   "at": 361,
+   "text": "Zec 3:4",
+   "start": "ZEC.3.4",
+   "end": "ZEC.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.22.1",
+   "at": 370,
+   "text": "5",
+   "start": "ZEC.3.5",
+   "end": "ZEC.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.22.1",
+   "at": 502,
+   "text": "Isa 61:10",
+   "start": "ISA.61.10",
+   "end": "ISA.61.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.22.1",
+   "at": 513,
+   "text": "Re 3:18",
+   "start": "REV.3.18",
+   "end": "REV.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.22.1",
+   "at": 540,
+   "text": "Ge 41:42",
+   "start": "GEN.41.42",
+   "end": "GEN.41.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.22.1",
+   "at": 550,
+   "text": "Jas 2:2",
+   "start": "JAS.2.2",
+   "end": "JAS.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.25.1",
+   "at": 59,
+   "text": "Lu 15:29",
+   "start": "LUK.15.29",
+   "end": "LUK.15.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.28.1",
+   "at": 124,
+   "text": "Ps 103:13",
+   "start": "PSA.103.13",
+   "end": "PSA.103.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.29.1",
+   "at": 320,
+   "text": "Job 23:10-12",
+   "start": "JOB.23.10",
+   "end": "JOB.23.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.15.29.1",
+   "at": 350,
+   "text": "Ps 18:20-24",
+   "start": "PSA.18.21",
+   "end": "PSA.18.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.1-31.1",
+   "at": 0,
+   "text": "Lu 16:1-31",
+   "start": "LUK.16.1",
+   "end": "LUK.16.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 55,
+   "text": "Lu 16:3",
+   "start": "LUK.16.3",
+   "end": "LUK.16.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 64,
+   "text": "5",
+   "start": "LUK.16.5",
+   "end": "LUK.16.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 250,
+   "text": "Lu 20:34",
+   "start": "LUK.20.34",
+   "end": "LUK.20.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 268,
+   "text": "Ps 17:14",
+   "start": "PSA.17.14",
+   "end": "PSA.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 309,
+   "text": "Php 3:19",
+   "start": "PHP.3.19",
+   "end": "PHP.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 343,
+   "text": "Ps 4:6",
+   "start": "PSA.4.7",
+   "end": "PSA.4.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 351,
+   "text": "7",
+   "start": "PSA.4.8",
+   "end": "PSA.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 830,
+   "text": "Joh 12:36",
+   "start": "JHN.12.36",
+   "end": "JHN.12.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 841,
+   "text": "Eph 5:8",
+   "start": "EPH.5.8",
+   "end": "EPH.5.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.8.1",
+   "at": 850,
+   "text": "1Th 5:5",
+   "start": "1TH.5.5",
+   "end": "1TH.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.9.1",
+   "at": 106,
+   "text": "Da 4:27",
+   "start": "DAN.4.24",
+   "end": "DAN.4.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.9.1",
+   "at": 123,
+   "text": "Lu 12:33",
+   "start": "LUK.12.33",
+   "end": "LUK.12.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.9.1",
+   "at": 133,
+   "text": "14:13",
+   "start": "LUK.14.13",
+   "end": "LUK.14.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.9.1",
+   "at": 140,
+   "text": "14",
+   "start": "LUK.14.14",
+   "end": "LUK.14.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.9.1",
+   "at": 205,
+   "text": "Mt 6:24",
+   "start": "MAT.6.24",
+   "end": "MAT.6.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.9.1",
+   "at": 306,
+   "text": "Lu 6:38",
+   "start": "LUK.6.38",
+   "end": "LUK.6.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.9.1",
+   "at": 769,
+   "text": "2Co 5:10",
+   "start": "2CO.5.10",
+   "end": "2CO.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.15.1",
+   "at": 134,
+   "text": "1Sa 16:7",
+   "start": "1SA.16.7",
+   "end": "1SA.16.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.16.1",
+   "at": 22,
+   "text": "Mt 11:13",
+   "start": "MAT.11.13",
+   "end": "MAT.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.18.1",
+   "at": 39,
+   "text": "Mt 19:3-9",
+   "start": "MAT.19.3",
+   "end": "MAT.19.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.19.1",
+   "at": 40,
+   "text": "Es 8:15",
+   "start": "EST.8.15",
+   "end": "EST.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.19.1",
+   "at": 49,
+   "text": "Re 18:12",
+   "start": "REV.18.12",
+   "end": "REV.18.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.21.1",
+   "at": 154,
+   "text": "Lu 15:16",
+   "start": "LUK.15.16",
+   "end": "LUK.15.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.24.1",
+   "at": 77,
+   "text": "Lu 3:8",
+   "start": "LUK.3.8",
+   "end": "LUK.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.24.1",
+   "at": 85,
+   "text": "Joh 8:37",
+   "start": "JHN.8.37",
+   "end": "JHN.8.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.24.1",
+   "at": 131,
+   "text": "Jas 2:3",
+   "start": "JAS.2.3",
+   "end": "JAS.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.25-26.1",
+   "at": 358,
+   "text": "Lu 6:24",
+   "start": "LUK.6.24",
+   "end": "LUK.6.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.16.25-26.1",
+   "at": 597,
+   "text": "Lu 6:21",
+   "start": "LUK.6.21",
+   "end": "LUK.6.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.1-10.1",
+   "at": 0,
+   "text": "Lu 17:1-10",
+   "start": "LUK.17.1",
+   "end": "LUK.17.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.3-4.1",
+   "at": 14,
+   "text": "Mt 18:15-17",
+   "start": "MAT.18.15",
+   "end": "MAT.18.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.5.1",
+   "at": 16,
+   "text": "Lu 10:1",
+   "start": "LUK.10.1",
+   "end": "LUK.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.10.1",
+   "at": 197,
+   "text": "Job 22:2",
+   "start": "JOB.22.2",
+   "end": "JOB.22.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.10.1",
+   "at": 207,
+   "text": "3",
+   "start": "JOB.22.3",
+   "end": "JOB.22.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.11-19.1",
+   "at": 0,
+   "text": "Lu 17:11-19",
+   "start": "LUK.17.11",
+   "end": "LUK.17.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.13.1",
+   "at": 77,
+   "text": "2Ki 7:3",
+   "start": "2KI.7.3",
+   "end": "2KI.7.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.13.1",
+   "at": 193,
+   "text": "Mt 20:30-33",
+   "start": "MAT.20.30",
+   "end": "MAT.20.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.14.1",
+   "at": 49,
+   "text": "Mt 8:4",
+   "start": "MAT.8.4",
+   "end": "MAT.8.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.14.1",
+   "at": 130,
+   "text": "Joh 4:22",
+   "start": "JHN.4.22",
+   "end": "JHN.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.19.1",
+   "at": 60,
+   "text": "Lu 17:16",
+   "start": "LUK.17.16",
+   "end": "LUK.17.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.20-37.1",
+   "at": 0,
+   "text": "Lu 17:20-37",
+   "start": "LUK.17.20",
+   "end": "LUK.17.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.22.1",
+   "at": 45,
+   "text": "Lu 19:43",
+   "start": "LUK.19.43",
+   "end": "LUK.19.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.25.1",
+   "at": 76,
+   "text": "Lu 17:23",
+   "start": "LUK.17.23",
+   "end": "LUK.17.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.17.34.1",
+   "at": 303,
+   "text": "Lu 21:21",
+   "start": "LUK.21.21",
+   "end": "LUK.21.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.1-8.1",
+   "at": 0,
+   "text": "Lu 18:1-8",
+   "start": "LUK.18.1",
+   "end": "LUK.18.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.1-5.1",
+   "at": 20,
+   "text": "Lu 18:7",
+   "start": "LUK.18.7",
+   "end": "LUK.18.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.2.1",
+   "at": 132,
+   "text": "1Ti 5:5",
+   "start": "1TI.5.5",
+   "end": "1TI.5.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.3.1",
+   "at": 25,
+   "text": "Lu 18:5",
+   "start": "LUK.18.5",
+   "end": "LUK.18.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.7.1",
+   "at": 215,
+   "text": "Zec 2:8",
+   "start": "ZEC.2.12",
+   "end": "ZEC.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.7.1",
+   "at": 305,
+   "text": "Jas 5:4",
+   "start": "JAS.5.4",
+   "end": "JAS.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.7.1",
+   "at": 445,
+   "text": "Jas 5:7",
+   "start": "JAS.5.7",
+   "end": "JAS.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.8.1",
+   "at": 101,
+   "text": "Pr 29:1",
+   "start": "PRO.29.1",
+   "end": "PRO.29.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.9-14.1",
+   "at": 0,
+   "text": "Lu 18:9-14",
+   "start": "LUK.18.9",
+   "end": "LUK.18.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.11-12.1",
+   "at": 37,
+   "text": "Mr 11:25",
+   "start": "MRK.11.25",
+   "end": "MRK.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.11-12.1",
+   "at": 660,
+   "text": "Le 16:29",
+   "start": "LEV.16.29",
+   "end": "LEV.16.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.13.1",
+   "at": 82,
+   "text": "Ps 34:18",
+   "start": "PSA.34.19",
+   "end": "PSA.34.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.13.1",
+   "at": 92,
+   "text": "Isa 57:15",
+   "start": "ISA.57.15",
+   "end": "ISA.57.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.13.1",
+   "at": 154,
+   "text": "Ezr 9:6",
+   "start": "EZR.9.6",
+   "end": "EZR.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.13.1",
+   "at": 203,
+   "text": "Lu 23:48",
+   "start": "LUK.23.48",
+   "end": "LUK.23.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.13.1",
+   "at": 233,
+   "text": "Jer 31:19",
+   "start": "JER.31.19",
+   "end": "JER.31.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.13.1",
+   "at": 409,
+   "text": "Heb 2:17",
+   "start": "HEB.2.17",
+   "end": "HEB.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.14.1",
+   "at": 309,
+   "text": "Ps 138:6",
+   "start": "PSA.138.6",
+   "end": "PSA.138.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.14.1",
+   "at": 319,
+   "text": "147:6",
+   "start": "PSA.147.6",
+   "end": "PSA.147.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.14.1",
+   "at": 326,
+   "text": "Lu 1:53",
+   "start": "LUK.1.53",
+   "end": "LUK.1.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.14.1",
+   "at": 757,
+   "text": "Job 33:27",
+   "start": "JOB.33.27",
+   "end": "JOB.33.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.14.1",
+   "at": 768,
+   "text": "28",
+   "start": "JOB.33.28",
+   "end": "JOB.33.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.14.1",
+   "at": 772,
+   "text": "Ps 34:18",
+   "start": "PSA.34.19",
+   "end": "PSA.34.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15-17.1",
+   "at": 0,
+   "text": "Lu 18:15-17",
+   "start": "LUK.18.15",
+   "end": "LUK.18.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 69,
+   "text": "Mt 19:13",
+   "start": "MAT.19.13",
+   "end": "MAT.19.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 89,
+   "text": "Mr 10:13",
+   "start": "MRK.10.13",
+   "end": "MRK.10.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 202,
+   "text": "Mt 19:13",
+   "start": "MAT.19.13",
+   "end": "MAT.19.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 279,
+   "text": "Mr 10:16",
+   "start": "MRK.10.16",
+   "end": "MRK.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 321,
+   "text": "Ge 48:14",
+   "start": "GEN.48.14",
+   "end": "GEN.48.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 331,
+   "text": "15",
+   "start": "GEN.48.15",
+   "end": "GEN.48.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 505,
+   "text": "Mt 15:23",
+   "start": "MAT.15.23",
+   "end": "MAT.15.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 515,
+   "text": "Lu 18:39",
+   "start": "LUK.18.39",
+   "end": "LUK.18.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.15.1",
+   "at": 525,
+   "text": "40",
+   "start": "LUK.18.40",
+   "end": "LUK.18.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.16.1",
+   "at": 44,
+   "text": "Mr 10:14",
+   "start": "MRK.10.14",
+   "end": "MRK.10.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.16.1",
+   "at": 192,
+   "text": "Mt 19:14",
+   "start": "MAT.19.14",
+   "end": "MAT.19.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.16.1",
+   "at": 212,
+   "text": "Mr 10:14",
+   "start": "MRK.10.14",
+   "end": "MRK.10.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.16.1",
+   "at": 388,
+   "text": "Mt 19:14",
+   "start": "MAT.19.14",
+   "end": "MAT.19.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.16.1",
+   "at": 581,
+   "text": "Mr 10:16",
+   "start": "MRK.10.16",
+   "end": "MRK.10.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.16.1",
+   "at": 1702,
+   "text": "Ac 10:47",
+   "start": "ACT.10.47",
+   "end": "ACT.10.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.18-30.1",
+   "at": 0,
+   "text": "Lu 18:18-30",
+   "start": "LUK.18.18",
+   "end": "LUK.18.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.18-30.1",
+   "at": 224,
+   "text": "Mt 19:22",
+   "start": "MAT.19.22",
+   "end": "MAT.19.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.18-30.1",
+   "at": 271,
+   "text": "Lu 18:23",
+   "start": "LUK.18.23",
+   "end": "LUK.18.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.18-30.1",
+   "at": 281,
+   "text": "Mr 10:22",
+   "start": "MRK.10.22",
+   "end": "MRK.10.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.18-30.1",
+   "at": 410,
+   "text": "Lu 18:18",
+   "start": "LUK.18.18",
+   "end": "LUK.18.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.18-30.1",
+   "at": 648,
+   "text": "Mr 10:17",
+   "start": "MRK.10.17",
+   "end": "MRK.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.19.1",
+   "at": 172,
+   "text": "Ps 112:5",
+   "start": "PSA.112.5",
+   "end": "PSA.112.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.19.1",
+   "at": 182,
+   "text": "Mt 25:21",
+   "start": "MAT.25.21",
+   "end": "MAT.25.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.19.1",
+   "at": 192,
+   "text": "Tit 1:8",
+   "start": "TIT.1.8",
+   "end": "TIT.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.20.1",
+   "at": 31,
+   "text": "Mt 19:17",
+   "start": "MAT.19.17",
+   "end": "MAT.19.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.20.1",
+   "at": 245,
+   "text": "Mt 19:17",
+   "start": "MAT.19.17",
+   "end": "MAT.19.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.20.1",
+   "at": 255,
+   "text": "18",
+   "start": "MAT.19.18",
+   "end": "MAT.19.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.20.1",
+   "at": 389,
+   "text": "Mr 10:19",
+   "start": "MRK.10.19",
+   "end": "MRK.10.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.20.1",
+   "at": 484,
+   "text": "Mt 19:19",
+   "start": "MAT.19.19",
+   "end": "MAT.19.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.21.1",
+   "at": 52,
+   "text": "Mt 19:20",
+   "start": "MAT.19.20",
+   "end": "MAT.19.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.21.1",
+   "at": 446,
+   "text": "Mr 10:21",
+   "start": "MRK.10.21",
+   "end": "MRK.10.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.23-25.1",
+   "at": 35,
+   "text": "Mt 19:22",
+   "start": "MAT.19.22",
+   "end": "MAT.19.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.24.1",
+   "at": 30,
+   "text": "Mr 3:34",
+   "start": "MRK.3.34",
+   "end": "MRK.3.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.24.1",
+   "at": 199,
+   "text": "Mr 10:24",
+   "start": "MRK.10.24",
+   "end": "MRK.10.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.28-30.1",
+   "at": 344,
+   "text": "Mt 19:27",
+   "start": "MAT.19.27",
+   "end": "MAT.19.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.29.1",
+   "at": 213,
+   "text": "Mt 19:27",
+   "start": "MAT.19.27",
+   "end": "MAT.19.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.29.1",
+   "at": 223,
+   "text": "Mr 10:29",
+   "start": "MRK.10.29",
+   "end": "MRK.10.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.29.1",
+   "at": 314,
+   "text": "Mr 10:29",
+   "start": "MRK.10.29",
+   "end": "MRK.10.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.30.1",
+   "at": 51,
+   "text": "Mt 19:29",
+   "start": "MAT.19.29",
+   "end": "MAT.19.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.30.1",
+   "at": 94,
+   "text": "Mr 10:30",
+   "start": "MRK.10.30",
+   "end": "MRK.10.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.30.1",
+   "at": 660,
+   "text": "Mt 12:49",
+   "start": "MAT.12.49",
+   "end": "MAT.12.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.30.1",
+   "at": 670,
+   "text": "50",
+   "start": "MAT.12.50",
+   "end": "MAT.12.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.30.1",
+   "at": 678,
+   "text": "2Co 6:14-18",
+   "start": "2CO.6.14",
+   "end": "2CO.6.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.30.1",
+   "at": 1132,
+   "text": "Mt 19:28",
+   "start": "MAT.19.28",
+   "end": "MAT.19.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.30.1",
+   "at": 1806,
+   "text": "Lu 22:28-30",
+   "start": "LUK.22.28",
+   "end": "LUK.22.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.31-34.1",
+   "at": 0,
+   "text": "Lu 18:31-34",
+   "start": "LUK.18.31",
+   "end": "LUK.18.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.35-43.1",
+   "at": 0,
+   "text": "Lu 18:35-43",
+   "start": "LUK.18.35",
+   "end": "LUK.18.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.35-43.1",
+   "at": 35,
+   "text": "Mt 20:29-34",
+   "start": "MAT.20.29",
+   "end": "MAT.20.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.35-43.1",
+   "at": 125,
+   "text": "Mr 10:46-52",
+   "start": "MRK.10.46",
+   "end": "MRK.10.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.39.1",
+   "at": 25,
+   "text": "Lu 18:15",
+   "start": "LUK.18.15",
+   "end": "LUK.18.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.40.1",
+   "at": 25,
+   "text": "Mr 10:49",
+   "start": "MRK.10.49",
+   "end": "MRK.10.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.18.41-43.1",
+   "at": 139,
+   "text": "Mr 10:51",
+   "start": "MRK.10.51",
+   "end": "MRK.10.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.1-10.1",
+   "at": 0,
+   "text": "Lu 19:1-10",
+   "start": "LUK.19.1",
+   "end": "LUK.19.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.5-6.1",
+   "at": 225,
+   "text": "Joh 10:3",
+   "start": "JHN.10.3",
+   "end": "JHN.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.5-6.1",
+   "at": 663,
+   "text": "Joh 1:39",
+   "start": "JHN.1.39",
+   "end": "JHN.1.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.7.1",
+   "at": 65,
+   "text": "Lu 15:2",
+   "start": "LUK.15.2",
+   "end": "LUK.15.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.8-10.1",
+   "at": 247,
+   "text": "Php 4:8",
+   "start": "PHP.4.8",
+   "end": "PHP.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.8-10.1",
+   "at": 308,
+   "text": "Lu 3:12",
+   "start": "LUK.3.12",
+   "end": "LUK.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.8-10.1",
+   "at": 317,
+   "text": "13",
+   "start": "LUK.3.13",
+   "end": "LUK.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.8-10.1",
+   "at": 413,
+   "text": "Nu 5:7",
+   "start": "NUM.5.7",
+   "end": "NUM.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.8-10.1",
+   "at": 526,
+   "text": "Joh 20:28",
+   "start": "JHN.20.28",
+   "end": "JHN.20.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.9.1",
+   "at": 452,
+   "text": "Ps 118:15",
+   "start": "PSA.118.15",
+   "end": "PSA.118.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.9.1",
+   "at": 463,
+   "text": "Ac 16:15",
+   "start": "ACT.16.15",
+   "end": "ACT.16.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.9.1",
+   "at": 473,
+   "text": "16",
+   "start": "ACT.16.16",
+   "end": "ACT.16.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.9.1",
+   "at": 477,
+   "text": "31",
+   "start": "ACT.16.31",
+   "end": "ACT.16.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.10.1",
+   "at": 56,
+   "text": "Lu 15:32",
+   "start": "LUK.15.32",
+   "end": "LUK.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.11-27.1",
+   "at": 0,
+   "text": "Lu 19:11-27",
+   "start": "LUK.19.11",
+   "end": "LUK.19.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.11-27.1",
+   "at": 83,
+   "text": "Mt 25:14-30",
+   "start": "MAT.25.14",
+   "end": "MAT.25.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.11-27.1",
+   "at": 163,
+   "text": "Lu 19:11",
+   "start": "LUK.19.11",
+   "end": "LUK.19.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.14.1",
+   "at": 135,
+   "text": "Joh 19:15",
+   "start": "JHN.19.15",
+   "end": "JHN.19.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.15-26.1",
+   "at": 15,
+   "text": "Mt 25:19-29",
+   "start": "MAT.25.19",
+   "end": "MAT.25.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.27.1",
+   "at": 31,
+   "text": "1Sa 15:32",
+   "start": "1SA.15.32",
+   "end": "1SA.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.27.1",
+   "at": 42,
+   "text": "33",
+   "start": "1SA.15.33",
+   "end": "1SA.15.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.28-44.1",
+   "at": 0,
+   "text": "Lu 19:28-44",
+   "start": "LUK.19.28",
+   "end": "LUK.19.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.31.1",
+   "at": 89,
+   "text": "Lu 19:5",
+   "start": "LUK.19.5",
+   "end": "LUK.19.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.38.1",
+   "at": 35,
+   "text": "Mr 11:9",
+   "start": "MRK.11.9",
+   "end": "MRK.11.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.38.1",
+   "at": 44,
+   "text": "10",
+   "start": "MRK.11.10",
+   "end": "MRK.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.38.1",
+   "at": 105,
+   "text": "Ps 118:25",
+   "start": "PSA.118.25",
+   "end": "PSA.118.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.38.1",
+   "at": 249,
+   "text": "Ps 118:26",
+   "start": "PSA.118.26",
+   "end": "PSA.118.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.41-44.1",
+   "at": 34,
+   "text": "La 3:51",
+   "start": "LAM.3.51",
+   "end": "LAM.3.51",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.42.1",
+   "at": 62,
+   "text": "Lu 13:9",
+   "start": "LUK.13.9",
+   "end": "LUK.13.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.42.1",
+   "at": 126,
+   "text": "Heb 7:2",
+   "start": "HEB.7.2",
+   "end": "HEB.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.45-48.1",
+   "at": 0,
+   "text": "Lu 19:45-48",
+   "start": "LUK.19.45",
+   "end": "LUK.19.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.19.45-46.1",
+   "at": 68,
+   "text": "Joh 2:13-22",
+   "start": "JHN.2.13",
+   "end": "JHN.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.1-19.1",
+   "at": 0,
+   "text": "Lu 20:1-19",
+   "start": "LUK.20.1",
+   "end": "LUK.20.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.7.1",
+   "at": 84,
+   "text": "Mt 7:6",
+   "start": "MAT.7.6",
+   "end": "MAT.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.9-13.1",
+   "at": 23,
+   "text": "Lu 13:6",
+   "start": "LUK.13.6",
+   "end": "LUK.13.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.9-13.1",
+   "at": 36,
+   "text": "Mt 21:33",
+   "start": "MAT.21.33",
+   "end": "MAT.21.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.9-13.1",
+   "at": 95,
+   "text": "Isa 5:2",
+   "start": "ISA.5.2",
+   "end": "ISA.5.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.13.1",
+   "at": 25,
+   "text": "Mr 12:6",
+   "start": "MRK.12.6",
+   "end": "MRK.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.13.1",
+   "at": 226,
+   "text": "Heb 3:3-6",
+   "start": "HEB.3.3",
+   "end": "HEB.3.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.14.1",
+   "at": 39,
+   "text": "Ge 37:18-20",
+   "start": "GEN.37.18",
+   "end": "GEN.37.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.14.1",
+   "at": 52,
+   "text": "Joh 11:47-53",
+   "start": "JHN.11.47",
+   "end": "JHN.11.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.14.1",
+   "at": 228,
+   "text": "Heb 1:2",
+   "start": "HEB.1.2",
+   "end": "HEB.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.15.1",
+   "at": 42,
+   "text": "Heb 13:11-13",
+   "start": "HEB.13.11",
+   "end": "HEB.13.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.15.1",
+   "at": 56,
+   "text": "1Ki 21:13",
+   "start": "1KI.21.13",
+   "end": "1KI.21.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.16.1",
+   "at": 74,
+   "text": "Mt 21:41",
+   "start": "MAT.21.41",
+   "end": "MAT.21.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.16.1",
+   "at": 143,
+   "text": "Mt 21:43",
+   "start": "MAT.21.43",
+   "end": "MAT.21.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.17-19.1",
+   "at": 19,
+   "text": "Ps 118:22",
+   "start": "PSA.118.22",
+   "end": "PSA.118.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.17-19.1",
+   "at": 30,
+   "text": "23",
+   "start": "PSA.118.23",
+   "end": "PSA.118.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.17-19.1",
+   "at": 41,
+   "text": "Lu 19:38",
+   "start": "LUK.19.38",
+   "end": "LUK.19.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.17-19.1",
+   "at": 315,
+   "text": "Isa 8:15",
+   "start": "ISA.8.15",
+   "end": "ISA.8.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.17-19.1",
+   "at": 429,
+   "text": "Da 2:34",
+   "start": "DAN.2.34",
+   "end": "DAN.2.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.17-19.1",
+   "at": 438,
+   "text": "35",
+   "start": "DAN.2.35",
+   "end": "DAN.2.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.17-19.1",
+   "at": 442,
+   "text": "Zec 12:3",
+   "start": "ZEC.12.3",
+   "end": "ZEC.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.20-40.1",
+   "at": 0,
+   "text": "Lu 20:20-40",
+   "start": "LUK.20.20",
+   "end": "LUK.20.40",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.20-26.1",
+   "at": 36,
+   "text": "Mt 22:15",
+   "start": "MAT.22.15",
+   "end": "MAT.22.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.20-26.1",
+   "at": 105,
+   "text": "Mr 12:13",
+   "start": "MRK.12.13",
+   "end": "MRK.12.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.27-34.1",
+   "at": 47,
+   "text": "Ac 23:8",
+   "start": "ACT.23.8",
+   "end": "ACT.23.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.34.1",
+   "at": 22,
+   "text": "Mt 22:29",
+   "start": "MAT.22.29",
+   "end": "MAT.22.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.36.1",
+   "at": 376,
+   "text": "Ro 8:21",
+   "start": "ROM.8.21",
+   "end": "ROM.8.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.36.1",
+   "at": 385,
+   "text": "23",
+   "start": "ROM.8.23",
+   "end": "ROM.8.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.38.1",
+   "at": 558,
+   "text": "Heb 11:16",
+   "start": "HEB.11.16",
+   "end": "HEB.11.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.41-47.1",
+   "at": 0,
+   "text": "Lu 20:41-47",
+   "start": "LUK.20.41",
+   "end": "LUK.20.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.41.1",
+   "at": 208,
+   "text": "Mr 12:36",
+   "start": "MRK.12.36",
+   "end": "MRK.12.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.41.1",
+   "at": 235,
+   "text": "Mt 22:42",
+   "start": "MAT.22.42",
+   "end": "MAT.22.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.41.1",
+   "at": 245,
+   "text": "43",
+   "start": "MAT.22.43",
+   "end": "MAT.22.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.41.1",
+   "at": 350,
+   "text": "Mt 1:23",
+   "start": "MAT.1.23",
+   "end": "MAT.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.20.46-47.1",
+   "at": 28,
+   "text": "Mt 23:5",
+   "start": "MAT.23.5",
+   "end": "MAT.23.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.1-4.1",
+   "at": 0,
+   "text": "Lu 21:1-4",
+   "start": "LUK.21.1",
+   "end": "LUK.21.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.1.1",
+   "at": 58,
+   "text": "Mr 12:41",
+   "start": "MRK.12.41",
+   "end": "MRK.12.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.1.1",
+   "at": 156,
+   "text": "Mr 11:27",
+   "start": "MRK.11.27",
+   "end": "MRK.11.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.1.1",
+   "at": 267,
+   "text": "Mr 12:41",
+   "start": "MRK.12.41",
+   "end": "MRK.12.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.1.1",
+   "at": 466,
+   "text": "2Ki 12:9",
+   "start": "2KI.12.10",
+   "end": "2KI.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.2.1",
+   "at": 38,
+   "text": "Mr 12:42",
+   "start": "MRK.12.42",
+   "end": "MRK.12.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.3.1",
+   "at": 60,
+   "text": "Mr 12:43",
+   "start": "MRK.12.43",
+   "end": "MRK.12.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.4.1",
+   "at": 120,
+   "text": "Mr 12:44",
+   "start": "MRK.12.44",
+   "end": "MRK.12.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.4.1",
+   "at": 224,
+   "text": "Mr 12:44",
+   "start": "MRK.12.44",
+   "end": "MRK.12.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.5-38.1",
+   "at": 0,
+   "text": "Lu 21:5-38",
+   "start": "LUK.21.5",
+   "end": "LUK.21.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.8.1",
+   "at": 97,
+   "text": "2Th 2:1",
+   "start": "2TH.2.1",
+   "end": "2TH.2.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.8.1",
+   "at": 106,
+   "text": "2",
+   "start": "2TH.2.2",
+   "end": "2TH.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.9-11.1",
+   "at": 25,
+   "text": "Lu 21:19",
+   "start": "LUK.21.19",
+   "end": "LUK.21.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.9-11.1",
+   "at": 35,
+   "text": "Isa 8:11-14",
+   "start": "ISA.8.11",
+   "end": "ISA.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.9-11.1",
+   "at": 93,
+   "text": "Mt 24:6",
+   "start": "MAT.24.6",
+   "end": "MAT.24.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.9-11.1",
+   "at": 102,
+   "text": "Mr 13:7",
+   "start": "MRK.13.7",
+   "end": "MRK.13.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.10.1",
+   "at": 34,
+   "text": "Mt 24:8",
+   "start": "MAT.24.8",
+   "end": "MAT.24.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.10.1",
+   "at": 43,
+   "text": "Mr 13:8",
+   "start": "MRK.13.8",
+   "end": "MRK.13.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.10.1",
+   "at": 157,
+   "text": "Jer 4:31",
+   "start": "JER.4.31",
+   "end": "JER.4.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.18.1",
+   "at": 42,
+   "text": "Lu 21:16",
+   "start": "LUK.21.16",
+   "end": "LUK.21.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.18.1",
+   "at": 280,
+   "text": "Mt 24:12",
+   "start": "MAT.24.12",
+   "end": "MAT.24.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.18.1",
+   "at": 671,
+   "text": "Heb 10:38",
+   "start": "HEB.10.38",
+   "end": "HEB.10.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.18.1",
+   "at": 682,
+   "text": "39",
+   "start": "HEB.10.39",
+   "end": "HEB.10.39",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.18.1",
+   "at": 686,
+   "text": "Re 2:10",
+   "start": "REV.2.10",
+   "end": "REV.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.18.1",
+   "at": 808,
+   "text": "Mt 24:14",
+   "start": "MAT.24.14",
+   "end": "MAT.24.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.20-21.1",
+   "at": 204,
+   "text": "Da 9:27",
+   "start": "DAN.9.27",
+   "end": "DAN.9.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.20-21.1",
+   "at": 244,
+   "text": "Mr 13:14",
+   "start": "MRK.13.14",
+   "end": "MRK.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.20-21.1",
+   "at": 307,
+   "text": "Mt 24:15",
+   "start": "MAT.24.15",
+   "end": "MAT.24.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.23.1",
+   "at": 170,
+   "text": "Mt 24:20",
+   "start": "MAT.24.20",
+   "end": "MAT.24.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.23.1",
+   "at": 591,
+   "text": "Mt 24:21",
+   "start": "MAT.24.21",
+   "end": "MAT.24.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.23.1",
+   "at": 601,
+   "text": "22",
+   "start": "MAT.24.22",
+   "end": "MAT.24.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.23.1",
+   "at": 828,
+   "text": "Mt 24:24",
+   "start": "MAT.24.24",
+   "end": "MAT.24.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.23.1",
+   "at": 838,
+   "text": "Mr 13:22",
+   "start": "MRK.13.22",
+   "end": "MRK.13.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.23.1",
+   "at": 971,
+   "text": "2Th 2:9-11",
+   "start": "2TH.2.9",
+   "end": "2TH.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.24.1",
+   "at": 128,
+   "text": "Re 11:2",
+   "start": "REV.11.2",
+   "end": "REV.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.24.1",
+   "at": 275,
+   "text": "Ro 11:25",
+   "start": "ROM.11.25",
+   "end": "ROM.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.24.1",
+   "at": 570,
+   "text": "Ro 11:1-36",
+   "start": "ROM.11.1",
+   "end": "ROM.11.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.25-28.1",
+   "at": 262,
+   "text": "Lu 21:28",
+   "start": "LUK.21.28",
+   "end": "LUK.21.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.25-28.1",
+   "at": 272,
+   "text": "32",
+   "start": "LUK.21.32",
+   "end": "LUK.21.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.28.1",
+   "at": 180,
+   "text": "Lu 21:31",
+   "start": "LUK.21.31",
+   "end": "LUK.21.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.28.1",
+   "at": 257,
+   "text": "Mt 24:30",
+   "start": "MAT.24.30",
+   "end": "MAT.24.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.21.34-37.1",
+   "at": 108,
+   "text": "Mr 4:7",
+   "start": "MRK.4.7",
+   "end": "MRK.4.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.1-6.1",
+   "at": 0,
+   "text": "Lu 22:1-6",
+   "start": "LUK.22.1",
+   "end": "LUK.22.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 220,
+   "text": "Joh 12:6",
+   "start": "JHN.12.6",
+   "end": "JHN.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 502,
+   "text": "2Co 2:11",
+   "start": "2CO.2.11",
+   "end": "2CO.2.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 569,
+   "text": "Joh 13:2",
+   "start": "JHN.13.2",
+   "end": "JHN.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 770,
+   "text": "Mt 26:6",
+   "start": "MAT.26.6",
+   "end": "MAT.26.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 790,
+   "text": "Joh 12:4-8",
+   "start": "JHN.12.4",
+   "end": "JHN.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 1013,
+   "text": "Joh 13:27",
+   "start": "JHN.13.27",
+   "end": "JHN.13.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 1139,
+   "text": "Eph 4:27",
+   "start": "EPH.4.27",
+   "end": "EPH.4.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.3.1",
+   "at": 1149,
+   "text": "Jas 4:7",
+   "start": "JAS.4.7",
+   "end": "JAS.4.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.5.1",
+   "at": 36,
+   "text": "Mt 26:15",
+   "start": "MAT.26.15",
+   "end": "MAT.26.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.5.1",
+   "at": 126,
+   "text": "Ex 21:32",
+   "start": "EXO.21.32",
+   "end": "EXO.21.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.5.1",
+   "at": 239,
+   "text": "Zec 11:13",
+   "start": "ZEC.11.13",
+   "end": "ZEC.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.7-38.1",
+   "at": 0,
+   "text": "Lu 22:7-38",
+   "start": "LUK.22.7",
+   "end": "LUK.22.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.14-18.1",
+   "at": 80,
+   "text": "Ex 12:6",
+   "start": "EXO.12.6",
+   "end": "EXO.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.15.1",
+   "at": 56,
+   "text": "Ge 31:30",
+   "start": "GEN.31.30",
+   "end": "GEN.31.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.15.1",
+   "at": 187,
+   "text": "1Co 5:7",
+   "start": "1CO.5.7",
+   "end": "1CO.5.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.17.1",
+   "at": 203,
+   "text": "Mt 26:29",
+   "start": "MAT.26.29",
+   "end": "MAT.26.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.21-22.1",
+   "at": 16,
+   "text": "Joh 13:21",
+   "start": "JHN.13.21",
+   "end": "JHN.13.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.28.1",
+   "at": 111,
+   "text": "Joh 6:66",
+   "start": "JHN.6.66",
+   "end": "JHN.6.66",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.28.1",
+   "at": 121,
+   "text": "67",
+   "start": "JHN.6.67",
+   "end": "JHN.6.67",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.30.1",
+   "at": 28,
+   "text": "Lu 22:16",
+   "start": "LUK.22.16",
+   "end": "LUK.22.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.30.1",
+   "at": 48,
+   "text": "Lu 18:28",
+   "start": "LUK.18.28",
+   "end": "LUK.18.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.31-34.1",
+   "at": 28,
+   "text": "Lu 10:41",
+   "start": "LUK.10.41",
+   "end": "LUK.10.41",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.31-34.1",
+   "at": 133,
+   "text": "Job 1:6-12",
+   "start": "JOB.1.6",
+   "end": "JOB.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.31-34.1",
+   "at": 145,
+   "text": "2:1-6",
+   "start": "JOB.2.1",
+   "end": "JOB.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.31-34.1",
+   "at": 263,
+   "text": "Re 12:10",
+   "start": "REV.12.10",
+   "end": "REV.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.32.1",
+   "at": 87,
+   "text": "Lu 22:61",
+   "start": "LUK.22.61",
+   "end": "LUK.22.61",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.32.1",
+   "at": 97,
+   "text": "62",
+   "start": "LUK.22.62",
+   "end": "LUK.22.62",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.39-46.1",
+   "at": 0,
+   "text": "Lu 22:39-46",
+   "start": "LUK.22.39",
+   "end": "LUK.22.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.40.1",
+   "at": 902,
+   "text": "Mr 14:36",
+   "start": "MRK.14.36",
+   "end": "MRK.14.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.40.2",
+   "at": 198,
+   "text": "Mr 14:37",
+   "start": "MRK.14.37",
+   "end": "MRK.14.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.40.2",
+   "at": 208,
+   "text": "38",
+   "start": "MRK.14.38",
+   "end": "MRK.14.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.40.2",
+   "at": 365,
+   "text": "Mt 26:42",
+   "start": "MAT.26.42",
+   "end": "MAT.26.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.40.2",
+   "at": 428,
+   "text": "Ps 22:1-6",
+   "start": "PSA.22.2",
+   "end": "PSA.22.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.40.3",
+   "at": 704,
+   "text": "Heb 10:10",
+   "start": "HEB.10.10",
+   "end": "HEB.10.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.47-54.1",
+   "at": 0,
+   "text": "Lu 22:47-54",
+   "start": "LUK.22.47",
+   "end": "LUK.22.54",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.55-62.1",
+   "at": 0,
+   "text": "Lu 22:55-62",
+   "start": "LUK.22.55",
+   "end": "LUK.22.62",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.63-71.1",
+   "at": 0,
+   "text": "Lu 22:63-71",
+   "start": "LUK.22.63",
+   "end": "LUK.22.71",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.63-71.1",
+   "at": 71,
+   "text": "Mr 14:53-63",
+   "start": "MRK.14.53",
+   "end": "MRK.14.63",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.22.63-71.1",
+   "at": 84,
+   "text": "Joh 18:19",
+   "start": "JHN.18.19",
+   "end": "JHN.18.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.1-5.1",
+   "at": 0,
+   "text": "Lu 23:1-5",
+   "start": "LUK.23.1",
+   "end": "LUK.23.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.1-5.1",
+   "at": 41,
+   "text": "Mr 15:1-5",
+   "start": "MRK.15.1",
+   "end": "MRK.15.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.6-12.1",
+   "at": 0,
+   "text": "Lu 23:6-12",
+   "start": "LUK.23.6",
+   "end": "LUK.23.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.8.1",
+   "at": 76,
+   "text": "Jud 16:25",
+   "start": "JDG.16.25",
+   "end": "JDG.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.8.1",
+   "at": 162,
+   "text": "Lu 13:31-33",
+   "start": "LUK.13.31",
+   "end": "LUK.13.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.11.1",
+   "at": 553,
+   "text": "Lu 23:14",
+   "start": "LUK.23.14",
+   "end": "LUK.23.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.11.1",
+   "at": 563,
+   "text": "15",
+   "start": "LUK.23.15",
+   "end": "LUK.23.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.11.1",
+   "at": 687,
+   "text": "Ac 4:27",
+   "start": "ACT.4.27",
+   "end": "ACT.4.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.13-38.1",
+   "at": 0,
+   "text": "Lu 23:13-38",
+   "start": "LUK.23.13",
+   "end": "LUK.23.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.13-38.1",
+   "at": 87,
+   "text": "Mr 15:6-15",
+   "start": "MRK.15.6",
+   "end": "MRK.15.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.26.1",
+   "at": 119,
+   "text": "Ac 6:9",
+   "start": "ACT.6.9",
+   "end": "ACT.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.26.1",
+   "at": 135,
+   "text": "Ac 2:10",
+   "start": "ACT.2.10",
+   "end": "ACT.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.26.1",
+   "at": 189,
+   "text": "Mr 15:21",
+   "start": "MRK.15.21",
+   "end": "MRK.15.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.26.1",
+   "at": 266,
+   "text": "Ro 16:13",
+   "start": "ROM.16.13",
+   "end": "ROM.16.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.26.1",
+   "at": 399,
+   "text": "Mt 27:32",
+   "start": "MAT.27.32",
+   "end": "MAT.27.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.26.1",
+   "at": 559,
+   "text": "Joh 19:17",
+   "start": "JHN.19.17",
+   "end": "JHN.19.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.27-31.1",
+   "at": 46,
+   "text": "Lu 23:49",
+   "start": "LUK.23.49",
+   "end": "LUK.23.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.30.1",
+   "at": 185,
+   "text": "Isa 2:10",
+   "start": "ISA.2.10",
+   "end": "ISA.2.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.30.1",
+   "at": 195,
+   "text": "19",
+   "start": "ISA.2.19",
+   "end": "ISA.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.30.1",
+   "at": 199,
+   "text": "21",
+   "start": "ISA.2.21",
+   "end": "ISA.2.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.32-38.1",
+   "at": 0,
+   "text": "Lu 23:32-38",
+   "start": "LUK.23.32",
+   "end": "LUK.23.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.32-38.1",
+   "at": 13,
+   "text": "44-46",
+   "start": "LUK.23.44",
+   "end": "LUK.23.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.39-43.1",
+   "at": 0,
+   "text": "Lu 23:39-43",
+   "start": "LUK.23.39",
+   "end": "LUK.23.43",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.42.1",
+   "at": 595,
+   "text": "Ne 5:19",
+   "start": "NEH.5.19",
+   "end": "NEH.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.43.1",
+   "at": 572,
+   "text": "2Co 12:4",
+   "start": "2CO.12.4",
+   "end": "2CO.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.43.1",
+   "at": 582,
+   "text": "Re 2:7",
+   "start": "REV.2.7",
+   "end": "REV.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.47-56.1",
+   "at": 0,
+   "text": "Lu 23:47-56",
+   "start": "LUK.23.47",
+   "end": "LUK.23.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.47-56.1",
+   "at": 78,
+   "text": "Mt 27:51-56",
+   "start": "MAT.27.51",
+   "end": "MAT.27.56",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.23.47-56.1",
+   "at": 91,
+   "text": "Mt 27:62-66",
+   "start": "MAT.27.62",
+   "end": "MAT.27.66",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.1-12.1",
+   "at": 0,
+   "text": "Lu 24:1-12",
+   "start": "LUK.24.1",
+   "end": "LUK.24.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.1-12.1",
+   "at": 114,
+   "text": "Mr 16:1-8",
+   "start": "MRK.16.1",
+   "end": "MRK.16.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.5.1",
+   "at": 81,
+   "text": "Re 1:18",
+   "start": "REV.1.18",
+   "end": "REV.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.7.1",
+   "at": 219,
+   "text": "1Ti 3:16",
+   "start": "1TI.3.16",
+   "end": "1TI.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.13-35.1",
+   "at": 0,
+   "text": "Lu 24:13-35",
+   "start": "LUK.24.13",
+   "end": "LUK.24.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.13.1",
+   "at": 33,
+   "text": "Lu 24:18",
+   "start": "LUK.24.18",
+   "end": "LUK.24.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.14-16.1",
+   "at": 105,
+   "text": "Lu 24:18-24",
+   "start": "LUK.24.18",
+   "end": "LUK.24.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.14-16.1",
+   "at": 216,
+   "text": "Mr 16:12",
+   "start": "MRK.16.12",
+   "end": "MRK.16.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.28-31.1",
+   "at": 36,
+   "text": "Mr 6:48",
+   "start": "MRK.6.48",
+   "end": "MRK.6.48",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.32-34.1",
+   "at": 778,
+   "text": "Mr 16:7",
+   "start": "MRK.16.7",
+   "end": "MRK.16.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.36-53.1",
+   "at": 0,
+   "text": "Lu 24:36-53",
+   "start": "LUK.24.36",
+   "end": "LUK.24.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.37-38.1",
+   "at": 76,
+   "text": "Ac 12:15",
+   "start": "ACT.12.15",
+   "end": "ACT.12.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.37-38.1",
+   "at": 86,
+   "text": "Mt 14:26",
+   "start": "MAT.14.26",
+   "end": "MAT.14.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.39-43.1",
+   "at": 290,
+   "text": "Ge 9:4",
+   "start": "GEN.9.4",
+   "end": "GEN.9.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.39-43.1",
+   "at": 342,
+   "text": "1Co 15:50",
+   "start": "1CO.15.50",
+   "end": "1CO.15.50",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.44-49.1",
+   "at": 168,
+   "text": "Lu 18:31-34",
+   "start": "LUK.18.31",
+   "end": "LUK.18.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.47.1",
+   "at": 116,
+   "text": "Ro 1:16",
+   "start": "ROM.1.16",
+   "end": "ROM.1.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.47.1",
+   "at": 125,
+   "text": "Ac 13:46",
+   "start": "ACT.13.46",
+   "end": "ACT.13.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.47.1",
+   "at": 135,
+   "text": "Isa 2:3",
+   "start": "ISA.2.3",
+   "end": "ISA.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.47.1",
+   "at": 151,
+   "text": "Mt 10:6",
+   "start": "MAT.10.6",
+   "end": "MAT.10.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 181,
+   "text": "Joh 14:7",
+   "start": "JHN.14.7",
+   "end": "JHN.14.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 191,
+   "text": "Re 3:1",
+   "start": "REV.3.1",
+   "end": "REV.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 199,
+   "text": "5:6",
+   "start": "REV.5.6",
+   "end": "REV.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 273,
+   "text": "Ro 13:14",
+   "start": "ROM.13.14",
+   "end": "ROM.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 283,
+   "text": "1Co 15:53",
+   "start": "1CO.15.53",
+   "end": "1CO.15.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 294,
+   "text": "Ga 3:27",
+   "start": "GAL.3.27",
+   "end": "GAL.3.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 303,
+   "text": "Col 3:9",
+   "start": "COL.3.9",
+   "end": "COL.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.49.1",
+   "at": 312,
+   "text": "10",
+   "start": "COL.3.10",
+   "end": "COL.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.52.1",
+   "at": 352,
+   "text": "Ac 1:10",
+   "start": "ACT.1.10",
+   "end": "ACT.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-luke.LUK.24.52.1",
+   "at": 361,
+   "text": "11",
+   "start": "ACT.1.11",
+   "end": "ACT.1.11",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}

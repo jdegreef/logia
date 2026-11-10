@@ -1,0 +1,18 @@
+{
+ "id": "jfb-luke",
+ "author": "brown",
+ "title": "A Commentary, Critical and Explanatory, on the Old and New Testaments: Luke",
+ "divisions": "verse",
+ "edition": "Robert Jamieson, A. R. Fausset and David Brown, Commentary Critical and Explanatory on the Whole Bible (1871); the Gospels are David Brown's; CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1871,
+ "full_text_url": "https://www.ccel.org/ccel/jamieson/jfb.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); David Brown died in 1897"
+ },
+ "source_kind": "digital",
+ "notes": "Luke 1-24 are CCEL jfb xi.iii ii-xxv, a page a chapter. Every note is kept, in the order printed. A note opens with its bold lemma: a verse number ('7.', '5, 6.' or '4-7.') places it on those verses, and a lemma of words alone goes on the verses of the note before. The summary that opens a section ('Lu 1:1-4.') is on the verses it names. Notes on the same verses are kept together in entries of up to about 350 words. The chapter headings and the introduction to the book are left out.",
+ "status": "ai_draft"
+}

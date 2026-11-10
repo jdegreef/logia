@@ -10,6 +10,7 @@ import re
 import sys
 import unicodedata
 import unittest
+from unittest import mock
 from contextlib import redirect_stdout
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -173,6 +174,32 @@ class VerifyCatchesChanges(unittest.TestCase):
         bare = "".join(c for c in unicodedata.normalize("NFD", word) if not unicodedata.combining(c))
         self.assertNotEqual(bare, word)
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
+
+
+class Counting(unittest.TestCase):
+    def test_counter_and_owner_tags_are_off_unless_set(self):
+        with mock.patch.multiple(build_site, GOATCOUNTER="", GOOGLE_VERIFY="", BING_VERIFY=""):
+            self.assertEqual(build_site.counter_script(), "")
+            self.assertEqual(build_site.site_owner_meta(), "")
+        with mock.patch.multiple(build_site, GOATCOUNTER="logia", GOOGLE_VERIFY="abc", BING_VERIFY=""):
+            self.assertIn('data-goatcounter="https://logia.goatcounter.com/count"', build_site.counter_script())
+            self.assertEqual(build_site.counter_script(noindex=True), "")
+            self.assertEqual(build_site.site_owner_meta(), '\n<meta name="google-site-verification" content="abc">')
+
+
+class OfflineApp(unittest.TestCase):
+    def test_manifest_names_the_icons_it_ships(self):
+        m = json.loads(build_site.app_manifest())
+        self.assertEqual((m["start_url"], m["display"]), ("/", "standalone"))
+        for icon in m["icons"]:
+            self.assertTrue(os.path.isfile(os.path.join(build_site.WEB, icon["src"].lstrip("/"))), icon["src"])
+
+    def test_service_worker_keeps_the_frame_and_changes_version_with_it(self):
+        a, b = build_site.service_worker("<p>one</p>"), build_site.service_worker("<p>two</p>")
+        self.assertIn('"/offline/"', a)
+        self.assertIn(build_site.asset("logia.css"), a)
+        self.assertNotIn("var SHELL = [];", a)
+        self.assertNotEqual(re.search(r'VERSION = "(\w+)"', a)[1], re.search(r'VERSION = "(\w+)"', b)[1])
 
 
 class Site(unittest.TestCase):
