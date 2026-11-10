@@ -26,7 +26,27 @@
     "owb": "The Open Word Bible",
     "owb_note": "The translation Logia reads",
     "source": "Source code and data",
-    "source_note": "Everything is open, on GitHub"
+    "source_note": "Everything is open, on GitHub",
+    "explore": "Explore",
+    "explore_read": "Ways in",
+    "explore_guides": "Guides and data",
+    "readings": "Readings for the church year",
+    "readings_note": "Christmas, Holy Week, Easter and Pentecost",
+    "collection_i-am": "The “I am” sayings",
+    "collection_i-am_note": "Seven sayings in John, with their commentary",
+    "collection_signs": "The signs in John",
+    "collection_signs_note": "Seven miracles, from Cana to Lazarus",
+    "most": "Most-discussed verses in {book}",
+    "most_note": "Where the commentators wrote most",
+    "open_data": "Open data",
+    "open_data_note": "Every excerpt as JSON and CSV",
+    "pick_chapter": "Go to another chapter or book",
+    "chapters_of": "Chapters of {book}",
+    "other_books": "Other books with commentary",
+    "has_commentary": "with commentary",
+    "prev_chapter": "Previous chapter: {ref}",
+    "next_chapter": "Next chapter: {ref}",
+    "dark_mode": "Dark mode"
   },
   "prefs": {
     "display": "Settings",
@@ -218,7 +238,13 @@
       "book": "{n} chapters",
       "none": "No verse, book or commentator by that name. Try “John 3:16”."
     },
-    "key_hint": "Press / on any page to search"
+    "key_hint": "Press / on any page to search",
+    "open": "Search",
+    "close": "Close",
+    "hint": "Type a verse such as John 3:16, a book, or a commentator’s name.",
+    "foot_choose": "to choose",
+    "foot_go": "to go",
+    "foot_close": "to close"
   },
   "read": {
     "title": "Read",

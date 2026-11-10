@@ -132,6 +132,16 @@ ICONS = {
     "menu": '<path d="M4 7h16M4 12h16M4 17h16"/>',
     "close": '<path d="M6 6l12 12M18 6 6 18"/>',
     "user": '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+    "compass": '<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>',
+    "bookmark": '<path d="M6 3h12v18l-6-4-6 4z"/>',
+    "moon": '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
+    "sun": '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+    "resume": '<path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/>',
+    "prev": '<path d="m15 6-6 6 6 6"/>',
+    "next": '<path d="m9 6 6 6-6 6"/>',
+    "list": '<path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>',
+    "star": '<path d="M12 3v18M3 12h18M6 6l12 12M18 6 6 18"/>',
+    "data": '<ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
 }
 GEAR = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/>'
@@ -619,8 +629,10 @@ def nav_menus(lib):
             rows.append(f'<a class="dd-item dd-book" href="/{code.lower()}/" data-book="{code.lower()}">'
                         f'<span class="dd-title">{e(lib.books[code]["en"])}</span>'
                         f'<span class="dd-count" aria-hidden="true">{done}/{lib.books[code]["chapters"]}</span></a>')
-    read = (f'<div class="dd-testaments"><div class="dd-col" style="--cols: 1"><p class="dd-head">{e(t("nav.with_commentary"))}</p>'
-            f'<div class="dd-books">{"".join(rows)}</div></div></div>'
+    read = (f'<a class="dd-item lg-dd-resume" href="/" data-resume="{e(t("home.resume"))}" hidden></a>'
+            f'<div class="dd-testaments lg-dd-read"><div class="dd-col" style="--cols: 1"><p class="dd-head">{e(t("nav.with_commentary"))}</p>'
+            f'<div class="dd-books">{"".join(rows)}</div></div>'
+            f'<div class="lg-dd-chapters" data-nav-chapters aria-live="polite" hidden></div></div>'
             f'<div class="dd-alls">{all_link("/read/", t("nav.all_books"))}</div>')
     cols = []
     for era in ERAS:
@@ -630,6 +642,16 @@ def nav_menus(lib):
                         + "".join(row(f'/commentators/{a["id"]}/', a["name"], a["dates"]) for a in authors) + "</div>")
     people = (f'<div class="dd-cols" style="--cols: {min(len(cols), 3)}">{"".join(cols)}</div>'
               f'{all_link("/commentators/", t("nav.all_commentators"))}')
+    explore = (f'<div class="dd-cols" style="--cols: 2"><div class="dd-col"><p class="dd-head">{e(t("nav.explore_read"))}</p>'
+               + row("/readings/", t("nav.readings"), t("nav.readings_note"), "star")
+               + "".join(row(f'/{c["book"].lower()}/{c["id"]}/', t(f'nav.collection_{c["id"]}'), t(f'nav.collection_{c["id"]}_note'), "list")
+                         for c in collections(lib))
+               + "".join(row(f"/{b.lower()}/most-discussed/", t("nav.most", book=lib.books[b]["en"]), t("nav.most_note"), "users")
+                         for b in dict.fromkeys(b for b, _c, _v in lib.voices_on) if b == "JHN")
+               + f'</div><div class="dd-col"><p class="dd-head">{e(t("nav.explore_guides"))}</p>'
+               + "".join(row(g["path"], g["title"], "", "info") for g in guides())
+               + row("/open-data/", t("nav.open_data"), t("nav.open_data_note"), "data")
+               + "</div></div>")
     about = "".join((
         row("/about/", t("nav.about_logia"), t("nav.about_logia_note"), "info"),
         row("/about/#checked", t("nav.checked"), t("nav.checked_note"), "check"),
@@ -637,6 +659,7 @@ def nav_menus(lib):
         row(GITHUB_URL, t("nav.source"), t("nav.source_note"), "code", ext=True)))
     return (("read", t("nav.read"), "book", "/read/", read, "dd-read"),
             ("commentators", t("nav.commentators"), "users", "/commentators/", people, "dd-wide"),
+            ("explore", t("nav.explore"), "compass", "/explore/", explore, "dd-wide lg-dd-explore"),
             ("about", t("nav.about"), "info", "/about/", about, "dd-about"))
 
 
@@ -659,6 +682,76 @@ def account_menu(path):
         '</div></div>')
 
 
+def search_palette():
+    """The header's search button and the pop-up it opens: Open Word Bible's
+    search button and palette (style.css), as a modal <dialog>, so focus
+    stays in it and Esc closes it. "/" and Ctrl+K open it too; its box is a
+    lg-search like the others (web/logia.js)."""
+    label, close = e(t("search.open")), e(t("search.close"))
+    return (f'<button type="button" class="tool-btn search-btn" data-search-open aria-haspopup="dialog" aria-controls="palette" '
+            f'title="{e(t("search.key_hint"))}">{SEARCH_ICON}<span class="search-label">{label}</span>'
+            '<kbd class="search-kbd" aria-hidden="true">/</kbd></button>'
+            f'<dialog class="palette lg-palette" id="palette" aria-label="{e(t("search.label"))}">'
+            '<form class="palette-box lg-search lg-pal-search" role="search" action="/read/" autocomplete="off">'
+            f'<div class="palette-form">{SEARCH_ICON}'
+            f'<input type="search" name="q" id="pal-q" placeholder="{e(t("search.placeholder"))}" aria-label="{e(t("search.label"))}" '
+            'role="combobox" aria-expanded="false" aria-controls="pal-q-list" aria-autocomplete="list">'
+            f'<button type="button" class="lg-pal-close" data-search-close aria-label="{close}" title="{close}"><kbd>Esc</kbd></button></div>'
+            f'<ul class="palette-list lg-sugg" id="pal-q-list" role="listbox" aria-label="{e(t("search.label"))}" hidden></ul>'
+            f'<p class="palette-empty lg-pal-hint">{e(t("search.hint"))}</p>'
+            f'<p class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> {e(t("search.foot_choose"))}</span>'
+            f'<span><kbd>Enter</kbd> {e(t("search.foot_go"))}</span><span><kbd>Esc</kbd> {e(t("search.foot_close"))}</span></p>'
+            '</form></dialog>')
+
+
+def header_place(lib, path):
+    """The book and chapter a page is in, from its address ("/jhn/3/16/" is
+    John 3; "/jhn/" and "/jhn/most-discussed/" are John): (code, chapter or
+    None), or (None, None)."""
+    m = re.match(r"/([a-z0-9]{3})/(?:(\d+)/)?", path or "")
+    code = m[1].upper() if m else None
+    if code not in lib.books:
+        return None, None
+    chapter = int(m[2]) if m[2] and 1 <= int(m[2]) <= lib.books[code]["chapters"] else None
+    return code, chapter
+
+
+@functools.lru_cache(maxsize=None)
+def nav_data(lib):
+    """What the header's chapter pickers need (web/logia.js): each book's
+    name, chapters and those with commentary, in Bible order."""
+    cov = lib.coverage()
+    books = {code: {"name": b["en"], "n": b["chapters"], "has": sorted(c for bk, c in cov if bk == code)}
+             for code, b in lib.books.items()}
+    return {"books": books, "ui": {"chapters": t("nav.chapters_of"), "others": t("nav.other_books"),
+                                   "has": t("nav.has_commentary")}}
+
+
+def where_switcher(lib, path):
+    """On a book's pages, "‹ John 3 ›": the button opens a chapter picker
+    (web/logia.js builds it), the arrows go to the chapter before and after."""
+    book, chapter = header_place(lib, path)
+    if not book:
+        return ""
+    name = lib.books[book]["en"]
+    label = f"{name} {chapter}" if chapter else name
+    turns = ["", ""]
+    if chapter:
+        order = lib.chapters
+        i = order.index((book, chapter)) if (book, chapter) in order else -1
+        for k, j, key in ((0, i - 1, "prev"), (1, i + 1, "next")):
+            if i >= 0 and 0 <= j < len(order):
+                b, c = order[j]
+                text = t(f"nav.{key}_chapter", ref=f'{lib.books[b]["en"]} {c}')
+                turns[k] = (f'<a class="lg-turn-btn" rel="{key}" href="{chapter_url(b, c)}" aria-label="{e(text)}" '
+                            f'title="{e(text)}">{icon(key, 16)}</a>')
+    pick = e(t("nav.pick_chapter"))
+    return (f'<div class="lg-where" data-book="{book}" data-chapter="{chapter or ""}">{turns[0]}'
+            f'<button type="button" class="lg-where-btn" aria-expanded="false" aria-controls="lg-where-pop" '
+            f'title="{pick}"><span class="lg-where-name">{e(label)}</span>{icon("chevron", 14, "icon caret")}</button>'
+            f'{turns[1]}<div class="lg-where-pop" id="lg-where-pop" role="group" aria-label="{pick}" hidden></div></div>')
+
+
 def site_header(lib, current, path):
     home_on = current == "/"
     items = [f'<li><a class="nav-link" href="/"{" aria-current=page" if home_on else ""}>'
@@ -673,16 +766,34 @@ def site_header(lib, current, path):
             f'<li class="nav-item"><button type="button" class="nav-link nav-trigger{" active" if current == href else ""}" '
             f'aria-expanded="false" aria-controls="dd-{key}">{icon(ico)}<span>{e(label)}</span>'
             f'{icon("chevron", 15, "icon caret")}</button><div class="dropdown {cls}" id="dd-{key}" hidden>{panel}</div></li>')
+    # On a phone the menu opens with the search and the reader's place.
+    items.insert(0, f'<li class="lg-nav-phone"><button type="button" class="lg-nav-search" data-search-open aria-haspopup="dialog" '
+                    f'aria-controls="palette">{SEARCH_ICON}<span>{e(t("search.placeholder"))}</span></button>'
+                    f'<a class="lg-nav-resume" href="/" data-resume="{e(t("home.resume"))}" hidden></a></li>')
     menu = e(t("nav.menu"))
+    book, chapter = header_place(lib, path)
+    progress = ('<div class="lg-progress" aria-hidden="true"><span></span></div>'
+                if chapter and path == chapter_url(book, chapter) else "")
+    dark, saved = e(t("nav.dark_mode")), e(t("account.saved"))
     return f"""<header class="site"><div class="wrap bar">
 <a class="brand" href="/"{" aria-current=page" if home_on else ""}>{MARK}<span class="brand-name">Logia</span></a>
+{where_switcher(lib, path)}
 <nav class="primary" id="site-nav" aria-label="{e(t("nav.main"))}"><ul class="nav-list">{"".join(items)}</ul></nav>
 <div class="tools">
+<a class="lg-resume" href="/" data-resume-pill="{e(t("home.resume"))}" hidden>{icon("resume", 16)}<span></span></a>
+{search_palette()}
+<button type="button" class="tool-btn lg-theme-btn" data-theme-toggle aria-pressed="false" aria-label="{dark}" title="{dark}" hidden>{icon("moon")}{icon("sun")}</button>
+<a class="tool-btn lg-saved-btn" href="/saved/" aria-label="{saved}" title="{saved}">{icon("bookmark")}</a>
 {account_menu(path)}
 {prefs_menu()}
 <button type="button" class="tool-btn menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="{menu}">{icon("menu", 22)}{icon("close", 22)}</button>
 </div>
-</div></header>"""
+</div>{progress}<script type="application/json" id="nav-data">{nav_json(lib)}</script></header>"""
+
+
+@functools.lru_cache(maxsize=None)
+def nav_json(lib):
+    return json.dumps(nav_data(lib), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
 # The sources of the Bible text and its word data, credited in the footer
