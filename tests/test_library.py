@@ -182,7 +182,9 @@ class Site(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        quiet(build_site.build)
+        # CI builds site/ in the step before the tests and sets LOGIA_SITE_BUILT, so it is built once.
+        if not (os.environ.get("LOGIA_SITE_BUILT") and os.path.isdir(build_site.SITE)):
+            quiet(build_site.build)
 
     def read(self, page):
         with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
