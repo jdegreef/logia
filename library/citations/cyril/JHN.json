@@ -1,0 +1,15 @@
+{
+ "work": "cyril",
+ "book": "JHN",
+ "citations": [
+  {
+   "in": "cyril.JHN.1.51.1",
+   "at": 614,
+   "text": "ii.2,3",
+   "start": "JHN.2.2",
+   "end": "JHN.2.3",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}

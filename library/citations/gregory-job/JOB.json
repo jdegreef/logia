@@ -1,0 +1,87 @@
+{
+ "work": "gregory-job",
+ "book": "JOB",
+ "citations": [
+  {
+   "in": "gregory-job.JOB.3.14.1",
+   "at": 514,
+   "text": "Ps. 8, 6",
+   "start": "PSA.8.7",
+   "end": "PSA.8.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.11.18.1",
+   "at": 310,
+   "text": "Ps. 126, 1",
+   "start": "PSA.126.1",
+   "end": "PSA.126.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.27.2.1",
+   "at": 701,
+   "text": "Ps. 14,1",
+   "start": "PSA.14.1",
+   "end": "PSA.14.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.31.36.1",
+   "at": 410,
+   "text": "Luke 1, 5",
+   "start": "LUK.1.5",
+   "end": "LUK.1.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.33.29.1",
+   "at": 185,
+   "text": "ver. 22",
+   "start": "JOB.33.22",
+   "end": "JOB.33.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.18.2",
+   "at": 586,
+   "text": "Ps. 4, 1",
+   "start": "PSA.4.2",
+   "end": "PSA.4.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.38.2",
+   "at": 192,
+   "text": "Ps. 1,4",
+   "start": "PSA.1.4",
+   "end": "PSA.1.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.4.1",
+   "at": 279,
+   "text": "Ps. 23,1",
+   "start": "PSA.23.1",
+   "end": "PSA.23.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.42.13-14.1",
+   "at": 947,
+   "text": "Ps. 8, 7",
+   "start": "PSA.8.8",
+   "end": "PSA.8.8",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}

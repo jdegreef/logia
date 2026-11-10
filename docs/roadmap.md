@@ -14,9 +14,10 @@ it, so it comes first. The rules in `CLAUDE.md` apply to every item: nothing
 here permits writing commentary, typing Greek or Hebrew, or marking work
 reviewed without a named human reviewer.
 
-Where Logia stands (November 2026): John 1:1–18, eight commentaries, 246
-excerpts, a chapter reader with Greek words and cross-references, and source
-checking.
+Where Logia stands (November 2026): 41 works by 25 commentators on Genesis,
+Job, the Psalms, Proverbs, Ecclesiastes, the Song of Songs, Matthew, John,
+Romans and Galatians, 39,110 excerpts, a chapter reader with Greek words
+and cross-references, and source checking.
 
 ## Phase 1: the data model
 
@@ -29,7 +30,11 @@ a first version too: 15 of the Catena's quotations of Chrysostom and
 Augustine are traced to their homily or tractate, 9 of them to the section
 and 8 to an excerpt Logia holds, and the reader links them both ways. Still
 to do: page numbers for the scanned editions, human review of the citations
-and quotations, the Catena's other Fathers (Hilary, Theophylact, Bede,
+and quotations, the Catena's quotations of Origen (his Commentary on John
+is in the library now, but adding it to `CATENAS` shifts some of the
+Chrysostom and Augustine matches, and the Catena also quotes books of his
+that have no English translation, so those would need a guard), the
+Catena's other Fathers (Hilary, Theophylact, Bede,
 Alcuin, Basil) once their works are in the library, and items 6–7.
 
 Item 5 has a first version: Chrysostom's Homilies 2–15 and Augustine's
