@@ -3185,7 +3185,8 @@ def work_page(lib, wid):
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 <p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
 {start}
-<section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
+<details class="lg-record-fold" open><summary><b>{e(t("work.record"))}</b><span class="lg-quiet">{e(w["original_language"])} · {w["published"]} · {e(t("work.excerpts", n=f"{len(comments):,}"))}</span></summary>
+<section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section></details>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 <ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>
@@ -3202,7 +3203,7 @@ def work_tiles(lib, wid, comments):
     words = {k: sum(len(c["text"].split()) for c in cs) for k, cs in chapters.items()}
     top = max(words.values(), default=1)
     return "".join(
-        f'<li><a href="{work_chapter_url(wid, b, ch)}"><b>{e(lib.books[b]["en"])} {ch}</b>'
+        f'<li><a href="{work_chapter_url(wid, b, ch)}"><b data-n="{ch}">{e(lib.books[b]["en"])} {ch}</b>'
         f'<span class="lg-tile-title">{e(lib.chapter_title(b, ch))}</span>'
         f'<span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))} · {e(t("commentators.minutes", n=max(1, round(words[(b, ch)] / 230))))}</span>'
         f'<span class="lg-tile-bar" title="{e(t("commentators.chapter_words", chapter=f"{lib.books[b]['en']} {ch}", n=f"{words[(b, ch)]:,}"))}">'
@@ -3247,7 +3248,7 @@ def work_contents(lib, wid, comments, current=None):
     """A work's chapters, each linking to its page with how many excerpts it has."""
     return "".join(
         f'<li><a href="{work_chapter_url(wid, b, ch)}"{" aria-current=page" if (b, ch) == current else ""}>'
-        f'<span>{e(lib.books[b]["en"])} {ch}</span><span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))}</span></a></li>'
+        f'<span data-n="{ch}">{e(lib.books[b]["en"])} {ch}</span><span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))}</span></a></li>'
         for (b, ch), cs in work_chapters(comments).items())
 
 

@@ -515,6 +515,9 @@
     }
     if (el.tagName === "DETAILS") el.open = true;
   }
+  // A work's record folds to one line on a phone; it stays open elsewhere.
+  var fold = document.querySelector(".lg-record-fold");
+  if (fold && window.matchMedia && window.matchMedia("(max-width: 560px)").matches) fold.removeAttribute("open");
   window.addEventListener("hashchange", openTarget);
   openTarget();
   // Offline (web/sw.js): register the service worker, the "Keep this book
