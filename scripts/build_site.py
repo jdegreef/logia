@@ -3004,6 +3004,11 @@ def work_page(lib, wid):
     facts += [(t("work.source"), source),
               (t("work.in_logia"), t("work.excerpts", n=f"{len(comments):,}") + (f" {on}" if on else ""))]
     dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
+    docs = source_texts(lib, comments)
+    if len(docs) > 1:
+        dl += (f'<dt>{e(t("work.source_texts"))}</dt><dd><ul class="lg-source-texts">'
+               + "".join(f'<li><a href="{e(url)}" rel="noopener">{e(label)} ↗</a> <span class="lg-quiet">{e(span)}</span></li>'
+                         for url, label, span in docs) + "</ul></dd>")
     dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{rights_pills(w)}</span>'
            f'<span class="lg-quiet lg-rights-note">{e(rights_note(w))}</span></dd>')
     cite = cite_box(a, w)
@@ -3043,8 +3048,41 @@ def work_page(lib, wid):
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 <ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>"""
-    return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
+    book = {"@context": "https://schema.org", **work_ld(lib, wid), "isBasedOn": [url for url, _l, _s in docs] or w["full_text_url"]}
+    if w["translation"]:
+        book["description"] = w["translation"]
+    crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (a["name"], f'/commentators/{a["id"]}/'),
+                         (w["title"], f"/works/{wid}/"))
+    return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/", ld=(book, crumbs),
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+
+
+def source_doc(url):
+    """The book a source page belongs to, as (its address, a short label): a
+    CCEL book (calcom35.vii.i.html is in calcom35) or an archive.org item."""
+    m = re.match(r"https?://(?:www\.)?ccel\.org/ccel/([^/]+)/([^/.#?]+)", url)
+    if m:
+        return f"https://www.ccel.org/ccel/{m[1]}/{m[2]}.html", f"CCEL {m[2]}"
+    m = re.match(r"https?://archive\.org/(?:details|download|stream)/([^/?#]+)", url)
+    if m:
+        return f"https://archive.org/details/{m[1]}", f"archive.org {m[1]}"
+    return url, re.sub(r"^https?://(www\.)?", "", url).split("#")[0]
+
+
+def source_texts(lib, comments):
+    """The books a work's excerpts were copied from, in the order they are
+    first used, each with the passages it supplies ("John 12:1–21:25")."""
+    books = list(lib.books)
+
+    def key(ref):
+        b, ch, v = ref_parts(ref)
+        return books.index(b), ch, v
+    out = {}
+    for c in comments:
+        url, label = source_doc(c["source_url"])
+        first, last = out.get(url, (label, c["start"], c["end"]))[1:]
+        out[url] = (label, min(first, c["start"], key=key), max(last, c["end"], key=key))
+    return [(url, label, scripture.label(a, b)) for url, (label, a, b) in out.items()]
 
 
 def work_tiles(lib, wid, comments):
