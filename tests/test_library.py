@@ -176,6 +176,28 @@ class VerifyCatchesChanges(unittest.TestCase):
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
 
 
+class Plurals(unittest.TestCase):
+    def test_a_count_of_one_takes_the_singular_form(self):
+        self.assertEqual(build_site.t("home.n_voices", n=1), "1 voice")
+        self.assertEqual(build_site.t("home.n_voices", n=2), "2 voices")
+        self.assertEqual(build_site.t("work.excerpts", n=1), "1 excerpt")
+        # A formatted string such as "1,204" is never taken for one.
+        self.assertEqual(build_site.t("passage.n_excerpts", n="1"), "1 excerpts")
+
+    def test_every_singular_form_fills_from_the_same_values(self):
+        def walk(node):
+            for key, value in node.items():
+                if isinstance(value, dict):
+                    yield from walk(value)
+                elif key.endswith("_one") and isinstance(node.get(key[:-4]), str):
+                    yield node[key[:-4]], value
+        names = re.compile(r"(?<!{){(\w+)}")
+        for plural, one in walk(build_site.CATALOG):
+            if one in ("{name} ({dates}) comments on {ref} in Logia.", "{n} excerpts from {name} ({dates}) on {ref}."):
+                continue  # chosen by hand in the code, with their own values
+            self.assertLessEqual(set(names.findall(one)), set(names.findall(plural)), one)
+
+
 class Counting(unittest.TestCase):
     def test_counter_and_owner_tags_are_off_unless_set(self):
         with mock.patch.multiple(build_site, GOATCOUNTER="", GOOGLE_VERIFY="", BING_VERIFY=""):

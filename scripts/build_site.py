@@ -162,10 +162,17 @@ CATALOG = load(os.path.join(ROOT, "i18n", f"{LANG}.json"))
 
 
 def t(key, **values):
-    """Interface text from i18n/<lang>.json by dotted key, with {name} filled."""
-    node = CATALOG
+    """Interface text from i18n/<lang>.json by dotted key, with {name} filled.
+
+    When the first whole-number count among n, works and total is 1 and the catalog has the
+    same key with "_one" added, that singular form is used: "1 voice", not
+    "1 voices"."""
+    node, parent = CATALOG, None
     for part in key.split("."):
-        node = node[part]
+        parent, node = node, node[part]
+    count = next((values[k] for k in ("n", "works", "total") if isinstance(values.get(k), int)), None)
+    if count == 1 and isinstance(parent, dict) and isinstance(parent.get(part + "_one"), str):
+        node = parent[part + "_one"]
     return node.format(**values) if values else node
 
 
