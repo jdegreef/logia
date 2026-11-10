@@ -1120,3 +1120,27 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-door b { font-family: var(--display); font-weight: 600; font-size: 17px; }
 .lg-door > span { font-size: 14px; color: var(--muted); }
 .lg-door .lg-door-go { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; color: var(--accent); font-weight: 600; }
+/* Home: chapter pills shaded by how much was written on each chapter */
+.chap.lg-has.lg-heat-0 { background: color-mix(in srgb, var(--gold) 22%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 55%, var(--bg)); color: var(--text); }
+.chap.lg-has.lg-heat-1 { background: color-mix(in srgb, var(--gold) 42%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 70%, var(--bg)); color: var(--text); }
+.chap.lg-has.lg-heat-2 { background: color-mix(in srgb, var(--gold) 65%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 85%, var(--bg)); color: var(--text); }
+.chap.lg-has.lg-heat-3 { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.chap.lg-has.lg-heat-4 { background: color-mix(in srgb, var(--gold) 68%, var(--text)); border-color: color-mix(in srgb, var(--gold) 68%, var(--text)); color: var(--bg); }
+.chap.lg-has[class*="lg-heat-"]:hover { border-color: var(--accent); }
+
+/* Home: the verses with the most excerpts */
+.lg-top-h { margin-top: 28px; }
+.lg-top { list-style: none; margin: 8px 0 0; padding: 0; }
+.lg-top a { display: grid; grid-template-columns: 116px minmax(0, 1fr) minmax(60px, 160px) 92px; gap: 12px; align-items: center;
+  padding: 8px 0; border-top: 1px solid var(--line); text-decoration: none; color: inherit; font-size: 14px; }
+.lg-top li:last-child a { border-bottom: 1px solid var(--line); }
+.lg-top a:hover .lg-top-ref { color: var(--accent); }
+.lg-top-ref { font-weight: 700; white-space: nowrap; }
+.lg-top-text { font-family: var(--serif); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.lg-top .lg-bar { height: 8px; }
+.lg-top-more { margin-top: 10px; }
+@media (max-width: 640px) {
+  .lg-top a { grid-template-columns: minmax(0, 1fr) auto; row-gap: 2px; }
+  .lg-top-text { grid-column: 1 / -1; grid-row: 2; }
+  .lg-top .lg-bar { display: none; }
+}
