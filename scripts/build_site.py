@@ -3077,7 +3077,8 @@ def work_page(lib, wid):
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
-<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>"""
+<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>
+{also_on(lib, wid, comments)}"""
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
 
@@ -3096,6 +3097,26 @@ def work_tiles(lib, wid, comments):
         f'<span class="lg-tile-bar" title="{e(t("commentators.chapter_words", chapter=f"{lib.books[b]['en']} {ch}", n=f"{words[(b, ch)]:,}"))}">'
         f'<span style="width:{100 * words[(b, ch)] / top:.0f}%"></span></span></a></li>'
         for (b, ch), cs in chapters.items())
+
+def also_on(lib, wid, comments):
+    """The other works in Logia on the same books, oldest first, each with
+    its author, era and how many excerpts it has on those books."""
+    books = list(dict.fromkeys(ref_parts(c["start"])[0] for c in comments))
+    counts = Counter((c["work"], ref_parts(c["start"])[0]) for c in lib.comments
+                     if c["work"] != wid and ref_parts(c["start"])[0] in books)
+    sections = []
+    for b in books:
+        rows = "".join(
+            f'<li><span class="lg-also-who"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a>'
+            f'<span class="lg-quiet">{e(a["dates"])} · {e(t("eras." + a["era"]))}</span></span>'
+            f'<a href="/works/{x}/"><i>{e(lib.works[x]["title"])}</i></a>'
+            f'<span class="lg-quiet">{e(t("work.excerpts", n=f"{counts[(x, b)]:,}"))}</span></li>'
+            for x in lib.ordered_works([x for x in lib.works if counts[(x, b)]]) for a in [lib.author_of(x)])
+        if rows:
+            sections.append(f'<section class="lg-block" id="also-{b.lower()}"><h2>{e(t("work.also_on", book=lib.books[b]["en"]))}</h2>'
+                            f'<p class="lg-quiet">{e(t("work.also_on_note", book=lib.books[b]["en"]))}</p>'
+                            f'<ul class="lg-also">{rows}</ul></section>')
+    return "".join(sections)
 
 
 def work_chapters(comments):
