@@ -507,6 +507,7 @@ def derive():
                 found = scan_citations(text, data["book"], int(ch))
                 kind = "pattern"
             for at, ctext, start, end in found:
+                start, end = scripture.english_span(start, end)
                 rows.append({"in": e["id"], "at": at, "text": ctext, "start": start, "end": end,
                              "found": kind, "status": "detected"})
             comments.setdefault(path, {**data, "entries": []})["entries"].append(e)

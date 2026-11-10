@@ -140,3 +140,16 @@ def title_verses(book, chapter):
     data = _load("versification.json")
     return [int(h.split(".")[2]) for h, english in data["english"].items()
             if not english and h.startswith(f"{book}.{chapter}.")]
+
+
+def english_span(start, end):
+    """A reference as English Bibles number it ('PSA.51.1', 'PSA.51.2') -> the
+    Open Word Bible's ids for it ('PSA.51.3', 'PSA.51.4'). The commentators,
+    and CCEL's marks of their references, number the verses as English Bibles
+    do. A verse with no place in the Hebrew is left as it is."""
+    out = []
+    for ref, pick in ((start, 0), (end, -1)):
+        b, c, v = parse(ref)
+        held = from_english(b, c, v)
+        out.append(f"{b}.{held[pick][0]}.{held[pick][1]}" if held else ref)
+    return out[0], out[1]

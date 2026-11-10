@@ -104,6 +104,15 @@ class Versification(unittest.TestCase):
     def test_the_new_testament_is_unchanged(self):
         self.assertEqual(scripture.from_english("MAT", 5, 3), [(5, 3)])
 
+    def test_a_reference_moves_with_its_verse(self):
+        self.assertEqual(scripture.english_span("PSA.51.1", "PSA.51.2"), ("PSA.51.3", "PSA.51.4"))
+        self.assertEqual(scripture.english_span("JHN.3.16", "JHN.3.16"), ("JHN.3.16", "JHN.3.16"))
+
+    def test_citations_of_the_psalms_are_on_the_hebrew_verses(self):
+        # Romans 3:4 quotes Psalm 51:4, "that thou mightest be justified", which is 51:6 here
+        rows = json.load(open(os.path.join(ROOT, "library", "citations", "hodge-romans", "ROM.json")))["citations"]
+        self.assertIn("PSA.51.6", {c["start"] for c in rows if c["text"] == "Ps. 51: 4"})
+
     def test_the_psalms_commentaries_are_on_the_hebrew_verses(self):
         entries = json.load(open(os.path.join(ROOT, "library", "comments", "augustine-psalms", "PSA.json")))["entries"]
         on = {e["start"] for e in entries if "Have pity upon me, O God, after Thy great mercy” (ver. 1)" in e["text"]}
