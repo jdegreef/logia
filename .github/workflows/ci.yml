@@ -25,7 +25,20 @@ jobs:
         run: python3 scripts/validate.py
       - name: Check every excerpt against its source
         run: python3 scripts/verify_sources.py
-      - name: Tests
-        run: python3 -m unittest discover -s tests -t .
       - name: Build the site
         run: python3 scripts/build_site.py
+      - name: Tests
+        run: python3 -m unittest discover -s tests -t .
+        env:
+          LOGIA_SITE_BUILT: "1"
+      - name: Check every link and #fragment inside the site
+        run: python3 scripts/check_links.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install the accessibility checker
+        run: |
+          npm install --no-save --no-package-lock playwright@1.49.1 axe-core@4.10.2
+          npx playwright install --with-deps chromium
+      - name: Accessibility audit (axe, every colour theme)
+        run: node scripts/a11y_audit.js
