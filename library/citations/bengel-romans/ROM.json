@@ -14230,6 +14230,222 @@
    "end": "1CO.1.14",
    "found": "pattern",
    "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 58,
+   "text": "xi. 36",
+   "start": "ROM.11.36",
+   "end": "ROM.11.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 108,
+   "text": "2 Pet. iii. 18",
+   "start": "2PE.3.18",
+   "end": "2PE.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 130,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 207,
+   "text": "i. 1",
+   "start": "ROM.1.1",
+   "end": "ROM.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 419,
+   "text": "Acts xx. 32",
+   "start": "ACT.20.32",
+   "end": "ACT.20.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 611,
+   "text": "Eph. iii. 3, 6",
+   "start": "EPH.3.3",
+   "end": "EPH.3.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 611,
+   "text": "Eph. iii. 3, 6",
+   "start": "EPH.3.6",
+   "end": "EPH.3.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 790,
+   "text": "Eph. iii. 9, 10",
+   "start": "EPH.3.9",
+   "end": "EPH.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.25.1",
+   "at": 1089,
+   "text": "2 Tim. i. 9",
+   "start": "2TI.1.9",
+   "end": "2TI.1.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.26.1",
+   "at": 15,
+   "text": "Col. i. 26",
+   "start": "COL.1.26",
+   "end": "COL.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.26.1",
+   "at": 27,
+   "text": "2 Tim. i. 10",
+   "start": "2TI.1.10",
+   "end": "2TI.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.26.1",
+   "at": 41,
+   "text": "Tit. i. 3",
+   "start": "TIT.1.3",
+   "end": "TIT.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.26.1",
+   "at": 104,
+   "text": "1 Tim. i. 1",
+   "start": "1TI.1.1",
+   "end": "1TI.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.26.1",
+   "at": 117,
+   "text": "Tit. i. 3",
+   "start": "TIT.1.3",
+   "end": "TIT.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.26.1",
+   "at": 230,
+   "text": "Tit. i. 2",
+   "start": "TIT.1.2",
+   "end": "TIT.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.26.1",
+   "at": 304,
+   "text": "Acts xv. 18",
+   "start": "ACT.15.18",
+   "end": "ACT.15.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 82,
+   "text": "Eph. iii. 10",
+   "start": "EPH.3.10",
+   "end": "EPH.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 119,
+   "text": "ver. 25",
+   "start": "ROM.16.25",
+   "end": "ROM.16.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 210,
+   "text": "1 Cor. i. 24",
+   "start": "1CO.1.24",
+   "end": "1CO.1.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 339,
+   "text": "iii. 14",
+   "start": "ROM.3.14",
+   "end": "ROM.3.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 354,
+   "text": "2 Tim. iii. 11",
+   "start": "2TI.3.11",
+   "end": "2TI.3.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 370,
+   "text": "Acts xxvi. 7",
+   "start": "ACT.26.7",
+   "end": "ACT.26.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 384,
+   "text": "2 Cor. iv. 6",
+   "start": "2CO.4.6",
+   "end": "2CO.4.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.16.27.1",
+   "at": 414,
+   "text": "v. 28",
+   "start": "ROM.16.28",
+   "end": "ROM.16.28",
+   "found": "pattern",
+   "status": "detected"
   }
  ]
 }

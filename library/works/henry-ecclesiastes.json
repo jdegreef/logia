@@ -1,0 +1,18 @@
+{
+ "id": "henry-ecclesiastes",
+ "author": "henry",
+ "title": "Commentary on the Whole Bible, Volume III (Job to Song of Solomon): Ecclesiastes",
+ "divisions": "verse",
+ "edition": "Matthew Henry, Exposition of the Old and New Testaments (1706-1721); CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1710,
+ "full_text_url": "https://www.ccel.org/ccel/henry/mhc3.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); Matthew Henry died in 1714"
+ },
+ "source_kind": "digital",
+ "notes": "Ecclesiastes 1–12 are CCEL mhc3 Ec.ii–Ec.xiii. Every paragraph of exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each of the exposition's points is placed on the verse it names near its start ('(v. 7)', 'v. 11-15'); a main point (I., II.) that names none is on the whole section of verses it stands under, and any other paragraph that names none on the verse of the paragraph before it. A short lead-in ('Here observe,') goes with the paragraph after it. The Bible text printed above each section and the chapter summaries are left out, and so is the introduction to the book. Ecclesiastes numbers its verses as English Bibles do, but Logia's Bible text follows the Hebrew, where English 5:1 is 4:17 and chapter 5 runs one verse behind; each entry is moved to the Hebrew verses (bible/owb/versification.json), and a section that spans the chapter break is kept to the chapter that holds more of it.",
+ "status": "ai_draft"
+}

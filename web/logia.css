@@ -1,3 +1,6 @@
+/* Gold as text, or behind text: --gold darkened toward the text colour (lightened
+   in the dark themes), so small gold type and gold chips pass WCAG AA contrast. */
+html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 /* Logia's own parts, on top of the Open Word Bible's web/style.css (its
    tokens, header, footer, settings menu, hero, buttons and book tiles).
    Every colour comes from style.css's tokens, so all six colour modes work;
@@ -23,7 +26,7 @@
 .lg-card span { font-size: 14px; color: var(--muted); }
 .lg-card.lg-plain { background: none; }
 .lg-pills { margin: 0 0 18px; }
-.chap.lg-has { background: var(--gold); border-color: var(--gold); color: var(--bg); font-weight: 700; }
+.chap.lg-has { background: var(--lg-gold-ink); border-color: var(--gold); color: var(--bg); font-weight: 700; }
 .lg-eras { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 8px 32px; }
 .lg-people { list-style: none; padding: 0; margin: 0; }
 .lg-people li { border-bottom: 1px solid var(--line); }
@@ -43,7 +46,7 @@
 .lg-person b { font-family: var(--display); font-weight: 600; font-size: 18px; }
 .lg-dates { font-size: 14px; color: var(--muted); }
 .lg-mono { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
-  font-family: var(--display); font-size: 21px; font-weight: 600; color: var(--gold); background: var(--surface-2); border: 1px solid var(--line); }
+  font-family: var(--display); font-size: 21px; font-weight: 600; color: var(--lg-gold-ink); background: var(--surface-2); border: 1px solid var(--line); }
 .lg-bio { max-width: 68ch; }
 .lg-bio p { font-family: var(--serif); font-size: 19px; line-height: 1.6; }
 .lg-excerpts { list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 2px; }
@@ -130,7 +133,7 @@
 .cx-dot { z-index: 3; }
 .cx-dot.cx-lane1 { bottom: 52px; z-index: 2; } .cx-dot.cx-lane1::after { height: 28px; }
 .cx-dot.cx-lane2 { bottom: 74px; z-index: 1; } .cx-dot.cx-lane2::after { height: 50px; }
-.cx-dot:hover { background: var(--gold); color: var(--bg); }
+.cx-dot:hover { background: var(--lg-gold-ink); color: var(--bg); }
 .cx-dot.cx-cur { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
 .cx-dot.cx-off { opacity: .4; border-style: dashed; cursor: default; background: var(--surface); }
 .cx-dot.cx-off:hover { color: var(--text); }
@@ -145,7 +148,7 @@
 .cx-chip { border: 1px solid var(--line); background: var(--bg); border-radius: 999px; padding: 4px 11px; font-size: 12.5px; cursor: pointer; }
 .cx-chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent-soft-border); color: var(--accent); font-weight: 600; }
 
-.cx-era { margin: 18px 0 8px; font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--gold); display: flex; align-items: center; gap: 10px; }
+.cx-era { margin: 18px 0 8px; font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--lg-gold-ink); display: flex; align-items: center; gap: 10px; }
 .cx-era::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .cx-era:first-child { margin-top: 0; }
 .cx-card { padding: 14px 0 16px; border-bottom: 1px solid var(--line); scroll-margin-top: 12px; }
@@ -206,7 +209,7 @@
 .cx-xr { display: flex; flex-wrap: wrap; gap: 8px; }
 .cx-xr a { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; text-decoration: none; background: var(--bg); font-size: 14px; }
 
-.cx-verse.cx-has .cx-vn { color: var(--gold); }
+.cx-verse.cx-has .cx-vn { color: var(--lg-gold-ink); }
 /* Beside the text (web/reader.js, drawGutter): a gold line, darker where more
    is written on a verse, and further out a bracket for each comment on a
    whole passage, which goes to the passage's first verse. */
@@ -238,10 +241,10 @@
 /* How many voices comment on a verse (web/reader.js), and the chosen verse
    marked by a gold rule as well as its colour. */
 .cx-vc { display: inline-block; min-width: 1.45em; margin: 0 4px 0 0; padding: 0 .3em; border-radius: 999px; box-sizing: border-box;
-  background: color-mix(in srgb, var(--gold) 18%, transparent); color: var(--gold); font-family: var(--sans); font-size: 10.5px;
+  background: color-mix(in srgb, var(--gold) 18%, transparent); color: var(--lg-gold-ink); font-family: var(--sans); font-size: 10.5px;
   font-weight: 700; line-height: 1.55; text-align: center; vertical-align: super; font-variant-numeric: tabular-nums; }
 .cx-verse.cx-on { box-shadow: inset 3px 0 0 var(--gold); padding-left: 6px; }
-.cx-verse.cx-on .cx-vc { background: var(--gold); color: var(--bg); }
+.cx-verse.cx-on .cx-vc { background: var(--lg-gold-ink); color: var(--bg); }
 .cx-verse.cx-cont.cx-on { box-shadow: none; padding-left: 1px; }
 /* Verses the Open Word Bible leaves out (John 5:4, 8:1-11...), where they would be. */
 .lg-gap { margin: 10px 0; padding: 10px 14px; border-left: 3px solid var(--gold); background: var(--surface-2);
@@ -373,6 +376,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .foot-books .lg-meter > span { display: block; height: 100%; min-width: 0; background: var(--gold); }
 .lg-chip-n { color: var(--muted); font-weight: 500; margin-left: 2px; }
 .lg-foot-note { margin: 12px 0 0; }
+footer.site .lg-foot-note a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Home: a verse and three of its voices, in the Open Word Bible's
    verse-of-the-day card. */
@@ -421,7 +425,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-bk .lg-quiet { font-size: 13px; }
 .lg-caret { position: absolute; right: 12px; top: 13px; color: var(--muted); transition: transform var(--fast) ease; }
 .lg-bk details[open] .lg-caret { transform: rotate(180deg); }
-.lg-badge { font-size: 12px; font-weight: 700; color: var(--gold); background: color-mix(in srgb, var(--gold) 14%, transparent);
+.lg-badge { font-size: 12px; font-weight: 700; color: var(--lg-gold-ink); background: color-mix(in srgb, var(--gold) 14%, transparent);
   border-radius: 999px; padding: 1px 9px; }
 .lg-bk-has details { border-color: color-mix(in srgb, var(--gold) 45%, var(--line)); }
 .lg-bk-open { padding: 0 14px 12px; }
@@ -491,7 +495,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .cx-pick-list a { display: flex; gap: 12px; padding: 7px 10px; border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14.5px; }
 .cx-pick-list a:hover { background: var(--surface-2); }
 .cx-pick-list a[aria-current] { background: var(--accent-soft); color: var(--accent); }
-.cx-pick-list b { min-width: 26px; font-variant-numeric: tabular-nums; color: var(--gold); }
+.cx-pick-list b { min-width: 26px; font-variant-numeric: tabular-nums; color: var(--lg-gold-ink); }
 .cx-progress { display: block; height: 2px; width: 0; background: var(--gold); }
 @media (max-width: 560px) { .cx-bar-in > a span { display: none; } .cx-pick summary span { display: none; } }
 @media (min-width: 881px) {
@@ -521,7 +525,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-toc li { break-inside: avoid; border-bottom: 1px solid var(--line); }
 .lg-toc a { display: flex; align-items: baseline; gap: 6px 12px; padding: 10px 4px; color: var(--text); text-decoration: none; }
 .lg-toc a:hover .lg-toc-title { color: var(--accent); }
-.lg-toc-n { min-width: 2.2em; font-family: var(--display); font-weight: 600; color: var(--gold); font-variant-numeric: tabular-nums; }
+.lg-toc-n { min-width: 2.2em; font-family: var(--display); font-weight: 600; color: var(--lg-gold-ink); font-variant-numeric: tabular-nums; }
 .lg-toc-title { flex: 1; font-family: var(--serif); font-size: 17px; }
 .lg-toc .lg-quiet { font-size: 12.5px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .lg-toc .lg-badge { white-space: nowrap; }
@@ -534,7 +538,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-famous-h { margin-top: 28px; }
 .lg-famous .lg-card { gap: 2px; }
 .lg-famous .lg-card b { font-family: var(--serif); font-weight: 400; font-size: 18px; }
-.lg-card .lg-card-ref { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold); }
+.lg-card .lg-card-ref { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--lg-gold-ink); }
 
 /* The footer, kept short: the commentators by name on one wrapped line. */
 .lg-foot-names { margin: 6px 0 0; font-size: 14px; line-height: 1.8; color: var(--muted); max-width: 30ch; }
@@ -548,10 +552,10 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 
 /* The commentators' lifetimes on one line of centuries (/commentators/),
    coloured by era from the early church's gold to the 1800s' indigo. */
-.lg-era-0 { --era: var(--gold); }
-.lg-era-1 { --era: color-mix(in srgb, var(--gold) 75%, var(--accent)); }
-.lg-era-2 { --era: color-mix(in srgb, var(--gold) 50%, var(--accent)); }
-.lg-era-3 { --era: color-mix(in srgb, var(--gold) 25%, var(--accent)); }
+.lg-era-0 { --era: var(--lg-gold-ink); }
+.lg-era-1 { --era: color-mix(in srgb, var(--lg-gold-ink) 75%, var(--accent)); }
+.lg-era-2 { --era: color-mix(in srgb, var(--lg-gold-ink) 50%, var(--accent)); }
+.lg-era-3 { --era: color-mix(in srgb, var(--lg-gold-ink) 25%, var(--accent)); }
 .lg-era-4 { --era: var(--accent); }
 .lg-tl { margin: 32px 0 0; }
 .lg-tl-scroll { overflow-x: auto; }
@@ -585,6 +589,18 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-cov { display: grid; gap: 4px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
 .lg-cov .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
 .lg-cov .lg-meter > span { display: block; height: 100%; background: var(--era); }
+/* The book chips above the cards, and the lives they dim on the timeline. */
+.lg-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; }
+.lg-pick[hidden] { display: none; }
+.lg-pick-label { font-size: 13px; color: var(--muted); margin-right: 2px; }
+.lg-pick button { font: inherit; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); }
+.lg-pick button:hover { border-color: var(--accent); }
+.lg-pick button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.lg-pick button[aria-pressed="true"] .lg-chip-n { color: inherit; opacity: .8; }
+.lg-tl-dim { opacity: .3; }
+.lg-tl-row { transition: opacity .2s; }
+@media (prefers-reduced-motion: reduce) { .lg-tl-row { transition: none; } }
 
 /* A commentator's page: the biography beside a card of facts. */
 .lg-profile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 24px 48px; align-items: start; }
@@ -599,7 +615,7 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-facts-card .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
 .lg-facts-card .lg-meter > span { display: block; height: 100%; background: var(--era); }
 .lg-pill { display: inline-block; font-family: var(--sans); font-size: 12.5px; font-weight: 600; padding: 3px 11px; border-radius: 999px; }
-.lg-pill-draft { color: var(--gold); background: color-mix(in srgb, var(--gold) 14%, transparent); }
+.lg-pill-draft { color: var(--lg-gold-ink); background: color-mix(in srgb, var(--gold) 14%, transparent); }
 @media (max-width: 880px) { .lg-profile { grid-template-columns: minmax(0, 1fr); } .lg-facts-card { margin-top: 0; } }
 .lg-profile .page-head { padding-bottom: 12px; } .lg-profile .lg-bio { padding-top: 0; }
 .lg-person-head { display: flex; gap: 18px; align-items: flex-start; }
@@ -688,7 +704,7 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-excerpt-side + .lg-excerpt-side:not(:has(.lg-ref)) { border-top: 0; padding-top: 0; }
 .lg-side .label { margin: 0 0 4px; }
 .lg-side-text { margin: 0; font-family: var(--serif); font-style: italic; font-size: 15px; line-height: 1.55; color: var(--muted); }
-.lg-side-text sup { font-family: var(--sans); font-style: normal; font-size: 10px; font-weight: 700; color: var(--gold); margin-right: 2px; }
+.lg-side-text sup { font-family: var(--sans); font-style: normal; font-size: 10px; font-weight: 700; color: var(--lg-gold-ink); margin-right: 2px; }
 @media (max-width: 1100px) {
   .lg-excerpt-side { display: block; }
   .lg-excerpt-side .lg-side { margin: 0 0 10px; }
@@ -713,7 +729,7 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
    (dashed read as "not available"), a ring for the chapter here, and a dot
    for a chapter already read (web/logia.js). */
 .chap.part { border-style: solid; border-color: var(--line-strong); }
-.chap.lg-has[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); background: var(--gold); color: var(--bg); }
+.chap.lg-has[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); background: var(--lg-gold-ink); color: var(--bg); }
 .chap { position: relative; }
 .chap.lg-read::after { content: ""; position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; border-radius: 50%;
   background: var(--accent); box-shadow: 0 0 0 2px var(--bg); }
@@ -727,7 +743,7 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 124px), 1fr)); }
 .lg-steps li { counter-increment: step; position: relative; display: grid; gap: 4px; align-content: start; padding: 12px 14px;
   border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
-.lg-steps li::before { content: counter(step); font-family: var(--display); font-weight: 600; color: var(--gold); font-size: 15px; }
+.lg-steps li::before { content: counter(step); font-family: var(--display); font-weight: 600; color: var(--lg-gold-ink); font-size: 15px; }
 .lg-steps li:last-child { background: var(--accent-soft); border-color: var(--accent-soft-border); }
 .lg-steps b { font-family: var(--display); font-weight: 600; font-size: 15.5px; line-height: 1.25; }
 .lg-steps span { font-size: 13px; line-height: 1.45; color: var(--muted); }
@@ -765,7 +781,7 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-ab-excerpt { font-family: var(--serif); font-size: 17.5px; line-height: 1.6; }
 .lg-ab-example .lg-quiet { font-size: 13.5px; }
 .lg-ab-name { margin: 8px 0 0; padding: 16px 18px; border-radius: var(--radius-sm); background: var(--surface-2); }
-.lg-ab-name .eyebrow { margin: 0 0 4px; color: var(--gold); }
+.lg-ab-name .eyebrow { margin: 0 0 4px; color: var(--lg-gold-ink); }
 .lg-ab-name p { margin: 0 0 8px; }
 .lg-ab-name p:last-child { margin: 0; }
 .lg-ab-name-words { font-family: var(--display); font-size: 26px; line-height: 1.2; }
@@ -850,7 +866,7 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
    excerpts on it, each opening with its first words. */
 .lg-ptext p { font-size: calc(18px * var(--read-scale)); line-height: 1.65; }
 .lg-ptext sup { font-family: var(--sans, inherit); font-size: 11px; font-weight: 700; color: var(--muted); margin-right: 2px; }
-.lg-ptext sup a { color: var(--gold); text-decoration: none; }
+.lg-ptext sup a { color: var(--lg-gold-ink); text-decoration: none; }
 .lg-passage .lg-excerpts li { padding: 8px 0; }
 .lg-passage .page-head .dek + .lg-vtext { margin-top: 18px; }
 
@@ -871,7 +887,7 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 
 /* Collections (/<book>/<id>/): sayings or passages that belong together. */
 .lg-collection .lg-ctext p { font-size: calc(18px * var(--read-scale)); }
-.lg-cnum { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 6px; border-radius: 50%; background: var(--gold); color: #fff; font-size: 14px; vertical-align: 3px; }
+.lg-cnum { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 6px; border-radius: 50%; background: var(--lg-gold-ink); color: #fff; font-size: 14px; vertical-align: 3px; }
 .lg-collection .lg-ex-ref { flex-direction: row; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
 
 /* Reading plans (/<book>/lent/). */
@@ -918,6 +934,123 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-guide .lg-block .prose { padding-top: 0; }
 .lg-guide > .prose { padding-top: 16px; }
 
+/* A commentator's page, the top: numbers, works as cards, the Bible strip
+   and a passage in their words fill the column beside the short facts card. */
+.lg-profile .lg-facts-card { position: sticky; top: calc(var(--header-h) + 16px); }
+@media (max-width: 880px) { .lg-profile .lg-facts-card { position: static; } }
+.lg-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 16px; margin: 28px 0 0; }
+.lg-stats div { border-top: 2px solid var(--era, var(--line-strong)); padding-top: 8px; min-width: 0; }
+.lg-stats b { display: block; font-family: var(--serif); font-size: 28px; line-height: 1.1; font-weight: 600; font-variant-numeric: tabular-nums; }
+.lg-stats span { font-size: 13px; color: var(--muted); }
+@media (max-width: 560px) { .lg-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.lg-works { margin-top: 32px; }
+.lg-wk-cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
+.lg-wk-cards li { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); min-width: 0; }
+.lg-wk-book { margin: 0; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--era, var(--muted)); }
+.lg-wk-title { font-family: var(--serif); font-size: 16px; line-height: 1.35; text-decoration: none; }
+.lg-wk-cards .lg-quiet { font-size: 13px; }
+.lg-wk-cards .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-top: 4px; }
+.lg-wk-cards .lg-meter > span { display: block; height: 100%; background: var(--era, var(--accent)); }
+.lg-wk-cards .button { margin-top: auto; align-self: flex-start; }
+.lg-bstrip { margin: 28px 0 0; }
+.lg-bstrip-cells { display: grid; grid-template-columns: repeat(66, minmax(0, 1fr)); gap: 2px; }
+.lg-bstrip-cells > * { height: 16px; border-radius: 2px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); }
+.lg-bstrip-cells > .lg-on { background: var(--accent); box-shadow: none; }
+.lg-bstrip-cells > .lg-on:hover, .lg-bstrip-cells > .lg-on:focus-visible { background: var(--text); }
+.lg-bstrip .lg-quiet { display: flex; justify-content: space-between; font-size: 12px; margin: 4px 0 0; }
+.lg-own { margin: 32px 0 0; padding: 20px 22px; border-radius: var(--radius-sm); background: var(--surface-2); }
+.lg-own blockquote { margin: 0; }
+.lg-own blockquote p { font-family: var(--serif); font-size: 20px; line-height: 1.5; font-style: italic; margin: 0; }
+.lg-own > .lg-quiet { margin: 12px 0 0; font-size: 13.5px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.lg-own-next { margin-left: auto; }
+
+/* The bar of sections, with the switch between books, that stays in view. */
+.lg-secbar { position: sticky; top: var(--header-h); z-index: 3; background: var(--bg); border-bottom: 1px solid var(--line);
+  margin: 40px 0 0; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; justify-content: space-between; }
+.lg-secbar-in { display: flex; gap: 18px; overflow-x: auto; scrollbar-width: none; min-width: 0; max-width: 100%; }
+.lg-secbar-in a { flex: none; padding: 11px 0 9px; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
+.lg-secbar-in a:hover { color: var(--text); }
+.lg-secbar-in a[aria-current="true"] { color: var(--text); border-bottom-color: var(--accent); }
+.lg-author .lg-chbar { top: calc(var(--header-h) + var(--secbar-h, 46px)); }
+.lg-author .lg-block { scroll-margin-top: calc(var(--header-h) + 56px); }
+.lg-bookpick { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 0; }
+.lg-bp { font: 600 13px var(--sans, inherit); padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); cursor: pointer; }
+.lg-bp[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.lg-bp:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Two readings of one verse. */
+.lg-pair-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; margin-top: 14px; }
+.lg-pair-one { padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); min-width: 0; }
+.lg-pair-who { margin: 0 0 6px; font-weight: 600; }
+.lg-pair-who a { text-decoration: none; }
+.lg-pair-one blockquote { margin: 0; }
+.lg-pair-one blockquote p { font-family: var(--serif); font-size: 17px; line-height: 1.5; margin: 0; }
+.lg-pair-one > .lg-quiet { margin: 8px 0 0; font-size: 13.5px; }
+
+/* The words they use more than the others. */
+.lg-vocab ul { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+.lg-vocab li { font-family: var(--serif); }
+.lg-vocab .lg-v1 { font-size: 22px; } .lg-vocab .lg-v2 { font-size: 18px; } .lg-vocab .lg-v3 { font-size: 15.5px; color: var(--muted); }
+.lg-vocab .lg-quiet { font-size: 13.5px; }
+
+/* More on Logia, and the commentators before and after. */
+.lg-related { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.lg-related a { display: flex; flex-direction: column; gap: 2px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); text-decoration: none; background: var(--surface); height: 100%; box-sizing: border-box; }
+.lg-related a:hover { border-color: var(--accent); }
+.lg-related b { color: var(--text); font-weight: 600; }
+.lg-related .lg-quiet { font-size: 13px; }
+.lg-nbrs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--line); }
+.lg-nbrs a { display: flex; flex-direction: column; gap: 2px; text-decoration: none; min-width: 0; }
+.lg-nbrs .lg-next { text-align: right; grid-column: 2; }
+.lg-nbrs b { font-family: var(--serif); font-size: 18px; font-weight: 600; }
+.lg-nbrs .lg-quiet { font-size: 13px; }
+/* A book page (/mat/): how much commentary each chapter has, its passages
+   folded under it, a tick on chapters read, and the commentators. */
+.lg-verse-go { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 18px 0 0; }
+.lg-verse-go label { font-weight: 600; font-size: 14px; }
+.lg-verse-go input { width: 7em; max-width: 100%; padding: 7px 12px; border: 1px solid var(--line-strong); border-radius: 999px;
+  background: var(--surface); color: var(--text); font: inherit; font-size: 15px; }
+.lg-verse-go .lg-quiet { font-size: 13px; flex-basis: 100%; }
+.lg-read-count { margin: 10px 0 0; font-size: 14px; }
+.lg-book-bar { position: sticky; top: var(--header-h); z-index: 20; display: flex; align-items: center; gap: 12px; margin: 0 0 8px;
+  padding: 10px 0; background: var(--bg); border-bottom: 1px solid var(--line); }
+.lg-book-bar-name { font-family: var(--display); font-weight: 600; font-size: 16px; flex: none; }
+.lg-book-bar .chap-pills { flex-wrap: nowrap; overflow-x: auto; padding: 3px 2px; scrollbar-width: thin; min-width: 0; }
+.lg-book-bar .chap { position: relative; min-width: 30px; height: 30px; font-size: 13px; flex: none; }
+.lg-toc-book a { align-items: center; }
+.lg-toc-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.lg-toc-facts { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-depth { flex: none; width: 72px; height: 7px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
+.lg-depth > span { display: block; height: 100%; border-radius: 4px; background: var(--gold); }
+.lg-toc-book li.lg-read .lg-toc-n::after { content: "✓"; margin-left: 4px; font-family: var(--sans); font-size: 12px; color: var(--accent); }
+.lg-toc-more { margin: -4px 0 8px calc(2.2em + 16px); font-size: 13.5px; }
+.lg-toc-more summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 12.5px; width: max-content; }
+.lg-toc-more ul { list-style: none; margin: 6px 0 2px; padding: 0; display: grid; gap: 4px; }
+.lg-toc-more li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 10px; border: 0; }
+.lg-toc-more li a { display: inline; padding: 0; color: var(--accent); }
+.lg-toc-more .lg-quiet { white-space: normal; }
+.lg-book-bars { max-width: 720px; }
+.lg-book-bars li { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 3.5em; }
+.lg-verse-quote { font-family: var(--serif); font-size: 19px; line-height: 1.55; max-width: 60ch; margin: 0 0 6px;
+  padding-left: 14px; border-left: 3px solid var(--gold); }
+.lg-book-voices .lg-person > span:last-child a { text-decoration: none; color: var(--text); }
+.lg-book-voices .lg-person > span:last-child a.lg-more { color: var(--accent); font-size: 14px; margin-top: 6px; }
+.lg-book-voices .lg-person:hover { border-color: var(--line); }
+.lg-map-h { margin-top: 28px; }
+.lg-map { margin: 8px 0 0; }
+.lg-map-scroll { overflow-x: auto; }
+.lg-map table { border-collapse: separate; border-spacing: 3px; font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.lg-map th { font-weight: 600; color: var(--muted); }
+.lg-map tbody th { text-align: right; padding-right: 6px; white-space: nowrap; font-size: 12.5px; color: var(--text); }
+.lg-map thead th { font-weight: 500; min-width: 18px; }
+.lg-map td { padding: 0; }
+.lg-map td a, .lg-map td.lg-map-none { display: block; width: 18px; height: 18px; border-radius: 3px; }
+.lg-map td a { background: color-mix(in srgb, var(--accent) var(--n), var(--surface)); }
+.lg-map td a:hover, .lg-map td a:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+.lg-map td.lg-map-none { box-shadow: inset 0 0 0 1px var(--line); }
+.lg-map figcaption { margin-top: 8px; max-width: 70ch; }
+.lg-book-voices { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.lg-book-voices .lg-person > span:last-child a.lg-more { align-self: flex-start; }
 /* Home hero: the motto, the voices by name, the search with its "/" hint,
    one row of ways to try it, the books to start in, and what Logia promises. */
 /* Small gold text: the light theme's gold is 3.4:1 on its page, so a deeper
@@ -1000,3 +1133,27 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-door b { font-family: var(--display); font-weight: 600; font-size: 17px; }
 .lg-door > span { font-size: 14px; color: var(--muted); }
 .lg-door .lg-door-go { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; color: var(--accent); font-weight: 600; }
+/* Home: chapter pills shaded by how much was written on each chapter */
+.chap.lg-has.lg-heat-0 { background: color-mix(in srgb, var(--gold) 22%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 55%, var(--bg)); color: var(--text); }
+.chap.lg-has.lg-heat-1 { background: color-mix(in srgb, var(--gold) 42%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 70%, var(--bg)); color: var(--text); }
+.chap.lg-has.lg-heat-2 { background: color-mix(in srgb, var(--gold) 65%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 85%, var(--bg)); color: var(--text); }
+.chap.lg-has.lg-heat-3 { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.chap.lg-has.lg-heat-4 { background: color-mix(in srgb, var(--gold) 68%, var(--text)); border-color: color-mix(in srgb, var(--gold) 68%, var(--text)); color: var(--bg); }
+.chap.lg-has[class*="lg-heat-"]:hover { border-color: var(--accent); }
+
+/* Home: the verses with the most excerpts */
+.lg-top-h { margin-top: 28px; }
+.lg-top { list-style: none; margin: 8px 0 0; padding: 0; }
+.lg-top a { display: grid; grid-template-columns: 116px minmax(0, 1fr) minmax(60px, 160px) 92px; gap: 12px; align-items: center;
+  padding: 8px 0; border-top: 1px solid var(--line); text-decoration: none; color: inherit; font-size: 14px; }
+.lg-top li:last-child a { border-bottom: 1px solid var(--line); }
+.lg-top a:hover .lg-top-ref { color: var(--accent); }
+.lg-top-ref { font-weight: 700; white-space: nowrap; }
+.lg-top-text { font-family: var(--serif); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.lg-top .lg-bar { height: 8px; }
+.lg-top-more { margin-top: 10px; }
+@media (max-width: 640px) {
+  .lg-top a { grid-template-columns: minmax(0, 1fr) auto; row-gap: 2px; }
+  .lg-top-text { grid-column: 1 / -1; grid-row: 2; }
+  .lg-top .lg-bar { display: none; }
+}

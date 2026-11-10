@@ -1,0 +1,18 @@
+{
+ "id": "henry-psalms",
+ "author": "henry",
+ "title": "Commentary on the Whole Bible, Volume III (Job to Song of Solomon): Psalms",
+ "divisions": "verse",
+ "edition": "Matthew Henry, Exposition of the Old and New Testaments (1706-1721); CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1710,
+ "full_text_url": "https://www.ccel.org/ccel/henry/mhc3.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); Matthew Henry died in 1714"
+ },
+ "source_kind": "digital",
+ "notes": "Psalms 1–150 are CCEL mhc3 Ps.ii–Ps.cli. Every paragraph of exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each of the exposition's points is placed on the verse it names near its start ('(v. 7)', 'v. 11-15'); a main point (I., II.) that names none is on the whole section of verses it stands under, and any other paragraph that names none on the verse of the paragraph before it. A short lead-in ('Here observe,') goes with the paragraph after it. Henry numbers the verses as English Bibles do; Logia's Bible text numbers them as the Hebrew does, where a psalm's title is its verse 1 (Psalm 51:1 in English is 51:3), so each entry is moved to the Hebrew verse that holds its English one (bible/owb/versification.json). A first paragraph that opens on the title ('The title...') is on the psalm's title verses. The psalm titles and Bible text printed above each section, and the chapter summaries, are left out. The verses Henry quotes from the poets are kept, a line to a paragraph.",
+ "status": "ai_draft"
+}
