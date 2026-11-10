@@ -400,10 +400,10 @@ class Site(unittest.TestCase):
 
     def test_a_commentator_page_opens_ways_into_the_work(self):
         text = self.read("commentators/chrysostom/index.html")
-        # Three passages to start with, the verse beside each row, where each
+        # A passage to start with in each of the four books, the verse beside each row, where each
         # sits in its homily, and the homilies themselves as a second tab.
         start = text.split('id="start"', 1)[1].split("</section>", 1)[0]
-        self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 3)
+        self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 4)
         self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', text)
         self.assertIn("Read the homily from here", text)
         self.assertIn('aria-controls="by-whole"', text)

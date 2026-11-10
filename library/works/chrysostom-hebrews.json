@@ -1,0 +1,21 @@
+{
+ "id": "chrysostom-hebrews",
+ "author": "chrysostom",
+ "title": "Homilies on the Epistle to the Hebrews",
+ "divisions": [
+  "Homily",
+  "Section"
+ ],
+ "edition": "The Oxford Translation (Library of the Fathers, tr. T. Keble), revised with introduction and notes by Frederic Gardiner; Nicene and Post-Nicene Fathers, Series 1, Vol. 14 (1889)",
+ "original_language": "Greek",
+ "translation": "Translated by the Rev. T. Keble for the Library of the Fathers (Oxford), revised by Frederic Gardiner; Nicene and Post-Nicene Fathers, Series 1, Vol. 14 (1889)",
+ "published": 1889,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf114.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years), T. Keble's and Frederic Gardiner's among them"
+ },
+ "source_kind": "digital",
+ "notes": "Homilies I-XXXIV are CCEL npnf114 sections v.v-v.xxxviii; the preface, introduction and Argument before them are not included. Each homily opens on the verses of its heading ('Hebrews i. 1, 2') and runs to the verse before the next homily's heading. The homily moves on as it quotes the epistle: a paragraph that opens with a mark ('Ver. 7.') or with a quotation of a later verse, matched against the King James text Henry prints (as 'Being made so much better than the angels'), opens an entry on that verse; a paragraph that does neither stays on the verse before it. Every paragraph of a homily's exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each homily's closing exhortation is left out, from the first sentence after the last verse mark that exhorts the hearers ('Let us then...'), in the last part of the homily; the whole homilies are in library/texts/. Where a footnote has swallowed the words after it, the cut is marked ' ... '. The translator's footnotes and the notes on manuscript readings are left out, and a space is kept where a footnote mark stood between two words.",
+ "status": "ai_draft"
+}
