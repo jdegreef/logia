@@ -3042,9 +3042,34 @@ def work_page(lib, wid):
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
-<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>"""
+{work_goto(lib, wid, a, comments)}<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>"""
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/",
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+
+
+def work_goto(lib, wid, a, comments):
+    """A box that goes to a verse: to the excerpt on it in the work's
+    chapter page, read in web/logia.js from each chapter's verse ranges."""
+    ranges = {}
+    for c in comments:
+        b, ch, v = ref_parts(c["start"])
+        _, ech, ev = ref_parts(c["end"])
+        last = ev if ech == ch else max(lib.verses(b, ch), default=v)
+        ranges.setdefault(b, {}).setdefault(str(ch), {})[f"{v}-{last}"] = None
+    if not ranges:
+        return ""
+    data = {b: {ch: ",".join(rs) for ch, rs in chs.items()} for b, chs in ranges.items()}
+    names = {b: [lib.books[b]["en"].lower(), b.lower()] for b in ranges}
+    picks = work_start_here(lib, comments)
+    b, ch, v = ref_parts((picks[len(picks) // 2] if picks else comments[0])["start"])
+    example = (f'{lib.books[b]["en"]} ' if len(ranges) > 1 else "") + f"{ch}:{v}"
+    short = short_name(a)
+    return (f'<form class="lg-goto lg-goto-work" data-base="/works/{wid}/" data-books="{e(json.dumps(names))}" '
+            f'data-ranges="{e(json.dumps(data, separators=(",", ":")))}" data-none="{e(t("commentators.jump_none", name=short))}">'
+            f'<label for="goto-{wid}">{e(t("commentators.jump_label"))}</label>'
+            f'<input id="goto-{wid}" type="text" inputmode="text" autocomplete="off" placeholder="{e(example)}" aria-describedby="goto-{wid}-hint">'
+            f'<button type="submit" class="button ghost">{e(t("commentators.jump_go"))}</button>'
+            f'<span class="lg-quiet" id="goto-{wid}-hint" role="status">{e(t("commentators.jump_hint", example=example))}</span></form>')
 
 
 def work_tiles(lib, wid, comments):
@@ -3092,7 +3117,7 @@ def work_chapter_page(lib, wid, book, chapter, comments):
     name = f'{lib.books[book]["en"]} {chapter}'
     full = []
     text = lib.plain(book, chapter)
-    shown = None
+    shown, anchored = None, set()
     for c in here:
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
@@ -3109,7 +3134,9 @@ def work_chapter_page(lib, wid, book, chapter, comments):
             more = " …" if last < (ev if ech == ch else max(text)) else ""
             side = (f'<div class="lg-side"><p class="label">{e(ref)} · {e(t("work.bible_text"))}</p>'
                     f'<p class="lg-side-text">{words}{more}</p></div>') if words else ""
-            label = (f'<p class="lg-ref"><a href="{chapter_url(b, ch)}#v{v}" '
+            anchor = f' id="v{v}"' if v not in anchored else ""
+            anchored.add(v)
+            label = (f'<p class="lg-ref"{anchor}><a href="{chapter_url(b, ch)}#v{v}" '
                      f'title="{e(t("work.open_verse", ref=ref))}">{e(ref)}</a></p>')
         full.append(f'<article class="lg-excerpt lg-excerpt-side" id="{e(c["id"])}">{label}{heading}<div class="lg-text">{paras}</div>{side}</article>')
     i = chapters.index((book, chapter))
