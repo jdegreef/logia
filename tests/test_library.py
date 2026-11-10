@@ -175,10 +175,47 @@ class VerifyCatchesChanges(unittest.TestCase):
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
 
 
+class SefariaIdeas(unittest.TestCase):
+    """The parts taken from Sefaria: AI marks, readings, the linker, scan pages."""
+
+    def test_ai_marks(self):
+        self.assertIn("lg-ai-draft", build_site.ai_mark("ai_draft"))
+        self.assertIn("Ada Example", build_site.ai_mark("reviewed", "Ada Example"))
+        self.assertEqual(build_site.ai_mark("reviewed"), "")   # reviewed needs a named person
+        self.assertEqual(build_site.ai_mark(None), "")
+
+    def test_readings_are_parsed_and_renumbered(self):
+        self.assertEqual(build_site.parse_reading("Luke 2:1-14, (15-20)"), ("LUK", (2, 1), (2, 14)))
+        self.assertEqual(build_site.parse_reading("Isaiah 61:10-62:3"), ("ISA", (61, 10), (62, 3)))
+        self.assertEqual(build_site.parse_reading("2 Peter 3:8-15a"), ("2PE", (3, 8), (3, 15)))
+        # Psalm 51's title is verse 1 and 2 in the Hebrew numbering the Bible text uses.
+        self.assertEqual(build_site.parse_reading("Psalm 51:1-17"), ("PSA", (51, 3), (51, 19)))
+        self.assertIsNone(build_site.parse_reading("Wisdom of Solomon 12:13"))
+
+    def test_linker_knows_numbered_books(self):
+        single, numbered = build_site.linker_names()
+        self.assertEqual(single["Rom"], "ROM")
+        self.assertEqual(numbered["Cor"], ["1CO", "2CO"])
+        self.assertEqual(numbered["John"], ["1JN", "2JN", "3JN"])
+        self.assertIn('"Rom": "ROM"', build_site.linker_js())
+
+    def test_scan_pages_name_excerpts_in_the_library(self):
+        import find_pages
+        for path in sorted(os.listdir(os.path.join(ROOT, "library", "pages"))):
+            work = path[:-5]
+            data = json.load(open(os.path.join(ROOT, "library", "pages", path), encoding="utf-8"))
+            ids = {c["id"] for c in find_pages.entries(work)}
+            self.assertTrue(set(data["pages"]) <= ids, work)
+            for ident, leaf, _printed in data["pages"].values():
+                self.assertIn(ident, {x["id"] for x in data["scans"]})
+                self.assertGreaterEqual(leaf, 0)
+
+
 class Site(unittest.TestCase):
     PAGES = ("index.html", "read/index.html", "jhn/index.html", "jhn/1/index.html", "jhn/21/index.html",
              "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html",
-             "jhn/3/16/index.html")
+             "jhn/3/16/index.html", "ai/index.html", "new/index.html", "explore/index.html", "topics/index.html",
+             "topics/baptism/index.html", "linker/index.html", "sheets/index.html", "readings/index.html")
 
     @classmethod
     def setUpClass(cls):
@@ -195,6 +232,12 @@ class Site(unittest.TestCase):
             self.assertIn('<header class="site">', text, page)
             self.assertIn('<footer class="site">', text, page)
             self.assertIn('id="colour-menu"', text, page)
+
+    def test_linker_files_are_numbered_as_english_bibles(self):
+        with open(os.path.join(build_site.SITE, "linker", "PSA.51.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertTrue(data["verses"]["1"]["href"].startswith("/psa/51/3"))
+        self.assertTrue(os.path.isfile(os.path.join(build_site.SITE, "linker.js")))
 
     def test_every_internal_link_leads_to_a_page(self):
         missing = set()
@@ -743,7 +786,7 @@ class Site(unittest.TestCase):
             self.assertEqual(g["status"], "ai_draft")   # only a person marks one reviewed
             self.assertIsNone(g["reviewed_by"])
             text = self.read(os.path.join(g["path"].strip("/"), "index.html"))
-            self.assertIn("A draft awaiting review", text)
+            self.assertIn("AI draft, not yet reviewed", text)
             for x in g.get("topics", []):
                 for w in lib.voices_on[build_site.ref_parts(x["focus"])]:
                     c = build_site.first_on(lib, {w}, x["focus"])

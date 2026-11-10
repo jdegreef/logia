@@ -1,0 +1,30 @@
+{
+  "id": "fall",
+  "order": 13,
+  "title": "The Fall and sin",
+  "dek": "Passages on the first sin and on sin in all people, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "GEN.3.1",
+      "end": "GEN.3.7"
+    },
+    {
+      "start": "GEN.3.15",
+      "end": "GEN.3.15"
+    },
+    {
+      "start": "PSA.51.7",
+      "end": "PSA.51.7"
+    },
+    {
+      "start": "ROM.3.23",
+      "end": "ROM.3.23"
+    },
+    {
+      "start": "ROM.5.12",
+      "end": "ROM.5.21"
+    }
+  ]
+}

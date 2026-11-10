@@ -19,8 +19,10 @@ jobs:
         run: python3 scripts/find_refs.py --check
       - name: Check whole texts are up to date
         run: python3 scripts/extract_texts.py --check
+      - name: Check the scan pages name excerpts the library holds
+        run: python3 scripts/find_pages.py --check
       - name: Check the page scripts parse
-        run: node --check web/site.js && node --check web/reader.js && node --check web/account.js && node --check web/logia.js
+        run: node --check web/site.js && node --check web/reader.js && node --check web/account.js && node --check web/logia.js && node --check web/linker.js && node --check web/sheets.js
       - name: Validate the library
         run: python3 scripts/validate.py
       - name: Check every excerpt against its source

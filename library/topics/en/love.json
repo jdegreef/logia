@@ -1,0 +1,38 @@
+{
+  "id": "love",
+  "order": 11,
+  "title": "Love",
+  "dek": "Passages on love, God's and ours, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "JHN.3.16",
+      "end": "JHN.3.16"
+    },
+    {
+      "start": "JHN.13.34",
+      "end": "JHN.13.35"
+    },
+    {
+      "start": "JHN.15.13",
+      "end": "JHN.15.13"
+    },
+    {
+      "start": "ROM.5.8",
+      "end": "ROM.5.8"
+    },
+    {
+      "start": "ROM.13.8",
+      "end": "ROM.13.10"
+    },
+    {
+      "start": "SNG.8.6",
+      "end": "SNG.8.7"
+    },
+    {
+      "start": "MAT.22.37",
+      "end": "MAT.22.40"
+    }
+  ]
+}

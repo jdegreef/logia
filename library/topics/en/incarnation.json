@@ -1,0 +1,30 @@
+{
+  "id": "incarnation",
+  "order": 2,
+  "title": "The Incarnation",
+  "dek": "Passages on the Son of God becoming man, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "JHN.1.14",
+      "end": "JHN.1.14"
+    },
+    {
+      "start": "MAT.1.18",
+      "end": "MAT.1.25"
+    },
+    {
+      "start": "GAL.4.4",
+      "end": "GAL.4.5"
+    },
+    {
+      "start": "ROM.1.3",
+      "end": "ROM.1.4"
+    },
+    {
+      "start": "ROM.8.3",
+      "end": "ROM.8.3"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "wisdom",
+  "order": 8,
+  "title": "Wisdom and the fear of the Lord",
+  "dek": "Passages on wisdom and the fear of the Lord, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "JOB.28.28",
+      "end": "JOB.28.28"
+    },
+    {
+      "start": "PSA.111.10",
+      "end": "PSA.111.10"
+    },
+    {
+      "start": "PRO.1.7",
+      "end": "PRO.1.7"
+    },
+    {
+      "start": "PRO.9.10",
+      "end": "PRO.9.10"
+    },
+    {
+      "start": "ECC.12.13",
+      "end": "ECC.12.14"
+    }
+  ]
+}

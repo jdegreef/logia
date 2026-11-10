@@ -1,0 +1,46 @@
+{
+  "id": "creation",
+  "order": 1,
+  "title": "Creation",
+  "dek": "Passages on God making the world, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "GEN.1.1",
+      "end": "GEN.1.1"
+    },
+    {
+      "start": "GEN.1.26",
+      "end": "GEN.1.27"
+    },
+    {
+      "start": "GEN.2.7",
+      "end": "GEN.2.7"
+    },
+    {
+      "start": "PSA.33.6",
+      "end": "PSA.33.6"
+    },
+    {
+      "start": "PSA.104.24",
+      "end": "PSA.104.24"
+    },
+    {
+      "start": "JOB.38.4",
+      "end": "JOB.38.7"
+    },
+    {
+      "start": "PRO.8.22",
+      "end": "PRO.8.31"
+    },
+    {
+      "start": "JHN.1.3",
+      "end": "JHN.1.3"
+    },
+    {
+      "start": "ROM.1.20",
+      "end": "ROM.1.20"
+    }
+  ]
+}

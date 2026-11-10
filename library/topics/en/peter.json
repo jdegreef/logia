@@ -1,0 +1,18 @@
+{
+  "id": "peter",
+  "order": 12,
+  "title": "Peter and the keys",
+  "dek": "Matthew 16 and John 21, where Jesus speaks to Peter, and what the commentators say on them. Catholic, Orthodox and Protestant readings of these verses differ, and the commentators here speak for several of them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "MAT.16.16",
+      "end": "MAT.16.19"
+    },
+    {
+      "start": "JHN.21.15",
+      "end": "JHN.21.17"
+    }
+  ]
+}

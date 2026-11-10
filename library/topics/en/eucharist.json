@@ -1,0 +1,22 @@
+{
+  "id": "eucharist",
+  "order": 4,
+  "title": "The Lord's Supper",
+  "dek": "Passages on the Lord's Supper, the Eucharist, and what the commentators say on them. The traditions differ on how Christ is present in it, and the commentators here speak for several of them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "MAT.26.26",
+      "end": "MAT.26.29"
+    },
+    {
+      "start": "JHN.6.51",
+      "end": "JHN.6.58"
+    },
+    {
+      "start": "JHN.6.63",
+      "end": "JHN.6.63"
+    }
+  ]
+}

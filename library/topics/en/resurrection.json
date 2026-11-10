@@ -1,0 +1,30 @@
+{
+  "id": "resurrection",
+  "order": 10,
+  "title": "The Resurrection",
+  "dek": "Passages on Christ's rising from the dead and the resurrection of the dead, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "JOB.19.25",
+      "end": "JOB.19.27"
+    },
+    {
+      "start": "MAT.28.1",
+      "end": "MAT.28.10"
+    },
+    {
+      "start": "JHN.11.25",
+      "end": "JHN.11.26"
+    },
+    {
+      "start": "JHN.20.1",
+      "end": "JHN.20.18"
+    },
+    {
+      "start": "ROM.6.4",
+      "end": "ROM.6.9"
+    }
+  ]
+}

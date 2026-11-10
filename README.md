@@ -20,6 +20,9 @@ Christian commentaries.
 | `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/guides/<lang>/<guide>.json` | Logia's own guides (where the traditions differ, the glossary, how to study a book): short framing notes, never commentary, each `ai_draft` until a named person reviews it; the commentators' words on its pages come from the excerpts |
+| `library/topics/<lang>/<topic>.json` | Topics (baptism, prayer, the Incarnation): a list of passages across books, chosen by Logia and `ai_draft` until a named person reviews it; the pages quote what the commentators say on each |
+| `library/pages/<work>.json` | The archive.org scan leaf and printed page each scanned excerpt begins on, found by `scripts/find_pages.py` |
+| `library/lectionary/rcl.json` | The Revised Common Lectionary's Sundays and holy days (references only), imported by `scripts/import_rcl.py` |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
 | `bible/owb/` | The Bible text: every Open Word Bible chapter, imported at a pinned commit |
@@ -64,6 +67,13 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
 | `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |
 | `/about/` | What Logia is and how excerpts are checked |
+| `/ai/` | How Logia uses AI, and the two marks on anything drafted with it |
+| `/new/`, `/new.xml` | Works as they are added, newest first, with a feed, and the library in numbers |
+| `/explore/` | Who the Catenas quote, which chapters the commentators cite, how much each century wrote |
+| `/topics/`, `/topics/<topic>/` | Passages on one subject across the Bible, with every commentator on each |
+| `/readings/` | The coming Sundays and holy days (Revised Common Lectionary), and the great days from John |
+| `/sheets/` | Study sheets: excerpts gathered from the reader, ordered, with the reader's own notes; kept in the browser, shared by link |
+| `/linker/`, `/linker.js` | A script other sites add to link their Bible references to Logia; its data is `/linker/<BOOK>.<chapter>.json` |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its
 sister site: `web/style.css` and `web/fonts/` are the Open Word Bible's own

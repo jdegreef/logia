@@ -1,0 +1,34 @@
+{
+  "id": "suffering",
+  "order": 9,
+  "title": "Suffering",
+  "dek": "Passages on suffering, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "JOB.1.21",
+      "end": "JOB.1.22"
+    },
+    {
+      "start": "JOB.19.25",
+      "end": "JOB.19.27"
+    },
+    {
+      "start": "PSA.22.2",
+      "end": "PSA.22.2"
+    },
+    {
+      "start": "ROM.5.3",
+      "end": "ROM.5.5"
+    },
+    {
+      "start": "ROM.8.18",
+      "end": "ROM.8.18"
+    },
+    {
+      "start": "ROM.8.28",
+      "end": "ROM.8.28"
+    }
+  ]
+}

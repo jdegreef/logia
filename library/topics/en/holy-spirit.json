@@ -1,0 +1,46 @@
+{
+  "id": "holy-spirit",
+  "order": 7,
+  "title": "The Holy Spirit",
+  "dek": "Passages on the Holy Spirit, and what the commentators say on them.",
+  "status": "ai_draft",
+  "reviewer": null,
+  "items": [
+    {
+      "start": "GEN.1.2",
+      "end": "GEN.1.2"
+    },
+    {
+      "start": "PSA.51.13",
+      "end": "PSA.51.13"
+    },
+    {
+      "start": "JHN.14.16",
+      "end": "JHN.14.17"
+    },
+    {
+      "start": "JHN.14.26",
+      "end": "JHN.14.26"
+    },
+    {
+      "start": "JHN.15.26",
+      "end": "JHN.15.26"
+    },
+    {
+      "start": "JHN.16.13",
+      "end": "JHN.16.13"
+    },
+    {
+      "start": "JHN.20.22",
+      "end": "JHN.20.22"
+    },
+    {
+      "start": "ROM.8.14",
+      "end": "ROM.8.16"
+    },
+    {
+      "start": "GAL.5.22",
+      "end": "GAL.5.23"
+    }
+  ]
+}
