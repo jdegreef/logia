@@ -239,6 +239,8 @@ def main():
         if not start or not end or start[0] != end[0] or start[1:] > end[1:]:
             say(f"{name}: verses {vs!r} is not a forward range of verses")
         for para in t.get("paragraphs", []):
+            if "source" in para and para["source"] not in sources.get(w["id"], set()):
+                say(f"{name}: {para['id']}: source {para['source']!r} is not in sources/manifest.json for {w['id']}")
             v = para.get("verse")
             if v is not None and not (start and end and (p_ := scripture.parse(v))
                                       and p_[0] == start[0] and start[1:] <= p_[1:] <= end[1:]):

@@ -23,8 +23,21 @@ library/texts/<work>/<n>.json, where n is the homily or tractate number:
   heading that names a range, a paragraph has no verse until a mark gives
   one.
 
-The book's title lines before the first homily or tractate heading are not
-part of it and are left out. scripts/verify_sources.py checks every paragraph
+A work whose CCEL pages are each one section of a book (Origen's
+Commentary on John: one page per section of Book II) gives each page's
+book in sources/manifest.json, as "part" ("Book II"), from CCEL's table of
+contents. Its pages are joined, in the manifest's order, into one text per
+book, library/texts/<work>/<book>.json; each paragraph names the page it is
+on (`source`). Those pages print no verse headings or marks, so the text's
+verses are the span of the excerpts Logia takes from it, and a paragraph's
+verse is that of the excerpt that holds it.
+
+A homily whose heading names no verse (Basil's on Genesis 1, titled "On the
+Firmament.") takes, likewise, the span of the excerpts Logia takes from it.
+
+The book's title lines before the first homily or tractate heading (or,
+for a book, before its title: "Book II.", "Sixth Book.") are not part of
+it and are left out. scripts/verify_sources.py checks every paragraph
 against its source.
 """
 import argparse
@@ -64,6 +77,9 @@ SAME = re.compile(r"^(?:again\s+)?on the same passage\.?$", re.I)
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13.",
 # or one that names the chapter it goes on into: "Chap. xv. ver. 1."
 VER = re.compile(r"^(?:\[\d+\.\]\s*)?(?:Chap\.\s+(?P<chap>[ivxl]+)\.\s+ver|Ver)\.\s+(\d+)\.")
+# A book's title, on the first page of a book: "Book II.", "Sixth Book.", "Fragments of the Fourth Book.",
+# "From the Fifth Book."
+BOOK_TITLE = re.compile(r"^(?:Book\s+[IVXL]+|(?:Fragments of the |From the )?\w+ Book)\.$")
 
 
 def load(path):
@@ -84,15 +100,19 @@ def derive():
         work = works.get(f["work"])
         if not work or not isinstance(work["divisions"], list) or not f["path"].endswith(".html"):
             continue
+        if f.get("part"):
+            book_page(out, problems, work, f)
+            continue
         path = os.path.join(ROOT, f["path"])
         page = find_refs.read_page(path)
         text, starts = page["text"], page["paras"] + [len(page["text"])]
         source = os.path.basename(path)
-        held = []
+        held, held_refs = [], {}
         for c in glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json")):
             for e in load(c)["entries"]:
                 if e["sources"][0] == source and (where := find_refs.span(page, e["text"])):
                     held.append((*where, e["id"]))
+                    held_refs[e["id"]] = (e["start"], e["end"])
         comment_files = glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json"))
         books = {os.path.basename(c)[:-5] for c in comment_files}       # the book the work comments on
         book = books.pop() if len(books) == 1 else None
@@ -169,6 +189,14 @@ def derive():
         if dest in out:
             problems.append(f"{f['path']}: a second page for {work['id']} {number}")
             continue
+        if span is None and not same and held_refs:
+            # A homily that prints no verse (Basil's on Genesis 1): the span of the excerpts taken from it.
+            key = lambda ref: tuple(int(n) for n in ref.split(".")[1:])     # noqa: E731
+            first = min((a for a, _ in held_refs.values()), key=key)
+            last = max((b for _, b in held_refs.values()), key=key)
+            _, start_chapter, a = first.split(".")
+            _, chapter, b = last.split(".")
+            start_chapter, chapter, span = int(start_chapter), int(chapter), [int(a), int(b)]
         if span is None and not same:
             problems.append(f"{f['path']}: no heading names the verse it opens on")
             continue
@@ -177,6 +205,19 @@ def derive():
                          "start": f"{book}.{start_chapter}.{span[0]}",
                          "end": "{}.{}.{}".format(book, *max((chapter, span[1]), heading_end or (0, 0)))},
                      "paragraphs": paras}
+    for dest, x in list(out.items()):
+        if "held" not in x:
+            continue
+        held = x.pop("held")
+        if not held:
+            problems.append(f"{x['source']}: no excerpt is taken from {x['work']} {x['title']}")
+            del out[dest]
+            continue
+        key = lambda ref: tuple(int(n) for n in ref.split(".")[1:])     # noqa: E731
+        x["verses"] = {"start": min((e["start"] for e in held.values()), key=key),
+                       "end": max((e["end"] for e in held.values()), key=key)}
+        for para in x["paragraphs"]:
+            para["verse"] = next((held[i]["start"] for i in para["excerpts"]), None)
     # "On the same passage": the verses of the homily or tractate before, once that is known.
     for dest in sorted(out, key=lambda d: (os.path.dirname(d), int(os.path.basename(d)[:-5]))):
         if out[dest]["verses"] is None:
@@ -187,6 +228,42 @@ def derive():
                 problems.append(f"{out[dest]['source']}: 'on the same passage', but no text before it")
                 del out[dest]
     return out, problems
+
+
+def book_page(out, problems, work, f):
+    """Add one page of a book (a manifest row with a "part") to that book's text."""
+    path = os.path.join(ROOT, f["path"])
+    page = find_refs.read_page(path, f["part"])
+    text, starts = page["text"], page["paras"] + [len(page["text"])]
+    source = os.path.basename(path)
+    number = find_refs.scripture.roman(f["part"].split()[-1])
+    dest = os.path.join(ROOT, "library", "texts", work["id"], f"{number}.json")
+    held = {}
+    for c in glob.glob(os.path.join(ROOT, "library", "comments", work["id"], "*.json")):
+        for e in load(c)["entries"]:
+            if e["sources"][0] == source and (where := find_refs.span(page, e["text"])):
+                held[e["id"]] = {"at": where, "start": e["start"], "end": e["end"]}
+    x = out.setdefault(dest, {"work": work["id"], "locus": str(number), "title": None, "source": source,
+                              "url": f["url"], "verses": None, "paragraphs": [], "held": {}})
+    x["held"].update(held)
+    for i, (a, b) in enumerate(zip(starts, starts[1:])):
+        words = " ".join(text[a:b].split())
+        if not words:
+            continue
+        if x["title"] is None:
+            if not BOOK_TITLE.match(words):
+                continue                     # the work's title lines, before the book's
+            x["title"] = words
+        cites = find_refs.ccel_citations(page, (a, b), words)
+        x["paragraphs"].append({
+            "id": page["para_ids"][i], "locus": find_refs.locus(page, a), "text": words,
+            "cites": [{"at": at, "text": t, "start": s, "end": e} for at, t, s, e in cites],
+            "excerpts": [k for k, h in held.items() if h["at"][0] < b and a < h["at"][1]],
+            "verse": None, "source": source,
+        })
+    if x["title"] is None:
+        problems.append(f"{f['path']}: no book title before it ({f['part']})")
+        del out[dest]
 
 
 def main(argv):
