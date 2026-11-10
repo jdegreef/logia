@@ -1608,8 +1608,8 @@
    "in": "calvin-romans.ROM.16.25-27.4",
    "at": 949,
    "text": "Malachi 4:2",
-   "start": "MAL.4.2",
-   "end": "MAL.4.2",
+   "start": "MAL.3.20",
+   "end": "MAL.3.20",
    "found": "source",
    "status": "detected"
   }
