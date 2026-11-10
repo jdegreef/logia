@@ -26141,6 +26141,15 @@
    "kind": "digital",
    "download_sha256": "5772b3146c09f0b366734f958df586244379e9191b5e56582dc2ad3af953797f",
    "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/bellarmine-psalms/commentaryonbook0000bell.txt",
+   "work": "bellarmine-psalms",
+   "url": "https://archive.org/download/commentaryonbook0000bell/commentaryonbook0000bell_djvu.txt",
+   "retrieved": "2026-11-10",
+   "kind": "scan",
+   "download_sha256": "566c4cf8c9d4c0f3bd0fbed390914dd28f7ab18def1279ce5241fc8208ce0030",
+   "extract": "The scan's full text, as downloaded."
   }
  ]
 }
