@@ -185,7 +185,10 @@ def chapter_url(book, chapter):
 def short_name(author):
     """"Chrysostom", "Augustine", "Aquinas": what the panel's summary calls them."""
     special = {"augustine": "Augustine", "aquinas": "Aquinas", "chrysostom": "Chrysostom"}
-    return special.get(author["id"], author["name"].split(" ")[-1])
+    name = author["name"]
+    if re.search(r" (?:of|the) ", name):        # "Basil of Caesarea", "Gregory the Great": the name, not the place
+        return special.get(author["id"], name.split(" ")[0])
+    return special.get(author["id"], name.split(" ")[-1])
 
 
 def short_edition(edition):
@@ -3013,7 +3016,7 @@ def text_lead(x):
     """The short headings under a homily's title: "John i. 1", "Chapter I. 1–5"."""
     out = []
     for p in x["paragraphs"][1:3]:
-        if len(p["text"]) >= 60 or p["excerpts"]:
+        if len(p["text"]) >= 60 or p["excerpts"] or re.match(r"\d+\.\s", p["text"]):   # a section's heading
             break
         out.append(p["text"])
     return " · ".join(out)
@@ -3529,9 +3532,14 @@ def lent_page(lib, book, year):
     name = lib.books[book]["en"]
     dates = lent_days(year)
     days = plan_days(lib, book, len(dates))
+    # A passage has a page of its own only where there is commentary on it (Psalms,
+    # Job): the others are read in the chapter.
+    pages = {passage_url(book, s_, e_) for _h, s_, e_, _v in passages_with_commentary(lib, book)}
+    href = lambda s_, e_: (passage_url(book, s_, e_) if passage_url(book, s_, e_) in pages     # noqa: E731
+                           else f"{chapter_url(book, s_[0])}#v{s_[1]}")
     rows = []
     for i, (date, secs) in enumerate(zip(dates, days), 1):
-        links = " · ".join(f'<a href="{passage_url(book, s_, e_)}">{e(h)}</a> <span class="lg-quiet">{e(passage_ref(lib, book, s_, e_).replace(name + " ", ""))}</span>'
+        links = " · ".join(f'<a href="{href(s_, e_)}">{e(h)}</a> <span class="lg-quiet">{e(passage_ref(lib, book, s_, e_).replace(name + " ", ""))}</span>'
                            for h, s_, e_ in secs)
         special = ""
         if i == 1:

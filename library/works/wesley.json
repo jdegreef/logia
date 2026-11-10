@@ -1,0 +1,18 @@
+{
+ "id": "wesley",
+ "author": "wesley",
+ "title": "Explanatory Notes upon the New Testament: St. John",
+ "divisions": "verse",
+ "edition": "John Wesley, Explanatory Notes upon the New Testament (London, 1755), CCEL edition (\"Wesley's Notes on the Bible\"; CCEL does not name the printing it follows)",
+ "original_language": "English",
+ "translation": null,
+ "published": 1755,
+ "full_text_url": "https://www.ccel.org/ccel/wesley/notes.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Wesley died in 1791; the printing CCEL transcribed (and any editor of it) is still to identify"
+ },
+ "source_kind": "digital",
+ "notes": "One excerpt per verse note, whole: Wesley's notes are short, so each note is taken as it stands, with its verse number and lemmas. A note that runs into numbered points (John 10:27–29, 13:14, 14:31, 17:21, 20:23) keeps them as further paragraphs. The outline that opens chapter 17 is one excerpt on the whole chapter. Headings are the note's first lemma, empty where the note has none.",
+ "status": "ai_draft"
+}
