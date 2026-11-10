@@ -14518,6 +14518,96 @@
    "end": "2TH.3.17",
    "found": "pattern",
    "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 473,
+   "text": "1 Cor. 2: 7",
+   "start": "1CO.2.7",
+   "end": "1CO.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 495,
+   "text": "Eph. 6: 19",
+   "start": "EPH.6.19",
+   "end": "EPH.6.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 507,
+   "text": "Col. 1: 25",
+   "start": "COL.1.25",
+   "end": "COL.1.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 607,
+   "text": "Eph. 3: 4",
+   "start": "EPH.3.4",
+   "end": "EPH.3.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 649,
+   "text": "Rom. 11: 25",
+   "start": "ROM.11.25",
+   "end": "ROM.11.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 724,
+   "text": "1 Cor. 15: 51",
+   "start": "1CO.15.51",
+   "end": "1CO.15.51",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 1239,
+   "text": "1 Cor. 2: 7",
+   "start": "1CO.2.7",
+   "end": "1CO.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.25-27.2",
+   "at": 1254,
+   "text": "Col. 1: 26",
+   "start": "COL.1.26",
+   "end": "COL.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.26.1",
+   "at": 940,
+   "text": "Mark 13: 10",
+   "start": "MRK.13.10",
+   "end": "MRK.13.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.16.26.1",
+   "at": 953,
+   "text": "Luke 24: 47",
+   "start": "LUK.24.47",
+   "end": "LUK.24.47",
+   "found": "pattern",
+   "status": "detected"
   }
  ]
 }

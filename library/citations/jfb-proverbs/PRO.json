@@ -1,0 +1,6936 @@
+{
+ "work": "jfb-proverbs",
+ "book": "PRO",
+ "citations": [
+  {
+   "in": "jfb-proverbs.PRO.1.1-33.1",
+   "at": 0,
+   "text": "Pr 1:1-33",
+   "start": "PRO.1.1",
+   "end": "PRO.1.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.3.1",
+   "at": 127,
+   "text": "Pr 1:2",
+   "start": "PRO.1.2",
+   "end": "PRO.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.3.1",
+   "at": 213,
+   "text": "Pr 16:22",
+   "start": "PRO.16.22",
+   "end": "PRO.16.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.4.1",
+   "at": 112,
+   "text": "Pr 3:21",
+   "start": "PRO.3.21",
+   "end": "PRO.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.4.1",
+   "at": 121,
+   "text": "5:21",
+   "start": "PRO.5.21",
+   "end": "PRO.5.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.6.1",
+   "at": 115,
+   "text": "Pr 1:2",
+   "start": "PRO.1.2",
+   "end": "PRO.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.6.1",
+   "at": 147,
+   "text": "Ps 49:4",
+   "start": "PSA.49.4",
+   "end": "PSA.49.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.6.1",
+   "at": 156,
+   "text": "Joh 16:25",
+   "start": "JHN.16.25",
+   "end": "JHN.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.7.1",
+   "at": 61,
+   "text": "Pr 2:5",
+   "start": "PRO.2.5",
+   "end": "PRO.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.7.1",
+   "at": 69,
+   "text": "14:26",
+   "start": "PRO.14.26",
+   "end": "PRO.14.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.7.1",
+   "at": 76,
+   "text": "27",
+   "start": "PRO.14.27",
+   "end": "PRO.14.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.7.1",
+   "at": 80,
+   "text": "Job 28:28",
+   "start": "JOB.28.28",
+   "end": "JOB.28.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.7.1",
+   "at": 91,
+   "text": "Ps 34:11",
+   "start": "PSA.34.11",
+   "end": "PSA.34.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.7.1",
+   "at": 101,
+   "text": "111:10",
+   "start": "PSA.111.10",
+   "end": "PSA.111.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.7.1",
+   "at": 109,
+   "text": "Ac 9:31",
+   "start": "ACT.9.31",
+   "end": "ACT.9.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.8.1",
+   "at": 166,
+   "text": "Pr 6:20",
+   "start": "PRO.6.20",
+   "end": "PRO.6.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.9.1",
+   "at": 21,
+   "text": "Pr 1:9",
+   "start": "PRO.1.9",
+   "end": "PRO.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.9.1",
+   "at": 37,
+   "text": "Ge 41:42",
+   "start": "GEN.41.42",
+   "end": "GEN.41.42",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.11-14.1",
+   "at": 212,
+   "text": "Nu 16:33",
+   "start": "NUM.16.33",
+   "end": "NUM.16.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.11-14.1",
+   "at": 222,
+   "text": "Ps 55:15",
+   "start": "PSA.55.15",
+   "end": "PSA.55.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.15-16.1",
+   "at": 91,
+   "text": "Pr 4:14",
+   "start": "PRO.4.14",
+   "end": "PRO.4.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.17-19.1",
+   "at": 134,
+   "text": "Ps 9:16",
+   "start": "PSA.9.16",
+   "end": "PSA.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.17-19.1",
+   "at": 213,
+   "text": "1Ti 6:10",
+   "start": "1TI.6.10",
+   "end": "1TI.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.20-33.1",
+   "at": 113,
+   "text": "Lu 11:49",
+   "start": "LUK.11.49",
+   "end": "LUK.11.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.20-33.1",
+   "at": 409,
+   "text": "Pr 8:1",
+   "start": "PRO.8.1",
+   "end": "PRO.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.20-33.1",
+   "at": 561,
+   "text": "Pr 9:1",
+   "start": "PRO.9.1",
+   "end": "PRO.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.22.1",
+   "at": 25,
+   "text": "Pr 1:4",
+   "start": "PRO.1.4",
+   "end": "PRO.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.22.1",
+   "at": 77,
+   "text": "Ps 1:1",
+   "start": "PSA.1.1",
+   "end": "PSA.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.22.1",
+   "at": 176,
+   "text": "Pr 1:7",
+   "start": "PRO.1.7",
+   "end": "PRO.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.23.1",
+   "at": 54,
+   "text": "Joh 16:8",
+   "start": "JHN.16.8",
+   "end": "JHN.16.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.24.1",
+   "at": 94,
+   "text": "Job 11:13",
+   "start": "JOB.11.13",
+   "end": "JOB.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.27.1",
+   "at": 130,
+   "text": "Pr 1:26",
+   "start": "PRO.1.26",
+   "end": "PRO.1.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.27.1",
+   "at": 197,
+   "text": "Ps 4:1",
+   "start": "PSA.4.1",
+   "end": "PSA.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.27.1",
+   "at": 205,
+   "text": "44:11",
+   "start": "PSA.44.11",
+   "end": "PSA.44.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.31.1",
+   "at": 35,
+   "text": "Isa 3:10",
+   "start": "ISA.3.10",
+   "end": "ISA.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.31.1",
+   "at": 45,
+   "text": "Eze 11:21",
+   "start": "EZK.11.21",
+   "end": "EZK.11.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.31.1",
+   "at": 56,
+   "text": "Ro 6:21",
+   "start": "ROM.6.21",
+   "end": "ROM.6.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.31.1",
+   "at": 65,
+   "text": "Ga 6:7",
+   "start": "GAL.6.7",
+   "end": "GAL.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.31.1",
+   "at": 73,
+   "text": "8",
+   "start": "GAL.6.8",
+   "end": "GAL.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.32.1",
+   "at": 43,
+   "text": "Pr 1:23",
+   "start": "PRO.1.23",
+   "end": "PRO.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.32.1",
+   "at": 66,
+   "text": "Pr 1:22",
+   "start": "PRO.1.22",
+   "end": "PRO.1.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.1.33.1",
+   "at": 45,
+   "text": "De 12:10",
+   "start": "DEU.12.10",
+   "end": "DEU.12.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.1-22.1",
+   "at": 0,
+   "text": "Pr 2:1-22",
+   "start": "PRO.2.1",
+   "end": "PRO.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.2.1",
+   "at": 45,
+   "text": "Pr 1:24",
+   "start": "PRO.1.24",
+   "end": "PRO.1.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.2.1",
+   "at": 54,
+   "text": "Ps 130:2",
+   "start": "PSA.130.2",
+   "end": "PSA.130.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.6.1",
+   "at": 21,
+   "text": "Jas 1:5",
+   "start": "JAS.1.5",
+   "end": "JAS.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.6.1",
+   "at": 30,
+   "text": "4:8",
+   "start": "JAS.4.8",
+   "end": "JAS.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.7.1",
+   "at": 206,
+   "text": "Pr 3:21",
+   "start": "PRO.3.21",
+   "end": "PRO.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.7.1",
+   "at": 215,
+   "text": "8:14",
+   "start": "PRO.8.14",
+   "end": "PRO.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.7.1",
+   "at": 221,
+   "text": "18:1",
+   "start": "PRO.18.1",
+   "end": "PRO.18.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.7.1",
+   "at": 227,
+   "text": "Job 6:13",
+   "start": "JOB.6.13",
+   "end": "JOB.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.7.1",
+   "at": 237,
+   "text": "12:13",
+   "start": "JOB.12.13",
+   "end": "JOB.12.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.8.1",
+   "at": 95,
+   "text": "Ps 4:3",
+   "start": "PSA.4.3",
+   "end": "PSA.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.10-11.1",
+   "at": 16,
+   "text": "Pr 2:9",
+   "start": "PRO.2.9",
+   "end": "PRO.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.10-11.1",
+   "at": 53,
+   "text": "Pr 2:2",
+   "start": "PRO.2.2",
+   "end": "PRO.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.12-15.1",
+   "at": 40,
+   "text": "Pr 6:5",
+   "start": "PRO.6.5",
+   "end": "PRO.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.12-15.1",
+   "at": 61,
+   "text": "Ps 1:1",
+   "start": "PSA.1.1",
+   "end": "PSA.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.12-15.1",
+   "at": 98,
+   "text": "Pr 6:14",
+   "start": "PRO.6.14",
+   "end": "PRO.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.12-15.1",
+   "at": 107,
+   "text": "23:23",
+   "start": "PRO.23.23",
+   "end": "PRO.23.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.16-19.1",
+   "at": 111,
+   "text": "Jud 11:1",
+   "start": "JDG.11.1",
+   "end": "JDG.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.16-19.1",
+   "at": 121,
+   "text": "2",
+   "start": "JDG.11.2",
+   "end": "JDG.11.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.16-19.1",
+   "at": 134,
+   "text": "Pr 7:5",
+   "start": "PRO.7.5",
+   "end": "PRO.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.16-19.1",
+   "at": 142,
+   "text": "19",
+   "start": "PRO.7.19",
+   "end": "PRO.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.16-19.1",
+   "at": 154,
+   "text": "1Ki 11:1",
+   "start": "1KI.11.1",
+   "end": "1KI.11.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.16-19.1",
+   "at": 317,
+   "text": "Nu 3:4",
+   "start": "NUM.3.4",
+   "end": "NUM.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.16-19.1",
+   "at": 345,
+   "text": "Ex 30:9",
+   "start": "EXO.30.9",
+   "end": "EXO.30.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.17.1",
+   "at": 34,
+   "text": "Jer 3:4",
+   "start": "JER.3.4",
+   "end": "JER.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.18.1",
+   "at": 34,
+   "text": "Nu 13:31",
+   "start": "NUM.13.31",
+   "end": "NUM.13.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.19.1",
+   "at": 48,
+   "text": "Ec 7:26",
+   "start": "ECC.7.26",
+   "end": "ECC.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.19.1",
+   "at": 74,
+   "text": "Ps 16:11",
+   "start": "PSA.16.11",
+   "end": "PSA.16.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.2.22.1",
+   "at": 45,
+   "text": "Jer 9:2",
+   "start": "JER.9.2",
+   "end": "JER.9.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.1-35.1",
+   "at": 0,
+   "text": "Pr 3:1-35",
+   "start": "PRO.3.1",
+   "end": "PRO.3.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.1.1",
+   "at": 58,
+   "text": "Ps 119:1",
+   "start": "PSA.119.1",
+   "end": "PSA.119.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.1.1",
+   "at": 71,
+   "text": "Ps 119:4",
+   "start": "PSA.119.4",
+   "end": "PSA.119.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.2.1",
+   "at": 46,
+   "text": "Ps 21:4",
+   "start": "PSA.21.4",
+   "end": "PSA.21.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.2.1",
+   "at": 55,
+   "text": "91:16",
+   "start": "PSA.91.16",
+   "end": "PSA.91.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.2.1",
+   "at": 91,
+   "text": "Ps 125:5",
+   "start": "PSA.125.5",
+   "end": "PSA.125.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.3.1",
+   "at": 89,
+   "text": "Ps 25:10",
+   "start": "PSA.25.10",
+   "end": "PSA.25.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.3.1",
+   "at": 99,
+   "text": "57:3",
+   "start": "PSA.57.3",
+   "end": "PSA.57.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.3.1",
+   "at": 168,
+   "text": "Pr 16:6",
+   "start": "PRO.16.6",
+   "end": "PRO.16.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.3.1",
+   "at": 177,
+   "text": "20:28",
+   "start": "PRO.20.28",
+   "end": "PRO.20.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.4.1",
+   "at": 29,
+   "text": "Pr 22:11",
+   "start": "PRO.22.11",
+   "end": "PRO.22.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.4.1",
+   "at": 39,
+   "text": "Ps 45:2",
+   "start": "PSA.45.2",
+   "end": "PSA.45.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.5.1",
+   "at": 63,
+   "text": "Pr 22:19",
+   "start": "PRO.22.19",
+   "end": "PRO.22.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.5.1",
+   "at": 73,
+   "text": "28:25",
+   "start": "PRO.28.25",
+   "end": "PRO.28.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.6.1",
+   "at": 9,
+   "text": "Ps 1:1",
+   "start": "PSA.1.1",
+   "end": "PSA.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.6.1",
+   "at": 56,
+   "text": "Pr 16:3",
+   "start": "PRO.16.3",
+   "end": "PRO.16.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.6.1",
+   "at": 65,
+   "text": "Ps 37:5",
+   "start": "PSA.37.5",
+   "end": "PSA.37.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.6.1",
+   "at": 74,
+   "text": "Jer 9:23",
+   "start": "JER.9.23",
+   "end": "JER.9.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.6.1",
+   "at": 84,
+   "text": "24",
+   "start": "JER.9.24",
+   "end": "JER.9.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.7.1",
+   "at": 12,
+   "text": "Pr 27:2",
+   "start": "PRO.27.2",
+   "end": "PRO.27.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.7.1",
+   "at": 21,
+   "text": "Ro 12:16",
+   "start": "ROM.12.16",
+   "end": "ROM.12.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.9-10.1",
+   "at": 16,
+   "text": "Pr 11:25",
+   "start": "PRO.11.25",
+   "end": "PRO.11.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.9-10.1",
+   "at": 26,
+   "text": "Ex 23:19",
+   "start": "EXO.23.19",
+   "end": "EXO.23.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.9-10.1",
+   "at": 36,
+   "text": "De 18:4",
+   "start": "DEU.18.4",
+   "end": "DEU.18.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.9-10.1",
+   "at": 45,
+   "text": "Isa 32:8",
+   "start": "ISA.32.8",
+   "end": "ISA.32.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.11-12.1",
+   "at": 123,
+   "text": "Job 5:17",
+   "start": "JOB.5.17",
+   "end": "JOB.5.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.14-15.1",
+   "at": 22,
+   "text": "Pr 3:13",
+   "start": "PRO.3.13",
+   "end": "PRO.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.16-17.1",
+   "at": 67,
+   "text": "Mt 6:33",
+   "start": "MAT.6.33",
+   "end": "MAT.6.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.18.1",
+   "at": 43,
+   "text": "Ge 2:9",
+   "start": "GEN.2.9",
+   "end": "GEN.2.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.18.1",
+   "at": 51,
+   "text": "3:22",
+   "start": "GEN.3.22",
+   "end": "GEN.3.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.21.1",
+   "at": 26,
+   "text": "Pr 2:7",
+   "start": "PRO.2.7",
+   "end": "PRO.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.25.1",
+   "at": 64,
+   "text": "Pr 1:27",
+   "start": "PRO.1.27",
+   "end": "PRO.1.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.25.1",
+   "at": 97,
+   "text": "Ps 46:3",
+   "start": "PSA.46.3",
+   "end": "PSA.46.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.25.1",
+   "at": 106,
+   "text": "91:12",
+   "start": "PSA.91.12",
+   "end": "PSA.91.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.25.1",
+   "at": 113,
+   "text": "1Pe 3:14",
+   "start": "1PE.3.14",
+   "end": "1PE.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.26.1",
+   "at": 142,
+   "text": "Na 3:9",
+   "start": "NAM.3.9",
+   "end": "NAM.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.3.32-35.1",
+   "at": 42,
+   "text": "Pr 2:15",
+   "start": "PRO.2.15",
+   "end": "PRO.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.1-27.1",
+   "at": 0,
+   "text": "Pr 4:1-27",
+   "start": "PRO.4.1",
+   "end": "PRO.4.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.1-2.1",
+   "at": 15,
+   "text": "Pr 1:8",
+   "start": "PRO.1.8",
+   "end": "PRO.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.1-2.1",
+   "at": 85,
+   "text": "Pr 1:5",
+   "start": "PRO.1.5",
+   "end": "PRO.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.3.1",
+   "at": 112,
+   "text": "1Ch 22:7",
+   "start": "1CH.22.7",
+   "end": "1CH.22.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.3.1",
+   "at": 122,
+   "text": "29:1",
+   "start": "1CH.29.1",
+   "end": "1CH.29.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.3.1",
+   "at": 194,
+   "text": "Ge 22:2",
+   "start": "GEN.22.2",
+   "end": "GEN.22.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.7.1",
+   "at": 12,
+   "text": "Job 28:28",
+   "start": "JOB.28.28",
+   "end": "JOB.28.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.9.1",
+   "at": 75,
+   "text": "Ge 14:20",
+   "start": "GEN.14.20",
+   "end": "GEN.14.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.11-12.1",
+   "at": 99,
+   "text": "Ps 107:7",
+   "start": "PSA.107.7",
+   "end": "PSA.107.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.13.1",
+   "at": 13,
+   "text": "Pr 3:18",
+   "start": "PRO.3.18",
+   "end": "PRO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.14.1",
+   "at": 13,
+   "text": "Ps 1:1",
+   "start": "PSA.1.1",
+   "end": "PSA.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.16-17.1",
+   "at": 101,
+   "text": "Pr 6:4",
+   "start": "PRO.6.4",
+   "end": "PRO.6.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.16-17.1",
+   "at": 109,
+   "text": "Ps 36:5",
+   "start": "PSA.36.5",
+   "end": "PSA.36.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.16-17.1",
+   "at": 148,
+   "text": "Pr 1:13",
+   "start": "PRO.1.13",
+   "end": "PRO.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.20-22.1",
+   "at": 16,
+   "text": "Pr 4:10",
+   "start": "PRO.4.10",
+   "end": "PRO.4.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.20-22.1",
+   "at": 25,
+   "text": "13",
+   "start": "PRO.4.13",
+   "end": "PRO.4.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.20-22.1",
+   "at": 29,
+   "text": "Pr 3:8",
+   "start": "PRO.3.8",
+   "end": "PRO.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.23.1",
+   "at": 108,
+   "text": "Eze 38:7",
+   "start": "EZK.38.7",
+   "end": "EZK.38.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.24.1",
+   "at": 102,
+   "text": "Pr 2:15",
+   "start": "PRO.2.15",
+   "end": "PRO.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.24.1",
+   "at": 111,
+   "text": "3:32",
+   "start": "PRO.3.32",
+   "end": "PRO.3.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.27.1",
+   "at": 13,
+   "text": "Pr 4:25",
+   "start": "PRO.4.25",
+   "end": "PRO.4.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.27.1",
+   "at": 51,
+   "text": "De 2:27",
+   "start": "DEU.2.27",
+   "end": "DEU.2.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.4.27.1",
+   "at": 60,
+   "text": "17:11",
+   "start": "DEU.17.11",
+   "end": "DEU.17.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.1-23.1",
+   "at": 0,
+   "text": "Pr 5:1-23",
+   "start": "PRO.5.1",
+   "end": "PRO.5.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.1.1",
+   "at": 60,
+   "text": "Pr 2:2",
+   "start": "PRO.2.2",
+   "end": "PRO.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.1.1",
+   "at": 68,
+   "text": "3:7",
+   "start": "PRO.3.7",
+   "end": "PRO.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.3.1",
+   "at": 12,
+   "text": "Pr 2:16",
+   "start": "PRO.2.16",
+   "end": "PRO.2.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.4.1",
+   "at": 78,
+   "text": "Ps 37:37",
+   "start": "PSA.37.37",
+   "end": "PSA.37.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.4.1",
+   "at": 88,
+   "text": "73:17",
+   "start": "PSA.73.17",
+   "end": "PSA.73.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.4.1",
+   "at": 159,
+   "text": "Pr 5:3",
+   "start": "PRO.5.3",
+   "end": "PRO.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.9.1",
+   "at": 50,
+   "text": "Pr 3:13",
+   "start": "PRO.3.13",
+   "end": "PRO.3.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.10.1",
+   "at": 100,
+   "text": "Ps 127:2",
+   "start": "PSA.127.2",
+   "end": "PSA.127.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.11.1",
+   "at": 44,
+   "text": "Pr 5:4",
+   "start": "PRO.5.4",
+   "end": "PRO.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.15-20.1",
+   "at": 57,
+   "text": "Pr 5:15",
+   "start": "PRO.5.15",
+   "end": "PRO.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.15-20.1",
+   "at": 66,
+   "text": "18",
+   "start": "PRO.5.18",
+   "end": "PRO.5.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.15-20.1",
+   "at": 112,
+   "text": "Pr 5:16",
+   "start": "PRO.5.16",
+   "end": "PRO.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.15-20.1",
+   "at": 216,
+   "text": "Pr 5:16",
+   "start": "PRO.5.16",
+   "end": "PRO.5.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.19.1",
+   "at": 105,
+   "text": "So 1:13",
+   "start": "SNG.1.13",
+   "end": "SNG.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.19.1",
+   "at": 114,
+   "text": "Eze 23:3",
+   "start": "EZK.23.3",
+   "end": "EZK.23.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.19.1",
+   "at": 124,
+   "text": "8",
+   "start": "EZK.23.8",
+   "end": "EZK.23.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.23.1",
+   "at": 88,
+   "text": "Job 13:18",
+   "start": "JOB.13.18",
+   "end": "JOB.13.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.23.1",
+   "at": 99,
+   "text": "Heb 11:24",
+   "start": "HEB.11.24",
+   "end": "HEB.11.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.5.23.1",
+   "at": 168,
+   "text": "Pr 5:19",
+   "start": "PRO.5.19",
+   "end": "PRO.5.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.1-35.1",
+   "at": 0,
+   "text": "Pr 6:1-35",
+   "start": "PRO.6.1",
+   "end": "PRO.6.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.1-35.1",
+   "at": 67,
+   "text": "Pr 6:6-8",
+   "start": "PRO.6.6",
+   "end": "PRO.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.1-35.1",
+   "at": 156,
+   "text": "Pr 6:20-35",
+   "start": "PRO.6.20",
+   "end": "PRO.6.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.1-2.1",
+   "at": 112,
+   "text": "Job 17:3",
+   "start": "JOB.17.3",
+   "end": "JOB.17.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.12.1",
+   "at": 127,
+   "text": "1Sa 25:25",
+   "start": "1SA.25.25",
+   "end": "1SA.25.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.12.1",
+   "at": 138,
+   "text": "30:22",
+   "start": "1SA.30.22",
+   "end": "1SA.30.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.14.1",
+   "at": 22,
+   "text": "Pr 2:14",
+   "start": "PRO.2.14",
+   "end": "PRO.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.15.1",
+   "at": 40,
+   "text": "Pr 6:11",
+   "start": "PRO.6.11",
+   "end": "PRO.6.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.15.1",
+   "at": 49,
+   "text": "29:1",
+   "start": "PRO.29.1",
+   "end": "PRO.29.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.16-19.1",
+   "at": 59,
+   "text": "Pr 30:15",
+   "start": "PRO.30.15",
+   "end": "PRO.30.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.16-19.1",
+   "at": 69,
+   "text": "18",
+   "start": "PRO.30.18",
+   "end": "PRO.30.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.17.1",
+   "at": 47,
+   "text": "Ps 131:1",
+   "start": "PSA.131.1",
+   "end": "PSA.131.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.19.1",
+   "at": 59,
+   "text": "Ps 27:12",
+   "start": "PSA.27.12",
+   "end": "PSA.27.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.22.1",
+   "at": 16,
+   "text": "Pr 6:23",
+   "start": "PRO.6.23",
+   "end": "PRO.6.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.22.1",
+   "at": 62,
+   "text": "Pr 6:20",
+   "start": "PRO.6.20",
+   "end": "PRO.6.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.22.1",
+   "at": 233,
+   "text": "Pr 3:21-23",
+   "start": "PRO.3.21",
+   "end": "PRO.3.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.22.1",
+   "at": 245,
+   "text": "Ps 19:9",
+   "start": "PSA.19.9",
+   "end": "PSA.19.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.23.1",
+   "at": 14,
+   "text": "Pr 1:23",
+   "start": "PRO.1.23",
+   "end": "PRO.1.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.26.1",
+   "at": 171,
+   "text": "Pr 6:29-35",
+   "start": "PRO.6.29",
+   "end": "PRO.6.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.26.1",
+   "at": 232,
+   "text": "Pr 5:9-12",
+   "start": "PRO.5.9",
+   "end": "PRO.5.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.26.1",
+   "at": 304,
+   "text": "Pr 7:6-8",
+   "start": "PRO.7.6",
+   "end": "PRO.7.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.31.1",
+   "at": 23,
+   "text": "Ex 22:1-4",
+   "start": "EXO.22.1",
+   "end": "EXO.22.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.31.1",
+   "at": 60,
+   "text": "Ge 4:24",
+   "start": "GEN.4.24",
+   "end": "GEN.4.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.31.1",
+   "at": 69,
+   "text": "Mt 18:21",
+   "start": "MAT.18.21",
+   "end": "MAT.18.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.6.33.1",
+   "at": 52,
+   "text": "Pr 3:35",
+   "start": "PRO.3.35",
+   "end": "PRO.3.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.1-27.1",
+   "at": 0,
+   "text": "Pr 7:1-27",
+   "start": "PRO.7.1",
+   "end": "PRO.7.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.1-4.1",
+   "at": 20,
+   "text": "Pr 3:1-3",
+   "start": "PRO.3.1",
+   "end": "PRO.3.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.1-4.1",
+   "at": 30,
+   "text": "4:10",
+   "start": "PRO.4.10",
+   "end": "PRO.4.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.2.1",
+   "at": 40,
+   "text": "Pr 4:23",
+   "start": "PRO.4.23",
+   "end": "PRO.4.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.6.1",
+   "at": 195,
+   "text": "Jud 5:28",
+   "start": "JDG.5.28",
+   "end": "JDG.5.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.7.1",
+   "at": 16,
+   "text": "Pr 1:4",
+   "start": "PRO.1.4",
+   "end": "PRO.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.11-12.1",
+   "at": 102,
+   "text": "1Ti 5:13",
+   "start": "1TI.5.13",
+   "end": "1TI.5.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.13-15.1",
+   "at": 146,
+   "text": "Le 3:9",
+   "start": "LEV.3.9",
+   "end": "LEV.3.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.21.1",
+   "at": 56,
+   "text": "Pr 5:3",
+   "start": "PRO.5.3",
+   "end": "PRO.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.24.1",
+   "at": 44,
+   "text": "Pr 7:26",
+   "start": "PRO.7.26",
+   "end": "PRO.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.7.24.1",
+   "at": 53,
+   "text": "27",
+   "start": "PRO.7.27",
+   "end": "PRO.7.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 0,
+   "text": "Pr 8:1-36",
+   "start": "PRO.8.1",
+   "end": "PRO.8.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 281,
+   "text": "Pr 3:19",
+   "start": "PRO.3.19",
+   "end": "PRO.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 290,
+   "text": "20",
+   "start": "PRO.3.20",
+   "end": "PRO.3.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 607,
+   "text": "Lu 11:49",
+   "start": "LUK.11.49",
+   "end": "LUK.11.49",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 621,
+   "text": "Joh 1:1",
+   "start": "JHN.1.1",
+   "end": "JHN.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 1203,
+   "text": "Joh 16:14",
+   "start": "JHN.16.14",
+   "end": "JHN.16.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 1338,
+   "text": "Pr 1:20",
+   "start": "PRO.1.20",
+   "end": "PRO.1.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 1347,
+   "text": "3:16",
+   "start": "PRO.3.16",
+   "end": "PRO.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 1353,
+   "text": "17",
+   "start": "PRO.3.17",
+   "end": "PRO.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 1357,
+   "text": "4:8",
+   "start": "PRO.4.8",
+   "end": "PRO.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 1362,
+   "text": "6:20-22",
+   "start": "PRO.6.20",
+   "end": "PRO.6.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-36.1",
+   "at": 1371,
+   "text": "9:1-4",
+   "start": "PRO.9.1",
+   "end": "PRO.9.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.1-4.1",
+   "at": 103,
+   "text": "Pr 7:8",
+   "start": "PRO.7.8",
+   "end": "PRO.7.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.8.1",
+   "at": 37,
+   "text": "Ps 9:8",
+   "start": "PSA.9.8",
+   "end": "PSA.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.8.1",
+   "at": 44,
+   "text": "11",
+   "start": "PSA.9.11",
+   "end": "PSA.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.12.1",
+   "at": 19,
+   "text": "Pr 8:5",
+   "start": "PRO.8.5",
+   "end": "PRO.8.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.14.1",
+   "at": 76,
+   "text": "Pr 2:7",
+   "start": "PRO.2.7",
+   "end": "PRO.2.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.14.1",
+   "at": 170,
+   "text": "Ec 9:16",
+   "start": "ECC.9.16",
+   "end": "ECC.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.22-31.1",
+   "at": 438,
+   "text": "Pr 3:19",
+   "start": "PRO.3.19",
+   "end": "PRO.3.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.23.1",
+   "at": 43,
+   "text": "Ps 2:6",
+   "start": "PSA.2.6",
+   "end": "PSA.2.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.24.1",
+   "at": 27,
+   "text": "Ps 90:2",
+   "start": "PSA.90.2",
+   "end": "PSA.90.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.28.1",
+   "at": 105,
+   "text": "Ge 1:7-11",
+   "start": "GEN.1.7",
+   "end": "GEN.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.29.1",
+   "at": 111,
+   "text": "Job 38:4",
+   "start": "JOB.38.4",
+   "end": "JOB.38.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.8.36.1",
+   "at": 67,
+   "text": "Pr 8:35",
+   "start": "PRO.8.35",
+   "end": "PRO.8.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.1-18.1",
+   "at": 0,
+   "text": "Pr 9:1-18",
+   "start": "PRO.9.1",
+   "end": "PRO.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.1-18.1",
+   "at": 138,
+   "text": "Lu 14:16-24",
+   "start": "LUK.14.16",
+   "end": "LUK.14.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.1.1",
+   "at": 18,
+   "text": "Pr 8:34",
+   "start": "PRO.8.34",
+   "end": "PRO.8.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.2.1",
+   "at": 34,
+   "text": "Pr 23:30",
+   "start": "PRO.23.30",
+   "end": "PRO.23.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.2.1",
+   "at": 44,
+   "text": "Isa 5:22",
+   "start": "ISA.5.22",
+   "end": "ISA.5.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.3.1",
+   "at": 39,
+   "text": "Ps 68:11",
+   "start": "PSA.68.11",
+   "end": "PSA.68.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.3.1",
+   "at": 49,
+   "text": "Isa 40:9",
+   "start": "ISA.40.9",
+   "end": "ISA.40.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.4-6.1",
+   "at": 14,
+   "text": "Pr 1:4",
+   "start": "PRO.1.4",
+   "end": "PRO.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.4-6.1",
+   "at": 22,
+   "text": "6:32",
+   "start": "PRO.6.32",
+   "end": "PRO.6.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.7-8.1",
+   "at": 21,
+   "text": "Pr 3:35",
+   "start": "PRO.3.35",
+   "end": "PRO.3.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.10.1",
+   "at": 13,
+   "text": "Pr 1:7",
+   "start": "PRO.1.7",
+   "end": "PRO.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.13.1",
+   "at": 121,
+   "text": "Pr 7:11",
+   "start": "PRO.7.11",
+   "end": "PRO.7.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.15-16.1",
+   "at": 74,
+   "text": "Pr 9:4",
+   "start": "PRO.9.4",
+   "end": "PRO.9.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.9.15-16.1",
+   "at": 114,
+   "text": "Pr 1:4",
+   "start": "PRO.1.4",
+   "end": "PRO.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.1-32.1",
+   "at": 0,
+   "text": "Pr 10:1-32",
+   "start": "PRO.10.1",
+   "end": "PRO.10.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.1-32.1",
+   "at": 53,
+   "text": "Pr 10:1-22:16",
+   "start": "PRO.10.1",
+   "end": "PRO.22.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.1-32.1",
+   "at": 91,
+   "text": "Pr 22:16-25:28",
+   "start": "PRO.22.16",
+   "end": "PRO.25.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.1-32.1",
+   "at": 264,
+   "text": "Pr 10:1-15:33",
+   "start": "PRO.10.1",
+   "end": "PRO.15.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.1-32.1",
+   "at": 314,
+   "text": "Pr 16:1-22:16",
+   "start": "PRO.16.1",
+   "end": "PRO.22.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.2.1",
+   "at": 81,
+   "text": "Pr 4:17",
+   "start": "PRO.4.17",
+   "end": "PRO.4.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.2.1",
+   "at": 90,
+   "text": "Mt 6:19",
+   "start": "MAT.6.19",
+   "end": "MAT.6.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.2.1",
+   "at": 139,
+   "text": "Ps 112:9",
+   "start": "PSA.112.9",
+   "end": "PSA.112.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.3.1",
+   "at": 12,
+   "text": "Ps 37:16-20",
+   "start": "PSA.37.16",
+   "end": "PSA.37.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.4.1",
+   "at": 65,
+   "text": "Ho 7:16",
+   "start": "HOS.7.16",
+   "end": "HOS.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.5.1",
+   "at": 10,
+   "text": "Pr 1:8",
+   "start": "PRO.1.8",
+   "end": "PRO.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.5.1",
+   "at": 18,
+   "text": "10",
+   "start": "PRO.1.10",
+   "end": "PRO.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.6.1",
+   "at": 175,
+   "text": "Ps 5:9",
+   "start": "PSA.5.9",
+   "end": "PSA.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.6.1",
+   "at": 183,
+   "text": "10:7",
+   "start": "PSA.10.7",
+   "end": "PSA.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.6.1",
+   "at": 189,
+   "text": "Ro 3:14",
+   "start": "ROM.3.14",
+   "end": "ROM.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.8.1",
+   "at": 22,
+   "text": "Pr 9:8",
+   "start": "PRO.9.8",
+   "end": "PRO.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.8.1",
+   "at": 30,
+   "text": "9",
+   "start": "PRO.9.9",
+   "end": "PRO.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.8.1",
+   "at": 33,
+   "text": "16",
+   "start": "PRO.9.16",
+   "end": "PRO.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.10.1",
+   "at": 70,
+   "text": "Pr 6:13",
+   "start": "PRO.6.13",
+   "end": "PRO.6.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.10.1",
+   "at": 79,
+   "text": "Ps 35:19",
+   "start": "PSA.35.19",
+   "end": "PSA.35.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.11.1",
+   "at": 55,
+   "text": "Joh 7:37",
+   "start": "JHN.7.37",
+   "end": "JHN.7.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.11.1",
+   "at": 65,
+   "text": "38",
+   "start": "JHN.7.38",
+   "end": "JHN.7.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.15.1",
+   "at": 44,
+   "text": "1Ti 6:17",
+   "start": "1TI.6.17",
+   "end": "1TI.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.15.1",
+   "at": 83,
+   "text": "Pr 30:9",
+   "start": "PRO.30.9",
+   "end": "PRO.30.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.17.1",
+   "at": 22,
+   "text": "Pr 3:18",
+   "start": "PRO.3.18",
+   "end": "PRO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.17.1",
+   "at": 31,
+   "text": "4:22",
+   "start": "PRO.4.22",
+   "end": "PRO.4.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.19.1",
+   "at": 82,
+   "text": "Ps 39:1",
+   "start": "PSA.39.1",
+   "end": "PSA.39.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.21.1",
+   "at": 100,
+   "text": "Pr 10:11",
+   "start": "PRO.10.11",
+   "end": "PRO.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.21.1",
+   "at": 110,
+   "text": "17",
+   "start": "PRO.10.17",
+   "end": "PRO.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.22.1",
+   "at": 106,
+   "text": "Ec 2:21-23",
+   "start": "ECC.2.21",
+   "end": "ECC.2.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.25.1",
+   "at": 13,
+   "text": "Ps 1:4",
+   "start": "PSA.1.4",
+   "end": "PSA.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.25.1",
+   "at": 21,
+   "text": "37:9",
+   "start": "PSA.37.9",
+   "end": "PSA.37.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.25.1",
+   "at": 27,
+   "text": "10",
+   "start": "PSA.37.10",
+   "end": "PSA.37.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.25.1",
+   "at": 31,
+   "text": "36",
+   "start": "PSA.37.36",
+   "end": "PSA.37.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.27.1",
+   "at": 13,
+   "text": "Pr 9:11",
+   "start": "PRO.9.11",
+   "end": "PRO.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.30.1",
+   "at": 13,
+   "text": "Pr 12:3",
+   "start": "PRO.12.3",
+   "end": "PRO.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.30.1",
+   "at": 22,
+   "text": "Ps 37:9-11",
+   "start": "PSA.37.9",
+   "end": "PSA.37.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.30.1",
+   "at": 34,
+   "text": "102:28",
+   "start": "PSA.102.28",
+   "end": "PSA.102.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.31.1",
+   "at": 73,
+   "text": "Pr 2:12",
+   "start": "PRO.2.12",
+   "end": "PRO.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.31.1",
+   "at": 82,
+   "text": "14",
+   "start": "PRO.2.14",
+   "end": "PRO.2.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.10.32.1",
+   "at": 33,
+   "text": "Ps 1:6",
+   "start": "PSA.1.6",
+   "end": "PSA.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.3.1",
+   "at": 33,
+   "text": "Pr 6:7",
+   "start": "PRO.6.7",
+   "end": "PRO.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.3.1",
+   "at": 41,
+   "text": "Ps 78:52",
+   "start": "PSA.78.52",
+   "end": "PSA.78.52",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.4.1",
+   "at": 12,
+   "text": "Pr 10:2",
+   "start": "PRO.10.2",
+   "end": "PRO.10.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.6.1",
+   "at": 81,
+   "text": "Pr 5:22",
+   "start": "PRO.5.22",
+   "end": "PRO.5.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.7.1",
+   "at": 60,
+   "text": "Lu 16:25",
+   "start": "LUK.16.25",
+   "end": "LUK.16.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.7.1",
+   "at": 133,
+   "text": "Isa 40:29",
+   "start": "ISA.40.29",
+   "end": "ISA.40.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.9.1",
+   "at": 12,
+   "text": "Ps 35:16",
+   "start": "PSA.35.16",
+   "end": "PSA.35.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.9.1",
+   "at": 22,
+   "text": "Da 11:32",
+   "start": "DAN.11.32",
+   "end": "DAN.11.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.14.1",
+   "at": 34,
+   "text": "Pr 1:5",
+   "start": "PRO.1.5",
+   "end": "PRO.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.15.1",
+   "at": 13,
+   "text": "Pr 6:1",
+   "start": "PRO.6.1",
+   "end": "PRO.6.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.17.1",
+   "at": 104,
+   "text": "Pr 24:5",
+   "start": "PRO.24.5",
+   "end": "PRO.24.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.18.1",
+   "at": 71,
+   "text": "Pr 10:2",
+   "start": "PRO.10.2",
+   "end": "PRO.10.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.18.1",
+   "at": 80,
+   "text": "23:5",
+   "start": "PRO.23.5",
+   "end": "PRO.23.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.18.1",
+   "at": 129,
+   "text": "Ho 10:12",
+   "start": "HOS.10.12",
+   "end": "HOS.10.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.19.1",
+   "at": 19,
+   "text": "Pr 11:18",
+   "start": "PRO.11.18",
+   "end": "PRO.11.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.20.1",
+   "at": 13,
+   "text": "Pr 11:5",
+   "start": "PRO.11.5",
+   "end": "PRO.11.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.20.1",
+   "at": 38,
+   "text": "Pr 2:15",
+   "start": "PRO.2.15",
+   "end": "PRO.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.22.1",
+   "at": 47,
+   "text": "Ge 24:47",
+   "start": "GEN.24.47",
+   "end": "GEN.24.47",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.22.1",
+   "at": 57,
+   "text": "Isa 3:21",
+   "start": "ISA.3.21",
+   "end": "ISA.3.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.23.1",
+   "at": 13,
+   "text": "Pr 10:28",
+   "start": "PRO.10.28",
+   "end": "PRO.10.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.24-31.1",
+   "at": 46,
+   "text": "Pr 11:23",
+   "start": "PRO.11.23",
+   "end": "PRO.11.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.25.1",
+   "at": 55,
+   "text": "Pr 28:25",
+   "start": "PRO.28.25",
+   "end": "PRO.28.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.25.1",
+   "at": 65,
+   "text": "De 32:15",
+   "start": "DEU.32.15",
+   "end": "DEU.32.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.25.1",
+   "at": 75,
+   "text": "Lu 6:38",
+   "start": "LUK.6.38",
+   "end": "LUK.6.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.26.1",
+   "at": 36,
+   "text": "Pr 11:23",
+   "start": "PRO.11.23",
+   "end": "PRO.11.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.28.1",
+   "at": 13,
+   "text": "Pr 10:15",
+   "start": "PRO.10.15",
+   "end": "PRO.10.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.28.1",
+   "at": 23,
+   "text": "Ps 49:6",
+   "start": "PSA.49.6",
+   "end": "PSA.49.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.28.1",
+   "at": 32,
+   "text": "1Ti 6:17",
+   "start": "1TI.6.17",
+   "end": "1TI.6.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.28.1",
+   "at": 64,
+   "text": "Ps 1:3",
+   "start": "PSA.1.3",
+   "end": "PSA.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.29.1",
+   "at": 17,
+   "text": "Pr 15:27",
+   "start": "PRO.15.27",
+   "end": "PRO.15.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.29.1",
+   "at": 68,
+   "text": "Pr 11:17",
+   "start": "PRO.11.17",
+   "end": "PRO.11.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.30.1",
+   "at": 80,
+   "text": "Pr 3:18",
+   "start": "PRO.3.18",
+   "end": "PRO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.30.1",
+   "at": 152,
+   "text": "Pr 6:25",
+   "start": "PRO.6.25",
+   "end": "PRO.6.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.30.1",
+   "at": 161,
+   "text": "Eze 13:18",
+   "start": "EZK.13.18",
+   "end": "EZK.13.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.11.31.1",
+   "at": 64,
+   "text": "Pr 11:23",
+   "start": "PRO.11.23",
+   "end": "PRO.11.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.1.1",
+   "at": 61,
+   "text": "Pr 1:2",
+   "start": "PRO.1.2",
+   "end": "PRO.1.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.1.1",
+   "at": 87,
+   "text": "Pr 10:17",
+   "start": "PRO.10.17",
+   "end": "PRO.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.4.1",
+   "at": 76,
+   "text": "Pr 31:10",
+   "start": "PRO.31.10",
+   "end": "PRO.31.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.5.1",
+   "at": 110,
+   "text": "Pr 11:14",
+   "start": "PRO.11.14",
+   "end": "PRO.11.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.8.1",
+   "at": 37,
+   "text": "Pr 11:12",
+   "start": "PRO.11.12",
+   "end": "PRO.11.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.9.1",
+   "at": 44,
+   "text": "1Sa 18:23",
+   "start": "1SA.18.23",
+   "end": "1SA.18.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.9.1",
+   "at": 55,
+   "text": "Isa 3:5",
+   "start": "ISA.3.5",
+   "end": "ISA.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.10.1",
+   "at": 36,
+   "text": "Ps 1:6",
+   "start": "PSA.1.6",
+   "end": "PSA.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.12.1",
+   "at": 165,
+   "text": "Eze 17:22",
+   "start": "EZK.17.22",
+   "end": "EZK.17.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.15.1",
+   "at": 55,
+   "text": "Pr 12:1",
+   "start": "PRO.12.1",
+   "end": "PRO.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.15.1",
+   "at": 64,
+   "text": "1:32",
+   "start": "PRO.1.32",
+   "end": "PRO.1.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.15.1",
+   "at": 70,
+   "text": "10:17",
+   "start": "PRO.10.17",
+   "end": "PRO.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.18.1",
+   "at": 61,
+   "text": "Ps 106:33",
+   "start": "PSA.106.33",
+   "end": "PSA.106.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.20.1",
+   "at": 29,
+   "text": "Pr 3:29",
+   "start": "PRO.3.29",
+   "end": "PRO.3.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.20.1",
+   "at": 188,
+   "text": "Mt 5:9",
+   "start": "MAT.5.9",
+   "end": "MAT.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.21.1",
+   "at": 19,
+   "text": "Ps 91:10",
+   "start": "PSA.91.10",
+   "end": "PSA.91.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.21.1",
+   "at": 60,
+   "text": "Ro 8:28",
+   "start": "ROM.8.28",
+   "end": "ROM.8.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.23.1",
+   "at": 31,
+   "text": "Pr 10:14",
+   "start": "PRO.10.14",
+   "end": "PRO.10.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.23.1",
+   "at": 41,
+   "text": "11:13",
+   "start": "PRO.11.13",
+   "end": "PRO.11.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.27.1",
+   "at": 13,
+   "text": "Pr 12:24",
+   "start": "PRO.12.24",
+   "end": "PRO.12.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.28.1",
+   "at": 13,
+   "text": "Pr 8:8",
+   "start": "PRO.8.8",
+   "end": "PRO.8.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.12.28.1",
+   "at": 21,
+   "text": "20",
+   "start": "PRO.8.20",
+   "end": "PRO.8.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.2.1",
+   "at": 30,
+   "text": "Pr 12:14",
+   "start": "PRO.12.14",
+   "end": "PRO.12.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.2.1",
+   "at": 62,
+   "text": "Pr 2:22",
+   "start": "PRO.2.22",
+   "end": "PRO.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.5.1",
+   "at": 65,
+   "text": "Pr 19:26",
+   "start": "PRO.19.26",
+   "end": "PRO.19.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.14.1",
+   "at": 13,
+   "text": "Pr 10:11",
+   "start": "PRO.10.11",
+   "end": "PRO.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.14.1",
+   "at": 76,
+   "text": "Pr 1:2-4",
+   "start": "PRO.1.2",
+   "end": "PRO.1.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.15.1",
+   "at": 190,
+   "text": "De 21:4",
+   "start": "DEU.21.4",
+   "end": "DEU.21.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.21.1",
+   "at": 13,
+   "text": "Pr 11:31",
+   "start": "PRO.11.31",
+   "end": "PRO.11.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.22.1",
+   "at": 136,
+   "text": "Pr 28:8",
+   "start": "PRO.28.8",
+   "end": "PRO.28.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.22.1",
+   "at": 145,
+   "text": "Ps 37:18",
+   "start": "PSA.37.18",
+   "end": "PSA.37.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.22.1",
+   "at": 155,
+   "text": "22",
+   "start": "PSA.37.22",
+   "end": "PSA.37.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.22.1",
+   "at": 159,
+   "text": "26",
+   "start": "PSA.37.26",
+   "end": "PSA.37.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.24.1",
+   "at": 94,
+   "text": "Pr 3:12",
+   "start": "PRO.3.12",
+   "end": "PRO.3.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.13.24.1",
+   "at": 103,
+   "text": "8:36",
+   "start": "PRO.8.36",
+   "end": "PRO.8.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.1.1",
+   "at": 53,
+   "text": "Pr 9:1",
+   "start": "PRO.9.1",
+   "end": "PRO.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.2.1",
+   "at": 73,
+   "text": "Pr 2:15",
+   "start": "PRO.2.15",
+   "end": "PRO.2.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.2.1",
+   "at": 82,
+   "text": "3:32",
+   "start": "PRO.3.32",
+   "end": "PRO.3.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.4.1",
+   "at": 78,
+   "text": "Am 4:6",
+   "start": "AMO.4.6",
+   "end": "AMO.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.5.1",
+   "at": 111,
+   "text": "Pr 6:19",
+   "start": "PRO.6.19",
+   "end": "PRO.6.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.5.1",
+   "at": 128,
+   "text": "Ac 9:1",
+   "start": "ACT.9.1",
+   "end": "ACT.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.6.1",
+   "at": 52,
+   "text": "Pr 8:9",
+   "start": "PRO.8.9",
+   "end": "PRO.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.6.1",
+   "at": 60,
+   "text": "Joh 7:17",
+   "start": "JHN.7.17",
+   "end": "JHN.7.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.11.1",
+   "at": 13,
+   "text": "Pr 12:7",
+   "start": "PRO.12.7",
+   "end": "PRO.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.12.1",
+   "at": 52,
+   "text": "Pr 5:4",
+   "start": "PRO.5.4",
+   "end": "PRO.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.14.1",
+   "at": 39,
+   "text": "Pr 1:31",
+   "start": "PRO.1.31",
+   "end": "PRO.1.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.16.1",
+   "at": 13,
+   "text": "Pr 3:7",
+   "start": "PRO.3.7",
+   "end": "PRO.3.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.16.1",
+   "at": 21,
+   "text": "28:14",
+   "start": "PRO.28.14",
+   "end": "PRO.28.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.17.1",
+   "at": 52,
+   "text": "Pr 14:29",
+   "start": "PRO.14.29",
+   "end": "PRO.14.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.18.1",
+   "at": 34,
+   "text": "Pr 3:35",
+   "start": "PRO.3.35",
+   "end": "PRO.3.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.24.1",
+   "at": 13,
+   "text": "Pr 3:16",
+   "start": "PRO.3.16",
+   "end": "PRO.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.26.1",
+   "at": 48,
+   "text": "Pr 13:22",
+   "start": "PRO.13.22",
+   "end": "PRO.13.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.26.1",
+   "at": 58,
+   "text": "20:7",
+   "start": "PRO.20.7",
+   "end": "PRO.20.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.27.1",
+   "at": 13,
+   "text": "Pr 13:14",
+   "start": "PRO.13.14",
+   "end": "PRO.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.29.1",
+   "at": 34,
+   "text": "Pr 14:17",
+   "start": "PRO.14.17",
+   "end": "PRO.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.29.1",
+   "at": 61,
+   "text": "Pr 14:17",
+   "start": "PRO.14.17",
+   "end": "PRO.14.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.31.1",
+   "at": 74,
+   "text": "Pr 22:2",
+   "start": "PRO.22.2",
+   "end": "PRO.22.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.31.1",
+   "at": 83,
+   "text": "Job 31:15",
+   "start": "JOB.31.15",
+   "end": "JOB.31.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.31.1",
+   "at": 108,
+   "text": "1Sa 2:8",
+   "start": "1SA.2.8",
+   "end": "1SA.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.32.1",
+   "at": 41,
+   "text": "Ps 35:5",
+   "start": "PSA.35.5",
+   "end": "PSA.35.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.32.1",
+   "at": 50,
+   "text": "6",
+   "start": "PSA.35.6",
+   "end": "PSA.35.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.32.1",
+   "at": 75,
+   "text": "Pr 10:2",
+   "start": "PRO.10.2",
+   "end": "PRO.10.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.32.1",
+   "at": 84,
+   "text": "11:4",
+   "start": "PRO.11.4",
+   "end": "PRO.11.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.32.1",
+   "at": 90,
+   "text": "Ps 2:12",
+   "start": "PSA.2.12",
+   "end": "PSA.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.35.1",
+   "at": 46,
+   "text": "Pr 10:5",
+   "start": "PRO.10.5",
+   "end": "PRO.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.14.35.1",
+   "at": 55,
+   "text": "12:4",
+   "start": "PRO.12.4",
+   "end": "PRO.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.2.1",
+   "at": 88,
+   "text": "Pr 12:23",
+   "start": "PRO.12.23",
+   "end": "PRO.12.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.3.1",
+   "at": 31,
+   "text": "Pr 5:21",
+   "start": "PRO.5.21",
+   "end": "PRO.5.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.4.1",
+   "at": 88,
+   "text": "Pr 3:18",
+   "start": "PRO.3.18",
+   "end": "PRO.3.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.4.1",
+   "at": 97,
+   "text": "11:30",
+   "start": "PRO.11.30",
+   "end": "PRO.11.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.4.1",
+   "at": 182,
+   "text": "Isa 65:14",
+   "start": "ISA.65.14",
+   "end": "ISA.65.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.5.1",
+   "at": 12,
+   "text": "Pr 4:1",
+   "start": "PRO.4.1",
+   "end": "PRO.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.5.1",
+   "at": 20,
+   "text": "10:17",
+   "start": "PRO.10.17",
+   "end": "PRO.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.5.1",
+   "at": 27,
+   "text": "13:1-18",
+   "start": "PRO.13.1",
+   "end": "PRO.13.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.7.1",
+   "at": 12,
+   "text": "Pr 10:20",
+   "start": "PRO.10.20",
+   "end": "PRO.10.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.7.1",
+   "at": 22,
+   "text": "21",
+   "start": "PRO.10.21",
+   "end": "PRO.10.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.8-9.1",
+   "at": 197,
+   "text": "Ps 50:17",
+   "start": "PSA.50.17",
+   "end": "PSA.50.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.10.1",
+   "at": 13,
+   "text": "Pr 10:17",
+   "start": "PRO.10.17",
+   "end": "PRO.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.10.1",
+   "at": 73,
+   "text": "Pr 2:13",
+   "start": "PRO.2.13",
+   "end": "PRO.2.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.11.1",
+   "at": 10,
+   "text": "Ps 16:10",
+   "start": "PSA.16.10",
+   "end": "PSA.16.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.12.1",
+   "at": 13,
+   "text": "Pr 9:8",
+   "start": "PRO.9.8",
+   "end": "PRO.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.14.1",
+   "at": 13,
+   "text": "Pr 10:21",
+   "start": "PRO.10.21",
+   "end": "PRO.10.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.14.1",
+   "at": 23,
+   "text": "22",
+   "start": "PRO.10.22",
+   "end": "PRO.10.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.16.1",
+   "at": 100,
+   "text": "Pr 16:18",
+   "start": "PRO.16.18",
+   "end": "PRO.16.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.17.1",
+   "at": 28,
+   "text": "2Ki 25:30",
+   "start": "2KI.25.30",
+   "end": "2KI.25.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.19.1",
+   "at": 146,
+   "text": "1Sa 10:7",
+   "start": "1SA.10.7",
+   "end": "1SA.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.24.1",
+   "at": 13,
+   "text": "Col 3:2",
+   "start": "COL.3.2",
+   "end": "COL.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.25.1",
+   "at": 96,
+   "text": "Pr 2:22",
+   "start": "PRO.2.22",
+   "end": "PRO.2.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.25.1",
+   "at": 105,
+   "text": "12:7",
+   "start": "PRO.12.7",
+   "end": "PRO.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.27.1",
+   "at": 13,
+   "text": "Pr 11:17",
+   "start": "PRO.11.17",
+   "end": "PRO.11.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.27.1",
+   "at": 91,
+   "text": "Ex 23:8",
+   "start": "EXO.23.8",
+   "end": "EXO.23.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.27.1",
+   "at": 100,
+   "text": "Ps 15:5",
+   "start": "PSA.15.5",
+   "end": "PSA.15.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.28.1",
+   "at": 13,
+   "text": "Pr 15:14",
+   "start": "PRO.15.14",
+   "end": "PRO.15.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.28.1",
+   "at": 23,
+   "text": "10:11",
+   "start": "PRO.10.11",
+   "end": "PRO.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.30.1",
+   "at": 23,
+   "text": "Pr 13:9",
+   "start": "PRO.13.9",
+   "end": "PRO.13.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.30.1",
+   "at": 147,
+   "text": "Isa 28:9",
+   "start": "ISA.28.9",
+   "end": "ISA.28.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.30.1",
+   "at": 157,
+   "text": "53:1",
+   "start": "ISA.53.1",
+   "end": "ISA.53.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.30.1",
+   "at": 202,
+   "text": "Pr 3:13-17",
+   "start": "PRO.3.13",
+   "end": "PRO.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.30.1",
+   "at": 214,
+   "text": "9:11",
+   "start": "PRO.9.11",
+   "end": "PRO.9.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.31-32.1",
+   "at": 17,
+   "text": "Pr 10:17",
+   "start": "PRO.10.17",
+   "end": "PRO.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.32.1",
+   "at": 42,
+   "text": "Pr 1:25",
+   "start": "PRO.1.25",
+   "end": "PRO.1.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.32.1",
+   "at": 51,
+   "text": "4:15",
+   "start": "PRO.4.15",
+   "end": "PRO.4.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.33.1",
+   "at": 82,
+   "text": "Lu 24:26",
+   "start": "LUK.24.26",
+   "end": "LUK.24.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.15.33.1",
+   "at": 92,
+   "text": "1Pe 1:11",
+   "start": "1PE.1.11",
+   "end": "1PE.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.4.1",
+   "at": 117,
+   "text": "Ps 49:5",
+   "start": "PSA.49.5",
+   "end": "PSA.49.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.4.1",
+   "at": 126,
+   "text": "Jer 17:18",
+   "start": "JER.17.18",
+   "end": "JER.17.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.6.1",
+   "at": 38,
+   "text": "Ps 85:10",
+   "start": "PSA.85.10",
+   "end": "PSA.85.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.6.1",
+   "at": 305,
+   "text": "Le 16:33",
+   "start": "LEV.16.33",
+   "end": "LEV.16.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.6.1",
+   "at": 315,
+   "text": "Isa 27:9",
+   "start": "ISA.27.9",
+   "end": "ISA.27.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.9.1",
+   "at": 12,
+   "text": "Pr 16:3",
+   "start": "PRO.16.3",
+   "end": "PRO.16.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.14.1",
+   "at": 67,
+   "text": "1Ki 2:25",
+   "start": "1KI.2.25",
+   "end": "1KI.2.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.15.1",
+   "at": 34,
+   "text": "Ps 4:6",
+   "start": "PSA.4.6",
+   "end": "PSA.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.18-19.1",
+   "at": 17,
+   "text": "Pr 15:33",
+   "start": "PRO.15.33",
+   "end": "PRO.15.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.20.1",
+   "at": 76,
+   "text": "Pr 13:13",
+   "start": "PRO.13.13",
+   "end": "PRO.13.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.22.1",
+   "at": 70,
+   "text": "Pr 13:14",
+   "start": "PRO.13.14",
+   "end": "PRO.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.24.1",
+   "at": 13,
+   "text": "Pr 15:26",
+   "start": "PRO.15.26",
+   "end": "PRO.15.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.27.1",
+   "at": 25,
+   "text": "Pr 6:12",
+   "start": "PRO.6.12",
+   "end": "PRO.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.28.1",
+   "at": 13,
+   "text": "Pr 6:14",
+   "start": "PRO.6.14",
+   "end": "PRO.6.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.28.1",
+   "at": 22,
+   "text": "10:31",
+   "start": "PRO.10.31",
+   "end": "PRO.10.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.29.1",
+   "at": 39,
+   "text": "Pr 3:31",
+   "start": "PRO.3.31",
+   "end": "PRO.3.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.30.1",
+   "at": 48,
+   "text": "Ps 64:6",
+   "start": "PSA.64.6",
+   "end": "PSA.64.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.31.1",
+   "at": 13,
+   "text": "Pr 20:29",
+   "start": "PRO.20.29",
+   "end": "PRO.20.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.31.1",
+   "at": 97,
+   "text": "Pr 3:16",
+   "start": "PRO.3.16",
+   "end": "PRO.3.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.31.1",
+   "at": 106,
+   "text": "4:10",
+   "start": "PRO.4.10",
+   "end": "PRO.4.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.16.32.1",
+   "at": 13,
+   "text": "Pr 14:29",
+   "start": "PRO.14.29",
+   "end": "PRO.14.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.1.1",
+   "at": 59,
+   "text": "Pr 7:14",
+   "start": "PRO.7.14",
+   "end": "PRO.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.1.1",
+   "at": 68,
+   "text": "Le 2:3",
+   "start": "LEV.2.3",
+   "end": "LEV.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.1.1",
+   "at": 76,
+   "text": "7:31",
+   "start": "LEV.7.31",
+   "end": "LEV.7.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.2.1",
+   "at": 12,
+   "text": "Pr 14:35",
+   "start": "PRO.14.35",
+   "end": "PRO.14.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.2.1",
+   "at": 39,
+   "text": "Pr 10:5",
+   "start": "PRO.10.5",
+   "end": "PRO.10.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.3.1",
+   "at": 32,
+   "text": "Ps 12:6",
+   "start": "PSA.12.6",
+   "end": "PSA.12.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.3.1",
+   "at": 41,
+   "text": "66:10",
+   "start": "PSA.66.10",
+   "end": "PSA.66.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.5.1",
+   "at": 12,
+   "text": "Pr 14:31",
+   "start": "PRO.14.31",
+   "end": "PRO.14.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.6.1",
+   "at": 63,
+   "text": "Pr 13:22",
+   "start": "PRO.13.22",
+   "end": "PRO.13.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.6.1",
+   "at": 73,
+   "text": "Ps 109:13-15",
+   "start": "PSA.109.13",
+   "end": "PSA.109.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.11.1",
+   "at": 32,
+   "text": "1Ki 2:25",
+   "start": "1KI.2.25",
+   "end": "1KI.2.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.13.1",
+   "at": 13,
+   "text": "Ps 7:4",
+   "start": "PSA.7.4",
+   "end": "PSA.7.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.13.1",
+   "at": 21,
+   "text": "35:12",
+   "start": "PSA.35.12",
+   "end": "PSA.35.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.18.1",
+   "at": 13,
+   "text": "Pr 6:1-5",
+   "start": "PRO.6.1",
+   "end": "PRO.6.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.18.1",
+   "at": 23,
+   "text": "11:15",
+   "start": "PRO.11.15",
+   "end": "PRO.11.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.21.1",
+   "at": 13,
+   "text": "Pr 23:24",
+   "start": "PRO.23.24",
+   "end": "PRO.23.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.22.1",
+   "at": 13,
+   "text": "Pr 14:30",
+   "start": "PRO.14.30",
+   "end": "PRO.14.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.17.22.1",
+   "at": 23,
+   "text": "15:13",
+   "start": "PRO.15.13",
+   "end": "PRO.15.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.1.1",
+   "at": 107,
+   "text": "Pr 17:14",
+   "start": "PRO.17.14",
+   "end": "PRO.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.3.1",
+   "at": 47,
+   "text": "Pr 16:4",
+   "start": "PRO.16.4",
+   "end": "PRO.16.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.5.1",
+   "at": 30,
+   "text": "Ps 82:2",
+   "start": "PSA.82.2",
+   "end": "PSA.82.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.8.1",
+   "at": 12,
+   "text": "Pr 16:28",
+   "start": "PRO.16.28",
+   "end": "PRO.16.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.8.1",
+   "at": 164,
+   "text": "Pr 20:27-30",
+   "start": "PRO.20.27",
+   "end": "PRO.20.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.10.1",
+   "at": 45,
+   "text": "Ps 8:1",
+   "start": "PSA.8.1",
+   "end": "PSA.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.10.1",
+   "at": 53,
+   "text": "20:2",
+   "start": "PSA.20.2",
+   "end": "PSA.20.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.11.1",
+   "at": 19,
+   "text": "Pr 18:10",
+   "start": "PRO.18.10",
+   "end": "PRO.18.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.11.1",
+   "at": 37,
+   "text": "Pr 10:15",
+   "start": "PRO.10.15",
+   "end": "PRO.10.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.16.1",
+   "at": 13,
+   "text": "Pr 17:8",
+   "start": "PRO.17.8",
+   "end": "PRO.17.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.16.1",
+   "at": 22,
+   "text": "23",
+   "start": "PRO.17.23",
+   "end": "PRO.17.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.18.1",
+   "at": 38,
+   "text": "Pr 16:13",
+   "start": "PRO.16.13",
+   "end": "PRO.16.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.20.1",
+   "at": 13,
+   "text": "Pr 12:14",
+   "start": "PRO.12.14",
+   "end": "PRO.12.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.20.1",
+   "at": 23,
+   "text": "13:2",
+   "start": "PRO.13.2",
+   "end": "PRO.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.21.1",
+   "at": 137,
+   "text": "Pr 18:19",
+   "start": "PRO.18.19",
+   "end": "PRO.18.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.22.1",
+   "at": 77,
+   "text": "Pr 19:14",
+   "start": "PRO.19.14",
+   "end": "PRO.19.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.24.1",
+   "at": 64,
+   "text": "Ps 108:9",
+   "start": "PSA.108.9",
+   "end": "PSA.108.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.24.1",
+   "at": 94,
+   "text": "Ps 5:11",
+   "start": "PSA.5.11",
+   "end": "PSA.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.24.1",
+   "at": 229,
+   "text": "Mt 11:19",
+   "start": "MAT.11.19",
+   "end": "MAT.11.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.18.24.1",
+   "at": 239,
+   "text": "Lu 7:34",
+   "start": "LUK.7.34",
+   "end": "LUK.7.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.1.1",
+   "at": 12,
+   "text": "Pr 28:6",
+   "start": "PRO.28.6",
+   "end": "PRO.28.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.3.1",
+   "at": 47,
+   "text": "Pr 13:6",
+   "start": "PRO.13.6",
+   "end": "PRO.13.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.3.1",
+   "at": 56,
+   "text": "Jas 1:13",
+   "start": "JAS.1.13",
+   "end": "JAS.1.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.4.1",
+   "at": 12,
+   "text": "Pr 14:20",
+   "start": "PRO.14.20",
+   "end": "PRO.14.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.5.1",
+   "at": 11,
+   "text": "Pr 19:9",
+   "start": "PRO.19.9",
+   "end": "PRO.19.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.8.1",
+   "at": 20,
+   "text": "Pr 15:32",
+   "start": "PRO.15.32",
+   "end": "PRO.15.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.10.1",
+   "at": 13,
+   "text": "Pr 17:7",
+   "start": "PRO.17.7",
+   "end": "PRO.17.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.11.1",
+   "at": 13,
+   "text": "Pr 14:29",
+   "start": "PRO.14.29",
+   "end": "PRO.14.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.11.1",
+   "at": 23,
+   "text": "16:32",
+   "start": "PRO.16.32",
+   "end": "PRO.16.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.12.1",
+   "at": 13,
+   "text": "Pr 16:14",
+   "start": "PRO.16.14",
+   "end": "PRO.16.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.12.1",
+   "at": 23,
+   "text": "15",
+   "start": "PRO.16.15",
+   "end": "PRO.16.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.12.1",
+   "at": 27,
+   "text": "20:2",
+   "start": "PRO.20.2",
+   "end": "PRO.20.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.14.1",
+   "at": 173,
+   "text": "Pr 19:13",
+   "start": "PRO.19.13",
+   "end": "PRO.19.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.16.1",
+   "at": 13,
+   "text": "Pr 10:17",
+   "start": "PRO.10.17",
+   "end": "PRO.10.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.16.1",
+   "at": 23,
+   "text": "13:13",
+   "start": "PRO.13.13",
+   "end": "PRO.13.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.16.1",
+   "at": 92,
+   "text": "Pr 16:17",
+   "start": "PRO.16.17",
+   "end": "PRO.16.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.17.1",
+   "at": 13,
+   "text": "Pr 14:21",
+   "start": "PRO.14.21",
+   "end": "PRO.14.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.17.1",
+   "at": 23,
+   "text": "Ps 37:26",
+   "start": "PSA.37.26",
+   "end": "PSA.37.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.18.1",
+   "at": 13,
+   "text": "Pr 13:24",
+   "start": "PRO.13.24",
+   "end": "PRO.13.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.18.1",
+   "at": 23,
+   "text": "23:13",
+   "start": "PRO.23.13",
+   "end": "PRO.23.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.18.1",
+   "at": 86,
+   "text": "Ps 24:4",
+   "start": "PSA.24.4",
+   "end": "PSA.24.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.18.1",
+   "at": 95,
+   "text": "25:1",
+   "start": "PSA.25.1",
+   "end": "PSA.25.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.20.1",
+   "at": 13,
+   "text": "Pr 13:18-20",
+   "start": "PRO.13.18",
+   "end": "PRO.13.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.20.1",
+   "at": 40,
+   "text": "Pr 5:11",
+   "start": "PRO.5.11",
+   "end": "PRO.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.21.1",
+   "at": 13,
+   "text": "Pr 16:1",
+   "start": "PRO.16.1",
+   "end": "PRO.16.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.21.1",
+   "at": 22,
+   "text": "9",
+   "start": "PRO.16.9",
+   "end": "PRO.16.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.21.1",
+   "at": 25,
+   "text": "Ps 33:10",
+   "start": "PSA.33.10",
+   "end": "PSA.33.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.21.1",
+   "at": 35,
+   "text": "11",
+   "start": "PSA.33.11",
+   "end": "PSA.33.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.22.1",
+   "at": 62,
+   "text": "Pr 11:23",
+   "start": "PRO.11.23",
+   "end": "PRO.11.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.23.1",
+   "at": 29,
+   "text": "Pr 3:2",
+   "start": "PRO.3.2",
+   "end": "PRO.3.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.23.1",
+   "at": 69,
+   "text": "1Ti 4:8",
+   "start": "1TI.4.8",
+   "end": "1TI.4.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.23.1",
+   "at": 103,
+   "text": "Pr 10:3",
+   "start": "PRO.10.3",
+   "end": "PRO.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.23.1",
+   "at": 112,
+   "text": "Ps 37:25",
+   "start": "PSA.37.25",
+   "end": "PSA.37.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.23.1",
+   "at": 174,
+   "text": "Ps 89:32",
+   "start": "PSA.89.32",
+   "end": "PSA.89.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.24.1",
+   "at": 74,
+   "text": "Mt 26:23",
+   "start": "MAT.26.23",
+   "end": "MAT.26.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.24.1",
+   "at": 93,
+   "text": "Pr 26:15",
+   "start": "PRO.26.15",
+   "end": "PRO.26.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.26.1",
+   "at": 38,
+   "text": "Pr 17:21-25",
+   "start": "PRO.17.21",
+   "end": "PRO.17.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.26.1",
+   "at": 51,
+   "text": "20:20",
+   "start": "PRO.20.20",
+   "end": "PRO.20.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.19.28.1",
+   "at": 75,
+   "text": "Pr 6:12",
+   "start": "PRO.6.12",
+   "end": "PRO.6.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.1.1",
+   "at": 90,
+   "text": "Isa 5:11",
+   "start": "ISA.5.11",
+   "end": "ISA.5.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.1.1",
+   "at": 100,
+   "text": "22",
+   "start": "ISA.5.22",
+   "end": "ISA.5.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.2.1",
+   "at": 12,
+   "text": "Pr 19:12",
+   "start": "PRO.19.12",
+   "end": "PRO.19.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.5.1",
+   "at": 43,
+   "text": "Pr 18:4",
+   "start": "PRO.18.4",
+   "end": "PRO.18.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.5.1",
+   "at": 52,
+   "text": "Ps 13:2",
+   "start": "PSA.13.2",
+   "end": "PSA.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.7.1",
+   "at": 134,
+   "text": "Pr 4:26",
+   "start": "PRO.4.26",
+   "end": "PRO.4.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.8.1",
+   "at": 9,
+   "text": "Pr 14:35",
+   "start": "PRO.14.35",
+   "end": "PRO.14.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.8.1",
+   "at": 19,
+   "text": "16:10",
+   "start": "PRO.16.10",
+   "end": "PRO.16.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.8.1",
+   "at": 26,
+   "text": "15",
+   "start": "PRO.16.15",
+   "end": "PRO.16.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.9.1",
+   "at": 82,
+   "text": "Job 15:14",
+   "start": "JOB.15.14",
+   "end": "JOB.15.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.13.1",
+   "at": 50,
+   "text": "Pr 6:9",
+   "start": "PRO.6.9",
+   "end": "PRO.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.13.1",
+   "at": 58,
+   "text": "10:11",
+   "start": "PRO.10.11",
+   "end": "PRO.10.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.16.1",
+   "at": 157,
+   "text": "Pr 27:13",
+   "start": "PRO.27.13",
+   "end": "PRO.27.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.17.1",
+   "at": 40,
+   "text": "Pr 9:17",
+   "start": "PRO.9.17",
+   "end": "PRO.9.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.18.1",
+   "at": 13,
+   "text": "Pr 15:22",
+   "start": "PRO.15.22",
+   "end": "PRO.15.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.19.1",
+   "at": 94,
+   "text": "Pr 1:10",
+   "start": "PRO.1.10",
+   "end": "PRO.1.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.21.1",
+   "at": 49,
+   "text": "Pr 28:20",
+   "start": "PRO.28.20",
+   "end": "PRO.28.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.22.1",
+   "at": 13,
+   "text": "Ps 27:14",
+   "start": "PSA.27.14",
+   "end": "PSA.27.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.26.1",
+   "at": 13,
+   "text": "Pr 20:8",
+   "start": "PRO.20.8",
+   "end": "PRO.20.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.27.1",
+   "at": 96,
+   "text": "Pr 20:5",
+   "start": "PRO.20.5",
+   "end": "PRO.20.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.27.1",
+   "at": 105,
+   "text": "Pr 18:8",
+   "start": "PRO.18.8",
+   "end": "PRO.18.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.27.1",
+   "at": 114,
+   "text": "17",
+   "start": "PRO.18.17",
+   "end": "PRO.18.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.20.30.1",
+   "at": 164,
+   "text": "Pr 18:8",
+   "start": "PRO.18.8",
+   "end": "PRO.18.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.1.1",
+   "at": 31,
+   "text": "Ps 1:3",
+   "start": "PSA.1.3",
+   "end": "PSA.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.1.1",
+   "at": 80,
+   "text": "De 11:10",
+   "start": "DEU.11.10",
+   "end": "DEU.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.1.1",
+   "at": 130,
+   "text": "Pr 16:9",
+   "start": "PRO.16.9",
+   "end": "PRO.16.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.3.1",
+   "at": 12,
+   "text": "Ps 50:7-15",
+   "start": "PSA.50.7",
+   "end": "PSA.50.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.4.1",
+   "at": 30,
+   "text": "Ps 131:1",
+   "start": "PSA.131.1",
+   "end": "PSA.131.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.4.1",
+   "at": 107,
+   "text": "Ps 101:5",
+   "start": "PSA.101.5",
+   "end": "PSA.101.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.4.1",
+   "at": 178,
+   "text": "Pr 20:20",
+   "start": "PRO.20.20",
+   "end": "PRO.20.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.6.1",
+   "at": 47,
+   "text": "Job 7:2",
+   "start": "JOB.7.2",
+   "end": "JOB.7.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.6.1",
+   "at": 56,
+   "text": "Jer 22:13",
+   "start": "JER.22.13",
+   "end": "JER.22.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.6.1",
+   "at": 150,
+   "text": "Pr 20:17-21",
+   "start": "PRO.20.17",
+   "end": "PRO.20.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.6.1",
+   "at": 163,
+   "text": "Ps 62:10",
+   "start": "PSA.62.10",
+   "end": "PSA.62.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.7.1",
+   "at": 124,
+   "text": "1Ki 7:9",
+   "start": "1KI.7.9",
+   "end": "1KI.7.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.10.1",
+   "at": 43,
+   "text": "Ps 10:3",
+   "start": "PSA.10.3",
+   "end": "PSA.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.10.1",
+   "at": 52,
+   "text": "Ec 8:11",
+   "start": "ECC.8.11",
+   "end": "ECC.8.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.11.1",
+   "at": 13,
+   "text": "Pr 19:25",
+   "start": "PRO.19.25",
+   "end": "PRO.19.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.12.1",
+   "at": 13,
+   "text": "Ps 37:35-38",
+   "start": "PSA.37.35",
+   "end": "PSA.37.38",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.12.1",
+   "at": 26,
+   "text": "73:17",
+   "start": "PSA.73.17",
+   "end": "PSA.73.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.12.1",
+   "at": 33,
+   "text": "20",
+   "start": "PSA.73.20",
+   "end": "PSA.73.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.12.1",
+   "at": 109,
+   "text": "Pr 10:24",
+   "start": "PRO.10.24",
+   "end": "PRO.10.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.13.1",
+   "at": 57,
+   "text": "Ps 18:26",
+   "start": "PSA.18.26",
+   "end": "PSA.18.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.14.1",
+   "at": 27,
+   "text": "Pr 17:23",
+   "start": "PRO.17.23",
+   "end": "PRO.17.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.16.1",
+   "at": 38,
+   "text": "Pr 12:26",
+   "start": "PRO.12.26",
+   "end": "PRO.12.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.16.1",
+   "at": 48,
+   "text": "14:22",
+   "start": "PRO.14.22",
+   "end": "PRO.14.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.18.1",
+   "at": 13,
+   "text": "Pr 11:8",
+   "start": "PRO.11.8",
+   "end": "PRO.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.18.1",
+   "at": 172,
+   "text": "Jos 7:26",
+   "start": "JOS.7.26",
+   "end": "JOS.7.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.19.1",
+   "at": 13,
+   "text": "Pr 21:9",
+   "start": "PRO.21.9",
+   "end": "PRO.21.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.21.1",
+   "at": 43,
+   "text": "Ps 34:14",
+   "start": "PSA.34.14",
+   "end": "PSA.34.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.22.1",
+   "at": 38,
+   "text": "Ec 7:19",
+   "start": "ECC.7.19",
+   "end": "ECC.7.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.22.1",
+   "at": 47,
+   "text": "9:15",
+   "start": "ECC.9.15",
+   "end": "ECC.9.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.23.1",
+   "at": 13,
+   "text": "Pr 13:2",
+   "start": "PRO.13.2",
+   "end": "PRO.13.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.23.1",
+   "at": 22,
+   "text": "3",
+   "start": "PRO.13.3",
+   "end": "PRO.13.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.28.1",
+   "at": 13,
+   "text": "Pr 19:5",
+   "start": "PRO.19.5",
+   "end": "PRO.19.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.28.1",
+   "at": 121,
+   "text": "Hab 1:5",
+   "start": "HAB.1.5",
+   "end": "HAB.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.28.1",
+   "at": 154,
+   "text": "Pr 12:19",
+   "start": "PRO.12.19",
+   "end": "PRO.12.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.21.30-31.1",
+   "at": 91,
+   "text": "Pr 19:21",
+   "start": "PRO.19.21",
+   "end": "PRO.19.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.1.1",
+   "at": 16,
+   "text": "Job 30:8",
+   "start": "JOB.30.8",
+   "end": "JOB.30.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.1.1",
+   "at": 64,
+   "text": "Ec 7:1",
+   "start": "ECC.7.1",
+   "end": "ECC.7.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.7.1",
+   "at": 106,
+   "text": "Pr 19:6",
+   "start": "PRO.19.6",
+   "end": "PRO.19.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.7.1",
+   "at": 115,
+   "text": "21:14",
+   "start": "PRO.21.14",
+   "end": "PRO.21.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.8.1",
+   "at": 12,
+   "text": "Pr 11:18",
+   "start": "PRO.11.18",
+   "end": "PRO.11.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.8.1",
+   "at": 22,
+   "text": "Ps 109:16-20",
+   "start": "PSA.109.16",
+   "end": "PSA.109.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.8.1",
+   "at": 36,
+   "text": "Ga 6:7",
+   "start": "GAL.6.7",
+   "end": "GAL.6.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.8.1",
+   "at": 44,
+   "text": "8",
+   "start": "GAL.6.8",
+   "end": "GAL.6.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.14.1",
+   "at": 38,
+   "text": "Pr 5:3",
+   "start": "PRO.5.3",
+   "end": "PRO.5.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.14.1",
+   "at": 46,
+   "text": "7:5",
+   "start": "PRO.7.5",
+   "end": "PRO.7.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.17.1",
+   "at": 172,
+   "text": "Pr 22:22-24:12",
+   "start": "PRO.22.22",
+   "end": "PRO.24.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.22-23.1",
+   "at": 99,
+   "text": "Pr 17:5",
+   "start": "PRO.17.5",
+   "end": "PRO.17.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.22-23.1",
+   "at": 108,
+   "text": "Ps 12:5",
+   "start": "PSA.12.5",
+   "end": "PSA.12.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.22-23.1",
+   "at": 158,
+   "text": "Job 5:4",
+   "start": "JOB.5.4",
+   "end": "JOB.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.22.28.1",
+   "at": 13,
+   "text": "Pr 23:10",
+   "start": "PRO.23.10",
+   "end": "PRO.23.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.4-5.1",
+   "at": 15,
+   "text": "1Ti 6:9",
+   "start": "1TI.6.9",
+   "end": "1TI.6.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.4-5.1",
+   "at": 24,
+   "text": "10",
+   "start": "1TI.6.10",
+   "end": "1TI.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.6-8.1",
+   "at": 110,
+   "text": "Pr 22:9",
+   "start": "PRO.22.9",
+   "end": "PRO.22.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.6-8.1",
+   "at": 119,
+   "text": "De 15:9",
+   "start": "DEU.15.9",
+   "end": "DEU.15.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.9.1",
+   "at": 12,
+   "text": "Pr 9:8",
+   "start": "PRO.9.8",
+   "end": "PRO.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.11.1",
+   "at": 25,
+   "text": "Le 25:25",
+   "start": "LEV.25.25",
+   "end": "LEV.25.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.11.1",
+   "at": 35,
+   "text": "26",
+   "start": "LEV.25.26",
+   "end": "LEV.25.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.11.1",
+   "at": 39,
+   "text": "Nu 35:12",
+   "start": "NUM.35.12",
+   "end": "NUM.35.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.11.1",
+   "at": 66,
+   "text": "Job 19:25",
+   "start": "JOB.19.25",
+   "end": "JOB.19.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.11.1",
+   "at": 101,
+   "text": "Job 31:21",
+   "start": "JOB.31.21",
+   "end": "JOB.31.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.22.1",
+   "at": 27,
+   "text": "Pr 1:8",
+   "start": "PRO.1.8",
+   "end": "PRO.1.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.22.1",
+   "at": 35,
+   "text": "Eph 6:1",
+   "start": "EPH.6.1",
+   "end": "EPH.6.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.23.1",
+   "at": 26,
+   "text": "Pr 4:5",
+   "start": "PRO.4.5",
+   "end": "PRO.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.26-35.1",
+   "at": 58,
+   "text": "Ho 4:11",
+   "start": "HOS.4.11",
+   "end": "HOS.4.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.26-35.1",
+   "at": 139,
+   "text": "Pr 8:1",
+   "start": "PRO.8.1",
+   "end": "PRO.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.26-35.1",
+   "at": 147,
+   "text": "9:3",
+   "start": "PRO.9.3",
+   "end": "PRO.9.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.28.1",
+   "at": 32,
+   "text": "Pr 5:8-10",
+   "start": "PRO.5.8",
+   "end": "PRO.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.29-30.1",
+   "at": 71,
+   "text": "Pr 9:2",
+   "start": "PRO.9.2",
+   "end": "PRO.9.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.31.1",
+   "at": 60,
+   "text": "Ge 49:11",
+   "start": "GEN.49.11",
+   "end": "GEN.49.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.31.1",
+   "at": 70,
+   "text": "De 32:14",
+   "start": "DEU.32.14",
+   "end": "DEU.32.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.33-34.1",
+   "at": 48,
+   "text": "Ge 19:31",
+   "start": "GEN.19.31",
+   "end": "GEN.19.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.33-34.1",
+   "at": 58,
+   "text": "35",
+   "start": "GEN.19.35",
+   "end": "GEN.19.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.23.35.1",
+   "at": 37,
+   "text": "Ge 9:24",
+   "start": "GEN.9.24",
+   "end": "GEN.9.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.1-2.1",
+   "at": 15,
+   "text": "Pr 23:3",
+   "start": "PRO.23.3",
+   "end": "PRO.23.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.1-2.1",
+   "at": 24,
+   "text": "17",
+   "start": "PRO.23.17",
+   "end": "PRO.23.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.3-4.1",
+   "at": 15,
+   "text": "Pr 14:1",
+   "start": "PRO.14.1",
+   "end": "PRO.14.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.3-4.1",
+   "at": 24,
+   "text": "Isa 54:14",
+   "start": "ISA.54.14",
+   "end": "ISA.54.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.5-6.1",
+   "at": 29,
+   "text": "Ec 9:16",
+   "start": "ECC.9.16",
+   "end": "ECC.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.5-6.1",
+   "at": 38,
+   "text": "18",
+   "start": "ECC.9.18",
+   "end": "ECC.9.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.5-6.1",
+   "at": 76,
+   "text": "Pr 21:22",
+   "start": "PRO.21.22",
+   "end": "PRO.21.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.7.1",
+   "at": 12,
+   "text": "Pr 14:16",
+   "start": "PRO.14.16",
+   "end": "PRO.14.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.11-12.1",
+   "at": 38,
+   "text": "Jas 4:17",
+   "start": "JAS.4.17",
+   "end": "JAS.4.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.14.1",
+   "at": 63,
+   "text": "Pr 23:18",
+   "start": "PRO.23.18",
+   "end": "PRO.23.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.15-16.1",
+   "at": 99,
+   "text": "Ps 37:24",
+   "start": "PSA.37.24",
+   "end": "PSA.37.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.17-18.1",
+   "at": 127,
+   "text": "Pr 17:5",
+   "start": "PRO.17.5",
+   "end": "PRO.17.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.21-22.1",
+   "at": 65,
+   "text": "Ro 13:1-7",
+   "start": "ROM.13.1",
+   "end": "ROM.13.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.21-22.1",
+   "at": 76,
+   "text": "1Pe 2:17",
+   "start": "1PE.2.17",
+   "end": "1PE.2.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.23.1",
+   "at": 135,
+   "text": "Pr 24:24-34",
+   "start": "PRO.24.24",
+   "end": "PRO.24.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.26.1",
+   "at": 44,
+   "text": "Ps 2:12",
+   "start": "PSA.2.12",
+   "end": "PSA.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.26.1",
+   "at": 53,
+   "text": "So 8:1",
+   "start": "SNG.8.1",
+   "end": "SNG.8.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.26.1",
+   "at": 110,
+   "text": "Pr 8:9",
+   "start": "PRO.8.9",
+   "end": "PRO.8.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.24.29.1",
+   "at": 34,
+   "text": "Mt 5:43-45",
+   "start": "MAT.5.43",
+   "end": "MAT.5.45",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.2.1",
+   "at": 57,
+   "text": "Isa 45:15",
+   "start": "ISA.45.15",
+   "end": "ISA.45.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.2.1",
+   "at": 68,
+   "text": "Ro 11:33",
+   "start": "ROM.11.33",
+   "end": "ROM.11.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.8.1",
+   "at": 12,
+   "text": "Pr 3:30",
+   "start": "PRO.3.30",
+   "end": "PRO.3.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.9-10.1",
+   "at": 16,
+   "text": "Mt 5:25",
+   "start": "MAT.5.25",
+   "end": "MAT.5.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.12.1",
+   "at": 78,
+   "text": "Pr 9:9",
+   "start": "PRO.9.9",
+   "end": "PRO.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.12.1",
+   "at": 86,
+   "text": "15:31",
+   "start": "PRO.15.31",
+   "end": "PRO.15.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.14.1",
+   "at": 32,
+   "text": "Jer 10:13",
+   "start": "JER.10.13",
+   "end": "JER.10.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.18.1",
+   "at": 82,
+   "text": "Pr 24:28",
+   "start": "PRO.24.28",
+   "end": "PRO.24.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.21-22.1",
+   "at": 17,
+   "text": "Mt 5:44",
+   "start": "MAT.5.44",
+   "end": "MAT.5.44",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.21-22.1",
+   "at": 26,
+   "text": "Ro 12:20",
+   "start": "ROM.12.20",
+   "end": "ROM.12.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.23.1",
+   "at": 47,
+   "text": "Ps 90:2",
+   "start": "PSA.90.2",
+   "end": "PSA.90.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.25.1",
+   "at": 13,
+   "text": "Pr 25:13",
+   "start": "PRO.25.13",
+   "end": "PRO.25.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.25.27.1",
+   "at": 22,
+   "text": "Pr 25:16",
+   "start": "PRO.25.16",
+   "end": "PRO.25.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.17.1",
+   "at": 19,
+   "text": "Pr 20:19",
+   "start": "PRO.20.19",
+   "end": "PRO.20.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.17.1",
+   "at": 29,
+   "text": "24:21",
+   "start": "PRO.24.21",
+   "end": "PRO.24.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.20-21.1",
+   "at": 32,
+   "text": "Pr 16:28",
+   "start": "PRO.16.28",
+   "end": "PRO.16.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.25.1",
+   "at": 17,
+   "text": "Pr 26:24",
+   "start": "PRO.26.24",
+   "end": "PRO.26.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.26-27.1",
+   "at": 109,
+   "text": "Pr 12:13",
+   "start": "PRO.12.13",
+   "end": "PRO.12.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.26-27.1",
+   "at": 119,
+   "text": "Ps 7:16",
+   "start": "PSA.7.16",
+   "end": "PSA.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.26-27.1",
+   "at": 128,
+   "text": "9:17",
+   "start": "PSA.9.17",
+   "end": "PSA.9.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.26.28.1",
+   "at": 80,
+   "text": "Pr 4:24",
+   "start": "PRO.4.24",
+   "end": "PRO.4.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.1.1",
+   "at": 44,
+   "text": "Pr 16:9",
+   "start": "PRO.16.9",
+   "end": "PRO.16.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.1.1",
+   "at": 53,
+   "text": "19:21",
+   "start": "PRO.19.21",
+   "end": "PRO.19.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.4.1",
+   "at": 40,
+   "text": "Pr 6:34",
+   "start": "PRO.6.34",
+   "end": "PRO.6.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.15.1",
+   "at": 13,
+   "text": "Pr 19:13",
+   "start": "PRO.19.13",
+   "end": "PRO.19.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.16.1",
+   "at": 162,
+   "text": "Ps 17:7",
+   "start": "PSA.17.7",
+   "end": "PSA.17.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.16.1",
+   "at": 171,
+   "text": "18:35",
+   "start": "PSA.18.35",
+   "end": "PSA.18.35",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.25-27.1",
+   "at": 150,
+   "text": "Ps 65:9-13",
+   "start": "PSA.65.9",
+   "end": "PSA.65.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.25-27.1",
+   "at": 212,
+   "text": "Job 40:15",
+   "start": "JOB.40.15",
+   "end": "JOB.40.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.27.27.1",
+   "at": 46,
+   "text": "Ac 16:15",
+   "start": "ACT.16.15",
+   "end": "ACT.16.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.1.1",
+   "at": 73,
+   "text": "Pr 14:26",
+   "start": "PRO.14.26",
+   "end": "PRO.14.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.5.1",
+   "at": 12,
+   "text": "Joh 7:17",
+   "start": "JHN.7.17",
+   "end": "JHN.7.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.6.1",
+   "at": 12,
+   "text": "Pr 10:6",
+   "start": "PRO.10.6",
+   "end": "PRO.10.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.7.1",
+   "at": 12,
+   "text": "Pr 17:25",
+   "start": "PRO.17.25",
+   "end": "PRO.17.25",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.9.1",
+   "at": 12,
+   "text": "Pr 15:8",
+   "start": "PRO.15.8",
+   "end": "PRO.15.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.9.1",
+   "at": 21,
+   "text": "21:27",
+   "start": "PRO.21.27",
+   "end": "PRO.21.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.9.1",
+   "at": 90,
+   "text": "Ps 66:18",
+   "start": "PSA.66.18",
+   "end": "PSA.66.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.12.1",
+   "at": 116,
+   "text": "Pr 14:34",
+   "start": "PRO.14.34",
+   "end": "PRO.14.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.13.1",
+   "at": 13,
+   "text": "Ps 32:3-5",
+   "start": "PSA.32.3",
+   "end": "PSA.32.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.17.1",
+   "at": 76,
+   "text": "Ge 9:6",
+   "start": "GEN.9.6",
+   "end": "GEN.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.17.1",
+   "at": 143,
+   "text": "Pr 1:12",
+   "start": "PRO.1.12",
+   "end": "PRO.1.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.17.1",
+   "at": 152,
+   "text": "Job 33:18-24",
+   "start": "JOB.33.18",
+   "end": "JOB.33.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.17.1",
+   "at": 166,
+   "text": "Ps 143:7",
+   "start": "PSA.143.7",
+   "end": "PSA.143.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.18.1",
+   "at": 13,
+   "text": "Pr 10:9",
+   "start": "PRO.10.9",
+   "end": "PRO.10.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.18.1",
+   "at": 22,
+   "text": "17:20",
+   "start": "PRO.17.20",
+   "end": "PRO.17.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.19.1",
+   "at": 13,
+   "text": "Pr 10:4",
+   "start": "PRO.10.4",
+   "end": "PRO.10.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.19.1",
+   "at": 22,
+   "text": "20:4",
+   "start": "PRO.20.4",
+   "end": "PRO.20.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.19.1",
+   "at": 101,
+   "text": "Pr 12:11",
+   "start": "PRO.12.11",
+   "end": "PRO.12.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.20.1",
+   "at": 50,
+   "text": "Pr 20:21",
+   "start": "PRO.20.21",
+   "end": "PRO.20.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.21.1",
+   "at": 24,
+   "text": "Pr 24:23",
+   "start": "PRO.24.23",
+   "end": "PRO.24.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.22.1",
+   "at": 13,
+   "text": "Pr 28:20",
+   "start": "PRO.28.20",
+   "end": "PRO.28.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.22.1",
+   "at": 58,
+   "text": "Pr 23:6",
+   "start": "PRO.23.6",
+   "end": "PRO.23.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.22.1",
+   "at": 112,
+   "text": "Pr 22:9",
+   "start": "PRO.22.9",
+   "end": "PRO.22.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.22.1",
+   "at": 121,
+   "text": "Mt 20:15",
+   "start": "MAT.20.15",
+   "end": "MAT.20.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.23.1",
+   "at": 13,
+   "text": "Pr 9:8",
+   "start": "PRO.9.8",
+   "end": "PRO.9.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.23.1",
+   "at": 21,
+   "text": "9",
+   "start": "PRO.9.9",
+   "end": "PRO.9.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.23.1",
+   "at": 24,
+   "text": "27:5",
+   "start": "PRO.27.5",
+   "end": "PRO.27.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.24.1",
+   "at": 13,
+   "text": "Mt 15:4-6",
+   "start": "MAT.15.4",
+   "end": "MAT.15.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.26.1",
+   "at": 13,
+   "text": "Pr 3:6-8",
+   "start": "PRO.3.6",
+   "end": "PRO.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.27.1",
+   "at": 13,
+   "text": "Pr 11:24-26",
+   "start": "PRO.11.24",
+   "end": "PRO.11.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.27.1",
+   "at": 57,
+   "text": "Ps 27:9",
+   "start": "PSA.27.9",
+   "end": "PSA.27.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.27.1",
+   "at": 66,
+   "text": "69:17",
+   "start": "PSA.69.17",
+   "end": "PSA.69.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.28.1",
+   "at": 89,
+   "text": "Pr 28:12",
+   "start": "PRO.28.12",
+   "end": "PRO.28.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.28.28.1",
+   "at": 99,
+   "text": "11:10",
+   "start": "PRO.11.10",
+   "end": "PRO.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.1.1",
+   "at": 49,
+   "text": "2Ki 17:14",
+   "start": "2KI.17.14",
+   "end": "2KI.17.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.1.1",
+   "at": 60,
+   "text": "Ne 9:16",
+   "start": "NEH.9.16",
+   "end": "NEH.9.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.2.1",
+   "at": 12,
+   "text": "Pr 11:10",
+   "start": "PRO.11.10",
+   "end": "PRO.11.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.2.1",
+   "at": 22,
+   "text": "28:28",
+   "start": "PRO.28.28",
+   "end": "PRO.28.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.3.1",
+   "at": 12,
+   "text": "Pr 4:6",
+   "start": "PRO.4.6",
+   "end": "PRO.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.3.1",
+   "at": 20,
+   "text": "7",
+   "start": "PRO.4.7",
+   "end": "PRO.4.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.3.1",
+   "at": 23,
+   "text": "10:1",
+   "start": "PRO.10.1",
+   "end": "PRO.10.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.4.1",
+   "at": 89,
+   "text": "Pr 28:21",
+   "start": "PRO.28.21",
+   "end": "PRO.28.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.5.1",
+   "at": 12,
+   "text": "Pr 26:28",
+   "start": "PRO.26.28",
+   "end": "PRO.26.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.6.1",
+   "at": 65,
+   "text": "Pr 12:13",
+   "start": "PRO.12.13",
+   "end": "PRO.12.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.7.1",
+   "at": 38,
+   "text": "Ps 1:6",
+   "start": "PSA.1.6",
+   "end": "PSA.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.7.1",
+   "at": 96,
+   "text": "Pr 29:14",
+   "start": "PRO.29.14",
+   "end": "PRO.29.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.7.1",
+   "at": 150,
+   "text": "Pr 28:27",
+   "start": "PRO.28.27",
+   "end": "PRO.28.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.10.1",
+   "at": 46,
+   "text": "Ps 5:6",
+   "start": "PSA.5.6",
+   "end": "PSA.5.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.10.1",
+   "at": 54,
+   "text": "26:9",
+   "start": "PSA.26.9",
+   "end": "PSA.26.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.10.1",
+   "at": 82,
+   "text": "Ge 3:4",
+   "start": "GEN.3.4",
+   "end": "GEN.3.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.11.1",
+   "at": 13,
+   "text": "Pr 12:16",
+   "start": "PRO.12.16",
+   "end": "PRO.12.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.11.1",
+   "at": 23,
+   "text": "16:32",
+   "start": "PRO.16.32",
+   "end": "PRO.16.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.13.1",
+   "at": 13,
+   "text": "Pr 22:2",
+   "start": "PRO.22.2",
+   "end": "PRO.22.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.13.1",
+   "at": 126,
+   "text": "1Sa 14:27",
+   "start": "1SA.14.27",
+   "end": "1SA.14.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.13.1",
+   "at": 137,
+   "text": "Ps 13:3",
+   "start": "PSA.13.3",
+   "end": "PSA.13.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.14.1",
+   "at": 13,
+   "text": "Pr 20:28",
+   "start": "PRO.20.28",
+   "end": "PRO.20.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.14.1",
+   "at": 23,
+   "text": "25:5",
+   "start": "PRO.25.5",
+   "end": "PRO.25.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.16.1",
+   "at": 13,
+   "text": "Pr 29:2",
+   "start": "PRO.29.2",
+   "end": "PRO.29.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.16.1",
+   "at": 22,
+   "text": "12",
+   "start": "PRO.29.12",
+   "end": "PRO.29.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.16.1",
+   "at": 26,
+   "text": "Ps 12:1-8",
+   "start": "PSA.12.1",
+   "end": "PSA.12.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.17.1",
+   "at": 13,
+   "text": "Pr 29:3",
+   "start": "PRO.29.3",
+   "end": "PRO.29.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.17.1",
+   "at": 22,
+   "text": "15",
+   "start": "PRO.29.15",
+   "end": "PRO.29.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.17.1",
+   "at": 26,
+   "text": "Pr 19:18",
+   "start": "PRO.19.18",
+   "end": "PRO.19.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.18.1",
+   "at": 82,
+   "text": "1Sa 3:1",
+   "start": "1SA.3.1",
+   "end": "1SA.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.18.1",
+   "at": 208,
+   "text": "Pr 14:11",
+   "start": "PRO.14.11",
+   "end": "PRO.14.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.18.1",
+   "at": 218,
+   "text": "34",
+   "start": "PRO.14.34",
+   "end": "PRO.14.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.20.1",
+   "at": 13,
+   "text": "Pr 21:5",
+   "start": "PRO.21.5",
+   "end": "PRO.21.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.22.1",
+   "at": 13,
+   "text": "Pr 15:18",
+   "start": "PRO.15.18",
+   "end": "PRO.15.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.23.1",
+   "at": 13,
+   "text": "Pr 16:18",
+   "start": "PRO.16.18",
+   "end": "PRO.16.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.23.1",
+   "at": 23,
+   "text": "18:12",
+   "start": "PRO.18.12",
+   "end": "PRO.18.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.24.1",
+   "at": 27,
+   "text": "Pr 8:36",
+   "start": "PRO.8.36",
+   "end": "PRO.8.36",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.24.1",
+   "at": 55,
+   "text": "Le 5:1",
+   "start": "LEV.5.1",
+   "end": "LEV.5.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.25.1",
+   "at": 57,
+   "text": "Pr 29:6",
+   "start": "PRO.29.6",
+   "end": "PRO.29.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.26.1",
+   "at": 21,
+   "text": "Ps 27:8",
+   "start": "PSA.27.8",
+   "end": "PSA.27.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.27.1",
+   "at": 13,
+   "text": "Pr 3:32",
+   "start": "PRO.3.32",
+   "end": "PRO.3.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.29.27.1",
+   "at": 47,
+   "text": "Pr 29:16",
+   "start": "PRO.29.16",
+   "end": "PRO.29.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 104,
+   "text": "Isa 13:1",
+   "start": "ISA.13.1",
+   "end": "ISA.13.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 114,
+   "text": "Zec 9:1",
+   "start": "ZEC.9.1",
+   "end": "ZEC.9.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 222,
+   "text": "1Ch 15:27",
+   "start": "1CH.15.27",
+   "end": "1CH.15.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 317,
+   "text": "Ge 20:7",
+   "start": "GEN.20.7",
+   "end": "GEN.20.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 326,
+   "text": "Ex 7:14",
+   "start": "EXO.7.14",
+   "end": "EXO.7.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 335,
+   "text": "15",
+   "start": "EXO.7.15",
+   "end": "EXO.7.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 339,
+   "text": "16",
+   "start": "EXO.7.16",
+   "end": "EXO.7.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 646,
+   "text": "2Sa 23:1",
+   "start": "2SA.23.1",
+   "end": "2SA.23.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 656,
+   "text": "Ps 36:1",
+   "start": "PSA.36.1",
+   "end": "PSA.36.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 665,
+   "text": "110:1",
+   "start": "PSA.110.1",
+   "end": "PSA.110.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.1.1",
+   "at": 672,
+   "text": "Isa 1:24",
+   "start": "ISA.1.24",
+   "end": "ISA.1.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.2-4.1",
+   "at": 387,
+   "text": "De 30:12-14",
+   "start": "DEU.30.12",
+   "end": "DEU.30.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.2-4.1",
+   "at": 400,
+   "text": "Isa 40:12",
+   "start": "ISA.40.12",
+   "end": "ISA.40.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.8.1",
+   "at": 36,
+   "text": "Job 11:11",
+   "start": "JOB.11.11",
+   "end": "JOB.11.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.9.1",
+   "at": 126,
+   "text": "Ex 20:7",
+   "start": "EXO.20.7",
+   "end": "EXO.20.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.10.1",
+   "at": 28,
+   "text": "Ps 10:7",
+   "start": "PSA.10.7",
+   "end": "PSA.10.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.11-14.1",
+   "at": 125,
+   "text": "Pr 30:14",
+   "start": "PRO.30.14",
+   "end": "PRO.30.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.11-14.1",
+   "at": 135,
+   "text": "Ps 14:4",
+   "start": "PSA.14.4",
+   "end": "PSA.14.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.11-14.1",
+   "at": 144,
+   "text": "52:2",
+   "start": "PSA.52.2",
+   "end": "PSA.52.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.11-14.1",
+   "at": 175,
+   "text": "Pr 30:15",
+   "start": "PRO.30.15",
+   "end": "PRO.30.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.11-14.1",
+   "at": 185,
+   "text": "16",
+   "start": "PRO.30.16",
+   "end": "PRO.30.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.11-14.1",
+   "at": 248,
+   "text": "Pr 30:17",
+   "start": "PRO.30.17",
+   "end": "PRO.30.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.11-14.1",
+   "at": 317,
+   "text": "Pr 30:18-20",
+   "start": "PRO.30.18",
+   "end": "PRO.30.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.24-31.1",
+   "at": 149,
+   "text": "Pr 30:25-28",
+   "start": "PRO.30.25",
+   "end": "PRO.30.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.24-31.1",
+   "at": 339,
+   "text": "Pr 30:30",
+   "start": "PRO.30.30",
+   "end": "PRO.30.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.24-31.1",
+   "at": 349,
+   "text": "31",
+   "start": "PRO.30.31",
+   "end": "PRO.30.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.30.32.1",
+   "at": 151,
+   "text": "Jud 18:19",
+   "start": "JDG.18.19",
+   "end": "JDG.18.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.3-9.1",
+   "at": 375,
+   "text": "Pr 5:9",
+   "start": "PRO.5.9",
+   "end": "PRO.5.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.3-9.1",
+   "at": 383,
+   "text": "7:22",
+   "start": "PRO.7.22",
+   "end": "PRO.7.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.3-9.1",
+   "at": 389,
+   "text": "27",
+   "start": "PRO.7.27",
+   "end": "PRO.7.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.4-5.1",
+   "at": 148,
+   "text": "Pr 20:1",
+   "start": "PRO.20.1",
+   "end": "PRO.20.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.4-5.1",
+   "at": 157,
+   "text": "22:29",
+   "start": "PRO.22.29",
+   "end": "PRO.22.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.8-9.1",
+   "at": 106,
+   "text": "Ps 72:12",
+   "start": "PSA.72.12",
+   "end": "PSA.72.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.8-9.1",
+   "at": 116,
+   "text": "Isa 1:17",
+   "start": "ISA.1.17",
+   "end": "ISA.1.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.10-31.1",
+   "at": 377,
+   "text": "Pr 18:22",
+   "start": "PRO.18.22",
+   "end": "PRO.18.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.10-31.1",
+   "at": 387,
+   "text": "19:14",
+   "start": "PRO.19.14",
+   "end": "PRO.19.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.10-31.1",
+   "at": 463,
+   "text": "Pr 12:4",
+   "start": "PRO.12.4",
+   "end": "PRO.12.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.10-31.1",
+   "at": 472,
+   "text": "Ru 3:11",
+   "start": "RUT.3.11",
+   "end": "RUT.3.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.17-18.1",
+   "at": 163,
+   "text": "Pr 24:20",
+   "start": "PRO.24.20",
+   "end": "PRO.24.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.22.1",
+   "at": 89,
+   "text": "Ex 26:1",
+   "start": "EXO.26.1",
+   "end": "EXO.26.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.22.1",
+   "at": 98,
+   "text": "27:9",
+   "start": "EXO.27.9",
+   "end": "EXO.27.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.23.1",
+   "at": 26,
+   "text": "Pr 22:22",
+   "start": "PRO.22.22",
+   "end": "PRO.22.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.24.1",
+   "at": 107,
+   "text": "2Sa 18:11",
+   "start": "2SA.18.11",
+   "end": "2SA.18.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.27.1",
+   "at": 13,
+   "text": "1Ti 5:14",
+   "start": "1TI.5.14",
+   "end": "1TI.5.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.27.1",
+   "at": 23,
+   "text": "Tit 2:5",
+   "start": "TIT.2.5",
+   "end": "TIT.2.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-proverbs.PRO.31.30.1",
+   "at": 77,
+   "text": "Pr 11:22",
+   "start": "PRO.11.22",
+   "end": "PRO.11.22",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}

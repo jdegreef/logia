@@ -7,7 +7,8 @@ bible/owb/en/<BOOK>.<chapter>.json, holding what the reader needs: the
 English text at three levels, the word alignments of the Balanced level, the
 original-language words with their MACULA data (SBLGNT Greek for the New
 Testament, the Westminster Leningrad Codex for the Old), the translation
-notes, headings and cross-references.
+notes, headings and cross-references. bible/owb/versification.json is its
+table of the Old Testament verses numbered otherwise in English Bibles.
 
 The text keeps the Open Word Bible's variations as it has them: its reader
 settings ({{gender:all people|men}}, {{christos:Christ|the Messiah}},
@@ -24,6 +25,7 @@ import argparse
 import glob
 import json
 import os
+import shutil
 import subprocess
 import sys
 
@@ -153,6 +155,9 @@ def main():
         json.dump({k: {"en": v["en"], "chapters": v["chapters"]} for k, v in books.items()},
                   f, ensure_ascii=False, indent=1)
         f.write("\n")
+    # The verses the Hebrew text numbers otherwise than English (KJV) Bibles,
+    # which the commentators cite (a psalm's title is its verse 1): copied as is.
+    shutil.copyfile(os.path.join(owb, "data", "versification.json"), os.path.join(OUT, "versification.json"))
     chapters = args.chapters
     if args.all:
         chapters = [f"{b}.{c}" for b, v in books.items() for c in range(1, v["chapters"] + 1)]
