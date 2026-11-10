@@ -83,7 +83,8 @@
       items = suggest(input.value);
       at = items.length ? 0 : -1;
       list.innerHTML = items.length ? items.map(function (x, i) {
-        return '<li role="option" id="' + list.id + "-" + i + '"' + (i === at ? ' aria-selected="true"' : "") + '><a href="' + esc(x.href) +
+        // The link is the option (an option may hold nothing focusable).
+        return '<li role="none"><a role="option" id="' + list.id + "-" + i + '"' + (i === at ? ' aria-selected="true"' : "") + ' href="' + esc(x.href) +
           '" tabindex="-1"><b>' + esc(x.title) + "</b><span>" + esc(x.note) + "</span></a></li>";
       }).join("") : (input.value.trim() ? '<li class="lg-sugg-none">' + esc(D.ui.none) + "</li>" : "");
       list.hidden = !input.value.trim();

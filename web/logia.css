@@ -394,7 +394,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
   color: var(--text); text-decoration: none; font-size: 15px; }
 .lg-sugg b { font-family: var(--display); font-weight: 600; }
 .lg-sugg span { color: var(--muted); font-size: 13px; }
-.lg-sugg [aria-selected="true"] a, .lg-sugg a:hover { background: var(--accent-soft); }
+.lg-sugg a[aria-selected="true"], .lg-sugg a:hover { background: var(--accent-soft); }
 .lg-sugg-none { padding: 10px 12px; color: var(--muted); font-size: 14px; }
 .hero .lg-search + .hero-try { margin-top: 14px; }
 
