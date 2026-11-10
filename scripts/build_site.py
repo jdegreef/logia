@@ -34,6 +34,7 @@ import json
 import os
 import re
 import shutil
+from collections import Counter
 import subprocess
 from urllib.parse import quote
 
@@ -304,6 +305,12 @@ class Library:
 
     def author_of(self, work_id):
         return self.authors[self.works[work_id]["author"]]
+
+    def excerpts_on_verse(self):
+        """{(book, chapter, verse): how many excerpts in Logia start there}."""
+        if not hasattr(self, "_on_verse"):
+            self._on_verse = Counter(ref_parts(c["start"]) for c in self.comments)
+        return self._on_verse
 
     def ordered_works(self, ids=None):
         ids = self.works if ids is None else ids
@@ -2775,6 +2782,28 @@ def wholes_list(lib, wid):
                    f'<span class="lg-quiet">{e(text_lead(x))}</span></li>' for x in lib.texts.get(wid, []))
 
 
+def work_start_here(lib, comments, n=3):
+    """A work's first excerpt on each of the n verses (one a chapter) that
+    the most works in Logia comment on, then the most excerpts in all."""
+    total = lib.excerpts_on_verse()
+    seen, out = set(), []
+    for c in sorted(comments, key=lambda c: (-len(lib.voices_on.get(ref_parts(c["start"]), [])),
+                                             -total[ref_parts(c["start"])], order_key(c))):
+        b, ch, _v = ref_parts(c["start"])
+        if (b, ch) not in seen:
+            seen.add((b, ch))
+            out.append(c)
+        if len(out) == n:
+            break
+    return sorted(out, key=order_key)
+
+
+def voices_line(lib, c):
+    """How many works in Logia comment on an excerpt's first verse."""
+    n = len(lib.voices_on.get(ref_parts(c["start"]), []))
+    return t("work.start_voices_one" if n == 1 else "work.start_voices", n=n)
+
+
 def work_page(lib, wid):
     w, a = lib.works[wid], lib.author_of(wid)
     comments = sorted((c for c in lib.comments if c["work"] == wid), key=order_key)
@@ -2790,6 +2819,14 @@ def work_page(lib, wid):
     dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{rights_pills(w)}</span>'
            f'<span class="lg-quiet lg-rights-note">{e(r["basis"])}; {e(r["worldwide"])}</span></dd>')
     cite = cite_box(a, w)
+    # Start here: three passages to read first, on the verses the most works discuss.
+    starts = "".join(
+        f'<li><a href="{excerpt_href(lib, c)}"><b>{e(scripture.label(c["start"], c["end"]))}</b>'
+        f'<span class="lg-start-text">{e(snippet(c["text"], 30))}</span>'
+        f'<span class="lg-quiet">{e(voices_line(lib, c))}</span></a></li>'
+        for c in work_start_here(lib, comments))
+    start = (f'<section class="lg-block lg-start lg-work-start"><h2>{e(t("work.start_here"))}</h2>'
+             f'<p class="lg-quiet">{e(t("work.start_note"))}</p><ul>{starts}</ul></section>' if starts else "")
     contents = work_contents(lib, wid, comments)
     texts = lib.texts.get(wid, [])
     whole = ""
@@ -2814,6 +2851,7 @@ def work_page(lib, wid):
 <header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 <p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
+{start}
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section>
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
