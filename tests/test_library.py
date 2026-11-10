@@ -198,6 +198,23 @@ class Site(unittest.TestCase):
             self.assertIn('<footer class="site">', text, page)
             self.assertIn('id="colour-menu"', text, page)
 
+    def test_header_has_the_search_pop_up_and_the_chapter_switcher(self):
+        home = self.read("index.html")
+        self.assertIn('<dialog class="palette lg-palette" id="palette"', home)
+        self.assertIn('data-search-open', home)
+        self.assertNotIn('class="lg-where"', home)
+        chapter = self.read(os.path.join("jhn", "3", "index.html"))
+        self.assertIn('<div class="lg-where" data-book="JHN" data-chapter="3">', chapter)
+        self.assertIn('rel="prev" href="/jhn/2/"', chapter)
+        self.assertIn('rel="next" href="/jhn/4/"', chapter)
+        self.assertIn('class="lg-progress"', chapter)
+        verse = self.read(os.path.join("jhn", "3", "16", "index.html"))
+        self.assertIn('data-chapter="3"', verse)
+        self.assertNotIn('class="lg-progress"', verse)
+        data = json.loads(re.search(r'id="nav-data">(.*?)</script>', home, re.S)[1].replace("<\\/", "</"))
+        self.assertEqual(data["books"]["JHN"]["n"], 21)
+        self.assertIn(3, data["books"]["JHN"]["has"])
+
     def test_every_internal_link_leads_to_a_page(self):
         missing = set()
         for root, _dirs, files in os.walk(build_site.SITE):

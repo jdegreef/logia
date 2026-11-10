@@ -110,12 +110,41 @@
       });
     });
     document.addEventListener("click", function (e) { if (!form.contains(e.target)) { list.hidden = true; input.setAttribute("aria-expanded", "false"); } });
-    // "/" focuses the page's own search, as on many reading sites (not the footer's).
-    if (form.classList.contains("lg-foot-search")) return;
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); input.focus(); }
-    });
   });
+
+  // The header's search pop-up (search_palette in scripts/build_site.py): a
+  // modal <dialog>, so focus stays inside it and Esc closes it. The search
+  // button, "/" and Ctrl+K (or ⌘K) open it; a click outside its box, the
+  // Esc button or Esc closes it, and focus goes back where it was.
+  var palette = document.getElementById("palette");
+  if (palette && palette.showModal) {
+    var palInput = palette.querySelector("input"), palBack = null;
+    var openPalette = function () {
+      if (palette.open) { palInput.focus(); return; }
+      palBack = document.activeElement;
+      document.documentElement.classList.add("palette-open");
+      palette.showModal();
+      palInput.focus();
+      palInput.select();
+      withData(function () {});
+    };
+    palette.addEventListener("close", function () {
+      document.documentElement.classList.remove("palette-open");
+      // The phone menu closes behind the pop-up: then back to its button.
+      var back = palBack && palBack.offsetParent ? palBack : document.querySelector(".menu-btn");
+      if (back && back.offsetParent && back.focus) back.focus();
+    });
+    palette.addEventListener("click", function (e) { if (e.target === palette) palette.close(); });
+    palette.querySelector("[data-search-close]").addEventListener("click", function () { palette.close(); });
+    document.querySelectorAll("[data-search-open]").forEach(function (b) {
+      b.addEventListener("click", function (e) { e.preventDefault(); openPalette(); });
+    });
+    document.addEventListener("keydown", function (e) {
+      var typing = /input|textarea|select/i.test(document.activeElement.tagName) || document.activeElement.isContentEditable;
+      if ((e.key === "k" || e.key === "K") && (e.ctrlKey || e.metaKey) && !e.altKey) { e.preventDefault(); openPalette(); }
+      else if (e.key === "/" && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); openPalette(); }
+    });
+  }
 
   // Page not found: an address that reads as a reference ("/jn3",
   // "/john/3/16", "/rom-8") is offered as a link.
@@ -183,6 +212,131 @@
       location.href = form.getAttribute("data-book") + ch + "/#v" + v;
     });
   });
+
+  // The header (site_header in scripts/build_site.py): the chapter pickers,
+  // the "Continue" pill, the dark-mode button and the reading progress line.
+  (function () {
+    var holder = document.getElementById("nav-data");
+    var N = holder ? JSON.parse(holder.textContent) : null;
+    var where = document.querySelector(".lg-where");
+    var hereBook = where ? where.getAttribute("data-book") : null;
+    var hereChapter = where ? +where.getAttribute("data-chapter") : 0;
+
+    // A book's chapters as links: gold-edged where there is commentary, a
+    // dot where the reader has been, the current one filled.
+    function grid(code) {
+      var b = N.books[code], out = [];
+      for (var c = 1; c <= b.n; c++) {
+        var href = "/" + code.toLowerCase() + "/" + c + "/";
+        var has = b.has.indexOf(c) >= 0, cur = code === hereBook && c === hereChapter;
+        out.push('<a href="' + href + '" class="lg-ch' + (has ? " lg-has" : "") + (read.indexOf(href) >= 0 ? " lg-read" : "") + '"' +
+          (cur ? ' aria-current="page"' : "") + (has ? ' title="' + esc(b.name + " " + c + ", " + N.ui.has) + '"' : "") + ">" + c + "</a>");
+      }
+      return '<p class="dd-head">' + esc(fmt(N.ui.chapters, { book: b.name })) + "</p>" +
+        '<div class="lg-chgrid' + (b.n > 60 ? " lg-chgrid-long" : "") + '">' + out.join("") + "</div>";
+    }
+
+    if (N && where) {
+      var btn = where.querySelector(".lg-where-btn"), pop = document.getElementById("lg-where-pop");
+      var shut = function (back) {
+        if (pop.hidden) return;
+        pop.hidden = true; btn.setAttribute("aria-expanded", "false");
+        if (back) btn.focus();
+      };
+      btn.addEventListener("click", function () {
+        if (!pop.hidden) { shut(false); return; }
+        var others = Object.keys(N.books).filter(function (c) { return c !== hereBook && N.books[c].has.length; });
+        pop.innerHTML = grid(hereBook) + (others.length ? '<p class="dd-head">' + esc(N.ui.others) + '</p><div class="lg-where-books">' +
+          others.map(function (c) { return '<a href="/' + c.toLowerCase() + '/">' + esc(N.books[c].name) + "</a>"; }).join("") + "</div>" : "");
+        pop.hidden = false; btn.setAttribute("aria-expanded", "true");
+        var first = pop.querySelector('[aria-current="page"]') || pop.querySelector("a");
+        if (first) first.focus();
+      });
+      pop.addEventListener("keydown", function (e) { if (e.key === "Escape") { e.stopPropagation(); shut(true); } });
+      document.addEventListener("click", function (e) { if (!where.contains(e.target)) shut(false); });
+      where.addEventListener("focusout", function (e) { if (e.relatedTarget && !where.contains(e.relatedTarget)) shut(false); });
+    }
+
+    // The Read menu: the chapters of the book pointed at, beside the books.
+    var chapters = document.querySelector("[data-nav-chapters]");
+    if (N && chapters) {
+      var shown = null;
+      var show = function (code) {
+        if (!N.books[code] || code === shown) return;
+        shown = code; chapters.innerHTML = grid(code); chapters.hidden = false;
+      };
+      var books = document.querySelectorAll(".dd-book[data-book]");
+      var start = hereBook && N.books[hereBook].has.length ? hereBook : null;
+      if (!start) {
+        var last = null;
+        try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
+        var m = last && last.href && last.href.match(/^\/([a-z0-9]{3})\//);
+        start = m && N.books[m[1].toUpperCase()] ? m[1].toUpperCase() : (books[0] && books[0].getAttribute("data-book").toUpperCase());
+      }
+      if (start) show(start);
+      books.forEach(function (a) {
+        var code = a.getAttribute("data-book").toUpperCase();
+        a.addEventListener("mouseenter", function () { show(code); });
+        a.addEventListener("focus", function () { show(code); });
+      });
+    }
+
+    // Continue: the last verse read, as a pill in the bar (not on its own page).
+    var pill = document.querySelector("[data-resume-pill]");
+    if (pill) {
+      var at = null;
+      try { at = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
+      if (at && at.href && at.href.charAt(0) === "/" && at.href.split("#")[0] !== location.pathname) {
+        pill.href = at.href;
+        pill.querySelector("span").textContent = at.ref;
+        pill.title = fmt(pill.getAttribute("data-resume-pill"), { ref: at.ref });
+        pill.setAttribute("aria-label", pill.title);
+        pill.hidden = false;
+      }
+    }
+
+    // One tap between light and dark: the settings menu's own theme buttons
+    // (web/site.js) do the choosing, so the two always agree. It returns to
+    // the light or dark mode chosen last (sepia, night...).
+    var toggle = document.querySelector("[data-theme-toggle]");
+    var themes = document.querySelector('#colour-menu [data-pref="theme"]');
+    if (toggle && themes) {
+      var root = document.documentElement, dark = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+      var isDark = function () {
+        var v = root.getAttribute("data-theme");
+        return v === "dark" || v === "night" || (v === "auto" && !!dark && dark.matches);
+      };
+      var sync = function () { toggle.setAttribute("aria-pressed", isDark() ? "true" : "false"); };
+      toggle.hidden = false;
+      sync();
+      document.addEventListener("logia:prefs", sync);
+      if (dark && dark.addEventListener) dark.addEventListener("change", sync);
+      toggle.addEventListener("click", function () {
+        var was = root.getAttribute("data-theme") || "light", to;
+        try {
+          if (isDark()) { localStorage.setItem("logia-last-dark", was === "auto" ? "dark" : was); to = localStorage.getItem("logia-last-light") || "light"; }
+          else { localStorage.setItem("logia-last-light", was === "auto" ? "light" : was); to = localStorage.getItem("logia-last-dark") || "dark"; }
+        } catch (e) { to = isDark() ? "light" : "dark"; }
+        var option = themes.querySelector('[data-value="' + to + '"]');
+        if (option) option.click();
+      });
+    }
+
+    // How far through the chapter's text the reader has scrolled.
+    var bar = document.querySelector(".lg-progress span"), text = document.getElementById("text");
+    if (bar && text) {
+      var tick = false;
+      var update = function () {
+        tick = false;
+        var r = text.getBoundingClientRect(), span = r.height - window.innerHeight * 0.6;
+        var p = span > 0 ? Math.min(1, Math.max(0, (window.innerHeight * 0.4 - r.top) / span)) : 1;
+        bar.style.transform = "scaleX(" + p.toFixed(3) + ")";
+      };
+      window.addEventListener("scroll", function () { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
+      window.addEventListener("resize", update);
+      update();
+    }
+  })();
 
   // A button that copies its data-copy text (a work's citation), and says so.
   document.querySelectorAll("[data-copy]").forEach(function (b) {

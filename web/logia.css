@@ -398,6 +398,103 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
 .lg-sugg-none { padding: 10px 12px; color: var(--muted); font-size: 14px; }
 .hero .lg-search + .hero-try { margin-top: 14px; }
 
+/* The header (site_header, web/logia.js). The search pop-up is Open Word
+   Bible's palette (style.css) as a modal <dialog>. */
+dialog.lg-palette { position: fixed; inset: 0; width: auto; height: auto; max-width: none; max-height: none; margin: 0; border: 0; color: var(--text); overflow: auto; }
+dialog.lg-palette:not([open]) { display: none; }
+dialog.lg-palette::backdrop { background: transparent; }
+.lg-palette .palette-box { display: block; }
+.lg-palette .palette-form > svg { flex: none; }
+.lg-palette .lg-sugg { position: static; border: 0; border-radius: 0; box-shadow: none; background: none; padding: 6px; }
+.lg-palette .lg-sugg a { padding: 10px 12px; font-size: 16px; }
+.lg-palette .lg-sugg:not([hidden]) ~ .lg-pal-hint { display: none; }
+.lg-pal-hint { margin: 0; padding: 14px 16px; }
+.lg-pal-close { flex: none; padding: 4px; border: 0; background: none; color: var(--muted); cursor: pointer; }
+.lg-pal-close kbd { display: block; }
+.lg-pal-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+/* "‹ John 3 ›": the chapter switcher beside the name. */
+.lg-where { position: relative; display: flex; align-items: center; gap: 2px; flex: none; }
+.lg-where-btn { display: inline-flex; align-items: center; gap: 4px; height: 34px; padding: 0 10px 0 12px; border: 1px solid var(--line);
+  border-radius: 999px; background: var(--surface); color: var(--text); font: 600 15.5px/1 var(--display); white-space: nowrap; cursor: pointer; }
+.lg-where-btn:hover, .lg-where-btn[aria-expanded="true"] { border-color: var(--line-strong); }
+.lg-where-btn .caret { opacity: .7; transition: transform var(--fast) ease; }
+.lg-where-btn[aria-expanded="true"] .caret { transform: rotate(180deg); }
+.lg-turn-btn { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: var(--muted); }
+.lg-turn-btn:hover { color: var(--text); background: var(--accent-soft); }
+.lg-where-pop { position: absolute; top: calc(100% + 10px); left: 0; z-index: 45; width: min(380px, calc(100vw - 32px)); max-height: min(70vh, 520px);
+  overflow: auto; padding: 12px 14px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-pop); }
+.lg-where-pop .dd-head, .lg-dd-chapters .dd-head { margin: 4px 0 8px; }
+.lg-where-pop .lg-chgrid + .dd-head { margin-top: 16px; }
+.lg-where-books { display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-where-books a { padding: 4px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); font-size: 14px; text-decoration: none; }
+.lg-where-books a:hover { border-color: var(--line-strong); background: var(--accent-soft); }
+.lg-chgrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.lg-chgrid-long { grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
+.lg-ch { position: relative; display: grid; place-items: center; height: 34px; border: 1px solid var(--line); border-radius: 8px;
+  color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; text-decoration: none; }
+.lg-chgrid-long .lg-ch { height: 30px; font-size: 13px; }
+.lg-ch.lg-has { border-color: var(--gold); color: var(--text); font-weight: 600; }
+.lg-ch:hover { background: var(--accent-soft); color: var(--text); }
+.lg-ch[aria-current] { border-color: var(--accent); background: var(--accent); color: var(--accent-contrast); }
+.lg-ch.lg-read::after { content: ""; position: absolute; top: 4px; right: 4px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+/* The Read menu: the chapters of the book pointed at, beside the books. */
+.lg-dd-read .lg-dd-chapters { width: 300px; max-height: 380px; overflow: auto; padding: 0 4px 0 16px; border-left: 1px solid var(--line); }
+.lg-dd-resume { margin: 0 0 6px; font-weight: 600; color: var(--accent); }
+
+/* The reading progress line along the bottom of the bar (chapter pages). */
+.lg-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+.lg-progress span { display: block; height: 100%; background: var(--gold); transform: scaleX(0); transform-origin: left; }
+[dir="rtl"] .lg-progress span { transform-origin: right; }
+
+/* The tools: "Continue" on wide screens, dark mode, Saved when signed in. */
+.lg-resume { display: none; align-items: center; gap: 6px; height: 38px; padding: 0 14px 0 11px; border: 1px solid var(--accent-soft-border);
+  border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 14.5px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.lg-resume:hover { border-color: var(--accent); }
+/* "Continue" only where the bar has room: wide screens, pages without the
+   switcher (whose Read menu has it), and the search folded to its icon. */
+@media (min-width: 1360px) {
+  header.site .bar:not(:has(.lg-where)) .lg-resume:not([hidden]) { display: inline-flex; }
+  header.site .tools:has(.lg-resume:not([hidden])) .search-btn { width: 38px; padding: 0; justify-content: center; }
+  header.site .tools:has(.lg-resume:not([hidden])) :is(.search-label, .search-kbd) { display: none; }
+}
+.lg-theme-btn[hidden] { display: none; }
+.lg-theme-btn .icon + .icon, .lg-theme-btn[aria-pressed="true"] .icon:first-child { display: none; }
+.lg-theme-btn[aria-pressed="true"] .icon + .icon { display: block; }
+header.site .tools > a.lg-saved-btn { display: none; }
+html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
+
+/* On a phone the menu opens with the search and the reader's place. */
+.lg-nav-phone { display: none; }
+@media (max-width: 940px) {
+  .lg-nav-phone { display: grid; gap: 8px; margin: 2px 0 10px; }
+  .lg-nav-search { display: flex; align-items: center; gap: 10px; width: 100%; height: 46px; padding: 0 16px; border: 1px solid var(--line-strong);
+    border-radius: 999px; background: var(--bg); color: var(--muted); font: inherit; font-size: 16px; text-align: left; cursor: pointer; }
+  .lg-nav-search span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lg-nav-resume { padding: 4px 14px; font-weight: 600; color: var(--accent); }
+  .lg-dd-read .lg-dd-chapters { display: none; }
+}
+/* Room in the bar: a book's pages carry the switcher, so their bar folds
+   sooner. The brand already goes home, so Home is the first to go. */
+@media (max-width: 1440px) and (min-width: 941px) {
+  header.site .bar:has(.lg-where) .nav-link > .icon:first-child { display: none; }
+  header.site .bar:has(.lg-where) .search-btn { width: 38px; padding: 0; justify-content: center; }
+  header.site .bar:has(.lg-where) :is(.search-label, .search-kbd) { display: none; }
+}
+@media (max-width: 1180px) and (min-width: 941px) {
+  header.site .nav-link > .icon:first-child { display: none; }
+  header.site .bar:has(.lg-where) .nav-list > li:nth-child(2) { display: none; }
+  header.site .bar:has(.lg-where) :is(.lg-turn-btn, .brand-name) { display: none; }
+  header.site .bar { gap: 10px; }
+}
+@media (max-width: 640px) {
+  header.site .bar:has(.lg-where) .brand-name { display: none; }
+  .lg-turn-btn, .lg-theme-btn { display: none; }
+  .lg-where-btn { padding: 0 8px 0 10px; font-size: 15px; }
+  .lg-where-pop { position: fixed; left: 16px; right: 16px; top: calc(var(--header-h) + 8px); width: auto; }
+}
+
 /* Read: every book in a compact grid, by part of the canon; a book opens to
    its chapters across the whole row. */
 .lg-read-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 8px 0 0; }
