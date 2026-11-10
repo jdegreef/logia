@@ -370,13 +370,7 @@ a.cx-cite:hover, a.lg-cite:hover { color: var(--accent); }
   .cx-col { scroll-snap-align: start; }
 }
 
-/* The footer's coverage: books with commentary out of each testament's. */
-.foot-books .testament .lg-meter { display: block; height: 5px; margin: 6px 0 10px; border-radius: 3px; background: var(--surface-2);
-  border: 1px solid var(--line); overflow: hidden; }
-.foot-books .lg-meter > span { display: block; height: 100%; min-width: 0; background: var(--gold); }
 .lg-chip-n { color: var(--muted); font-weight: 500; margin-left: 2px; }
-.lg-foot-note { margin: 12px 0 0; }
-footer.site .lg-foot-note a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Home: a verse and three of its voices, in the Open Word Bible's
    verse-of-the-day card. */
@@ -552,14 +546,38 @@ footer.site .lg-foot-note a { text-decoration: underline; text-underline-offset:
 .lg-famous .lg-card b { font-family: var(--serif); font-weight: 400; font-size: 18px; }
 .lg-card .lg-card-ref { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--lg-gold-ink); }
 
-/* The footer, kept short: the commentators by name on one wrapped line. */
-.lg-foot-names { margin: 6px 0 0; font-size: 14px; line-height: 1.8; color: var(--muted); max-width: 30ch; }
-.lg-foot-names a { color: inherit; text-decoration: none; }
-.lg-foot-names a:hover { color: var(--accent); text-decoration: underline; }
-footer.site .foot-books .testaments { gap: 12px 40px; }
-@media (min-width: 881px) {
-  footer.site .foot-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 48px; align-items: start; }
-  footer.site .foot-top .foot-books { margin: 0; padding: 0; border: 0; }
+/* The footer: the project, a box to go to a verse and "Continue reading";
+   the library in three numbers and each book's most-discussed verses; five
+   columns of links; the review note and the sources, each linked. */
+footer.site .lg-foot-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px 56px; align-items: start; }
+footer.site .lg-foot-search { margin-top: 20px; max-width: 420px; }
+footer.site .lg-foot-search .lg-sugg { top: auto; bottom: calc(100% + 6px); }
+.lg-foot-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 12px 0 0; }
+.lg-foot-actions .foot-resume { margin-top: 0; }
+footer.site .lg-foot-up { color: var(--muted); font-size: 14px; }
+footer.site .lg-foot-up:hover { color: var(--accent); }
+.lg-foot-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
+.lg-foot-stats div { min-width: 0; }
+.lg-foot-stats dt { font: 600 28px/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.lg-foot-stats dd { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+footer.site h2.lg-foot-most { margin-top: 24px; }
+.lg-foot-library .book-chips { list-style: none; padding: 0; margin: 0 0 8px; }
+.lg-foot-library a.book-chip { color: var(--text); font-weight: 600; text-decoration: none; }
+.lg-foot-library a.book-chip:hover { border-color: var(--accent); color: var(--accent); }
+footer.site .lg-foot-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+footer.site .lg-foot-grid .foot-licence { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+footer.site .foot-review a, .lg-foot-sources a { color: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); }
+footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent); }
+.lg-foot-sources { max-width: 100%; }
+@media (max-width: 1000px) {
+  footer.site .lg-foot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  footer.site .lg-foot-top { grid-template-columns: minmax(0, 1fr); }
+  footer.site .lg-foot-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .lg-foot-stats dt { font-size: 22px; }
 }
 
 /* The commentators' lifetimes on one line of centuries (/commentators/),
