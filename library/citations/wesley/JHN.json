@@ -1,0 +1,672 @@
+{
+ "work": "wesley",
+ "book": "JHN",
+ "citations": [
+  {
+   "in": "wesley.JHN.1.1.1",
+   "at": 36,
+   "text": "Gen. i, 1",
+   "start": "GEN.1.1",
+   "end": "GEN.1.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.1.1",
+   "at": 51,
+   "text": "Prov. viii, 23",
+   "start": "PRO.8.23",
+   "end": "PRO.8.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.1.1",
+   "at": 318,
+   "text": "Psalm xxxiii, 6",
+   "start": "PSA.33.6",
+   "end": "PSA.33.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.1.1",
+   "at": 1373,
+   "text": "Jer. xxiii, 7",
+   "start": "JER.23.7",
+   "end": "JER.23.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.1.1",
+   "at": 1388,
+   "text": "Hosea i, 6",
+   "start": "HOS.1.6",
+   "end": "HOS.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.1.1",
+   "at": 1400,
+   "text": "Psalm xxiii, 1",
+   "start": "PSA.23.1",
+   "end": "PSA.23.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.14.1",
+   "at": 177,
+   "text": "Luke ix, 32",
+   "start": "LUK.9.32",
+   "end": "LUK.9.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.29.1",
+   "at": 108,
+   "text": "Isaiah liii, 7",
+   "start": "ISA.53.7",
+   "end": "ISA.53.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.31.1",
+   "at": 364,
+   "text": "Luke i, 80",
+   "start": "LUK.1.80",
+   "end": "LUK.1.80",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.1.45.1",
+   "at": 204,
+   "text": "Matt. x, 3",
+   "start": "MAT.10.3",
+   "end": "MAT.10.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.3.16.1",
+   "at": 588,
+   "text": "Gal. iv, 4",
+   "start": "GAL.4.4",
+   "end": "GAL.4.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.4.12.1",
+   "at": 204,
+   "text": "2 Kings xvii, 24",
+   "start": "2KI.17.24",
+   "end": "2KI.17.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.4.20.1",
+   "at": 348,
+   "text": "Neh. xiii, 28",
+   "start": "NEH.13.28",
+   "end": "NEH.13.28",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.4.20.1",
+   "at": 698,
+   "text": "Gen. xii, 6, 7",
+   "start": "GEN.12.6",
+   "end": "GEN.12.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.4.20.1",
+   "at": 718,
+   "text": "Gen. xxxiii, 18, 20",
+   "start": "GEN.33.18",
+   "end": "GEN.33.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.4.20.1",
+   "at": 718,
+   "text": "Gen. xxxiii, 18, 20",
+   "start": "GEN.33.20",
+   "end": "GEN.33.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.4.20.1",
+   "at": 876,
+   "text": "Deut. xi, 29",
+   "start": "DEU.11.29",
+   "end": "DEU.11.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.4.22.1",
+   "at": 210,
+   "text": "2 Kings xvii, 33",
+   "start": "2KI.17.33",
+   "end": "2KI.17.33",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.6.1.1",
+   "at": 120,
+   "text": "Matt. xiv, 13",
+   "start": "MAT.14.13",
+   "end": "MAT.14.13",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.6.1.1",
+   "at": 135,
+   "text": "Mark vi, 32",
+   "start": "MRK.6.32",
+   "end": "MRK.6.32",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.7.2.1",
+   "at": 86,
+   "text": "Lev. xxiii, 34",
+   "start": "LEV.23.34",
+   "end": "LEV.23.34",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.8.16.1",
+   "at": 251,
+   "text": "Prov. viii, 22, 23, 30",
+   "start": "PRO.8.22",
+   "end": "PRO.8.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.8.16.1",
+   "at": 251,
+   "text": "Prov. viii, 22, 23, 30",
+   "start": "PRO.8.30",
+   "end": "PRO.8.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.8.24.1",
+   "at": 94,
+   "text": "Exod. iii, 14",
+   "start": "EXO.3.14",
+   "end": "EXO.3.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.8.56.1",
+   "at": 150,
+   "text": "Gen. xviii, 1",
+   "start": "GEN.18.1",
+   "end": "GEN.18.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.10.3.1",
+   "at": 318,
+   "text": "Acts xiv, 27",
+   "start": "ACT.14.27",
+   "end": "ACT.14.27",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.10.3.1",
+   "at": 332,
+   "text": "Colossians iv, 3",
+   "start": "COL.4.3",
+   "end": "COL.4.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.10.3.1",
+   "at": 350,
+   "text": "Rev. iii, 8",
+   "start": "REV.3.8",
+   "end": "REV.3.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.10.3.1",
+   "at": 363,
+   "text": "Acts xvi, 14",
+   "start": "ACT.16.14",
+   "end": "ACT.16.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.10.22.1",
+   "at": 72,
+   "text": "1 Macc. iv, 59",
+   "start": "1MA.4.59",
+   "end": "1MA.4.59",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.11.38.1",
+   "at": 120,
+   "text": "Gen. xlix, 29-31",
+   "start": "GEN.49.29",
+   "end": "GEN.49.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.12.3.1",
+   "at": 156,
+   "text": "Luke vii, 37",
+   "start": "LUK.7.37",
+   "end": "LUK.7.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.12.13.1",
+   "at": 4,
+   "text": "Psalm cxviii, 26",
+   "start": "PSA.118.26",
+   "end": "PSA.118.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.12.13.1",
+   "at": 22,
+   "text": "Mark xi, 8",
+   "start": "MRK.11.8",
+   "end": "MRK.11.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.12.40.1",
+   "at": 4,
+   "text": "Isaiah vi, 10",
+   "start": "ISA.6.10",
+   "end": "ISA.6.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.12.40.1",
+   "at": 19,
+   "text": "Matt. xiii, 14",
+   "start": "MAT.13.14",
+   "end": "MAT.13.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.12.41.1",
+   "at": 38,
+   "text": "Isaiah vi, 1",
+   "start": "ISA.6.1",
+   "end": "ISA.6.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.13.30.1",
+   "at": 113,
+   "text": "Matt. xxvi, 20",
+   "start": "MAT.26.20",
+   "end": "MAT.26.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.14.12.1",
+   "at": 97,
+   "text": "Acts v, 15",
+   "start": "ACT.5.15",
+   "end": "ACT.5.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.14.12.1",
+   "at": 157,
+   "text": "Acts xix, 12",
+   "start": "ACT.19.12",
+   "end": "ACT.19.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.14.31.1",
+   "at": 185,
+   "text": "Phil. ii, 8",
+   "start": "PHP.2.8",
+   "end": "PHP.2.8",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.15.2.1",
+   "at": 69,
+   "text": "1 Pet. i, 22",
+   "start": "1PE.1.22",
+   "end": "1PE.1.22",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.15.2.1",
+   "at": 120,
+   "text": "Heb. xii, 10, 11",
+   "start": "HEB.12.10",
+   "end": "HEB.12.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.15.20.1",
+   "at": 4,
+   "text": "John xiii, 16",
+   "start": "JHN.13.16",
+   "end": "JHN.13.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.15.20.1",
+   "at": 19,
+   "text": "Matt. x, 24",
+   "start": "MAT.10.24",
+   "end": "MAT.10.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.15.26.1",
+   "at": 561,
+   "text": "1 Pet. i, 11",
+   "start": "1PE.1.11",
+   "end": "1PE.1.11",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.1-26.1",
+   "at": 59,
+   "text": "John xvii, 1-5",
+   "start": "JHN.17.1",
+   "end": "JHN.17.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.1-26.1",
+   "at": 107,
+   "text": "John xvii, 6-19",
+   "start": "JHN.17.6",
+   "end": "JHN.17.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.1-26.1",
+   "at": 147,
+   "text": "John xvii, 24-26",
+   "start": "JHN.17.24",
+   "end": "JHN.17.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.1-26.1",
+   "at": 199,
+   "text": "John xvii, 20-23",
+   "start": "JHN.17.20",
+   "end": "JHN.17.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.1-26.1",
+   "at": 251,
+   "text": "John xvii, 21-23",
+   "start": "JHN.17.21",
+   "end": "JHN.17.23",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.3.1",
+   "at": 194,
+   "text": "1 Cor. viii, 6",
+   "start": "1CO.8.6",
+   "end": "1CO.8.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.12.1",
+   "at": 374,
+   "text": "2 Sam. xii, 5",
+   "start": "2SA.12.5",
+   "end": "2SA.12.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.12.1",
+   "at": 407,
+   "text": "Matt. xxiii, 15",
+   "start": "MAT.23.15",
+   "end": "MAT.23.15",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.17.12.1",
+   "at": 447,
+   "text": "Eph. ii, 3",
+   "start": "EPH.2.3",
+   "end": "EPH.2.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.18.1.1",
+   "at": 601,
+   "text": "Matt. xxvi, 30",
+   "start": "MAT.26.30",
+   "end": "MAT.26.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.18.1.1",
+   "at": 617,
+   "text": "Mark xiv, 26",
+   "start": "MRK.14.26",
+   "end": "MRK.14.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.18.13.1",
+   "at": 375,
+   "text": "Matt. xxvi, 57",
+   "start": "MAT.26.57",
+   "end": "MAT.26.57",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.18.13.1",
+   "at": 391,
+   "text": "Mark xiv, 53",
+   "start": "MRK.14.53",
+   "end": "MRK.14.53",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.18.28.1",
+   "at": 132,
+   "text": "Deut. xvi, 4",
+   "start": "DEU.16.4",
+   "end": "DEU.16.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.18.28.1",
+   "at": 146,
+   "text": "Matt. xxvii, 2",
+   "start": "MAT.27.2",
+   "end": "MAT.27.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.18.28.1",
+   "at": 162,
+   "text": "Mark xv, 1",
+   "start": "MRK.15.1",
+   "end": "MRK.15.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.19.1.1",
+   "at": 3,
+   "text": "Matt. xxvii, 26",
+   "start": "MAT.27.26",
+   "end": "MAT.27.26",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.19.17.1",
+   "at": 212,
+   "text": "Matt. xxvii, 31",
+   "start": "MAT.27.31",
+   "end": "MAT.27.31",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.19.17.1",
+   "at": 229,
+   "text": "Mark xv, 20",
+   "start": "MRK.15.20",
+   "end": "MRK.15.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.19.37.1",
+   "at": 286,
+   "text": "Rev. i, 7",
+   "start": "REV.1.7",
+   "end": "REV.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.20.1.1",
+   "at": 3,
+   "text": "Matt. xxviii, 1",
+   "start": "MAT.28.1",
+   "end": "MAT.28.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.20.1.1",
+   "at": 20,
+   "text": "Mark xvi, 1",
+   "start": "MRK.16.1",
+   "end": "MRK.16.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.20.17.1",
+   "at": 81,
+   "text": "Matt. xxviii, 9",
+   "start": "MAT.28.9",
+   "end": "MAT.28.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.20.19.1",
+   "at": 4,
+   "text": "Mark xvi, 1",
+   "start": "MRK.16.1",
+   "end": "MRK.16.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.20.21.1",
+   "at": 112,
+   "text": "2 Cor. iv, 1",
+   "start": "2CO.4.1",
+   "end": "2CO.4.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.20.21.1",
+   "at": 208,
+   "text": "Heb. iii, 1",
+   "start": "HEB.3.1",
+   "end": "HEB.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.21.15.1",
+   "at": 103,
+   "text": "Matt. xvi, 16",
+   "start": "MAT.16.16",
+   "end": "MAT.16.16",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley.JHN.21.15.1",
+   "at": 370,
+   "text": "Matt. xxvi, 33",
+   "start": "MAT.26.33",
+   "end": "MAT.26.33",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}
