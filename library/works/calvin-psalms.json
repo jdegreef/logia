@@ -1,0 +1,18 @@
+{
+ "id": "calvin-psalms",
+ "author": "calvin",
+ "title": "Commentary on the Book of Psalms",
+ "divisions": "verse",
+ "edition": "Calvin Translation Society, tr. James Anderson, Edinburgh, 1845-49 (5 vols.); CCEL edition",
+ "original_language": "Latin",
+ "translation": "Translated from the original Latin, and collated with the author's French version, by the Rev. James Anderson for the Calvin Translation Society (1845-49)",
+ "published": 1849,
+ "full_text_url": "https://www.ccel.org/ccel/calvin/calcom08.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years), James Anderson's among them"
+ },
+ "source_kind": "digital",
+ "notes": "CCEL calcom08-calcom12 (the five volumes). Each psalm's own page (Calvin's argument of the psalm) is placed on the psalm's title verses, or on the whole psalm where it has no title. Each section page is placed by the verses it covers; within it, each lemma (the bold verse number, '1.', or the italic words Calvin comments on) opens an entry, with the paragraphs after it, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Calvin numbers the verses as English Bibles do; they are moved to the Hebrew numbering of the Bible text (Psalm 51:1 in English is Psalm 51:3 here). The psalm text printed above each section, the headings and the translator's footnotes are left out, and so are the editor's tables at the end of the last volume. Two section pages whose first reference CCEL prints as verse 0 are placed by their headings (Psalm 34:15-17 and Psalm 119:65-72). Each entry's heading is the italic lemma as printed.",
+ "status": "ai_draft"
+}

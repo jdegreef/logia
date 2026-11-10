@@ -1,0 +1,21 @@
+{
+ "id": "basil-genesis",
+ "author": "basil",
+ "title": "The Hexaemeron",
+ "divisions": [
+  "Homily",
+  "Section"
+ ],
+ "edition": "Translated by Blomfield Jackson; Nicene and Post-Nicene Fathers, Series 2, Vol. 8 (1895)",
+ "original_language": "Greek",
+ "translation": "Translated by Blomfield Jackson, Nicene and Post-Nicene Fathers, Series 2, Vol. 8 (1895)",
+ "published": 1895,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf208.viii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Blomfield Jackson's death date (life + 70 years)"
+ },
+ "source_kind": "digital",
+ "notes": "Nine homilies on Genesis 1:1-25; Basil does not reach the creation of man (1:26). Each excerpt is the opening of one of the edition's numbered sections, up to about 350 words and cut at a sentence end, set on the verse the section takes up. The homilies print no verse headings, so the verses each whole homily covers are those of the excerpts taken from it.",
+ "status": "ai_draft"
+}

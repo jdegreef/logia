@@ -1,0 +1,18 @@
+{
+ "id": "jfb-ecclesiastes",
+ "author": "fausset",
+ "title": "A Commentary, Critical and Explanatory, on the Old and New Testaments: Ecclesiastes",
+ "divisions": "verse",
+ "edition": "Robert Jamieson, A. R. Fausset and David Brown, Commentary Critical and Explanatory on the Whole Bible (1871); the books from Job to Malachi are Fausset's; CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1871,
+ "full_text_url": "https://www.ccel.org/ccel/jamieson/jfb.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); A. R. Fausset died in 1910"
+ },
+ "source_kind": "digital",
+ "notes": "Ecclesiastes 1-12 are CCEL jfb x.xxi ii-xiii, a page a chapter. Every note is kept, in the order printed. A note opens with its bold lemma: a verse number ('7.', '5, 6.' or '4-7.') places it on those verses, and a lemma of words alone ('vanity') goes on the verses of the note before. The summary that opens a chapter or section ('Ec 5:1-20.') is on the verses it names. Notes on the same verses are kept together in entries of up to about 350 words. The chapter headings and the introduction to the book are left out. Ecclesiastes numbers its verses as English Bibles do, but Logia's Bible text follows the Hebrew, where English 5:1 is 4:17 and chapter 5 runs one verse behind; each entry is moved to the Hebrew verses (bible/owb/versification.json), and a section that spans the chapter break is kept to the chapter that holds more of it.",
+ "status": "ai_draft"
+}

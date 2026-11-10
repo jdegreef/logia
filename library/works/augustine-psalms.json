@@ -1,0 +1,18 @@
+{
+ "id": "augustine-psalms",
+ "author": "augustine",
+ "title": "Expositions on the Book of Psalms",
+ "divisions": "verse",
+ "edition": "Oxford translation (Library of the Fathers, 6 vols., 1847-57), condensed and edited with brief annotations by A. Cleveland Coxe; Nicene and Post-Nicene Fathers, Series 1, Vol. 8 (1888); CCEL edition",
+ "original_language": "Latin",
+ "translation": "The Oxford translation of the Library of the Fathers (1847-57), condensed by A. Cleveland Coxe for the Nicene and Post-Nicene Fathers, Series 1, Vol. 8 (1888)",
+ "published": 1888,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf108.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every translator and editor named (life + 70 years), A. Cleveland Coxe's (d. 1896) among them"
+ },
+ "source_kind": "digital",
+ "notes": "Psalms 1-150 are CCEL npnf108 ii (Psalm I to Psalm CL, with the parts of Psalms 37, 49, 59 and 119 on their own pages). This English edition is Coxe's abridgement of the Oxford translation: where he left out a passage, the text shows '…' as printed. Every paragraph is kept, in order, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. A paragraph is cut where a sentence opens on a quotation of the psalm marked '(ver. N)', and what follows is on that verse; a verse quoted with only a few words after it goes with the next. What comes before a psalm's first marked verse is on its title verses (or its first verse, where it has no title), and a psalm's later pages go on from the verse its page before ended on. The edition numbers the psalms and verses as English Bibles do (Augustine's Latin numbering is given in its footnotes); the verses are moved to the Hebrew numbering of the Bible text (Psalm 51:1 in English is Psalm 51:3 here), and a verse the Latin has past a psalm's end is placed on its last verse. The psalm headings, the psalm titles and the lines on each sermon's occasion ('A sermon to the people') printed above the exposition, the letter headings of Psalm 119 and the editor's footnotes are left out.",
+ "status": "ai_draft"
+}
