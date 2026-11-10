@@ -588,6 +588,18 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-cov { display: grid; gap: 4px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
 .lg-cov .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
 .lg-cov .lg-meter > span { display: block; height: 100%; background: var(--era); }
+/* The book chips above the cards, and the lives they dim on the timeline. */
+.lg-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; }
+.lg-pick[hidden] { display: none; }
+.lg-pick-label { font-size: 13px; color: var(--muted); margin-right: 2px; }
+.lg-pick button { font: inherit; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); }
+.lg-pick button:hover { border-color: var(--accent); }
+.lg-pick button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.lg-pick button[aria-pressed="true"] .lg-chip-n { color: inherit; opacity: .8; }
+.lg-tl-dim { opacity: .3; }
+.lg-tl-row { transition: opacity .2s; }
+@media (prefers-reduced-motion: reduce) { .lg-tl-row { transition: none; } }
 
 /* A commentator's page: the biography beside a card of facts. */
 .lg-profile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 24px 48px; align-items: start; }

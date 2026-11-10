@@ -423,6 +423,8 @@
     "head_title": "{name} on {books}: commentary verse by verse · Logia",
     "missing": "Verses with no comment from {name} ({n})",
     "timeline_note": "Each bar is a commentator's life, on one line of centuries from AD {a} to {b}, over the eras Logia groups them in.",
+    "filter_label": "Commentators on",
+    "filter_all": "All books",
     "works": "Works in Logia",
     "comments_on": "What {name} says, verse by verse",
     "bio_draft": "Biography: a draft awaiting review",

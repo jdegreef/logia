@@ -2157,7 +2157,7 @@ def timeline(lib, authors=None):
             continue
         b, d = born(a), a["died"]
         flip = pos(d) > 62
-        rows.append(f'<li class="lg-tl-row"><a class="lg-tl-life lg-era-{ERAS.index(a["era"])}{" lg-tl-flip" if flip else ""}" '
+        rows.append(f'<li class="lg-tl-row" data-author="{a["id"]}"><a class="lg-tl-life lg-era-{ERAS.index(a["era"])}{" lg-tl-flip" if flip else ""}" '
                     f'href="/commentators/{a["id"]}/" style="left:{pos(b):.2f}%;width:{max(pos(d) - pos(b), .6):.2f}%">'
                     f'<span class="lg-tl-name"><b>{e(a["name"])}</b> {e(a["dates"])}</span></a></li>')
     return (f'<figure class="lg-tl" aria-labelledby="tl-cap"><div class="lg-tl-scroll"><div class="lg-tl-in">'
@@ -2202,12 +2202,22 @@ def commentators_page(lib):
         langs = " · ".join(dict.fromkeys(lib.works[w]["original_language"] for w in works))
         initials = name_initials(a)
         cards.append(
-            f'<li><a class="lg-person lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/">'
+            f'<li data-author="{a["id"]}" data-books="{" ".join(sorted(verses.get(a["id"], {})))}"><a class="lg-person lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/">'
             f'<span class="lg-mono" aria-hidden="true">{e(initials)}</span>'
             f'<span><span class="lg-era-name">{e(t("eras." + a["era"]))}</span><b>{e(a["name"])}</b>'
             f'<span class="lg-dates">{e(a["dates"])} · {e(a["tradition"])}</span>{quote}'
             f'<span class="lg-meta">{e(t("commentators.wrote_in", lang=langs))}</span>{cov}</span></a></li>')
-    sections = f'<section class="lg-block"><ul class="lg-grid lg-people-grid">{"".join(cards)}</ul></section>'
+    # A row of book chips (shown by web/logia.js) that narrows the cards and
+    # dims the other lives on the timeline; every card is in the HTML.
+    has = {a: set(bs) for a, bs in verses.items()}
+    books = [b for b in lib.books if any(b in bs for bs in has.values())]
+    chips = "".join(f'<button type="button" aria-pressed="false" data-book="{b}">{e(lib.books[b]["en"])} '
+                    f'<span class="lg-chip-n">{sum(b in bs for bs in has.values())}</span></button>' for b in books)
+    pick = (f'<div class="lg-pick" role="group" aria-label="{e(t("commentators.filter_label"))}" hidden>'
+            f'<span class="lg-pick-label">{e(t("commentators.filter_label"))}</span>'
+            f'<button type="button" aria-pressed="true" data-book="">{e(t("commentators.filter_all"))} '
+            f'<span class="lg-chip-n">{len(lib.authors)}</span></button>{chips}</div>' if len(books) > 1 else "")
+    sections = f'<section class="lg-block">{pick}<ul class="lg-grid lg-people-grid">{"".join(cards)}</ul></section>'
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("commentators.title"))}</p>
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
