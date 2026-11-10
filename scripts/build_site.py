@@ -2324,10 +2324,11 @@ def one_verse(lib, ref=VOICES_VERSE):
         if not c:
             continue
         paras = [p for p in c["text"].split("\n\n") if p.strip()]
-        lead = paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]
+        lead, quoted = card_lead(paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0])
+        who = f' <span class="lg-ov-quoted">{e(t("commentators.quoted", name=quoted, author=short_name(a)))}</span>' if quoted else ""
         rows.append(f'<li class="lg-era-{ERAS.index(a["era"])}"><p class="lg-ov-who"><a href="/commentators/{a["id"]}/">'
                     f'<b>{e(a["name"])}</b></a> <span>{e(a["dates"])}</span></p>'
-                    f'<p class="lg-ov-text"><a href="{excerpt_href(lib, c)}">“{e(snippet(lead, 30))}”</a></p></li>')
+                    f'<p class="lg-ov-text"><a href="{excerpt_href(lib, c)}">“{e(snippet(lead, 30))}”</a>{who}</p></li>')
     if len(rows) < 2:
         return ""
     label = f'{lib.books[book]["en"]} {chapter}:{verse}'
