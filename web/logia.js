@@ -1,5 +1,5 @@
 // Logia's own site script, beside the Open Word Bible's web/site.js: the
-// passage search (home, Read, page not found), "Continue reading" (the last
+// passage search (home, Read, page not found, and the footer), "Continue reading" (the last
 // verse read, kept by web/reader.js), and opening a closed <details> that a
 // link points into. The search reads its book names and commentators from
 // the page's #search-data (search_data in scripts/build_site.py).
@@ -11,6 +11,18 @@
   var fmt = function (s, vals) { return s.replace(/\{(\w+)\}/g, function (_, k) { return vals[k] !== undefined ? vals[k] : ""; }); };
   var holder = document.getElementById("search-data");
   var D = holder ? JSON.parse(holder.textContent) : null;
+  // A page without #search-data (all but home, Read and page not found) has
+  // only the footer's box, which loads the same data from /search.json when
+  // it is first used.
+  var waiting = null;
+  function withData(then) {
+    if (D) return then();
+    if (!waiting) {
+      waiting = fetch("/search.json").then(function (r) { return r.json(); })
+        .then(function (d) { D = d; }, function () { waiting = null; });
+    }
+    waiting.then(function () { if (D) then(); });
+  }
 
   // "John 3:16", "jn 3.16", "1 Cor 13", "Ps 23 4", "john3:16": a book (any
   // name or abbreviation in D.aliases, or the start of a book's name), then
@@ -82,7 +94,8 @@
       list.querySelectorAll("[role=option]").forEach(function (li, i) { li.setAttribute("aria-selected", i === at); });
       if (at >= 0) input.setAttribute("aria-activedescendant", list.id + "-" + at); else input.removeAttribute("aria-activedescendant");
     }
-    input.addEventListener("input", render);
+    input.addEventListener("focus", function () { withData(function () {}); });
+    input.addEventListener("input", function () { withData(render); });
     input.addEventListener("keydown", function (e) {
       if (!items.length) return;
       if (e.key === "ArrowDown") { at = (at + 1) % items.length; mark(); e.preventDefault(); }
@@ -91,11 +104,14 @@
     });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (!items.length) render();
-      if (items.length) location.href = items[Math.max(0, at)].href;
+      withData(function () {
+        if (!items.length) render();
+        if (items.length) location.href = items[Math.max(0, at)].href;
+      });
     });
     document.addEventListener("click", function (e) { if (!form.contains(e.target)) { list.hidden = true; input.setAttribute("aria-expanded", "false"); } });
-    // "/" focuses the search, as on many reading sites.
+    // "/" focuses the page's own search, as on many reading sites (not the footer's).
+    if (form.classList.contains("lg-foot-search")) return;
     document.addEventListener("keydown", function (e) {
       if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); input.focus(); }
     });
@@ -346,4 +362,74 @@
   }
   window.addEventListener("hashchange", openTarget);
   openTarget();
+  // Offline (web/sw.js): register the service worker, the "Keep this book
+  // for offline" button on a book's page, and the list on /offline/ of what
+  // this device holds. Cache names match web/sw.js.
+  var canKeep = "serviceWorker" in navigator && "caches" in window &&
+    (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1");
+  if (canKeep) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () { /* not available here */ });
+    });
+  }
+
+  var keepBox = document.querySelector("[data-keep]");
+  if (keepBox && canKeep) {
+    var keepUrls = JSON.parse(keepBox.getAttribute("data-keep"));
+    var keepBtn = keepBox.querySelector("button");
+    var keepSay = keepBox.querySelector("[role=status]");
+    var keepDone = function () { keepBtn.hidden = true; keepSay.textContent = keepBox.getAttribute("data-done"); };
+    keepBox.hidden = false;
+    caches.open("logia-kept").then(function (c) {
+      return Promise.all([c.match(keepUrls[0]), c.match(keepUrls[keepUrls.length - 1])]);
+    }).then(function (hits) { if (hits[0] && hits[1]) keepDone(); }).catch(function () { /* ignore */ });
+    keepBtn.addEventListener("click", function () {
+      keepBtn.disabled = true;
+      var failed = 0;
+      caches.open("logia-kept").then(function (cache) {
+        var one = function (i) {
+          if (i >= keepUrls.length) return Promise.resolve();
+          keepSay.textContent = fmt(keepBox.getAttribute("data-saving"), { done: i + 1, total: keepUrls.length });
+          return fetch(keepUrls[i]).then(function (res) {
+            if (!res.ok) throw new Error(res.status);
+            return res.clone().text().then(function (html) {
+              var m = html.match(/<script type="application\/json" id="chapter-data">([\s\S]*?)<\/script>/);
+              var data = m ? JSON.parse(m[1]) : {};
+              var files = [data.panel, data.comm].filter(Boolean);
+              return Promise.all(files.map(function (u) { return cache.add(u); })).then(function () { return cache.put(keepUrls[i], res); });
+            });
+          }).catch(function () { failed++; }).then(function () { return one(i + 1); });
+        };
+        return one(0);
+      }).then(function () {
+        keepBtn.disabled = false;
+        if (failed) keepSay.textContent = keepBox.getAttribute("data-failed");
+        else keepDone();
+      });
+    });
+  }
+
+  var offlineList = document.getElementById("lg-offline-list");
+  if (offlineList && "caches" in window) {
+    Promise.all(["logia-kept", "logia-pages"].map(function (name) {
+      return caches.open(name).then(function (c) {
+        return c.keys().then(function (keys) {
+          return Promise.all(keys.reverse().map(function (k) {
+            return c.match(k).then(function (res) { return res.text(); }).then(function (html) {
+              var m = html.match(/<title>([^<]*)<\/title>/);
+              return { href: new URL(k.url).pathname, title: m ? m[1].replace(/ · Logia$/, "") : new URL(k.url).pathname };
+            });
+          }));
+        });
+      });
+    })).then(function (lists) {
+      var seen = {}, rows = [];
+      lists[0].concat(lists[1]).forEach(function (p) {
+        if (seen[p.href] || p.href === "/offline/" || !/\/$/.test(p.href)) return;
+        seen[p.href] = 1;
+        rows.push('<li><a href="' + esc(p.href) + '">' + p.title + "</a></li>");
+      });
+      offlineList.innerHTML = rows.length ? rows.join("") : "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>";
+    }).catch(function () { offlineList.innerHTML = "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>"; });
+  }
 })();

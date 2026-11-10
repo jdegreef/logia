@@ -1,0 +1,18 @@
+{
+ "id": "henry-luke",
+ "author": "henry",
+ "title": "Commentary on the Whole Bible, Volume V (Matthew to John): Luke",
+ "divisions": "verse",
+ "edition": "Matthew Henry, Exposition of the Old and New Testaments (1706-1721); CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1710,
+ "full_text_url": "https://www.ccel.org/ccel/henry/mhc5.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); Matthew Henry died in 1714"
+ },
+ "source_kind": "digital",
+ "notes": "Luke 1–24 are CCEL mhc5 Luke.ii–Luke.xxv. Every paragraph of exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each of the exposition's points is placed on the verse it names near its start ('(v. 7)', 'v. 11-15'); a main point (I., II.) that names none is on the whole section of verses it stands under, and any other paragraph that names none on the verse of the paragraph before it. A short lead-in ('Here observe,') goes with the paragraph after it. The verses Henry quotes from the poets are kept, a line to a paragraph. The chapter summaries before the sections, the Bible text printed above each section and the preface to the book are left out. Where the Open Word Bible leaves a verse out, Henry's exposition of it stays on that verse number.",
+ "status": "ai_draft"
+}

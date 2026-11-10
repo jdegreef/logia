@@ -1,0 +1,18 @@
+{
+ "id": "calvin-genesis",
+ "author": "calvin",
+ "title": "Commentaries on the First Book of Moses called Genesis",
+ "divisions": "verse",
+ "edition": "Calvin Translation Society, tr. John King (2 vols.; the translator's preface is dated Hull, January 1, 1847); CCEL edition",
+ "original_language": "Latin",
+ "translation": "Translated from the original Latin, and compared with the French edition, by the Rev. John King, M.A., of Queen's College, Cambridge, for the Calvin Translation Society",
+ "published": 1847,
+ "full_text_url": "https://www.ccel.org/ccel/calvin/calcom01.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years), John King's among them; the year of the second volume"
+ },
+ "source_kind": "digital",
+ "notes": "CCEL calcom01 (Genesis 1-23) and calcom02 (Genesis 24-50), a section page a chapter. Each section page is placed by the verses it covers; within it, each lemma (the bold verse number, '1.', or the italic words Calvin comments on) opens an entry, with the paragraphs after it, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. The English and Latin text printed above each section, the headings, the translator's footnotes, the prefaces, Calvin's Argument and the editor's indexes are left out. Each entry's heading is the italic lemma as printed. Genesis numbers its verses as English Bibles do, but Logia's Bible text follows the Hebrew, where English 31:55 is 32:1 and chapter 32 runs one verse ahead; each entry is moved to the Hebrew verses (bible/owb/versification.json).",
+ "status": "ai_draft"
+}
