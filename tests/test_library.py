@@ -187,6 +187,21 @@ class Counting(unittest.TestCase):
             self.assertEqual(build_site.site_owner_meta(), '\n<meta name="google-site-verification" content="abc">')
 
 
+class OfflineApp(unittest.TestCase):
+    def test_manifest_names_the_icons_it_ships(self):
+        m = json.loads(build_site.app_manifest())
+        self.assertEqual((m["start_url"], m["display"]), ("/", "standalone"))
+        for icon in m["icons"]:
+            self.assertTrue(os.path.isfile(os.path.join(build_site.WEB, icon["src"].lstrip("/"))), icon["src"])
+
+    def test_service_worker_keeps_the_frame_and_changes_version_with_it(self):
+        a, b = build_site.service_worker("<p>one</p>"), build_site.service_worker("<p>two</p>")
+        self.assertIn('"/offline/"', a)
+        self.assertIn(build_site.asset("logia.css"), a)
+        self.assertNotIn("var SHELL = [];", a)
+        self.assertNotEqual(re.search(r'VERSION = "(\w+)"', a)[1], re.search(r'VERSION = "(\w+)"', b)[1])
+
+
 class Site(unittest.TestCase):
     PAGES = ("index.html", "read/index.html", "jhn/index.html", "jhn/1/index.html", "jhn/21/index.html",
              "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html",
