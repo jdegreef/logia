@@ -9,6 +9,7 @@ are listed here so that a citation of them is kept like any other.
 """
 import json
 import os
+import functools
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -74,9 +75,11 @@ CHAPTERS = {**{k: v["chapters"] for k, v in _BOOKS.items()}, **{k: v[1] for k, v
 REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
 
 
+@functools.lru_cache(maxsize=None)
 def parse(ref):
     """'JHN.1.14' -> ('JHN', 1, 14), or None if it is not a reference to a
-    chapter that exists."""
+    chapter that exists. Cached: the build parses the same few thousand
+    references millions of times."""
     m = REF.match(ref or "")
     if not m or m[1] not in CHAPTERS:
         return None

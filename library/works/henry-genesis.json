@@ -1,0 +1,18 @@
+{
+ "id": "henry-genesis",
+ "author": "henry",
+ "title": "Commentary on the Whole Bible, Volume I (Genesis to Deuteronomy): Genesis",
+ "divisions": "verse",
+ "edition": "Matthew Henry, Exposition of the Old and New Testaments (1706-1721); CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1708,
+ "full_text_url": "https://www.ccel.org/ccel/henry/mhc1.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); Matthew Henry died in 1714"
+ },
+ "source_kind": "digital",
+ "notes": "Genesis 1-50 are CCEL mhc1 Gen.ii-Gen.li, a page a chapter. Every paragraph of exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each of the exposition's points is placed on the verse it names near its start ('(v. 7)', 'v. 11-15'); a main point (I., II.) that names none is on the whole section of verses it stands under, and any other paragraph that names none on the verse of the paragraph before it. A short lead-in ('Here observe,') goes with the paragraph after it. The Bible text printed above each section, the chapter summaries and the preface to the book are left out. Genesis numbers its verses as English Bibles do, but Logia's Bible text follows the Hebrew, where English 31:55 is 32:1 and chapter 32 runs one verse ahead; each entry is moved to the Hebrew verses (bible/owb/versification.json).",
+ "status": "ai_draft"
+}

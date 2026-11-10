@@ -143,8 +143,14 @@ def check_scan(excerpt, src):
             covered += len(ws) if "".join(ws) in src else 0
             continue
         hit = [False] * len(ws)
+        at = -1  # where the last run was found: the next one most likely follows it
         for i in range(len(ws) - 5):
-            if "".join(ws[i:i + 6]) in src:
+            run = "".join(ws[i:i + 6])
+            if at >= 0 and src.startswith(run, at + len(ws[i - 1])):
+                at += len(ws[i - 1])
+            else:
+                at = src.find(run)
+            if at >= 0:
                 hit[i:i + 6] = [True] * 6
         covered += sum(hit)
     share = covered / total if total else 1

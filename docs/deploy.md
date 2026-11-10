@@ -46,3 +46,26 @@ In the Cloudflare dashboard for `logia.faith`:
   with `dig +short logia.faith` and retry.
 - **502 just after verifying**: Render is still updating its routing. Wait.
 - **Too many redirects**: Cloudflare SSL is on Flexible. Set it to Full.
+
+## 3. Visit counts and search engines (optional)
+
+Each of these is off until its environment variable is set on the Render
+service (**Environment > Environment Variables**). A change takes effect on
+the next deploy, so after saving, run **Manual Deploy > Deploy latest
+commit**.
+
+| Variable              | Value                                   | Turns on |
+|-----------------------|-----------------------------------------|----------|
+| `LOGIA_GOATCOUNTER`   | the GoatCounter site code, e.g. `logia` | GoatCounter's counter on every indexed page, and a line on the About page saying so |
+| `LOGIA_GOOGLE_VERIFY` | the code from Search Console's *HTML tag* method | `<meta name="google-site-verification">` |
+| `LOGIA_BING_VERIFY`   | the code from Bing Webmaster Tools' *meta tag* method | `<meta name="msvalidate.01">` |
+
+**GoatCounter**: sign up at goatcounter.com (free for non-commercial sites)
+and choose the code; the dashboard is then at `https://<code>.goatcounter.com`.
+GoatCounter sets no cookies and keeps no IP addresses, so no consent banner
+is needed.
+
+**Search Console**: add `https://logia.faith/` as a *URL prefix* property,
+pick *HTML tag*, and copy only the `content` value. Once verified, submit
+`https://logia.faith/sitemap.xml` under *Sitemaps*. Bing Webmaster Tools can
+import the site from Search Console instead of using its own code.

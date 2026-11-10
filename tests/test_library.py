@@ -10,6 +10,7 @@ import re
 import sys
 import unicodedata
 import unittest
+from unittest import mock
 from contextlib import redirect_stdout
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -175,6 +176,17 @@ class VerifyCatchesChanges(unittest.TestCase):
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
 
 
+class Counting(unittest.TestCase):
+    def test_counter_and_owner_tags_are_off_unless_set(self):
+        with mock.patch.multiple(build_site, GOATCOUNTER="", GOOGLE_VERIFY="", BING_VERIFY=""):
+            self.assertEqual(build_site.counter_script(), "")
+            self.assertEqual(build_site.site_owner_meta(), "")
+        with mock.patch.multiple(build_site, GOATCOUNTER="logia", GOOGLE_VERIFY="abc", BING_VERIFY=""):
+            self.assertIn('data-goatcounter="https://logia.goatcounter.com/count"', build_site.counter_script())
+            self.assertEqual(build_site.counter_script(noindex=True), "")
+            self.assertEqual(build_site.site_owner_meta(), '\n<meta name="google-site-verification" content="abc">')
+
+
 class OfflineApp(unittest.TestCase):
     def test_manifest_names_the_icons_it_ships(self):
         m = json.loads(build_site.app_manifest())
@@ -197,7 +209,9 @@ class Site(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        quiet(build_site.build)
+        # CI builds site/ in the step before the tests and sets LOGIA_SITE_BUILT, so it is built once.
+        if not (os.environ.get("LOGIA_SITE_BUILT") and os.path.isdir(build_site.SITE)):
+            quiet(build_site.build)
 
     def read(self, page):
         with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
