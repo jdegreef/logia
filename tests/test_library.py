@@ -406,7 +406,7 @@ class Site(unittest.TestCase):
         self.assertIn('class="lg-vocab"', text)
         self.assertIn('href="/commentators/era/reformation/"', text)
         self.assertIn('class="lg-prev" href="/commentators/luther/"', text)
-        self.assertIn('class="lg-next" href="/commentators/lapide/"', text)
+        self.assertIn('class="lg-next" href="/commentators/bellarmine/"', text)
 
     def test_the_reader_can_report_a_mistake_on_github(self):
         text = self.read("jhn/3/index.html")
