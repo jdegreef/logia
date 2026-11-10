@@ -49,6 +49,12 @@ SITE_URL = "https://logia.faith"
 # build at a local API and site.
 OWB_SITE = os.environ.get("LOGIA_OWB_URL", "https://openwordbible.org").rstrip("/")
 API_URL = os.environ.get("LOGIA_API_URL", "https://api.openwordbible.org").rstrip("/")
+# Visit counting and search-engine ownership, all off unless set on Render
+# (docs/deploy.md). GOATCOUNTER is the GoatCounter site code ("logia" for
+# logia.goatcounter.com); it counts pages without cookies or personal data.
+GOATCOUNTER = re.sub(r"[^a-z0-9-]", "", os.environ.get("LOGIA_GOATCOUNTER", "").lower())
+GOOGLE_VERIFY = os.environ.get("LOGIA_GOOGLE_VERIFY", "").strip()
+BING_VERIFY = os.environ.get("LOGIA_BING_VERIFY", "").strip()
 GITHUB_URL = "https://github.com/jdegreef/logia"
 # The Lent the reading plan gives dates for (/<book>/lent/).
 LENT_YEAR = 2027
@@ -844,6 +850,22 @@ def digest_url(path, text):
     return f"{path}?v={hashlib.sha256(text.encode()).hexdigest()[:10]}"
 
 
+def site_owner_meta():
+    """The tags Google Search Console and Bing Webmaster Tools read to confirm
+    who owns logia.faith, when their codes are set."""
+    tags = [("google-site-verification", GOOGLE_VERIFY), ("msvalidate.01", BING_VERIFY)]
+    return "".join(f'\n<meta name="{n}" content="{e(v)}">' for n, v in tags if v)
+
+
+def counter_script(noindex=False):
+    """GoatCounter's page counter, when a site code is set: no cookies, no
+    personal data, and nothing on pages kept out of search."""
+    if not GOATCOUNTER or noindex:
+        return ""
+    return (f'\n<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" '
+            'async src="https://gc.zgo.at/count.js"></script>')
+
+
 def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True,
          preload=(), head_title=None, ld=()):
     """A whole page. head_title, when given, is the <title> and og:title in
@@ -874,13 +896,13 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta name="logia-api" content="{API_URL}">
 <meta name="logia-owb" content="{OWB_SITE}">
 <meta name="theme-color" content="#f4eee3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#2a241c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#2a241c" media="(prefers-color-scheme: dark)">{site_owner_meta()}
 <script>{BOOT_SCRIPT}</script>
 <style>{TEXT_WAITS}</style>
 <link rel="preload" href="/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/gentium-book-plus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 {"".join(f'<link rel="preload" href="{u}" as="fetch" crossorigin>{chr(10)}' for u in preload)}<link rel="stylesheet" href="{asset("style.css")}">
-<link rel="stylesheet" href="{asset("logia.css")}">{js}
+<link rel="stylesheet" href="{asset("logia.css")}">{js}{counter_script(noindex)}
 </head>
 <body>
 <a class="skip" href="#main">{e(t("site.skip"))}</a>
@@ -3530,6 +3552,8 @@ def about_page(lib):
                 ("bible", "".join(f"<p>{e(p)}</p>" for p in t("about.bible"))),
                 ("languages", "".join(f"<p>{e(p)}</p>" for p in t("about.languages"))),
                 ("open", about_open()),
+                ("privacy", "".join(f"<p>{e(p)}</p>" for p in t("about.privacy"))
+                 + (f'<p>{e(t("about.privacy_counter"))}</p>' if GOATCOUNTER else "")),
                 ("cite", about_cite()),
                 ("help", about_help()),
                 ("thanks", about_thanks(lib)),

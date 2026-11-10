@@ -592,6 +592,7 @@
       "bible": "The Bible text",
       "languages": "Languages",
       "open": "Open",
+      "privacy": "Privacy",
       "cite": "Citing Logia",
       "help": "Help build Logia",
       "thanks": "With thanks",
@@ -662,6 +663,10 @@
     "languages": [
       "Logia starts in English. Each new language is translated from the best public-domain source, the original Greek, Latin or German where that is better than the English, and reviewed by native speakers before it is marked reviewed."
     ],
+    "privacy": [
+      "Reading Logia needs no account, and Logia sets no cookies of its own. If you sign in to save or like comments, you use your Open Word Bible account, and what you save is kept there."
+    ],
+    "privacy_counter": "To learn which books and pages people read, Logia counts visits with GoatCounter. It sets no cookies, keeps no IP addresses and builds no profile of anyone; it records only the page, the site you came from, and your browser, screen size and country in general terms.",
     "open": [
       [
         "Data and writing",
