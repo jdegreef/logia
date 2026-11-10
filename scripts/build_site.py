@@ -2173,6 +2173,29 @@ def timeline(lib, authors=None):
             f'<figcaption class="lg-quiet" id="tl-cap">{e(t("commentators.timeline_note", a=lo, b=hi))}</figcaption></figure>')
 
 
+# What a card's quotation leaves off the front of a paragraph: the
+# paragraph's number or verses as the edition prints them ("11.", "(1)",
+# "Vv. 1, 2."), and in a
+# catena the label naming whose words follow ("CHRYS.", "Jerome, ...:").
+LEAD_NUMBER = re.compile(r"^(?:\(\d+\)|\d+\.|Vv?\. \d+(?:[,–-] ?\d+)*\.)\s+")
+LEAD_LABEL = re.compile(r"^([A-Z]{3,})\s?[.;]\s+")
+LEAD_NAME = re.compile(r"^([A-Z][A-Za-z.\- ]{1,20}?)(?:,[^:\n]{0,80})?:\s+")
+
+
+def card_lead(text):
+    """A paragraph as a card quotes it, and whose words it is when the
+    paragraph opens with a catena's label (None when it is the author's)."""
+    text = LEAD_NUMBER.sub("", text, count=1)
+    m = LEAD_LABEL.match(text)
+    who = CATENA_LABELS.get(m[1] + ".") if m else None
+    if not who:
+        m = LEAD_NAME.match(text)
+        who = CATENA_NAMES.get(m[1]) if m else None
+    if who and who in CATALOG["catena"]["names"]:
+        return text[m.end():], t("catena.names." + who)
+    return text, None
+
+
 def name_initials(a):
     """"JC" for John Chrysostom: the first and last capitals of a name."""
     caps = "".join(w[0] for w in a["name"].replace(".", " ").split() if w[0].isupper())
@@ -2199,9 +2222,11 @@ def commentators_page(lib):
         quote = ""
         if first:
             paras = [p for p in first["text"].split("\n\n") if p.strip()]
-            lead = paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]
-            quote = (f'<p class="lg-pq">“{e(snippet(lead, 22))}” '
-                     f'<span>{e(t("commentators.on", ref=scripture.label(first["start"], first["end"])))}</span></p>')
+            lead, quoted = card_lead(paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0])
+            on = t("commentators.on", ref=scripture.label(first["start"], first["end"]))
+            if quoted:
+                on = t("commentators.quoted", name=quoted, author=short_name(a)) + " · " + on
+            quote = f'<p class="lg-pq">“{e(snippet(lead, 22))}” <span>{e(on)}</span></p>'
         cov = "".join(
             f'<span class="lg-cov"><span class="lg-meter"><span style="width:{100 * len(vs) / book_verses[b]:.0f}%"></span></span>'
             f'{e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=book_verses[b]))}</span>'
