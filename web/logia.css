@@ -607,6 +607,19 @@ footer.site .foot-books .testaments { gap: 12px 40px; }
 .lg-pq { margin: 6px 0 4px; font-family: var(--serif); font-size: 15px; line-height: 1.5; color: var(--text); }
 .lg-pq span { font-family: var(--sans); font-size: 12px; color: var(--muted); white-space: nowrap; }
 .lg-meta { font-size: 12.5px; color: var(--muted); }
+/* Every voice on one verse, under the cards (/commentators/). */
+.lg-ov-verse { margin: 14px 0 8px; padding-left: 14px; border-left: 3px solid var(--gold); font-family: var(--serif); font-size: 18px; line-height: 1.5; }
+.lg-ov-verse p { margin: 0; }
+.lg-ov-list { list-style: none; padding: 0; margin: 0 0 12px; }
+.lg-ov-list li { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 4px 20px; padding: 12px 0; border-top: 1px solid var(--line); }
+.lg-ov-who { margin: 0; }
+.lg-ov-who a { text-decoration: none; }
+.lg-ov-who b { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--era); }
+.lg-ov-who span { display: block; font-size: 12.5px; color: var(--muted); }
+.lg-ov-text { margin: 0; font-family: var(--serif); font-size: 16px; line-height: 1.5; }
+.lg-ov-text a { color: var(--text); text-decoration: none; }
+.lg-ov-text a:hover { color: var(--accent); text-decoration: underline; }
+@media (max-width: 600px) { .lg-ov-list li { grid-template-columns: minmax(0, 1fr); } .lg-ov-who span { display: inline; margin-left: 6px; } }
 .lg-cov { display: grid; gap: 4px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
 .lg-cov .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
 .lg-cov .lg-meter > span { display: block; height: 100%; background: var(--era); }

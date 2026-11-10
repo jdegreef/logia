@@ -1,0 +1,26 @@
+{
+ "work": "bernard-song",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "/ will",
+   "to": "I will"
+  },
+  {
+   "from": "/ am",
+   "to": "I am"
+  },
+  {
+   "from": "ivork",
+   "to": "work"
+  },
+  {
+   "from": "/ waited",
+   "to": "I waited"
+  },
+  {
+   "from": "shadoivs",
+   "to": "shadows"
+  }
+ ]
+}

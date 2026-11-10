@@ -1,0 +1,2031 @@
+{
+ "work": "haydock-genesis",
+ "book": "GEN",
+ "citations": [
+  {
+   "in": "haydock-genesis.GEN.1.6.1",
+   "at": 380,
+   "text": "Ps. 103:3",
+   "start": "PSA.103.3",
+   "end": "PSA.103.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.1.20.1",
+   "at": 309,
+   "text": "v. 20",
+   "start": "GEN.1.20",
+   "end": "GEN.1.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.1.28.1",
+   "at": 203,
+   "text": "ver. 22",
+   "start": "GEN.1.22",
+   "end": "GEN.1.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.1.28.1",
+   "at": 932,
+   "text": "1 Cor. 7:1",
+   "start": "1CO.7.1",
+   "end": "1CO.7.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.2.1",
+   "at": 105,
+   "text": "John 5:17",
+   "start": "JHN.5.17",
+   "end": "JHN.5.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.2.1",
+   "at": 240,
+   "text": "Ex. 20:8",
+   "start": "EXO.20.8",
+   "end": "EXO.20.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.2.1",
+   "at": 1320,
+   "text": "v. 6",
+   "start": "GEN.2.6",
+   "end": "GEN.2.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.2.1",
+   "at": 1329,
+   "text": "v. 7",
+   "start": "GEN.2.7",
+   "end": "GEN.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.9.1",
+   "at": 699,
+   "text": "Cant. 8:5",
+   "start": "SNG.8.5",
+   "end": "SNG.8.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.10.1",
+   "at": 408,
+   "text": "Prov. 3:18",
+   "start": "PRO.3.18",
+   "end": "PRO.3.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.24.1",
+   "at": 108,
+   "text": "Eph. 5:23",
+   "start": "EPH.5.23",
+   "end": "EPH.5.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.1.1",
+   "at": 764,
+   "text": "v. 15",
+   "start": "GEN.3.15",
+   "end": "GEN.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.6.1",
+   "at": 749,
+   "text": "Gen. 2:14",
+   "start": "GEN.2.14",
+   "end": "GEN.2.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.6.1",
+   "at": 1062,
+   "text": "Rom. 5:19",
+   "start": "ROM.5.19",
+   "end": "ROM.5.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.7.1",
+   "at": 114,
+   "text": "ver. 6",
+   "start": "GEN.3.6",
+   "end": "GEN.3.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.10.1",
+   "at": 443,
+   "text": "Ex. 8:15",
+   "start": "EXO.8.11",
+   "end": "EXO.8.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.18.1",
+   "at": 431,
+   "text": "2 Thess. 3:10",
+   "start": "2TH.3.10",
+   "end": "2TH.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.22.1",
+   "at": 264,
+   "text": "Gen. xi. 39",
+   "start": "GEN.11.39",
+   "end": "GEN.11.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.4.8.1",
+   "at": 416,
+   "text": "Heb. 12:2",
+   "start": "HEB.12.2",
+   "end": "HEB.12.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.4.14.1",
+   "at": 248,
+   "text": "Gen. 5:3",
+   "start": "GEN.5.3",
+   "end": "GEN.5.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.5.24.1",
+   "at": 211,
+   "text": "Heb. 11:5",
+   "start": "HEB.11.5",
+   "end": "HEB.11.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.6.4.1",
+   "at": 931,
+   "text": "Num. 13:33",
+   "start": "NUM.13.33",
+   "end": "NUM.13.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.6.15.1",
+   "at": 769,
+   "text": "Gen. 1:4",
+   "start": "GEN.1.4",
+   "end": "GEN.1.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.7.2.1",
+   "at": 906,
+   "text": "Mark 6:7",
+   "start": "MRK.6.7",
+   "end": "MRK.6.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.7.24.1",
+   "at": 839,
+   "text": "1 Pet. 3:19",
+   "start": "1PE.3.19",
+   "end": "1PE.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.8.1.1",
+   "at": 504,
+   "text": "Prov. 25:23",
+   "start": "PRO.25.23",
+   "end": "PRO.25.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.8.1.1",
+   "at": 517,
+   "text": "Ex. 14:21",
+   "start": "EXO.14.21",
+   "end": "EXO.14.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.8.4.1",
+   "at": 127,
+   "text": "ver. 13",
+   "start": "GEN.8.13",
+   "end": "GEN.8.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.9.4.1",
+   "at": 410,
+   "text": "Lev. 17:11",
+   "start": "LEV.17.11",
+   "end": "LEV.17.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.9.5.1",
+   "at": 89,
+   "text": "Ex. 21:28",
+   "start": "EXO.21.28",
+   "end": "EXO.21.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.9.25.1",
+   "at": 846,
+   "text": "Deut. 9:4",
+   "start": "DEU.9.4",
+   "end": "DEU.9.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.10.5.1",
+   "at": 191,
+   "text": "Jer. 25:22",
+   "start": "JER.25.22",
+   "end": "JER.25.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.10.24.1",
+   "at": 69,
+   "text": "Luke 3:36",
+   "start": "LUK.3.36",
+   "end": "LUK.3.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.11.27.1",
+   "at": 439,
+   "text": "v. 31",
+   "start": "GEN.11.31",
+   "end": "GEN.11.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.11.29.1",
+   "at": 815,
+   "text": "Acts. 7:2",
+   "start": "ACT.7.2",
+   "end": "ACT.7.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.1.1",
+   "at": 439,
+   "text": "Heb. 11:8",
+   "start": "HEB.11.8",
+   "end": "HEB.11.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.3.1",
+   "at": 154,
+   "text": "Gal. 3:16",
+   "start": "GAL.3.16",
+   "end": "GAL.3.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.3.1",
+   "at": 503,
+   "text": "v. 1",
+   "start": "GEN.12.1",
+   "end": "GEN.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.6.1",
+   "at": 96,
+   "text": "Deut. 11:30",
+   "start": "DEU.11.30",
+   "end": "DEU.11.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.6.1",
+   "at": 692,
+   "text": "v. 7",
+   "start": "GEN.12.7",
+   "end": "GEN.12.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.13.1",
+   "at": 218,
+   "text": "Gen. 14:14",
+   "start": "GEN.14.14",
+   "end": "GEN.14.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.13.1",
+   "at": 234,
+   "text": "Gen. 20:12",
+   "start": "GEN.20.12",
+   "end": "GEN.20.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.12.15.1",
+   "at": 191,
+   "text": "v. 17",
+   "start": "GEN.12.17",
+   "end": "GEN.12.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.13.15.1",
+   "at": 136,
+   "text": "Acts 8:5",
+   "start": "ACT.8.5",
+   "end": "ACT.8.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.13.15.1",
+   "at": 516,
+   "text": "Rom. 4:16",
+   "start": "ROM.4.16",
+   "end": "ROM.4.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.14.5.1",
+   "at": 141,
+   "text": "Deut. 3:13",
+   "start": "DEU.3.13",
+   "end": "DEU.3.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.14.7.1",
+   "at": 141,
+   "text": "Num. 20:11",
+   "start": "NUM.20.11",
+   "end": "NUM.20.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.14.10.1",
+   "at": 106,
+   "text": "Gen. 11:3",
+   "start": "GEN.11.3",
+   "end": "GEN.11.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.14.10.1",
+   "at": 353,
+   "text": "v. 17",
+   "start": "GEN.14.17",
+   "end": "GEN.14.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.14.18.1",
+   "at": 1267,
+   "text": "Judges 6:18",
+   "start": "JDG.6.18",
+   "end": "JDG.6.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.14.18.1",
+   "at": 1934,
+   "text": "Deut. 23:4",
+   "start": "DEU.23.5",
+   "end": "DEU.23.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.14.19.1",
+   "at": 67,
+   "text": "Heb. 4:7",
+   "start": "HEB.4.7",
+   "end": "HEB.4.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.15.1.1",
+   "at": 251,
+   "text": "v. 5",
+   "start": "GEN.15.5",
+   "end": "GEN.15.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.15.17.1",
+   "at": 128,
+   "text": "Jer. 34:18",
+   "start": "JER.34.18",
+   "end": "JER.34.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.16.2.1",
+   "at": 135,
+   "text": "Ex. 1:21",
+   "start": "EXO.1.21",
+   "end": "EXO.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.16.3.1",
+   "at": 1517,
+   "text": "Gen. 2:24",
+   "start": "GEN.2.24",
+   "end": "GEN.2.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.16.13.1",
+   "at": 499,
+   "text": "Ex. 32:20",
+   "start": "EXO.32.20",
+   "end": "EXO.32.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.17.11.1",
+   "at": 383,
+   "text": "Rom. 4:2",
+   "start": "ROM.4.2",
+   "end": "ROM.4.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.17.11.1",
+   "at": 1224,
+   "text": "Gal. 4:9",
+   "start": "GAL.4.9",
+   "end": "GAL.4.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.17.16.1",
+   "at": 338,
+   "text": "Gal. 4:23",
+   "start": "GAL.4.23",
+   "end": "GAL.4.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.17.17.1",
+   "at": 148,
+   "text": "Rom. 4:19",
+   "start": "ROM.4.19",
+   "end": "ROM.4.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.18.2.1",
+   "at": 54,
+   "text": "Heb. 13:2",
+   "start": "HEB.13.2",
+   "end": "HEB.13.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.18.32.1",
+   "at": 334,
+   "text": "Jer. 5:1",
+   "start": "JER.5.1",
+   "end": "JER.5.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.19.14.1",
+   "at": 63,
+   "text": "v. 4",
+   "start": "GEN.19.4",
+   "end": "GEN.19.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.19.19.1",
+   "at": 205,
+   "text": "v. 30",
+   "start": "GEN.19.30",
+   "end": "GEN.19.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.19.22.1",
+   "at": 71,
+   "text": "v. 20",
+   "start": "GEN.19.20",
+   "end": "GEN.19.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.19.23.1",
+   "at": 52,
+   "text": "v. 15",
+   "start": "GEN.19.15",
+   "end": "GEN.19.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.19.25.1",
+   "at": 60,
+   "text": "v. 7",
+   "start": "GEN.19.7",
+   "end": "GEN.19.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.20.2.1",
+   "at": 125,
+   "text": "v. 13",
+   "start": "GEN.20.13",
+   "end": "GEN.20.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.20.3.1",
+   "at": 437,
+   "text": "v. 7",
+   "start": "GEN.20.7",
+   "end": "GEN.20.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.20.9.1",
+   "at": 110,
+   "text": "v. 18",
+   "start": "GEN.20.18",
+   "end": "GEN.20.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.20.14.1",
+   "at": 124,
+   "text": "1 Kings 9:7",
+   "start": "1KI.9.7",
+   "end": "1KI.9.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.20.16.1",
+   "at": 81,
+   "text": "1 Cor. 11:5",
+   "start": "1CO.11.5",
+   "end": "1CO.11.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.21.3.1",
+   "at": 125,
+   "text": "Luke 1:14",
+   "start": "LUK.1.14",
+   "end": "LUK.1.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.21.3.1",
+   "at": 171,
+   "text": "v. 6",
+   "start": "GEN.21.6",
+   "end": "GEN.21.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.21.7.1",
+   "at": 134,
+   "text": "v. 2",
+   "start": "GEN.21.2",
+   "end": "GEN.21.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.21.9.1",
+   "at": 57,
+   "text": "Gal. 4:29",
+   "start": "GAL.4.29",
+   "end": "GAL.4.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.21.9.1",
+   "at": 273,
+   "text": "Ex. 32:6",
+   "start": "EXO.32.6",
+   "end": "EXO.32.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.21.9.1",
+   "at": 829,
+   "text": "v. 12",
+   "start": "GEN.21.12",
+   "end": "GEN.21.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.21.33.1",
+   "at": 694,
+   "text": "Deut. 16:22",
+   "start": "DEU.16.22",
+   "end": "DEU.16.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.22.1.1",
+   "at": 54,
+   "text": "James 1:13",
+   "start": "JAS.1.13",
+   "end": "JAS.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.22.2.1",
+   "at": 478,
+   "text": "ver. 14",
+   "start": "GEN.22.14",
+   "end": "GEN.22.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.22.5.1",
+   "at": 79,
+   "text": "Heb. 11:19",
+   "start": "HEB.11.19",
+   "end": "HEB.11.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.22.14.1",
+   "at": 323,
+   "text": "v. 8",
+   "start": "GEN.22.8",
+   "end": "GEN.22.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.22.16.1",
+   "at": 61,
+   "text": "Heb. 6:13",
+   "start": "HEB.6.13",
+   "end": "HEB.6.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.22.16.1",
+   "at": 73,
+   "text": "Jer. 22:5",
+   "start": "JER.22.5",
+   "end": "JER.22.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.23.1.1",
+   "at": 131,
+   "text": "Gal. 4:23",
+   "start": "GAL.4.23",
+   "end": "GAL.4.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.23.1.1",
+   "at": 142,
+   "text": "Heb. 11:11",
+   "start": "HEB.11.11",
+   "end": "HEB.11.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.23.2.1",
+   "at": 821,
+   "text": "Acts 8:2",
+   "start": "ACT.8.2",
+   "end": "ACT.8.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.23.6.1",
+   "at": 86,
+   "text": "Acts 7:5",
+   "start": "ACT.7.5",
+   "end": "ACT.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.24.14.1",
+   "at": 269,
+   "text": "Acts 1:24",
+   "start": "ACT.1.24",
+   "end": "ACT.1.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.24.14.1",
+   "at": 372,
+   "text": "Gen. ii. 17",
+   "start": "GEN.2.17",
+   "end": "GEN.2.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.24.53.1",
+   "at": 60,
+   "text": "v. 22",
+   "start": "GEN.24.22",
+   "end": "GEN.24.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.25.16.1",
+   "at": 332,
+   "text": "Jer. 49:31",
+   "start": "JER.49.31",
+   "end": "JER.49.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.25.21.1",
+   "at": 50,
+   "text": "v. 26",
+   "start": "GEN.25.26",
+   "end": "GEN.25.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.25.25.1",
+   "at": 73,
+   "text": "v. 30",
+   "start": "GEN.25.30",
+   "end": "GEN.25.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.25.31.1",
+   "at": 751,
+   "text": "Deut. 21:17",
+   "start": "DEU.21.17",
+   "end": "DEU.21.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.25.31.1",
+   "at": 916,
+   "text": "Heb. 12:16",
+   "start": "HEB.12.16",
+   "end": "HEB.12.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.4.1",
+   "at": 320,
+   "text": "v. 29",
+   "start": "GEN.27.29",
+   "end": "GEN.27.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.7.1",
+   "at": 58,
+   "text": "v. 4",
+   "start": "GEN.27.4",
+   "end": "GEN.27.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.15.1",
+   "at": 57,
+   "text": "v. 27",
+   "start": "GEN.27.27",
+   "end": "GEN.27.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.19.1",
+   "at": 878,
+   "text": "1 Cor. 10:12",
+   "start": "1CO.10.12",
+   "end": "1CO.10.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.33.1",
+   "at": 153,
+   "text": "v. 12",
+   "start": "GEN.27.12",
+   "end": "GEN.27.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.39.1",
+   "at": 162,
+   "text": "Heb. 12:17",
+   "start": "HEB.12.17",
+   "end": "HEB.12.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.39.1",
+   "at": 490,
+   "text": "Ps. 109:24",
+   "start": "PSA.109.24",
+   "end": "PSA.109.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.28.16.1",
+   "at": 589,
+   "text": "v. 17",
+   "start": "GEN.28.17",
+   "end": "GEN.28.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.29.3.1",
+   "at": 72,
+   "text": "v. 2",
+   "start": "GEN.29.2",
+   "end": "GEN.29.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.29.4.1",
+   "at": 242,
+   "text": "Jer. 5:15",
+   "start": "JER.5.15",
+   "end": "JER.5.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.29.31.1",
+   "at": 74,
+   "text": "Matt. 10:17",
+   "start": "MAT.10.17",
+   "end": "MAT.10.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.29.32.1",
+   "at": 85,
+   "text": "v. 24",
+   "start": "GEN.29.24",
+   "end": "GEN.29.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.29.33.1",
+   "at": 38,
+   "text": "Deut. 21:15",
+   "start": "DEU.21.15",
+   "end": "DEU.21.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.2.1",
+   "at": 325,
+   "text": "Ps. 144:16",
+   "start": "PSA.144.16",
+   "end": "PSA.144.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.2.1",
+   "at": 349,
+   "text": "Deut. 28:12",
+   "start": "DEU.28.12",
+   "end": "DEU.28.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.3.1",
+   "at": 298,
+   "text": "Job 3:12",
+   "start": "JOB.3.12",
+   "end": "JOB.3.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.3.1",
+   "at": 308,
+   "text": "Ps. 21:11",
+   "start": "PSA.21.12",
+   "end": "PSA.21.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.8.1",
+   "at": 212,
+   "text": "Ps. 17:27",
+   "start": "PSA.17.27",
+   "end": "PSA.17.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.14.1",
+   "at": 102,
+   "text": "Ex. 9:32",
+   "start": "EXO.9.32",
+   "end": "EXO.9.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.14.1",
+   "at": 169,
+   "text": "Cant. 7:13",
+   "start": "SNG.7.14",
+   "end": "SNG.7.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.15.1",
+   "at": 333,
+   "text": "Exod. 21:10",
+   "start": "EXO.21.10",
+   "end": "EXO.21.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.32.1",
+   "at": 464,
+   "text": "v. 35",
+   "start": "GEN.30.35",
+   "end": "GEN.30.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.35.1",
+   "at": 148,
+   "text": "v. 36",
+   "start": "GEN.30.36",
+   "end": "GEN.30.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.31.1.1",
+   "at": 131,
+   "text": "v. 3",
+   "start": "GEN.31.3",
+   "end": "GEN.31.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.31.21.1",
+   "at": 67,
+   "text": "v. 48",
+   "start": "GEN.31.48",
+   "end": "GEN.31.48",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.31.51.1",
+   "at": 87,
+   "text": "v. 45",
+   "start": "GEN.31.45",
+   "end": "GEN.31.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.32.1.1",
+   "at": 172,
+   "text": "Dan. 12:1",
+   "start": "DAN.12.1",
+   "end": "DAN.12.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.32.1.1",
+   "at": 183,
+   "text": "Acts 16:9",
+   "start": "ACT.16.9",
+   "end": "ACT.16.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.32.6.1",
+   "at": 121,
+   "text": "v. 11",
+   "start": "GEN.32.12",
+   "end": "GEN.32.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.32.24.1",
+   "at": 100,
+   "text": "v. 28",
+   "start": "GEN.32.29",
+   "end": "GEN.32.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.32.24.1",
+   "at": 259,
+   "text": "v. 28",
+   "start": "GEN.32.29",
+   "end": "GEN.32.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.32.24.1",
+   "at": 716,
+   "text": "v. 9",
+   "start": "GEN.32.10",
+   "end": "GEN.32.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.32.29.1",
+   "at": 118,
+   "text": "Ex. 6:3",
+   "start": "EXO.6.3",
+   "end": "EXO.6.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.33.18.1",
+   "at": 182,
+   "text": "John 3:23",
+   "start": "JHN.3.23",
+   "end": "JHN.3.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.33.19.1",
+   "at": 83,
+   "text": "Job 42:11",
+   "start": "JOB.42.11",
+   "end": "JOB.42.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.33.19.1",
+   "at": 254,
+   "text": "Acts 7:19",
+   "start": "ACT.7.19",
+   "end": "ACT.7.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.34.13.1",
+   "at": 365,
+   "text": "v. 25",
+   "start": "GEN.34.25",
+   "end": "GEN.34.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.34.17.1",
+   "at": 102,
+   "text": "v. 26",
+   "start": "GEN.34.26",
+   "end": "GEN.34.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.35.2.1",
+   "at": 273,
+   "text": "Exod. 19:10",
+   "start": "EXO.19.10",
+   "end": "EXO.19.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.35.2.1",
+   "at": 286,
+   "text": "Lev. 15:13",
+   "start": "LEV.15.13",
+   "end": "LEV.15.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.35.4.1",
+   "at": 655,
+   "text": "Deut. 7:5",
+   "start": "DEU.7.5",
+   "end": "DEU.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.35.16.1",
+   "at": 106,
+   "text": "v. 19",
+   "start": "GEN.35.19",
+   "end": "GEN.35.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.35.16.1",
+   "at": 296,
+   "text": "v. 19",
+   "start": "GEN.35.19",
+   "end": "GEN.35.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.1.1",
+   "at": 46,
+   "text": "v. 20",
+   "start": "GEN.36.20",
+   "end": "GEN.36.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.1.1",
+   "at": 210,
+   "text": "v. 31",
+   "start": "GEN.36.31",
+   "end": "GEN.36.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.1.1",
+   "at": 434,
+   "text": "v. 31",
+   "start": "GEN.36.31",
+   "end": "GEN.36.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.1.1",
+   "at": 624,
+   "text": "Deut. 33:5",
+   "start": "DEU.33.5",
+   "end": "DEU.33.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.2.1",
+   "at": 321,
+   "text": "v. 14",
+   "start": "GEN.36.14",
+   "end": "GEN.36.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.2.1",
+   "at": 393,
+   "text": "v. 24",
+   "start": "GEN.36.24",
+   "end": "GEN.36.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.4.1",
+   "at": 154,
+   "text": "v. 33",
+   "start": "GEN.36.33",
+   "end": "GEN.36.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.24.1",
+   "at": 228,
+   "text": "v. 35",
+   "start": "GEN.36.35",
+   "end": "GEN.36.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.31.1",
+   "at": 21,
+   "text": "v. 1",
+   "start": "GEN.36.1",
+   "end": "GEN.36.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.40.1",
+   "at": 165,
+   "text": "Ex. 15:15",
+   "start": "EXO.15.15",
+   "end": "EXO.15.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.36.43.1",
+   "at": 110,
+   "text": "v. 8",
+   "start": "GEN.36.8",
+   "end": "GEN.36.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.37.3.1",
+   "at": 383,
+   "text": "v. 3",
+   "start": "GEN.37.3",
+   "end": "GEN.37.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.37.5.1",
+   "at": 253,
+   "text": "Deut. 18:10",
+   "start": "DEU.18.10",
+   "end": "DEU.18.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.37.36.1",
+   "at": 329,
+   "text": "Dan. 2:14",
+   "start": "DAN.2.14",
+   "end": "DAN.2.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.8.1",
+   "at": 294,
+   "text": "Deut. 25:5",
+   "start": "DEU.25.5",
+   "end": "DEU.25.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.10.1",
+   "at": 55,
+   "text": "Ps. 77:49",
+   "start": "PSA.77.49",
+   "end": "PSA.77.49",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.14.1",
+   "at": 527,
+   "text": "Jer. 3:2",
+   "start": "JER.3.2",
+   "end": "JER.3.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.18.1",
+   "at": 507,
+   "text": "v. 24",
+   "start": "GEN.38.24",
+   "end": "GEN.38.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.25.1",
+   "at": 437,
+   "text": "Lev. 21:9",
+   "start": "LEV.21.9",
+   "end": "LEV.21.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.25.1",
+   "at": 475,
+   "text": "Lev. 20:10",
+   "start": "LEV.20.10",
+   "end": "LEV.20.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.26.1",
+   "at": 266,
+   "text": "Num. 26:19",
+   "start": "NUM.26.19",
+   "end": "NUM.26.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.38.30.1",
+   "at": 392,
+   "text": "Matt. 1:3",
+   "start": "MAT.1.3",
+   "end": "MAT.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.39.21.1",
+   "at": 258,
+   "text": "Ps. 104:18",
+   "start": "PSA.104.18",
+   "end": "PSA.104.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.39.21.1",
+   "at": 422,
+   "text": "v. 10",
+   "start": "GEN.39.10",
+   "end": "GEN.39.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.40.1.1",
+   "at": 86,
+   "text": "v. 2",
+   "start": "GEN.40.2",
+   "end": "GEN.40.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.40.8.1",
+   "at": 1037,
+   "text": "Deut. 18:10",
+   "start": "DEU.18.10",
+   "end": "DEU.18.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.40.19.1",
+   "at": 117,
+   "text": "Deut. 21:22",
+   "start": "DEU.21.22",
+   "end": "DEU.21.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.40.20.1",
+   "at": 68,
+   "text": "Matt. 14:6",
+   "start": "MAT.14.6",
+   "end": "MAT.14.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.3.1",
+   "at": 392,
+   "text": "v. 9",
+   "start": "GEN.41.9",
+   "end": "GEN.41.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.5.1",
+   "at": 43,
+   "text": "v. 25",
+   "start": "GEN.41.25",
+   "end": "GEN.41.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.5.1",
+   "at": 113,
+   "text": "v. 32",
+   "start": "GEN.41.32",
+   "end": "GEN.41.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.14.1",
+   "at": 273,
+   "text": "Gen. 50:4",
+   "start": "GEN.50.4",
+   "end": "GEN.50.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.16.1",
+   "at": 188,
+   "text": "Matt. 10:20",
+   "start": "MAT.10.20",
+   "end": "MAT.10.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.40.1",
+   "at": 199,
+   "text": "Ps. 104:21",
+   "start": "PSA.104.21",
+   "end": "PSA.104.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.42.1",
+   "at": 228,
+   "text": "Ex. 25:4",
+   "start": "EXO.25.4",
+   "end": "EXO.25.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.42.1",
+   "at": 386,
+   "text": "Dan. 5:7, 16",
+   "start": "DAN.5.16",
+   "end": "DAN.5.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.41.42.1",
+   "at": 386,
+   "text": "Dan. 5:7, 16",
+   "start": "DAN.5.7",
+   "end": "DAN.5.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.42.22.1",
+   "at": 58,
+   "text": "v. 13",
+   "start": "GEN.42.13",
+   "end": "GEN.42.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.42.34.1",
+   "at": 44,
+   "text": "v. 20",
+   "start": "GEN.42.20",
+   "end": "GEN.42.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.42.35.1",
+   "at": 56,
+   "text": "v. 28",
+   "start": "GEN.42.28",
+   "end": "GEN.42.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.42.38.1",
+   "at": 132,
+   "text": "ver. 35",
+   "start": "GEN.42.35",
+   "end": "GEN.42.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.43.11.1",
+   "at": 520,
+   "text": "Ps. 44:9",
+   "start": "PSA.44.10",
+   "end": "PSA.44.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.43.16.1",
+   "at": 94,
+   "text": "Lev. 17:5",
+   "start": "LEV.17.5",
+   "end": "LEV.17.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.43.16.1",
+   "at": 469,
+   "text": "Eccles. 10:16",
+   "start": "ECC.10.16",
+   "end": "ECC.10.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.43.16.1",
+   "at": 484,
+   "text": "Acts 2:15",
+   "start": "ACT.2.15",
+   "end": "ACT.2.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.43.32.1",
+   "at": 511,
+   "text": "Exod. 8:26",
+   "start": "EXO.8.22",
+   "end": "EXO.8.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.43.34.1",
+   "at": 864,
+   "text": "Prov. 11:24",
+   "start": "PRO.11.24",
+   "end": "PRO.11.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.7.1",
+   "at": 51,
+   "text": "v. 17",
+   "start": "GEN.46.17",
+   "end": "GEN.46.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.10.1",
+   "at": 17,
+   "text": "Num. 26:12",
+   "start": "NUM.26.12",
+   "end": "NUM.26.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.20.1",
+   "at": 63,
+   "text": "Num. 26:29",
+   "start": "NUM.26.29",
+   "end": "NUM.26.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.21.1",
+   "at": 272,
+   "text": "Num. 26:38",
+   "start": "NUM.26.38",
+   "end": "NUM.26.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.23.1",
+   "at": 51,
+   "text": "Num. 26:42",
+   "start": "NUM.26.42",
+   "end": "NUM.26.42",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.26.1",
+   "at": 87,
+   "text": "v. 27",
+   "start": "GEN.46.27",
+   "end": "GEN.46.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.26.1",
+   "at": 94,
+   "text": "Deut. 10:22",
+   "start": "DEU.10.22",
+   "end": "DEU.10.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.26.1",
+   "at": 202,
+   "text": "Acts. 7:14",
+   "start": "ACT.7.14",
+   "end": "ACT.7.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.26.1",
+   "at": 469,
+   "text": "v. 7",
+   "start": "GEN.46.7",
+   "end": "GEN.46.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.47.18.1",
+   "at": 140,
+   "text": "v. 19",
+   "start": "GEN.47.19",
+   "end": "GEN.47.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.47.31.1",
+   "at": 38,
+   "text": "Heb. 11:21",
+   "start": "HEB.11.21",
+   "end": "HEB.11.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.2.1",
+   "at": 147,
+   "text": "Gal. 5:22",
+   "start": "GAL.5.22",
+   "end": "GAL.5.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.14.1",
+   "at": 365,
+   "text": "v. 19",
+   "start": "GEN.48.19",
+   "end": "GEN.48.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.14.1",
+   "at": 659,
+   "text": "Num. 8:10",
+   "start": "NUM.8.10",
+   "end": "NUM.8.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.14.1",
+   "at": 670,
+   "text": "Acts 6:6",
+   "start": "ACT.6.6",
+   "end": "ACT.6.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.14.1",
+   "at": 684,
+   "text": "Matt. 19:13",
+   "start": "MAT.19.13",
+   "end": "MAT.19.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.14.1",
+   "at": 697,
+   "text": "Num. 27:23",
+   "start": "NUM.27.23",
+   "end": "NUM.27.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.17.1",
+   "at": 202,
+   "text": "v. 8",
+   "start": "GEN.48.8",
+   "end": "GEN.48.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.22.1",
+   "at": 493,
+   "text": "John 4:5",
+   "start": "JHN.4.5",
+   "end": "JHN.4.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.4.1",
+   "at": 574,
+   "text": "Deut. 33:6",
+   "start": "DEU.33.6",
+   "end": "DEU.33.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.10.1",
+   "at": 1189,
+   "text": "v. 12",
+   "start": "GEN.49.12",
+   "end": "GEN.49.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.10.1",
+   "at": 1347,
+   "text": "John 4:25",
+   "start": "JHN.4.25",
+   "end": "JHN.4.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.11.1",
+   "at": 151,
+   "text": "Isai. 5:7",
+   "start": "ISA.5.7",
+   "end": "ISA.5.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.11.1",
+   "at": 223,
+   "text": "Eph. 2:14",
+   "start": "EPH.2.14",
+   "end": "EPH.2.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.11.1",
+   "at": 1119,
+   "text": "Cant. 1:13",
+   "start": "SNG.1.13",
+   "end": "SNG.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.12.1",
+   "at": 229,
+   "text": "v. 12",
+   "start": "GEN.49.12",
+   "end": "GEN.49.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.12.1",
+   "at": 424,
+   "text": "Matt. 21:43",
+   "start": "MAT.21.43",
+   "end": "MAT.21.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.16.1",
+   "at": 117,
+   "text": "Judges 13:5",
+   "start": "JDG.13.5",
+   "end": "JDG.13.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.16.1",
+   "at": 211,
+   "text": "v. 18",
+   "start": "GEN.49.18",
+   "end": "GEN.49.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.16.1",
+   "at": 446,
+   "text": "v. 30",
+   "start": "GEN.49.30",
+   "end": "GEN.49.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.19.1",
+   "at": 412,
+   "text": "Num. 32:17",
+   "start": "NUM.32.17",
+   "end": "NUM.32.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.49.20.1",
+   "at": 58,
+   "text": "Deut. 33:24",
+   "start": "DEU.33.24",
+   "end": "DEU.33.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.50.2.1",
+   "at": 395,
+   "text": "v. 3",
+   "start": "GEN.50.3",
+   "end": "GEN.50.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.50.2.1",
+   "at": 924,
+   "text": "Deut. 34:8",
+   "start": "DEU.34.8",
+   "end": "DEU.34.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.50.11.1",
+   "at": 222,
+   "text": "Lev. 19:28",
+   "start": "LEV.19.28",
+   "end": "LEV.19.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.50.11.1",
+   "at": 234,
+   "text": "Deut. 14:1",
+   "start": "DEU.14.1",
+   "end": "DEU.14.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.50.25.1",
+   "at": 658,
+   "text": "Ex. 1:8",
+   "start": "EXO.1.8",
+   "end": "EXO.1.8",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}

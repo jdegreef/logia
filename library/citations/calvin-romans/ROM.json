@@ -294,8 +294,8 @@
    "in": "calvin-romans.ROM.2.15.1",
    "at": 955,
    "text": "Deuteronomy 29:4",
-   "start": "DEU.29.4",
-   "end": "DEU.29.4",
+   "start": "DEU.29.3",
+   "end": "DEU.29.3",
    "found": "source",
    "status": "detected"
   },
@@ -321,8 +321,8 @@
    "in": "calvin-romans.ROM.2.17.3",
    "at": 552,
    "text": "Jeremiah 9:24",
-   "start": "JER.9.24",
-   "end": "JER.9.24",
+   "start": "JER.9.23",
+   "end": "JER.9.23",
    "found": "source",
    "status": "detected"
   },
@@ -807,8 +807,8 @@
    "in": "calvin-romans.ROM.8.15.5",
    "at": 1686,
    "text": "Hosea 2:23",
-   "start": "HOS.2.23",
-   "end": "HOS.2.23",
+   "start": "HOS.2.25",
+   "end": "HOS.2.25",
    "found": "source",
    "status": "detected"
   },
@@ -852,8 +852,8 @@
    "in": "calvin-romans.ROM.8.31.2",
    "at": 727,
    "text": "Psalm 56:11",
-   "start": "PSA.56.11",
-   "end": "PSA.56.11",
+   "start": "PSA.56.12",
+   "end": "PSA.56.12",
    "found": "source",
    "status": "detected"
   },
@@ -861,8 +861,8 @@
    "in": "calvin-romans.ROM.8.31.2",
    "at": 804,
    "text": "Psalm 3:6",
-   "start": "PSA.3.6",
-   "end": "PSA.3.6",
+   "start": "PSA.3.7",
+   "end": "PSA.3.7",
    "found": "source",
    "status": "detected"
   },
@@ -1203,8 +1203,8 @@
    "in": "calvin-romans.ROM.10.18.1",
    "at": 665,
    "text": "Psalm 19:4",
-   "start": "PSA.19.4",
-   "end": "PSA.19.4",
+   "start": "PSA.19.5",
+   "end": "PSA.19.5",
    "found": "source",
    "status": "detected"
   },
@@ -1419,8 +1419,8 @@
    "in": "calvin-romans.ROM.15.3.1",
    "at": 450,
    "text": "Psalm 69:9,10",
-   "start": "PSA.69.9",
-   "end": "PSA.69.10",
+   "start": "PSA.69.10",
+   "end": "PSA.69.11",
    "found": "source",
    "status": "detected"
   },
@@ -1428,8 +1428,8 @@
    "in": "calvin-romans.ROM.15.10.1",
    "at": 326,
    "text": "Psalm 47:5",
-   "start": "PSA.47.5",
-   "end": "PSA.47.5",
+   "start": "PSA.47.6",
+   "end": "PSA.47.6",
    "found": "source",
    "status": "detected"
   },
@@ -1608,8 +1608,8 @@
    "in": "calvin-romans.ROM.16.25-27.4",
    "at": 949,
    "text": "Malachi 4:2",
-   "start": "MAL.4.2",
-   "end": "MAL.4.2",
+   "start": "MAL.3.20",
+   "end": "MAL.3.20",
    "found": "source",
    "status": "detected"
   }

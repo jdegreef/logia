@@ -30,9 +30,24 @@ Christian commentaries.
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
-John 1:1–18 with eight commentaries (Chrysostom,
-Augustine, the Catena Aurea, Calvin, Matthew Henry, Bengel, J. C. Ryle and
-Westcott), 246 excerpts in all.
+41 works by 25 commentators, 39,110 excerpts in all:
+
+- **Genesis**: Basil's Hexaemeron (1:1–25), Keil, Haydock and Jamieson
+  (Jamieson-Fausset-Brown).
+- **Job**: Gregory the Great's Morals.
+- **Psalms**: Augustine, Calvin, Matthew Henry, Fausset (Jamieson-Fausset-Brown)
+  and Spurgeon's Treasury of David (Psalms 111–119 still to come from Spurgeon).
+- **Proverbs** and **Ecclesiastes**: Matthew Henry, Fausset and Charles Bridges.
+- **Song of Songs**: Bernard of Clairvaux's sermons (1:1–3:3).
+- **Matthew**: Chrysostom, the Catena Aurea, Calvin, Matthew Henry and Ryle.
+- **John**: Chrysostom, Augustine, the Catena Aurea, Calvin, Matthew Henry,
+  Bengel, J. C. Ryle, Westcott, John Wesley and Cornelius a Lapide on the
+  whole Gospel; Cyril of Alexandria (all but John 10:19–12:50, whose books
+  are lost); and Origen on John 1:1–2:25, the only part of his commentary
+  with an English translation from 1930 or earlier.
+- **Romans**: Chrysostom, Calvin, Matthew Henry, Bengel, Charles Hodge and
+  Godet.
+- **Galatians**: Luther.
 
 ## The site
 
