@@ -1,0 +1,9 @@
+{
+  "about": "Each commentator's entry in Wikidata and English Wikipedia, for the sameAs links in Logia's schema.org data. Written by scripts/fetch_wikidata.py, which accepts an entry only when Wikidata says the person is human and gives the same year of death as library/authors/; never typed.",
+  "authors": {
+    "augustine": {
+      "wikidata": "Q8018",
+      "wikipedia": "Augustine_of_Hippo"
+    }
+  }
+}

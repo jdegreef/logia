@@ -68,6 +68,13 @@ def main():
             say(f"{name}: died must be a year")
         authors[a.get("id")] = a
 
+    # Wikidata items and Wikipedia articles, written by scripts/fetch_wikidata.py.
+    for aid, ids in load(os.path.join(ROOT, "library", "identifiers.json"))["authors"].items():
+        if aid not in authors:
+            say(f"library/identifiers.json: {aid!r} has no library/authors/ file")
+        if set(ids) != {"wikidata", "wikipedia"} or not re.fullmatch(r"Q\d+", str(ids.get("wikidata"))):
+            say(f"library/identifiers.json: {aid}: needs a wikidata item (Q123) and a wikipedia title or null")
+
     works = {}
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "works", "*.json"))):
         w = load(p)
