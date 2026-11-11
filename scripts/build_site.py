@@ -644,6 +644,7 @@ def nav_menus(lib):
               f'{all_link("/commentators/", t("nav.all_commentators"))}')
     explore = (f'<div class="dd-cols" style="--cols: 2"><div class="dd-col"><p class="dd-head">{e(t("nav.explore_read"))}</p>'
                + row("/readings/", t("nav.readings"), t("nav.readings_note"), "star")
+               + row("/topics/", t("nav.topics"), t("nav.topics_note"), "list")
                + "".join(row(f'/{c["book"].lower()}/{c["id"]}/', t(f'nav.collection_{c["id"]}'), t(f'nav.collection_{c["id"]}_note'), "list")
                          for c in collections(lib))
                + "".join(row(f"/{b.lower()}/most-discussed/", t("nav.most", book=lib.books[b]["en"]), t("nav.most_note"), "users")
@@ -3756,18 +3757,18 @@ def collections(lib):
     return load(os.path.join(ROOT, "library", "collections.json"))["collections"]
 
 
-def collection_page(lib, col):
-    key = f'collections.{col["id"]}'
-    book = col["book"]
-    name = lib.books[book]["en"]
-    path = f'/{book.lower()}/{col["id"]}/'
-    blocks, toc, total = [], [], 0
-    for i, item in enumerate(col["items"], 1):
-        _b, sc, sv = ref_parts(item["start"])
+def collection_items(lib, key, items):
+    """The blocks of a collection or topic page, one per passage: its
+    reference, each commentator's first words on it and a link to read them
+    all. Returns (blocks, contents links, excerpts in all, [work ids])."""
+    blocks, toc, total, works = [], [], 0, []
+    for i, item in enumerate(items, 1):
+        book, sc, sv = ref_parts(item["start"])
         _b, ec, ev = ref_parts(item["end"])
         voices = in_passage(lib, book, (sc, sv), (ec, ev))
         n = sum(len(cs) for _w, cs in voices)
         total += n
+        works += [w for w, _cs in voices if w not in works]
         single = (sc, sv) == (ec, ev)
         ref = verse_ref(lib, book, sc, sv) if single else passage_ref(lib, book, (sc, sv), (ec, ev))
         label = t(f'{key}.items.{item["key"]}')
@@ -3787,13 +3788,22 @@ def collection_page(lib, col):
         blocks.append(f'<section class="lg-voice" id="{e(anchor_id)}"><h3><span class="lg-cnum">{i}</span> {e(label)}</h3>'
                       f'<p class="lg-vmeta">{e(ref)}</p>{quote}<ul class="lg-excerpts">{"".join(rows)}</ul>{all_link}</section>')
         toc.append(f'<a href="#{e(anchor_id)}">{e(label)}</a>')
+    return blocks, toc, total, works
+
+
+def collection_page(lib, col):
+    key = f'collections.{col["id"]}'
+    book = col["book"]
+    name = lib.books[book]["en"]
+    path = f'/{book.lower()}/{col["id"]}/'
+    blocks, toc, total, _works = collection_items(lib, key, col["items"])
     note = f'<p class="lg-quiet">{e(t(key + ".note"))}</p>' if t(key + ".note") else ""
     body = f"""
 <article class="lg-verse lg-collection">
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("collection.eyebrow"))}</p>
 <h1>{e(t(key + ".heading"))}</h1><p class="dek">{e(t(key + ".dek"))}</p>
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
-<section class="lg-block" id="items">{"".join(blocks)}</section>
+<section class="lg-block" id="items"><h2>{e(t("collection.passages"))}</h2>{"".join(blocks)}</section>
 {note}
 <p class="lg-quiet">{e(t("collection.how", n=total))}</p>
 </article>
@@ -3813,6 +3823,76 @@ def section_url(lib, book, at):
 def collection_links(lib, book):
     return " · ".join(f'<a href="/{book.lower()}/{c["id"]}/">{e(t("collections." + c["id"] + ".heading"))}</a>'
                       for c in collections(lib) if c["book"] == book)
+
+
+# --- Topics (/topics/<id>/) ---------------------------------------------------
+#
+# A subject readers look up across the books in Logia (baptism, the Lord's
+# Supper, election), as the passages of Scripture on it. A topic chooses
+# passages, never excerpts: every commentator Logia holds on each passage
+# is shown, so the page takes no side where the traditions differ.
+
+def topics(lib):
+    """The topics with at least one passage that has commentary, as
+    library/topics.json lists them, each with only those passages."""
+    out = []
+    for tp in load(os.path.join(ROOT, "library", "topics.json"))["topics"]:
+        items = [x for x in tp["items"] if in_passage(lib, *topic_span(x))]
+        if items:
+            out.append({**tp, "items": items})
+    return out
+
+
+def topic_span(item):
+    book, sc, sv = ref_parts(item["start"])
+    _b, ec, ev = ref_parts(item["end"])
+    return book, (sc, sv), (ec, ev)
+
+
+def topic_page(lib, tp):
+    key = f'topics.{tp["id"]}'
+    path = f'/topics/{tp["id"]}/'
+    blocks, toc, total, works = collection_items(lib, key, tp["items"])
+    names = [short_name(lib.author_of(w)) for w in lib.ordered_works(works)]
+    names = list(dict.fromkeys(names))
+    books = list(dict.fromkeys(lib.books[ref_parts(x["start"])[0]]["en"] for x in tp["items"]))
+    note = f'<p class="lg-quiet">{e(t(key + ".note"))}</p>' if t(key + ".note") else ""
+    others = "".join(f'<li><a href="/topics/{x["id"]}/"><b>{e(t("topics." + x["id"] + ".heading"))}</b></a></li>'
+                     for x in topics(lib) if x["id"] != tp["id"])
+    heading = t(key + ".heading")
+    body = f"""
+<article class="lg-verse lg-collection">
+<header class="page-head"><p class="eyebrow"><a href="/topics/">{e(t("topic.eyebrow"))}</a> · {e(name_list(books))}</p>
+<h1>{e(heading)}</h1><p class="dek">{e(t(key + ".dek"))}</p>
+<p class="dek lg-vlead">{e(t("topic.lead", n=len(tp["items"]), k=len(names), names=name_list(names), total=total))}</p>
+<nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
+<section class="lg-block" id="items"><h2>{e(t("collection.passages"))}</h2>{"".join(blocks)}</section>
+{note}
+<p class="lg-quiet">{e(t("topic.how"))}</p>
+<section class="lg-block"><h2>{e(t("topic.others"))}</h2><ul class="lg-people lg-wide">{others}</ul></section>
+</article>"""
+    crumbs = breadcrumbs((t("topic.eyebrow"), "/topics/"), (heading, path))
+    shown = names if len(names) <= 4 else names[:3]
+    title_names = name_list(shown) if len(names) <= 4 else t("verse.title_more", names=", ".join(shown), n=len(names) - 3)
+    return path, page(lib, heading, body, path, current="/read/", ld=(crumbs,),
+                      head_title=t("topic.title", heading=heading, books=name_list(books), names=title_names),
+                      description=t("topic.description", heading=heading, dek=t(key + ".dek"), names=name_list(names)))
+
+
+def topics_page(lib):
+    rows = []
+    for tp in topics(lib):
+        key = f'topics.{tp["id"]}'
+        books = list(dict.fromkeys(lib.books[ref_parts(x["start"])[0]]["en"] for x in tp["items"]))
+        rows.append(f'<li><a class="lg-card" href="/topics/{tp["id"]}/"><b>{e(t(key + ".heading"))}</b>'
+                    f'<span>{e(t("topic.card", n=len(tp["items"]), books=name_list(books)))}</span></a></li>')
+    body = f"""
+<header class="page-head"><h1>{e(t("topic.index_heading"))}</h1><p class="dek">{e(t("topic.index_dek"))}</p></header>
+<ul class="lg-cards">{"".join(rows)}</ul>
+<p class="lg-block lg-quiet">{e(t("topic.how"))}</p>"""
+    return page(lib, t("topic.index_heading"), body, "/topics/", current="/read/",
+                ld=(breadcrumbs((t("topic.eyebrow"), "/topics/")),),
+                head_title=t("topic.index_title"), description=t("topic.index_description"))
 
 
 # --- Reading plans (/<book>/lent/) ------------------------------------------
@@ -4558,6 +4638,12 @@ def build():
             pages.append(passage_url(book, start, end))
     for col in collections(lib):
         path, text = collection_page(lib, col)
+        write(path, text)
+        pages.append(path)
+    write("/topics/", topics_page(lib))
+    pages.append("/topics/")
+    for tp in topics(lib):
+        path, text = topic_page(lib, tp)
         write(path, text)
         pages.append(path)
     for book in dict.fromkeys(b for b, _c, _v in lib.voices_on):

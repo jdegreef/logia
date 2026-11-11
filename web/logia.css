@@ -1040,6 +1040,7 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-vx + .lg-vx { border-top: 1px dashed var(--line); }
 .lg-vx-links { margin: 6px 0 0; font-size: 13.5px; }
 .lg-vx-links a { white-space: nowrap; }
+.lg-collection .lg-vx-links a { white-space: normal; }   /* "36 excerpts from 6 commentators on …" is a sentence */
 .lg-vx-more { margin: 4px 0 0; padding-left: 18px; font-size: 14px; color: var(--muted); }
 .lg-table-wrap { overflow-x: auto; }
 .lg-words { border-collapse: collapse; width: 100%; font-size: 15px; }
