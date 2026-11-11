@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build_site  # noqa: E402
 import extract_texts  # noqa: E402
+import fetch_wikidata  # noqa: E402
 import find_refs  # noqa: E402
 import scripture  # noqa: E402
 import validate  # noqa: E402
@@ -905,6 +906,33 @@ class Site(unittest.TestCase):
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")
         self.assertNotIn("Let ns", ryle)
         self.assertIn("Let us", ryle)
+
+
+class Wikidata(unittest.TestCase):
+    """scripts/fetch_wikidata.py accepts only one human who died in the author's year."""
+
+    @staticmethod
+    def item(qid, human=True, died=430, article=None):
+        claims = {"P31": [{"mainsnak": {"datavalue": {"value": {"id": "Q5" if human else "Q4167410"}}}}],
+                  "P570": [{"mainsnak": {"datavalue": {"value": {"time": f"+{died:04d}-08-28T00:00:00Z"}}}}]}
+        return {"id": qid, "claims": claims, "sitelinks": {"enwiki": {"title": article}} if article else {}}
+
+    def test_one_human_with_the_same_year_of_death(self):
+        author = {"name": "Augustine of Hippo", "died": 430}
+        got = fetch_wikidata.pick(author, [self.item("Q1", human=False), self.item("Q2", died=604),
+                                           self.item("Q3", article="Augustine of Hippo")])
+        self.assertEqual(got, {"wikidata": "Q3", "wikipedia": "Augustine_of_Hippo"})
+
+    def test_no_match_or_two_matches_is_left_for_a_person(self):
+        author = {"name": "John", "died": 407}
+        self.assertIsNone(fetch_wikidata.pick(author, [self.item("Q1", died=408)]))
+        self.assertIsNone(fetch_wikidata.pick(author, [self.item("Q1", died=407), self.item("Q2", died=407)]))
+
+    def test_identifiers_become_same_as_links(self):
+        a = {"id": "x", "name": "X", "dates": "354-430", "died": 430}
+        ld = build_site.person_ld(a, {"wikidata": "Q8018", "wikipedia": "Augustine_of_Hippo"})
+        self.assertEqual(ld["sameAs"], ["https://www.wikidata.org/wiki/Q8018", "https://en.wikipedia.org/wiki/Augustine_of_Hippo"])
+        self.assertNotIn("sameAs", build_site.person_ld(a))
 
 
 if __name__ == "__main__":

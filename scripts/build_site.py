@@ -258,6 +258,8 @@ def locus_label(work, locus):
 class Library:
     def __init__(self):
         self.authors = {a["id"]: a for a in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "authors", "*.json")))}
+        # Their Wikidata items and Wikipedia articles (scripts/fetch_wikidata.py).
+        self.identifiers = load(os.path.join(ROOT, "library", "identifiers.json"))["authors"]
         self.works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
         self.books = load(os.path.join(ROOT, "bible", "owb", "books.json"))
         self.fixes = {}
@@ -1988,13 +1990,24 @@ def breadcrumbs_ld(items):
         for i, (name, path) in enumerate(items)]}, ensure_ascii=False).replace("</", "<\\/")
 
 
-def person_ld(author):
-    """schema.org Person for a commentator: their page, dates and tradition."""
+def person_ld(author, ids=None):
+    """schema.org Person for a commentator: their page and dates, and their
+    Wikidata item and Wikipedia article where library/identifiers.json has them."""
     out = {"@context": "https://schema.org", "@type": "Person", "name": author["name"],
            "url": SITE_URL + f'/commentators/{author["id"]}/', "deathDate": f'{author["died"]:04d}'}
     if not author["dates"].lstrip().startswith("c."):      # "c. 347-407": the birth year is a guess
         out["birthDate"] = f"{born(author):04d}"
+    same = same_as(ids)
+    if same:
+        out["sameAs"] = same
     return out
+
+
+def same_as(ids):
+    """The addresses of a commentator's Wikidata item and Wikipedia article."""
+    ids = ids or {}
+    return ([f"https://www.wikidata.org/wiki/{ids['wikidata']}"] if ids.get("wikidata") else []) + \
+           ([f"https://en.wikipedia.org/wiki/{quote(ids['wikipedia'])}"] if ids.get("wikipedia") else [])
 
 
 def work_ld(lib, wid):
@@ -2011,7 +2024,7 @@ def verse_ld(lib, ref, path, voices, verse):
     parts = []
     for wid, cs in voices:
         a = lib.author_of(wid)
-        creator = {k: v for k, v in person_ld(a).items() if k != "@context"}
+        creator = {k: v for k, v in person_ld(a, lib.identifiers.get(a["id"])).items() if k != "@context"}
         for c in cs:
             if ref_parts(c["start"])[2] != verse:
                 continue                    # printed in full on the verse it begins at
@@ -3062,6 +3075,8 @@ def author_page(lib, author):
               "deathDate": f'{author["died"]:04d}'}
     if not author["dates"].lstrip().startswith("c."):
         person["birthDate"] = f"{born(author):04d}"
+    if same_as(lib.identifiers.get(aid)):
+        person["sameAs"] = same_as(lib.identifiers.get(aid))
     crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (name, f'/commentators/{aid}/'))
     return page(lib, name, body, f'/commentators/{aid}/', current="/commentators/",
                 head_title=t("commentators.head_title", name=name, books=books) if books else None,
