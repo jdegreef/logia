@@ -1,0 +1,126 @@
+{
+  "about": "Topics: the passages of Scripture where readers look for what the church has said on a subject, across the books in Logia, each a page at /topics/<id>/. A topic chooses passages, never excerpts: every commentator Logia holds on each passage is shown. The words are in i18n/<lang>.json under topics.<id>.",
+  "topics": [
+    {"id": "creation", "items": [
+      {"key": "beginning", "start": "GEN.1.1", "end": "GEN.1.5"},
+      {"key": "image", "start": "GEN.1.26", "end": "GEN.1.28"},
+      {"key": "rest", "start": "GEN.2.1", "end": "GEN.2.3"},
+      {"key": "heavens", "start": "PSA.19.1", "end": "PSA.19.6"},
+      {"key": "all-things", "start": "JHN.1.3", "end": "JHN.1.3"},
+      {"key": "seen", "start": "ROM.1.20", "end": "ROM.1.20"}
+    ]},
+    {"id": "the-fall", "items": [
+      {"key": "serpent", "start": "GEN.3.1", "end": "GEN.3.7"},
+      {"key": "seed", "start": "GEN.3.14", "end": "GEN.3.15"},
+      {"key": "one-man", "start": "ROM.5.12", "end": "ROM.5.21"},
+      {"key": "conceived", "start": "PSA.51.5", "end": "PSA.51.5"}
+    ]},
+    {"id": "incarnation", "items": [
+      {"key": "word", "start": "JHN.1.1", "end": "JHN.1.5"},
+      {"key": "flesh", "start": "JHN.1.14", "end": "JHN.1.14"},
+      {"key": "birth", "start": "MAT.1.18", "end": "MAT.1.25"},
+      {"key": "bethlehem", "start": "LUK.2.1", "end": "LUK.2.20"},
+      {"key": "david", "start": "ROM.1.3", "end": "ROM.1.4"},
+      {"key": "likeness", "start": "ROM.8.3", "end": "ROM.8.3"}
+    ]},
+    {"id": "new-birth", "items": [
+      {"key": "children", "start": "JHN.1.12", "end": "JHN.1.13"},
+      {"key": "nicodemus", "start": "JHN.3.3", "end": "JHN.3.8"},
+      {"key": "newness", "start": "ROM.6.4", "end": "ROM.6.4"},
+      {"key": "adoption", "start": "ROM.8.14", "end": "ROM.8.17"}
+    ]},
+    {"id": "baptism", "items": [
+      {"key": "jordan", "start": "MAT.3.13", "end": "MAT.3.17"},
+      {"key": "spirit-descends", "start": "LUK.3.21", "end": "LUK.3.22"},
+      {"key": "water-spirit", "start": "JHN.3.5", "end": "JHN.3.5"},
+      {"key": "buried", "start": "ROM.6.3", "end": "ROM.6.4"},
+      {"key": "nations", "start": "MAT.28.18", "end": "MAT.28.20"}
+    ]},
+    {"id": "lords-supper", "items": [
+      {"key": "supper", "start": "MAT.26.26", "end": "MAT.26.29"},
+      {"key": "new-covenant", "start": "LUK.22.14", "end": "LUK.22.20"},
+      {"key": "bread", "start": "JHN.6.51", "end": "JHN.6.58"}
+    ]},
+    {"id": "repentance", "items": [
+      {"key": "miserere", "start": "PSA.51.1", "end": "PSA.51.12"},
+      {"key": "blessed", "start": "PSA.32.1", "end": "PSA.32.5"},
+      {"key": "prodigal", "start": "LUK.15.11", "end": "LUK.15.32"},
+      {"key": "tax-collector", "start": "LUK.18.9", "end": "LUK.18.14"},
+      {"key": "seventy", "start": "MAT.18.21", "end": "MAT.18.35"}
+    ]},
+    {"id": "justification", "items": [
+      {"key": "reckoned", "start": "GEN.15.6", "end": "GEN.15.6"},
+      {"key": "gospel", "start": "ROM.1.16", "end": "ROM.1.17"},
+      {"key": "apart", "start": "ROM.3.21", "end": "ROM.3.28"},
+      {"key": "abraham", "start": "ROM.4.1", "end": "ROM.4.8"},
+      {"key": "peace", "start": "ROM.5.1", "end": "ROM.5.2"}
+    ]},
+    {"id": "grace-and-law", "items": [
+      {"key": "fulfil", "start": "MAT.5.17", "end": "MAT.5.20"},
+      {"key": "moses", "start": "JHN.1.17", "end": "JHN.1.17"},
+      {"key": "knowledge", "start": "ROM.3.19", "end": "ROM.3.20"},
+      {"key": "holy", "start": "ROM.7.7", "end": "ROM.7.13"},
+      {"key": "end", "start": "ROM.10.4", "end": "ROM.10.4"}
+    ]},
+    {"id": "election", "items": [
+      {"key": "given", "start": "JHN.6.37", "end": "JHN.6.44"},
+      {"key": "foreknew", "start": "ROM.8.28", "end": "ROM.8.30"},
+      {"key": "jacob", "start": "ROM.9.10", "end": "ROM.9.24"},
+      {"key": "remnant", "start": "ROM.11.1", "end": "ROM.11.6"}
+    ]},
+    {"id": "the-cross", "items": [
+      {"key": "forsaken", "start": "PSA.22.1", "end": "PSA.22.18"},
+      {"key": "golgotha", "start": "MAT.27.32", "end": "MAT.27.54"},
+      {"key": "paradise", "start": "LUK.23.33", "end": "LUK.23.46"},
+      {"key": "finished", "start": "JHN.19.16", "end": "JHN.19.30"},
+      {"key": "propitiation", "start": "ROM.3.25", "end": "ROM.3.26"},
+      {"key": "while-sinners", "start": "ROM.5.6", "end": "ROM.5.11"}
+    ]},
+    {"id": "resurrection", "items": [
+      {"key": "tomb", "start": "MAT.28.1", "end": "MAT.28.10"},
+      {"key": "emmaus", "start": "LUK.24.13", "end": "LUK.24.35"},
+      {"key": "mary", "start": "JHN.20.1", "end": "JHN.20.18"},
+      {"key": "thomas", "start": "JHN.20.24", "end": "JHN.20.29"},
+      {"key": "raised", "start": "ROM.4.24", "end": "ROM.4.25"},
+      {"key": "dies-no-more", "start": "ROM.6.8", "end": "ROM.6.11"}
+    ]},
+    {"id": "holy-spirit", "items": [
+      {"key": "helper", "start": "JHN.14.15", "end": "JHN.14.17"},
+      {"key": "teach", "start": "JHN.14.26", "end": "JHN.14.26"},
+      {"key": "convict", "start": "JHN.16.7", "end": "JHN.16.15"},
+      {"key": "breathed", "start": "JHN.20.22", "end": "JHN.20.23"},
+      {"key": "indwelling", "start": "ROM.8.9", "end": "ROM.8.11"},
+      {"key": "intercedes", "start": "ROM.8.26", "end": "ROM.8.27"}
+    ]},
+    {"id": "prayer", "items": [
+      {"key": "lords-prayer", "start": "MAT.6.5", "end": "MAT.6.15"},
+      {"key": "teach-us", "start": "LUK.11.1", "end": "LUK.11.13"},
+      {"key": "ask", "start": "MAT.7.7", "end": "MAT.7.11"},
+      {"key": "widow", "start": "LUK.18.1", "end": "LUK.18.8"},
+      {"key": "in-my-name", "start": "JHN.14.13", "end": "JHN.14.14"},
+      {"key": "high-priestly", "start": "JHN.17.1", "end": "JHN.17.26"},
+      {"key": "groanings", "start": "ROM.8.26", "end": "ROM.8.27"}
+    ]},
+    {"id": "love", "items": [
+      {"key": "enemies", "start": "MAT.5.43", "end": "MAT.5.48"},
+      {"key": "greatest", "start": "MAT.22.34", "end": "MAT.22.40"},
+      {"key": "samaritan", "start": "LUK.10.25", "end": "LUK.10.37"},
+      {"key": "new-commandment", "start": "JHN.13.34", "end": "JHN.13.35"},
+      {"key": "friends", "start": "JHN.15.12", "end": "JHN.15.17"},
+      {"key": "fulfilling", "start": "ROM.13.8", "end": "ROM.13.10"}
+    ]},
+    {"id": "peter", "items": [
+      {"key": "cephas", "start": "JHN.1.40", "end": "JHN.1.42"},
+      {"key": "fishers", "start": "LUK.5.1", "end": "LUK.5.11"},
+      {"key": "rock", "start": "MAT.16.13", "end": "MAT.16.20"},
+      {"key": "sifted", "start": "LUK.22.31", "end": "LUK.22.34"},
+      {"key": "feed", "start": "JHN.21.15", "end": "JHN.21.19"}
+    ]},
+    {"id": "shepherd", "items": [
+      {"key": "psalm-23", "start": "PSA.23.1", "end": "PSA.23.6"},
+      {"key": "lost-sheep", "start": "LUK.15.3", "end": "LUK.15.7"},
+      {"key": "good-shepherd", "start": "JHN.10.11", "end": "JHN.10.18"},
+      {"key": "feed", "start": "JHN.21.15", "end": "JHN.21.17"}
+    ]}
+  ]
+}

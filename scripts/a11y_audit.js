@@ -19,7 +19,8 @@ const AXE = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8");
 // without commentary and with verses left out, the commentators, a
 // commentator, a work, one of its chapters, About and the open data.
 const PAGES = ["/", "/read/", "/jhn/", "/jhn/3/", "/jhn/8/", "/rom/8/", "/gen/1/", "/commentators/",
-  "/commentators/calvin/", "/works/chrysostom/", "/works/chrysostom/jhn/1/", "/about/", "/open-data/"];
+  "/commentators/calvin/", "/works/chrysostom/", "/works/chrysostom/jhn/1/", "/about/", "/open-data/",
+  "/topics/", "/topics/baptism/"];
 const THEMES = ["light", "sepia", "dark", "night"];
 const TYPES = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json",
   ".svg": "image/svg+xml", ".png": "image/png", ".woff2": "font/woff2", ".xml": "application/xml", ".txt": "text/plain" };

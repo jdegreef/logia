@@ -18,6 +18,8 @@
     "menu": "Menu",
     "with_commentary": "With commentary",
     "all_books": "All books",
+    "topics": "Topics",
+    "topics_note": "Baptism, prayer, the cross and more, across the books",
     "all_commentators": "All commentators",
     "about_logia": "About Logia",
     "about_logia_note": "What it is and who it is for",
@@ -1278,6 +1280,10 @@
         "Open data: download the whole library"
       ],
       [
+        "/topics/",
+        "Topics: baptism, the Lord's Supper, prayer and more, with every commentator on each passage"
+      ],
+      [
         "/readings/",
         "Readings for the church year"
       ],
@@ -1292,5 +1298,228 @@
     ],
     "cite": "How to cite",
     "cite_how": "Name the commentator, the work and the edition, then the Logia address of the verse, for example: John Chrysostom, Homilies on the Gospel of St. John, Homily 27 (Oxford translation), quoted at https://logia.faith/jhn/3/16/."
+  },
+
+  "topic": {
+    "eyebrow": "Topics",
+    "lead": "{n} passages, with {total} excerpts from {k} commentators: {names}.",
+    "how": "A topic is a choice of passages, never of excerpts: every commentator Logia holds on each passage is here, whatever their tradition. Each opens with their first words on it; follow a name to read it in full.",
+    "others": "Other topics",
+    "title": "{heading} in {books}: what {names} said · Logia",
+    "description": "{heading}: {dek} With what {names} wrote, word for word from public-domain editions.",
+    "card": "{n} passages in {books}",
+    "index_heading": "Topics",
+    "index_title": "Topics: what the church fathers, Reformers and later commentators said on baptism, the Lord's Supper, prayer and more · Logia",
+    "index_description": "Subjects readers look up across the books in Logia, from creation and the Incarnation to prayer and forgiveness, each as the passages of Scripture on it with every commentator in Logia on each.",
+    "index_dek": "Subjects readers look up across the books in Logia, each as the passages of Scripture on it, with what every commentator here wrote on each passage."
+  },
+
+  "topics": {
+    "creation": {
+      "heading": "Creation",
+      "dek": "God creating the heavens and the earth in Genesis, humankind made in God's image, the heavens declaring his glory, the Word through whom all things were made, and creation as witness.",
+      "note": "",
+      "items": {
+        "beginning": "In the beginning",
+        "image": "In our image, after our likeness",
+        "rest": "God rested on the seventh day",
+        "heavens": "The heavens declare the glory of God",
+        "all-things": "All things were made through him",
+        "seen": "Clearly seen in what has been made"
+      }
+    },
+    "the-fall": {
+      "heading": "The fall and sin",
+      "dek": "The serpent and the first sin in Genesis, the promise of the woman's seed, sin and death through one man in Romans, and David's confession that he was sinful from birth.",
+      "note": "Genesis 3:15 is read by some as the first promise of a redeemer and by others more plainly; the commentators differ.",
+      "items": {
+        "serpent": "The serpent and the fruit",
+        "seed": "Her seed shall bruise your head",
+        "one-man": "Sin came into the world through one man",
+        "conceived": "In sin my mother conceived me"
+      }
+    },
+    "incarnation": {
+      "heading": "The Incarnation",
+      "dek": "The Word who was with God becomes flesh: the opening of John, the birth of Jesus in Matthew and Luke, and Paul on the Son born of David's line.",
+      "note": "",
+      "items": {
+        "word": "In the beginning was the Word",
+        "flesh": "The Word became flesh",
+        "birth": "The birth of Jesus",
+        "david": "Descended from David, declared the Son of God",
+        "likeness": "In the likeness of sinful flesh",
+        "bethlehem": "The birth in Bethlehem"
+      }
+    },
+    "new-birth": {
+      "heading": "New birth and adoption",
+      "dek": "Being born of God, born from above, raised to new life, and made God's children: John and Romans.",
+      "note": "",
+      "items": {
+        "children": "Born not of blood, but of God",
+        "nicodemus": "You must be born from above",
+        "newness": "Walking in newness of life",
+        "adoption": "The Spirit of adoption"
+      }
+    },
+    "baptism": {
+      "heading": "Baptism",
+      "dek": "The baptism of Jesus in Matthew and Luke, being born of water and the Spirit, baptism into Christ's death, and the command to baptize the nations.",
+      "note": "Whether John 3:5 speaks of baptism is itself read differently by the commentators.",
+      "items": {
+        "jordan": "Jesus is baptized in the Jordan",
+        "water-spirit": "Born of water and the Spirit",
+        "buried": "Buried with him by baptism",
+        "nations": "Baptizing them in the name",
+        "spirit-descends": "The Spirit descends like a dove"
+      }
+    },
+    "lords-supper": {
+      "heading": "The Lord's Supper",
+      "dek": "Jesus's words over the bread and the cup at the Last Supper in Matthew and Luke, and his words on eating his flesh in John 6.",
+      "note": "Whether John 6 speaks of the Lord's Supper is itself read differently by the commentators.",
+      "items": {
+        "supper": "This is my body",
+        "bread": "Whoever eats my flesh",
+        "new-covenant": "The new covenant in my blood"
+      }
+    },
+    "justification": {
+      "heading": "Justification and faith",
+      "dek": "Abraham's faith counted as righteousness in Genesis, and Paul's words in Romans on the righteousness of God, being justified by faith, and peace with God.",
+      "note": "",
+      "items": {
+        "gospel": "The righteous shall live by faith",
+        "apart": "The righteousness of God apart from the law",
+        "abraham": "Abraham believed God",
+        "peace": "Peace with God",
+        "reckoned": "Abraham believed, and it was counted to him as righteousness"
+      }
+    },
+    "grace-and-law": {
+      "heading": "The law and grace",
+      "dek": "Jesus on fulfilling the law, John on the law given through Moses, and Paul on what the law does.",
+      "note": "",
+      "items": {
+        "fulfil": "Not to abolish but to fulfil",
+        "moses": "The law through Moses, grace and truth through Jesus Christ",
+        "knowledge": "Through the law comes knowledge of sin",
+        "holy": "The law is holy",
+        "end": "Christ the end of the law"
+      }
+    },
+    "election": {
+      "heading": "Election and predestination",
+      "dek": "The passages on God's choosing: those the Father gives to the Son, those he foreknew, Jacob and Esau, and the remnant chosen by grace.",
+      "note": "",
+      "items": {
+        "given": "All that the Father gives me",
+        "foreknew": "Those he foreknew he predestined",
+        "jacob": "Jacob I loved",
+        "remnant": "A remnant chosen by grace"
+      }
+    },
+    "the-cross": {
+      "heading": "The cross",
+      "dek": "Psalm 22, the crucifixion in Matthew, Luke and John, and Paul on Christ's death for sinners.",
+      "note": "",
+      "items": {
+        "golgotha": "The crucifixion",
+        "finished": "It is finished",
+        "propitiation": "Put forward as a propitiation",
+        "while-sinners": "While we were still sinners",
+        "forsaken": "My God, my God, why have you forsaken me?",
+        "paradise": "Today you will be with me in paradise"
+      }
+    },
+    "resurrection": {
+      "heading": "The resurrection of Jesus",
+      "dek": "The empty tomb in Matthew and John, the road to Emmaus, Thomas, and Paul on Christ raised for our justification.",
+      "note": "",
+      "items": {
+        "tomb": "He is not here, he is risen",
+        "mary": "Mary Magdalene at the tomb",
+        "thomas": "My Lord and my God",
+        "raised": "Raised for our justification",
+        "dies-no-more": "Christ being raised dies no more",
+        "emmaus": "The road to Emmaus"
+      }
+    },
+    "holy-spirit": {
+      "heading": "The Holy Spirit",
+      "dek": "Jesus's promise of the Spirit in John's farewell discourse, the Spirit breathed on the disciples, and Paul on the Spirit who dwells in believers.",
+      "note": "",
+      "items": {
+        "helper": "Another Helper",
+        "teach": "He will teach you all things",
+        "convict": "When the Spirit of truth comes",
+        "breathed": "Receive the Holy Spirit",
+        "indwelling": "The Spirit of God dwells in you",
+        "intercedes": "The Spirit intercedes for us"
+      }
+    },
+    "prayer": {
+      "heading": "Prayer",
+      "dek": "The Lord's Prayer in Matthew and Luke, asking and seeking, the persistent widow, praying in Jesus's name, Jesus's own prayer in John 17, and the Spirit who helps us pray.",
+      "note": "",
+      "items": {
+        "lords-prayer": "The Lord's Prayer",
+        "ask": "Ask, seek, knock",
+        "in-my-name": "Whatever you ask in my name",
+        "high-priestly": "Jesus's prayer for his disciples",
+        "groanings": "We do not know what to pray for",
+        "teach-us": "Lord, teach us to pray",
+        "widow": "The persistent widow"
+      }
+    },
+    "love": {
+      "heading": "The commandment to love",
+      "dek": "Love of enemies, the greatest commandment, the good Samaritan, Jesus's new commandment, and love as the fulfilling of the law.",
+      "note": "",
+      "items": {
+        "enemies": "Love your enemies",
+        "greatest": "The greatest commandment",
+        "new-commandment": "A new commandment",
+        "friends": "Greater love has no one",
+        "fulfilling": "Love is the fulfilling of the law",
+        "samaritan": "The good Samaritan"
+      }
+    },
+    "peter": {
+      "heading": "Peter",
+      "dek": "Simon named Cephas, the call by the lake, the rock and the keys of the kingdom, Jesus's prayer for Peter, and Peter restored after the resurrection.",
+      "note": "Catholic, Orthodox and Protestant readers understand the rock and the keys differently; every commentator in Logia on each passage is here.",
+      "items": {
+        "cephas": "You shall be called Cephas",
+        "rock": "On this rock",
+        "feed": "Feed my sheep",
+        "fishers": "From now on you will catch people",
+        "sifted": "I have prayed for you"
+      }
+    },
+    "repentance": {
+      "heading": "Repentance and forgiveness",
+      "dek": "David's prayer for mercy in Psalm 51, the blessing of forgiven sin in Psalm 32, the prodigal son, the Pharisee and the tax collector, and forgiving seventy times seven.",
+      "note": "",
+      "items": {
+        "miserere": "Have mercy on me, O God",
+        "blessed": "Blessed is the one whose sin is forgiven",
+        "prodigal": "The prodigal son",
+        "tax-collector": "The Pharisee and the tax collector",
+        "seventy": "Seventy times seven"
+      }
+    },
+    "shepherd": {
+      "heading": "The Good Shepherd",
+      "dek": "The Lord is my shepherd in Psalm 23, the lost sheep in Luke, the good shepherd who lays down his life in John, and Peter told to feed the sheep.",
+      "note": "",
+      "items": {
+        "psalm-23": "The Lord is my shepherd",
+        "lost-sheep": "The lost sheep",
+        "good-shepherd": "I am the good shepherd",
+        "feed": "Feed my sheep"
+      }
+    }
   }
 }

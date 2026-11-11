@@ -868,6 +868,38 @@ class Site(unittest.TestCase):
             self.skipTest("no full git history")
         self.assertRegex(self.read("sitemap.xml"), r"<loc>https://logia\.faith/jhn/3/16/</loc><lastmod>\d{4}-\d\d-\d\d</lastmod>")
 
+    # --- Topics ---
+
+    def test_topic_passages_are_real_and_their_words_are_in_the_catalog(self):
+        lib = build_site.Library()
+        data = build_site.load(os.path.join(build_site.ROOT, "library", "topics.json"))["topics"]
+        self.assertEqual(len({x["id"] for x in data}), len(data))
+        for tp in data:
+            words = build_site.CATALOG["topics"][tp["id"]]
+            for k in ("heading", "dek", "note"):
+                self.assertIn(k, words, tp["id"])
+            for item in tp["items"]:
+                book, start, end = build_site.topic_span(item)
+                self.assertLessEqual(start, end, item)
+                self.assertIn(start[1], build_site.chapter_verses(book, start[0]), item)
+                self.assertIn(end[1], build_site.chapter_verses(book, end[0]), item)
+                self.assertIn(item["key"], words["items"], (tp["id"], item["key"]))
+            self.assertTrue(any(build_site.in_passage(lib, *build_site.topic_span(x)) for x in tp["items"]), tp["id"])
+
+    def test_a_topic_shows_every_commentator_on_each_passage(self):
+        lib = build_site.Library()
+        tp = next(x for x in build_site.topics(lib) if x["id"] == "baptism")
+        text = self.read(os.path.join("topics", "baptism", "index.html"))
+        for item in tp["items"]:
+            section = text.split(f'id="{item["key"]}"')[1].split("</section>")[0]
+            for wid, _cs in build_site.in_passage(lib, *build_site.topic_span(item)):
+                self.assertIn(f"<b>{build_site.short_name(lib.author_of(wid))}</b>", section, (item["key"], wid))
+        self.assertIn("<loc>https://logia.faith/topics/baptism/</loc>", self.read("sitemap.xml"))
+        index = self.read(os.path.join("topics", "index.html"))
+        for x in build_site.topics(lib):
+            self.assertIn(f'href="/topics/{x["id"]}/"', index)
+        self.assertIn('href="/topics/"', self.read("index.html"))
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")
