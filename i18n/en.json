@@ -1068,6 +1068,7 @@
   },
   "collection": {
     "eyebrow": "Collections",
+    "passages": "The passages",
     "and_more": "and {n} more",
     "read_all": "All {n} excerpts from {k} commentators on {ref}",
     "read_passage": "{n} excerpts from {k} commentators on {ref}: read them with the passage",

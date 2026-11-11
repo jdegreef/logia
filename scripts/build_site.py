@@ -3803,7 +3803,7 @@ def collection_page(lib, col):
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("collection.eyebrow"))}</p>
 <h1>{e(t(key + ".heading"))}</h1><p class="dek">{e(t(key + ".dek"))}</p>
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
-<section class="lg-block" id="items">{"".join(blocks)}</section>
+<section class="lg-block" id="items"><h2>{e(t("collection.passages"))}</h2>{"".join(blocks)}</section>
 {note}
 <p class="lg-quiet">{e(t("collection.how", n=total))}</p>
 </article>
@@ -3866,7 +3866,7 @@ def topic_page(lib, tp):
 <h1>{e(heading)}</h1><p class="dek">{e(t(key + ".dek"))}</p>
 <p class="dek lg-vlead">{e(t("topic.lead", n=len(tp["items"]), k=len(names), names=name_list(names), total=total))}</p>
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
-<section class="lg-block" id="items">{"".join(blocks)}</section>
+<section class="lg-block" id="items"><h2>{e(t("collection.passages"))}</h2>{"".join(blocks)}</section>
 {note}
 <p class="lg-quiet">{e(t("topic.how"))}</p>
 <section class="lg-block"><h2>{e(t("topic.others"))}</h2><ul class="lg-people lg-wide">{others}</ul></section>
