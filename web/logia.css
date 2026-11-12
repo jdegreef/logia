@@ -1097,7 +1097,11 @@ html {
 .lg-vtext p { margin: 0; font-family: var(--read-font); font-size: calc(22px * var(--read-scale)); line-height: 1.5; }
 .lg-vlead { margin: 22px 0 10px; font-size: 19px; }
 .lg-voice { padding: 8px 0 18px; border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 60px); }
-.lg-voice > h3 { font-family: var(--display); font-weight: 600; font-size: 21px; margin: 22px 0 4px; text-wrap: balance; }
+.lg-voice > h3 { font-family: var(--display); font-weight: 600; font-size: 23px; margin: 2px 0 2px; text-wrap: balance; }
+.lg-voice > h3 a { color: var(--text); text-decoration: none; }
+.lg-voice > h3 a:hover { color: var(--accent); }
+/* The question a voice answers, as a small line above the name. */
+.lg-vq { margin: 22px 0 0; font: 600 12px/1.4 var(--sans); letter-spacing: .04em; color: var(--muted); }
 .lg-vmeta { margin: 0 0 4px; font-size: 14px; color: var(--muted); }
 .lg-vmeta a { text-decoration: none; }
 .lg-vx { border-bottom: 0; padding: 12px 0 4px; }

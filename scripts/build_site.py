@@ -2139,6 +2139,13 @@ def verse_ld(lib, ref, path, voices, verse):
             "inLanguage": LANG, "isAccessibleForFree": True, "hasPart": parts}
 
 
+def voice_head(author, ref):
+    """A voice's heading on a verse or passage page: the commentator's name,
+    with the question it answers as a small line above it."""
+    return (f'<p class="lg-vq">{e(t("verse.question", name=short_name(author), ref=ref))}</p>'
+            f'<h3><a href="/commentators/{author["id"]}/">{e(author["name"])}</a></h3>')
+
+
 def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
     """A verse's page. cited_by is lib.cited_by for its whole chapter."""
     name = lib.books[book]["en"]
@@ -2169,9 +2176,9 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
     sections, toc, rail = [], [], []
     for (wid, cs), a in zip(voices, authors):
         w = lib.works[wid]
-        meta = (f'<p class="lg-vmeta"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a> ({e(a["dates"])}) · '
+        meta = (f'<p class="lg-vmeta">{e(a["dates"])} · '
                 f'{e(a["tradition"])} · <a href="{work_chapter_url(wid, book, chapter)}"><i>{e(w["title"])}</i></a></p>')
-        sections.append(f'<section class="lg-voice" id="{wid}"><h3>{e(t("verse.question", name=short_name(a), ref=ref))}</h3>'
+        sections.append(f'<section class="lg-voice" id="{wid}">{voice_head(a, ref)}'
                         f'{meta}{"".join(verse_excerpt(lib, c, book, chapter, verse) for c in cs)}</section>')
         toc.append(f'<a href="#{wid}">{e(short_name(a))}</a>')
         words = sum(len(c["text"].split()) for c in cs)
@@ -2395,9 +2402,9 @@ def passage_page(lib, book, heading, start, end, voices, occasion=None):
             head = f' <span class="lg-quiet">{e(c["heading"])}</span>' if c["heading"] else ""
             rows.append(f'<li><p class="lg-ex-ref"><a href="{excerpt_href(lib, c)}"><b>{e(on)}</b></a>{head}</p>'
                         f'<div><p>{e(snippet(c["text"], 40))}</p></div></li>')
-        meta = (f'<p class="lg-vmeta"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a> ({e(a["dates"])}) · '
+        meta = (f'<p class="lg-vmeta">{e(a["dates"])} · '
                 f'{e(a["tradition"])} · <i>{e(w["title"])}</i> · {e(t("passage.n_excerpts", n=len(cs)) if len(cs) != 1 else t("passage.one_excerpt"))}</p>')
-        sections.append(f'<section class="lg-voice" id="{wid}"><h3>{e(t("verse.question", name=short_name(a), ref=ref))}</h3>'
+        sections.append(f'<section class="lg-voice" id="{wid}">{voice_head(a, ref)}'
                         f'{meta}<ul class="lg-excerpts">{"".join(rows)}</ul></section>')
         toc.append(f'<a href="#{wid}">{e(short_name(a))}</a>')
     lead = t("passage.lead", n=n, ref=ref, k=len(authors), first=authors[0]["name"], first_dates=authors[0]["dates"],
