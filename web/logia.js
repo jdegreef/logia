@@ -148,7 +148,8 @@
   }
 
   // Page not found: an address that reads as a reference ("/jn3",
-  // "/john/3/16", "/rom-8") is offered as a link.
+  // "/john/3/16", "/rom-8") or names a commentator ("/calvin") is offered
+  // as a link.
   (function () {
     var guess = document.getElementById("nf-guess");
     if (!guess || !D) return;
@@ -160,6 +161,21 @@
     else {
       var code = bookOf(words.split(" ")[0]);
       if (code) { href = "/" + code.toLowerCase() + "/"; label = D.names[code]; }
+      else {
+        // A commentator's name or page id ("/calvin", "/chrysostom",
+        // "/commentators/augustin"): the first whose id or a name word
+        // matches a word of the address.
+        var plain = function (x) { return x.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); };
+        var asked = plain(words).split(" ").filter(function (w) { return w.length > 3 && w !== "commentators"; });
+        D.people.some(function (p) {
+          var id = p[1].split("/")[2], names = plain(p[0]).split(/[\s.]+/);
+          var hit = asked.some(function (w) {
+            return w === id || names.indexOf(w) >= 0 || (w.length > 5 && id.indexOf(w.slice(0, -1)) === 0);
+          });
+          if (hit) { href = p[1]; label = p[0]; }
+          return hit;
+        });
+      }
     }
     if (!href) return;
     guess.innerHTML = fmt(esc(guess.getAttribute("data-text")), { link: '<a href="' + esc(href) + '">' + esc(label) + "</a>" });
