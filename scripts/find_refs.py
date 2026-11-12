@@ -343,7 +343,8 @@ def scan_citations(excerpt, book, chapter, own=None):
 # For each catena, the labels it prints before a quotation that the library
 # can follow to the quoted work: the library's source pages for that work.
 CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"},
-           "catena-matthew": {"CHRYS": "chrysostom-matthew"}}
+           "catena-matthew": {"CHRYS": "chrysostom-matthew"},
+           "catena-mark": {"CHRYS": "chrysostom-matthew"}}
 # The Part II scans of the Catena (John 11-21), and CCEL's Matthew, print the names in
 # this form: "Aug.", "Chrys."; "Pseudo-Chrys." (the Opus Imperfectum) is not Chrysostom.
 LABEL = re.compile(r"(?<![\w-])(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
