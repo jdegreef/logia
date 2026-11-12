@@ -1516,3 +1516,7 @@ html {
   color: var(--accent); font: 600 13.5px/1.2 var(--sans); cursor: pointer; }
 .lg-unfold:hover { border-color: var(--accent); }
 @media print { .lg-folded { max-height: none; overflow: visible; -webkit-mask-image: none; mask-image: none; } .lg-unfold { display: none; } }
+/* Verse pages: the verses either side, shaded by how much is said on each. */
+.lg-near { margin: 14px 0 4px; gap: 5px; }
+.lg-near .chap { min-width: 0; height: 30px; padding: 0 9px; border-radius: 8px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.lg-near .chap[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }

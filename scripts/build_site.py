@@ -2155,6 +2155,38 @@ def voice_head(author, ref):
             f'<h3><a href="/commentators/{author["id"]}/">{e(author["name"])}</a></h3>')
 
 
+def verse_counts_cached(lib, book):
+    """verse_counts for a book, worked out once per build."""
+    memo = lib.__dict__.setdefault("_verse_counts", {})
+    if book not in memo:
+        memo[book] = verse_counts(lib, book)
+    return memo[book]
+
+
+def nearby_verses(lib, book, chapter, verse, pages_here, reach=4):
+    """A strip of the verses around this one, each shaded by how many excerpts
+    are on it (the chapter heat scale) and linked to its own page, or to the
+    reader where it has no commentary yet; this verse is ringed."""
+    last = max(chapter_plain(book, chapter), default=verse)
+    counts = verse_counts_cached(lib, book)
+    lo, hi = max(1, verse - reach), min(last, verse + reach)
+    peak = max((counts.get((chapter, v), 0) for v in range(1, last + 1)), default=0)
+    cells = []
+    for v in range(lo, hi + 1):
+        label = f"{chapter}:{v}"
+        ref = verse_ref(lib, book, chapter, v)
+        k = counts.get((chapter, v), 0)
+        current = ' aria-current="page"' if v == verse else ""
+        if v in pages_here and k and peak:
+            step = min(4, int(k / peak * 5))
+            title = t("verse.nearby_title_one", ref=ref) if k == 1 else t("verse.nearby_title", ref=ref, n=f"{k:,}")
+            cells.append(f'<a class="chap lg-has lg-heat-{step}" href="{verse_url(book, chapter, v)}" title="{e(title)}"{current}>{label}</a>')
+        else:
+            cells.append(f'<a class="chap part" href="{chapter_url(book, chapter)}#v{v}" '
+                         f'title="{e(t("verse.nearby_none", ref=ref))}"{current}>{label}</a>')
+    return f'<nav class="chap-pills lg-near" aria-label="{e(t("verse.nearby"))}">{"".join(cells)}</nav>'
+
+
 def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
     """A verse's page. cited_by is lib.cited_by for its whole chapter."""
     name = lib.books[book]["en"]
@@ -2225,6 +2257,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 <h1>{e(ref)}</h1>
 {verse_html}
 <p class="lg-quiet">{t("verse.bible_credit", link=owb_link)}</p>
+{nearby_verses(lib, book, chapter, verse, pages_here)}
 <p class="dek lg-vlead">{e(lead)}</p>
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
 <section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
