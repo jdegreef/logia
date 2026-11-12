@@ -6158,6 +6158,16 @@
    "extract": "The page's book-content block (CCEL site chrome left out), up to the footnote mark where CCEL's page runs on, without its heading, into Homily LIII and LIV: that footnote has swallowed the end of this homily, the next one's heading and the start of its text, so the rest of the page is not saved. Footnote text is inline in mnote spans."
   },
   {
+   "path": "sources/chrysostom-matthew/npnf110.iii.LII-homily-LIV.html",
+   "work": "chrysostom-matthew",
+   "url": "https://www.ccel.org/ccel/schaff/npnf110.iii.LII.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "7e78b11a602459ac81f8c2a6de379932980e1ee1ad04b001e951ba0b6d9e7a32",
+   "extract": "Homily LIV, from CCEL's page for Homily LII (the page saved as npnf110.iii.LII.html): the page's book-content block (CCEL site chrome left out) from paragraph iii.LII-p156 to the end of the block. The page runs on, with no headings, from Homily LII through Homily LIII into Homily LIV; footnote 2075 has swallowed the end of Homily LIII and Homily LIV's heading with the Gospel words under it, and iii.LII-p156 is the first paragraph after it. The part is named as the printed volume names it: the archive.org scan of the same volume (https://archive.org/details/selectlibraryofn10auguuoft) prints 'HOMILY LIV.' and Matthew 16:13 above the words that open iii.LII-p156. Footnote text is inline in mnote spans.",
+   "part": "Homily LIV"
+  },
+  {
    "path": "sources/chrysostom-matthew/npnf110.iii.LIII.html",
    "work": "chrysostom-matthew",
    "url": "https://www.ccel.org/ccel/schaff/npnf110.iii.LIII.html",
@@ -26150,6 +26160,159 @@
    "kind": "scan",
    "download_sha256": "566c4cf8c9d4c0f3bd0fbed390914dd28f7ab18def1279ce5241fc8208ce0030",
    "extract": "The scan's full text, as downloaded."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.ii.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "00553e5173a841821bf0bbd7b470b29312a4f798223aaad6b5ad45efde9e6623",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.iii.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "94b7e516d0cb6ff5843f4f997f03f8f5daa692959e9d9d03d69e2c1864852730",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.iv.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.iv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "2a2b598f7f4e1d39618f4d30e78f9df865b67b4802f24f7d25b3f0082021e794",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.v.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.v.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "7417102e5429a4c9a75ebff4e878b7ad0aff3907df43d372a58b0fa4510acf26",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.vi.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.vi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "2f4ea938a301c77b9ec7d6cb45a4d399105da95c277c5097f58780cd24b484ba",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.vii.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.vii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "b8c960f8a5a2671b2227f21c6ff4a6b1ef644973cebff25a5a86cbdbb472fdd0",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.viii.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.viii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "44103522a879cc816d091a63d717f39d4867b9d45b4eb3b638e6a2cb789aec9e",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.ix.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.ix.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "a03c0f64160fef1a2b36a50b3bc059ca425deb01c88be3129467d41fbfff559a",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.x.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.x.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "e386254535f0a90ad68cafd3b56e7641635b29c0715b8914878497c891455993",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.xi.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.xi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "bc6d446ebf8573e0e83f66ea99ff28c1c0a166e55e31c319d0a3ba877fd7c5f6",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.xii.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.xii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "ae55234c69070ee7d0a26754a00e94690dc24227b011d742afa1c80d6730ec7e",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.xiii.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.xiii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "b9750a75c00ecc915e3e37cfbf4686b5833011055f0834d19bf5ef2a78002e55",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.xiv.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.xiv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "c431d8c0d44dff7ce91198b79011bc6216340c31737a3679e58f0d04364b2ab3",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.xv.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.xv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "254ebf2e05f9b7f6c597812fcf4905a3bef4928e808e25eaf34f725ac0c2d3d5",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.xvi.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.xvi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "70258e1ba28b3b26ac08eb548e59ba374de25eb29dd907767ecd7637721add2d",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/wesley-romans/notes.i.vii.xvii.html",
+   "work": "wesley-romans",
+   "url": "https://www.ccel.org/ccel/wesley/notes.i.vii.xvii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "e5e81b9d54648761bdfba8867fbf3583102d8d2ca05348f1b8c1f4a7f38571fe",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/haydock-romans/haydock-catholic-bible-comment-haydock-george-leo-3948.txt",
+   "work": "haydock-romans",
+   "url": "https://archive.org/stream/haydock-catholic-bible-comment-haydock-george-leo-3948/Haydock%20Catholic%20Bible%20Comment%20-%20Haydock%2C%20George%20Leo_3948_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "7bf5cb6986a4a97904161f2de9151b023cee2b8852f240a7f067cf19bc1c39dd",
+   "extract": "Characters 7509590-7660703 of the scan's full text (the Epistle to the Romans, with a margin)."
   }
  ]
 }

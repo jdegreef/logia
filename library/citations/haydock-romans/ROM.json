@@ -1,0 +1,294 @@
+{
+ "work": "haydock-romans",
+ "book": "ROM",
+ "citations": [
+  {
+   "in": "haydock-romans.ROM.1.1.1",
+   "at": 315,
+   "text": "Acts 13:2",
+   "start": "ACT.13.2",
+   "end": "ACT.13.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.1.17.1",
+   "at": 362,
+   "text": "Hab. 2:4",
+   "start": "HAB.2.4",
+   "end": "HAB.2.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.2.25.1",
+   "at": 201,
+   "text": "Gal. 5:6",
+   "start": "GAL.5.6",
+   "end": "GAL.5.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.3.9.1",
+   "at": 286,
+   "text": "v. 19",
+   "start": "ROM.3.19",
+   "end": "ROM.3.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.3.20.1",
+   "at": 762,
+   "text": "v. 26",
+   "start": "ROM.3.26",
+   "end": "ROM.3.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.3.31.1",
+   "at": 107,
+   "text": "Matt. 5:17",
+   "start": "MAT.5.17",
+   "end": "MAT.5.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.4.7.1",
+   "at": 873,
+   "text": "Ps. 1. 105",
+   "start": "PSA.1.105",
+   "end": "PSA.1.105",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.4.13.1",
+   "at": 811,
+   "text": "Ps. 2:8",
+   "start": "PSA.2.8",
+   "end": "PSA.2.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.5.13-14.1",
+   "at": 971,
+   "text": "1 Cor. 15:45",
+   "start": "1CO.15.45",
+   "end": "1CO.15.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.6.1.1",
+   "at": 111,
+   "text": "v. 7",
+   "start": "ROM.6.7",
+   "end": "ROM.6.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.7.1.1",
+   "at": 660,
+   "text": "v. 4",
+   "start": "ROM.7.4",
+   "end": "ROM.7.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.7.9.1",
+   "at": 1220,
+   "text": "v. 12",
+   "start": "ROM.7.12",
+   "end": "ROM.7.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.7.14.1",
+   "at": 1225,
+   "text": "Gal. 5:17",
+   "start": "GAL.5.17",
+   "end": "GAL.5.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.7.17-18.1",
+   "at": 641,
+   "text": "1 Cor. 3:6",
+   "start": "1CO.3.6",
+   "end": "1CO.3.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.8.5.1",
+   "at": 1124,
+   "text": "ver. 9",
+   "start": "ROM.8.9",
+   "end": "ROM.8.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.8.19.1",
+   "at": 1027,
+   "text": "2 Pet. 1:13",
+   "start": "2PE.1.13",
+   "end": "2PE.1.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.8.19.1",
+   "at": 1040,
+   "text": "Apoc. 21:1",
+   "start": "REV.21.1",
+   "end": "REV.21.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.8.24.1",
+   "at": 211,
+   "text": "1 Cor. 2:9",
+   "start": "1CO.2.9",
+   "end": "1CO.2.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.9.3.1",
+   "at": 601,
+   "text": "Numb. 21:3",
+   "start": "NUM.21.3",
+   "end": "NUM.21.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.9.3.1",
+   "at": 804,
+   "text": "Acts 23:14",
+   "start": "ACT.23.14",
+   "end": "ACT.23.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.9.14.1",
+   "at": 202,
+   "text": "v. 22",
+   "start": "ROM.9.22",
+   "end": "ROM.9.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.10.5-7.1",
+   "at": 17,
+   "text": "Lev. 18:12",
+   "start": "LEV.18.12",
+   "end": "LEV.18.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.10.9.1",
+   "at": 96,
+   "text": "v. 13",
+   "start": "ROM.10.13",
+   "end": "ROM.10.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.10.9.1",
+   "at": 310,
+   "text": "Matt. 7:21",
+   "start": "MAT.7.21",
+   "end": "MAT.7.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.10.18.1",
+   "at": 371,
+   "text": "Deut. 32:21",
+   "start": "DEU.32.21",
+   "end": "DEU.32.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.11.8.1",
+   "at": 969,
+   "text": "Ps. 68:23",
+   "start": "PSA.68.24",
+   "end": "PSA.68.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.11.11-15.1",
+   "at": 1244,
+   "text": "v. 15",
+   "start": "ROM.11.15",
+   "end": "ROM.11.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.11.16.1",
+   "at": 708,
+   "text": "v. 23",
+   "start": "ROM.11.23",
+   "end": "ROM.11.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.12.16.1",
+   "at": 82,
+   "text": "Luke 2:48",
+   "start": "LUK.2.48",
+   "end": "LUK.2.48",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.13.8-9.1",
+   "at": 400,
+   "text": "Matt. 22:40",
+   "start": "MAT.22.40",
+   "end": "MAT.22.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.15.25-28.1",
+   "at": 395,
+   "text": "v. 27",
+   "start": "ROM.15.27",
+   "end": "ROM.15.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.16.5.1",
+   "at": 395,
+   "text": "1 Cor. 16:19",
+   "start": "1CO.16.19",
+   "end": "1CO.16.19",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}
