@@ -816,6 +816,8 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-goto input { width: 11em; max-width: 100%; padding: 7px 12px; border: 1px solid var(--line-strong); border-radius: 999px;
   background: var(--surface); color: var(--text); font: inherit; font-size: 15px; }
 .lg-goto .lg-quiet { font-size: 13px; flex-basis: 100%; }
+.lg-goto-work { margin: 14px 0 4px; }
+.lg-excerpt .lg-ref[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 .lg-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin: 0 0 16px; }
 .lg-tabs button { padding: 8px 14px; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: none;
   color: var(--muted); font: 600 15px var(--sans); cursor: pointer; }

@@ -402,7 +402,7 @@
     });
     pick.hidden = false;
   });
-  document.querySelectorAll(".lg-goto").forEach(function (form) {
+  document.querySelectorAll(".lg-goto:not(.lg-goto-work)").forEach(function (form) {
     var books = JSON.parse(form.getAttribute("data-books"));
     var codes = Object.keys(books);
     var input = form.querySelector("input"), note = form.querySelector("[role=status]");
@@ -434,6 +434,40 @@
       row.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
       var link = row.querySelector("a");
       if (link) link.focus({ preventScroll: true });
+    });
+  });
+
+  // A work's page: go to the verse in the work's chapter page, to the
+  // excerpt whose verses hold it (data-ranges: "from-to,..." a chapter).
+  document.querySelectorAll(".lg-goto-work").forEach(function (form) {
+    var books = JSON.parse(form.getAttribute("data-books"));
+    var ranges = JSON.parse(form.getAttribute("data-ranges"));
+    var codes = Object.keys(books);
+    var input = form.querySelector("input"), note = form.querySelector("[role=status]");
+    var hint = note.textContent;
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var m = input.value.trim().toLowerCase().match(/^(.*?)\s*(\d+)\s*[:.\s]\s*(\d+)$/);
+      var code = null;
+      if (m && !m[1]) code = codes[0];
+      else if (m) {
+        var name = m[1].replace(/[.\s]+/g, "");
+        codes.forEach(function (c) {
+          if (books[c].some(function (n) { return n.replace(/\s/g, "").indexOf(name) === 0; })) code = code || c;
+        });
+      }
+      var list = code && ranges[code][String(+m[2])];
+      var from = null;
+      if (list) {
+        var v = +m[3];
+        list.split(",").forEach(function (r) {
+          var p = r.split("-");
+          if (from === null && +p[0] <= v && v <= +p[1]) from = p[0];
+        });
+      }
+      if (from === null) { note.textContent = form.getAttribute("data-none"); return; }
+      note.textContent = hint;
+      location.href = form.getAttribute("data-base") + code.toLowerCase() + "/" + (+m[2]) + "/#v" + from;
     });
   });
 
