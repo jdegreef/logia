@@ -250,13 +250,13 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-new { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
 .cx-also { color: var(--muted); border: 1px dashed var(--line-strong); font-weight: 600; }
 /* How many voices comment on a verse (web/reader.js), and the chosen verse
-   marked by a gold rule as well as its colour. */
+   marked like a highlighter: the same soft wash and gold underline on every
+   line it runs over (box-decoration-break: clone, above), not only colour. */
 .cx-vc { display: inline-block; min-width: 1.45em; margin: 0 4px 0 0; padding: 0 .3em; border-radius: 999px; box-sizing: border-box;
   background: color-mix(in srgb, var(--gold) 18%, transparent); color: var(--lg-gold-ink); font-family: var(--sans); font-size: 10.5px;
   font-weight: 700; line-height: 1.55; text-align: center; vertical-align: super; font-variant-numeric: tabular-nums; }
-.cx-verse.cx-on { box-shadow: inset 3px 0 0 var(--gold); padding-left: 6px; }
+.cx-verse.cx-on { box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--gold) 75%, transparent); padding: 2px 3px; border-radius: 4px; }
 .cx-verse.cx-on .cx-vc { background: var(--lg-gold-ink); color: var(--bg); }
-.cx-verse.cx-cont.cx-on { box-shadow: none; padding-left: 1px; }
 /* Verses the Open Word Bible leaves out (John 5:4, 8:1-11...), where they would be. */
 .lg-gap { margin: 10px 0; padding: 10px 14px; border-left: 3px solid var(--gold); background: var(--surface-2);
   border-radius: 0 8px 8px 0; font-family: var(--sans); font-size: 14px; line-height: 1.55; color: var(--muted); }
