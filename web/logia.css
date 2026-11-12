@@ -644,9 +644,14 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
 .lg-toc .lg-badge { white-space: nowrap; }
 
 /* Home: a strip of each book's chapters, and well-known passages. */
-.lg-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; margin: 14px 0 0; }
-.lg-strip-book { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--text); text-decoration: none; min-width: 5em; }
+/* Every book on the same two columns: its name and voice count on the left,
+   its chapters on the right, so the circles all start at one edge. */
+.lg-strip { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); align-items: start; gap: 8px 18px; margin: 16px 0 0; }
+.lg-strip-book { display: grid; gap: 1px; font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.2;
+  color: var(--text); text-decoration: none; padding-top: 2px; }
+.lg-strip-book span { font-family: var(--sans); font-weight: 500; font-size: 12.5px; color: var(--muted); }
 .lg-strip-book:hover { color: var(--accent); }
+@media (max-width: 560px) { .lg-strip { grid-template-columns: minmax(0, 1fr); } .lg-strip-book { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 8px; } }
 .lg-strip .chap-pills { margin: 0; }
 .lg-famous-h { margin-top: 28px; }
 .lg-famous .lg-card { gap: 2px; }

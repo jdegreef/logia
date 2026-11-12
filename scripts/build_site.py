@@ -1318,7 +1318,9 @@ def home_page(lib):
     # then a few well-known passages by their titles.
     strips = ""
     for book in dict.fromkeys(b for b, _c in sorted(cov, key=lambda bc: lib.chapters.index(bc))):
-        strips += (f'<div class="lg-strip"><a class="lg-strip-book" href="/{book.lower()}/">{e(lib.books[book]["en"])}</a>'
+        voices = len({lib.author_of(c["work"])["id"] for c in lib.comments if c["start"].split(".")[0] == book})
+        strips += (f'<div class="lg-strip"><a class="lg-strip-book" href="/{book.lower()}/">{e(lib.books[book]["en"])}'
+                   f'<span>{e(t("home.n_voices", n=voices))}</span></a>'
                    f'<div class="chap-pills">{heat_pills(lib, book, cov)}</div></div>')
     famous = "".join(
         f'<li><a class="lg-card" href="{chapter_url(b, c)}"><span class="lg-card-ref">{e(lib.books[b]["en"])} {c}</span>'
