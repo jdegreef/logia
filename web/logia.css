@@ -85,7 +85,11 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-verse { cursor: pointer; border-radius: 5px; padding: 2px 1px; transition: background-color 150ms; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .cx-verse:hover { background: var(--surface-2); }
 .cx-verse.cx-on { background: var(--mark); }
-.cx-vn { font-family: var(--sans); font-size: 11.5px; font-weight: 700; color: var(--muted); vertical-align: super; line-height: 0; margin: 0 3px 0 2px; }
+/* Verse numbers: a little air before each (so "beginning. 2He" reads as a
+   new verse, not part of the word before), even-width figures, and one step
+   lighter so they guide without competing with the text. */
+.cx-vn { font-family: var(--sans); font-size: 11.5px; font-weight: 600; color: var(--muted); vertical-align: super; line-height: 0;
+  margin: 0 .22em 0 .15em; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
 .cx-w { border-radius: 3px; }
 .cx-verse.cx-on .cx-w:hover, .cx-w.cx-on { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .cx-w.cx-on { background: var(--accent-soft); }
@@ -1112,7 +1116,7 @@ html {
 /* Passage pages (/<book>/<chapter>/<a>-<b>/): a section of a book and the
    excerpts on it, each opening with its first words. */
 .lg-ptext p { font-size: calc(18px * var(--read-scale)); line-height: 1.65; }
-.lg-ptext sup { font-family: var(--sans, inherit); font-size: 11px; font-weight: 700; color: var(--muted); margin-right: 2px; }
+.lg-ptext sup { font-family: var(--sans, inherit); font-size: 11px; font-weight: 600; color: var(--muted); margin: 0 .22em 0 .15em; font-variant-numeric: tabular-nums; }
 .lg-ptext sup a { color: var(--lg-gold-ink); text-decoration: none; }
 .lg-passage .lg-excerpts li { padding: 8px 0; }
 .lg-passage .page-head .dek + .lg-vtext { margin-top: 18px; }
