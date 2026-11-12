@@ -1509,3 +1509,10 @@ html {
 @media (max-width: 640px) { .lg-era-rows section { grid-template-columns: 1fr; } }
 /* On a narrow phone the reference keeps the room when Listen is shown. */
 @media (max-width: 420px) { .cx-listen:not([hidden]) ~ .cx-pos { display: none; } }
+/* Verse pages: a long excerpt folded to eight lines (web/logia.js). */
+.lg-folded { max-height: var(--fold, 13em); overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent); mask-image: linear-gradient(to bottom, #000 62%, transparent); }
+.lg-unfold { margin: 2px 0 6px; padding: 6px 14px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--bg);
+  color: var(--accent); font: 600 13.5px/1.2 var(--sans); cursor: pointer; }
+.lg-unfold:hover { border-color: var(--accent); }
+@media print { .lg-folded { max-height: none; overflow: visible; -webkit-mask-image: none; mask-image: none; } .lg-unfold { display: none; } }

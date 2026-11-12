@@ -1994,6 +1994,9 @@ def verse_voices(lib, book, chapter, verse):
     return [(w, sorted(by_work[w], key=order_key)) for w in lib.ordered_works(by_work)]
 
 
+FOLD_WORDS = 160  # excerpts longer than this fold on verse pages
+
+
 def verse_excerpt(lib, c, book, chapter, verse):
     w = lib.works[c["work"]]
     _, _, sv = ref_parts(c["start"])
@@ -2024,8 +2027,14 @@ def verse_excerpt(lib, c, book, chapter, verse):
                     + (f' · <a href="{e(n["href"])}">{e(t("verse.names_here", name=n["author"], ref=n["ref"]))}</a>' if n["href"] else "")
                     + "</li>")
     locus = f' {e(locus_label(w, c["locus"]))}.' if c.get("locus") else ""
+    # A long excerpt folds to its first lines on screen (web/logia.js), so one
+    # long homily doesn't push every other voice down; the whole text stays
+    # in the page for search engines, screen readers and print.
+    words = len(c["text"].split())
+    fold = (f'<button type="button" class="lg-unfold" hidden>{e(t("verse.read_all", n=f"{words:,}"))}</button>'
+            if words > FOLD_WORDS else "")
     return (f'<article class="lg-excerpt lg-vx" id="{e(c["id"])}">{on}{heading}'
-            f'<div class="lg-text">{verse_html(lib, c["text"], c["cites"])}</div>'
+            f'<div class="lg-text{" lg-foldable" if fold else ""}">{verse_html(lib, c["text"], c["cites"])}</div>{fold}'
             + (f'<ul class="lg-vx-more">{"".join(more)}</ul>' if more else "")
             + f'<p class="lg-vx-links lg-quiet">{e(t("verse.from", edition=short_edition(w["edition"])))}{locus} '
             f'{" · ".join(links)}</p></article>')
