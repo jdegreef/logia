@@ -920,10 +920,12 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 }
 @media (max-width: 480px) { .cx-tabs button { padding: 10px 5px 9px; font-size: 13px; } .cx-tabs .cx-n { margin-left: 2px; font-size: 11px; } }
 
-/* Chapter chips: gold with commentary, a solid outline with the Bible text
-   (dashed read as "not available"), a ring for the chapter here, and a dot
-   for a chapter already read (web/logia.js). */
-.chap.part { border-style: solid; border-color: var(--line-strong); }
+/* Chapter chips: gold with commentary; a dashed outline and muted number
+   where there is only the Bible text so far (it still opens the reader, and
+   turns solid on hover); a ring for the chapter here, and a dot for a
+   chapter already read (web/logia.js). */
+.chap.part { border-style: dashed; border-color: var(--line-strong); color: var(--muted); background: transparent; }
+.chap.part:hover { border-style: solid; }
 .chap.lg-has[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); background: var(--lg-gold-ink); color: var(--bg); }
 .chap { position: relative; }
 .chap.lg-read::after { content: ""; position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; border-radius: 50%;

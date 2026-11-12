@@ -1281,7 +1281,7 @@ def heat_pills(lib, book, cov):
             out.append(f'<a class="chap lg-has lg-heat-{step}" href="{chapter_url(book, n)}" '
                        f'title="{e(t("home.heat_title", ref=label, n=f"{k:,}"))}">{n}</a>')
         elif n in have:
-            out.append(f'<a class="chap part" href="{chapter_url(book, n)}" title="{e(label + ": " + t("read.text_only_chapter"))}">{n}</a>')
+            out.append(f'<a class="chap part" href="{chapter_url(book, n)}" title="{e(t("read.no_commentary_title", ref=label))}">{n}</a>')
         else:
             out.append(f'<span class="chap none" title="{e(label)}">{n}</span>')
     return "".join(out)
