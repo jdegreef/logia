@@ -651,7 +651,8 @@
       "excerpts": "excerpts",
       "commentators": "commentators",
       "works": "works",
-      "books": "books: {books}",
+      "books": "books",
+      "books_list": "The books so far: {books}.",
       "fixes": "scan misreadings corrected"
     },
     "toc": "On this page",
