@@ -386,6 +386,8 @@
   },
   "reader": {
     "rail_more": "Open the voices that don't fit on the line: {names}",
+    "verse_of": "{n} of {total}",
+    "verse_of_label": "Verse {n} of {total} in this chapter",
     "listen": "Listen",
     "listen_stop": "Stop",
     "listen_title": "Read this verse and its commentary aloud, then go on to the next verse",

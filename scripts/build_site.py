@@ -1901,7 +1901,7 @@ def chapter_page(lib, book, chapter, all_chapters):
 <button type="button" class="cx-grab" id="grab" aria-label="{e(t("chapter.toggle_panel"))}"></button>
 <div class="cx-ph">
 <div class="cx-ph-ref"><h2 class="cx-ref" id="ref">{e(first_ref)}</h2>
-<div class="cx-nav"><button type="button" class="cx-listen" id="listen" aria-pressed="false" title="{e(t("reader.listen_title"))}" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>{e(t("reader.listen"))}</span></button><button type="button" id="prev" aria-label="{e(t("chapter.prev_verse"))}">&#8249;</button>
+<div class="cx-nav"><button type="button" class="cx-listen" id="listen" aria-pressed="false" title="{e(t("reader.listen_title"))}" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>{e(t("reader.listen"))}</span></button><button type="button" id="prev" aria-label="{e(t("chapter.prev_verse"))}">&#8249;</button><span class="cx-pos" id="vpos"></span>
 <button type="button" id="next" aria-label="{e(t("chapter.next_verse"))}">&#8250;</button></div></div>
 <div class="cx-ph-text" id="ph-text"></div>
 <div class="cx-summary" id="summary" aria-live="polite"></div>

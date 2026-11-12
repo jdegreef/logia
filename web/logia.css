@@ -122,7 +122,9 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-ph .cx-ref { font-family: var(--display); font-size: 24px; font-weight: 600; margin: 0; }
 .cx-nav { display: flex; gap: 4px; }
 .cx-nav button { border: 1px solid var(--line); background: var(--bg); width: 32px; height: 32px; border-radius: 8px; cursor: pointer; }
-.cx-nav button:disabled { opacity: .35; cursor: default; }
+.cx-nav button:disabled { color: var(--muted); border-color: var(--line); background: transparent; opacity: .6; cursor: default; }
+/* Where the chosen verse falls in the chapter, between the arrows. */
+.cx-pos { align-self: center; min-width: 4.2em; padding: 0 2px; text-align: center; font: 600 12px/1 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .cx-ph-text { font-family: var(--serif); font-size: 16px; color: var(--muted); margin: 6px 0 14px; }
 .cx-summary { font-size: 13px; color: var(--muted); }
 
@@ -1496,3 +1498,5 @@ html {
 .lg-people-flow li { border: 0; }
 .lg-people-flow a { padding: 2px 0; gap: 0 7px; }
 @media (max-width: 640px) { .lg-era-rows section { grid-template-columns: 1fr; } }
+/* On a narrow phone the reference keeps the room when Listen is shown. */
+@media (max-width: 420px) { .cx-listen:not([hidden]) ~ .cx-pos { display: none; } }
