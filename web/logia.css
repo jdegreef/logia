@@ -1330,11 +1330,20 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-door > span { font-size: 14px; color: var(--muted); }
 .lg-door .lg-door-go { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; color: var(--accent); font-weight: 600; }
 /* Home: chapter pills shaded by how much was written on each chapter */
-.chap.lg-has.lg-heat-0 { background: color-mix(in srgb, var(--gold) 14%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 45%, var(--bg)); color: var(--text); }
-.chap.lg-has.lg-heat-1 { background: color-mix(in srgb, var(--gold) 28%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 62%, var(--bg)); color: var(--text); }
-.chap.lg-has.lg-heat-2 { background: color-mix(in srgb, var(--gold) 40%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 75%, var(--bg)); color: var(--text); }
-.chap.lg-has.lg-heat-3 { background: var(--lg-gold-ink); border-color: var(--lg-gold-ink); color: var(--bg); }
-.chap.lg-has.lg-heat-4 { background: color-mix(in srgb, var(--gold) 40%, var(--text)); border-color: color-mix(in srgb, var(--gold) 40%, var(--text)); color: var(--bg); }
+/* The heat ramp, checked in all five themes: three washes of gold over the
+   page, then two deep steps toward the text colour (a dark gold on the light
+   themes, a pale one on the dark), so neighbouring steps stay apart and every
+   number keeps at least 4.5:1. The number flips to the page colour on the two
+   deep steps, and on step 2 in the contrast theme. */
+:root { --lg-heat-end: color-mix(in oklab, var(--gold) 58%, var(--text)); }
+.chap.lg-has.lg-heat-0 { --h: color-mix(in oklab, var(--gold) 18%, var(--bg)); }
+.chap.lg-has.lg-heat-1 { --h: color-mix(in oklab, var(--gold) 36%, var(--bg)); }
+.chap.lg-has.lg-heat-2 { --h: color-mix(in oklab, var(--gold) 50%, var(--bg)); }
+.chap.lg-has.lg-heat-3 { --h: color-mix(in oklab, var(--lg-heat-end) 88%, var(--bg)); color: var(--bg); }
+.chap.lg-has.lg-heat-4 { --h: var(--lg-heat-end); color: var(--bg); }
+.chap.lg-has[class*="lg-heat-"] { background: var(--h); border-color: color-mix(in oklab, var(--lg-heat-end) 30%, var(--h)); }
+.chap.lg-has.lg-heat-0, .chap.lg-has.lg-heat-1, .chap.lg-has.lg-heat-2 { color: var(--text); }
+:root[data-theme="contrast"] .chap.lg-has.lg-heat-2 { color: var(--bg); }
 .chap.lg-has[class*="lg-heat-"]:hover { border-color: var(--accent); }
 
 /* Home: the verses with the most excerpts */
