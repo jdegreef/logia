@@ -173,10 +173,17 @@ CATALOG = load(os.path.join(ROOT, "i18n", f"{LANG}.json"))
 
 
 def t(key, **values):
-    """Interface text from i18n/<lang>.json by dotted key, with {name} filled."""
-    node = CATALOG
+    """Interface text from i18n/<lang>.json by dotted key, with {name} filled.
+
+    When the first whole-number count among n, works and total is 1 and the catalog has the
+    same key with "_one" added, that singular form is used: "1 voice", not
+    "1 voices"."""
+    node, parent = CATALOG, None
     for part in key.split("."):
-        node = node[part]
+        parent, node = node, node[part]
+    count = next((values[k] for k in ("n", "works", "total") if isinstance(values.get(k), int)), None)
+    if count == 1 and isinstance(parent, dict) and isinstance(parent.get(part + "_one"), str):
+        node = parent[part + "_one"]
     return node.format(**values) if values else node
 
 
@@ -4500,7 +4507,7 @@ def guide_page(lib, g):
                 links.append(f'<a href="{x["link"]}">{e(x["link_label"])}</a>')
             if hits:
                 first = hits[0]
-                links.append(f'<a href="{excerpt_href(lib, first)}">{e(t("guide.used", n=f"{len(hits):,}", who=short_name(lib.author_of(first["work"])), ref=scripture.label(first["start"], first["end"])))}</a>')
+                links.append(f'<a href="{excerpt_href(lib, first)}">{e(t("guide.used", n=len(hits), who=short_name(lib.author_of(first["work"])), ref=scripture.label(first["start"], first["end"])))}</a>')
             rows += (f'<div><dt>{e(x["term"])}</dt><dd><p>{e(x["text"])}</p>'
                      f'<p class="lg-quiet lg-gloss-links">{" · ".join(links)}</p></dd></div>')
         parts.append(f'<section class="lg-block" id="t{i}"><h2>{e(grp["title"])}</h2><dl class="lg-gloss">{rows}</dl></section>')
