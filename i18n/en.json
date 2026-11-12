@@ -850,6 +850,7 @@
     "on_range": "On {ref}",
     "continues": "This comment begins at {ref}:",
     "read_full": "Read it in full on {ref}",
+    "read_all": "Read all {n} words",
     "from": "From {edition}.",
     "source": "Source",
     "in_reader": "Read in the reader",

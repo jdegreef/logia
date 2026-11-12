@@ -1366,3 +1366,11 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .cx-nav .cx-listen[hidden] { display: none; }
 .cx-nav .cx-listen[aria-pressed="true"] { border-color: var(--lg-gold-ink); color: var(--lg-gold-ink); }
 .cx-card.cx-speaking { background: color-mix(in srgb, var(--gold) 9%, transparent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 9%, transparent); border-radius: 2px; }
+
+/* Verse pages: a long excerpt folded to eight lines (web/logia.js). */
+.lg-folded { max-height: var(--fold, 13em); overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent); mask-image: linear-gradient(to bottom, #000 62%, transparent); }
+.lg-unfold { margin: 2px 0 6px; padding: 6px 14px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--bg);
+  color: var(--accent); font: 600 13.5px/1.2 var(--sans); cursor: pointer; }
+.lg-unfold:hover { border-color: var(--accent); }
+@media print { .lg-folded { max-height: none; overflow: visible; -webkit-mask-image: none; mask-image: none; } .lg-unfold { display: none; } }

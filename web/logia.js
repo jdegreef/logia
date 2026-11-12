@@ -590,4 +590,22 @@
       offlineList.innerHTML = rows.length ? rows.join("") : "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>";
     }).catch(function () { offlineList.innerHTML = "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>"; });
   }
+  // Verse pages: a long excerpt shows its first eight lines with a fade and
+  // "Read all 412 words" (scripts/build_site.py, verse_excerpt). The one the
+  // address points to opens in full.
+  document.querySelectorAll(".lg-foldable").forEach(function (box) {
+    var btn = box.nextElementSibling;
+    if (!btn || !btn.classList.contains("lg-unfold")) return;
+    var art = box.closest(".lg-vx");
+    if (art && location.hash && location.hash.slice(1) === art.id) return;
+    var line = parseFloat(getComputedStyle(box).lineHeight) || 30;
+    if (box.scrollHeight <= line * 11) return;
+    box.style.setProperty("--fold", line * 8 + "px");
+    box.classList.add("lg-folded");
+    btn.hidden = false;
+    btn.addEventListener("click", function () {
+      box.classList.remove("lg-folded");
+      btn.remove();
+    });
+  });
 })();
