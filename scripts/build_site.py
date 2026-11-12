@@ -1595,8 +1595,14 @@ def book_page(lib, book):
             f'{e(t("book.keep", book=name))}</button> <span class="lg-quiet" role="status">{e(t("book.keep_note"))}</span></p>')
     read = (f'<p class="lg-quiet lg-read-count" data-read-count="{e(t("book.read_count", total=len(have)))}" '
             f'data-prefix="/{book.lower()}/" hidden></p>' if have else "")
-    bar = (f'<nav class="lg-book-bar" aria-label="{e(t("book.bar", book=name))}"><span class="lg-book-bar-name">{e(name)}</span>'
-           f'<div class="chap-pills">{chapter_pills(lib, book, cov)}</div></nav>' if len(have) > 12 else "")
+    # The chapter bar, shaded like the home page (darker gold, more written).
+    # A book of 23 to 30 chapters splits into two even rows on wide screens,
+    # so no chapter sits alone; longer books, and every book on phones,
+    # scroll sideways with a fade at the end that has more.
+    wrap = f' lg-book-bar-wrap" style="--per-row:{-(-total // 2)}' if 22 < total <= 30 else ""
+    pills = heat_pills(lib, book, cov) if any(b == book for b, _c in cov) else chapter_pills(lib, book, cov)
+    bar = (f'<nav class="lg-book-bar{wrap}" aria-label="{e(t("book.bar", book=name))}"><span class="lg-book-bar-name">{e(name)}</span>'
+           f'<div class="chap-pills">{pills}</div></nav>' if len(have) > 12 else "")
     body = f"""
 <header class="page-head"><p class="eyebrow"><a href="/read/">{e(t("read.title"))}</a> · <a href="/read/#{"ot" if testament == "old" else "nt"}">{e(t("testaments." + testament))}</a> · {e(t("canon." + canon_section(lib, book)))}</p>
 <h1>{e(name)}</h1><p class="dek">{e(dek)}</p>{start}{go}{read}{keep}</header>
