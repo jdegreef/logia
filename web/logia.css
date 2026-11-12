@@ -63,7 +63,9 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .lg-ref { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .lg-ref a { text-decoration: none; }
 .lg-lemma { margin: 0 0 6px; font-family: var(--serif); font-style: italic; color: var(--muted); }
-.lg-text { font-family: var(--read-font); font-size: calc(18px * var(--read-scale)); line-height: calc(1.65 * var(--read-leading)); }
+/* Excerpt text: lines of about 70 characters, short enough that the eye
+   finds the start of the next line in a long homily. */
+.lg-text { font-family: var(--read-font); font-size: calc(18px * var(--read-scale)); line-height: calc(1.65 * var(--read-leading)); max-width: 62ch; }
 .lg-text p { margin: 0 0 .7em; }
 
 /* The chapter reader ----------------------------------------------------- */
