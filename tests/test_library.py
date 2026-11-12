@@ -323,6 +323,13 @@ class Quoting(unittest.TestCase):
         self.assertEqual(build_site.in_quotes("a < b"), "“a &lt; b”")
 
 
+class Dashes(unittest.TestCase):
+    def test_lifespans_take_an_en_dash(self):
+        self.assertEqual(build_site.en_dash("1509-1564"), "1509–1564")
+        self.assertEqual(build_site.en_dash("c. 185-c. 253"), "c. 185–c. 253")
+        self.assertEqual(build_site.en_dash("fl. 1680"), "fl. 1680")
+
+
 class Counting(unittest.TestCase):
     def test_counter_and_owner_tags_are_off_unless_set(self):
         with mock.patch.multiple(build_site, GOATCOUNTER="", GOOGLE_VERIFY="", BING_VERIFY=""):

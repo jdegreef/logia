@@ -187,6 +187,11 @@ def t(key, **values):
     return node.format(**values) if values else node
 
 
+def en_dash(span):
+    """A range of years or verses with an en dash between its ends: 1509–1564."""
+    return re.sub(r"(?<=\d)-(?=\d|c\. )", "\u2013", span)
+
+
 def e(text):
     return html.escape(str(text), quote=True)
 
@@ -227,7 +232,7 @@ def short_name(author):
 
 def short_edition(edition):
     m = re.match(r"^[^;(]+", edition)
-    s = (m[0] if m else edition).strip().rstrip(",.")
+    s = en_dash((m[0] if m else edition).strip().rstrip(",."))
     return s if len(s) <= 90 else re.sub(r"\s+\S*$", "", s[:88]) + "…"
 
 
@@ -276,6 +281,10 @@ def locus_label(work, locus):
 class Library:
     def __init__(self):
         self.authors = {a["id"]: a for a in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "authors", "*.json")))}
+        # Lifespans are kept as typed ("354-430"); the site prints them with an
+        # en dash, as the printed editions do ("354–430", "c. 185–c. 253").
+        for a in self.authors.values():
+            a["dates"] = en_dash(a["dates"])
         # Their Wikidata items and Wikipedia articles (scripts/fetch_wikidata.py).
         ids = load(os.path.join(ROOT, "library", "identifiers.json"))
         self.identifiers = ids["authors"]
