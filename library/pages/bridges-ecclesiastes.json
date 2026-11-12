@@ -1,0 +1,1788 @@
+{
+ "work": "bridges-ecclesiastes",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "expositionofbook00brid_0",
+   "files": [
+    {
+     "url": "https://archive.org/download/expositionofbook00brid_0/expositionofbook00brid_0_hocr_pageindex.json.gz",
+     "sha256": "e64a1f85ca98fc6bd095fa5c0e7803022bb4d10e771da2805e16d003d887e093"
+    },
+    {
+     "url": "https://archive.org/download/expositionofbook00brid_0/expositionofbook00brid_0_hocr_searchtext.txt.gz",
+     "sha256": "0631444eafde20e93aa5fba8a444c2d91e6df905b0eb9c4691b00ecfd6d7d299"
+    },
+    {
+     "url": "https://archive.org/download/expositionofbook00brid_0/expositionofbook00brid_0_page_numbers.json",
+     "sha256": "2016b52e4527274f0c1905666c7ce913a6477e7f13fbd36f6ab2e48b007e968b"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 352,
+ "missed": 0,
+ "pages": {
+  "bridges-ecclesiastes.ECC.1.1.1": [
+   "expositionofbook00brid_0",
+   25,
+   "20"
+  ],
+  "bridges-ecclesiastes.ECC.1.1.2": [
+   "expositionofbook00brid_0",
+   26,
+   "21"
+  ],
+  "bridges-ecclesiastes.ECC.1.1.3": [
+   "expositionofbook00brid_0",
+   27,
+   "22"
+  ],
+  "bridges-ecclesiastes.ECC.1.1.4": [
+   "expositionofbook00brid_0",
+   29,
+   "24"
+  ],
+  "bridges-ecclesiastes.ECC.1.2.1": [
+   "expositionofbook00brid_0",
+   29,
+   "24"
+  ],
+  "bridges-ecclesiastes.ECC.1.2.2": [
+   "expositionofbook00brid_0",
+   31,
+   "26"
+  ],
+  "bridges-ecclesiastes.ECC.1.2.3": [
+   "expositionofbook00brid_0",
+   32,
+   "27"
+  ],
+  "bridges-ecclesiastes.ECC.1.3.1": [
+   "expositionofbook00brid_0",
+   33,
+   "28"
+  ],
+  "bridges-ecclesiastes.ECC.1.3.2": [
+   "expositionofbook00brid_0",
+   34,
+   "29"
+  ],
+  "bridges-ecclesiastes.ECC.1.4-7.1": [
+   "expositionofbook00brid_0",
+   35,
+   "30"
+  ],
+  "bridges-ecclesiastes.ECC.1.8.1": [
+   "expositionofbook00brid_0",
+   37,
+   "32"
+  ],
+  "bridges-ecclesiastes.ECC.1.8.2": [
+   "expositionofbook00brid_0",
+   38,
+   "33"
+  ],
+  "bridges-ecclesiastes.ECC.1.9-10.1": [
+   "expositionofbook00brid_0",
+   39,
+   "34"
+  ],
+  "bridges-ecclesiastes.ECC.1.9-10.2": [
+   "expositionofbook00brid_0",
+   40,
+   "35"
+  ],
+  "bridges-ecclesiastes.ECC.1.11.1": [
+   "expositionofbook00brid_0",
+   42,
+   "37"
+  ],
+  "bridges-ecclesiastes.ECC.1.11.2": [
+   "expositionofbook00brid_0",
+   43,
+   "38"
+  ],
+  "bridges-ecclesiastes.ECC.1.12.1": [
+   "expositionofbook00brid_0",
+   43,
+   "38"
+  ],
+  "bridges-ecclesiastes.ECC.1.13.1": [
+   "expositionofbook00brid_0",
+   45,
+   "40"
+  ],
+  "bridges-ecclesiastes.ECC.1.13.2": [
+   "expositionofbook00brid_0",
+   45,
+   "40"
+  ],
+  "bridges-ecclesiastes.ECC.1.14.1": [
+   "expositionofbook00brid_0",
+   46,
+   "41"
+  ],
+  "bridges-ecclesiastes.ECC.1.15.1": [
+   "expositionofbook00brid_0",
+   47,
+   "42"
+  ],
+  "bridges-ecclesiastes.ECC.1.15.2": [
+   "expositionofbook00brid_0",
+   48,
+   "43"
+  ],
+  "bridges-ecclesiastes.ECC.1.16-18.1": [
+   "expositionofbook00brid_0",
+   50,
+   "45"
+  ],
+  "bridges-ecclesiastes.ECC.1.16-18.2": [
+   "expositionofbook00brid_0",
+   51,
+   "46"
+  ],
+  "bridges-ecclesiastes.ECC.1.16-18.3": [
+   "expositionofbook00brid_0",
+   52,
+   "47"
+  ],
+  "bridges-ecclesiastes.ECC.2.1-2.1": [
+   "expositionofbook00brid_0",
+   54,
+   "49"
+  ],
+  "bridges-ecclesiastes.ECC.2.1-2.2": [
+   "expositionofbook00brid_0",
+   55,
+   "50"
+  ],
+  "bridges-ecclesiastes.ECC.2.1-2.3": [
+   "expositionofbook00brid_0",
+   56,
+   "51"
+  ],
+  "bridges-ecclesiastes.ECC.2.1-2.4": [
+   "expositionofbook00brid_0",
+   57,
+   "52"
+  ],
+  "bridges-ecclesiastes.ECC.2.3.1": [
+   "expositionofbook00brid_0",
+   58,
+   "53"
+  ],
+  "bridges-ecclesiastes.ECC.2.3.2": [
+   "expositionofbook00brid_0",
+   59,
+   "54"
+  ],
+  "bridges-ecclesiastes.ECC.2.3.3": [
+   "expositionofbook00brid_0",
+   60,
+   "55"
+  ],
+  "bridges-ecclesiastes.ECC.2.4-11.1": [
+   "expositionofbook00brid_0",
+   61,
+   "56"
+  ],
+  "bridges-ecclesiastes.ECC.2.4-11.2": [
+   "expositionofbook00brid_0",
+   62,
+   "57"
+  ],
+  "bridges-ecclesiastes.ECC.2.4-11.3": [
+   "expositionofbook00brid_0",
+   63,
+   "58"
+  ],
+  "bridges-ecclesiastes.ECC.2.4-11.4": [
+   "expositionofbook00brid_0",
+   65,
+   "60"
+  ],
+  "bridges-ecclesiastes.ECC.2.12.1": [
+   "expositionofbook00brid_0",
+   66,
+   "61"
+  ],
+  "bridges-ecclesiastes.ECC.2.12.2": [
+   "expositionofbook00brid_0",
+   67,
+   "62"
+  ],
+  "bridges-ecclesiastes.ECC.2.16.1": [
+   "expositionofbook00brid_0",
+   68,
+   "63"
+  ],
+  "bridges-ecclesiastes.ECC.2.16.2": [
+   "expositionofbook00brid_0",
+   69,
+   "64"
+  ],
+  "bridges-ecclesiastes.ECC.2.16.3": [
+   "expositionofbook00brid_0",
+   70,
+   "65"
+  ],
+  "bridges-ecclesiastes.ECC.2.18-23.1": [
+   "expositionofbook00brid_0",
+   72,
+   "67"
+  ],
+  "bridges-ecclesiastes.ECC.2.18-23.2": [
+   "expositionofbook00brid_0",
+   73,
+   "68"
+  ],
+  "bridges-ecclesiastes.ECC.2.18-23.3": [
+   "expositionofbook00brid_0",
+   74,
+   "69"
+  ],
+  "bridges-ecclesiastes.ECC.2.24-26.1": [
+   "expositionofbook00brid_0",
+   75,
+   "70"
+  ],
+  "bridges-ecclesiastes.ECC.2.24-26.2": [
+   "expositionofbook00brid_0",
+   76,
+   "71"
+  ],
+  "bridges-ecclesiastes.ECC.2.24-26.3": [
+   "expositionofbook00brid_0",
+   78,
+   "73"
+  ],
+  "bridges-ecclesiastes.ECC.3.1.1": [
+   "expositionofbook00brid_0",
+   79,
+   "74"
+  ],
+  "bridges-ecclesiastes.ECC.3.1.2": [
+   "expositionofbook00brid_0",
+   80,
+   "75"
+  ],
+  "bridges-ecclesiastes.ECC.3.1.3": [
+   "expositionofbook00brid_0",
+   81,
+   "76"
+  ],
+  "bridges-ecclesiastes.ECC.3.2.1": [
+   "expositionofbook00brid_0",
+   82,
+   "77"
+  ],
+  "bridges-ecclesiastes.ECC.3.2.2": [
+   "expositionofbook00brid_0",
+   82,
+   "77"
+  ],
+  "bridges-ecclesiastes.ECC.3.2.3": [
+   "expositionofbook00brid_0",
+   83,
+   "78"
+  ],
+  "bridges-ecclesiastes.ECC.3.2.4": [
+   "expositionofbook00brid_0",
+   84,
+   "79"
+  ],
+  "bridges-ecclesiastes.ECC.3.2.5": [
+   "expositionofbook00brid_0",
+   85,
+   "80"
+  ],
+  "bridges-ecclesiastes.ECC.3.8.1": [
+   "expositionofbook00brid_0",
+   85,
+   "80"
+  ],
+  "bridges-ecclesiastes.ECC.3.9.1": [
+   "expositionofbook00brid_0",
+   86,
+   "81"
+  ],
+  "bridges-ecclesiastes.ECC.3.9.2": [
+   "expositionofbook00brid_0",
+   87,
+   "82"
+  ],
+  "bridges-ecclesiastes.ECC.3.10.1": [
+   "expositionofbook00brid_0",
+   89,
+   "84"
+  ],
+  "bridges-ecclesiastes.ECC.3.11.1": [
+   "expositionofbook00brid_0",
+   90,
+   "85"
+  ],
+  "bridges-ecclesiastes.ECC.3.12.1": [
+   "expositionofbook00brid_0",
+   91,
+   "86"
+  ],
+  "bridges-ecclesiastes.ECC.3.12.2": [
+   "expositionofbook00brid_0",
+   92,
+   "87"
+  ],
+  "bridges-ecclesiastes.ECC.3.12.3": [
+   "expositionofbook00brid_0",
+   94,
+   "89"
+  ],
+  "bridges-ecclesiastes.ECC.3.13.1": [
+   "expositionofbook00brid_0",
+   95,
+   "90"
+  ],
+  "bridges-ecclesiastes.ECC.3.13.2": [
+   "expositionofbook00brid_0",
+   96,
+   "91"
+  ],
+  "bridges-ecclesiastes.ECC.3.13.3": [
+   "expositionofbook00brid_0",
+   97,
+   "92"
+  ],
+  "bridges-ecclesiastes.ECC.3.13.4": [
+   "expositionofbook00brid_0",
+   98,
+   "93"
+  ],
+  "bridges-ecclesiastes.ECC.3.14.1": [
+   "expositionofbook00brid_0",
+   99,
+   "94"
+  ],
+  "bridges-ecclesiastes.ECC.3.14.2": [
+   "expositionofbook00brid_0",
+   100,
+   "95"
+  ],
+  "bridges-ecclesiastes.ECC.3.15.1": [
+   "expositionofbook00brid_0",
+   101,
+   "96"
+  ],
+  "bridges-ecclesiastes.ECC.3.15.2": [
+   "expositionofbook00brid_0",
+   102,
+   "97"
+  ],
+  "bridges-ecclesiastes.ECC.3.15.3": [
+   "expositionofbook00brid_0",
+   103,
+   "98"
+  ],
+  "bridges-ecclesiastes.ECC.3.16.1": [
+   "expositionofbook00brid_0",
+   104,
+   "99"
+  ],
+  "bridges-ecclesiastes.ECC.3.16.2": [
+   "expositionofbook00brid_0",
+   105,
+   "100"
+  ],
+  "bridges-ecclesiastes.ECC.3.16.3": [
+   "expositionofbook00brid_0",
+   106,
+   "101"
+  ],
+  "bridges-ecclesiastes.ECC.3.17.1": [
+   "expositionofbook00brid_0",
+   107,
+   "102"
+  ],
+  "bridges-ecclesiastes.ECC.3.17.2": [
+   "expositionofbook00brid_0",
+   107,
+   "102"
+  ],
+  "bridges-ecclesiastes.ECC.3.17.3": [
+   "expositionofbook00brid_0",
+   108,
+   "103"
+  ],
+  "bridges-ecclesiastes.ECC.3.18.1": [
+   "expositionofbook00brid_0",
+   109,
+   "104"
+  ],
+  "bridges-ecclesiastes.ECC.3.18.2": [
+   "expositionofbook00brid_0",
+   111,
+   "106"
+  ],
+  "bridges-ecclesiastes.ECC.3.18-20.1": [
+   "expositionofbook00brid_0",
+   111,
+   "106"
+  ],
+  "bridges-ecclesiastes.ECC.3.21.1": [
+   "expositionofbook00brid_0",
+   113,
+   "108"
+  ],
+  "bridges-ecclesiastes.ECC.3.22.1": [
+   "expositionofbook00brid_0",
+   114,
+   "109"
+  ],
+  "bridges-ecclesiastes.ECC.4.1-3.1": [
+   "expositionofbook00brid_0",
+   116,
+   "111"
+  ],
+  "bridges-ecclesiastes.ECC.4.1-3.2": [
+   "expositionofbook00brid_0",
+   117,
+   "112"
+  ],
+  "bridges-ecclesiastes.ECC.4.1-3.3": [
+   "expositionofbook00brid_0",
+   118,
+   "113"
+  ],
+  "bridges-ecclesiastes.ECC.4.4.1": [
+   "expositionofbook00brid_0",
+   119,
+   "114"
+  ],
+  "bridges-ecclesiastes.ECC.4.4.2": [
+   "expositionofbook00brid_0",
+   120,
+   "115"
+  ],
+  "bridges-ecclesiastes.ECC.4.4.3": [
+   "expositionofbook00brid_0",
+   121,
+   "116"
+  ],
+  "bridges-ecclesiastes.ECC.4.5-6.1": [
+   "expositionofbook00brid_0",
+   121,
+   "116"
+  ],
+  "bridges-ecclesiastes.ECC.4.5-6.2": [
+   "expositionofbook00brid_0",
+   123,
+   "118"
+  ],
+  "bridges-ecclesiastes.ECC.4.5-6.3": [
+   "expositionofbook00brid_0",
+   124,
+   "119"
+  ],
+  "bridges-ecclesiastes.ECC.4.5-6.4": [
+   "expositionofbook00brid_0",
+   125,
+   "120"
+  ],
+  "bridges-ecclesiastes.ECC.4.9-12.1": [
+   "expositionofbook00brid_0",
+   127,
+   "122"
+  ],
+  "bridges-ecclesiastes.ECC.4.9-12.2": [
+   "expositionofbook00brid_0",
+   127,
+   "122"
+  ],
+  "bridges-ecclesiastes.ECC.4.9-12.3": [
+   "expositionofbook00brid_0",
+   129,
+   "124"
+  ],
+  "bridges-ecclesiastes.ECC.4.9-12.4": [
+   "expositionofbook00brid_0",
+   130,
+   "125"
+  ],
+  "bridges-ecclesiastes.ECC.4.13.1": [
+   "expositionofbook00brid_0",
+   131,
+   "126"
+  ],
+  "bridges-ecclesiastes.ECC.4.13.2": [
+   "expositionofbook00brid_0",
+   132,
+   "127"
+  ],
+  "bridges-ecclesiastes.ECC.4.15-16.1": [
+   "expositionofbook00brid_0",
+   134,
+   "129"
+  ],
+  "bridges-ecclesiastes.ECC.4.15-16.2": [
+   "expositionofbook00brid_0",
+   134,
+   "129"
+  ],
+  "bridges-ecclesiastes.ECC.4.17.1": [
+   "expositionofbook00brid_0",
+   136,
+   "131"
+  ],
+  "bridges-ecclesiastes.ECC.4.17.2": [
+   "expositionofbook00brid_0",
+   137,
+   "132"
+  ],
+  "bridges-ecclesiastes.ECC.4.17.3": [
+   "expositionofbook00brid_0",
+   138,
+   "133"
+  ],
+  "bridges-ecclesiastes.ECC.4.17.4": [
+   "expositionofbook00brid_0",
+   139,
+   "134"
+  ],
+  "bridges-ecclesiastes.ECC.4.17.5": [
+   "expositionofbook00brid_0",
+   140,
+   "135"
+  ],
+  "bridges-ecclesiastes.ECC.5.1-2.1": [
+   "expositionofbook00brid_0",
+   141,
+   "136"
+  ],
+  "bridges-ecclesiastes.ECC.5.1-2.2": [
+   "expositionofbook00brid_0",
+   142,
+   "137"
+  ],
+  "bridges-ecclesiastes.ECC.5.1-2.3": [
+   "expositionofbook00brid_0",
+   143,
+   "138"
+  ],
+  "bridges-ecclesiastes.ECC.5.1-2.4": [
+   "expositionofbook00brid_0",
+   145,
+   "140"
+  ],
+  "bridges-ecclesiastes.ECC.5.3-6.1": [
+   "expositionofbook00brid_0",
+   146,
+   "141"
+  ],
+  "bridges-ecclesiastes.ECC.5.3-6.2": [
+   "expositionofbook00brid_0",
+   147,
+   "142"
+  ],
+  "bridges-ecclesiastes.ECC.5.3-6.3": [
+   "expositionofbook00brid_0",
+   148,
+   "143"
+  ],
+  "bridges-ecclesiastes.ECC.5.3-6.4": [
+   "expositionofbook00brid_0",
+   149,
+   "144"
+  ],
+  "bridges-ecclesiastes.ECC.5.3-6.5": [
+   "expositionofbook00brid_0",
+   149,
+   "144"
+  ],
+  "bridges-ecclesiastes.ECC.5.3-6.6": [
+   "expositionofbook00brid_0",
+   150,
+   "145"
+  ],
+  "bridges-ecclesiastes.ECC.5.7.1": [
+   "expositionofbook00brid_0",
+   151,
+   "146"
+  ],
+  "bridges-ecclesiastes.ECC.5.7.2": [
+   "expositionofbook00brid_0",
+   153,
+   "148"
+  ],
+  "bridges-ecclesiastes.ECC.5.8.1": [
+   "expositionofbook00brid_0",
+   153,
+   "148"
+  ],
+  "bridges-ecclesiastes.ECC.5.8.2": [
+   "expositionofbook00brid_0",
+   153,
+   "148"
+  ],
+  "bridges-ecclesiastes.ECC.5.9-11.1": [
+   "expositionofbook00brid_0",
+   155,
+   "150"
+  ],
+  "bridges-ecclesiastes.ECC.5.9-11.2": [
+   "expositionofbook00brid_0",
+   156,
+   "151"
+  ],
+  "bridges-ecclesiastes.ECC.5.9-11.3": [
+   "expositionofbook00brid_0",
+   157,
+   "152"
+  ],
+  "bridges-ecclesiastes.ECC.5.9-11.4": [
+   "expositionofbook00brid_0",
+   158,
+   "153"
+  ],
+  "bridges-ecclesiastes.ECC.5.12-16.1": [
+   "expositionofbook00brid_0",
+   160,
+   "155"
+  ],
+  "bridges-ecclesiastes.ECC.5.12-16.2": [
+   "expositionofbook00brid_0",
+   160,
+   "155"
+  ],
+  "bridges-ecclesiastes.ECC.5.17-19.1": [
+   "expositionofbook00brid_0",
+   162,
+   "157"
+  ],
+  "bridges-ecclesiastes.ECC.5.17-19.2": [
+   "expositionofbook00brid_0",
+   163,
+   "158"
+  ],
+  "bridges-ecclesiastes.ECC.5.17-19.3": [
+   "expositionofbook00brid_0",
+   164,
+   "159"
+  ],
+  "bridges-ecclesiastes.ECC.6.1-2.1": [
+   "expositionofbook00brid_0",
+   165,
+   "160"
+  ],
+  "bridges-ecclesiastes.ECC.6.1-2.2": [
+   "expositionofbook00brid_0",
+   166,
+   "161"
+  ],
+  "bridges-ecclesiastes.ECC.6.3-6.1": [
+   "expositionofbook00brid_0",
+   167,
+   "162"
+  ],
+  "bridges-ecclesiastes.ECC.6.3-6.2": [
+   "expositionofbook00brid_0",
+   168,
+   "163"
+  ],
+  "bridges-ecclesiastes.ECC.6.3-6.3": [
+   "expositionofbook00brid_0",
+   168,
+   "163"
+  ],
+  "bridges-ecclesiastes.ECC.6.7-8.1": [
+   "expositionofbook00brid_0",
+   169,
+   "164"
+  ],
+  "bridges-ecclesiastes.ECC.6.7-8.2": [
+   "expositionofbook00brid_0",
+   170,
+   "165"
+  ],
+  "bridges-ecclesiastes.ECC.6.9.1": [
+   "expositionofbook00brid_0",
+   171,
+   "166"
+  ],
+  "bridges-ecclesiastes.ECC.6.9.2": [
+   "expositionofbook00brid_0",
+   172,
+   "167"
+  ],
+  "bridges-ecclesiastes.ECC.6.10.1": [
+   "expositionofbook00brid_0",
+   173,
+   "168"
+  ],
+  "bridges-ecclesiastes.ECC.6.11-12.1": [
+   "expositionofbook00brid_0",
+   174,
+   "169"
+  ],
+  "bridges-ecclesiastes.ECC.6.11-12.2": [
+   "expositionofbook00brid_0",
+   176,
+   "171"
+  ],
+  "bridges-ecclesiastes.ECC.7.1.1": [
+   "expositionofbook00brid_0",
+   177,
+   "172"
+  ],
+  "bridges-ecclesiastes.ECC.7.1.2": [
+   "expositionofbook00brid_0",
+   178,
+   "173"
+  ],
+  "bridges-ecclesiastes.ECC.7.1.3": [
+   "expositionofbook00brid_0",
+   179,
+   "174"
+  ],
+  "bridges-ecclesiastes.ECC.7.2.1": [
+   "expositionofbook00brid_0",
+   180,
+   "175"
+  ],
+  "bridges-ecclesiastes.ECC.7.2.2": [
+   "expositionofbook00brid_0",
+   181,
+   "176"
+  ],
+  "bridges-ecclesiastes.ECC.7.8.1": [
+   "expositionofbook00brid_0",
+   182,
+   "177"
+  ],
+  "bridges-ecclesiastes.ECC.7.8.2": [
+   "expositionofbook00brid_0",
+   183,
+   "178"
+  ],
+  "bridges-ecclesiastes.ECC.7.8.3": [
+   "expositionofbook00brid_0",
+   184,
+   "179"
+  ],
+  "bridges-ecclesiastes.ECC.7.8.4": [
+   "expositionofbook00brid_0",
+   185,
+   "180"
+  ],
+  "bridges-ecclesiastes.ECC.7.9.1": [
+   "expositionofbook00brid_0",
+   186,
+   "181"
+  ],
+  "bridges-ecclesiastes.ECC.7.9.2": [
+   "expositionofbook00brid_0",
+   186,
+   "181"
+  ],
+  "bridges-ecclesiastes.ECC.7.9.3": [
+   "expositionofbook00brid_0",
+   187,
+   "182"
+  ],
+  "bridges-ecclesiastes.ECC.7.9.4": [
+   "expositionofbook00brid_0",
+   188,
+   "183"
+  ],
+  "bridges-ecclesiastes.ECC.7.10.1": [
+   "expositionofbook00brid_0",
+   188,
+   "183"
+  ],
+  "bridges-ecclesiastes.ECC.7.10.2": [
+   "expositionofbook00brid_0",
+   190,
+   "185"
+  ],
+  "bridges-ecclesiastes.ECC.7.10.3": [
+   "expositionofbook00brid_0",
+   191,
+   "186"
+  ],
+  "bridges-ecclesiastes.ECC.7.10.4": [
+   "expositionofbook00brid_0",
+   191,
+   "186"
+  ],
+  "bridges-ecclesiastes.ECC.7.10.5": [
+   "expositionofbook00brid_0",
+   193,
+   "188"
+  ],
+  "bridges-ecclesiastes.ECC.7.11.1": [
+   "expositionofbook00brid_0",
+   193,
+   "188"
+  ],
+  "bridges-ecclesiastes.ECC.7.11.2": [
+   "expositionofbook00brid_0",
+   193,
+   "188"
+  ],
+  "bridges-ecclesiastes.ECC.7.11.3": [
+   "expositionofbook00brid_0",
+   196,
+   "191"
+  ],
+  "bridges-ecclesiastes.ECC.7.12.1": [
+   "expositionofbook00brid_0",
+   196,
+   "191"
+  ],
+  "bridges-ecclesiastes.ECC.7.12.2": [
+   "expositionofbook00brid_0",
+   197,
+   "192"
+  ],
+  "bridges-ecclesiastes.ECC.7.12.3": [
+   "expositionofbook00brid_0",
+   198,
+   "193"
+  ],
+  "bridges-ecclesiastes.ECC.7.13.1": [
+   "expositionofbook00brid_0",
+   199,
+   "194"
+  ],
+  "bridges-ecclesiastes.ECC.7.13.2": [
+   "expositionofbook00brid_0",
+   200,
+   "195"
+  ],
+  "bridges-ecclesiastes.ECC.7.13.3": [
+   "expositionofbook00brid_0",
+   201,
+   "196"
+  ],
+  "bridges-ecclesiastes.ECC.7.13.4": [
+   "expositionofbook00brid_0",
+   202,
+   "197"
+  ],
+  "bridges-ecclesiastes.ECC.7.13.5": [
+   "expositionofbook00brid_0",
+   203,
+   "198"
+  ],
+  "bridges-ecclesiastes.ECC.7.14.1": [
+   "expositionofbook00brid_0",
+   204,
+   "199"
+  ],
+  "bridges-ecclesiastes.ECC.7.14.2": [
+   "expositionofbook00brid_0",
+   205,
+   "200"
+  ],
+  "bridges-ecclesiastes.ECC.7.14.3": [
+   "expositionofbook00brid_0",
+   206,
+   "201"
+  ],
+  "bridges-ecclesiastes.ECC.7.14.4": [
+   "expositionofbook00brid_0",
+   207,
+   "202"
+  ],
+  "bridges-ecclesiastes.ECC.7.14.5": [
+   "expositionofbook00brid_0",
+   208,
+   "203"
+  ],
+  "bridges-ecclesiastes.ECC.7.15.1": [
+   "expositionofbook00brid_0",
+   209,
+   "204"
+  ],
+  "bridges-ecclesiastes.ECC.7.15.2": [
+   "expositionofbook00brid_0",
+   210,
+   "205"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.1": [
+   "expositionofbook00brid_0",
+   211,
+   "206"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.2": [
+   "expositionofbook00brid_0",
+   212,
+   "207"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.3": [
+   "expositionofbook00brid_0",
+   212,
+   "207"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.4": [
+   "expositionofbook00brid_0",
+   214,
+   "209"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.5": [
+   "expositionofbook00brid_0",
+   215,
+   "210"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.6": [
+   "expositionofbook00brid_0",
+   216,
+   "211"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.7": [
+   "expositionofbook00brid_0",
+   216,
+   "211"
+  ],
+  "bridges-ecclesiastes.ECC.7.16-18.8": [
+   "expositionofbook00brid_0",
+   217,
+   "212"
+  ],
+  "bridges-ecclesiastes.ECC.7.19-20.1": [
+   "expositionofbook00brid_0",
+   218,
+   "213"
+  ],
+  "bridges-ecclesiastes.ECC.7.19-20.2": [
+   "expositionofbook00brid_0",
+   219,
+   "214"
+  ],
+  "bridges-ecclesiastes.ECC.7.19-20.3": [
+   "expositionofbook00brid_0",
+   220,
+   "215"
+  ],
+  "bridges-ecclesiastes.ECC.7.21-22.1": [
+   "expositionofbook00brid_0",
+   221,
+   "216"
+  ],
+  "bridges-ecclesiastes.ECC.7.21-22.2": [
+   "expositionofbook00brid_0",
+   223,
+   "218"
+  ],
+  "bridges-ecclesiastes.ECC.7.23-25.1": [
+   "expositionofbook00brid_0",
+   224,
+   "219"
+  ],
+  "bridges-ecclesiastes.ECC.7.23-25.2": [
+   "expositionofbook00brid_0",
+   225,
+   "220"
+  ],
+  "bridges-ecclesiastes.ECC.7.26.1": [
+   "expositionofbook00brid_0",
+   226,
+   "221"
+  ],
+  "bridges-ecclesiastes.ECC.7.27.1": [
+   "expositionofbook00brid_0",
+   227,
+   "222"
+  ],
+  "bridges-ecclesiastes.ECC.7.27.2": [
+   "expositionofbook00brid_0",
+   228,
+   "223"
+  ],
+  "bridges-ecclesiastes.ECC.7.27-28.1": [
+   "expositionofbook00brid_0",
+   228,
+   "223"
+  ],
+  "bridges-ecclesiastes.ECC.7.29.1": [
+   "expositionofbook00brid_0",
+   229,
+   "224"
+  ],
+  "bridges-ecclesiastes.ECC.7.29.2": [
+   "expositionofbook00brid_0",
+   230,
+   "225"
+  ],
+  "bridges-ecclesiastes.ECC.7.29.3": [
+   "expositionofbook00brid_0",
+   231,
+   "226"
+  ],
+  "bridges-ecclesiastes.ECC.7.29.4": [
+   "expositionofbook00brid_0",
+   232,
+   "227"
+  ],
+  "bridges-ecclesiastes.ECC.7.29.5": [
+   "expositionofbook00brid_0",
+   233,
+   "228"
+  ],
+  "bridges-ecclesiastes.ECC.8.1.1": [
+   "expositionofbook00brid_0",
+   235,
+   "230"
+  ],
+  "bridges-ecclesiastes.ECC.8.1.2": [
+   "expositionofbook00brid_0",
+   236,
+   "231"
+  ],
+  "bridges-ecclesiastes.ECC.8.1.3": [
+   "expositionofbook00brid_0",
+   236,
+   "231"
+  ],
+  "bridges-ecclesiastes.ECC.8.2.1": [
+   "expositionofbook00brid_0",
+   237,
+   "232"
+  ],
+  "bridges-ecclesiastes.ECC.8.2.2": [
+   "expositionofbook00brid_0",
+   238,
+   "233"
+  ],
+  "bridges-ecclesiastes.ECC.8.8.1": [
+   "expositionofbook00brid_0",
+   240,
+   "235"
+  ],
+  "bridges-ecclesiastes.ECC.8.8.2": [
+   "expositionofbook00brid_0",
+   241,
+   "236"
+  ],
+  "bridges-ecclesiastes.ECC.8.8.3": [
+   "expositionofbook00brid_0",
+   242,
+   "237"
+  ],
+  "bridges-ecclesiastes.ECC.8.8.4": [
+   "expositionofbook00brid_0",
+   243,
+   "238"
+  ],
+  "bridges-ecclesiastes.ECC.8.9.1": [
+   "expositionofbook00brid_0",
+   244,
+   "239"
+  ],
+  "bridges-ecclesiastes.ECC.8.9.2": [
+   "expositionofbook00brid_0",
+   245,
+   "240"
+  ],
+  "bridges-ecclesiastes.ECC.8.9.3": [
+   "expositionofbook00brid_0",
+   246,
+   "241"
+  ],
+  "bridges-ecclesiastes.ECC.8.10.1": [
+   "expositionofbook00brid_0",
+   247,
+   "242"
+  ],
+  "bridges-ecclesiastes.ECC.8.10.2": [
+   "expositionofbook00brid_0",
+   248,
+   "243"
+  ],
+  "bridges-ecclesiastes.ECC.8.10.3": [
+   "expositionofbook00brid_0",
+   249,
+   "244"
+  ],
+  "bridges-ecclesiastes.ECC.8.11.1": [
+   "expositionofbook00brid_0",
+   250,
+   "245"
+  ],
+  "bridges-ecclesiastes.ECC.8.11.2": [
+   "expositionofbook00brid_0",
+   250,
+   "245"
+  ],
+  "bridges-ecclesiastes.ECC.8.11.3": [
+   "expositionofbook00brid_0",
+   252,
+   "247"
+  ],
+  "bridges-ecclesiastes.ECC.8.11.4": [
+   "expositionofbook00brid_0",
+   253,
+   "248"
+  ],
+  "bridges-ecclesiastes.ECC.8.11.5": [
+   "expositionofbook00brid_0",
+   253,
+   "248"
+  ],
+  "bridges-ecclesiastes.ECC.8.11.6": [
+   "expositionofbook00brid_0",
+   254,
+   "249"
+  ],
+  "bridges-ecclesiastes.ECC.8.11.7": [
+   "expositionofbook00brid_0",
+   256,
+   "251"
+  ],
+  "bridges-ecclesiastes.ECC.8.12-13.1": [
+   "expositionofbook00brid_0",
+   256,
+   "251"
+  ],
+  "bridges-ecclesiastes.ECC.8.12-13.2": [
+   "expositionofbook00brid_0",
+   257,
+   "252"
+  ],
+  "bridges-ecclesiastes.ECC.8.12-13.3": [
+   "expositionofbook00brid_0",
+   258,
+   "253"
+  ],
+  "bridges-ecclesiastes.ECC.8.12-13.4": [
+   "expositionofbook00brid_0",
+   259,
+   "254"
+  ],
+  "bridges-ecclesiastes.ECC.8.12-13.5": [
+   "expositionofbook00brid_0",
+   259,
+   "254"
+  ],
+  "bridges-ecclesiastes.ECC.8.14-15.1": [
+   "expositionofbook00brid_0",
+   261,
+   "256"
+  ],
+  "bridges-ecclesiastes.ECC.8.14-15.2": [
+   "expositionofbook00brid_0",
+   262,
+   "257"
+  ],
+  "bridges-ecclesiastes.ECC.8.16.1": [
+   "expositionofbook00brid_0",
+   263,
+   "258"
+  ],
+  "bridges-ecclesiastes.ECC.8.16.2": [
+   "expositionofbook00brid_0",
+   264,
+   "259"
+  ],
+  "bridges-ecclesiastes.ECC.8.16.3": [
+   "expositionofbook00brid_0",
+   265,
+   "260"
+  ],
+  "bridges-ecclesiastes.ECC.8.16.4": [
+   "expositionofbook00brid_0",
+   266,
+   "261"
+  ],
+  "bridges-ecclesiastes.ECC.8.16.5": [
+   "expositionofbook00brid_0",
+   267,
+   "262"
+  ],
+  "bridges-ecclesiastes.ECC.8.16.6": [
+   "expositionofbook00brid_0",
+   267,
+   "262"
+  ],
+  "bridges-ecclesiastes.ECC.9.1-2.1": [
+   "expositionofbook00brid_0",
+   269,
+   "264"
+  ],
+  "bridges-ecclesiastes.ECC.9.1-2.2": [
+   "expositionofbook00brid_0",
+   270,
+   "265"
+  ],
+  "bridges-ecclesiastes.ECC.9.3.1": [
+   "expositionofbook00brid_0",
+   271,
+   "266"
+  ],
+  "bridges-ecclesiastes.ECC.9.3.2": [
+   "expositionofbook00brid_0",
+   272,
+   "267"
+  ],
+  "bridges-ecclesiastes.ECC.9.3.3": [
+   "expositionofbook00brid_0",
+   273,
+   "268"
+  ],
+  "bridges-ecclesiastes.ECC.9.4-6.1": [
+   "expositionofbook00brid_0",
+   275,
+   "270"
+  ],
+  "bridges-ecclesiastes.ECC.9.4-6.2": [
+   "expositionofbook00brid_0",
+   276,
+   "271"
+  ],
+  "bridges-ecclesiastes.ECC.9.7-9.1": [
+   "expositionofbook00brid_0",
+   277,
+   "272"
+  ],
+  "bridges-ecclesiastes.ECC.9.7-9.2": [
+   "expositionofbook00brid_0",
+   278,
+   "273"
+  ],
+  "bridges-ecclesiastes.ECC.9.7-9.3": [
+   "expositionofbook00brid_0",
+   279,
+   "274"
+  ],
+  "bridges-ecclesiastes.ECC.9.7-9.4": [
+   "expositionofbook00brid_0",
+   281,
+   "276"
+  ],
+  "bridges-ecclesiastes.ECC.9.10.1": [
+   "expositionofbook00brid_0",
+   282,
+   "277"
+  ],
+  "bridges-ecclesiastes.ECC.9.10.2": [
+   "expositionofbook00brid_0",
+   283,
+   "278"
+  ],
+  "bridges-ecclesiastes.ECC.9.10.3": [
+   "expositionofbook00brid_0",
+   284,
+   "279"
+  ],
+  "bridges-ecclesiastes.ECC.9.10.4": [
+   "expositionofbook00brid_0",
+   285,
+   "280"
+  ],
+  "bridges-ecclesiastes.ECC.9.10.5": [
+   "expositionofbook00brid_0",
+   285,
+   "280"
+  ],
+  "bridges-ecclesiastes.ECC.9.10.6": [
+   "expositionofbook00brid_0",
+   286,
+   "281"
+  ],
+  "bridges-ecclesiastes.ECC.9.11.1": [
+   "expositionofbook00brid_0",
+   287,
+   "282"
+  ],
+  "bridges-ecclesiastes.ECC.9.11.2": [
+   "expositionofbook00brid_0",
+   288,
+   "283"
+  ],
+  "bridges-ecclesiastes.ECC.9.13-16.1": [
+   "expositionofbook00brid_0",
+   290,
+   "285"
+  ],
+  "bridges-ecclesiastes.ECC.9.13-16.2": [
+   "expositionofbook00brid_0",
+   291,
+   "286"
+  ],
+  "bridges-ecclesiastes.ECC.9.17-18.1": [
+   "expositionofbook00brid_0",
+   292,
+   "287"
+  ],
+  "bridges-ecclesiastes.ECC.9.17-18.2": [
+   "expositionofbook00brid_0",
+   293,
+   "288"
+  ],
+  "bridges-ecclesiastes.ECC.9.17-18.3": [
+   "expositionofbook00brid_0",
+   294,
+   "289"
+  ],
+  "bridges-ecclesiastes.ECC.10.1.1": [
+   "expositionofbook00brid_0",
+   295,
+   "290"
+  ],
+  "bridges-ecclesiastes.ECC.10.1.2": [
+   "expositionofbook00brid_0",
+   296,
+   "291"
+  ],
+  "bridges-ecclesiastes.ECC.10.2-3.1": [
+   "expositionofbook00brid_0",
+   297,
+   "292"
+  ],
+  "bridges-ecclesiastes.ECC.10.2-3.2": [
+   "expositionofbook00brid_0",
+   298,
+   "293"
+  ],
+  "bridges-ecclesiastes.ECC.10.2-3.3": [
+   "expositionofbook00brid_0",
+   299,
+   "294"
+  ],
+  "bridges-ecclesiastes.ECC.10.2-3.4": [
+   "expositionofbook00brid_0",
+   300,
+   "295"
+  ],
+  "bridges-ecclesiastes.ECC.10.4.1": [
+   "expositionofbook00brid_0",
+   301,
+   "296"
+  ],
+  "bridges-ecclesiastes.ECC.10.4.2": [
+   "expositionofbook00brid_0",
+   303,
+   "298"
+  ],
+  "bridges-ecclesiastes.ECC.10.5-7.1": [
+   "expositionofbook00brid_0",
+   303,
+   "298"
+  ],
+  "bridges-ecclesiastes.ECC.10.5-7.2": [
+   "expositionofbook00brid_0",
+   305,
+   "300"
+  ],
+  "bridges-ecclesiastes.ECC.10.8-9.1": [
+   "expositionofbook00brid_0",
+   306,
+   "301"
+  ],
+  "bridges-ecclesiastes.ECC.10.10.1": [
+   "expositionofbook00brid_0",
+   307,
+   "302"
+  ],
+  "bridges-ecclesiastes.ECC.10.10.2": [
+   "expositionofbook00brid_0",
+   308,
+   "303"
+  ],
+  "bridges-ecclesiastes.ECC.10.10.3": [
+   "expositionofbook00brid_0",
+   309,
+   "304"
+  ],
+  "bridges-ecclesiastes.ECC.10.11.1": [
+   "expositionofbook00brid_0",
+   310,
+   "305"
+  ],
+  "bridges-ecclesiastes.ECC.10.11.2": [
+   "expositionofbook00brid_0",
+   311,
+   "306"
+  ],
+  "bridges-ecclesiastes.ECC.10.12-15.1": [
+   "expositionofbook00brid_0",
+   312,
+   "307"
+  ],
+  "bridges-ecclesiastes.ECC.10.12-15.2": [
+   "expositionofbook00brid_0",
+   313,
+   "308"
+  ],
+  "bridges-ecclesiastes.ECC.10.12-15.3": [
+   "expositionofbook00brid_0",
+   314,
+   "309"
+  ],
+  "bridges-ecclesiastes.ECC.10.12-15.4": [
+   "expositionofbook00brid_0",
+   315,
+   "310"
+  ],
+  "bridges-ecclesiastes.ECC.10.16-17.1": [
+   "expositionofbook00brid_0",
+   316,
+   "311"
+  ],
+  "bridges-ecclesiastes.ECC.10.16-17.2": [
+   "expositionofbook00brid_0",
+   318,
+   "313"
+  ],
+  "bridges-ecclesiastes.ECC.10.16-17.3": [
+   "expositionofbook00brid_0",
+   318,
+   "313"
+  ],
+  "bridges-ecclesiastes.ECC.10.18.1": [
+   "expositionofbook00brid_0",
+   319,
+   "314"
+  ],
+  "bridges-ecclesiastes.ECC.10.18.2": [
+   "expositionofbook00brid_0",
+   320,
+   "315"
+  ],
+  "bridges-ecclesiastes.ECC.10.18.3": [
+   "expositionofbook00brid_0",
+   321,
+   "316"
+  ],
+  "bridges-ecclesiastes.ECC.10.18.4": [
+   "expositionofbook00brid_0",
+   322,
+   "317"
+  ],
+  "bridges-ecclesiastes.ECC.10.19.1": [
+   "expositionofbook00brid_0",
+   324,
+   "319"
+  ],
+  "bridges-ecclesiastes.ECC.10.19.2": [
+   "expositionofbook00brid_0",
+   325,
+   "320"
+  ],
+  "bridges-ecclesiastes.ECC.10.20.1": [
+   "expositionofbook00brid_0",
+   326,
+   "321"
+  ],
+  "bridges-ecclesiastes.ECC.10.20.2": [
+   "expositionofbook00brid_0",
+   327,
+   "322"
+  ],
+  "bridges-ecclesiastes.ECC.10.20.3": [
+   "expositionofbook00brid_0",
+   328,
+   "323"
+  ],
+  "bridges-ecclesiastes.ECC.11.1.1": [
+   "expositionofbook00brid_0",
+   329,
+   "324"
+  ],
+  "bridges-ecclesiastes.ECC.11.1.2": [
+   "expositionofbook00brid_0",
+   330,
+   "325"
+  ],
+  "bridges-ecclesiastes.ECC.11.1.3": [
+   "expositionofbook00brid_0",
+   331,
+   "326"
+  ],
+  "bridges-ecclesiastes.ECC.11.1.4": [
+   "expositionofbook00brid_0",
+   332,
+   "327"
+  ],
+  "bridges-ecclesiastes.ECC.11.2.1": [
+   "expositionofbook00brid_0",
+   333,
+   "328"
+  ],
+  "bridges-ecclesiastes.ECC.11.2.2": [
+   "expositionofbook00brid_0",
+   334,
+   "329"
+  ],
+  "bridges-ecclesiastes.ECC.11.2.3": [
+   "expositionofbook00brid_0",
+   334,
+   "329"
+  ],
+  "bridges-ecclesiastes.ECC.11.3.1": [
+   "expositionofbook00brid_0",
+   336,
+   "331"
+  ],
+  "bridges-ecclesiastes.ECC.11.4.1": [
+   "expositionofbook00brid_0",
+   337,
+   "332"
+  ],
+  "bridges-ecclesiastes.ECC.11.4.2": [
+   "expositionofbook00brid_0",
+   338,
+   "333"
+  ],
+  "bridges-ecclesiastes.ECC.11.4.3": [
+   "expositionofbook00brid_0",
+   339,
+   "334"
+  ],
+  "bridges-ecclesiastes.ECC.11.5.1": [
+   "expositionofbook00brid_0",
+   340,
+   "335"
+  ],
+  "bridges-ecclesiastes.ECC.11.5.2": [
+   "expositionofbook00brid_0",
+   341,
+   "336"
+  ],
+  "bridges-ecclesiastes.ECC.11.6.1": [
+   "expositionofbook00brid_0",
+   342,
+   "337"
+  ],
+  "bridges-ecclesiastes.ECC.11.6.2": [
+   "expositionofbook00brid_0",
+   343,
+   "338"
+  ],
+  "bridges-ecclesiastes.ECC.11.6.3": [
+   "expositionofbook00brid_0",
+   344,
+   "339"
+  ],
+  "bridges-ecclesiastes.ECC.11.7.1": [
+   "expositionofbook00brid_0",
+   345,
+   "340"
+  ],
+  "bridges-ecclesiastes.ECC.11.7.2": [
+   "expositionofbook00brid_0",
+   346,
+   "341"
+  ],
+  "bridges-ecclesiastes.ECC.11.7.3": [
+   "expositionofbook00brid_0",
+   346,
+   "341"
+  ],
+  "bridges-ecclesiastes.ECC.11.7.4": [
+   "expositionofbook00brid_0",
+   348,
+   "343"
+  ],
+  "bridges-ecclesiastes.ECC.11.9-10.1": [
+   "expositionofbook00brid_0",
+   348,
+   "343"
+  ],
+  "bridges-ecclesiastes.ECC.11.9-10.2": [
+   "expositionofbook00brid_0",
+   349,
+   "344"
+  ],
+  "bridges-ecclesiastes.ECC.11.9-10.3": [
+   "expositionofbook00brid_0",
+   350,
+   "345"
+  ],
+  "bridges-ecclesiastes.ECC.11.9-10.4": [
+   "expositionofbook00brid_0",
+   351,
+   "346"
+  ],
+  "bridges-ecclesiastes.ECC.11.9-10.5": [
+   "expositionofbook00brid_0",
+   352,
+   "347"
+  ],
+  "bridges-ecclesiastes.ECC.12.1.1": [
+   "expositionofbook00brid_0",
+   354,
+   "349"
+  ],
+  "bridges-ecclesiastes.ECC.12.1.2": [
+   "expositionofbook00brid_0",
+   355,
+   "350"
+  ],
+  "bridges-ecclesiastes.ECC.12.1.3": [
+   "expositionofbook00brid_0",
+   356,
+   "351"
+  ],
+  "bridges-ecclesiastes.ECC.12.1.4": [
+   "expositionofbook00brid_0",
+   357,
+   "352"
+  ],
+  "bridges-ecclesiastes.ECC.12.1.5": [
+   "expositionofbook00brid_0",
+   360,
+   "355"
+  ],
+  "bridges-ecclesiastes.ECC.12.3-6.1": [
+   "expositionofbook00brid_0",
+   361,
+   "356"
+  ],
+  "bridges-ecclesiastes.ECC.12.3-6.2": [
+   "expositionofbook00brid_0",
+   361,
+   "356"
+  ],
+  "bridges-ecclesiastes.ECC.12.3-6.3": [
+   "expositionofbook00brid_0",
+   362,
+   "357"
+  ],
+  "bridges-ecclesiastes.ECC.12.3-6.4": [
+   "expositionofbook00brid_0",
+   364,
+   "359"
+  ],
+  "bridges-ecclesiastes.ECC.12.3-6.5": [
+   "expositionofbook00brid_0",
+   365,
+   "360"
+  ],
+  "bridges-ecclesiastes.ECC.12.3-6.6": [
+   "expositionofbook00brid_0",
+   366,
+   "361"
+  ],
+  "bridges-ecclesiastes.ECC.12.7.1": [
+   "expositionofbook00brid_0",
+   367,
+   "362"
+  ],
+  "bridges-ecclesiastes.ECC.12.7.2": [
+   "expositionofbook00brid_0",
+   368,
+   "363"
+  ],
+  "bridges-ecclesiastes.ECC.12.7.3": [
+   "expositionofbook00brid_0",
+   369,
+   "364"
+  ],
+  "bridges-ecclesiastes.ECC.12.7.4": [
+   "expositionofbook00brid_0",
+   370,
+   "365"
+  ],
+  "bridges-ecclesiastes.ECC.12.8.1": [
+   "expositionofbook00brid_0",
+   371,
+   "366"
+  ],
+  "bridges-ecclesiastes.ECC.12.8.2": [
+   "expositionofbook00brid_0",
+   372,
+   "367"
+  ],
+  "bridges-ecclesiastes.ECC.12.8.3": [
+   "expositionofbook00brid_0",
+   373,
+   "368"
+  ],
+  "bridges-ecclesiastes.ECC.12.9.1": [
+   "expositionofbook00brid_0",
+   374,
+   "369"
+  ],
+  "bridges-ecclesiastes.ECC.12.9.2": [
+   "expositionofbook00brid_0",
+   376,
+   "371"
+  ],
+  "bridges-ecclesiastes.ECC.12.10.1": [
+   "expositionofbook00brid_0",
+   376,
+   "371"
+  ],
+  "bridges-ecclesiastes.ECC.12.10.2": [
+   "expositionofbook00brid_0",
+   378,
+   "373"
+  ],
+  "bridges-ecclesiastes.ECC.12.11.1": [
+   "expositionofbook00brid_0",
+   379,
+   "374"
+  ],
+  "bridges-ecclesiastes.ECC.12.11.2": [
+   "expositionofbook00brid_0",
+   380,
+   "375"
+  ],
+  "bridges-ecclesiastes.ECC.12.11.3": [
+   "expositionofbook00brid_0",
+   381,
+   "376"
+  ],
+  "bridges-ecclesiastes.ECC.12.12.1": [
+   "expositionofbook00brid_0",
+   382,
+   "377"
+  ],
+  "bridges-ecclesiastes.ECC.12.13.1": [
+   "expositionofbook00brid_0",
+   383,
+   "378"
+  ],
+  "bridges-ecclesiastes.ECC.12.13.2": [
+   "expositionofbook00brid_0",
+   383,
+   "378"
+  ],
+  "bridges-ecclesiastes.ECC.12.13.3": [
+   "expositionofbook00brid_0",
+   384,
+   "379"
+  ],
+  "bridges-ecclesiastes.ECC.12.13.4": [
+   "expositionofbook00brid_0",
+   385,
+   "380"
+  ],
+  "bridges-ecclesiastes.ECC.12.14.1": [
+   "expositionofbook00brid_0",
+   386,
+   "381"
+  ],
+  "bridges-ecclesiastes.ECC.12.14.2": [
+   "expositionofbook00brid_0",
+   388,
+   "383"
+  ],
+  "bridges-ecclesiastes.ECC.12.14.3": [
+   "expositionofbook00brid_0",
+   389,
+   "384"
+  ],
+  "bridges-ecclesiastes.ECC.12.14.4": [
+   "expositionofbook00brid_0",
+   391,
+   "386"
+  ],
+  "bridges-ecclesiastes.ECC.12.14.5": [
+   "expositionofbook00brid_0",
+   392,
+   "387"
+  ]
+ }
+}
