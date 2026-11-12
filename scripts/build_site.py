@@ -1586,7 +1586,7 @@ def book_page(lib, book):
           f'<button type="submit" class="button ghost">{e(t("commentators.jump_go"))}</button>'
           f'<span class="lg-quiet" id="go-{book.lower()}-hint" role="status">{e(t("book.go_hint", example=hint))}</span></form>' if have else "")
     if here and done == total:
-        dek = t("book.dek_full", n=total, excerpts=f"{len(here):,}", works=len(works),
+        dek = t("book.dek_full" if len(works) != 1 else "book.dek_full_one", n=total, excerpts=f"{len(here):,}", works=len(works),
                 h=book_hours(sum(words.values())))
     elif done:
         dek = t("book.dek", n=total, done=done)
@@ -4093,7 +4093,12 @@ CATENA_NAMES = {
     "Isidore": "isidore", "Isid.": "isidore", "Damascenus": "damascene", "Damas.": "damascene",
     "Damasc.": "damascene", "Theodotus": "theodotus", "Gregory Nyss.": "gregory_nyssa", "Anselm": "anselm",
     "Josephus": "josephus", "Maximus": "maximus", "Gennadius": "gennadius", "Ambrosiaster": "ambrosiaster",
-    "Nemesius": "nemesius", "Dionysius": "dionysius", "Dionys.": "dionysius"}
+    "Nemesius": "nemesius", "Dionysius": "dionysius", "Dionys.": "dionysius",
+    # the Catena on Mark, with the misprints its pages carry
+    "Theophylact": "theophylact", "Theophlyact": "theophylact", "Theophyact": "theophylact",
+    "Pseudo-Jerome": "pseudo_jerome", "Chrysostom": "chrysostom", "Severianus": "severianus",
+    "Pseudo-Augustine": "pseudo_augustine", "Psuedo-Chrys.": "pseudo_chrysostom", "Pseudo-Chyrs.": "pseudo_chrysostom",
+    "Origin": "origen", "Greg. Nyss.": "gregory_nyssa", "Titus": "titus"}
 CATENA_HEAD = re.compile(r"(?:^|(?<=\n\n))([A-Z][A-Za-z\-]+\.?(?: [A-Z][A-Za-z]+\.?)?)(,[^:\n]{0,90})?:(?= )")
 
 

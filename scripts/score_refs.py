@@ -19,7 +19,9 @@ Two measures, both read from the library, never typed:
   and library/texts/ records the verses each homily covers, as CCEL's
   headings print them. A match whose homily covers that verse, or whose
   paragraph is within a few verses of it, agrees; the rest are listed for a
-  person to check first, against the margin note on the printed page. A
+  person to check first, against the margin note on the printed page.
+  A quotation from a homily on another Gospel (the Catena on Mark quoting
+  Chrysostom on Matthew) cannot be checked this way and is only counted. A
   homily runs from the first verse its heading names to the verse the next
   homily opens on, since the headings mark only some of the verses between.
 
@@ -97,11 +99,12 @@ def verse_number(ref):
 
 
 def quotation_scores():
-    paras, texts = {}, collections.defaultdict(list)
+    paras, texts, book_of = {}, collections.defaultdict(list), {}
     for p in glob.glob(os.path.join(ROOT, "library", "texts", "*", "*.json")):
         t = load(p)
         if t.get("verses"):
             texts[t["work"]].append((int(t["locus"]), t["verses"]))
+            book_of[t["work"]] = t["verses"]["start"].split(".")[0]
         for para in t["paragraphs"]:
             paras[(t["work"], para["id"])] = para.get("verse")
     covers = {}
@@ -119,6 +122,9 @@ def quotation_scores():
         flagged = []
         for q in data["quotations"]:
             if q["status"] == "rejected":
+                continue
+            if book_of.get(q["work"]) not in (None, data["book"]):
+                tally["from another book"] += 1        # the Catena on Mark quoting Chrysostom on Matthew
                 continue
             ref = q["in"].split(".", 1)[1].rsplit(".", 1)[0].split("-")[0]
             at = verse_number(ref)
