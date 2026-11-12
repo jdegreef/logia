@@ -351,7 +351,11 @@ def scan_citations(excerpt, book, chapter, own=None):
 # can follow to the quoted work: the library's source pages for that work.
 CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"},
            "catena-matthew": {"CHRYS": "chrysostom-matthew"},
-           "catena-mark": {"CHRYS": "chrysostom-matthew"}}
+           "catena-mark": {"CHRYS": "chrysostom-matthew"},
+           # The Catena on Luke's Chrysostom is "chiefly taken from the Homilies on
+           # Matthew" (its Preface); its Augustine, Origen and Cyril come from works
+           # on other books than the ones the library holds.
+           "catena-luke": {"CHRYS": "chrysostom-matthew"}}
 # The Part II scans of the Catena (John 11-21), and CCEL's Matthew, print the names in
 # this form: "Aug.", "Chrys."; "Pseudo-Chrys." (the Opus Imperfectum) is not Chrysostom.
 LABEL = re.compile(r"(?<![\w-])(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
@@ -463,8 +467,8 @@ def match_quotation(words, candidates, idf, near=lambda para: False):
 
 def overlaps(span, entry):
     """True if a text's verses (from library/texts/) overlap an excerpt's."""
-    if not span:
-        return False
+    if not span or span["start"].split(".")[0] != entry["start"].split(".")[0]:
+        return False                # a homily on another book (the Catena on Luke quoting Matthew's)
     key = lambda ref: tuple(int(x) for x in ref.split(".")[1:])     # noqa: E731
     return key(span["start"]) <= key(entry["end"]) and key(entry["start"]) <= key(span["end"])
 

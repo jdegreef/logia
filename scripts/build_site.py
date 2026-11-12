@@ -3382,10 +3382,20 @@ def work_chapter_page(lib, wid, book, chapter, comments):
                 description=t("work.chapter_description", name=a["name"], title=w["title"], chapter=name, n=len(here)))
 
 
+def text_titled(x):
+    """1 if a whole text opens with its title ("Homily LV."), else 0: Homily LIV
+    of Chrysostom on Matthew has no page of its own and opens on its first words."""
+    first = x["paragraphs"][0] if x["paragraphs"] else None
+    return 1 if first and len(first["text"]) < 60 and not first["excerpts"] else 0
+
+
 def text_lead(x):
     """The short headings under a homily's title: "John i. 1", "Chapter I. 1–5"."""
     out = []
-    for p in x["paragraphs"][1:3]:
+    start = text_titled(x)
+    if not start:
+        return ""
+    for p in x["paragraphs"][start:start + 2]:
         if len(p["text"]) >= 60 or p["excerpts"] or re.match(r"\d+\.\s", p["text"]):   # a section's heading
             break
         out.append(p["text"])
@@ -3396,7 +3406,7 @@ def text_body(x):
     """A whole text's paragraphs after its title and the headings under it:
     the ones its page sets out, each with its id."""
     lead = text_lead(x)
-    return x["paragraphs"][1 + (lead.count(" · ") + 1 if lead else 0):]
+    return x["paragraphs"][text_titled(x) + (lead.count(" · ") + 1 if lead else 0):]
 
 
 def linked_html(lib, text, cites):

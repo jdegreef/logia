@@ -3575,6 +3575,69 @@
    "extract": "Characters 175279-815886 of the scan's full text (the pages quoted, with a margin)."
   },
   {
+   "path": "sources/catena-luke/catenaaureacomme03thomuoft.txt",
+   "work": "catena-luke",
+   "url": "https://archive.org/stream/catenaaureacomme03thomuoft/catenaaureacomme03thomuoft_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "7bd395d3a9d610293737710df768155270fae91eb2ade4de47e88892ed555fab",
+   "extract": "Characters 163377-1174618 of the scan's full text: Part I (chapters 1-10), the main copy, from the commentary's first page to the end (the excerpts are copied from it)."
+  },
+  {
+   "path": "sources/catena-luke/catenaaurept203thomuoft.txt",
+   "work": "catena-luke",
+   "url": "https://archive.org/stream/catenaaurept203thomuoft/catenaaurept203thomuoft_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "cb1ccd235f68a994543041a30e14e69c90e52715abec7db3e36849ab87b28fdc",
+   "extract": "Characters 138311-1210948 of the scan's full text: Part II (chapters 11-24), the main copy, its whole OCR text (the excerpts are copied from it)."
+  },
+  {
+   "path": "sources/catena-luke/p1catenaaureaco03thom.txt",
+   "work": "catena-luke",
+   "url": "https://archive.org/stream/p1catenaaureaco03thom/p1catenaaureaco03thom_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "cb75f762782cd09ef5ddda992938181a06d7f9fe80fc6cac7c21d4790afac2e6",
+   "extract": "Characters 163553-1178551 of the scan's full text: Part I, another scan of the same printing, compared with the main copy word by word; the corrections in library/corrections/catena-luke.json follow it where two or more copies agree."
+  },
+  {
+   "path": "sources/catena-luke/a6788682p103thomuoft.txt",
+   "work": "catena-luke",
+   "url": "https://archive.org/stream/a6788682p103thomuoft/a6788682p103thomuoft_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "bae19a3f156425b0eda35ea42906061ccf51b04d2338e643d76edf36ca121841",
+   "extract": "Characters 163280-1177030 of the scan's full text: Part I, another scan of the same printing, compared with the main copy word by word; the corrections in library/corrections/catena-luke.json follow it where two or more copies agree."
+  },
+  {
+   "path": "sources/catena-luke/p2catenaaureaco03thom.txt",
+   "work": "catena-luke",
+   "url": "https://archive.org/stream/p2catenaaureaco03thom/p2catenaaureaco03thom_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "4879290c4b1cc6b40811febd4311638298c8b90de5dd0d7e5b03436a9671c367",
+   "extract": "Characters 138305-1214419 of the scan's full text: Part II, another scan of the same printing, compared with the main copy word by word; the corrections in library/corrections/catena-luke.json follow it where two or more copies agree."
+  },
+  {
+   "path": "sources/catena-luke/p2catenaaureacom03thomuoft.txt",
+   "work": "catena-luke",
+   "url": "https://archive.org/stream/p2catenaaureacom03thomuoft/p2catenaaureacom03thomuoft_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "aaca7ba42ab9a9834e2abd48deb2b42eeb51ef85cd4b1797cd3622a4b9623197",
+   "extract": "Characters 138320-1211537 of the scan's full text: Part II, another scan of the same printing, compared with the main copy word by word; the corrections in library/corrections/catena-luke.json follow it where two or more copies agree."
+  },
+  {
+   "path": "sources/catena-luke/catenaaureacomme03thom.txt",
+   "work": "catena-luke",
+   "url": "https://archive.org/stream/catenaaureacomme03thom/catenaaureacomme03thom_djvu.txt",
+   "retrieved": "2026-11-12",
+   "kind": "scan",
+   "download_sha256": "eaee31760a0e7f37e9bbe93956004ac442777fc6923d03ca420353ddc651813b",
+   "extract": "Characters 163276-2244367 of the scan's full text: Parts I and II bound together, another scan of the same printing, compared with the main copy word by word; the corrections in library/corrections/catena-luke.json follow it where two or more copies agree."
+  },
+  {
    "path": "sources/ryle/expositorythough07ryle.txt",
    "work": "ryle",
    "url": "https://archive.org/stream/expositorythough07ryle/expositorythough07ryle_djvu.txt",
