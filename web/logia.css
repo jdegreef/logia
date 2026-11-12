@@ -1366,3 +1366,8 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .cx-nav .cx-listen[hidden] { display: none; }
 .cx-nav .cx-listen[aria-pressed="true"] { border-color: var(--lg-gold-ink); color: var(--lg-gold-ink); }
 .cx-card.cx-speaking { background: color-mix(in srgb, var(--gold) 9%, transparent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 9%, transparent); border-radius: 2px; }
+
+/* Selected text: a soft gold wash with the body colour, in every theme;
+   the contrast theme keeps the system's own highlight. */
+::selection { background: color-mix(in oklab, var(--gold) 34%, var(--bg)); color: var(--text); }
+:root[data-theme="contrast"] ::selection { background: Highlight; color: HighlightText; }
