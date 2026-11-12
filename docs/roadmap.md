@@ -14,10 +14,10 @@ it, so it comes first. The rules in `CLAUDE.md` apply to every item: nothing
 here permits writing commentary, typing Greek or Hebrew, or marking work
 reviewed without a named human reviewer.
 
-Where Logia stands (November 2026): 41 works by 25 commentators on Genesis,
-Job, the Psalms, Proverbs, Ecclesiastes, the Song of Songs, Matthew, John,
-Romans and Galatians, 39,110 excerpts, a chapter reader with Greek words
-and cross-references, and source checking.
+Where Logia stands (November 2026): 48 works by 27 commentators on Genesis,
+Job, the Psalms, Proverbs, Ecclesiastes, the Song of Songs, Matthew, Luke,
+John, Romans and Galatians, 47,474 excerpts, a chapter reader with Greek
+words and cross-references, and source checking.
 
 ## Phase 1: the data model
 

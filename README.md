@@ -30,7 +30,7 @@ Christian commentaries.
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
-41 works by 25 commentators, 39,110 excerpts in all:
+48 works by 27 commentators, 47,474 excerpts in all:
 
 - **Genesis**: Basil's Hexaemeron (1:1–25), Keil, Haydock and Jamieson
   (Jamieson-Fausset-Brown).
@@ -40,6 +40,8 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 - **Proverbs** and **Ecclesiastes**: Matthew Henry, Fausset and Charles Bridges.
 - **Song of Songs**: Bernard of Clairvaux's sermons (1:1–3:3).
 - **Matthew**: Chrysostom, the Catena Aurea, Calvin, Matthew Henry and Ryle.
+- **Luke**: the Catena Aurea, Calvin, Matthew Henry and Jamieson
+  (Jamieson-Fausset-Brown), on the whole Gospel.
 - **John**: Chrysostom, Augustine, the Catena Aurea, Calvin, Matthew Henry,
   Bengel, J. C. Ryle, Westcott, John Wesley and Cornelius a Lapide on the
   whole Gospel; Cyril of Alexandria (all but John 10:19–12:50, whose books
