@@ -1057,6 +1057,24 @@ html {
 /* Verse pages (/<book>/<chapter>/<verse>/): one verse and every voice on it,
    read straight down the page. */
 .lg-verse { max-width: 760px; }
+/* Wide screens: the voices rail beside the page. */
+.lg-vrail { display: none; }
+@media (min-width: 1100px) {
+  .lg-verse.lg-verse-railed { max-width: none; display: grid; grid-template-columns: minmax(0, 760px) 220px; gap: 0 48px; align-items: start; }
+  .lg-verse-railed .lg-verse-main { min-width: 0; }
+  .lg-verse-railed .page-head .lg-chbar { display: none; }
+  .lg-vrail { display: block; position: sticky; top: calc(var(--header-h) + 24px); margin-top: 48px;
+    max-height: calc(100vh - var(--header-h) - 48px); overflow-y: auto; border-left: 1px solid var(--line); padding: 0 0 0 16px; }
+  .lg-vrail .label { margin: 0 0 10px; }
+  .lg-vrail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+  .lg-vrail a { display: grid; gap: 0; padding: 5px 0 5px 16px; position: relative; text-decoration: none; color: var(--text); border-radius: 6px; }
+  .lg-vrail a::before { content: ""; position: absolute; left: 2px; top: 12px; width: 8px; height: 8px; border-radius: 50%; background: var(--era); }
+  .lg-vrail b { font-family: var(--display); font-weight: 600; font-size: 15.5px; }
+  .lg-vrail span { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .lg-vrail a:hover b { color: var(--accent); }
+  .lg-vrail a[aria-current="true"] b { color: var(--accent); }
+  .lg-vrail a[aria-current="true"]::after { content: ""; position: absolute; left: -17px; top: 4px; bottom: 4px; width: 2px; background: var(--accent); }
+}
 .lg-verse .page-head { padding-bottom: 12px; }
 .lg-vtext { margin: 0 0 8px; padding: 4px 0 4px 18px; border-left: 3px solid var(--gold); }
 .lg-vtext p { margin: 0; font-family: var(--read-font); font-size: calc(22px * var(--read-scale)); line-height: 1.5; }
