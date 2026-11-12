@@ -1197,6 +1197,10 @@ html {
 .lg-wk-cards .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-top: 4px; }
 .lg-wk-cards .lg-meter > span { display: block; height: 100%; background: var(--era, var(--accent)); }
 .lg-wk-cards .button { margin-top: auto; align-self: flex-start; }
+@media (min-width: 640px) {
+  .lg-wk-cards { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .lg-wk-cards li { grid-column: span var(--span, 2); }
+}
 .lg-bstrip { margin: 28px 0 0; }
 .lg-bstrip-cells { display: grid; grid-template-columns: repeat(66, minmax(0, 1fr)); gap: 2px; }
 .lg-bstrip-cells > * { height: 16px; border-radius: 2px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); }

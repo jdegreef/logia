@@ -2937,6 +2937,18 @@ def author_page(lib, author):
         cards.append(f'<li><p class="lg-wk-book">{e(label)}</p><a class="lg-wk-title" href="/works/{w}/"><i>{e(x["title"])}</i></a>'
                      + (f'<span class="lg-quiet">{e(short_edition(x["edition"]))}</span>' if x["edition"] else "")
                      + f'{meters}{go}</li>')
+    # Lay the cards on a six-column grid so every row is full: three to a row
+    # (span 2) or two (span 3), with the last row or two widened so no card
+    # sits alone beside a hole (five cards: three, then two).
+    n = len(cards)
+    if n % 3 == 0:
+        spans = [2] * n
+    elif n % 2 == 0:
+        spans = [3] * n
+    else:
+        wide = 2 if n % 3 == 2 else 4
+        spans = [2] * (n - wide) + [3] * wide
+    cards = [c.replace("<li>", f'<li style="--span:{k}">', 1) for c, k in zip(cards, spans)]
     works_block = (f'<section class="lg-works" aria-labelledby="works-{aid}"><h2 class="label" id="works-{aid}">{e(t("commentators.works"))}</h2>'
                    f'<ul class="lg-wk-cards">{"".join(cards)}</ul></section>' if cards else "")
 
