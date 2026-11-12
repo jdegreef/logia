@@ -81,6 +81,19 @@
    "status": "detected"
   },
   {
+   "in": "catena-mark.MRK.8.32.1",
+   "at": 252,
+   "label": "Chrys.",
+   "work": "chrysostom-matthew",
+   "locus": "54",
+   "source": "npnf110.iii.LII-homily-LIV.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.32,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
    "in": "catena-mark.MRK.9.19.1",
    "at": 0,
    "label": "Chrys.",
@@ -90,19 +103,6 @@
    "para": null,
    "excerpt": null,
    "score": 0.32,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
-   "in": "catena-mark.MRK.9.28.4",
-   "at": 923,
-   "label": "Chrys.",
-   "work": "chrysostom-matthew",
-   "locus": "22.7",
-   "source": "npnf110.iii.XXII.html",
-   "para": "iii.XXII-p65",
-   "excerpt": null,
-   "score": 0.38,
    "found": "similar",
    "status": "detected"
   },

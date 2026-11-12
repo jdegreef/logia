@@ -2,11 +2,11 @@
  "about": "Written by scripts/score_refs.py: the pattern matcher of scripts/find_refs.py scored against the references CCEL's editors marked, and the Catena's quotations checked against the verses each homily or tractate covers. Never typed.",
  "citations": {
   "all": {
-   "found": 35898,
-   "marked": 32968,
-   "right": 31613,
-   "caught": 31861,
-   "precision": 0.881,
+   "found": 36081,
+   "marked": 33020,
+   "right": 31664,
+   "caught": 31912,
+   "precision": 0.878,
    "recall": 0.966
   },
   "works": {
@@ -225,6 +225,14 @@
     "caught": 72,
     "precision": 0.425,
     "recall": 0.973
+   },
+   "wesley-romans": {
+    "found": 183,
+    "marked": 52,
+    "right": 51,
+    "caught": 51,
+    "precision": 0.279,
+    "recall": 0.981
    }
   }
  },
@@ -235,13 +243,14 @@
    "check_first": []
   },
   "catena-matthew/MAT": {
-   "quotations": 197,
-   "inside the homily": 153,
-   "outside": 27,
+   "quotations": 201,
+   "inside the homily": 156,
+   "outside": 28,
    "paragraph near": 17,
    "check_first": [
     "catena-matthew.MAT.12.5.1",
     "catena-matthew.MAT.14.20.1",
+    "catena-matthew.MAT.16.18.1",
     "catena-matthew.MAT.16.4.1",
     "catena-matthew.MAT.17.15.1",
     "catena-matthew.MAT.18.17.1",
