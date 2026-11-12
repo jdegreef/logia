@@ -1366,3 +1366,13 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .cx-nav .cx-listen[hidden] { display: none; }
 .cx-nav .cx-listen[aria-pressed="true"] { border-color: var(--lg-gold-ink); color: var(--lg-gold-ink); }
 .cx-card.cx-speaking { background: color-mix(in srgb, var(--gold) 9%, transparent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 9%, transparent); border-radius: 2px; }
+
+/* Home, "The voices, so far": one row per era, its names flowing inline,
+   so a short era doesn't leave a blank column beside a long one. */
+.lg-era-rows section { display: grid; grid-template-columns: 11em minmax(0, 1fr); gap: 4px 24px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--line); }
+.lg-era-rows section:last-child { border-bottom: 1px solid var(--line); }
+.lg-era-rows h3 { margin: 0; }
+.lg-people-flow { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.lg-people-flow li { border: 0; }
+.lg-people-flow a { padding: 2px 0; gap: 0 7px; }
+@media (max-width: 640px) { .lg-era-rows section { grid-template-columns: 1fr; } }

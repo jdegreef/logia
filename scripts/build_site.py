@@ -1329,9 +1329,10 @@ def home_page(lib):
              if famous else strips)
     voices = ""
     for era in ERAS:
-        people = [a for a in lib.ordered_authors() if a["era"] == era]
+        # By birth, as the dates read ("1812-1900" first among those dying later).
+        people = sorted((a for a in lib.ordered_authors() if a["era"] == era), key=born)
         if people:
-            voices += (f'<section><h3 class="label">{e(t("eras." + era))}</h3><ul class="lg-people">'
+            voices += (f'<section><h3 class="label">{e(t("eras." + era))}</h3><ul class="lg-people lg-people-flow">'
                        + "".join(f'<li><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b> '
                                  f'<span>{e(a["dates"])}</span></a></li>' for a in people) + "</ul></section>")
     body = f"""{home_hero(lib, cov)}
@@ -1340,7 +1341,7 @@ def home_page(lib):
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
 <p class="lg-quiet">{e(t("home.heat_note"))}</p>{cards}</section>
 <section class="lg-block" aria-labelledby="h-voices"><h2 id="h-voices">{e(t("home.voices_heading"))}</h2>
-<div class="lg-eras">{voices}</div>
+<div class="lg-era-rows">{voices}</div>
 <p><a class="lg-more" href="/commentators/">{e(t("home.all_commentators"))} {icon("arrow", 15)}</a></p></section>
 <section class="lg-block" aria-labelledby="h-how"><h2 id="h-how">{e(t("home.how_heading"))}</h2>
 <div class="lg-cols">
