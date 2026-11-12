@@ -568,6 +568,7 @@
   "work": {
     "eyebrow": "Commentary",
     "by": "By {name}",
+    "printed": "Printed {year}",
     "edition": "Edition",
     "translation": "Translation",
     "original": "Written in",

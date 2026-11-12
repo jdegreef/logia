@@ -1366,3 +1366,14 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .cx-nav .cx-listen[hidden] { display: none; }
 .cx-nav .cx-listen[aria-pressed="true"] { border-color: var(--lg-gold-ink); color: var(--lg-gold-ink); }
 .cx-card.cx-speaking { background: color-mix(in srgb, var(--gold) 9%, transparent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 9%, transparent); border-radius: 2px; }
+
+/* A work page's top, set like the printed edition's title page: centred,
+   the author in small capitals, a short rule, then the imprint. */
+.lg-titlepage { text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;
+  padding: 28px 16px 24px; border-top: 3px double var(--line-strong); border-bottom: 3px double var(--line-strong); }
+.lg-titlepage h1 { text-wrap: balance; margin-left: auto; margin-right: auto; }
+.lg-titlepage .lg-tp-by { font-variant: small-caps; letter-spacing: .06em; font-size: 20px; margin: 10px auto 0; }
+.lg-tp-imprint { margin: 16px auto 0; max-width: 34em; font-family: var(--serif); font-size: 15.5px; line-height: 1.5; color: var(--muted);
+  font-variant-numeric: oldstyle-nums; }
+.lg-tp-imprint::before { content: ""; display: block; width: 64px; height: 1px; margin: 0 auto 14px; background: var(--line-strong); }
+.lg-titlepage .actions { justify-content: center; margin-top: 18px; }

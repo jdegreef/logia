@@ -3196,9 +3196,16 @@ def work_page(lib, wid):
                  f'<ul class="lg-wholes">{items}</ul></div>'
                  f'<div><h3 class="label">{e(t("work.by_verse"))}</h3><p class="lg-quiet">{e(t("work.by_verse_note"))}</p>'
                  f'<ul class="lg-wholes lg-by-verse">{by_verse}</ul></div></div></section>')
+    # The top of the page set like the printed edition's title page: the
+    # title, a rule, then the translation (when it fits a title page) and the
+    # year it was printed, all from the work's record.
+    imprint_line = w["translation"] if w["translation"] and len(w["translation"]) <= 160 else ""
+    printed = "" if str(w["published"]) in imprint_line else e(t("work.printed", year=w["published"]))
+    imprint = f'<p class="lg-tp-imprint">{"<br>".join(x for x in (e(imprint_line), printed) if x)}</p>'
     body = f"""
-<header class="page-head"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
-<h1>{e(w["title"])}</h1><p class="dek">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
+<header class="page-head lg-titlepage"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
+<h1>{e(w["title"])}</h1><p class="dek lg-tp-by">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
+{imprint}
 <p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
 {start}
 <details class="lg-record-fold" open><summary><b>{e(t("work.record"))}</b><span class="lg-quiet">{e(w["original_language"])} · {w["published"]} · {e(t("work.excerpts", n=f"{len(comments):,}"))}</span></summary>
