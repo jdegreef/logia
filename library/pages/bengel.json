@@ -1,0 +1,2953 @@
+{
+ "work": "bengel",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "gnomonofnewtesta0000mern",
+   "files": [
+    {
+     "url": "https://archive.org/download/gnomonofnewtesta0000mern/gnomonofnewtesta0000mern_hocr_pageindex.json.gz",
+     "sha256": "0ccc0f9c599865e281e1d83de850c84059cd4a00cf1fc5aab99e4e8f2245ac3c"
+    },
+    {
+     "url": "https://archive.org/download/gnomonofnewtesta0000mern/gnomonofnewtesta0000mern_hocr_searchtext.txt.gz",
+     "sha256": "a8afd59aca2b160f4e4f18c8a17fb2f30e779c6545db65f0a005bd9b1d65d825"
+    },
+    {
+     "url": "https://archive.org/download/gnomonofnewtesta0000mern/gnomonofnewtesta0000mern_page_numbers.json",
+     "sha256": "17fa1ae4b43d2318ea5336421e5bfedb662451ae685fd8280e30e5b8ddbd5429"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 585,
+ "missed": 0,
+ "pages": {
+  "bengel.JHN.1.1.1": [
+   "gnomonofnewtesta0000mern",
+   240,
+   "231"
+  ],
+  "bengel.JHN.1.1.2": [
+   "gnomonofnewtesta0000mern",
+   245,
+   "236"
+  ],
+  "bengel.JHN.1.1.3": [
+   "gnomonofnewtesta0000mern",
+   249,
+   "240"
+  ],
+  "bengel.JHN.1.2.1": [
+   "gnomonofnewtesta0000mern",
+   250,
+   "241"
+  ],
+  "bengel.JHN.1.3.1": [
+   "gnomonofnewtesta0000mern",
+   250,
+   "241"
+  ],
+  "bengel.JHN.1.4.1": [
+   "gnomonofnewtesta0000mern",
+   251,
+   "242"
+  ],
+  "bengel.JHN.1.5.1": [
+   "gnomonofnewtesta0000mern",
+   251,
+   "242"
+  ],
+  "bengel.JHN.1.6.1": [
+   "gnomonofnewtesta0000mern",
+   252,
+   "243"
+  ],
+  "bengel.JHN.1.7.1": [
+   "gnomonofnewtesta0000mern",
+   253,
+   "244"
+  ],
+  "bengel.JHN.1.8.1": [
+   "gnomonofnewtesta0000mern",
+   253,
+   "244"
+  ],
+  "bengel.JHN.1.9.1": [
+   "gnomonofnewtesta0000mern",
+   254,
+   "245"
+  ],
+  "bengel.JHN.1.10.1": [
+   "gnomonofnewtesta0000mern",
+   255,
+   "246"
+  ],
+  "bengel.JHN.1.11.1": [
+   "gnomonofnewtesta0000mern",
+   255,
+   "246"
+  ],
+  "bengel.JHN.1.12.1": [
+   "gnomonofnewtesta0000mern",
+   256,
+   "247"
+  ],
+  "bengel.JHN.1.13.1": [
+   "gnomonofnewtesta0000mern",
+   256,
+   "247"
+  ],
+  "bengel.JHN.1.14.1": [
+   "gnomonofnewtesta0000mern",
+   258,
+   "249"
+  ],
+  "bengel.JHN.1.14.2": [
+   "gnomonofnewtesta0000mern",
+   259,
+   "250"
+  ],
+  "bengel.JHN.1.14.3": [
+   "gnomonofnewtesta0000mern",
+   259,
+   "250"
+  ],
+  "bengel.JHN.1.15.1": [
+   "gnomonofnewtesta0000mern",
+   261,
+   "252"
+  ],
+  "bengel.JHN.1.15.2": [
+   "gnomonofnewtesta0000mern",
+   262,
+   "253"
+  ],
+  "bengel.JHN.1.16.1": [
+   "gnomonofnewtesta0000mern",
+   263,
+   "254"
+  ],
+  "bengel.JHN.1.17.1": [
+   "gnomonofnewtesta0000mern",
+   264,
+   "255"
+  ],
+  "bengel.JHN.1.18.1": [
+   "gnomonofnewtesta0000mern",
+   264,
+   "255"
+  ],
+  "bengel.JHN.1.18.2": [
+   "gnomonofnewtesta0000mern",
+   265,
+   "256"
+  ],
+  "bengel.JHN.1.19.1": [
+   "gnomonofnewtesta0000mern",
+   265,
+   "256"
+  ],
+  "bengel.JHN.1.20.1": [
+   "gnomonofnewtesta0000mern",
+   265,
+   "256"
+  ],
+  "bengel.JHN.1.21.1": [
+   "gnomonofnewtesta0000mern",
+   266,
+   "257"
+  ],
+  "bengel.JHN.1.22-23.1": [
+   "gnomonofnewtesta0000mern",
+   266,
+   "257"
+  ],
+  "bengel.JHN.1.24.1": [
+   "gnomonofnewtesta0000mern",
+   266,
+   "257"
+  ],
+  "bengel.JHN.1.26-27.1": [
+   "gnomonofnewtesta0000mern",
+   267,
+   "258"
+  ],
+  "bengel.JHN.1.28.1": [
+   "gnomonofnewtesta0000mern",
+   267,
+   "258"
+  ],
+  "bengel.JHN.1.29.1": [
+   "gnomonofnewtesta0000mern",
+   267,
+   "258"
+  ],
+  "bengel.JHN.1.29.2": [
+   "gnomonofnewtesta0000mern",
+   268,
+   "259"
+  ],
+  "bengel.JHN.1.30-31.1": [
+   "gnomonofnewtesta0000mern",
+   268,
+   "259"
+  ],
+  "bengel.JHN.1.32.1": [
+   "gnomonofnewtesta0000mern",
+   269,
+   "260"
+  ],
+  "bengel.JHN.1.33-34.1": [
+   "gnomonofnewtesta0000mern",
+   269,
+   "260"
+  ],
+  "bengel.JHN.1.35-36.1": [
+   "gnomonofnewtesta0000mern",
+   269,
+   "260"
+  ],
+  "bengel.JHN.1.37.1": [
+   "gnomonofnewtesta0000mern",
+   270,
+   "261"
+  ],
+  "bengel.JHN.1.38.1": [
+   "gnomonofnewtesta0000mern",
+   270,
+   "261"
+  ],
+  "bengel.JHN.1.39.1": [
+   "gnomonofnewtesta0000mern",
+   270,
+   "261"
+  ],
+  "bengel.JHN.1.41.1": [
+   "gnomonofnewtesta0000mern",
+   271,
+   "262"
+  ],
+  "bengel.JHN.1.42.1": [
+   "gnomonofnewtesta0000mern",
+   271,
+   "262"
+  ],
+  "bengel.JHN.1.43-44.1": [
+   "gnomonofnewtesta0000mern",
+   271,
+   "262"
+  ],
+  "bengel.JHN.1.45.1": [
+   "gnomonofnewtesta0000mern",
+   272,
+   "263"
+  ],
+  "bengel.JHN.1.46.1": [
+   "gnomonofnewtesta0000mern",
+   272,
+   "263"
+  ],
+  "bengel.JHN.1.47.1": [
+   "gnomonofnewtesta0000mern",
+   273,
+   "264"
+  ],
+  "bengel.JHN.1.48.1": [
+   "gnomonofnewtesta0000mern",
+   273,
+   "264"
+  ],
+  "bengel.JHN.1.49.1": [
+   "gnomonofnewtesta0000mern",
+   273,
+   "264"
+  ],
+  "bengel.JHN.1.50.1": [
+   "gnomonofnewtesta0000mern",
+   273,
+   "264"
+  ],
+  "bengel.JHN.1.51.1": [
+   "gnomonofnewtesta0000mern",
+   274,
+   "265"
+  ],
+  "bengel.JHN.2.1.1": [
+   "gnomonofnewtesta0000mern",
+   275,
+   "266"
+  ],
+  "bengel.JHN.2.2.1": [
+   "gnomonofnewtesta0000mern",
+   276,
+   "267"
+  ],
+  "bengel.JHN.2.3.1": [
+   "gnomonofnewtesta0000mern",
+   276,
+   "267"
+  ],
+  "bengel.JHN.2.4.1": [
+   "gnomonofnewtesta0000mern",
+   276,
+   "267"
+  ],
+  "bengel.JHN.2.5.1": [
+   "gnomonofnewtesta0000mern",
+   277,
+   "268"
+  ],
+  "bengel.JHN.2.6-8.1": [
+   "gnomonofnewtesta0000mern",
+   277,
+   "268"
+  ],
+  "bengel.JHN.2.9-10.1": [
+   "gnomonofnewtesta0000mern",
+   277,
+   "268"
+  ],
+  "bengel.JHN.2.11.1": [
+   "gnomonofnewtesta0000mern",
+   278,
+   "269"
+  ],
+  "bengel.JHN.2.11.2": [
+   "gnomonofnewtesta0000mern",
+   278,
+   "269"
+  ],
+  "bengel.JHN.2.12-13.1": [
+   "gnomonofnewtesta0000mern",
+   279,
+   "270"
+  ],
+  "bengel.JHN.2.14-16.1": [
+   "gnomonofnewtesta0000mern",
+   279,
+   "270"
+  ],
+  "bengel.JHN.2.17.1": [
+   "gnomonofnewtesta0000mern",
+   279,
+   "270"
+  ],
+  "bengel.JHN.2.18.1": [
+   "gnomonofnewtesta0000mern",
+   280,
+   "271"
+  ],
+  "bengel.JHN.2.19.1": [
+   "gnomonofnewtesta0000mern",
+   280,
+   "271"
+  ],
+  "bengel.JHN.2.19.2": [
+   "gnomonofnewtesta0000mern",
+   281,
+   "272"
+  ],
+  "bengel.JHN.2.20-21.1": [
+   "gnomonofnewtesta0000mern",
+   281,
+   "272"
+  ],
+  "bengel.JHN.2.22.1": [
+   "gnomonofnewtesta0000mern",
+   281,
+   "272"
+  ],
+  "bengel.JHN.2.23.1": [
+   "gnomonofnewtesta0000mern",
+   281,
+   "272"
+  ],
+  "bengel.JHN.2.24.1": [
+   "gnomonofnewtesta0000mern",
+   282,
+   "273"
+  ],
+  "bengel.JHN.2.25.1": [
+   "gnomonofnewtesta0000mern",
+   282,
+   "273"
+  ],
+  "bengel.JHN.3.1-2.1": [
+   "gnomonofnewtesta0000mern",
+   283,
+   "274"
+  ],
+  "bengel.JHN.3.3.1": [
+   "gnomonofnewtesta0000mern",
+   283,
+   "274"
+  ],
+  "bengel.JHN.3.4.1": [
+   "gnomonofnewtesta0000mern",
+   284,
+   "275"
+  ],
+  "bengel.JHN.3.5.1": [
+   "gnomonofnewtesta0000mern",
+   284,
+   "275"
+  ],
+  "bengel.JHN.3.6-7.1": [
+   "gnomonofnewtesta0000mern",
+   285,
+   "276"
+  ],
+  "bengel.JHN.3.8.1": [
+   "gnomonofnewtesta0000mern",
+   286,
+   "277"
+  ],
+  "bengel.JHN.3.10.1": [
+   "gnomonofnewtesta0000mern",
+   286,
+   "277"
+  ],
+  "bengel.JHN.3.11.1": [
+   "gnomonofnewtesta0000mern",
+   287,
+   "278"
+  ],
+  "bengel.JHN.3.12.1": [
+   "gnomonofnewtesta0000mern",
+   287,
+   "278"
+  ],
+  "bengel.JHN.3.13.1": [
+   "gnomonofnewtesta0000mern",
+   287,
+   "278"
+  ],
+  "bengel.JHN.3.14.1": [
+   "gnomonofnewtesta0000mern",
+   288,
+   "279"
+  ],
+  "bengel.JHN.3.15.1": [
+   "gnomonofnewtesta0000mern",
+   289,
+   "280"
+  ],
+  "bengel.JHN.3.16.1": [
+   "gnomonofnewtesta0000mern",
+   289,
+   "280"
+  ],
+  "bengel.JHN.3.17-18.1": [
+   "gnomonofnewtesta0000mern",
+   290,
+   "281"
+  ],
+  "bengel.JHN.3.19.1": [
+   "gnomonofnewtesta0000mern",
+   290,
+   "281"
+  ],
+  "bengel.JHN.3.20-21.1": [
+   "gnomonofnewtesta0000mern",
+   291,
+   "282"
+  ],
+  "bengel.JHN.3.22.1": [
+   "gnomonofnewtesta0000mern",
+   291,
+   "282"
+  ],
+  "bengel.JHN.3.23-24.1": [
+   "gnomonofnewtesta0000mern",
+   292,
+   "283"
+  ],
+  "bengel.JHN.3.25-26.1": [
+   "gnomonofnewtesta0000mern",
+   292,
+   "283"
+  ],
+  "bengel.JHN.3.27-28.1": [
+   "gnomonofnewtesta0000mern",
+   292,
+   "283"
+  ],
+  "bengel.JHN.3.29-30.1": [
+   "gnomonofnewtesta0000mern",
+   293,
+   "284"
+  ],
+  "bengel.JHN.3.31.1": [
+   "gnomonofnewtesta0000mern",
+   293,
+   "284"
+  ],
+  "bengel.JHN.3.32.1": [
+   "gnomonofnewtesta0000mern",
+   294,
+   "285"
+  ],
+  "bengel.JHN.3.33.1": [
+   "gnomonofnewtesta0000mern",
+   294,
+   "285"
+  ],
+  "bengel.JHN.3.34.1": [
+   "gnomonofnewtesta0000mern",
+   294,
+   "285"
+  ],
+  "bengel.JHN.3.35.1": [
+   "gnomonofnewtesta0000mern",
+   295,
+   "286"
+  ],
+  "bengel.JHN.3.36.1": [
+   "gnomonofnewtesta0000mern",
+   295,
+   "286"
+  ],
+  "bengel.JHN.4.1-2.1": [
+   "gnomonofnewtesta0000mern",
+   296,
+   "287"
+  ],
+  "bengel.JHN.4.4.1": [
+   "gnomonofnewtesta0000mern",
+   296,
+   "287"
+  ],
+  "bengel.JHN.4.5.1": [
+   "gnomonofnewtesta0000mern",
+   297,
+   "288"
+  ],
+  "bengel.JHN.4.6.1": [
+   "gnomonofnewtesta0000mern",
+   297,
+   "288"
+  ],
+  "bengel.JHN.4.7.1": [
+   "gnomonofnewtesta0000mern",
+   298,
+   "289"
+  ],
+  "bengel.JHN.4.8.1": [
+   "gnomonofnewtesta0000mern",
+   298,
+   "289"
+  ],
+  "bengel.JHN.4.9.1": [
+   "gnomonofnewtesta0000mern",
+   298,
+   "289"
+  ],
+  "bengel.JHN.4.10.1": [
+   "gnomonofnewtesta0000mern",
+   298,
+   "289"
+  ],
+  "bengel.JHN.4.11.1": [
+   "gnomonofnewtesta0000mern",
+   300,
+   "291"
+  ],
+  "bengel.JHN.4.12.1": [
+   "gnomonofnewtesta0000mern",
+   300,
+   "291"
+  ],
+  "bengel.JHN.4.14.1": [
+   "gnomonofnewtesta0000mern",
+   300,
+   "291"
+  ],
+  "bengel.JHN.4.15-16.1": [
+   "gnomonofnewtesta0000mern",
+   301,
+   "292"
+  ],
+  "bengel.JHN.4.17-18.1": [
+   "gnomonofnewtesta0000mern",
+   301,
+   "292"
+  ],
+  "bengel.JHN.4.19-20.1": [
+   "gnomonofnewtesta0000mern",
+   302,
+   "293"
+  ],
+  "bengel.JHN.4.21.1": [
+   "gnomonofnewtesta0000mern",
+   302,
+   "293"
+  ],
+  "bengel.JHN.4.22.1": [
+   "gnomonofnewtesta0000mern",
+   303,
+   "294"
+  ],
+  "bengel.JHN.4.23.1": [
+   "gnomonofnewtesta0000mern",
+   303,
+   "294"
+  ],
+  "bengel.JHN.4.24.1": [
+   "gnomonofnewtesta0000mern",
+   304,
+   "295"
+  ],
+  "bengel.JHN.4.25-26.1": [
+   "gnomonofnewtesta0000mern",
+   304,
+   "295"
+  ],
+  "bengel.JHN.4.27-28.1": [
+   "gnomonofnewtesta0000mern",
+   304,
+   "295"
+  ],
+  "bengel.JHN.4.29-30.1": [
+   "gnomonofnewtesta0000mern",
+   305,
+   "296"
+  ],
+  "bengel.JHN.4.31-32.1": [
+   "gnomonofnewtesta0000mern",
+   305,
+   "296"
+  ],
+  "bengel.JHN.4.34.1": [
+   "gnomonofnewtesta0000mern",
+   305,
+   "296"
+  ],
+  "bengel.JHN.4.35.1": [
+   "gnomonofnewtesta0000mern",
+   306,
+   "297"
+  ],
+  "bengel.JHN.4.36.1": [
+   "gnomonofnewtesta0000mern",
+   307,
+   "298"
+  ],
+  "bengel.JHN.4.37.1": [
+   "gnomonofnewtesta0000mern",
+   307,
+   "298"
+  ],
+  "bengel.JHN.4.38.1": [
+   "gnomonofnewtesta0000mern",
+   308,
+   "299"
+  ],
+  "bengel.JHN.4.39.1": [
+   "gnomonofnewtesta0000mern",
+   308,
+   "299"
+  ],
+  "bengel.JHN.4.40-41.1": [
+   "gnomonofnewtesta0000mern",
+   308,
+   "299"
+  ],
+  "bengel.JHN.4.42.1": [
+   "gnomonofnewtesta0000mern",
+   308,
+   "299"
+  ],
+  "bengel.JHN.4.43-44.1": [
+   "gnomonofnewtesta0000mern",
+   309,
+   "300"
+  ],
+  "bengel.JHN.4.46-47.1": [
+   "gnomonofnewtesta0000mern",
+   309,
+   "300"
+  ],
+  "bengel.JHN.4.48.1": [
+   "gnomonofnewtesta0000mern",
+   310,
+   "301"
+  ],
+  "bengel.JHN.4.49-50.1": [
+   "gnomonofnewtesta0000mern",
+   310,
+   "301"
+  ],
+  "bengel.JHN.4.51-52.1": [
+   "gnomonofnewtesta0000mern",
+   311,
+   "302"
+  ],
+  "bengel.JHN.4.54.1": [
+   "gnomonofnewtesta0000mern",
+   311,
+   "302"
+  ],
+  "bengel.JHN.5.1.1": [
+   "gnomonofnewtesta0000mern",
+   312,
+   "303"
+  ],
+  "bengel.JHN.5.2.1": [
+   "gnomonofnewtesta0000mern",
+   313,
+   "304"
+  ],
+  "bengel.JHN.5.3-4.1": [
+   "gnomonofnewtesta0000mern",
+   313,
+   "304"
+  ],
+  "bengel.JHN.5.6-7.1": [
+   "gnomonofnewtesta0000mern",
+   313,
+   "304"
+  ],
+  "bengel.JHN.5.8-11.1": [
+   "gnomonofnewtesta0000mern",
+   314,
+   "305"
+  ],
+  "bengel.JHN.5.13-14.1": [
+   "gnomonofnewtesta0000mern",
+   314,
+   "305"
+  ],
+  "bengel.JHN.5.15.1": [
+   "gnomonofnewtesta0000mern",
+   314,
+   "305"
+  ],
+  "bengel.JHN.5.16-17.1": [
+   "gnomonofnewtesta0000mern",
+   315,
+   "306"
+  ],
+  "bengel.JHN.5.18.1": [
+   "gnomonofnewtesta0000mern",
+   315,
+   "306"
+  ],
+  "bengel.JHN.5.19.1": [
+   "gnomonofnewtesta0000mern",
+   316,
+   "307"
+  ],
+  "bengel.JHN.5.19-20.1": [
+   "gnomonofnewtesta0000mern",
+   317,
+   "308"
+  ],
+  "bengel.JHN.5.21.1": [
+   "gnomonofnewtesta0000mern",
+   317,
+   "308"
+  ],
+  "bengel.JHN.5.22.1": [
+   "gnomonofnewtesta0000mern",
+   317,
+   "308"
+  ],
+  "bengel.JHN.5.23-24.1": [
+   "gnomonofnewtesta0000mern",
+   318,
+   "309"
+  ],
+  "bengel.JHN.5.25.1": [
+   "gnomonofnewtesta0000mern",
+   318,
+   "309"
+  ],
+  "bengel.JHN.5.26-27.1": [
+   "gnomonofnewtesta0000mern",
+   319,
+   "310"
+  ],
+  "bengel.JHN.5.28.1": [
+   "gnomonofnewtesta0000mern",
+   319,
+   "310"
+  ],
+  "bengel.JHN.5.29-31.1": [
+   "gnomonofnewtesta0000mern",
+   319,
+   "310"
+  ],
+  "bengel.JHN.5.32.1": [
+   "gnomonofnewtesta0000mern",
+   320,
+   "311"
+  ],
+  "bengel.JHN.5.34.1": [
+   "gnomonofnewtesta0000mern",
+   320,
+   "311"
+  ],
+  "bengel.JHN.5.35.1": [
+   "gnomonofnewtesta0000mern",
+   321,
+   "312"
+  ],
+  "bengel.JHN.5.36-37.1": [
+   "gnomonofnewtesta0000mern",
+   321,
+   "312"
+  ],
+  "bengel.JHN.5.38.1": [
+   "gnomonofnewtesta0000mern",
+   322,
+   "313"
+  ],
+  "bengel.JHN.5.39.1": [
+   "gnomonofnewtesta0000mern",
+   323,
+   "314"
+  ],
+  "bengel.JHN.5.40.1": [
+   "gnomonofnewtesta0000mern",
+   323,
+   "314"
+  ],
+  "bengel.JHN.5.42.1": [
+   "gnomonofnewtesta0000mern",
+   324,
+   "315"
+  ],
+  "bengel.JHN.5.43-44.1": [
+   "gnomonofnewtesta0000mern",
+   324,
+   "315"
+  ],
+  "bengel.JHN.5.45.1": [
+   "gnomonofnewtesta0000mern",
+   324,
+   "315"
+  ],
+  "bengel.JHN.5.46-47.1": [
+   "gnomonofnewtesta0000mern",
+   325,
+   "316"
+  ],
+  "bengel.JHN.6.1.1": [
+   "gnomonofnewtesta0000mern",
+   325,
+   "316"
+  ],
+  "bengel.JHN.6.3-4.1": [
+   "gnomonofnewtesta0000mern",
+   325,
+   "316"
+  ],
+  "bengel.JHN.6.7-9.1": [
+   "gnomonofnewtesta0000mern",
+   326,
+   "317"
+  ],
+  "bengel.JHN.6.10.1": [
+   "gnomonofnewtesta0000mern",
+   326,
+   "317"
+  ],
+  "bengel.JHN.6.12-15.1": [
+   "gnomonofnewtesta0000mern",
+   326,
+   "317"
+  ],
+  "bengel.JHN.6.19-22.1": [
+   "gnomonofnewtesta0000mern",
+   327,
+   "318"
+  ],
+  "bengel.JHN.6.24-25.1": [
+   "gnomonofnewtesta0000mern",
+   327,
+   "318"
+  ],
+  "bengel.JHN.6.26.1": [
+   "gnomonofnewtesta0000mern",
+   328,
+   "319"
+  ],
+  "bengel.JHN.6.27.1": [
+   "gnomonofnewtesta0000mern",
+   328,
+   "319"
+  ],
+  "bengel.JHN.6.27.2": [
+   "gnomonofnewtesta0000mern",
+   329,
+   "320"
+  ],
+  "bengel.JHN.6.28-29.1": [
+   "gnomonofnewtesta0000mern",
+   329,
+   "320"
+  ],
+  "bengel.JHN.6.30.1": [
+   "gnomonofnewtesta0000mern",
+   329,
+   "320"
+  ],
+  "bengel.JHN.6.31.1": [
+   "gnomonofnewtesta0000mern",
+   330,
+   "321"
+  ],
+  "bengel.JHN.6.32.1": [
+   "gnomonofnewtesta0000mern",
+   330,
+   "321"
+  ],
+  "bengel.JHN.6.33.1": [
+   "gnomonofnewtesta0000mern",
+   331,
+   "322"
+  ],
+  "bengel.JHN.6.34.1": [
+   "gnomonofnewtesta0000mern",
+   331,
+   "322"
+  ],
+  "bengel.JHN.6.35.1": [
+   "gnomonofnewtesta0000mern",
+   331,
+   "322"
+  ],
+  "bengel.JHN.6.36.1": [
+   "gnomonofnewtesta0000mern",
+   332,
+   "323"
+  ],
+  "bengel.JHN.6.37.1": [
+   "gnomonofnewtesta0000mern",
+   332,
+   "323"
+  ],
+  "bengel.JHN.6.38.1": [
+   "gnomonofnewtesta0000mern",
+   333,
+   "324"
+  ],
+  "bengel.JHN.6.40.1": [
+   "gnomonofnewtesta0000mern",
+   334,
+   "325"
+  ],
+  "bengel.JHN.6.41-42.1": [
+   "gnomonofnewtesta0000mern",
+   335,
+   "326"
+  ],
+  "bengel.JHN.6.44.1": [
+   "gnomonofnewtesta0000mern",
+   335,
+   "326"
+  ],
+  "bengel.JHN.6.45.1": [
+   "gnomonofnewtesta0000mern",
+   336,
+   "327"
+  ],
+  "bengel.JHN.6.46.1": [
+   "gnomonofnewtesta0000mern",
+   336,
+   "327"
+  ],
+  "bengel.JHN.6.47-49.1": [
+   "gnomonofnewtesta0000mern",
+   336,
+   "327"
+  ],
+  "bengel.JHN.6.50.1": [
+   "gnomonofnewtesta0000mern",
+   337,
+   "328"
+  ],
+  "bengel.JHN.6.51.1": [
+   "gnomonofnewtesta0000mern",
+   337,
+   "328"
+  ],
+  "bengel.JHN.6.52.1": [
+   "gnomonofnewtesta0000mern",
+   338,
+   "329"
+  ],
+  "bengel.JHN.6.53-55.1": [
+   "gnomonofnewtesta0000mern",
+   338,
+   "329"
+  ],
+  "bengel.JHN.6.56-57.1": [
+   "gnomonofnewtesta0000mern",
+   338,
+   "329"
+  ],
+  "bengel.JHN.6.58-60.1": [
+   "gnomonofnewtesta0000mern",
+   338,
+   "329"
+  ],
+  "bengel.JHN.6.61-62.1": [
+   "gnomonofnewtesta0000mern",
+   339,
+   "330"
+  ],
+  "bengel.JHN.6.63.1": [
+   "gnomonofnewtesta0000mern",
+   339,
+   "330"
+  ],
+  "bengel.JHN.6.63-64.1": [
+   "gnomonofnewtesta0000mern",
+   340,
+   "331"
+  ],
+  "bengel.JHN.6.65-67.1": [
+   "gnomonofnewtesta0000mern",
+   341,
+   "332"
+  ],
+  "bengel.JHN.6.68.1": [
+   "gnomonofnewtesta0000mern",
+   341,
+   "332"
+  ],
+  "bengel.JHN.6.69.1": [
+   "gnomonofnewtesta0000mern",
+   342,
+   "333"
+  ],
+  "bengel.JHN.6.70.1": [
+   "gnomonofnewtesta0000mern",
+   342,
+   "333"
+  ],
+  "bengel.JHN.6.71.1": [
+   "gnomonofnewtesta0000mern",
+   342,
+   "333"
+  ],
+  "bengel.JHN.7.1.1": [
+   "gnomonofnewtesta0000mern",
+   342,
+   "333"
+  ],
+  "bengel.JHN.7.3.1": [
+   "gnomonofnewtesta0000mern",
+   343,
+   "334"
+  ],
+  "bengel.JHN.7.4.1": [
+   "gnomonofnewtesta0000mern",
+   343,
+   "334"
+  ],
+  "bengel.JHN.7.5-7.1": [
+   "gnomonofnewtesta0000mern",
+   343,
+   "334"
+  ],
+  "bengel.JHN.7.8.1": [
+   "gnomonofnewtesta0000mern",
+   344,
+   "335"
+  ],
+  "bengel.JHN.7.9-12.1": [
+   "gnomonofnewtesta0000mern",
+   344,
+   "335"
+  ],
+  "bengel.JHN.7.14.1": [
+   "gnomonofnewtesta0000mern",
+   345,
+   "336"
+  ],
+  "bengel.JHN.7.15-16.1": [
+   "gnomonofnewtesta0000mern",
+   345,
+   "336"
+  ],
+  "bengel.JHN.7.17.1": [
+   "gnomonofnewtesta0000mern",
+   345,
+   "336"
+  ],
+  "bengel.JHN.7.18.1": [
+   "gnomonofnewtesta0000mern",
+   347,
+   "338"
+  ],
+  "bengel.JHN.7.19.1": [
+   "gnomonofnewtesta0000mern",
+   347,
+   "338"
+  ],
+  "bengel.JHN.7.20.1": [
+   "gnomonofnewtesta0000mern",
+   348,
+   "339"
+  ],
+  "bengel.JHN.7.21.1": [
+   "gnomonofnewtesta0000mern",
+   348,
+   "339"
+  ],
+  "bengel.JHN.7.22.1": [
+   "gnomonofnewtesta0000mern",
+   348,
+   "339"
+  ],
+  "bengel.JHN.7.23.1": [
+   "gnomonofnewtesta0000mern",
+   349,
+   "340"
+  ],
+  "bengel.JHN.7.24.1": [
+   "gnomonofnewtesta0000mern",
+   349,
+   "340"
+  ],
+  "bengel.JHN.7.25-26.1": [
+   "gnomonofnewtesta0000mern",
+   350,
+   "341"
+  ],
+  "bengel.JHN.7.27.1": [
+   "gnomonofnewtesta0000mern",
+   350,
+   "341"
+  ],
+  "bengel.JHN.7.28.1": [
+   "gnomonofnewtesta0000mern",
+   350,
+   "341"
+  ],
+  "bengel.JHN.7.28.2": [
+   "gnomonofnewtesta0000mern",
+   351,
+   "342"
+  ],
+  "bengel.JHN.7.29.1": [
+   "gnomonofnewtesta0000mern",
+   351,
+   "342"
+  ],
+  "bengel.JHN.7.30-32.1": [
+   "gnomonofnewtesta0000mern",
+   352,
+   "343"
+  ],
+  "bengel.JHN.7.33.1": [
+   "gnomonofnewtesta0000mern",
+   352,
+   "343"
+  ],
+  "bengel.JHN.7.34.1": [
+   "gnomonofnewtesta0000mern",
+   352,
+   "343"
+  ],
+  "bengel.JHN.7.35-36.1": [
+   "gnomonofnewtesta0000mern",
+   353,
+   "344"
+  ],
+  "bengel.JHN.7.37.1": [
+   "gnomonofnewtesta0000mern",
+   353,
+   "344"
+  ],
+  "bengel.JHN.7.37.2": [
+   "gnomonofnewtesta0000mern",
+   354,
+   "345"
+  ],
+  "bengel.JHN.7.37.3": [
+   "gnomonofnewtesta0000mern",
+   355,
+   "346"
+  ],
+  "bengel.JHN.7.38.1": [
+   "gnomonofnewtesta0000mern",
+   356,
+   "347"
+  ],
+  "bengel.JHN.7.39-42.1": [
+   "gnomonofnewtesta0000mern",
+   356,
+   "347"
+  ],
+  "bengel.JHN.7.43.1": [
+   "gnomonofnewtesta0000mern",
+   356,
+   "347"
+  ],
+  "bengel.JHN.7.45-48.1": [
+   "gnomonofnewtesta0000mern",
+   356,
+   "347"
+  ],
+  "bengel.JHN.7.49.1": [
+   "gnomonofnewtesta0000mern",
+   357,
+   "348"
+  ],
+  "bengel.JHN.7.50.1": [
+   "gnomonofnewtesta0000mern",
+   357,
+   "348"
+  ],
+  "bengel.JHN.7.51.1": [
+   "gnomonofnewtesta0000mern",
+   357,
+   "348"
+  ],
+  "bengel.JHN.7.52.1": [
+   "gnomonofnewtesta0000mern",
+   357,
+   "348"
+  ],
+  "bengel.JHN.7.53.1": [
+   "gnomonofnewtesta0000mern",
+   358,
+   "349"
+  ],
+  "bengel.JHN.8.1.1": [
+   "gnomonofnewtesta0000mern",
+   358,
+   "349"
+  ],
+  "bengel.JHN.8.2-4.1": [
+   "gnomonofnewtesta0000mern",
+   359,
+   "350"
+  ],
+  "bengel.JHN.8.5.1": [
+   "gnomonofnewtesta0000mern",
+   359,
+   "350"
+  ],
+  "bengel.JHN.8.7.1": [
+   "gnomonofnewtesta0000mern",
+   362,
+   "353"
+  ],
+  "bengel.JHN.8.9-10.1": [
+   "gnomonofnewtesta0000mern",
+   362,
+   "353"
+  ],
+  "bengel.JHN.8.11-12.1": [
+   "gnomonofnewtesta0000mern",
+   362,
+   "353"
+  ],
+  "bengel.JHN.8.13.1": [
+   "gnomonofnewtesta0000mern",
+   363,
+   "354"
+  ],
+  "bengel.JHN.8.14.1": [
+   "gnomonofnewtesta0000mern",
+   363,
+   "354"
+  ],
+  "bengel.JHN.8.15-16.1": [
+   "gnomonofnewtesta0000mern",
+   363,
+   "354"
+  ],
+  "bengel.JHN.8.17.1": [
+   "gnomonofnewtesta0000mern",
+   364,
+   "355"
+  ],
+  "bengel.JHN.8.18.1": [
+   "gnomonofnewtesta0000mern",
+   364,
+   "355"
+  ],
+  "bengel.JHN.8.18.2": [
+   "gnomonofnewtesta0000mern",
+   365,
+   "356"
+  ],
+  "bengel.JHN.8.20.1": [
+   "gnomonofnewtesta0000mern",
+   365,
+   "356"
+  ],
+  "bengel.JHN.8.21.1": [
+   "gnomonofnewtesta0000mern",
+   367,
+   "358"
+  ],
+  "bengel.JHN.8.22-23.1": [
+   "gnomonofnewtesta0000mern",
+   367,
+   "358"
+  ],
+  "bengel.JHN.8.24.1": [
+   "gnomonofnewtesta0000mern",
+   367,
+   "358"
+  ],
+  "bengel.JHN.8.25.1": [
+   "gnomonofnewtesta0000mern",
+   369,
+   "360"
+  ],
+  "bengel.JHN.8.25.2": [
+   "gnomonofnewtesta0000mern",
+   370,
+   "361"
+  ],
+  "bengel.JHN.8.27.1": [
+   "gnomonofnewtesta0000mern",
+   371,
+   "362"
+  ],
+  "bengel.JHN.8.28-29.1": [
+   "gnomonofnewtesta0000mern",
+   372,
+   "363"
+  ],
+  "bengel.JHN.8.31-32.1": [
+   "gnomonofnewtesta0000mern",
+   372,
+   "363"
+  ],
+  "bengel.JHN.8.33.1": [
+   "gnomonofnewtesta0000mern",
+   373,
+   "364"
+  ],
+  "bengel.JHN.8.34.1": [
+   "gnomonofnewtesta0000mern",
+   373,
+   "364"
+  ],
+  "bengel.JHN.8.35.1": [
+   "gnomonofnewtesta0000mern",
+   373,
+   "364"
+  ],
+  "bengel.JHN.8.37.1": [
+   "gnomonofnewtesta0000mern",
+   374,
+   "365"
+  ],
+  "bengel.JHN.8.38.1": [
+   "gnomonofnewtesta0000mern",
+   374,
+   "365"
+  ],
+  "bengel.JHN.8.39-40.1": [
+   "gnomonofnewtesta0000mern",
+   374,
+   "365"
+  ],
+  "bengel.JHN.8.41-42.1": [
+   "gnomonofnewtesta0000mern",
+   374,
+   "365"
+  ],
+  "bengel.JHN.8.43.1": [
+   "gnomonofnewtesta0000mern",
+   375,
+   "366"
+  ],
+  "bengel.JHN.8.44.1": [
+   "gnomonofnewtesta0000mern",
+   375,
+   "366"
+  ],
+  "bengel.JHN.8.44.2": [
+   "gnomonofnewtesta0000mern",
+   376,
+   "367"
+  ],
+  "bengel.JHN.8.45-46.1": [
+   "gnomonofnewtesta0000mern",
+   376,
+   "367"
+  ],
+  "bengel.JHN.8.47-48.1": [
+   "gnomonofnewtesta0000mern",
+   377,
+   "368"
+  ],
+  "bengel.JHN.8.50-51.1": [
+   "gnomonofnewtesta0000mern",
+   377,
+   "368"
+  ],
+  "bengel.JHN.8.52-53.1": [
+   "gnomonofnewtesta0000mern",
+   377,
+   "368"
+  ],
+  "bengel.JHN.8.54-55.1": [
+   "gnomonofnewtesta0000mern",
+   378,
+   "369"
+  ],
+  "bengel.JHN.8.56.1": [
+   "gnomonofnewtesta0000mern",
+   378,
+   "369"
+  ],
+  "bengel.JHN.8.57.1": [
+   "gnomonofnewtesta0000mern",
+   379,
+   "370"
+  ],
+  "bengel.JHN.8.58.1": [
+   "gnomonofnewtesta0000mern",
+   380,
+   "371"
+  ],
+  "bengel.JHN.8.58.2": [
+   "gnomonofnewtesta0000mern",
+   381,
+   "372"
+  ],
+  "bengel.JHN.8.59.1": [
+   "gnomonofnewtesta0000mern",
+   381,
+   "372"
+  ],
+  "bengel.JHN.9.1-2.1": [
+   "gnomonofnewtesta0000mern",
+   382,
+   "373"
+  ],
+  "bengel.JHN.9.3.1": [
+   "gnomonofnewtesta0000mern",
+   382,
+   "373"
+  ],
+  "bengel.JHN.9.4.1": [
+   "gnomonofnewtesta0000mern",
+   382,
+   "373"
+  ],
+  "bengel.JHN.9.6.1": [
+   "gnomonofnewtesta0000mern",
+   383,
+   "374"
+  ],
+  "bengel.JHN.9.7.1": [
+   "gnomonofnewtesta0000mern",
+   383,
+   "374"
+  ],
+  "bengel.JHN.9.8-11.1": [
+   "gnomonofnewtesta0000mern",
+   383,
+   "374"
+  ],
+  "bengel.JHN.9.13-17.1": [
+   "gnomonofnewtesta0000mern",
+   384,
+   "375"
+  ],
+  "bengel.JHN.9.18-21.1": [
+   "gnomonofnewtesta0000mern",
+   384,
+   "375"
+  ],
+  "bengel.JHN.9.22-24.1": [
+   "gnomonofnewtesta0000mern",
+   384,
+   "375"
+  ],
+  "bengel.JHN.9.25.1": [
+   "gnomonofnewtesta0000mern",
+   385,
+   "376"
+  ],
+  "bengel.JHN.9.26-28.1": [
+   "gnomonofnewtesta0000mern",
+   385,
+   "376"
+  ],
+  "bengel.JHN.9.30.1": [
+   "gnomonofnewtesta0000mern",
+   386,
+   "377"
+  ],
+  "bengel.JHN.9.31-33.1": [
+   "gnomonofnewtesta0000mern",
+   386,
+   "377"
+  ],
+  "bengel.JHN.9.34.1": [
+   "gnomonofnewtesta0000mern",
+   386,
+   "377"
+  ],
+  "bengel.JHN.9.35-36.1": [
+   "gnomonofnewtesta0000mern",
+   386,
+   "377"
+  ],
+  "bengel.JHN.9.37-38.1": [
+   "gnomonofnewtesta0000mern",
+   387,
+   "378"
+  ],
+  "bengel.JHN.9.39-41.1": [
+   "gnomonofnewtesta0000mern",
+   387,
+   "378"
+  ],
+  "bengel.JHN.10.1.1": [
+   "gnomonofnewtesta0000mern",
+   387,
+   "378"
+  ],
+  "bengel.JHN.10.2-3.1": [
+   "gnomonofnewtesta0000mern",
+   388,
+   "379"
+  ],
+  "bengel.JHN.10.4-5.1": [
+   "gnomonofnewtesta0000mern",
+   388,
+   "379"
+  ],
+  "bengel.JHN.10.6-8.1": [
+   "gnomonofnewtesta0000mern",
+   388,
+   "379"
+  ],
+  "bengel.JHN.10.9.1": [
+   "gnomonofnewtesta0000mern",
+   389,
+   "380"
+  ],
+  "bengel.JHN.10.9-11.1": [
+   "gnomonofnewtesta0000mern",
+   390,
+   "381"
+  ],
+  "bengel.JHN.10.12.1": [
+   "gnomonofnewtesta0000mern",
+   390,
+   "381"
+  ],
+  "bengel.JHN.10.13.1": [
+   "gnomonofnewtesta0000mern",
+   391,
+   "382"
+  ],
+  "bengel.JHN.10.14-15.1": [
+   "gnomonofnewtesta0000mern",
+   391,
+   "382"
+  ],
+  "bengel.JHN.10.16.1": [
+   "gnomonofnewtesta0000mern",
+   392,
+   "383"
+  ],
+  "bengel.JHN.10.16.2": [
+   "gnomonofnewtesta0000mern",
+   392,
+   "383"
+  ],
+  "bengel.JHN.10.18.1": [
+   "gnomonofnewtesta0000mern",
+   393,
+   "384"
+  ],
+  "bengel.JHN.10.19-22.1": [
+   "gnomonofnewtesta0000mern",
+   393,
+   "384"
+  ],
+  "bengel.JHN.10.24.1": [
+   "gnomonofnewtesta0000mern",
+   394,
+   "385"
+  ],
+  "bengel.JHN.10.25.1": [
+   "gnomonofnewtesta0000mern",
+   394,
+   "385"
+  ],
+  "bengel.JHN.10.26-27.1": [
+   "gnomonofnewtesta0000mern",
+   394,
+   "385"
+  ],
+  "bengel.JHN.10.28.1": [
+   "gnomonofnewtesta0000mern",
+   394,
+   "385"
+  ],
+  "bengel.JHN.10.29-30.1": [
+   "gnomonofnewtesta0000mern",
+   395,
+   "386"
+  ],
+  "bengel.JHN.10.31-34.1": [
+   "gnomonofnewtesta0000mern",
+   395,
+   "386"
+  ],
+  "bengel.JHN.10.35.1": [
+   "gnomonofnewtesta0000mern",
+   396,
+   "387"
+  ],
+  "bengel.JHN.10.35.2": [
+   "gnomonofnewtesta0000mern",
+   397,
+   "388"
+  ],
+  "bengel.JHN.10.38.1": [
+   "gnomonofnewtesta0000mern",
+   398,
+   "389"
+  ],
+  "bengel.JHN.10.39-41.1": [
+   "gnomonofnewtesta0000mern",
+   398,
+   "389"
+  ],
+  "bengel.JHN.11.1.1": [
+   "gnomonofnewtesta0000mern",
+   399,
+   "390"
+  ],
+  "bengel.JHN.11.2.1": [
+   "gnomonofnewtesta0000mern",
+   399,
+   "390"
+  ],
+  "bengel.JHN.11.3.1": [
+   "gnomonofnewtesta0000mern",
+   399,
+   "390"
+  ],
+  "bengel.JHN.11.4.1": [
+   "gnomonofnewtesta0000mern",
+   399,
+   "390"
+  ],
+  "bengel.JHN.11.5-6.1": [
+   "gnomonofnewtesta0000mern",
+   400,
+   "391"
+  ],
+  "bengel.JHN.11.7-9.1": [
+   "gnomonofnewtesta0000mern",
+   400,
+   "391"
+  ],
+  "bengel.JHN.11.10-11.1": [
+   "gnomonofnewtesta0000mern",
+   401,
+   "392"
+  ],
+  "bengel.JHN.11.12-15.1": [
+   "gnomonofnewtesta0000mern",
+   401,
+   "392"
+  ],
+  "bengel.JHN.11.16.1": [
+   "gnomonofnewtesta0000mern",
+   402,
+   "393"
+  ],
+  "bengel.JHN.11.20-21.1": [
+   "gnomonofnewtesta0000mern",
+   403,
+   "394"
+  ],
+  "bengel.JHN.11.22.1": [
+   "gnomonofnewtesta0000mern",
+   403,
+   "394"
+  ],
+  "bengel.JHN.11.23-24.1": [
+   "gnomonofnewtesta0000mern",
+   403,
+   "394"
+  ],
+  "bengel.JHN.11.26.1": [
+   "gnomonofnewtesta0000mern",
+   404,
+   "395"
+  ],
+  "bengel.JHN.11.27.1": [
+   "gnomonofnewtesta0000mern",
+   405,
+   "396"
+  ],
+  "bengel.JHN.11.28.1": [
+   "gnomonofnewtesta0000mern",
+   405,
+   "396"
+  ],
+  "bengel.JHN.11.30-31.1": [
+   "gnomonofnewtesta0000mern",
+   405,
+   "396"
+  ],
+  "bengel.JHN.11.32-33.1": [
+   "gnomonofnewtesta0000mern",
+   405,
+   "396"
+  ],
+  "bengel.JHN.11.35-37.1": [
+   "gnomonofnewtesta0000mern",
+   406,
+   "397"
+  ],
+  "bengel.JHN.11.38-39.1": [
+   "gnomonofnewtesta0000mern",
+   407,
+   "398"
+  ],
+  "bengel.JHN.11.40-41.1": [
+   "gnomonofnewtesta0000mern",
+   407,
+   "398"
+  ],
+  "bengel.JHN.11.42.1": [
+   "gnomonofnewtesta0000mern",
+   407,
+   "398"
+  ],
+  "bengel.JHN.11.43.1": [
+   "gnomonofnewtesta0000mern",
+   408,
+   "399"
+  ],
+  "bengel.JHN.11.44-47.1": [
+   "gnomonofnewtesta0000mern",
+   408,
+   "399"
+  ],
+  "bengel.JHN.11.48.1": [
+   "gnomonofnewtesta0000mern",
+   408,
+   "399"
+  ],
+  "bengel.JHN.11.50.1": [
+   "gnomonofnewtesta0000mern",
+   409,
+   "400"
+  ],
+  "bengel.JHN.11.51.1": [
+   "gnomonofnewtesta0000mern",
+   409,
+   "400"
+  ],
+  "bengel.JHN.11.52.1": [
+   "gnomonofnewtesta0000mern",
+   409,
+   "400"
+  ],
+  "bengel.JHN.11.53-55.1": [
+   "gnomonofnewtesta0000mern",
+   410,
+   "401"
+  ],
+  "bengel.JHN.11.56-57.1": [
+   "gnomonofnewtesta0000mern",
+   410,
+   "401"
+  ],
+  "bengel.JHN.12.1.1": [
+   "gnomonofnewtesta0000mern",
+   411,
+   "402"
+  ],
+  "bengel.JHN.12.2.1": [
+   "gnomonofnewtesta0000mern",
+   411,
+   "402"
+  ],
+  "bengel.JHN.12.3.1": [
+   "gnomonofnewtesta0000mern",
+   412,
+   "403"
+  ],
+  "bengel.JHN.12.5.1": [
+   "gnomonofnewtesta0000mern",
+   413,
+   "404"
+  ],
+  "bengel.JHN.12.7.1": [
+   "gnomonofnewtesta0000mern",
+   413,
+   "404"
+  ],
+  "bengel.JHN.12.9-10.1": [
+   "gnomonofnewtesta0000mern",
+   413,
+   "404"
+  ],
+  "bengel.JHN.12.11-13.1": [
+   "gnomonofnewtesta0000mern",
+   414,
+   "405"
+  ],
+  "bengel.JHN.12.14-15.1": [
+   "gnomonofnewtesta0000mern",
+   414,
+   "405"
+  ],
+  "bengel.JHN.12.16.1": [
+   "gnomonofnewtesta0000mern",
+   414,
+   "405"
+  ],
+  "bengel.JHN.12.17.1": [
+   "gnomonofnewtesta0000mern",
+   415,
+   "406"
+  ],
+  "bengel.JHN.12.18.1": [
+   "gnomonofnewtesta0000mern",
+   415,
+   "406"
+  ],
+  "bengel.JHN.12.19.1": [
+   "gnomonofnewtesta0000mern",
+   415,
+   "406"
+  ],
+  "bengel.JHN.12.20.1": [
+   "gnomonofnewtesta0000mern",
+   416,
+   "407"
+  ],
+  "bengel.JHN.12.21.1": [
+   "gnomonofnewtesta0000mern",
+   416,
+   "407"
+  ],
+  "bengel.JHN.12.22-23.1": [
+   "gnomonofnewtesta0000mern",
+   416,
+   "407"
+  ],
+  "bengel.JHN.12.24.1": [
+   "gnomonofnewtesta0000mern",
+   417,
+   "408"
+  ],
+  "bengel.JHN.12.25.1": [
+   "gnomonofnewtesta0000mern",
+   417,
+   "408"
+  ],
+  "bengel.JHN.12.26.1": [
+   "gnomonofnewtesta0000mern",
+   417,
+   "408"
+  ],
+  "bengel.JHN.12.26.2": [
+   "gnomonofnewtesta0000mern",
+   419,
+   "410"
+  ],
+  "bengel.JHN.12.28.1": [
+   "gnomonofnewtesta0000mern",
+   419,
+   "410"
+  ],
+  "bengel.JHN.12.29-30.1": [
+   "gnomonofnewtesta0000mern",
+   419,
+   "410"
+  ],
+  "bengel.JHN.12.31.1": [
+   "gnomonofnewtesta0000mern",
+   420,
+   "411"
+  ],
+  "bengel.JHN.12.31.2": [
+   "gnomonofnewtesta0000mern",
+   420,
+   "411"
+  ],
+  "bengel.JHN.12.32.1": [
+   "gnomonofnewtesta0000mern",
+   421,
+   "412"
+  ],
+  "bengel.JHN.12.34.1": [
+   "gnomonofnewtesta0000mern",
+   421,
+   "412"
+  ],
+  "bengel.JHN.12.35.1": [
+   "gnomonofnewtesta0000mern",
+   422,
+   "413"
+  ],
+  "bengel.JHN.12.36.1": [
+   "gnomonofnewtesta0000mern",
+   422,
+   "413"
+  ],
+  "bengel.JHN.12.37-38.1": [
+   "gnomonofnewtesta0000mern",
+   422,
+   "413"
+  ],
+  "bengel.JHN.12.39-40.1": [
+   "gnomonofnewtesta0000mern",
+   423,
+   "414"
+  ],
+  "bengel.JHN.12.41.1": [
+   "gnomonofnewtesta0000mern",
+   423,
+   "414"
+  ],
+  "bengel.JHN.12.42.1": [
+   "gnomonofnewtesta0000mern",
+   424,
+   "415"
+  ],
+  "bengel.JHN.12.43.1": [
+   "gnomonofnewtesta0000mern",
+   424,
+   "415"
+  ],
+  "bengel.JHN.12.44.1": [
+   "gnomonofnewtesta0000mern",
+   424,
+   "415"
+  ],
+  "bengel.JHN.12.45.1": [
+   "gnomonofnewtesta0000mern",
+   425,
+   "416"
+  ],
+  "bengel.JHN.12.46-47.1": [
+   "gnomonofnewtesta0000mern",
+   425,
+   "416"
+  ],
+  "bengel.JHN.12.48.1": [
+   "gnomonofnewtesta0000mern",
+   426,
+   "417"
+  ],
+  "bengel.JHN.12.49-50.1": [
+   "gnomonofnewtesta0000mern",
+   426,
+   "417"
+  ],
+  "bengel.JHN.13.1.1": [
+   "gnomonofnewtesta0000mern",
+   426,
+   "417"
+  ],
+  "bengel.JHN.13.2.1": [
+   "gnomonofnewtesta0000mern",
+   427,
+   "418"
+  ],
+  "bengel.JHN.13.3.1": [
+   "gnomonofnewtesta0000mern",
+   427,
+   "418"
+  ],
+  "bengel.JHN.13.4-5.1": [
+   "gnomonofnewtesta0000mern",
+   428,
+   "419"
+  ],
+  "bengel.JHN.13.6.1": [
+   "gnomonofnewtesta0000mern",
+   428,
+   "419"
+  ],
+  "bengel.JHN.13.7.1": [
+   "gnomonofnewtesta0000mern",
+   428,
+   "419"
+  ],
+  "bengel.JHN.13.8.1": [
+   "gnomonofnewtesta0000mern",
+   429,
+   "420"
+  ],
+  "bengel.JHN.13.9.1": [
+   "gnomonofnewtesta0000mern",
+   429,
+   "420"
+  ],
+  "bengel.JHN.13.10-11.1": [
+   "gnomonofnewtesta0000mern",
+   429,
+   "420"
+  ],
+  "bengel.JHN.13.12-13.1": [
+   "gnomonofnewtesta0000mern",
+   429,
+   "420"
+  ],
+  "bengel.JHN.13.16-18.1": [
+   "gnomonofnewtesta0000mern",
+   430,
+   "421"
+  ],
+  "bengel.JHN.13.19.1": [
+   "gnomonofnewtesta0000mern",
+   431,
+   "422"
+  ],
+  "bengel.JHN.13.20.1": [
+   "gnomonofnewtesta0000mern",
+   431,
+   "422"
+  ],
+  "bengel.JHN.13.21-23.1": [
+   "gnomonofnewtesta0000mern",
+   431,
+   "422"
+  ],
+  "bengel.JHN.13.24.1": [
+   "gnomonofnewtesta0000mern",
+   432,
+   "423"
+  ],
+  "bengel.JHN.13.25.1": [
+   "gnomonofnewtesta0000mern",
+   432,
+   "423"
+  ],
+  "bengel.JHN.13.26.1": [
+   "gnomonofnewtesta0000mern",
+   433,
+   "424"
+  ],
+  "bengel.JHN.13.27.1": [
+   "gnomonofnewtesta0000mern",
+   433,
+   "424"
+  ],
+  "bengel.JHN.13.28-29.1": [
+   "gnomonofnewtesta0000mern",
+   433,
+   "424"
+  ],
+  "bengel.JHN.13.30.1": [
+   "gnomonofnewtesta0000mern",
+   434,
+   "425"
+  ],
+  "bengel.JHN.13.31.1": [
+   "gnomonofnewtesta0000mern",
+   434,
+   "425"
+  ],
+  "bengel.JHN.13.31.2": [
+   "gnomonofnewtesta0000mern",
+   435,
+   "426"
+  ],
+  "bengel.JHN.13.32-33.1": [
+   "gnomonofnewtesta0000mern",
+   435,
+   "426"
+  ],
+  "bengel.JHN.13.34.1": [
+   "gnomonofnewtesta0000mern",
+   436,
+   "427"
+  ],
+  "bengel.JHN.13.34.2": [
+   "gnomonofnewtesta0000mern",
+   436,
+   "427"
+  ],
+  "bengel.JHN.13.35.1": [
+   "gnomonofnewtesta0000mern",
+   437,
+   "428"
+  ],
+  "bengel.JHN.13.36.1": [
+   "gnomonofnewtesta0000mern",
+   437,
+   "428"
+  ],
+  "bengel.JHN.13.36.2": [
+   "gnomonofnewtesta0000mern",
+   438,
+   "429"
+  ],
+  "bengel.JHN.13.37-38.1": [
+   "gnomonofnewtesta0000mern",
+   438,
+   "429"
+  ],
+  "bengel.JHN.14.1.1": [
+   "gnomonofnewtesta0000mern",
+   438,
+   "429"
+  ],
+  "bengel.JHN.14.1.2": [
+   "gnomonofnewtesta0000mern",
+   439,
+   "430"
+  ],
+  "bengel.JHN.14.2.1": [
+   "gnomonofnewtesta0000mern",
+   440,
+   "431"
+  ],
+  "bengel.JHN.14.3.1": [
+   "gnomonofnewtesta0000mern",
+   441,
+   "432"
+  ],
+  "bengel.JHN.14.4-5.1": [
+   "gnomonofnewtesta0000mern",
+   441,
+   "432"
+  ],
+  "bengel.JHN.14.6.1": [
+   "gnomonofnewtesta0000mern",
+   441,
+   "432"
+  ],
+  "bengel.JHN.14.7-8.1": [
+   "gnomonofnewtesta0000mern",
+   442,
+   "433"
+  ],
+  "bengel.JHN.14.9.1": [
+   "gnomonofnewtesta0000mern",
+   442,
+   "433"
+  ],
+  "bengel.JHN.14.10.1": [
+   "gnomonofnewtesta0000mern",
+   443,
+   "434"
+  ],
+  "bengel.JHN.14.11.1": [
+   "gnomonofnewtesta0000mern",
+   443,
+   "434"
+  ],
+  "bengel.JHN.14.12.1": [
+   "gnomonofnewtesta0000mern",
+   444,
+   "435"
+  ],
+  "bengel.JHN.14.13.1": [
+   "gnomonofnewtesta0000mern",
+   445,
+   "436"
+  ],
+  "bengel.JHN.14.14-15.1": [
+   "gnomonofnewtesta0000mern",
+   445,
+   "436"
+  ],
+  "bengel.JHN.14.17.1": [
+   "gnomonofnewtesta0000mern",
+   446,
+   "437"
+  ],
+  "bengel.JHN.14.17.2": [
+   "gnomonofnewtesta0000mern",
+   447,
+   "438"
+  ],
+  "bengel.JHN.14.18.1": [
+   "gnomonofnewtesta0000mern",
+   447,
+   "438"
+  ],
+  "bengel.JHN.14.19.1": [
+   "gnomonofnewtesta0000mern",
+   448,
+   "439"
+  ],
+  "bengel.JHN.14.20-21.1": [
+   "gnomonofnewtesta0000mern",
+   448,
+   "439"
+  ],
+  "bengel.JHN.14.22.1": [
+   "gnomonofnewtesta0000mern",
+   448,
+   "439"
+  ],
+  "bengel.JHN.14.23.1": [
+   "gnomonofnewtesta0000mern",
+   449,
+   "440"
+  ],
+  "bengel.JHN.14.24.1": [
+   "gnomonofnewtesta0000mern",
+   449,
+   "440"
+  ],
+  "bengel.JHN.14.25.1": [
+   "gnomonofnewtesta0000mern",
+   450,
+   "441"
+  ],
+  "bengel.JHN.14.26.1": [
+   "gnomonofnewtesta0000mern",
+   445,
+   "436"
+  ],
+  "bengel.JHN.14.27.1": [
+   "gnomonofnewtesta0000mern",
+   450,
+   "441"
+  ],
+  "bengel.JHN.14.28.1": [
+   "gnomonofnewtesta0000mern",
+   451,
+   "442"
+  ],
+  "bengel.JHN.14.29-30.1": [
+   "gnomonofnewtesta0000mern",
+   453,
+   "444"
+  ],
+  "bengel.JHN.14.31.1": [
+   "gnomonofnewtesta0000mern",
+   453,
+   "444"
+  ],
+  "bengel.JHN.14.31.2": [
+   "gnomonofnewtesta0000mern",
+   454,
+   "445"
+  ],
+  "bengel.JHN.15.1-2.1": [
+   "gnomonofnewtesta0000mern",
+   454,
+   "445"
+  ],
+  "bengel.JHN.15.3-4.1": [
+   "gnomonofnewtesta0000mern",
+   455,
+   "446"
+  ],
+  "bengel.JHN.15.5-6.1": [
+   "gnomonofnewtesta0000mern",
+   455,
+   "446"
+  ],
+  "bengel.JHN.15.7-8.1": [
+   "gnomonofnewtesta0000mern",
+   455,
+   "446"
+  ],
+  "bengel.JHN.15.9-11.1": [
+   "gnomonofnewtesta0000mern",
+   456,
+   "447"
+  ],
+  "bengel.JHN.15.12-13.1": [
+   "gnomonofnewtesta0000mern",
+   457,
+   "448"
+  ],
+  "bengel.JHN.15.14-15.1": [
+   "gnomonofnewtesta0000mern",
+   457,
+   "448"
+  ],
+  "bengel.JHN.15.18.1": [
+   "gnomonofnewtesta0000mern",
+   457,
+   "448"
+  ],
+  "bengel.JHN.15.19.1": [
+   "gnomonofnewtesta0000mern",
+   458,
+   "449"
+  ],
+  "bengel.JHN.15.20.1": [
+   "gnomonofnewtesta0000mern",
+   458,
+   "449"
+  ],
+  "bengel.JHN.15.21-23.1": [
+   "gnomonofnewtesta0000mern",
+   458,
+   "449"
+  ],
+  "bengel.JHN.15.24-25.1": [
+   "gnomonofnewtesta0000mern",
+   458,
+   "449"
+  ],
+  "bengel.JHN.15.26.1": [
+   "gnomonofnewtesta0000mern",
+   459,
+   "450"
+  ],
+  "bengel.JHN.15.27.1": [
+   "gnomonofnewtesta0000mern",
+   459,
+   "450"
+  ],
+  "bengel.JHN.16.4.1": [
+   "gnomonofnewtesta0000mern",
+   460,
+   "451"
+  ],
+  "bengel.JHN.16.5.1": [
+   "gnomonofnewtesta0000mern",
+   460,
+   "451"
+  ],
+  "bengel.JHN.16.6-7.1": [
+   "gnomonofnewtesta0000mern",
+   460,
+   "451"
+  ],
+  "bengel.JHN.16.8.1": [
+   "gnomonofnewtesta0000mern",
+   461,
+   "452"
+  ],
+  "bengel.JHN.16.9.1": [
+   "gnomonofnewtesta0000mern",
+   461,
+   "452"
+  ],
+  "bengel.JHN.16.10.1": [
+   "gnomonofnewtesta0000mern",
+   462,
+   "453"
+  ],
+  "bengel.JHN.16.10.2": [
+   "gnomonofnewtesta0000mern",
+   462,
+   "453"
+  ],
+  "bengel.JHN.16.11.1": [
+   "gnomonofnewtesta0000mern",
+   463,
+   "454"
+  ],
+  "bengel.JHN.16.12.1": [
+   "gnomonofnewtesta0000mern",
+   463,
+   "454"
+  ],
+  "bengel.JHN.16.13.1": [
+   "gnomonofnewtesta0000mern",
+   463,
+   "454"
+  ],
+  "bengel.JHN.16.13.2": [
+   "gnomonofnewtesta0000mern",
+   464,
+   "455"
+  ],
+  "bengel.JHN.16.14.1": [
+   "gnomonofnewtesta0000mern",
+   464,
+   "455"
+  ],
+  "bengel.JHN.16.15-16.1": [
+   "gnomonofnewtesta0000mern",
+   465,
+   "456"
+  ],
+  "bengel.JHN.16.17-18.1": [
+   "gnomonofnewtesta0000mern",
+   465,
+   "456"
+  ],
+  "bengel.JHN.16.19-21.1": [
+   "gnomonofnewtesta0000mern",
+   466,
+   "457"
+  ],
+  "bengel.JHN.16.22.1": [
+   "gnomonofnewtesta0000mern",
+   466,
+   "457"
+  ],
+  "bengel.JHN.16.23.1": [
+   "gnomonofnewtesta0000mern",
+   467,
+   "458"
+  ],
+  "bengel.JHN.16.24-25.1": [
+   "gnomonofnewtesta0000mern",
+   467,
+   "458"
+  ],
+  "bengel.JHN.16.26.1": [
+   "gnomonofnewtesta0000mern",
+   468,
+   "459"
+  ],
+  "bengel.JHN.16.27.1": [
+   "gnomonofnewtesta0000mern",
+   468,
+   "459"
+  ],
+  "bengel.JHN.16.28-29.1": [
+   "gnomonofnewtesta0000mern",
+   468,
+   "459"
+  ],
+  "bengel.JHN.16.30.1": [
+   "gnomonofnewtesta0000mern",
+   469,
+   "460"
+  ],
+  "bengel.JHN.16.31.1": [
+   "gnomonofnewtesta0000mern",
+   469,
+   "460"
+  ],
+  "bengel.JHN.16.32-33.1": [
+   "gnomonofnewtesta0000mern",
+   469,
+   "460"
+  ],
+  "bengel.JHN.17.1.1": [
+   "gnomonofnewtesta0000mern",
+   470,
+   "461"
+  ],
+  "bengel.JHN.17.1.2": [
+   "gnomonofnewtesta0000mern",
+   470,
+   "461"
+  ],
+  "bengel.JHN.17.2.1": [
+   "gnomonofnewtesta0000mern",
+   471,
+   "462"
+  ],
+  "bengel.JHN.17.3.1": [
+   "gnomonofnewtesta0000mern",
+   471,
+   "462"
+  ],
+  "bengel.JHN.17.4-5.1": [
+   "gnomonofnewtesta0000mern",
+   472,
+   "463"
+  ],
+  "bengel.JHN.17.6.1": [
+   "gnomonofnewtesta0000mern",
+   472,
+   "463"
+  ],
+  "bengel.JHN.17.7-9.1": [
+   "gnomonofnewtesta0000mern",
+   472,
+   "463"
+  ],
+  "bengel.JHN.17.10.1": [
+   "gnomonofnewtesta0000mern",
+   473,
+   "464"
+  ],
+  "bengel.JHN.17.11.1": [
+   "gnomonofnewtesta0000mern",
+   473,
+   "464"
+  ],
+  "bengel.JHN.17.11.2": [
+   "gnomonofnewtesta0000mern",
+   474,
+   "465"
+  ],
+  "bengel.JHN.17.12.1": [
+   "gnomonofnewtesta0000mern",
+   474,
+   "465"
+  ],
+  "bengel.JHN.17.13-14.1": [
+   "gnomonofnewtesta0000mern",
+   475,
+   "466"
+  ],
+  "bengel.JHN.17.15-16.1": [
+   "gnomonofnewtesta0000mern",
+   475,
+   "466"
+  ],
+  "bengel.JHN.17.17-18.1": [
+   "gnomonofnewtesta0000mern",
+   475,
+   "466"
+  ],
+  "bengel.JHN.17.19.1": [
+   "gnomonofnewtesta0000mern",
+   476,
+   "467"
+  ],
+  "bengel.JHN.17.20.1": [
+   "gnomonofnewtesta0000mern",
+   476,
+   "467"
+  ],
+  "bengel.JHN.17.21.1": [
+   "gnomonofnewtesta0000mern",
+   476,
+   "467"
+  ],
+  "bengel.JHN.17.22-24.1": [
+   "gnomonofnewtesta0000mern",
+   476,
+   "467"
+  ],
+  "bengel.JHN.17.25-26.1": [
+   "gnomonofnewtesta0000mern",
+   477,
+   "468"
+  ],
+  "bengel.JHN.18.1.1": [
+   "gnomonofnewtesta0000mern",
+   477,
+   "468"
+  ],
+  "bengel.JHN.18.2-4.1": [
+   "gnomonofnewtesta0000mern",
+   478,
+   "469"
+  ],
+  "bengel.JHN.18.6-8.1": [
+   "gnomonofnewtesta0000mern",
+   478,
+   "469"
+  ],
+  "bengel.JHN.18.9-10.1": [
+   "gnomonofnewtesta0000mern",
+   478,
+   "469"
+  ],
+  "bengel.JHN.18.11-13.1": [
+   "gnomonofnewtesta0000mern",
+   479,
+   "470"
+  ],
+  "bengel.JHN.18.14-16.1": [
+   "gnomonofnewtesta0000mern",
+   479,
+   "470"
+  ],
+  "bengel.JHN.18.18-19.1": [
+   "gnomonofnewtesta0000mern",
+   480,
+   "471"
+  ],
+  "bengel.JHN.18.20.1": [
+   "gnomonofnewtesta0000mern",
+   481,
+   "472"
+  ],
+  "bengel.JHN.18.21-22.1": [
+   "gnomonofnewtesta0000mern",
+   481,
+   "472"
+  ],
+  "bengel.JHN.18.23.1": [
+   "gnomonofnewtesta0000mern",
+   482,
+   "473"
+  ],
+  "bengel.JHN.18.24.1": [
+   "gnomonofnewtesta0000mern",
+   482,
+   "473"
+  ],
+  "bengel.JHN.18.25-27.1": [
+   "gnomonofnewtesta0000mern",
+   482,
+   "473"
+  ],
+  "bengel.JHN.18.28.1": [
+   "gnomonofnewtesta0000mern",
+   483,
+   "474"
+  ],
+  "bengel.JHN.18.30-31.1": [
+   "gnomonofnewtesta0000mern",
+   483,
+   "474"
+  ],
+  "bengel.JHN.18.32-33.1": [
+   "gnomonofnewtesta0000mern",
+   484,
+   "475"
+  ],
+  "bengel.JHN.18.34.1": [
+   "gnomonofnewtesta0000mern",
+   484,
+   "475"
+  ],
+  "bengel.JHN.18.35-36.1": [
+   "gnomonofnewtesta0000mern",
+   484,
+   "475"
+  ],
+  "bengel.JHN.18.37.1": [
+   "gnomonofnewtesta0000mern",
+   485,
+   "476"
+  ],
+  "bengel.JHN.18.38.1": [
+   "gnomonofnewtesta0000mern",
+   485,
+   "476"
+  ],
+  "bengel.JHN.18.39.1": [
+   "gnomonofnewtesta0000mern",
+   486,
+   "477"
+  ],
+  "bengel.JHN.19.2-4.1": [
+   "gnomonofnewtesta0000mern",
+   487,
+   "478"
+  ],
+  "bengel.JHN.19.6-7.1": [
+   "gnomonofnewtesta0000mern",
+   487,
+   "478"
+  ],
+  "bengel.JHN.19.8-9.1": [
+   "gnomonofnewtesta0000mern",
+   487,
+   "478"
+  ],
+  "bengel.JHN.19.10-11.1": [
+   "gnomonofnewtesta0000mern",
+   488,
+   "479"
+  ],
+  "bengel.JHN.19.12-13.1": [
+   "gnomonofnewtesta0000mern",
+   488,
+   "479"
+  ],
+  "bengel.JHN.19.14.1": [
+   "gnomonofnewtesta0000mern",
+   488,
+   "479"
+  ],
+  "bengel.JHN.19.14.2": [
+   "gnomonofnewtesta0000mern",
+   489,
+   "480"
+  ],
+  "bengel.JHN.19.15-19.1": [
+   "gnomonofnewtesta0000mern",
+   490,
+   "481"
+  ],
+  "bengel.JHN.19.20-21.1": [
+   "gnomonofnewtesta0000mern",
+   490,
+   "481"
+  ],
+  "bengel.JHN.19.22.1": [
+   "gnomonofnewtesta0000mern",
+   491,
+   "482"
+  ],
+  "bengel.JHN.19.23-25.1": [
+   "gnomonofnewtesta0000mern",
+   491,
+   "482"
+  ],
+  "bengel.JHN.19.26.1": [
+   "gnomonofnewtesta0000mern",
+   491,
+   "482"
+  ],
+  "bengel.JHN.19.27.1": [
+   "gnomonofnewtesta0000mern",
+   492,
+   "483"
+  ],
+  "bengel.JHN.19.28.1": [
+   "gnomonofnewtesta0000mern",
+   492,
+   "483"
+  ],
+  "bengel.JHN.19.29-30.1": [
+   "gnomonofnewtesta0000mern",
+   493,
+   "484"
+  ],
+  "bengel.JHN.19.31.1": [
+   "gnomonofnewtesta0000mern",
+   493,
+   "484"
+  ],
+  "bengel.JHN.19.32.1": [
+   "gnomonofnewtesta0000mern",
+   494,
+   "485"
+  ],
+  "bengel.JHN.19.33.1": [
+   "gnomonofnewtesta0000mern",
+   494,
+   "485"
+  ],
+  "bengel.JHN.19.34.1": [
+   "gnomonofnewtesta0000mern",
+   495,
+   "486"
+  ],
+  "bengel.JHN.19.35.1": [
+   "gnomonofnewtesta0000mern",
+   495,
+   "486"
+  ],
+  "bengel.JHN.19.36.1": [
+   "gnomonofnewtesta0000mern",
+   496,
+   "487"
+  ],
+  "bengel.JHN.19.37-38.1": [
+   "gnomonofnewtesta0000mern",
+   496,
+   "487"
+  ],
+  "bengel.JHN.20.1-2.1": [
+   "gnomonofnewtesta0000mern",
+   497,
+   "488"
+  ],
+  "bengel.JHN.20.3-4.1": [
+   "gnomonofnewtesta0000mern",
+   497,
+   "488"
+  ],
+  "bengel.JHN.20.5-6.1": [
+   "gnomonofnewtesta0000mern",
+   498,
+   "489"
+  ],
+  "bengel.JHN.20.8-10.1": [
+   "gnomonofnewtesta0000mern",
+   498,
+   "489"
+  ],
+  "bengel.JHN.20.11-13.1": [
+   "gnomonofnewtesta0000mern",
+   498,
+   "489"
+  ],
+  "bengel.JHN.20.14-15.1": [
+   "gnomonofnewtesta0000mern",
+   499,
+   "490"
+  ],
+  "bengel.JHN.20.16.1": [
+   "gnomonofnewtesta0000mern",
+   499,
+   "490"
+  ],
+  "bengel.JHN.20.17.1": [
+   "gnomonofnewtesta0000mern",
+   499,
+   "490"
+  ],
+  "bengel.JHN.20.17.2": [
+   "gnomonofnewtesta0000mern",
+   500,
+   "491"
+  ],
+  "bengel.JHN.20.19.1": [
+   "gnomonofnewtesta0000mern",
+   501,
+   "492"
+  ],
+  "bengel.JHN.20.20-21.1": [
+   "gnomonofnewtesta0000mern",
+   501,
+   "492"
+  ],
+  "bengel.JHN.20.22.1": [
+   "gnomonofnewtesta0000mern",
+   501,
+   "492"
+  ],
+  "bengel.JHN.20.23.1": [
+   "gnomonofnewtesta0000mern",
+   502,
+   "493"
+  ],
+  "bengel.JHN.20.23-24.1": [
+   "gnomonofnewtesta0000mern",
+   503,
+   "494"
+  ],
+  "bengel.JHN.20.25.1": [
+   "gnomonofnewtesta0000mern",
+   503,
+   "494"
+  ],
+  "bengel.JHN.20.26-27.1": [
+   "gnomonofnewtesta0000mern",
+   503,
+   "494"
+  ],
+  "bengel.JHN.20.28.1": [
+   "gnomonofnewtesta0000mern",
+   504,
+   "495"
+  ],
+  "bengel.JHN.20.29.1": [
+   "gnomonofnewtesta0000mern",
+   505,
+   "496"
+  ],
+  "bengel.JHN.20.30.1": [
+   "gnomonofnewtesta0000mern",
+   505,
+   "496"
+  ],
+  "bengel.JHN.21.1.1": [
+   "gnomonofnewtesta0000mern",
+   506,
+   "497"
+  ],
+  "bengel.JHN.21.2.1": [
+   "gnomonofnewtesta0000mern",
+   507,
+   "498"
+  ],
+  "bengel.JHN.21.3-4.1": [
+   "gnomonofnewtesta0000mern",
+   507,
+   "498"
+  ],
+  "bengel.JHN.21.5-6.1": [
+   "gnomonofnewtesta0000mern",
+   507,
+   "498"
+  ],
+  "bengel.JHN.21.7.1": [
+   "gnomonofnewtesta0000mern",
+   507,
+   "498"
+  ],
+  "bengel.JHN.21.8-9.1": [
+   "gnomonofnewtesta0000mern",
+   508,
+   "499"
+  ],
+  "bengel.JHN.21.10.1": [
+   "gnomonofnewtesta0000mern",
+   508,
+   "499"
+  ],
+  "bengel.JHN.21.11.1": [
+   "gnomonofnewtesta0000mern",
+   508,
+   "499"
+  ],
+  "bengel.JHN.21.12.1": [
+   "gnomonofnewtesta0000mern",
+   509,
+   "500"
+  ],
+  "bengel.JHN.21.15.1": [
+   "gnomonofnewtesta0000mern",
+   509,
+   "500"
+  ],
+  "bengel.JHN.21.15.2": [
+   "gnomonofnewtesta0000mern",
+   510,
+   "501"
+  ],
+  "bengel.JHN.21.16.1": [
+   "gnomonofnewtesta0000mern",
+   511,
+   "502"
+  ],
+  "bengel.JHN.21.16.2": [
+   "gnomonofnewtesta0000mern",
+   512,
+   "503"
+  ],
+  "bengel.JHN.21.16.3": [
+   "gnomonofnewtesta0000mern",
+   512,
+   "503"
+  ],
+  "bengel.JHN.21.18.1": [
+   "gnomonofnewtesta0000mern",
+   513,
+   "504"
+  ],
+  "bengel.JHN.21.19.1": [
+   "gnomonofnewtesta0000mern",
+   513,
+   "504"
+  ],
+  "bengel.JHN.21.20.1": [
+   "gnomonofnewtesta0000mern",
+   514,
+   "505"
+  ],
+  "bengel.JHN.21.21.1": [
+   "gnomonofnewtesta0000mern",
+   514,
+   "505"
+  ],
+  "bengel.JHN.21.22.1": [
+   "gnomonofnewtesta0000mern",
+   515,
+   "506"
+  ],
+  "bengel.JHN.21.22.2": [
+   "gnomonofnewtesta0000mern",
+   517,
+   "508"
+  ],
+  "bengel.JHN.21.23.1": [
+   "gnomonofnewtesta0000mern",
+   517,
+   "508"
+  ],
+  "bengel.JHN.21.23.2": [
+   "gnomonofnewtesta0000mern",
+   518,
+   "509"
+  ],
+  "bengel.JHN.21.24.1": [
+   "gnomonofnewtesta0000mern",
+   518,
+   "509"
+  ],
+  "bengel.JHN.21.25.1": [
+   "gnomonofnewtesta0000mern",
+   519,
+   "510"
+  ]
+ }
+}

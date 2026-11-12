@@ -1,0 +1,1978 @@
+{
+ "work": "bengel-romans",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "gnomonofthenewte00benguoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/gnomonofthenewte00benguoft/gnomonofthenewte00benguoft_hocr_pageindex.json.gz",
+     "sha256": "023cb323d5bdda2acebc0eb6ae71d919e488583fcfa778716beae6b0ef51edbf"
+    },
+    {
+     "url": "https://archive.org/download/gnomonofthenewte00benguoft/gnomonofthenewte00benguoft_hocr_searchtext.txt.gz",
+     "sha256": "58c47eb337411bbba40b9e930c0e59deb65dd15c51269cc9daa27892e61cd750"
+    },
+    {
+     "url": "https://archive.org/download/gnomonofthenewte00benguoft/gnomonofthenewte00benguoft_page_numbers.json",
+     "sha256": "8889376b4060832b88822e499073410beab0b2a61b7f9dd66cd1c99d07cb2a9e"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 390,
+ "missed": 1,
+ "pages": {
+  "bengel-romans.ROM.1.1.1": [
+   "gnomonofthenewte00benguoft",
+   8,
+   ""
+  ],
+  "bengel-romans.ROM.1.1.2": [
+   "gnomonofthenewte00benguoft",
+   9,
+   ""
+  ],
+  "bengel-romans.ROM.1.1.3": [
+   "gnomonofthenewte00benguoft",
+   9,
+   ""
+  ],
+  "bengel-romans.ROM.1.1.4": [
+   "gnomonofthenewte00benguoft",
+   10,
+   "3"
+  ],
+  "bengel-romans.ROM.1.2.1": [
+   "gnomonofthenewte00benguoft",
+   10,
+   "3"
+  ],
+  "bengel-romans.ROM.1.3.1": [
+   "gnomonofthenewte00benguoft",
+   11,
+   "4"
+  ],
+  "bengel-romans.ROM.1.4.1": [
+   "gnomonofthenewte00benguoft",
+   11,
+   "4"
+  ],
+  "bengel-romans.ROM.1.4.2": [
+   "gnomonofthenewte00benguoft",
+   12,
+   "5"
+  ],
+  "bengel-romans.ROM.1.4.3": [
+   "gnomonofthenewte00benguoft",
+   13,
+   "6"
+  ],
+  "bengel-romans.ROM.1.4.4": [
+   "gnomonofthenewte00benguoft",
+   13,
+   "6"
+  ],
+  "bengel-romans.ROM.1.5.1": [
+   "gnomonofthenewte00benguoft",
+   14,
+   "7"
+  ],
+  "bengel-romans.ROM.1.6.1": [
+   "gnomonofthenewte00benguoft",
+   15,
+   "8"
+  ],
+  "bengel-romans.ROM.1.7.1": [
+   "gnomonofthenewte00benguoft",
+   15,
+   "8"
+  ],
+  "bengel-romans.ROM.1.7.2": [
+   "gnomonofthenewte00benguoft",
+   15,
+   "8"
+  ],
+  "bengel-romans.ROM.1.7.3": [
+   "gnomonofthenewte00benguoft",
+   16,
+   "9"
+  ],
+  "bengel-romans.ROM.1.8.1": [
+   "gnomonofthenewte00benguoft",
+   17,
+   "10"
+  ],
+  "bengel-romans.ROM.1.9.1": [
+   "gnomonofthenewte00benguoft",
+   17,
+   "10"
+  ],
+  "bengel-romans.ROM.1.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   18,
+   "11"
+  ],
+  "bengel-romans.ROM.1.12.1": [
+   "gnomonofthenewte00benguoft",
+   18,
+   "11"
+  ],
+  "bengel-romans.ROM.1.13.1": [
+   "gnomonofthenewte00benguoft",
+   19,
+   "12"
+  ],
+  "bengel-romans.ROM.1.14.1": [
+   "gnomonofthenewte00benguoft",
+   19,
+   "12"
+  ],
+  "bengel-romans.ROM.1.15.1": [
+   "gnomonofthenewte00benguoft",
+   20,
+   "13"
+  ],
+  "bengel-romans.ROM.1.16.1": [
+   "gnomonofthenewte00benguoft",
+   20,
+   "13"
+  ],
+  "bengel-romans.ROM.1.16.2": [
+   "gnomonofthenewte00benguoft",
+   20,
+   "13"
+  ],
+  "bengel-romans.ROM.1.16.3": [
+   "gnomonofthenewte00benguoft",
+   22,
+   "15"
+  ],
+  "bengel-romans.ROM.1.17.1": [
+   "gnomonofthenewte00benguoft",
+   22,
+   "15"
+  ],
+  "bengel-romans.ROM.1.17.2": [
+   "gnomonofthenewte00benguoft",
+   23,
+   "16"
+  ],
+  "bengel-romans.ROM.1.17.3": [
+   "gnomonofthenewte00benguoft",
+   23,
+   "16"
+  ],
+  "bengel-romans.ROM.1.17.4": [
+   "gnomonofthenewte00benguoft",
+   24,
+   "17"
+  ],
+  "bengel-romans.ROM.1.17.5": [
+   "gnomonofthenewte00benguoft",
+   24,
+   "17"
+  ],
+  "bengel-romans.ROM.1.18.1": [
+   "gnomonofthenewte00benguoft",
+   24,
+   "17"
+  ],
+  "bengel-romans.ROM.1.18.2": [
+   "gnomonofthenewte00benguoft",
+   25,
+   "18"
+  ],
+  "bengel-romans.ROM.1.19.1": [
+   "gnomonofthenewte00benguoft",
+   25,
+   "18"
+  ],
+  "bengel-romans.ROM.1.20.1": [
+   "gnomonofthenewte00benguoft",
+   26,
+   "19"
+  ],
+  "bengel-romans.ROM.1.21.1": [
+   "gnomonofthenewte00benguoft",
+   27,
+   "20"
+  ],
+  "bengel-romans.ROM.1.22-23.1": [
+   "gnomonofthenewte00benguoft",
+   27,
+   "20"
+  ],
+  "bengel-romans.ROM.1.24.1": [
+   "gnomonofthenewte00benguoft",
+   28,
+   "21"
+  ],
+  "bengel-romans.ROM.1.25-26.1": [
+   "gnomonofthenewte00benguoft",
+   29,
+   "22"
+  ],
+  "bengel-romans.ROM.1.27-28.1": [
+   "gnomonofthenewte00benguoft",
+   29,
+   "22"
+  ],
+  "bengel-romans.ROM.1.29.1": [
+   "gnomonofthenewte00benguoft",
+   30,
+   "23"
+  ],
+  "bengel-romans.ROM.1.30.1": [
+   "gnomonofthenewte00benguoft",
+   31,
+   "24"
+  ],
+  "bengel-romans.ROM.1.30-31.1": [
+   "gnomonofthenewte00benguoft",
+   31,
+   "24"
+  ],
+  "bengel-romans.ROM.1.32.1": [
+   "gnomonofthenewte00benguoft",
+   31,
+   "24"
+  ],
+  "bengel-romans.ROM.2.1.1": [
+   "gnomonofthenewte00benguoft",
+   33,
+   "26"
+  ],
+  "bengel-romans.ROM.2.2-3.1": [
+   "gnomonofthenewte00benguoft",
+   34,
+   "27"
+  ],
+  "bengel-romans.ROM.2.4.1": [
+   "gnomonofthenewte00benguoft",
+   34,
+   "27"
+  ],
+  "bengel-romans.ROM.2.5.1": [
+   "gnomonofthenewte00benguoft",
+   34,
+   "27"
+  ],
+  "bengel-romans.ROM.2.6.1": [
+   "gnomonofthenewte00benguoft",
+   35,
+   "28"
+  ],
+  "bengel-romans.ROM.2.7-8.1": [
+   "gnomonofthenewte00benguoft",
+   36,
+   "29"
+  ],
+  "bengel-romans.ROM.2.8.1": [
+   "gnomonofthenewte00benguoft",
+   36,
+   "29"
+  ],
+  "bengel-romans.ROM.2.9.1": [
+   "gnomonofthenewte00benguoft",
+   37,
+   "30"
+  ],
+  "bengel-romans.ROM.2.9-10.1": [
+   "gnomonofthenewte00benguoft",
+   38,
+   "31"
+  ],
+  "bengel-romans.ROM.2.12.1": [
+   "gnomonofthenewte00benguoft",
+   38,
+   "31"
+  ],
+  "bengel-romans.ROM.2.13.1": [
+   "gnomonofthenewte00benguoft",
+   39,
+   "32"
+  ],
+  "bengel-romans.ROM.2.14.1": [
+   "gnomonofthenewte00benguoft",
+   39,
+   "32"
+  ],
+  "bengel-romans.ROM.2.14.2": [
+   "gnomonofthenewte00benguoft",
+   40,
+   "33"
+  ],
+  "bengel-romans.ROM.2.14.3": [
+   "gnomonofthenewte00benguoft",
+   40,
+   "33"
+  ],
+  "bengel-romans.ROM.2.15.1": [
+   "gnomonofthenewte00benguoft",
+   40,
+   "33"
+  ],
+  "bengel-romans.ROM.2.16.1": [
+   "gnomonofthenewte00benguoft",
+   41,
+   "34"
+  ],
+  "bengel-romans.ROM.2.16.2": [
+   "gnomonofthenewte00benguoft",
+   42,
+   "35"
+  ],
+  "bengel-romans.ROM.2.17.1": [
+   "gnomonofthenewte00benguoft",
+   42,
+   "35"
+  ],
+  "bengel-romans.ROM.2.18-20.1": [
+   "gnomonofthenewte00benguoft",
+   43,
+   "36"
+  ],
+  "bengel-romans.ROM.2.21-22.1": [
+   "gnomonofthenewte00benguoft",
+   44,
+   "37"
+  ],
+  "bengel-romans.ROM.2.24-25.1": [
+   "gnomonofthenewte00benguoft",
+   44,
+   "37"
+  ],
+  "bengel-romans.ROM.2.26-27.1": [
+   "gnomonofthenewte00benguoft",
+   44,
+   "37"
+  ],
+  "bengel-romans.ROM.2.28-29.1": [
+   "gnomonofthenewte00benguoft",
+   45,
+   "38"
+  ],
+  "bengel-romans.ROM.3.1.1": [
+   "gnomonofthenewte00benguoft",
+   45,
+   "38"
+  ],
+  "bengel-romans.ROM.3.2.1": [
+   "gnomonofthenewte00benguoft",
+   46,
+   "39"
+  ],
+  "bengel-romans.ROM.3.3.1": [
+   "gnomonofthenewte00benguoft",
+   46,
+   "39"
+  ],
+  "bengel-romans.ROM.3.4.1": [
+   "gnomonofthenewte00benguoft",
+   47,
+   "40"
+  ],
+  "bengel-romans.ROM.3.4.2": [
+   "gnomonofthenewte00benguoft",
+   48,
+   "41"
+  ],
+  "bengel-romans.ROM.3.5.1": [
+   "gnomonofthenewte00benguoft",
+   48,
+   "41"
+  ],
+  "bengel-romans.ROM.3.6.1": [
+   "gnomonofthenewte00benguoft",
+   48,
+   "41"
+  ],
+  "bengel-romans.ROM.3.7.1": [
+   "gnomonofthenewte00benguoft",
+   49,
+   "42"
+  ],
+  "bengel-romans.ROM.3.8.1": [
+   "gnomonofthenewte00benguoft",
+   49,
+   "42"
+  ],
+  "bengel-romans.ROM.3.9.1": [
+   "gnomonofthenewte00benguoft",
+   50,
+   "43"
+  ],
+  "bengel-romans.ROM.3.10.1": [
+   "gnomonofthenewte00benguoft",
+   50,
+   "43"
+  ],
+  "bengel-romans.ROM.3.10.2": [
+   "gnomonofthenewte00benguoft",
+   51,
+   "44"
+  ],
+  "bengel-romans.ROM.3.11-12.1": [
+   "gnomonofthenewte00benguoft",
+   51,
+   "44"
+  ],
+  "bengel-romans.ROM.3.13-14.1": [
+   "gnomonofthenewte00benguoft",
+   51,
+   "44"
+  ],
+  "bengel-romans.ROM.3.15-18.1": [
+   "gnomonofthenewte00benguoft",
+   51,
+   "44"
+  ],
+  "bengel-romans.ROM.3.19.1": [
+   "gnomonofthenewte00benguoft",
+   52,
+   "45"
+  ],
+  "bengel-romans.ROM.3.20.1": [
+   "gnomonofthenewte00benguoft",
+   52,
+   "45"
+  ],
+  "bengel-romans.ROM.3.20.2": [
+   "gnomonofthenewte00benguoft",
+   53,
+   "46"
+  ],
+  "bengel-romans.ROM.3.21-22.1": [
+   "gnomonofthenewte00benguoft",
+   54,
+   "47"
+  ],
+  "bengel-romans.ROM.3.23.1": [
+   "gnomonofthenewte00benguoft",
+   54,
+   "47"
+  ],
+  "bengel-romans.ROM.3.23.2": [
+   "gnomonofthenewte00benguoft",
+   55,
+   "48"
+  ],
+  "bengel-romans.ROM.3.24.1": [
+   "gnomonofthenewte00benguoft",
+   55,
+   "48"
+  ],
+  "bengel-romans.ROM.3.25.1": [
+   "gnomonofthenewte00benguoft",
+   56,
+   "49"
+  ],
+  "bengel-romans.ROM.3.25.2": [
+   "gnomonofthenewte00benguoft",
+   57,
+   "50"
+  ],
+  "bengel-romans.ROM.3.25.3": [
+   "gnomonofthenewte00benguoft",
+   57,
+   "50"
+  ],
+  "bengel-romans.ROM.3.25.4": [
+   "gnomonofthenewte00benguoft",
+   58,
+   "51"
+  ],
+  "bengel-romans.ROM.3.26.1": [
+   "gnomonofthenewte00benguoft",
+   58,
+   "51"
+  ],
+  "bengel-romans.ROM.3.27.1": [
+   "gnomonofthenewte00benguoft",
+   58,
+   "51"
+  ],
+  "bengel-romans.ROM.3.28.1": [
+   "gnomonofthenewte00benguoft",
+   59,
+   "52"
+  ],
+  "bengel-romans.ROM.3.29-30.1": [
+   "gnomonofthenewte00benguoft",
+   60,
+   "53"
+  ],
+  "bengel-romans.ROM.3.31.1": [
+   "gnomonofthenewte00benguoft",
+   60,
+   "53"
+  ],
+  "bengel-romans.ROM.4.1.1": [
+   "gnomonofthenewte00benguoft",
+   61,
+   "54"
+  ],
+  "bengel-romans.ROM.4.2-3.1": [
+   "gnomonofthenewte00benguoft",
+   61,
+   "54"
+  ],
+  "bengel-romans.ROM.4.4.1": [
+   "gnomonofthenewte00benguoft",
+   62,
+   "55"
+  ],
+  "bengel-romans.ROM.4.5.1": [
+   "gnomonofthenewte00benguoft",
+   62,
+   "55"
+  ],
+  "bengel-romans.ROM.4.6.1": [
+   "gnomonofthenewte00benguoft",
+   63,
+   "56"
+  ],
+  "bengel-romans.ROM.4.7-9.1": [
+   "gnomonofthenewte00benguoft",
+   64,
+   "57"
+  ],
+  "bengel-romans.ROM.4.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   64,
+   "57"
+  ],
+  "bengel-romans.ROM.4.12.1": [
+   "gnomonofthenewte00benguoft",
+   64,
+   "57"
+  ],
+  "bengel-romans.ROM.4.13.1": [
+   "gnomonofthenewte00benguoft",
+   65,
+   "58"
+  ],
+  "bengel-romans.ROM.4.14.1": [
+   "gnomonofthenewte00benguoft",
+   65,
+   "58"
+  ],
+  "bengel-romans.ROM.4.15-16.1": [
+   "gnomonofthenewte00benguoft",
+   66,
+   "59"
+  ],
+  "bengel-romans.ROM.4.17.1": [
+   "gnomonofthenewte00benguoft",
+   66,
+   "59"
+  ],
+  "bengel-romans.ROM.4.18-21.1": [
+   "gnomonofthenewte00benguoft",
+   67,
+   "60"
+  ],
+  "bengel-romans.ROM.4.19.1": [
+   "gnomonofthenewte00benguoft",
+   67,
+   "60"
+  ],
+  "bengel-romans.ROM.4.20-22.1": [
+   "gnomonofthenewte00benguoft",
+   67,
+   "60"
+  ],
+  "bengel-romans.ROM.4.23-25.1": [
+   "gnomonofthenewte00benguoft",
+   67,
+   "60"
+  ],
+  "bengel-romans.ROM.5.1.1": [
+   "gnomonofthenewte00benguoft",
+   68,
+   "61"
+  ],
+  "bengel-romans.ROM.5.2.1": [
+   "gnomonofthenewte00benguoft",
+   69,
+   "62"
+  ],
+  "bengel-romans.ROM.5.3.1": [
+   "gnomonofthenewte00benguoft",
+   69,
+   "62"
+  ],
+  "bengel-romans.ROM.5.4.1": [
+   "gnomonofthenewte00benguoft",
+   69,
+   "62"
+  ],
+  "bengel-romans.ROM.5.5.1": [
+   "gnomonofthenewte00benguoft",
+   70,
+   "63"
+  ],
+  "bengel-romans.ROM.5.6.1": [
+   "gnomonofthenewte00benguoft",
+   70,
+   "63"
+  ],
+  "bengel-romans.ROM.5.7.1": [
+   "gnomonofthenewte00benguoft",
+   71,
+   "64"
+  ],
+  "bengel-romans.ROM.5.7.2": [
+   "gnomonofthenewte00benguoft",
+   72,
+   "65"
+  ],
+  "bengel-romans.ROM.5.8-9.1": [
+   "gnomonofthenewte00benguoft",
+   73,
+   "66"
+  ],
+  "bengel-romans.ROM.5.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   73,
+   "66"
+  ],
+  "bengel-romans.ROM.5.12.1": [
+   "gnomonofthenewte00benguoft",
+   74,
+   "67"
+  ],
+  "bengel-romans.ROM.5.12.2": [
+   "gnomonofthenewte00benguoft",
+   74,
+   "67"
+  ],
+  "bengel-romans.ROM.5.12.3": [
+   "gnomonofthenewte00benguoft",
+   75,
+   "68"
+  ],
+  "bengel-romans.ROM.5.13.1": [
+   "gnomonofthenewte00benguoft",
+   75,
+   "68"
+  ],
+  "bengel-romans.ROM.5.14.1": [
+   "gnomonofthenewte00benguoft",
+   76,
+   "69"
+  ],
+  "bengel-romans.ROM.5.14.2": [
+   "gnomonofthenewte00benguoft",
+   77,
+   "70"
+  ],
+  "bengel-romans.ROM.5.14.3": [
+   "gnomonofthenewte00benguoft",
+   77,
+   "70"
+  ],
+  "bengel-romans.ROM.5.14.4": [
+   "gnomonofthenewte00benguoft",
+   78,
+   "71"
+  ],
+  "bengel-romans.ROM.5.15.1": [
+   "gnomonofthenewte00benguoft",
+   78,
+   "71"
+  ],
+  "bengel-romans.ROM.5.15.2": [
+   "gnomonofthenewte00benguoft",
+   79,
+   "72"
+  ],
+  "bengel-romans.ROM.5.15.3": [
+   "gnomonofthenewte00benguoft",
+   79,
+   "72"
+  ],
+  "bengel-romans.ROM.5.16.1": [
+   "gnomonofthenewte00benguoft",
+   80,
+   "73"
+  ],
+  "bengel-romans.ROM.5.17.1": [
+   "gnomonofthenewte00benguoft",
+   80,
+   "73"
+  ],
+  "bengel-romans.ROM.5.18.1": [
+   "gnomonofthenewte00benguoft",
+   81,
+   "74"
+  ],
+  "bengel-romans.ROM.5.19.1": [
+   "gnomonofthenewte00benguoft",
+   82,
+   "75"
+  ],
+  "bengel-romans.ROM.5.19.2": [
+   "gnomonofthenewte00benguoft",
+   83,
+   "76"
+  ],
+  "bengel-romans.ROM.5.20.1": [
+   "gnomonofthenewte00benguoft",
+   83,
+   "76"
+  ],
+  "bengel-romans.ROM.5.21.1": [
+   "gnomonofthenewte00benguoft",
+   84,
+   "77"
+  ],
+  "bengel-romans.ROM.6.1.1": [
+   "gnomonofthenewte00benguoft",
+   84,
+   "77"
+  ],
+  "bengel-romans.ROM.6.2-3.1": [
+   "gnomonofthenewte00benguoft",
+   84,
+   "77"
+  ],
+  "bengel-romans.ROM.6.4.1": [
+   "gnomonofthenewte00benguoft",
+   85,
+   "78"
+  ],
+  "bengel-romans.ROM.6.5.1": [
+   "gnomonofthenewte00benguoft",
+   85,
+   "78"
+  ],
+  "bengel-romans.ROM.6.6-7.1": [
+   "gnomonofthenewte00benguoft",
+   86,
+   "79"
+  ],
+  "bengel-romans.ROM.6.8-10.1": [
+   "gnomonofthenewte00benguoft",
+   86,
+   "79"
+  ],
+  "bengel-romans.ROM.6.11.1": [
+   "gnomonofthenewte00benguoft",
+   87,
+   "80"
+  ],
+  "bengel-romans.ROM.6.12.1": [
+   "gnomonofthenewte00benguoft",
+   87,
+   "80"
+  ],
+  "bengel-romans.ROM.6.13.1": [
+   "gnomonofthenewte00benguoft",
+   87,
+   "80"
+  ],
+  "bengel-romans.ROM.6.14-16.1": [
+   "gnomonofthenewte00benguoft",
+   88,
+   "81"
+  ],
+  "bengel-romans.ROM.6.17.1": [
+   "gnomonofthenewte00benguoft",
+   88,
+   "81"
+  ],
+  "bengel-romans.ROM.6.17.2": [
+   "gnomonofthenewte00benguoft",
+   89,
+   "82"
+  ],
+  "bengel-romans.ROM.6.18.1": [
+   "gnomonofthenewte00benguoft",
+   90,
+   "83"
+  ],
+  "bengel-romans.ROM.6.19.1": [
+   "gnomonofthenewte00benguoft",
+   91,
+   "84"
+  ],
+  "bengel-romans.ROM.6.20.1": [
+   "gnomonofthenewte00benguoft",
+   91,
+   "84"
+  ],
+  "bengel-romans.ROM.6.21.1": [
+   "gnomonofthenewte00benguoft",
+   92,
+   "85"
+  ],
+  "bengel-romans.ROM.6.22-23.1": [
+   "gnomonofthenewte00benguoft",
+   92,
+   "85"
+  ],
+  "bengel-romans.ROM.7.1.1": [
+   "gnomonofthenewte00benguoft",
+   93,
+   "86"
+  ],
+  "bengel-romans.ROM.7.2-4.1": [
+   "gnomonofthenewte00benguoft",
+   94,
+   "87"
+  ],
+  "bengel-romans.ROM.7.5.1": [
+   "gnomonofthenewte00benguoft",
+   94,
+   "87"
+  ],
+  "bengel-romans.ROM.7.6.1": [
+   "gnomonofthenewte00benguoft",
+   94,
+   "87"
+  ],
+  "bengel-romans.ROM.7.7.1": [
+   "gnomonofthenewte00benguoft",
+   95,
+   "88"
+  ],
+  "bengel-romans.ROM.7.8-9.1": [
+   "gnomonofthenewte00benguoft",
+   96,
+   "89"
+  ],
+  "bengel-romans.ROM.7.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   97,
+   "90"
+  ],
+  "bengel-romans.ROM.7.12.1": [
+   "gnomonofthenewte00benguoft",
+   97,
+   "90"
+  ],
+  "bengel-romans.ROM.7.13.1": [
+   "gnomonofthenewte00benguoft",
+   97,
+   "90"
+  ],
+  "bengel-romans.ROM.7.14.1": [
+   "gnomonofthenewte00benguoft",
+   98,
+   "91"
+  ],
+  "bengel-romans.ROM.7.14.2": [
+   "gnomonofthenewte00benguoft",
+   98,
+   "91"
+  ],
+  "bengel-romans.ROM.7.14.3": [
+   "gnomonofthenewte00benguoft",
+   99,
+   "92"
+  ],
+  "bengel-romans.ROM.7.14.4": [
+   "gnomonofthenewte00benguoft",
+   100,
+   "93"
+  ],
+  "bengel-romans.ROM.7.15.1": [
+   "gnomonofthenewte00benguoft",
+   100,
+   "93"
+  ],
+  "bengel-romans.ROM.7.16-18.1": [
+   "gnomonofthenewte00benguoft",
+   100,
+   "93"
+  ],
+  "bengel-romans.ROM.7.20-21.1": [
+   "gnomonofthenewte00benguoft",
+   101,
+   "94"
+  ],
+  "bengel-romans.ROM.7.22-23.1": [
+   "gnomonofthenewte00benguoft",
+   102,
+   "95"
+  ],
+  "bengel-romans.ROM.7.24.1": [
+   "gnomonofthenewte00benguoft",
+   102,
+   "95"
+  ],
+  "bengel-romans.ROM.7.25.1": [
+   "gnomonofthenewte00benguoft",
+   103,
+   "96"
+  ],
+  "bengel-romans.ROM.8.1.1": [
+   "gnomonofthenewte00benguoft",
+   104,
+   "97"
+  ],
+  "bengel-romans.ROM.8.1-2.1": [
+   "gnomonofthenewte00benguoft",
+   104,
+   "97"
+  ],
+  "bengel-romans.ROM.8.2.1": [
+   "gnomonofthenewte00benguoft",
+   105,
+   "98"
+  ],
+  "bengel-romans.ROM.8.3.1": [
+   "gnomonofthenewte00benguoft",
+   105,
+   "98"
+  ],
+  "bengel-romans.ROM.8.3.2": [
+   "gnomonofthenewte00benguoft",
+   106,
+   "99"
+  ],
+  "bengel-romans.ROM.8.4.1": [
+   "gnomonofthenewte00benguoft",
+   106,
+   "99"
+  ],
+  "bengel-romans.ROM.8.5-6.1": [
+   "gnomonofthenewte00benguoft",
+   107,
+   "100"
+  ],
+  "bengel-romans.ROM.8.7-9.1": [
+   "gnomonofthenewte00benguoft",
+   107,
+   "100"
+  ],
+  "bengel-romans.ROM.8.10.1": [
+   "gnomonofthenewte00benguoft",
+   108,
+   "101"
+  ],
+  "bengel-romans.ROM.8.11.1": [
+   "gnomonofthenewte00benguoft",
+   108,
+   "101"
+  ],
+  "bengel-romans.ROM.8.12.1": [
+   "gnomonofthenewte00benguoft",
+   109,
+   "102"
+  ],
+  "bengel-romans.ROM.8.13.1": [
+   "gnomonofthenewte00benguoft",
+   109,
+   "102"
+  ],
+  "bengel-romans.ROM.8.14.1": [
+   "gnomonofthenewte00benguoft",
+   109,
+   "102"
+  ],
+  "bengel-romans.ROM.8.15.1": [
+   "gnomonofthenewte00benguoft",
+   110,
+   "103"
+  ],
+  "bengel-romans.ROM.8.16-17.1": [
+   "gnomonofthenewte00benguoft",
+   110,
+   "103"
+  ],
+  "bengel-romans.ROM.8.18.1": [
+   "gnomonofthenewte00benguoft",
+   111,
+   "104"
+  ],
+  "bengel-romans.ROM.8.18-19.1": [
+   "gnomonofthenewte00benguoft",
+   111,
+   "104"
+  ],
+  "bengel-romans.ROM.8.20.1": [
+   "gnomonofthenewte00benguoft",
+   112,
+   "105"
+  ],
+  "bengel-romans.ROM.8.21.1": [
+   "gnomonofthenewte00benguoft",
+   112,
+   "105"
+  ],
+  "bengel-romans.ROM.8.22.1": [
+   "gnomonofthenewte00benguoft",
+   113,
+   "106"
+  ],
+  "bengel-romans.ROM.8.23.1": [
+   "gnomonofthenewte00benguoft",
+   113,
+   "106"
+  ],
+  "bengel-romans.ROM.8.23.2": [
+   "gnomonofthenewte00benguoft",
+   114,
+   "107"
+  ],
+  "bengel-romans.ROM.8.24.1": [
+   "gnomonofthenewte00benguoft",
+   114,
+   "107"
+  ],
+  "bengel-romans.ROM.8.25-26.1": [
+   "gnomonofthenewte00benguoft",
+   114,
+   "107"
+  ],
+  "bengel-romans.ROM.8.27.1": [
+   "gnomonofthenewte00benguoft",
+   115,
+   "108"
+  ],
+  "bengel-romans.ROM.8.28.1": [
+   "gnomonofthenewte00benguoft",
+   116,
+   "109"
+  ],
+  "bengel-romans.ROM.8.29.1": [
+   "gnomonofthenewte00benguoft",
+   117,
+   "110"
+  ],
+  "bengel-romans.ROM.8.30.1": [
+   "gnomonofthenewte00benguoft",
+   117,
+   "110"
+  ],
+  "bengel-romans.ROM.8.31.1": [
+   "gnomonofthenewte00benguoft",
+   118,
+   "111"
+  ],
+  "bengel-romans.ROM.8.31.2": [
+   "gnomonofthenewte00benguoft",
+   118,
+   "111"
+  ],
+  "bengel-romans.ROM.8.31.3": [
+   "gnomonofthenewte00benguoft",
+   119,
+   "112"
+  ],
+  "bengel-romans.ROM.8.32.1": [
+   "gnomonofthenewte00benguoft",
+   119,
+   "112"
+  ],
+  "bengel-romans.ROM.8.33.1": [
+   "gnomonofthenewte00benguoft",
+   120,
+   "113"
+  ],
+  "bengel-romans.ROM.8.34.1": [
+   "gnomonofthenewte00benguoft",
+   120,
+   "113"
+  ],
+  "bengel-romans.ROM.8.35.1": [
+   "gnomonofthenewte00benguoft",
+   121,
+   "114"
+  ],
+  "bengel-romans.ROM.8.36.1": [
+   "gnomonofthenewte00benguoft",
+   122,
+   "115"
+  ],
+  "bengel-romans.ROM.8.37.1": [
+   "gnomonofthenewte00benguoft",
+   122,
+   "115"
+  ],
+  "bengel-romans.ROM.8.38.1": [
+   "gnomonofthenewte00benguoft",
+   122,
+   "115"
+  ],
+  "bengel-romans.ROM.8.38.2": [
+   "gnomonofthenewte00benguoft",
+   122,
+   "115"
+  ],
+  "bengel-romans.ROM.8.38.3": [
+   "gnomonofthenewte00benguoft",
+   123,
+   "116"
+  ],
+  "bengel-romans.ROM.8.38.4": [
+   "gnomonofthenewte00benguoft",
+   124,
+   "117"
+  ],
+  "bengel-romans.ROM.8.39.1": [
+   "gnomonofthenewte00benguoft",
+   124,
+   "117"
+  ],
+  "bengel-romans.ROM.9.1.1": [
+   "gnomonofthenewte00benguoft",
+   126,
+   "119"
+  ],
+  "bengel-romans.ROM.9.2.1": [
+   "gnomonofthenewte00benguoft",
+   126,
+   "119"
+  ],
+  "bengel-romans.ROM.9.3.1": [
+   "gnomonofthenewte00benguoft",
+   126,
+   "119"
+  ],
+  "bengel-romans.ROM.9.3.2": [
+   "gnomonofthenewte00benguoft",
+   127,
+   "120"
+  ],
+  "bengel-romans.ROM.9.3.3": [
+   "gnomonofthenewte00benguoft",
+   128,
+   "121"
+  ],
+  "bengel-romans.ROM.9.4.1": [
+   "gnomonofthenewte00benguoft",
+   128,
+   "121"
+  ],
+  "bengel-romans.ROM.9.4.2": [
+   "gnomonofthenewte00benguoft",
+   129,
+   "122"
+  ],
+  "bengel-romans.ROM.9.5.1": [
+   "gnomonofthenewte00benguoft",
+   129,
+   "122"
+  ],
+  "bengel-romans.ROM.9.5.2": [
+   "gnomonofthenewte00benguoft",
+   130,
+   "123"
+  ],
+  "bengel-romans.ROM.9.5.3": [
+   "gnomonofthenewte00benguoft",
+   131,
+   "124"
+  ],
+  "bengel-romans.ROM.9.5.4": [
+   "gnomonofthenewte00benguoft",
+   131,
+   "124"
+  ],
+  "bengel-romans.ROM.9.6.1": [
+   "gnomonofthenewte00benguoft",
+   132,
+   "125"
+  ],
+  "bengel-romans.ROM.9.6.2": [
+   "gnomonofthenewte00benguoft",
+   132,
+   "125"
+  ],
+  "bengel-romans.ROM.9.7.1": [
+   "gnomonofthenewte00benguoft",
+   133,
+   "126"
+  ],
+  "bengel-romans.ROM.9.8-9.1": [
+   "gnomonofthenewte00benguoft",
+   133,
+   "126"
+  ],
+  "bengel-romans.ROM.9.10.1": [
+   "gnomonofthenewte00benguoft",
+   134,
+   "127"
+  ],
+  "bengel-romans.ROM.9.11.1": [
+   "gnomonofthenewte00benguoft",
+   134,
+   "127"
+  ],
+  "bengel-romans.ROM.9.12-13.1": [
+   "gnomonofthenewte00benguoft",
+   135,
+   "128"
+  ],
+  "bengel-romans.ROM.9.14.1": [
+   "gnomonofthenewte00benguoft",
+   135,
+   "128"
+  ],
+  "bengel-romans.ROM.9.14.2": [
+   "gnomonofthenewte00benguoft",
+   135,
+   "128"
+  ],
+  "bengel-romans.ROM.9.14.3": [
+   "gnomonofthenewte00benguoft",
+   136,
+   "129"
+  ],
+  "bengel-romans.ROM.9.15.1": [
+   "gnomonofthenewte00benguoft",
+   136,
+   "129"
+  ],
+  "bengel-romans.ROM.9.15.2": [
+   "gnomonofthenewte00benguoft",
+   137,
+   "130"
+  ],
+  "bengel-romans.ROM.9.15.3": [
+   "gnomonofthenewte00benguoft",
+   138,
+   "131"
+  ],
+  "bengel-romans.ROM.9.16.1": [
+   "gnomonofthenewte00benguoft",
+   138,
+   "131"
+  ],
+  "bengel-romans.ROM.9.17.1": [
+   "gnomonofthenewte00benguoft",
+   138,
+   "131"
+  ],
+  "bengel-romans.ROM.9.18.1": [
+   "gnomonofthenewte00benguoft",
+   139,
+   "132"
+  ],
+  "bengel-romans.ROM.9.19.1": [
+   "gnomonofthenewte00benguoft",
+   140,
+   "133"
+  ],
+  "bengel-romans.ROM.9.20.1": [
+   "gnomonofthenewte00benguoft",
+   140,
+   "133"
+  ],
+  "bengel-romans.ROM.9.21.1": [
+   "gnomonofthenewte00benguoft",
+   140,
+   "133"
+  ],
+  "bengel-romans.ROM.9.22.1": [
+   "gnomonofthenewte00benguoft",
+   141,
+   "134"
+  ],
+  "bengel-romans.ROM.9.22.2": [
+   "gnomonofthenewte00benguoft",
+   141,
+   "134"
+  ],
+  "bengel-romans.ROM.9.23.1": [
+   "gnomonofthenewte00benguoft",
+   142,
+   "135"
+  ],
+  "bengel-romans.ROM.9.24.1": [
+   "gnomonofthenewte00benguoft",
+   142,
+   "135"
+  ],
+  "bengel-romans.ROM.9.25.1": [
+   "gnomonofthenewte00benguoft",
+   143,
+   "136"
+  ],
+  "bengel-romans.ROM.9.26-27.1": [
+   "gnomonofthenewte00benguoft",
+   143,
+   "136"
+  ],
+  "bengel-romans.ROM.9.28.1": [
+   "gnomonofthenewte00benguoft",
+   144,
+   "137"
+  ],
+  "bengel-romans.ROM.9.29.1": [
+   "gnomonofthenewte00benguoft",
+   144,
+   "137"
+  ],
+  "bengel-romans.ROM.9.30.1": [
+   "gnomonofthenewte00benguoft",
+   144,
+   "137"
+  ],
+  "bengel-romans.ROM.9.31.1": [
+   "gnomonofthenewte00benguoft",
+   145,
+   "138"
+  ],
+  "bengel-romans.ROM.9.32-33.1": [
+   "gnomonofthenewte00benguoft",
+   145,
+   "138"
+  ],
+  "bengel-romans.ROM.10.1-2.1": [
+   "gnomonofthenewte00benguoft",
+   146,
+   "139"
+  ],
+  "bengel-romans.ROM.10.3-4.1": [
+   "gnomonofthenewte00benguoft",
+   146,
+   "139"
+  ],
+  "bengel-romans.ROM.10.5.1": [
+   "gnomonofthenewte00benguoft",
+   147,
+   "140"
+  ],
+  "bengel-romans.ROM.10.6.1": [
+   "gnomonofthenewte00benguoft",
+   147,
+   "140"
+  ],
+  "bengel-romans.ROM.10.6.2": [
+   "gnomonofthenewte00benguoft",
+   147,
+   "140"
+  ],
+  "bengel-romans.ROM.10.7.1": [
+   "gnomonofthenewte00benguoft",
+   148,
+   "141"
+  ],
+  "bengel-romans.ROM.10.8.1": [
+   "gnomonofthenewte00benguoft",
+   149,
+   "142"
+  ],
+  "bengel-romans.ROM.10.9.1": [
+   "gnomonofthenewte00benguoft",
+   149,
+   "142"
+  ],
+  "bengel-romans.ROM.10.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   149,
+   "142"
+  ],
+  "bengel-romans.ROM.10.12-13.1": [
+   "gnomonofthenewte00benguoft",
+   150,
+   "143"
+  ],
+  "bengel-romans.ROM.10.14-15.1": [
+   "gnomonofthenewte00benguoft",
+   150,
+   "143"
+  ],
+  "bengel-romans.ROM.10.14-15.2": [
+   "gnomonofthenewte00benguoft",
+   150,
+   "143"
+  ],
+  "bengel-romans.ROM.10.16-17.1": [
+   "gnomonofthenewte00benguoft",
+   151,
+   "144"
+  ],
+  "bengel-romans.ROM.10.18.1": [
+   "gnomonofthenewte00benguoft",
+   151,
+   "144"
+  ],
+  "bengel-romans.ROM.10.19.1": [
+   "gnomonofthenewte00benguoft",
+   152,
+   "145"
+  ],
+  "bengel-romans.ROM.10.20-21.1": [
+   "gnomonofthenewte00benguoft",
+   152,
+   "145"
+  ],
+  "bengel-romans.ROM.11.1.1": [
+   "gnomonofthenewte00benguoft",
+   153,
+   "146"
+  ],
+  "bengel-romans.ROM.11.2-3.1": [
+   "gnomonofthenewte00benguoft",
+   153,
+   "146"
+  ],
+  "bengel-romans.ROM.11.4.1": [
+   "gnomonofthenewte00benguoft",
+   154,
+   "147"
+  ],
+  "bengel-romans.ROM.11.5-6.1": [
+   "gnomonofthenewte00benguoft",
+   154,
+   "147"
+  ],
+  "bengel-romans.ROM.11.7-8.1": [
+   "gnomonofthenewte00benguoft",
+   155,
+   "148"
+  ],
+  "bengel-romans.ROM.11.9.1": [
+   "gnomonofthenewte00benguoft",
+   156,
+   "149"
+  ],
+  "bengel-romans.ROM.11.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   156,
+   "149"
+  ],
+  "bengel-romans.ROM.11.12.1": [
+   "gnomonofthenewte00benguoft",
+   157,
+   "150"
+  ],
+  "bengel-romans.ROM.11.13-15.1": [
+   "gnomonofthenewte00benguoft",
+   157,
+   "150"
+  ],
+  "bengel-romans.ROM.11.16-17.1": [
+   "gnomonofthenewte00benguoft",
+   158,
+   "151"
+  ],
+  "bengel-romans.ROM.11.18-19.1": [
+   "gnomonofthenewte00benguoft",
+   158,
+   "151"
+  ],
+  "bengel-romans.ROM.11.20.1": [
+   "gnomonofthenewte00benguoft",
+   158,
+   "151"
+  ],
+  "bengel-romans.ROM.11.21-22.1": [
+   "gnomonofthenewte00benguoft",
+   159,
+   "152"
+  ],
+  "bengel-romans.ROM.11.23.1": [
+   "gnomonofthenewte00benguoft",
+   159,
+   "152"
+  ],
+  "bengel-romans.ROM.11.24.1": [
+   "gnomonofthenewte00benguoft",
+   160,
+   "153"
+  ],
+  "bengel-romans.ROM.11.25.1": [
+   "gnomonofthenewte00benguoft",
+   160,
+   "153"
+  ],
+  "bengel-romans.ROM.11.25.2": [
+   "gnomonofthenewte00benguoft",
+   161,
+   "154"
+  ],
+  "bengel-romans.ROM.11.26.1": [
+   "gnomonofthenewte00benguoft",
+   161,
+   "154"
+  ],
+  "bengel-romans.ROM.11.27-28.1": [
+   "gnomonofthenewte00benguoft",
+   162,
+   "155"
+  ],
+  "bengel-romans.ROM.11.29-30.1": [
+   "gnomonofthenewte00benguoft",
+   163,
+   "156"
+  ],
+  "bengel-romans.ROM.11.31.1": [
+   "gnomonofthenewte00benguoft",
+   163,
+   "156"
+  ],
+  "bengel-romans.ROM.11.32.1": [
+   "gnomonofthenewte00benguoft",
+   163,
+   "156"
+  ],
+  "bengel-romans.ROM.11.33.1": [
+   "gnomonofthenewte00benguoft",
+   164,
+   "157"
+  ],
+  "bengel-romans.ROM.11.34.1": [
+   "gnomonofthenewte00benguoft",
+   164,
+   "157"
+  ],
+  "bengel-romans.ROM.11.35-36.1": [
+   "gnomonofthenewte00benguoft",
+   165,
+   "158"
+  ],
+  "bengel-romans.ROM.12.1.1": [
+   "gnomonofthenewte00benguoft",
+   166,
+   "159"
+  ],
+  "bengel-romans.ROM.12.1.2": [
+   "gnomonofthenewte00benguoft",
+   167,
+   "160"
+  ],
+  "bengel-romans.ROM.12.2.1": [
+   "gnomonofthenewte00benguoft",
+   167,
+   "160"
+  ],
+  "bengel-romans.ROM.12.3.1": [
+   "gnomonofthenewte00benguoft",
+   168,
+   "161"
+  ],
+  "bengel-romans.ROM.12.6.1": [
+   "gnomonofthenewte00benguoft",
+   169,
+   "162"
+  ],
+  "bengel-romans.ROM.12.6.2": [
+   "gnomonofthenewte00benguoft",
+   169,
+   "162"
+  ],
+  "bengel-romans.ROM.12.6.3": [
+   "gnomonofthenewte00benguoft",
+   169,
+   "162"
+  ],
+  "bengel-romans.ROM.12.6.4": [
+   "gnomonofthenewte00benguoft",
+   170,
+   "163"
+  ],
+  "bengel-romans.ROM.12.7-8.1": [
+   "gnomonofthenewte00benguoft",
+   171,
+   "164"
+  ],
+  "bengel-romans.ROM.12.9.1": [
+   "gnomonofthenewte00benguoft",
+   171,
+   "164"
+  ],
+  "bengel-romans.ROM.12.10.1": [
+   "gnomonofthenewte00benguoft",
+   172,
+   "165"
+  ],
+  "bengel-romans.ROM.12.11.1": [
+   "gnomonofthenewte00benguoft",
+   172,
+   "165"
+  ],
+  "bengel-romans.ROM.12.12.1": [
+   "gnomonofthenewte00benguoft",
+   172,
+   "165"
+  ],
+  "bengel-romans.ROM.12.13-15.1": [
+   "gnomonofthenewte00benguoft",
+   172,
+   "165"
+  ],
+  "bengel-romans.ROM.12.16.1": [
+   "gnomonofthenewte00benguoft",
+   173,
+   "166"
+  ],
+  "bengel-romans.ROM.12.17-18.1": [
+   "gnomonofthenewte00benguoft",
+   173,
+   "166"
+  ],
+  "bengel-romans.ROM.12.19.1": [
+   "gnomonofthenewte00benguoft",
+   174,
+   "167"
+  ],
+  "bengel-romans.ROM.12.20.1": [
+   "gnomonofthenewte00benguoft",
+   175,
+   "168"
+  ],
+  "bengel-romans.ROM.12.21.1": [
+   "gnomonofthenewte00benguoft",
+   175,
+   "168"
+  ],
+  "bengel-romans.ROM.13.1.1": [
+   "gnomonofthenewte00benguoft",
+   175,
+   "168"
+  ],
+  "bengel-romans.ROM.13.2.1": [
+   "gnomonofthenewte00benguoft",
+   176,
+   "169"
+  ],
+  "bengel-romans.ROM.13.3.1": [
+   "gnomonofthenewte00benguoft",
+   176,
+   "169"
+  ],
+  "bengel-romans.ROM.13.4.1": [
+   "gnomonofthenewte00benguoft",
+   177,
+   "170"
+  ],
+  "bengel-romans.ROM.13.5.1": [
+   "gnomonofthenewte00benguoft",
+   177,
+   "170"
+  ],
+  "bengel-romans.ROM.13.6-8.1": [
+   "gnomonofthenewte00benguoft",
+   178,
+   "171"
+  ],
+  "bengel-romans.ROM.13.9.1": [
+   "gnomonofthenewte00benguoft",
+   178,
+   "171"
+  ],
+  "bengel-romans.ROM.13.10.1": [
+   "gnomonofthenewte00benguoft",
+   179,
+   "172"
+  ],
+  "bengel-romans.ROM.13.11.1": [
+   "gnomonofthenewte00benguoft",
+   179,
+   "172"
+  ],
+  "bengel-romans.ROM.13.11.2": [
+   "gnomonofthenewte00benguoft",
+   180,
+   "173"
+  ],
+  "bengel-romans.ROM.13.12.1": [
+   "gnomonofthenewte00benguoft",
+   180,
+   "173"
+  ],
+  "bengel-romans.ROM.13.13.1": [
+   "gnomonofthenewte00benguoft",
+   181,
+   "174"
+  ],
+  "bengel-romans.ROM.13.14.1": [
+   "gnomonofthenewte00benguoft",
+   181,
+   "174"
+  ],
+  "bengel-romans.ROM.14.1.1": [
+   "gnomonofthenewte00benguoft",
+   181,
+   "174"
+  ],
+  "bengel-romans.ROM.14.2-4.1": [
+   "gnomonofthenewte00benguoft",
+   182,
+   "175"
+  ],
+  "bengel-romans.ROM.14.5.1": [
+   "gnomonofthenewte00benguoft",
+   182,
+   "175"
+  ],
+  "bengel-romans.ROM.14.6.1": [
+   "gnomonofthenewte00benguoft",
+   183,
+   "176"
+  ],
+  "bengel-romans.ROM.14.7.1": [
+   "gnomonofthenewte00benguoft",
+   183,
+   "176"
+  ],
+  "bengel-romans.ROM.14.8.1": [
+   "gnomonofthenewte00benguoft",
+   183,
+   "176"
+  ],
+  "bengel-romans.ROM.14.9.1": [
+   "gnomonofthenewte00benguoft",
+   183,
+   "176"
+  ],
+  "bengel-romans.ROM.14.9.2": [
+   "gnomonofthenewte00benguoft",
+   184,
+   "177"
+  ],
+  "bengel-romans.ROM.14.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   185,
+   "178"
+  ],
+  "bengel-romans.ROM.14.12-13.1": [
+   "gnomonofthenewte00benguoft",
+   185,
+   "178"
+  ],
+  "bengel-romans.ROM.14.14-15.1": [
+   "gnomonofthenewte00benguoft",
+   185,
+   "178"
+  ],
+  "bengel-romans.ROM.14.16.1": [
+   "gnomonofthenewte00benguoft",
+   186,
+   "179"
+  ],
+  "bengel-romans.ROM.14.17.1": [
+   "gnomonofthenewte00benguoft",
+   186,
+   "179"
+  ],
+  "bengel-romans.ROM.14.18-19.1": [
+   "gnomonofthenewte00benguoft",
+   186,
+   "179"
+  ],
+  "bengel-romans.ROM.14.20.1": [
+   "gnomonofthenewte00benguoft",
+   187,
+   "180"
+  ],
+  "bengel-romans.ROM.14.21.1": [
+   "gnomonofthenewte00benguoft",
+   187,
+   "180"
+  ],
+  "bengel-romans.ROM.14.22.1": [
+   "gnomonofthenewte00benguoft",
+   187,
+   "180"
+  ],
+  "bengel-romans.ROM.14.23.1": [
+   "gnomonofthenewte00benguoft",
+   188,
+   "181"
+  ],
+  "bengel-romans.ROM.15.1.1": [
+   "gnomonofthenewte00benguoft",
+   188,
+   "181"
+  ],
+  "bengel-romans.ROM.15.2-3.1": [
+   "gnomonofthenewte00benguoft",
+   188,
+   "181"
+  ],
+  "bengel-romans.ROM.15.4.1": [
+   "gnomonofthenewte00benguoft",
+   189,
+   "182"
+  ],
+  "bengel-romans.ROM.15.5-6.1": [
+   "gnomonofthenewte00benguoft",
+   190,
+   "183"
+  ],
+  "bengel-romans.ROM.15.7.1": [
+   "gnomonofthenewte00benguoft",
+   190,
+   "183"
+  ],
+  "bengel-romans.ROM.15.8.1": [
+   "gnomonofthenewte00benguoft",
+   190,
+   "183"
+  ],
+  "bengel-romans.ROM.15.9.1": [
+   "gnomonofthenewte00benguoft",
+   191,
+   "184"
+  ],
+  "bengel-romans.ROM.15.10-11.1": [
+   "gnomonofthenewte00benguoft",
+   192,
+   "185"
+  ],
+  "bengel-romans.ROM.15.12.1": [
+   "gnomonofthenewte00benguoft",
+   192,
+   "185"
+  ],
+  "bengel-romans.ROM.15.13.1": [
+   "gnomonofthenewte00benguoft",
+   193,
+   "186"
+  ],
+  "bengel-romans.ROM.15.14.1": [
+   "gnomonofthenewte00benguoft",
+   193,
+   "186"
+  ],
+  "bengel-romans.ROM.15.15.1": [
+   "gnomonofthenewte00benguoft",
+   193,
+   "186"
+  ],
+  "bengel-romans.ROM.15.16-17.1": [
+   "gnomonofthenewte00benguoft",
+   194,
+   "187"
+  ],
+  "bengel-romans.ROM.15.18.1": [
+   "gnomonofthenewte00benguoft",
+   194,
+   "187"
+  ],
+  "bengel-romans.ROM.15.19-20.1": [
+   "gnomonofthenewte00benguoft",
+   194,
+   "187"
+  ],
+  "bengel-romans.ROM.15.21-24.1": [
+   "gnomonofthenewte00benguoft",
+   195,
+   "188"
+  ],
+  "bengel-romans.ROM.15.25-26.1": [
+   "gnomonofthenewte00benguoft",
+   196,
+   "189"
+  ],
+  "bengel-romans.ROM.15.27.1": [
+   "gnomonofthenewte00benguoft",
+   196,
+   "189"
+  ],
+  "bengel-romans.ROM.15.28.1": [
+   "gnomonofthenewte00benguoft",
+   196,
+   "189"
+  ],
+  "bengel-romans.ROM.15.29-30.1": [
+   "gnomonofthenewte00benguoft",
+   197,
+   "190"
+  ],
+  "bengel-romans.ROM.15.31-32.1": [
+   "gnomonofthenewte00benguoft",
+   198,
+   "191"
+  ],
+  "bengel-romans.ROM.15.33.1": [
+   "gnomonofthenewte00benguoft",
+   198,
+   "191"
+  ],
+  "bengel-romans.ROM.16.1-2.1": [
+   "gnomonofthenewte00benguoft",
+   198,
+   "191"
+  ],
+  "bengel-romans.ROM.16.3.1": [
+   "gnomonofthenewte00benguoft",
+   199,
+   "192"
+  ],
+  "bengel-romans.ROM.16.4.1": [
+   "gnomonofthenewte00benguoft",
+   199,
+   "192"
+  ],
+  "bengel-romans.ROM.16.5.1": [
+   "gnomonofthenewte00benguoft",
+   200,
+   "193"
+  ],
+  "bengel-romans.ROM.16.7.1": [
+   "gnomonofthenewte00benguoft",
+   200,
+   "193"
+  ],
+  "bengel-romans.ROM.16.8-10.1": [
+   "gnomonofthenewte00benguoft",
+   201,
+   "194"
+  ],
+  "bengel-romans.ROM.16.11-14.1": [
+   "gnomonofthenewte00benguoft",
+   201,
+   "194"
+  ],
+  "bengel-romans.ROM.16.16.1": [
+   "gnomonofthenewte00benguoft",
+   201,
+   "194"
+  ],
+  "bengel-romans.ROM.16.17.1": [
+   "gnomonofthenewte00benguoft",
+   202,
+   "195"
+  ],
+  "bengel-romans.ROM.16.18.1": [
+   "gnomonofthenewte00benguoft",
+   202,
+   "195"
+  ],
+  "bengel-romans.ROM.16.19.1": [
+   "gnomonofthenewte00benguoft",
+   203,
+   "196"
+  ],
+  "bengel-romans.ROM.16.20.1": [
+   "gnomonofthenewte00benguoft",
+   203,
+   "196"
+  ],
+  "bengel-romans.ROM.16.21-22.1": [
+   "gnomonofthenewte00benguoft",
+   204,
+   "197"
+  ],
+  "bengel-romans.ROM.16.23-24.1": [
+   "gnomonofthenewte00benguoft",
+   204,
+   "197"
+  ],
+  "bengel-romans.ROM.16.25.1": [
+   "gnomonofthenewte00benguoft",
+   204,
+   "197"
+  ],
+  "bengel-romans.ROM.16.26.1": [
+   "gnomonofthenewte00benguoft",
+   205,
+   "198"
+  ],
+  "bengel-romans.ROM.16.27.1": [
+   "gnomonofthenewte00benguoft",
+   205,
+   "198"
+  ]
+ }
+}

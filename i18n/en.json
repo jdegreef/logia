@@ -33,8 +33,22 @@
     "explore": "Explore",
     "explore_read": "Ways in",
     "explore_guides": "Guides and data",
+    "explore_page": "Explore the library",
+    "explore_page_note": "Who the Catena quotes, the chapters most cited, words by century",
+    "ai": "How Logia uses AI",
+    "ai_note": "What is drafted, and how it is marked",
+    "new": "New on Logia",
+    "new_note": "Each commentary as it is added, with a feed",
+    "linker": "Link your site to Logia",
+    "linker_note": "One line links your Bible references here",
+    "sheets": "Study sheets",
+    "sheets_note": "Gather excerpts, add notes, print or share",
+    "rules": "Editorial rules",
+    "rules_note": "How texts get in, and each one's rights",
+    "api": "The API",
+    "api_note": "Logia's data as JSON, for other programs",
     "readings": "Readings for the church year",
-    "readings_note": "Christmas, Holy Week, Easter and Pentecost",
+    "readings_note": "The coming Sundays, and the great days from John",
     "collection_i-am": "The “I am” sayings",
     "collection_i-am_note": "Seven sayings in John, with their commentary",
     "collection_signs": "The signs in John",
@@ -145,6 +159,7 @@
     "new": "New Testament"
   },
   "footer": {
+    "releases": "Data releases",
     "read": "Read",
     "explore": "Explore",
     "commentators": "Commentators",
@@ -452,6 +467,11 @@
     "share_title": "{name} on {ref} · Logia",
     "copied": "Link copied.",
     "copy_cite": "Copy with citation",
+    "add_to_sheet": "Add to sheet",
+    "sheet_added": "Added to “{title}” ({n} on it).",
+    "sheet_already": "Already on “{title}”.",
+    "sheet_open": "Open the sheet",
+    "sheet_failed": "This browser would not keep the sheet. Private windows often refuse.",
     "report": "Report a mistake",
     "report_title": "Mistake in {name} on {ref}",
     "report_body": "Excerpt: {ids}\nWork: {title} ({edition})\nVerse: {ref}\nCopied from: {sources}\nPage: {url}\n\nWhat looks wrong (quote the words), and what the printed page says:\n\n",
@@ -467,6 +487,9 @@
     "elsewhere_hint": "Writing on other verses, these commentators refer to {ref}.",
     "read_it_on": "Read it on {ref}",
     "read_in_full": "Read {where} in full",
+    "printed_page": "Printed page {page}",
+    "printed_leaf": "The printed page",
+    "printed_title": "Open the archive.org scan at the page this excerpt was copied from, to compare it with the printed edition.",
     "unchecked": "(matched by wording, unchecked)",
     "unchecked_title": "Matched by shared wording; no one has checked it yet",
     "not_pinned": "(the passage is not pinned down)",
@@ -522,7 +545,6 @@
     "filter_all": "All books",
     "works": "Works in Logia",
     "comments_on": "What {name} says, verse by verse",
-    "bio_draft": "Biography: a draft awaiting review",
     "died": "Died {year}",
     "back": "All commentators",
     "passages": "{n} passages",
@@ -896,6 +918,9 @@
     "read_all": "Read all {n} words",
     "from": "From {edition}.",
     "source": "Source",
+    "printed_page": "Printed page {page}",
+    "printed_leaf": "The printed page",
+    "printed_title": "Open the archive.org scan at the page this excerpt was copied from, to compare it with the printed edition.",
     "in_reader": "Read in the reader",
     "in_whole": "In the whole {division}",
     "in_work": "{name} on {chapter}",
@@ -953,10 +978,11 @@
     "heading": "The Gospel for {name}: {ref}",
     "title": "{name} Gospel, {ref}: commentary from {names}",
     "description": "What the church has said about the Gospel for {name}, {ref}: {n} excerpts from {names}, word for word from public-domain editions.",
-    "index_heading": "Readings from John through the church year",
-    "index_dek": "Many churches read from John on the great days of the year. Each page sets the reading beside everything Logia holds on it, from the early church to the 1800s.",
+    "index_heading": "Readings through the church year",
+    "index_dek": "The readings churches hear on Sundays and holy days, each beside what Logia's commentators say on it, from the early church to the 1800s.",
+    "john_heading": "The great days, from John",
     "index_note": "Lectionaries differ in where a reading starts and ends. Each page says which passage it shows and which lectionaries read it.",
-    "index_description": "The Gospel readings from John for Christmas, Holy Week, Easter and Pentecost, each with what the church fathers and later commentators wrote on it.",
+    "index_description": "The Sunday and holy-day readings of the Revised Common Lectionary, and the Gospels from John for Christmas, Holy Week, Easter and Pentecost, each with what the church fathers and later commentators wrote on it.",
     "christmas": {
       "name": "Christmas Day",
       "season": "Christmas",
@@ -1003,6 +1029,14 @@
   },
   "open_data": {
     "heading": "Open data",
+    "api_title": "The API",
+    "api_note": "The same library as static JSON for other programs and sites: every chapter of the Bible with its text and the excerpts on each verse, the works with their rights, the commentators, the topics and the whole texts. No key, any origin; fields are added within a version, never removed or renamed.",
+    "api_index": "Every file of the API, with counts",
+    "api_docs": "What each file holds",
+    "releases_title": "Versioned releases",
+    "releases_note": "The downloads above are rebuilt with every change. For a fixed copy to cite or build on, each data release is a zip of the whole library, its sources list and its documentation, numbered by format, additions and fixes, and the same bytes each time it is built from its tag.",
+    "releases_link": "Every release of the data, on GitHub",
+    "releases_docs": "Every data file, and how releases are numbered",
     "dek": "All {n} excerpts from {works} commentaries by {authors} commentators, free to download and build on. The data is CC0: no permission needed, no attribution required.",
     "description": "Download Logia's {n} public-domain commentary excerpts on {books} as JSON or CSV, each tied to its verse and its source. CC0.",
     "about_link": "Download the open data",
@@ -1341,7 +1375,6 @@
 
   "guide": {
     "eyebrow": "Guide",
-    "draft": "A draft awaiting review",
     "draft_note": "Logia wrote this page; it is not commentary. It is a draft until a named reviewer approves it.",
     "voices": "What the commentators say on {ref}",
     "used": "In {n:,} excerpts; first in {who} on {ref}",
@@ -1349,6 +1382,222 @@
     "differ": "Every commentator on {ref}, side by side"
   },
 
+  "ai": {
+    "title": "How Logia uses AI",
+    "heading": "How Logia uses AI",
+    "dek": "No commentary on Logia is written by AI. AI helps to build the library and to draft Logia's own notes, and everything it drafts is marked until a named person reviews it.",
+    "description": "What on Logia is drafted with AI, how it is marked, and what AI is never used for.",
+    "mark_draft": "AI draft, not yet reviewed",
+    "mark_reviewed": "AI-assisted, reviewed by {name}",
+    "example_reviewer": "a named reviewer",
+    "mark_draft_title": "Drafted with AI and not yet reviewed by a person. Follow the link to read how Logia uses AI.",
+    "mark_reviewed_title": "Drafted with AI, then reviewed and approved by {name}. Follow the link to read how Logia uses AI.",
+    "marks_title": "The two marks",
+    "marks": [
+      ["draft", "Drafted with AI and not yet reviewed. Read it as a first draft: check it against the sources it points to."],
+      ["reviewed", "Drafted with AI, then read and approved by the person named. The mark keeps their name, so you know who checked it."]
+    ],
+    "marks_note": "Text with no mark is copied from a printed edition: the commentators' own words, quoted whole.",
+    "never_title": "What AI never does here",
+    "never": [
+      "It never writes commentary. Every excerpt is copied word for word from a public-domain edition, and a script checks it against the saved source on every change.",
+      "It never types Greek or Hebrew. Original-language words come from the printed edition or from the open Greek and Hebrew texts, as they read.",
+      "It never fixes a scan by guessing. A misread letter is fixed only where the printed page plainly says otherwise, and every fix is listed in the open data.",
+      "It never marks its own work reviewed. Only a named person can do that.",
+      "It never takes a side. Where Catholic, Orthodox and Protestant readings differ, Logia shows the readings and lets them speak."
+    ],
+    "drafted_title": "What is drafted with AI",
+    "drafted_cols": ["What", "How many", "Reviewed"],
+    "drafted": {
+      "bios": "Commentators' biographies",
+      "guides": "Logia's guides, such as the glossary",
+      "differ": "Notes on passages the churches read differently",
+      "works": "Each work's choice of excerpts and the verses they are tied to",
+      "bible": "The Open Word Bible, the Bible text Logia reads",
+      "citations": "Scripture references found in the excerpts"
+    },
+    "bible_n": "66 books",
+    "drafted_note": "The Scripture references are found by a script, not by AI; they are listed here because no one has checked them yet either.",
+    "how_title": "How the drafts are made",
+    "how": [
+      "Claude, an AI model made by Anthropic, fetches each edition's pages, copies the excerpts with a script and drafts the records around them. Every step is saved in the open repository, so anyone can check it.",
+      "A biography or guide is drafted from the sources it names, and stays marked as a draft until a person reads it and adds their name."
+    ],
+    "help": "Seen a mistake, in a draft or anywhere else? Report it on GitHub, and it will be fixed in the open.",
+    "help_link": "Report a problem"
+  },
+  "new": {
+    "title": "New on Logia",
+    "heading": "New on Logia",
+    "dek": "Every commentary as it joins the library, newest first, and the library's size today.",
+    "description": "The commentaries added to Logia, newest first, with a feed to follow, and the library in numbers.",
+    "numbers": "The library in numbers",
+    "numbers_note": "Counted from the library each time the site is built.",
+    "n": {
+      "works": "commentaries",
+      "authors": "commentators",
+      "excerpts": "excerpts",
+      "words": "words of commentary",
+      "books": "books of the Bible with commentary",
+      "verses": "verses with commentary",
+      "texts": "homilies and tractates in full",
+      "citations": "Scripture references found in the excerpts",
+      "fixes": "scan misreadings corrected"
+    },
+    "added": "Added, newest first",
+    "row_note": "{books} · {n} excerpts",
+    "feed": "Follow by feed",
+    "feed_note": "Paste this address into a feed reader to hear of each new commentary.",
+    "feed_title": "New on Logia",
+    "no_history": "The list of additions is built from the repository's history, which this copy does not have.",
+    "all": "Everything added, newest first"
+  },
+  "explore": {
+    "title": "Explore the library",
+    "heading": "Explore the library",
+    "dek": "Three pictures of what is in Logia: who the Catenas quote, which chapters of Scripture the commentators cite, and how much each century wrote. Each is counted from the library when the site is built.",
+    "description": "Who the Catena Aurea quotes, which chapters the commentators cite most, and how much each century wrote, counted from Logia's library.",
+    "catena": "Who the Catena Aurea quotes",
+    "catena_note": "Thomas Aquinas built the Catena from quotations of the Fathers, each opened by the Father's name. These are the names counted in Logia's excerpts of it.",
+    "catena_on": "The Catena on {book}",
+    "cited": "Where the commentators cite Scripture",
+    "cited_note": "Every chapter of the Bible, shaded by how often the excerpts cite it: {n} references in all, found by a script and not yet checked by a person. Each shaded square opens its chapter.",
+    "cited_top": "Cited most: {list}.",
+    "cell": "{ref}: cited {n} times",
+    "centuries": "How much each century wrote",
+    "centuries_note": "Words of commentary in Logia's excerpts, by the century in which each commentator died.",
+    "century": "{n} century",
+    "words": "{n} words",
+    "timeline": "Every commentator on a timeline"
+  },
+  "linker": {
+    "heading": "Link your site to Logia",
+    "dek": "Add one line to a church website, a blog or a course page, and every Bible reference on it, such as John 1:14 or Rom. 5:1, becomes a link to Logia, with a card of the verse and who comments on it.",
+    "description": "A free script that turns the Bible references on any website into links to Logia, with the verse and its commentators.",
+    "install": "Add it to your site",
+    "install_note": "Paste this line into your pages, just before the closing </body> tag or in a site-wide footer:",
+    "steps": [
+      "References written the usual ways are found, such as John 3:16, Ps. 23:1–3, 1 Cor. 13:4 and I John 4:8.",
+      "Readers who hover over or tab to a reference see the verse in the Open Word Bible and the commentators on it, and can open Logia in a new tab.",
+      "Links, code, form fields and anything you give the class logia-skip are left alone."
+    ],
+    "try": "Try it",
+    "try_note": "The script runs on this paragraph. Hover over a reference, or tab to it.",
+    "demo": "A few references to try: John 1:14, Galatians 4:4, Psalm 51:1, Rom. 5:8 and 1 Cor. 13:4.",
+    "details": "The details",
+    "details_text": [
+      "The script is free and needs no account or key. It reads one small file from Logia for each chapter a reader looks at, and sends nothing about your site's visitors.",
+      "References are numbered as English Bibles number them. The verse is the Open Word Bible's Balanced text, the commentary links go to Logia's verse pages."
+    ],
+    "ui": {
+      "bible": "Open Word Bible",
+      "voices": "{n} commentators on Logia: {names}",
+      "more": " and {n} more",
+      "none": "No commentary on Logia yet.",
+      "read": "Read the commentary on Logia ›",
+      "read_verse": "Read the chapter on Logia ›"
+    }
+  },
+  "sheets": {
+    "title": "Study sheets",
+    "heading": "Study sheets",
+    "dek": "Gather excerpts for a sermon, a class or a Bible study, put them in order, add notes of your own, then print the sheet or share it by link.",
+    "description": "Build a study sheet from Logia's commentary: gather excerpts, add your own notes, print it or share it by link.",
+    "how": [
+      "In the reader, press “Add to sheet” under any excerpt. It goes on the sheet you are making.",
+      "Here, put the excerpts in order and add notes of your own between them. Your notes are marked as yours, apart from the commentary.",
+      "Print the sheet, or copy its link: the link holds the whole sheet, so whoever opens it sees what you made and can keep a copy."
+    ],
+    "kept_note": "Sheets are kept in this browser, not in your account, and nothing is sent anywhere until you share a link. Clearing the browser's data clears them.",
+    "noscript": "Study sheets need JavaScript.",
+    "ui": {
+      "untitled": "My study sheet",
+      "your_sheets": "Sheet:",
+      "new": "New sheet",
+      "print": "Print",
+      "share": "Copy link to share",
+      "copied": "Link copied. Anyone who opens it sees this sheet.",
+      "title_label": "Title",
+      "up": "Move up",
+      "down": "Move down",
+      "remove": "Remove",
+      "add_note": "Add a note of your own",
+      "note_who": "Note by the sheet's author",
+      "note_label": "Your note",
+      "how_to_add": "Nothing on this sheet yet. In the reader, press “Add to sheet” under an excerpt.",
+      "empty_title": "Make your first sheet",
+      "empty_text": "Open a chapter, press “Add to sheet” under the excerpts you want, then come back here to order them and add notes.",
+      "try_it": "Try it on John 1:14",
+      "shared_note": "A study sheet someone shared with you. The excerpts are copied word for word; the notes are the sheet author's own.",
+      "keep": "Keep a copy",
+      "kept": "Kept. It is now one of your sheets in this browser.",
+      "missing": "This excerpt is no longer in the library."
+    }
+  },
+  "sundays": {
+    "heading": "The coming Sundays and holy days",
+    "dek": "The readings of the Revised Common Lectionary, used by many Anglican, Lutheran, Methodist, Presbyterian and other churches. Each reading links to what Logia's commentators say on it.",
+    "gospel": "Gospel:",
+    "others": "Also read:",
+    "n": "{n} excerpts from {k} commentators",
+    "all": "Show all {n} days",
+    "rights": "Revised Common Lectionary copyright 1992 Consultation on Common Texts. Used by permission. Dates and readings as listed by the Vanderbilt Divinity Library."
+  },
+  "rules": {
+    "title": "Editorial rules",
+    "heading": "How texts get into Logia",
+    "dek": "The rules every text in Logia follows, and the rights each work is used under, so anyone can check them.",
+    "description": "Logia's editorial rules: copied word for word from public-domain editions, scan fixes in the open, nothing marked reviewed by AI, and the rights basis of every work.",
+    "rules_heading": "The rules",
+    "rules": [
+      [
+        "Copied, never written",
+        "Every excerpt is copied from a public-domain edition exactly as it reads, and the source it came from is saved beside it. Nothing is paraphrased, summarised, modernised or filled in from memory. A script checks every excerpt against its source on every change."
+      ],
+      [
+        "Public domain only",
+        "Text and translation must be published in 1930 or earlier, which makes them public domain in the United States. Each work records its edition, translator and year, and what is still to confirm for use worldwide. Logia copies from scans and open transcriptions, not from sites that claim rights in their typed editions."
+      ],
+      [
+        "Greek and Hebrew are never retyped",
+        "Original-language words appear only as the source prints them. Where a scan turns Greek into noise, the Greek is left out and the cut is marked, rather than typed in by hand."
+      ],
+      [
+        "Scan misreadings are corrected in the open",
+        "An excerpt keeps the scan's text. A misreading is fixed by a listed correction (“Let ns” → “Let us”), applied when the site is built. Only what the printed page plainly says is fixed; anything uncertain is left alone."
+      ],
+      [
+        "Places, citations and links are read from the sources",
+        "Where an excerpt sits in its work, the Scripture it cites and the Fathers a catena quotes are found by scripts from the sources, not typed. Each stays marked as unchecked until a person checks it."
+      ],
+      [
+        "Nothing is marked reviewed by an AI",
+        "Works, biographies, guides and translations stay drafts until a named person reviews them, and the site marks them so."
+      ],
+      [
+        "The Bible text is imported, never edited",
+        "Logia reads the Open Word Bible at a pinned version. A problem with its wording is raised with the Open Word Bible, not changed here."
+      ],
+      [
+        "Every tradition, in its own words",
+        "Logia sets Catholic, Orthodox and Protestant voices side by side and takes no side where they differ. A commentator's words are kept whole, even when harsh or dated; a note may explain, but nothing is cut silently."
+      ]
+    ],
+    "procedure": "The full procedure for adding a work, and the reference scheme, are in the repository: {adding} and {references}.",
+    "rights_heading": "Every work, and its rights",
+    "rights_note": "Each work's edition and translator, the year it was published, where it was copied from, the basis on which Logia uses it, what is still to confirm, and whether a person has reviewed it. Read from the work's record when the site is built.",
+    "col_work": "Work",
+    "col_edition": "Edition",
+    "col_published": "Published",
+    "col_source": "Copied from",
+    "col_rights": "Rights",
+    "col_review": "Review",
+    "scan": "page scan",
+    "digital": "transcription",
+    "fixes": "{n} scan misreadings corrected",
+    "reviewed": "Reviewed",
+    "report": "Found something wrong? Every excerpt has a “Report a mistake” link, or open an issue on GitHub."
+  },
   "llms": {
     "holds": "It holds {excerpts} excerpts from {works} commentaries by {authors} commentators, on {books}, each tied to the verses it comments on.",
     "rules": "Every excerpt is copied word for word from a public-domain edition (published in 1930 or earlier) and links to its source; nothing is paraphrased or summarised. Logia takes no side where Catholic, Orthodox and Protestant readings differ. The Bible text is the Open Word Bible (CC0), an AI draft awaiting human review. Logia's data is CC0.",
@@ -1416,6 +1665,7 @@
 
   "topic": {
     "eyebrow": "Topics",
+    "on_verse": "Topics:",
     "lead": "{n} passages, with {total} excerpts from {k} commentators: {names}.",
     "how": "A topic is a choice of passages, never of excerpts: every commentator Logia holds on each passage is here, whatever their tradition. Each opens with their first words on it; follow a name to read it in full.",
     "others": "Other topics",

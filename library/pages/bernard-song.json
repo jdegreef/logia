@@ -1,0 +1,388 @@
+{
+ "work": "bernard-song",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "LifeAndWorksOfSaintBernardV4",
+   "files": [
+    {
+     "url": "https://archive.org/download/LifeAndWorksOfSaintBernardV4/LifeAndWorksOfSaintBernardV4_hocr_pageindex.json.gz",
+     "sha256": "4966ffca7694e63983ab1d1d5d462d077c55bb8ba503a051114f774668c146d3"
+    },
+    {
+     "url": "https://archive.org/download/LifeAndWorksOfSaintBernardV4/LifeAndWorksOfSaintBernardV4_hocr_searchtext.txt.gz",
+     "sha256": "9b9cdce5b3b85d6433c77bfcff48e7d6aeb55bb249754bb72e92df402f45ed6d"
+    },
+    {
+     "url": "https://archive.org/download/LifeAndWorksOfSaintBernardV4/LifeAndWorksOfSaintBernardV4_page_numbers.json",
+     "sha256": "4d94c0e6489b3436703d1b43f02d71eeb5f14fe3be2c43ef045956b288be7c43"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 72,
+ "missed": 0,
+ "pages": {
+  "bernard-song.SNG.1.1.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   44,
+   "7"
+  ],
+  "bernard-song.SNG.1.2.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   49,
+   "12"
+  ],
+  "bernard-song.SNG.1.2.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   54,
+   "17"
+  ],
+  "bernard-song.SNG.1.2.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   59,
+   "22"
+  ],
+  "bernard-song.SNG.1.2.4": [
+   "LifeAndWorksOfSaintBernardV4",
+   61,
+   "24"
+  ],
+  "bernard-song.SNG.1.2.5": [
+   "LifeAndWorksOfSaintBernardV4",
+   66,
+   "29"
+  ],
+  "bernard-song.SNG.1.2.6": [
+   "LifeAndWorksOfSaintBernardV4",
+   70,
+   "33"
+  ],
+  "bernard-song.SNG.1.2.7": [
+   "LifeAndWorksOfSaintBernardV4",
+   76,
+   "39"
+  ],
+  "bernard-song.SNG.1.3.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   81,
+   "44"
+  ],
+  "bernard-song.SNG.1.3.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   86,
+   "49"
+  ],
+  "bernard-song.SNG.1.3.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   92,
+   "55"
+  ],
+  "bernard-song.SNG.1.3.4": [
+   "LifeAndWorksOfSaintBernardV4",
+   97,
+   "60"
+  ],
+  "bernard-song.SNG.1.3.5": [
+   "LifeAndWorksOfSaintBernardV4",
+   105,
+   "68"
+  ],
+  "bernard-song.SNG.1.3.6": [
+   "LifeAndWorksOfSaintBernardV4",
+   111,
+   "74"
+  ],
+  "bernard-song.SNG.1.3.7": [
+   "LifeAndWorksOfSaintBernardV4",
+   117,
+   "80"
+  ],
+  "bernard-song.SNG.1.3.8": [
+   "LifeAndWorksOfSaintBernardV4",
+   123,
+   "86"
+  ],
+  "bernard-song.SNG.1.3.9": [
+   "LifeAndWorksOfSaintBernardV4",
+   132,
+   "95"
+  ],
+  "bernard-song.SNG.1.4.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   137,
+   "100"
+  ],
+  "bernard-song.SNG.1.4.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   141,
+   "104"
+  ],
+  "bernard-song.SNG.1.4.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   147,
+   "110"
+  ],
+  "bernard-song.SNG.1.4.4": [
+   "LifeAndWorksOfSaintBernardV4",
+   153,
+   "116"
+  ],
+  "bernard-song.SNG.1.4.5": [
+   "LifeAndWorksOfSaintBernardV4",
+   160,
+   "123"
+  ],
+  "bernard-song.SNG.1.5.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   167,
+   "130"
+  ],
+  "bernard-song.SNG.1.6.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   186,
+   "149"
+  ],
+  "bernard-song.SNG.1.6.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   204,
+   "167"
+  ],
+  "bernard-song.SNG.1.6.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   213,
+   "176"
+  ],
+  "bernard-song.SNG.1.7.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   223,
+   "186"
+  ],
+  "bernard-song.SNG.1.7.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   230,
+   "193"
+  ],
+  "bernard-song.SNG.1.8.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   238,
+   "201"
+  ],
+  "bernard-song.SNG.1.8.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   244,
+   "207"
+  ],
+  "bernard-song.SNG.1.8.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   252,
+   "215"
+  ],
+  "bernard-song.SNG.1.9.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   261,
+   "224"
+  ],
+  "bernard-song.SNG.1.9.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   264,
+   "227"
+  ],
+  "bernard-song.SNG.1.9.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   270,
+   "233"
+  ],
+  "bernard-song.SNG.1.9.4": [
+   "LifeAndWorksOfSaintBernardV4",
+   275,
+   "238"
+  ],
+  "bernard-song.SNG.1.9.5": [
+   "LifeAndWorksOfSaintBernardV4",
+   280,
+   "243"
+  ],
+  "bernard-song.SNG.1.10.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   284,
+   "247"
+  ],
+  "bernard-song.SNG.1.11.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   289,
+   "252"
+  ],
+  "bernard-song.SNG.1.11.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   294,
+   "257"
+  ],
+  "bernard-song.SNG.1.14.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   303,
+   "266"
+  ],
+  "bernard-song.SNG.1.15.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   308,
+   "271"
+  ],
+  "bernard-song.SNG.1.16.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   312,
+   "275"
+  ],
+  "bernard-song.SNG.1.17.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   319,
+   "282"
+  ],
+  "bernard-song.SNG.2.1.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   324,
+   "287"
+  ],
+  "bernard-song.SNG.2.2.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   329,
+   "292"
+  ],
+  "bernard-song.SNG.2.4.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   335,
+   "298"
+  ],
+  "bernard-song.SNG.2.4.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   340,
+   "303"
+  ],
+  "bernard-song.SNG.2.5.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   345,
+   "308"
+  ],
+  "bernard-song.SNG.2.7.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   351,
+   "314"
+  ],
+  "bernard-song.SNG.2.8.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   356,
+   "319"
+  ],
+  "bernard-song.SNG.2.8.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   362,
+   "325"
+  ],
+  "bernard-song.SNG.2.9.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   370,
+   "333"
+  ],
+  "bernard-song.SNG.2.9.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   373,
+   "336"
+  ],
+  "bernard-song.SNG.2.10.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   384,
+   "347"
+  ],
+  "bernard-song.SNG.2.12.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   391,
+   "354"
+  ],
+  "bernard-song.SNG.2.13.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   398,
+   "361"
+  ],
+  "bernard-song.SNG.2.13.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   403,
+   "366"
+  ],
+  "bernard-song.SNG.2.14.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   408,
+   "371"
+  ],
+  "bernard-song.SNG.2.15.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   415,
+   "378"
+  ],
+  "bernard-song.SNG.2.15.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   420,
+   "383"
+  ],
+  "bernard-song.SNG.2.15.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   430,
+   "393"
+  ],
+  "bernard-song.SNG.2.15.4": [
+   "LifeAndWorksOfSaintBernardV4",
+   436,
+   "399"
+  ],
+  "bernard-song.SNG.2.16.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   457,
+   "420"
+  ],
+  "bernard-song.SNG.2.16.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   463,
+   "426"
+  ],
+  "bernard-song.SNG.2.16.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   478,
+   "441"
+  ],
+  "bernard-song.SNG.2.17.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   485,
+   "448"
+  ],
+  "bernard-song.SNG.2.17.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   491,
+   "454"
+  ],
+  "bernard-song.SNG.3.1.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   499,
+   "462"
+  ],
+  "bernard-song.SNG.3.2.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   505,
+   "468"
+  ],
+  "bernard-song.SNG.3.3.1": [
+   "LifeAndWorksOfSaintBernardV4",
+   521,
+   "484"
+  ],
+  "bernard-song.SNG.3.3.2": [
+   "LifeAndWorksOfSaintBernardV4",
+   524,
+   "487"
+  ],
+  "bernard-song.SNG.3.3.3": [
+   "LifeAndWorksOfSaintBernardV4",
+   531,
+   "494"
+  ]
+ }
+}

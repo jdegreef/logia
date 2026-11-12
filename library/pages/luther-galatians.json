@@ -1,0 +1,1098 @@
+{
+ "work": "luther-galatians",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "cu31924029294141",
+   "files": [
+    {
+     "url": "https://archive.org/download/cu31924029294141/cu31924029294141_hocr_pageindex.json.gz",
+     "sha256": "1c4056e3a3a40850ac4fb5685f449af36477efcada98d3b97eb6d4fd4933dfdd"
+    },
+    {
+     "url": "https://archive.org/download/cu31924029294141/cu31924029294141_hocr_searchtext.txt.gz",
+     "sha256": "ff8e3b80f02889902a6b2c306921dbb5194da15fe88f2c2220ca0cd4675a8dd1"
+    },
+    {
+     "url": "https://archive.org/download/cu31924029294141/cu31924029294141_page_numbers.json",
+     "sha256": "a18d78217b6f824daa050fcd01383c26d13d3813b50dbfb14f151dd35f6475f4"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 214,
+ "missed": 0,
+ "pages": {
+  "luther-galatians.GAL.1.1.1": [
+   "cu31924029294141",
+   38,
+   ""
+  ],
+  "luther-galatians.GAL.1.1.2": [
+   "cu31924029294141",
+   40,
+   ""
+  ],
+  "luther-galatians.GAL.1.2.1": [
+   "cu31924029294141",
+   42,
+   "37"
+  ],
+  "luther-galatians.GAL.1.2.2": [
+   "cu31924029294141",
+   42,
+   "37"
+  ],
+  "luther-galatians.GAL.1.3.1": [
+   "cu31924029294141",
+   44,
+   "39"
+  ],
+  "luther-galatians.GAL.1.4.1": [
+   "cu31924029294141",
+   51,
+   "46"
+  ],
+  "luther-galatians.GAL.1.4.2": [
+   "cu31924029294141",
+   59,
+   "54"
+  ],
+  "luther-galatians.GAL.1.4.3": [
+   "cu31924029294141",
+   62,
+   "57"
+  ],
+  "luther-galatians.GAL.1.4.4": [
+   "cu31924029294141",
+   63,
+   "58"
+  ],
+  "luther-galatians.GAL.1.5.1": [
+   "cu31924029294141",
+   63,
+   "58"
+  ],
+  "luther-galatians.GAL.1.6.1": [
+   "cu31924029294141",
+   63,
+   "58"
+  ],
+  "luther-galatians.GAL.1.6.2": [
+   "cu31924029294141",
+   65,
+   "60"
+  ],
+  "luther-galatians.GAL.1.6.3": [
+   "cu31924029294141",
+   66,
+   "61"
+  ],
+  "luther-galatians.GAL.1.6.4": [
+   "cu31924029294141",
+   67,
+   "62"
+  ],
+  "luther-galatians.GAL.1.6.5": [
+   "cu31924029294141",
+   69,
+   "64"
+  ],
+  "luther-galatians.GAL.1.7.1": [
+   "cu31924029294141",
+   71,
+   "66"
+  ],
+  "luther-galatians.GAL.1.7.2": [
+   "cu31924029294141",
+   74,
+   "69"
+  ],
+  "luther-galatians.GAL.1.8.1": [
+   "cu31924029294141",
+   75,
+   "70"
+  ],
+  "luther-galatians.GAL.1.9.1": [
+   "cu31924029294141",
+   76,
+   "71"
+  ],
+  "luther-galatians.GAL.1.10.1": [
+   "cu31924029294141",
+   78,
+   "73"
+  ],
+  "luther-galatians.GAL.1.10.2": [
+   "cu31924029294141",
+   79,
+   "74"
+  ],
+  "luther-galatians.GAL.1.10.3": [
+   "cu31924029294141",
+   80,
+   "75"
+  ],
+  "luther-galatians.GAL.1.11-12.1": [
+   "cu31924029294141",
+   81,
+   "76"
+  ],
+  "luther-galatians.GAL.1.13.1": [
+   "cu31924029294141",
+   87,
+   "82"
+  ],
+  "luther-galatians.GAL.1.15-16.1": [
+   "cu31924029294141",
+   88,
+   "83"
+  ],
+  "luther-galatians.GAL.1.15.1": [
+   "cu31924029294141",
+   90,
+   "85"
+  ],
+  "luther-galatians.GAL.1.15.2": [
+   "cu31924029294141",
+   90,
+   "85"
+  ],
+  "luther-galatians.GAL.1.15.3": [
+   "cu31924029294141",
+   91,
+   "86"
+  ],
+  "luther-galatians.GAL.1.16.1": [
+   "cu31924029294141",
+   91,
+   "86"
+  ],
+  "luther-galatians.GAL.1.16.2": [
+   "cu31924029294141",
+   92,
+   "87"
+  ],
+  "luther-galatians.GAL.1.16.3": [
+   "cu31924029294141",
+   93,
+   "88"
+  ],
+  "luther-galatians.GAL.1.17.1": [
+   "cu31924029294141",
+   93,
+   "88"
+  ],
+  "luther-galatians.GAL.1.18.1": [
+   "cu31924029294141",
+   94,
+   "89"
+  ],
+  "luther-galatians.GAL.1.20.1": [
+   "cu31924029294141",
+   96,
+   "91"
+  ],
+  "luther-galatians.GAL.1.21.1": [
+   "cu31924029294141",
+   96,
+   "91"
+  ],
+  "luther-galatians.GAL.1.22-23.1": [
+   "cu31924029294141",
+   96,
+   "91"
+  ],
+  "luther-galatians.GAL.2.1.1": [
+   "cu31924029294141",
+   99,
+   "94"
+  ],
+  "luther-galatians.GAL.2.2.1": [
+   "cu31924029294141",
+   99,
+   "94"
+  ],
+  "luther-galatians.GAL.2.2.2": [
+   "cu31924029294141",
+   99,
+   "94"
+  ],
+  "luther-galatians.GAL.2.2.3": [
+   "cu31924029294141",
+   99,
+   "94"
+  ],
+  "luther-galatians.GAL.2.2.4": [
+   "cu31924029294141",
+   100,
+   "95"
+  ],
+  "luther-galatians.GAL.2.3.1": [
+   "cu31924029294141",
+   101,
+   "96"
+  ],
+  "luther-galatians.GAL.2.4-5.1": [
+   "cu31924029294141",
+   104,
+   "99"
+  ],
+  "luther-galatians.GAL.2.6-7.1": [
+   "cu31924029294141",
+   109,
+   "104"
+  ],
+  "luther-galatians.GAL.2.6.1": [
+   "cu31924029294141",
+   110,
+   "105"
+  ],
+  "luther-galatians.GAL.2.6.2": [
+   "cu31924029294141",
+   114,
+   "109"
+  ],
+  "luther-galatians.GAL.2.7-8.1": [
+   "cu31924029294141",
+   116,
+   "111"
+  ],
+  "luther-galatians.GAL.2.8.1": [
+   "cu31924029294141",
+   118,
+   "113"
+  ],
+  "luther-galatians.GAL.2.9.1": [
+   "cu31924029294141",
+   119,
+   "114"
+  ],
+  "luther-galatians.GAL.2.9.2": [
+   "cu31924029294141",
+   119,
+   "114"
+  ],
+  "luther-galatians.GAL.2.10.1": [
+   "cu31924029294141",
+   120,
+   "115"
+  ],
+  "luther-galatians.GAL.2.10.2": [
+   "cu31924029294141",
+   148,
+   "143"
+  ],
+  "luther-galatians.GAL.2.12.1": [
+   "cu31924029294141",
+   123,
+   "118"
+  ],
+  "luther-galatians.GAL.2.12.2": [
+   "cu31924029294141",
+   124,
+   "119"
+  ],
+  "luther-galatians.GAL.2.13.1": [
+   "cu31924029294141",
+   126,
+   "121"
+  ],
+  "luther-galatians.GAL.2.14.1": [
+   "cu31924029294141",
+   128,
+   "123"
+  ],
+  "luther-galatians.GAL.2.15.1": [
+   "cu31924029294141",
+   132,
+   "127"
+  ],
+  "luther-galatians.GAL.2.16.1": [
+   "cu31924029294141",
+   133,
+   "128"
+  ],
+  "luther-galatians.GAL.2.16.2": [
+   "cu31924029294141",
+   146,
+   "141"
+  ],
+  "luther-galatians.GAL.2.16.3": [
+   "cu31924029294141",
+   149,
+   "144"
+  ],
+  "luther-galatians.GAL.2.17.1": [
+   "cu31924029294141",
+   151,
+   "146"
+  ],
+  "luther-galatians.GAL.2.17.2": [
+   "cu31924029294141",
+   156,
+   "151"
+  ],
+  "luther-galatians.GAL.2.17.3": [
+   "cu31924029294141",
+   159,
+   "154"
+  ],
+  "luther-galatians.GAL.2.18.1": [
+   "cu31924029294141",
+   160,
+   "155"
+  ],
+  "luther-galatians.GAL.2.19.1": [
+   "cu31924029294141",
+   163,
+   "158"
+  ],
+  "luther-galatians.GAL.2.19.2": [
+   "cu31924029294141",
+   172,
+   "167"
+  ],
+  "luther-galatians.GAL.2.20.1": [
+   "cu31924029294141",
+   172,
+   "167"
+  ],
+  "luther-galatians.GAL.2.20.2": [
+   "cu31924029294141",
+   173,
+   "168"
+  ],
+  "luther-galatians.GAL.2.20.3": [
+   "cu31924029294141",
+   174,
+   "169"
+  ],
+  "luther-galatians.GAL.2.20.4": [
+   "cu31924029294141",
+   178,
+   "173"
+  ],
+  "luther-galatians.GAL.2.20.5": [
+   "cu31924029294141",
+   183,
+   "178"
+  ],
+  "luther-galatians.GAL.2.21.1": [
+   "cu31924029294141",
+   187,
+   "182"
+  ],
+  "luther-galatians.GAL.2.21.2": [
+   "cu31924029294141",
+   188,
+   "183"
+  ],
+  "luther-galatians.GAL.3.1.1": [
+   "cu31924029294141",
+   193,
+   "188"
+  ],
+  "luther-galatians.GAL.3.1.2": [
+   "cu31924029294141",
+   196,
+   "191"
+  ],
+  "luther-galatians.GAL.3.1.3": [
+   "cu31924029294141",
+   198,
+   "193"
+  ],
+  "luther-galatians.GAL.3.1.4": [
+   "cu31924029294141",
+   200,
+   "195"
+  ],
+  "luther-galatians.GAL.3.1.5": [
+   "cu31924029294141",
+   201,
+   "196"
+  ],
+  "luther-galatians.GAL.3.1.6": [
+   "cu31924029294141",
+   202,
+   "197"
+  ],
+  "luther-galatians.GAL.3.3.1": [
+   "cu31924029294141",
+   219,
+   "214"
+  ],
+  "luther-galatians.GAL.3.4.1": [
+   "cu31924029294141",
+   221,
+   "216"
+  ],
+  "luther-galatians.GAL.3.4.2": [
+   "cu31924029294141",
+   222,
+   "217"
+  ],
+  "luther-galatians.GAL.3.6.1": [
+   "cu31924029294141",
+   226,
+   "221"
+  ],
+  "luther-galatians.GAL.3.7.1": [
+   "cu31924029294141",
+   235,
+   "230"
+  ],
+  "luther-galatians.GAL.3.8.1": [
+   "cu31924029294141",
+   240,
+   "235"
+  ],
+  "luther-galatians.GAL.3.8.2": [
+   "cu31924029294141",
+   242,
+   "237"
+  ],
+  "luther-galatians.GAL.3.9.1": [
+   "cu31924029294141",
+   244,
+   "239"
+  ],
+  "luther-galatians.GAL.3.10.1": [
+   "cu31924029294141",
+   248,
+   "243"
+  ],
+  "luther-galatians.GAL.3.10.2": [
+   "cu31924029294141",
+   251,
+   "246"
+  ],
+  "luther-galatians.GAL.3.11.1": [
+   "cu31924029294141",
+   269,
+   "264"
+  ],
+  "luther-galatians.GAL.3.12.1": [
+   "cu31924029294141",
+   271,
+   "266"
+  ],
+  "luther-galatians.GAL.3.12.2": [
+   "cu31924029294141",
+   272,
+   "267"
+  ],
+  "luther-galatians.GAL.3.13.1": [
+   "cu31924029294141",
+   251,
+   "246"
+  ],
+  "luther-galatians.GAL.3.14.1": [
+   "cu31924029294141",
+   291,
+   "286"
+  ],
+  "luther-galatians.GAL.3.15.1": [
+   "cu31924029294141",
+   293,
+   "288"
+  ],
+  "luther-galatians.GAL.3.16.1": [
+   "cu31924029294141",
+   295,
+   "290"
+  ],
+  "luther-galatians.GAL.3.16.2": [
+   "cu31924029294141",
+   305,
+   "300"
+  ],
+  "luther-galatians.GAL.3.17.1": [
+   "cu31924029294141",
+   296,
+   "291"
+  ],
+  "luther-galatians.GAL.3.18.1": [
+   "cu31924029294141",
+   301,
+   "296"
+  ],
+  "luther-galatians.GAL.3.18.2": [
+   "cu31924029294141",
+   302,
+   "297"
+  ],
+  "luther-galatians.GAL.3.19.1": [
+   "cu31924029294141",
+   302,
+   "297"
+  ],
+  "luther-galatians.GAL.3.19.2": [
+   "cu31924029294141",
+   312,
+   "307"
+  ],
+  "luther-galatians.GAL.3.19.3": [
+   "cu31924029294141",
+   314,
+   "309"
+  ],
+  "luther-galatians.GAL.3.20.1": [
+   "cu31924029294141",
+   322,
+   "317"
+  ],
+  "luther-galatians.GAL.3.21.1": [
+   "cu31924029294141",
+   326,
+   "321"
+  ],
+  "luther-galatians.GAL.3.21.2": [
+   "cu31924029294141",
+   327,
+   "322"
+  ],
+  "luther-galatians.GAL.3.21.3": [
+   "cu31924029294141",
+   329,
+   "324"
+  ],
+  "luther-galatians.GAL.3.22.1": [
+   "cu31924029294141",
+   331,
+   "326"
+  ],
+  "luther-galatians.GAL.3.22.2": [
+   "cu31924029294141",
+   333,
+   "328"
+  ],
+  "luther-galatians.GAL.3.23.1": [
+   "cu31924029294141",
+   334,
+   "329"
+  ],
+  "luther-galatians.GAL.3.23.2": [
+   "cu31924029294141",
+   335,
+   "330"
+  ],
+  "luther-galatians.GAL.3.23.3": [
+   "cu31924029294141",
+   339,
+   "334"
+  ],
+  "luther-galatians.GAL.3.24.1": [
+   "cu31924029294141",
+   344,
+   "339"
+  ],
+  "luther-galatians.GAL.3.24.2": [
+   "cu31924029294141",
+   346,
+   "341"
+  ],
+  "luther-galatians.GAL.3.25.1": [
+   "cu31924029294141",
+   348,
+   "343"
+  ],
+  "luther-galatians.GAL.3.26.1": [
+   "cu31924029294141",
+   350,
+   "345"
+  ],
+  "luther-galatians.GAL.3.28.1": [
+   "cu31924029294141",
+   353,
+   "348"
+  ],
+  "luther-galatians.GAL.3.28.2": [
+   "cu31924029294141",
+   355,
+   "350"
+  ],
+  "luther-galatians.GAL.3.29.1": [
+   "cu31924029294141",
+   356,
+   "351"
+  ],
+  "luther-galatians.GAL.4.1.1": [
+   "cu31924029294141",
+   357,
+   "352"
+  ],
+  "luther-galatians.GAL.4.2.1": [
+   "cu31924029294141",
+   357,
+   "352"
+  ],
+  "luther-galatians.GAL.4.3.1": [
+   "cu31924029294141",
+   358,
+   "353"
+  ],
+  "luther-galatians.GAL.4.3.2": [
+   "cu31924029294141",
+   360,
+   "355"
+  ],
+  "luther-galatians.GAL.4.4.1": [
+   "cu31924029294141",
+   365,
+   "360"
+  ],
+  "luther-galatians.GAL.4.5.1": [
+   "cu31924029294141",
+   372,
+   "367"
+  ],
+  "luther-galatians.GAL.4.6.1": [
+   "cu31924029294141",
+   372,
+   "367"
+  ],
+  "luther-galatians.GAL.4.6.2": [
+   "cu31924029294141",
+   378,
+   "373"
+  ],
+  "luther-galatians.GAL.4.7.1": [
+   "cu31924029294141",
+   387,
+   "382"
+  ],
+  "luther-galatians.GAL.4.7.2": [
+   "cu31924029294141",
+   390,
+   "385"
+  ],
+  "luther-galatians.GAL.4.7.3": [
+   "cu31924029294141",
+   392,
+   "387"
+  ],
+  "luther-galatians.GAL.4.8-9.1": [
+   "cu31924029294141",
+   392,
+   "387"
+  ],
+  "luther-galatians.GAL.4.9.1": [
+   "cu31924029294141",
+   398,
+   "393"
+  ],
+  "luther-galatians.GAL.4.9.2": [
+   "cu31924029294141",
+   399,
+   "394"
+  ],
+  "luther-galatians.GAL.4.9.3": [
+   "cu31924029294141",
+   405,
+   "400"
+  ],
+  "luther-galatians.GAL.4.10.1": [
+   "cu31924029294141",
+   406,
+   "401"
+  ],
+  "luther-galatians.GAL.4.11.1": [
+   "cu31924029294141",
+   407,
+   "402"
+  ],
+  "luther-galatians.GAL.4.12.1": [
+   "cu31924029294141",
+   407,
+   "402"
+  ],
+  "luther-galatians.GAL.4.12.2": [
+   "cu31924029294141",
+   410,
+   "405"
+  ],
+  "luther-galatians.GAL.4.12.3": [
+   "cu31924029294141",
+   411,
+   "406"
+  ],
+  "luther-galatians.GAL.4.12.4": [
+   "cu31924029294141",
+   412,
+   "407"
+  ],
+  "luther-galatians.GAL.4.13.1": [
+   "cu31924029294141",
+   412,
+   "407"
+  ],
+  "luther-galatians.GAL.4.15.1": [
+   "cu31924029294141",
+   417,
+   "412"
+  ],
+  "luther-galatians.GAL.4.15.2": [
+   "cu31924029294141",
+   417,
+   "412"
+  ],
+  "luther-galatians.GAL.4.16.1": [
+   "cu31924029294141",
+   418,
+   "413"
+  ],
+  "luther-galatians.GAL.4.17.1": [
+   "cu31924029294141",
+   419,
+   "414"
+  ],
+  "luther-galatians.GAL.4.18.1": [
+   "cu31924029294141",
+   424,
+   "419"
+  ],
+  "luther-galatians.GAL.4.19.1": [
+   "cu31924029294141",
+   425,
+   "420"
+  ],
+  "luther-galatians.GAL.4.20.1": [
+   "cu31924029294141",
+   426,
+   "421"
+  ],
+  "luther-galatians.GAL.4.20.2": [
+   "cu31924029294141",
+   427,
+   "422"
+  ],
+  "luther-galatians.GAL.4.22-23.1": [
+   "cu31924029294141",
+   428,
+   "423"
+  ],
+  "luther-galatians.GAL.4.24.1": [
+   "cu31924029294141",
+   430,
+   "425"
+  ],
+  "luther-galatians.GAL.4.24.2": [
+   "cu31924029294141",
+   431,
+   "426"
+  ],
+  "luther-galatians.GAL.4.25.1": [
+   "cu31924029294141",
+   433,
+   "428"
+  ],
+  "luther-galatians.GAL.4.26.1": [
+   "cu31924029294141",
+   434,
+   "429"
+  ],
+  "luther-galatians.GAL.4.27.1": [
+   "cu31924029294141",
+   437,
+   "432"
+  ],
+  "luther-galatians.GAL.4.28.1": [
+   "cu31924029294141",
+   444,
+   "439"
+  ],
+  "luther-galatians.GAL.4.30.1": [
+   "cu31924029294141",
+   452,
+   "447"
+  ],
+  "luther-galatians.GAL.4.31.1": [
+   "cu31924029294141",
+   456,
+   "451"
+  ],
+  "luther-galatians.GAL.5.1.1": [
+   "cu31924029294141",
+   457,
+   "452"
+  ],
+  "luther-galatians.GAL.5.1.2": [
+   "cu31924029294141",
+   461,
+   "456"
+  ],
+  "luther-galatians.GAL.5.2.1": [
+   "cu31924029294141",
+   463,
+   "458"
+  ],
+  "luther-galatians.GAL.5.3.1": [
+   "cu31924029294141",
+   467,
+   "462"
+  ],
+  "luther-galatians.GAL.5.4.1": [
+   "cu31924029294141",
+   470,
+   "465"
+  ],
+  "luther-galatians.GAL.5.4.2": [
+   "cu31924029294141",
+   472,
+   "467"
+  ],
+  "luther-galatians.GAL.5.5.1": [
+   "cu31924029294141",
+   473,
+   "468"
+  ],
+  "luther-galatians.GAL.5.7.1": [
+   "cu31924029294141",
+   481,
+   "476"
+  ],
+  "luther-galatians.GAL.5.7.2": [
+   "cu31924029294141",
+   482,
+   "477"
+  ],
+  "luther-galatians.GAL.5.8.1": [
+   "cu31924029294141",
+   483,
+   "478"
+  ],
+  "luther-galatians.GAL.5.9.1": [
+   "cu31924029294141",
+   485,
+   "480"
+  ],
+  "luther-galatians.GAL.5.10.1": [
+   "cu31924029294141",
+   488,
+   "483"
+  ],
+  "luther-galatians.GAL.5.10.2": [
+   "cu31924029294141",
+   488,
+   "483"
+  ],
+  "luther-galatians.GAL.5.11.1": [
+   "cu31924029294141",
+   489,
+   "484"
+  ],
+  "luther-galatians.GAL.5.12.1": [
+   "cu31924029294141",
+   492,
+   "487"
+  ],
+  "luther-galatians.GAL.5.13.1": [
+   "cu31924029294141",
+   495,
+   "490"
+  ],
+  "luther-galatians.GAL.5.14.1": [
+   "cu31924029294141",
+   499,
+   "494"
+  ],
+  "luther-galatians.GAL.5.14.2": [
+   "cu31924029294141",
+   501,
+   "496"
+  ],
+  "luther-galatians.GAL.5.15.1": [
+   "cu31924029294141",
+   504,
+   "499"
+  ],
+  "luther-galatians.GAL.5.16.1": [
+   "cu31924029294141",
+   506,
+   "501"
+  ],
+  "luther-galatians.GAL.5.16.2": [
+   "cu31924029294141",
+   509,
+   "504"
+  ],
+  "luther-galatians.GAL.5.17.1": [
+   "cu31924029294141",
+   513,
+   "508"
+  ],
+  "luther-galatians.GAL.5.17.2": [
+   "cu31924029294141",
+   513,
+   "508"
+  ],
+  "luther-galatians.GAL.5.18.1": [
+   "cu31924029294141",
+   521,
+   "516"
+  ],
+  "luther-galatians.GAL.5.19.1": [
+   "cu31924029294141",
+   523,
+   "518"
+  ],
+  "luther-galatians.GAL.5.19.2": [
+   "cu31924029294141",
+   531,
+   "526"
+  ],
+  "luther-galatians.GAL.5.21.1": [
+   "cu31924029294141",
+   535,
+   "530"
+  ],
+  "luther-galatians.GAL.5.22.1": [
+   "cu31924029294141",
+   536,
+   "531"
+  ],
+  "luther-galatians.GAL.5.23.1": [
+   "cu31924029294141",
+   539,
+   "534"
+  ],
+  "luther-galatians.GAL.5.24.1": [
+   "cu31924029294141",
+   540,
+   "535"
+  ],
+  "luther-galatians.GAL.5.25.1": [
+   "cu31924029294141",
+   541,
+   "536"
+  ],
+  "luther-galatians.GAL.5.26.1": [
+   "cu31924029294141",
+   547,
+   "542"
+  ],
+  "luther-galatians.GAL.5.26.2": [
+   "cu31924029294141",
+   547,
+   "542"
+  ],
+  "luther-galatians.GAL.6.1.1": [
+   "cu31924029294141",
+   548,
+   "543"
+  ],
+  "luther-galatians.GAL.6.1.2": [
+   "cu31924029294141",
+   550,
+   "545"
+  ],
+  "luther-galatians.GAL.6.2.1": [
+   "cu31924029294141",
+   551,
+   "546"
+  ],
+  "luther-galatians.GAL.6.3.1": [
+   "cu31924029294141",
+   552,
+   "547"
+  ],
+  "luther-galatians.GAL.6.4.1": [
+   "cu31924029294141",
+   554,
+   "549"
+  ],
+  "luther-galatians.GAL.6.5.1": [
+   "cu31924029294141",
+   558,
+   "553"
+  ],
+  "luther-galatians.GAL.6.6.1": [
+   "cu31924029294141",
+   559,
+   "554"
+  ],
+  "luther-galatians.GAL.6.7.1": [
+   "cu31924029294141",
+   563,
+   "558"
+  ],
+  "luther-galatians.GAL.6.7.2": [
+   "cu31924029294141",
+   564,
+   "559"
+  ],
+  "luther-galatians.GAL.6.8.1": [
+   "cu31924029294141",
+   565,
+   "560"
+  ],
+  "luther-galatians.GAL.6.9.1": [
+   "cu31924029294141",
+   566,
+   "561"
+  ],
+  "luther-galatians.GAL.6.10.1": [
+   "cu31924029294141",
+   566,
+   "561"
+  ],
+  "luther-galatians.GAL.6.11.1": [
+   "cu31924029294141",
+   567,
+   "562"
+  ],
+  "luther-galatians.GAL.6.12.1": [
+   "cu31924029294141",
+   567,
+   "562"
+  ],
+  "luther-galatians.GAL.6.13.1": [
+   "cu31924029294141",
+   568,
+   "563"
+  ],
+  "luther-galatians.GAL.6.14.1": [
+   "cu31924029294141",
+   570,
+   "565"
+  ],
+  "luther-galatians.GAL.6.14.2": [
+   "cu31924029294141",
+   572,
+   "567"
+  ],
+  "luther-galatians.GAL.6.15.1": [
+   "cu31924029294141",
+   574,
+   "569"
+  ],
+  "luther-galatians.GAL.6.16.1": [
+   "cu31924029294141",
+   577,
+   "572"
+  ],
+  "luther-galatians.GAL.6.16.2": [
+   "cu31924029294141",
+   578,
+   "573"
+  ],
+  "luther-galatians.GAL.6.17.1": [
+   "cu31924029294141",
+   578,
+   "573"
+  ],
+  "luther-galatians.GAL.6.17.2": [
+   "cu31924029294141",
+   578,
+   "573"
+  ],
+  "luther-galatians.GAL.6.18.1": [
+   "cu31924029294141",
+   580,
+   ""
+  ]
+ }
+}
