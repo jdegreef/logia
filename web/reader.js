@@ -13,6 +13,9 @@
   if (!holder) return;
   var DATA = JSON.parse(holder.textContent);
   var U = DATA.ui;
+  // A heading that names its place in the work is a running head, set in
+  // small capitals; keep in step with RUNHEAD in scripts/build_site.py.
+  var RUNHEAD = /^(Homily|Tractate|Sermon|Lecture|Discourse|Exposition|Book|Chapter|Section|Part|Psalm|Hom\.|Serm\.)\b.{0,80}$/;
   var ERAS = DATA.eras;
   var Prefs = window.LogiaPrefs;
   var $ = function (s) { return document.querySelector(s); };
@@ -426,7 +429,7 @@
         .filter(Boolean).join(" · ");
       var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
       var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
-        ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
+        ? '<div class="cx-lemma' + (RUNHEAD.test(e.heading) ? " cx-runhead" : "") + '">' + esc(e.heading) + "</div>" : "";
       return range + lemma + paras(linked(e.excerpt, e.cites, e.speakers)) + traced(e);
     }).join("");
   }

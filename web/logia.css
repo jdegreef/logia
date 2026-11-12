@@ -1469,3 +1469,6 @@ html {
   font-variant-numeric: oldstyle-nums; }
 .lg-tp-imprint::before { content: ""; display: block; width: 64px; height: 1px; margin: 0 auto 14px; background: var(--line-strong); }
 .lg-titlepage .actions { justify-content: center; margin-top: 18px; }
+/* Running heads ("Homily XXV") are the book's own place marks, set in small
+   capitals; quoted lemmas keep their italic. */
+.lg-lemma.lg-runhead, .cx-lemma.cx-runhead { font-style: normal; font-variant: small-caps; letter-spacing: .05em; font-size: .92em; }
