@@ -1,5 +1,5 @@
-"""Check the library's data: every work, excerpt, citation, correction and
-translation.
+"""Check the library's data: every work, excerpt, citation, correction,
+translation, creed and confession.
 
     python3 scripts/validate.py
 
@@ -13,6 +13,7 @@ import os
 import re
 import sys
 
+import differ
 import scripture
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,6 +26,12 @@ CITATION_FIELDS = {"in", "at", "text", "start", "end", "found", "status"}
 CITATION_STATUSES = {"detected", "reviewed", "rejected"}   # set by a person checking it
 QUOTATION_FIELDS = {"in", "at", "label", "work", "locus", "source", "para", "excerpt", "score", "found", "status"}
 STATUSES = {"ai_draft", "reviewed"}          # "reviewed" is set only by a named human reviewer
+CREED_FIELDS = {"id", "title", "kind", "tradition", "year", "edition", "translation", "published", "full_text_url",
+                "rights", "notes", "status", "sections"}
+CREED_KINDS = {"creed", "council", "confession", "catechism"}
+CREED_SECTION_FIELDS = {"id", "label", "text", "source", "cites"}
+CREED_CITE_FIELDS = {"at", "text", "start", "end", "note"}
+SHARED = "Shared by the churches"
 REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
 GREEK_OR_HEBREW = re.compile(r"[Ͱ-Ͽἀ-῿֐-׿]")
 
@@ -67,6 +74,13 @@ def main():
         if not isinstance(a.get("died"), int):
             say(f"{name}: died must be a year")
         authors[a.get("id")] = a
+
+    # Wikidata items and Wikipedia articles, written by scripts/fetch_wikidata.py.
+    for aid, ids in load(os.path.join(ROOT, "library", "identifiers.json"))["authors"].items():
+        if aid not in authors:
+            say(f"library/identifiers.json: {aid!r} has no library/authors/ file")
+        if set(ids) != {"wikidata", "wikipedia"} or not re.fullmatch(r"Q\d+", str(ids.get("wikidata"))):
+            say(f"library/identifiers.json: {aid}: needs a wikidata item (Q123) and a wikipedia title or null")
 
     works = {}
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "works", "*.json"))):
@@ -192,6 +206,30 @@ def main():
             if x["status"] not in CITATION_STATUSES:
                 say(f"{where}: status {x['status']!r}")
 
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "mentions", "*", "*.json"))):
+        m = load(p)
+        name = os.path.relpath(p, ROOT)
+        work = m.get("work")
+        if os.path.basename(os.path.dirname(p)) != work or os.path.basename(p) != f"{m.get('book')}.json":
+            say(f"{name}: file path does not match work {work!r} and book {m.get('book')!r}")
+        for x in m.get("mentions", []):
+            where = f"{name}: {x.get('in')} {x.get('text')!r}"
+            if set(x) != {"in", "at", "text", "author", "status"}:
+                say(f"{where}: fields {sorted(x)}, not ['at', 'author', 'in', 'status', 'text']")
+                continue
+            if x["in"] not in texts or texts[x["in"]][0] != work:
+                say(f"{where}: {x['in']!r} is not an excerpt of {work}")
+                continue
+            text = texts[x["in"]][1]
+            for a, b in fixes.get(work, []):
+                text = text.replace(a, b)
+            if text[x["at"]:x["at"] + len(x["text"])] != x["text"]:
+                say(f"{where}: is not at {x['at']} in the excerpt any more; run scripts/find_refs.py")
+            if x["author"] not in authors:
+                say(f"{where}: {x['author']!r} is not a commentator in library/authors/")
+            if x["status"] not in CITATION_STATUSES:
+                say(f"{where}: status {x['status']!r}")
+
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "quotations", "*", "*.json"))):
         q = load(p)
         name = os.path.relpath(p, ROOT)
@@ -252,6 +290,61 @@ def main():
                 if para["text"][c["at"]:c["at"] + len(c["text"])] != c["text"] or not scripture.parse(c["start"]):
                     say(f"{name}: {para['id']}: citation {c['text']!r} does not fit; run scripts/extract_texts.py")
 
+    # Creeds, conciliar decrees and confessions, from scripts/extract_creeds.py.
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "creeds", "*.json"))):
+        d = load(p)
+        name = os.path.relpath(p, ROOT)
+        if os.path.basename(p) != f"{d.get('id')}.json":
+            say(f"{name}: file name does not match id {d.get('id')!r}")
+        if set(d) != CREED_FIELDS:
+            say(f"{name}: fields differ from the schema: missing {sorted(CREED_FIELDS - set(d))}, "
+                f"extra {sorted(set(d) - CREED_FIELDS)}")
+            continue
+        if d["kind"] not in CREED_KINDS:
+            say(f"{name}: kind {d['kind']!r} is not one of {sorted(CREED_KINDS)}")
+        if not isinstance(d["tradition"], str) or not d["tradition"].strip():
+            say(f"{name}: tradition must be named ({SHARED!r} for the creeds and councils the churches share)")
+        if d["year"] is not None and not isinstance(d["year"], int):
+            say(f"{name}: year must be a year, or null where the source gives none")
+        if not isinstance(d["published"], int) or d["published"] > 1930:
+            say(f"{name}: published {d['published']!r}: only editions published in 1930 or earlier are "
+                "public domain in the US")
+        if set(d["rights"] or {}) != {"basis", "worldwide"}:
+            say(f"{name}: rights needs a basis and what is still to confirm for worldwide use")
+        if d["status"] not in STATUSES:
+            say(f"{name}: status {d['status']!r}")
+        if not d["sections"]:
+            say(f"{name}: no sections")
+        seen = set()
+        for s in d["sections"]:
+            where = f"{name}: {s.get('id')}"
+            if set(s) != CREED_SECTION_FIELDS:
+                say(f"{where}: fields {sorted(s)}, not {sorted(CREED_SECTION_FIELDS)}")
+                continue
+            if s["id"] in seen:
+                say(f"{where}: duplicate section id")
+            seen.add(s["id"])
+            if s["source"] not in sources.get("creeds", set()):
+                say(f"{where}: source {s['source']!r} is not in sources/manifest.json for creeds")
+            if not s["text"].strip():
+                say(f"{where}: empty text")
+            if s["label"] is not None and not (isinstance(s["label"], str) and s["label"].strip()):
+                say(f"{where}: label must be the page's heading or number, or null")
+            for c in s["cites"]:
+                if set(c) != CREED_CITE_FIELDS:
+                    say(f"{where}: citation fields {sorted(c)}, not {sorted(CREED_CITE_FIELDS)}")
+                    continue
+                if c["note"]:          # a proof text: at is where its footnote marker stands
+                    if not 0 <= c["at"] <= len(s["text"]):
+                        say(f"{where}: proof text {c['text']!r} is placed outside the section")
+                elif s["text"][c["at"]:c["at"] + len(c["text"])] != c["text"]:
+                    say(f"{where}: citation {c['text']!r} is not at {c['at']}; run scripts/extract_creeds.py")
+                a, b = scripture.parse(c["start"]), scripture.parse(c["end"])
+                if not a or not b:
+                    say(f"{where}: {c['start']}–{c['end']} is not a reference to a chapter that exists")
+                elif a[0] != b[0] or a[1:] > b[1:]:
+                    say(f"{where}: {c['start']}–{c['end']} is not a forward range in one book")
+
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "translations", "*", "*", "*.json"))):
         t = load(p)
         name = os.path.relpath(p, ROOT)
@@ -260,6 +353,36 @@ def main():
                 say(f"{name}: {e.get('of')!r} is not an excerpt id")
             if e.get("status") not in STATUSES:
                 say(f"{name}: {e.get('of')}: status {e.get('status')!r}")
+
+    # Where the churches differ (library/differ/): each page fits, and is fair
+    # enough to publish or is held back with what it lacks.
+    fam = differ.families()
+    for a, x in authors.items():
+        if not differ.family(x.get("tradition", ""), fam):
+            say(f"library/authors/{a}.json: tradition {x.get('tradition')!r} is in no family of library/families.json")
+    rows = [(texts[i][0], x["start"], x["end"], i) for i, x in entries.items()
+            if scripture.parse(x.get("start")) and scripture.parse(x.get("end"))]
+    held = []
+    for pg in differ.pages():
+        name = f"library/differ/{pg['id']}.json"
+        if "missing" in pg:
+            say(f"{name}: {pg['missing']}")
+            continue
+        for k in ("start", "end", "focus"):
+            if not scripture.parse(pg.get(k)):
+                say(f"{name}: {k} {pg.get(k)!r} is not a verse")
+        if pg.get("status") not in STATUSES or not pg.get("note") or not pg.get("title"):
+            say(f"{name}: needs a title, a note and a status")
+            continue
+        if pg["status"] == "reviewed" and not pg.get("reviewed_by"):
+            say(f"{name}: reviewed, but by no one named")
+        on = differ.works_on(pg, rows)
+        present = {differ.family(authors[works[w]["author"]]["tradition"], fam) for w in on} - {None}
+        fair, missing = differ.balance(present, fam)
+        if not fair:
+            held.append(f"{pg['id']} ({len(on)} works; lacks {', '.join(missing)})")
+    if held:
+        print("held back, not yet fair enough to publish: " + "; ".join(held))
 
     for a in authors:
         if not any(w["author"] == a for w in works.values()):

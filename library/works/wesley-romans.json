@@ -1,0 +1,18 @@
+{
+ "id": "wesley-romans",
+ "author": "wesley",
+ "title": "Explanatory Notes upon the New Testament: Romans",
+ "divisions": "verse",
+ "edition": "John Wesley, Explanatory Notes upon the New Testament (London, 1755), CCEL edition (\"Wesley's Notes on the Bible\"; CCEL does not name the printing it follows)",
+ "original_language": "English",
+ "translation": null,
+ "published": 1755,
+ "full_text_url": "https://www.ccel.org/ccel/wesley/notes.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Wesley died in 1791; the printing CCEL transcribed (and any editor of it) is still to identify"
+ },
+ "source_kind": "digital",
+ "notes": "Chapters 1–16 are CCEL notes.i.vii.ii to notes.i.vii.xvii; the preface to the epistles that opens the book (notes.i.vii.i), on no one verse, is not included. One excerpt per verse note, whole: each note is taken as it stands, with its verse number and lemmas. A note that runs into numbered points (Romans 1:17, 5:15, 6:18, 9:13, 9:29) keeps them as further paragraphs. The outlines that open chapters 4 and 9 are each one excerpt on the whole chapter. Where CCEL's page starts a new paragraph in mid-sentence (Romans 3:20, 8:29), the two are joined with a space. Headings are the note's first lemma, empty where the note has none.",
+ "status": "ai_draft"
+}

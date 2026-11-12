@@ -8211,15 +8211,6 @@
    "status": "detected"
   },
   {
-   "in": "henry-romans.ROM.11.23.1",
-   "at": 747,
-   "text": "Eph. i. 19, 29",
-   "start": "EPH.1.29",
-   "end": "EPH.1.29",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "henry-romans.ROM.11.23.2",
    "at": 236,
    "text": "v. 24",
@@ -9674,15 +9665,6 @@
    "text": "John xiii. 5",
    "start": "JHN.13.5",
    "end": "JHN.13.5",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-romans.ROM.12.16.2",
-   "at": 250,
-   "text": "xiv. 34",
-   "start": "JHN.14.34",
-   "end": "JHN.14.34",
    "found": "source",
    "status": "detected"
   },

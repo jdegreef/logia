@@ -300,15 +300,6 @@
    "status": "detected"
   },
   {
-   "in": "ryle-matthew.MAT.5.1-12.1",
-   "at": 1549,
-   "text": "Isaiah 6:21",
-   "start": "ISA.6.21",
-   "end": "ISA.6.21",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "ryle-matthew.MAT.5.1-12.2",
    "at": 375,
    "text": "Psalm 51:17",
@@ -764,15 +755,6 @@
    "text": "Matthew 25:35",
    "start": "MAT.25.35",
    "end": "MAT.25.35",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "ryle-matthew.MAT.11.1-15.2",
-   "at": 1330,
-   "text": "Daniel 10:26",
-   "start": "DAN.10.26",
-   "end": "DAN.10.26",
    "found": "source",
    "status": "detected"
   },
@@ -1952,15 +1934,6 @@
    "text": "Daniel 5:23",
    "start": "DAN.5.23",
    "end": "DAN.5.23",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "ryle-matthew.MAT.25.14-30.3",
-   "at": 810,
-   "text": "1 Corinthians 2:31",
-   "start": "1CO.2.31",
-   "end": "1CO.2.31",
    "found": "source",
    "status": "detected"
   },

@@ -1,0 +1,748 @@
+{
+ "work": "jfb-hebrews",
+ "book": "HEB",
+ "mentions": [
+  {
+   "in": "jfb-hebrews.HEB.1.1.1",
+   "at": 1642,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.1.3.1",
+   "at": 1093,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.1.5.1",
+   "at": 203,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.1.9.2",
+   "at": 22,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.1.10.1",
+   "at": 481,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.3.2",
+   "at": 1163,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.3.2",
+   "at": 1417,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.7.1",
+   "at": 19,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.9.2",
+   "at": 60,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.9.2",
+   "at": 1283,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.10.1",
+   "at": 219,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.10.2",
+   "at": 220,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.10.2",
+   "at": 409,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.11.1",
+   "at": 1167,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.11.1",
+   "at": 2018,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.13.1",
+   "at": 895,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.14.2",
+   "at": 225,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.17.1",
+   "at": 1684,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.2.17.2",
+   "at": 549,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.1.2",
+   "at": 404,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.6.1",
+   "at": 361,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.6.1",
+   "at": 499,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.6.1",
+   "at": 900,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.9.1",
+   "at": 115,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.10.1",
+   "at": 551,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.11.1",
+   "at": 33,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.12.1",
+   "at": 465,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.3.14.1",
+   "at": 386,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.4.1.1",
+   "at": 844,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.4.10.1",
+   "at": 773,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.4.12.2",
+   "at": 309,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.4.15.1",
+   "at": 1404,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.5.6.1",
+   "at": 294,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.5.7.1",
+   "at": 955,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.5.12.1",
+   "at": 368,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.6.1.1",
+   "at": 291,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.6.2.1",
+   "at": 958,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.6.4.1",
+   "at": 582,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.6.13.1",
+   "at": 427,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.6.17.1",
+   "at": 282,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.6.17.1",
+   "at": 697,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.6.20.1",
+   "at": 1003,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.7.1.1",
+   "at": 1132,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.7.3.3",
+   "at": 288,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.7.10.1",
+   "at": 653,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.7.26.1",
+   "at": 1365,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.8.4.1",
+   "at": 823,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.8.5.1",
+   "at": 80,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.8.9.1",
+   "at": 600,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.8.11.1",
+   "at": 1233,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.9.17.1",
+   "at": 231,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.9.18.1",
+   "at": 478,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.9.19.2",
+   "at": 201,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.9.28.1",
+   "at": 959,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.10.1.1",
+   "at": 361,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.10.7.1",
+   "at": 1017,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.10.12.1",
+   "at": 333,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.10.29.1",
+   "at": 1498,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.10.32.1",
+   "at": 645,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.10.38.1",
+   "at": 115,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.10.38.2",
+   "at": 907,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.1.2",
+   "at": 796,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.1.2",
+   "at": 1619,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.2.1",
+   "at": 657,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.2.1",
+   "at": 1312,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.3.1",
+   "at": 959,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.3.1",
+   "at": 1642,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.6.1",
+   "at": 541,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.13-16.1",
+   "at": 449,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.13-16.2",
+   "at": 1201,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.18.1",
+   "at": 84,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.24.1",
+   "at": 79,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.28.1",
+   "at": 334,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.29.1",
+   "at": 428,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.30.1",
+   "at": 134,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.33.1",
+   "at": 294,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.37.1",
+   "at": 936,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.39.1",
+   "at": 856,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.11.40.2",
+   "at": 605,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.1.2",
+   "at": 85,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.3.1",
+   "at": 253,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.8.1",
+   "at": 546,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.9.1",
+   "at": 274,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.10.1",
+   "at": 727,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.12.1",
+   "at": 73,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.13.1",
+   "at": 205,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.14.2",
+   "at": 1262,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.15.1",
+   "at": 274,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.16.1",
+   "at": 364,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.17.2",
+   "at": 807,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.23.1",
+   "at": 556,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.23.2",
+   "at": 313,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.24.2",
+   "at": 73,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.24.3",
+   "at": 1111,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.12.28.1",
+   "at": 203,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.3.1",
+   "at": 549,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.5.1",
+   "at": 593,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.8.1",
+   "at": 1176,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.13.1",
+   "at": 79,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.13.1",
+   "at": 234,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.15.1",
+   "at": 639,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.17.1",
+   "at": 1327,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.17.1",
+   "at": 1652,
+   "text": "Aquinas",
+   "author": "aquinas",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.17.1",
+   "at": 1734,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.17.2",
+   "at": 660,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-hebrews.HEB.13.21.1",
+   "at": 92,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  }
+ ]
+}

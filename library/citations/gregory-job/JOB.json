@@ -3,11 +3,290 @@
  "book": "JOB",
  "citations": [
   {
+   "in": "gregory-job.JOB.1.8.1",
+   "at": 4,
+   "text": "Ver. 8",
+   "start": "JOB.1.8",
+   "end": "JOB.1.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.1.8.2",
+   "at": 4,
+   "text": "Ver. 8",
+   "start": "JOB.1.8",
+   "end": "JOB.1.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.1.12.2",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.1.12",
+   "end": "JOB.1.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.1.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "JOB.1.16",
+   "end": "JOB.1.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.1.18-19.1",
+   "at": 4,
+   "text": "Ver. 18, 19",
+   "start": "JOB.1.18",
+   "end": "JOB.1.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.1.18-19.3",
+   "at": 4,
+   "text": "Ver. 18, 19",
+   "start": "JOB.1.18",
+   "end": "JOB.1.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.1.21.1",
+   "at": 4,
+   "text": "Ver. 21",
+   "start": "JOB.1.21",
+   "end": "JOB.1.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.2.6.3",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.2.6",
+   "end": "JOB.2.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.2.10.1",
+   "at": 4,
+   "text": "Ver. 10",
+   "start": "JOB.2.10",
+   "end": "JOB.2.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.2.11.2",
+   "at": 4,
+   "text": "Ver. 11",
+   "start": "JOB.2.11",
+   "end": "JOB.2.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.2.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.2.12",
+   "end": "JOB.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.2.13.1",
+   "at": 4,
+   "text": "Ver. 13",
+   "start": "JOB.2.13",
+   "end": "JOB.2.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.3.10.1",
+   "at": 4,
+   "text": "Ver. 10",
+   "start": "JOB.3.10",
+   "end": "JOB.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "gregory-job.JOB.3.14.1",
    "at": 514,
    "text": "Ps. 8, 6",
    "start": "PSA.8.7",
    "end": "PSA.8.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.3.15.1",
+   "at": 4,
+   "text": "Ver. 15",
+   "start": "JOB.3.15",
+   "end": "JOB.3.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.3.22.1",
+   "at": 4,
+   "text": "Ver. 22",
+   "start": "JOB.3.22",
+   "end": "JOB.3.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.4.13.1",
+   "at": 4,
+   "text": "Ver. 13",
+   "start": "JOB.4.13",
+   "end": "JOB.4.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.4.20.1",
+   "at": 4,
+   "text": "Ver. 20",
+   "start": "JOB.4.20",
+   "end": "JOB.4.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.5.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.5.12",
+   "end": "JOB.5.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.5.13.1",
+   "at": 4,
+   "text": "Ver. 13",
+   "start": "JOB.5.13",
+   "end": "JOB.5.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.6.4.1",
+   "at": 4,
+   "text": "Ver. 4",
+   "start": "JOB.6.4",
+   "end": "JOB.6.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.6.6.1",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.6.6",
+   "end": "JOB.6.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.6.6.2",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.6.6",
+   "end": "JOB.6.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.6.7.2",
+   "at": 4,
+   "text": "Ver. 7",
+   "start": "JOB.6.7",
+   "end": "JOB.6.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.6.27.1",
+   "at": 4,
+   "text": "Ver. 27",
+   "start": "JOB.6.27",
+   "end": "JOB.6.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.8.3.1",
+   "at": 4,
+   "text": "Ver. 3",
+   "start": "JOB.8.3",
+   "end": "JOB.8.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.8.15.1",
+   "at": 4,
+   "text": "Ver. 15",
+   "start": "JOB.8.15",
+   "end": "JOB.8.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.9.6.1",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.9.6",
+   "end": "JOB.9.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.9.9.1",
+   "at": 4,
+   "text": "Ver. 9",
+   "start": "JOB.9.9",
+   "end": "JOB.9.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.10.9.1",
+   "at": 4,
+   "text": "Ver. 9",
+   "start": "JOB.10.9",
+   "end": "JOB.10.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.10.14.1",
+   "at": 4,
+   "text": "Ver. 14",
+   "start": "JOB.10.14",
+   "end": "JOB.10.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.10.21.1",
+   "at": 4,
+   "text": "Ver. 21",
+   "start": "JOB.10.21",
+   "end": "JOB.10.21",
    "found": "pattern",
    "status": "detected"
   },
@@ -21,11 +300,362 @@
    "status": "detected"
   },
   {
+   "in": "gregory-job.JOB.12.10.1",
+   "at": 4,
+   "text": "Ver. 10",
+   "start": "JOB.12.10",
+   "end": "JOB.12.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.12.22.1",
+   "at": 4,
+   "text": "Ver. 22",
+   "start": "JOB.12.22",
+   "end": "JOB.12.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.13.22.1",
+   "at": 4,
+   "text": "Ver. 22",
+   "start": "JOB.13.22",
+   "end": "JOB.13.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.15.7-8.1",
+   "at": 4,
+   "text": "Ver. 7, 8",
+   "start": "JOB.15.7",
+   "end": "JOB.15.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.15.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.15.12",
+   "end": "JOB.15.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.15.22.1",
+   "at": 4,
+   "text": "Ver. 22",
+   "start": "JOB.15.22",
+   "end": "JOB.15.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.15.22.1",
+   "at": 565,
+   "text": "Ver. 2",
+   "start": "JOB.15.2",
+   "end": "JOB.15.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.15.28.1",
+   "at": 4,
+   "text": "Ver. 28",
+   "start": "JOB.15.28",
+   "end": "JOB.15.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.15.33-34.1",
+   "at": 4,
+   "text": "Ver. 33, 34",
+   "start": "JOB.15.33",
+   "end": "JOB.15.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.17.11.1",
+   "at": 4,
+   "text": "Ver. 11",
+   "start": "JOB.17.11",
+   "end": "JOB.17.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.18.5.1",
+   "at": 4,
+   "text": "Ver. 5",
+   "start": "JOB.18.5",
+   "end": "JOB.18.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.18.6.1",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.18.6",
+   "end": "JOB.18.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.18.18.1",
+   "at": 4,
+   "text": "Ver. 18",
+   "start": "JOB.18.18",
+   "end": "JOB.18.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.19.27.1",
+   "at": 4,
+   "text": "Ver. 27",
+   "start": "JOB.19.27",
+   "end": "JOB.19.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.20.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.20.12",
+   "end": "JOB.20.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.20.23.1",
+   "at": 4,
+   "text": "Ver. 23",
+   "start": "JOB.20.23",
+   "end": "JOB.20.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.21.21.1",
+   "at": 4,
+   "text": "Ver. 21",
+   "start": "JOB.21.21",
+   "end": "JOB.21.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.21.27-28.1",
+   "at": 4,
+   "text": "Ver. 27, 28",
+   "start": "JOB.21.27",
+   "end": "JOB.21.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.22.5.1",
+   "at": 801,
+   "text": "Ver. 6",
+   "start": "JOB.22.6",
+   "end": "JOB.22.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.23.6.1",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.23.6",
+   "end": "JOB.23.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.23.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "JOB.23.16",
+   "end": "JOB.23.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.24.5.1",
+   "at": 4,
+   "text": "Ver. 5",
+   "start": "JOB.24.5",
+   "end": "JOB.24.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.24.6.1",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.24.6",
+   "end": "JOB.24.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.24.15.1",
+   "at": 4,
+   "text": "Ver. 15",
+   "start": "JOB.24.15",
+   "end": "JOB.24.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.24.19.1",
+   "at": 4,
+   "text": "Ver. 19",
+   "start": "JOB.24.19",
+   "end": "JOB.24.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.26.14.1",
+   "at": 4,
+   "text": "Ver. 14",
+   "start": "JOB.26.14",
+   "end": "JOB.26.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.27.2.1",
+   "at": 4,
+   "text": "Ver. 2",
+   "start": "JOB.27.2",
+   "end": "JOB.27.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "gregory-job.JOB.27.2.1",
    "at": 701,
    "text": "Ps. 14,1",
    "start": "PSA.14.1",
    "end": "PSA.14.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.27.19.1",
+   "at": 4,
+   "text": "Ver. 19",
+   "start": "JOB.27.19",
+   "end": "JOB.27.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.28.5.1",
+   "at": 4,
+   "text": "Ver. 5",
+   "start": "JOB.28.5",
+   "end": "JOB.28.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.28.11.1",
+   "at": 4,
+   "text": "Ver. 11",
+   "start": "JOB.28.11",
+   "end": "JOB.28.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.28.28.1",
+   "at": 4,
+   "text": "Ver. 28",
+   "start": "JOB.28.28",
+   "end": "JOB.28.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.29.3.1",
+   "at": 4,
+   "text": "Ver. 3",
+   "start": "JOB.29.3",
+   "end": "JOB.29.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.30.9.1",
+   "at": 4,
+   "text": "Ver. 9",
+   "start": "JOB.30.9",
+   "end": "JOB.30.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.30.10.1",
+   "at": 4,
+   "text": "Ver. 10",
+   "start": "JOB.30.10",
+   "end": "JOB.30.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.30.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "JOB.30.16",
+   "end": "JOB.30.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.30.30.1",
+   "at": 4,
+   "text": "Ver. 30",
+   "start": "JOB.30.30",
+   "end": "JOB.30.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.31.5-6.1",
+   "at": 4,
+   "text": "Ver. 5, 6",
+   "start": "JOB.31.5",
+   "end": "JOB.31.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.31.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "JOB.31.16",
+   "end": "JOB.31.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.31.18.1",
+   "at": 4,
+   "text": "Ver. 18",
+   "start": "JOB.31.18",
+   "end": "JOB.31.18",
    "found": "pattern",
    "status": "detected"
   },
@@ -39,6 +669,60 @@
    "status": "detected"
   },
   {
+   "in": "gregory-job.JOB.32.4-5.1",
+   "at": 4,
+   "text": "Ver. 4, 5",
+   "start": "JOB.32.4",
+   "end": "JOB.32.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.33.8.1",
+   "at": 125,
+   "text": "Ver. 9",
+   "start": "JOB.33.9",
+   "end": "JOB.33.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.33.13-14.1",
+   "at": 4,
+   "text": "Ver. 13, 14",
+   "start": "JOB.33.13",
+   "end": "JOB.33.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.33.15.1",
+   "at": 4,
+   "text": "Ver. 15",
+   "start": "JOB.33.15",
+   "end": "JOB.33.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.33.20.1",
+   "at": 4,
+   "text": "Ver. 20",
+   "start": "JOB.33.20",
+   "end": "JOB.33.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.33.21.1",
+   "at": 4,
+   "text": "Ver. 21",
+   "start": "JOB.33.21",
+   "end": "JOB.33.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "gregory-job.JOB.33.29.1",
    "at": 185,
    "text": "ver. 22",
@@ -48,11 +732,146 @@
    "status": "detected"
   },
   {
+   "in": "gregory-job.JOB.34.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.34.12",
+   "end": "JOB.34.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.34.14.1",
+   "at": 4,
+   "text": "Ver. 14",
+   "start": "JOB.34.14",
+   "end": "JOB.34.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.34.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "JOB.34.16",
+   "end": "JOB.34.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.34.24.1",
+   "at": 4,
+   "text": "Ver. 24",
+   "start": "JOB.34.24",
+   "end": "JOB.34.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.35.4.1",
+   "at": 536,
+   "text": "Ver. 5",
+   "start": "JOB.35.5",
+   "end": "JOB.35.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.35.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "JOB.35.16",
+   "end": "JOB.35.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.36.8-9.1",
+   "at": 4,
+   "text": "Ver. 8, 9",
+   "start": "JOB.36.8",
+   "end": "JOB.36.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.37.6.1",
+   "at": 4,
+   "text": "Ver. 6",
+   "start": "JOB.37.6",
+   "end": "JOB.37.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.38.12",
+   "end": "JOB.38.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.13.2",
+   "at": 4,
+   "text": "Ver. 13",
+   "start": "JOB.38.13",
+   "end": "JOB.38.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.17.2",
+   "at": 4,
+   "text": "Ver. 17",
+   "start": "JOB.38.17",
+   "end": "JOB.38.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "gregory-job.JOB.38.18.2",
    "at": 586,
    "text": "Ps. 4, 1",
    "start": "PSA.4.2",
    "end": "PSA.4.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.22-23.1",
+   "at": 4,
+   "text": "Ver. 22, 23",
+   "start": "JOB.38.22",
+   "end": "JOB.38.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.26.1",
+   "at": 4,
+   "text": "Ver. 26",
+   "start": "JOB.38.26",
+   "end": "JOB.38.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.29.1",
+   "at": 4,
+   "text": "Ver. 29",
+   "start": "JOB.38.29",
+   "end": "JOB.38.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.38.36.1",
+   "at": 4,
+   "text": "Ver. 36",
+   "start": "JOB.38.36",
+   "end": "JOB.38.36",
    "found": "pattern",
    "status": "detected"
   },
@@ -71,6 +890,114 @@
    "text": "Ps. 23,1",
    "start": "PSA.23.1",
    "end": "PSA.23.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.11.1",
+   "at": 4,
+   "text": "Ver. 11",
+   "start": "JOB.39.11",
+   "end": "JOB.39.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.39.12",
+   "end": "JOB.39.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.14.1",
+   "at": 4,
+   "text": "Ver. 14",
+   "start": "JOB.39.14",
+   "end": "JOB.39.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.15.1",
+   "at": 4,
+   "text": "Ver. 15",
+   "start": "JOB.39.15",
+   "end": "JOB.39.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.15.2",
+   "at": 4,
+   "text": "Ver. 15",
+   "start": "JOB.39.15",
+   "end": "JOB.39.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.26.1",
+   "at": 4,
+   "text": "Ver. 26",
+   "start": "JOB.39.26",
+   "end": "JOB.39.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.39.27.1",
+   "at": 4,
+   "text": "Ver. 27",
+   "start": "JOB.39.27",
+   "end": "JOB.39.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.42.3.1",
+   "at": 4,
+   "text": "Ver. 3",
+   "start": "JOB.42.3",
+   "end": "JOB.42.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.42.9.1",
+   "at": 4,
+   "text": "Ver. 9",
+   "start": "JOB.42.9",
+   "end": "JOB.42.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.42.11.1",
+   "at": 4,
+   "text": "Ver. 11",
+   "start": "JOB.42.11",
+   "end": "JOB.42.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.42.12.1",
+   "at": 4,
+   "text": "Ver. 12",
+   "start": "JOB.42.12",
+   "end": "JOB.42.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "gregory-job.JOB.42.13-14.1",
+   "at": 4,
+   "text": "Ver. 13, 14",
+   "start": "JOB.42.13",
+   "end": "JOB.42.14",
    "found": "pattern",
    "status": "detected"
   },

@@ -1,0 +1,4426 @@
+{
+ "work": "catena-luke",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work. A pair is listed only where two or more of the other scans of the same printing agree on the reading.",
+ "corrections": [
+  {
+   "from": "give accounts those",
+   "to": "give accounts of those"
+  },
+  {
+   "from": "uPon hi8 own mnid? ^. Luke",
+   "to": "uPon his own mind, St. Luke"
+  },
+  {
+   "from": "Latin can-riot express",
+   "to": "Latin cannot express"
+  },
+  {
+   "from": "us, who themselves",
+   "to": "us, who were themselves"
+  },
+  {
+   "from": "excellent Thcnphilus. AMBROSE;",
+   "to": "excellent Theophilus. AMBROSE;"
+  },
+  {
+   "from": "then lores God,",
+   "to": "then loves God,"
+  },
+  {
+   "from": "things ivhich have",
+   "to": "things which have"
+  },
+  {
+   "from": "resurrection. THEOPIIYLACT ; Wishing",
+   "to": "resurrection. THEOPHYLACT; Wishing"
+  },
+  {
+   "from": "wife ivas of",
+   "to": "wife was of"
+  },
+  {
+   "from": "was Elisabetlty for",
+   "to": "was Elisabeth, for"
+  },
+  {
+   "from": "me, bat not",
+   "to": "me, but not"
+  },
+  {
+   "from": "carried 011 by",
+   "to": "carried on by"
+  },
+  {
+   "from": "life as day",
+   "to": "life as the day"
+  },
+  {
+   "from": "serve nny one.",
+   "to": "serve any one."
+  },
+  {
+   "from": "not witnout fear",
+   "to": "not without fear"
+  },
+  {
+   "from": "added, Zacharias troubled.",
+   "to": "added, Zacharias was troubled."
+  },
+  {
+   "from": "prays 1'or wliut he",
+   "to": "prays for what he"
+  },
+  {
+   "from": "words, T7iy prayer",
+   "to": "words, Thy prayer"
+  },
+  {
+   "from": "shine forth received",
+   "to": "shine forth virtue, received"
+  },
+  {
+   "from": "drunk with which",
+   "to": "drunk with wine which"
+  },
+  {
+   "from": "Apostles. BPJDE ; But",
+   "to": "Apostles. Bede ; But"
+  },
+  {
+   "from": "said itnto him,",
+   "to": "said unto him,"
+  },
+  {
+   "from": "Gabriel^ ivho stand",
+   "to": "Gabriel^ who stand"
+  },
+  {
+   "from": "then iiot right",
+   "to": "then not right"
+  },
+  {
+   "from": "Now wnile these",
+   "to": "Now while these"
+  },
+  {
+   "from": "days tvere accomplished,",
+   "to": "days were accomplished,"
+  },
+  {
+   "from": "she kid herself.",
+   "to": "she hid herself."
+  },
+  {
+   "from": "thrive, whPe there",
+   "to": "thrive, while there"
+  },
+  {
+   "from": "she earned in",
+   "to": "she carried in"
+  },
+  {
+   "from": "her childrbearing} on",
+   "to": "her child-bearing, on"
+  },
+  {
+   "from": "CHRYS. Her twofold.",
+   "to": "CHRYS. Her therefore is twofold."
+  },
+  {
+   "from": "five boojis set",
+   "to": "five books set"
+  },
+  {
+   "from": "the sixth We",
+   "to": "the sixth month, We"
+  },
+  {
+   "from": "of t-ne angels,",
+   "to": "of the angels,"
+  },
+  {
+   "from": "Church. JEROME And",
+   "to": "Church. JEROME Hieron. And"
+  },
+  {
+   "from": "the Ijoly Mary's",
+   "to": "the holy Mary's"
+  },
+  {
+   "from": "Himself say, / came not",
+   "to": "Himself say, I came not"
+  },
+  {
+   "from": "law? Not add",
+   "to": "law? Not to add"
+  },
+  {
+   "from": "could cast suspicion",
+   "to": "could cast no suspicion"
+  },
+  {
+   "from": "David. BEDS ; Which",
+   "to": "David. Bede ; Which"
+  },
+  {
+   "from": "of (/race. For",
+   "to": "of grace. For"
+  },
+  {
+   "from": "at liis words.",
+   "to": "at his words."
+  },
+  {
+   "from": "mind ivltat manner",
+   "to": "mind what manner"
+  },
+  {
+   "from": "God girelh James",
+   "to": "God giveth James"
+  },
+  {
+   "from": "Ex. 77/owsev.Anshalt conceive",
+   "to": "Ex. Thou Sev. An-shalt conceive"
+  },
+  {
+   "from": "thou shall bring",
+   "to": "thou shalt bring"
+  },
+  {
+   "from": "thou shall call",
+   "to": "thou shalt call"
+  },
+  {
+   "from": "adds, HP shall",
+   "to": "adds, He shall"
+  },
+  {
+   "from": "Paul says, They",
+   "to": "Paul Matt-says, They"
+  },
+  {
+   "from": "the An gel J, How",
+   "to": "the Angel, How"
+  },
+  {
+   "from": "Virgin. The Angel",
+   "to": "Virgin. The Nat. Angel"
+  },
+  {
+   "from": "that £ know",
+   "to": "that I know"
+  },
+  {
+   "from": "can 1 be",
+   "to": "can I be"
+  },
+  {
+   "from": "Ex. Hut mark,",
+   "to": "Ex. But mark,"
+  },
+  {
+   "from": "Angel Geomusolves the",
+   "to": "Angel solves the"
+  },
+  {
+   "from": "the Ant/el answered,",
+   "to": "the Angel answered,"
+  },
+  {
+   "from": "the order nature",
+   "to": "the order of nature"
+  },
+  {
+   "from": "shall 1his be,",
+   "to": "shall this be,"
+  },
+  {
+   "from": "certain lifesseg giymg power",
+   "to": "certain lifegiving power"
+  },
+  {
+   "from": "Hence a^s°5 St.",
+   "to": "Hence also, St."
+  },
+  {
+   "from": "indivisible °.",
+   "to": "indivisible c."
+  },
+  {
+   "from": "CIIRYS. Seeing",
+   "to": "Chrys. Seeing"
+  },
+  {
+   "from": "For there shall no word",
+   "to": "For there shall be no word"
+  },
+  {
+   "from": "thy wordy the",
+   "to": "thy word, the"
+  },
+  {
+   "from": "of /acharias. But",
+   "to": "of Zacharias. But"
+  },
+  {
+   "from": "object 110 less",
+   "to": "object no less"
+  },
+  {
+   "from": "Lord, BKDE ; Having",
+   "to": "Lord, Bede ; Having"
+  },
+  {
+   "from": "And the departed",
+   "to": "And the angel departed"
+  },
+  {
+   "from": "obtained whatvel Ge he",
+   "to": "obtained what vel he"
+  },
+  {
+   "from": "might buildup her",
+   "to": "might build up her"
+  },
+  {
+   "from": "went forth the",
+   "to": "went forth into the"
+  },
+  {
+   "from": "the bale leaped",
+   "to": "the babe leaped"
+  },
+  {
+   "from": "but as could",
+   "to": "but as he could"
+  },
+  {
+   "from": "blessed by Elisabeth the same",
+   "to": "blessed by Elisabeth with the same"
+  },
+  {
+   "from": "And Messed is",
+   "to": "And blessed is"
+  },
+  {
+   "from": "in the Of",
+   "to": "in the name ps Of"
+  },
+  {
+   "from": "David, Of of",
+   "to": "David, Of the of"
+  },
+  {
+   "from": "coincides her son.",
+   "to": "coincides ner son."
+  },
+  {
+   "from": "knowledge. lUit this",
+   "to": "knowledge. But this"
+  },
+  {
+   "from": "art thou hast",
+   "to": "art thou who hast"
+  },
+  {
+   "from": "things ifhtch were",
+   "to": "things which were"
+  },
+  {
+   "from": "to say,andputto death.",
+   "to": "to say, and put to death."
+  },
+  {
+   "from": "regarded meanbut approved?\"",
+   "to": "regarded mean but approved?\""
+  },
+  {
+   "from": "Jerusal>em-> h°w great",
+   "to": "Jerusal>em-> how great"
+  },
+  {
+   "from": "nature ? 1 have",
+   "to": "nature ? r I have"
+  },
+  {
+   "from": "the only -begotten Son",
+   "to": "the only-begotten Son"
+  },
+  {
+   "from": "thereby defiled,/or holy",
+   "to": "thereby defiled, for holy"
+  },
+  {
+   "from": "them that/ear him.",
+   "to": "them that fear him."
+  },
+  {
+   "from": "only forme hath",
+   "to": "only for me hath"
+  },
+  {
+   "from": "OF JERUS. But",
+   "to": "OF JER US. But"
+  },
+  {
+   "from": "BEDE ; Tlic words,",
+   "to": "BEDE ; The words,"
+  },
+  {
+   "from": "giving them power",
+   "to": "giving them the power"
+  },
+  {
+   "from": "prosperity seeins to",
+   "to": "prosperity seems to"
+  },
+  {
+   "from": "after thee,for an",
+   "to": "after thee, for an"
+  },
+  {
+   "from": "CHHYS. The",
+   "to": "CHRYS. The"
+  },
+  {
+   "from": "writing (able, and",
+   "to": "writing table, and"
+  },
+  {
+   "from": "but Phrastesthe right",
+   "to": "but the right"
+  },
+  {
+   "from": "God knovveth how",
+   "to": "God knoweth how"
+  },
+  {
+   "from": "was bom of",
+   "to": "was born of"
+  },
+  {
+   "from": "to ?/£, he",
+   "to": "to us, he"
+  },
+  {
+   "from": "as when wrath",
+   "to": "as when the wrath"
+  },
+  {
+   "from": "And thou,child, shalt",
+   "to": "And thou, child, shalt"
+  },
+  {
+   "from": "man teas born",
+   "to": "man was born"
+  },
+  {
+   "from": "thou shall go",
+   "to": "thou shalt go"
+  },
+  {
+   "from": "for thcv desire to delivered",
+   "to": "for they desire to be delivered"
+  },
+  {
+   "from": "on n-gk jiatk appeared",
+   "to": "on high hath appeared"
+  },
+  {
+   "from": "people sitting, were",
+   "to": "people sitting, who were"
+  },
+  {
+   "from": "the Re\\felations, because",
+   "to": "the Revelations, because"
+  },
+  {
+   "from": "prediction, They shall",
+   "to": "prediction, They is. shall"
+  },
+  {
+   "from": "the Only -begotten ; for",
+   "to": "the Only-begotten ; for"
+  },
+  {
+   "from": "that Pie was",
+   "to": "that He was"
+  },
+  {
+   "from": "in order that might know",
+   "to": "in order that men might know"
+  },
+  {
+   "from": "Gospel. BEDK; He",
+   "to": "Gospel. Bede; He"
+  },
+  {
+   "from": "also only -begotten in",
+   "to": "also only-begotten in"
+  },
+  {
+   "from": "them that true",
+   "to": "them that were true"
+  },
+  {
+   "from": "MAXIMUS; But perhaps",
+   "to": "MAXIMUS; But if perhaps"
+  },
+  {
+   "from": "clothes arc mean",
+   "to": "clothes are mean"
+  },
+  {
+   "from": "a niystery that",
+   "to": "a mystery that"
+  },
+  {
+   "from": "born who says, / am the good",
+   "to": "born who says, I am the good"
+  },
+  {
+   "from": "nations conic to",
+   "to": "nations come to"
+  },
+  {
+   "from": "same t*me tne}r a^so S*ve Praises",
+   "to": "same time they also give Praises"
+  },
+  {
+   "from": "voices of Job",
+   "to": "voices of i i Job"
+  },
+  {
+   "from": "by Plimself to",
+   "to": "by Himself to"
+  },
+  {
+   "from": "that love name °f God.",
+   "to": "that love the name of God."
+  },
+  {
+   "from": "Saviour say, / came not",
+   "to": "Saviour say, I came not"
+  },
+  {
+   "from": "had known secrets",
+   "to": "had known the secrets"
+  },
+  {
+   "from": "her. ATHANAS. But",
+   "to": "her. A THAN AS. But"
+  },
+  {
+   "from": "highest. BEDK; To",
+   "to": "highest. Bede; To"
+  },
+  {
+   "from": "of our those",
+   "to": "of our love those"
+  },
+  {
+   "from": "shall conic that",
+   "to": "shall come that"
+  },
+  {
+   "from": "were ace jmplished for",
+   "to": "were accomplished for"
+  },
+  {
+   "from": "flesh. EPIPHAN. £ .",
+   "to": "flesh. EP I PH AN. e ."
+  },
+  {
+   "from": "Christ un circumcised. BEDE;",
+   "to": "Christ uncircumcised. BEDE;"
+  },
+  {
+   "from": "at tnai time",
+   "to": "at that time"
+  },
+  {
+   "from": "Lord. gATHAN. But",
+   "to": "Lord. gATH AN. But"
+  },
+  {
+   "from": "As it is in the",
+   "to": "As it is written in the"
+  },
+  {
+   "from": "the icomb shall",
+   "to": "the womb shall"
+  },
+  {
+   "from": "opening the he",
+   "to": "opening the womb, he"
+  },
+  {
+   "from": "ransomed. GIIEO. NYSS.",
+   "to": "ransomed. Greg. NYSS."
+  },
+  {
+   "from": "no gnilt from",
+   "to": "no guilt from"
+  },
+  {
+   "from": "be lorn of",
+   "to": "be born of"
+  },
+  {
+   "from": "creature, That thing",
+   "to": "creature, That holy thing"
+  },
+  {
+   "from": "but areal happiness,",
+   "to": "but a real happiness,"
+  },
+  {
+   "from": "temple. OKI GEN ; If",
+   "to": "temple. Origen ; If"
+  },
+  {
+   "from": "saying, I/)rd, now",
+   "to": "saying, Lord, now"
+  },
+  {
+   "from": "And there forg he",
+   "to": "And therefore he"
+  },
+  {
+   "from": "to see, thou",
+   "to": "to see, now lettest thou"
+  },
+  {
+   "from": "should sec the",
+   "to": "should see the"
+  },
+  {
+   "from": "fulfilled, Fur mine",
+   "to": "fulfilled, For mine"
+  },
+  {
+   "from": "of nceessity forfeit",
+   "to": "of necessity forfeit"
+  },
+  {
+   "from": "and / make",
+   "to": "and I make"
+  },
+  {
+   "from": "and a master,",
+   "to": "and a cruel master,"
+  },
+  {
+   "from": "to thec. Thou wort a",
+   "to": "to thee. Thou wert a"
+  },
+  {
+   "from": "in thec, that thou maycst thence",
+   "to": "in thee, that thou mayest thence"
+  },
+  {
+   "from": "for a siyn- GREG.",
+   "to": "for sign. GREG."
+  },
+  {
+   "from": "OHIGEN; But all",
+   "to": "ORIGEN; But all"
+  },
+  {
+   "from": "her SOITOWS; for",
+   "to": "her sorrows; for"
+  },
+  {
+   "from": "in their that",
+   "to": "in their lips, that"
+  },
+  {
+   "from": "that Mary aiso? through",
+   "to": "that also, through"
+  },
+  {
+   "from": "so doubtalso causes",
+   "to": "so doubt also causes"
+  },
+  {
+   "from": "Saviour. TIcnce it",
+   "to": "Saviour. Hence it"
+  },
+  {
+   "from": "again, Luke describing",
+   "to": "again, Luke is here describing"
+  },
+  {
+   "from": "go clown to",
+   "to": "go down to"
+  },
+  {
+   "from": "mature age,but this",
+   "to": "mature age, but this"
+  },
+  {
+   "from": "wisdom, ashe says,",
+   "to": "wisdom, as he says,"
+  },
+  {
+   "from": "Lord's Jud £rosparents wished",
+   "to": "Lord's parents wished"
+  },
+  {
+   "from": "from forge tfulness ? To",
+   "to": "from forgetfulness ? To"
+  },
+  {
+   "from": "by the before",
+   "to": "by the Patriarchs before"
+  },
+  {
+   "from": "as it is said, in the midst",
+   "to": "as it is said, Sitting in the midst"
+  },
+  {
+   "from": "follows, AIL who",
+   "to": "follows, All who"
+  },
+  {
+   "from": "they knewT to",
+   "to": "they knew to"
+  },
+  {
+   "from": "sorrow. GLOSS. lest",
+   "to": "sorrow. GLOSS. feared lest"
+  },
+  {
+   "from": "ORTGEN; Jesus",
+   "to": "ORIGEN; Jesus"
+  },
+  {
+   "from": "humbly an reverently.",
+   "to": "humbly and reverently."
+  },
+  {
+   "from": "at Viennc. But",
+   "to": "at Vienne. But"
+  },
+  {
+   "from": "place Elcazar the",
+   "to": "place Eleazar the"
+  },
+  {
+   "from": "said, / knew",
+   "to": "said, I knew"
+  },
+  {
+   "from": "sins. CIIRYS. For",
+   "to": "sins. Chrys. For"
+  },
+  {
+   "from": "in tlte book of the",
+   "to": "in the book of Esaias the"
+  },
+  {
+   "from": "forsaken Judaja, but",
+   "to": "forsaken Judaea, but"
+  },
+  {
+   "from": "conversation u way",
+   "to": "conversation a way"
+  },
+  {
+   "from": "course in BASIL.",
+   "to": "course in thee. BASIL."
+  },
+  {
+   "from": "men have away,",
+   "to": "men have worn away,"
+  },
+  {
+   "from": "it. CIIRYS. But",
+   "to": "it. Chrys. But"
+  },
+  {
+   "from": "The ralleys shall",
+   "to": "The valleys shall"
+  },
+  {
+   "from": "proud °^' CHRYS.",
+   "to": "proud keep afar off. CHRYS."
+  },
+  {
+   "from": "And all flesh shall see,",
+   "to": "And all Jlesh shall see,"
+  },
+  {
+   "from": "sent jjis Son",
+   "to": "sent His Son"
+  },
+  {
+   "from": "so conies forth",
+   "to": "so comes forth"
+  },
+  {
+   "from": "and sought advice",
+   "to": "and sought for advice"
+  },
+  {
+   "from": "law, Thou shalt love thy",
+   "to": "law, Thou shall love thy"
+  },
+  {
+   "from": "therefore that exact",
+   "to": "therefore that they exact"
+  },
+  {
+   "from": "savage and the",
+   "to": "savage and tion, the"
+  },
+  {
+   "from": "to obey others",
+   "to": "to obey when others"
+  },
+  {
+   "from": "people luere expecting",
+   "to": "people were expecting"
+  },
+  {
+   "from": "to bear. If",
+   "to": "to hear. If"
+  },
+  {
+   "from": "word Jire, expresses",
+   "to": "word fire, expresses"
+  },
+  {
+   "from": "truth wre are",
+   "to": "truth we are"
+  },
+  {
+   "from": "OKIGEN ; And as",
+   "to": "ORIGEN ; And as"
+  },
+  {
+   "from": "needs 'cation, He",
+   "to": "needs purification, He"
+  },
+  {
+   "from": "adds, trhose fan",
+   "to": "adds, /chose fan"
+  },
+  {
+   "from": "of Jire, you",
+   "to": "of fire, you"
+  },
+  {
+   "from": "were allowred to",
+   "to": "were allowed to"
+  },
+  {
+   "from": "and praying -, that",
+   "to": "and praying-, that"
+  },
+  {
+   "from": "shall bejftlled with",
+   "to": "shall be filled with"
+  },
+  {
+   "from": "saying, TJwu art",
+   "to": "saying, Thou art"
+  },
+  {
+   "from": "God, saying, / will send",
+   "to": "God, saying, I will send"
+  },
+  {
+   "from": "objection wasdoneaway: He",
+   "to": "objection was done away: He"
+  },
+  {
+   "from": "seemed tobeoutof the",
+   "to": "seemed to be out of the"
+  },
+  {
+   "from": "either Qua**-one Evangelist",
+   "to": "either one Evangelist"
+  },
+  {
+   "from": "that Matthas, who",
+   "to": "that Matt has, who"
+  },
+  {
+   "from": "Eli. AUG. Jt is",
+   "to": "Eli. It is"
+  },
+  {
+   "from": "son ofMatthat, i.",
+   "to": "son of Matthat, i."
+  },
+  {
+   "from": "son ofMattathias, as",
+   "to": "son of Mattathias, as"
+  },
+  {
+   "from": "Babylon.\" Salalhiel, \" God",
+   "to": "Babylon.\" Salathiel, \" God"
+  },
+  {
+   "from": "divining.\" //er, \" watching,",
+   "to": "divining.\" Her, \" watching,"
+  },
+  {
+   "from": "skins.\" PF/to w;«s Me sow of",
+   "to": "skins.\" Who was the son of"
+  },
+  {
+   "from": "people.\" CIIRYS. Matthew,",
+   "to": "people.\" Chrys. Matthew,"
+  },
+  {
+   "from": "of TJiara. GLOSS.",
+   "to": "of Thara, GLOSS."
+  },
+  {
+   "from": "rested.\" Sarua, i.",
+   "to": "rested.\" Sarug, i."
+  },
+  {
+   "from": "e. \" a or being « named.\"",
+   "to": "e. \" a name,\" or being« named.\""
+  },
+  {
+   "from": "to bo omitted",
+   "to": "to be omitted"
+  },
+  {
+   "from": "or struck, Who",
+   "to": "or struck, humble.\" Who"
+  },
+  {
+   "from": "were lull of",
+   "to": "were full of"
+  },
+  {
+   "from": "that H is soul",
+   "to": "that His soul"
+  },
+  {
+   "from": "already conquered, Adam.",
+   "to": "already conquered, namely, Adam."
+  },
+  {
+   "from": "the Soti of",
+   "to": "the Son of"
+  },
+  {
+   "from": "And dostthou, whose",
+   "to": "And dost thou, whose"
+  },
+  {
+   "from": "said, Thou shall not tempt",
+   "to": "said, Thou shalt not tempt"
+  },
+  {
+   "from": "God. CIIRYS. For",
+   "to": "God. Chrys. For"
+  },
+  {
+   "from": "evil (jeneration seekcth a",
+   "to": "evil generation seeketh a"
+  },
+  {
+   "from": "also, when thou a man",
+   "to": "also, when thou seest a man"
+  },
+  {
+   "from": "of vain -glory, greediness",
+   "to": "of vain-glory, greediness"
+  },
+  {
+   "from": "Evangelist places first,",
+   "to": "Evangelist places event first,"
+  },
+  {
+   "from": "all. GRIG EN ; But",
+   "to": "all. Origen; But"
+  },
+  {
+   "from": "he ha opened",
+   "to": "he had opened"
+  },
+  {
+   "from": "the kingdom heaven.",
+   "to": "the kingdom of heaven."
+  },
+  {
+   "from": "captives. ^HRYS- The wor(* caPtivity",
+   "to": "captives. Chrys. The word caPtivity"
+  },
+  {
+   "from": "of lightandthe day.",
+   "to": "of light and the day."
+  },
+  {
+   "from": "people to greater",
+   "to": "people to Matt, greater"
+  },
+  {
+   "from": "And tlicy said.",
+   "to": "And they said."
+  },
+  {
+   "from": "CYRIL ; AsifHesaySjYou wish ineto workmany miracles",
+   "to": "CYRIL ; As if He says. You wish me to work many miracles"
+  },
+  {
+   "from": "that arc jealous",
+   "to": "that are jealous"
+  },
+  {
+   "from": "I can not but",
+   "to": "I cannot but"
+  },
+  {
+   "from": "follows, Bui to",
+   "to": "follows, But to"
+  },
+  {
+   "from": "bread and2\"-her nourishment.",
+   "to": "bread and her nourishment."
+  },
+  {
+   "from": "And thpre were",
+   "to": "And there were"
+  },
+  {
+   "from": "synagogues, asEsaias saith,",
+   "to": "synagogues, as Esaias saith,"
+  },
+  {
+   "from": "actions belies what",
+   "to": "actions be lies what"
+  },
+  {
+   "from": "there teas in",
+   "to": "there was in"
+  },
+  {
+   "from": "man ivhich had",
+   "to": "man which had"
+  },
+  {
+   "from": "left olF. Holy",
+   "to": "left off. Holy"
+  },
+  {
+   "from": "faults. CHRYS. Because",
+   "to": "faults. Chrvs. Because"
+  },
+  {
+   "from": "they kneiv him",
+   "to": "they knew him"
+  },
+  {
+   "from": "tongues. THEOPHYL. Because, \"",
+   "to": "tongues. The- Because, \""
+  },
+  {
+   "from": "of asinner.\" Or,",
+   "to": "of a sinner.\" Or,"
+  },
+  {
+   "from": "greater wrhen the",
+   "to": "greater when the"
+  },
+  {
+   "from": "one neart and",
+   "to": "one heart and"
+  },
+  {
+   "from": "off speaking -, he",
+   "to": "off speaking-, he"
+  },
+  {
+   "from": "to theej nor",
+   "to": "to thee, nor"
+  },
+  {
+   "from": "of Jvshes. They",
+   "to": "of Jishes. They"
+  },
+  {
+   "from": "as if intention",
+   "to": "as if with the intention"
+  },
+  {
+   "from": "to passy when",
+   "to": "to pass, when"
+  },
+  {
+   "from": "follow, / will,",
+   "to": "follow, I will,"
+  },
+  {
+   "from": "Word wan made",
+   "to": "Word was made"
+  },
+  {
+   "from": "then, / will,",
+   "to": "then, I will,"
+  },
+  {
+   "from": "declared, / will,",
+   "to": "declared, I will,"
+  },
+  {
+   "from": "says, / will,",
+   "to": "says, I will,"
+  },
+  {
+   "from": "to pans on",
+   "to": "to pass on"
+  },
+  {
+   "from": "the gi\\rer of",
+   "to": "the giver of"
+  },
+  {
+   "from": "this tc-hich speakeih blasphemies?",
+   "to": "this which speaketh blasphemies?"
+  },
+  {
+   "from": "say, IVho can foryive silts, but",
+   "to": "say, Who can forgive sins, but"
+  },
+  {
+   "from": "prophet, / am the that",
+   "to": "prophet, I am the Lord, that"
+  },
+  {
+   "from": "and trietli the reins. CHRYS. then",
+   "to": "and trieth the reins. CHRYS. If ch then"
+  },
+  {
+   "from": "you may THEOPHYL.",
+   "to": "you may know. THEOPHYL."
+  },
+  {
+   "from": "they were with",
+   "to": "they were filled with"
+  },
+  {
+   "from": "we mav understand",
+   "to": "we may understand"
+  },
+  {
+   "from": "the Pluirisees murmured,",
+   "to": "the Pharisees murmured,"
+  },
+  {
+   "from": "He meantby the",
+   "to": "He meant by the"
+  },
+  {
+   "from": "And vso they",
+   "to": "And so they"
+  },
+  {
+   "from": "and Hie Pharisees",
+   "to": "and the Pharisees"
+  },
+  {
+   "from": "said nnto them,",
+   "to": "said unto them,"
+  },
+  {
+   "from": "same manner have",
+   "to": "same manner we have"
+  },
+  {
+   "from": "which was called",
+   "to": "which was also called"
+  },
+  {
+   "from": "Father ivorketh hitherto,",
+   "to": "Father worketh hitherto,"
+  },
+  {
+   "from": "the 8on of",
+   "to": "the Son of"
+  },
+  {
+   "from": "of lite sabbath.",
+   "to": "of the sabbath."
+  },
+  {
+   "from": "man. CIIRYS. But",
+   "to": "man. Chrys. But"
+  },
+  {
+   "from": "of thesabbath. Hence",
+   "to": "of the sabbath. Hence"
+  },
+  {
+   "from": "the sabbath- day even",
+   "to": "the sabbath-day even"
+  },
+  {
+   "from": "thou breathest forth",
+   "to": "thou breath est forth"
+  },
+  {
+   "from": "is i stretched",
+   "to": "is i Kings stretched"
+  },
+  {
+   "from": "may leani the",
+   "to": "may learn the"
+  },
+  {
+   "from": "is blessed, he Wh0 has",
+   "to": "is blessed, but he who has"
+  },
+  {
+   "from": "condemn. Fur nothing",
+   "to": "condemn. For nothing"
+  },
+  {
+   "from": "account . selves sufficiently",
+   "to": "account ourselves sufficiently"
+  },
+  {
+   "from": "come. / shall",
+   "to": "come. I shall"
+  },
+  {
+   "from": "when tlnj glory",
+   "to": "when thy glory"
+  },
+  {
+   "from": "for G od's sake",
+   "to": "for God's sake"
+  },
+  {
+   "from": "your ligltt shine",
+   "to": "your light shine"
+  },
+  {
+   "from": "way to any",
+   "to": "way tOb any"
+  },
+  {
+   "from": "give thec a",
+   "to": "give thee a"
+  },
+  {
+   "from": "for ei'il, if",
+   "to": "for evil, if"
+  },
+  {
+   "from": "follows, Andh im tltat taketU away cloak,",
+   "to": "follows, Andhim that taketh away thy cloak,"
+  },
+  {
+   "from": "CHHYS. Every",
+   "to": "CHRYS. Every"
+  },
+  {
+   "from": "we receive God.",
+   "to": "we receive from God."
+  },
+  {
+   "from": "CHKYS. The",
+   "to": "CHRYS. The"
+  },
+  {
+   "from": "them winch love yon, what",
+   "to": "them which love you, what"
+  },
+  {
+   "from": "he [s beloved",
+   "to": "he is beloved"
+  },
+  {
+   "from": "his money and",
+   "to": "his money cont. and"
+  },
+  {
+   "from": "it follows, ye",
+   "to": "it follows, And ye"
+  },
+  {
+   "from": "follows, Be then",
+   "to": "follows, Be ye then"
+  },
+  {
+   "from": "merciful. AiHAN. That istosay, that",
+   "to": "merciful. Ai HAN. That is to say, that"
+  },
+  {
+   "from": "thou shouldestbe compelled",
+   "to": "thou shouldest be compelled"
+  },
+  {
+   "from": "ye sltall not",
+   "to": "ye shall not"
+  },
+  {
+   "from": "measure thai ye",
+   "to": "measure that ye"
+  },
+  {
+   "from": "He ivho sows",
+   "to": "He who sows"
+  },
+  {
+   "from": "(that is, abundantly,)",
+   "to": "(that is, not abundantly,)"
+  },
+  {
+   "from": "thou shmest, who",
+   "to": "thou sinnest, who"
+  },
+  {
+   "from": "lead ike blind,",
+   "to": "lead the blind,"
+  },
+  {
+   "from": "follows, Tlwu hypocrite,",
+   "to": "follows, Thou hypocrite,"
+  },
+  {
+   "from": "afterwards shall thou",
+   "to": "afterwards shalt thou"
+  },
+  {
+   "from": "CHRYS. Hut although",
+   "to": "CHRYS. But although"
+  },
+  {
+   "from": "The Jig trees",
+   "to": "The fig trees"
+  },
+  {
+   "from": "is goody and",
+   "to": "is good, and"
+  },
+  {
+   "from": "words, Oat of",
+   "to": "words, Out of"
+  },
+  {
+   "from": "and lieareth my",
+   "to": "and lie are th my"
+  },
+  {
+   "from": "But thejiood came,",
+   "to": "But the flood came,"
+  },
+  {
+   "from": "that lieareth and",
+   "to": "that heareth and"
+  },
+  {
+   "from": "with I lis disciples",
+   "to": "with His disciples"
+  },
+  {
+   "from": "us that centurion said, / am",
+   "to": "us that the Horn. centurion said, I am"
+  },
+  {
+   "from": "thou shouldcst enter",
+   "to": "thou shouldest enter"
+  },
+  {
+   "from": "in Judsea were",
+   "to": "in Judaea were"
+  },
+  {
+   "from": "therefore, receiving3-as it",
+   "to": "therefore, receiving as it"
+  },
+  {
+   "from": "them / am",
+   "to": "them I am"
+  },
+  {
+   "from": "your tvay, and",
+   "to": "your way, and"
+  },
+  {
+   "from": "Lord givethfood to",
+   "to": "Lord give th food to"
+  },
+  {
+   "from": "hart. BEUE ; And",
+   "to": "hart. Bede ; And"
+  },
+  {
+   "from": "to sec Him",
+   "to": "to see Him"
+  },
+  {
+   "from": "they who and",
+   "to": "they who are and"
+  },
+  {
+   "from": "ISID. PELEUS; John",
+   "to": "ISID. PE LE US; John"
+  },
+  {
+   "from": "he. CIIRYS. For",
+   "to": "he. Chrys. For"
+  },
+  {
+   "from": "have not refer",
+   "to": "have not danced, refer"
+  },
+  {
+   "from": "as gluttonous 1 For",
+   "to": "as gluttonous1 For"
+  },
+  {
+   "from": "baptized wiih the",
+   "to": "baptized with the"
+  },
+  {
+   "from": "the cily^ which",
+   "to": "the city which"
+  },
+  {
+   "from": "colours, wThich is",
+   "to": "colours, which is"
+  },
+  {
+   "from": "earthly things, was",
+   "to": "earthly things, she was"
+  },
+  {
+   "from": "woman who a",
+   "to": "woman who was a"
+  },
+  {
+   "from": "There ivas a",
+   "to": "There was a"
+  },
+  {
+   "from": "answers, / suppose,",
+   "to": "answers, I suppose,"
+  },
+  {
+   "from": "debts they made",
+   "to": "debts they have made"
+  },
+  {
+   "from": "that for giveth sins",
+   "to": "that forgiveth sins"
+  },
+  {
+   "from": "but the refreshing",
+   "to": "but the s refreshing"
+  },
+  {
+   "from": "be desPise(* which",
+   "to": "be despised which"
+  },
+  {
+   "from": "of 110 slight",
+   "to": "of no slight"
+  },
+  {
+   "from": "ISID. PELEUS. Now",
+   "to": "ISID. PE LE US. Now"
+  },
+  {
+   "from": "that tho women",
+   "to": "that the women"
+  },
+  {
+   "from": "women ivhich had",
+   "to": "women which had"
+  },
+  {
+   "from": "thought blaincable, according",
+   "to": "thought blameable, according"
+  },
+  {
+   "from": "Christ, / will",
+   "to": "Christ, I will"
+  },
+  {
+   "from": "mystically. OKIGEN ; And",
+   "to": "mystically. ORIGEN ; And"
+  },
+  {
+   "from": "to soiv his",
+   "to": "to sow his"
+  },
+  {
+   "from": "none other the",
+   "to": "none other but the"
+  },
+  {
+   "from": "letters, liamng never",
+   "to": "letters, having never"
+  },
+  {
+   "from": "up, broug/tt forth",
+   "to": "up, brought forth"
+  },
+  {
+   "from": "asked Mm, fyc. But",
+   "to": "asked him, 8?c. But"
+  },
+  {
+   "from": "these hare no",
+   "to": "these have no"
+  },
+  {
+   "from": "an holiest and",
+   "to": "an honest and"
+  },
+  {
+   "from": "the wray side",
+   "to": "the way side"
+  },
+  {
+   "from": "to him regard",
+   "to": "to him Matt, with regard"
+  },
+  {
+   "from": "lake. AMBROSE -, We",
+   "to": "lake. AMBROSE-, We"
+  },
+  {
+   "from": "neighbourhood \\vas chiefly",
+   "to": "neighbourhood was chiefly"
+  },
+  {
+   "from": "one who most",
+   "to": "one who was most"
+  },
+  {
+   "from": "pray, / beseech",
+   "to": "pray, I beseech"
+  },
+  {
+   "from": "to conic out",
+   "to": "to come out"
+  },
+  {
+   "from": "as.ked liim, saying,",
+   "to": "as.ked him, saying,"
+  },
+  {
+   "from": "ax. speakable power",
+   "to": "ax. speak able power"
+  },
+  {
+   "from": "Lord ordains class",
+   "to": "Lord ordains each class"
+  },
+  {
+   "from": "The Of jjeu unquenchable",
+   "to": "The Hell unquenchable"
+  },
+  {
+   "from": "they that fed",
+   "to": "they that Ant. fed"
+  },
+  {
+   "from": "and icent and it",
+   "to": "and went and told it"
+  },
+  {
+   "from": "And he up",
+   "to": "And he went up"
+  },
+  {
+   "from": "follows, Noiv the",
+   "to": "follows, Now the"
+  },
+  {
+   "from": "those wrho were",
+   "to": "those who were"
+  },
+  {
+   "from": "the Geraseiies who",
+   "to": "the Gerasenes who"
+  },
+  {
+   "from": "... CIIRYS. But",
+   "to": "... Chrys. But"
+  },
+  {
+   "from": "His wrord. For",
+   "to": "His word. For"
+  },
+  {
+   "from": "OHIGEN; But",
+   "to": "ORIGEN; But"
+  },
+  {
+   "from": "in (Ca?sarea Philippi,",
+   "to": "in (Caesarea Philippi,"
+  },
+  {
+   "from": "For tlu's is",
+   "to": "For this is"
+  },
+  {
+   "from": "written, Tliou shall",
+   "to": "written, Thou shall"
+  },
+  {
+   "from": "him folloiu me.",
+   "to": "him follow me."
+  },
+  {
+   "from": "seeing Christ26-present in",
+   "to": "seeing Christ present in"
+  },
+  {
+   "from": "the synagogue 8 house,",
+   "to": "the synagogue's house,"
+  },
+  {
+   "from": "gives Ihe whole,",
+   "to": "gives the whole,"
+  },
+  {
+   "from": "shewn fortli something,",
+   "to": "shewn forth something,"
+  },
+  {
+   "from": "trouble Mm ; as",
+   "to": "trouble him ; as"
+  },
+  {
+   "from": "assembly of doctors",
+   "to": "assembly of the doctors"
+  },
+  {
+   "from": "therefore mouni their",
+   "to": "therefore mourn their"
+  },
+  {
+   "from": "his month against",
+   "to": "his mouth against"
+  },
+  {
+   "from": "them the whole of mankind",
+   "to": "them the whole race of mankind"
+  },
+  {
+   "from": "not to fleshly",
+   "to": "not to a fleshly"
+  },
+  {
+   "from": "says, Tliey should take notlting in",
+   "to": "says, They should take nothing in"
+  },
+  {
+   "from": "And ut into",
+   "to": "And ut SUP* into"
+  },
+  {
+   "from": "spiritual things,will minister",
+   "to": "spiritual things, will minister"
+  },
+  {
+   "from": "who desup' spise the saving",
+   "to": "who de-the saving"
+  },
+  {
+   "from": "the household,will shew",
+   "to": "the household, will shew"
+  },
+  {
+   "from": "when 110 one",
+   "to": "when no one"
+  },
+  {
+   "from": "some. THEornYL. For",
+   "to": "some. Theophyl. For"
+  },
+  {
+   "from": "the Baplisf, he",
+   "to": "the Baptist, he"
+  },
+  {
+   "from": "wisdom wrhich is",
+   "to": "wisdom which is"
+  },
+  {
+   "from": "but Jive loaves",
+   "to": "but five loaves"
+  },
+  {
+   "from": "follows, Tlieti lie took the Jive loaves,",
+   "to": "follows, Then he took the five loaves,"
+  },
+  {
+   "from": "may leani that",
+   "to": "may learn that"
+  },
+  {
+   "from": "His disciples, honouring",
+   "to": "His disciples, so honouring"
+  },
+  {
+   "from": "earth briny forth,",
+   "to": "earth bring forth,"
+  },
+  {
+   "from": "but ail. For",
+   "to": "but all. For"
+  },
+  {
+   "from": "CYRIL ; But the subtle",
+   "to": "CYRIL ; But mark the subtle"
+  },
+  {
+   "from": "They arc then forbid t > preach",
+   "to": "They are then forbid t> preach"
+  },
+  {
+   "from": "There is a for every",
+   "to": "There is a time for every"
+  },
+  {
+   "from": "CHRYS. Now Saviour",
+   "to": "CHRYS. Now the Saviour"
+  },
+  {
+   "from": "either G™gwhen the",
+   "to": "either when the"
+  },
+  {
+   "from": "... S.Thomas in",
+   "to": "... S. Thomas in"
+  },
+  {
+   "from": "persecution, an other time",
+   "to": "persecution, another time"
+  },
+  {
+   "from": "a mart, 8fc. Now",
+   "to": "a man, 8$c. Now"
+  },
+  {
+   "from": "the wreak-ness of",
+   "to": "the weakness of"
+  },
+  {
+   "from": "the fig. $.8. pronnse made",
+   "to": "the promise made"
+  },
+  {
+   "from": "He takes with",
+   "to": "He takes these with"
+  },
+  {
+   "from": "And cts he",
+   "to": "And as he"
+  },
+  {
+   "from": "whose utsuPface was",
+   "to": "whose ut SUP-face was"
+  },
+  {
+   "from": "heretics mightbe shut,",
+   "to": "heretics might be shut,"
+  },
+  {
+   "from": "are written, ( for",
+   "to": "are written,( for"
+  },
+  {
+   "from": "weighed clown their",
+   "to": "weighed down their"
+  },
+  {
+   "from": "was earned away",
+   "to": "was carried away"
+  },
+  {
+   "from": "to Matthew who",
+   "to": "to Matthew and Mark, who"
+  },
+  {
+   "from": "the cloudy saying, Tliis is",
+   "to": "the cloud, saying, This is"
+  },
+  {
+   "from": "past, Jcsits was",
+   "to": "past, Jesus was"
+  },
+  {
+   "from": "also our commands,",
+   "to": "also our i commands,"
+  },
+  {
+   "from": "And, be/told, a",
+   "to": "And, behold, a"
+  },
+  {
+   "from": "thou nnj unbelief; and, tfthou Mark o, canst.",
+   "to": "thou my unbelief; and, If thou canst."
+  },
+  {
+   "from": "child clown ; as",
+   "to": "child down ; as"
+  },
+  {
+   "from": "applied. CIIRYS. The",
+   "to": "applied. Chrys. The"
+  },
+  {
+   "from": "amazed at the power of",
+   "to": "amazed at the mighty power of"
+  },
+  {
+   "from": "a pecujiar and",
+   "to": "a peculiar and"
+  },
+  {
+   "from": "said, Put while",
+   "to": "said, But while"
+  },
+  {
+   "from": "adds, Far the",
+   "to": "adds, For the"
+  },
+  {
+   "from": "But tltey understood",
+   "to": "But they understood"
+  },
+  {
+   "from": "And lie say 8 unto",
+   "to": "And he says unto"
+  },
+  {
+   "from": "receiveth 1dm thai sent",
+   "to": "receiveth him that sent"
+  },
+  {
+   "from": "those whichbe numbered",
+   "to": "those which be numbered"
+  },
+  {
+   "from": "wish to those",
+   "to": "wish to follow those"
+  },
+  {
+   "from": "they arc not",
+   "to": "they are not"
+  },
+  {
+   "from": "set his/ace, that",
+   "to": "set his face, that"
+  },
+  {
+   "from": "and altered into a milage of",
+   "to": "and entered into a village of"
+  },
+  {
+   "from": "were undercut. But",
+   "to": "were under cut. But"
+  },
+  {
+   "from": "command Jire to",
+   "to": "command fire to"
+  },
+  {
+   "from": "destroy metis lives,",
+   "to": "destroy men's lives,"
+  },
+  {
+   "from": "thou gocst ; for",
+   "to": "thou goest; for"
+  },
+  {
+   "from": "not then, will",
+   "to": "not then, I will"
+  },
+  {
+   "from": "father Pie knew",
+   "to": "father He knew"
+  },
+  {
+   "from": "saying, / will",
+   "to": "saying, I will"
+  },
+  {
+   "from": "is Jit for",
+   "to": "is fit for"
+  },
+  {
+   "from": "nations. d e AUG.",
+   "to": "nations. de AUG."
+  },
+  {
+   "from": "by the ™^ twelve",
+   "to": "by the™^ twelve"
+  },
+  {
+   "from": "isa. 40, God.",
+   "to": "isa. 40, our God."
+  },
+  {
+   "from": "lambs, but438-goats. AMBROSE ;",
+   "to": "lambs, but goats. AMBROSE ;"
+  },
+  {
+   "from": "the GreSpreacher (of",
+   "to": "the preacher (of"
+  },
+  {
+   "from": "Him, bul because",
+   "to": "Him, but because"
+  },
+  {
+   "from": "of the lest",
+   "to": "of the word,\" lest"
+  },
+  {
+   "from": "perplexed Exod w^y in",
+   "to": "perplexed why in"
+  },
+  {
+   "from": "peace as a sign of",
+   "to": "peace as a Matt, sign of"
+  },
+  {
+   "from": "that which dwells",
+   "to": "that Matt-which dwells"
+  },
+  {
+   "from": "But it' any",
+   "to": "But if any"
+  },
+  {
+   "from": "either rsst on",
+   "to": "either rest on"
+  },
+  {
+   "from": "as tliey give.",
+   "to": "as they give."
+  },
+  {
+   "from": "two re wards are",
+   "to": "two rewards are"
+  },
+  {
+   "from": "sick that therein,",
+   "to": "sick that are therein,"
+  },
+  {
+   "from": "Now I yet",
+   "to": "Now I live. yet"
+  },
+  {
+   "from": "come niyh unto",
+   "to": "come nigh unto"
+  },
+  {
+   "from": "lamentations over who",
+   "to": "lamentations over those who"
+  },
+  {
+   "from": "me, despise th him",
+   "to": "me, despiseth him"
+  },
+  {
+   "from": "God,) despiseth sent",
+   "to": "God,) despiseth him that sent"
+  },
+  {
+   "from": "follows, / beheld",
+   "to": "follows, I beheld"
+  },
+  {
+   "from": "an OuJJl enemy",
+   "to": "an Quod enemy"
+  },
+  {
+   "from": "not, 4 1 see",
+   "to": "not, I see"
+  },
+  {
+   "from": "angel oflight. TIT.",
+   "to": "angel of light. TIT."
+  },
+  {
+   "from": "BASIL ; Powers",
+   "to": "BASIL ; heavenly Powers"
+  },
+  {
+   "from": "of sanclifi cation. And",
+   "to": "of sanctification. And"
+  },
+  {
+   "from": "else, / saw",
+   "to": "else, I saw"
+  },
+  {
+   "from": "trodden under foot by",
+   "to": "trodden underfoot by"
+  },
+  {
+   "from": "subject unto BEDE ;",
+   "to": "subject unto you, BEDE ;"
+  },
+  {
+   "from": "are written not",
+   "to": "are written indeed not"
+  },
+  {
+   "from": "hearts arc perverted,",
+   "to": "hearts are perverted,"
+  },
+  {
+   "from": "sight. THEOFHYL. The",
+   "to": "sight. THEOPHYL. The"
+  },
+  {
+   "from": "it follows, so,",
+   "to": "it follows, Even so,"
+  },
+  {
+   "from": "thy siyht.",
+   "to": "thy sight."
+  },
+  {
+   "from": "will. CIIKYS. But",
+   "to": "will. Chrys. But"
+  },
+  {
+   "from": "said, / thank tliee thai thou",
+   "to": "said, I thank thee that thou"
+  },
+  {
+   "from": "all tilings were",
+   "to": "all things were"
+  },
+  {
+   "from": "Him, saying, that",
+   "to": "Him, saying, Arian. that"
+  },
+  {
+   "from": "thou, Simon for",
+   "to": "thou, Simon Barjona, for"
+  },
+  {
+   "from": "Thou shalt see",
+   "to": "Thou shall see"
+  },
+  {
+   "from": "from this Horn.",
+   "to": "from this Joan. Horn."
+  },
+  {
+   "from": "and icas glad,",
+   "to": "and was glad,"
+  },
+  {
+   "from": "said, Andy behold,",
+   "to": "said, And, behold,"
+  },
+  {
+   "from": "and temp fed him.",
+   "to": "and tempted him."
+  },
+  {
+   "from": "went ahout the",
+   "to": "went about the"
+  },
+  {
+   "from": "as who not",
+   "to": "as who does not"
+  },
+  {
+   "from": "said, Tttou shalt",
+   "to": "said, Thou shalt"
+  },
+  {
+   "from": "Deuteronomy, Tltou shalt",
+   "to": "Deuteronomy, Tftou shalt"
+  },
+  {
+   "from": "the Lord God;",
+   "to": "the Lord thy God;"
+  },
+  {
+   "from": "certain HHDI went",
+   "to": "certain man went"
+  },
+  {
+   "from": "sets. PsEUDO-Auo. Or",
+   "to": "sets. PSEUDO-AUG. Or"
+  },
+  {
+   "from": "robbers, and was",
+   "to": "robbers, and who was"
+  },
+  {
+   "from": "he Lat-could not",
+   "to": "he could not"
+  },
+  {
+   "from": "free wrill) wounded,",
+   "to": "free will) wounded,"
+  },
+  {
+   "from": "He sa.ys,jonrneying, as",
+   "to": "He says, journeying, as"
+  },
+  {
+   "from": "with seventy, and",
+   "to": "with severity, and"
+  },
+  {
+   "from": "blood, sanctification conferred",
+   "to": "blood, sanctification be conferred"
+  },
+  {
+   "from": "therefore He4-LXXplaced us",
+   "to": "therefore Ps. placed us"
+  },
+  {
+   "from": "might Fs-32>9abolish the",
+   "to": "might abolish the"
+  },
+  {
+   "from": "inn. CHRYS. the",
+   "to": "inn. CHRYS. For the"
+  },
+  {
+   "from": "Inn iscontaincd all",
+   "to": "Inn is contained all"
+  },
+  {
+   "from": "of love, the",
+   "to": "of love, SUP- which the"
+  },
+  {
+   "from": "And tvhatsoever thou",
+   "to": "And whatsoever thou"
+  },
+  {
+   "from": "more m giyulg counsel,",
+   "to": "more either in giving counsel,"
+  },
+  {
+   "from": "of my ye jiave done",
+   "to": "of my brethren, ye have done"
+  },
+  {
+   "from": "me jju|. taking",
+   "to": "me But taking"
+  },
+  {
+   "from": "heard, Tlte Word",
+   "to": "heard, The Word"
+  },
+  {
+   "from": "dost iliou not",
+   "to": "dost thou not"
+  },
+  {
+   "from": "suPPort °f the",
+   "to": "suPPort of the"
+  },
+  {
+   "from": "two livres of",
+   "to": "two lives of"
+  },
+  {
+   "from": "new lorm 01 prayer,",
+   "to": "new form of prayer,"
+  },
+  {
+   "from": "heavens. PsEUDO-Auc. Or",
+   "to": "heavens. PSEUDO-AUG. Or"
+  },
+  {
+   "from": "what follows, dom",
+   "to": "what follows, Thy dom"
+  },
+  {
+   "from": "bread. PsEUDO-Auc. In the APP-Greek the",
+   "to": "bread. PSEUDO-AUG. In the Greek the"
+  },
+  {
+   "from": "to tie substance.",
+   "to": "to the substance."
+  },
+  {
+   "from": "prayer that may",
+   "to": "prayer that we may"
+  },
+  {
+   "from": "not intointertemptation. But",
+   "to": "not into temptation. But"
+  },
+  {
+   "from": "the fonner, which",
+   "to": "the former, which"
+  },
+  {
+   "from": "us, iclw can",
+   "to": "us, who can"
+  },
+  {
+   "from": "second prater, left",
+   "to": "second prayer, left"
+  },
+  {
+   "from": "to do, ought",
+   "to": "to do, who ought"
+  },
+  {
+   "from": "guard what given.",
+   "to": "guard what is given."
+  },
+  {
+   "from": "in led.",
+   "to": "in bed."
+  },
+  {
+   "from": "adds, / cannot",
+   "to": "adds, I cannot"
+  },
+  {
+   "from": "the Mend who",
+   "to": "the friend who"
+  },
+  {
+   "from": "that asketlt receiveth.",
+   "to": "that asketh receiveth."
+  },
+  {
+   "from": "rather hinderest him",
+   "to": "rather hinder est him"
+  },
+  {
+   "from": "what seekest or",
+   "to": "what seekest thou.? or"
+  },
+  {
+   "from": "he, knotting their",
+   "to": "he, knowing their"
+  },
+  {
+   "from": "of ihejfinger of",
+   "to": "of the finger of"
+  },
+  {
+   "from": "to \\hefinger of",
+   "to": "to the finger of"
+  },
+  {
+   "from": "for the worketh",
+   "to": "for the Father worketh"
+  },
+  {
+   "from": "power, because rested",
+   "to": "power, because he rested"
+  },
+  {
+   "from": "But \\f a",
+   "to": "But if a"
+  },
+  {
+   "from": "he Wh0 opposes",
+   "to": "he who opposes"
+  },
+  {
+   "from": "house tvhence I",
+   "to": "house whence I"
+  },
+  {
+   "from": "he findcth it",
+   "to": "he Jindeth it"
+  },
+  {
+   "from": "And he and",
+   "to": "And he goeth and"
+  },
+  {
+   "from": "says, / will",
+   "to": "says, I will"
+  },
+  {
+   "from": "from men or",
+   "to": "from men 'like or"
+  },
+  {
+   "from": "who does it",
+   "to": "who does not see that it"
+  },
+  {
+   "from": "an ^ie question,",
+   "to": "an idle question,"
+  },
+  {
+   "from": "No man * when",
+   "to": "No man* when"
+  },
+  {
+   "from": "Thy wordy O",
+   "to": "Thy word, O"
+  },
+  {
+   "from": "in tliee be",
+   "to": "in thee be"
+  },
+  {
+   "from": "It is necessary that as",
+   "to": "It is necessary then that as"
+  },
+  {
+   "from": "If tliy whole",
+   "to": "If thy whole"
+  },
+  {
+   "from": "as ike bright",
+   "to": "as the bright"
+  },
+  {
+   "from": "give tliee light.",
+   "to": "give thee light."
+  },
+  {
+   "from": "the queen the",
+   "to": "the queen of the"
+  },
+  {
+   "from": "and suy within",
+   "to": "and say within"
+  },
+  {
+   "from": "he notjirst washed",
+   "to": "he not first washed"
+  },
+  {
+   "from": "platter denies us,",
+   "to": "platter defiles us,"
+  },
+  {
+   "from": "over: and,behold,all things",
+   "to": "over: and, behold, all things"
+  },
+  {
+   "from": "shew mercy. thou",
+   "to": "shew mercy. If thou"
+  },
+  {
+   "from": "please God. unto",
+   "to": "please God. Return unto"
+  },
+  {
+   "from": "but he not",
+   "to": "but he knew not"
+  },
+  {
+   "from": "ye Lawyer 8, for",
+   "to": "ye Lawyers, for"
+  },
+  {
+   "from": "like. CIIRYS. But",
+   "to": "like. Chrys. But"
+  },
+  {
+   "from": "word icoe, which",
+   "to": "word woe, which"
+  },
+  {
+   "from": "knowledge of according",
+   "to": "knowledge of truth, according"
+  },
+  {
+   "from": "And tq force",
+   "to": "And to force"
+  },
+  {
+   "from": "it follows, in",
+   "to": "it follows, Laying in"
+  },
+  {
+   "from": "maliciousness. THEOIHYL. He",
+   "to": "maliciousness. THEOPHYL. He"
+  },
+  {
+   "from": "says, p rocla imed on",
+   "to": "says, proclaimed on"
+  },
+  {
+   "from": "again. CIIRYS. Observe",
+   "to": "again. Chrys. Observe"
+  },
+  {
+   "from": "adding, / will",
+   "to": "adding, I will"
+  },
+  {
+   "from": "is anp' nounced, and in",
+   "to": "is an-and in"
+  },
+  {
+   "from": "if wre repent,",
+   "to": "if we repent,"
+  },
+  {
+   "from": "by natnre merciful,",
+   "to": "by nature merciful,"
+  },
+  {
+   "from": "Christ be . . .",
+   "to": "Christ be formed . . ."
+  },
+  {
+   "from": "very God the",
+   "to": "very God raised the"
+  },
+  {
+   "from": "manner of what,",
+   "to": "manner of speaking, what,"
+  },
+  {
+   "from": "He adds, / will build",
+   "to": "He adds, I will build"
+  },
+  {
+   "from": "is my For",
+   "to": "is my own? For"
+  },
+  {
+   "from": "he %Tho anticipates",
+   "to": "he who anticipates"
+  },
+  {
+   "from": "hast muck goods",
+   "to": "hast much goods"
+  },
+  {
+   "from": "lean the and",
+   "to": "lean the soul, and"
+  },
+  {
+   "from": "require qf thee.",
+   "to": "require of thee."
+  },
+  {
+   "from": "the soulrises and",
+   "to": "the soul rises and"
+  },
+  {
+   "from": "GREG. ButinGl>gthe night",
+   "to": "GREG. But the night"
+  },
+  {
+   "from": "the healthgiving use",
+   "to": "the health giving use"
+  },
+  {
+   "from": "who arc in",
+   "to": "who are in"
+  },
+  {
+   "from": "and un doubting trust,",
+   "to": "and undoubting trust,"
+  },
+  {
+   "from": "a toilless and",
+   "to": "a toil less and"
+  },
+  {
+   "from": "not ichctt ye eaf, 8$c.",
+   "to": "not what ye shall eat^ 8$c."
+  },
+  {
+   "from": "but ivhat ye shall cat or",
+   "to": "but what ye shall eat or"
+  },
+  {
+   "from": "up, saying, be",
+   "to": "up, saying, Neither be"
+  },
+  {
+   "from": "things to his",
+   "to": "things to satisfy his"
+  },
+  {
+   "from": "and wouJd not",
+   "to": "and would not"
+  },
+  {
+   "from": "For al though His",
+   "to": "For although His"
+  },
+  {
+   "from": "almsgiving Act-has to",
+   "to": "almsgiving has to"
+  },
+  {
+   "from": "I i'earlest yOU sjiouij think",
+   "to": "I fear lest yOU should think"
+  },
+  {
+   "from": "be 110 creation",
+   "to": "be no creation"
+  },
+  {
+   "from": "a treasure THEOPHYL.",
+   "to": "a treasure that faileth not, THEOPHYL."
+  },
+  {
+   "from": "when bv con-we",
+   "to": "when by con-we"
+  },
+  {
+   "from": "is added, be",
+   "to": "is added, And be"
+  },
+  {
+   "from": "he comelh and knocketh, tJiey may",
+   "to": "he cometh and knocketh, they may"
+  },
+  {
+   "from": "Blessed arc the",
+   "to": "Blessed are the"
+  },
+  {
+   "from": "them. TIIEOPHYL. That",
+   "to": "them. THEOPHYL. That"
+  },
+  {
+   "from": "CYKIL ; Our",
+   "to": "CYRIL ; Our"
+  },
+  {
+   "from": "and wine steward, his",
+   "to": "and wise steward, whom his"
+  },
+  {
+   "from": "THKOPHYL. Or,",
+   "to": "THEOPHYL. Or,"
+  },
+  {
+   "from": "him r tiler over",
+   "to": "him ruler over"
+  },
+  {
+   "from": "the ilesh, ordering",
+   "to": "the flesh, ordering"
+  },
+  {
+   "from": "servant sltall say in Itis heart^",
+   "to": "servant shall say in his heart^"
+  },
+  {
+   "from": "Lord delay eth his",
+   "to": "Lord delayeth his"
+  },
+  {
+   "from": "our departuie, there",
+   "to": "our departure, there"
+  },
+  {
+   "from": "his owm, and",
+   "to": "his own, and"
+  },
+  {
+   "from": "people, Matt-suffer a",
+   "to": "people, suffer a"
+  },
+  {
+   "from": "saying, / came",
+   "to": "saying, I came"
+  },
+  {
+   "from": "send Jire on",
+   "to": "send fire on"
+  },
+  {
+   "from": "term Jire, of",
+   "to": "term fire, of"
+  },
+  {
+   "from": "piety. CHUYS. For",
+   "to": "piety. CHRYS. For"
+  },
+  {
+   "from": "say, / came",
+   "to": "say, I came"
+  },
+  {
+   "from": "Jews believed, whom",
+   "to": "Jews believed, of whom"
+  },
+  {
+   "from": "in Juda3a was",
+   "to": "in Judaea was"
+  },
+  {
+   "from": "sent upon earth,",
+   "to": "sent upon the earth,"
+  },
+  {
+   "from": "of several BEDE;",
+   "to": "of several H BEDE;"
+  },
+  {
+   "from": "adds, / have",
+   "to": "adds, I have"
+  },
+  {
+   "from": "Lord ? Diclst thou",
+   "to": "Lord ? Didst thou"
+  },
+  {
+   "from": "be Jive in one divided,",
+   "to": "be five in one house divided,"
+  },
+  {
+   "from": "event, lor it",
+   "to": "event, for it"
+  },
+  {
+   "from": "that lathers were",
+   "to": "that fathers were"
+  },
+  {
+   "from": "to be*no division;",
+   "to": "to be no division;"
+  },
+  {
+   "from": "the sonlh wind",
+   "to": "the south wind"
+  },
+  {
+   "from": "A shoicer cometh.",
+   "to": "A shower cometh."
+  },
+  {
+   "from": "but Itoiv is",
+   "to": "but how is"
+  },
+  {
+   "from": "hence. CHKYS. It",
+   "to": "hence. CHRYS. It"
+  },
+  {
+   "from": "visible Man-and at",
+   "to": "visible and at"
+  },
+  {
+   "from": "vicious praetice. Lastly,",
+   "to": "vicious practice. Lastly,"
+  },
+  {
+   "from": "him hand foot,",
+   "to": "him hand and foot,"
+  },
+  {
+   "from": "a serrant is",
+   "to": "a servant is"
+  },
+  {
+   "from": "written afarthiny,the other",
+   "to": "written a farthing, the other"
+  },
+  {
+   "from": "the fonner, our",
+   "to": "the former, our"
+  },
+  {
+   "from": "Him who says, / am the life,",
+   "to": "Him who says, I am the life,"
+  },
+  {
+   "from": "these Galiloeans were",
+   "to": "these Galilaeans were"
+  },
+  {
+   "from": "he shews He",
+   "to": "he shews that He"
+  },
+  {
+   "from": "heirs of kingdom",
+   "to": "heirs of the kingdom"
+  },
+  {
+   "from": "the Galilseans with",
+   "to": "the Galilaeans with"
+  },
+  {
+   "from": "alone thin year",
+   "to": "alone this year"
+  },
+  {
+   "from": "Jews. 1 \\ e knew",
+   "to": "Jews. He knew"
+  },
+  {
+   "from": "that thou cut",
+   "to": "that thou shall cut"
+  },
+  {
+   "from": "birth. TIIEOPHYL. But",
+   "to": "birth. THEOPHYL. But"
+  },
+  {
+   "from": "yields 110 fruit",
+   "to": "yields no fruit"
+  },
+  {
+   "from": "as ban-en, as",
+   "to": "as barren, as"
+  },
+  {
+   "from": "will r.ot by",
+   "to": "will not by"
+  },
+  {
+   "from": "six days men",
+   "to": "six days which men"
+  },
+  {
+   "from": "years. AUG. which",
+   "to": "years. AUG. That which"
+  },
+  {
+   "from": "meal, fill the",
+   "to": "meal, till the"
+  },
+  {
+   "from": "GREG. when",
+   "to": "GREG. Mor. when"
+  },
+  {
+   "from": "said fust, strive,",
+   "to": "said first, strive,"
+  },
+  {
+   "from": "but tunis His",
+   "to": "but turns His"
+  },
+  {
+   "from": "the icest ; for",
+   "to": "the west; for"
+  },
+  {
+   "from": "few parison with",
+   "to": "few in comparison with"
+  },
+  {
+   "from": "follows, Wlien once",
+   "to": "follows, When once"
+  },
+  {
+   "from": "it prqfiteth me",
+   "to": "it profiteth me"
+  },
+  {
+   "from": "BEDE; Rut the",
+   "to": "BEDE; But the"
+  },
+  {
+   "from": "He, / cast,",
+   "to": "He, I cast,"
+  },
+  {
+   "from": "devils, a/id I",
+   "to": "devils, and I"
+  },
+  {
+   "from": "THKOPHYL. As if He says,",
+   "to": "THEOPHYL. As if He says,"
+  },
+  {
+   "from": "kingdom. THEOPH YL.",
+   "to": "kingdom. TH EO PH YL."
+  },
+  {
+   "from": "our Lord from",
+   "to": "our Lord went from"
+  },
+  {
+   "from": "bade Ihee cometh,",
+   "to": "bade thee cometh,"
+  },
+  {
+   "from": "Friend, yo up",
+   "to": "Friend, go up"
+  },
+  {
+   "from": "Then shalt thou have worship. take",
+   "to": "Then shall thou have worship. To take"
+  },
+  {
+   "from": "thy friends. CHRYS.",
+   "to": "thy friends. Horn. CHRYS."
+  },
+  {
+   "from": "made thce. He",
+   "to": "made thee. He"
+  },
+  {
+   "from": "make a/east, call",
+   "to": "make a feast, call"
+  },
+  {
+   "from": "man docs not",
+   "to": "man does not"
+  },
+  {
+   "from": "hereafter. Bftt he",
+   "to": "hereafter. But he"
+  },
+  {
+   "from": "recompense tkee, i.",
+   "to": "recompense thee^ i."
+  },
+  {
+   "from": "the re&urrection of",
+   "to": "the resurrection of"
+  },
+  {
+   "from": "who says, / am the",
+   "to": "who says, I am the"
+  },
+  {
+   "from": "express mercy,by the",
+   "to": "express mercy, by the"
+  },
+  {
+   "from": "thou hasl, and",
+   "to": "thou hast, and"
+  },
+  {
+   "from": "I have bought Jive yoke of oxen,",
+   "to": "I have bought five yoke of oxen,"
+  },
+  {
+   "from": "bought Jive yoke",
+   "to": "bought five yoke"
+  },
+  {
+   "from": "says, / cannot",
+   "to": "says, I cannot"
+  },
+  {
+   "from": "Gospel ended. lust",
+   "to": "Gospel ended. The lust"
+  },
+  {
+   "from": "flesh, / have",
+   "to": "flesh, I have"
+  },
+  {
+   "from": "bought jive yoke",
+   "to": "bought five yoke"
+  },
+  {
+   "from": "CYRIL; Thusitwas that",
+   "to": "CYRIL; Thus it was that"
+  },
+  {
+   "from": "fit lor the",
+   "to": "fit for the"
+  },
+  {
+   "from": "GREG. Tne}r then wno> broken",
+   "to": "GREG. They then who, broken"
+  },
+  {
+   "from": "announced the of",
+   "to": "announced the death of"
+  },
+  {
+   "from": "either <Ii°.mwhen by",
+   "to": "either when by"
+  },
+  {
+   "from": "the tower a i0fty watch-tower",
+   "to": "the tower is a lofty watch-tower"
+  },
+  {
+   "from": "one slone the",
+   "to": "one stone the"
+  },
+  {
+   "from": "evil spirits, find",
+   "to": "evil spirits, we find"
+  },
+  {
+   "from": "that comet h against",
+   "to": "that cometh against"
+  },
+  {
+   "from": "and teas not",
+   "to": "and was not"
+  },
+  {
+   "from": "disciples to»salt, inasmuch",
+   "to": "disciples to salt, inasmuch"
+  },
+  {
+   "from": "neither Jit for",
+   "to": "neither fit for"
+  },
+  {
+   "from": "And coining he",
+   "to": "And coming he"
+  },
+  {
+   "from": "friends and saying",
+   "to": "friends and neighbours, saying"
+  },
+  {
+   "from": "But he there",
+   "to": "But he allows there"
+  },
+  {
+   "from": "lose o)ie, fyc. GREG.",
+   "to": "lose one, ^c. GREG."
+  },
+  {
+   "from": "angels Ev-and men",
+   "to": "angels and men"
+  },
+  {
+   "from": "she Jose one",
+   "to": "she lose one"
+  },
+  {
+   "from": "the louse. Because",
+   "to": "the house. Because"
+  },
+  {
+   "from": "she fin d it ;",
+   "to": "she find it ;"
+  },
+  {
+   "from": "He makes powers",
+   "to": "He makes the heavenly powers"
+  },
+  {
+   "from": "Lord sets us i*1 tne search",
+   "to": "Lord sets before us in the search"
+  },
+  {
+   "from": "adds, TJiere in joy",
+   "to": "adds, There is joy"
+  },
+  {
+   "from": "spent #//, Iliere arose",
+   "to": "spent all, there arose"
+  },
+  {
+   "from": "people the wOnjs of",
+   "to": "people words of"
+  },
+  {
+   "from": "that is, knowledge",
+   "to": "that is, the knowledge"
+  },
+  {
+   "from": "journey into a far country. AMBROSE ;",
+   "to": "journey into afar country. AMBROSE ;"
+  },
+  {
+   "from": "word of.,God. And",
+   "to": "word of God. And"
+  },
+  {
+   "from": "who departs his",
+   "to": "who departs from his"
+  },
+  {
+   "from": "to enter, in filtn and",
+   "to": "to enter, living in filth and"
+  },
+  {
+   "from": "and hurtfully sweet,",
+   "to": "and hurt fully sweet,"
+  },
+  {
+   "from": "added, / will",
+   "to": "added, I will"
+  },
+  {
+   "from": "Father. / have",
+   "to": "Father. I have"
+  },
+  {
+   "from": "and btfoie thee.",
+   "to": "and before thee."
+  },
+  {
+   "from": "alone beholds things,",
+   "to": "alone beholds all\" things,"
+  },
+  {
+   "from": "supremacy. / have",
+   "to": "supremacy. I have"
+  },
+  {
+   "from": "because from the bo&om of",
+   "to": "because Irom the bosom of"
+  },
+  {
+   "from": "adds, / am",
+   "to": "adds, I am"
+  },
+  {
+   "from": "GREG. Nvss. Now",
+   "to": "GREG. Nyss. Now"
+  },
+  {
+   "from": "ne said, / will go",
+   "to": "ne said, I will go"
+  },
+  {
+   "from": "return. a^ded, And",
+   "to": "return. For it is added, And"
+  },
+  {
+   "from": "speaks to steward,",
+   "to": "speaks to his steward,"
+  },
+  {
+   "from": "he may along",
+   "to": "he may walk firm along"
+  },
+  {
+   "from": "ever ivith me,",
+   "to": "ever with me,"
+  },
+  {
+   "from": "All lhat I",
+   "to": "All that I"
+  },
+  {
+   "from": "thou vvert its",
+   "to": "thou wert its"
+  },
+  {
+   "from": "be cither food",
+   "to": "be either food"
+  },
+  {
+   "from": "CHRYS. But is",
+   "to": "CHRYS. But it is"
+  },
+  {
+   "from": "he said his",
+   "to": "he said unto his"
+  },
+  {
+   "from": "our life possess",
+   "to": "our life we possess"
+  },
+  {
+   "from": "Lord takelh away",
+   "to": "Lord taketh away"
+  },
+  {
+   "from": "I can no/ di<j, to bc<j I",
+   "to": "I cannot dig, to beg I"
+  },
+  {
+   "from": "follows, / am",
+   "to": "follows, I am"
+  },
+  {
+   "from": "of tvheat. A",
+   "to": "of wheat. A"
+  },
+  {
+   "from": "relieves the of",
+   "to": "relieves the want of"
+  },
+  {
+   "from": "And t/ie Lord",
+   "to": "And the Lord"
+  },
+  {
+   "from": "to Ihe poor.",
+   "to": "to the poor."
+  },
+  {
+   "from": "thou receivcst what",
+   "to": "thou receivest what"
+  },
+  {
+   "from": "another mail's, who",
+   "to": "another man's, who"
+  },
+  {
+   "from": "one w}iell askeci whether",
+   "to": "one when asked whether"
+  },
+  {
+   "from": "either he hate",
+   "to": "either he will hate"
+  },
+  {
+   "from": "THEorHYL. But",
+   "to": "THEOPHYL. But"
+  },
+  {
+   "from": "unless 1 had",
+   "to": "unless I had"
+  },
+  {
+   "from": "one titile of",
+   "to": "one tittle of"
+  },
+  {
+   "from": "husband, committcth adultery ;",
+   "to": "husband, committeth adultery ;"
+  },
+  {
+   "from": "his sores. PSEUDO-CHRYS.",
+   "to": "his sores. ut PSEUDO-CHRYS."
+  },
+  {
+   "from": "be any bodily,",
+   "to": "be any thing bodily,"
+  },
+  {
+   "from": "stretching down ward, through",
+   "to": "stretching downward, through"
+  },
+  {
+   "from": "added Lazaroto his",
+   "to": "added to his"
+  },
+  {
+   "from": "angels earned Lazarus ;",
+   "to": "angels carried Lazarus ;"
+  },
+  {
+   "from": "For that man wno would",
+   "to": "For that rich man who would"
+  },
+  {
+   "from": "sorrow. GKEG. But",
+   "to": "sorrow. Greg. But"
+  },
+  {
+   "from": "of the and",
+   "to": "of the tongue and"
+  },
+  {
+   "from": "the icings in",
+   "to": "the wings in"
+  },
+  {
+   "from": "if the man",
+   "to": "if the rich man"
+  },
+  {
+   "from": "image °f tne face>",
+   "to": "image of the face>"
+  },
+  {
+   "from": "thou thoughtcst to",
+   "to": "thou thoughtest to"
+  },
+  {
+   "from": "be very about",
+   "to": "be very fearful about"
+  },
+  {
+   "from": "iniquity denies, the",
+   "to": "iniquity defiles, the"
+  },
+  {
+   "from": "For Lazar°should poverty",
+   "to": "For should poverty"
+  },
+  {
+   "from": "seek in own",
+   "to": "seek in our own"
+  },
+  {
+   "from": "gulf Jixed. THKOPHYL. The",
+   "to": "gulf fixed. THEOPHYL. The"
+  },
+  {
+   "from": "great gull', because",
+   "to": "great gulf, because"
+  },
+  {
+   "from": "we havr escaped,",
+   "to": "we have escaped,"
+  },
+  {
+   "from": "those relations he",
+   "to": "those relations whom he"
+  },
+  {
+   "from": "have Jive brethren,",
+   "to": "have five brethren,"
+  },
+  {
+   "from": "appointed them Co\"cteachers to",
+   "to": "appointed teachers to"
+  },
+  {
+   "from": "establish their own.",
+   "to": "establish their qu. own."
+  },
+  {
+   "from": "resources. GKKG. Lazarus",
+   "to": "resources. Greg. Lazarus"
+  },
+  {
+   "from": "bursting fortb of",
+   "to": "bursting forth of"
+  },
+  {
+   "from": "from tlie crumbs",
+   "to": "from the crumbs"
+  },
+  {
+   "from": "But woe him",
+   "to": "But woe to him"
+  },
+  {
+   "from": "whom the;/ come.",
+   "to": "whom they come."
+  },
+  {
+   "from": "to siri against",
+   "to": "to sin against"
+  },
+  {
+   "from": "against Ihee seven",
+   "to": "against thee seven"
+  },
+  {
+   "from": "increase °f tnat faith",
+   "to": "increase of that faith"
+  },
+  {
+   "from": "CuRYS. He",
+   "to": "CHRYS. He"
+  },
+  {
+   "from": "though Horn. smaii in",
+   "to": "though small in"
+  },
+  {
+   "from": "then thon not",
+   "to": "then thou not"
+  },
+  {
+   "from": "to meaty but",
+   "to": "to meat, but"
+  },
+  {
+   "from": "And it to",
+   "to": "And it came to"
+  },
+  {
+   "from": "up their and",
+   "to": "up their voices, and"
+  },
+  {
+   "from": "He wen1 a",
+   "to": "He were a"
+  },
+  {
+   "from": "were thankful. then",
+   "to": "were thankful. Such then"
+  },
+  {
+   "from": "strength trill I",
+   "to": "strength will I"
+  },
+  {
+   "from": "it followrs, And",
+   "to": "it follows, And"
+  },
+  {
+   "from": "many 1 /tiny.?, and",
+   "to": "many things, and"
+  },
+  {
+   "from": "The coining of",
+   "to": "The coming of"
+  },
+  {
+   "from": "mankind. CIIRYS. For",
+   "to": "mankind. Chrys. For"
+  },
+  {
+   "from": "they cat and",
+   "to": "they eat and"
+  },
+  {
+   "from": "pleasure rattier titan lovers",
+   "to": "pleasure rather than lovers"
+  },
+  {
+   "from": "sudden coining of",
+   "to": "sudden coming of"
+  },
+  {
+   "from": "would openly from",
+   "to": "would openly return from"
+  },
+  {
+   "from": "Apostles gathered around",
+   "to": "Apostles gathered together around"
+  },
+  {
+   "from": "man comeih, shall he Jind faith",
+   "to": "man cometh, shall he find faith"
+  },
+  {
+   "from": "the earth (? AUG.",
+   "to": "the earth(? AUG."
+  },
+  {
+   "from": "follows, / give",
+   "to": "follows, I give"
+  },
+  {
+   "from": "pride that bare",
+   "to": "pride that laid bare"
+  },
+  {
+   "from": "merciful. CHKYS. He",
+   "to": "merciful. CHRYS. He"
+  },
+  {
+   "from": "since Pie himself",
+   "to": "since He himself"
+  },
+  {
+   "from": "the loioly. He",
+   "to": "the lowly. He"
+  },
+  {
+   "from": "CHKYS. This",
+   "to": "CHRYS. This"
+  },
+  {
+   "from": "unto Mm, and",
+   "to": "unto him^ and"
+  },
+  {
+   "from": "virtue, \\ve must",
+   "to": "virtue, we must"
+  },
+  {
+   "from": "a c^d if",
+   "to": "a child if"
+  },
+  {
+   "from": "but trustfully and",
+   "to": "but trust fully and"
+  },
+  {
+   "from": "follows, Wlnj callest",
+   "to": "follows, Why callest"
+  },
+  {
+   "from": "adds, TJiou knowest",
+   "to": "adds, Thou knowest"
+  },
+  {
+   "from": "cut strips hides,",
+   "to": "cut strips off hides,"
+  },
+  {
+   "from": "for tnen they wouid not",
+   "to": "for then they would not"
+  },
+  {
+   "from": "poor i w^tnout our",
+   "to": "poor Horn, without our"
+  },
+  {
+   "from": "thou inayest gain",
+   "to": "thou mayest gain"
+  },
+  {
+   "from": "riches vnter into",
+   "to": "riches enter into"
+  },
+  {
+   "from": "a needless eye.",
+   "to": "a needle's eye."
+  },
+  {
+   "from": "For thou shalt not leave",
+   "to": "For thou shall not leave"
+  },
+  {
+   "from": "things ivhich were",
+   "to": "things which were"
+  },
+  {
+   "from": "Christ abidethfor ever,",
+   "to": "Christ abide th for ever,"
+  },
+  {
+   "from": "being nigli to",
+   "to": "being nigh to"
+  },
+  {
+   "from": "and tbe blind",
+   "to": "and the blind"
+  },
+  {
+   "from": "drawing to wards Him,",
+   "to": "drawing towards Him,"
+  },
+  {
+   "from": "Nazareth passelh by.",
+   "to": "Nazareth passeth by."
+  },
+  {
+   "from": "wilt t/tou that",
+   "to": "wilt thou that"
+  },
+  {
+   "from": "a tne human",
+   "to": "a symbol of the human"
+  },
+  {
+   "from": "who said, / am the",
+   "to": "who said, I am the"
+  },
+  {
+   "from": "came 1o the",
+   "to": "came to the"
+  },
+  {
+   "from": "follows, Zacch&ns, make",
+   "to": "follows, Zacchceus, make"
+  },
+  {
+   "from": "and come for",
+   "to": "and come down, for"
+  },
+  {
+   "from": "to east a",
+   "to": "to cast a"
+  },
+  {
+   "from": "life. Zacchteus stood,",
+   "to": "life. Zacchceus stood,"
+  },
+  {
+   "from": "but, / give, and / restore.",
+   "to": "but, I give, and I restore."
+  },
+  {
+   "from": "such not to",
+   "to": "such not even to"
+  },
+  {
+   "from": "be ieft unfO yOU",
+   "to": "be left unto yOU"
+  },
+  {
+   "from": "Yea, thouyh we",
+   "to": "Yea, though we"
+  },
+  {
+   "from": "henceforth know Him",
+   "to": "henceforth know we Him"
+  },
+  {
+   "from": "ten command-merits, and",
+   "to": "ten commandments, and"
+  },
+  {
+   "from": "Jews, who sprung",
+   "to": "Jews, who were sprung"
+  },
+  {
+   "from": "that ivhen he",
+   "to": "that when he"
+  },
+  {
+   "from": "Thou knewcst that",
+   "to": "Thou knewest that"
+  },
+  {
+   "from": "given> vve take",
+   "to": "given> we take"
+  },
+  {
+   "from": "and (jive to",
+   "to": "and give to"
+  },
+  {
+   "from": "thou may est be",
+   "to": "thou mayest be"
+  },
+  {
+   "from": "reason °rigsaid to",
+   "to": "reason said to"
+  },
+  {
+   "from": "village without any",
+   "to": "village without joan. any"
+  },
+  {
+   "from": "sit thereon, as",
+   "to": "sit thereon, inasmuch as"
+  },
+  {
+   "from": "says, / am",
+   "to": "says, I am"
+  },
+  {
+   "from": "of ihe Godhead.",
+   "to": "of the Godhead."
+  },
+  {
+   "from": "in Mis Gospel",
+   "to": "in His Gospel"
+  },
+  {
+   "from": "sorrow, GRKG. The",
+   "to": "sorrow, Greg. The"
+  },
+  {
+   "from": "over tbe fall",
+   "to": "over the fall"
+  },
+  {
+   "from": "They sur-Ev-round it",
+   "to": "They round it"
+  },
+  {
+   "from": "I trill raise",
+   "to": "I will raise"
+  },
+  {
+   "from": "he teas teaching",
+   "to": "he was teaching"
+  },
+  {
+   "from": "Now irom what",
+   "to": "Now from what"
+  },
+  {
+   "from": "But lite chief",
+   "to": "But the chief"
+  },
+  {
+   "from": "knew nut what",
+   "to": "knew not what"
+  },
+  {
+   "from": "privilege of Orders,",
+   "to": "privilege of Holy Orders,"
+  },
+  {
+   "from": "neighbours, wrhom they",
+   "to": "neighbours, whom they"
+  },
+  {
+   "from": "that yace ihee tliis authority?",
+   "to": "that gave thee this authority?"
+  },
+  {
+   "from": "they wrould in",
+   "to": "they would in"
+  },
+  {
+   "from": "of ba])tisin. But",
+   "to": "of baptism But"
+  },
+  {
+   "from": "For dod sent",
+   "to": "For God sent"
+  },
+  {
+   "from": "said, M Inj did",
+   "to": "said, Why did"
+  },
+  {
+   "from": "If tec shall",
+   "to": "If we shall"
+  },
+  {
+   "from": "not. BKDE ; As",
+   "to": "not. Bede ; As"
+  },
+  {
+   "from": "people it'ill stone",
+   "to": "people will stone"
+  },
+  {
+   "from": "were baflled, and",
+   "to": "were baffled, and"
+  },
+  {
+   "from": "these fhiiH/s. For",
+   "to": "these things. For"
+  },
+  {
+   "from": "His coining to",
+   "to": "His coming to"
+  },
+  {
+   "from": "THEOFHYL. After",
+   "to": "THEOPHYL. After"
+  },
+  {
+   "from": "say, / will",
+   "to": "say, I will"
+  },
+  {
+   "from": "said, / will (jive thee",
+   "to": "said, I will give thee"
+  },
+  {
+   "from": "gate. TIIEOPHYL. Since",
+   "to": "gate. THEOPHYL. Since"
+  },
+  {
+   "from": "if Pie said,",
+   "to": "if He said,"
+  },
+  {
+   "from": "as tfye corner",
+   "to": "as the corner"
+  },
+  {
+   "from": "and despised, the",
+   "to": "and despised, wherefore the"
+  },
+  {
+   "from": "the meeting of",
+   "to": "the meeting together of"
+  },
+  {
+   "from": "the tc/iich the",
+   "to": "the dust which the"
+  },
+  {
+   "from": "of the checked",
+   "to": "of the people checked"
+  },
+  {
+   "from": "perceived (hat he",
+   "to": "perceived that he"
+  },
+  {
+   "from": "though He a",
+   "to": "though He were a"
+  },
+  {
+   "from": "sayest and rightly.",
+   "to": "sayest and teachest rightly."
+  },
+  {
+   "from": "to Caesar, or",
+   "to": "to Ccesar, or"
+  },
+  {
+   "from": "God require th not",
+   "to": "God requireth not"
+  },
+  {
+   "from": "and THEOPIIYL. And",
+   "to": "and THEOPHYL. And"
+  },
+  {
+   "from": "wisely. AMUROSE; Be",
+   "to": "wisely. AMBROSE; Be"
+  },
+  {
+   "from": "not. Fur greater",
+   "to": "not. Far greater"
+  },
+  {
+   "from": "OIUGEN; Now",
+   "to": "ORIGEN; Now"
+  },
+  {
+   "from": "own imaye: another",
+   "to": "own image: another"
+  },
+  {
+   "from": "the tliinys which",
+   "to": "the things which"
+  },
+  {
+   "from": "that we give",
+   "to": "that we should give"
+  },
+  {
+   "from": "do becauss of",
+   "to": "do because of"
+  },
+  {
+   "from": "by the people, the other",
+   "to": "by the people, separated the other"
+  },
+  {
+   "from": "Him. OIUGEN; The",
+   "to": "Him. ORIGEN; The"
+  },
+  {
+   "from": "folly, utsuPwho assert",
+   "to": "folly, who assert"
+  },
+  {
+   "from": "the iuture life,",
+   "to": "the future life,"
+  },
+  {
+   "from": "God. THKOPHYL. As",
+   "to": "God. THEOPHYL. As"
+  },
+  {
+   "from": "with 110 fear",
+   "to": "with no fear"
+  },
+  {
+   "from": "the God of the God",
+   "to": "the God of Abraham, the God"
+  },
+  {
+   "from": "have said, / am, but,",
+   "to": "have said, I am, but,"
+  },
+  {
+   "from": "said, / am,",
+   "to": "said, I am,"
+  },
+  {
+   "from": "all lire unto",
+   "to": "all live unto"
+  },
+  {
+   "from": "the Sadducecs denied,)",
+   "to": "the Sadducees denied,)"
+  },
+  {
+   "from": "Master, ilwu hast",
+   "to": "Master, thou hast"
+  },
+  {
+   "from": "Son of rendered",
+   "to": "Son of David, rendered"
+  },
+  {
+   "from": "are not Lords,",
+   "to": "are not two Lords,"
+  },
+  {
+   "from": "Sit thoti at",
+   "to": "Sit thou at"
+  },
+  {
+   "from": "from fjje Prophets.",
+   "to": "from the Prophets."
+  },
+  {
+   "from": "in lie markets. THEOPIIYL. Which",
+   "to": "in Ihe markets. THEOPHYL. Which"
+  },
+  {
+   "from": "chief scats in",
+   "to": "chief seats in"
+  },
+  {
+   "from": "CHRYS. For regarded",
+   "to": "CHRYS. For God regarded"
+  },
+  {
+   "from": "doctrines which above",
+   "to": "doctrines which are above"
+  },
+  {
+   "from": "the ^lory of",
+   "to": "the glory of"
+  },
+  {
+   "from": "the first Simon",
+   "to": "the first was Simon"
+  },
+  {
+   "from": "said, Tins man",
+   "to": "said, This man"
+  },
+  {
+   "from": "GREG. m om. -L00k at jjjg vicissitudes",
+   "to": "GREG. Look at the vicissitudes"
+  },
+  {
+   "from": "Jerusalem. CIIRYS. But",
+   "to": "Jerusalem. Chrys. But"
+  },
+  {
+   "from": "deeds 01 wicked",
+   "to": "deeds oi wicked"
+  },
+  {
+   "from": "THEOFHYL. Having",
+   "to": "THEOPHYL. Having"
+  },
+  {
+   "from": "those tilings which",
+   "to": "those things which"
+  },
+  {
+   "from": "as Arias and",
+   "to": "as Arius and"
+  },
+  {
+   "from": "the newr world,",
+   "to": "the new world,"
+  },
+  {
+   "from": "EUSEK. What",
+   "to": "EUSEB. What"
+  },
+  {
+   "from": "the potrers of heaven sliall be",
+   "to": "the powers of heaven shall be"
+  },
+  {
+   "from": "his reproof \\ What",
+   "to": "his reproof\\ What"
+  },
+  {
+   "from": "the mooti, elect",
+   "to": "the moon, elect"
+  },
+  {
+   "from": "Lord's coining obtain",
+   "to": "Lord's coming obtain"
+  },
+  {
+   "from": "as it in",
+   "to": "as it were\" in"
+  },
+  {
+   "from": "the Jig tree",
+   "to": "the fig tree"
+  },
+  {
+   "from": "I soy unto",
+   "to": "I say unto"
+  },
+  {
+   "from": "pass atcay, hut my",
+   "to": "pass away, but my"
+  },
+  {
+   "from": "all tilings should",
+   "to": "all things should"
+  },
+  {
+   "from": "the sethereal or",
+   "to": "the set he real or"
+  },
+  {
+   "from": "O God my",
+   "to": "O Ood my"
+  },
+  {
+   "from": "called (he Passover.",
+   "to": "called the Passover."
+  },
+  {
+   "from": "to Plis people,",
+   "to": "to His people,"
+  },
+  {
+   "from": "he entercth in.",
+   "to": "he entereth in."
+  },
+  {
+   "from": "of tlie man,",
+   "to": "of the man,"
+  },
+  {
+   "from": "Passover of Jews.",
+   "to": "Passover of the Jews."
+  },
+  {
+   "from": "death. There fore David",
+   "to": "death. Therefore David"
+  },
+  {
+   "from": "BEDK ; Having",
+   "to": "Bede ; Having"
+  },
+  {
+   "from": "made a for",
+   "to": "made a Priest for"
+  },
+  {
+   "from": "my Hood, which",
+   "to": "my blood, which"
+  },
+  {
+   "from": "God. CHIIYS. For",
+   "to": "God. Chrys. For"
+  },
+  {
+   "from": "away, moreover refreshes",
+   "to": "away, moreover it refreshes"
+  },
+  {
+   "from": "even p^trlthough he",
+   "to": "even though he"
+  },
+  {
+   "from": "who coining unworthily",
+   "to": "who coming unworthily"
+  },
+  {
+   "from": "there teas a/so a",
+   "to": "there was also a"
+  },
+  {
+   "from": "greater, he who at meat9",
+   "to": "greater, he who sitteth at meat9"
+  },
+  {
+   "from": "in Flis temptations",
+   "to": "in His temptations"
+  },
+  {
+   "from": "also sas that",
+   "to": "also says that"
+  },
+  {
+   "from": "the twelre tribes",
+   "to": "the twelve tribes"
+  },
+  {
+   "from": "Therefore is, speaking",
+   "to": "Therefore is, lo! speaking"
+  },
+  {
+   "from": "give ihee the",
+   "to": "give thee the"
+  },
+  {
+   "from": "things of the but to",
+   "to": "things of the body, but to"
+  },
+  {
+   "from": "AUG. B no",
+   "to": "AUG. By no"
+  },
+  {
+   "from": "but by reason",
+   "to": "but by the reason"
+  },
+  {
+   "from": "not kid them",
+   "to": "not bid them"
+  },
+  {
+   "from": "are iwo swords.",
+   "to": "are two swords."
+  },
+  {
+   "from": "is enouyh, because",
+   "to": "is enough, because"
+  },
+  {
+   "from": "said unto Pray,",
+   "to": "said unto them. Pray,"
+  },
+  {
+   "from": "Pray ihat ye",
+   "to": "Pray that ye"
+  },
+  {
+   "from": "you. CVKIL; But",
+   "to": "you. Cyril; But"
+  },
+  {
+   "from": "words and of",
+   "to": "words and works of"
+  },
+  {
+   "from": "prevent His so",
+   "to": "prevent His Passion, so"
+  },
+  {
+   "from": "Satan, howr should",
+   "to": "Satan, how should"
+  },
+  {
+   "from": "Let tliis cup",
+   "to": "Let this cup"
+  },
+  {
+   "from": "from me, is",
+   "to": "from me, it is"
+  },
+  {
+   "from": "to have nor",
+   "to": "to have come nor"
+  },
+  {
+   "from": "other divine. our",
+   "to": "other divine. For our"
+  },
+  {
+   "from": "had not own",
+   "to": "had not His own"
+  },
+  {
+   "from": "but that exists",
+   "to": "but that Christ exists"
+  },
+  {
+   "from": "THEOFHYL. To",
+   "to": "THEOPHYL. To"
+  },
+  {
+   "from": "O Lore], Thine",
+   "to": "O Lord, Thine"
+  },
+  {
+   "from": "CHHYS. And",
+   "to": "CHRYS. And"
+  },
+  {
+   "from": "I nevermore admire",
+   "to": "I never more admire"
+  },
+  {
+   "from": "out of involuntary.",
+   "to": "out of an involuntary."
+  },
+  {
+   "from": "a multitude •, and",
+   "to": "a multitude•, and"
+  },
+  {
+   "from": "of 11 is lovingkindness.",
+   "to": "of His lovingkindness."
+  },
+  {
+   "from": "staves ? fyc. CHRVS. For",
+   "to": "staves ? ^c. Chrys. For"
+  },
+  {
+   "from": "When \\ve read",
+   "to": "When we read"
+  },
+  {
+   "from": "being holdcn, let",
+   "to": "being holden, let"
+  },
+  {
+   "from": "Priest. CIIRYS. It",
+   "to": "Priest. Chrys. It"
+  },
+  {
+   "from": "his Lordbeingtaken prisoner,",
+   "to": "his Lord being taken prisoner,"
+  },
+  {
+   "from": "PsEUDO-Auc. For",
+   "to": "PSEUDO-AUG. For"
+  },
+  {
+   "from": "says, / know",
+   "to": "says, I know"
+  },
+  {
+   "from": "Father. Ae'ain, a",
+   "to": "Father. Again, a"
+  },
+  {
+   "from": "speaks o£ With",
+   "to": "speaks of. With"
+  },
+  {
+   "from": "truth 1 his fellow",
+   "to": "truth this fellow"
+  },
+  {
+   "from": "thy speech as",
+   "to": "thy speech thee; as"
+  },
+  {
+   "from": "know not thou",
+   "to": "know not what thou"
+  },
+  {
+   "from": "look Fie brought",
+   "to": "look He brought"
+  },
+  {
+   "from": "CYKIL; Now",
+   "to": "CYRIL; Now"
+  },
+  {
+   "from": "to \\veep openly,",
+   "to": "to weep openly,"
+  },
+  {
+   "from": "be de lee ted by",
+   "to": "be detected by"
+  },
+  {
+   "from": "him, CIIRYS. Jesus,",
+   "to": "him, Chrys. Jesus,"
+  },
+  {
+   "from": "Father? THEOFHYL. When",
+   "to": "Father? THEOPHYL. When"
+  },
+  {
+   "from": "composed liis narrative,",
+   "to": "composed his narrative,"
+  },
+  {
+   "from": "Him. TiiEOPHYL. Most",
+   "to": "Him. THEOPHYL. Most"
+  },
+  {
+   "from": "king, HeVas aware",
+   "to": "king, He was aware"
+  },
+  {
+   "from": "B EDE ; He",
+   "to": "BEDE ; He"
+  },
+  {
+   "from": "the Galileans were",
+   "to": "the Galilaeans were"
+  },
+  {
+   "from": "jurisdiction. TiiEOi'HYL. Wherein",
+   "to": "jurisdiction. Theophyl. Wherein"
+  },
+  {
+   "from": "they wTho were",
+   "to": "they who were"
+  },
+  {
+   "from": "vehemently accmed him.",
+   "to": "vehemently accused him."
+  },
+  {
+   "from": "nothing ivorthy of",
+   "to": "nothing worthy of"
+  },
+  {
+   "from": "adds, / will",
+   "to": "adds, I will"
+  },
+  {
+   "from": "sedition ancl murder",
+   "to": "sedition and murder"
+  },
+  {
+   "from": "own cross, which",
+   "to": "own cross, from which"
+  },
+  {
+   "from": "interpretation \" obedient,\" heir.\"",
+   "to": "interpretation \" obedient,\" Cyrene \" an heir.\""
+  },
+  {
+   "from": "the days coming,",
+   "to": "the days are coming,"
+  },
+  {
+   "from": "death bad entered,",
+   "to": "death had entered,"
+  },
+  {
+   "from": "passing unconquercd through",
+   "to": "passing unconquered through"
+  },
+  {
+   "from": "on Ins right handy the",
+   "to": "on his right hand, the"
+  },
+  {
+   "from": "when 1 read,",
+   "to": "when I read,"
+  },
+  {
+   "from": "I read, the",
+   "to": "I read, And the"
+  },
+  {
+   "from": "Thou beholdcst the",
+   "to": "Thou beholdest the"
+  },
+  {
+   "from": "then proclaimest the",
+   "to": "then proclaim est the"
+  },
+  {
+   "from": "shall Ihon be",
+   "to": "shall thou be"
+  },
+  {
+   "from": "Paradise, hut thus, / say",
+   "to": "Paradise, but thus, I say"
+  },
+  {
+   "from": "follows, thott shall be",
+   "to": "follows, thou shalt be"
+  },
+  {
+   "from": "a naming sword",
+   "to": "a flaming sword"
+  },
+  {
+   "from": "whereas Elijah3^-alone is",
+   "to": "whereas Elijah alone is"
+  },
+  {
+   "from": "we are by",
+   "to": "we are washed by"
+  },
+  {
+   "from": "who crucified suffer",
+   "to": "who crucified Him would suffer"
+  },
+  {
+   "from": "the darkness And",
+   "to": "the darkness arose, saying, And"
+  },
+  {
+   "from": "painted tJiy walls;",
+   "to": "painted thy walls;"
+  },
+  {
+   "from": "how heili>c-22who for",
+   "to": "how who for"
+  },
+  {
+   "from": "and legged the",
+   "to": "and begged the"
+  },
+  {
+   "from": "before teas laid,",
+   "to": "before was laid,"
+  },
+  {
+   "from": "Sabbath teas dawning.",
+   "to": "Sabbath was dawning."
+  },
+  {
+   "from": "unbelief. BEDK ; Now",
+   "to": "unbelief. Bede ; Now"
+  },
+  {
+   "from": "perplexed thereabout, behold,",
+   "to": "perplexed there about, behold,"
+  },
+  {
+   "from": "that there'they saw",
+   "to": "that there they saw"
+  },
+  {
+   "from": "here, but is",
+   "to": "here, hut is"
+  },
+  {
+   "from": "these tilings to",
+   "to": "these things to"
+  },
+  {
+   "from": "those wrho doubted",
+   "to": "those who doubted"
+  },
+  {
+   "from": "at the%tomb, he",
+   "to": "at the tomb, he"
+  },
+  {
+   "from": "in. BKDE; According",
+   "to": "in. Bede; According"
+  },
+  {
+   "from": "They wore truth",
+   "to": "They were truth"
+  },
+  {
+   "from": "thou knovvest not",
+   "to": "thou knowest not"
+  },
+  {
+   "from": "to the sepulchre, and has",
+   "to": "to the sepulchre, ut and has"
+  },
+  {
+   "from": "the prop/iets have",
+   "to": "the prophets have"
+  },
+  {
+   "from": "becomes us in",
+   "to": "becomes us lo. in"
+  },
+  {
+   "from": "which nleans nothing.",
+   "to": "which means nothing."
+  },
+  {
+   "from": "would yo further.",
+   "to": "would go further."
+  },
+  {
+   "from": "them which not",
+   "to": "them which did not"
+  },
+  {
+   "from": "sacred vScriptures, who",
+   "to": "sacred Scriptures, who"
+  },
+  {
+   "from": "not gofarfromhim, whoever",
+   "to": "not go far from him, whoever"
+  },
+  {
+   "from": "them talking these",
+   "to": "them talking of these"
+  },
+  {
+   "from": "mention. CIIKYS. For",
+   "to": "mention. Chrys. For"
+  },
+  {
+   "from": "whereas I ,uke says,",
+   "to": "whereas Luke says,"
+  },
+  {
+   "from": "command, / will",
+   "to": "command, I will"
+  },
+  {
+   "from": "to * Cor-more than",
+   "to": "to more than"
+  },
+  {
+   "from": "Lord, must taken",
+   "to": "Lord, must be taken"
+  },
+  {
+   "from": "Why arc ye",
+   "to": "Why are ye"
+  },
+  {
+   "from": "eaten with bitter",
+   "to": "eaten with Res. bitter"
+  },
+  {
+   "from": "that abandoning acquaintances",
+   "to": "that abandoning Act. their acquaintances"
+  },
+  {
+   "from": "who tittered that",
+   "to": "who uttered that"
+  },
+  {
+   "from": "adds, Rut ye",
+   "to": "adds, But ye"
+  },
+  {
+   "from": "upon all flesh. CHRVS. But",
+   "to": "upon Chrys. But"
+  },
+  {
+   "from": "Because it fitting",
+   "to": "Because it was fitting"
+  },
+  {
+   "from": "that among beasts",
+   "to": "that among the four beasts"
+  },
+  {
+   "from": "BAXTER, PRINTER, OXFORD.",
+   "to": "BAXTER, PR INTER, OXFORD."
+  },
+  {
+   "from": " fyc.",
+   "to": " &c."
+  },
+  {
+   "from": " $c.",
+   "to": " &c."
+  },
+  {
+   "from": " 8$c.",
+   "to": " &c."
+  },
+  {
+   "from": " #c.",
+   "to": " &c."
+  },
+  {
+   "from": " tyc.",
+   "to": " &c."
+  },
+  {
+   "from": " %c.",
+   "to": " &c."
+  },
+  {
+   "from": " 8fc.",
+   "to": " &c."
+  },
+  {
+   "from": " Sfc.",
+   "to": " &c."
+  },
+  {
+   "from": " SfC.",
+   "to": " &c."
+  },
+  {
+   "from": " $-c.",
+   "to": " &c."
+  },
+  {
+   "from": " ^c.",
+   "to": " &c."
+  },
+  {
+   "from": " Sf-c.",
+   "to": " &c."
+  },
+  {
+   "from": " S$c.",
+   "to": " &c."
+  },
+  {
+   "from": " ;",
+   "to": ";"
+  },
+  {
+   "from": " :",
+   "to": ":"
+  },
+  {
+   "from": " ?",
+   "to": "?"
+  },
+  {
+   "from": " !",
+   "to": "!"
+  }
+ ]
+}

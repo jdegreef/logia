@@ -2,6 +2,7 @@
 
     python3 -m unittest discover -s tests -t .
 """
+import glob
 import html
 import io
 import json
@@ -17,8 +18,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build_site  # noqa: E402
+import differ  # noqa: E402
+import extract_creeds  # noqa: E402
 import extract_texts  # noqa: E402
+import fetch_wikidata  # noqa: E402
 import find_refs  # noqa: E402
+import score_refs  # noqa: E402
 import scripture  # noqa: E402
 import validate  # noqa: E402
 import verify_sources  # noqa: E402
@@ -74,6 +79,35 @@ class FindRefs(unittest.TestCase):
         self.assertEqual(self.refs("Matt. li. 22"), [])          # Matthew has 28 chapters: a misread
         self.assertEqual(self.refs("Comp. v. 5"), [("v. 5", "JHN.1.5", "JHN.1.5")])   # verse 5, not chapter 5
 
+    def test_short_names_with_a_colon(self):
+        # Jamieson-Fausset-Brown: "Lu 1:1-4; 24:3", "1Co 13:12"
+        self.assertEqual(self.refs("(Lu 1:1-4; 24:3)", "LUK"),
+                         [("Lu 1:1-4", "LUK.1.1", "LUK.1.4"), ("24:3", "LUK.24.3", "LUK.24.3")])
+        self.assertEqual(self.refs("compare 1Co 13:12"), [("1Co 13:12", "1CO.13.12", "1CO.13.12")])
+        self.assertEqual(self.refs("I am 3 years"), [])               # "Am" is read only before chapter:verse
+        self.assertEqual(self.refs("Pr 10:1-22:16", "PRO"), [])        # a span of chapters is not cut short
+
+    def test_capital_ver_and_this_book_s_chapters(self):
+        self.assertEqual(self.refs("as he said, Ver. 4."), [("Ver. 4", "JHN.1.4", "JHN.1.4")])
+        self.assertEqual(self.refs("I am the way ( c. xiv. 6 )"), [("xiv. 6", "JHN.14.6", "JHN.14.6")])
+
+    def test_a_heading_is_not_a_citation(self):
+        def refs(text):
+            return [t for _, t, _, _ in find_refs.scan_citations(text, "ROM", 9, ("ROM.9.13", "ROM.9.13"))]
+        self.assertEqual(refs("Ver. 13. A second quotation"), [])
+        self.assertEqual(refs("x\n\n[2.] Ver. 13. Then"), [])
+        self.assertEqual(refs("as Ver. 13 shows, and Ver. 11."), ["Ver. 13", "Ver. 11"])
+
+    def test_a_verse_that_cannot_exist_is_a_misreading(self):
+        self.assertEqual(self.refs("ver. 1 7, which", "ROM", 5), [])   # the scan's "17"
+        self.assertEqual(self.refs("Isa. xv. 14"), [])                  # Isaiah 15 has nine verses
+        self.assertEqual(self.refs("Joel ii. 32"), [("Joel ii. 32", "JOL.2.32", "JOL.2.32")])  # Hebrew 3:5
+        self.assertEqual(self.refs("John viii. 51"), [("John viii. 51", "JHN.8.51", "JHN.8.51")])
+
+    def test_the_scores_are_up_to_date(self):
+        code, out = quiet(score_refs.main, ["--check"])
+        self.assertEqual(code, 0, out)
+
     def test_ccel_marks_are_read_as_printed(self):
         with open(os.path.join(ROOT, "library", "citations", "chrysostom", "JHN.json"), encoding="utf-8") as f:
             cites = json.load(f)["citations"]
@@ -118,6 +152,27 @@ class Versification(unittest.TestCase):
         entries = json.load(open(os.path.join(ROOT, "library", "comments", "augustine-psalms", "PSA.json")))["entries"]
         on = {e["start"] for e in entries if "Have pity upon me, O God, after Thy great mercy” (ver. 1)" in e["text"]}
         self.assertEqual(on, {"PSA.51.3"})       # Psalm 51:1 in English
+
+
+class Differ(unittest.TestCase):
+    """Pages on passages the churches read differently are published only when fair."""
+    def test_families(self):
+        self.assertEqual(differ.family("Anglican (Methodist)"), "methodist")
+        self.assertEqual(differ.family("Baptist (Reformed)"), "reformed")
+        self.assertEqual(differ.family("Patristic (Greek East)"), "early")
+        self.assertEqual(differ.family("Roman Catholic (Jesuit)"), "catholic")
+
+    def test_a_page_needs_the_early_church_a_catholic_or_orthodox_and_a_protestant_voice(self):
+        self.assertEqual(differ.balance({"early", "catholic", "reformed", "anglican"}), (True, []))
+        fair, missing = differ.balance({"early", "lutheran", "reformed"})
+        self.assertFalse(fair)
+        self.assertIn("Catholic or Orthodox", missing)
+        self.assertFalse(differ.balance({"early", "orthodox", "reformed"})[0])      # three traditions only
+
+    def test_every_page_is_resolved(self):
+        for pg in differ.pages():
+            self.assertNotIn("missing", pg, pg)
+            self.assertTrue(pg["note"] and pg["status"] in ("ai_draft", "reviewed"), pg["id"])
 
 
 class Quotations(unittest.TestCase):
@@ -176,6 +231,105 @@ class VerifyCatchesChanges(unittest.TestCase):
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
 
 
+class Creeds(unittest.TestCase):
+    """library/creeds/: the creeds and confessions, read from their CCEL pages."""
+
+    def doc(self, name):
+        with open(os.path.join(ROOT, "library", "creeds", f"{name}.json"), encoding="utf-8") as f:
+            return json.load(f)
+
+    def test_creeds_are_up_to_date(self):
+        code, out = quiet(extract_creeds.main, ["--check"])
+        self.assertEqual(code, 0, out)
+
+    def test_every_tradition_is_here_and_nothing_is_reviewed(self):
+        docs = [self.doc(os.path.basename(p)[:-5])
+                for p in glob.glob(os.path.join(ROOT, "library", "creeds", "*.json"))]
+        self.assertTrue(all(d["status"] == "ai_draft" for d in docs))
+        shared = {d["id"] for d in docs if d["tradition"] == "Shared by the churches"}
+        self.assertEqual(shared, {"apostles", "nicaea", "constantinople", "chalcedon", "athanasian"})
+        traditions = {d["tradition"] for d in docs}
+        for t in ("Roman Catholic", "Orthodox", "Lutheran", "Reformed", "Anglican", "Baptist"):
+            self.assertTrue(any(x.startswith(t) for x in traditions), t)
+        self.assertTrue(any("Methodist" in x for x in traditions))
+
+    def test_only_the_english_column_is_taken(self):
+        ath = self.doc("athanasian")["sections"]
+        self.assertEqual([s["label"] for s in ath], [str(n) for n in range(1, 45)])
+        self.assertTrue(ath[0]["text"].startswith("1. Whosoever will be saved"))
+        self.assertFalse(any("Quicunque" in s["text"] or "Credimus" in s["text"] for s in ath))
+        # the Thirty-Nine Articles: the English of 1571, not the American revision beside it
+        art1 = self.doc("thirty-nine-articles")["sections"][1]
+        self.assertEqual(art1["label"], "I. Of fayth in the holy Trinitie")
+        self.assertIn("lyuyng and true God", art1["text"])
+        self.assertNotIn("living and true God", art1["text"])
+
+    def test_a_paragraph_split_by_a_page_break_is_one_section(self):
+        canon = next(s for s in self.doc("trent-6")["sections"] if s["label"] == "ON JUSTIFICATION, CANON XVI")
+        self.assertTrue(canon["text"].startswith("CANON XVI.—If any one saith, that he will for certain"))
+
+    def test_proof_texts_are_kept_and_editors_notes_are_not(self):
+        first = self.doc("westminster")["sections"][0]
+        self.assertEqual(first["label"], "Chapter I. Of the Holy Scripture, I")
+        proof = next(c for c in first["cites"] if c["start"] == "ROM.1.19")
+        self.assertEqual((proof["end"], proof["note"]), ("ROM.1.20", True))
+        self.assertEqual(first["text"][:proof["at"]].rstrip()[-len("inexcusable;"):], "inexcusable;")
+        # Schaff's note on "he descended into hell" cites Scripture as he discusses the text: not a citation
+        self.assertEqual([c for s in self.doc("apostles")["sections"] for c in s["cites"]], [])
+
+    def test_a_question_and_its_answer_are_one_section(self):
+        q1 = self.doc("heidelberg")["sections"][0]
+        self.assertEqual(q1["label"], "Question 1")
+        self.assertTrue(q1["text"].startswith("What is thy only comfort in life and in death?\n\nAnswer.\n\nThat I"))
+        orthodox = self.doc("orthodox-catechism")["sections"]
+        self.assertEqual(len(orthodox), 611)          # Schaff numbers the questions 1-611
+
+    def test_a_changed_word_in_a_creed_fails(self):
+        s = self.doc("trent-5")["sections"][1]
+        streams = verify_sources.column_letters(os.path.join(ROOT, "sources", "creeds", s["source"]))
+        self.assertTrue(any(verify_sources.check_digital(s["text"], x) is None for x in streams.values()))
+        changed = s["text"].replace("Paradise", "Eden", 1)
+        self.assertNotEqual(changed, s["text"])
+        self.assertTrue(all(verify_sources.check_digital(changed, x) for x in streams.values()))
+
+
+class Plurals(unittest.TestCase):
+    def test_a_count_of_one_takes_the_singular_form(self):
+        self.assertEqual(build_site.t("home.n_voices", n=1), "1 voice")
+        self.assertEqual(build_site.t("home.n_voices", n=2), "2 voices")
+        self.assertEqual(build_site.t("work.excerpts", n=1), "1 excerpt")
+        # A formatted string such as "1,204" is never taken for one.
+        self.assertEqual(build_site.t("passage.n_excerpts", n="1"), "1 excerpts")
+
+    def test_every_singular_form_fills_from_the_same_values(self):
+        def walk(node):
+            for key, value in node.items():
+                if isinstance(value, dict):
+                    yield from walk(value)
+                elif key.endswith("_one") and isinstance(node.get(key[:-4]), str):
+                    yield node[key[:-4]], value
+        names = re.compile(r"(?<!{){(\w+)}")
+        for plural, one in walk(build_site.CATALOG):
+            if one in ("{name} ({dates}) comments on {ref} in Logia.", "{n} excerpts from {name} ({dates}) on {ref}."):
+                continue  # chosen by hand in the code, with their own values
+            self.assertLessEqual(set(names.findall(one)), set(names.findall(plural)), one)
+
+
+class Quoting(unittest.TestCase):
+    def test_an_excerpt_that_opens_with_a_quote_gets_no_second_mark(self):
+        self.assertEqual(build_site.in_quotes("Now some"), "“Now some”")
+        self.assertEqual(build_site.in_quotes("“In the beginning was the Word.” It is"),
+                         "“In the beginning was the Word.” It is")
+        self.assertEqual(build_site.in_quotes("a < b"), "“a &lt; b”")
+
+
+class Dashes(unittest.TestCase):
+    def test_lifespans_take_an_en_dash(self):
+        self.assertEqual(build_site.en_dash("1509-1564"), "1509–1564")
+        self.assertEqual(build_site.en_dash("c. 185-c. 253"), "c. 185–c. 253")
+        self.assertEqual(build_site.en_dash("fl. 1680"), "fl. 1680")
+
+
 class Counting(unittest.TestCase):
     def test_counter_and_owner_tags_are_off_unless_set(self):
         with mock.patch.multiple(build_site, GOATCOUNTER="", GOOGLE_VERIFY="", BING_VERIFY=""):
@@ -224,6 +378,23 @@ class Site(unittest.TestCase):
             self.assertIn('<header class="site">', text, page)
             self.assertIn('<footer class="site">', text, page)
             self.assertIn('id="colour-menu"', text, page)
+
+    def test_header_has_the_search_pop_up_and_the_chapter_switcher(self):
+        home = self.read("index.html")
+        self.assertIn('<dialog class="palette lg-palette" id="palette"', home)
+        self.assertIn('data-search-open', home)
+        self.assertNotIn('class="lg-where"', home)
+        chapter = self.read(os.path.join("jhn", "3", "index.html"))
+        self.assertIn('<div class="lg-where" data-book="JHN" data-chapter="3">', chapter)
+        self.assertIn('rel="prev" href="/jhn/2/"', chapter)
+        self.assertIn('rel="next" href="/jhn/4/"', chapter)
+        self.assertIn('class="lg-progress"', chapter)
+        verse = self.read(os.path.join("jhn", "3", "16", "index.html"))
+        self.assertIn('data-chapter="3"', verse)
+        self.assertNotIn('class="lg-progress"', verse)
+        data = json.loads(re.search(r'id="nav-data">(.*?)</script>', home, re.S)[1].replace("<\\/", "</"))
+        self.assertEqual(data["books"]["JHN"]["n"], 21)
+        self.assertIn(3, data["books"]["JHN"]["has"])
 
     def test_every_internal_link_leads_to_a_page(self):
         missing = set()
@@ -406,7 +577,7 @@ class Site(unittest.TestCase):
         self.assertIn('class="lg-vocab"', text)
         self.assertIn('href="/commentators/era/reformation/"', text)
         self.assertIn('class="lg-prev" href="/commentators/luther/"', text)
-        self.assertIn('class="lg-next" href="/commentators/lapide/"', text)
+        self.assertIn('class="lg-next" href="/commentators/bellarmine/"', text)
 
     def test_the_reader_can_report_a_mistake_on_github(self):
         text = self.read("jhn/3/index.html")
@@ -415,10 +586,10 @@ class Site(unittest.TestCase):
 
     def test_a_commentator_page_opens_ways_into_the_work(self):
         text = self.read("commentators/chrysostom/index.html")
-        # Three passages to start with, the verse beside each row, where each
+        # A passage to start with in each of the four books, the verse beside each row, where each
         # sits in its homily, and the homilies themselves as a second tab.
         start = text.split('id="start"', 1)[1].split("</section>", 1)[0]
-        self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 3)
+        self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 4)
         self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', text)
         self.assertIn("Read the homily from here", text)
         self.assertIn('aria-controls="by-whole"', text)
@@ -851,11 +1022,85 @@ class Site(unittest.TestCase):
             self.skipTest("no full git history")
         self.assertRegex(self.read("sitemap.xml"), r"<loc>https://logia\.faith/jhn/3/16/</loc><lastmod>\d{4}-\d\d-\d\d</lastmod>")
 
+    # --- Topics ---
+
+    def test_topic_passages_are_real_and_their_words_are_in_the_catalog(self):
+        lib = build_site.Library()
+        data = build_site.load(os.path.join(build_site.ROOT, "library", "topics.json"))["topics"]
+        self.assertEqual(len({x["id"] for x in data}), len(data))
+        for tp in data:
+            words = build_site.CATALOG["topics"][tp["id"]]
+            for k in ("heading", "dek", "note"):
+                self.assertIn(k, words, tp["id"])
+            for item in tp["items"]:
+                book, start, end = build_site.topic_span(item)
+                self.assertLessEqual(start, end, item)
+                self.assertIn(start[1], build_site.chapter_verses(book, start[0]), item)
+                self.assertIn(end[1], build_site.chapter_verses(book, end[0]), item)
+                self.assertIn(item["key"], words["items"], (tp["id"], item["key"]))
+            self.assertTrue(any(build_site.in_passage(lib, *build_site.topic_span(x)) for x in tp["items"]), tp["id"])
+
+    def test_a_topic_shows_every_commentator_on_each_passage(self):
+        lib = build_site.Library()
+        tp = next(x for x in build_site.topics(lib) if x["id"] == "baptism")
+        text = self.read(os.path.join("topics", "baptism", "index.html"))
+        for item in tp["items"]:
+            section = text.split(f'id="{item["key"]}"')[1].split("</section>")[0]
+            for wid, _cs in build_site.in_passage(lib, *build_site.topic_span(item)):
+                self.assertIn(f"<b>{build_site.short_name(lib.author_of(wid))}</b>", section, (item["key"], wid))
+        self.assertIn("<loc>https://logia.faith/topics/baptism/</loc>", self.read("sitemap.xml"))
+        index = self.read(os.path.join("topics", "index.html"))
+        for x in build_site.topics(lib):
+            self.assertIn(f'href="/topics/{x["id"]}/"', index)
+        self.assertIn('href="/topics/"', self.read("index.html"))
+
     def test_corrections_are_applied(self):
         lib = build_site.Library()
         ryle = " ".join(c["text"] for c in lib.comments if c["work"] == "ryle")
         self.assertNotIn("Let ns", ryle)
         self.assertIn("Let us", ryle)
+
+
+class Wikidata(unittest.TestCase):
+    """scripts/fetch_wikidata.py accepts only one human who died in the author's year."""
+
+    @staticmethod
+    def item(qid, human=True, died=430, article=None):
+        claims = {"P31": [{"mainsnak": {"datavalue": {"value": {"id": "Q5" if human else "Q4167410"}}}}],
+                  "P570": [{"mainsnak": {"datavalue": {"value": {"time": f"+{died:04d}-08-28T00:00:00Z"}}}}]}
+        return {"id": qid, "claims": claims, "sitelinks": {"enwiki": {"title": article}} if article else {}}
+
+    def test_one_human_with_the_same_year_of_death(self):
+        author = {"name": "Augustine of Hippo", "died": 430}
+        got = fetch_wikidata.pick(author, [self.item("Q1", human=False), self.item("Q2", died=604),
+                                           self.item("Q3", article="Augustine of Hippo")])
+        self.assertEqual(got, {"wikidata": "Q3", "wikipedia": "Augustine_of_Hippo"})
+
+    def test_no_match_or_two_matches_is_left_for_a_person(self):
+        author = {"name": "John", "died": 407}
+        self.assertIsNone(fetch_wikidata.pick(author, [self.item("Q1", died=408)]))
+        self.assertIsNone(fetch_wikidata.pick(author, [self.item("Q1", died=407), self.item("Q2", died=407)]))
+
+    def test_a_work_is_the_author_s_one_item_with_its_title(self):
+        def work(qid, label, author="Q100", cpg=None):
+            claims = {"P50": [{"mainsnak": {"datavalue": {"value": {"id": author}}}}]}
+            if cpg:
+                claims["P9"] = [{"mainsnak": {"datavalue": {"value": cpg}}}]
+            return {"id": qid, "labels": {"en": {"value": label}}, "claims": claims}
+        title = "Homilies on the Gospel of St. John"
+        items = [work("Q1", "Homilies on John", cpg="1234"), work("Q2", "Homilies on Matthew"),
+                 work("Q3", "Homilies on John the Baptist", author="Q999")]
+        self.assertEqual(fetch_wikidata.pick_work(title, "Q100", items, {"cpg": "P9"}),
+                         {"wikidata": "Q1", "label": "Homilies on John", "cpg": "1234"})
+        # two items as like the title, or one sharing a single word: none
+        self.assertIsNone(fetch_wikidata.pick_work(title, "Q100", items + [work("Q4", "John: homilies")], {}))
+        self.assertIsNone(fetch_wikidata.pick_work("On the Psalms", "Q100", items, {}))
+
+    def test_identifiers_become_same_as_links(self):
+        a = {"id": "x", "name": "X", "dates": "354-430", "died": 430}
+        ld = build_site.person_ld(a, {"wikidata": "Q8018", "wikipedia": "Augustine_of_Hippo"})
+        self.assertEqual(ld["sameAs"], ["https://www.wikidata.org/wiki/Q8018", "https://en.wikipedia.org/wiki/Augustine_of_Hippo"])
+        self.assertNotIn("sameAs", build_site.person_ld(a))
 
 
 if __name__ == "__main__":

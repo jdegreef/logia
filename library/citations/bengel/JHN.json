@@ -679,24 +679,6 @@
   },
   {
    "in": "bengel.JHN.1.35-36.1",
-   "at": 100,
-   "text": "ver. 15, 163",
-   "start": "JHN.1.15",
-   "end": "JHN.1.15",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.1.35-36.1",
-   "at": 100,
-   "text": "ver. 15, 163",
-   "start": "JHN.1.163",
-   "end": "JHN.1.163",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.1.35-36.1",
    "at": 231,
    "text": "ver. 29, 30",
    "start": "JHN.1.29",
@@ -1907,15 +1889,6 @@
    "text": "xii. 47",
    "start": "JHN.12.47",
    "end": "JHN.12.47",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.3.16.1",
-   "at": 1242,
-   "text": "Rom. vii. 32",
-   "start": "ROM.7.32",
-   "end": "ROM.7.32",
    "found": "pattern",
    "status": "detected"
   },
@@ -4351,15 +4324,6 @@
   },
   {
    "in": "bengel.JHN.6.34.1",
-   "at": 124,
-   "text": "ver. 85",
-   "start": "JHN.6.85",
-   "end": "JHN.6.85",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.6.34.1",
    "at": 299,
    "text": "ver. 36, 42",
    "start": "JHN.6.36",
@@ -5368,15 +5332,6 @@
   },
   {
    "in": "bengel.JHN.7.9-12.1",
-   "at": 513,
-   "text": "ver. 82",
-   "start": "JHN.7.82",
-   "end": "JHN.7.82",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.7.9-12.1",
    "at": 987,
    "text": "ver. 13",
    "start": "JHN.7.13",
@@ -5664,6 +5619,15 @@
    "status": "detected"
   },
   {
+   "in": "bengel.JHN.7.27.1",
+   "at": 834,
+   "text": "Ver. 42",
+   "start": "JHN.7.42",
+   "end": "JHN.7.42",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "bengel.JHN.7.28.1",
    "at": 142,
    "text": "Matt. xii. 19",
@@ -5809,15 +5773,6 @@
   },
   {
    "in": "bengel.JHN.7.33.1",
-   "at": 672,
-   "text": "iii. 138",
-   "start": "JHN.3.138",
-   "end": "JHN.3.138",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.7.33.1",
    "at": 1019,
    "text": "xiii. 33",
    "start": "JHN.13.33",
@@ -5894,24 +5849,6 @@
    "text": "xvi. 17",
    "start": "JHN.16.17",
    "end": "JHN.16.17",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.7.37.1",
-   "at": 245,
-   "text": "Lev. xxii. 34, 36",
-   "start": "LEV.22.34",
-   "end": "LEV.22.34",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.7.37.1",
-   "at": 245,
-   "text": "Lev. xxii. 34, 36",
-   "start": "LEV.22.36",
-   "end": "LEV.22.36",
    "found": "pattern",
    "status": "detected"
   },
@@ -6254,15 +6191,6 @@
    "text": "ver. 14, 17",
    "start": "JHN.8.17",
    "end": "JHN.8.17",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.8.15-16.1",
-   "at": 472,
-   "text": "v. 80",
-   "start": "JHN.5.80",
-   "end": "JHN.5.80",
    "found": "pattern",
    "status": "detected"
   },
@@ -7312,15 +7240,6 @@
   },
   {
    "in": "bengel.JHN.9.30.1",
-   "at": 30,
-   "text": "iv. 87",
-   "start": "JHN.4.87",
-   "end": "JHN.4.87",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.9.30.1",
    "at": 208,
    "text": "ver. 29",
    "start": "JHN.9.29",
@@ -7482,11 +7401,11 @@
    "status": "detected"
   },
   {
-   "in": "bengel.JHN.10.2-3.1",
-   "at": 36,
-   "text": "ver. 93",
-   "start": "JHN.10.93",
-   "end": "JHN.10.93",
+   "in": "bengel.JHN.10.1.1",
+   "at": 1125,
+   "text": "Ver. 8",
+   "start": "JHN.10.8",
+   "end": "JHN.10.8",
    "found": "pattern",
    "status": "detected"
   },
@@ -7919,15 +7838,6 @@
    "text": "xiv. 28",
    "start": "JHN.14.28",
    "end": "JHN.14.28",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.10.29-30.1",
-   "at": 795,
-   "text": "ver. 83",
-   "start": "JHN.10.83",
-   "end": "JHN.10.83",
    "found": "pattern",
    "status": "detected"
   },
@@ -9004,15 +8914,6 @@
   },
   {
    "in": "bengel.JHN.12.26.1",
-   "at": 846,
-   "text": "Rom. vii. 29",
-   "start": "ROM.7.29",
-   "end": "ROM.7.29",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.12.26.1",
    "at": 1075,
    "text": "ver. 31",
    "start": "JHN.12.31",
@@ -9751,42 +9652,6 @@
   },
   {
    "in": "bengel.JHN.13.12-13.1",
-   "at": 578,
-   "text": "ver. 6, 9, 25, 86, 37",
-   "start": "JHN.13.25",
-   "end": "JHN.13.25",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.13.12-13.1",
-   "at": 578,
-   "text": "ver. 6, 9, 25, 86, 37",
-   "start": "JHN.13.6",
-   "end": "JHN.13.6",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.13.12-13.1",
-   "at": 578,
-   "text": "ver. 6, 9, 25, 86, 37",
-   "start": "JHN.13.86",
-   "end": "JHN.13.86",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.13.12-13.1",
-   "at": 578,
-   "text": "ver. 6, 9, 25, 86, 37",
-   "start": "JHN.13.9",
-   "end": "JHN.13.9",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.13.12-13.1",
    "at": 605,
    "text": "xiv. 5, 8, 22",
    "start": "JHN.14.22",
@@ -10124,24 +9989,6 @@
    "text": "John xvii. 1, 2",
    "start": "JHN.17.1",
    "end": "JHN.17.2",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.13.31.2",
-   "at": 771,
-   "text": "John xiii. 31, 82",
-   "start": "JHN.13.31",
-   "end": "JHN.13.31",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.13.31.2",
-   "at": 771,
-   "text": "John xiii. 31, 82",
-   "start": "JHN.13.82",
-   "end": "JHN.13.82",
    "found": "pattern",
    "status": "detected"
   },
@@ -11676,15 +11523,6 @@
    "status": "detected"
   },
   {
-   "in": "bengel.JHN.15.26.1",
-   "at": 702,
-   "text": "Acts v. 82",
-   "start": "ACT.5.82",
-   "end": "ACT.5.82",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "bengel.JHN.15.27.1",
    "at": 69,
    "text": "ver. 26",
@@ -11744,15 +11582,6 @@
    "text": "xxiv. 9",
    "start": "MAT.24.9",
    "end": "MAT.24.9",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.16.5.1",
-   "at": 236,
-   "text": "xiii. 86",
-   "start": "JHN.13.86",
-   "end": "JHN.13.86",
    "found": "pattern",
    "status": "detected"
   },
@@ -13152,15 +12981,6 @@
    "status": "detected"
   },
   {
-   "in": "bengel.JHN.18.18-19.1",
-   "at": 708,
-   "text": "ver. 50",
-   "start": "JHN.18.50",
-   "end": "JHN.18.50",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "bengel.JHN.18.20.1",
    "at": 816,
    "text": "Matt. xxvi. 64",
@@ -14430,29 +14250,11 @@
    "status": "detected"
   },
   {
-   "in": "bengel.JHN.21.16.2",
-   "at": 1476,
-   "text": "xiii. 88",
-   "start": "JHN.13.88",
-   "end": "JHN.13.88",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "bengel.JHN.21.16.3",
    "at": 390,
    "text": "i. 42",
    "start": "JHN.1.42",
    "end": "JHN.1.42",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.21.16.3",
-   "at": 431,
-   "text": "ver. 47, 48",
-   "start": "JHN.21.47",
-   "end": "JHN.21.48",
    "found": "pattern",
    "status": "detected"
   },
@@ -14521,28 +14323,10 @@
   },
   {
    "in": "bengel.JHN.21.16.3",
-   "at": 747,
-   "text": "ver. 38",
-   "start": "JHN.21.38",
-   "end": "JHN.21.38",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.21.16.3",
    "at": 799,
    "text": "xvi. 19",
    "start": "JHN.16.19",
    "end": "JHN.16.19",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.21.16.3",
-   "at": 824,
-   "text": "ver. 30",
-   "start": "JHN.21.30",
-   "end": "JHN.21.30",
    "found": "pattern",
    "status": "detected"
   },
@@ -14597,15 +14381,6 @@
    "text": "vii. 47",
    "start": "LUK.7.47",
    "end": "LUK.7.47",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel.JHN.21.16.3",
-   "at": 1082,
-   "text": "ver. 39",
-   "start": "JHN.21.39",
-   "end": "JHN.21.39",
    "found": "pattern",
    "status": "detected"
   },

@@ -2541,56 +2541,11 @@
    "status": "detected"
   },
   {
-   "in": "henry-proverbs.PRO.6.12-19.3",
-   "at": 21,
-   "text": "v. 15",
-   "start": "PSA.6.15",
-   "end": "PSA.6.15",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.12-19.4",
-   "at": 934,
-   "text": "v. 16",
-   "start": "PSA.6.16",
-   "end": "PSA.6.16",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "henry-proverbs.PRO.6.12-19.5",
    "at": 307,
    "text": "John viii. 44",
    "start": "JHN.8.44",
    "end": "JHN.8.44",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.1",
-   "at": 178,
-   "text": "v. 23",
-   "start": "PSA.6.23",
-   "end": "PSA.6.23",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.1",
-   "at": 199,
-   "text": "v. 20, 23",
-   "start": "PSA.6.20",
-   "end": "PSA.6.20",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.1",
-   "at": 900,
-   "text": "v. 20",
-   "start": "PSA.6.20",
-   "end": "PSA.6.20",
    "found": "source",
    "status": "detected"
   },
@@ -2605,28 +2560,10 @@
   },
   {
    "in": "henry-proverbs.PRO.6.20-35.2",
-   "at": 354,
-   "text": "v. 21",
-   "start": "PSA.6.21",
-   "end": "PSA.6.21",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.2",
    "at": 432,
    "text": "Deut. vi. 8",
    "start": "DEU.6.8",
    "end": "DEU.6.8",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.3",
-   "at": 227,
-   "text": "v. 22",
-   "start": "PSA.6.22",
-   "end": "PSA.6.22",
    "found": "source",
    "status": "detected"
   },
@@ -2641,37 +2578,10 @@
   },
   {
    "in": "henry-proverbs.PRO.6.20-35.5",
-   "at": 475,
-   "text": "v. 24",
-   "start": "PSA.6.24",
-   "end": "PSA.6.24",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.5",
    "at": 1015,
    "text": "Prov. xxvii. 5, 6",
    "start": "PRO.27.5",
    "end": "PRO.27.6",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.5",
-   "at": 1180,
-   "text": "v. 25",
-   "start": "PSA.6.25",
-   "end": "PSA.6.25",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.6",
-   "at": 184,
-   "text": "v. 26",
-   "start": "PSA.6.26",
-   "end": "PSA.6.26",
    "found": "source",
    "status": "detected"
   },
@@ -2681,24 +2591,6 @@
    "text": "Job xxxi. 12",
    "start": "JOB.31.12",
    "end": "JOB.31.12",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.7",
-   "at": 143,
-   "text": "v. 29",
-   "start": "PSA.6.29",
-   "end": "PSA.6.29",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.8",
-   "at": 120,
-   "text": "v. 30-33",
-   "start": "PSA.6.30",
-   "end": "PSA.6.33",
    "found": "source",
    "status": "detected"
   },
@@ -2739,38 +2631,11 @@
    "status": "detected"
   },
   {
-   "in": "henry-proverbs.PRO.6.20-35.10",
-   "at": 372,
-   "text": "v. 33",
-   "start": "PSA.6.33",
-   "end": "PSA.6.33",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.11",
-   "at": 109,
-   "text": "v. 34, 35",
-   "start": "PSA.6.34",
-   "end": "PSA.6.35",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "henry-proverbs.PRO.6.20-35.11",
    "at": 333,
    "text": "Num. v. 12",
    "start": "NUM.5.12",
    "end": "NUM.5.12",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.6.20-35.11",
-   "at": 1289,
-   "text": "v. 31",
-   "start": "PSA.6.31",
-   "end": "PSA.6.31",
    "found": "source",
    "status": "detected"
   },
@@ -2789,15 +2654,6 @@
    "text": "v. 5",
    "start": "PSA.7.6",
    "end": "PSA.7.6",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.7.1-5.1",
-   "at": 144,
-   "text": "v. 24",
-   "start": "PSA.7.24",
-   "end": "PSA.7.24",
    "found": "source",
    "status": "detected"
   },
@@ -3712,15 +3568,6 @@
   },
   {
    "in": "henry-proverbs.PRO.8.32.2",
-   "at": 744,
-   "text": "ch. xxi. 38",
-   "start": "PRO.21.38",
-   "end": "PRO.21.38",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.8.32.2",
    "at": 957,
    "text": "v. 32",
    "start": "PRO.8.32",
@@ -4441,15 +4288,6 @@
   },
   {
    "in": "henry-proverbs.PRO.11.4.1",
-   "at": 199,
-   "text": "Ps. cx. 11",
-   "start": "PSA.110.11",
-   "end": "PSA.110.11",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.11.4.1",
    "at": 322,
    "text": "Rev. vi. 17",
    "start": "REV.6.17",
@@ -4553,15 +4391,6 @@
    "text": "Ps. xxxvii. 4",
    "start": "PSA.37.4",
    "end": "PSA.37.4",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.11.24.1",
-   "at": 551,
-   "text": "2 Cor. ix. 20",
-   "start": "2CO.9.20",
-   "end": "2CO.9.20",
    "found": "source",
    "status": "detected"
   },
@@ -6241,28 +6070,10 @@
   },
   {
    "in": "henry-proverbs.PRO.19.28.1",
-   "at": 548,
-   "text": "v. 27",
-   "start": "PRO.18.27",
-   "end": "PRO.18.27",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.19.28.1",
    "at": 639,
    "text": "Job xv. 26",
    "start": "JOB.15.26",
    "end": "JOB.15.26",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.19.29.1",
-   "at": 204,
-   "text": "v. 28",
-   "start": "PRO.18.28",
-   "end": "PRO.18.28",
    "found": "source",
    "status": "detected"
   },
@@ -6920,15 +6731,6 @@
    "text": "Hos. xiv. 3",
    "start": "HOS.14.4",
    "end": "HOS.14.4",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-proverbs.PRO.23.17-18.1",
-   "at": 284,
-   "text": "Ps. xii. 14",
-   "start": "PSA.12.14",
-   "end": "PSA.12.14",
    "found": "source",
    "status": "detected"
   },

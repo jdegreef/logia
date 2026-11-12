@@ -13,6 +13,9 @@
   if (!holder) return;
   var DATA = JSON.parse(holder.textContent);
   var U = DATA.ui;
+  // A heading that names its place in the work is a running head, set in
+  // small capitals; keep in step with RUNHEAD in scripts/build_site.py.
+  var RUNHEAD = /^(Homily|Tractate|Sermon|Lecture|Discourse|Exposition|Book|Chapter|Section|Part|Psalm|Hom\.|Serm\.)\b.{0,80}$/;
   var ERAS = DATA.eras;
   var Prefs = window.LogiaPrefs;
   var $ = function (s) { return document.querySelector(s); };
@@ -220,26 +223,34 @@
 
   // The commentators on a line of centuries, each a labelled pill at the year
   // they died: tap one to open what they say. Pills that would overlap stack
-  // in lanes; a voice with nothing on this verse is faded.
+  // in up to three lanes; any that still don't fit fold into one "+N" pill at
+  // the top right, which opens them all. A voice with nothing on this verse
+  // is faded.
   function renderRail() {
     var lo = 200, hi = 1950, pos = function (y) { return ((y - lo) / (hi - lo)) * 100; };
-    var width = $("#rail").offsetWidth || 480, PILL = 40;
-    var h = "";
+    var width = $("#rail").offsetWidth || 480, PILL = 40, LANES = 3;
+    var h = "", folded = [];
     [300, 600, 900, 1200, 1500, 1800].forEach(function (t) { h += '<span class="cx-tick" style="left:' + pos(t) + '%">' + t + "</span>"; });
     var lanes = [];
     works.slice().sort(function (a, b) { return a.died - b.died; }).forEach(function (w) {
       var on = entriesFor(w, state.verse).length > 0 && state.eras.has(w.era);
       var x = pos(w.died), px = x / 100 * width;
       var lane = 0;
-      while (lanes[lane] !== undefined && px - lanes[lane] < PILL + 3) lane++;
+      while (lane < LANES && lanes[lane] !== undefined && px - lanes[lane] < PILL + 3) lane++;
+      if (lane === LANES) { if (on) folded.push(w); return; }
       lanes[lane] = px;
       var label = (w.short_name || w.author).slice(0, 3);
-      h += '<button type="button" class="cx-dot cx-lane' + Math.min(lane, 2) + (on ? "" : " cx-off") +
+      h += '<button type="button" class="cx-dot cx-lane' + lane + (on ? "" : " cx-off") +
         (on && state.open[w.work_id] ? " cx-cur" : "") + '" style="left:' + x + '%" data-work="' + w.work_id +
         '" title="' + esc(w.author + ", " + w.author_dates) + '" aria-label="' + esc(w.author) + '"' + (on ? "" : " disabled") + ">" +
         esc(label) + "</button>";
     });
-    $("#rail").style.setProperty("--lanes", Math.min(lanes.length, 3));
+    if (folded.length) {
+      var names = folded.map(function (w) { return w.author; }).join(", ");
+      h += '<button type="button" class="cx-dot cx-more" data-works="' + folded.map(function (w) { return w.work_id; }).join(" ") +
+        '" title="' + esc(names) + '" aria-label="' + esc(fmt(U.rail_more, { names: names })) + '">+' + folded.length + "</button>";
+    }
+    $("#rail").style.setProperty("--lanes", Math.min(lanes.length, LANES) + (folded.length ? 1 : 0));
     $("#rail").innerHTML = '<div class="cx-rail-line"></div>' + h;
   }
   window.addEventListener("resize", function () { if ($("#rail").offsetWidth) renderRail(); });
@@ -249,6 +260,9 @@
     $("#ref").textContent = REF(v);
     $("#ph-text").textContent = verseText(v);
     $("#prev").disabled = v === FIRST; $("#next").disabled = v === LAST;
+    var pos = { n: DATA.verses.indexOf(v) + 1, total: DATA.verses.length };
+    $("#vpos").textContent = fmt(U.verse_of, pos);
+    $("#vpos").title = fmt(U.verse_of_label, pos);
     var voices = works.filter(function (w) { return entriesFor(w, v).length; });
     var eras = new Set(voices.map(function (w) { return w.era; }));
     $("#summary").textContent = voices.length
@@ -381,6 +395,10 @@
     }).concat((e.quotedIn || []).map(function (q) {
       var label = esc(fmt(U.quoted_by, { name: q.author, title: q.title, ref: q.ref }));
       return "<div>" + (q.href ? '<a href="' + esc(q.href) + '">' + label + "</a>" : label) + unchecked(q) + "</div>";
+    })).concat((e.names || []).map(function (n) {
+      // Another commentator this excerpt names: a fact of the page, not a judgement of agreement.
+      return '<div title="' + esc(U.names_title) + '"><a href="' + esc(n.url) + '">' + esc(fmt(U.names, { name: n.author })) + "</a>" +
+        (n.href ? ' · <a href="' + esc(n.href) + '">' + esc(fmt(U.names_here, { name: n.author, ref: n.ref })) + "</a>" : "") + "</div>";
     }));
     return rows.length ? '<div class="cx-qs">' + rows.join("") + "</div>" : "";
   }
@@ -414,7 +432,7 @@
         .filter(Boolean).join(" · ");
       var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
       var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
-        ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
+        ? '<div class="cx-lemma' + (RUNHEAD.test(e.heading) ? " cx-runhead" : "") + '">' + esc(e.heading) + "</div>" : "";
       return range + lemma + paras(linked(e.excerpt, e.cites, e.speakers)) + traced(e);
     }).join("");
   }
@@ -721,6 +739,8 @@
     catch (err) { /* storage blocked */ }
     var cur = location.hash.match(/^#v(\d+)/);
     if (!cur || +cur[1] !== state.verse) history.replaceState(null, "", "#v" + state.verse);
+    // Moving to another verse while listening reads from there.
+    if (listen && listen.on && !listen.moving) listenFrom(state.verse);
   }
 
   $("#text").addEventListener("click", function (e) {
@@ -854,9 +874,10 @@
   });
   $("#rail").addEventListener("click", function (e) {
     var d = e.target.closest(".cx-dot"); if (!d || d.classList.contains("cx-off")) return;
-    state.open[d.dataset.work] = true;
+    var ids = d.dataset.works ? d.dataset.works.split(" ") : [d.dataset.work];
+    ids.forEach(function (id) { state.open[id] = true; });
     state.tab = "comm"; renderPanel();
-    var card = document.getElementById("c-" + d.dataset.work);
+    var card = document.getElementById("c-" + ids[0]);
     if (card) {
       card.scrollIntoView({ behavior: "smooth", block: "start" });
       card.classList.remove("cx-flash"); void card.offsetWidth; card.classList.add("cx-flash");
@@ -939,5 +960,95 @@
   if (Account && works.length) {
     Account.likeCounts(CHAPTER).then(function (counts) { state.counts = counts || {}; if (state.tab === "comm") refresh(); });
     Account.marks().then(function (m) { if (m) { state.marks = m; if (state.tab === "comm") refresh(); } });
+  }
+  // Listen: the browser's own speech reads the verse, then each voice the
+  // panel shows on it (in its era order, within the eras chosen), then goes
+  // on to the next verse until the chapter ends or the reader presses Stop.
+  // An excerpt already read for an earlier verse is not read again.
+  var listen = { on: false, moving: false, run: 0, said: {} };
+  function listenFrom(v) { listen.run++; speechSynthesis.cancel(); listenVerse(v, listen.run); }
+  function speakable(text) {
+    // Short pieces: some browsers stop an utterance after about 15 seconds.
+    var out = [];
+    flat(text).replace(/\s+/g, " ").trim().split(/(?<=[.;:!?])\s+/).forEach(function (s) {
+      while (s.length > 240) {
+        var cut = s.lastIndexOf(", ", 240); if (cut < 80) cut = s.lastIndexOf(" ", 240);
+        out.push(s.slice(0, cut + 1)); s = s.slice(cut + 1).trim();
+      }
+      if (!s) return;
+      // "Ver." or "16." alone would be read as a sentence of its own.
+      if (out.length && out[out.length - 1].length < 40) out[out.length - 1] += " " + s;
+      else out.push(s);
+    });
+    return out;
+  }
+  function listenVerse(v, run) {
+    if (!COMM) { loadComm(); if (commLoad) commLoad.then(function () { if (run === listen.run) listenVerse(v, run); }); return; }
+    if (state.tab !== "comm") { state.tab = "comm"; refresh(); }
+    var queue = speakable(REF(v) + ". " + verseText(v)).map(function (t) { return { text: t }; });
+    ERAS.forEach(function (era) {
+      if (!state.eras.has(era)) return;
+      works.filter(function (w) { return w.era === era; }).forEach(function (w) {
+        var es = entriesFor(w, v).filter(function (e) { return !listen.said[w.work_id + ":" + e.start + ":" + e.excerpt.length]; });
+        if (!es.length) return;
+        queue.push({ text: w.author + ", " + w.title + ".", work: w.work_id });
+        es.forEach(function (e) {
+          listen.said[w.work_id + ":" + e.start + ":" + e.excerpt.length] = 1;
+          speakable(e.excerpt).forEach(function (t) { queue.push({ text: t, work: w.work_id }); });
+        });
+      });
+    });
+    var lang = document.documentElement.lang || "en";
+    var voice = speechSynthesis.getVoices().filter(function (x) { return x.lang && x.lang.indexOf(lang) === 0; })
+      .sort(function (a, b) { return (b.localService ? 1 : 0) - (a.localService ? 1 : 0); })[0];
+    var i = 0, card = null;
+    var mark = function (work) {
+      if (card) card.classList.remove("cx-speaking");
+      card = work ? document.getElementById("c-" + work) : null;
+      if (!card) return;
+      card.classList.add("cx-speaking");
+      if (card.classList.contains("cx-shut")) { var tg = card.querySelector("[data-toggle]"); if (tg) tg.click(); card = document.getElementById("c-" + work); card.classList.add("cx-speaking"); }
+      card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    };
+    var next = function () {
+      if (run !== listen.run) return;
+      if (i >= queue.length) {
+        mark(null);
+        var at = DATA.verses.indexOf(v);
+        if (at >= 0 && at < DATA.verses.length - 1) {
+          listen.moving = true; go(DATA.verses[at + 1]); listen.moving = false;
+          keepInView(document.querySelector('.cx-verse[data-v="' + state.verse + '"]'));
+          listenVerse(state.verse, run);
+        } else listenStop();
+        return;
+      }
+      var item = queue[i++];
+      if (item.work !== (card && card.id.slice(2))) mark(item.work);
+      var u = new SpeechSynthesisUtterance(item.text);
+      u.lang = lang; if (voice) u.voice = voice;
+      u.onend = next;
+      u.onerror = function (ev) { if (ev.error !== "interrupted" && ev.error !== "canceled") next(); };
+      speechSynthesis.speak(u);
+    };
+    next();
+  }
+  function listenShow() {
+    var b = $("#listen");
+    b.setAttribute("aria-pressed", listen.on);
+    b.querySelector("span").textContent = listen.on ? U.listen_stop : U.listen;
+  }
+  function listenStop() {
+    listen.on = false; listen.run++; listen.said = {};
+    speechSynthesis.cancel();
+    document.querySelectorAll(".cx-speaking").forEach(function (el) { el.classList.remove("cx-speaking"); });
+    listenShow();
+  }
+  if ("speechSynthesis" in window && $("#listen")) {
+    $("#listen").hidden = false;
+    $("#listen").addEventListener("click", function () {
+      if (listen.on) { listenStop(); return; }
+      listen.on = true; listen.said = {}; listenShow(); listenFrom(state.verse);
+    });
+    window.addEventListener("pagehide", function () { speechSynthesis.cancel(); });
   }
 })();

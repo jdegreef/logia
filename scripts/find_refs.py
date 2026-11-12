@@ -32,6 +32,11 @@ Two things are read from the sources, never written by hand:
   scripts/extract_texts.py first when texts change) needs a smaller lead. Like a
   citation it stays "detected" until a person checks it, for instance
   against the margin note printed beside it ("Aug. in Joan. tract. i. c. 13").
+- **Names**, in library/mentions/<work>/<BOOK>.json: where an excerpt names
+  another commentator in the library ("as Augustine explains", "Calvin and
+  Elsner"), by the forms in NAMED. It records that the name is printed, not
+  whether the writer agrees with them. A catena's attributions are its
+  quotations, so catenas are left out, and a writer naming himself is too.
 """
 import argparse
 import glob
@@ -182,7 +187,7 @@ def ccel_citations(page, where, excerpt):
         if not (s <= rs and rend <= e):
             continue
         text = page["text"][rs:rend].strip()
-        printed = full_refs(text)
+        printed = full_refs(text, short=False)
         if printed:
             out.append((text, [(t, a, b, at) for at, _, t, a, b in printed]))
             continue
@@ -193,7 +198,7 @@ def ccel_citations(page, where, excerpt):
         if not code or v1 == "0":
             continue                         # a book we do not know, or a whole chapter
         a, b = f"{code}.{int(c1)}.{int(v1)}", f"{code}.{int(c2)}.{int(v2 or v1)}"
-        if scripture.parse(a) and scripture.parse(b):
+        if scripture.plausible(a) and scripture.plausible(b):
             out.append((text, [(text, a, b, 0)]))
     # Place each in the excerpt, in order: the excerpt is the page's words.
     placed, pos = [], 0
@@ -223,12 +228,34 @@ def _names():
 
 SINGLE, NUMBERED = _names()
 _BOOK = "|".join(sorted(set(SINGLE) | set(NUMBERED), key=len, reverse=True))
+
+# The short names some commentaries print with Arabic numbers and a colon,
+# "Lu 1:1-4; 24:3", "Ac 22:26", "1Co 13:12" (Jamieson-Fausset-Brown). Several
+# are also English words ("Am", "Re"), so they are read only before
+# "chapter:verse".
+SHORT_SINGLE = {
+    "Ge": "GEN", "Ex": "EXO", "Le": "LEV", "Nu": "NUM", "De": "DEU", "Jos": "JOS", "Jud": "JDG",
+    "Ru": "RUT", "Ezr": "EZR", "Ne": "NEH", "Es": "EST", "Job": "JOB", "Ps": "PSA", "Pr": "PRO",
+    "Ec": "ECC", "So": "SNG", "Isa": "ISA", "Jer": "JER", "La": "LAM", "Eze": "EZK", "Da": "DAN",
+    "Ho": "HOS", "Joe": "JOL", "Am": "AMO", "Ob": "OBA", "Jon": "JON", "Mic": "MIC", "Na": "NAM",
+    "Hab": "HAB", "Zep": "ZEP", "Hag": "HAG", "Zec": "ZEC", "Mal": "MAL", "Mt": "MAT", "Mr": "MRK",
+    "Lu": "LUK", "Joh": "JHN", "Ac": "ACT", "Ro": "ROM", "Ga": "GAL", "Eph": "EPH", "Php": "PHP",
+    "Col": "COL", "Tit": "TIT", "Phm": "PHM", "Heb": "HEB", "Jas": "JAS", "Jude": "JUD", "Re": "REV",
+}
+SHORT_NUMBERED = {
+    "Sa": ("1SA", "2SA"), "Ki": ("1KI", "2KI"), "Ch": ("1CH", "2CH"), "Co": ("1CO", "2CO"),
+    "Th": ("1TH", "2TH"), "Ti": ("1TI", "2TI"), "Pe": ("1PE", "2PE"), "Jo": ("1JN", "2JN", "3JN"),
+}
 _CH = r"[ivxlcIVXL]+|\d+"
 _VERSES = r"\d{1,3}(?:\s?[-–]\s?\d{1,3})?(?:\s?,\s?\d{1,3}(?:\s?[-–]\s?\d{1,3})?)*(?![\d])"
 FULL = re.compile(rf"\b(?:(?P<ord>[123]|III|II|I)\s?)?(?P<book>{_BOOK})\.?\s(?P<ch>{_CH})[.,:]\s?(?P<vs>{_VERSES})")
 MORE = re.compile(rf"\s?(?P<sep>[;,])\s?(?P<ch>{_CH})[.,:]\s?(?P<vs>{_VERSES})")
-BARE = re.compile(rf"\b(?P<lead>[Cc]omp\.|[Cc]f\.|[Cc]h\.|[Cc]hap\.)\s(?P<ch>[ivxlcIVXL]+)\.\s?(?P<vs>{_VERSES})")
-VERSE = re.compile(rf"\b(?:vv|ver|v)\.\s?(?P<vs>{_VERSES})")
+BARE = re.compile(rf"\b(?P<lead>[Cc]omp\.|[Cc]f\.|[Cc]h\.|[Cc]hap\.|c\.)\s(?P<ch>[ivxlcIVXL]+)\.\s?(?P<vs>{_VERSES})")
+VERSE = re.compile(rf"\b(?:vv|[Vv]er|v)\.\s?(?P<vs>{_VERSES})(?!\s\d)")     # not "Ver. 1 1.", a scan's 11
+LEMMA = re.compile(r"(?:\A|\n)\s*(?:\[\d+\.\]\s*)?\Z")    # nothing but a section mark before it in its paragraph
+_SHORT = "|".join(sorted(set(SHORT_SINGLE) | set(SHORT_NUMBERED), key=len, reverse=True))
+SHORT = re.compile(rf"\b(?:(?P<ord>[123])\s?)?(?P<book>{_SHORT})"
+                   rf"\s(?P<ch>\d{{1,3}}):(?P<vs>{_VERSES})(?![-–:\d])")    # not "10:1-22:16", a span of chapters
 
 
 def chapter_number(s):
@@ -254,22 +281,26 @@ def verse_groups(vs):
 def _refs(code, ch, vs):
     groups = verse_groups(vs) if code and ch else []
     refs = [(f"{code}.{ch}.{a}", f"{code}.{ch}.{b}") for a, b in groups]
-    return refs if refs and all(scripture.parse(s) and scripture.parse(e) for s, e in refs) else []
+    return refs if refs and all(scripture.plausible(s) and scripture.plausible(e) for s, e in refs) else []
 
 
-def full_refs(s):
+def full_refs(s, short=True):
     """References that name their book, with any that follow on from them:
     'Isa. xl. 12, 28; xli. 4', '1 John ii. 29, iii. 9'. Each is (at, end,
     text, start, end ref)."""
     found = []
-    for m in FULL.finditer(s):
+    full = list(FULL.finditer(s))
+    short = [m for m in SHORT.finditer(s) if short
+             and not any(f.start() < m.end() and m.start() < f.end() for f in full)]
+    for m in sorted(full + short, key=lambda m: m.start()):
         name, ordinal = m["book"], m["ord"]
+        single, numbered = (SINGLE, NUMBERED) if m.re is FULL else (SHORT_SINGLE, SHORT_NUMBERED)
         if ordinal:
-            codes = NUMBERED.get(name)
+            codes = numbered.get(name)
             n = {"I": 1, "II": 2, "III": 3}.get(ordinal) or int(ordinal)
             code = codes[n - 1] if codes and n <= len(codes) else None
         else:
-            code = SINGLE.get(name)          # "Tim. iii. 16" with no number is not guessed
+            code = single.get(name)          # "Tim. iii. 16" with no number is not guessed
         refs = _refs(code, chapter_number(m["ch"]), m["vs"])
         if not refs:
             continue
@@ -286,8 +317,18 @@ def full_refs(s):
     return [(at, end, s[at:end].rstrip(" ,;."), a, b) for at, end, a, b in found]
 
 
-def scan_citations(excerpt, book, chapter):
+def scan_citations(excerpt, book, chapter, own=None):
+    """References printed in a scan's excerpt. With `own`, the excerpt's
+    (start, end): a "Ver. 13" that opens a paragraph and names a verse the
+    excerpt is on is its heading ("Ver. 13. A second quotation..."), not a
+    citation. The same words inside a paragraph are a citation."""
     found = full_refs(excerpt)
+
+    def heading(at, refs):
+        if not own or not LEMMA.search(excerpt, 0, at):
+            return refs
+        lo, hi = (scripture.parse(r) for r in own)
+        return [(a, b) for a, b in refs if not (lo <= scripture.parse(a) and scripture.parse(b) <= hi)]
 
     def free(s, e):
         return not any(a < e and s < b for a, b, *_ in found)
@@ -299,7 +340,8 @@ def scan_citations(excerpt, book, chapter):
                       for a, b in _refs(book, chapter_number(ch), m["vs"])]
     for m in VERSE.finditer(excerpt):
         if free(m.start(), m.end()):
-            found += [(m.start(), m.end(), m[0].rstrip(" ,;."), a, b) for a, b in _refs(book, chapter, m["vs"])]
+            refs = heading(m.start(), _refs(book, chapter, m["vs"]))
+            found += [(m.start(), m.end(), m[0].rstrip(" ,;."), a, b) for a, b in refs]
     return sorted((at, text, a, b) for at, _, text, a, b in found)
 
 
@@ -308,7 +350,12 @@ def scan_citations(excerpt, book, chapter):
 # For each catena, the labels it prints before a quotation that the library
 # can follow to the quoted work: the library's source pages for that work.
 CATENAS = {"catena": {"CHRYS": "chrysostom", "AUG": "augustine"},
-           "catena-matthew": {"CHRYS": "chrysostom-matthew"}}
+           "catena-matthew": {"CHRYS": "chrysostom-matthew"},
+           "catena-mark": {"CHRYS": "chrysostom-matthew"},
+           # The Catena on Luke's Chrysostom is "chiefly taken from the Homilies on
+           # Matthew" (its Preface); its Augustine, Origen and Cyril come from works
+           # on other books than the ones the library holds.
+           "catena-luke": {"CHRYS": "chrysostom-matthew"}}
 # The Part II scans of the Catena (John 11-21), and CCEL's Matthew, print the names in
 # this form: "Aug.", "Chrys."; "Pseudo-Chrys." (the Opus Imperfectum) is not Chrysostom.
 LABEL = re.compile(r"(?<![\w-])(CHRYS|Chrys|AUG|Aug|HILARY|THEOPHYL|ALCUIN|BEDE|BASIL|ORIGEN|GREG)\s?[.;]")
@@ -420,8 +467,8 @@ def match_quotation(words, candidates, idf, near=lambda para: False):
 
 def overlaps(span, entry):
     """True if a text's verses (from library/texts/) overlap an excerpt's."""
-    if not span:
-        return False
+    if not span or span["start"].split(".")[0] != entry["start"].split(".")[0]:
+        return False                # a homily on another book (the Catena on Luke quoting Matthew's)
     key = lambda ref: tuple(int(x) for x in ref.split(".")[1:])     # noqa: E731
     return key(span["start"]) <= key(entry["end"]) and key(entry["start"]) <= key(span["end"])
 
@@ -462,6 +509,32 @@ def catena_quotations(entries, labels, candidates, idf, held, spans=None):
     return rows
 
 
+# ---- Names of other commentators -------------------------------------------
+
+# The forms in which the commentaries print the name of a commentator in the
+# library. Only forms that name one person: a bare "Cyril" or "Gregory" could
+# be several Fathers, "Henry" or "Brown" anyone, so they are left out.
+NAMED = {
+    "augustine": r"Augustine|Augustin\b|Austin\b", "chrysostom": r"Chrysostom|Chrysostome",
+    "calvin": r"Calvin\b", "luther": r"Luther\b", "origen": r"Origen\b", "cyril": r"Cyril of Alexandria",
+    "basil": r"Basil\b", "bernard": r"Bernard\b", "aquinas": r"Aquinas", "gregory": r"Gregory the Great|Pope Gregory",
+    "bengel": r"Bengel", "henry": r"Matthew Henry|Mr\. Henry", "hodge": r"Hodge\b", "godet": r"Godet",
+    "spurgeon": r"Spurgeon", "keil": r"Keil\b", "haydock": r"Haydock", "lapide": r"[aà] Lapide",
+    "bellarmine": r"Bellarmin", "ryle": r"Ryle\b", "westcott": r"Westcott", "wesley": r"(?<!Charles )Wesley\b",
+    "fausset": r"Fausset", "jamieson": r"Jamieson",
+}
+NAMED_RE = {a: re.compile(rf"\b(?:{f})") for a, f in NAMED.items()}
+
+
+def mentions(text, author):
+    """[(at, printed, author named)] in an excerpt by `author`."""
+    out = []
+    for named, rx in NAMED_RE.items():
+        if named != author:
+            out += [(m.start(), m[0], named) for m in rx.finditer(text)]
+    return sorted(out)
+
+
 # ---- The library ---------------------------------------------------------
 
 def corrected_texts():
@@ -480,13 +553,13 @@ def derive():
     parts = {os.path.join(ROOT, f["path"]): f.get("part") for f in manifest["files"]}
     works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
     fixes = corrected_texts()
-    pages, comments, citations, problems = {}, {}, {}, []
+    pages, comments, citations, names, problems = {}, {}, {}, {}, []
     held = {}                                # (work, source) -> [(start, end, excerpt id)]
     for path in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
         data = load(path)
         work = works[data["work"]]
         by_division = isinstance(work["divisions"], list)
-        rows = []
+        rows, named = [], []
         for e in data["entries"]:
             e = {k: v for k, v in e.items() if k != "locus"}
             text = e["text"]
@@ -514,13 +587,19 @@ def derive():
             else:
                 if by_division:
                     problems.append(f"{e['id']}: loci are read from CCEL pages only")
-                found = scan_citations(text, data["book"], int(ch))
+                found = scan_citations(text, data["book"], int(ch), (e["start"], e["end"]))
                 kind = "pattern"
             for at, ctext, start, end in found:
                 start, end = scripture.english_span(start, end)
                 rows.append({"in": e["id"], "at": at, "text": ctext, "start": start, "end": end,
                              "found": kind, "status": "detected"})
             comments.setdefault(path, {**data, "entries": []})["entries"].append(e)
+            if data["work"] not in CATENAS:
+                named.extend({"in": e["id"], "at": at, "text": t, "author": a, "status": "detected"}
+                             for at, t, a in mentions(text, work["author"]))
+        if named:
+            out = os.path.join(ROOT, "library", "mentions", work["id"], f"{data['book']}.json")
+            names[out] = {"work": work["id"], "book": data["book"], "mentions": named}
         if rows:
             out = os.path.join(ROOT, "library", "citations", work["id"], f"{data['book']}.json")
             citations[out] = {"work": work["id"], "book": data["book"], "citations": rows}
@@ -548,7 +627,7 @@ def derive():
         if rows:
             out = os.path.join(ROOT, "library", "quotations", data["work"], f"{data['book']}.json")
             quotations[out] = {"work": data["work"], "book": data["book"], "quotations": rows}
-    return comments, citations, quotations, problems
+    return comments, citations, quotations, names, problems
 
 
 def keep_status(new, old, rows, fields):
@@ -569,7 +648,7 @@ def main(argv):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--check", action="store_true", help="change nothing; exit 1 if anything would change")
     args = ap.parse_args(argv)
-    comments, citations, quotations, problems = derive()
+    comments, citations, quotations, names, problems = derive()
     changed = []
     for path, data in comments.items():
         if load(path) != data:
@@ -577,7 +656,8 @@ def main(argv):
             if not args.check:
                 dump(path, data)
     for kind, found, rows, fields in (("citations", citations, "citations", ("in", "text", "start", "end")),
-                                      ("quotations", quotations, "quotations", ("in", "label", "work", "locus"))):
+                                      ("quotations", quotations, "quotations", ("in", "label", "work", "locus")),
+                                      ("mentions", names, "mentions", ("in", "text", "author"))):
         existing = set(glob.glob(os.path.join(ROOT, "library", kind, "*", "*.json")))
         for path, data in found.items():
             old = load(path) if path in existing else None
@@ -598,8 +678,9 @@ def main(argv):
     for path in changed:
         print(f"{os.path.relpath(path, ROOT)}: {verb}")
     q = sum(len(c["quotations"]) for c in quotations.values())
+    m = sum(len(c["mentions"]) for c in names.values())
     print(f"{loci} excerpts placed in their works, {n} citations of Scripture found, "
-          f"{q} quotations of the Fathers traced")
+          f"{q} quotations of the Fathers traced, {m} names of other commentators")
     if args.check and changed:
         print("run python3 scripts/find_refs.py and commit what it writes")
     return 1 if problems or (args.check and changed) else 0

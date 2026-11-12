@@ -401,7 +401,7 @@
    "source": "npnf110.iii.XIX.html",
    "para": "iii.XIX-p38",
    "excerpt": "chrysostom-matthew.MAT.6.4.1",
-   "score": 0.85,
+   "score": 0.84,
    "found": "similar",
    "status": "detected"
   },
@@ -713,7 +713,7 @@
    "source": "npnf110.iii.XXX.html",
    "para": "iii.XXX-p6",
    "excerpt": "chrysostom-matthew.MAT.9.9.1",
-   "score": 0.62,
+   "score": 0.61,
    "found": "similar",
    "status": "detected"
   },
@@ -960,7 +960,7 @@
    "source": "npnf110.iii.XXXIV.html",
    "para": null,
    "excerpt": null,
-   "score": 0.24,
+   "score": 0.23,
    "found": "similar",
    "status": "detected"
   },
@@ -1077,7 +1077,7 @@
    "source": "npnf110.iii.XXXVIII.html",
    "para": "iii.XXXVIII-p15",
    "excerpt": "chrysostom-matthew.MAT.11.25-26.2",
-   "score": 0.55,
+   "score": 0.54,
    "found": "similar",
    "status": "detected"
   },
@@ -1090,7 +1090,7 @@
    "source": "npnf110.iii.XXXVIII.html",
    "para": "iii.XXXVIII-p23",
    "excerpt": "chrysostom-matthew.MAT.11.25-26.4",
-   "score": 0.39,
+   "score": 0.38,
    "found": "similar",
    "status": "detected"
   },
@@ -1385,10 +1385,10 @@
    "at": 205,
    "label": "Chrys.",
    "work": "chrysostom-matthew",
-   "locus": "46",
+   "locus": "46.1",
    "source": "npnf110.iii.XLVI.html",
-   "para": null,
-   "excerpt": null,
+   "para": "iii.XLVI-p22",
+   "excerpt": "chrysostom-matthew.MAT.13.24-30.4",
    "score": 0.35,
    "found": "similar",
    "status": "detected"
@@ -1533,6 +1533,58 @@
    "para": null,
    "excerpt": null,
    "score": 0.28,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.16.17.1",
+   "at": 1331,
+   "label": "Chrys.",
+   "work": "chrysostom-matthew",
+   "locus": "54",
+   "source": "npnf110.iii.LII-homily-LIV.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.31,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.16.17.3",
+   "at": 0,
+   "label": "Chrys.",
+   "work": "chrysostom-matthew",
+   "locus": "54",
+   "source": "npnf110.iii.LII-homily-LIV.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.34,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.16.18.1",
+   "at": 1366,
+   "label": "Chrys.",
+   "work": "chrysostom-matthew",
+   "locus": "54.3",
+   "source": "npnf110.iii.LII-homily-LIV.html",
+   "para": "iii.LII-p183",
+   "excerpt": "chrysostom-matthew.MAT.16.13.4",
+   "score": 0.45,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.16.19.1",
+   "at": 1180,
+   "label": "Chrys.",
+   "work": "chrysostom-matthew",
+   "locus": "54",
+   "source": "npnf110.iii.LII-homily-LIV.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.33,
    "found": "similar",
    "status": "detected"
   },
@@ -1771,19 +1823,6 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.20.16.10",
-   "at": 498,
-   "label": "Chrys.",
-   "work": "chrysostom-matthew",
-   "locus": "64",
-   "source": "npnf110.iii.LXI.html",
-   "para": null,
-   "excerpt": null,
-   "score": 0.2,
-   "found": "similar",
-   "status": "detected"
-  },
-  {
    "in": "catena-matthew.MAT.21.19.2",
    "at": 0,
    "label": "Chrys.",
@@ -2001,6 +2040,19 @@
    "para": null,
    "excerpt": null,
    "score": 0.21,
+   "found": "similar",
+   "status": "detected"
+  },
+  {
+   "in": "catena-matthew.MAT.24.15.1",
+   "at": 1359,
+   "label": "Chrys.",
+   "work": "chrysostom-matthew",
+   "locus": "75",
+   "source": "npnf110.iii.LXXII.html",
+   "para": null,
+   "excerpt": null,
+   "score": 0.22,
    "found": "similar",
    "status": "detected"
   },

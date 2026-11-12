@@ -2757,15 +2757,6 @@
    "status": "detected"
   },
   {
-   "in": "bengel-romans.ROM.3.7.1",
-   "at": 592,
-   "text": "Job xxxix. 35",
-   "start": "JOB.39.35",
-   "end": "JOB.39.35",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "bengel-romans.ROM.3.8.1",
    "at": 132,
    "text": "iv. 17",
@@ -4378,15 +4369,6 @@
   },
   {
    "in": "bengel-romans.ROM.5.2.1",
-   "at": 786,
-   "text": "ver. 24",
-   "start": "ROM.5.24",
-   "end": "ROM.5.24",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.5.2.1",
    "at": 828,
    "text": "Col. i. 27",
    "start": "COL.1.27",
@@ -4859,15 +4841,6 @@
    "text": "ver. 21",
    "start": "ROM.5.21",
    "end": "ROM.5.21",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.5.12.2",
-   "at": 498,
-   "text": "ver. 1",
-   "start": "ROM.5.1",
-   "end": "ROM.5.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -5359,6 +5332,15 @@
   },
   {
    "in": "bengel-romans.ROM.5.18.1",
+   "at": 1267,
+   "text": "Ver. 16",
+   "start": "ROM.5.16",
+   "end": "ROM.5.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.5.18.1",
    "at": 1581,
    "text": "ver. 10",
    "start": "ROM.5.10",
@@ -5741,15 +5723,6 @@
    "text": "vii. 4",
    "start": "ROM.7.4",
    "end": "ROM.7.4",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.6.12.1",
-   "at": 51,
-   "text": "ver. 1",
-   "start": "ROM.6.1",
-   "end": "ROM.6.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -6511,28 +6484,10 @@
   },
   {
    "in": "bengel-romans.ROM.7.15.1",
-   "at": 1020,
-   "text": "ver. 1",
-   "start": "ROM.7.1",
-   "end": "ROM.7.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.7.15.1",
    "at": 1206,
    "text": "ver. 15",
    "start": "ROM.7.15",
    "end": "ROM.7.15",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.7.15.1",
-   "at": 1332,
-   "text": "ver. 1",
-   "start": "ROM.7.1",
-   "end": "ROM.7.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -6650,15 +6605,6 @@
    "text": "viii. 10",
    "start": "ROM.8.10",
    "end": "ROM.8.10",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.7.24.1",
-   "at": 1118,
-   "text": "ver. 1",
-   "start": "ROM.7.1",
-   "end": "ROM.7.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -9184,15 +9130,6 @@
   },
   {
    "in": "bengel-romans.ROM.9.15.1",
-   "at": 845,
-   "text": "ver. 1",
-   "start": "ROM.9.1",
-   "end": "ROM.9.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.9.15.1",
    "at": 1158,
    "text": "ver. 19",
    "start": "ROM.9.19",
@@ -9544,28 +9481,10 @@
   },
   {
    "in": "bengel-romans.ROM.9.22.2",
-   "at": 1225,
-   "text": "ver. 41",
-   "start": "ROM.9.41",
-   "end": "ROM.9.41",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.9.22.2",
    "at": 1238,
    "text": "Acts xiii. 46",
    "start": "ACT.13.46",
    "end": "ACT.13.46",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.9.22.2",
-   "at": 1258,
-   "text": "ver. 48",
-   "start": "ROM.9.48",
-   "end": "ROM.9.48",
    "found": "pattern",
    "status": "detected"
   },
@@ -9962,15 +9881,6 @@
    "text": "ver. 11",
    "start": "ROM.10.11",
    "end": "ROM.10.11",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.10.3-4.1",
-   "at": 1054,
-   "text": "ver. 1",
-   "start": "ROM.10.1",
-   "end": "ROM.10.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -12181,15 +12091,6 @@
   },
   {
    "in": "bengel-romans.ROM.13.5.1",
-   "at": 585,
-   "text": "ver. 19",
-   "start": "ROM.13.19",
-   "end": "ROM.13.19",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.13.5.1",
    "at": 713,
    "text": "ver. 3",
    "start": "ROM.13.3",
@@ -12617,15 +12518,6 @@
    "text": "viii. 38",
    "start": "ROM.8.38",
    "end": "ROM.8.38",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.14.9.2",
-   "at": 396,
-   "text": "ver. 34",
-   "start": "ROM.14.34",
-   "end": "ROM.14.34",
    "found": "pattern",
    "status": "detected"
   },
@@ -14012,15 +13904,6 @@
    "text": "ver. 6",
    "start": "ROM.16.6",
    "end": "ROM.16.6",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bengel-romans.ROM.16.8-10.1",
-   "at": 180,
-   "text": "ver. 2",
-   "start": "ROM.16.2",
-   "end": "ROM.16.2",
    "found": "pattern",
    "status": "detected"
   },

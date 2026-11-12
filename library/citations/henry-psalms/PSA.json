@@ -12450,15 +12450,6 @@
    "status": "detected"
   },
   {
-   "in": "henry-psalms.PSA.39.6.1",
-   "at": 807,
-   "text": "Ps. lxxix. 47",
-   "start": "PSA.79.47",
-   "end": "PSA.79.47",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "henry-psalms.PSA.39.6.3",
    "at": 256,
    "text": "Acts xxv. 23",
@@ -15965,15 +15956,6 @@
    "text": "John xiv. 2, 3",
    "start": "JHN.14.2",
    "end": "JHN.14.3",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.49.16-21.3",
-   "at": 663,
-   "text": "Ps. v. 16",
-   "start": "PSA.5.16",
-   "end": "PSA.5.16",
    "found": "source",
    "status": "detected"
   },
@@ -32791,15 +32773,6 @@
   },
   {
    "in": "henry-psalms.PSA.98.4-9.1",
-   "at": 833,
-   "text": "lxvi. 25",
-   "start": "PSA.66.25",
-   "end": "PSA.66.25",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.98.4-9.1",
    "at": 1341,
    "text": "v. 6",
    "start": "PSA.98.6",
@@ -38515,15 +38488,6 @@
   },
   {
    "in": "henry-psalms.PSA.113.4-5.4",
-   "at": 667,
-   "text": "v. 7, 8",
-   "start": "PSA.113.78",
-   "end": "PSA.113.78",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.113.4-5.4",
    "at": 1343,
    "text": "1 Cor. i. 27, 28",
    "start": "1CO.1.27",
@@ -39113,15 +39077,6 @@
    "text": "Ps. lxxii. 2, 23",
    "start": "PSA.72.2",
    "end": "PSA.72.2",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.116.3.4",
-   "at": 586,
-   "text": "Ps. lxxii. 2, 23",
-   "start": "PSA.72.23",
-   "end": "PSA.72.23",
    "found": "source",
    "status": "detected"
   },

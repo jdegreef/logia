@@ -1,0 +1,18 @@
+{
+ "id": "bellarmine-psalms",
+ "author": "bellarmine",
+ "title": "A Commentary on the Book of Psalms",
+ "divisions": "verse",
+ "edition": "Robert Bellarmine, Explanatio in Psalmos (first published Rome, 1611), translated by John O'Sullivan, Archdeacon of Kerry, as A Commentary on the Book of Psalms (Dublin and London: James Duffy, 1866); text from archive.org djvu OCR",
+ "original_language": "Latin",
+ "translation": "John O'Sullivan, A Commentary on the Book of Psalms (Dublin: James Duffy, 1866). In the Bishop of Kerry's words printed with the Life, the translation omits 'those portions which are purely philological, or which relate to the discrepancy and reconciliation of the texts and versions'.",
+ "published": 1866,
+ "full_text_url": "https://archive.org/details/commentaryonbook0000bell",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: the death date of the translator, John O'Sullivan, Archdeacon of Kerry and parish priest of Kenmare (life + 70 years)"
+ },
+ "source_kind": "scan",
+ "notes": "Not on CCEL; the text is archive.org OCR of the 1866 James Duffy edition (commentaryonbook0000bell, Claremont School of Theology copy). Each psalm prints its Douay text and then the Explanation of the Psalm, which quotes a verse ('3 “ And he shall be like a tree...”') and expounds it; the quoted verse is the excerpt's heading, and everything after it, until the next quoted verse, is on that verse, in entries of up to about 350 words, with a paragraph cut between entries marked ' ...'. Anything before a psalm's first quoted verse is on the psalm's first verse, and an Explanation that quotes no verse (Psalms 53, 108, 116:10-19 and 147:12-20 in English numbering) is on the whole psalm or part. The printed psalm text, the running heads, page numbers and printer's signatures are left out, and stray marks of the scan (_ | ~) are taken out. Lines are joined, and a word broken at a line end is joined again; a blank line is taken as a paragraph break only where a sentence ends before it. The edition numbers the psalms as the Vulgate does and the verses as the Douay Bible does without the titles: Psalm 9 holds English Psalms 9 and 10, 113 holds 114 and 115, 114 and 115 are 116, and 146 and 147 are 147, and psalms 10 to 145 are one lower than in English Bibles. Each excerpt is set on the Open Word Bible's verse (Hebrew numbering, so English Psalm 51:1 is 51:3), and a verse number past a psalm's end is placed on its last verse; where the Douay divides a psalm's verses differently from the English, an excerpt may sit a verse away from the words it explains. Other OCR slips are left as read ('Twill' for 'I will', a word run together or broken); the Life of Bellarmine and the prefaces are left out.",
+ "status": "ai_draft"
+}

@@ -1,0 +1,97 @@
+{
+ "work": "bengel-romans",
+ "book": "ROM",
+ "mentions": [
+  {
+   "in": "bengel-romans.ROM.1.4.4",
+   "at": 1248,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.1.17.3",
+   "at": 375,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.3.28.1",
+   "at": 338,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.3.28.1",
+   "at": 901,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.3.28.1",
+   "at": 1178,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.5.7.1",
+   "at": 1036,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.5.13.1",
+   "at": 1132,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.5.19.1",
+   "at": 594,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.8.3.1",
+   "at": 386,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.8.18-19.1",
+   "at": 270,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.10.20-21.1",
+   "at": 1012,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.12.6.3",
+   "at": 1112,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel-romans.ROM.14.9.1",
+   "at": 580,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  }
+ ]
+}

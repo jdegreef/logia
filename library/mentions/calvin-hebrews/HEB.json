@@ -1,0 +1,83 @@
+{
+ "work": "calvin-hebrews",
+ "book": "HEB",
+ "mentions": [
+  {
+   "in": "calvin-hebrews.HEB.1.4-6.3",
+   "at": 825,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.2.9.3",
+   "at": 392,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.2.9.3",
+   "at": 846,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.5.7.5",
+   "at": 801,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.6.2.1",
+   "at": 778,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.6.2.2",
+   "at": 592,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.6.10.2",
+   "at": 1133,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.9.22.1",
+   "at": 1173,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.11.1.3",
+   "at": 970,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.11.34.1",
+   "at": 43,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-hebrews.HEB.11.39.1",
+   "at": 478,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  }
+ ]
+}

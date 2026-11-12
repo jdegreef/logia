@@ -1,0 +1,70 @@
+{
+ "about": "The families of tradition a commentator's `tradition` belongs to, for the balance check on the pages where the churches read a passage differently (library/differ/). Each family lists words its traditions contain; the first family whose word a tradition contains is its family (so Methodist comes before Anglican, for \"Anglican (Methodist)\"), and pages list them in this order. Catholic, Orthodox and Protestant families are marked, so a page can be required to hold all three.",
+ "families": [
+  {
+   "id": "early",
+   "match": [
+    "Patristic"
+   ],
+   "kind": "shared"
+  },
+  {
+   "id": "catholic",
+   "match": [
+    "Catholic"
+   ],
+   "kind": "catholic"
+  },
+  {
+   "id": "orthodox",
+   "match": [
+    "Orthodox"
+   ],
+   "kind": "orthodox"
+  },
+  {
+   "id": "lutheran",
+   "match": [
+    "Lutheran"
+   ],
+   "kind": "protestant"
+  },
+  {
+   "id": "reformed",
+   "match": [
+    "Reformed",
+    "Presbyterian"
+   ],
+   "kind": "protestant"
+  },
+  {
+   "id": "methodist",
+   "match": [
+    "Methodist"
+   ],
+   "kind": "protestant"
+  },
+  {
+   "id": "anglican",
+   "match": [
+    "Anglican"
+   ],
+   "kind": "protestant"
+  },
+  {
+   "id": "baptist",
+   "match": [
+    "Baptist"
+   ],
+   "kind": "protestant"
+  }
+ ],
+ "rule": {
+  "families": 4,
+  "need": [
+   "shared",
+   "catholic|orthodox",
+   "protestant"
+  ]
+ }
+}

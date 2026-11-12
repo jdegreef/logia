@@ -1,0 +1,33 @@
+{
+ "id": "constantinople",
+ "title": "The Niceno-Constantinopolitan Creed",
+ "kind": "creed",
+ "tradition": "Shared by the churches",
+ "year": 381,
+ "edition": "Henry R. Percival (ed.), The Seven Ecumenical Councils of the Undivided Church, A Select Library of Nicene and Post-Nicene Fathers, Second Series, Vol. XIV, ed. Philip Schaff and Henry Wace (1900), CCEL edition (from a reprint by T&T Clark, Edinburgh, and Wm. B. Eerdmans, Grand Rapids)",
+ "translation": "Not named in the volume",
+ "published": 1900,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.ix.iii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Henry R. Percival died in 1903; the volume does not name the translator of this document (Percival's preface says the translations are mostly other scholars'), and the 1900 printing should be compared with CCEL's reprint"
+ },
+ "notes": "The creed of the First Council of Constantinople (A.D. 381), as NPNF II.14 prints it under 'The Holy Creed Which the 150 Holy Fathers Set Forth, Which is Consonant with the Holy and Great Synod of Nice'. The marks (I) and (II) in the text refer to the volume's Notes I and II, which follow the creed on the page.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "ix.iii-p6",
+   "label": null,
+   "text": "We believe in one God, the Father Almighty, maker of heaven and earth and of all things visible and invisible. And in one Lord Jesus Christ, the only begotten Son of God, begotten of his Father before all worlds, Light of Light, very God of very God, begotten not made, being of one substance with the Father, by whom all things were made. Who for us men and for our salvation came down from heaven and was incarnate by the Holy Ghost and the Virgin Mary, and was made man, and was crucified also for us under Pontius Pilate. He suffered and was buried, and the third day he rose again according to the Scriptures, and ascended into heaven, and sitteth at the Right Hand of the Father. And he shall come again with glory to judge both the quick and the dead. Whose kingdom shall have no end. (I)",
+   "source": "npnf214.ix.iii.html",
+   "cites": []
+  },
+  {
+   "id": "ix.iii-p7",
+   "label": null,
+   "text": "And [we believe] in the Holy Ghost, the Lord and Giver-of-Life, who proceedeth from the Father, who with the Father and the Son together is worshipped and glorified, who spake by the prophets. And [we believe] in one, holy, (II) Catholic and Apostolic Church. We acknowledge one Baptism for the remission of sins, [and] we look for the resurrection of the dead and the life of the world to come. Amen.",
+   "source": "npnf214.ix.iii.html",
+   "cites": []
+  }
+ ]
+}

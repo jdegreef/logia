@@ -83,7 +83,8 @@
       items = suggest(input.value);
       at = items.length ? 0 : -1;
       list.innerHTML = items.length ? items.map(function (x, i) {
-        return '<li role="option" id="' + list.id + "-" + i + '"' + (i === at ? ' aria-selected="true"' : "") + '><a href="' + esc(x.href) +
+        // The link is the option (an option may hold nothing focusable).
+        return '<li role="none"><a role="option" id="' + list.id + "-" + i + '"' + (i === at ? ' aria-selected="true"' : "") + ' href="' + esc(x.href) +
           '" tabindex="-1"><b>' + esc(x.title) + "</b><span>" + esc(x.note) + "</span></a></li>";
       }).join("") : (input.value.trim() ? '<li class="lg-sugg-none">' + esc(D.ui.none) + "</li>" : "");
       list.hidden = !input.value.trim();
@@ -110,15 +111,45 @@
       });
     });
     document.addEventListener("click", function (e) { if (!form.contains(e.target)) { list.hidden = true; input.setAttribute("aria-expanded", "false"); } });
-    // "/" focuses the page's own search, as on many reading sites (not the footer's).
-    if (form.classList.contains("lg-foot-search")) return;
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); input.focus(); }
-    });
   });
 
+  // The header's search pop-up (search_palette in scripts/build_site.py): a
+  // modal <dialog>, so focus stays inside it and Esc closes it. The search
+  // button, "/" and Ctrl+K (or ⌘K) open it; a click outside its box, the
+  // Esc button or Esc closes it, and focus goes back where it was.
+  var palette = document.getElementById("palette");
+  if (palette && palette.showModal) {
+    var palInput = palette.querySelector("input"), palBack = null;
+    var openPalette = function () {
+      if (palette.open) { palInput.focus(); return; }
+      palBack = document.activeElement;
+      document.documentElement.classList.add("palette-open");
+      palette.showModal();
+      palInput.focus();
+      palInput.select();
+      withData(function () {});
+    };
+    palette.addEventListener("close", function () {
+      document.documentElement.classList.remove("palette-open");
+      // The phone menu closes behind the pop-up: then back to its button.
+      var back = palBack && palBack.offsetParent ? palBack : document.querySelector(".menu-btn");
+      if (back && back.offsetParent && back.focus) back.focus();
+    });
+    palette.addEventListener("click", function (e) { if (e.target === palette) palette.close(); });
+    palette.querySelector("[data-search-close]").addEventListener("click", function () { palette.close(); });
+    document.querySelectorAll("[data-search-open]").forEach(function (b) {
+      b.addEventListener("click", function (e) { e.preventDefault(); openPalette(); });
+    });
+    document.addEventListener("keydown", function (e) {
+      var typing = /input|textarea|select/i.test(document.activeElement.tagName) || document.activeElement.isContentEditable;
+      if ((e.key === "k" || e.key === "K") && (e.ctrlKey || e.metaKey) && !e.altKey) { e.preventDefault(); openPalette(); }
+      else if (e.key === "/" && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); openPalette(); }
+    });
+  }
+
   // Page not found: an address that reads as a reference ("/jn3",
-  // "/john/3/16", "/rom-8") is offered as a link.
+  // "/john/3/16", "/rom-8") or names a commentator ("/calvin") is offered
+  // as a link.
   (function () {
     var guess = document.getElementById("nf-guess");
     if (!guess || !D) return;
@@ -130,6 +161,21 @@
     else {
       var code = bookOf(words.split(" ")[0]);
       if (code) { href = "/" + code.toLowerCase() + "/"; label = D.names[code]; }
+      else {
+        // A commentator's name or page id ("/calvin", "/chrysostom",
+        // "/commentators/augustin"): the first whose id or a name word
+        // matches a word of the address.
+        var plain = function (x) { return x.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); };
+        var asked = plain(words).split(" ").filter(function (w) { return w.length > 3 && w !== "commentators"; });
+        D.people.some(function (p) {
+          var id = p[1].split("/")[2], names = plain(p[0]).split(/[\s.]+/);
+          var hit = asked.some(function (w) {
+            return w === id || names.indexOf(w) >= 0 || (w.length > 5 && id.indexOf(w.slice(0, -1)) === 0);
+          });
+          if (hit) { href = p[1]; label = p[0]; }
+          return hit;
+        });
+      }
     }
     if (!href) return;
     guess.innerHTML = fmt(esc(guess.getAttribute("data-text")), { link: '<a href="' + esc(href) + '">' + esc(label) + "</a>" });
@@ -148,6 +194,20 @@
     a.textContent = fmt(a.getAttribute("data-resume"), { ref: last.ref });
     a.hidden = false;
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
+  });
+
+  // The book page's chapter bar: say which end has more chapters out of
+  // view, so the CSS can fade that edge.
+  document.querySelectorAll(".lg-book-bar .chap-pills").forEach(function (row) {
+    var mark = function () {
+      var room = row.scrollWidth - row.clientWidth;
+      var left = row.scrollLeft > 4, right = row.scrollLeft < room - 4;
+      if (room <= 4) row.removeAttribute("data-more");
+      else row.setAttribute("data-more", left && right ? "both" : left ? "start" : "end");
+    };
+    row.addEventListener("scroll", mark, { passive: true });
+    window.addEventListener("resize", mark);
+    mark();
   });
 
   // Chapters already read: a dot on their chip (web/reader.js keeps the list).
@@ -172,6 +232,23 @@
 
   // A book page's "Go to a verse" box: "5:3", "5 3" or "5.3" opens the
   // chapter at that verse.
+  // A verse page's voices rail: mark the voice now at the top of the screen.
+  var vrail = document.querySelector(".lg-vrail");
+  if (vrail && "IntersectionObserver" in window) {
+    var railLinks = {};
+    vrail.querySelectorAll("a").forEach(function (a) { railLinks[a.getAttribute("href").slice(1)] = a; });
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { seen[en.target.id] = en.isIntersecting; });
+      var first = null;
+      document.querySelectorAll(".lg-voice").forEach(function (sec) { if (!first && seen[sec.id]) first = sec.id; });
+      Object.keys(railLinks).forEach(function (id) {
+        if (id === first) railLinks[id].setAttribute("aria-current", "true"); else railLinks[id].removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-30% 0px -50% 0px" });
+    document.querySelectorAll(".lg-voice").forEach(function (sec) { io.observe(sec); });
+  }
+
   document.querySelectorAll(".lg-verse-go").forEach(function (form) {
     var verses = JSON.parse(form.getAttribute("data-verses"));
     var input = form.querySelector("input"), note = form.querySelector("[role=status]");
@@ -183,6 +260,131 @@
       location.href = form.getAttribute("data-book") + ch + "/#v" + v;
     });
   });
+
+  // The header (site_header in scripts/build_site.py): the chapter pickers,
+  // the "Continue" pill, the dark-mode button and the reading progress line.
+  (function () {
+    var holder = document.getElementById("nav-data");
+    var N = holder ? JSON.parse(holder.textContent) : null;
+    var where = document.querySelector(".lg-where");
+    var hereBook = where ? where.getAttribute("data-book") : null;
+    var hereChapter = where ? +where.getAttribute("data-chapter") : 0;
+
+    // A book's chapters as links: gold-edged where there is commentary, a
+    // dot where the reader has been, the current one filled.
+    function grid(code) {
+      var b = N.books[code], out = [];
+      for (var c = 1; c <= b.n; c++) {
+        var href = "/" + code.toLowerCase() + "/" + c + "/";
+        var has = b.has.indexOf(c) >= 0, cur = code === hereBook && c === hereChapter;
+        out.push('<a href="' + href + '" class="lg-ch' + (has ? " lg-has" : "") + (read.indexOf(href) >= 0 ? " lg-read" : "") + '"' +
+          (cur ? ' aria-current="page"' : "") + (has ? ' title="' + esc(b.name + " " + c + ", " + N.ui.has) + '"' : "") + ">" + c + "</a>");
+      }
+      return '<p class="dd-head">' + esc(fmt(N.ui.chapters, { book: b.name })) + "</p>" +
+        '<div class="lg-chgrid' + (b.n > 60 ? " lg-chgrid-long" : "") + '">' + out.join("") + "</div>";
+    }
+
+    if (N && where) {
+      var btn = where.querySelector(".lg-where-btn"), pop = document.getElementById("lg-where-pop");
+      var shut = function (back) {
+        if (pop.hidden) return;
+        pop.hidden = true; btn.setAttribute("aria-expanded", "false");
+        if (back) btn.focus();
+      };
+      btn.addEventListener("click", function () {
+        if (!pop.hidden) { shut(false); return; }
+        var others = Object.keys(N.books).filter(function (c) { return c !== hereBook && N.books[c].has.length; });
+        pop.innerHTML = grid(hereBook) + (others.length ? '<p class="dd-head">' + esc(N.ui.others) + '</p><div class="lg-where-books">' +
+          others.map(function (c) { return '<a href="/' + c.toLowerCase() + '/">' + esc(N.books[c].name) + "</a>"; }).join("") + "</div>" : "");
+        pop.hidden = false; btn.setAttribute("aria-expanded", "true");
+        var first = pop.querySelector('[aria-current="page"]') || pop.querySelector("a");
+        if (first) first.focus();
+      });
+      pop.addEventListener("keydown", function (e) { if (e.key === "Escape") { e.stopPropagation(); shut(true); } });
+      document.addEventListener("click", function (e) { if (!where.contains(e.target)) shut(false); });
+      where.addEventListener("focusout", function (e) { if (e.relatedTarget && !where.contains(e.relatedTarget)) shut(false); });
+    }
+
+    // The Read menu: the chapters of the book pointed at, beside the books.
+    var chapters = document.querySelector("[data-nav-chapters]");
+    if (N && chapters) {
+      var shown = null;
+      var show = function (code) {
+        if (!N.books[code] || code === shown) return;
+        shown = code; chapters.innerHTML = grid(code); chapters.hidden = false;
+      };
+      var books = document.querySelectorAll(".dd-book[data-book]");
+      var start = hereBook && N.books[hereBook].has.length ? hereBook : null;
+      if (!start) {
+        var last = null;
+        try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
+        var m = last && last.href && last.href.match(/^\/([a-z0-9]{3})\//);
+        start = m && N.books[m[1].toUpperCase()] ? m[1].toUpperCase() : (books[0] && books[0].getAttribute("data-book").toUpperCase());
+      }
+      if (start) show(start);
+      books.forEach(function (a) {
+        var code = a.getAttribute("data-book").toUpperCase();
+        a.addEventListener("mouseenter", function () { show(code); });
+        a.addEventListener("focus", function () { show(code); });
+      });
+    }
+
+    // Continue: the last verse read, as a pill in the bar (not on its own page).
+    var pill = document.querySelector("[data-resume-pill]");
+    if (pill) {
+      var at = null;
+      try { at = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
+      if (at && at.href && at.href.charAt(0) === "/" && at.href.split("#")[0] !== location.pathname) {
+        pill.href = at.href;
+        pill.querySelector("span").textContent = at.ref;
+        pill.title = fmt(pill.getAttribute("data-resume-pill"), { ref: at.ref });
+        pill.setAttribute("aria-label", pill.title);
+        pill.hidden = false;
+      }
+    }
+
+    // One tap between light and dark: the settings menu's own theme buttons
+    // (web/site.js) do the choosing, so the two always agree. It returns to
+    // the light or dark mode chosen last (sepia, night...).
+    var toggle = document.querySelector("[data-theme-toggle]");
+    var themes = document.querySelector('#colour-menu [data-pref="theme"]');
+    if (toggle && themes) {
+      var root = document.documentElement, dark = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+      var isDark = function () {
+        var v = root.getAttribute("data-theme");
+        return v === "dark" || v === "night" || (v === "auto" && !!dark && dark.matches);
+      };
+      var sync = function () { toggle.setAttribute("aria-pressed", isDark() ? "true" : "false"); };
+      toggle.hidden = false;
+      sync();
+      document.addEventListener("logia:prefs", sync);
+      if (dark && dark.addEventListener) dark.addEventListener("change", sync);
+      toggle.addEventListener("click", function () {
+        var was = root.getAttribute("data-theme") || "light", to;
+        try {
+          if (isDark()) { localStorage.setItem("logia-last-dark", was === "auto" ? "dark" : was); to = localStorage.getItem("logia-last-light") || "light"; }
+          else { localStorage.setItem("logia-last-light", was === "auto" ? "light" : was); to = localStorage.getItem("logia-last-dark") || "dark"; }
+        } catch (e) { to = isDark() ? "light" : "dark"; }
+        var option = themes.querySelector('[data-value="' + to + '"]');
+        if (option) option.click();
+      });
+    }
+
+    // How far through the chapter's text the reader has scrolled.
+    var bar = document.querySelector(".lg-progress span"), text = document.getElementById("text");
+    if (bar && text) {
+      var tick = false;
+      var update = function () {
+        tick = false;
+        var r = text.getBoundingClientRect(), span = r.height - window.innerHeight * 0.6;
+        var p = span > 0 ? Math.min(1, Math.max(0, (window.innerHeight * 0.4 - r.top) / span)) : 1;
+        bar.style.transform = "scaleX(" + p.toFixed(3) + ")";
+      };
+      window.addEventListener("scroll", function () { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
+      window.addEventListener("resize", update);
+      update();
+    }
+  })();
 
   // A button that copies its data-copy text (a work's citation), and says so.
   document.querySelectorAll("[data-copy]").forEach(function (b) {
@@ -247,7 +449,7 @@
     });
     pick.hidden = false;
   });
-  document.querySelectorAll(".lg-goto").forEach(function (form) {
+  document.querySelectorAll(".lg-goto:not(.lg-goto-work)").forEach(function (form) {
     var books = JSON.parse(form.getAttribute("data-books"));
     var codes = Object.keys(books);
     var input = form.querySelector("input"), note = form.querySelector("[role=status]");
@@ -282,6 +484,40 @@
     });
   });
 
+  // A work's page: go to the verse in the work's chapter page, to the
+  // excerpt whose verses hold it (data-ranges: "from-to,..." a chapter).
+  document.querySelectorAll(".lg-goto-work").forEach(function (form) {
+    var books = JSON.parse(form.getAttribute("data-books"));
+    var ranges = JSON.parse(form.getAttribute("data-ranges"));
+    var codes = Object.keys(books);
+    var input = form.querySelector("input"), note = form.querySelector("[role=status]");
+    var hint = note.textContent;
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var m = input.value.trim().toLowerCase().match(/^(.*?)\s*(\d+)\s*[:.\s]\s*(\d+)$/);
+      var code = null;
+      if (m && !m[1]) code = codes[0];
+      else if (m) {
+        var name = m[1].replace(/[.\s]+/g, "");
+        codes.forEach(function (c) {
+          if (books[c].some(function (n) { return n.replace(/\s/g, "").indexOf(name) === 0; })) code = code || c;
+        });
+      }
+      var list = code && ranges[code][String(+m[2])];
+      var from = null;
+      if (list) {
+        var v = +m[3];
+        list.split(",").forEach(function (r) {
+          var p = r.split("-");
+          if (from === null && +p[0] <= v && v <= +p[1]) from = p[0];
+        });
+      }
+      if (from === null) { note.textContent = form.getAttribute("data-none"); return; }
+      note.textContent = hint;
+      location.href = form.getAttribute("data-base") + code.toLowerCase() + "/" + (+m[2]) + "/#v" + from;
+    });
+  });
+
   // A commentator's page: a passage in their words, a different one each
   // day (the page shows the first without script), and another on request.
   document.querySelectorAll(".lg-own[data-quotes]").forEach(function (fig) {
@@ -292,7 +528,8 @@
     var at = Math.floor(Date.now() / 864e5) % pool.length;
     var show = function () {
       var x = pool[at];
-      p.textContent = "“" + x.q + "”";
+      // As in_quotes() in build_site.py: no second mark when the passage opens with one.
+      p.textContent = /^[“"‘']/.test(x.q) ? x.q : "“" + x.q + "”";
       link.textContent = x.ref; link.href = x.href; work.textContent = x.work;
     };
     show();
@@ -360,6 +597,9 @@
     }
     if (el.tagName === "DETAILS") el.open = true;
   }
+  // A work's record folds to one line on a phone; it stays open elsewhere.
+  var fold = document.querySelector(".lg-record-fold");
+  if (fold && window.matchMedia && window.matchMedia("(max-width: 560px)").matches) fold.removeAttribute("open");
   window.addEventListener("hashchange", openTarget);
   openTarget();
   // Offline (web/sw.js): register the service worker, the "Keep this book
@@ -432,4 +672,22 @@
       offlineList.innerHTML = rows.length ? rows.join("") : "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>";
     }).catch(function () { offlineList.innerHTML = "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>"; });
   }
+  // Verse pages: a long excerpt shows its first eight lines with a fade and
+  // "Read all 412 words" (scripts/build_site.py, verse_excerpt). The one the
+  // address points to opens in full.
+  document.querySelectorAll(".lg-foldable").forEach(function (box) {
+    var btn = box.nextElementSibling;
+    if (!btn || !btn.classList.contains("lg-unfold")) return;
+    var art = box.closest(".lg-vx");
+    if (art && location.hash && location.hash.slice(1) === art.id) return;
+    var line = parseFloat(getComputedStyle(box).lineHeight) || 30;
+    if (box.scrollHeight <= line * 11) return;
+    box.style.setProperty("--fold", line * 8 + "px");
+    box.classList.add("lg-folded");
+    btn.hidden = false;
+    btn.addEventListener("click", function () {
+      box.classList.remove("lg-folded");
+      btn.remove();
+    });
+  });
 })();

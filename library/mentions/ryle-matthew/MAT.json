@@ -1,0 +1,83 @@
+{
+ "work": "ryle-matthew",
+ "book": "MAT",
+ "mentions": [
+  {
+   "in": "ryle-matthew.MAT.12.22-37.1",
+   "at": 1739,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.13.24-43.2",
+   "at": 833,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.13.24-43.4",
+   "at": 964,
+   "text": "Matthew Henry",
+   "author": "henry",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.16.13-20.1",
+   "at": 1463,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.16.13-20.2",
+   "at": 369,
+   "text": "Matthew Henry",
+   "author": "henry",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.16.13-20.4",
+   "at": 2042,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.20.1-16.2",
+   "at": 298,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.20.17-23.3",
+   "at": 1020,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.26.57-68.4",
+   "at": 506,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.26.57-68.4",
+   "at": 523,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle-matthew.MAT.26.57-68.4",
+   "at": 534,
+   "text": "Wesley",
+   "author": "wesley",
+   "status": "detected"
+  }
+ ]
+}

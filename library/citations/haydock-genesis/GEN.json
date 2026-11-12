@@ -12,6 +12,15 @@
    "status": "detected"
   },
   {
+   "in": "haydock-genesis.GEN.1.11.1",
+   "at": 539,
+   "text": "Ver. 14",
+   "start": "GEN.1.14",
+   "end": "GEN.1.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "haydock-genesis.GEN.1.20.1",
    "at": 309,
    "text": "v. 20",
@@ -71,6 +80,15 @@
    "text": "v. 7",
    "start": "GEN.2.7",
    "end": "GEN.2.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.2.8.1",
+   "at": 4,
+   "text": "Ver. 8",
+   "start": "GEN.2.8",
+   "end": "GEN.2.8",
    "found": "pattern",
    "status": "detected"
   },
@@ -152,15 +170,6 @@
    "text": "2 Thess. 3:10",
    "start": "2TH.3.10",
    "end": "2TH.3.10",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "haydock-genesis.GEN.3.22.1",
-   "at": 264,
-   "text": "Gen. xi. 39",
-   "start": "GEN.11.39",
-   "end": "GEN.11.39",
    "found": "pattern",
    "status": "detected"
   },
@@ -296,6 +305,15 @@
    "text": "Luke 3:36",
    "start": "LUK.3.36",
    "end": "LUK.3.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.11.27.1",
+   "at": 4,
+   "text": "Ver. 27",
+   "start": "GEN.11.27",
+   "end": "GEN.11.27",
    "found": "pattern",
    "status": "detected"
   },
@@ -552,6 +570,15 @@
    "status": "detected"
   },
   {
+   "in": "haydock-genesis.GEN.17.20.1",
+   "at": 72,
+   "text": "Ver. 23",
+   "start": "GEN.17.23",
+   "end": "GEN.17.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "haydock-genesis.GEN.18.2.1",
    "at": 54,
    "text": "Heb. 13:2",
@@ -647,6 +674,15 @@
    "text": "1 Kings 9:7",
    "start": "1KI.9.7",
    "end": "1KI.9.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.20.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "GEN.20.16",
+   "end": "GEN.20.16",
    "found": "pattern",
    "status": "detected"
   },
@@ -796,6 +832,15 @@
   },
   {
    "in": "haydock-genesis.GEN.23.2.1",
+   "at": 757,
+   "text": "Ver. 3",
+   "start": "GEN.23.3",
+   "end": "GEN.23.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.23.2.1",
    "at": 821,
    "text": "Acts 8:2",
    "start": "ACT.8.2",
@@ -809,6 +854,15 @@
    "text": "Acts 7:5",
    "start": "ACT.7.5",
    "end": "ACT.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.23.16.1",
+   "at": 4,
+   "text": "Ver. 16",
+   "start": "GEN.23.16",
+   "end": "GEN.23.16",
    "found": "pattern",
    "status": "detected"
   },
@@ -897,8 +951,8 @@
    "in": "haydock-genesis.GEN.27.7.1",
    "at": 58,
    "text": "v. 4",
-   "start": "GEN.27.4",
-   "end": "GEN.27.4",
+   "start": "GEN.5.4",
+   "end": "GEN.5.4",
    "found": "pattern",
    "status": "detected"
   },
@@ -1034,15 +1088,6 @@
    "text": "Ps. 21:11",
    "start": "PSA.21.12",
    "end": "PSA.21.12",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "haydock-genesis.GEN.30.8.1",
-   "at": 212,
-   "text": "Ps. 17:27",
-   "start": "PSA.17.27",
-   "end": "PSA.17.27",
    "found": "pattern",
    "status": "detected"
   },
@@ -1403,15 +1448,6 @@
    "text": "Deut. 25:5",
    "start": "DEU.25.5",
    "end": "DEU.25.5",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "haydock-genesis.GEN.38.10.1",
-   "at": 55,
-   "text": "Ps. 77:49",
-   "start": "PSA.77.49",
-   "end": "PSA.77.49",
    "found": "pattern",
    "status": "detected"
   },

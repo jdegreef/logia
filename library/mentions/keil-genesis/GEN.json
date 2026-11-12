@@ -1,0 +1,90 @@
+{
+ "work": "keil-genesis",
+ "book": "GEN",
+ "mentions": [
+  {
+   "in": "keil-genesis.GEN.4.11-12.1",
+   "at": 907,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.6.4.1",
+   "at": 94,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.6.5-8.1",
+   "at": 755,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.8.20-22.1",
+   "at": 1465,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.8.20-22.1",
+   "at": 1476,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.22.15-19.1",
+   "at": 540,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.25.22-23.1",
+   "at": 452,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.29.15-30.1",
+   "at": 1597,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.31.31-32.1",
+   "at": 933,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.41.50-52.1",
+   "at": 364,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.49.13.1",
+   "at": 679,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "keil-genesis.GEN.49.18.1",
+   "at": 398,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  }
+ ]
+}

@@ -19,6 +19,10 @@ jobs:
         run: python3 scripts/find_refs.py --check
       - name: Check whole texts are up to date
         run: python3 scripts/extract_texts.py --check
+      - name: Check the reference finders' scores are recorded
+        run: python3 scripts/score_refs.py --check
+      - name: Check creeds and confessions are up to date
+        run: python3 scripts/extract_creeds.py --check
       - name: Check the page scripts parse
         run: node --check web/site.js && node --check web/reader.js && node --check web/account.js && node --check web/logia.js && node --check web/sw.js
       - name: Validate the library

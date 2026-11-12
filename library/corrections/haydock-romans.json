@@ -1,0 +1,34 @@
+{
+ "work": "haydock-romans",
+ "about": "Scan misreadings in the source text, corrected at build time to match the printed page. Entries keep the scan's text; each pair is applied in order to every entry of this work.",
+ "corrections": [
+  {
+   "from": "Iam a debtor",
+   "to": "I am a debtor"
+  },
+  {
+   "from": "1am bound",
+   "to": "I am bound"
+  },
+  {
+   "from": "Iam carnal",
+   "to": "I am carnal"
+  },
+  {
+   "from": "Ch.—WNor",
+   "to": "Ch.—Nor"
+  },
+  {
+   "from": "Ch._—This",
+   "to": "Ch.—This"
+  },
+  {
+   "from": "Ch. —tThe",
+   "to": "Ch.—The"
+  },
+  {
+   "from": "pasts of Scripture",
+   "to": "parts of Scripture"
+  }
+ ]
+}

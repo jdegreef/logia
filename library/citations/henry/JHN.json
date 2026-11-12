@@ -3352,15 +3352,6 @@
   },
   {
    "in": "henry.JHN.3.22.2",
-   "at": 529,
-   "text": "ch. ii. 24",
-   "start": "JHN.2.42",
-   "end": "JHN.2.42",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry.JHN.3.22.2",
    "at": 585,
    "text": "Matt. iii. 1",
    "start": "MAT.3.1",
@@ -6857,15 +6848,6 @@
    "text": "v. 3",
    "start": "JHN.6.3",
    "end": "JHN.6.3",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry.JHN.6.15.3",
-   "at": 1710,
-   "text": "Ps. xvii. 23, 24",
-   "start": "PSA.17.23",
-   "end": "PSA.17.24",
    "found": "source",
    "status": "detected"
   },

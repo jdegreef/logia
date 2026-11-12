@@ -1,0 +1,48 @@
+{
+ "work": "henry-matthew",
+ "book": "MAT",
+ "mentions": [
+  {
+   "in": "henry-matthew.MAT.7.22.1",
+   "at": 1308,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "henry-matthew.MAT.24.5.1",
+   "at": 678,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "henry-matthew.MAT.24.45.5",
+   "at": 441,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "henry-matthew.MAT.25.5.2",
+   "at": 1666,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "henry-matthew.MAT.25.40.4",
+   "at": 1188,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "henry-matthew.MAT.26.36-46.7",
+   "at": 473,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  }
+ ]
+}

@@ -1,0 +1,3793 @@
+{
+ "work": "lapide",
+ "book": "JHN",
+ "mentions": [
+  {
+   "in": "lapide.JHN.1.3.1",
+   "at": 153,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.6.1",
+   "at": 202,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.8.1",
+   "at": 483,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.10.1",
+   "at": 257,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.10.1",
+   "at": 269,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.11.1",
+   "at": 37,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.11.1",
+   "at": 55,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.14.1",
+   "at": 410,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.16.1",
+   "at": 167,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.16.1",
+   "at": 267,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.16.1",
+   "at": 1067,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.17.1",
+   "at": 1177,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.27.1",
+   "at": 499,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.31.1",
+   "at": 401,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.37.1",
+   "at": 45,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.37.1",
+   "at": 265,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.42.1",
+   "at": 69,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.42.1",
+   "at": 508,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.46.1",
+   "at": 388,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.46.1",
+   "at": 1106,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.47.1",
+   "at": 415,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.48.1",
+   "at": 52,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.48.1",
+   "at": 318,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.49.1",
+   "at": 150,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.49.1",
+   "at": 184,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.1.51.1",
+   "at": 715,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.4.1",
+   "at": 243,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.4.1",
+   "at": 345,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.4.1",
+   "at": 1157,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.4.1",
+   "at": 1716,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.4.1",
+   "at": 1730,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.5.1",
+   "at": 519,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.6.1",
+   "at": 259,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.7.1",
+   "at": 7,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.17.1",
+   "at": 807,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.21.1",
+   "at": 33,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.25.1",
+   "at": 144,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.2.25.1",
+   "at": 379,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.4.1",
+   "at": 51,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.5.1",
+   "at": 31,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.6.1",
+   "at": 1572,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.7.1",
+   "at": 32,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.7.1",
+   "at": 1284,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.16.1",
+   "at": 45,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.17.1",
+   "at": 626,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.19.1",
+   "at": 541,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.20.1",
+   "at": 18,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.21.1",
+   "at": 749,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.22.1",
+   "at": 246,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.22.1",
+   "at": 955,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.24.1",
+   "at": 26,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.30.1",
+   "at": 662,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.3.32.1",
+   "at": 815,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.6.1",
+   "at": 557,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.12.1",
+   "at": 1121,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.13.1",
+   "at": 289,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.15.1",
+   "at": 51,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.18.1",
+   "at": 160,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.18.1",
+   "at": 211,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.22.1",
+   "at": 665,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.24.1",
+   "at": 17,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.27.1",
+   "at": 32,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.28.1",
+   "at": 59,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.28.1",
+   "at": 591,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.29.1",
+   "at": 141,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.29.1",
+   "at": 357,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.31.1",
+   "at": 50,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.33.1",
+   "at": 129,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.36.1",
+   "at": 534,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.36.1",
+   "at": 1317,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.37.1",
+   "at": 104,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.38.1",
+   "at": 706,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.42.1",
+   "at": 284,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.46.1",
+   "at": 71,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.46.1",
+   "at": 219,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.46.1",
+   "at": 719,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.4.48.1",
+   "at": 569,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.2.1",
+   "at": 476,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.5.1",
+   "at": 60,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.5.1",
+   "at": 886,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.5.1",
+   "at": 1056,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.7.1",
+   "at": 836,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.8.1",
+   "at": 67,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.11.1",
+   "at": 215,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.13.1",
+   "at": 370,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.14.1",
+   "at": 320,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.15.1",
+   "at": 149,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.15.1",
+   "at": 160,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.17.1",
+   "at": 1244,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.19.1",
+   "at": 212,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.19.1",
+   "at": 230,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.21.1",
+   "at": 578,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.22.1",
+   "at": 514,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.24.1",
+   "at": 917,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.25.1",
+   "at": 316,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.26.1",
+   "at": 1161,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.27.1",
+   "at": 908,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.28.1",
+   "at": 280,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.32.1",
+   "at": 230,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.36.1",
+   "at": 625,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.39.1",
+   "at": 331,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.39.1",
+   "at": 345,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.5.39.1",
+   "at": 559,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.28.1",
+   "at": 478,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.31.1",
+   "at": 566,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.34.1",
+   "at": 348,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.34.1",
+   "at": 472,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.36.1",
+   "at": 76,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.40.1",
+   "at": 187,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.44.1",
+   "at": 72,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.45.1",
+   "at": 803,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.49-50.1",
+   "at": 72,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.52.1",
+   "at": 246,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.52.1",
+   "at": 744,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.53.1",
+   "at": 105,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.53.1",
+   "at": 399,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.53.1",
+   "at": 1232,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.55.1",
+   "at": 1515,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.56.1",
+   "at": 105,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.56.1",
+   "at": 196,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.57.1",
+   "at": 906,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.59.1",
+   "at": 837,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.59.1",
+   "at": 1272,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.60.1",
+   "at": 286,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.64.1",
+   "at": 500,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.64.1",
+   "at": 565,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.64.1",
+   "at": 693,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.64.1",
+   "at": 1537,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.65.1",
+   "at": 475,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.65.1",
+   "at": 1215,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.68.1",
+   "at": 133,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.68.1",
+   "at": 789,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.69.1",
+   "at": 398,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.69.1",
+   "at": 527,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.71.1",
+   "at": 918,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.6.71.1",
+   "at": 1116,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.3.1",
+   "at": 178,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.8.1",
+   "at": 675,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.11.1",
+   "at": 82,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.11.1",
+   "at": 833,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.13.1",
+   "at": 404,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.13.1",
+   "at": 657,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.15.1",
+   "at": 357,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.15.1",
+   "at": 883,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.16.1",
+   "at": 410,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.16.1",
+   "at": 620,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.17.1",
+   "at": 137,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.17.1",
+   "at": 629,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.19-20.1",
+   "at": 57,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.21.1",
+   "at": 642,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.24.1",
+   "at": 977,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.24.1",
+   "at": 991,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.25.1",
+   "at": 244,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.29.1",
+   "at": 21,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.30.1",
+   "at": 102,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.31.1",
+   "at": 585,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.33.1",
+   "at": 118,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.33.1",
+   "at": 944,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.33.1",
+   "at": 1250,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.33.1",
+   "at": 1408,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.37.1",
+   "at": 380,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.38.1",
+   "at": 1063,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.45.1",
+   "at": 351,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.46.1",
+   "at": 551,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.48.1",
+   "at": 321,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.7.50-51.1",
+   "at": 244,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.6.1",
+   "at": 374,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.6.1",
+   "at": 937,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.9.1",
+   "at": 230,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.9.1",
+   "at": 452,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.10.1",
+   "at": 126,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.12.1",
+   "at": 545,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.12.1",
+   "at": 571,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.12.1",
+   "at": 822,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.15.1",
+   "at": 879,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.16.1",
+   "at": 7,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.16.1",
+   "at": 296,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.17.1",
+   "at": 727,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.18.1",
+   "at": 577,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.19.1",
+   "at": 217,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.19.1",
+   "at": 392,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.22.1",
+   "at": 661,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.23.1",
+   "at": 347,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.23.1",
+   "at": 619,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.23.1",
+   "at": 649,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.24.1",
+   "at": 333,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.25.1",
+   "at": 222,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.25.1",
+   "at": 487,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.26.1",
+   "at": 708,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.26.1",
+   "at": 1758,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.27.1",
+   "at": 488,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.28.1",
+   "at": 993,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.29.1",
+   "at": 65,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.29.1",
+   "at": 245,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.32.1",
+   "at": 977,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.33.1",
+   "at": 404,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.33.1",
+   "at": 809,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.34.1",
+   "at": 380,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.35.1",
+   "at": 639,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.36.1",
+   "at": 129,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.37.1",
+   "at": 367,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.37.1",
+   "at": 381,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.39.1",
+   "at": 411,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.43.1",
+   "at": 180,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.44.1",
+   "at": 87,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.44.1",
+   "at": 415,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.44.1",
+   "at": 729,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.49.1",
+   "at": 370,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.49.1",
+   "at": 639,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.50.1",
+   "at": 155,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.51.1",
+   "at": 196,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.51.1",
+   "at": 596,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.54.1",
+   "at": 249,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.54.1",
+   "at": 592,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.55.1",
+   "at": 547,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.56.1",
+   "at": 114,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.56.1",
+   "at": 234,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.56.1",
+   "at": 480,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.56.1",
+   "at": 729,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.57.1",
+   "at": 301,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.58.1",
+   "at": 134,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.8.59.1",
+   "at": 770,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.1.1",
+   "at": 427,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.1.1",
+   "at": 636,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.2.1",
+   "at": 426,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.2.1",
+   "at": 903,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.2.1",
+   "at": 1050,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.4.1",
+   "at": 30,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.4.1",
+   "at": 286,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.6.1",
+   "at": 168,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.6.1",
+   "at": 1485,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.8-9.1",
+   "at": 75,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.8-9.1",
+   "at": 170,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.8-9.1",
+   "at": 414,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.12.1",
+   "at": 151,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.13.1",
+   "at": 269,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.17.1",
+   "at": 1000,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.18.1",
+   "at": 554,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.22.1",
+   "at": 91,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.24.1",
+   "at": 439,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.24.1",
+   "at": 851,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.28.1",
+   "at": 295,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.30.1",
+   "at": 285,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.34.1",
+   "at": 283,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.34.1",
+   "at": 596,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.34.1",
+   "at": 742,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.35.1",
+   "at": 810,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.9.41.1",
+   "at": 44,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.2.1",
+   "at": 51,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.2.1",
+   "at": 744,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.3.1",
+   "at": 99,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.3.1",
+   "at": 293,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.3.1",
+   "at": 304,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.7.1",
+   "at": 619,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.8.1",
+   "at": 123,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.11.1",
+   "at": 397,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.11.1",
+   "at": 415,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.12.1",
+   "at": 145,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.12.1",
+   "at": 242,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.17.1",
+   "at": 466,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.22.1",
+   "at": 152,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.22.1",
+   "at": 1172,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.24.1",
+   "at": 254,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.24.1",
+   "at": 382,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.24.1",
+   "at": 688,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.24.1",
+   "at": 774,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.26.1",
+   "at": 285,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.28.1",
+   "at": 221,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.29.1",
+   "at": 11,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.29.1",
+   "at": 866,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.30.1",
+   "at": 857,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.30.1",
+   "at": 905,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.31.1",
+   "at": 298,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.33.1",
+   "at": 73,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.36.1",
+   "at": 227,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.36.1",
+   "at": 724,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.36.1",
+   "at": 1518,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.38.1",
+   "at": 142,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.38.1",
+   "at": 289,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.39.1",
+   "at": 158,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.39.1",
+   "at": 173,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.40.1",
+   "at": 450,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.41.1",
+   "at": 188,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.42.1",
+   "at": 58,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.3.1",
+   "at": 491,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.4.1",
+   "at": 591,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.4.1",
+   "at": 920,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.7.1",
+   "at": 192,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.7.1",
+   "at": 474,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.11.1",
+   "at": 95,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.12.1",
+   "at": 255,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.15.1",
+   "at": 179,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.17.1",
+   "at": 264,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.21.1",
+   "at": 230,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.22.1",
+   "at": 514,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.25.1",
+   "at": 286,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.34.1",
+   "at": 109,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.34.1",
+   "at": 1065,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.35.1",
+   "at": 69,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.35.1",
+   "at": 342,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.35.1",
+   "at": 1197,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.38.1",
+   "at": 817,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.39.1",
+   "at": 316,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.40.1",
+   "at": 456,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.43.1",
+   "at": 733,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.44.1",
+   "at": 783,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.44.1",
+   "at": 794,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.46.1",
+   "at": 7,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.46.1",
+   "at": 393,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.47.1",
+   "at": 445,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.47.1",
+   "at": 720,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.47.1",
+   "at": 1071,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.48.1",
+   "at": 1129,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.52.1",
+   "at": 251,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.52.1",
+   "at": 265,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.56.1",
+   "at": 337,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.11.56.1",
+   "at": 348,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.2.1",
+   "at": 85,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.6.1",
+   "at": 222,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.7.1",
+   "at": 210,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.9.1",
+   "at": 69,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.10.1",
+   "at": 437,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.19.1",
+   "at": 416,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.20.1",
+   "at": 279,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.21.1",
+   "at": 467,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.24.1",
+   "at": 164,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.25.1",
+   "at": 663,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.26.1",
+   "at": 127,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.26.1",
+   "at": 426,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.26.1",
+   "at": 655,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.26.1",
+   "at": 935,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.27.1",
+   "at": 318,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.27.1",
+   "at": 747,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.28.1",
+   "at": 367,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.28.1",
+   "at": 378,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.28.1",
+   "at": 503,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.28.1",
+   "at": 566,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.29.1",
+   "at": 247,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.30.1",
+   "at": 444,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.31.1",
+   "at": 152,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.34.1",
+   "at": 7,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.35.1",
+   "at": 844,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.35.1",
+   "at": 858,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.36.1",
+   "at": 819,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.37.1",
+   "at": 7,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.38.1",
+   "at": 215,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.39.1",
+   "at": 161,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.39.1",
+   "at": 970,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.41.1",
+   "at": 185,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.43.1",
+   "at": 674,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.43.1",
+   "at": 698,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.45.1",
+   "at": 262,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.47.1",
+   "at": 475,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.47.1",
+   "at": 656,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.48.1",
+   "at": 203,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.48.1",
+   "at": 394,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.49.1",
+   "at": 455,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.49.1",
+   "at": 697,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.49.1",
+   "at": 976,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.12.50.1",
+   "at": 509,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.3.1",
+   "at": 483,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.5.1",
+   "at": 333,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.6.1",
+   "at": 453,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.6.1",
+   "at": 708,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.6.1",
+   "at": 792,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.7.1",
+   "at": 337,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.7.1",
+   "at": 351,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.7.1",
+   "at": 1362,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.7.1",
+   "at": 1686,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.8.1",
+   "at": 132,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.8.1",
+   "at": 907,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.15.1",
+   "at": 475,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.18.1",
+   "at": 135,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.20.1",
+   "at": 227,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.22.1",
+   "at": 12,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.24.1",
+   "at": 190,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.24.1",
+   "at": 291,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.24.1",
+   "at": 299,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.24.1",
+   "at": 468,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.24.1",
+   "at": 868,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.24.1",
+   "at": 879,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.30.1",
+   "at": 225,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.31.1",
+   "at": 982,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.32.1",
+   "at": 673,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.32.1",
+   "at": 1374,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.35.1",
+   "at": 471,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.35.1",
+   "at": 857,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.13.38.1",
+   "at": 370,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.1.1",
+   "at": 633,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.1.1",
+   "at": 942,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.2.1",
+   "at": 744,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.2.1",
+   "at": 758,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.4.1",
+   "at": 364,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.8.1",
+   "at": 178,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.8.1",
+   "at": 520,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.9.1",
+   "at": 173,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.13.1",
+   "at": 90,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.14.1",
+   "at": 413,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.14.1",
+   "at": 494,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.14.1",
+   "at": 1072,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.16.1",
+   "at": 139,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.16.1",
+   "at": 1752,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.19.1",
+   "at": 929,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.21.1",
+   "at": 643,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.22.1",
+   "at": 437,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.24.1",
+   "at": 193,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.25-26.1",
+   "at": 1314,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.28.1",
+   "at": 316,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.30.1",
+   "at": 785,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.14.31.1",
+   "at": 304,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.2.1",
+   "at": 211,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.5.1",
+   "at": 261,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.7.1",
+   "at": 622,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.7.1",
+   "at": 1180,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.8.1",
+   "at": 1227,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.9.1",
+   "at": 1081,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.11.1",
+   "at": 174,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.15.1",
+   "at": 45,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.16.1",
+   "at": 41,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.16.1",
+   "at": 761,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.16.1",
+   "at": 798,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.17.1",
+   "at": 328,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.17.1",
+   "at": 666,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.19.1",
+   "at": 79,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.19.1",
+   "at": 598,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.15.26-27.1",
+   "at": 1428,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.1.1",
+   "at": 1141,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.2.1",
+   "at": 1023,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.3.1",
+   "at": 528,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.3.1",
+   "at": 542,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.5.1",
+   "at": 669,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.7.1",
+   "at": 7,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.9.1",
+   "at": 190,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.9.1",
+   "at": 205,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.10.1",
+   "at": 1553,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.11.1",
+   "at": 76,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.11.1",
+   "at": 578,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.11.1",
+   "at": 780,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.12.1",
+   "at": 745,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.12.1",
+   "at": 784,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.13.1",
+   "at": 341,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.14.1",
+   "at": 88,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.14.1",
+   "at": 738,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.16.1",
+   "at": 476,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.16.1",
+   "at": 537,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.17.1",
+   "at": 358,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.17.1",
+   "at": 637,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.20.1",
+   "at": 524,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.21.1",
+   "at": 767,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.23.1",
+   "at": 705,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.23.1",
+   "at": 934,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.24.1",
+   "at": 722,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.25.1",
+   "at": 708,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.16.33.1",
+   "at": 1300,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.2.1",
+   "at": 900,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.4.1",
+   "at": 333,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.4.1",
+   "at": 534,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.5.1",
+   "at": 7,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.5.1",
+   "at": 1253,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.5.1",
+   "at": 1528,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.6.1",
+   "at": 146,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.6.1",
+   "at": 259,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.6.1",
+   "at": 563,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.9.1",
+   "at": 228,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.9.1",
+   "at": 506,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.9.1",
+   "at": 1154,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.10.1",
+   "at": 397,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.10.1",
+   "at": 553,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.13.1",
+   "at": 172,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.19.1",
+   "at": 7,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.19.1",
+   "at": 171,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.24.1",
+   "at": 27,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.24.1",
+   "at": 481,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.25.1",
+   "at": 183,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.1.1",
+   "at": 861,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.5.1",
+   "at": 335,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.5.1",
+   "at": 1012,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.12.1",
+   "at": 218,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.28.1",
+   "at": 601,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.28.1",
+   "at": 807,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.37.1",
+   "at": 673,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.18.38.1",
+   "at": 530,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.7.1",
+   "at": 127,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.17.1",
+   "at": 57,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.23.1",
+   "at": 272,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.26.1",
+   "at": 919,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.26.1",
+   "at": 939,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.27.1",
+   "at": 858,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.28.1",
+   "at": 364,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.28.1",
+   "at": 1361,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.31.1",
+   "at": 408,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.34.1",
+   "at": 318,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.38.1",
+   "at": 329,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.39.1",
+   "at": 172,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.39.1",
+   "at": 894,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.41.1",
+   "at": 271,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.19.42.1",
+   "at": 68,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.6.1",
+   "at": 94,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.6.1",
+   "at": 560,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.8.1",
+   "at": 564,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.8.1",
+   "at": 611,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.10.1",
+   "at": 239,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.11.1",
+   "at": 243,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.12.1",
+   "at": 402,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.14.1",
+   "at": 397,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.17.1",
+   "at": 195,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.17.1",
+   "at": 1073,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.19.1",
+   "at": 157,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.19.1",
+   "at": 843,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.19.1",
+   "at": 940,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.19.1",
+   "at": 1468,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.19.1",
+   "at": 1690,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.21.1",
+   "at": 477,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.22.1",
+   "at": 307,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.22.1",
+   "at": 1063,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.23.1",
+   "at": 4,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.23.1",
+   "at": 788,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.24.1",
+   "at": 533,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.24.1",
+   "at": 659,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.25.1",
+   "at": 272,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.25.1",
+   "at": 308,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.27.1",
+   "at": 296,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.28.1",
+   "at": 1226,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.29.1",
+   "at": 465,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.29.1",
+   "at": 708,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.30.1",
+   "at": 78,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.20.30.1",
+   "at": 535,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.6.1",
+   "at": 247,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.7.1",
+   "at": 174,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.10.1",
+   "at": 256,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.10.1",
+   "at": 816,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.11.1",
+   "at": 167,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.16.1",
+   "at": 153,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.16.1",
+   "at": 481,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.17.1",
+   "at": 507,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.18.1",
+   "at": 69,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.18.1",
+   "at": 263,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.19.1",
+   "at": 649,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.20-21.1",
+   "at": 1404,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.22.1",
+   "at": 398,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.21.24.1",
+   "at": 815,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}
