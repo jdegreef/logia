@@ -24,6 +24,8 @@ Christian commentaries.
 | `library/guides/<lang>/<guide>.json` | Logia's own guides (where the traditions differ, the glossary, how to study a book): short framing notes, never commentary, each `ai_draft` until a named person reviews it; the commentators' words on its pages come from the excerpts |
 | `library/differ/<id>.json` | A passage the churches read differently: Logia's short framing note (`ai_draft` until reviewed), or a pointer to a guide's; the page shows every commentator on the passage and is published only when they come from enough traditions (`scripts/differ.py`, `library/families.json`) |
 | `library/creeds/<id>.json` | Creeds, conciliar decrees and confessions, copied section by section from CCEL by `scripts/extract_creeds.py`, with the Scripture each section cites |
+| `library/pages/<work>.json` | The archive.org scan leaf and printed page each scanned excerpt begins on, found by `scripts/find_pages.py` in archive.org's page index |
+| `library/lectionary/rcl.json` | The Revised Common Lectionary's Sundays and holy days for 2025–28 (references only), imported by `scripts/import_rcl.py` |
 | `library/identifiers.json` | Each commentator's, and each Father's work's, Wikidata item, Wikipedia article and Clavis Patrum number, fetched by `scripts/fetch_wikidata.py`, never typed |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
@@ -31,7 +33,7 @@ Christian commentaries.
 | `i18n/en.json` | Every word of the interface, so a language can be added by adding a catalog |
 | `web/` | The stylesheets, scripts and fonts the pages use (see "The site" below) |
 | `scripts/` | Import, validate, verify and build |
-| `docs/` | How to add a work, the editorial rules, the reference scheme (`references.md`), the roadmap (`roadmap.md`), and how the site is deployed |
+| `docs/` | How to add a work, the editorial rules, the reference scheme (`references.md`), every data file and how data releases are numbered (`data.md`), the API (`api.md`), the roadmap (`roadmap.md`), and how the site is deployed |
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
@@ -76,6 +78,14 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 | `/creeds/`, `/creeds/<id>/` | Creeds, councils and confessions, each whole, with their Scripture linked; verse pages list the ones that cite the verse |
 | `/search/` | The words of every excerpt, found with [Pagefind](https://pagefind.app) and narrowed by era, tradition, book and commentator (the build's one dependency; see `docs/deploy.md`) |
 | `/about/` | What Logia is and how excerpts are checked |
+| `/readings/` | The coming Sundays and holy days (Revised Common Lectionary), then the great days from John (`library/occasions.json`), each reading linked to its commentary |
+| `/about/rules/` | The editorial rules in plain words, and every work's edition, source, rights basis and review |
+| `/api/v1/` | The public read-only API: every chapter with its text and excerpts, the works, commentators, topics and whole texts as static JSON (`scripts/api.py`, `docs/api.md`) |
+| `/ai/` | How Logia uses AI, and the two marks on anything drafted with it: a filled star for a draft, an outlined star with the reviewer's name |
+| `/new/`, `/new.xml` | Works as they are added, newest first, with an Atom feed, and the library in numbers |
+| `/explore/` | Who the Catena quotes, which chapters the commentators cite, how much each century wrote |
+| `/sheets/` | Study sheets: excerpts gathered from the reader, ordered, with the reader's own notes; kept in the browser, shared by link |
+| `/linker/`, `/linker.js` | A script other sites add to link their Bible references to Logia; its data is `/linker/<BOOK>.<chapter>.json`, in English verse numbering |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its
 sister site: `web/style.css` and `web/fonts/` are the Open Word Bible's own
@@ -143,11 +153,13 @@ can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
     python3 scripts/find_refs.py --check      # loci, citations, quotations up to date
     python3 scripts/extract_texts.py --check  # whole texts up to date
     python3 scripts/extract_creeds.py --check # creeds and confessions up to date
+    python3 scripts/find_pages.py --check     # scan pages name excerpts the library holds
     python3 scripts/validate.py          # the data is well formed
     python3 scripts/verify_sources.py    # every excerpt is in its source
     python3 -m unittest discover -s tests -t .
     python3 scripts/build_site.py        # writes site/
     uvx ruff@0.16.9 check .              # lint (pyproject.toml)
+    python3 scripts/export_data.py 1.0.0  # a data release, dist/logia-data-1.0.0.zip (docs/data.md)
 
 Preview the built site with `python3 -m http.server -d site` and open
 <http://localhost:8000/jhn/1/>.

@@ -42,6 +42,7 @@
     share: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8M5 12.5v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>'
   };
   ICON.chevron = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+  ICON.sheet = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15h6"/></svg>';
   ICON.flag = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg>';
   ICON.copy = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
@@ -514,7 +515,9 @@
           '<div class="cx-more">' + (long ? '<button type="button" data-expand>' + esc(fmt(U.read_all, { n: words.toLocaleString() })) + "</button>" : "") +
           (es[0].inFull ? '<a href="' + esc(es[0].inFull) + '">' +
             esc(fmt(U.read_in_full, { where: locusLabel(w, es[0].locus.split(".")[0]) })) + "</a>" : "") +
-          '<a href="' + esc(es[0].source_url) + '" target="_blank" rel="noopener">' + esc(U.full_text) + " ↗</a></div>" +
+          '<a href="' + esc(es[0].source_url) + '" target="_blank" rel="noopener">' + esc(U.full_text) + " ↗</a>" +
+          (es[0].scan ? '<a href="' + esc(es[0].scan.url) + '" target="_blank" rel="noopener" title="' + esc(U.printed_title) + '">' +
+            esc(es[0].scan.page ? fmt(U.printed_page, { page: es[0].scan.page }) : U.printed_leaf) + " ↗</a>" : "") + "</div>" +
           actions(w, v) + "</div></section>";
       });
     });
@@ -556,6 +559,8 @@
       '<span class="cx-act-label">' + esc(isSaved ? U.saved : U.save) + "</span></button>" +
       '<button type="button" class="cx-act" data-act="cite" title="' + esc(U.copy_cite) + '">' + ICON.copy + '<span class="cx-act-label">' + esc(U.copy_cite) +
       "</span></button>" +
+      '<button type="button" class="cx-act" data-act="sheet" title="' + esc(U.add_to_sheet) + '">' + ICON.sheet + '<span class="cx-act-label">' + esc(U.add_to_sheet) +
+      "</span></button>" +
       '<button type="button" class="cx-act" data-act="share" title="' + esc(U.share) + '">' + ICON.share + '<span class="cx-act-label">' + esc(U.share) +
       "</span></button>" +
       '<a class="cx-act" href="' + esc(reportUrl(w, v)) + '" target="_blank" rel="noopener" title="' + esc(U.report) + '">' + ICON.flag +
@@ -581,6 +586,15 @@
     refresh();
   }
 
+  // "Add to sheet": web/sheets.js keeps the reader's study sheets in this browser.
+  function toSheet(key) {
+    var got = window.LogiaSheets ? window.LogiaSheets.add(key) : { ok: false };
+    state.note = { key: key, html: got.ok
+      ? esc(fmt(got.already ? U.sheet_already : U.sheet_added, { title: got.title, n: got.n })) + ' <a href="/sheets/">' + esc(U.sheet_open) + "</a>"
+      : esc(U.sheet_failed) };
+    refresh();
+  }
+
   function act(button) {
     var box = button.closest(".cx-actions");
     var key = box.getAttribute("data-key");
@@ -588,6 +602,7 @@
     var kind = button.getAttribute("data-act");
     if (kind === "share") return share(w, key);
     if (kind === "cite") return cite(w, key);
+    if (kind === "sheet") return toSheet(key);
     if (!Account || !Account.user()) return signInNote(key);
     var mark = kind === "like" ? "liked" : "saved";
     var on = !(state.marks && state.marks[mark][key]);

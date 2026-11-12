@@ -1,0 +1,1904 @@
+{
+ "work": "gregory-job",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "moralsonbookofjo01greguoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/moralsonbookofjo01greguoft/moralsonbookofjo01greguoft_hocr_pageindex.json.gz",
+     "sha256": "b2f50d660d01a70f9a70139713d1347a3d5a01dfa5f50351169767ff92919060"
+    },
+    {
+     "url": "https://archive.org/download/moralsonbookofjo01greguoft/moralsonbookofjo01greguoft_hocr_searchtext.txt.gz",
+     "sha256": "15692552f39cc0c491535cdf65fbe61a4631877a349b910649e0ee0d466351df"
+    },
+    {
+     "url": "https://archive.org/download/moralsonbookofjo01greguoft/moralsonbookofjo01greguoft_page_numbers.json",
+     "sha256": "a38175116948f90d7e809cf7536f7af2dfb26b32447bc6e29e888a0c95dd559f"
+    }
+   ]
+  },
+  {
+   "id": "moralsonbookofjo02greguoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/moralsonbookofjo02greguoft/moralsonbookofjo02greguoft_hocr_pageindex.json.gz",
+     "sha256": "3fbb22eec7632de1ab0df2c19f24017f5ac53e9a94c4a1ef1cb5a3328b61d363"
+    },
+    {
+     "url": "https://archive.org/download/moralsonbookofjo02greguoft/moralsonbookofjo02greguoft_hocr_searchtext.txt.gz",
+     "sha256": "5298b3abbd8816ec59c00afc970bf18565905020ceb604b9084e10bdc2ccfb56"
+    },
+    {
+     "url": "https://archive.org/download/moralsonbookofjo02greguoft/moralsonbookofjo02greguoft_page_numbers.json",
+     "sha256": "ac37118f49f1de71bfe5bd48e01c1de0eefd319cf4bb5e602435ea3eb43469f1"
+    }
+   ]
+  },
+  {
+   "id": "p1moralsonbookof03greguoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/p1moralsonbookof03greguoft/p1moralsonbookof03greguoft_hocr_pageindex.json.gz",
+     "sha256": "4a22cdc60db46d6415a0f372f796a56fb68a63d8883c37b2466eddfbf8213033"
+    },
+    {
+     "url": "https://archive.org/download/p1moralsonbookof03greguoft/p1moralsonbookof03greguoft_hocr_searchtext.txt.gz",
+     "sha256": "d4a3bcb4c26c4d891dc8f51ee6fd9f129e90f8be0ee29286b8d05bec074a4e06"
+    },
+    {
+     "url": "https://archive.org/download/p1moralsonbookof03greguoft/p1moralsonbookof03greguoft_page_numbers.json",
+     "sha256": "4df61aa9aa8d712a680a0cef5b5460febea355116992dbc28d07395efe05cea1"
+    }
+   ]
+  },
+  {
+   "id": "p2moralsonbookof03greguoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/p2moralsonbookof03greguoft/p2moralsonbookof03greguoft_hocr_pageindex.json.gz",
+     "sha256": "8db0fad7410a93b232b46d209e657f941304e6c3135e91589f7e180b2b255cdb"
+    },
+    {
+     "url": "https://archive.org/download/p2moralsonbookof03greguoft/p2moralsonbookof03greguoft_hocr_searchtext.txt.gz",
+     "sha256": "7241e3311e45151982c850ddb639b334ac254ae2cc5e60f7fa84e921a6706c55"
+    },
+    {
+     "url": "https://archive.org/download/p2moralsonbookof03greguoft/p2moralsonbookof03greguoft_page_numbers.json",
+     "sha256": "2b37c8f2e8690b58fbe5a2a60b4ffb7900a1b0780d842ce428e60de9a8045307"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 365,
+ "missed": 0,
+ "pages": {
+  "gregory-job.JOB.1.3.1": [
+   "moralsonbookofjo01greguoft",
+   52,
+   "35"
+  ],
+  "gregory-job.JOB.1.4.1": [
+   "moralsonbookofjo01greguoft",
+   63,
+   "46"
+  ],
+  "gregory-job.JOB.1.5.1": [
+   "moralsonbookofjo01greguoft",
+   65,
+   "48"
+  ],
+  "gregory-job.JOB.1.6.1": [
+   "moralsonbookofjo01greguoft",
+   85,
+   "68"
+  ],
+  "gregory-job.JOB.1.7.1": [
+   "moralsonbookofjo01greguoft",
+   88,
+   "71"
+  ],
+  "gregory-job.JOB.1.7.2": [
+   "moralsonbookofjo01greguoft",
+   113,
+   "96"
+  ],
+  "gregory-job.JOB.1.7.3": [
+   "moralsonbookofjo01greguoft",
+   114,
+   "97"
+  ],
+  "gregory-job.JOB.1.8.1": [
+   "moralsonbookofjo01greguoft",
+   89,
+   "72"
+  ],
+  "gregory-job.JOB.1.8.2": [
+   "moralsonbookofjo01greguoft",
+   94,
+   "77"
+  ],
+  "gregory-job.JOB.1.9-10.1": [
+   "moralsonbookofjo01greguoft",
+   114,
+   "97"
+  ],
+  "gregory-job.JOB.1.10.1": [
+   "moralsonbookofjo01greguoft",
+   115,
+   "98"
+  ],
+  "gregory-job.JOB.1.10.2": [
+   "moralsonbookofjo01greguoft",
+   129,
+   "112"
+  ],
+  "gregory-job.JOB.1.11.1": [
+   "moralsonbookofjo01greguoft",
+   115,
+   "98"
+  ],
+  "gregory-job.JOB.1.11.2": [
+   "moralsonbookofjo01greguoft",
+   129,
+   "112"
+  ],
+  "gregory-job.JOB.1.12.1": [
+   "moralsonbookofjo01greguoft",
+   116,
+   "99"
+  ],
+  "gregory-job.JOB.1.12.2": [
+   "moralsonbookofjo01greguoft",
+   129,
+   "112"
+  ],
+  "gregory-job.JOB.1.14-15.1": [
+   "moralsonbookofjo01greguoft",
+   117,
+   "100"
+  ],
+  "gregory-job.JOB.1.16.1": [
+   "moralsonbookofjo01greguoft",
+   132,
+   "115"
+  ],
+  "gregory-job.JOB.1.17.1": [
+   "moralsonbookofjo01greguoft",
+   133,
+   "116"
+  ],
+  "gregory-job.JOB.1.17.2": [
+   "moralsonbookofjo01greguoft",
+   133,
+   "116"
+  ],
+  "gregory-job.JOB.1.18-19.1": [
+   "moralsonbookofjo01greguoft",
+   102,
+   "85"
+  ],
+  "gregory-job.JOB.1.18-19.2": [
+   "moralsonbookofjo01greguoft",
+   121,
+   "104"
+  ],
+  "gregory-job.JOB.1.18-19.3": [
+   "moralsonbookofjo01greguoft",
+   135,
+   "118"
+  ],
+  "gregory-job.JOB.1.20.1": [
+   "moralsonbookofjo01greguoft",
+   104,
+   "87"
+  ],
+  "gregory-job.JOB.1.21.1": [
+   "moralsonbookofjo01greguoft",
+   106,
+   "89"
+  ],
+  "gregory-job.JOB.1.21.2": [
+   "moralsonbookofjo01greguoft",
+   125,
+   "108"
+  ],
+  "gregory-job.JOB.1.21.3": [
+   "moralsonbookofjo01greguoft",
+   126,
+   "109"
+  ],
+  "gregory-job.JOB.2.4-5.1": [
+   "moralsonbookofjo01greguoft",
+   149,
+   "132"
+  ],
+  "gregory-job.JOB.2.4-5.2": [
+   "moralsonbookofjo01greguoft",
+   149,
+   "132"
+  ],
+  "gregory-job.JOB.2.6.1": [
+   "moralsonbookofjo01greguoft",
+   150,
+   "133"
+  ],
+  "gregory-job.JOB.2.6.2": [
+   "moralsonbookofjo01greguoft",
+   167,
+   "150"
+  ],
+  "gregory-job.JOB.2.6.3": [
+   "moralsonbookofjo01greguoft",
+   185,
+   "168"
+  ],
+  "gregory-job.JOB.2.7.1": [
+   "moralsonbookofjo01greguoft",
+   169,
+   "152"
+  ],
+  "gregory-job.JOB.2.8.1": [
+   "moralsonbookofjo01greguoft",
+   170,
+   "153"
+  ],
+  "gregory-job.JOB.2.8.2": [
+   "moralsonbookofjo01greguoft",
+   170,
+   "153"
+  ],
+  "gregory-job.JOB.2.9.1": [
+   "moralsonbookofjo01greguoft",
+   154,
+   "137"
+  ],
+  "gregory-job.JOB.2.9.2": [
+   "moralsonbookofjo01greguoft",
+   172,
+   "155"
+  ],
+  "gregory-job.JOB.2.10.1": [
+   "moralsonbookofjo01greguoft",
+   156,
+   "139"
+  ],
+  "gregory-job.JOB.2.10.2": [
+   "moralsonbookofjo01greguoft",
+   174,
+   "157"
+  ],
+  "gregory-job.JOB.2.10.3": [
+   "moralsonbookofjo01greguoft",
+   174,
+   "157"
+  ],
+  "gregory-job.JOB.2.11.1": [
+   "moralsonbookofjo01greguoft",
+   176,
+   "159"
+  ],
+  "gregory-job.JOB.2.11.2": [
+   "moralsonbookofjo01greguoft",
+   191,
+   "174"
+  ],
+  "gregory-job.JOB.2.12.1": [
+   "moralsonbookofjo01greguoft",
+   179,
+   "162"
+  ],
+  "gregory-job.JOB.2.13.1": [
+   "moralsonbookofjo01greguoft",
+   161,
+   "144"
+  ],
+  "gregory-job.JOB.2.13.2": [
+   "moralsonbookofjo01greguoft",
+   180,
+   "163"
+  ],
+  "gregory-job.JOB.2.13.3": [
+   "moralsonbookofjo01greguoft",
+   180,
+   "163"
+  ],
+  "gregory-job.JOB.3.3.1": [
+   "moralsonbookofjo01greguoft",
+   203,
+   "186"
+  ],
+  "gregory-job.JOB.3.6.1": [
+   "moralsonbookofjo01greguoft",
+   207,
+   "190"
+  ],
+  "gregory-job.JOB.3.6.2": [
+   "moralsonbookofjo01greguoft",
+   207,
+   "190"
+  ],
+  "gregory-job.JOB.3.9.1": [
+   "moralsonbookofjo01greguoft",
+   228,
+   "211"
+  ],
+  "gregory-job.JOB.3.10.1": [
+   "moralsonbookofjo01greguoft",
+   216,
+   "199"
+  ],
+  "gregory-job.JOB.3.10.2": [
+   "moralsonbookofjo01greguoft",
+   231,
+   "214"
+  ],
+  "gregory-job.JOB.3.14.1": [
+   "moralsonbookofjo01greguoft",
+   238,
+   "221"
+  ],
+  "gregory-job.JOB.3.15.1": [
+   "moralsonbookofjo01greguoft",
+   245,
+   "228"
+  ],
+  "gregory-job.JOB.3.16.1": [
+   "moralsonbookofjo01greguoft",
+   246,
+   "229"
+  ],
+  "gregory-job.JOB.3.22.1": [
+   "moralsonbookofjo01greguoft",
+   265,
+   "248"
+  ],
+  "gregory-job.JOB.3.23.1": [
+   "moralsonbookofjo01greguoft",
+   266,
+   "249"
+  ],
+  "gregory-job.JOB.3.24.1": [
+   "moralsonbookofjo01greguoft",
+   268,
+   "251"
+  ],
+  "gregory-job.JOB.3.25.1": [
+   "moralsonbookofjo01greguoft",
+   269,
+   "252"
+  ],
+  "gregory-job.JOB.3.26.1": [
+   "moralsonbookofjo01greguoft",
+   270,
+   "253"
+  ],
+  "gregory-job.JOB.4.13.1": [
+   "moralsonbookofjo01greguoft",
+   293,
+   "276"
+  ],
+  "gregory-job.JOB.4.14.1": [
+   "moralsonbookofjo01greguoft",
+   294,
+   "277"
+  ],
+  "gregory-job.JOB.4.14.2": [
+   "moralsonbookofjo01greguoft",
+   294,
+   "277"
+  ],
+  "gregory-job.JOB.4.15-16.1": [
+   "moralsonbookofjo01greguoft",
+   294,
+   "277"
+  ],
+  "gregory-job.JOB.4.15.1": [
+   "moralsonbookofjo01greguoft",
+   303,
+   "286"
+  ],
+  "gregory-job.JOB.4.17.1": [
+   "moralsonbookofjo01greguoft",
+   311,
+   "294"
+  ],
+  "gregory-job.JOB.4.20.1": [
+   "moralsonbookofjo01greguoft",
+   315,
+   "298"
+  ],
+  "gregory-job.JOB.5.3.1": [
+   "moralsonbookofjo01greguoft",
+   331,
+   "314"
+  ],
+  "gregory-job.JOB.5.3.2": [
+   "moralsonbookofjo01greguoft",
+   333,
+   "316"
+  ],
+  "gregory-job.JOB.5.4.1": [
+   "moralsonbookofjo01greguoft",
+   331,
+   "314"
+  ],
+  "gregory-job.JOB.5.4.2": [
+   "moralsonbookofjo01greguoft",
+   335,
+   "318"
+  ],
+  "gregory-job.JOB.5.12.1": [
+   "moralsonbookofjo01greguoft",
+   350,
+   "333"
+  ],
+  "gregory-job.JOB.5.13.1": [
+   "moralsonbookofjo01greguoft",
+   350,
+   "333"
+  ],
+  "gregory-job.JOB.5.14.1": [
+   "moralsonbookofjo01greguoft",
+   354,
+   "337"
+  ],
+  "gregory-job.JOB.5.15.1": [
+   "moralsonbookofjo01greguoft",
+   355,
+   "338"
+  ],
+  "gregory-job.JOB.5.16.1": [
+   "moralsonbookofjo01greguoft",
+   356,
+   "339"
+  ],
+  "gregory-job.JOB.5.19.1": [
+   "moralsonbookofjo01greguoft",
+   362,
+   "345"
+  ],
+  "gregory-job.JOB.5.22.1": [
+   "moralsonbookofjo01greguoft",
+   364,
+   "347"
+  ],
+  "gregory-job.JOB.5.24.1": [
+   "moralsonbookofjo01greguoft",
+   369,
+   "352"
+  ],
+  "gregory-job.JOB.5.25.1": [
+   "moralsonbookofjo01greguoft",
+   371,
+   "354"
+  ],
+  "gregory-job.JOB.6.4.1": [
+   "moralsonbookofjo01greguoft",
+   384,
+   "367"
+  ],
+  "gregory-job.JOB.6.4.2": [
+   "moralsonbookofjo01greguoft",
+   390,
+   "373"
+  ],
+  "gregory-job.JOB.6.5.1": [
+   "moralsonbookofjo01greguoft",
+   390,
+   "373"
+  ],
+  "gregory-job.JOB.6.5.2": [
+   "moralsonbookofjo01greguoft",
+   390,
+   "373"
+  ],
+  "gregory-job.JOB.6.6.1": [
+   "moralsonbookofjo01greguoft",
+   387,
+   "370"
+  ],
+  "gregory-job.JOB.6.6.2": [
+   "moralsonbookofjo01greguoft",
+   391,
+   "374"
+  ],
+  "gregory-job.JOB.6.7.1": [
+   "moralsonbookofjo01greguoft",
+   388,
+   "371"
+  ],
+  "gregory-job.JOB.6.7.2": [
+   "moralsonbookofjo01greguoft",
+   393,
+   "376"
+  ],
+  "gregory-job.JOB.6.11.1": [
+   "moralsonbookofjo01greguoft",
+   397,
+   "380"
+  ],
+  "gregory-job.JOB.6.12.1": [
+   "moralsonbookofjo01greguoft",
+   398,
+   "381"
+  ],
+  "gregory-job.JOB.6.26.1": [
+   "moralsonbookofjo01greguoft",
+   427,
+   "410"
+  ],
+  "gregory-job.JOB.6.27.1": [
+   "moralsonbookofjo01greguoft",
+   431,
+   "414"
+  ],
+  "gregory-job.JOB.7.5.1": [
+   "moralsonbookofjo01greguoft",
+   446,
+   "429"
+  ],
+  "gregory-job.JOB.7.9.1": [
+   "moralsonbookofjo01greguoft",
+   456,
+   "439"
+  ],
+  "gregory-job.JOB.7.15.1": [
+   "moralsonbookofjo01greguoft",
+   467,
+   "450"
+  ],
+  "gregory-job.JOB.7.21.1": [
+   "moralsonbookofjo01greguoft",
+   478,
+   "461"
+  ],
+  "gregory-job.JOB.8.3.1": [
+   "moralsonbookofjo01greguoft",
+   481,
+   "464"
+  ],
+  "gregory-job.JOB.8.7.1": [
+   "moralsonbookofjo01greguoft",
+   483,
+   "466"
+  ],
+  "gregory-job.JOB.8.9.1": [
+   "moralsonbookofjo01greguoft",
+   484,
+   "467"
+  ],
+  "gregory-job.JOB.8.15.1": [
+   "moralsonbookofjo01greguoft",
+   493,
+   "476"
+  ],
+  "gregory-job.JOB.8.17.1": [
+   "moralsonbookofjo01greguoft",
+   499,
+   "482"
+  ],
+  "gregory-job.JOB.8.20.1": [
+   "moralsonbookofjo01greguoft",
+   505,
+   "488"
+  ],
+  "gregory-job.JOB.8.22.1": [
+   "moralsonbookofjo01greguoft",
+   507,
+   "490"
+  ],
+  "gregory-job.JOB.9.3.1": [
+   "moralsonbookofjo01greguoft",
+   512,
+   "495"
+  ],
+  "gregory-job.JOB.9.6.1": [
+   "moralsonbookofjo01greguoft",
+   515,
+   "498"
+  ],
+  "gregory-job.JOB.9.9.1": [
+   "moralsonbookofjo01greguoft",
+   520,
+   "503"
+  ],
+  "gregory-job.JOB.9.14.1": [
+   "moralsonbookofjo01greguoft",
+   533,
+   "516"
+  ],
+  "gregory-job.JOB.9.15.1": [
+   "moralsonbookofjo01greguoft",
+   533,
+   "516"
+  ],
+  "gregory-job.JOB.9.23.1": [
+   "moralsonbookofjo01greguoft",
+   541,
+   "524"
+  ],
+  "gregory-job.JOB.9.25.1": [
+   "moralsonbookofjo01greguoft",
+   544,
+   "527"
+  ],
+  "gregory-job.JOB.9.25.2": [
+   "moralsonbookofjo01greguoft",
+   547,
+   "530"
+  ],
+  "gregory-job.JOB.9.29.1": [
+   "moralsonbookofjo01greguoft",
+   553,
+   "536"
+  ],
+  "gregory-job.JOB.9.35.1": [
+   "moralsonbookofjo01greguoft",
+   559,
+   "542"
+  ],
+  "gregory-job.JOB.10.9.1": [
+   "moralsonbookofjo01greguoft",
+   567,
+   "550"
+  ],
+  "gregory-job.JOB.10.14.1": [
+   "moralsonbookofjo01greguoft",
+   571,
+   "554"
+  ],
+  "gregory-job.JOB.10.21.1": [
+   "moralsonbookofjo01greguoft",
+   582,
+   "565"
+  ],
+  "gregory-job.JOB.11.16.1": [
+   "moralsonbookofjo01greguoft",
+   620,
+   "603"
+  ],
+  "gregory-job.JOB.11.18.1": [
+   "moralsonbookofjo01greguoft",
+   623,
+   "606"
+  ],
+  "gregory-job.JOB.11.19.1": [
+   "moralsonbookofjo01greguoft",
+   624,
+   "607"
+  ],
+  "gregory-job.JOB.12.6.1": [
+   "moralsonbookofjo02greguoft",
+   15,
+   ""
+  ],
+  "gregory-job.JOB.12.7-8.1": [
+   "moralsonbookofjo02greguoft",
+   17,
+   "4"
+  ],
+  "gregory-job.JOB.12.10.1": [
+   "moralsonbookofjo02greguoft",
+   18,
+   "5"
+  ],
+  "gregory-job.JOB.12.12.1": [
+   "moralsonbookofjo02greguoft",
+   20,
+   "7"
+  ],
+  "gregory-job.JOB.12.13.1": [
+   "moralsonbookofjo02greguoft",
+   21,
+   "8"
+  ],
+  "gregory-job.JOB.12.15.1": [
+   "moralsonbookofjo02greguoft",
+   23,
+   "10"
+  ],
+  "gregory-job.JOB.12.22.1": [
+   "moralsonbookofjo02greguoft",
+   31,
+   "18"
+  ],
+  "gregory-job.JOB.12.24-25.1": [
+   "moralsonbookofjo02greguoft",
+   34,
+   "21"
+  ],
+  "gregory-job.JOB.13.22.1": [
+   "moralsonbookofjo02greguoft",
+   48,
+   "35"
+  ],
+  "gregory-job.JOB.13.23.1": [
+   "moralsonbookofjo02greguoft",
+   48,
+   "35"
+  ],
+  "gregory-job.JOB.13.24.1": [
+   "moralsonbookofjo02greguoft",
+   49,
+   "36"
+  ],
+  "gregory-job.JOB.13.25.1": [
+   "moralsonbookofjo02greguoft",
+   50,
+   "37"
+  ],
+  "gregory-job.JOB.13.27.1": [
+   "moralsonbookofjo02greguoft",
+   52,
+   "39"
+  ],
+  "gregory-job.JOB.14.3.1": [
+   "moralsonbookofjo02greguoft",
+   56,
+   "43"
+  ],
+  "gregory-job.JOB.14.4.1": [
+   "moralsonbookofjo02greguoft",
+   57,
+   "44"
+  ],
+  "gregory-job.JOB.14.5.1": [
+   "moralsonbookofjo02greguoft",
+   58,
+   "45"
+  ],
+  "gregory-job.JOB.14.14.1": [
+   "moralsonbookofjo02greguoft",
+   68,
+   "55"
+  ],
+  "gregory-job.JOB.14.22.1": [
+   "moralsonbookofjo02greguoft",
+   76,
+   "63"
+  ],
+  "gregory-job.JOB.15.6.1": [
+   "moralsonbookofjo02greguoft",
+   78,
+   "65"
+  ],
+  "gregory-job.JOB.15.7-8.1": [
+   "moralsonbookofjo02greguoft",
+   78,
+   "65"
+  ],
+  "gregory-job.JOB.15.12.1": [
+   "moralsonbookofjo02greguoft",
+   79,
+   "66"
+  ],
+  "gregory-job.JOB.15.16.1": [
+   "moralsonbookofjo02greguoft",
+   82,
+   "69"
+  ],
+  "gregory-job.JOB.15.21.1": [
+   "moralsonbookofjo02greguoft",
+   85,
+   "72"
+  ],
+  "gregory-job.JOB.15.22.1": [
+   "moralsonbookofjo02greguoft",
+   86,
+   "73"
+  ],
+  "gregory-job.JOB.15.25-26.1": [
+   "moralsonbookofjo02greguoft",
+   88,
+   "75"
+  ],
+  "gregory-job.JOB.15.28.1": [
+   "moralsonbookofjo02greguoft",
+   90,
+   "77"
+  ],
+  "gregory-job.JOB.15.30.1": [
+   "moralsonbookofjo02greguoft",
+   92,
+   "79"
+  ],
+  "gregory-job.JOB.15.33-34.1": [
+   "moralsonbookofjo02greguoft",
+   95,
+   "82"
+  ],
+  "gregory-job.JOB.16.9.1": [
+   "moralsonbookofjo02greguoft",
+   106,
+   "93"
+  ],
+  "gregory-job.JOB.16.11.1": [
+   "moralsonbookofjo02greguoft",
+   109,
+   "96"
+  ],
+  "gregory-job.JOB.16.15.1": [
+   "moralsonbookofjo02greguoft",
+   113,
+   "100"
+  ],
+  "gregory-job.JOB.16.16.1": [
+   "moralsonbookofjo02greguoft",
+   113,
+   "100"
+  ],
+  "gregory-job.JOB.16.18.1": [
+   "moralsonbookofjo02greguoft",
+   114,
+   "101"
+  ],
+  "gregory-job.JOB.16.20.1": [
+   "moralsonbookofjo02greguoft",
+   116,
+   "103"
+  ],
+  "gregory-job.JOB.16.22.1": [
+   "moralsonbookofjo02greguoft",
+   118,
+   "105"
+  ],
+  "gregory-job.JOB.17.5.1": [
+   "moralsonbookofjo02greguoft",
+   121,
+   "108"
+  ],
+  "gregory-job.JOB.17.11.1": [
+   "moralsonbookofjo02greguoft",
+   125,
+   "112"
+  ],
+  "gregory-job.JOB.17.14.1": [
+   "moralsonbookofjo02greguoft",
+   127,
+   "114"
+  ],
+  "gregory-job.JOB.18.5.1": [
+   "moralsonbookofjo02greguoft",
+   134,
+   "121"
+  ],
+  "gregory-job.JOB.18.6.1": [
+   "moralsonbookofjo02greguoft",
+   135,
+   "122"
+  ],
+  "gregory-job.JOB.18.7.1": [
+   "moralsonbookofjo02greguoft",
+   136,
+   "123"
+  ],
+  "gregory-job.JOB.18.9.1": [
+   "moralsonbookofjo02greguoft",
+   137,
+   "124"
+  ],
+  "gregory-job.JOB.18.13.1": [
+   "moralsonbookofjo02greguoft",
+   141,
+   "128"
+  ],
+  "gregory-job.JOB.18.16.1": [
+   "moralsonbookofjo02greguoft",
+   144,
+   "131"
+  ],
+  "gregory-job.JOB.18.18.1": [
+   "moralsonbookofjo02greguoft",
+   145,
+   "132"
+  ],
+  "gregory-job.JOB.18.21.1": [
+   "moralsonbookofjo02greguoft",
+   147,
+   "134"
+  ],
+  "gregory-job.JOB.19.8.1": [
+   "moralsonbookofjo02greguoft",
+   156,
+   "143"
+  ],
+  "gregory-job.JOB.19.9.1": [
+   "moralsonbookofjo02greguoft",
+   157,
+   "144"
+  ],
+  "gregory-job.JOB.19.11.1": [
+   "moralsonbookofjo02greguoft",
+   159,
+   "146"
+  ],
+  "gregory-job.JOB.19.12.1": [
+   "moralsonbookofjo02greguoft",
+   160,
+   "147"
+  ],
+  "gregory-job.JOB.19.15.1": [
+   "moralsonbookofjo02greguoft",
+   161,
+   "148"
+  ],
+  "gregory-job.JOB.19.21.1": [
+   "moralsonbookofjo02greguoft",
+   168,
+   "155"
+  ],
+  "gregory-job.JOB.19.27.1": [
+   "moralsonbookofjo02greguoft",
+   182,
+   "169"
+  ],
+  "gregory-job.JOB.20.4-5.1": [
+   "moralsonbookofjo02greguoft",
+   186,
+   "173"
+  ],
+  "gregory-job.JOB.20.12.1": [
+   "moralsonbookofjo02greguoft",
+   192,
+   "179"
+  ],
+  "gregory-job.JOB.20.14.1": [
+   "moralsonbookofjo02greguoft",
+   193,
+   "180"
+  ],
+  "gregory-job.JOB.20.19-20.1": [
+   "moralsonbookofjo02greguoft",
+   200,
+   "187"
+  ],
+  "gregory-job.JOB.20.23.1": [
+   "moralsonbookofjo02greguoft",
+   204,
+   "191"
+  ],
+  "gregory-job.JOB.20.27.1": [
+   "moralsonbookofjo02greguoft",
+   209,
+   "196"
+  ],
+  "gregory-job.JOB.20.28.1": [
+   "moralsonbookofjo02greguoft",
+   210,
+   "197"
+  ],
+  "gregory-job.JOB.20.29.1": [
+   "moralsonbookofjo02greguoft",
+   211,
+   "198"
+  ],
+  "gregory-job.JOB.21.6.1": [
+   "moralsonbookofjo02greguoft",
+   214,
+   "201"
+  ],
+  "gregory-job.JOB.21.13.1": [
+   "moralsonbookofjo02greguoft",
+   216,
+   "203"
+  ],
+  "gregory-job.JOB.21.15.1": [
+   "moralsonbookofjo02greguoft",
+   218,
+   "205"
+  ],
+  "gregory-job.JOB.21.17.1": [
+   "moralsonbookofjo02greguoft",
+   221,
+   "208"
+  ],
+  "gregory-job.JOB.21.18.1": [
+   "moralsonbookofjo02greguoft",
+   222,
+   "209"
+  ],
+  "gregory-job.JOB.21.20.1": [
+   "moralsonbookofjo02greguoft",
+   225,
+   "212"
+  ],
+  "gregory-job.JOB.21.21.1": [
+   "moralsonbookofjo02greguoft",
+   225,
+   "212"
+  ],
+  "gregory-job.JOB.21.22.1": [
+   "moralsonbookofjo02greguoft",
+   226,
+   "213"
+  ],
+  "gregory-job.JOB.21.26.1": [
+   "moralsonbookofjo02greguoft",
+   227,
+   "214"
+  ],
+  "gregory-job.JOB.21.27-28.1": [
+   "moralsonbookofjo02greguoft",
+   227,
+   "214"
+  ],
+  "gregory-job.JOB.21.31.1": [
+   "moralsonbookofjo02greguoft",
+   232,
+   "219"
+  ],
+  "gregory-job.JOB.22.3.1": [
+   "moralsonbookofjo02greguoft",
+   238,
+   "225"
+  ],
+  "gregory-job.JOB.22.4.1": [
+   "moralsonbookofjo02greguoft",
+   239,
+   "226"
+  ],
+  "gregory-job.JOB.22.5.1": [
+   "moralsonbookofjo02greguoft",
+   239,
+   "226"
+  ],
+  "gregory-job.JOB.22.10.1": [
+   "moralsonbookofjo02greguoft",
+   243,
+   "230"
+  ],
+  "gregory-job.JOB.22.16.1": [
+   "moralsonbookofjo02greguoft",
+   245,
+   "232"
+  ],
+  "gregory-job.JOB.22.18.1": [
+   "moralsonbookofjo02greguoft",
+   248,
+   "235"
+  ],
+  "gregory-job.JOB.22.19.1": [
+   "moralsonbookofjo02greguoft",
+   248,
+   "235"
+  ],
+  "gregory-job.JOB.22.23.1": [
+   "moralsonbookofjo02greguoft",
+   250,
+   "237"
+  ],
+  "gregory-job.JOB.22.25.1": [
+   "moralsonbookofjo02greguoft",
+   251,
+   "238"
+  ],
+  "gregory-job.JOB.22.28.1": [
+   "moralsonbookofjo02greguoft",
+   254,
+   "241"
+  ],
+  "gregory-job.JOB.22.30.1": [
+   "moralsonbookofjo02greguoft",
+   255,
+   "242"
+  ],
+  "gregory-job.JOB.23.3.1": [
+   "moralsonbookofjo02greguoft",
+   258,
+   "245"
+  ],
+  "gregory-job.JOB.23.4.1": [
+   "moralsonbookofjo02greguoft",
+   259,
+   "246"
+  ],
+  "gregory-job.JOB.23.5.1": [
+   "moralsonbookofjo02greguoft",
+   260,
+   "247"
+  ],
+  "gregory-job.JOB.23.6.1": [
+   "moralsonbookofjo02greguoft",
+   260,
+   "247"
+  ],
+  "gregory-job.JOB.23.11.1": [
+   "moralsonbookofjo02greguoft",
+   264,
+   "251"
+  ],
+  "gregory-job.JOB.23.14.1": [
+   "moralsonbookofjo02greguoft",
+   268,
+   "255"
+  ],
+  "gregory-job.JOB.23.16.1": [
+   "moralsonbookofjo02greguoft",
+   269,
+   "256"
+  ],
+  "gregory-job.JOB.23.17.1": [
+   "moralsonbookofjo02greguoft",
+   270,
+   "257"
+  ],
+  "gregory-job.JOB.24.4.1": [
+   "moralsonbookofjo02greguoft",
+   274,
+   "261"
+  ],
+  "gregory-job.JOB.24.5.1": [
+   "moralsonbookofjo02greguoft",
+   274,
+   "261"
+  ],
+  "gregory-job.JOB.24.6.1": [
+   "moralsonbookofjo02greguoft",
+   275,
+   "262"
+  ],
+  "gregory-job.JOB.24.7.1": [
+   "moralsonbookofjo02greguoft",
+   276,
+   "263"
+  ],
+  "gregory-job.JOB.24.10.1": [
+   "moralsonbookofjo02greguoft",
+   278,
+   "265"
+  ],
+  "gregory-job.JOB.24.15.1": [
+   "moralsonbookofjo02greguoft",
+   283,
+   "270"
+  ],
+  "gregory-job.JOB.24.16.1": [
+   "moralsonbookofjo02greguoft",
+   284,
+   "271"
+  ],
+  "gregory-job.JOB.24.19.1": [
+   "moralsonbookofjo02greguoft",
+   288,
+   "275"
+  ],
+  "gregory-job.JOB.24.21.1": [
+   "moralsonbookofjo02greguoft",
+   293,
+   "280"
+  ],
+  "gregory-job.JOB.24.24.1": [
+   "moralsonbookofjo02greguoft",
+   298,
+   "285"
+  ],
+  "gregory-job.JOB.25.4.1": [
+   "moralsonbookofjo02greguoft",
+   306,
+   "293"
+  ],
+  "gregory-job.JOB.25.5.1": [
+   "moralsonbookofjo02greguoft",
+   307,
+   "294"
+  ],
+  "gregory-job.JOB.25.6.1": [
+   "moralsonbookofjo02greguoft",
+   308,
+   "295"
+  ],
+  "gregory-job.JOB.26.7.1": [
+   "moralsonbookofjo02greguoft",
+   313,
+   "300"
+  ],
+  "gregory-job.JOB.26.8.1": [
+   "moralsonbookofjo02greguoft",
+   314,
+   "301"
+  ],
+  "gregory-job.JOB.26.14.1": [
+   "moralsonbookofjo02greguoft",
+   328,
+   "315"
+  ],
+  "gregory-job.JOB.27.2.1": [
+   "moralsonbookofjo02greguoft",
+   331,
+   "318"
+  ],
+  "gregory-job.JOB.27.3-4.1": [
+   "moralsonbookofjo02greguoft",
+   332,
+   "319"
+  ],
+  "gregory-job.JOB.27.7.1": [
+   "moralsonbookofjo02greguoft",
+   337,
+   "324"
+  ],
+  "gregory-job.JOB.27.14.1": [
+   "moralsonbookofjo02greguoft",
+   344,
+   "331"
+  ],
+  "gregory-job.JOB.27.15.1": [
+   "moralsonbookofjo02greguoft",
+   345,
+   "332"
+  ],
+  "gregory-job.JOB.27.18.1": [
+   "moralsonbookofjo02greguoft",
+   347,
+   "334"
+  ],
+  "gregory-job.JOB.27.19.1": [
+   "moralsonbookofjo02greguoft",
+   348,
+   "335"
+  ],
+  "gregory-job.JOB.27.20.1": [
+   "moralsonbookofjo02greguoft",
+   350,
+   "337"
+  ],
+  "gregory-job.JOB.28.3.1": [
+   "moralsonbookofjo02greguoft",
+   361,
+   "348"
+  ],
+  "gregory-job.JOB.28.5.1": [
+   "moralsonbookofjo02greguoft",
+   366,
+   "353"
+  ],
+  "gregory-job.JOB.28.6.1": [
+   "moralsonbookofjo02greguoft",
+   366,
+   "353"
+  ],
+  "gregory-job.JOB.28.9.1": [
+   "moralsonbookofjo02greguoft",
+   371,
+   "358"
+  ],
+  "gregory-job.JOB.28.11.1": [
+   "moralsonbookofjo02greguoft",
+   373,
+   "360"
+  ],
+  "gregory-job.JOB.28.22.1": [
+   "moralsonbookofjo02greguoft",
+   409,
+   "396"
+  ],
+  "gregory-job.JOB.28.26-27.1": [
+   "moralsonbookofjo02greguoft",
+   416,
+   "403"
+  ],
+  "gregory-job.JOB.28.28.1": [
+   "moralsonbookofjo02greguoft",
+   418,
+   "405"
+  ],
+  "gregory-job.JOB.29.2.1": [
+   "moralsonbookofjo02greguoft",
+   420,
+   "407"
+  ],
+  "gregory-job.JOB.29.3.1": [
+   "moralsonbookofjo02greguoft",
+   421,
+   "408"
+  ],
+  "gregory-job.JOB.29.8.1": [
+   "moralsonbookofjo02greguoft",
+   430,
+   "417"
+  ],
+  "gregory-job.JOB.29.14.1": [
+   "moralsonbookofjo02greguoft",
+   435,
+   "422"
+  ],
+  "gregory-job.JOB.29.15-16.1": [
+   "moralsonbookofjo02greguoft",
+   438,
+   "425"
+  ],
+  "gregory-job.JOB.29.20.1": [
+   "moralsonbookofjo02greguoft",
+   454,
+   "441"
+  ],
+  "gregory-job.JOB.30.9.1": [
+   "moralsonbookofjo02greguoft",
+   496,
+   "483"
+  ],
+  "gregory-job.JOB.30.10.1": [
+   "moralsonbookofjo02greguoft",
+   496,
+   "483"
+  ],
+  "gregory-job.JOB.30.16.1": [
+   "moralsonbookofjo02greguoft",
+   504,
+   "491"
+  ],
+  "gregory-job.JOB.30.19.1": [
+   "moralsonbookofjo02greguoft",
+   507,
+   "494"
+  ],
+  "gregory-job.JOB.30.26.1": [
+   "moralsonbookofjo02greguoft",
+   517,
+   "504"
+  ],
+  "gregory-job.JOB.30.29.1": [
+   "moralsonbookofjo02greguoft",
+   520,
+   "507"
+  ],
+  "gregory-job.JOB.30.30.1": [
+   "moralsonbookofjo02greguoft",
+   522,
+   "509"
+  ],
+  "gregory-job.JOB.30.31.1": [
+   "moralsonbookofjo02greguoft",
+   523,
+   "510"
+  ],
+  "gregory-job.JOB.31.1.1": [
+   "moralsonbookofjo02greguoft",
+   528,
+   "515"
+  ],
+  "gregory-job.JOB.31.5-6.1": [
+   "moralsonbookofjo02greguoft",
+   537,
+   "524"
+  ],
+  "gregory-job.JOB.31.7.1": [
+   "moralsonbookofjo02greguoft",
+   538,
+   "525"
+  ],
+  "gregory-job.JOB.31.8.1": [
+   "moralsonbookofjo02greguoft",
+   540,
+   "527"
+  ],
+  "gregory-job.JOB.31.15.1": [
+   "moralsonbookofjo02greguoft",
+   546,
+   "533"
+  ],
+  "gregory-job.JOB.31.16.1": [
+   "moralsonbookofjo02greguoft",
+   549,
+   "536"
+  ],
+  "gregory-job.JOB.31.17.1": [
+   "moralsonbookofjo02greguoft",
+   550,
+   "537"
+  ],
+  "gregory-job.JOB.31.18.1": [
+   "moralsonbookofjo02greguoft",
+   550,
+   "537"
+  ],
+  "gregory-job.JOB.31.19-20.1": [
+   "moralsonbookofjo01greguoft",
+   26,
+   "9"
+  ],
+  "gregory-job.JOB.31.21.1": [
+   "moralsonbookofjo02greguoft",
+   553,
+   "540"
+  ],
+  "gregory-job.JOB.31.22.1": [
+   "moralsonbookofjo02greguoft",
+   554,
+   "541"
+  ],
+  "gregory-job.JOB.31.32.1": [
+   "moralsonbookofjo02greguoft",
+   582,
+   "569"
+  ],
+  "gregory-job.JOB.31.34.1": [
+   "moralsonbookofjo02greguoft",
+   588,
+   "575"
+  ],
+  "gregory-job.JOB.31.35.1": [
+   "moralsonbookofjo02greguoft",
+   594,
+   "581"
+  ],
+  "gregory-job.JOB.31.36.1": [
+   "moralsonbookofjo02greguoft",
+   597,
+   "584"
+  ],
+  "gregory-job.JOB.32.2.1": [
+   "p1moralsonbookof03greguoft",
+   23,
+   "10"
+  ],
+  "gregory-job.JOB.32.4-5.1": [
+   "p1moralsonbookof03greguoft",
+   25,
+   "12"
+  ],
+  "gregory-job.JOB.32.8.1": [
+   "p1moralsonbookof03greguoft",
+   26,
+   "13"
+  ],
+  "gregory-job.JOB.32.17.1": [
+   "p1moralsonbookof03greguoft",
+   32,
+   "19"
+  ],
+  "gregory-job.JOB.33.3.1": [
+   "p1moralsonbookof03greguoft",
+   39,
+   "26"
+  ],
+  "gregory-job.JOB.33.4.1": [
+   "p1moralsonbookof03greguoft",
+   39,
+   "26"
+  ],
+  "gregory-job.JOB.33.8.1": [
+   "p1moralsonbookof03greguoft",
+   42,
+   "29"
+  ],
+  "gregory-job.JOB.33.12.1": [
+   "p1moralsonbookof03greguoft",
+   44,
+   "31"
+  ],
+  "gregory-job.JOB.33.13-14.1": [
+   "p1moralsonbookof03greguoft",
+   45,
+   "32"
+  ],
+  "gregory-job.JOB.33.15.1": [
+   "p1moralsonbookof03greguoft",
+   49,
+   "36"
+  ],
+  "gregory-job.JOB.33.18.1": [
+   "p1moralsonbookof03greguoft",
+   56,
+   "43"
+  ],
+  "gregory-job.JOB.33.20.1": [
+   "p1moralsonbookof03greguoft",
+   60,
+   "47"
+  ],
+  "gregory-job.JOB.33.21.1": [
+   "p1moralsonbookof03greguoft",
+   64,
+   "51"
+  ],
+  "gregory-job.JOB.33.22.1": [
+   "p1moralsonbookof03greguoft",
+   65,
+   "52"
+  ],
+  "gregory-job.JOB.33.25.1": [
+   "p1moralsonbookof03greguoft",
+   72,
+   "59"
+  ],
+  "gregory-job.JOB.33.29.1": [
+   "p1moralsonbookof03greguoft",
+   85,
+   "72"
+  ],
+  "gregory-job.JOB.34.4.1": [
+   "p1moralsonbookof03greguoft",
+   98,
+   "85"
+  ],
+  "gregory-job.JOB.34.12.1": [
+   "p1moralsonbookof03greguoft",
+   103,
+   "90"
+  ],
+  "gregory-job.JOB.34.14.1": [
+   "p1moralsonbookof03greguoft",
+   104,
+   "91"
+  ],
+  "gregory-job.JOB.34.16.1": [
+   "p1moralsonbookof03greguoft",
+   106,
+   "93"
+  ],
+  "gregory-job.JOB.34.21.1": [
+   "p1moralsonbookof03greguoft",
+   115,
+   "102"
+  ],
+  "gregory-job.JOB.34.22.1": [
+   "p1moralsonbookof03greguoft",
+   117,
+   "104"
+  ],
+  "gregory-job.JOB.34.24.1": [
+   "p1moralsonbookof03greguoft",
+   128,
+   "115"
+  ],
+  "gregory-job.JOB.34.25.1": [
+   "p1moralsonbookof03greguoft",
+   132,
+   "119"
+  ],
+  "gregory-job.JOB.35.2.1": [
+   "p1moralsonbookof03greguoft",
+   162,
+   "149"
+  ],
+  "gregory-job.JOB.35.4.1": [
+   "p1moralsonbookof03greguoft",
+   163,
+   "150"
+  ],
+  "gregory-job.JOB.35.12.1": [
+   "p1moralsonbookof03greguoft",
+   176,
+   "163"
+  ],
+  "gregory-job.JOB.35.16.1": [
+   "p1moralsonbookof03greguoft",
+   182,
+   "169"
+  ],
+  "gregory-job.JOB.36.4.1": [
+   "p1moralsonbookof03greguoft",
+   186,
+   "173"
+  ],
+  "gregory-job.JOB.36.7.1": [
+   "p1moralsonbookof03greguoft",
+   198,
+   "185"
+  ],
+  "gregory-job.JOB.36.8-9.1": [
+   "p1moralsonbookof03greguoft",
+   200,
+   "187"
+  ],
+  "gregory-job.JOB.36.11-12.1": [
+   "p1moralsonbookof03greguoft",
+   201,
+   "188"
+  ],
+  "gregory-job.JOB.36.16.1": [
+   "p1moralsonbookof03greguoft",
+   207,
+   "194"
+  ],
+  "gregory-job.JOB.37.3.1": [
+   "p1moralsonbookof03greguoft",
+   253,
+   "240"
+  ],
+  "gregory-job.JOB.37.5.1": [
+   "p1moralsonbookof03greguoft",
+   258,
+   "245"
+  ],
+  "gregory-job.JOB.37.6.1": [
+   "p1moralsonbookof03greguoft",
+   259,
+   "246"
+  ],
+  "gregory-job.JOB.37.7.1": [
+   "p1moralsonbookof03greguoft",
+   262,
+   "249"
+  ],
+  "gregory-job.JOB.37.14.1": [
+   "p1moralsonbookof03greguoft",
+   272,
+   "259"
+  ],
+  "gregory-job.JOB.37.15.1": [
+   "p1moralsonbookof03greguoft",
+   273,
+   "260"
+  ],
+  "gregory-job.JOB.37.16.1": [
+   "p1moralsonbookof03greguoft",
+   274,
+   "261"
+  ],
+  "gregory-job.JOB.38.7.1": [
+   "p1moralsonbookof03greguoft",
+   320,
+   "307"
+  ],
+  "gregory-job.JOB.38.8.1": [
+   "p1moralsonbookof03greguoft",
+   322,
+   "309"
+  ],
+  "gregory-job.JOB.38.9.1": [
+   "p1moralsonbookof03greguoft",
+   322,
+   "309"
+  ],
+  "gregory-job.JOB.38.9.2": [
+   "p1moralsonbookof03greguoft",
+   330,
+   "317"
+  ],
+  "gregory-job.JOB.38.12.1": [
+   "p1moralsonbookof03greguoft",
+   335,
+   "322"
+  ],
+  "gregory-job.JOB.38.13.1": [
+   "p1moralsonbookof03greguoft",
+   337,
+   "324"
+  ],
+  "gregory-job.JOB.38.13.2": [
+   "p1moralsonbookof03greguoft",
+   347,
+   "334"
+  ],
+  "gregory-job.JOB.38.14.1": [
+   "p1moralsonbookof03greguoft",
+   348,
+   "335"
+  ],
+  "gregory-job.JOB.38.17.1": [
+   "p1moralsonbookof03greguoft",
+   352,
+   "339"
+  ],
+  "gregory-job.JOB.38.17.2": [
+   "p1moralsonbookof03greguoft",
+   355,
+   "342"
+  ],
+  "gregory-job.JOB.38.18.1": [
+   "p1moralsonbookof03greguoft",
+   356,
+   "343"
+  ],
+  "gregory-job.JOB.38.18.2": [
+   "p1moralsonbookof03greguoft",
+   356,
+   "343"
+  ],
+  "gregory-job.JOB.38.21.1": [
+   "p1moralsonbookof03greguoft",
+   360,
+   "347"
+  ],
+  "gregory-job.JOB.38.22-23.1": [
+   "p1moralsonbookof03greguoft",
+   361,
+   "348"
+  ],
+  "gregory-job.JOB.38.24.1": [
+   "p1moralsonbookof03greguoft",
+   364,
+   "351"
+  ],
+  "gregory-job.JOB.38.26.1": [
+   "p1moralsonbookof03greguoft",
+   370,
+   "357"
+  ],
+  "gregory-job.JOB.38.29.1": [
+   "p1moralsonbookof03greguoft",
+   375,
+   ""
+  ],
+  "gregory-job.JOB.38.32.1": [
+   "p1moralsonbookof03greguoft",
+   392,
+   "19"
+  ],
+  "gregory-job.JOB.38.33.1": [
+   "p1moralsonbookof03greguoft",
+   394,
+   "21"
+  ],
+  "gregory-job.JOB.38.34.1": [
+   "p2moralsonbookof03greguoft",
+   19,
+   ""
+  ],
+  "gregory-job.JOB.38.36.1": [
+   "p2moralsonbookof03greguoft",
+   25,
+   "368"
+  ],
+  "gregory-job.JOB.38.38.1": [
+   "p2moralsonbookof03greguoft",
+   34,
+   "377"
+  ],
+  "gregory-job.JOB.38.38.2": [
+   "p2moralsonbookof03greguoft",
+   34,
+   "377"
+  ],
+  "gregory-job.JOB.38.41.1": [
+   "p2moralsonbookof03greguoft",
+   41,
+   "384"
+  ],
+  "gregory-job.JOB.39.4.1": [
+   "p2moralsonbookof03greguoft",
+   56,
+   "399"
+  ],
+  "gregory-job.JOB.39.5.1": [
+   "p2moralsonbookof03greguoft",
+   57,
+   "400"
+  ],
+  "gregory-job.JOB.39.5.2": [
+   "p2moralsonbookof03greguoft",
+   57,
+   "400"
+  ],
+  "gregory-job.JOB.39.8.1": [
+   "p2moralsonbookof03greguoft",
+   66,
+   "409"
+  ],
+  "gregory-job.JOB.39.9.1": [
+   "p2moralsonbookof03greguoft",
+   83,
+   "426"
+  ],
+  "gregory-job.JOB.39.11.1": [
+   "p2moralsonbookof03greguoft",
+   109,
+   "452"
+  ],
+  "gregory-job.JOB.39.12.1": [
+   "p2moralsonbookof03greguoft",
+   89,
+   "432"
+  ],
+  "gregory-job.JOB.39.12.2": [
+   "p2moralsonbookof03greguoft",
+   109,
+   "452"
+  ],
+  "gregory-job.JOB.39.14.1": [
+   "p2moralsonbookof03greguoft",
+   111,
+   "454"
+  ],
+  "gregory-job.JOB.39.15.1": [
+   "p2moralsonbookof03greguoft",
+   95,
+   "438"
+  ],
+  "gregory-job.JOB.39.15.2": [
+   "p2moralsonbookof03greguoft",
+   112,
+   "455"
+  ],
+  "gregory-job.JOB.39.16.1": [
+   "p2moralsonbookof03greguoft",
+   112,
+   "455"
+  ],
+  "gregory-job.JOB.39.17.1": [
+   "p2moralsonbookof03greguoft",
+   103,
+   "446"
+  ],
+  "gregory-job.JOB.39.18.1": [
+   "p2moralsonbookof03greguoft",
+   113,
+   "456"
+  ],
+  "gregory-job.JOB.39.19.1": [
+   "p2moralsonbookof03greguoft",
+   114,
+   "457"
+  ],
+  "gregory-job.JOB.39.22.1": [
+   "p2moralsonbookof03greguoft",
+   130,
+   "473"
+  ],
+  "gregory-job.JOB.39.23.1": [
+   "p2moralsonbookof03greguoft",
+   130,
+   "473"
+  ],
+  "gregory-job.JOB.39.26.1": [
+   "p2moralsonbookof03greguoft",
+   151,
+   "494"
+  ],
+  "gregory-job.JOB.39.27.1": [
+   "p2moralsonbookof03greguoft",
+   152,
+   "495"
+  ],
+  "gregory-job.JOB.39.30.1": [
+   "p2moralsonbookof03greguoft",
+   160,
+   "503"
+  ],
+  "gregory-job.JOB.42.3.1": [
+   "p2moralsonbookof03greguoft",
+   320,
+   "663"
+  ],
+  "gregory-job.JOB.42.4.1": [
+   "p2moralsonbookof03greguoft",
+   322,
+   "665"
+  ],
+  "gregory-job.JOB.42.5.1": [
+   "moralsonbookofjo02greguoft",
+   401,
+   "388"
+  ],
+  "gregory-job.JOB.42.8.1": [
+   "p2moralsonbookof03greguoft",
+   327,
+   "670"
+  ],
+  "gregory-job.JOB.42.9.1": [
+   "p2moralsonbookof03greguoft",
+   333,
+   "676"
+  ],
+  "gregory-job.JOB.42.11.1": [
+   "p2moralsonbookof03greguoft",
+   335,
+   "678"
+  ],
+  "gregory-job.JOB.42.12.1": [
+   "p2moralsonbookof03greguoft",
+   344,
+   "687"
+  ],
+  "gregory-job.JOB.42.13-14.1": [
+   "moralsonbookofjo01greguoft",
+   52,
+   "35"
+  ],
+  "gregory-job.JOB.42.14.1": [
+   "p2moralsonbookof03greguoft",
+   351,
+   "694"
+  ],
+  "gregory-job.JOB.42.15.1": [
+   "p2moralsonbookof03greguoft",
+   354,
+   "697"
+  ]
+ }
+}

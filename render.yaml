@@ -63,3 +63,29 @@ services:
       - path: /logia.js
         name: Cache-Control
         value: public, max-age=31536000, immutable
+      - path: /sheets.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      # The linker (web/linker.js) runs on other sites, so it and its chapter
+      # files may be read from any origin. Their addresses carry no digest,
+      # so browsers keep them a day.
+      - path: /linker.js
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /linker.js
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /linker/*
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /linker/*
+        name: Cache-Control
+        value: public, max-age=86400
+      # The API (scripts/api.py, docs/api.md) is for other sites and
+      # programs, so any origin may read it; it changes with each build.
+      - path: /api/*
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /api/*
+        name: Cache-Control
+        value: public, max-age=3600

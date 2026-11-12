@@ -1,0 +1,3410 @@
+{
+ "work": "lapide",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "greatcommentaryo05lapi",
+   "files": [
+    {
+     "url": "https://archive.org/download/greatcommentaryo05lapi/greatcommentaryo05lapi_hocr_pageindex.json.gz",
+     "sha256": "0f6f610695ca4108665d3f7fa49d24ec5d9d9a9e0ec4e81bf74e3f100fe3776c"
+    },
+    {
+     "url": "https://archive.org/download/greatcommentaryo05lapi/greatcommentaryo05lapi_hocr_searchtext.txt.gz",
+     "sha256": "06f95621060992ae4fd19def6172b12654172ad00c26fd61671def24e5b5ce97"
+    },
+    {
+     "url": "https://archive.org/download/greatcommentaryo05lapi/greatcommentaryo05lapi_page_numbers.json",
+     "sha256": "658c232ffd857b958e2026a25cf42e87549c8898b8eccb5ed3cb7e93edf4e55d"
+    }
+   ]
+  },
+  {
+   "id": "greatcommentaryo06lapi",
+   "files": [
+    {
+     "url": "https://archive.org/download/greatcommentaryo06lapi/greatcommentaryo06lapi_hocr_pageindex.json.gz",
+     "sha256": "4f0c423f035a47adee5326b197b2645937887ee25ac5c6e4f386f383e81a0682"
+    },
+    {
+     "url": "https://archive.org/download/greatcommentaryo06lapi/greatcommentaryo06lapi_hocr_searchtext.txt.gz",
+     "sha256": "65167fc1c5aae09dbce6c7b169e5aa07c4cb53efb0013ceaeeb32d2e2e5db3cc"
+    },
+    {
+     "url": "https://archive.org/download/greatcommentaryo06lapi/greatcommentaryo06lapi_page_numbers.json",
+     "sha256": "9f2af73edc1e1b45a70df1c721eaa4e7bba782a6dcd3b4466b2b117e839e786c"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 673,
+ "missed": 0,
+ "pages": {
+  "lapide.JHN.1.1.1": [
+   "greatcommentaryo05lapi",
+   28,
+   "17"
+  ],
+  "lapide.JHN.1.2.1": [
+   "greatcommentaryo05lapi",
+   36,
+   "25"
+  ],
+  "lapide.JHN.1.3.1": [
+   "greatcommentaryo05lapi",
+   36,
+   "25"
+  ],
+  "lapide.JHN.1.4.1": [
+   "greatcommentaryo05lapi",
+   39,
+   "28"
+  ],
+  "lapide.JHN.1.6.1": [
+   "greatcommentaryo05lapi",
+   43,
+   "32"
+  ],
+  "lapide.JHN.1.8.1": [
+   "greatcommentaryo05lapi",
+   44,
+   "33"
+  ],
+  "lapide.JHN.1.9.1": [
+   "greatcommentaryo05lapi",
+   44,
+   "33"
+  ],
+  "lapide.JHN.1.10.1": [
+   "greatcommentaryo05lapi",
+   46,
+   "35"
+  ],
+  "lapide.JHN.1.11.1": [
+   "greatcommentaryo05lapi",
+   47,
+   "36"
+  ],
+  "lapide.JHN.1.12.1": [
+   "greatcommentaryo05lapi",
+   48,
+   "37"
+  ],
+  "lapide.JHN.1.13.1": [
+   "greatcommentaryo05lapi",
+   50,
+   "39"
+  ],
+  "lapide.JHN.1.14.1": [
+   "greatcommentaryo05lapi",
+   50,
+   "39"
+  ],
+  "lapide.JHN.1.16.1": [
+   "greatcommentaryo05lapi",
+   60,
+   "49"
+  ],
+  "lapide.JHN.1.17.1": [
+   "greatcommentaryo05lapi",
+   63,
+   "52"
+  ],
+  "lapide.JHN.1.18.1": [
+   "greatcommentaryo05lapi",
+   64,
+   "53"
+  ],
+  "lapide.JHN.1.19.1": [
+   "greatcommentaryo05lapi",
+   66,
+   "55"
+  ],
+  "lapide.JHN.1.20.1": [
+   "greatcommentaryo05lapi",
+   69,
+   "58"
+  ],
+  "lapide.JHN.1.21.1": [
+   "greatcommentaryo05lapi",
+   70,
+   "59"
+  ],
+  "lapide.JHN.1.23.1": [
+   "greatcommentaryo05lapi",
+   70,
+   "59"
+  ],
+  "lapide.JHN.1.24.1": [
+   "greatcommentaryo05lapi",
+   71,
+   "60"
+  ],
+  "lapide.JHN.1.25.1": [
+   "greatcommentaryo05lapi",
+   71,
+   "60"
+  ],
+  "lapide.JHN.1.26.1": [
+   "greatcommentaryo05lapi",
+   71,
+   "60"
+  ],
+  "lapide.JHN.1.27.1": [
+   "greatcommentaryo05lapi",
+   71,
+   "60"
+  ],
+  "lapide.JHN.1.28.1": [
+   "greatcommentaryo05lapi",
+   72,
+   "61"
+  ],
+  "lapide.JHN.1.31.1": [
+   "greatcommentaryo05lapi",
+   75,
+   "64"
+  ],
+  "lapide.JHN.1.33.1": [
+   "greatcommentaryo05lapi",
+   75,
+   "64"
+  ],
+  "lapide.JHN.1.35.1": [
+   "greatcommentaryo05lapi",
+   75,
+   "64"
+  ],
+  "lapide.JHN.1.37.1": [
+   "greatcommentaryo05lapi",
+   76,
+   "65"
+  ],
+  "lapide.JHN.1.38.1": [
+   "greatcommentaryo05lapi",
+   76,
+   "65"
+  ],
+  "lapide.JHN.1.39.1": [
+   "greatcommentaryo05lapi",
+   77,
+   "66"
+  ],
+  "lapide.JHN.1.40.1": [
+   "greatcommentaryo05lapi",
+   78,
+   "67"
+  ],
+  "lapide.JHN.1.41.1": [
+   "greatcommentaryo05lapi",
+   78,
+   "67"
+  ],
+  "lapide.JHN.1.42.1": [
+   "greatcommentaryo05lapi",
+   79,
+   "68"
+  ],
+  "lapide.JHN.1.43.1": [
+   "greatcommentaryo05lapi",
+   80,
+   "69"
+  ],
+  "lapide.JHN.1.44.1": [
+   "greatcommentaryo05lapi",
+   81,
+   "70"
+  ],
+  "lapide.JHN.1.45.1": [
+   "greatcommentaryo05lapi",
+   81,
+   "70"
+  ],
+  "lapide.JHN.1.46.1": [
+   "greatcommentaryo05lapi",
+   82,
+   "71"
+  ],
+  "lapide.JHN.1.47.1": [
+   "greatcommentaryo05lapi",
+   83,
+   "72"
+  ],
+  "lapide.JHN.1.48.1": [
+   "greatcommentaryo05lapi",
+   83,
+   "72"
+  ],
+  "lapide.JHN.1.49.1": [
+   "greatcommentaryo05lapi",
+   84,
+   "73"
+  ],
+  "lapide.JHN.1.51.1": [
+   "greatcommentaryo05lapi",
+   85,
+   "74"
+  ],
+  "lapide.JHN.2.1.1": [
+   "greatcommentaryo05lapi",
+   90,
+   "79"
+  ],
+  "lapide.JHN.2.4.1": [
+   "greatcommentaryo05lapi",
+   95,
+   "84"
+  ],
+  "lapide.JHN.2.5.1": [
+   "greatcommentaryo05lapi",
+   97,
+   "86"
+  ],
+  "lapide.JHN.2.6.1": [
+   "greatcommentaryo05lapi",
+   97,
+   "86"
+  ],
+  "lapide.JHN.2.7.1": [
+   "greatcommentaryo05lapi",
+   98,
+   "87"
+  ],
+  "lapide.JHN.2.8.1": [
+   "greatcommentaryo05lapi",
+   99,
+   "88"
+  ],
+  "lapide.JHN.2.9.1": [
+   "greatcommentaryo05lapi",
+   100,
+   "89"
+  ],
+  "lapide.JHN.2.11.1": [
+   "greatcommentaryo05lapi",
+   101,
+   "90"
+  ],
+  "lapide.JHN.2.12.1": [
+   "greatcommentaryo05lapi",
+   103,
+   "92"
+  ],
+  "lapide.JHN.2.17.1": [
+   "greatcommentaryo05lapi",
+   103,
+   "92"
+  ],
+  "lapide.JHN.2.18.1": [
+   "greatcommentaryo05lapi",
+   104,
+   "93"
+  ],
+  "lapide.JHN.2.19.1": [
+   "greatcommentaryo05lapi",
+   105,
+   "94"
+  ],
+  "lapide.JHN.2.20.1": [
+   "greatcommentaryo05lapi",
+   105,
+   "94"
+  ],
+  "lapide.JHN.2.21.1": [
+   "greatcommentaryo05lapi",
+   107,
+   "96"
+  ],
+  "lapide.JHN.2.22.1": [
+   "greatcommentaryo05lapi",
+   107,
+   "96"
+  ],
+  "lapide.JHN.2.23.1": [
+   "greatcommentaryo05lapi",
+   107,
+   "96"
+  ],
+  "lapide.JHN.2.24.1": [
+   "greatcommentaryo05lapi",
+   108,
+   "97"
+  ],
+  "lapide.JHN.2.25.1": [
+   "greatcommentaryo05lapi",
+   108,
+   "97"
+  ],
+  "lapide.JHN.3.1.1": [
+   "greatcommentaryo05lapi",
+   110,
+   "99"
+  ],
+  "lapide.JHN.3.3.1": [
+   "greatcommentaryo05lapi",
+   111,
+   "100"
+  ],
+  "lapide.JHN.3.4.1": [
+   "greatcommentaryo05lapi",
+   113,
+   "102"
+  ],
+  "lapide.JHN.3.5.1": [
+   "greatcommentaryo05lapi",
+   113,
+   "102"
+  ],
+  "lapide.JHN.3.6.1": [
+   "greatcommentaryo05lapi",
+   116,
+   "105"
+  ],
+  "lapide.JHN.3.7.1": [
+   "greatcommentaryo05lapi",
+   117,
+   "106"
+  ],
+  "lapide.JHN.3.11.1": [
+   "greatcommentaryo05lapi",
+   120,
+   "109"
+  ],
+  "lapide.JHN.3.12.1": [
+   "greatcommentaryo05lapi",
+   120,
+   "109"
+  ],
+  "lapide.JHN.3.13.1": [
+   "greatcommentaryo05lapi",
+   121,
+   "110"
+  ],
+  "lapide.JHN.3.16.1": [
+   "greatcommentaryo05lapi",
+   124,
+   "113"
+  ],
+  "lapide.JHN.3.17.1": [
+   "greatcommentaryo05lapi",
+   126,
+   "115"
+  ],
+  "lapide.JHN.3.19.1": [
+   "greatcommentaryo05lapi",
+   127,
+   "116"
+  ],
+  "lapide.JHN.3.20.1": [
+   "greatcommentaryo05lapi",
+   128,
+   "117"
+  ],
+  "lapide.JHN.3.21.1": [
+   "greatcommentaryo05lapi",
+   128,
+   "117"
+  ],
+  "lapide.JHN.3.22.1": [
+   "greatcommentaryo05lapi",
+   128,
+   "117"
+  ],
+  "lapide.JHN.3.23.1": [
+   "greatcommentaryo05lapi",
+   130,
+   "119"
+  ],
+  "lapide.JHN.3.24.1": [
+   "greatcommentaryo05lapi",
+   131,
+   "120"
+  ],
+  "lapide.JHN.3.26.1": [
+   "greatcommentaryo05lapi",
+   132,
+   "121"
+  ],
+  "lapide.JHN.3.28.1": [
+   "greatcommentaryo05lapi",
+   132,
+   "121"
+  ],
+  "lapide.JHN.3.29.1": [
+   "greatcommentaryo05lapi",
+   133,
+   "122"
+  ],
+  "lapide.JHN.3.30.1": [
+   "greatcommentaryo05lapi",
+   134,
+   "123"
+  ],
+  "lapide.JHN.3.32.1": [
+   "greatcommentaryo05lapi",
+   135,
+   "124"
+  ],
+  "lapide.JHN.3.35.1": [
+   "greatcommentaryo05lapi",
+   136,
+   "125"
+  ],
+  "lapide.JHN.3.36.1": [
+   "greatcommentaryo05lapi",
+   139,
+   "128"
+  ],
+  "lapide.JHN.4.1.1": [
+   "greatcommentaryo05lapi",
+   142,
+   "131"
+  ],
+  "lapide.JHN.4.5.1": [
+   "greatcommentaryo05lapi",
+   143,
+   "132"
+  ],
+  "lapide.JHN.4.6.1": [
+   "greatcommentaryo05lapi",
+   144,
+   "133"
+  ],
+  "lapide.JHN.4.8.1": [
+   "greatcommentaryo05lapi",
+   145,
+   "134"
+  ],
+  "lapide.JHN.4.11.1": [
+   "greatcommentaryo05lapi",
+   148,
+   "137"
+  ],
+  "lapide.JHN.4.12.1": [
+   "greatcommentaryo05lapi",
+   149,
+   "138"
+  ],
+  "lapide.JHN.4.13.1": [
+   "greatcommentaryo05lapi",
+   149,
+   "138"
+  ],
+  "lapide.JHN.4.14.1": [
+   "greatcommentaryo05lapi",
+   151,
+   "140"
+  ],
+  "lapide.JHN.4.15.1": [
+   "greatcommentaryo05lapi",
+   152,
+   "141"
+  ],
+  "lapide.JHN.4.17.1": [
+   "greatcommentaryo05lapi",
+   153,
+   "142"
+  ],
+  "lapide.JHN.4.18.1": [
+   "greatcommentaryo05lapi",
+   153,
+   "142"
+  ],
+  "lapide.JHN.4.19.1": [
+   "greatcommentaryo05lapi",
+   154,
+   "143"
+  ],
+  "lapide.JHN.4.20.1": [
+   "greatcommentaryo05lapi",
+   154,
+   "143"
+  ],
+  "lapide.JHN.4.21.1": [
+   "greatcommentaryo05lapi",
+   155,
+   "144"
+  ],
+  "lapide.JHN.4.22.1": [
+   "greatcommentaryo05lapi",
+   156,
+   "145"
+  ],
+  "lapide.JHN.4.24.1": [
+   "greatcommentaryo05lapi",
+   159,
+   "148"
+  ],
+  "lapide.JHN.4.25.1": [
+   "greatcommentaryo05lapi",
+   160,
+   "149"
+  ],
+  "lapide.JHN.4.26.1": [
+   "greatcommentaryo05lapi",
+   160,
+   "149"
+  ],
+  "lapide.JHN.4.27.1": [
+   "greatcommentaryo05lapi",
+   160,
+   "149"
+  ],
+  "lapide.JHN.4.28.1": [
+   "greatcommentaryo05lapi",
+   161,
+   "150"
+  ],
+  "lapide.JHN.4.29.1": [
+   "greatcommentaryo05lapi",
+   162,
+   "151"
+  ],
+  "lapide.JHN.4.30.1": [
+   "greatcommentaryo05lapi",
+   162,
+   "151"
+  ],
+  "lapide.JHN.4.31.1": [
+   "greatcommentaryo05lapi",
+   163,
+   "152"
+  ],
+  "lapide.JHN.4.32.1": [
+   "greatcommentaryo05lapi",
+   163,
+   "152"
+  ],
+  "lapide.JHN.4.33.1": [
+   "greatcommentaryo05lapi",
+   163,
+   "152"
+  ],
+  "lapide.JHN.4.34.1": [
+   "greatcommentaryo05lapi",
+   163,
+   "152"
+  ],
+  "lapide.JHN.4.35.1": [
+   "greatcommentaryo05lapi",
+   164,
+   "153"
+  ],
+  "lapide.JHN.4.36.1": [
+   "greatcommentaryo05lapi",
+   165,
+   "154"
+  ],
+  "lapide.JHN.4.37.1": [
+   "greatcommentaryo05lapi",
+   166,
+   "155"
+  ],
+  "lapide.JHN.4.38.1": [
+   "greatcommentaryo05lapi",
+   166,
+   "155"
+  ],
+  "lapide.JHN.4.39.1": [
+   "greatcommentaryo05lapi",
+   167,
+   "156"
+  ],
+  "lapide.JHN.4.40.1": [
+   "greatcommentaryo05lapi",
+   167,
+   "156"
+  ],
+  "lapide.JHN.4.42.1": [
+   "greatcommentaryo05lapi",
+   167,
+   "156"
+  ],
+  "lapide.JHN.4.43.1": [
+   "greatcommentaryo05lapi",
+   167,
+   "156"
+  ],
+  "lapide.JHN.4.44.1": [
+   "greatcommentaryo05lapi",
+   167,
+   "156"
+  ],
+  "lapide.JHN.4.45.1": [
+   "greatcommentaryo05lapi",
+   167,
+   "156"
+  ],
+  "lapide.JHN.4.46.1": [
+   "greatcommentaryo05lapi",
+   170,
+   "159"
+  ],
+  "lapide.JHN.4.47.1": [
+   "greatcommentaryo05lapi",
+   170,
+   "159"
+  ],
+  "lapide.JHN.4.48.1": [
+   "greatcommentaryo05lapi",
+   171,
+   "160"
+  ],
+  "lapide.JHN.4.49.1": [
+   "greatcommentaryo05lapi",
+   171,
+   "160"
+  ],
+  "lapide.JHN.4.51.1": [
+   "greatcommentaryo05lapi",
+   172,
+   "161"
+  ],
+  "lapide.JHN.4.52.1": [
+   "greatcommentaryo05lapi",
+   172,
+   "161"
+  ],
+  "lapide.JHN.4.53.1": [
+   "greatcommentaryo05lapi",
+   172,
+   "161"
+  ],
+  "lapide.JHN.4.54.1": [
+   "greatcommentaryo05lapi",
+   173,
+   "162"
+  ],
+  "lapide.JHN.5.2.1": [
+   "greatcommentaryo05lapi",
+   176,
+   "165"
+  ],
+  "lapide.JHN.5.3.1": [
+   "greatcommentaryo05lapi",
+   177,
+   "166"
+  ],
+  "lapide.JHN.5.5.1": [
+   "greatcommentaryo05lapi",
+   180,
+   "169"
+  ],
+  "lapide.JHN.5.6.1": [
+   "greatcommentaryo05lapi",
+   181,
+   "170"
+  ],
+  "lapide.JHN.5.7.1": [
+   "greatcommentaryo05lapi",
+   181,
+   "170"
+  ],
+  "lapide.JHN.5.8.1": [
+   "greatcommentaryo05lapi",
+   182,
+   "171"
+  ],
+  "lapide.JHN.5.9.1": [
+   "greatcommentaryo05lapi",
+   183,
+   "172"
+  ],
+  "lapide.JHN.5.10.1": [
+   "greatcommentaryo05lapi",
+   183,
+   "172"
+  ],
+  "lapide.JHN.5.11.1": [
+   "greatcommentaryo05lapi",
+   183,
+   "172"
+  ],
+  "lapide.JHN.5.12.1": [
+   "greatcommentaryo05lapi",
+   184,
+   "173"
+  ],
+  "lapide.JHN.5.13.1": [
+   "greatcommentaryo05lapi",
+   184,
+   "173"
+  ],
+  "lapide.JHN.5.14.1": [
+   "greatcommentaryo05lapi",
+   184,
+   "173"
+  ],
+  "lapide.JHN.5.15.1": [
+   "greatcommentaryo05lapi",
+   186,
+   "175"
+  ],
+  "lapide.JHN.5.16.1": [
+   "greatcommentaryo05lapi",
+   186,
+   "175"
+  ],
+  "lapide.JHN.5.17.1": [
+   "greatcommentaryo05lapi",
+   186,
+   "175"
+  ],
+  "lapide.JHN.5.18.1": [
+   "greatcommentaryo05lapi",
+   187,
+   "176"
+  ],
+  "lapide.JHN.5.19.1": [
+   "greatcommentaryo05lapi",
+   187,
+   "176"
+  ],
+  "lapide.JHN.5.20.1": [
+   "greatcommentaryo05lapi",
+   189,
+   "178"
+  ],
+  "lapide.JHN.5.21.1": [
+   "greatcommentaryo05lapi",
+   191,
+   "180"
+  ],
+  "lapide.JHN.5.22.1": [
+   "greatcommentaryo05lapi",
+   192,
+   "181"
+  ],
+  "lapide.JHN.5.23.1": [
+   "greatcommentaryo05lapi",
+   192,
+   "181"
+  ],
+  "lapide.JHN.5.24.1": [
+   "greatcommentaryo05lapi",
+   193,
+   "182"
+  ],
+  "lapide.JHN.5.25.1": [
+   "greatcommentaryo05lapi",
+   194,
+   "183"
+  ],
+  "lapide.JHN.5.26.1": [
+   "greatcommentaryo05lapi",
+   195,
+   "184"
+  ],
+  "lapide.JHN.5.27.1": [
+   "greatcommentaryo05lapi",
+   196,
+   "185"
+  ],
+  "lapide.JHN.5.28.1": [
+   "greatcommentaryo05lapi",
+   196,
+   "185"
+  ],
+  "lapide.JHN.5.29.1": [
+   "greatcommentaryo05lapi",
+   197,
+   "186"
+  ],
+  "lapide.JHN.5.31.1": [
+   "greatcommentaryo05lapi",
+   198,
+   "187"
+  ],
+  "lapide.JHN.5.32.1": [
+   "greatcommentaryo05lapi",
+   199,
+   "188"
+  ],
+  "lapide.JHN.5.33.1": [
+   "greatcommentaryo05lapi",
+   199,
+   "188"
+  ],
+  "lapide.JHN.5.34.1": [
+   "greatcommentaryo05lapi",
+   200,
+   "189"
+  ],
+  "lapide.JHN.5.35.1": [
+   "greatcommentaryo05lapi",
+   200,
+   "189"
+  ],
+  "lapide.JHN.5.36.1": [
+   "greatcommentaryo05lapi",
+   202,
+   "191"
+  ],
+  "lapide.JHN.5.37.1": [
+   "greatcommentaryo05lapi",
+   203,
+   "192"
+  ],
+  "lapide.JHN.5.38.1": [
+   "greatcommentaryo05lapi",
+   204,
+   "193"
+  ],
+  "lapide.JHN.5.39.1": [
+   "greatcommentaryo05lapi",
+   206,
+   "195"
+  ],
+  "lapide.JHN.5.40.1": [
+   "greatcommentaryo05lapi",
+   207,
+   "196"
+  ],
+  "lapide.JHN.5.41.1": [
+   "greatcommentaryo05lapi",
+   207,
+   "196"
+  ],
+  "lapide.JHN.5.42.1": [
+   "greatcommentaryo05lapi",
+   207,
+   "196"
+  ],
+  "lapide.JHN.5.43.1": [
+   "greatcommentaryo05lapi",
+   208,
+   "197"
+  ],
+  "lapide.JHN.5.44.1": [
+   "greatcommentaryo05lapi",
+   208,
+   "197"
+  ],
+  "lapide.JHN.5.45.1": [
+   "greatcommentaryo05lapi",
+   208,
+   "197"
+  ],
+  "lapide.JHN.5.46.1": [
+   "greatcommentaryo05lapi",
+   209,
+   "198"
+  ],
+  "lapide.JHN.5.47.1": [
+   "greatcommentaryo05lapi",
+   209,
+   "198"
+  ],
+  "lapide.JHN.6.1.1": [
+   "greatcommentaryo05lapi",
+   213,
+   "202"
+  ],
+  "lapide.JHN.6.3.1": [
+   "greatcommentaryo05lapi",
+   213,
+   "202"
+  ],
+  "lapide.JHN.6.11.1": [
+   "greatcommentaryo05lapi",
+   214,
+   "203"
+  ],
+  "lapide.JHN.6.15.1": [
+   "greatcommentaryo05lapi",
+   214,
+   "203"
+  ],
+  "lapide.JHN.6.21.1": [
+   "greatcommentaryo05lapi",
+   215,
+   "204"
+  ],
+  "lapide.JHN.6.22.1": [
+   "greatcommentaryo05lapi",
+   216,
+   "205"
+  ],
+  "lapide.JHN.6.23.1": [
+   "greatcommentaryo05lapi",
+   216,
+   "205"
+  ],
+  "lapide.JHN.6.25.1": [
+   "greatcommentaryo05lapi",
+   216,
+   "205"
+  ],
+  "lapide.JHN.6.26.1": [
+   "greatcommentaryo05lapi",
+   216,
+   "205"
+  ],
+  "lapide.JHN.6.27.1": [
+   "greatcommentaryo05lapi",
+   217,
+   "206"
+  ],
+  "lapide.JHN.6.28.1": [
+   "greatcommentaryo05lapi",
+   220,
+   "209"
+  ],
+  "lapide.JHN.6.30.1": [
+   "greatcommentaryo05lapi",
+   222,
+   "211"
+  ],
+  "lapide.JHN.6.31.1": [
+   "greatcommentaryo05lapi",
+   222,
+   "211"
+  ],
+  "lapide.JHN.6.33.1": [
+   "greatcommentaryo05lapi",
+   225,
+   "214"
+  ],
+  "lapide.JHN.6.34.1": [
+   "greatcommentaryo05lapi",
+   225,
+   "214"
+  ],
+  "lapide.JHN.6.36.1": [
+   "greatcommentaryo05lapi",
+   228,
+   "217"
+  ],
+  "lapide.JHN.6.37.1": [
+   "greatcommentaryo05lapi",
+   228,
+   "217"
+  ],
+  "lapide.JHN.6.38.1": [
+   "greatcommentaryo05lapi",
+   231,
+   "220"
+  ],
+  "lapide.JHN.6.39.1": [
+   "greatcommentaryo05lapi",
+   231,
+   "220"
+  ],
+  "lapide.JHN.6.40.1": [
+   "greatcommentaryo05lapi",
+   231,
+   "220"
+  ],
+  "lapide.JHN.6.41-42.1": [
+   "greatcommentaryo05lapi",
+   232,
+   "221"
+  ],
+  "lapide.JHN.6.44.1": [
+   "greatcommentaryo05lapi",
+   232,
+   "221"
+  ],
+  "lapide.JHN.6.45.1": [
+   "greatcommentaryo05lapi",
+   237,
+   "226"
+  ],
+  "lapide.JHN.6.46.1": [
+   "greatcommentaryo05lapi",
+   239,
+   "228"
+  ],
+  "lapide.JHN.6.48.1": [
+   "greatcommentaryo05lapi",
+   239,
+   "228"
+  ],
+  "lapide.JHN.6.49-50.1": [
+   "greatcommentaryo05lapi",
+   239,
+   "228"
+  ],
+  "lapide.JHN.6.52.1": [
+   "greatcommentaryo05lapi",
+   240,
+   "229"
+  ],
+  "lapide.JHN.6.53.1": [
+   "greatcommentaryo05lapi",
+   247,
+   "236"
+  ],
+  "lapide.JHN.6.55.1": [
+   "greatcommentaryo05lapi",
+   253,
+   "242"
+  ],
+  "lapide.JHN.6.56.1": [
+   "greatcommentaryo05lapi",
+   255,
+   "244"
+  ],
+  "lapide.JHN.6.57.1": [
+   "greatcommentaryo05lapi",
+   256,
+   "245"
+  ],
+  "lapide.JHN.6.58.1": [
+   "greatcommentaryo05lapi",
+   261,
+   "250"
+  ],
+  "lapide.JHN.6.59.1": [
+   "greatcommentaryo05lapi",
+   264,
+   "253"
+  ],
+  "lapide.JHN.6.60.1": [
+   "greatcommentaryo05lapi",
+   265,
+   "254"
+  ],
+  "lapide.JHN.6.61.1": [
+   "greatcommentaryo05lapi",
+   265,
+   "254"
+  ],
+  "lapide.JHN.6.62.1": [
+   "greatcommentaryo05lapi",
+   266,
+   "255"
+  ],
+  "lapide.JHN.6.63.1": [
+   "greatcommentaryo05lapi",
+   266,
+   "255"
+  ],
+  "lapide.JHN.6.64.1": [
+   "greatcommentaryo05lapi",
+   267,
+   "256"
+  ],
+  "lapide.JHN.6.65.1": [
+   "greatcommentaryo05lapi",
+   270,
+   "259"
+  ],
+  "lapide.JHN.6.66.1": [
+   "greatcommentaryo05lapi",
+   271,
+   "260"
+  ],
+  "lapide.JHN.6.67.1": [
+   "greatcommentaryo05lapi",
+   271,
+   "260"
+  ],
+  "lapide.JHN.6.68.1": [
+   "greatcommentaryo05lapi",
+   272,
+   "261"
+  ],
+  "lapide.JHN.6.69.1": [
+   "greatcommentaryo05lapi",
+   273,
+   "262"
+  ],
+  "lapide.JHN.6.70.1": [
+   "greatcommentaryo05lapi",
+   274,
+   "263"
+  ],
+  "lapide.JHN.6.71.1": [
+   "greatcommentaryo05lapi",
+   275,
+   "264"
+  ],
+  "lapide.JHN.7.2.1": [
+   "greatcommentaryo05lapi",
+   281,
+   "270"
+  ],
+  "lapide.JHN.7.3.1": [
+   "greatcommentaryo05lapi",
+   281,
+   "270"
+  ],
+  "lapide.JHN.7.4.1": [
+   "greatcommentaryo05lapi",
+   282,
+   "271"
+  ],
+  "lapide.JHN.7.5.1": [
+   "greatcommentaryo05lapi",
+   282,
+   "271"
+  ],
+  "lapide.JHN.7.7.1": [
+   "greatcommentaryo05lapi",
+   283,
+   "272"
+  ],
+  "lapide.JHN.7.8.1": [
+   "greatcommentaryo05lapi",
+   283,
+   "272"
+  ],
+  "lapide.JHN.7.9-10.1": [
+   "greatcommentaryo05lapi",
+   284,
+   "273"
+  ],
+  "lapide.JHN.7.11.1": [
+   "greatcommentaryo05lapi",
+   284,
+   "273"
+  ],
+  "lapide.JHN.7.12.1": [
+   "greatcommentaryo05lapi",
+   284,
+   "273"
+  ],
+  "lapide.JHN.7.13.1": [
+   "greatcommentaryo05lapi",
+   284,
+   "273"
+  ],
+  "lapide.JHN.7.15.1": [
+   "greatcommentaryo05lapi",
+   286,
+   "275"
+  ],
+  "lapide.JHN.7.16.1": [
+   "greatcommentaryo05lapi",
+   286,
+   "275"
+  ],
+  "lapide.JHN.7.17.1": [
+   "greatcommentaryo05lapi",
+   287,
+   "276"
+  ],
+  "lapide.JHN.7.18.1": [
+   "greatcommentaryo05lapi",
+   287,
+   "276"
+  ],
+  "lapide.JHN.7.19-20.1": [
+   "greatcommentaryo05lapi",
+   288,
+   "277"
+  ],
+  "lapide.JHN.7.21.1": [
+   "greatcommentaryo05lapi",
+   288,
+   "277"
+  ],
+  "lapide.JHN.7.22.1": [
+   "greatcommentaryo05lapi",
+   289,
+   "278"
+  ],
+  "lapide.JHN.7.23.1": [
+   "greatcommentaryo05lapi",
+   290,
+   "279"
+  ],
+  "lapide.JHN.7.24.1": [
+   "greatcommentaryo05lapi",
+   290,
+   "279"
+  ],
+  "lapide.JHN.7.25.1": [
+   "greatcommentaryo05lapi",
+   291,
+   "280"
+  ],
+  "lapide.JHN.7.26.1": [
+   "greatcommentaryo05lapi",
+   291,
+   "280"
+  ],
+  "lapide.JHN.7.27.1": [
+   "greatcommentaryo05lapi",
+   291,
+   "280"
+  ],
+  "lapide.JHN.7.29.1": [
+   "greatcommentaryo05lapi",
+   292,
+   "281"
+  ],
+  "lapide.JHN.7.30.1": [
+   "greatcommentaryo05lapi",
+   293,
+   "282"
+  ],
+  "lapide.JHN.7.31.1": [
+   "greatcommentaryo05lapi",
+   293,
+   "282"
+  ],
+  "lapide.JHN.7.32.1": [
+   "greatcommentaryo05lapi",
+   294,
+   "283"
+  ],
+  "lapide.JHN.7.33.1": [
+   "greatcommentaryo05lapi",
+   294,
+   "283"
+  ],
+  "lapide.JHN.7.36.1": [
+   "greatcommentaryo05lapi",
+   295,
+   "284"
+  ],
+  "lapide.JHN.7.37.1": [
+   "greatcommentaryo05lapi",
+   296,
+   "285"
+  ],
+  "lapide.JHN.7.38.1": [
+   "greatcommentaryo05lapi",
+   296,
+   "285"
+  ],
+  "lapide.JHN.7.39.1": [
+   "greatcommentaryo05lapi",
+   298,
+   "287"
+  ],
+  "lapide.JHN.7.42.1": [
+   "greatcommentaryo05lapi",
+   299,
+   "288"
+  ],
+  "lapide.JHN.7.43.1": [
+   "greatcommentaryo05lapi",
+   300,
+   "289"
+  ],
+  "lapide.JHN.7.44.1": [
+   "greatcommentaryo05lapi",
+   300,
+   "289"
+  ],
+  "lapide.JHN.7.45.1": [
+   "greatcommentaryo05lapi",
+   300,
+   "289"
+  ],
+  "lapide.JHN.7.46.1": [
+   "greatcommentaryo05lapi",
+   300,
+   "289"
+  ],
+  "lapide.JHN.7.47.1": [
+   "greatcommentaryo05lapi",
+   301,
+   "290"
+  ],
+  "lapide.JHN.7.48.1": [
+   "greatcommentaryo05lapi",
+   301,
+   "290"
+  ],
+  "lapide.JHN.7.49.1": [
+   "greatcommentaryo05lapi",
+   302,
+   "291"
+  ],
+  "lapide.JHN.7.50-51.1": [
+   "greatcommentaryo05lapi",
+   302,
+   "291"
+  ],
+  "lapide.JHN.7.52.1": [
+   "greatcommentaryo05lapi",
+   302,
+   "291"
+  ],
+  "lapide.JHN.7.53.1": [
+   "greatcommentaryo05lapi",
+   303,
+   "292"
+  ],
+  "lapide.JHN.8.2.1": [
+   "greatcommentaryo05lapi",
+   307,
+   "296"
+  ],
+  "lapide.JHN.8.6.1": [
+   "greatcommentaryo05lapi",
+   307,
+   "296"
+  ],
+  "lapide.JHN.8.7.1": [
+   "greatcommentaryo05lapi",
+   309,
+   "298"
+  ],
+  "lapide.JHN.8.9.1": [
+   "greatcommentaryo05lapi",
+   311,
+   "300"
+  ],
+  "lapide.JHN.8.10.1": [
+   "greatcommentaryo05lapi",
+   312,
+   "301"
+  ],
+  "lapide.JHN.8.11.1": [
+   "greatcommentaryo05lapi",
+   312,
+   "301"
+  ],
+  "lapide.JHN.8.12.1": [
+   "greatcommentaryo05lapi",
+   313,
+   "302"
+  ],
+  "lapide.JHN.8.13.1": [
+   "greatcommentaryo05lapi",
+   315,
+   "304"
+  ],
+  "lapide.JHN.8.15.1": [
+   "greatcommentaryo05lapi",
+   316,
+   "305"
+  ],
+  "lapide.JHN.8.16.1": [
+   "greatcommentaryo05lapi",
+   317,
+   "306"
+  ],
+  "lapide.JHN.8.17.1": [
+   "greatcommentaryo05lapi",
+   318,
+   "307"
+  ],
+  "lapide.JHN.8.18.1": [
+   "greatcommentaryo05lapi",
+   318,
+   "307"
+  ],
+  "lapide.JHN.8.19.1": [
+   "greatcommentaryo05lapi",
+   319,
+   "308"
+  ],
+  "lapide.JHN.8.20.1": [
+   "greatcommentaryo05lapi",
+   320,
+   "309"
+  ],
+  "lapide.JHN.8.22.1": [
+   "greatcommentaryo05lapi",
+   322,
+   "311"
+  ],
+  "lapide.JHN.8.23.1": [
+   "greatcommentaryo05lapi",
+   323,
+   "312"
+  ],
+  "lapide.JHN.8.24.1": [
+   "greatcommentaryo05lapi",
+   324,
+   "313"
+  ],
+  "lapide.JHN.8.25.1": [
+   "greatcommentaryo05lapi",
+   325,
+   "314"
+  ],
+  "lapide.JHN.8.26.1": [
+   "greatcommentaryo05lapi",
+   327,
+   "316"
+  ],
+  "lapide.JHN.8.27.1": [
+   "greatcommentaryo05lapi",
+   327,
+   "316"
+  ],
+  "lapide.JHN.8.28.1": [
+   "greatcommentaryo05lapi",
+   328,
+   "317"
+  ],
+  "lapide.JHN.8.29.1": [
+   "greatcommentaryo05lapi",
+   328,
+   "317"
+  ],
+  "lapide.JHN.8.30.1": [
+   "greatcommentaryo05lapi",
+   329,
+   "318"
+  ],
+  "lapide.JHN.8.31.1": [
+   "greatcommentaryo05lapi",
+   329,
+   "318"
+  ],
+  "lapide.JHN.8.32.1": [
+   "greatcommentaryo05lapi",
+   329,
+   "318"
+  ],
+  "lapide.JHN.8.33.1": [
+   "greatcommentaryo05lapi",
+   330,
+   "319"
+  ],
+  "lapide.JHN.8.34.1": [
+   "greatcommentaryo05lapi",
+   331,
+   "320"
+  ],
+  "lapide.JHN.8.35.1": [
+   "greatcommentaryo05lapi",
+   332,
+   "321"
+  ],
+  "lapide.JHN.8.36.1": [
+   "greatcommentaryo05lapi",
+   333,
+   "322"
+  ],
+  "lapide.JHN.8.37.1": [
+   "greatcommentaryo05lapi",
+   333,
+   "322"
+  ],
+  "lapide.JHN.8.38.1": [
+   "greatcommentaryo05lapi",
+   333,
+   "322"
+  ],
+  "lapide.JHN.8.39.1": [
+   "greatcommentaryo05lapi",
+   333,
+   "322"
+  ],
+  "lapide.JHN.8.40.1": [
+   "greatcommentaryo05lapi",
+   333,
+   "322"
+  ],
+  "lapide.JHN.8.41.1": [
+   "greatcommentaryo05lapi",
+   334,
+   "323"
+  ],
+  "lapide.JHN.8.43.1": [
+   "greatcommentaryo05lapi",
+   335,
+   "324"
+  ],
+  "lapide.JHN.8.44.1": [
+   "greatcommentaryo05lapi",
+   335,
+   "324"
+  ],
+  "lapide.JHN.8.46.1": [
+   "greatcommentaryo05lapi",
+   338,
+   "327"
+  ],
+  "lapide.JHN.8.47.1": [
+   "greatcommentaryo05lapi",
+   339,
+   "328"
+  ],
+  "lapide.JHN.8.48.1": [
+   "greatcommentaryo05lapi",
+   341,
+   "330"
+  ],
+  "lapide.JHN.8.49.1": [
+   "greatcommentaryo05lapi",
+   341,
+   "330"
+  ],
+  "lapide.JHN.8.50.1": [
+   "greatcommentaryo05lapi",
+   342,
+   "331"
+  ],
+  "lapide.JHN.8.51.1": [
+   "greatcommentaryo05lapi",
+   343,
+   "332"
+  ],
+  "lapide.JHN.8.52.1": [
+   "greatcommentaryo05lapi",
+   343,
+   "332"
+  ],
+  "lapide.JHN.8.53.1": [
+   "greatcommentaryo05lapi",
+   344,
+   "333"
+  ],
+  "lapide.JHN.8.54.1": [
+   "greatcommentaryo05lapi",
+   344,
+   "333"
+  ],
+  "lapide.JHN.8.55.1": [
+   "greatcommentaryo05lapi",
+   344,
+   "333"
+  ],
+  "lapide.JHN.8.56.1": [
+   "greatcommentaryo05lapi",
+   345,
+   "334"
+  ],
+  "lapide.JHN.8.57.1": [
+   "greatcommentaryo05lapi",
+   347,
+   "336"
+  ],
+  "lapide.JHN.8.58.1": [
+   "greatcommentaryo05lapi",
+   348,
+   "337"
+  ],
+  "lapide.JHN.8.59.1": [
+   "greatcommentaryo05lapi",
+   348,
+   "337"
+  ],
+  "lapide.JHN.9.1.1": [
+   "greatcommentaryo05lapi",
+   351,
+   "340"
+  ],
+  "lapide.JHN.9.2.1": [
+   "greatcommentaryo05lapi",
+   352,
+   "341"
+  ],
+  "lapide.JHN.9.4.1": [
+   "greatcommentaryo05lapi",
+   354,
+   "343"
+  ],
+  "lapide.JHN.9.5.1": [
+   "greatcommentaryo05lapi",
+   355,
+   "344"
+  ],
+  "lapide.JHN.9.6.1": [
+   "greatcommentaryo05lapi",
+   355,
+   "344"
+  ],
+  "lapide.JHN.9.7.1": [
+   "greatcommentaryo05lapi",
+   356,
+   "345"
+  ],
+  "lapide.JHN.9.8-9.1": [
+   "greatcommentaryo05lapi",
+   359,
+   "348"
+  ],
+  "lapide.JHN.9.10.1": [
+   "greatcommentaryo05lapi",
+   359,
+   "348"
+  ],
+  "lapide.JHN.9.12.1": [
+   "greatcommentaryo05lapi",
+   360,
+   "349"
+  ],
+  "lapide.JHN.9.13.1": [
+   "greatcommentaryo05lapi",
+   360,
+   "349"
+  ],
+  "lapide.JHN.9.17.1": [
+   "greatcommentaryo05lapi",
+   360,
+   "349"
+  ],
+  "lapide.JHN.9.18.1": [
+   "greatcommentaryo05lapi",
+   361,
+   "350"
+  ],
+  "lapide.JHN.9.22.1": [
+   "greatcommentaryo05lapi",
+   361,
+   "350"
+  ],
+  "lapide.JHN.9.24.1": [
+   "greatcommentaryo05lapi",
+   362,
+   "351"
+  ],
+  "lapide.JHN.9.28.1": [
+   "greatcommentaryo05lapi",
+   363,
+   "352"
+  ],
+  "lapide.JHN.9.30.1": [
+   "greatcommentaryo05lapi",
+   363,
+   "352"
+  ],
+  "lapide.JHN.9.31.1": [
+   "greatcommentaryo05lapi",
+   363,
+   "352"
+  ],
+  "lapide.JHN.9.32.1": [
+   "greatcommentaryo05lapi",
+   364,
+   "353"
+  ],
+  "lapide.JHN.9.33.1": [
+   "greatcommentaryo05lapi",
+   364,
+   "353"
+  ],
+  "lapide.JHN.9.34.1": [
+   "greatcommentaryo05lapi",
+   365,
+   "354"
+  ],
+  "lapide.JHN.9.35.1": [
+   "greatcommentaryo05lapi",
+   365,
+   "354"
+  ],
+  "lapide.JHN.9.38.1": [
+   "greatcommentaryo05lapi",
+   366,
+   "355"
+  ],
+  "lapide.JHN.9.39.1": [
+   "greatcommentaryo05lapi",
+   366,
+   "355"
+  ],
+  "lapide.JHN.9.40.1": [
+   "greatcommentaryo05lapi",
+   367,
+   "356"
+  ],
+  "lapide.JHN.9.41.1": [
+   "greatcommentaryo05lapi",
+   367,
+   "356"
+  ],
+  "lapide.JHN.10.1.1": [
+   "greatcommentaryo05lapi",
+   370,
+   "359"
+  ],
+  "lapide.JHN.10.2.1": [
+   "greatcommentaryo05lapi",
+   373,
+   "362"
+  ],
+  "lapide.JHN.10.3.1": [
+   "greatcommentaryo05lapi",
+   374,
+   "363"
+  ],
+  "lapide.JHN.10.4.1": [
+   "greatcommentaryo05lapi",
+   375,
+   "364"
+  ],
+  "lapide.JHN.10.5.1": [
+   "greatcommentaryo05lapi",
+   376,
+   "365"
+  ],
+  "lapide.JHN.10.6.1": [
+   "greatcommentaryo05lapi",
+   376,
+   "365"
+  ],
+  "lapide.JHN.10.7.1": [
+   "greatcommentaryo05lapi",
+   376,
+   "365"
+  ],
+  "lapide.JHN.10.8.1": [
+   "greatcommentaryo05lapi",
+   377,
+   "366"
+  ],
+  "lapide.JHN.10.9.1": [
+   "greatcommentaryo05lapi",
+   378,
+   "367"
+  ],
+  "lapide.JHN.10.10.1": [
+   "greatcommentaryo05lapi",
+   379,
+   "368"
+  ],
+  "lapide.JHN.10.11.1": [
+   "greatcommentaryo05lapi",
+   380,
+   "369"
+  ],
+  "lapide.JHN.10.12.1": [
+   "greatcommentaryo05lapi",
+   382,
+   "371"
+  ],
+  "lapide.JHN.10.13.1": [
+   "greatcommentaryo05lapi",
+   383,
+   "372"
+  ],
+  "lapide.JHN.10.14.1": [
+   "greatcommentaryo05lapi",
+   383,
+   "372"
+  ],
+  "lapide.JHN.10.15.1": [
+   "greatcommentaryo05lapi",
+   384,
+   "373"
+  ],
+  "lapide.JHN.10.16.1": [
+   "greatcommentaryo05lapi",
+   385,
+   "374"
+  ],
+  "lapide.JHN.10.17.1": [
+   "greatcommentaryo05lapi",
+   386,
+   "375"
+  ],
+  "lapide.JHN.10.18.1": [
+   "greatcommentaryo05lapi",
+   386,
+   "375"
+  ],
+  "lapide.JHN.10.21.1": [
+   "greatcommentaryo05lapi",
+   388,
+   "377"
+  ],
+  "lapide.JHN.10.22.1": [
+   "greatcommentaryo05lapi",
+   388,
+   "377"
+  ],
+  "lapide.JHN.10.23.1": [
+   "greatcommentaryo05lapi",
+   389,
+   "378"
+  ],
+  "lapide.JHN.10.24.1": [
+   "greatcommentaryo05lapi",
+   389,
+   "378"
+  ],
+  "lapide.JHN.10.26.1": [
+   "greatcommentaryo05lapi",
+   390,
+   "379"
+  ],
+  "lapide.JHN.10.27.1": [
+   "greatcommentaryo05lapi",
+   391,
+   "380"
+  ],
+  "lapide.JHN.10.28.1": [
+   "greatcommentaryo05lapi",
+   391,
+   "380"
+  ],
+  "lapide.JHN.10.29.1": [
+   "greatcommentaryo05lapi",
+   392,
+   "381"
+  ],
+  "lapide.JHN.10.30.1": [
+   "greatcommentaryo05lapi",
+   392,
+   "381"
+  ],
+  "lapide.JHN.10.31.1": [
+   "greatcommentaryo05lapi",
+   393,
+   "382"
+  ],
+  "lapide.JHN.10.33.1": [
+   "greatcommentaryo05lapi",
+   393,
+   "382"
+  ],
+  "lapide.JHN.10.35.1": [
+   "greatcommentaryo05lapi",
+   394,
+   "383"
+  ],
+  "lapide.JHN.10.36.1": [
+   "greatcommentaryo05lapi",
+   394,
+   "383"
+  ],
+  "lapide.JHN.10.37.1": [
+   "greatcommentaryo05lapi",
+   395,
+   "384"
+  ],
+  "lapide.JHN.10.38.1": [
+   "greatcommentaryo05lapi",
+   395,
+   "384"
+  ],
+  "lapide.JHN.10.39.1": [
+   "greatcommentaryo05lapi",
+   396,
+   "385"
+  ],
+  "lapide.JHN.10.40.1": [
+   "greatcommentaryo05lapi",
+   396,
+   "385"
+  ],
+  "lapide.JHN.10.41.1": [
+   "greatcommentaryo05lapi",
+   396,
+   "385"
+  ],
+  "lapide.JHN.10.42.1": [
+   "greatcommentaryo05lapi",
+   397,
+   "386"
+  ],
+  "lapide.JHN.11.1.1": [
+   "greatcommentaryo05lapi",
+   400,
+   "389"
+  ],
+  "lapide.JHN.11.2.1": [
+   "greatcommentaryo05lapi",
+   401,
+   "390"
+  ],
+  "lapide.JHN.11.3.1": [
+   "greatcommentaryo05lapi",
+   401,
+   "390"
+  ],
+  "lapide.JHN.11.4.1": [
+   "greatcommentaryo05lapi",
+   402,
+   "391"
+  ],
+  "lapide.JHN.11.5.1": [
+   "greatcommentaryo05lapi",
+   403,
+   "392"
+  ],
+  "lapide.JHN.11.6.1": [
+   "greatcommentaryo05lapi",
+   404,
+   "393"
+  ],
+  "lapide.JHN.11.7.1": [
+   "greatcommentaryo05lapi",
+   404,
+   "393"
+  ],
+  "lapide.JHN.11.8.1": [
+   "greatcommentaryo05lapi",
+   404,
+   "393"
+  ],
+  "lapide.JHN.11.10.1": [
+   "greatcommentaryo05lapi",
+   405,
+   "394"
+  ],
+  "lapide.JHN.11.11.1": [
+   "greatcommentaryo05lapi",
+   406,
+   "395"
+  ],
+  "lapide.JHN.11.12.1": [
+   "greatcommentaryo05lapi",
+   406,
+   "395"
+  ],
+  "lapide.JHN.11.14.1": [
+   "greatcommentaryo05lapi",
+   406,
+   "395"
+  ],
+  "lapide.JHN.11.15.1": [
+   "greatcommentaryo05lapi",
+   406,
+   "395"
+  ],
+  "lapide.JHN.11.16.1": [
+   "greatcommentaryo05lapi",
+   407,
+   "396"
+  ],
+  "lapide.JHN.11.17.1": [
+   "greatcommentaryo05lapi",
+   407,
+   "396"
+  ],
+  "lapide.JHN.11.18.1": [
+   "greatcommentaryo05lapi",
+   409,
+   "398"
+  ],
+  "lapide.JHN.11.20.1": [
+   "greatcommentaryo05lapi",
+   409,
+   "398"
+  ],
+  "lapide.JHN.11.21.1": [
+   "greatcommentaryo05lapi",
+   410,
+   "399"
+  ],
+  "lapide.JHN.11.22.1": [
+   "greatcommentaryo05lapi",
+   410,
+   "399"
+  ],
+  "lapide.JHN.11.23.1": [
+   "greatcommentaryo05lapi",
+   411,
+   "400"
+  ],
+  "lapide.JHN.11.24.1": [
+   "greatcommentaryo05lapi",
+   412,
+   "401"
+  ],
+  "lapide.JHN.11.25.1": [
+   "greatcommentaryo05lapi",
+   412,
+   "401"
+  ],
+  "lapide.JHN.11.26.1": [
+   "greatcommentaryo05lapi",
+   413,
+   "402"
+  ],
+  "lapide.JHN.11.27.1": [
+   "greatcommentaryo05lapi",
+   413,
+   "402"
+  ],
+  "lapide.JHN.11.28.1": [
+   "greatcommentaryo05lapi",
+   414,
+   "403"
+  ],
+  "lapide.JHN.11.29-30.1": [
+   "greatcommentaryo05lapi",
+   414,
+   "403"
+  ],
+  "lapide.JHN.11.31.1": [
+   "greatcommentaryo05lapi",
+   414,
+   "403"
+  ],
+  "lapide.JHN.11.32.1": [
+   "greatcommentaryo05lapi",
+   414,
+   "403"
+  ],
+  "lapide.JHN.11.33.1": [
+   "greatcommentaryo05lapi",
+   414,
+   "403"
+  ],
+  "lapide.JHN.11.34.1": [
+   "greatcommentaryo05lapi",
+   417,
+   "406"
+  ],
+  "lapide.JHN.11.35.1": [
+   "greatcommentaryo05lapi",
+   417,
+   "406"
+  ],
+  "lapide.JHN.11.37.1": [
+   "greatcommentaryo05lapi",
+   419,
+   "408"
+  ],
+  "lapide.JHN.11.38.1": [
+   "greatcommentaryo05lapi",
+   419,
+   "408"
+  ],
+  "lapide.JHN.11.39.1": [
+   "greatcommentaryo05lapi",
+   419,
+   "408"
+  ],
+  "lapide.JHN.11.40.1": [
+   "greatcommentaryo05lapi",
+   420,
+   "409"
+  ],
+  "lapide.JHN.11.41.1": [
+   "greatcommentaryo05lapi",
+   421,
+   "410"
+  ],
+  "lapide.JHN.11.42.1": [
+   "greatcommentaryo05lapi",
+   422,
+   "411"
+  ],
+  "lapide.JHN.11.43.1": [
+   "greatcommentaryo05lapi",
+   422,
+   "411"
+  ],
+  "lapide.JHN.11.44.1": [
+   "greatcommentaryo05lapi",
+   423,
+   "412"
+  ],
+  "lapide.JHN.11.45.1": [
+   "greatcommentaryo05lapi",
+   425,
+   "414"
+  ],
+  "lapide.JHN.11.46.1": [
+   "greatcommentaryo05lapi",
+   425,
+   "414"
+  ],
+  "lapide.JHN.11.47.1": [
+   "greatcommentaryo05lapi",
+   425,
+   "414"
+  ],
+  "lapide.JHN.11.48.1": [
+   "greatcommentaryo05lapi",
+   426,
+   "415"
+  ],
+  "lapide.JHN.11.49.1": [
+   "greatcommentaryo05lapi",
+   427,
+   "416"
+  ],
+  "lapide.JHN.11.51.1": [
+   "greatcommentaryo05lapi",
+   428,
+   "417"
+  ],
+  "lapide.JHN.11.52.1": [
+   "greatcommentaryo05lapi",
+   430,
+   ""
+  ],
+  "lapide.JHN.11.53.1": [
+   "greatcommentaryo05lapi",
+   430,
+   ""
+  ],
+  "lapide.JHN.11.54.1": [
+   "greatcommentaryo05lapi",
+   430,
+   ""
+  ],
+  "lapide.JHN.11.55.1": [
+   "greatcommentaryo05lapi",
+   431,
+   ""
+  ],
+  "lapide.JHN.11.56.1": [
+   "greatcommentaryo05lapi",
+   431,
+   ""
+  ],
+  "lapide.JHN.12.1.1": [
+   "greatcommentaryo06lapi",
+   11,
+   "4"
+  ],
+  "lapide.JHN.12.2.1": [
+   "greatcommentaryo06lapi",
+   12,
+   "5"
+  ],
+  "lapide.JHN.12.4.1": [
+   "greatcommentaryo06lapi",
+   14,
+   "7"
+  ],
+  "lapide.JHN.12.6.1": [
+   "greatcommentaryo06lapi",
+   14,
+   "7"
+  ],
+  "lapide.JHN.12.7.1": [
+   "greatcommentaryo06lapi",
+   18,
+   "11"
+  ],
+  "lapide.JHN.12.9.1": [
+   "greatcommentaryo06lapi",
+   18,
+   "11"
+  ],
+  "lapide.JHN.12.10.1": [
+   "greatcommentaryo06lapi",
+   18,
+   "11"
+  ],
+  "lapide.JHN.12.11.1": [
+   "greatcommentaryo06lapi",
+   19,
+   "12"
+  ],
+  "lapide.JHN.12.12.1": [
+   "greatcommentaryo06lapi",
+   19,
+   "12"
+  ],
+  "lapide.JHN.12.17.1": [
+   "greatcommentaryo06lapi",
+   19,
+   "12"
+  ],
+  "lapide.JHN.12.18.1": [
+   "greatcommentaryo06lapi",
+   19,
+   "12"
+  ],
+  "lapide.JHN.12.19.1": [
+   "greatcommentaryo06lapi",
+   19,
+   "12"
+  ],
+  "lapide.JHN.12.20.1": [
+   "greatcommentaryo06lapi",
+   20,
+   "13"
+  ],
+  "lapide.JHN.12.21.1": [
+   "greatcommentaryo06lapi",
+   20,
+   "13"
+  ],
+  "lapide.JHN.12.22.1": [
+   "greatcommentaryo06lapi",
+   20,
+   "13"
+  ],
+  "lapide.JHN.12.23.1": [
+   "greatcommentaryo06lapi",
+   21,
+   "14"
+  ],
+  "lapide.JHN.12.24.1": [
+   "greatcommentaryo06lapi",
+   21,
+   "14"
+  ],
+  "lapide.JHN.12.25.1": [
+   "greatcommentaryo06lapi",
+   22,
+   "15"
+  ],
+  "lapide.JHN.12.26.1": [
+   "greatcommentaryo06lapi",
+   24,
+   "17"
+  ],
+  "lapide.JHN.12.27.1": [
+   "greatcommentaryo06lapi",
+   24,
+   "17"
+  ],
+  "lapide.JHN.12.28.1": [
+   "greatcommentaryo06lapi",
+   25,
+   "18"
+  ],
+  "lapide.JHN.12.29.1": [
+   "greatcommentaryo06lapi",
+   26,
+   "19"
+  ],
+  "lapide.JHN.12.30.1": [
+   "greatcommentaryo06lapi",
+   28,
+   "21"
+  ],
+  "lapide.JHN.12.31.1": [
+   "greatcommentaryo06lapi",
+   28,
+   "21"
+  ],
+  "lapide.JHN.12.32.1": [
+   "greatcommentaryo06lapi",
+   30,
+   "23"
+  ],
+  "lapide.JHN.12.33.1": [
+   "greatcommentaryo06lapi",
+   32,
+   "25"
+  ],
+  "lapide.JHN.12.34.1": [
+   "greatcommentaryo06lapi",
+   32,
+   "25"
+  ],
+  "lapide.JHN.12.35.1": [
+   "greatcommentaryo06lapi",
+   33,
+   "26"
+  ],
+  "lapide.JHN.12.36.1": [
+   "greatcommentaryo06lapi",
+   34,
+   "27"
+  ],
+  "lapide.JHN.12.37.1": [
+   "greatcommentaryo06lapi",
+   35,
+   "28"
+  ],
+  "lapide.JHN.12.38.1": [
+   "greatcommentaryo06lapi",
+   36,
+   "29"
+  ],
+  "lapide.JHN.12.39.1": [
+   "greatcommentaryo06lapi",
+   36,
+   "29"
+  ],
+  "lapide.JHN.12.40.1": [
+   "greatcommentaryo06lapi",
+   37,
+   "30"
+  ],
+  "lapide.JHN.12.41.1": [
+   "greatcommentaryo06lapi",
+   38,
+   "31"
+  ],
+  "lapide.JHN.12.42.1": [
+   "greatcommentaryo06lapi",
+   39,
+   "32"
+  ],
+  "lapide.JHN.12.43.1": [
+   "greatcommentaryo06lapi",
+   39,
+   "32"
+  ],
+  "lapide.JHN.12.45.1": [
+   "greatcommentaryo06lapi",
+   41,
+   "34"
+  ],
+  "lapide.JHN.12.46.1": [
+   "greatcommentaryo06lapi",
+   41,
+   "34"
+  ],
+  "lapide.JHN.12.47.1": [
+   "greatcommentaryo06lapi",
+   43,
+   "36"
+  ],
+  "lapide.JHN.12.48.1": [
+   "greatcommentaryo06lapi",
+   43,
+   "36"
+  ],
+  "lapide.JHN.12.49.1": [
+   "greatcommentaryo06lapi",
+   44,
+   "37"
+  ],
+  "lapide.JHN.12.50.1": [
+   "greatcommentaryo06lapi",
+   45,
+   "38"
+  ],
+  "lapide.JHN.13.1.1": [
+   "greatcommentaryo06lapi",
+   48,
+   "41"
+  ],
+  "lapide.JHN.13.3.1": [
+   "greatcommentaryo06lapi",
+   53,
+   "46"
+  ],
+  "lapide.JHN.13.5.1": [
+   "greatcommentaryo06lapi",
+   55,
+   "48"
+  ],
+  "lapide.JHN.13.6.1": [
+   "greatcommentaryo06lapi",
+   56,
+   "49"
+  ],
+  "lapide.JHN.13.7.1": [
+   "greatcommentaryo06lapi",
+   57,
+   "50"
+  ],
+  "lapide.JHN.13.8.1": [
+   "greatcommentaryo06lapi",
+   59,
+   "52"
+  ],
+  "lapide.JHN.13.10.1": [
+   "greatcommentaryo06lapi",
+   61,
+   "54"
+  ],
+  "lapide.JHN.13.11.1": [
+   "greatcommentaryo06lapi",
+   62,
+   "55"
+  ],
+  "lapide.JHN.13.15.1": [
+   "greatcommentaryo06lapi",
+   63,
+   "56"
+  ],
+  "lapide.JHN.13.16.1": [
+   "greatcommentaryo06lapi",
+   63,
+   "56"
+  ],
+  "lapide.JHN.13.17.1": [
+   "greatcommentaryo06lapi",
+   63,
+   "56"
+  ],
+  "lapide.JHN.13.18.1": [
+   "greatcommentaryo06lapi",
+   63,
+   "56"
+  ],
+  "lapide.JHN.13.19.1": [
+   "greatcommentaryo06lapi",
+   65,
+   "58"
+  ],
+  "lapide.JHN.13.20.1": [
+   "greatcommentaryo06lapi",
+   65,
+   "58"
+  ],
+  "lapide.JHN.13.21.1": [
+   "greatcommentaryo06lapi",
+   67,
+   "60"
+  ],
+  "lapide.JHN.13.22.1": [
+   "greatcommentaryo06lapi",
+   70,
+   "63"
+  ],
+  "lapide.JHN.13.23.1": [
+   "greatcommentaryo06lapi",
+   70,
+   "63"
+  ],
+  "lapide.JHN.13.24.1": [
+   "greatcommentaryo06lapi",
+   71,
+   "64"
+  ],
+  "lapide.JHN.13.28.1": [
+   "greatcommentaryo06lapi",
+   75,
+   "68"
+  ],
+  "lapide.JHN.13.30.1": [
+   "greatcommentaryo06lapi",
+   75,
+   "68"
+  ],
+  "lapide.JHN.13.31.1": [
+   "greatcommentaryo06lapi",
+   77,
+   "70"
+  ],
+  "lapide.JHN.13.32.1": [
+   "greatcommentaryo06lapi",
+   78,
+   "71"
+  ],
+  "lapide.JHN.13.33.1": [
+   "greatcommentaryo06lapi",
+   79,
+   "72"
+  ],
+  "lapide.JHN.13.34.1": [
+   "greatcommentaryo06lapi",
+   80,
+   "73"
+  ],
+  "lapide.JHN.13.35.1": [
+   "greatcommentaryo06lapi",
+   82,
+   "75"
+  ],
+  "lapide.JHN.13.37.1": [
+   "greatcommentaryo06lapi",
+   83,
+   "76"
+  ],
+  "lapide.JHN.13.38.1": [
+   "greatcommentaryo06lapi",
+   83,
+   "76"
+  ],
+  "lapide.JHN.14.1.1": [
+   "greatcommentaryo06lapi",
+   85,
+   "78"
+  ],
+  "lapide.JHN.14.2.1": [
+   "greatcommentaryo06lapi",
+   86,
+   "79"
+  ],
+  "lapide.JHN.14.3.1": [
+   "greatcommentaryo06lapi",
+   89,
+   "82"
+  ],
+  "lapide.JHN.14.4.1": [
+   "greatcommentaryo06lapi",
+   89,
+   "82"
+  ],
+  "lapide.JHN.14.5.1": [
+   "greatcommentaryo06lapi",
+   89,
+   "82"
+  ],
+  "lapide.JHN.14.7.1": [
+   "greatcommentaryo06lapi",
+   94,
+   "87"
+  ],
+  "lapide.JHN.14.8.1": [
+   "greatcommentaryo06lapi",
+   94,
+   "87"
+  ],
+  "lapide.JHN.14.9.1": [
+   "greatcommentaryo06lapi",
+   96,
+   "89"
+  ],
+  "lapide.JHN.14.10.1": [
+   "greatcommentaryo06lapi",
+   97,
+   "90"
+  ],
+  "lapide.JHN.14.11-12.1": [
+   "greatcommentaryo06lapi",
+   99,
+   "92"
+  ],
+  "lapide.JHN.14.13.1": [
+   "greatcommentaryo06lapi",
+   102,
+   "95"
+  ],
+  "lapide.JHN.14.14.1": [
+   "greatcommentaryo06lapi",
+   103,
+   "96"
+  ],
+  "lapide.JHN.14.15.1": [
+   "greatcommentaryo06lapi",
+   103,
+   "96"
+  ],
+  "lapide.JHN.14.16.1": [
+   "greatcommentaryo06lapi",
+   104,
+   "97"
+  ],
+  "lapide.JHN.14.18.1": [
+   "greatcommentaryo06lapi",
+   107,
+   "100"
+  ],
+  "lapide.JHN.14.19.1": [
+   "greatcommentaryo06lapi",
+   108,
+   "101"
+  ],
+  "lapide.JHN.14.20.1": [
+   "greatcommentaryo06lapi",
+   108,
+   "101"
+  ],
+  "lapide.JHN.14.21.1": [
+   "greatcommentaryo06lapi",
+   109,
+   "102"
+  ],
+  "lapide.JHN.14.22.1": [
+   "greatcommentaryo06lapi",
+   110,
+   "103"
+  ],
+  "lapide.JHN.14.23.1": [
+   "greatcommentaryo06lapi",
+   110,
+   "103"
+  ],
+  "lapide.JHN.14.24.1": [
+   "greatcommentaryo06lapi",
+   113,
+   "106"
+  ],
+  "lapide.JHN.14.25-26.1": [
+   "greatcommentaryo06lapi",
+   113,
+   "106"
+  ],
+  "lapide.JHN.14.27.1": [
+   "greatcommentaryo06lapi",
+   114,
+   "107"
+  ],
+  "lapide.JHN.14.28.1": [
+   "greatcommentaryo06lapi",
+   116,
+   "109"
+  ],
+  "lapide.JHN.14.29.1": [
+   "greatcommentaryo06lapi",
+   118,
+   "111"
+  ],
+  "lapide.JHN.14.30.1": [
+   "greatcommentaryo06lapi",
+   119,
+   "112"
+  ],
+  "lapide.JHN.14.31.1": [
+   "greatcommentaryo06lapi",
+   119,
+   "112"
+  ],
+  "lapide.JHN.15.2.1": [
+   "greatcommentaryo06lapi",
+   128,
+   "121"
+  ],
+  "lapide.JHN.15.3.1": [
+   "greatcommentaryo06lapi",
+   130,
+   "123"
+  ],
+  "lapide.JHN.15.4.1": [
+   "greatcommentaryo06lapi",
+   131,
+   "124"
+  ],
+  "lapide.JHN.15.5.1": [
+   "greatcommentaryo06lapi",
+   134,
+   "127"
+  ],
+  "lapide.JHN.15.7.1": [
+   "greatcommentaryo06lapi",
+   137,
+   "130"
+  ],
+  "lapide.JHN.15.8.1": [
+   "greatcommentaryo06lapi",
+   137,
+   "130"
+  ],
+  "lapide.JHN.15.9.1": [
+   "greatcommentaryo06lapi",
+   138,
+   "131"
+  ],
+  "lapide.JHN.15.11.1": [
+   "greatcommentaryo06lapi",
+   139,
+   "132"
+  ],
+  "lapide.JHN.15.13.1": [
+   "greatcommentaryo06lapi",
+   142,
+   "135"
+  ],
+  "lapide.JHN.15.15.1": [
+   "greatcommentaryo06lapi",
+   145,
+   "138"
+  ],
+  "lapide.JHN.15.16.1": [
+   "greatcommentaryo06lapi",
+   147,
+   "140"
+  ],
+  "lapide.JHN.15.17.1": [
+   "greatcommentaryo06lapi",
+   149,
+   "142"
+  ],
+  "lapide.JHN.15.18.1": [
+   "greatcommentaryo06lapi",
+   150,
+   "143"
+  ],
+  "lapide.JHN.15.19.1": [
+   "greatcommentaryo06lapi",
+   151,
+   "144"
+  ],
+  "lapide.JHN.15.20.1": [
+   "greatcommentaryo06lapi",
+   151,
+   "144"
+  ],
+  "lapide.JHN.15.22.1": [
+   "greatcommentaryo06lapi",
+   152,
+   "145"
+  ],
+  "lapide.JHN.15.23.1": [
+   "greatcommentaryo06lapi",
+   152,
+   "145"
+  ],
+  "lapide.JHN.15.25.1": [
+   "greatcommentaryo06lapi",
+   152,
+   "145"
+  ],
+  "lapide.JHN.15.26-27.1": [
+   "greatcommentaryo06lapi",
+   153,
+   "146"
+  ],
+  "lapide.JHN.16.1.1": [
+   "greatcommentaryo06lapi",
+   159,
+   "152"
+  ],
+  "lapide.JHN.16.2.1": [
+   "greatcommentaryo06lapi",
+   160,
+   "153"
+  ],
+  "lapide.JHN.16.3.1": [
+   "greatcommentaryo06lapi",
+   161,
+   "154"
+  ],
+  "lapide.JHN.16.4.1": [
+   "greatcommentaryo06lapi",
+   162,
+   "155"
+  ],
+  "lapide.JHN.16.5.1": [
+   "greatcommentaryo06lapi",
+   162,
+   "155"
+  ],
+  "lapide.JHN.16.6.1": [
+   "greatcommentaryo06lapi",
+   164,
+   "157"
+  ],
+  "lapide.JHN.16.7.1": [
+   "greatcommentaryo06lapi",
+   165,
+   "158"
+  ],
+  "lapide.JHN.16.8.1": [
+   "greatcommentaryo06lapi",
+   166,
+   "159"
+  ],
+  "lapide.JHN.16.9.1": [
+   "greatcommentaryo06lapi",
+   166,
+   "159"
+  ],
+  "lapide.JHN.16.10.1": [
+   "greatcommentaryo06lapi",
+   167,
+   "160"
+  ],
+  "lapide.JHN.16.11.1": [
+   "greatcommentaryo06lapi",
+   168,
+   "161"
+  ],
+  "lapide.JHN.16.12.1": [
+   "greatcommentaryo06lapi",
+   170,
+   "163"
+  ],
+  "lapide.JHN.16.13.1": [
+   "greatcommentaryo06lapi",
+   170,
+   "163"
+  ],
+  "lapide.JHN.16.14.1": [
+   "greatcommentaryo06lapi",
+   172,
+   "165"
+  ],
+  "lapide.JHN.16.15.1": [
+   "greatcommentaryo06lapi",
+   174,
+   "167"
+  ],
+  "lapide.JHN.16.16.1": [
+   "greatcommentaryo06lapi",
+   175,
+   "168"
+  ],
+  "lapide.JHN.16.17.1": [
+   "greatcommentaryo06lapi",
+   176,
+   "169"
+  ],
+  "lapide.JHN.16.19.1": [
+   "greatcommentaryo06lapi",
+   176,
+   "169"
+  ],
+  "lapide.JHN.16.20.1": [
+   "greatcommentaryo06lapi",
+   177,
+   "170"
+  ],
+  "lapide.JHN.16.21.1": [
+   "greatcommentaryo06lapi",
+   178,
+   "171"
+  ],
+  "lapide.JHN.16.22.1": [
+   "greatcommentaryo06lapi",
+   180,
+   "173"
+  ],
+  "lapide.JHN.16.23.1": [
+   "greatcommentaryo06lapi",
+   182,
+   "175"
+  ],
+  "lapide.JHN.16.24.1": [
+   "greatcommentaryo06lapi",
+   187,
+   "180"
+  ],
+  "lapide.JHN.16.25.1": [
+   "greatcommentaryo06lapi",
+   188,
+   "181"
+  ],
+  "lapide.JHN.16.26.1": [
+   "greatcommentaryo06lapi",
+   188,
+   "181"
+  ],
+  "lapide.JHN.16.27.1": [
+   "greatcommentaryo06lapi",
+   189,
+   "182"
+  ],
+  "lapide.JHN.16.28.1": [
+   "greatcommentaryo06lapi",
+   190,
+   "183"
+  ],
+  "lapide.JHN.16.29.1": [
+   "greatcommentaryo06lapi",
+   190,
+   "183"
+  ],
+  "lapide.JHN.16.30.1": [
+   "greatcommentaryo06lapi",
+   190,
+   "183"
+  ],
+  "lapide.JHN.16.31.1": [
+   "greatcommentaryo06lapi",
+   191,
+   "184"
+  ],
+  "lapide.JHN.16.33.1": [
+   "greatcommentaryo06lapi",
+   191,
+   "184"
+  ],
+  "lapide.JHN.17.1.1": [
+   "greatcommentaryo06lapi",
+   195,
+   "188"
+  ],
+  "lapide.JHN.17.2.1": [
+   "greatcommentaryo06lapi",
+   199,
+   "192"
+  ],
+  "lapide.JHN.17.3.1": [
+   "greatcommentaryo05lapi",
+   139,
+   "128"
+  ],
+  "lapide.JHN.17.4.1": [
+   "greatcommentaryo06lapi",
+   202,
+   "195"
+  ],
+  "lapide.JHN.17.5.1": [
+   "greatcommentaryo06lapi",
+   203,
+   "196"
+  ],
+  "lapide.JHN.17.6.1": [
+   "greatcommentaryo06lapi",
+   205,
+   "198"
+  ],
+  "lapide.JHN.17.7.1": [
+   "greatcommentaryo06lapi",
+   206,
+   "199"
+  ],
+  "lapide.JHN.17.8.1": [
+   "greatcommentaryo06lapi",
+   206,
+   "199"
+  ],
+  "lapide.JHN.17.9.1": [
+   "greatcommentaryo06lapi",
+   206,
+   "199"
+  ],
+  "lapide.JHN.17.10.1": [
+   "greatcommentaryo06lapi",
+   207,
+   "200"
+  ],
+  "lapide.JHN.17.11.1": [
+   "greatcommentaryo06lapi",
+   208,
+   "201"
+  ],
+  "lapide.JHN.17.12.1": [
+   "greatcommentaryo06lapi",
+   209,
+   "202"
+  ],
+  "lapide.JHN.17.13.1": [
+   "greatcommentaryo06lapi",
+   209,
+   "202"
+  ],
+  "lapide.JHN.17.15.1": [
+   "greatcommentaryo06lapi",
+   210,
+   "203"
+  ],
+  "lapide.JHN.17.16.1": [
+   "greatcommentaryo06lapi",
+   210,
+   "203"
+  ],
+  "lapide.JHN.17.17.1": [
+   "greatcommentaryo06lapi",
+   210,
+   "203"
+  ],
+  "lapide.JHN.17.18.1": [
+   "greatcommentaryo06lapi",
+   212,
+   "205"
+  ],
+  "lapide.JHN.17.19.1": [
+   "greatcommentaryo06lapi",
+   212,
+   "205"
+  ],
+  "lapide.JHN.17.20.1": [
+   "greatcommentaryo06lapi",
+   213,
+   "206"
+  ],
+  "lapide.JHN.17.22.1": [
+   "greatcommentaryo06lapi",
+   216,
+   "209"
+  ],
+  "lapide.JHN.17.23.1": [
+   "greatcommentaryo06lapi",
+   217,
+   "210"
+  ],
+  "lapide.JHN.17.24.1": [
+   "greatcommentaryo06lapi",
+   221,
+   "214"
+  ],
+  "lapide.JHN.17.25.1": [
+   "greatcommentaryo06lapi",
+   222,
+   "215"
+  ],
+  "lapide.JHN.17.26.1": [
+   "greatcommentaryo06lapi",
+   223,
+   "216"
+  ],
+  "lapide.JHN.18.1.1": [
+   "greatcommentaryo06lapi",
+   226,
+   "219"
+  ],
+  "lapide.JHN.18.4.1": [
+   "greatcommentaryo06lapi",
+   228,
+   "221"
+  ],
+  "lapide.JHN.18.5.1": [
+   "greatcommentaryo06lapi",
+   228,
+   "221"
+  ],
+  "lapide.JHN.18.6.1": [
+   "greatcommentaryo06lapi",
+   229,
+   "222"
+  ],
+  "lapide.JHN.18.7.1": [
+   "greatcommentaryo06lapi",
+   229,
+   "222"
+  ],
+  "lapide.JHN.18.9.1": [
+   "greatcommentaryo06lapi",
+   229,
+   "222"
+  ],
+  "lapide.JHN.18.10.1": [
+   "greatcommentaryo06lapi",
+   230,
+   "223"
+  ],
+  "lapide.JHN.18.12.1": [
+   "greatcommentaryo06lapi",
+   230,
+   "223"
+  ],
+  "lapide.JHN.18.13.1": [
+   "greatcommentaryo06lapi",
+   231,
+   "224"
+  ],
+  "lapide.JHN.18.24.1": [
+   "greatcommentaryo06lapi",
+   233,
+   "226"
+  ],
+  "lapide.JHN.18.28.1": [
+   "greatcommentaryo06lapi",
+   233,
+   "226"
+  ],
+  "lapide.JHN.18.31.1": [
+   "greatcommentaryo06lapi",
+   233,
+   "226"
+  ],
+  "lapide.JHN.18.32.1": [
+   "greatcommentaryo06lapi",
+   234,
+   "227"
+  ],
+  "lapide.JHN.18.37.1": [
+   "greatcommentaryo06lapi",
+   235,
+   "228"
+  ],
+  "lapide.JHN.18.38.1": [
+   "greatcommentaryo06lapi",
+   236,
+   "229"
+  ],
+  "lapide.JHN.19.1.1": [
+   "greatcommentaryo06lapi",
+   242,
+   "235"
+  ],
+  "lapide.JHN.19.2.1": [
+   "greatcommentaryo06lapi",
+   242,
+   "235"
+  ],
+  "lapide.JHN.19.7.1": [
+   "greatcommentaryo06lapi",
+   242,
+   "235"
+  ],
+  "lapide.JHN.19.11.1": [
+   "greatcommentaryo06lapi",
+   242,
+   "235"
+  ],
+  "lapide.JHN.19.12.1": [
+   "greatcommentaryo06lapi",
+   243,
+   "236"
+  ],
+  "lapide.JHN.19.13.1": [
+   "greatcommentaryo06lapi",
+   243,
+   "236"
+  ],
+  "lapide.JHN.19.14.1": [
+   "greatcommentaryo06lapi",
+   243,
+   "236"
+  ],
+  "lapide.JHN.19.17.1": [
+   "greatcommentaryo06lapi",
+   244,
+   "237"
+  ],
+  "lapide.JHN.19.23.1": [
+   "greatcommentaryo06lapi",
+   244,
+   "237"
+  ],
+  "lapide.JHN.19.25.1": [
+   "greatcommentaryo06lapi",
+   245,
+   "238"
+  ],
+  "lapide.JHN.19.26.1": [
+   "greatcommentaryo06lapi",
+   247,
+   "240"
+  ],
+  "lapide.JHN.19.27.1": [
+   "greatcommentaryo06lapi",
+   250,
+   "243"
+  ],
+  "lapide.JHN.19.28.1": [
+   "greatcommentaryo06lapi",
+   252,
+   "245"
+  ],
+  "lapide.JHN.19.30.1": [
+   "greatcommentaryo06lapi",
+   253,
+   "246"
+  ],
+  "lapide.JHN.19.31.1": [
+   "greatcommentaryo06lapi",
+   253,
+   "246"
+  ],
+  "lapide.JHN.19.33.1": [
+   "greatcommentaryo06lapi",
+   254,
+   "247"
+  ],
+  "lapide.JHN.19.34.1": [
+   "greatcommentaryo06lapi",
+   255,
+   "248"
+  ],
+  "lapide.JHN.19.35.1": [
+   "greatcommentaryo06lapi",
+   257,
+   "250"
+  ],
+  "lapide.JHN.19.36.1": [
+   "greatcommentaryo06lapi",
+   258,
+   "251"
+  ],
+  "lapide.JHN.19.37.1": [
+   "greatcommentaryo05lapi",
+   192,
+   "181"
+  ],
+  "lapide.JHN.19.38.1": [
+   "greatcommentaryo06lapi",
+   258,
+   "251"
+  ],
+  "lapide.JHN.19.39.1": [
+   "greatcommentaryo06lapi",
+   259,
+   "252"
+  ],
+  "lapide.JHN.19.40.1": [
+   "greatcommentaryo06lapi",
+   259,
+   "252"
+  ],
+  "lapide.JHN.19.41.1": [
+   "greatcommentaryo06lapi",
+   259,
+   "252"
+  ],
+  "lapide.JHN.19.42.1": [
+   "greatcommentaryo06lapi",
+   260,
+   "253"
+  ],
+  "lapide.JHN.20.1.1": [
+   "greatcommentaryo06lapi",
+   262,
+   "255"
+  ],
+  "lapide.JHN.20.2.1": [
+   "greatcommentaryo06lapi",
+   263,
+   "256"
+  ],
+  "lapide.JHN.20.4.1": [
+   "greatcommentaryo06lapi",
+   263,
+   "256"
+  ],
+  "lapide.JHN.20.5.1": [
+   "greatcommentaryo06lapi",
+   263,
+   "256"
+  ],
+  "lapide.JHN.20.6.1": [
+   "greatcommentaryo06lapi",
+   264,
+   "257"
+  ],
+  "lapide.JHN.20.8.1": [
+   "greatcommentaryo06lapi",
+   264,
+   "257"
+  ],
+  "lapide.JHN.20.9.1": [
+   "greatcommentaryo06lapi",
+   265,
+   "258"
+  ],
+  "lapide.JHN.20.10.1": [
+   "greatcommentaryo06lapi",
+   265,
+   "258"
+  ],
+  "lapide.JHN.20.11.1": [
+   "greatcommentaryo06lapi",
+   265,
+   "258"
+  ],
+  "lapide.JHN.20.12.1": [
+   "greatcommentaryo06lapi",
+   265,
+   "258"
+  ],
+  "lapide.JHN.20.13.1": [
+   "greatcommentaryo06lapi",
+   266,
+   "259"
+  ],
+  "lapide.JHN.20.14.1": [
+   "greatcommentaryo06lapi",
+   266,
+   "259"
+  ],
+  "lapide.JHN.20.15.1": [
+   "greatcommentaryo06lapi",
+   267,
+   "260"
+  ],
+  "lapide.JHN.20.16.1": [
+   "greatcommentaryo06lapi",
+   270,
+   "263"
+  ],
+  "lapide.JHN.20.17.1": [
+   "greatcommentaryo06lapi",
+   271,
+   "264"
+  ],
+  "lapide.JHN.20.18.1": [
+   "greatcommentaryo06lapi",
+   274,
+   "267"
+  ],
+  "lapide.JHN.20.19.1": [
+   "greatcommentaryo06lapi",
+   274,
+   "267"
+  ],
+  "lapide.JHN.20.21.1": [
+   "greatcommentaryo06lapi",
+   277,
+   "270"
+  ],
+  "lapide.JHN.20.22.1": [
+   "greatcommentaryo06lapi",
+   278,
+   "271"
+  ],
+  "lapide.JHN.20.23.1": [
+   "greatcommentaryo06lapi",
+   282,
+   "275"
+  ],
+  "lapide.JHN.20.24.1": [
+   "greatcommentaryo06lapi",
+   285,
+   "278"
+  ],
+  "lapide.JHN.20.25.1": [
+   "greatcommentaryo06lapi",
+   285,
+   "278"
+  ],
+  "lapide.JHN.20.26.1": [
+   "greatcommentaryo06lapi",
+   286,
+   "279"
+  ],
+  "lapide.JHN.20.27.1": [
+   "greatcommentaryo06lapi",
+   287,
+   "280"
+  ],
+  "lapide.JHN.20.28.1": [
+   "greatcommentaryo06lapi",
+   289,
+   "282"
+  ],
+  "lapide.JHN.20.29.1": [
+   "greatcommentaryo06lapi",
+   290,
+   "283"
+  ],
+  "lapide.JHN.20.30.1": [
+   "greatcommentaryo06lapi",
+   292,
+   "285"
+  ],
+  "lapide.JHN.20.31.1": [
+   "greatcommentaryo06lapi",
+   292,
+   "285"
+  ],
+  "lapide.JHN.21.6.1": [
+   "greatcommentaryo06lapi",
+   297,
+   "290"
+  ],
+  "lapide.JHN.21.7.1": [
+   "greatcommentaryo06lapi",
+   298,
+   "291"
+  ],
+  "lapide.JHN.21.10.1": [
+   "greatcommentaryo06lapi",
+   300,
+   "293"
+  ],
+  "lapide.JHN.21.11.1": [
+   "greatcommentaryo06lapi",
+   300,
+   "293"
+  ],
+  "lapide.JHN.21.13.1": [
+   "greatcommentaryo06lapi",
+   303,
+   "296"
+  ],
+  "lapide.JHN.21.14.1": [
+   "greatcommentaryo06lapi",
+   303,
+   "296"
+  ],
+  "lapide.JHN.21.15.1": [
+   "greatcommentaryo06lapi",
+   303,
+   "296"
+  ],
+  "lapide.JHN.21.16.1": [
+   "greatcommentaryo06lapi",
+   308,
+   "301"
+  ],
+  "lapide.JHN.21.17.1": [
+   "greatcommentaryo06lapi",
+   309,
+   "302"
+  ],
+  "lapide.JHN.21.18.1": [
+   "greatcommentaryo06lapi",
+   311,
+   "304"
+  ],
+  "lapide.JHN.21.19.1": [
+   "greatcommentaryo06lapi",
+   312,
+   "305"
+  ],
+  "lapide.JHN.21.20-21.1": [
+   "greatcommentaryo06lapi",
+   315,
+   "308"
+  ],
+  "lapide.JHN.21.22.1": [
+   "greatcommentaryo06lapi",
+   316,
+   "309"
+  ],
+  "lapide.JHN.21.23.1": [
+   "greatcommentaryo06lapi",
+   321,
+   "314"
+  ],
+  "lapide.JHN.21.24.1": [
+   "greatcommentaryo06lapi",
+   321,
+   "314"
+  ]
+ }
+}

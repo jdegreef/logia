@@ -1,0 +1,1118 @@
+{
+ "work": "keil-genesis",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "pentateuch01keil",
+   "files": [
+    {
+     "url": "https://archive.org/download/pentateuch01keil/pentateuch01keil_hocr_pageindex.json.gz",
+     "sha256": "b2c22683de3f7729020dbabe9b1bae1f4593cfc197883cb9150f9a9e814cc900"
+    },
+    {
+     "url": "https://archive.org/download/pentateuch01keil/pentateuch01keil_hocr_searchtext.txt.gz",
+     "sha256": "ec398607712ac88d0709629a2a2de9d40349d17b8816679fd94bdadcc141d8f4"
+    },
+    {
+     "url": "https://archive.org/download/pentateuch01keil/pentateuch01keil_page_numbers.json",
+     "sha256": "7c056a2f37452a9cc64c4c0d5923f6224f66de4255e1fbfead302d141bf1d95a"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 218,
+ "missed": 0,
+ "pages": {
+  "keil-genesis.GEN.1.2-5.1": [
+   "pentateuch01keil",
+   52,
+   "49"
+  ],
+  "keil-genesis.GEN.1.3.1": [
+   "pentateuch01keil",
+   53,
+   "50"
+  ],
+  "keil-genesis.GEN.1.6-8.1": [
+   "pentateuch01keil",
+   56,
+   "53"
+  ],
+  "keil-genesis.GEN.1.9-13.1": [
+   "pentateuch01keil",
+   58,
+   "55"
+  ],
+  "keil-genesis.GEN.1.14-19.1": [
+   "pentateuch01keil",
+   60,
+   "57"
+  ],
+  "keil-genesis.GEN.1.24-31.1": [
+   "pentateuch01keil",
+   65,
+   "62"
+  ],
+  "keil-genesis.GEN.1.27.1": [
+   "pentateuch01keil",
+   69,
+   "66"
+  ],
+  "keil-genesis.GEN.2.7.1": [
+   "pentateuch01keil",
+   82,
+   "79"
+  ],
+  "keil-genesis.GEN.2.8.1": [
+   "pentateuch01keil",
+   84,
+   "81"
+  ],
+  "keil-genesis.GEN.2.10.1": [
+   "pentateuch01keil",
+   85,
+   "82"
+  ],
+  "keil-genesis.GEN.2.18-25.1": [
+   "pentateuch01keil",
+   90,
+   "87"
+  ],
+  "keil-genesis.GEN.2.23-24.1": [
+   "pentateuch01keil",
+   94,
+   "91"
+  ],
+  "keil-genesis.GEN.3.1-8.1": [
+   "pentateuch01keil",
+   98,
+   "95"
+  ],
+  "keil-genesis.GEN.3.6.1": [
+   "pentateuch01keil",
+   100,
+   "97"
+  ],
+  "keil-genesis.GEN.3.7-8.1": [
+   "pentateuch01keil",
+   100,
+   "97"
+  ],
+  "keil-genesis.GEN.3.9-15.1": [
+   "pentateuch01keil",
+   101,
+   "98"
+  ],
+  "keil-genesis.GEN.3.14-15.1": [
+   "pentateuch01keil",
+   102,
+   "99"
+  ],
+  "keil-genesis.GEN.3.16-19.1": [
+   "pentateuch01keil",
+   106,
+   "103"
+  ],
+  "keil-genesis.GEN.3.17-19.1": [
+   "pentateuch01keil",
+   107,
+   "104"
+  ],
+  "keil-genesis.GEN.3.20-24.1": [
+   "pentateuch01keil",
+   110,
+   "107"
+  ],
+  "keil-genesis.GEN.3.22-23.1": [
+   "pentateuch01keil",
+   110,
+   "107"
+  ],
+  "keil-genesis.GEN.4.8.1": [
+   "pentateuch01keil",
+   116,
+   "113"
+  ],
+  "keil-genesis.GEN.4.9-15.1": [
+   "pentateuch01keil",
+   117,
+   "114"
+  ],
+  "keil-genesis.GEN.4.11-12.1": [
+   "pentateuch01keil",
+   118,
+   "115"
+  ],
+  "keil-genesis.GEN.4.16.1": [
+   "pentateuch01keil",
+   120,
+   "117"
+  ],
+  "keil-genesis.GEN.4.25-26.1": [
+   "pentateuch01keil",
+   123,
+   "120"
+  ],
+  "keil-genesis.GEN.4.26.1": [
+   "pentateuch01keil",
+   124,
+   "121"
+  ],
+  "keil-genesis.GEN.5.3.1": [
+   "pentateuch01keil",
+   128,
+   "125"
+  ],
+  "keil-genesis.GEN.6.3.1": [
+   "pentateuch01keil",
+   138,
+   "135"
+  ],
+  "keil-genesis.GEN.6.4.1": [
+   "pentateuch01keil",
+   141,
+   "138"
+  ],
+  "keil-genesis.GEN.6.5-8.1": [
+   "pentateuch01keil",
+   143,
+   "140"
+  ],
+  "keil-genesis.GEN.6.9.1": [
+   "pentateuch01keil",
+   145,
+   "142"
+  ],
+  "keil-genesis.GEN.6.13.1": [
+   "pentateuch01keil",
+   146,
+   "143"
+  ],
+  "keil-genesis.GEN.6.16.1": [
+   "pentateuch01keil",
+   146,
+   "143"
+  ],
+  "keil-genesis.GEN.8.6-12.1": [
+   "pentateuch01keil",
+   152,
+   "149"
+  ],
+  "keil-genesis.GEN.8.13-19.1": [
+   "pentateuch01keil",
+   153,
+   "150"
+  ],
+  "keil-genesis.GEN.8.20-22.1": [
+   "pentateuch01keil",
+   154,
+   "151"
+  ],
+  "keil-genesis.GEN.9.3-4.1": [
+   "pentateuch01keil",
+   156,
+   "153"
+  ],
+  "keil-genesis.GEN.9.8-17.1": [
+   "pentateuch01keil",
+   158,
+   "155"
+  ],
+  "keil-genesis.GEN.9.26.1": [
+   "pentateuch01keil",
+   162,
+   "159"
+  ],
+  "keil-genesis.GEN.9.27.1": [
+   "pentateuch01keil",
+   162,
+   "159"
+  ],
+  "keil-genesis.GEN.10.1-5.1": [
+   "pentateuch01keil",
+   166,
+   "163"
+  ],
+  "keil-genesis.GEN.10.4.1": [
+   "pentateuch01keil",
+   167,
+   "164"
+  ],
+  "keil-genesis.GEN.10.5.1": [
+   "pentateuch01keil",
+   168,
+   "165"
+  ],
+  "keil-genesis.GEN.10.6-20.1": [
+   "pentateuch01keil",
+   168,
+   "165"
+  ],
+  "keil-genesis.GEN.10.7.1": [
+   "pentateuch01keil",
+   169,
+   "166"
+  ],
+  "keil-genesis.GEN.10.8-12.1": [
+   "pentateuch01keil",
+   169,
+   "166"
+  ],
+  "keil-genesis.GEN.10.10.1": [
+   "pentateuch01keil",
+   170,
+   "167"
+  ],
+  "keil-genesis.GEN.10.11-12.1": [
+   "pentateuch01keil",
+   171,
+   "168"
+  ],
+  "keil-genesis.GEN.10.13-14.1": [
+   "pentateuch01keil",
+   171,
+   "168"
+  ],
+  "keil-genesis.GEN.10.21.1": [
+   "pentateuch01keil",
+   174,
+   "171"
+  ],
+  "keil-genesis.GEN.10.25.1": [
+   "pentateuch01keil",
+   175,
+   "172"
+  ],
+  "keil-genesis.GEN.10.30.1": [
+   "pentateuch01keil",
+   176,
+   "173"
+  ],
+  "keil-genesis.GEN.11.29.1": [
+   "pentateuch01keil",
+   183,
+   "180"
+  ],
+  "keil-genesis.GEN.12.1-3.1": [
+   "pentateuch01keil",
+   196,
+   "193"
+  ],
+  "keil-genesis.GEN.12.4-9.1": [
+   "pentateuch01keil",
+   199,
+   "196"
+  ],
+  "keil-genesis.GEN.12.6.1": [
+   "pentateuch01keil",
+   200,
+   "197"
+  ],
+  "keil-genesis.GEN.12.7.1": [
+   "pentateuch01keil",
+   200,
+   "197"
+  ],
+  "keil-genesis.GEN.12.8.1": [
+   "pentateuch01keil",
+   200,
+   "197"
+  ],
+  "keil-genesis.GEN.12.10-20.1": [
+   "pentateuch01keil",
+   200,
+   "197"
+  ],
+  "keil-genesis.GEN.12.10-13.1": [
+   "pentateuch01keil",
+   204,
+   "201"
+  ],
+  "keil-genesis.GEN.12.14-18.1": [
+   "pentateuch01keil",
+   204,
+   "201"
+  ],
+  "keil-genesis.GEN.13.1-12.1": [
+   "pentateuch01keil",
+   205,
+   "202"
+  ],
+  "keil-genesis.GEN.13.3.1": [
+   "pentateuch01keil",
+   206,
+   "203"
+  ],
+  "keil-genesis.GEN.13.7.1": [
+   "pentateuch01keil",
+   208,
+   "205"
+  ],
+  "keil-genesis.GEN.13.13-16.1": [
+   "pentateuch01keil",
+   209,
+   "206"
+  ],
+  "keil-genesis.GEN.13.17-18.1": [
+   "pentateuch01keil",
+   210,
+   "207"
+  ],
+  "keil-genesis.GEN.15.1-6.1": [
+   "pentateuch01keil",
+   214,
+   "211"
+  ],
+  "keil-genesis.GEN.15.11.1": [
+   "pentateuch01keil",
+   219,
+   "216"
+  ],
+  "keil-genesis.GEN.15.12-17.1": [
+   "pentateuch01keil",
+   219,
+   "216"
+  ],
+  "keil-genesis.GEN.15.17.1": [
+   "pentateuch01keil",
+   220,
+   "217"
+  ],
+  "keil-genesis.GEN.17.22-27.1": [
+   "pentateuch01keil",
+   231,
+   "228"
+  ],
+  "keil-genesis.GEN.18.1-15.1": [
+   "pentateuch01keil",
+   232,
+   "229"
+  ],
+  "keil-genesis.GEN.18.9-15.1": [
+   "pentateuch01keil",
+   232,
+   "229"
+  ],
+  "keil-genesis.GEN.18.16-33.1": [
+   "pentateuch01keil",
+   234,
+   "231"
+  ],
+  "keil-genesis.GEN.18.20.1": [
+   "pentateuch01keil",
+   234,
+   "231"
+  ],
+  "keil-genesis.GEN.18.21.1": [
+   "pentateuch01keil",
+   234,
+   "231"
+  ],
+  "keil-genesis.GEN.19.12-22.1": [
+   "pentateuch01keil",
+   237,
+   "234"
+  ],
+  "keil-genesis.GEN.19.17.1": [
+   "pentateuch01keil",
+   238,
+   "235"
+  ],
+  "keil-genesis.GEN.19.23-28.1": [
+   "pentateuch01keil",
+   239,
+   "236"
+  ],
+  "keil-genesis.GEN.19.26.1": [
+   "pentateuch01keil",
+   240,
+   "237"
+  ],
+  "keil-genesis.GEN.19.29-38.1": [
+   "pentateuch01keil",
+   241,
+   "238"
+  ],
+  "keil-genesis.GEN.20.8-15.1": [
+   "pentateuch01keil",
+   244,
+   "241"
+  ],
+  "keil-genesis.GEN.20.10.1": [
+   "pentateuch01keil",
+   244,
+   "241"
+  ],
+  "keil-genesis.GEN.20.17-18.1": [
+   "pentateuch01keil",
+   245,
+   "242"
+  ],
+  "keil-genesis.GEN.21.1-7.1": [
+   "pentateuch01keil",
+   247,
+   "244"
+  ],
+  "keil-genesis.GEN.21.9.1": [
+   "pentateuch01keil",
+   248,
+   "245"
+  ],
+  "keil-genesis.GEN.21.20.1": [
+   "pentateuch01keil",
+   249,
+   "246"
+  ],
+  "keil-genesis.GEN.21.22-34.1": [
+   "pentateuch01keil",
+   250,
+   "247"
+  ],
+  "keil-genesis.GEN.21.31.1": [
+   "pentateuch01keil",
+   250,
+   "247"
+  ],
+  "keil-genesis.GEN.21.33.1": [
+   "pentateuch01keil",
+   251,
+   "248"
+  ],
+  "keil-genesis.GEN.21.34.1": [
+   "pentateuch01keil",
+   251,
+   "248"
+  ],
+  "keil-genesis.GEN.22.1-19.1": [
+   "pentateuch01keil",
+   252,
+   "249"
+  ],
+  "keil-genesis.GEN.22.5.1": [
+   "pentateuch01keil",
+   253,
+   "250"
+  ],
+  "keil-genesis.GEN.22.9-10.1": [
+   "pentateuch01keil",
+   254,
+   "251"
+  ],
+  "keil-genesis.GEN.22.15-19.1": [
+   "pentateuch01keil",
+   254,
+   "251"
+  ],
+  "keil-genesis.GEN.22.20-24.1": [
+   "pentateuch01keil",
+   257,
+   "254"
+  ],
+  "keil-genesis.GEN.22.20.1": [
+   "pentateuch01keil",
+   261,
+   "258"
+  ],
+  "keil-genesis.GEN.24.1-9.1": [
+   "pentateuch01keil",
+   261,
+   "258"
+  ],
+  "keil-genesis.GEN.24.10-28.1": [
+   "pentateuch01keil",
+   262,
+   "259"
+  ],
+  "keil-genesis.GEN.24.21.1": [
+   "pentateuch01keil",
+   263,
+   "260"
+  ],
+  "keil-genesis.GEN.24.29-54.1": [
+   "pentateuch01keil",
+   263,
+   "260"
+  ],
+  "keil-genesis.GEN.24.50.1": [
+   "pentateuch01keil",
+   264,
+   "261"
+  ],
+  "keil-genesis.GEN.24.52.1": [
+   "pentateuch01keil",
+   264,
+   "261"
+  ],
+  "keil-genesis.GEN.24.54-60.1": [
+   "pentateuch01keil",
+   264,
+   "261"
+  ],
+  "keil-genesis.GEN.24.61-67.1": [
+   "pentateuch01keil",
+   264,
+   "261"
+  ],
+  "keil-genesis.GEN.25.1-4.1": [
+   "pentateuch01keil",
+   265,
+   "262"
+  ],
+  "keil-genesis.GEN.25.3.1": [
+   "pentateuch01keil",
+   266,
+   "263"
+  ],
+  "keil-genesis.GEN.25.5-11.1": [
+   "pentateuch01keil",
+   267,
+   "264"
+  ],
+  "keil-genesis.GEN.25.7-8.1": [
+   "pentateuch01keil",
+   267,
+   "264"
+  ],
+  "keil-genesis.GEN.25.9-10.1": [
+   "pentateuch01keil",
+   267,
+   "264"
+  ],
+  "keil-genesis.GEN.25.11.1": [
+   "pentateuch01keil",
+   267,
+   "264"
+  ],
+  "keil-genesis.GEN.25.16.1": [
+   "pentateuch01keil",
+   269,
+   "266"
+  ],
+  "keil-genesis.GEN.25.17-18.1": [
+   "pentateuch01keil",
+   269,
+   "266"
+  ],
+  "keil-genesis.GEN.25.21-26.1": [
+   "pentateuch01keil",
+   271,
+   "268"
+  ],
+  "keil-genesis.GEN.25.22-23.1": [
+   "pentateuch01keil",
+   271,
+   "268"
+  ],
+  "keil-genesis.GEN.25.27-34.1": [
+   "pentateuch01keil",
+   272,
+   "269"
+  ],
+  "keil-genesis.GEN.26.1-5.1": [
+   "pentateuch01keil",
+   273,
+   "270"
+  ],
+  "keil-genesis.GEN.26.6-11.1": [
+   "pentateuch01keil",
+   274,
+   "271"
+  ],
+  "keil-genesis.GEN.26.12-17.1": [
+   "pentateuch01keil",
+   275,
+   "272"
+  ],
+  "keil-genesis.GEN.26.18-22.1": [
+   "pentateuch01keil",
+   275,
+   "272"
+  ],
+  "keil-genesis.GEN.26.23-25.1": [
+   "pentateuch01keil",
+   276,
+   "273"
+  ],
+  "keil-genesis.GEN.26.26-33.1": [
+   "pentateuch01keil",
+   277,
+   "274"
+  ],
+  "keil-genesis.GEN.27.34-35.1": [
+   "pentateuch01keil",
+   277,
+   "274"
+  ],
+  "keil-genesis.GEN.27.42.1": [
+   "pentateuch01keil",
+   284,
+   "281"
+  ],
+  "keil-genesis.GEN.28.18.1": [
+   "pentateuch01keil",
+   286,
+   "283"
+  ],
+  "keil-genesis.GEN.28.20.1": [
+   "pentateuch01keil",
+   287,
+   "284"
+  ],
+  "keil-genesis.GEN.29.15-30.1": [
+   "pentateuch01keil",
+   289,
+   "286"
+  ],
+  "keil-genesis.GEN.29.27.1": [
+   "pentateuch01keil",
+   290,
+   "287"
+  ],
+  "keil-genesis.GEN.29.31-35.1": [
+   "pentateuch01keil",
+   291,
+   "288"
+  ],
+  "keil-genesis.GEN.30.14-21.1": [
+   "pentateuch01keil",
+   293,
+   "290"
+  ],
+  "keil-genesis.GEN.30.22-24.1": [
+   "pentateuch01keil",
+   294,
+   "291"
+  ],
+  "keil-genesis.GEN.30.25-43.1": [
+   "pentateuch01keil",
+   296,
+   "293"
+  ],
+  "keil-genesis.GEN.30.41-42.1": [
+   "pentateuch01keil",
+   298,
+   "295"
+  ],
+  "keil-genesis.GEN.31.17-19.1": [
+   "pentateuch01keil",
+   300,
+   "297"
+  ],
+  "keil-genesis.GEN.31.22-54.1": [
+   "pentateuch01keil",
+   301,
+   "298"
+  ],
+  "keil-genesis.GEN.31.27.1": [
+   "pentateuch01keil",
+   301,
+   "298"
+  ],
+  "keil-genesis.GEN.31.29.1": [
+   "pentateuch01keil",
+   301,
+   "298"
+  ],
+  "keil-genesis.GEN.31.31-32.1": [
+   "pentateuch01keil",
+   301,
+   "298"
+  ],
+  "keil-genesis.GEN.31.40.1": [
+   "pentateuch01keil",
+   302,
+   "299"
+  ],
+  "keil-genesis.GEN.31.42.1": [
+   "pentateuch01keil",
+   302,
+   "299"
+  ],
+  "keil-genesis.GEN.31.43-54.1": [
+   "pentateuch01keil",
+   303,
+   "300"
+  ],
+  "keil-genesis.GEN.32.1-3.1": [
+   "pentateuch01keil",
+   305,
+   "302"
+  ],
+  "keil-genesis.GEN.32.4-13.1": [
+   "pentateuch01keil",
+   306,
+   "303"
+  ],
+  "keil-genesis.GEN.32.14-22.1": [
+   "pentateuch01keil",
+   307,
+   "304"
+  ],
+  "keil-genesis.GEN.32.23-33.1": [
+   "pentateuch01keil",
+   307,
+   "304"
+  ],
+  "keil-genesis.GEN.32.25.1": [
+   "pentateuch01keil",
+   308,
+   "305"
+  ],
+  "keil-genesis.GEN.32.32-33.1": [
+   "pentateuch01keil",
+   311,
+   "308"
+  ],
+  "keil-genesis.GEN.34.1-4.1": [
+   "pentateuch01keil",
+   315,
+   "312"
+  ],
+  "keil-genesis.GEN.34.3.1": [
+   "pentateuch01keil",
+   316,
+   "313"
+  ],
+  "keil-genesis.GEN.34.5-12.1": [
+   "pentateuch01keil",
+   316,
+   "313"
+  ],
+  "keil-genesis.GEN.34.13-17.1": [
+   "pentateuch01keil",
+   317,
+   "314"
+  ],
+  "keil-genesis.GEN.34.25-31.1": [
+   "pentateuch01keil",
+   318,
+   "315"
+  ],
+  "keil-genesis.GEN.34.30-31.1": [
+   "pentateuch01keil",
+   319,
+   "316"
+  ],
+  "keil-genesis.GEN.35.1-8.1": [
+   "pentateuch01keil",
+   319,
+   "316"
+  ],
+  "keil-genesis.GEN.35.8.1": [
+   "pentateuch01keil",
+   320,
+   "317"
+  ],
+  "keil-genesis.GEN.35.9-15.1": [
+   "pentateuch01keil",
+   320,
+   "317"
+  ],
+  "keil-genesis.GEN.35.16-20.1": [
+   "pentateuch01keil",
+   322,
+   "319"
+  ],
+  "keil-genesis.GEN.35.27-28.1": [
+   "pentateuch01keil",
+   323,
+   "320"
+  ],
+  "keil-genesis.GEN.36.1-8.1": [
+   "pentateuch01keil",
+   325,
+   "322"
+  ],
+  "keil-genesis.GEN.36.2-3.1": [
+   "pentateuch01keil",
+   325,
+   "322"
+  ],
+  "keil-genesis.GEN.36.15-19.1": [
+   "pentateuch01keil",
+   328,
+   "325"
+  ],
+  "keil-genesis.GEN.36.30.1": [
+   "pentateuch01keil",
+   329,
+   "326"
+  ],
+  "keil-genesis.GEN.37.1-4.1": [
+   "pentateuch01keil",
+   338,
+   "335"
+  ],
+  "keil-genesis.GEN.37.3.1": [
+   "pentateuch01keil",
+   339,
+   "336"
+  ],
+  "keil-genesis.GEN.37.11.1": [
+   "pentateuch01keil",
+   344,
+   "341"
+  ],
+  "keil-genesis.GEN.37.13-14.1": [
+   "pentateuch01keil",
+   345,
+   "342"
+  ],
+  "keil-genesis.GEN.38.24-26.1": [
+   "pentateuch01keil",
+   346,
+   "343"
+  ],
+  "keil-genesis.GEN.38.27-30.1": [
+   "pentateuch01keil",
+   347,
+   "344"
+  ],
+  "keil-genesis.GEN.38.29.1": [
+   "pentateuch01keil",
+   347,
+   "344"
+  ],
+  "keil-genesis.GEN.39.19-23.1": [
+   "pentateuch01keil",
+   349,
+   "346"
+  ],
+  "keil-genesis.GEN.40.1-8.1": [
+   "pentateuch01keil",
+   350,
+   "347"
+  ],
+  "keil-genesis.GEN.40.5.1": [
+   "pentateuch01keil",
+   350,
+   "347"
+  ],
+  "keil-genesis.GEN.40.8.1": [
+   "pentateuch01keil",
+   350,
+   "347"
+  ],
+  "keil-genesis.GEN.40.9-15.1": [
+   "pentateuch01keil",
+   351,
+   "348"
+  ],
+  "keil-genesis.GEN.40.16-19.1": [
+   "pentateuch01keil",
+   351,
+   "348"
+  ],
+  "keil-genesis.GEN.40.20-23.1": [
+   "pentateuch01keil",
+   352,
+   "349"
+  ],
+  "keil-genesis.GEN.41.37-57.1": [
+   "pentateuch01keil",
+   354,
+   "351"
+  ],
+  "keil-genesis.GEN.41.43.1": [
+   "pentateuch01keil",
+   355,
+   "352"
+  ],
+  "keil-genesis.GEN.41.44.1": [
+   "pentateuch01keil",
+   355,
+   "352"
+  ],
+  "keil-genesis.GEN.41.45.1": [
+   "pentateuch01keil",
+   355,
+   "352"
+  ],
+  "keil-genesis.GEN.41.46.1": [
+   "pentateuch01keil",
+   356,
+   "353"
+  ],
+  "keil-genesis.GEN.41.50-52.1": [
+   "pentateuch01keil",
+   357,
+   "354"
+  ],
+  "keil-genesis.GEN.41.53-57.1": [
+   "pentateuch01keil",
+   358,
+   "355"
+  ],
+  "keil-genesis.GEN.42.26-38.1": [
+   "pentateuch01keil",
+   361,
+   "358"
+  ],
+  "keil-genesis.GEN.42.29-34.1": [
+   "pentateuch01keil",
+   362,
+   "359"
+  ],
+  "keil-genesis.GEN.42.37-38.1": [
+   "pentateuch01keil",
+   362,
+   "359"
+  ],
+  "keil-genesis.GEN.43.27.1": [
+   "pentateuch01keil",
+   365,
+   "362"
+  ],
+  "keil-genesis.GEN.43.32-33.1": [
+   "pentateuch01keil",
+   365,
+   "362"
+  ],
+  "keil-genesis.GEN.43.33-34.1": [
+   "pentateuch01keil",
+   366,
+   "363"
+  ],
+  "keil-genesis.GEN.43.33-34.2": [
+   "pentateuch01keil",
+   369,
+   "366"
+  ],
+  "keil-genesis.GEN.45.19-20.1": [
+   "pentateuch01keil",
+   371,
+   "368"
+  ],
+  "keil-genesis.GEN.45.25-28.1": [
+   "pentateuch01keil",
+   372,
+   "369"
+  ],
+  "keil-genesis.GEN.46.8-27.1": [
+   "pentateuch01keil",
+   373,
+   "370"
+  ],
+  "keil-genesis.GEN.46.28.1": [
+   "pentateuch01keil",
+   378,
+   "375"
+  ],
+  "keil-genesis.GEN.46.33-34.1": [
+   "pentateuch01keil",
+   378,
+   "375"
+  ],
+  "keil-genesis.GEN.47.1-2.1": [
+   "pentateuch01keil",
+   385,
+   "382"
+  ],
+  "keil-genesis.GEN.47.8-22.1": [
+   "pentateuch01keil",
+   386,
+   "383"
+  ],
+  "keil-genesis.GEN.47.12-13.1": [
+   "pentateuch01keil",
+   387,
+   "384"
+  ],
+  "keil-genesis.GEN.47.14-15.1": [
+   "pentateuch01keil",
+   387,
+   "384"
+  ],
+  "keil-genesis.GEN.47.17-19.1": [
+   "pentateuch01keil",
+   388,
+   "385"
+  ],
+  "keil-genesis.GEN.48.1-2.1": [
+   "pentateuch01keil",
+   390,
+   "387"
+  ],
+  "keil-genesis.GEN.49.3-4.1": [
+   "pentateuch01keil",
+   393,
+   "390"
+  ],
+  "keil-genesis.GEN.49.5-7.1": [
+   "pentateuch01keil",
+   394,
+   "391"
+  ],
+  "keil-genesis.GEN.49.8-12.1": [
+   "pentateuch01keil",
+   396,
+   "393"
+  ],
+  "keil-genesis.GEN.49.9.1": [
+   "pentateuch01keil",
+   396,
+   "393"
+  ],
+  "keil-genesis.GEN.49.13.1": [
+   "pentateuch01keil",
+   406,
+   "403"
+  ],
+  "keil-genesis.GEN.49.18.1": [
+   "pentateuch01keil",
+   408,
+   "405"
+  ],
+  "keil-genesis.GEN.49.19.1": [
+   "pentateuch01keil",
+   409,
+   "406"
+  ],
+  "keil-genesis.GEN.49.20.1": [
+   "pentateuch01keil",
+   409,
+   "406"
+  ],
+  "keil-genesis.GEN.49.21.1": [
+   "pentateuch01keil",
+   409,
+   "406"
+  ],
+  "keil-genesis.GEN.49.22-26.1": [
+   "pentateuch01keil",
+   410,
+   "407"
+  ],
+  "keil-genesis.GEN.49.23-24.1": [
+   "pentateuch01keil",
+   410,
+   "407"
+  ],
+  "keil-genesis.GEN.49.25-26.1": [
+   "pentateuch01keil",
+   411,
+   "408"
+  ],
+  "keil-genesis.GEN.49.27.1": [
+   "pentateuch01keil",
+   412,
+   "409"
+  ],
+  "keil-genesis.GEN.49.29-33.1": [
+   "pentateuch01keil",
+   413,
+   "410"
+  ],
+  "keil-genesis.GEN.50.15-21.1": [
+   "pentateuch01keil",
+   415,
+   "412"
+  ],
+  "keil-genesis.GEN.50.24.1": [
+   "pentateuch01keil",
+   417,
+   "414"
+  ]
+ }
+}

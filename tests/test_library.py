@@ -18,10 +18,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build_site  # noqa: E402
+import export_data  # noqa: E402
 import differ  # noqa: E402
 import extract_creeds  # noqa: E402
 import extract_texts  # noqa: E402
 import fetch_wikidata  # noqa: E402
+import find_pages  # noqa: E402
 import find_refs  # noqa: E402
 import score_refs  # noqa: E402
 import scripture  # noqa: E402
@@ -356,10 +358,83 @@ class OfflineApp(unittest.TestCase):
         self.assertNotEqual(re.search(r'VERSION = "(\w+)"', a)[1], re.search(r'VERSION = "(\w+)"', b)[1])
 
 
+def ref_is_verse_page(lib, c):
+    return build_site.ref_parts(c["start"]) in lib.voices_on
+
+
+class SefariaIdeas(unittest.TestCase):
+    """The parts taken from Sefaria: AI marks, Sunday readings, the linker, scan pages."""
+
+    def test_ai_marks(self):
+        self.assertIn("lg-ai-draft", build_site.ai_mark("ai_draft"))
+        self.assertIn("Ada Example", build_site.ai_mark("reviewed", "Ada Example"))
+        self.assertEqual(build_site.ai_mark("reviewed"), "")   # reviewed needs a named person
+        self.assertEqual(build_site.ai_mark(None), "")
+
+    def test_readings_are_parsed_and_renumbered(self):
+        self.assertEqual(build_site.parse_reading("Luke 2:1-14, (15-20)"), ("LUK", (2, 1), (2, 14)))
+        self.assertEqual(build_site.parse_reading("Isaiah 61:10-62:3"), ("ISA", (61, 10), (62, 3)))
+        self.assertEqual(build_site.parse_reading("2 Peter 3:8-15a"), ("2PE", (3, 8), (3, 15)))
+        # Psalm 51's title is verse 1 and 2 in the Hebrew numbering the Bible text uses.
+        self.assertEqual(build_site.parse_reading("Psalm 51:1-17"), ("PSA", (51, 3), (51, 19)))
+        self.assertIsNone(build_site.parse_reading("Wisdom of Solomon 12:13"))
+
+    def test_lectionary_holds_references_only(self):
+        with open(os.path.join(ROOT, "library", "lectionary", "rcl.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertIn("Consultation on Common Texts", data["rights"])
+        for d in data["days"]:
+            self.assertRegex(d["date"], r"^\d{4}-\d{2}-\d{2}$")
+            self.assertEqual(set(d["readings"]), {"first_and_psalm", "epistle", "gospel"})
+            for refs in d["readings"].values():
+                for r in refs:
+                    self.assertLess(len(r), 80, r)   # a reference, never the reading's text
+
+    def test_linker_knows_numbered_books(self):
+        single, numbered = build_site.linker_names()
+        self.assertEqual(single["Rom"], "ROM")
+        self.assertEqual(numbered["Cor"], ["1CO", "2CO"])
+        self.assertEqual(numbered["John"], ["1JN", "2JN", "3JN"])
+        self.assertIn('"Rom": "ROM"', build_site.linker_js())
+
+    def test_scan_pages_name_excerpts_in_the_library(self):
+        for path in sorted(os.listdir(os.path.join(ROOT, "library", "pages"))):
+            work = path[:-5]
+            with open(os.path.join(ROOT, "library", "pages", path), encoding="utf-8") as f:
+                data = json.load(f)
+            ids = {c["id"] for c in find_pages.entries(work)}
+            self.assertTrue(set(data["pages"]) <= ids, work)
+            for ident, leaf, _printed in data["pages"].values():
+                self.assertIn(ident, {x["id"] for x in data["scans"]})
+                self.assertGreaterEqual(leaf, 0)
+
+
+class DataRelease(unittest.TestCase):
+    """scripts/export_data.py: a release is the whole library, reproducibly."""
+
+    def test_release_holds_the_library_and_its_docs(self):
+        names = export_data.files()
+        self.assertIn("sources/manifest.json", names)
+        for doc in ("docs/data.md", "docs/api.md", "docs/references.md", "LICENSE"):
+            self.assertIn(doc, names)
+        self.assertTrue(any(n.startswith("library/comments/") for n in names))
+        # The Bible text is the Open Word Bible's to release.
+        self.assertFalse(any(n.startswith(("bible/", "site/")) for n in names))
+        counts = export_data.counts()
+        self.assertEqual(counts["works"], len(glob.glob(os.path.join(ROOT, "library", "works", "*.json"))))
+
+    def test_release_version_follows_the_format(self):
+        with redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):
+            export_data.main(["2.0.0"])       # the major number is the data format
+        with redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):
+            export_data.main(["latest"])
+
+
 class Site(unittest.TestCase):
     PAGES = ("index.html", "read/index.html", "jhn/index.html", "jhn/1/index.html", "jhn/21/index.html",
              "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html",
-             "jhn/3/16/index.html")
+             "jhn/3/16/index.html", "ai/index.html", "new/index.html", "explore/index.html", "linker/index.html",
+             "sheets/index.html", "readings/index.html", "about/rules/index.html", "open-data/index.html")
 
     @classmethod
     def setUpClass(cls):
@@ -370,6 +445,64 @@ class Site(unittest.TestCase):
     def read(self, page):
         with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
             return f.read()
+
+    def test_linker_files_are_numbered_as_english_bibles(self):
+        with open(os.path.join(build_site.SITE, "linker", "PSA.51.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertTrue(data["verses"]["1"]["href"].startswith("/psa/51/3"))
+        self.assertTrue(os.path.isfile(os.path.join(build_site.SITE, "linker.js")))
+
+    def test_ai_marks_replace_the_draft_pills(self):
+        calvin = self.read("commentators/calvin/index.html")
+        self.assertIn('class="lg-ai lg-ai-draft" href="/ai/"', calvin)
+        self.assertNotIn("a draft awaiting review", calvin)
+
+    def test_readings_hold_the_sundays_and_the_great_days(self):
+        text = self.read("readings/index.html")
+        self.assertIn('id="sundays"', text)
+        self.assertIn('id="great-days"', text)
+        self.assertEqual(text.count("<h1>"), 1)
+
+    def test_verse_pages_name_their_topics_and_printed_pages(self):
+        lib = build_site.Library()
+        on = build_site.topics_on_verse(lib)
+        verse = next(k for k in sorted(on) if k in lib.voices_on)
+        text = self.read(build_site.verse_url(*verse).strip("/") + "/index.html")
+        for x in on[verse]:
+            self.assertIn(f'href="/topics/{x}/"', text)
+        scanned = next(c for c in lib.comments if c["scan"] and ref_is_verse_page(lib, c))
+        text = self.read(build_site.verse_url(*build_site.ref_parts(scanned["start"])).strip("/") + "/index.html")
+        self.assertIn(scanned["scan"]["url"], text)
+
+    def test_api_chapters_hold_verses_and_excerpts(self):
+        api_dir = os.path.join(build_site.SITE, "api", "v1")
+        with open(os.path.join(api_dir, "index.json"), encoding="utf-8") as f:
+            index = json.load(f)
+        self.assertEqual(index["api_version"], 1)
+        with open(os.path.join(api_dir, "chapters", "JHN.1.json"), encoding="utf-8") as f:
+            ch = json.load(f)
+        v14 = next(v for v in ch["verses"] if v["verse"] == 14)
+        self.assertTrue(v14["text"] and v14["excerpts"])
+        first = v14["excerpts"][0]
+        self.assertEqual(ch["excerpts"][first]["text"], build_site.Library().by_id[first]["text"])
+        # Every chapter, with or without commentary.
+        self.assertTrue(os.path.isfile(os.path.join(api_dir, "chapters", "OBA.1.json")))
+        with open(os.path.join(api_dir, "works.json"), encoding="utf-8") as f:
+            works = json.load(f)
+        self.assertTrue(all(w["rights"]["basis"] and w["status"] in ("ai_draft", "reviewed") for w in works))
+
+    def test_rules_page_lists_every_work_and_its_rights(self):
+        text = self.read("about/rules/index.html")
+        lib = build_site.Library()
+        for wid, w in lib.works.items():
+            self.assertIn(f'href="/works/{wid}/"', text)
+            self.assertIn(html.escape(w["rights"]["basis"], quote=True), text)
+        self.assertIn("docs/adding-a-work.md", text)
+
+    def test_new_feed_is_atom(self):
+        text = self.read("new.xml")
+        self.assertTrue(text.startswith('<?xml version="1.0" encoding="utf-8"?>'))
+        self.assertIn('<feed xmlns="http://www.w3.org/2005/Atom"', text)
 
     def test_pages_exist_with_the_site_frame(self):
         for page in self.PAGES:
@@ -797,7 +930,8 @@ class Site(unittest.TestCase):
         counts = build_site.verse_counts(lib, "JHN")
         (ch, v), n = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
         text = self.read(os.path.join("jhn", "most-discussed", "index.html"))
-        self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a></td><td class="lg-num" data-sort="{n}">', text)
+        cell = f'<td class="lg-num" data-sort="{n}">'
+        self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a></td>{cell}', text)
         self.assertIn('href="/jhn/most-discussed/"', self.read(os.path.join("jhn", "index.html")))
 
     # --- Open data ---
@@ -943,7 +1077,7 @@ class Site(unittest.TestCase):
             self.assertEqual(g["status"], "ai_draft")   # only a person marks one reviewed
             self.assertIsNone(g["reviewed_by"])
             text = self.read(os.path.join(g["path"].strip("/"), "index.html"))
-            self.assertIn("A draft awaiting review", text)
+            self.assertIn("AI draft, not yet reviewed", text)
             for x in g.get("topics", []):
                 for w in lib.voices_on[build_site.ref_parts(x["focus"])]:
                     c = build_site.first_on(lib, {w}, x["focus"])
