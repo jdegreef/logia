@@ -26736,6 +26736,33 @@
    "kind": "digital",
    "download_sha256": "91f46026f649dcf8dd08d2ed21987f11a3de2a706c08b6c3e12b4e89b1946f54",
    "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/delitzsch-psalms/biblicalcommenta187101deli.txt",
+   "work": "delitzsch-psalms",
+   "url": "https://archive.org/download/biblicalcommenta187101deli/biblicalcommenta187101deli_djvu.txt",
+   "retrieved": "2026-11-10",
+   "kind": "scan",
+   "download_sha256": "a26194ce8d7e67c9f8232f858e76e96718db7c2c9709fce5d92c44598e865921",
+   "extract": "The scan's full text (vol. 1), as downloaded."
+  },
+  {
+   "path": "sources/delitzsch-psalms/biblicalcommenta187102deli.txt",
+   "work": "delitzsch-psalms",
+   "url": "https://archive.org/download/biblicalcommenta187102deli/biblicalcommenta187102deli_djvu.txt",
+   "retrieved": "2026-11-10",
+   "kind": "scan",
+   "download_sha256": "a023a05648cd6beb5c81cc988eefb17f00967634526e9b64e431d849d5b80a6d",
+   "extract": "The scan's full text (vol. 2), as downloaded."
+  },
+  {
+   "path": "sources/delitzsch-psalms/biblicalcomment02unkngoog.txt",
+   "work": "delitzsch-psalms",
+   "url": "https://archive.org/download/biblicalcomment02unkngoog/biblicalcomment02unkngoog_djvu.txt",
+   "retrieved": "2026-11-10",
+   "kind": "scan",
+   "download_sha256": "885f88a9e9f584229c68c108f2e7d69aa67af15060d6bc5e3fd9ca43a921c856",
+   "extract": "The scan's full text (vol. 3), as downloaded."
   }
  ]
 }
