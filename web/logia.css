@@ -538,7 +538,7 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
 .lg-contents .lg-quiet { font-size: 12.5px; font-variant-numeric: tabular-nums; }
 /* The contents on a work's own page: a tile a chapter. */
 .lg-tiles { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); max-width: 1080px; }
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
 .lg-tiles a { display: flex; flex-direction: column; gap: 3px; height: 100%; padding: 12px 14px 14px; border: 1px solid var(--line);
   border-radius: var(--radius-sm); background: var(--surface); color: var(--text); text-decoration: none; }
 .lg-tiles a:hover { border-color: var(--accent); }
@@ -909,9 +909,11 @@ html {
   .lg-excerpt-side .lg-side { order: -1; }
 }
 
-/* A work's record: its facts, its rights said plainly, and a citation. */
+/* A work's record: its facts, its rights said plainly, and a citation. It
+   and the chapter tiles run the full width, on the same right edge as the
+   Start here cards above them. */
 .lg-record { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 24px 40px; align-items: start; margin-top: 28px;
-  padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); max-width: 1080px; }
+  padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
 .lg-record .lg-facts { margin: 0; }
 .lg-pills { display: flex; flex-wrap: wrap; gap: 6px; }
 .lg-pill-ok { color: var(--accent); background: var(--accent-soft); }
