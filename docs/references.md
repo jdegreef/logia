@@ -215,3 +215,61 @@ Neither is proof. The answer key for a quotation is the margin note on the
 printed page ("Chrys. Hom. ii. in Joan."), which the OCR scatters: a
 reviewer who reads a sample of them off the page images, with their name on
 the file, gives the matcher a true precision.
+## Creeds and councils
+
+`library/creeds/<id>.json` holds the creeds, conciliar decrees and
+confessions of the churches, each readable whole: the creeds the churches
+share (the Apostles', Nicaea, Constantinople, the Definition of Chalcedon,
+the Athanasian Creed) and documents of each tradition (Trent, the Orthodox
+Longer Catechism, Augsburg, Luther's Small Catechism, Heidelberg,
+Westminster, the Thirty-Nine Articles, the Methodist Articles, the New
+Hampshire Confession). `scripts/extract_creeds.py` reads them from their
+CCEL pages (`sources/creeds/`, the work `creeds` in
+`sources/manifest.json`); which pages, and which paragraphs of them, make
+up each document is set in the table at the top of the script, and the
+words are always the page's own. `scripts/verify_sources.py` checks every
+section against its page.
+
+```json
+{"id": "westminster", "title": "The Westminster Confession of Faith", "kind": "confession",
+ "tradition": "Reformed (Presbyterian)", "year": 1647, "edition": "Philip Schaff, ...",
+ "translation": null, "published": 1877, "full_text_url": "https://www.ccel.org/ccel/schaff/creeds3.iv.xvii.ii.html",
+ "rights": {"basis": "public domain: published before 1931 (US)", "worldwide": "to confirm: ..."},
+ "notes": "...", "status": "ai_draft",
+ "sections": [{"id": "iv.xvii.ii-p3.18", "label": "Chapter I. Of the Holy Scripture, I", "text": "I. Although ...",
+               "source": "creeds3.iv.xvii.ii.html",
+               "cites": [{"at": 162, "text": "Rom. ii. 14, 15", "start": "ROM.2.14", "end": "ROM.2.15", "note": true}]}]}
+```
+
+- `kind` is `creed`, `council`, `confession` or `catechism`; `tradition`
+  is "Shared by the churches" for the creeds and councils the churches hold
+  in common, and otherwise a label like a commentator's ("Roman Catholic",
+  "Orthodox", "Lutheran", "Reformed (Presbyterian)", "Anglican (Methodist)",
+  "Baptist"). `year` is the document's year as the source gives it, or null
+  where it gives none; `published` the edition's. `notes` says where the
+  text and its proof texts come from, and what of the page is left out.
+- A section is one paragraph, article, question with its answer, or canon,
+  as the page divides it. Its `id` is CCEL's id for the paragraph it begins
+  with, so it is also an anchor on CCEL. Its `label` is what the page prints
+  over and at the start of it: the last heading before it and the number it
+  opens with ("Chapter I. Of the Holy Scripture, I", "ON JUSTIFICATION,
+  CANON I", "Question 1"), or null where the page prints neither.
+- Schaff prints the Latin, Greek or German beside the English; only the
+  English is taken. A paragraph that a page break splits over two rows of
+  his table is joined again. A question and its answer are separated by a
+  blank line, as an excerpt's paragraphs are.
+- `cites` are the Scripture references CCEL's editors marked. `at` and
+  `text` are where the reference is printed in the section, as for
+  citations of excerpts. Proof texts, which Schaff prints as footnotes to
+  each clause (Westminster, New Hampshire, and the Scripture Trent quotes),
+  have `"note": true`: `text` is the footnote's reference and `at` is
+  where its marker stands in the section. A footnote is taken only when it
+  holds nothing but references, so Schaff's own notes on a text are not
+  made into its citations. Proof texts changed between editions of a
+  confession, so a document's `notes` say which edition they are from.
+- `start` and `end` keep the English (KJV) verse numbers CCEL marks, as
+  the whole texts in `library/texts/` do; `scripture.english_span` is not
+  applied. The site converts them to the Open Word Bible's numbering (the
+  Hebrew verses of the Psalm titles, Malachi 4) when it links them.
+- Like a work, each document stays `ai_draft` until a named person reviews
+  it, and its `rights` record what is still to confirm for worldwide use.

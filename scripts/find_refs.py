@@ -198,7 +198,7 @@ def ccel_citations(page, where, excerpt):
         if not code or v1 == "0":
             continue                         # a book we do not know, or a whole chapter
         a, b = f"{code}.{int(c1)}.{int(v1)}", f"{code}.{int(c2)}.{int(v2 or v1)}"
-        if scripture.parse(a) and scripture.parse(b):
+        if scripture.plausible(a) and scripture.plausible(b):
             out.append((text, [(text, a, b, 0)]))
     # Place each in the excerpt, in order: the excerpt is the page's words.
     placed, pos = [], 0

@@ -714,15 +714,6 @@
    "status": "detected"
   },
   {
-   "in": "catena-mark.MRK.8.12.1",
-   "at": 299,
-   "text": "Ps 80:36",
-   "start": "PSA.80.36",
-   "end": "PSA.80.36",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "catena-mark.MRK.8.23.1",
    "at": 361,
    "text": "Matt. 11, 21",
@@ -957,15 +948,6 @@
    "status": "detected"
   },
   {
-   "in": "catena-mark.MRK.11.9.1",
-   "at": 614,
-   "text": "Ps 117:25",
-   "start": "PSA.117.25",
-   "end": "PSA.117.25",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "catena-mark.MRK.11.9.2",
    "at": 526,
    "text": "Luke 1:32",
@@ -1043,15 +1025,6 @@
    "text": "Acts 13:46",
    "start": "ACT.13.46",
    "end": "ACT.13.46",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-mark.MRK.11.33.1",
-   "at": 244,
-   "text": "Ps 131:17-18",
-   "start": "PSA.131.17",
-   "end": "PSA.131.18",
    "found": "source",
    "status": "detected"
   },
@@ -1416,15 +1389,6 @@
    "status": "detected"
   },
   {
-   "in": "catena-mark.MRK.14.53.1",
-   "at": 629,
-   "text": "Ps 67:31",
-   "start": "PSA.67.31",
-   "end": "PSA.67.31",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "catena-mark.MRK.14.54.1",
    "at": 714,
    "text": "Luke 12:49",
@@ -1583,15 +1547,6 @@
    "text": "John 19:28",
    "start": "JHN.19.28",
    "end": "JHN.19.28",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-mark.MRK.15.36.1",
-   "at": 876,
-   "text": "Ps 117:19",
-   "start": "PSA.117.19",
-   "end": "PSA.117.19",
    "found": "source",
    "status": "detected"
   },

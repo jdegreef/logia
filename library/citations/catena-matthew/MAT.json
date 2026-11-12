@@ -1741,15 +1741,6 @@
   },
   {
    "in": "catena-matthew.MAT.6.34.1",
-   "at": 346,
-   "text": "Gen 35:33",
-   "start": "GEN.35.33",
-   "end": "GEN.35.33",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.6.34.1",
    "at": 450,
    "text": "1 Sam 28:19",
    "start": "1SA.28.19",
@@ -2231,15 +2222,6 @@
    "text": "Ps 42:3",
    "start": "PSA.42.4",
    "end": "PSA.42.4",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.9.18.1",
-   "at": 1337,
-   "text": "Matt 8:41",
-   "start": "MAT.8.41",
-   "end": "MAT.8.41",
    "found": "source",
    "status": "detected"
   },
@@ -4098,15 +4080,6 @@
    "status": "detected"
   },
   {
-   "in": "catena-matthew.MAT.22.31.1",
-   "at": 367,
-   "text": "Isa 26:29",
-   "start": "ISA.26.29",
-   "end": "ISA.26.29",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "catena-matthew.MAT.22.32.1",
    "at": 1130,
    "text": "Rom 14:8",
@@ -4589,15 +4562,6 @@
    "text": "Gen 22:19",
    "start": "GEN.22.19",
    "end": "GEN.22.19",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.24.36.3",
-   "at": 289,
-   "text": "1 Cor 5:21",
-   "start": "1CO.5.21",
-   "end": "1CO.5.21",
    "found": "source",
    "status": "detected"
   },
@@ -5408,15 +5372,6 @@
    "text": "John 11:50",
    "start": "JHN.11.50",
    "end": "JHN.11.50",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "catena-matthew.MAT.27.34.1",
-   "at": 116,
-   "text": "Mark 16:23",
-   "start": "MRK.16.23",
-   "end": "MRK.16.23",
    "found": "source",
    "status": "detected"
   },

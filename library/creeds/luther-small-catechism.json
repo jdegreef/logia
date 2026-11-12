@@ -1,0 +1,259 @@
+{
+ "id": "luther-small-catechism",
+ "title": "Luther's Small Catechism",
+ "kind": "catechism",
+ "tradition": "Lutheran",
+ "year": 1529,
+ "edition": "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. III, The Evangelical Protestant Creeds, with Translations (New York: Harper & Brothers, 1877), CCEL edition (from a printing marked 'Fourth Edition—Revised and Enlarged', Baker Book House paperback, Grand Rapids, 1977, reprinted by arrangement with Harper and Row; copyright 1877 by Harper & Brothers, 1905 and 1919 by David S. Schaff)",
+ "translation": "Not named on the page; Schaff calls it 'more literal than those in use among the Lutheran churches in America'",
+ "published": 1877,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/creeds3.iii.iii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Philip Schaff died in 1893; the translator; CCEL transcribes a later printing of Schaff, revised by David S. Schaff (copyright 1905 and 1919) and holding matter added up to 1928; confirm against a scan of the 1877 first edition that this document reads the same there, and David S. Schaff's dates if a revision of his is in it"
+ },
+ "notes": "The English column of Schaff's parallel German and English, from the German of the third edition (Wittenberg, 1531): the five parts, with the form of confession Schaff prints in Part IV. Each section is what the page prints under one heading (a commandment, an article of the Creed, a petition) with its questions and answers. Schaff does not print the prayers and the table of duties that follow Part V in other editions. Schaff's footnotes are left out; Scripture references CCEL marks in the text are its cites.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "iii.iii-p3",
+   "label": "Part I. THE TEN COMMANDMENTS",
+   "text": "As they should be clearly and simply explained to every household by the head of the family.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.11",
+   "label": "The First Commandment",
+   "text": "Thou shalt have no other gods.\n\nWhat does this mean? Answer:\n\nWe should fear and love God, and trust in him, above all things.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.30",
+   "label": "The Second Commandment",
+   "text": "Thou shalt not take the name of thy God in vain.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to curse, swear, conjure, lie, or deceive, by his name; but call upon it in every time of need, pray, praise and give thanks.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.49",
+   "label": "The Third Commandment",
+   "text": "Thou shalt keep holy the Sabbath day.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to despise preaching and his Word, but deem it holy, and willingly hear and learn it.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.75",
+   "label": "The Fourth Commandment",
+   "text": "Thou shalt honor thy father and thy mother.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to despise nor provoke our parents and rulers, but honor, serve, obey, love, and esteem them.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.95",
+   "label": "The Fifth Commandment",
+   "text": "Thou shalt not kill.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to do our neighbor any injury or harm in his body, but help and befriend him in all bodily troubles.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.114",
+   "label": "The Sixth Commandment",
+   "text": "Thou shalt not commit adultery.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as to be chaste and pure in our words and deeds, and that husband and wife should love and honor each other.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.133",
+   "label": "The Seventh Commandment",
+   "text": "Thou shalt not steal.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to take our neighbor's money or property, nor get it by false ware or dealing, but help him to improve and protect his property and livelihood.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.158",
+   "label": "The Eighth Commandment",
+   "text": "Thou shalt not bear false witness against thy neighbor.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to belie, betray, or slander our neighbor, nor injure his character, but defend him, speak well of him, and make the best of all he does.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.179",
+   "label": "The Ninth Commandment",
+   "text": "Thou shall not covet thy neighbor's house.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to try to defraud our neighbor of his inheritance or home, nor obtain it under pretext of a legal right, but aid and assist him to keep it.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p3.198",
+   "label": "The Tenth Commandment",
+   "text": "Thou shalt not covet thy neighbor's wife, nor his man-servant, nor his maid-servant, nor his cattle, nor any thing that is his own.\n\nWhat does this mean? Answer:\n\nWe should so fear and love God as not to detach, extort, or alienate from our neighbor his wife, servants, or cattle, but induce them to stay and do their duty.\n\nWhat does God say about all these Commandments?\n\nHe says this:\n\nI the Lord, thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me, and showing mercy unto thousands of them that love me and keep my commandments.\n\nWhat does this mean? Answer:\n\nGod threatens to punish all who transgress these Commandments: we should, therefore, fear his anger, and do nothing against such Commandments. But he promises grace and every blessing to all who keep them: we should, therefore, love and trust in him, and gladly obey his Commandments.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p5",
+   "label": "Part II. THE CREED",
+   "text": "As it should be clearly and simply explained to every household by the head of the family.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p5.15",
+   "label": "The First Article. Of Creation",
+   "text": "I believe in God the Father Almighty, Maker of heaven and earth.\n\nWhat does this mean? Answer:\n\nI believe that God has created me and all that exists; that he has given and still preserves to me body and soul, eyes, ears, and all my limbs, my reason and all my senses; and also clothing and shoes, food and drink, house and home, wife and child, land, cattle, and all my property; that he provides me richly and daily with all the necessaries of life, protects me from all danger, and preserves and guards me against all evil; and all this out of pure paternal, divine goodness and mercy, without any merit or worthiness of mine; for all which I am in duty bound to thank, praise, serve, and obey him. This is most certainly true.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p5.40",
+   "label": "The Second Article. Of Redemption",
+   "text": "And in Jesus Christ his only Son, our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary; suffered under Pontius Pilate; was crucified, dead, and buried; he descended into hell; the third day he rose again from the dead; he ascended into heaven, and sitteth on the right hand of God the Father Almighty; from thence he shall come to judge the quick and the dead.\n\nWhat does this mean? Answer:\n\nI believe that Jesus Christ, true God, begotten of the Father from eternity, and also true man, born of the Virgin Mary, is my Lord; who has redeemed me, a lost and condemned man, secured and delivered me [even] from all sins, from death, and from the power of the devil, not with gold or silver, but with his holy, precious blood, and with his innocent sufferings and death; in order that I might be his own, live under him in his kingdom, and serve him in everlasting righteousness, innocence, and blessedness, even as he is risen from the dead, and lives and reigns forever. This is most certainly true.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p5.73",
+   "label": "The Third Article. Of Sanctification",
+   "text": "I believe in the Holy Ghost; one holy Christian Church; the Communion of Saints; the Forgiveness of Sins; the Resurrection of the Body; and the Life Everlasting. Amen.\n\nWhat does this mean? Answer:\n\nI believe that I can not, by my own reason or strength, believe in Jesus Christ my Lord, or come to him; but the Holy Ghost has called me through the Gospel, enlightened me by his gifts, and sanctified and preserved me in the true faith; just as he calls, gathers, enlightens, and sanctifies the whole Christian Church on earth, and preserves it in union with Jesus Christ in the one true faith; in which Christian Church he daily forgives richly all my sins, and the sins of all believers; and will raise up me and all the dead at the last day, and will grant everlasting life to me and to all who believe in Christ. This is most certainly true.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7",
+   "label": "Part III. THE LORD'S PRAYER",
+   "text": "As it should be clearly and simply explained to every household by the head of the family.\n\nOur Father, who art in heaven.\n\nWhat does this mean? Answer:\n\nGod would thereby affectionately encourage us to believe that he is truly our Father, and that we are truly his children, so that we may cheerfully and with all confidence pray to him, even as dear children ask their dear father.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.32",
+   "label": "The First Petition",
+   "text": "Hallowed be thy name.\n\nWhat does this mean? Answer:\n\nThe name of God is indeed in itself holy; but we pray in this petition that it may be hallowed also by us.\n\nHow can this be done? Answer:\n\nWhen the Word of God is taught in its truth and purity, and we, as the children of God, lead holy lives accordingly. To this may our blessed Father in heaven help us! But whoever teaches and lives otherwise than as God's Word teaches, profanes the name of God among us. From this preserve us, heavenly Father!",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.59",
+   "label": "The Second Petition",
+   "text": "Thy kingdom come.\n\nWhat does this mean? Answer:\n\nThe kingdom of God comes indeed of itself, without our prayer; but we pray in this petition that it may come also to us.\n\nHow can this be done? Answer:\n\nWhen our heavenly Father gives us his Holy Spirit, so that by his grace we believe his holy Word, and live a godly life here in time, and hereafter in eternity.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.88",
+   "label": "The Third Petition",
+   "text": "Thy will be done on earth, as it is in heaven.\n\nWhat does this mean? Answer:\n\nGod's good, gracious will is done indeed without our prayer; but we pray in this petition that it may be done also by us.\n\nHow can this be done? Answer:\n\nWhen God breaks and brings to naught every evil counsel and will which would hinder us from hallowing the name of God, and prevent his kingdom from coming to us (such as the will of the devil, of the world, and of our own flesh); but makes us strong and steadfast in his Word and faith even unto our end: this is his gracious, good will.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.115",
+   "label": "The Fourth Petition",
+   "text": "Give us this day our daily bread.\n\nWhat does this mean? Answer:\n\nGod gives indeed, without our prayer, even to the wicked their daily bread; but we pray in this petition that he would make us sensible [of his benefits] and enable us to receive our daily bread with thanksgiving.\n\nHow can this be done? Answer:\n\nAll that pertains to the nourishment and needs of the body, as drink, food, clothing, shoes, house. home, land, cattle, money, property, pious husband or wife, pious children, pious servants, pious and faithful rulers, good government, good seasons, peace, health, education, honor, good friends, trusty neighbors, and the like.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.148",
+   "label": "The Fifth Petition",
+   "text": "And forgive us our debts, as we forgive our debtors.\n\nWhat does this mean? Answer:\n\nWe pray in this petition that our Father in heaven would not look upon our sins, nor on account of them deny our request; for we are not worthy of any thing for which we pray, and have not merited it; but that he would grant us all things through grace; for we daily sin much, and deserve nothing but punishment. We will, therefore, also on our part, heartily forgive and willingly do good to those who sin against us.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.164",
+   "label": "The Sixth Petition",
+   "text": "And lead us not into temptation.\n\nWhat does this mean? Answer:\n\nGod indeed tempts no one, but we pray in this petition that God would so guard and preserve us that the devil, the world, and our own flesh may not deceive us, nor lead us into misbelief, despair, and other great shame and vice; and that, though we may be thus tempted, we may nevertheless finally prevail and gain the victory.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.189",
+   "label": "The Seventh Petition",
+   "text": "But deliver us from evil.\n\nWhat does this mean? Answer:\n\nWe pray in this petition, as in a summary, that our Father in heaven may deliver us from all manner of evil—in body or soul, property or honor—and, at last, when our time comes, may grant us a happy end, and graciously take us from this world of sorrow to himself in heaven.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p7.208",
+   "label": "Amen",
+   "text": "What does this mean? Answer:\n\nThat I should be sure that such petitions are pleasing to our Father in heaven, and are heard by him; for he himself has commanded us thus to pray, and has promised that he will hear us. Amen, Amen: that is, Yea, yea, so shall it be.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p9",
+   "label": "Part. IV. THE SACRAMENT OF HOLY BAPTISM",
+   "text": "As it should be clearly and simply explained to every household by the head of the family.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p9.8",
+   "label": "I",
+   "text": "What is Baptism? Answer:\n\nBaptism is not simply common water, but it is the water comprehended in God's command, and connected with God's Word.\n\nWhat is that Word of God? Answer:\n\nIt is that which our Lord Christ speaks in the last chapter of Matthew [xxviii. 19]:\n\n'Go ye [into all the world], and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost.'",
+   "source": "creeds3.iii.iii.html",
+   "cites": [
+    {
+     "at": 252,
+     "text": "xxviii. 19",
+     "start": "MAT.28.19",
+     "end": "MAT.28.19",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.iii-p9.35",
+   "label": "II",
+   "text": "What does Baptism give, or of what use is it? Answer:\n\nIt worketh forgiveness of sins, delivers from death and the devil, and gives everlasting salvation to all who believe, as the Word and promise of God declare.\n\nWhat are such words and promises of God? Answer:\n\nThose which our Lord Christ speaks in the last chapter of Mark:\n\n'He that believeth and is baptized, shall be saved; but he that believeth not, shall be damned.'",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p9.65",
+   "label": "III",
+   "text": "How can water do such great things? Answer:\n\nIt is not water, indeed, that does it, but the Word of God which is with and in the water, and faith, which trusts in the Word of God in the water. For without the Word of God the water is nothing but water, and no baptism; but with the Word of God it is a baptism—that is, a gracious water of life and a washing of regeneration in the Holy Ghost, as St. Paul says, Titus, third chapter [iii. 5–7]:\n\n'By the washing of regeneration, and renewing of the Holy Ghost, which he shed on. us abundantly through Jesus Christ our Saviour; that being justified by his grace, we should be made heirs according to the hope of eternal life.' This is certainly true. [Or, 'This is a faithful saying,' ver. 8.]",
+   "source": "creeds3.iii.iii.html",
+   "cites": [
+    {
+     "at": 433,
+     "text": "iii. 5–7",
+     "start": "TIT.3.5",
+     "end": "TIT.3.7",
+     "note": false
+    },
+    {
+     "at": 733,
+     "text": "ver. 8",
+     "start": "TIT.3.8",
+     "end": "TIT.3.8",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.iii-p9.84",
+   "label": "IV",
+   "text": "What does such baptising with water signify? Answer:\n\nIt signifies that the old Adam in us is to be drowned by daily sorrow and repentance, and perish with all sins and evil lusts; and that the new man should daily come forth again and rise, who shall live before God in righteousness and purity forever.\n\nWhere is it so written? Answer:\n\nSt. Paul, in the 6th chapter of Romans, says:\n\n'We are buried with Christ by baptism into death; that like as he was raised up from the dead by the glory of the Father, even, so we also should walk in newness of life.'",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p9.121",
+   "label": "HOW THE UNLEARNED SHOULD BE TAUGHT TO CONFESS",
+   "text": "What sins should we confess? Answer:\n\nBefore God we should accuse ourselves of all manner of sins, even of those which we do not ourselves perceive; as we do in the Lord's Prayer. But to the confessor we should confess those sins only which we know and feel in our hearts.\n\nWhich are these? Answer:\n\nHere consider your condition, according to the Ten Commandments, whether you are a father or mother, a son or daughter, a master or mistress, a man-servant or maid-servant; whether you have been disobedient, unfaithful, lazy, angry, unchaste, spiteful; whether you have injured any one by words or deeds; whether yon have stolen, neglected, or wasted any thing, or done any harm.\n\nShow me a short way to confess. Answer:\n\nSpeak thus to the confessor:\n\nWorthy, dear sir, I beseech you to hear my confession, and absolve me for God's sake.\n\nSay:\n\nI, poor sinner, confess before God that I am guilty of all manner of sin; in particular I confess before you that I am a man-servant, maid-servant, etc.; but, alas ! I serve my master unfaithfully, for I have not done what they told me; I have moved them to anger and to cursing, have neglected my duty, and let things go to waste; I have also been immodest in words and deeds, have quarreled with my equals, have grumbled and sworn at my wife, etc. For all this I am sorry, and plead for mercy; I will do so no more.\n\nA master or mistress should say thus:\n\nIn particular I confess before you, that I have not brought up my child, household, and wife to the glory of God; I have cursed, have set a bad example with unchaste words and actions, have injured my neighbor, have slandered, overcharged, given spurious goods and short measure.\n\n[And so on with any thing he has done contrary to the commands of God, and to his position, etc. If, however, the conscience of any one of you is not troubled with such or greater sins, do not worry, or hunt up, or invent other sins, and thereby make a torture out of confession, but mention one or two you know of Thus:]\n\nIn particular, I confess that I have once sworn; also, I have once used improper language, once neglected some duty, etc.\n\n[And then stop. But if you should know of no sin (which, however, is hardly possible), then mention none in particular, but receive absolution after the general confession which you make to God before the confessor.]\n\nThen shall the father confessor say:\n\nGod be merciful unto thee, and strengthen thy faith. Amen.\n\nFurther:\n\nDost thou believe that my forgiveness is the forgiveness of God?\n\nAnswer:\n\nYes, dear sir.\n\nThen let him say:\n\nAs thou believest, so be it unto thee. And I, by command of our Lord Jesus Christ, forgive thee thy sins in the name of the Father, and of the Son, and of the Holy Ghost. Amen.\n\nDepart in peace.\n\n[Those, however, who are much troubled in conscience, or who are in distress or temptation, a father confessor will know how to comfort with Scripture passages, and stir up to faith. This is only a general method of confession for the unlearned.]",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.iii-p11",
+   "label": "Part V. THE SACRAMENT OF THE ALTAR",
+   "text": "As it should be clearly and simply explained to every household by the head of the family.\n\nWhat is the Sacrament of the Altar? Answer:\n\nIt is the true body and blood of our Lord Jesus Christ, under the bread and wine, given unto us Christians to eat and to drink, as it was instituted by Christ himself.\n\nWhere is it so written? Answer:\n\nThe holy Evangelists, Matthew, Mark, and Luke, together with St. Paul, write thus:\n\n'Our Lord Jesus Christ, the same night in which he was betrayed, took bread/ and when he had given thanks, he brake it, and gave it to the disciples, and said, Take, eat; this is my body, which is given for you; this do, in remembrance of me.\n\n'After the same manner also he took the cup, when he had supped, gave thanks, and gave it to them, saying, Drink ye all of it: this cup is the New Testament in my blood, which is shed for you, for the remission of sins: this do ye, as oft as ye drink it, in remembrance of me!\n\nWhat is the use, then, of such eating and drinking? Answer:\n\nIt is pointed out to us in the words: 'Given, and shed for you, for the remission of sins.' Namely, through these words, the remission of sins, life and salvation are given us in the Sacrament: for where there is remission of sins, there are also life and salvation.\n\nHow can bodily eating and drinking do such great things? Answer:\n\nEating and drinking, indeed, do not do them, but the words which stand here: 'Given, and shed for you, for the remission of sins.' Which words, besides the bodily eating and drinking, are the main point in the sacrament; and he who believes these words has that which they declare and mean, namely, forgiveness of sins.\n\nWho, then, receives this Sacrament worthily? Answer:\n\nFasting and bodily preparation are, indeed, a good external discipline, but he is truly worthy and well prepared who has faith in these words: 'Given, and shed for you, for the remission of sins.' But he who does not believe these words, or who doubts, is unworthy and unfit, for the words 'for you' require truly believing hearts.",
+   "source": "creeds3.iii.iii.html",
+   "cites": []
+  }
+ ]
+}

@@ -21657,15 +21657,6 @@
    "status": "detected"
   },
   {
-   "in": "henry-matthew.MAT.18.21-35.1",
-   "at": 803,
-   "text": "Ps. lxxvii. 38, 40",
-   "start": "PSA.77.38",
-   "end": "PSA.77.38",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "henry-matthew.MAT.18.23-27.1",
    "at": 183,
    "text": "v. 23-27",
@@ -23498,15 +23489,6 @@
    "text": "Luke ix. 55",
    "start": "LUK.9.55",
    "end": "LUK.9.55",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-matthew.MAT.20.22.2",
-   "at": 311,
-   "text": "Ps. xliii. 10",
-   "start": "PSA.43.10",
-   "end": "PSA.43.10",
    "found": "source",
    "status": "detected"
   },
@@ -25523,15 +25505,6 @@
    "text": "1 Cor. v. 8",
    "start": "1CO.5.8",
    "end": "1CO.5.8",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-matthew.MAT.22.4.1",
-   "at": 851,
-   "text": "Esth. vii. 17",
-   "start": "EST.7.17",
-   "end": "EST.7.17",
    "found": "source",
    "status": "detected"
   },
@@ -35018,15 +34991,6 @@
    "text": "Prov. x. 22",
    "start": "PRO.10.22",
    "end": "PRO.10.22",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-matthew.MAT.27.1-10.2",
-   "at": 565,
-   "text": "Isa. l. 14",
-   "start": "ISA.50.14",
-   "end": "ISA.50.14",
    "found": "source",
    "status": "detected"
   },

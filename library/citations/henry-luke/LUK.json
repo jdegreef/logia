@@ -10515,15 +10515,6 @@
    "status": "detected"
   },
   {
-   "in": "henry-luke.LUK.15.29-30.6",
-   "at": 910,
-   "text": "1 Kings xix. 46",
-   "start": "1KI.19.46",
-   "end": "1KI.19.46",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "henry-luke.LUK.15.31.1",
    "at": 156,
    "text": "v. 31",

@@ -1,5 +1,5 @@
-"""Check the library's data: every work, excerpt, citation, correction and
-translation.
+"""Check the library's data: every work, excerpt, citation, correction,
+translation, creed and confession.
 
     python3 scripts/validate.py
 
@@ -26,6 +26,12 @@ CITATION_FIELDS = {"in", "at", "text", "start", "end", "found", "status"}
 CITATION_STATUSES = {"detected", "reviewed", "rejected"}   # set by a person checking it
 QUOTATION_FIELDS = {"in", "at", "label", "work", "locus", "source", "para", "excerpt", "score", "found", "status"}
 STATUSES = {"ai_draft", "reviewed"}          # "reviewed" is set only by a named human reviewer
+CREED_FIELDS = {"id", "title", "kind", "tradition", "year", "edition", "translation", "published", "full_text_url",
+                "rights", "notes", "status", "sections"}
+CREED_KINDS = {"creed", "council", "confession", "catechism"}
+CREED_SECTION_FIELDS = {"id", "label", "text", "source", "cites"}
+CREED_CITE_FIELDS = {"at", "text", "start", "end", "note"}
+SHARED = "Shared by the churches"
 REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
 GREEK_OR_HEBREW = re.compile(r"[Ͱ-Ͽἀ-῿֐-׿]")
 
@@ -283,6 +289,61 @@ def main():
             for c in para["cites"]:
                 if para["text"][c["at"]:c["at"] + len(c["text"])] != c["text"] or not scripture.parse(c["start"]):
                     say(f"{name}: {para['id']}: citation {c['text']!r} does not fit; run scripts/extract_texts.py")
+
+    # Creeds, conciliar decrees and confessions, from scripts/extract_creeds.py.
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "creeds", "*.json"))):
+        d = load(p)
+        name = os.path.relpath(p, ROOT)
+        if os.path.basename(p) != f"{d.get('id')}.json":
+            say(f"{name}: file name does not match id {d.get('id')!r}")
+        if set(d) != CREED_FIELDS:
+            say(f"{name}: fields differ from the schema: missing {sorted(CREED_FIELDS - set(d))}, "
+                f"extra {sorted(set(d) - CREED_FIELDS)}")
+            continue
+        if d["kind"] not in CREED_KINDS:
+            say(f"{name}: kind {d['kind']!r} is not one of {sorted(CREED_KINDS)}")
+        if not isinstance(d["tradition"], str) or not d["tradition"].strip():
+            say(f"{name}: tradition must be named ({SHARED!r} for the creeds and councils the churches share)")
+        if d["year"] is not None and not isinstance(d["year"], int):
+            say(f"{name}: year must be a year, or null where the source gives none")
+        if not isinstance(d["published"], int) or d["published"] > 1930:
+            say(f"{name}: published {d['published']!r}: only editions published in 1930 or earlier are "
+                "public domain in the US")
+        if set(d["rights"] or {}) != {"basis", "worldwide"}:
+            say(f"{name}: rights needs a basis and what is still to confirm for worldwide use")
+        if d["status"] not in STATUSES:
+            say(f"{name}: status {d['status']!r}")
+        if not d["sections"]:
+            say(f"{name}: no sections")
+        seen = set()
+        for s in d["sections"]:
+            where = f"{name}: {s.get('id')}"
+            if set(s) != CREED_SECTION_FIELDS:
+                say(f"{where}: fields {sorted(s)}, not {sorted(CREED_SECTION_FIELDS)}")
+                continue
+            if s["id"] in seen:
+                say(f"{where}: duplicate section id")
+            seen.add(s["id"])
+            if s["source"] not in sources.get("creeds", set()):
+                say(f"{where}: source {s['source']!r} is not in sources/manifest.json for creeds")
+            if not s["text"].strip():
+                say(f"{where}: empty text")
+            if s["label"] is not None and not (isinstance(s["label"], str) and s["label"].strip()):
+                say(f"{where}: label must be the page's heading or number, or null")
+            for c in s["cites"]:
+                if set(c) != CREED_CITE_FIELDS:
+                    say(f"{where}: citation fields {sorted(c)}, not {sorted(CREED_CITE_FIELDS)}")
+                    continue
+                if c["note"]:          # a proof text: at is where its footnote marker stands
+                    if not 0 <= c["at"] <= len(s["text"]):
+                        say(f"{where}: proof text {c['text']!r} is placed outside the section")
+                elif s["text"][c["at"]:c["at"] + len(c["text"])] != c["text"]:
+                    say(f"{where}: citation {c['text']!r} is not at {c['at']}; run scripts/extract_creeds.py")
+                a, b = scripture.parse(c["start"]), scripture.parse(c["end"])
+                if not a or not b:
+                    say(f"{where}: {c['start']}–{c['end']} is not a reference to a chapter that exists")
+                elif a[0] != b[0] or a[1:] > b[1:]:
+                    say(f"{where}: {c['start']}–{c['end']} is not a forward range in one book")
 
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "translations", "*", "*", "*.json"))):
         t = load(p)

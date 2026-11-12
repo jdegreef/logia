@@ -3,11 +3,11 @@
  "citations": {
   "all": {
    "found": 36081,
-   "marked": 33020,
+   "marked": 32973,
    "right": 31664,
    "caught": 31912,
    "precision": 0.878,
-   "recall": 0.966
+   "recall": 0.968
   },
   "works": {
    "augustine": {
@@ -76,27 +76,27 @@
    },
    "catena-mark": {
     "found": 217,
-    "marked": 196,
+    "marked": 191,
     "right": 191,
     "caught": 191,
     "precision": 0.88,
-    "recall": 0.974
+    "recall": 1.0
    },
    "catena-matthew": {
     "found": 712,
-    "marked": 634,
+    "marked": 629,
     "right": 620,
     "caught": 620,
     "precision": 0.871,
-    "recall": 0.978
+    "recall": 0.986
    },
    "chrysostom": {
     "found": 589,
-    "marked": 681,
+    "marked": 680,
     "right": 546,
     "caught": 547,
     "precision": 0.927,
-    "recall": 0.803
+    "recall": 0.804
    },
    "chrysostom-romans": {
     "found": 425,
@@ -108,7 +108,7 @@
    },
    "henry": {
     "found": 3192,
-    "marked": 2993,
+    "marked": 2991,
     "right": 2970,
     "caught": 2968,
     "precision": 0.93,
@@ -132,7 +132,7 @@
    },
    "henry-luke": {
     "found": 1741,
-    "marked": 1683,
+    "marked": 1682,
     "right": 1641,
     "caught": 1642,
     "precision": 0.943,
@@ -140,27 +140,27 @@
    },
    "henry-matthew": {
     "found": 4477,
-    "marked": 4181,
+    "marked": 4177,
     "right": 4100,
     "caught": 4101,
     "precision": 0.916,
-    "recall": 0.981
+    "recall": 0.982
    },
    "henry-proverbs": {
     "found": 1239,
-    "marked": 1134,
+    "marked": 1112,
     "right": 1050,
     "caught": 1051,
     "precision": 0.847,
-    "recall": 0.927
+    "recall": 0.945
    },
    "henry-psalms": {
     "found": 5443,
-    "marked": 5178,
+    "marked": 5175,
     "right": 5086,
     "caught": 5081,
     "precision": 0.934,
-    "recall": 0.981
+    "recall": 0.982
    },
    "henry-romans": {
     "found": 1478,
@@ -204,19 +204,19 @@
    },
    "jfb-psalms": {
     "found": 3035,
-    "marked": 2279,
+    "marked": 2278,
     "right": 2178,
     "caught": 2273,
     "precision": 0.718,
-    "recall": 0.997
+    "recall": 0.998
    },
    "ryle-matthew": {
     "found": 335,
-    "marked": 278,
+    "marked": 275,
     "right": 267,
     "caught": 267,
     "precision": 0.797,
-    "recall": 0.96
+    "recall": 0.971
    },
    "wesley": {
     "found": 181,

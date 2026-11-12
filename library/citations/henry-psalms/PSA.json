@@ -12450,15 +12450,6 @@
    "status": "detected"
   },
   {
-   "in": "henry-psalms.PSA.39.6.1",
-   "at": 807,
-   "text": "Ps. lxxix. 47",
-   "start": "PSA.79.47",
-   "end": "PSA.79.47",
-   "found": "source",
-   "status": "detected"
-  },
-  {
    "in": "henry-psalms.PSA.39.6.3",
    "at": 256,
    "text": "Acts xxv. 23",
@@ -15965,15 +15956,6 @@
    "text": "John xiv. 2, 3",
    "start": "JHN.14.2",
    "end": "JHN.14.3",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.49.16-21.3",
-   "at": 663,
-   "text": "Ps. v. 16",
-   "start": "PSA.5.16",
-   "end": "PSA.5.16",
    "found": "source",
    "status": "detected"
   },
@@ -38501,15 +38483,6 @@
    "text": "Dan. iv. 35",
    "start": "DAN.4.32",
    "end": "DAN.4.32",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.113.4-5.4",
-   "at": 667,
-   "text": "v. 7, 8",
-   "start": "PSA.113.78",
-   "end": "PSA.113.78",
    "found": "source",
    "status": "detected"
   },

@@ -69,6 +69,7 @@ is weak), ships as `ai_draft`, and is approved by a native-speaking reviewer.
     python3 scripts/find_refs.py --check
     python3 scripts/extract_texts.py --check
     python3 scripts/score_refs.py --check
+    python3 scripts/extract_creeds.py --check
     python3 scripts/validate.py
     python3 scripts/verify_sources.py
     python3 -m unittest discover -s tests -t .

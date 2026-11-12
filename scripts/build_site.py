@@ -322,7 +322,7 @@ class Library:
         # in English numbering, as CCEL marks it; Logia's verses are the Hebrew.
         self.creeds = sorted((load(p) for p in glob.glob(os.path.join(ROOT, "library", "creeds", "*.json"))
                               if not os.path.basename(p).startswith("_")),
-                             key=lambda d: (d["year"], d["id"]))
+                             key=lambda d: (d["year"] is not None, d["year"] or 0, d["id"]))
         self.creed_cites = {}
         for d in self.creeds:
             for sec in d["sections"]:
@@ -4464,10 +4464,15 @@ def verse_creeds(lib, book, chapter, verse, ref):
     rows = lib.creed_cites.get((book, chapter, verse), [])
     if not rows:
         return ""
-    items = "".join(f'<li><a href="{creed_url(d, sec)}"><b>{e(d["title"])}</b> <span>{e(sec["label"])}</span></a> '
-                    f'<span class="lg-quiet">{e(creed_tradition(d))} · {d["year"]}</span></li>' for d, sec in rows)
+    items = "".join(f'<li><a href="{creed_url(d, sec)}"><b>{e(d["title"])}</b> <span>{e(sec["label"] or "")}</span></a> '
+                    f'<span class="lg-quiet">{e(creed_when(d))}</span></li>' for d, sec in rows)
     return (f'<section class="lg-block" id="creeds"><h2>{e(t("creeds.on_verse", ref=ref))}</h2>'
             f'<p class="lg-quiet">{e(t("creeds.on_verse_note"))}</p><ul class="lg-people lg-wide">{items}</ul></section>')
+
+
+def creed_when(d):
+    """Its tradition, and its year where the edition gives one."""
+    return creed_tradition(d) + (f' · {d["year"]}' if d["year"] else "")
 
 
 def creed_tradition(d):
@@ -4477,11 +4482,11 @@ def creed_tradition(d):
 def creed_page(lib, d):
     secs = "".join(f'<section class="lg-creed-sec" id="{e(sec["id"])}">'
                    + (f'<h2 class="lg-creed-label">{e(sec["label"])}</h2>' if sec["label"] else "")
-                   + f'<div class="lg-text">{verse_html(lib, sec["text"], creed_cites(lib, sec))}</div></section>'
+                   + f'<div class="lg-text">{verse_html(lib, sec["text"], creed_cites(lib, sec))}</div>{creed_proofs(lib, sec)}</section>'
                    for sec in d["sections"])
     r = d["rights"]
     facts = [(t("creeds.kind_label"), t(f'creeds.kind.{d["kind"]}')), (t("creeds.tradition"), creed_tradition(d)),
-             (t("creeds.year"), str(d["year"])), (t("work.edition"), d["edition"])]
+             (t("creeds.year"), str(d["year"]) if d["year"] else t("creeds.no_year")), (t("work.edition"), d["edition"])]
     if d.get("translation"):
         facts.append((t("work.translation"), d["translation"]))
     facts.append((t("work.rights"), r["basis"] + (f'. {t("work.rights_world_note", what=r["worldwide"].removeprefix("to confirm: ").rstrip("."))}'
@@ -4497,14 +4502,29 @@ def creed_page(lib, d):
 <div class="lg-creed-body">{secs}</div>
 </article>"""
     return page(lib, d["title"], body, creed_url(d), current="/read/", head_title=f'{d["title"]} · Logia',
-                description=t("creeds.description", title=d["title"], tradition=creed_tradition(d), year=d["year"]),
+                description=t("creeds.description", title=d["title"], when=creed_when(d)),
                 ld=(breadcrumbs((t("creeds.eyebrow"), "/creeds/"), (d["title"], creed_url(d))),))
 
 
+def creed_proofs(lib, sec):
+    """The proof texts an edition prints in a footnote to the section, linked, once each."""
+    seen, links = set(), []
+    for c in sec["cites"]:
+        if not c.get("note") or c["text"] in seen or not scripture.parse(c["start"]):
+            continue
+        seen.add(c["text"])
+        a, _b = scripture.english_span(c["start"], c["end"])
+        href = lib.verse_link(a)
+        links.append(f'<a href="{e(href)}">{e(c["text"])}</a>' if href else e(c["text"]))
+    return f'<p class="lg-quiet lg-creed-proofs">{e(t("creeds.proofs"))}: {" · ".join(links)}</p>' if links else ""
+
+
 def creed_cites(lib, sec):
-    """A section's cites in the shape verse_html takes, linked on Logia's (Hebrew) numbering."""
+    """A section's cites printed in its text, in the shape verse_html takes, linked on Logia's (Hebrew) numbering."""
     out = []
     for c in sec["cites"]:
+        if c.get("note"):
+            continue
         if scripture.parse(c["start"]) and scripture.parse(c["end"]):
             a, b = scripture.english_span(c["start"], c["end"])
             out.append({**c, "start": a, "end": b})
@@ -4517,7 +4537,7 @@ def creeds_index(lib):
     def row(d):
         kind = t("creeds.kind." + d["kind"])
         return (f'<li><a href="{creed_url(d)}"><b>{e(d["title"])}</b></a> '
-                f'<span class="lg-quiet">{d["year"]} · {e(creed_tradition(d))} · {e(kind)}</span></li>')
+                f'<span class="lg-quiet">{e(creed_when(d))} · {e(kind)}</span></li>')
     body = f"""
 <article class="lg-verse lg-creed">
 <header class="page-head"><p class="eyebrow">{e(t("creeds.eyebrow"))}</p><h1>{e(t("creeds.index_title"))}</h1>

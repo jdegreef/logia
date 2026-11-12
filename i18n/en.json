@@ -1273,7 +1273,9 @@
     "year": "Year",
     "kind": {"creed": "Creed", "council": "Council", "confession": "Confession", "catechism": "Catechism"},
     "not_commentary": "A creed or confession, not commentary: the words are copied from the edition named below, and its Scripture references link to the verses.",
-    "description": "{title} ({tradition}, {year}): the whole text, with the Scripture it cites linked to each verse.",
+    "description": "{title} ({when}): the whole text, with the Scripture it cites linked to each verse.",
+    "no_year": "Not dated in the edition",
+    "proofs": "Proof texts",
     "on_verse": "In the creeds and councils on {ref}",
     "on_verse_note": "Creeds, conciliar decrees and confessions that cite this verse, oldest first. They are not commentary; each links to the whole document."
   },
