@@ -14,17 +14,29 @@ it, so it comes first. The rules in `CLAUDE.md` apply to every item: nothing
 here permits writing commentary, typing Greek or Hebrew, or marking work
 reviewed without a named human reviewer.
 
-Where Logia stands (November 2026): 41 works by 25 commentators on Genesis,
-Job, the Psalms, Proverbs, Ecclesiastes, the Song of Songs, Matthew, John,
-Romans and Galatians, 39,110 excerpts, a chapter reader with Greek words
-and cross-references, and source checking.
+Where Logia stands (November 2026): 51 works by 27 commentators on Genesis,
+Job, the Psalms, Proverbs, Ecclesiastes, the Song of Songs, Matthew, Mark,
+Luke, John, Romans and Galatians, 48,740 excerpts, a chapter reader with
+Greek words and cross-references, and source checking.
+
+From the Catena Commons plan (November 2026): the reference finders are
+scored against CCEL's editors and the Catena's verse headings
+(`scripts/score_refs.py`, `docs/scores.json`); links have named kinds,
+with "names" for a commentator naming another and no kind that judges who
+is right (docs/references.md); pages on passages the churches read
+differently are published only when their commentators come from enough
+traditions (`/differ/`, `scripts/differ.py`); the creeds, councils and
+confessions are a layer of their own, apart from the commentary
+(`/creeds/`); and the Fathers' works take their Clavis Patrum numbers from
+Wikidata where it has them (`scripts/fetch_wikidata.py`).
 
 ## Phase 1: the data model
 
 *Progress:* items 1–3 have a first version (docs/references.md). Works
 declare their `divisions` and the Chrysostom and Augustine excerpts carry
-their homily or tractate and section. `scripts/find_refs.py` finds 325
-Scripture citations in the excerpts. The reader links each one and lists,
+their homily or tractate and section. `scripts/find_refs.py` finds 46,667
+Scripture citations in the excerpts, and `scripts/score_refs.py` measures
+how often its pattern matcher is right (docs/references.md). The reader links each one and lists,
 under every verse, the excerpts on other verses that cite it. Item 4 has
 a first version too: 15 of the Catena's quotations of Chrysostom and
 Augustine are traced to their homily or tractate, 9 of them to the section

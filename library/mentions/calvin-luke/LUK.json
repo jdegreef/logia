@@ -1,0 +1,69 @@
+{
+ "work": "calvin-luke",
+ "book": "LUK",
+ "mentions": [
+  {
+   "in": "calvin-luke.LUK.1.26.3",
+   "at": 106,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.6.24.1",
+   "at": 1156,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.7.35.2",
+   "at": 1050,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.8.19.2",
+   "at": 430,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.8.26-39.1",
+   "at": 639,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.14.23.1",
+   "at": 941,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.16.25.1",
+   "at": 561,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.24.28.2",
+   "at": 664,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-luke.LUK.24.30.1",
+   "at": 19,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

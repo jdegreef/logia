@@ -48,15 +48,6 @@
    "status": "detected"
   },
   {
-   "in": "luther-galatians.GAL.1.15.1",
-   "at": 586,
-   "text": "Matt. xi. 43",
-   "start": "MAT.11.43",
-   "end": "MAT.11.43",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "luther-galatians.GAL.2.3.1",
    "at": 1122,
    "text": "Rom. iv. 11",

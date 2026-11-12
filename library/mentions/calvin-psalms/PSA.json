@@ -1,0 +1,153 @@
+{
+ "work": "calvin-psalms",
+ "book": "PSA",
+ "mentions": [
+  {
+   "in": "calvin-psalms.PSA.9.21.3",
+   "at": 314,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.18.21.3",
+   "at": 684,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.26.5.2",
+   "at": 267,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.31.20.3",
+   "at": 450,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.55.13-16.2",
+   "at": 801,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.58.2.2",
+   "at": 1370,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.59.11.1",
+   "at": 191,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.63.3.4",
+   "at": 87,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.69.6.1",
+   "at": 38,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.71.16.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.81.14.3",
+   "at": 1425,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.85.11.1",
+   "at": 831,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.88.2-6.3",
+   "at": 347,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.99.5-9.2",
+   "at": 880,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.99.5-9.2",
+   "at": 1038,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.101.1-5.1",
+   "at": 459,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.105.25.2",
+   "at": 648,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.111.1-4.4",
+   "at": 1338,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.115.1-3.6",
+   "at": 18,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.118.24.6",
+   "at": 696,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-psalms.PSA.132.14.1",
+   "at": 1270,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  }
+ ]
+}

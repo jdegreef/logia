@@ -35,6 +35,11 @@ verse is that of the excerpt that holds it.
 A homily whose heading names no verse (Basil's on Genesis 1, titled "On the
 Firmament.") takes, likewise, the span of the excerpts Logia takes from it.
 
+A homily whose page has lost its heading (Chrysostom on Matthew, Homily LIV,
+on the rest of CCEL's page for Homily LII) is named by its manifest row's
+"part" ("Homily LIV"), as the printed volume names it, and its verse is in
+HEADING_FIX.
+
 The book's title lines before the first homily or tractate heading (or,
 for a book, before its title: "Book II.", "Sixth Book.") are not part of
 it and are left out. scripts/verify_sources.py checks every paragraph
@@ -58,7 +63,7 @@ HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX", "John xiii";
 # a stray full stop at the end ("Chapter XIII. 10–15.", "John xiii. 20 ."), "(continued)" after the
 # verses, and "and" before the next chapter ("Chapter XIX. 31–42, and XX. 1-9") are allowed.
-OPENS = re.compile(r"^(?:(?:John|Rom\.|Matt\.)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)"
+OPENS = re.compile(r"^(?:(?:John|Rom\.|Matt\.|Hebrews)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)"
                    r"(?:(?:[–-]|,\s*)(?:\d+,\s*)*(?P<v2>\d+))?"
                    r"(?:;\s*(?P<ch2>[ivxl]+)\.\s+(?P<e>\d+)(?:[–-](?P<f>\d+))?)?"
                    r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"
@@ -70,8 +75,12 @@ OPENS = re.compile(r"^(?:(?:John|Rom\.|Matt\.)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P
 # A page whose heading misprints its verses, or prints none, with the heading read
 # from the Gospel words the homily prints under it: Chrysostom on Matthew, Homily
 # XXXVII is headed "Matt. X. 7, 8, 9." over Matthew 11:7-9, and Homily LXXIV has
-# no verse heading over Matthew 23:29 (its first footnote names the verse).
-HEADING_FIX = {"npnf110.iii.XXXVII.html": "Matt. XI. 7, 8, 9.", "npnf110.iii.LXXI.html": "Matt. XXIII. 29."}
+# no verse heading over Matthew 23:29 (its first footnote names the verse). Homily LIV,
+# whose heading CCEL's page has lost, is headed Matthew 16:13 in the printed volume.
+HEADING_FIX = {"npnf110.iii.XXXVII.html": "Matt. XI. 7, 8, 9.", "npnf110.iii.LXXI.html": "Matt. XXIII. 29.",
+               "npnf110.iii.LII-homily-LIV.html": "Matt. XVI. 13."}
+# A manifest "part" that names a homily or tractate, for a page that has lost its heading.
+PART_HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)$")
 # A tractate on the passage of the one before it: "on the same passage.", "again on the same passage."
 SAME = re.compile(r"^(?:again\s+)?on the same passage\.?$", re.I)
 # A verse mark at the start of a paragraph or of a section: "Ver. 7.", "[2.] Ver. 13.",
@@ -100,11 +109,12 @@ def derive():
         work = works.get(f["work"])
         if not work or not isinstance(work["divisions"], list) or not f["path"].endswith(".html"):
             continue
-        if f.get("part"):
+        named = PART_HEADING.match(f.get("part") or "")
+        if f.get("part") and not named:
             book_page(out, problems, work, f)
             continue
         path = os.path.join(ROOT, f["path"])
-        page = find_refs.read_page(path)
+        page = find_refs.read_page(path, f.get("part"))
         text, starts = page["text"], page["paras"] + [len(page["text"])]
         source = os.path.basename(path)
         held, held_refs = [], {}
@@ -117,6 +127,8 @@ def derive():
         books = {os.path.basename(c)[:-5] for c in comment_files}       # the book the work comments on
         book = books.pop() if len(books) == 1 else None
         paras, number, title, chapter, start_chapter, verse, span = [], None, None, None, None, None, None
+        if named:                            # the page has lost its heading: the manifest names it
+            number, title = find_refs.scripture.roman(named[2]), f["part"] + "."
         heading_end = None                   # where a heading that crosses a chapter says the text ends
         before = None                        # a verse line printed above the title
         # a page that prints where it goes on into the next chapter ("Chap. xv. ver. 1.") says so

@@ -148,7 +148,8 @@
   }
 
   // Page not found: an address that reads as a reference ("/jn3",
-  // "/john/3/16", "/rom-8") is offered as a link.
+  // "/john/3/16", "/rom-8") or names a commentator ("/calvin") is offered
+  // as a link.
   (function () {
     var guess = document.getElementById("nf-guess");
     if (!guess || !D) return;
@@ -160,6 +161,21 @@
     else {
       var code = bookOf(words.split(" ")[0]);
       if (code) { href = "/" + code.toLowerCase() + "/"; label = D.names[code]; }
+      else {
+        // A commentator's name or page id ("/calvin", "/chrysostom",
+        // "/commentators/augustin"): the first whose id or a name word
+        // matches a word of the address.
+        var plain = function (x) { return x.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); };
+        var asked = plain(words).split(" ").filter(function (w) { return w.length > 3 && w !== "commentators"; });
+        D.people.some(function (p) {
+          var id = p[1].split("/")[2], names = plain(p[0]).split(/[\s.]+/);
+          var hit = asked.some(function (w) {
+            return w === id || names.indexOf(w) >= 0 || (w.length > 5 && id.indexOf(w.slice(0, -1)) === 0);
+          });
+          if (hit) { href = p[1]; label = p[0]; }
+          return hit;
+        });
+      }
     }
     if (!href) return;
     guess.innerHTML = fmt(esc(guess.getAttribute("data-text")), { link: '<a href="' + esc(href) + '">' + esc(label) + "</a>" });
@@ -178,6 +194,20 @@
     a.textContent = fmt(a.getAttribute("data-resume"), { ref: last.ref });
     a.hidden = false;
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
+  });
+
+  // The book page's chapter bar: say which end has more chapters out of
+  // view, so the CSS can fade that edge.
+  document.querySelectorAll(".lg-book-bar .chap-pills").forEach(function (row) {
+    var mark = function () {
+      var room = row.scrollWidth - row.clientWidth;
+      var left = row.scrollLeft > 4, right = row.scrollLeft < room - 4;
+      if (room <= 4) row.removeAttribute("data-more");
+      else row.setAttribute("data-more", left && right ? "both" : left ? "start" : "end");
+    };
+    row.addEventListener("scroll", mark, { passive: true });
+    window.addEventListener("resize", mark);
+    mark();
   });
 
   // Chapters already read: a dot on their chip (web/reader.js keeps the list).
@@ -202,6 +232,23 @@
 
   // A book page's "Go to a verse" box: "5:3", "5 3" or "5.3" opens the
   // chapter at that verse.
+  // A verse page's voices rail: mark the voice now at the top of the screen.
+  var vrail = document.querySelector(".lg-vrail");
+  if (vrail && "IntersectionObserver" in window) {
+    var railLinks = {};
+    vrail.querySelectorAll("a").forEach(function (a) { railLinks[a.getAttribute("href").slice(1)] = a; });
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { seen[en.target.id] = en.isIntersecting; });
+      var first = null;
+      document.querySelectorAll(".lg-voice").forEach(function (sec) { if (!first && seen[sec.id]) first = sec.id; });
+      Object.keys(railLinks).forEach(function (id) {
+        if (id === first) railLinks[id].setAttribute("aria-current", "true"); else railLinks[id].removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-30% 0px -50% 0px" });
+    document.querySelectorAll(".lg-voice").forEach(function (sec) { io.observe(sec); });
+  }
+
   document.querySelectorAll(".lg-verse-go").forEach(function (form) {
     var verses = JSON.parse(form.getAttribute("data-verses"));
     var input = form.querySelector("input"), note = form.querySelector("[role=status]");
@@ -402,7 +449,7 @@
     });
     pick.hidden = false;
   });
-  document.querySelectorAll(".lg-goto").forEach(function (form) {
+  document.querySelectorAll(".lg-goto:not(.lg-goto-work)").forEach(function (form) {
     var books = JSON.parse(form.getAttribute("data-books"));
     var codes = Object.keys(books);
     var input = form.querySelector("input"), note = form.querySelector("[role=status]");
@@ -437,6 +484,40 @@
     });
   });
 
+  // A work's page: go to the verse in the work's chapter page, to the
+  // excerpt whose verses hold it (data-ranges: "from-to,..." a chapter).
+  document.querySelectorAll(".lg-goto-work").forEach(function (form) {
+    var books = JSON.parse(form.getAttribute("data-books"));
+    var ranges = JSON.parse(form.getAttribute("data-ranges"));
+    var codes = Object.keys(books);
+    var input = form.querySelector("input"), note = form.querySelector("[role=status]");
+    var hint = note.textContent;
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var m = input.value.trim().toLowerCase().match(/^(.*?)\s*(\d+)\s*[:.\s]\s*(\d+)$/);
+      var code = null;
+      if (m && !m[1]) code = codes[0];
+      else if (m) {
+        var name = m[1].replace(/[.\s]+/g, "");
+        codes.forEach(function (c) {
+          if (books[c].some(function (n) { return n.replace(/\s/g, "").indexOf(name) === 0; })) code = code || c;
+        });
+      }
+      var list = code && ranges[code][String(+m[2])];
+      var from = null;
+      if (list) {
+        var v = +m[3];
+        list.split(",").forEach(function (r) {
+          var p = r.split("-");
+          if (from === null && +p[0] <= v && v <= +p[1]) from = p[0];
+        });
+      }
+      if (from === null) { note.textContent = form.getAttribute("data-none"); return; }
+      note.textContent = hint;
+      location.href = form.getAttribute("data-base") + code.toLowerCase() + "/" + (+m[2]) + "/#v" + from;
+    });
+  });
+
   // A commentator's page: a passage in their words, a different one each
   // day (the page shows the first without script), and another on request.
   document.querySelectorAll(".lg-own[data-quotes]").forEach(function (fig) {
@@ -447,7 +528,8 @@
     var at = Math.floor(Date.now() / 864e5) % pool.length;
     var show = function () {
       var x = pool[at];
-      p.textContent = "“" + x.q + "”";
+      // As in_quotes() in build_site.py: no second mark when the passage opens with one.
+      p.textContent = /^[“"‘']/.test(x.q) ? x.q : "“" + x.q + "”";
       link.textContent = x.ref; link.href = x.href; work.textContent = x.work;
     };
     show();
@@ -590,4 +672,22 @@
       offlineList.innerHTML = rows.length ? rows.join("") : "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>";
     }).catch(function () { offlineList.innerHTML = "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>"; });
   }
+  // Verse pages: a long excerpt shows its first eight lines with a fade and
+  // "Read all 412 words" (scripts/build_site.py, verse_excerpt). The one the
+  // address points to opens in full.
+  document.querySelectorAll(".lg-foldable").forEach(function (box) {
+    var btn = box.nextElementSibling;
+    if (!btn || !btn.classList.contains("lg-unfold")) return;
+    var art = box.closest(".lg-vx");
+    if (art && location.hash && location.hash.slice(1) === art.id) return;
+    var line = parseFloat(getComputedStyle(box).lineHeight) || 30;
+    if (box.scrollHeight <= line * 11) return;
+    box.style.setProperty("--fold", line * 8 + "px");
+    box.classList.add("lg-folded");
+    btn.hidden = false;
+    btn.addEventListener("click", function () {
+      box.classList.remove("lg-folded");
+      btn.remove();
+    });
+  });
 })();

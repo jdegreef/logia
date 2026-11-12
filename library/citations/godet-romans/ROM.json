@@ -309,15 +309,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.1.3-4.14",
-   "at": 1688,
-   "text": "vv. 6",
-   "start": "ROM.1.6",
-   "end": "ROM.1.6",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.1.3-4.15",
    "at": 197,
    "text": "ver. 5",
@@ -435,15 +426,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.1.7.2",
-   "at": 1914,
-   "text": "ver. 1",
-   "start": "ROM.1.1",
-   "end": "ROM.1.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.1.7.3",
    "at": 1625,
    "text": "v. 15",
@@ -507,15 +489,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.1.11-12.2",
-   "at": 63,
-   "text": "ver. 1",
-   "start": "ROM.1.1",
-   "end": "ROM.1.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.1.11-12.3",
    "at": 1685,
    "text": "vv. 13-15",
@@ -530,15 +503,6 @@
    "text": "ver. 11",
    "start": "ROM.1.11",
    "end": "ROM.1.11",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.1.13-14.1",
-   "at": 711,
-   "text": "ver. 1",
-   "start": "ROM.1.1",
-   "end": "ROM.1.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -593,15 +557,6 @@
    "text": "ver. 16",
    "start": "ROM.1.16",
    "end": "ROM.1.16",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.1.15.2",
-   "at": 1122,
-   "text": "ver. 1",
-   "start": "ROM.1.1",
-   "end": "ROM.1.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -804,15 +759,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.1.17.13",
-   "at": 486,
-   "text": "X. 37",
-   "start": "ROM.10.37",
-   "end": "ROM.10.37",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.1.17.14",
    "at": 1618,
    "text": "ver. 16",
@@ -845,15 +791,6 @@
    "text": "ver. 18",
    "start": "ROM.1.18",
    "end": "ROM.1.18",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.1.18.1",
-   "at": 608,
-   "text": "ver. 1",
-   "start": "ROM.1.1",
-   "end": "ROM.1.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -1155,6 +1092,15 @@
    "status": "detected"
   },
   {
+   "in": "godet-romans.ROM.1.19-20.2",
+   "at": 382,
+   "text": "Ver. 20",
+   "start": "ROM.1.20",
+   "end": "ROM.1.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "godet-romans.ROM.1.20.2",
    "at": 1100,
    "text": "Acts xiv. 17",
@@ -1205,6 +1151,15 @@
    "text": "ver. 18",
    "start": "ROM.1.18",
    "end": "ROM.1.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.1.21.1",
+   "at": 527,
+   "text": "Ver. 19",
+   "start": "ROM.1.19",
+   "end": "ROM.1.19",
    "found": "pattern",
    "status": "detected"
   },
@@ -1534,10 +1489,10 @@
   },
   {
    "in": "godet-romans.ROM.2.1.2",
-   "at": 489,
-   "text": "ver. 32",
-   "start": "ROM.2.32",
-   "end": "ROM.2.32",
+   "at": 430,
+   "text": "Ver. 1",
+   "start": "ROM.2.1",
+   "end": "ROM.2.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -1556,15 +1511,6 @@
    "text": "ver. 2",
    "start": "ROM.2.2",
    "end": "ROM.2.2",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.2.2.2",
-   "at": 691,
-   "text": "ver. 32",
-   "start": "ROM.2.32",
-   "end": "ROM.2.32",
    "found": "pattern",
    "status": "detected"
   },
@@ -2524,6 +2470,15 @@
   },
   {
    "in": "godet-romans.ROM.2.28-29.1",
+   "at": 476,
+   "text": "Ver. 28",
+   "start": "ROM.2.28",
+   "end": "ROM.2.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.2.28-29.1",
    "at": 562,
    "text": "ver. 25",
    "start": "ROM.2.25",
@@ -2564,15 +2519,6 @@
    "text": "ver. 29",
    "start": "ROM.2.29",
    "end": "ROM.2.29",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.2.28-29.2",
-   "at": 682,
-   "text": "ver. 1",
-   "start": "ROM.2.1",
-   "end": "ROM.2.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -2825,6 +2771,15 @@
    "text": "ver. 8",
    "start": "ROM.3.8",
    "end": "ROM.3.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.3.7-8.1",
+   "at": 1464,
+   "text": "Ver. 7",
+   "start": "ROM.3.7",
+   "end": "ROM.3.7",
    "found": "pattern",
    "status": "detected"
   },
@@ -3189,6 +3144,15 @@
    "status": "detected"
   },
   {
+   "in": "godet-romans.ROM.3.21-26.1",
+   "at": 514,
+   "text": "Ver. 23",
+   "start": "ROM.3.23",
+   "end": "ROM.3.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "godet-romans.ROM.3.21-22.1",
    "at": 474,
    "text": "ver. 26",
@@ -3230,6 +3194,15 @@
    "text": "xiv. 6",
    "start": "1CO.14.6",
    "end": "1CO.14.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.3.22.1",
+   "at": 119,
+   "text": "Ver. 22",
+   "start": "ROM.3.22",
+   "end": "ROM.3.22",
    "found": "pattern",
    "status": "detected"
   },
@@ -3293,6 +3266,15 @@
    "text": "ver. 24",
    "start": "ROM.3.24",
    "end": "ROM.3.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.3.24.1",
+   "at": 405,
+   "text": "Ver. 23",
+   "start": "ROM.3.23",
+   "end": "ROM.3.23",
    "found": "pattern",
    "status": "detected"
   },
@@ -3959,6 +3941,15 @@
    "text": "ver. 27",
    "start": "ROM.4.27",
    "end": "ROM.4.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.4.2.4",
+   "at": 3,
+   "text": "Ver. 3",
+   "start": "ROM.4.3",
+   "end": "ROM.4.3",
    "found": "pattern",
    "status": "detected"
   },
@@ -4729,6 +4720,15 @@
   },
   {
    "in": "godet-romans.ROM.5.2.2",
+   "at": 709,
+   "text": "Ver. 2",
+   "start": "ROM.5.2",
+   "end": "ROM.5.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.5.2.2",
    "at": 920,
    "text": "ver. 1",
    "start": "ROM.5.1",
@@ -4787,6 +4787,15 @@
    "text": "2 Cor. xii. 9",
    "start": "2CO.12.9",
    "end": "2CO.12.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.5.3-4.1",
+   "at": 1698,
+   "text": "Ver. 4",
+   "start": "ROM.5.4",
+   "end": "ROM.5.4",
    "found": "pattern",
    "status": "detected"
   },
@@ -5360,7 +5369,7 @@
   {
    "in": "godet-romans.ROM.5.12-21.4",
    "at": 1000,
-   "text": "v. 1-1",
+   "text": "v. 1",
    "start": "ROM.5.1",
    "end": "ROM.5.1",
    "found": "pattern",
@@ -5521,15 +5530,6 @@
   },
   {
    "in": "godet-romans.ROM.5.12.4",
-   "at": 546,
-   "text": "ver. 156",
-   "start": "ROM.5.156",
-   "end": "ROM.5.156",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.5.12.4",
    "at": 792,
    "text": "ver. 18",
    "start": "ROM.5.18",
@@ -5674,15 +5674,6 @@
   },
   {
    "in": "godet-romans.ROM.5.12.9",
-   "at": 798,
-   "text": "ver. 47",
-   "start": "ROM.5.47",
-   "end": "ROM.5.47",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.5.12.9",
    "at": 819,
    "text": "Gen. iii. 19",
    "start": "GEN.3.19",
@@ -5759,15 +5750,6 @@
    "text": "ver. 13",
    "start": "ROM.5.13",
    "end": "ROM.5.13",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.5.13-14.2",
-   "at": 307,
-   "text": "ver. 1",
-   "start": "ROM.5.1",
-   "end": "ROM.5.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -6610,15 +6592,6 @@
   },
   {
    "in": "godet-romans.ROM.5.17.3",
-   "at": 456,
-   "text": "ver. 1",
-   "start": "ROM.5.1",
-   "end": "ROM.5.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.5.17.3",
    "at": 589,
    "text": "ver. 15",
    "start": "ROM.5.15",
@@ -6641,15 +6614,6 @@
    "text": "ver. 16",
    "start": "ROM.5.16",
    "end": "ROM.5.16",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.5.17.3",
-   "at": 851,
-   "text": "ver. 1",
-   "start": "ROM.5.1",
-   "end": "ROM.5.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -6691,15 +6655,6 @@
   },
   {
    "in": "godet-romans.ROM.5.17.3",
-   "at": 1509,
-   "text": "ver. 1",
-   "start": "ROM.5.1",
-   "end": "ROM.5.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.5.17.3",
    "at": 1600,
    "text": "ver. 16",
    "start": "ROM.5.16",
@@ -6736,10 +6691,10 @@
   },
   {
    "in": "godet-romans.ROM.5.17.4",
-   "at": 641,
-   "text": "ver. 1",
-   "start": "ROM.5.1",
-   "end": "ROM.5.1",
+   "at": 574,
+   "text": "Ver. 17",
+   "start": "ROM.5.17",
+   "end": "ROM.5.17",
    "found": "pattern",
    "status": "detected"
   },
@@ -6906,6 +6861,15 @@
    "status": "detected"
   },
   {
+   "in": "godet-romans.ROM.5.17.11",
+   "at": 931,
+   "text": "Ver. 15",
+   "start": "ROM.5.15",
+   "end": "ROM.5.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "godet-romans.ROM.5.17.12",
    "at": 169,
    "text": "ver. 16",
@@ -6947,15 +6911,6 @@
    "text": "ver. 12",
    "start": "ROM.5.12",
    "end": "ROM.5.12",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.5.18-19.2",
-   "at": 458,
-   "text": "v. 1",
-   "start": "ROM.5.1",
-   "end": "ROM.5.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -7609,15 +7564,6 @@
   },
   {
    "in": "godet-romans.ROM.6.6.1",
-   "at": 415,
-   "text": "ver. 1",
-   "start": "ROM.6.1",
-   "end": "ROM.6.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.6.6.1",
    "at": 534,
    "text": "ver. 5",
    "start": "ROM.6.5",
@@ -7924,6 +7870,15 @@
   },
   {
    "in": "godet-romans.ROM.6.10.3",
+   "at": 567,
+   "text": "Ver. 11",
+   "start": "ROM.6.11",
+   "end": "ROM.6.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.6.10.3",
    "at": 632,
    "text": "ver. 8",
    "start": "ROM.6.8",
@@ -8022,6 +7977,15 @@
    "status": "detected"
   },
   {
+   "in": "godet-romans.ROM.6.13.1",
+   "at": 1726,
+   "text": "Ver. 13",
+   "start": "ROM.6.13",
+   "end": "ROM.6.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "godet-romans.ROM.6.13.2",
    "at": 64,
    "text": "ver. 7",
@@ -8063,6 +8027,15 @@
    "text": "ver. 12",
    "start": "ROM.6.12",
    "end": "ROM.6.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.6.14.1",
+   "at": 733,
+   "text": "Ver. 14",
+   "start": "ROM.6.14",
+   "end": "ROM.6.14",
    "found": "pattern",
    "status": "detected"
   },
@@ -8176,6 +8149,15 @@
   },
   {
    "in": "godet-romans.ROM.6.17-18.1",
+   "at": 225,
+   "text": "Ver. 16",
+   "start": "ROM.6.16",
+   "end": "ROM.6.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.6.17-18.1",
    "at": 386,
    "text": "ver. 17",
    "start": "ROM.6.17",
@@ -8225,6 +8207,15 @@
    "text": "ver. 18",
    "start": "ROM.6.18",
    "end": "ROM.6.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.6.17-18.4",
+   "at": 495,
+   "text": "Ver. 16",
+   "start": "ROM.6.16",
+   "end": "ROM.6.16",
    "found": "pattern",
    "status": "detected"
   },
@@ -8338,24 +8329,6 @@
   },
   {
    "in": "godet-romans.ROM.6.19.3",
-   "at": 808,
-   "text": "ver. 186",
-   "start": "ROM.6.186",
-   "end": "ROM.6.186",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.6.19.3",
-   "at": 1261,
-   "text": "ver. 195",
-   "start": "ROM.6.195",
-   "end": "ROM.6.195",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.6.19.3",
    "at": 1274,
    "text": "ver. 18",
    "start": "ROM.6.18",
@@ -8459,6 +8432,15 @@
    "text": "ver. 19",
    "start": "ROM.6.19",
    "end": "ROM.6.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.6.20-21.1",
+   "at": 845,
+   "text": "Ver. 21",
+   "start": "ROM.6.21",
+   "end": "ROM.6.21",
    "found": "pattern",
    "status": "detected"
   },
@@ -8684,6 +8666,15 @@
    "text": "ver. 1",
    "start": "ROM.7.1",
    "end": "ROM.7.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.7.1-2.3",
+   "at": 1452,
+   "text": "Ver. 4",
+   "start": "ROM.7.4",
+   "end": "ROM.7.4",
    "found": "pattern",
    "status": "detected"
   },
@@ -9192,15 +9183,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.7.10.1",
-   "at": 492,
-   "text": "ver. 1",
-   "start": "ROM.7.1",
-   "end": "ROM.7.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.7.10-11.2",
    "at": 157,
    "text": "ver. 8",
@@ -9350,6 +9332,15 @@
    "text": "vv. 15, 19",
    "start": "ROM.7.19",
    "end": "ROM.7.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.7.14-25.1",
+   "at": 767,
+   "text": "Ver. 25",
+   "start": "ROM.7.25",
+   "end": "ROM.7.25",
    "found": "pattern",
    "status": "detected"
   },
@@ -9517,15 +9508,6 @@
   },
   {
    "in": "godet-romans.ROM.7.18.1",
-   "at": 190,
-   "text": "ver. 1",
-   "start": "ROM.7.1",
-   "end": "ROM.7.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.7.18.1",
    "at": 427,
    "text": "ver. 10",
    "start": "ROM.7.10",
@@ -9602,15 +9584,6 @@
    "text": "ver. 23",
    "start": "ROM.7.23",
    "end": "ROM.7.23",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.7.21.1",
-   "at": 1265,
-   "text": "ver. 1",
-   "start": "ROM.7.1",
-   "end": "ROM.7.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -9719,15 +9692,6 @@
    "text": "ver. 4",
    "start": "ROM.7.4",
    "end": "ROM.7.4",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.7.24-25.2",
-   "at": 1811,
-   "text": "ver. 1",
-   "start": "ROM.7.1",
-   "end": "ROM.7.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -9953,15 +9917,6 @@
    "text": "1 Tim. i. 12-16",
    "start": "1TI.1.12",
    "end": "1TI.1.16",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.8.1-2.2",
-   "at": 812,
-   "text": "ver. 1",
-   "start": "ROM.8.1",
-   "end": "ROM.8.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -10435,15 +10390,6 @@
   },
   {
    "in": "godet-romans.ROM.8.11.2",
-   "at": 268,
-   "text": "ver. 1",
-   "start": "ROM.8.1",
-   "end": "ROM.8.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.8.11.2",
    "at": 481,
    "text": "ver. 10",
    "start": "ROM.8.10",
@@ -10713,15 +10659,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.8.18-30.2",
-   "at": 1222,
-   "text": "ver. 1",
-   "start": "ROM.8.1",
-   "end": "ROM.8.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.8.18.1",
    "at": 1526,
    "text": "2 Cor. iv. 17",
@@ -10790,15 +10727,6 @@
    "text": "ver. 19",
    "start": "ROM.8.19",
    "end": "ROM.8.19",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.8.20-22.1",
-   "at": 1886,
-   "text": "ver. 1",
-   "start": "ROM.8.1",
-   "end": "ROM.8.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -11010,15 +10938,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.8.29.6",
-   "at": 856,
-   "text": "ver. 3",
-   "start": "ROM.8.3",
-   "end": "ROM.8.3",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.8.30.2",
    "at": 1363,
    "text": "John i. 16",
@@ -11159,15 +11078,6 @@
    "text": "Acts xvii. 31",
    "start": "ACT.17.31",
    "end": "ACT.17.31",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.8.34.2",
-   "at": 983,
-   "text": "ver. 1",
-   "start": "ROM.8.1",
-   "end": "ROM.8.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -12495,15 +12405,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.9.30-31.1",
-   "at": 1228,
-   "text": "ver. 3",
-   "start": "ROM.9.3",
-   "end": "ROM.9.3",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.9.32-33.1",
    "at": 258,
    "text": "ver. 30",
@@ -12518,24 +12419,6 @@
    "text": "ver. 11",
    "start": "ROM.9.11",
    "end": "ROM.9.11",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.9.32-33.3",
-   "at": 499,
-   "text": "ver. 83",
-   "start": "ROM.9.83",
-   "end": "ROM.9.83",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.9.33.1",
-   "at": 41,
-   "text": "Isa. xxvii. 16",
-   "start": "ISA.27.16",
-   "end": "ISA.27.16",
    "found": "pattern",
    "status": "detected"
   },
@@ -12631,15 +12514,6 @@
   },
   {
    "in": "godet-romans.ROM.10.1-2.1",
-   "at": 291,
-   "text": "ver. 33",
-   "start": "ROM.10.33",
-   "end": "ROM.10.33",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.10.1-2.1",
    "at": 303,
    "text": "ver. 1",
    "start": "ROM.10.1",
@@ -12671,15 +12545,6 @@
    "text": "Hab. ii. 4",
    "start": "HAB.2.4",
    "end": "HAB.2.4",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.10.3-4.1",
-   "at": 1437,
-   "text": "ver. 32",
-   "start": "ROM.10.32",
-   "end": "ROM.10.32",
    "found": "pattern",
    "status": "detected"
   },
@@ -12990,6 +12855,15 @@
    "status": "detected"
   },
   {
+   "in": "godet-romans.ROM.10.9-10.2",
+   "at": 297,
+   "text": "Ver. 10",
+   "start": "ROM.10.10",
+   "end": "ROM.10.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "godet-romans.ROM.10.10.1",
    "at": 483,
    "text": "v. 9",
@@ -13058,15 +12932,6 @@
    "text": "Eph. iv. 21",
    "start": "EPH.4.21",
    "end": "EPH.4.21",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.10.15.2",
-   "at": 388,
-   "text": "Eph. ii. 27",
-   "start": "EPH.2.27",
-   "end": "EPH.2.27",
    "found": "pattern",
    "status": "detected"
   },
@@ -13693,15 +13558,6 @@
   },
   {
    "in": "godet-romans.ROM.11.25-26.3",
-   "at": 344,
-   "text": "ver. 1",
-   "start": "ROM.11.1",
-   "end": "ROM.11.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.11.25-26.3",
    "at": 578,
    "text": "ver. 26",
    "start": "ROM.11.26",
@@ -13956,6 +13812,15 @@
    "in": "godet-romans.ROM.12.1.4",
    "at": 134,
    "text": "ver. 2",
+   "start": "ROM.12.2",
+   "end": "ROM.12.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.12.1.5",
+   "at": 1839,
+   "text": "Ver. 2",
    "start": "ROM.12.2",
    "end": "ROM.12.2",
    "found": "pattern",
@@ -14268,20 +14133,20 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.13.1-10.1",
-   "at": 710,
-   "text": "ver. 21",
-   "start": "ROM.13.21",
-   "end": "ROM.13.21",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.13.1-10.4",
    "at": 1352,
    "text": "ver. 2",
    "start": "ROM.13.2",
    "end": "ROM.13.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.13.1-10.4",
+   "at": 1392,
+   "text": "Ver. 5",
+   "start": "ROM.13.5",
+   "end": "ROM.13.5",
    "found": "pattern",
    "status": "detected"
   },
@@ -14579,15 +14444,6 @@
    "text": "2 Cor. xii. 20",
    "start": "2CO.12.20",
    "end": "2CO.12.20",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "godet-romans.ROM.13.13-14.1",
-   "at": 1387,
-   "text": "v. 20",
-   "start": "ROM.13.20",
-   "end": "ROM.13.20",
    "found": "pattern",
    "status": "detected"
   },
@@ -15303,15 +15159,6 @@
    "status": "detected"
   },
   {
-   "in": "godet-romans.ROM.15.17-19.1",
-   "at": 1818,
-   "text": "ver. 196",
-   "start": "ROM.15.196",
-   "end": "ROM.15.196",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "godet-romans.ROM.15.18.1",
    "at": 1649,
    "text": "ver. 17",
@@ -15857,6 +15704,15 @@
    "text": "2 Tim. iv. 20",
    "start": "2TI.4.20",
    "end": "2TI.4.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "godet-romans.ROM.16.23.2",
+   "at": 0,
+   "text": "Ver. 24",
+   "start": "ROM.16.24",
+   "end": "ROM.16.24",
    "found": "pattern",
    "status": "detected"
   },

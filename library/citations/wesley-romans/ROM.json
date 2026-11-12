@@ -1,0 +1,474 @@
+{
+ "work": "wesley-romans",
+ "book": "ROM",
+ "citations": [
+  {
+   "in": "wesley-romans.ROM.1.2.1",
+   "at": 120,
+   "text": "Deut. xviii, 18",
+   "start": "DEU.18.18",
+   "end": "DEU.18.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.2.1",
+   "at": 137,
+   "text": "Isa. ix, 6, 7",
+   "start": "ISA.9.5",
+   "end": "ISA.9.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.8.1",
+   "at": 648,
+   "text": "Colossians i, 3",
+   "start": "COL.1.3",
+   "end": "COL.1.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.8.1",
+   "at": 693,
+   "text": "1 Cor. i, 5",
+   "start": "1CO.1.5",
+   "end": "1CO.1.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.11.1",
+   "at": 227,
+   "text": "1 Cor. i, 7",
+   "start": "1CO.1.7",
+   "end": "1CO.1.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.11.1",
+   "at": 240,
+   "text": "xii, 1",
+   "start": "1CO.12.1",
+   "end": "1CO.12.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.11.1",
+   "at": 248,
+   "text": "xiv, 1",
+   "start": "1CO.14.1",
+   "end": "1CO.14.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.11.1",
+   "at": 287,
+   "text": "Gal. iii, 5",
+   "start": "GAL.3.5",
+   "end": "GAL.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.11.1",
+   "at": 455,
+   "text": "Acts xix, 6",
+   "start": "ACT.19.6",
+   "end": "ACT.19.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.11.1",
+   "at": 468,
+   "text": "viii, 17",
+   "start": "ACT.8.17",
+   "end": "ACT.8.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.11.1",
+   "at": 483,
+   "text": "2 Tim. i, 6",
+   "start": "2TI.1.6",
+   "end": "2TI.1.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.13.1",
+   "at": 575,
+   "text": "1 Thess. ii, 2",
+   "start": "1TH.2.2",
+   "end": "1TH.2.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.13.1",
+   "at": 606,
+   "text": "Acts xvi, 7",
+   "start": "ACT.16.7",
+   "end": "ACT.16.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.16.1",
+   "at": 89,
+   "text": "1 Cor. i, 18",
+   "start": "1CO.1.18",
+   "end": "1CO.1.18",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.1.24.1",
+   "at": 192,
+   "text": "1 Thess. iv, 5",
+   "start": "1TH.4.5",
+   "end": "1TH.4.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.2.29.1",
+   "at": 178,
+   "text": "Deut. xxx, 6",
+   "start": "DEU.30.6",
+   "end": "DEU.30.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.3.9.1",
+   "at": 54,
+   "text": "Rom. iii, 1",
+   "start": "ROM.3.1",
+   "end": "ROM.3.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.3.10.1",
+   "at": 499,
+   "text": "Psalm xiv, 1",
+   "start": "PSA.14.1",
+   "end": "PSA.14.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.3.13.1",
+   "at": 369,
+   "text": "Psalm v, 9",
+   "start": "PSA.5.10",
+   "end": "PSA.5.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.4.3.1",
+   "at": 87,
+   "text": "Gen. xv, 5, 7",
+   "start": "GEN.15.5",
+   "end": "GEN.15.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.4.3.1",
+   "at": 87,
+   "text": "Gen. xv, 5, 7",
+   "start": "GEN.15.7",
+   "end": "GEN.15.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.4.3.1",
+   "at": 148,
+   "text": "Gen. xii, 3",
+   "start": "GEN.12.3",
+   "end": "GEN.12.3",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.4.10.1",
+   "at": 102,
+   "text": "Gen. xv, 1-21",
+   "start": "GEN.15.1",
+   "end": "GEN.15.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.4.17.1",
+   "at": 523,
+   "text": "Gen. xvii, 5",
+   "start": "GEN.17.5",
+   "end": "GEN.17.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.5.12.1",
+   "at": 621,
+   "text": "2 Cor. v, 4",
+   "start": "2CO.5.4",
+   "end": "2CO.5.4",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.6.6.1",
+   "at": 445,
+   "text": "Colossians iii, 5",
+   "start": "COL.3.5",
+   "end": "COL.3.5",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.7.7.1",
+   "at": 416,
+   "text": "1 Cor. x, 30",
+   "start": "1CO.10.30",
+   "end": "1CO.10.30",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.7.7.1",
+   "at": 430,
+   "text": "1 Cor. iv, 6",
+   "start": "1CO.4.6",
+   "end": "1CO.4.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.20.1",
+   "at": 116,
+   "text": "Gen. iii, 17",
+   "start": "GEN.3.17",
+   "end": "GEN.3.17",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.29.1",
+   "at": 293,
+   "text": "2 Tim. ii, 19",
+   "start": "2TI.2.19",
+   "end": "2TI.2.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.30.1",
+   "at": 126,
+   "text": "Acts xxvi, 19",
+   "start": "ACT.26.19",
+   "end": "ACT.26.19",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.33.1",
+   "at": 303,
+   "text": "Deut. xiv, 1",
+   "start": "DEU.14.1",
+   "end": "DEU.14.1",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.33.1",
+   "at": 332,
+   "text": "Deut. vii, 6",
+   "start": "DEU.7.6",
+   "end": "DEU.7.6",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.33.1",
+   "at": 346,
+   "text": "xiv, 2",
+   "start": "DEU.14.2",
+   "end": "DEU.14.2",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.33.1",
+   "at": 371,
+   "text": "Deut. iv, 37",
+   "start": "DEU.4.37",
+   "end": "DEU.4.37",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.33.1",
+   "at": 398,
+   "text": "Isaiah xli, 8, 9",
+   "start": "ISA.41.8",
+   "end": "ISA.41.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.33.1",
+   "at": 416,
+   "text": "xliii, 10",
+   "start": "ISA.43.10",
+   "end": "ISA.43.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.8.33.1",
+   "at": 448,
+   "text": "Isaiah xlviii, 12",
+   "start": "ISA.48.12",
+   "end": "ISA.48.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.9.4.1",
+   "at": 269,
+   "text": "Deut. iv, 7",
+   "start": "DEU.4.7",
+   "end": "DEU.4.7",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.9.4.1",
+   "at": 282,
+   "text": "Psalm cvi, 20",
+   "start": "PSA.106.20",
+   "end": "PSA.106.20",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.9.4.1",
+   "at": 734,
+   "text": "Gal. iv, 24",
+   "start": "GAL.4.24",
+   "end": "GAL.4.24",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.9.29.1",
+   "at": 40,
+   "text": "Isaiah i, 9",
+   "start": "ISA.1.9",
+   "end": "ISA.1.9",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.9.33.1",
+   "at": 291,
+   "text": "Isaiah viii, 14",
+   "start": "ISA.8.14",
+   "end": "ISA.8.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.11.11.1",
+   "at": 193,
+   "text": "Acts xiii, 46",
+   "start": "ACT.13.46",
+   "end": "ACT.13.46",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.12.20.1",
+   "at": 323,
+   "text": "Prov. xxv, 21",
+   "start": "PRO.25.21",
+   "end": "PRO.25.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.15.12.1",
+   "at": 211,
+   "text": "Eph. ii, 12",
+   "start": "EPH.2.12",
+   "end": "EPH.2.12",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.15.26.1",
+   "at": 244,
+   "text": "Acts xi, 28, 29",
+   "start": "ACT.11.28",
+   "end": "ACT.11.29",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.16.13.1",
+   "at": 55,
+   "text": "Mark xv, 21",
+   "start": "MRK.15.21",
+   "end": "MRK.15.21",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.16.16.1",
+   "at": 84,
+   "text": "1 Pet. v, 14",
+   "start": "1PE.5.14",
+   "end": "1PE.5.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.16.22.1",
+   "at": 191,
+   "text": "1 Cor. i, 14",
+   "start": "1CO.1.14",
+   "end": "1CO.1.14",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.16.27.1",
+   "at": 92,
+   "text": "Eph. iii, 10",
+   "start": "EPH.3.10",
+   "end": "EPH.3.10",
+   "found": "source",
+   "status": "detected"
+  },
+  {
+   "in": "wesley-romans.ROM.16.27.1",
+   "at": 166,
+   "text": "1 Cor. i, 24",
+   "start": "1CO.1.24",
+   "end": "1CO.1.24",
+   "found": "source",
+   "status": "detected"
+  }
+ ]
+}

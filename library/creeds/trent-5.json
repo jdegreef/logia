@@ -1,0 +1,214 @@
+{
+ "id": "trent-5",
+ "title": "The Council of Trent, Fifth Session: Original Sin",
+ "kind": "council",
+ "tradition": "Roman Catholic",
+ "year": 1546,
+ "edition": "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. II, The Greek and Latin Creeds, with Translations (New York: Harper & Brothers, 1877), CCEL edition (from a printing marked 'Sixth Edition', reprinted by arrangement with Harper and Row; copyright 1877 by Harper & Brothers, 1905 and 1919 by David S. Schaff)",
+ "translation": "J. Waterworth, The Canons and Decrees of the Sacred and Œcumenical Council of Trent (London, 1848), as Schaff prints it",
+ "published": 1877,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.iii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Philip Schaff died in 1893, J. Waterworth in 1876; CCEL transcribes a later printing of Schaff, revised by David S. Schaff (copyright 1905 and 1919) and holding matter added up to 1928; confirm against a scan of the 1877 first edition that this document reads the same there, and David S. Schaff's dates if a revision of his is in it"
+ },
+ "notes": "The dogmatic decrees and canons of the session, in the English column of Schaff's parallel Latin and English. Schaff leaves out the Council's decrees on the reformation of discipline (his note on creeds2.v.i.i.html). Schaff's footnotes are left out; Scripture references CCEL marks in the text are its cites.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "v.i.i.iii-p0.21",
+   "label": "Fifth Session, held June 17, 1546. DECREE CONCERNING ORIGINAL SIN",
+   "text": "That our Catholic faith, without which it is impossible to please God, may, errors being purged away, continue in its own perfect and spotless integrity, and that the Christian people may not be carried about with every wind of doctrine; whereas that old serpent, the perpetual enemy of mankind, amongst the very many evils with which the Church of God is in these our times troubled, has also stirred up not only new, but even old, dissensions touching original sin, and the remedy thereof; the sacred and holy, œcumenical and general Synod of Trent,—lawfully assembled in the Holy Ghost, the three same legates of the Apostolic See presiding therein,—wishing now to come to the reclaiming of the erring, and the confirming of the wavering,—following the testimonies of the sacred Scriptures, of the holy Fathers, of the most approved councils, and the judgment and consent of the Church itself, ordains, confesses, and declares these things touching the said original sin:",
+   "source": "creeds2.v.i.i.iii.html",
+   "cites": [
+    {
+     "at": 70,
+     "text": "Heb. xi. 6",
+     "start": "HEB.11.6",
+     "end": "HEB.11.6",
+     "note": true
+    },
+    {
+     "at": 237,
+     "text": "Ephes. iv. 14",
+     "start": "EPH.4.14",
+     "end": "EPH.4.14",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.i.i.iii-p2.10",
+   "label": "Fifth Session, held June 17, 1546. DECREE CONCERNING ORIGINAL SIN, 1",
+   "text": "1. If any one does not confess that the first man, Adam, when he had transgressed the commandment of God in Paradise, immediately lost the holiness and justice wherein he had been constituted; and that he incurred, through the offense of that prevarication, the wrath and indignation of God, and consequently death, with which God had previously threatened him, and, together with death, captivity under his power who thenceforth had the empire of death, that is to say, the devil, and that the entire Adam, through that offense of prevarication was changed, in body and soul, for the worse; let him be anathema.",
+   "source": "creeds2.v.i.i.iii.html",
+   "cites": [
+    {
+     "at": 481,
+     "text": "Heb. ii. 14",
+     "start": "HEB.2.14",
+     "end": "HEB.2.14",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.i.i.iii-p3.10",
+   "label": "Fifth Session, held June 17, 1546. DECREE CONCERNING ORIGINAL SIN, 2",
+   "text": "2. If any one asserts, that the prevarication of Adam injured himself alone, and not his posterity; and that the holiness and justice, received of God, which he lost, he lost for himself alone, and not for us also; or that he, being defiled by the sin of disobedience, has only transfused death and pains of the body into the whole human race, but not sin also, which is the death of the soul; let him be anathema:—whereas he contradicts the apostle who says: By one man sin entered into the world, and by sin death, and so death passed upon all men, in whom all have sinned.",
+   "source": "creeds2.v.i.i.iii.html",
+   "cites": [
+    {
+     "at": 575,
+     "text": "Rom. v. 12",
+     "start": "ROM.5.12",
+     "end": "ROM.5.12",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.i.i.iii-p4.5",
+   "label": "Fifth Session, held June 17, 1546. DECREE CONCERNING ORIGINAL SIN, 3",
+   "text": "3. If any one asserts, that this sin of Adam,—which in its origin is one, and being transfused into all by propagation, not by imitation, is in each one as his own,—is taken away either by the powers of human nature, or by any other remedy than the merit of the one mediator, our Lord Jesus Christ, who hath reconciled us to God in his own blood, being made unto us justice, sanctification, and redemption; or if he denies that the said merit of Jesus Christ is applied, both to adults and to infants, by the sacrament of baptism rightly administered in the form of the Church; let him be anathema: For there is no other name under heaven given to men, whereby we must be saved. Whence that voice: Behold the lamb of God, behold him who taketh away the sins of the world; and that other: As many as have been baptized, have put on Christ.",
+   "source": "creeds2.v.i.i.iii.html",
+   "cites": [
+    {
+     "at": 298,
+     "text": "1 Tim. ii. 5",
+     "start": "1TI.2.5",
+     "end": "1TI.2.5",
+     "note": true
+    },
+    {
+     "at": 406,
+     "text": "1 Cor. i. 30",
+     "start": "1CO.1.30",
+     "end": "1CO.1.30",
+     "note": true
+    },
+    {
+     "at": 678,
+     "text": "Acts iv. 2",
+     "start": "ACT.4.2",
+     "end": "ACT.4.2",
+     "note": true
+    },
+    {
+     "at": 771,
+     "text": "John i. 29",
+     "start": "JHN.1.29",
+     "end": "JHN.1.29",
+     "note": true
+    },
+    {
+     "at": 838,
+     "text": "Gal. iii. 27",
+     "start": "GAL.3.27",
+     "end": "GAL.3.27",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.i.i.iii-p9.5",
+   "label": "Fifth Session, held June 17, 1546. DECREE CONCERNING ORIGINAL SIN, 4",
+   "text": "4. If any one denies, that infants, newly born from their mothers' wombs, even though they be sprung from baptized parents, are to be baptized; or says that they are baptized indeed for the remission of sins, but that they derive nothing of original sin from Adam, which has need of being expiated by the laver of regeneration for obtaining life everlasting,—whence it follows as a consequence, that in them the form of baptism, for the remission of sins, is understood to be not true, but false,—let him be anathema. For that which the apostle has said, By one man sin entered into the world, and by sin death, and so death passed upon all men, in whom all have sinned, is not to be understood otherwise than as the Catholic Church spread every where hath always understood it. For, by reason of this rule of faith, from a tradition of the apostles, even infants, who could not as yet commit any sin of themselves, are for this cause truly baptized for the remission of sins, that in them that may be cleansed away by regeneration, which they have contracted by generation. For, unless a man be born again of water and the Holy Ghost, he can not enter into the kingdom of God.",
+   "source": "creeds2.v.i.i.iii.html",
+   "cites": [
+    {
+     "at": 208,
+     "text": "Acts ii. 38",
+     "start": "ACT.2.38",
+     "end": "ACT.2.38",
+     "note": true
+    },
+    {
+     "at": 670,
+     "text": "Rom. v. 12",
+     "start": "ROM.5.12",
+     "end": "ROM.5.12",
+     "note": true
+    },
+    {
+     "at": 1177,
+     "text": "John iii. 5",
+     "start": "JHN.3.5",
+     "end": "JHN.3.5",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.i.i.iii-p12.5",
+   "label": "Fifth Session, held June 17, 1546. DECREE CONCERNING ORIGINAL SIN, 5",
+   "text": "5. If any one denies, that, by the grace of our Lord Jesus Christ, which is conferred in baptism, the guilt of original sin is remitted; or even asserts that the whole of that which has the true and proper nature of sin is not taken away; but says that it is only rased, or not imputed; let him be anathema. For, in those who are born again, there is nothing that God hates; because, There is no condemnation to those who are truly buried together with Christ by baptism into death; who walk not according to the flesh, but, putting off the old man, and putting on the new who is created according to God, are made innocent, immaculate, pure, harmless, and beloved of God, heirs indeed of God, but joint heirs with Christ; so that there is nothing whatever to retard their entrance into heaven. But this holy synod confesses and is sensible, that in the baptized there remains concupiscence, or an incentive (to sin); which, whereas it is left for our exercise, can not injure those who consent not, but resist manfully by the grace of Jesus Christ; yea, he who shall have striven lawfully shall be crowned. This concupiscence, which the apostle sometimes calls sin, the holy Synod declares that the Catholic Church has never understood it to be called sin, as being truly and properly sin in those born again, but because it is of sin, and inclines to sin. And if any one is of a contrary sentiment, let him be anathema.",
+   "source": "creeds2.v.i.i.iii.html",
+   "cites": [
+    {
+     "at": 482,
+     "text": "Rom. viii. 1",
+     "start": "ROM.8.1",
+     "end": "ROM.8.1",
+     "note": true
+    },
+    {
+     "at": 482,
+     "text": "vi. 4",
+     "start": "ROM.6.4",
+     "end": "ROM.6.4",
+     "note": true
+    },
+    {
+     "at": 605,
+     "text": "Ephes. iv. 22, 24",
+     "start": "EPH.4.22",
+     "end": "EPH.4.22",
+     "note": true
+    },
+    {
+     "at": 605,
+     "text": "Ephes. iv. 22, 24",
+     "start": "EPH.4.24",
+     "end": "EPH.4.24",
+     "note": true
+    },
+    {
+     "at": 722,
+     "text": "Rom. viii.17",
+     "start": "ROM.8.17",
+     "end": "ROM.8.17",
+     "note": true
+    },
+    {
+     "at": 1107,
+     "text": "2 Tim. ii. 5",
+     "start": "2TI.2.5",
+     "end": "2TI.2.5",
+     "note": true
+    },
+    {
+     "at": 1166,
+     "text": "Rom. vi. 12",
+     "start": "ROM.6.12",
+     "end": "ROM.6.12",
+     "note": true
+    },
+    {
+     "at": 1166,
+     "text": "vii. 8",
+     "start": "ROM.7.8",
+     "end": "ROM.7.8",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.i.i.iii-p18.3",
+   "label": "Fifth Session, held June 17, 1546. DECREE CONCERNING ORIGINAL SIN",
+   "text": "This same holy Synod doth nevertheless declare, that it is not its intention to include in this decree, where original sin is treated of, the blessed and immaculate Virgin Mary, the mother of God; but that the constitutions of Pope Sixtus IV., of happy memory, are to be observed, under the pains contained in the said constitutions, which it renews.",
+   "source": "creeds2.v.i.i.iii.html",
+   "cites": []
+  }
+ ]
+}

@@ -1,0 +1,327 @@
+{
+ "id": "athanasian",
+ "title": "The Athanasian Creed",
+ "kind": "creed",
+ "tradition": "Shared by the churches",
+ "year": null,
+ "edition": "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. II, The Greek and Latin Creeds, with Translations (New York: Harper & Brothers, 1877), CCEL edition (from a printing marked 'Sixth Edition', reprinted by arrangement with Harper and Row; copyright 1877 by Harper & Brothers, 1905 and 1919 by David S. Schaff)",
+ "translation": "The English of the sixteenth century (1548), as in the English editions of the Book of Common Prayer, with Schaff's alternative readings in brackets",
+ "published": 1877,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iv.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Philip Schaff died in 1893; CCEL transcribes a later printing of Schaff, revised by David S. Schaff (copyright 1905 and 1919) and holding matter added up to 1928; confirm against a scan of the 1877 first edition that this document reads the same there, and David S. Schaff's dates if a revision of his is in it"
+ },
+ "notes": "The Symbolum Quicunque in its forty-four verses, numbered as Schaff numbers them; the English column only. Schaff's note on the translation is on the page (Notes, 3); his notes on the verses are left out. The page gives the creed no year.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "iv.i.iv-p3",
+   "label": "1",
+   "text": "1. Whosoever will be saved: before all things it is necessary that he hold the Catholic Faith:",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p5",
+   "label": "2",
+   "text": "2. Which Faith except every one do keep whole and undefiled: without doubt he shall perish everlastingly.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p7",
+   "label": "3",
+   "text": "3. And the Catholic Faith is this: That we worship one God in Trinity, and Trinity in Unity;",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p9",
+   "label": "4",
+   "text": "4. Neither confounding the Persons: nor dividing the Substance [Essence].",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p11",
+   "label": "5",
+   "text": "5. For there is one Person of the Father: another of the Son: and another of the Holy Ghost.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p13",
+   "label": "6",
+   "text": "6. But the Godhead of the Father, of the Son, and of the Holy Ghost, is all one: the Glory equal, the Majesty coeternal.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p15",
+   "label": "7",
+   "text": "7. Such as the Father is: such is the Son: and such is the Holy Ghost.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p17",
+   "label": "8",
+   "text": "8. The Father uncreate [uncreated]: the Son uncreate [uncreated]: and the Holy Ghost uncreate [uncreated].",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p19",
+   "label": "9",
+   "text": "9. The Father incomprehensible [unlimited]: the Son incomprehensible [unlimited]: and the Holy Ghost incomprehensible [unlimited, or infinite].",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p21",
+   "label": "10",
+   "text": "10. The Father eternal: the Son eternal: and the Holy Ghost eternal.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p23",
+   "label": "11",
+   "text": "11. And yet they are not three eternals: but one eternal.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p25",
+   "label": "12",
+   "text": "12. As also there are not three uncreated: nor three incomprehensibles [infinites], but one uncreated: and one incomprehensible [infinite].",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p27",
+   "label": "13",
+   "text": "13. So likewise the Father is Almighty: the Son Almighty: and the Holy Ghost Almighty.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p29",
+   "label": "14",
+   "text": "14. And yet they are not three Almighties: but one Almighty.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p31",
+   "label": "15",
+   "text": "15. So the Father is God: the Son is God: and the Holy Ghost is God.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p33",
+   "label": "16",
+   "text": "16. And yet they are not three Gods: but one God.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p35",
+   "label": "17",
+   "text": "17. So likewise the Father is Lord: the Son Lord: and the Holy Ghost Lord.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p37",
+   "label": "18",
+   "text": "18. And yet not three Lords: but one Lord.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p39",
+   "label": "19",
+   "text": "19. For like as we are compelled by the Christian verity: to acknowledge every Person by himself to be God and Lord:",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p41",
+   "label": "20",
+   "text": "20. So are we forbidden by the Catholic Religion: to say, There be [are] three Gods, or three Lords.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p43",
+   "label": "21",
+   "text": "21. The Father is made of none: neither created, nor begotten.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p45",
+   "label": "22",
+   "text": "22. The Son is of the Father alone: not made, nor created: but begotten.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p47",
+   "label": "23",
+   "text": "23. The Holy Ghost is of the Father and of the Son: neither made, nor created, nor begotten: but proceeding.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p49",
+   "label": "24",
+   "text": "24. So there is one Father, not three Fathers: one Son, not three Sons: one Holy Ghost, not three Holy Ghosts.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p51",
+   "label": "25",
+   "text": "25. And in this Trinity none is afore, or after another: none is greater, or less than another [there is nothing before, or after: nothing greater or less].",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p53",
+   "label": "26",
+   "text": "26. But the whole three Persons are coeternal, and coequal.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p55",
+   "label": "27",
+   "text": "27. So that in all things, as aforesaid: the Unity in Trinity, and the Trinity in Unity, is to be worshiped.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p57",
+   "label": "28",
+   "text": "28. He therefore that will be saved, must [let him] thus think of the Trinity.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p59",
+   "label": "29",
+   "text": "29. Furthermore it is necessary to everlasting salvation: that he also believe rightly [faithfully] the Incarnation of our Lord Jesus Christ.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p61",
+   "label": "30",
+   "text": "30. For the right Faith is, that we believe and confess: that our Lord Jesus Christ, the Son of God, is God and Man;",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p63",
+   "label": "31",
+   "text": "31. God, of the Substance [Essence] of the Father; begotten before the worlds: and Man, of the Substance [Essence] of his Mother, born in the world.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p65",
+   "label": "32",
+   "text": "32. Perfect God: and perfect Man, of a reasonable soul and human flesh subsisting.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p67",
+   "label": "33",
+   "text": "33. Equal to the Father, as touching his Godhead: and inferior to the Father as touching his Manhood.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p69",
+   "label": "34",
+   "text": "34. Who although he be [is] God and Man; yet he is not two, but one Christ.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p71",
+   "label": "35",
+   "text": "35. One; not by conversion of the Godhead into flesh: but by taking [assumption] of the Manhood into God.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p73",
+   "label": "36",
+   "text": "36. One altogether; not by confusion of Substance [Essence]: but by unity of Person.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p75",
+   "label": "37",
+   "text": "37. For as the reasonable soul and flesh is one man: so God and Man is one Christ;",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p77",
+   "label": "38",
+   "text": "38. Who suffered for our salvation: descended into hell [Hades, spirit-world]: rose again the third day from the dead.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p79",
+   "label": "39",
+   "text": "39. He ascended into heaven, he sitteth on the right hand of the Father God [God the Father] Almighty.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p81",
+   "label": "40",
+   "text": "40. From whence [thence] he shall come to judge the quick and the dead.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p83",
+   "label": "41",
+   "text": "41. At whose coming all men shall rise again with their bodies;",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p85",
+   "label": "42",
+   "text": "42. And shall give account for their own works.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p87",
+   "label": "43",
+   "text": "43. And they that have done good shall go into life everlasting: and they that have done evil, into everlasting fire.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.iv-p89",
+   "label": "44",
+   "text": "44. This is the Catholic Faith: which except a man believe faithfully [truly and firmly], he can not be saved.",
+   "source": "creeds2.iv.i.iv.html",
+   "cites": []
+  }
+ ]
+}

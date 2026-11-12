@@ -1957,15 +1957,6 @@
   },
   {
    "in": "ryle.JHN.4.5.2",
-   "at": 147,
-   "text": "Gen. xxxiii. 29",
-   "start": "GEN.33.29",
-   "end": "GEN.33.29",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "ryle.JHN.4.5.2",
    "at": 271,
    "text": "Gen. xxxiv. 28",
    "start": "GEN.34.28",
@@ -5278,15 +5269,6 @@
   },
   {
    "in": "ryle.JHN.7.37.1",
-   "at": 877,
-   "text": "Levit. xxiv. 33",
-   "start": "LEV.24.33",
-   "end": "LEV.24.33",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "ryle.JHN.7.37.1",
    "at": 1509,
    "text": "Lev. xxiii. 36",
    "start": "LEV.23.36",
@@ -6137,15 +6119,6 @@
    "text": "xvii. 16",
    "start": "JHN.17.16",
    "end": "JHN.17.16",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "ryle.JHN.8.24.1",
-   "at": 629,
-   "text": "Mark xvi. 26",
-   "start": "MRK.16.26",
-   "end": "MRK.16.26",
    "found": "pattern",
    "status": "detected"
   },
@@ -11829,15 +11802,6 @@
    "status": "detected"
   },
   {
-   "in": "ryle.JHN.17.4.2",
-   "at": 412,
-   "text": "Dan. ix. 34",
-   "start": "DAN.9.34",
-   "end": "DAN.9.34",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "ryle.JHN.17.6.1",
    "at": 454,
    "text": "Psalm xxii. 22",
@@ -11996,15 +11960,6 @@
    "text": "Matt. v. 48",
    "start": "MAT.5.48",
    "end": "MAT.5.48",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "ryle.JHN.17.11.3",
-   "at": 1054,
-   "text": "Luke vi. 86",
-   "start": "LUK.6.86",
-   "end": "LUK.6.86",
    "found": "pattern",
    "status": "detected"
   },
@@ -12410,6 +12365,15 @@
    "text": "John xxi. 9",
    "start": "JHN.21.9",
    "end": "JHN.21.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.19.1",
+   "at": 935,
+   "text": "Ver. 13",
+   "start": "JHN.18.13",
+   "end": "JHN.18.13",
    "found": "pattern",
    "status": "detected"
   },
@@ -13589,24 +13553,6 @@
    "text": "Ezek. xliii. 3",
    "start": "EZK.43.3",
    "end": "EZK.43.3",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "ryle.JHN.20.23.2",
-   "at": 1168,
-   "text": "Acts xvi. 43",
-   "start": "ACT.16.43",
-   "end": "ACT.16.43",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "ryle.JHN.20.23.2",
-   "at": 1329,
-   "text": "Acts xiii. 82, 38",
-   "start": "ACT.13.82",
-   "end": "ACT.13.82",
    "found": "pattern",
    "status": "detected"
   },

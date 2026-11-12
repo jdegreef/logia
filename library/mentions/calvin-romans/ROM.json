@@ -1,0 +1,167 @@
+{
+ "work": "calvin-romans",
+ "book": "ROM",
+ "mentions": [
+  {
+   "in": "calvin-romans.ROM.1.1.1",
+   "at": 699,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.1.1.1",
+   "at": 900,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.1.23.1",
+   "at": 1597,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.1.31.1",
+   "at": 203,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.3.20.1",
+   "at": 266,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.3.20.1",
+   "at": 278,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.3.21.1",
+   "at": 1022,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.4.19.2",
+   "at": 214,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.5.5.3",
+   "at": 153,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.5.14.2",
+   "at": 952,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.5.20.2",
+   "at": 69,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.6.5.1",
+   "at": 1188,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.7.7.3",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.7.14.2",
+   "at": 342,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.7.15.4",
+   "at": 740,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.7.22.1",
+   "at": 178,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.8.3.5",
+   "at": 165,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.8.15.5",
+   "at": 512,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.8.28.1",
+   "at": 1515,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.9.3.3",
+   "at": 1003,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.9.16.2",
+   "at": 810,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.10.2.1",
+   "at": 1252,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-romans.ROM.16.16.1",
+   "at": 628,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  }
+ ]
+}

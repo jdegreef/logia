@@ -1,0 +1,18 @@
+{
+ "id": "catena-mark",
+ "author": "aquinas",
+ "title": "Catena Aurea: Commentary on the Four Gospels, Collected out of the Works of the Fathers. Vol. II: St. Mark",
+ "divisions": "verse",
+ "edition": "Oxford: John Henry Parker; London: J. G. F. and J. Rivington, 1842 (Vol. II), translation edited by John Henry Newman; CCEL edition",
+ "original_language": "Latin",
+ "translation": "The Oxford translation, edited by John Henry Newman, Vol. II (1842); the preface (signed J. H. N.) thanks 'John Dobbee Dalgairns, M. A. of Exeter College' (John Dobrée Dalgairns) for the translation",
+ "published": 1842,
+ "full_text_url": "https://www.ccel.org/ccel/aquinas/catena2.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years); John Henry Newman, the editor, died in 1890; John Dobrée Dalgairns, the translator named in the preface, died in 1876 (to confirm)"
+ },
+ "source_kind": "digital",
+ "notes": "Mark 1–16 are CCEL catena2 iii.i–iii.xvi. Each of the Catena's lemmas (the verses printed before the Fathers' comments) is followed by the Fathers' paragraphs, and every paragraph is kept, in the order printed, in entries of up to about 350 words. A paragraph is placed on the verse of its lemma whose words it quotes (from the verse it is at onward; where it quotes more than one, the verse whose words it quotes most fully), and one that quotes none on the verse of the paragraph before it (the first, on the lemma's first verse). A verse the Catena prints in two halves, each with its own comments (3:19, 6:6, 15:20), keeps both, in order. Two paragraphs CCEL marks as Gospel text but which are comments (Chrys. after 11:1-10, Theophylact after the first half of 15:20) are kept as comments, and the 'Amen.' printed after 16:20 is part of its lemma. The Fathers' attributions (Chrys., Pseudo-Chrys., Theophylact, Bede, Pseudo-Jerome, Gloss.) are kept as printed. The editors' bracketed notes ('[ed. note: ...]', '[note: ...]', '[see note ...]', and the Latin readings they cite '[..., ap. Pseudo-Hier.]') are left out, and a cut inside a paragraph marked ' ... '; so is a page mark CCEL left in the text of a comment on 11:1-10 ('[p 223” /&gt;'). Page numbers are left out. Each verse's first entry (and the first of each half of a verse printed in two) is headed with the lemma as printed.",
+ "status": "ai_draft"
+}

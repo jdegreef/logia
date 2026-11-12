@@ -76,6 +76,34 @@ REF = re.compile(r"^([1-3]?[A-Z]{2,3})\.(\d+)\.(\d+)$")
 
 
 @functools.lru_cache(maxsize=None)
+@functools.lru_cache(maxsize=None)
+def last_verse(book, chapter):
+    """The last verse of a chapter in the Open Word Bible (Hebrew numbering in
+    the Old Testament), or None where it has no text for the chapter. Its
+    `verses` lists the numbers it prints, which need not start at 1 (John 8
+    opens at verse 12)."""
+    path = os.path.join(OWB, "en", f"{book}.{chapter}.json")
+    if not os.path.exists(path):
+        return None
+    with open(path, encoding="utf-8") as f:
+        return max(json.load(f)["verses"], default=None)
+
+
+def plausible(ref):
+    """Whether a reference as English Bibles number it can exist: its chapter
+    exists, and its verse is no more than two past the chapter's last (the
+    Hebrew numbering of the Psalms counts the title as a verse, so the
+    English is never longer by more), once English chapters are matched to
+    the Hebrew. Rejects a scan's "Ver. 80" for "30"."""
+    p = parse(ref)
+    if not p:
+        return False
+    held = from_english(*p) or [p[1:]]          # English Joel 2:32 is the Hebrew 3:5
+    c, v = held[-1]
+    n = last_verse(p[0], c)
+    return n is None or v <= n + 2
+
+
 def parse(ref):
     """'JHN.1.14' -> ('JHN', 1, 14), or None if it is not a reference to a
     chapter that exists. Cached: the build parses the same few thousand

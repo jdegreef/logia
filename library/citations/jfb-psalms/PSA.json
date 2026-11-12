@@ -1984,15 +1984,6 @@
   },
   {
    "in": "jfb-psalms.PSA.15.1.1",
-   "at": 98,
-   "text": "27",
-   "start": "PSA.23.27",
-   "end": "PSA.23.27",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "jfb-psalms.PSA.15.1.1",
    "at": 147,
    "text": "2Sa 6:17",
    "start": "2SA.6.17",

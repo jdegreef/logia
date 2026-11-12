@@ -786,24 +786,6 @@
    "status": "detected"
   },
   {
-   "in": "lapide.JHN.9.31.1",
-   "at": 373,
-   "text": "Ps. 1. 16",
-   "start": "PSA.1.16",
-   "end": "PSA.1.16",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "lapide.JHN.9.31.1",
-   "at": 512,
-   "text": "Ps. xxxii. 16",
-   "start": "PSA.32.16",
-   "end": "PSA.32.16",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "lapide.JHN.9.39.1",
    "at": 1393,
    "text": "Rom. xi. 33",
@@ -885,6 +867,15 @@
    "status": "detected"
   },
   {
+   "in": "lapide.JHN.10.22.1",
+   "at": 0,
+   "text": "Ver. 21",
+   "start": "JHN.10.21",
+   "end": "JHN.10.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "lapide.JHN.10.23.1",
    "at": 1709,
    "text": "Acts iii. 11",
@@ -908,6 +899,15 @@
    "text": "vi. 27",
    "start": "JHN.6.27",
    "end": "JHN.6.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.10.42.1",
+   "at": 0,
+   "text": "Ver. 41",
+   "start": "JHN.10.41",
+   "end": "JHN.10.41",
    "found": "pattern",
    "status": "detected"
   },
@@ -966,6 +966,15 @@
    "status": "detected"
   },
   {
+   "in": "lapide.JHN.11.23.1",
+   "at": 0,
+   "text": "Ver. 21",
+   "start": "JHN.11.21",
+   "end": "JHN.11.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "lapide.JHN.11.24.1",
    "at": 695,
    "text": "Job xix. 26",
@@ -1016,15 +1025,6 @@
    "text": "Hosea xii. 4",
    "start": "HOS.12.5",
    "end": "HOS.12.5",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "lapide.JHN.11.35.1",
-   "at": 1408,
-   "text": "Ps. 11. 17",
-   "start": "PSA.11.17",
-   "end": "PSA.11.17",
    "found": "pattern",
    "status": "detected"
   },
@@ -1655,6 +1655,15 @@
    "text": "Eph. iv. 24",
    "start": "EPH.4.24",
    "end": "EPH.4.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "lapide.JHN.17.20.1",
+   "at": 1255,
+   "text": "Ver. 21",
+   "start": "JHN.17.21",
+   "end": "JHN.17.21",
    "found": "pattern",
    "status": "detected"
   },

@@ -1,0 +1,146 @@
+{
+ "work": "spurgeon-psalms",
+ "book": "PSA",
+ "mentions": [
+  {
+   "in": "spurgeon-psalms.PSA.6.10.1",
+   "at": 295,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.9.12.1",
+   "at": 573,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.9.12.1",
+   "at": 657,
+   "text": "Wesley",
+   "author": "wesley",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.9.14-15.1",
+   "at": 456,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.10.9.1",
+   "at": 458,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.17.13.1",
+   "at": 1201,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.17.14.1",
+   "at": 949,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.18.27.1",
+   "at": 455,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.18.32.1",
+   "at": 204,
+   "text": "Matthew Henry",
+   "author": "henry",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.19.13.1",
+   "at": 703,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.32.9.1",
+   "at": 940,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.33.2.1",
+   "at": 539,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.74.5.1",
+   "at": 591,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.74.5.1",
+   "at": 612,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.89.44.1",
+   "at": 901,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.92.2.1",
+   "at": 1623,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.92.4.1",
+   "at": 332,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.94.16.1",
+   "at": 1256,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.98.4.1",
+   "at": 375,
+   "text": "Wesley",
+   "author": "wesley",
+   "status": "detected"
+  },
+  {
+   "in": "spurgeon-psalms.PSA.98.5.1",
+   "at": 310,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  }
+ ]
+}

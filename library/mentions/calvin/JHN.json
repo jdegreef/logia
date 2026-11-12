@@ -1,0 +1,251 @@
+{
+ "work": "calvin",
+ "book": "JHN",
+ "mentions": [
+  {
+   "in": "calvin.JHN.1.16.2",
+   "at": 37,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.3.1",
+   "at": 771,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.2.24.1",
+   "at": 286,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.3.5.1",
+   "at": 814,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.3.7.1",
+   "at": 709,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.3.7.1",
+   "at": 817,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.3.21.1",
+   "at": 364,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.3.34.2",
+   "at": 33,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.4.2.1",
+   "at": 1319,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.4.44.1",
+   "at": 200,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.4.44.1",
+   "at": 552,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.6.54.2",
+   "at": 1329,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.6.63.1",
+   "at": 440,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.6.63.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.8.6.1",
+   "at": 231,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.8.15.1",
+   "at": 886,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.8.25.1",
+   "at": 29,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.8.49.1",
+   "at": 664,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.8.56.1",
+   "at": 1168,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.8.58.2",
+   "at": 107,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.9.35.1",
+   "at": 1327,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.10.11.1",
+   "at": 462,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.10.12.3",
+   "at": 362,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.10.12.3",
+   "at": 958,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.10.16.1",
+   "at": 930,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.10.16.1",
+   "at": 1344,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.11.12.1",
+   "at": 410,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.11.33.2",
+   "at": 387,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.12.32.1",
+   "at": 1096,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.13.27.2",
+   "at": 748,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.15.22.2",
+   "at": 161,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.16.12.2",
+   "at": 454,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.19.34.2",
+   "at": 669,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.20.12.2",
+   "at": 920,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin.JHN.21.6.2",
+   "at": 536,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

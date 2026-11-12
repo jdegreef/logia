@@ -1,0 +1,776 @@
+{
+ "work": "bellarmine-psalms",
+ "book": "PSA",
+ "mentions": [
+  {
+   "in": "bellarmine-psalms.PSA.4.5.1",
+   "at": 671,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.10.18.1",
+   "at": 444,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.26.7.1",
+   "at": 167,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.27.4.1",
+   "at": 212,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.27.9.1",
+   "at": 840,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.30.6.1",
+   "at": 466,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.31.6.1",
+   "at": 1010,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.31.10.1",
+   "at": 336,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.33.3.2",
+   "at": 0,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.35.17.1",
+   "at": 831,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.35.19.1",
+   "at": 677,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.35.28.1",
+   "at": 619,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.36.12.1",
+   "at": 619,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.38.2.1",
+   "at": 403,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.38.2.1",
+   "at": 663,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.39.3.1",
+   "at": 375,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.39.13.1",
+   "at": 1057,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.41.10.1",
+   "at": 602,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.42.2.1",
+   "at": 613,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.42.3.1",
+   "at": 42,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.45.5.1",
+   "at": 518,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.45.8.1",
+   "at": 1367,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.45.10.4",
+   "at": 1580,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.45.17.1",
+   "at": 1189,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.45.18.1",
+   "at": 346,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.46.4.1",
+   "at": 56,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.46.4.1",
+   "at": 70,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.46.10.1",
+   "at": 300,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.48.8.1",
+   "at": 40,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.48.8.1",
+   "at": 115,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.49.10.1",
+   "at": 214,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.49.11.1",
+   "at": 858,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.49.11.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.50.23.1",
+   "at": 701,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.54.8.1",
+   "at": 428,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.55.15.1",
+   "at": 1387,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.58.6.1",
+   "at": 811,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.59.6.1",
+   "at": 1381,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.59.18.1",
+   "at": 454,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.62.11.1",
+   "at": 318,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.62.11.1",
+   "at": 507,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.62.11.1",
+   "at": 521,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.63.5.1",
+   "at": 581,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.63.6.1",
+   "at": 764,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.63.9.1",
+   "at": 151,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.64.2.1",
+   "at": 930,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.68.7.1",
+   "at": 763,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.69.12.2",
+   "at": 759,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.71.7.1",
+   "at": 477,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.72.1.2",
+   "at": 806,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.72.5.1",
+   "at": 1370,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.72.5.1",
+   "at": 1394,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.72.7.1",
+   "at": 667,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.73.5.1",
+   "at": 368,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.73.7.1",
+   "at": 310,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.73.20.1",
+   "at": 1350,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.75.3.1",
+   "at": 1438,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.77.16.1",
+   "at": 569,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.78.72.1",
+   "at": 1053,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.79.6.1",
+   "at": 664,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.79.13.1",
+   "at": 4,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.83.2.1",
+   "at": 444,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.83.3.1",
+   "at": 411,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.85.8.1",
+   "at": 955,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.86.1.1",
+   "at": 793,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.86.2.1",
+   "at": 592,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.86.5.1",
+   "at": 498,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.86.13.1",
+   "at": 701,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.86.13.1",
+   "at": 724,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.86.14.1",
+   "at": 306,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.86.17.1",
+   "at": 876,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.87.7.1",
+   "at": 704,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.89.20.1",
+   "at": 249,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.89.20.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.89.21.1",
+   "at": 227,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.89.35.1",
+   "at": 1213,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.91.2.1",
+   "at": 1104,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.91.12.1",
+   "at": 549,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.92.3.1",
+   "at": 883,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.94.23.1",
+   "at": 436,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.95.7.1",
+   "at": 173,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.95.8.2",
+   "at": 356,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.96.13.2",
+   "at": 378,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.98.1.1",
+   "at": 850,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.100.1.1",
+   "at": 1033,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.103.1.1",
+   "at": 474,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.103.5.1",
+   "at": 1049,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.105.4.1",
+   "at": 760,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.105.6.1",
+   "at": 370,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.107.38.1",
+   "at": 1427,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.109.6.1",
+   "at": 641,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.111.2.1",
+   "at": 970,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.116.10-19.2",
+   "at": 768,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.116.10-19.5",
+   "at": 627,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.119.3.1",
+   "at": 617,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.119.25.1",
+   "at": 590,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.119.77.1",
+   "at": 362,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.119.113.1",
+   "at": 145,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.119.119.1",
+   "at": 4,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.127.1.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.127.3.2",
+   "at": 1057,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.132.17.2",
+   "at": 355,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.137.3.1",
+   "at": 265,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.140.2.1",
+   "at": 60,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.141.5.1",
+   "at": 1224,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.142.8.1",
+   "at": 27,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.143.1.1",
+   "at": 1227,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.143.8.1",
+   "at": 780,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.148.4.1",
+   "at": 1313,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "bellarmine-psalms.PSA.148.14.2",
+   "at": 493,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

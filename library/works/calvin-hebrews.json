@@ -1,0 +1,18 @@
+{
+ "id": "calvin-hebrews",
+ "author": "calvin",
+ "title": "Commentaries on the Epistle of Paul the Apostle to the Hebrews",
+ "divisions": "verse",
+ "edition": "Calvin Translation Society, tr. John Owen (his preface is dated Thrussington, August 1853); CCEL edition",
+ "original_language": "Latin",
+ "translation": "Translated from the original Latin by the Rev. John Owen for the Calvin Translation Society (1853)",
+ "published": 1853,
+ "full_text_url": "https://www.ccel.org/ccel/calvin/calcom44.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years), John Owen's (the translator, vicar of Thrussington) among them"
+ },
+ "source_kind": "digital",
+ "notes": "CCEL calcom44 vii-xix, a section page for each passage. Each section page is placed by the verses it covers, read from its caption ('Hebrews 1:1-2'; for a caption CCEL prints without a reference mark, as 'Hebrews Chapter 3:1-6', from its words); within it, each lemma (the bold verse number, '1.', or the italic words Calvin comments on) opens an entry, with the paragraphs after it, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. The English and Latin text printed above each section, the tables in Calvin's comments, the headings, the translator's footnotes, the prefaces, Calvin's Argument, and the translator's appendix, his translation of Calvin's version and the indexes are left out. Each entry's heading is the italic lemma as printed.",
+ "status": "ai_draft"
+}

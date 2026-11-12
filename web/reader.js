@@ -13,6 +13,9 @@
   if (!holder) return;
   var DATA = JSON.parse(holder.textContent);
   var U = DATA.ui;
+  // A heading that names its place in the work is a running head, set in
+  // small capitals; keep in step with RUNHEAD in scripts/build_site.py.
+  var RUNHEAD = /^(Homily|Tractate|Sermon|Lecture|Discourse|Exposition|Book|Chapter|Section|Part|Psalm|Hom\.|Serm\.)\b.{0,80}$/;
   var ERAS = DATA.eras;
   var Prefs = window.LogiaPrefs;
   var $ = function (s) { return document.querySelector(s); };
@@ -220,26 +223,34 @@
 
   // The commentators on a line of centuries, each a labelled pill at the year
   // they died: tap one to open what they say. Pills that would overlap stack
-  // in lanes; a voice with nothing on this verse is faded.
+  // in up to three lanes; any that still don't fit fold into one "+N" pill at
+  // the top right, which opens them all. A voice with nothing on this verse
+  // is faded.
   function renderRail() {
     var lo = 200, hi = 1950, pos = function (y) { return ((y - lo) / (hi - lo)) * 100; };
-    var width = $("#rail").offsetWidth || 480, PILL = 40;
-    var h = "";
+    var width = $("#rail").offsetWidth || 480, PILL = 40, LANES = 3;
+    var h = "", folded = [];
     [300, 600, 900, 1200, 1500, 1800].forEach(function (t) { h += '<span class="cx-tick" style="left:' + pos(t) + '%">' + t + "</span>"; });
     var lanes = [];
     works.slice().sort(function (a, b) { return a.died - b.died; }).forEach(function (w) {
       var on = entriesFor(w, state.verse).length > 0 && state.eras.has(w.era);
       var x = pos(w.died), px = x / 100 * width;
       var lane = 0;
-      while (lanes[lane] !== undefined && px - lanes[lane] < PILL + 3) lane++;
+      while (lane < LANES && lanes[lane] !== undefined && px - lanes[lane] < PILL + 3) lane++;
+      if (lane === LANES) { if (on) folded.push(w); return; }
       lanes[lane] = px;
       var label = (w.short_name || w.author).slice(0, 3);
-      h += '<button type="button" class="cx-dot cx-lane' + Math.min(lane, 2) + (on ? "" : " cx-off") +
+      h += '<button type="button" class="cx-dot cx-lane' + lane + (on ? "" : " cx-off") +
         (on && state.open[w.work_id] ? " cx-cur" : "") + '" style="left:' + x + '%" data-work="' + w.work_id +
         '" title="' + esc(w.author + ", " + w.author_dates) + '" aria-label="' + esc(w.author) + '"' + (on ? "" : " disabled") + ">" +
         esc(label) + "</button>";
     });
-    $("#rail").style.setProperty("--lanes", Math.min(lanes.length, 3));
+    if (folded.length) {
+      var names = folded.map(function (w) { return w.author; }).join(", ");
+      h += '<button type="button" class="cx-dot cx-more" data-works="' + folded.map(function (w) { return w.work_id; }).join(" ") +
+        '" title="' + esc(names) + '" aria-label="' + esc(fmt(U.rail_more, { names: names })) + '">+' + folded.length + "</button>";
+    }
+    $("#rail").style.setProperty("--lanes", Math.min(lanes.length, LANES) + (folded.length ? 1 : 0));
     $("#rail").innerHTML = '<div class="cx-rail-line"></div>' + h;
   }
   window.addEventListener("resize", function () { if ($("#rail").offsetWidth) renderRail(); });
@@ -249,6 +260,9 @@
     $("#ref").textContent = REF(v);
     $("#ph-text").textContent = verseText(v);
     $("#prev").disabled = v === FIRST; $("#next").disabled = v === LAST;
+    var pos = { n: DATA.verses.indexOf(v) + 1, total: DATA.verses.length };
+    $("#vpos").textContent = fmt(U.verse_of, pos);
+    $("#vpos").title = fmt(U.verse_of_label, pos);
     var voices = works.filter(function (w) { return entriesFor(w, v).length; });
     var eras = new Set(voices.map(function (w) { return w.era; }));
     $("#summary").textContent = voices.length
@@ -381,6 +395,10 @@
     }).concat((e.quotedIn || []).map(function (q) {
       var label = esc(fmt(U.quoted_by, { name: q.author, title: q.title, ref: q.ref }));
       return "<div>" + (q.href ? '<a href="' + esc(q.href) + '">' + label + "</a>" : label) + unchecked(q) + "</div>";
+    })).concat((e.names || []).map(function (n) {
+      // Another commentator this excerpt names: a fact of the page, not a judgement of agreement.
+      return '<div title="' + esc(U.names_title) + '"><a href="' + esc(n.url) + '">' + esc(fmt(U.names, { name: n.author })) + "</a>" +
+        (n.href ? ' · <a href="' + esc(n.href) + '">' + esc(fmt(U.names_here, { name: n.author, ref: n.ref })) + "</a>" : "") + "</div>";
     }));
     return rows.length ? '<div class="cx-qs">' + rows.join("") + "</div>" : "";
   }
@@ -414,7 +432,7 @@
         .filter(Boolean).join(" · ");
       var range = where ? '<div class="cx-range">' + esc(where) + "</div>" : "";
       var lemma = e.heading && e.excerpt.replace(/^\s*\d+\.\s*/, "").toLowerCase().indexOf(e.heading.toLowerCase()) !== 0
-        ? '<div class="cx-lemma">' + esc(e.heading) + "</div>" : "";
+        ? '<div class="cx-lemma' + (RUNHEAD.test(e.heading) ? " cx-runhead" : "") + '">' + esc(e.heading) + "</div>" : "";
       return range + lemma + paras(linked(e.excerpt, e.cites, e.speakers)) + traced(e);
     }).join("");
   }
@@ -856,9 +874,10 @@
   });
   $("#rail").addEventListener("click", function (e) {
     var d = e.target.closest(".cx-dot"); if (!d || d.classList.contains("cx-off")) return;
-    state.open[d.dataset.work] = true;
+    var ids = d.dataset.works ? d.dataset.works.split(" ") : [d.dataset.work];
+    ids.forEach(function (id) { state.open[id] = true; });
     state.tab = "comm"; renderPanel();
-    var card = document.getElementById("c-" + d.dataset.work);
+    var card = document.getElementById("c-" + ids[0]);
     if (card) {
       card.scrollIntoView({ behavior: "smooth", block: "start" });
       card.classList.remove("cx-flash"); void card.offsetWidth; card.classList.add("cx-flash");

@@ -17,9 +17,14 @@ Christian commentaries.
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
 | `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
+| `library/mentions/<work>/<BOOK>.json` | Where an excerpt names another commentator in the library ("as Augustine explains"), found by `scripts/find_refs.py` |
 | `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
+| `library/creeds/<id>.json` | Creeds, conciliar decrees and confessions, each whole, section by section, with the Scripture each section cites, copied from their CCEL pages by `scripts/extract_creeds.py` (see `docs/references.md`) |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/guides/<lang>/<guide>.json` | Logia's own guides (where the traditions differ, the glossary, how to study a book): short framing notes, never commentary, each `ai_draft` until a named person reviews it; the commentators' words on its pages come from the excerpts |
+| `library/differ/<id>.json` | A passage the churches read differently: Logia's short framing note (`ai_draft` until reviewed), or a pointer to a guide's; the page shows every commentator on the passage and is published only when they come from enough traditions (`scripts/differ.py`, `library/families.json`) |
+| `library/creeds/<id>.json` | Creeds, conciliar decrees and confessions, copied section by section from CCEL by `scripts/extract_creeds.py`, with the Scripture each section cites |
+| `library/identifiers.json` | Each commentator's, and each Father's work's, Wikidata item, Wikipedia article and Clavis Patrum number, fetched by `scripts/fetch_wikidata.py`, never typed |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
 | `bible/owb/` | The Bible text: every Open Word Bible chapter, imported at a pinned commit |
@@ -30,7 +35,7 @@ Christian commentaries.
 
 The library today: the whole Bible in the Open Word Bible text (all 66 books,
 1,189 chapters, with its Greek and Hebrew words and translation notes), and
-41 works by 25 commentators, 39,110 excerpts in all:
+51 works by 27 commentators, 48,740 excerpts in all:
 
 - **Genesis**: Basil's Hexaemeron (1:1–25), Keil, Haydock and Jamieson
   (Jamieson-Fausset-Brown).
@@ -39,14 +44,18 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
   and Spurgeon's Treasury of David (Psalms 111–119 still to come from Spurgeon).
 - **Proverbs** and **Ecclesiastes**: Matthew Henry, Fausset and Charles Bridges.
 - **Song of Songs**: Bernard of Clairvaux's sermons (1:1–3:3).
-- **Matthew**: Chrysostom, the Catena Aurea, Calvin, Matthew Henry and Ryle.
+- **Matthew**: Chrysostom (all but Homilies LIII, LVIII and LXXIX, which
+  CCEL's pages break off), the Catena Aurea, Calvin, Matthew Henry and Ryle.
+- **Mark**: the Catena Aurea on the whole Gospel.
+- **Luke**: the Catena Aurea, Calvin, Matthew Henry and Jamieson
+  (Jamieson-Fausset-Brown), on the whole Gospel.
 - **John**: Chrysostom, Augustine, the Catena Aurea, Calvin, Matthew Henry,
   Bengel, J. C. Ryle, Westcott, John Wesley and Cornelius a Lapide on the
   whole Gospel; Cyril of Alexandria (all but John 10:19–12:50, whose books
   are lost); and Origen on John 1:1–2:25, the only part of his commentary
   with an English translation from 1930 or earlier.
-- **Romans**: Chrysostom, Calvin, Matthew Henry, Bengel, Charles Hodge and
-  Godet.
+- **Romans**: Chrysostom, Calvin, Matthew Henry, Bengel, John Wesley,
+  Charles Hodge, Godet and Haydock.
 - **Galatians**: Luther.
 
 ## The site
@@ -63,6 +72,8 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 | `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
 | `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |
+| `/differ/`, `/differ/<id>/` | Passages the churches read differently: a short note on how, then every commentator on the passage, in the order they died |
+| `/creeds/`, `/creeds/<id>/` | Creeds, councils and confessions, each whole, with their Scripture linked; verse pages list the ones that cite the verse |
 | `/about/` | What Logia is and how excerpts are checked |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its
@@ -130,6 +141,7 @@ can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
 
     python3 scripts/find_refs.py --check      # loci, citations, quotations up to date
     python3 scripts/extract_texts.py --check  # whole texts up to date
+    python3 scripts/extract_creeds.py --check # creeds and confessions up to date
     python3 scripts/validate.py          # the data is well formed
     python3 scripts/verify_sources.py    # every excerpt is in its source
     python3 -m unittest discover -s tests -t .

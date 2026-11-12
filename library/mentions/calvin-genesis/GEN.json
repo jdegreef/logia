@@ -1,0 +1,167 @@
+{
+ "work": "calvin-genesis",
+ "book": "GEN",
+ "mentions": [
+  {
+   "in": "calvin-genesis.GEN.1.26.3",
+   "at": 494,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.1.26.4",
+   "at": 1165,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.2.8.7",
+   "at": 88,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.3.6.3",
+   "at": 270,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.3.6.8",
+   "at": 188,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.3.6.8",
+   "at": 1124,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.3.6.8",
+   "at": 1284,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.4.7.7",
+   "at": 1099,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.6.3.2",
+   "at": 626,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.6.3.3",
+   "at": 180,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.6.14.2",
+   "at": 159,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.6.14.3",
+   "at": 891,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.7.1.4",
+   "at": 311,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.11.10.3",
+   "at": 626,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.11.27.1",
+   "at": 959,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.13.1.2",
+   "at": 461,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.13.14.2",
+   "at": 1186,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.17.12.1",
+   "at": 1185,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.21.8.2",
+   "at": 146,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.22.12.1",
+   "at": 56,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.25.1.2",
+   "at": 1013,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.35.10.1",
+   "at": 970,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-genesis.GEN.46.8.1",
+   "at": 299,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

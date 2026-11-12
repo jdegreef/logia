@@ -1,0 +1,18 @@
+{
+ "id": "catena-luke",
+ "author": "aquinas",
+ "title": "Catena Aurea: Commentary on the Four Gospels, Collected out of the Works of the Fathers. Vol. III: St. Luke",
+ "divisions": "verse",
+ "edition": "Oxford: John Henry Parker, 1841-45 (Vol. III, Parts I and II, 1843), translation edited by John Henry Newman; text from University of Toronto scans on archive.org (djvu OCR)",
+ "original_language": "Latin",
+ "translation": "The Oxford translation, edited by John Henry Newman, Vol. III (1843)",
+ "published": 1843,
+ "full_text_url": "https://archive.org/details/catenaaureacomme03thomuoft",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author, translator and editor named (life + 70 years); John Henry Newman, the editor, died in 1890; the translators of the volume are to confirm"
+ },
+ "source_kind": "scan",
+ "notes": "Not on CCEL (CCEL has only the Matthew and Mark volumes), so the text is archive.org OCR of the 1841-45 Oxford edition, Vol. III (Parts I and II, both dated MDCCCXLIII on the title page). Luke 1-24 are all covered: 1,377 excerpts on 896 verses. The main copies are University of Toronto scans that print the Fathers' names in capitals: catenaaureacomme03thomuoft (Part I, chapters 1-10) and catenaaurept203thomuoft (Part II, chapters 11-24); every excerpt is copied from one of them. Five other scans of the same printing were compared with them word by word: p1catenaaureaco03thom and a6788682p103thomuoft (Part I), p2catenaaureaco03thom and p2catenaaureacom03thomuoft (Part II), and Princeton's catenaaureacomme03thom (both Parts). Where two or more of them agree on a word the main copy's OCR misread, dropped or ran together, the fix is a pair in library/corrections/catena-luke.json, never a change to the excerpt; so are '&c.' (OCR 'fyc.', '8fc.', 'Sfc.'), the italic I read as '/', the italic f read as 'J' ('Jlesh'), and words run together in every copy ('say,andputto'). Editing limited to: dropping the printed margin references (e.g. 'Ambr. in Luc. lib. i.'), which the OCR interleaves into the lines and sometimes fuses onto a word ('hisChrys.', 'it£vang.'), running heads, page numbers, signatures, footnotes and footnote markers; joining words broken at line ends. The Fathers' attributions are kept as printed (AMBROSE, BEDE, CHRYSOSTOM or CHRYS., CYRIL, EUSEBIUS, TITUS BOSTRENSIS or TIT. BOST., GREEK Ex., GREG. NYSS., THEOPHYL.). Each lemma's comments are kept in the order printed, in excerpts of up to about 300 words; a quotation is placed on the verse of its lemma whose words it quotes most, and one that quotes none on the verse of the quotation before it; an excerpt that goes on into the next ends with ' ...'. Each verse's first excerpt is headed with the lemma as printed, where two copies read it alike (46 are left without a heading). ' ... ' inside an excerpt marks a sentence left out because it stays garbled in every copy (174 places), or unreadable Greek left out of a sentence; no Greek is typed. Remaining OCR slips are left uncorrected where the copies do not agree (e.g. 'lie' for 'He'), and a word at a line's edge is now and then lost with the margin note beside it in every copy ('Of the of thy body', Luke 1:43). The Luke 8:40 comment of Theophylact (eleven words) is left out because a margin note breaks it in every copy.",
+ "status": "ai_draft"
+}

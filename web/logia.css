@@ -63,7 +63,9 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .lg-ref { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .lg-ref a { text-decoration: none; }
 .lg-lemma { margin: 0 0 6px; font-family: var(--serif); font-style: italic; color: var(--muted); }
-.lg-text { font-family: var(--read-font); font-size: calc(18px * var(--read-scale)); line-height: calc(1.65 * var(--read-leading)); }
+/* Excerpt text: lines of about 70 characters, short enough that the eye
+   finds the start of the next line in a long homily. */
+.lg-text { font-family: var(--read-font); font-size: calc(18px * var(--read-scale)); line-height: calc(1.65 * var(--read-leading)); max-width: 62ch; }
 .lg-text p { margin: 0 0 .7em; }
 
 /* The chapter reader ----------------------------------------------------- */
@@ -83,7 +85,11 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-verse { cursor: pointer; border-radius: 5px; padding: 2px 1px; transition: background-color 150ms; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .cx-verse:hover { background: var(--surface-2); }
 .cx-verse.cx-on { background: var(--mark); }
-.cx-vn { font-family: var(--sans); font-size: 11.5px; font-weight: 700; color: var(--muted); vertical-align: super; line-height: 0; margin: 0 3px 0 2px; }
+/* Verse numbers: a little air before each (so "beginning. 2He" reads as a
+   new verse, not part of the word before), even-width figures, and one step
+   lighter so they guide without competing with the text. */
+.cx-vn { font-family: var(--sans); font-size: 11.5px; font-weight: 600; color: var(--muted); vertical-align: super; line-height: 0;
+  margin: 0 .22em 0 .15em; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
 .cx-w { border-radius: 3px; }
 .cx-verse.cx-on .cx-w:hover, .cx-w.cx-on { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .cx-w.cx-on { background: var(--accent-soft); }
@@ -116,7 +122,9 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-ph .cx-ref { font-family: var(--display); font-size: 24px; font-weight: 600; margin: 0; }
 .cx-nav { display: flex; gap: 4px; }
 .cx-nav button { border: 1px solid var(--line); background: var(--bg); width: 32px; height: 32px; border-radius: 8px; cursor: pointer; }
-.cx-nav button:disabled { opacity: .35; cursor: default; }
+.cx-nav button:disabled { color: var(--muted); border-color: var(--line); background: transparent; opacity: .6; cursor: default; }
+/* Where the chosen verse falls in the chapter, between the arrows. */
+.cx-pos { align-self: center; min-width: 4.2em; padding: 0 2px; text-align: center; font: 600 12px/1 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .cx-ph-text { font-family: var(--serif); font-size: 16px; color: var(--muted); margin: 6px 0 14px; }
 .cx-summary { font-size: 13px; color: var(--muted); }
 
@@ -136,6 +144,11 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-dot:hover { background: var(--lg-gold-ink); color: var(--bg); }
 .cx-dot.cx-cur { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
 .cx-dot.cx-off { opacity: .4; border-style: dashed; cursor: default; background: var(--surface); }
+/* The voices that don't fit in three lanes, folded into one pill at the top
+   right of the line. */
+.cx-dot.cx-more { left: auto; right: -12px; bottom: auto; top: 0; transform: none; border-color: var(--accent);
+  background: var(--accent-soft); color: var(--accent); }
+.cx-dot.cx-more::after { display: none; }
 .cx-dot.cx-off:hover { color: var(--text); }
 
 .cx-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
@@ -160,6 +173,11 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-who b { font-family: var(--display); font-size: 17px; font-weight: 600; }
 .cx-who .cx-d { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .cx-tag { font-size: 11.5px; color: var(--muted); border: 1px solid var(--line); border-radius: 5px; padding: 0 6px; }
+/* Beside a name the tradition is plain muted text after the dates, as on the
+   verse pages: a bordered tag read as a button, and the name should be the
+   one thing that stands out on a card. */
+.cx-who .cx-tag { border: 0; padding: 0; border-radius: 0; font-size: 12.5px; margin-left: -4px; }
+.cx-who .cx-d + .cx-tag::before { content: "\00B7"; margin-right: 6px; }
 /* A voice opens as two lines of its excerpt (web/reader.js); the chevron or
    the lines open it. */
 .cx-toggle { margin-left: auto; align-self: center; border: 0; background: none; padding: 4px; border-radius: 6px; color: var(--muted);
@@ -239,13 +257,13 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-new { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
 .cx-also { color: var(--muted); border: 1px dashed var(--line-strong); font-weight: 600; }
 /* How many voices comment on a verse (web/reader.js), and the chosen verse
-   marked by a gold rule as well as its colour. */
+   marked like a highlighter: the same soft wash and gold underline on every
+   line it runs over (box-decoration-break: clone, above), not only colour. */
 .cx-vc { display: inline-block; min-width: 1.45em; margin: 0 4px 0 0; padding: 0 .3em; border-radius: 999px; box-sizing: border-box;
   background: color-mix(in srgb, var(--gold) 18%, transparent); color: var(--lg-gold-ink); font-family: var(--sans); font-size: 10.5px;
   font-weight: 700; line-height: 1.55; text-align: center; vertical-align: super; font-variant-numeric: tabular-nums; }
-.cx-verse.cx-on { box-shadow: inset 3px 0 0 var(--gold); padding-left: 6px; }
+.cx-verse.cx-on { box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--gold) 75%, transparent); padding: 2px 3px; border-radius: 4px; }
 .cx-verse.cx-on .cx-vc { background: var(--lg-gold-ink); color: var(--bg); }
-.cx-verse.cx-cont.cx-on { box-shadow: none; padding-left: 1px; }
 /* Verses the Open Word Bible leaves out (John 5:4, 8:1-11...), where they would be. */
 .lg-gap { margin: 10px 0; padding: 10px 14px; border-left: 3px solid var(--gold); background: var(--surface-2);
   border-radius: 0 8px 8px 0; font-family: var(--sans); font-size: 14px; line-height: 1.55; color: var(--muted); }
@@ -533,7 +551,7 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
 .lg-contents .lg-quiet { font-size: 12.5px; font-variant-numeric: tabular-nums; }
 /* The contents on a work's own page: a tile a chapter. */
 .lg-tiles { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); max-width: 1080px; }
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
 .lg-tiles a { display: flex; flex-direction: column; gap: 3px; height: 100%; padding: 12px 14px 14px; border: 1px solid var(--line);
   border-radius: var(--radius-sm); background: var(--surface); color: var(--text); text-decoration: none; }
 .lg-tiles a:hover { border-color: var(--accent); }
@@ -644,9 +662,14 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
 .lg-toc .lg-badge { white-space: nowrap; }
 
 /* Home: a strip of each book's chapters, and well-known passages. */
-.lg-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; margin: 14px 0 0; }
-.lg-strip-book { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--text); text-decoration: none; min-width: 5em; }
+/* Every book on the same two columns: its name and voice count on the left,
+   its chapters on the right, so the circles all start at one edge. */
+.lg-strip { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); align-items: start; gap: 8px 18px; margin: 16px 0 0; }
+.lg-strip-book { display: grid; gap: 1px; font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.2;
+  color: var(--text); text-decoration: none; padding-top: 2px; }
+.lg-strip-book span { font-family: var(--sans); font-weight: 500; font-size: 12.5px; color: var(--muted); }
 .lg-strip-book:hover { color: var(--accent); }
+@media (max-width: 560px) { .lg-strip { grid-template-columns: minmax(0, 1fr); } .lg-strip-book { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 8px; } }
 .lg-strip .chap-pills { margin: 0; }
 .lg-famous-h { margin-top: 28px; }
 .lg-famous .lg-card { gap: 2px; }
@@ -689,11 +712,23 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 
 /* The commentators' lifetimes on one line of centuries (/commentators/),
    coloured by era from the early church's gold to the 1800s' indigo. */
-.lg-era-0 { --era: var(--lg-gold-ink); }
-.lg-era-1 { --era: color-mix(in srgb, var(--lg-gold-ink) 75%, var(--accent)); }
-.lg-era-2 { --era: color-mix(in srgb, var(--lg-gold-ink) 50%, var(--accent)); }
-.lg-era-3 { --era: color-mix(in srgb, var(--lg-gold-ink) 25%, var(--accent)); }
-.lg-era-4 { --era: var(--accent); }
+/* The five eras, each its own hue (ochre, plum, teal, indigo, brick) so the
+   Reformation and the Puritans, or the 1700s and 1800s, never look alike.
+   Each hue is mixed with the theme's text colour: darker on the light and
+   sepia pages, lighter on dark and night, so text in --bg on an era colour,
+   and an era colour as text, keep their contrast in every theme. */
+html {
+  --lg-era-0: color-mix(in oklab, #b27a12 62%, var(--text));
+  --lg-era-1: color-mix(in oklab, #8a4fb0 62%, var(--text));
+  --lg-era-2: color-mix(in oklab, #18877f 62%, var(--text));
+  --lg-era-3: color-mix(in oklab, #4848c8 62%, var(--text));
+  --lg-era-4: color-mix(in oklab, #c2452f 62%, var(--text));
+}
+.lg-era-0 { --era: var(--lg-era-0); }
+.lg-era-1 { --era: var(--lg-era-1); }
+.lg-era-2 { --era: var(--lg-era-2); }
+.lg-era-3 { --era: var(--lg-era-3); }
+.lg-era-4 { --era: var(--lg-era-4); }
 .lg-tl { margin: 32px 0 0; }
 .lg-tl-scroll { overflow-x: auto; }
 .lg-tl-in { position: relative; min-width: 720px; padding: 34px 0 28px; }
@@ -816,6 +851,8 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-goto input { width: 11em; max-width: 100%; padding: 7px 12px; border: 1px solid var(--line-strong); border-radius: 999px;
   background: var(--surface); color: var(--text); font: inherit; font-size: 15px; }
 .lg-goto .lg-quiet { font-size: 13px; flex-basis: 100%; }
+.lg-goto-work { margin: 14px 0 4px; }
+.lg-excerpt .lg-ref[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 .lg-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin: 0 0 16px; }
 .lg-tabs button { padding: 8px 14px; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: none;
   color: var(--muted); font: 600 15px var(--sans); cursor: pointer; }
@@ -885,12 +922,16 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
   .lg-excerpt-side .lg-side { order: -1; }
 }
 
-/* A work's record: its facts, its rights said plainly, and a citation. */
+/* A work's record: its facts, its rights said plainly, and a citation. It
+   and the chapter tiles run the full width, on the same right edge as the
+   Start here cards above them. */
 .lg-record { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 24px 40px; align-items: start; margin-top: 28px;
-  padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); max-width: 1080px; }
+  padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
 .lg-record .lg-facts { margin: 0; }
 .lg-pills { display: flex; flex-wrap: wrap; gap: 6px; }
 .lg-pill-ok { color: var(--accent); background: var(--accent-soft); }
+.lg-source-texts { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
+.lg-source-texts .lg-quiet { font-size: 13px; }
 .lg-rights-note { display: block; margin-top: 6px; font-size: 13px; }
 .lg-cite-box { padding: 14px 16px; border-radius: 10px; background: var(--surface-2); }
 .lg-cite-box .label { margin: 0 0 6px; }
@@ -920,10 +961,12 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 }
 @media (max-width: 480px) { .cx-tabs button { padding: 10px 5px 9px; font-size: 13px; } .cx-tabs .cx-n { margin-left: 2px; font-size: 11px; } }
 
-/* Chapter chips: gold with commentary, a solid outline with the Bible text
-   (dashed read as "not available"), a ring for the chapter here, and a dot
-   for a chapter already read (web/logia.js). */
-.chap.part { border-style: solid; border-color: var(--line-strong); }
+/* Chapter chips: gold with commentary; a dashed outline and muted number
+   where there is only the Bible text so far (it still opens the reader, and
+   turns solid on hover); a ring for the chapter here, and a dot for a
+   chapter already read (web/logia.js). */
+.chap.part { border-style: dashed; border-color: var(--line-strong); color: var(--muted); background: transparent; }
+.chap.part:hover { border-style: solid; }
 .chap.lg-has[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); background: var(--lg-gold-ink); color: var(--bg); }
 .chap { position: relative; }
 .chap.lg-read::after { content: ""; position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; border-radius: 50%;
@@ -951,8 +994,11 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 
 /* About: the library's size, a contents row, one verse and voice, the name,
    one excerpt followed through the checks, licences, ways to help. */
-.lg-ab-stats { list-style: none; display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 28px 0 0; padding: 0; }
-.lg-ab-stats li { display: grid; gap: 2px; }
+.lg-ab-stats { list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 20px;
+  max-width: 640px; margin: 28px 0 0; padding: 0; }
+.lg-ab-stats li { display: grid; align-content: start; gap: 2px; border-top: 2px solid var(--line-strong); padding-top: 8px; min-width: 0; }
+.lg-ab-books { margin: 10px 0 0; font-size: 13px; color: var(--muted); max-width: 640px; }
+@media (max-width: 560px) { .lg-ab-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .lg-ab-stats b { font-family: var(--display); font-weight: 600; font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .lg-ab-stats span { font-size: 13px; color: var(--muted); }
 .lg-ab-toc { max-width: 720px; padding: 12px 0; border-block: 1px solid var(--line); }
@@ -1028,12 +1074,34 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 /* Verse pages (/<book>/<chapter>/<verse>/): one verse and every voice on it,
    read straight down the page. */
 .lg-verse { max-width: 760px; }
+/* Wide screens: the voices rail beside the page. */
+.lg-vrail { display: none; }
+@media (min-width: 1100px) {
+  .lg-verse.lg-verse-railed { max-width: none; display: grid; grid-template-columns: minmax(0, 760px) 220px; gap: 0 48px; align-items: start; }
+  .lg-verse-railed .lg-verse-main { min-width: 0; }
+  .lg-verse-railed .page-head .lg-chbar { display: none; }
+  .lg-vrail { display: block; position: sticky; top: calc(var(--header-h) + 24px); margin-top: 48px;
+    max-height: calc(100vh - var(--header-h) - 48px); overflow-y: auto; border-left: 1px solid var(--line); padding: 0 0 0 16px; }
+  .lg-vrail .label { margin: 0 0 10px; }
+  .lg-vrail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+  .lg-vrail a { display: grid; gap: 0; padding: 5px 0 5px 16px; position: relative; text-decoration: none; color: var(--text); border-radius: 6px; }
+  .lg-vrail a::before { content: ""; position: absolute; left: 2px; top: 12px; width: 8px; height: 8px; border-radius: 50%; background: var(--era); }
+  .lg-vrail b { font-family: var(--display); font-weight: 600; font-size: 15.5px; }
+  .lg-vrail span { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .lg-vrail a:hover b { color: var(--accent); }
+  .lg-vrail a[aria-current="true"] b { color: var(--accent); }
+  .lg-vrail a[aria-current="true"]::after { content: ""; position: absolute; left: -17px; top: 4px; bottom: 4px; width: 2px; background: var(--accent); }
+}
 .lg-verse .page-head { padding-bottom: 12px; }
 .lg-vtext { margin: 0 0 8px; padding: 4px 0 4px 18px; border-left: 3px solid var(--gold); }
 .lg-vtext p { margin: 0; font-family: var(--read-font); font-size: calc(22px * var(--read-scale)); line-height: 1.5; }
 .lg-vlead { margin: 22px 0 10px; font-size: 19px; }
 .lg-voice { padding: 8px 0 18px; border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 60px); }
-.lg-voice > h3 { font-family: var(--display); font-weight: 600; font-size: 21px; margin: 22px 0 4px; text-wrap: balance; }
+.lg-voice > h3 { font-family: var(--display); font-weight: 600; font-size: 23px; margin: 2px 0 2px; text-wrap: balance; }
+.lg-voice > h3 a { color: var(--text); text-decoration: none; }
+.lg-voice > h3 a:hover { color: var(--accent); }
+/* The question a voice answers, as a small line above the name. */
+.lg-vq { margin: 22px 0 0; font: 600 12px/1.4 var(--sans); letter-spacing: .04em; color: var(--muted); }
 .lg-vmeta { margin: 0 0 4px; font-size: 14px; color: var(--muted); }
 .lg-vmeta a { text-decoration: none; }
 .lg-vx { border-bottom: 0; padding: 12px 0 4px; }
@@ -1061,7 +1129,7 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 /* Passage pages (/<book>/<chapter>/<a>-<b>/): a section of a book and the
    excerpts on it, each opening with its first words. */
 .lg-ptext p { font-size: calc(18px * var(--read-scale)); line-height: 1.65; }
-.lg-ptext sup { font-family: var(--sans, inherit); font-size: 11px; font-weight: 700; color: var(--muted); margin-right: 2px; }
+.lg-ptext sup { font-family: var(--sans, inherit); font-size: 11px; font-weight: 600; color: var(--muted); margin: 0 .22em 0 .15em; font-variant-numeric: tabular-nums; }
 .lg-ptext sup a { color: var(--lg-gold-ink); text-decoration: none; }
 .lg-passage .lg-excerpts li { padding: 8px 0; }
 .lg-passage .page-head .dek + .lg-vtext { margin-top: 18px; }
@@ -1148,6 +1216,10 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-wk-cards .lg-meter { display: block; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-top: 4px; }
 .lg-wk-cards .lg-meter > span { display: block; height: 100%; background: var(--era, var(--accent)); }
 .lg-wk-cards .button { margin-top: auto; align-self: flex-start; }
+@media (min-width: 640px) {
+  .lg-wk-cards { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .lg-wk-cards li { grid-column: span var(--span, 2); }
+}
 .lg-bstrip { margin: 28px 0 0; }
 .lg-bstrip-cells { display: grid; grid-template-columns: repeat(66, minmax(0, 1fr)); gap: 2px; }
 .lg-bstrip-cells > * { height: 16px; border-radius: 2px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); }
@@ -1213,6 +1285,18 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-book-bar-name { font-family: var(--display); font-weight: 600; font-size: 16px; flex: none; }
 .lg-book-bar .chap-pills { flex-wrap: nowrap; overflow-x: auto; padding: 3px 2px; scrollbar-width: thin; min-width: 0; }
 .lg-book-bar .chap { position: relative; min-width: 30px; height: 30px; font-size: 13px; flex: none; }
+/* A bar that scrolls fades at whichever end has more chapters to show
+   (logia.js sets data-more); a short book wraps onto two rows instead. */
+.lg-book-bar .chap-pills[data-more="end"] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+.lg-book-bar .chap-pills[data-more="start"] { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.lg-book-bar .chap-pills[data-more="both"] { -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+@media (min-width: 720px) {
+  .lg-book-bar-wrap .chap-pills { display: grid; grid-template-columns: repeat(var(--per-row), auto); justify-content: start;
+    overflow: visible; -webkit-mask-image: none; mask-image: none; }
+}
 .lg-toc-book a { align-items: center; }
 .lg-toc-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .lg-toc-facts { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -1298,6 +1382,10 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
     padding: 2px 16px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
   .lg-try::-webkit-scrollbar { display: none; }
   .lg-try > * { flex: none; white-space: nowrap; scroll-snap-align: start; }
+  /* No snapping (it scrolled the row past the gutter on load), and "Try"
+     stays in view as the chips scroll under it. */
+  .lg-try { scroll-snap-type: none; }
+  .lg-try > span:first-child { position: sticky; left: -16px; z-index: 1; margin-left: -16px; padding: 0 8px 0 16px; background: var(--bg); }
 }
 
 /* Home: the verse card's tabs, a voice that opens in place, and the
@@ -1330,11 +1418,20 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-door > span { font-size: 14px; color: var(--muted); }
 .lg-door .lg-door-go { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; color: var(--accent); font-weight: 600; }
 /* Home: chapter pills shaded by how much was written on each chapter */
-.chap.lg-has.lg-heat-0 { background: color-mix(in srgb, var(--gold) 14%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 45%, var(--bg)); color: var(--text); }
-.chap.lg-has.lg-heat-1 { background: color-mix(in srgb, var(--gold) 28%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 62%, var(--bg)); color: var(--text); }
-.chap.lg-has.lg-heat-2 { background: color-mix(in srgb, var(--gold) 40%, var(--bg)); border-color: color-mix(in srgb, var(--gold) 75%, var(--bg)); color: var(--text); }
-.chap.lg-has.lg-heat-3 { background: var(--lg-gold-ink); border-color: var(--lg-gold-ink); color: var(--bg); }
-.chap.lg-has.lg-heat-4 { background: color-mix(in srgb, var(--gold) 40%, var(--text)); border-color: color-mix(in srgb, var(--gold) 40%, var(--text)); color: var(--bg); }
+/* The heat ramp, checked in all five themes: three washes of gold over the
+   page, then two deep steps toward the text colour (a dark gold on the light
+   themes, a pale one on the dark), so neighbouring steps stay apart and every
+   number keeps at least 4.5:1. The number flips to the page colour on the two
+   deep steps, and on step 2 in the contrast theme. */
+:root { --lg-heat-end: color-mix(in oklab, var(--gold) 58%, var(--text)); }
+.chap.lg-has.lg-heat-0 { --h: color-mix(in oklab, var(--gold) 18%, var(--bg)); }
+.chap.lg-has.lg-heat-1 { --h: color-mix(in oklab, var(--gold) 36%, var(--bg)); }
+.chap.lg-has.lg-heat-2 { --h: color-mix(in oklab, var(--gold) 50%, var(--bg)); }
+.chap.lg-has.lg-heat-3 { --h: color-mix(in oklab, var(--lg-heat-end) 88%, var(--bg)); color: var(--bg); }
+.chap.lg-has.lg-heat-4 { --h: var(--lg-heat-end); color: var(--bg); }
+.chap.lg-has[class*="lg-heat-"] { background: var(--h); border-color: color-mix(in oklab, var(--lg-heat-end) 30%, var(--h)); }
+.chap.lg-has.lg-heat-0, .chap.lg-has.lg-heat-1, .chap.lg-has.lg-heat-2 { color: var(--text); }
+:root[data-theme="contrast"] .chap.lg-has.lg-heat-2 { color: var(--bg); }
 .chap.lg-has[class*="lg-heat-"]:hover { border-color: var(--accent); }
 
 /* Home: the verses with the most excerpts */
@@ -1366,3 +1463,63 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .cx-nav .cx-listen[hidden] { display: none; }
 .cx-nav .cx-listen[aria-pressed="true"] { border-color: var(--lg-gold-ink); color: var(--lg-gold-ink); }
 .cx-card.cx-speaking { background: color-mix(in srgb, var(--gold) 9%, transparent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 9%, transparent); border-radius: 2px; }
+
+/* Where the churches differ (/differ/): the traditions present, then every voice */
+.lg-differ-families { list-style: none; padding: 0; margin: 12px 0 18px; display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-differ-families li { border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); padding: 4px 10px; font-size: 14px; }
+.lg-differ-families b { font-weight: 600; margin-right: 4px; }
+.lg-differ-voices { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.lg-differ-voice { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); padding: 14px 16px; min-width: 0; }
+.lg-differ-voice p { margin: 0 0 6px; }
+.lg-differ-voice blockquote { margin: 8px 0; font-family: var(--read-font); }
+.lg-differ-who b a { color: inherit; }
+.lg-differ-index { padding-left: 20px; }
+.lg-differ-index li { margin-bottom: 8px; }
+.lg-differ .lg-block .prose, .lg-differ > .prose { padding-top: 0; }
+/* Creeds and councils (/creeds/) */
+.lg-creed-list { padding-left: 20px; }
+.lg-creed-list li { margin-bottom: 8px; }
+.lg-creed-sec { margin: 0 0 18px; scroll-margin-top: calc(var(--header-h) + 16px); }
+.lg-creed-sec .lg-creed-label { font-size: 17px; font-family: var(--sans); font-weight: 600; margin: 24px 0 6px; }
+/* A work page's top, set like the printed edition's title page: centred,
+   the author in small capitals, a short rule, then the imprint. */
+.lg-titlepage { text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;
+  padding: 28px 16px 24px; border-top: 3px double var(--line-strong); border-bottom: 3px double var(--line-strong); }
+.lg-titlepage h1 { text-wrap: balance; margin-left: auto; margin-right: auto; }
+.lg-titlepage .lg-tp-by { font-variant: small-caps; letter-spacing: .06em; font-size: 20px; margin: 10px auto 0; }
+.lg-tp-imprint { margin: 16px auto 0; max-width: 34em; font-family: var(--serif); font-size: 15.5px; line-height: 1.5; color: var(--muted);
+  font-variant-numeric: oldstyle-nums; }
+.lg-tp-imprint::before { content: ""; display: block; width: 64px; height: 1px; margin: 0 auto 14px; background: var(--line-strong); }
+.lg-titlepage .actions { justify-content: center; margin-top: 18px; }
+/* Running heads ("Homily XXV") are the book's own place marks, set in small
+   capitals; quoted lemmas keep their italic. */
+.lg-lemma.lg-runhead, .cx-lemma.cx-runhead { font-style: normal; font-variant: small-caps; letter-spacing: .05em; font-size: .92em; }
+/* Selected text: a soft gold wash with the body colour, in every theme;
+   the contrast theme keeps the system's own highlight. */
+::selection { background: color-mix(in oklab, var(--gold) 34%, var(--bg)); color: var(--text); }
+:root[data-theme="contrast"] ::selection { background: Highlight; color: HighlightText; }
+/* Home, "The voices, so far": one row per era, its names flowing inline,
+   so a short era doesn't leave a blank column beside a long one. */
+.lg-era-rows section { display: grid; grid-template-columns: 11em minmax(0, 1fr); gap: 4px 24px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--line); }
+.lg-era-rows section:last-child { border-bottom: 1px solid var(--line); }
+.lg-era-rows h3 { margin: 0; }
+.lg-people-flow { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.lg-people-flow li { border: 0; }
+.lg-people-flow a { padding: 2px 0; gap: 0 7px; }
+@media (max-width: 640px) { .lg-era-rows section { grid-template-columns: 1fr; } }
+/* On a narrow phone the reference keeps the room when Listen is shown. */
+@media (max-width: 420px) { .cx-listen:not([hidden]) ~ .cx-pos { display: none; } }
+/* Verse pages: a long excerpt folded to eight lines (web/logia.js). */
+.lg-folded { max-height: var(--fold, 13em); overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent); mask-image: linear-gradient(to bottom, #000 62%, transparent); }
+.lg-unfold { margin: 2px 0 6px; padding: 6px 14px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--bg);
+  color: var(--accent); font: 600 13.5px/1.2 var(--sans); cursor: pointer; }
+.lg-unfold:hover { border-color: var(--accent); }
+@media print { .lg-folded { max-height: none; overflow: visible; -webkit-mask-image: none; mask-image: none; } .lg-unfold { display: none; } }
+/* Verse pages: the verses either side, shaded by how much is said on each. */
+.lg-near { margin: 14px 0 4px; gap: 5px; }
+.lg-near .chap { min-width: 0; height: 30px; padding: 0 9px; border-radius: 8px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.lg-near .chap[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
+/* A page's trail back up the library (build_site.trail). */
+.lg-trail { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; }
+.lg-trail span { color: var(--muted); opacity: .7; }

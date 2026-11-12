@@ -111,15 +111,6 @@
    "status": "detected"
   },
   {
-   "in": "bridges-ecclesiastes.ECC.1.2.2",
-   "at": 552,
-   "text": "Isa. xv. 14",
-   "start": "ISA.15.14",
-   "end": "ISA.15.14",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "bridges-ecclesiastes.ECC.1.2.3",
    "at": 424,
    "text": "v. 4",
@@ -629,15 +620,6 @@
    "text": "iv. 13",
    "start": "SNG.4.13",
    "end": "SNG.4.13",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bridges-ecclesiastes.ECC.2.4-11.2",
-   "at": 908,
-   "text": "2 Sam. xix. 85",
-   "start": "2SA.19.85",
-   "end": "2SA.19.85",
    "found": "pattern",
    "status": "detected"
   },
@@ -3784,24 +3766,6 @@
   },
   {
    "in": "bridges-ecclesiastes.ECC.7.14.3",
-   "at": 160,
-   "text": "Ps. 1. 15",
-   "start": "PSA.1.15",
-   "end": "PSA.1.15",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bridges-ecclesiastes.ECC.7.14.3",
-   "at": 171,
-   "text": "Ixxxvi. 7",
-   "start": "PSA.86.7",
-   "end": "PSA.86.7",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bridges-ecclesiastes.ECC.7.14.3",
    "at": 232,
    "text": "Ps. xciv. 12, 13",
    "start": "PSA.94.12",
@@ -4495,6 +4459,15 @@
   },
   {
    "in": "bridges-ecclesiastes.ECC.7.29.4",
+   "at": 527,
+   "text": "i. 6, 7",
+   "start": "ECC.1.6",
+   "end": "ECC.1.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.4",
    "at": 1068,
    "text": "Isa. ii. 6",
    "start": "ISA.2.6",
@@ -4639,15 +4612,6 @@
   },
   {
    "in": "bridges-ecclesiastes.ECC.8.2.2",
-   "at": 193,
-   "text": "v. 29",
-   "start": "ECC.8.29",
-   "end": "ECC.8.29",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bridges-ecclesiastes.ECC.8.2.2",
    "at": 539,
    "text": "Ps. cxix. 106",
    "start": "PSA.119.106",
@@ -4688,15 +4652,6 @@
    "text": "Rom. xiii. 1-7",
    "start": "ROM.13.1",
    "end": "ROM.13.7",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bridges-ecclesiastes.ECC.8.8.2",
-   "at": 1336,
-   "text": "Dan. iv. 85",
-   "start": "DAN.4.85",
-   "end": "DAN.4.85",
    "found": "pattern",
    "status": "detected"
   },
@@ -5601,15 +5556,6 @@
    "status": "detected"
   },
   {
-   "in": "bridges-ecclesiastes.ECC.9.11.2",
-   "at": 1544,
-   "text": "vv. 35-43",
-   "start": "ECC.9.35",
-   "end": "ECC.9.43",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "bridges-ecclesiastes.ECC.9.13-16.1",
    "at": 940,
    "text": "2 Sam. xx. 14-22",
@@ -5795,15 +5741,6 @@
    "text": "1 Sam. xx. 34, 42",
    "start": "1SA.21.1",
    "end": "1SA.21.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bridges-ecclesiastes.ECC.10.4.1",
-   "at": 1541,
-   "text": "Prov. xvi. 82",
-   "start": "PRO.16.82",
-   "end": "PRO.16.82",
    "found": "pattern",
    "status": "detected"
   },
@@ -6938,15 +6875,6 @@
    "text": "1 Cor. iv. 5",
    "start": "1CO.4.5",
    "end": "1CO.4.5",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "bridges-ecclesiastes.ECC.12.14.1",
-   "at": 928,
-   "text": "v. 22",
-   "start": "ECC.12.22",
-   "end": "ECC.12.22",
    "found": "pattern",
    "status": "detected"
   },

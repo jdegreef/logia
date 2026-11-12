@@ -1,0 +1,41 @@
+{
+ "work": "jfb-psalms",
+ "book": "PSA",
+ "mentions": [
+  {
+   "in": "jfb-psalms.PSA.46.1-12.1",
+   "at": 251,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-psalms.PSA.119.100.1",
+   "at": 110,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-psalms.PSA.119.160.1",
+   "at": 451,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-psalms.PSA.124.8.1",
+   "at": 268,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-psalms.PSA.125.3.1",
+   "at": 587,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  }
+ ]
+}

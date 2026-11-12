@@ -1,0 +1,62 @@
+{
+ "work": "haydock-romans",
+ "book": "ROM",
+ "mentions": [
+  {
+   "in": "haydock-romans.ROM.2.17.1",
+   "at": 379,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.3.10.1",
+   "at": 1060,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.3.17.1",
+   "at": 12,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.5.6.1",
+   "at": 1071,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.8.29.1",
+   "at": 220,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.11.33-36.1",
+   "at": 1129,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.14.5.1",
+   "at": 1133,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-romans.ROM.16.25-27.1",
+   "at": 168,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  }
+ ]
+}

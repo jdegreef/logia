@@ -1363,15 +1363,6 @@
   },
   {
    "in": "westcott.JHN.1.29.1",
-   "at": 415,
-   "text": "v. 3",
-   "start": "JHN.1.3",
-   "end": "JHN.1.3",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.1.29.1",
    "at": 524,
    "text": "v. 47",
    "start": "JHN.1.47",
@@ -3244,15 +3235,6 @@
   },
   {
    "in": "westcott.JHN.2.6.2",
-   "at": 84,
-   "text": "iii. 45",
-   "start": "JHN.3.45",
-   "end": "JHN.3.45",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.2.6.2",
    "at": 94,
    "text": "Heb. i. 3",
    "start": "HEB.1.3",
@@ -4153,15 +4135,6 @@
   },
   {
    "in": "westcott.JHN.2.22.2",
-   "at": 124,
-   "text": "v. 46, 47",
-   "start": "JHN.2.46",
-   "end": "JHN.2.47",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.2.22.2",
    "at": 443,
    "text": "Mark xii. 10",
    "start": "MRK.12.10",
@@ -4193,15 +4166,6 @@
    "text": "viii. 35",
    "start": "ACT.8.35",
    "end": "ACT.8.35",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.2.22.2",
-   "at": 611,
-   "text": "v. 39",
-   "start": "JHN.2.39",
-   "end": "JHN.2.39",
    "found": "pattern",
    "status": "detected"
   },
@@ -4526,6 +4490,15 @@
    "text": "Matt. xii. 24",
    "start": "MAT.12.24",
    "end": "MAT.12.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.3.2.2",
+   "at": 497,
+   "text": "ix. 29",
+   "start": "JHN.9.29",
+   "end": "JHN.9.29",
    "found": "pattern",
    "status": "detected"
   },
@@ -5080,15 +5053,6 @@
   },
   {
    "in": "westcott.JHN.3.15.1",
-   "at": 297,
-   "text": "v. 39",
-   "start": "JHN.3.39",
-   "end": "JHN.3.39",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.3.15.1",
    "at": 787,
    "text": "vv. 16, 36",
    "start": "JHN.3.16",
@@ -5201,15 +5165,6 @@
    "text": "vv. 31",
    "start": "JHN.3.31",
    "end": "JHN.3.31",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.3.17.1",
-   "at": 68,
-   "text": "v. 1",
-   "start": "JHN.3.1",
-   "end": "JHN.3.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -5579,15 +5534,6 @@
    "text": "Mark ii. 15",
    "start": "MRK.2.15",
    "end": "MRK.2.15",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.3.22.1",
-   "at": 369,
-   "text": "Mark viii. 87",
-   "start": "MRK.8.87",
-   "end": "MRK.8.87",
    "found": "pattern",
    "status": "detected"
   },
@@ -6123,15 +6069,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.3.32.1",
-   "at": 827,
-   "text": "v. 39",
-   "start": "JHN.3.39",
-   "end": "JHN.3.39",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.3.33.1",
    "at": 368,
    "text": "Rev. vii. 3",
@@ -6267,24 +6204,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.3.36.1",
-   "at": 989,
-   "text": "v. 24, 39",
-   "start": "JHN.3.24",
-   "end": "JHN.3.24",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.3.36.1",
-   "at": 989,
-   "text": "v. 24, 39",
-   "start": "JHN.3.39",
-   "end": "JHN.3.39",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.3.36.2",
    "at": 121,
    "text": "Eph. ii. 3",
@@ -6299,42 +6218,6 @@
    "text": "1 John iii. 14",
    "start": "1JN.3.14",
    "end": "1JN.3.14",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.4.1.1",
-   "at": 466,
-   "text": "xx. 2, 13, 18, 35",
-   "start": "JHN.20.13",
-   "end": "JHN.20.13",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.4.1.1",
-   "at": 466,
-   "text": "xx. 2, 13, 18, 35",
-   "start": "JHN.20.18",
-   "end": "JHN.20.18",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.4.1.1",
-   "at": 466,
-   "text": "xx. 2, 13, 18, 35",
-   "start": "JHN.20.2",
-   "end": "JHN.20.2",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.4.1.1",
-   "at": 466,
-   "text": "xx. 2, 13, 18, 35",
-   "start": "JHN.20.35",
-   "end": "JHN.20.35",
    "found": "pattern",
    "status": "detected"
   },
@@ -8195,7 +8078,7 @@
   {
    "in": "westcott.JHN.5.9-18.1",
    "at": 188,
-   "text": "vv. 10, 1",
+   "text": "vv. 10",
    "start": "JHN.5.10",
    "end": "JHN.5.10",
    "found": "pattern",
@@ -10461,15 +10344,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.6.14.1",
-   "at": 205,
-   "text": "v. 1",
-   "start": "JHN.6.1",
-   "end": "JHN.6.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.6.15.1",
    "at": 6,
    "text": "Acts xxiii. 10",
@@ -11042,15 +10916,6 @@
    "text": "v. 36",
    "start": "JHN.6.36",
    "end": "JHN.6.36",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.6.27.2",
-   "at": 1081,
-   "text": "v. 5",
-   "start": "JHN.6.5",
-   "end": "JHN.6.5",
    "found": "pattern",
    "status": "detected"
   },
@@ -13693,15 +13558,6 @@
   },
   {
    "in": "westcott.JHN.7.35.2",
-   "at": 590,
-   "text": "Hos. ii. 34",
-   "start": "HOS.2.34",
-   "end": "HOS.2.34",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.7.35.2",
    "at": 796,
    "text": "Deut. xxviii. 35",
    "start": "DEU.28.35",
@@ -14165,15 +14021,6 @@
    "text": "xv. 2",
    "start": "LUK.15.2",
    "end": "LUK.15.2",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.8.5.1",
-   "at": 0,
-   "text": "Deut. xxii. 43",
-   "start": "DEU.22.43",
-   "end": "DEU.22.43",
    "found": "pattern",
    "status": "detected"
   },
@@ -15970,15 +15817,6 @@
   },
   {
    "in": "westcott.JHN.9.9.1",
-   "at": 155,
-   "text": "vv. 1",
-   "start": "JHN.9.1",
-   "end": "JHN.9.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.9.9.1",
    "at": 323,
    "text": "ii. 21",
    "start": "JHN.2.21",
@@ -16604,24 +16442,6 @@
    "text": "Matt. xvii. 25",
    "start": "MAT.17.25",
    "end": "MAT.17.25",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.10.6.1",
-   "at": 55,
-   "text": "xvi. 25, 39",
-   "start": "JHN.16.25",
-   "end": "JHN.16.25",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.10.6.1",
-   "at": 55,
-   "text": "xvi. 25, 39",
-   "start": "JHN.16.39",
-   "end": "JHN.16.39",
    "found": "pattern",
    "status": "detected"
   },
@@ -18049,15 +17869,6 @@
   },
   {
    "in": "westcott.JHN.11.20.1",
-   "at": 21,
-   "text": "vv. 1",
-   "start": "JHN.11.1",
-   "end": "JHN.11.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.11.20.1",
    "at": 237,
    "text": "v. 29",
    "start": "JHN.11.29",
@@ -18805,6 +18616,15 @@
   },
   {
    "in": "westcott.JHN.11.49.1",
+   "at": 624,
+   "text": "xx. 19",
+   "start": "JHN.20.19",
+   "end": "JHN.20.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.11.49.1",
    "at": 639,
    "text": "Mark iv. 35",
    "start": "MRK.4.35",
@@ -19331,15 +19151,6 @@
    "text": "v. 16",
    "start": "JHN.12.16",
    "end": "JHN.12.16",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.12.19.1",
-   "at": 137,
-   "text": "v. 1",
-   "start": "JHN.12.1",
-   "end": "JHN.12.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -20218,15 +20029,6 @@
   },
   {
    "in": "westcott.JHN.12.42.1",
-   "at": 317,
-   "text": "ii. 33",
-   "start": "JHN.2.33",
-   "end": "JHN.2.33",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.12.42.1",
    "at": 423,
    "text": "vii. 13",
    "start": "JHN.7.13",
@@ -20713,15 +20515,6 @@
   },
   {
    "in": "westcott.JHN.13.1-20.1",
-   "at": 319,
-   "text": "v. 1",
-   "start": "JHN.13.1",
-   "end": "JHN.13.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.13.1-20.1",
    "at": 611,
    "text": "vv. 16",
    "start": "JHN.13.16",
@@ -21072,15 +20865,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.13.8.1",
-   "at": 1352,
-   "text": "Ps. 1. 18",
-   "start": "PSA.1.18",
-   "end": "PSA.1.18",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.13.10.1",
    "at": 866,
    "text": "Matt. xv. 2",
@@ -21140,15 +20924,6 @@
    "text": "v. 7",
    "start": "JHN.13.7",
    "end": "JHN.13.7",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.13.12.1",
-   "at": 85,
-   "text": "v. 1",
-   "start": "JHN.13.1",
-   "end": "JHN.13.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -21590,15 +21365,6 @@
    "text": "xx. 22",
    "start": "JHN.20.22",
    "end": "JHN.20.22",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.13.30.1",
-   "at": 179,
-   "text": "v. 43",
-   "start": "JHN.13.43",
-   "end": "JHN.13.43",
    "found": "pattern",
    "status": "detected"
   },
@@ -22360,15 +22126,6 @@
   },
   {
    "in": "westcott.JHN.14.10.2",
-   "at": 654,
-   "text": "v. 36",
-   "start": "JHN.14.36",
-   "end": "JHN.14.36",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.14.10.2",
    "at": 744,
    "text": "v. 19",
    "start": "JHN.14.19",
@@ -22418,15 +22175,6 @@
    "text": "vv. 21, 26",
    "start": "JHN.14.26",
    "end": "JHN.14.26",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.14.12.1",
-   "at": 388,
-   "text": "v. 39",
-   "start": "JHN.14.39",
-   "end": "JHN.14.39",
    "found": "pattern",
    "status": "detected"
   },
@@ -22517,15 +22265,6 @@
    "text": "iv. 10",
    "start": "ACT.4.10",
    "end": "ACT.4.10",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.14.13.3",
-   "at": 151,
-   "text": "v. 43",
-   "start": "JHN.14.43",
-   "end": "JHN.14.43",
    "found": "pattern",
    "status": "detected"
   },
@@ -22891,15 +22630,6 @@
   },
   {
    "in": "westcott.JHN.14.21.1",
-   "at": 108,
-   "text": "v. 38",
-   "start": "JHN.14.38",
-   "end": "JHN.14.38",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.14.21.1",
    "at": 201,
    "text": "v. 15",
    "start": "JHN.14.15",
@@ -23044,15 +22774,6 @@
   },
   {
    "in": "westcott.JHN.14.23.1",
-   "at": 868,
-   "text": "ii. 34",
-   "start": "1JN.2.34",
-   "end": "1JN.2.34",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.14.23.1",
    "at": 953,
    "text": "vv. 17, 25",
    "start": "JHN.14.17",
@@ -23120,15 +22841,6 @@
    "text": "1 John ii. 20, 27",
    "start": "1JN.2.27",
    "end": "1JN.2.27",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.14.26.1",
-   "at": 444,
-   "text": "v. 43",
-   "start": "JHN.14.43",
-   "end": "JHN.14.43",
    "found": "pattern",
    "status": "detected"
   },
@@ -23602,15 +23314,6 @@
   },
   {
    "in": "westcott.JHN.15.3.1",
-   "at": 355,
-   "text": "v. 34",
-   "start": "JHN.15.34",
-   "end": "JHN.15.34",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.15.3.1",
    "at": 363,
    "text": "Eph. v. 26",
    "start": "EPH.5.26",
@@ -23687,15 +23390,6 @@
    "text": "2 Cor. x. 7",
    "start": "2CO.10.7",
    "end": "2CO.10.7",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.15.4.1",
-   "at": 976,
-   "text": "v. 30",
-   "start": "JHN.15.30",
-   "end": "JHN.15.30",
    "found": "pattern",
    "status": "detected"
   },
@@ -23862,24 +23556,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.15.9.2",
-   "at": 520,
-   "text": "v. 30",
-   "start": "JHN.15.30",
-   "end": "JHN.15.30",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.15.9.2",
-   "at": 636,
-   "text": "v. 30",
-   "start": "JHN.15.30",
-   "end": "JHN.15.30",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.15.10.1",
    "at": 678,
    "text": "viii. 29",
@@ -23980,15 +23656,6 @@
   },
   {
    "in": "westcott.JHN.15.12-13.1",
-   "at": 28,
-   "text": "v. 1",
-   "start": "JHN.15.1",
-   "end": "JHN.15.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.15.12-13.1",
    "at": 164,
    "text": "v. 10",
    "start": "JHN.15.10",
@@ -24083,15 +23750,6 @@
    "text": "Isai. xli. 8",
    "start": "ISA.41.8",
    "end": "ISA.41.8",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.15.14.1",
-   "at": 342,
-   "text": "James ii. 43",
-   "start": "JAS.2.43",
-   "end": "JAS.2.43",
    "found": "pattern",
    "status": "detected"
   },
@@ -24260,7 +23918,7 @@
   {
    "in": "westcott.JHN.15.16.2",
    "at": 1050,
-   "text": "vv. 15, 1",
+   "text": "vv. 15",
    "start": "JHN.15.15",
    "end": "JHN.15.15",
    "found": "pattern",
@@ -24314,7 +23972,7 @@
   {
    "in": "westcott.JHN.15.17-27.1",
    "at": 139,
-   "text": "vv. 17, 1",
+   "text": "vv. 17",
    "start": "JHN.15.17",
    "end": "JHN.15.17",
    "found": "pattern",
@@ -24470,24 +24128,6 @@
    "text": "iv. 34",
    "start": "JHN.4.34",
    "end": "JHN.4.34",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.15.21.1",
-   "at": 1159,
-   "text": "v. 24, 30",
-   "start": "JHN.15.24",
-   "end": "JHN.15.24",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.15.21.1",
-   "at": 1159,
-   "text": "v. 24, 30",
-   "start": "JHN.15.30",
-   "end": "JHN.15.30",
    "found": "pattern",
    "status": "detected"
   },
@@ -26373,15 +26013,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.17.3.3",
-   "at": 1027,
-   "text": "v. 36",
-   "start": "JHN.17.36",
-   "end": "JHN.17.36",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.17.4.1",
    "at": 281,
    "text": "v. 27",
@@ -26634,15 +26265,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.17.4.2",
-   "at": 930,
-   "text": "v. 36",
-   "start": "JHN.17.36",
-   "end": "JHN.17.36",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.17.4-5.1",
    "at": 18,
    "text": "v. 1",
@@ -26788,37 +26410,10 @@
   },
   {
    "in": "westcott.JHN.17.7.1",
-   "at": 188,
-   "text": "v. 42",
-   "start": "JHN.17.42",
-   "end": "JHN.17.42",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.17.7.1",
    "at": 225,
    "text": "1 John ii. 4",
    "start": "1JN.2.4",
    "end": "1JN.2.4",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.17.7.1",
-   "at": 602,
-   "text": "v. 19, 30",
-   "start": "JHN.17.19",
-   "end": "JHN.17.19",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.17.7.1",
-   "at": 602,
-   "text": "v. 19, 30",
-   "start": "JHN.17.30",
-   "end": "JHN.17.30",
    "found": "pattern",
    "status": "detected"
   },
@@ -26925,8 +26520,8 @@
    "in": "westcott.JHN.17.11.1",
    "at": 849,
    "text": "v. 25",
-   "start": "1JN.5.25",
-   "end": "1JN.5.25",
+   "start": "JHN.17.25",
+   "end": "JHN.17.25",
    "found": "pattern",
    "status": "detected"
   },
@@ -29947,15 +29542,6 @@
   },
   {
    "in": "westcott.JHN.19.23.1",
-   "at": 106,
-   "text": "v. 1",
-   "start": "JHN.19.1",
-   "end": "JHN.19.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.19.23.1",
    "at": 211,
    "text": "Mark xv. 24",
    "start": "MRK.15.24",
@@ -30198,6 +29784,15 @@
    "status": "detected"
   },
   {
+   "in": "westcott.JHN.19.30.2",
+   "at": 837,
+   "text": "xii. 33",
+   "start": "JHN.12.33",
+   "end": "JHN.12.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "westcott.JHN.19.30.3",
    "at": 394,
    "text": "Luke xxiii. 34",
@@ -30266,15 +29861,6 @@
    "text": "xvi. 33",
    "start": "JHN.16.33",
    "end": "JHN.16.33",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.19.30.3",
-   "at": 905,
-   "text": "vv. 3",
-   "start": "JHN.19.3",
-   "end": "JHN.19.3",
    "found": "pattern",
    "status": "detected"
   },
@@ -31269,15 +30855,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.20.15.1",
-   "at": 370,
-   "text": "v. 1",
-   "start": "JHN.20.1",
-   "end": "JHN.20.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.20.16.1",
    "at": 258,
    "text": "Luke viii. 2",
@@ -31355,15 +30932,6 @@
    "text": "Gen. xxiii. 15",
    "start": "GEN.23.15",
    "end": "GEN.23.15",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.20.17.1",
-   "at": 2223,
-   "text": "v. 1",
-   "start": "JHN.20.1",
-   "end": "JHN.20.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -32565,15 +32133,6 @@
    "status": "detected"
   },
   {
-   "in": "westcott.JHN.21.15.2",
-   "at": 866,
-   "text": "v. 1",
-   "start": "JHN.21.1",
-   "end": "JHN.21.1",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "westcott.JHN.21.15.3",
    "at": 682,
    "text": "v. 17",
@@ -32957,15 +32516,6 @@
    "text": "i. 15",
    "start": "JHN.1.15",
    "end": "JHN.1.15",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "westcott.JHN.21.24.1",
-   "at": 297,
-   "text": "v. 32, 33",
-   "start": "JHN.21.32",
-   "end": "JHN.21.33",
    "found": "pattern",
    "status": "detected"
   },
