@@ -18,6 +18,7 @@ Christian commentaries.
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
 | `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
 | `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
+| `library/creeds/<id>.json` | Creeds, conciliar decrees and confessions, each whole, section by section, with the Scripture each section cites, copied from their CCEL pages by `scripts/extract_creeds.py` (see `docs/references.md`) |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/guides/<lang>/<guide>.json` | Logia's own guides (where the traditions differ, the glossary, how to study a book): short framing notes, never commentary, each `ai_draft` until a named person reviews it; the commentators' words on its pages come from the excerpts |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
@@ -130,6 +131,7 @@ can point at a local API and site with `LOGIA_API_URL` and `LOGIA_OWB_URL`.
 
     python3 scripts/find_refs.py --check      # loci, citations, quotations up to date
     python3 scripts/extract_texts.py --check  # whole texts up to date
+    python3 scripts/extract_creeds.py --check # creeds and confessions up to date
     python3 scripts/validate.py          # the data is well formed
     python3 scripts/verify_sources.py    # every excerpt is in its source
     python3 -m unittest discover -s tests -t .

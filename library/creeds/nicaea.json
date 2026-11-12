@@ -1,0 +1,26 @@
+{
+ "id": "nicaea",
+ "title": "The Creed of Nicaea",
+ "kind": "creed",
+ "tradition": "Shared by the churches",
+ "year": 325,
+ "edition": "Henry R. Percival (ed.), The Seven Ecumenical Councils of the Undivided Church, A Select Library of Nicene and Post-Nicene Fathers, Second Series, Vol. XIV, ed. Philip Schaff and Henry Wace (1900), CCEL edition (from a reprint by T&T Clark, Edinburgh, and Wm. B. Eerdmans, Grand Rapids)",
+ "translation": "Not named in the volume",
+ "published": 1900,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.vii.iii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Henry R. Percival died in 1903; the volume does not name the translator of this document (Percival's preface says the translations are mostly other scholars'), and the 1900 printing should be compared with CCEL's reprint"
+ },
+ "notes": "The creed of the First Council of Nicaea (A.D. 325, as the volume's title page for the council gives it), with its anathemas, as NPNF II.14 prints it under 'The Ecthesis of the Synod at Nice'. The Greek words in brackets are the translation's own.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "vii.iii-p7",
+   "label": "The Ecthesis of the Synod at Nice",
+   "text": "We believe in one God, the Father Almighty, maker of all things visible and invisible; and in one Lord Jesus Christ, the Son of God, the only-begotten of his Father, of the substance of the Father, God of God, Light of Light, very God of very God, begotten (γεννηθέντα), not made, being of one substance (ὁμοούσιον, consubstantialem) with the Father. By whom all things were made, both which be in heaven and in earth. Who for us men and for our salvation came down [from heaven] and was incarnate and was made man. He suffered and the third day he rose again, and ascended into heaven. And he shall come again to judge both the quick and the dead. And [we believe] in the Holy Ghost. And whosoever shall say that there was a time when the Son of God was not (ἤν ποτε ὅτε οὐκ ἦν), or that before he was begotten he was not, or that he was made of things that were not, or that he is of a different substance or essence [from the Father] or that he is a creature, or subject to change or conversion—all that so say, the Catholic and Apostolic Church anathematizes them.",
+   "source": "npnf214.vii.iii.html",
+   "cites": []
+  }
+ ]
+}

@@ -1,0 +1,3523 @@
+{
+ "id": "new-hampshire",
+ "title": "The New Hampshire Baptist Confession",
+ "kind": "confession",
+ "tradition": "Baptist",
+ "year": 1833,
+ "edition": "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. III, The Evangelical Protestant Creeds, with Translations (New York: Harper & Brothers, 1877), CCEL edition (from a printing marked 'Fourth Edition—Revised and Enlarged', Baker Book House paperback, Grand Rapids, 1977, reprinted by arrangement with Harper and Row; copyright 1877 by Harper & Brothers, 1905 and 1919 by David S. Schaff)",
+ "translation": null,
+ "published": 1877,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/creeds3.v.ii.ii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Philip Schaff died in 1893; CCEL transcribes a later printing of Schaff, revised by David S. Schaff (copyright 1905 and 1919) and holding matter added up to 1928; confirm against a scan of the 1877 first edition that this document reads the same there, and David S. Schaff's dates if a revision of his is in it"
+ },
+ "notes": "The Declaration of Faith in eighteen articles, drawn up by John Newton Brown about 1833, as Schaff prints it. The proof texts are Schaff's footnotes to each clause, kept as cites with \"note\": true where CCEL marks them; which edition of the Confession they follow is to confirm.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "v.ii.ii-p3",
+   "label": "I. OF THE SCRIPTURES",
+   "text": "We believe that the Holy Bible was written by men divinely inspired, and is a perfect treasure of heavenly instruction; that it has God for its author, salvation for its end, and truth without any mixture of error for its matter; that it reveals the principles by which God will judge us; and therefore is, and shall remain to the end of the world, the true centre of Christian union, and the supreme standard by which all human conduct, creeds, and opinions should be tried.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 119,
+     "text": "2 Tim. iii. 16, 17",
+     "start": "2TI.3.16",
+     "end": "2TI.3.17",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "2 Pet. i. 21",
+     "start": "2PE.1.21",
+     "end": "2PE.1.21",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "1 Sam. xxiii. 2",
+     "start": "1SA.23.2",
+     "end": "1SA.23.2",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "Acts i. 16",
+     "start": "ACT.1.16",
+     "end": "ACT.1.16",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "iii. 21",
+     "start": "ACT.3.21",
+     "end": "ACT.3.21",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "John x. 35",
+     "start": "JHN.10.35",
+     "end": "JHN.10.35",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "Luke xvi. 29–31",
+     "start": "LUK.16.29",
+     "end": "LUK.16.31",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "Psa. cxix. 11",
+     "start": "PSA.119.11",
+     "end": "PSA.119.11",
+     "note": true
+    },
+    {
+     "at": 119,
+     "text": "Rom. iii. 1, 2",
+     "start": "ROM.3.1",
+     "end": "ROM.3.2",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "2 Tim. iii. 15",
+     "start": "2TI.3.15",
+     "end": "2TI.3.15",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "1 Pet. i. 10–12",
+     "start": "1PE.1.10",
+     "end": "1PE.1.12",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "Acts xi. 14",
+     "start": "ACT.11.14",
+     "end": "ACT.11.14",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "Rom. i. 16",
+     "start": "ROM.1.16",
+     "end": "ROM.1.16",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "Mark xvi. 16",
+     "start": "MRK.16.16",
+     "end": "MRK.16.16",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "John v. 38, 39",
+     "start": "JHN.5.38",
+     "end": "JHN.5.39",
+     "note": true
+    },
+    {
+     "at": 229,
+     "text": "Prov. xxx. 5, 6",
+     "start": "PRO.30.5",
+     "end": "PRO.30.6",
+     "note": true
+    },
+    {
+     "at": 229,
+     "text": "John xvii. 17",
+     "start": "JHN.17.17",
+     "end": "JHN.17.17",
+     "note": true
+    },
+    {
+     "at": 229,
+     "text": "Rev. xxii. 18, 19",
+     "start": "REV.22.18",
+     "end": "REV.22.19",
+     "note": true
+    },
+    {
+     "at": 229,
+     "text": "Rom. iii. 4",
+     "start": "ROM.3.4",
+     "end": "ROM.3.4",
+     "note": true
+    },
+    {
+     "at": 288,
+     "text": "Rom. ii. 12",
+     "start": "ROM.2.12",
+     "end": "ROM.2.12",
+     "note": true
+    },
+    {
+     "at": 288,
+     "text": "John xii. 47, 48",
+     "start": "JHN.12.47",
+     "end": "JHN.12.48",
+     "note": true
+    },
+    {
+     "at": 288,
+     "text": "1 Cor. iv. 3, 4",
+     "start": "1CO.4.3",
+     "end": "1CO.4.4",
+     "note": true
+    },
+    {
+     "at": 288,
+     "text": "Luke x. 10–16",
+     "start": "LUK.10.10",
+     "end": "LUK.10.16",
+     "note": true
+    },
+    {
+     "at": 288,
+     "text": "xii. 47, 48",
+     "start": "LUK.12.47",
+     "end": "LUK.12.48",
+     "note": true
+    },
+    {
+     "at": 384,
+     "text": "Phil. iii. 16",
+     "start": "PHP.3.16",
+     "end": "PHP.3.16",
+     "note": true
+    },
+    {
+     "at": 384,
+     "text": "Eph. iv. 3–6",
+     "start": "EPH.4.3",
+     "end": "EPH.4.6",
+     "note": true
+    },
+    {
+     "at": 384,
+     "text": "Phil. ii. 1, 2",
+     "start": "PHP.2.1",
+     "end": "PHP.2.2",
+     "note": true
+    },
+    {
+     "at": 384,
+     "text": "1 Cor. i. 10",
+     "start": "1CO.1.10",
+     "end": "1CO.1.10",
+     "note": true
+    },
+    {
+     "at": 384,
+     "text": "1 Pet. iv. 11",
+     "start": "1PE.4.11",
+     "end": "1PE.4.11",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "1 John iv. 1",
+     "start": "1JN.4.1",
+     "end": "1JN.4.1",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "Isa. viii. 20",
+     "start": "ISA.8.20",
+     "end": "ISA.8.20",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "1 Thess. v. 21",
+     "start": "1TH.5.21",
+     "end": "1TH.5.21",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "2 Cor. xiii. 5",
+     "start": "2CO.13.5",
+     "end": "2CO.13.5",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "Acts xvii. 11",
+     "start": "ACT.17.11",
+     "end": "ACT.17.11",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "1 John iv. 6",
+     "start": "1JN.4.6",
+     "end": "1JN.4.6",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "Eph. vi. 17",
+     "start": "EPH.6.17",
+     "end": "EPH.6.17",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "Psa. cxix. 59, 60",
+     "start": "PSA.119.59",
+     "end": "PSA.119.60",
+     "note": true
+    },
+    {
+     "at": 475,
+     "text": "Phil. i. 9–11",
+     "start": "PHP.1.9",
+     "end": "PHP.1.11",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p5",
+   "label": "II. OF THE TRUE GOD",
+   "text": "We believe that there is one, and only one, living and true God, an infinite, intelligent Spirit, whose name is Jehovah, the Maker and Supreme Ruler of heaven and earth; inexpressibly glorious in holiness, and worthy of all possible honor, confidence, and love; that in the unity of the Godhead there are three persons, the Father, the Son, and the Holy Ghost; equal in every divine perfection, and executing distinct and harmonious offices in the great work of redemption.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 169,
+     "text": "John iv. 24",
+     "start": "JHN.4.24",
+     "end": "JHN.4.24",
+     "note": true
+    },
+    {
+     "at": 169,
+     "text": "Psa. cxlvii. 5",
+     "start": "PSA.147.5",
+     "end": "PSA.147.5",
+     "note": true
+    },
+    {
+     "at": 169,
+     "text": "lxxxiii. 18",
+     "start": "PSA.83.18",
+     "end": "PSA.83.18",
+     "note": true
+    },
+    {
+     "at": 169,
+     "text": "Heb. iii. 4",
+     "start": "HEB.3.4",
+     "end": "HEB.3.4",
+     "note": true
+    },
+    {
+     "at": 169,
+     "text": "Rom. i. 20",
+     "start": "ROM.1.20",
+     "end": "ROM.1.20",
+     "note": true
+    },
+    {
+     "at": 169,
+     "text": "Jer. x. 10",
+     "start": "JER.10.10",
+     "end": "JER.10.10",
+     "note": true
+    },
+    {
+     "at": 205,
+     "text": "Exod. xv. 11",
+     "start": "EXO.15.11",
+     "end": "EXO.15.11",
+     "note": true
+    },
+    {
+     "at": 205,
+     "text": "Isa. vi. 3",
+     "start": "ISA.6.3",
+     "end": "ISA.6.3",
+     "note": true
+    },
+    {
+     "at": 205,
+     "text": "1 Pet. i. 15, 16",
+     "start": "1PE.1.15",
+     "end": "1PE.1.16",
+     "note": true
+    },
+    {
+     "at": 205,
+     "text": "Rev. iv. 6–8",
+     "start": "REV.4.6",
+     "end": "REV.4.8",
+     "note": true
+    },
+    {
+     "at": 261,
+     "text": "Mark xii. 30",
+     "start": "MRK.12.30",
+     "end": "MRK.12.30",
+     "note": true
+    },
+    {
+     "at": 261,
+     "text": "Rev. iv. 11",
+     "start": "REV.4.11",
+     "end": "REV.4.11",
+     "note": true
+    },
+    {
+     "at": 261,
+     "text": "Matt. x. 37",
+     "start": "MAT.10.37",
+     "end": "MAT.10.37",
+     "note": true
+    },
+    {
+     "at": 261,
+     "text": "Jer. ii. 12, 13",
+     "start": "JER.2.12",
+     "end": "JER.2.13",
+     "note": true
+    },
+    {
+     "at": 360,
+     "text": "Matt. xxviii. 19",
+     "start": "MAT.28.19",
+     "end": "MAT.28.19",
+     "note": true
+    },
+    {
+     "at": 360,
+     "text": "John xv. 26",
+     "start": "JHN.15.26",
+     "end": "JHN.15.26",
+     "note": true
+    },
+    {
+     "at": 360,
+     "text": "1 Cor. xii. 4–6",
+     "start": "1CO.12.4",
+     "end": "1CO.12.6",
+     "note": true
+    },
+    {
+     "at": 360,
+     "text": "1 John v. 7",
+     "start": "1JN.5.7",
+     "end": "1JN.5.7",
+     "note": true
+    },
+    {
+     "at": 394,
+     "text": "John x. 30",
+     "start": "JHN.10.30",
+     "end": "JHN.10.30",
+     "note": true
+    },
+    {
+     "at": 394,
+     "text": "v. 17",
+     "start": "JHN.5.17",
+     "end": "JHN.5.17",
+     "note": true
+    },
+    {
+     "at": 394,
+     "text": "xiv. 23",
+     "start": "JHN.14.23",
+     "end": "JHN.14.23",
+     "note": true
+    },
+    {
+     "at": 394,
+     "text": "xvii. 5, 10",
+     "start": "JHN.17.5",
+     "end": "JHN.17.5",
+     "note": true
+    },
+    {
+     "at": 394,
+     "text": "Acts v. 3, 4",
+     "start": "ACT.5.3",
+     "end": "ACT.5.4",
+     "note": true
+    },
+    {
+     "at": 394,
+     "text": "1 Cor. ii. 10, 11",
+     "start": "1CO.2.10",
+     "end": "1CO.2.11",
+     "note": true
+    },
+    {
+     "at": 394,
+     "text": "Phil. ii. 5, 6",
+     "start": "PHP.2.5",
+     "end": "PHP.2.6",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p7",
+   "label": "III. OF THE FALL OF MAN",
+   "text": "We believe that man was created in holiness, under the law of his Maker; but by voluntary transgression fell from that holy and happy state; in consequence of which all mankind are now sinners, not by constraint, but choice; being by nature utterly void of that holiness required by the law of God, positively inclined to evil; and therefore under just condemnation to eternal ruin, without defense or excuse.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 72,
+     "text": "Gen. i. 27",
+     "start": "GEN.1.27",
+     "end": "GEN.1.27",
+     "note": true
+    },
+    {
+     "at": 72,
+     "text": "i. 31",
+     "start": "GEN.1.31",
+     "end": "GEN.1.31",
+     "note": true
+    },
+    {
+     "at": 72,
+     "text": "Eccles. vii. 29",
+     "start": "ECC.7.29",
+     "end": "ECC.7.29",
+     "note": true
+    },
+    {
+     "at": 72,
+     "text": "Acts xvi. 26",
+     "start": "ACT.16.26",
+     "end": "ACT.16.26",
+     "note": true
+    },
+    {
+     "at": 72,
+     "text": "Gen. ii. 16",
+     "start": "GEN.2.16",
+     "end": "GEN.2.16",
+     "note": true
+    },
+    {
+     "at": 140,
+     "text": "Gen. iii. 6–24",
+     "start": "GEN.3.6",
+     "end": "GEN.3.24",
+     "note": true
+    },
+    {
+     "at": 140,
+     "text": "Rom. v. 12",
+     "start": "ROM.5.12",
+     "end": "ROM.5.12",
+     "note": true
+    },
+    {
+     "at": 193,
+     "text": "Rom. v. 19",
+     "start": "ROM.5.19",
+     "end": "ROM.5.19",
+     "note": true
+    },
+    {
+     "at": 193,
+     "text": "John iii. 6",
+     "start": "JHN.3.6",
+     "end": "JHN.3.6",
+     "note": true
+    },
+    {
+     "at": 193,
+     "text": "Psa. li. 5",
+     "start": "PSA.51.5",
+     "end": "PSA.51.5",
+     "note": true
+    },
+    {
+     "at": 193,
+     "text": "Rom. v. 15–19",
+     "start": "ROM.5.15",
+     "end": "ROM.5.19",
+     "note": true
+    },
+    {
+     "at": 193,
+     "text": "viii. 7",
+     "start": "ROM.8.7",
+     "end": "ROM.8.7",
+     "note": true
+    },
+    {
+     "at": 224,
+     "text": "Isa. liii. 6",
+     "start": "ISA.53.6",
+     "end": "ISA.53.6",
+     "note": true
+    },
+    {
+     "at": 224,
+     "text": "Gen. vi. 12",
+     "start": "GEN.6.12",
+     "end": "GEN.6.12",
+     "note": true
+    },
+    {
+     "at": 224,
+     "text": "Rom. iii. 9–18",
+     "start": "ROM.3.9",
+     "end": "ROM.3.18",
+     "note": true
+    },
+    {
+     "at": 382,
+     "text": "Eph. ii. 1–3",
+     "start": "EPH.2.1",
+     "end": "EPH.2.3",
+     "note": true
+    },
+    {
+     "at": 382,
+     "text": "Rom. i. 18",
+     "start": "ROM.1.18",
+     "end": "ROM.1.18",
+     "note": true
+    },
+    {
+     "at": 382,
+     "text": "i. 32",
+     "start": "ROM.1.32",
+     "end": "ROM.1.32",
+     "note": true
+    },
+    {
+     "at": 382,
+     "text": "ii. 1–16",
+     "start": "ROM.2.1",
+     "end": "ROM.2.16",
+     "note": true
+    },
+    {
+     "at": 382,
+     "text": "Gal. iii. 10",
+     "start": "GAL.3.10",
+     "end": "GAL.3.10",
+     "note": true
+    },
+    {
+     "at": 382,
+     "text": "Matt. xx. 15",
+     "start": "MAT.20.15",
+     "end": "MAT.20.15",
+     "note": true
+    },
+    {
+     "at": 409,
+     "text": "Ezek. xviii. 19, 20",
+     "start": "EZK.18.19",
+     "end": "EZK.18.20",
+     "note": true
+    },
+    {
+     "at": 409,
+     "text": "Rom. i. 20",
+     "start": "ROM.1.20",
+     "end": "ROM.1.20",
+     "note": true
+    },
+    {
+     "at": 409,
+     "text": "iii. 19",
+     "start": "ROM.3.19",
+     "end": "ROM.3.19",
+     "note": true
+    },
+    {
+     "at": 409,
+     "text": "Gal. iii. 22",
+     "start": "GAL.3.22",
+     "end": "GAL.3.22",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p9",
+   "label": "IV. OF THE WAY OF SALVATION",
+   "text": "We believe that the salvation of sinners is wholly of grace, through the mediatorial offices of the Son of God; who by the appointment of the Father, freely took upon him our nature, yet without sin; honored the divine law by his personal obedience, and by his death made a full atonement for our sins; that having risen from the dead, he is now enthroned in heaven; and uniting in his wonderful person the tenderest sympathies with divine perfections, he is every way qualified to be a suitable, a compassionate, and an all-sufficient Saviour.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 60,
+     "text": "Eph. ii. 5",
+     "start": "EPH.2.5",
+     "end": "EPH.2.5",
+     "note": true
+    },
+    {
+     "at": 60,
+     "text": "Matt. xviii. 11",
+     "start": "MAT.18.11",
+     "end": "MAT.18.11",
+     "note": true
+    },
+    {
+     "at": 60,
+     "text": "1 John iv. 10",
+     "start": "1JN.4.10",
+     "end": "1JN.4.10",
+     "note": true
+    },
+    {
+     "at": 60,
+     "text": "1 Cor. iii. 5–7",
+     "start": "1CO.3.5",
+     "end": "1CO.3.7",
+     "note": true
+    },
+    {
+     "at": 60,
+     "text": "Acts xv. 11",
+     "start": "ACT.15.11",
+     "end": "ACT.15.11",
+     "note": true
+    },
+    {
+     "at": 111,
+     "text": "John iii. 16",
+     "start": "JHN.3.16",
+     "end": "JHN.3.16",
+     "note": true
+    },
+    {
+     "at": 111,
+     "text": "i. 1–14",
+     "start": "JHN.1.1",
+     "end": "JHN.1.14",
+     "note": true
+    },
+    {
+     "at": 111,
+     "text": "Heb. iv. 14",
+     "start": "HEB.4.14",
+     "end": "HEB.4.14",
+     "note": true
+    },
+    {
+     "at": 111,
+     "text": "xii. 24",
+     "start": "HEB.12.24",
+     "end": "HEB.12.24",
+     "note": true
+    },
+    {
+     "at": 199,
+     "text": "Phil. ii. 6, 7",
+     "start": "PHP.2.6",
+     "end": "PHP.2.7",
+     "note": true
+    },
+    {
+     "at": 199,
+     "text": "Heb. ii. 9",
+     "start": "HEB.2.9",
+     "end": "HEB.2.9",
+     "note": true
+    },
+    {
+     "at": 199,
+     "text": "ii. 14",
+     "start": "HEB.2.14",
+     "end": "HEB.2.14",
+     "note": true
+    },
+    {
+     "at": 199,
+     "text": "2 Cor. v. 21",
+     "start": "2CO.5.21",
+     "end": "2CO.5.21",
+     "note": true
+    },
+    {
+     "at": 249,
+     "text": "Isa. xlii. 21",
+     "start": "ISA.42.21",
+     "end": "ISA.42.21",
+     "note": true
+    },
+    {
+     "at": 249,
+     "text": "Phil. ii. 8",
+     "start": "PHP.2.8",
+     "end": "PHP.2.8",
+     "note": true
+    },
+    {
+     "at": 249,
+     "text": "Gal. iv. 4, 5",
+     "start": "GAL.4.4",
+     "end": "GAL.4.5",
+     "note": true
+    },
+    {
+     "at": 249,
+     "text": "Rom. iii. 21",
+     "start": "ROM.3.21",
+     "end": "ROM.3.21",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "Isa. liii. 4, 5",
+     "start": "ISA.53.4",
+     "end": "ISA.53.5",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "Matt. xx. 28",
+     "start": "MAT.20.28",
+     "end": "MAT.20.28",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "Rom. iv. 25",
+     "start": "ROM.4.25",
+     "end": "ROM.4.25",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "iii. 21–26",
+     "start": "ROM.3.21",
+     "end": "ROM.3.26",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "1 John iv. 10",
+     "start": "1JN.4.10",
+     "end": "1JN.4.10",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "ii. 2",
+     "start": "1JN.2.2",
+     "end": "1JN.2.2",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "1 Cor. xv. 1–3",
+     "start": "1CO.15.1",
+     "end": "1CO.15.3",
+     "note": true
+    },
+    {
+     "at": 302,
+     "text": "Heb. ix. 13–15",
+     "start": "HEB.9.13",
+     "end": "HEB.9.15",
+     "note": true
+    },
+    {
+     "at": 366,
+     "text": "Heb. i. 8",
+     "start": "HEB.1.8",
+     "end": "HEB.1.8",
+     "note": true
+    },
+    {
+     "at": 366,
+     "text": "i. 3",
+     "start": "HEB.1.3",
+     "end": "HEB.1.3",
+     "note": true
+    },
+    {
+     "at": 366,
+     "text": "viii. 1",
+     "start": "HEB.8.1",
+     "end": "HEB.8.1",
+     "note": true
+    },
+    {
+     "at": 366,
+     "text": "Col. iii. 1–4",
+     "start": "COL.3.1",
+     "end": "COL.3.4",
+     "note": true
+    },
+    {
+     "at": 544,
+     "text": "Heb. vii. 25",
+     "start": "HEB.7.25",
+     "end": "HEB.7.25",
+     "note": true
+    },
+    {
+     "at": 544,
+     "text": "Col. ii. 9",
+     "start": "COL.2.9",
+     "end": "COL.2.9",
+     "note": true
+    },
+    {
+     "at": 544,
+     "text": "Heb. ii. 18",
+     "start": "HEB.2.18",
+     "end": "HEB.2.18",
+     "note": true
+    },
+    {
+     "at": 544,
+     "text": "vii. 26",
+     "start": "HEB.7.26",
+     "end": "HEB.7.26",
+     "note": true
+    },
+    {
+     "at": 544,
+     "text": "Psa. lxxxix. 19",
+     "start": "PSA.89.19",
+     "end": "PSA.89.19",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p11",
+   "label": "V. OF JUSTIFICATION",
+   "text": "We believe that the great gospel blessing which Christ secures to such as believe in him is Justification; that Justification includes the pardon of sin, and the promise of eternal life on principles of righteousness; that it is bestowed, not in consideration of any works of righteousness which we have done, but solely through faith in the Redeemer's blood; by virtue of which faith his perfect righteousness is freely imputed to us of God; that it brings us into a state of most blessed peace and favor with God, and secures every other blessing needful for time and eternity.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 54,
+     "text": "John i. 16",
+     "start": "JHN.1.16",
+     "end": "JHN.1.16",
+     "note": true
+    },
+    {
+     "at": 54,
+     "text": "Eph. iii. 8",
+     "start": "EPH.3.8",
+     "end": "EPH.3.8",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "Acts xiii. 39",
+     "start": "ACT.13.39",
+     "end": "ACT.13.39",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "Isa. iii. 11, 12",
+     "start": "ISA.3.11",
+     "end": "ISA.3.12",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "Rom. viii. 1",
+     "start": "ROM.8.1",
+     "end": "ROM.8.1",
+     "note": true
+    },
+    {
+     "at": 153,
+     "text": "Rom. v. 9",
+     "start": "ROM.5.9",
+     "end": "ROM.5.9",
+     "note": true
+    },
+    {
+     "at": 153,
+     "text": "Zech. xiii. 1",
+     "start": "ZEC.13.1",
+     "end": "ZEC.13.1",
+     "note": true
+    },
+    {
+     "at": 153,
+     "text": "Matt. ix. 6",
+     "start": "MAT.9.6",
+     "end": "MAT.9.6",
+     "note": true
+    },
+    {
+     "at": 153,
+     "text": "Acts x. 43",
+     "start": "ACT.10.43",
+     "end": "ACT.10.43",
+     "note": true
+    },
+    {
+     "at": 217,
+     "text": "Rom. v. 17",
+     "start": "ROM.5.17",
+     "end": "ROM.5.17",
+     "note": true
+    },
+    {
+     "at": 217,
+     "text": "Titus iii. 5, 6",
+     "start": "TIT.3.5",
+     "end": "TIT.3.6",
+     "note": true
+    },
+    {
+     "at": 217,
+     "text": "1 Pet. iii. 7",
+     "start": "1PE.3.7",
+     "end": "1PE.3.7",
+     "note": true
+    },
+    {
+     "at": 217,
+     "text": "1 John ii. 25",
+     "start": "1JN.2.25",
+     "end": "1JN.2.25",
+     "note": true
+    },
+    {
+     "at": 217,
+     "text": "Rom. v. 21",
+     "start": "ROM.5.21",
+     "end": "ROM.5.21",
+     "note": true
+    },
+    {
+     "at": 359,
+     "text": "Rom. iv. 4, 5",
+     "start": "ROM.4.4",
+     "end": "ROM.4.5",
+     "note": true
+    },
+    {
+     "at": 359,
+     "text": "v. 21",
+     "start": "ROM.5.21",
+     "end": "ROM.5.21",
+     "note": true
+    },
+    {
+     "at": 359,
+     "text": "vi. 23",
+     "start": "ROM.6.23",
+     "end": "ROM.6.23",
+     "note": true
+    },
+    {
+     "at": 359,
+     "text": "Phil. iii. 7–9",
+     "start": "PHP.3.7",
+     "end": "PHP.3.9",
+     "note": true
+    },
+    {
+     "at": 442,
+     "text": "Rom. v. 19",
+     "start": "ROM.5.19",
+     "end": "ROM.5.19",
+     "note": true
+    },
+    {
+     "at": 442,
+     "text": "iii. 24–26",
+     "start": "ROM.3.24",
+     "end": "ROM.3.26",
+     "note": true
+    },
+    {
+     "at": 442,
+     "text": "iv. 23-25",
+     "start": "ROM.4.23",
+     "end": "ROM.4.25",
+     "note": true
+    },
+    {
+     "at": 442,
+     "text": "1 John ii. 12",
+     "start": "1JN.2.12",
+     "end": "1JN.2.12",
+     "note": true
+    },
+    {
+     "at": 579,
+     "text": "Rom. v. 1, 2",
+     "start": "ROM.5.1",
+     "end": "ROM.5.2",
+     "note": true
+    },
+    {
+     "at": 579,
+     "text": "v. 3",
+     "start": "ROM.5.3",
+     "end": "ROM.5.3",
+     "note": true
+    },
+    {
+     "at": 579,
+     "text": "v. 11",
+     "start": "ROM.5.11",
+     "end": "ROM.5.11",
+     "note": true
+    },
+    {
+     "at": 579,
+     "text": "1 Cor. i. 30, 31",
+     "start": "1CO.1.30",
+     "end": "1CO.1.31",
+     "note": true
+    },
+    {
+     "at": 579,
+     "text": "Matt. vi. 33",
+     "start": "MAT.6.33",
+     "end": "MAT.6.33",
+     "note": true
+    },
+    {
+     "at": 579,
+     "text": "1 Tim. iv. 8",
+     "start": "1TI.4.8",
+     "end": "1TI.4.8",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p13",
+   "label": "VI. OF THE FREENESS OF SALVATION",
+   "text": "We believe that the blessings of salvation are made free to all by the gospel; that it is the immediate duty of all to accept them by a cordial, penitent, and obedient faith; and that nothing prevents the salvation of the greatest sinner on earth but his own inherent depravity and voluntary rejection of the gospel; which rejection involves him in an aggravated condemnation.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 78,
+     "text": "Isa. lv. 1",
+     "start": "ISA.55.1",
+     "end": "ISA.55.1",
+     "note": true
+    },
+    {
+     "at": 78,
+     "text": "Rev. xxii. 17",
+     "start": "REV.22.17",
+     "end": "REV.22.17",
+     "note": true
+    },
+    {
+     "at": 78,
+     "text": "Luke xiv. 17",
+     "start": "LUK.14.17",
+     "end": "LUK.14.17",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "Rom. xvi. 26",
+     "start": "ROM.16.26",
+     "end": "ROM.16.26",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "Mark i. 15",
+     "start": "MRK.1.15",
+     "end": "MRK.1.15",
+     "note": true
+    },
+    {
+     "at": 174,
+     "text": "Rom. i. 15–17",
+     "start": "ROM.1.15",
+     "end": "ROM.1.17",
+     "note": true
+    },
+    {
+     "at": 316,
+     "text": "John v. 40",
+     "start": "JHN.5.40",
+     "end": "JHN.5.40",
+     "note": true
+    },
+    {
+     "at": 316,
+     "text": "Matt. xxiii. 37",
+     "start": "MAT.23.37",
+     "end": "MAT.23.37",
+     "note": true
+    },
+    {
+     "at": 316,
+     "text": "Rom. ix. 32",
+     "start": "ROM.9.32",
+     "end": "ROM.9.32",
+     "note": true
+    },
+    {
+     "at": 316,
+     "text": "Prov. i. 24",
+     "start": "PRO.1.24",
+     "end": "PRO.1.24",
+     "note": true
+    },
+    {
+     "at": 316,
+     "text": "Acts xiii. 46",
+     "start": "ACT.13.46",
+     "end": "ACT.13.46",
+     "note": true
+    },
+    {
+     "at": 376,
+     "text": "John iii. 19",
+     "start": "JHN.3.19",
+     "end": "JHN.3.19",
+     "note": true
+    },
+    {
+     "at": 376,
+     "text": "Matt. xi. 20",
+     "start": "MAT.11.20",
+     "end": "MAT.11.20",
+     "note": true
+    },
+    {
+     "at": 376,
+     "text": "Luke xix. 27",
+     "start": "LUK.19.27",
+     "end": "LUK.19.27",
+     "note": true
+    },
+    {
+     "at": 376,
+     "text": "2 Thess. i. 8",
+     "start": "2TH.1.8",
+     "end": "2TH.1.8",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p15",
+   "label": "VII. OF GRACE IN REGENERATION",
+   "text": "We believe that, in order to be saved, sinners must be regenerated, or born again; that regeneration consists in giving a holy disposition to the mind; that it is effected in a manner above our comprehension by the power of the Holy Spirit, in connection with divine truth, so as to secure our voluntary obedience to the gospel; and that its proper evidence appears in the holy fruits of repentance, and faith, and newness of life.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 82,
+     "text": "John iii. 3",
+     "start": "JHN.3.3",
+     "end": "JHN.3.3",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "iii. 6, 7",
+     "start": "JHN.3.6",
+     "end": "JHN.3.7",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "1 Cor. i. 14",
+     "start": "1CO.1.14",
+     "end": "1CO.1.14",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "Rev. viii. 7–9",
+     "start": "REV.8.7",
+     "end": "REV.8.9",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "xxi. 27",
+     "start": "REV.21.27",
+     "end": "REV.21.27",
+     "note": true
+    },
+    {
+     "at": 151,
+     "text": "2 Cor. v. 17",
+     "start": "2CO.5.17",
+     "end": "2CO.5.17",
+     "note": true
+    },
+    {
+     "at": 151,
+     "text": "Ezek. xxxvi. 26",
+     "start": "EZK.36.26",
+     "end": "EZK.36.26",
+     "note": true
+    },
+    {
+     "at": 151,
+     "text": "Deut. xxx. 6",
+     "start": "DEU.30.6",
+     "end": "DEU.30.6",
+     "note": true
+    },
+    {
+     "at": 151,
+     "text": "Rom. ii. 28, 29",
+     "start": "ROM.2.28",
+     "end": "ROM.2.29",
+     "note": true
+    },
+    {
+     "at": 151,
+     "text": "v. 5",
+     "start": "ROM.5.5",
+     "end": "ROM.5.5",
+     "note": true
+    },
+    {
+     "at": 151,
+     "text": "1 John iv. 7",
+     "start": "1JN.4.7",
+     "end": "1JN.4.7",
+     "note": true
+    },
+    {
+     "at": 273,
+     "text": "John iii. 8",
+     "start": "JHN.3.8",
+     "end": "JHN.3.8",
+     "note": true
+    },
+    {
+     "at": 273,
+     "text": "i. 13",
+     "start": "JHN.1.13",
+     "end": "JHN.1.13",
+     "note": true
+    },
+    {
+     "at": 273,
+     "text": "James i. 16-18",
+     "start": "JAS.1.16",
+     "end": "JAS.1.18",
+     "note": true
+    },
+    {
+     "at": 273,
+     "text": "1 Cor. i. 30",
+     "start": "1CO.1.30",
+     "end": "1CO.1.30",
+     "note": true
+    },
+    {
+     "at": 273,
+     "text": "Phil. ii. 13",
+     "start": "PHP.2.13",
+     "end": "PHP.2.13",
+     "note": true
+    },
+    {
+     "at": 328,
+     "text": "1 Pet. i. 22-25",
+     "start": "1PE.1.22",
+     "end": "1PE.1.25",
+     "note": true
+    },
+    {
+     "at": 328,
+     "text": "1 John v. 1",
+     "start": "1JN.5.1",
+     "end": "1JN.5.1",
+     "note": true
+    },
+    {
+     "at": 328,
+     "text": "Eph. iv. 20–24",
+     "start": "EPH.4.20",
+     "end": "EPH.4.24",
+     "note": true
+    },
+    {
+     "at": 328,
+     "text": "Col. iii. 9–11",
+     "start": "COL.3.9",
+     "end": "COL.3.11",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "Eph. v. 9",
+     "start": "EPH.5.9",
+     "end": "EPH.5.9",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "Rom. viii. 9",
+     "start": "ROM.8.9",
+     "end": "ROM.8.9",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "Gal. v. 16–23",
+     "start": "GAL.5.16",
+     "end": "GAL.5.23",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "Eph. iii. 14–21",
+     "start": "EPH.3.14",
+     "end": "EPH.3.21",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "Matt. iii. 8–10",
+     "start": "MAT.3.8",
+     "end": "MAT.3.10",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "vii. 20",
+     "start": "MAT.7.20",
+     "end": "MAT.7.20",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "1 John v. 4, 18",
+     "start": "1JN.5.4",
+     "end": "1JN.5.4",
+     "note": true
+    },
+    {
+     "at": 431,
+     "text": "1 John v. 4, 18",
+     "start": "1JN.5.18",
+     "end": "1JN.5.18",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p17",
+   "label": "VIII. OF REPENTANCE AND FAITH",
+   "text": "We believe that Repentance and Faith are sacred duties, and also inseparable graces, wrought in our souls by the regenerating Spirit of God; whereby being deeply convinced of our guilt, danger, and helplessness, and of the way of salvation by Christ, we turn to God with unfeigned contrition, confession, and supplication for mercy; at the same time heartily receiving the Lord Jesus Christ as our Prophet, Priest, and King, and relying on him alone as the only and all-sufficient Saviour.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 140,
+     "text": "Mark i. 15",
+     "start": "MRK.1.15",
+     "end": "MRK.1.15",
+     "note": true
+    },
+    {
+     "at": 140,
+     "text": "Acts xi. 18",
+     "start": "ACT.11.18",
+     "end": "ACT.11.18",
+     "note": true
+    },
+    {
+     "at": 140,
+     "text": "Eph. ii. 8",
+     "start": "EPH.2.8",
+     "end": "EPH.2.8",
+     "note": true
+    },
+    {
+     "at": 140,
+     "text": "1 John v. 1",
+     "start": "1JN.5.1",
+     "end": "1JN.5.1",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "John xvi. 8",
+     "start": "JHN.16.8",
+     "end": "JHN.16.8",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Acts ii. 37, 38",
+     "start": "ACT.2.37",
+     "end": "ACT.2.38",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "xvi. 30, 31",
+     "start": "ACT.16.30",
+     "end": "ACT.16.31",
+     "note": true
+    },
+    {
+     "at": 332,
+     "text": "Luke xviii. 13",
+     "start": "LUK.18.13",
+     "end": "LUK.18.13",
+     "note": true
+    },
+    {
+     "at": 332,
+     "text": "xv. 18-21",
+     "start": "LUK.15.18",
+     "end": "LUK.15.21",
+     "note": true
+    },
+    {
+     "at": 332,
+     "text": "James iv. 7–10",
+     "start": "JAS.4.7",
+     "end": "JAS.4.10",
+     "note": true
+    },
+    {
+     "at": 332,
+     "text": "2 Cor. vii. 11",
+     "start": "2CO.7.11",
+     "end": "2CO.7.11",
+     "note": true
+    },
+    {
+     "at": 332,
+     "text": "Rom. x. 12, 13",
+     "start": "ROM.10.12",
+     "end": "ROM.10.13",
+     "note": true
+    },
+    {
+     "at": 489,
+     "text": "Rom. x. 9–11",
+     "start": "ROM.10.9",
+     "end": "ROM.10.11",
+     "note": true
+    },
+    {
+     "at": 489,
+     "text": "Acts iii. 22, 23",
+     "start": "ACT.3.22",
+     "end": "ACT.3.23",
+     "note": true
+    },
+    {
+     "at": 489,
+     "text": "Heb. iv. 14",
+     "start": "HEB.4.14",
+     "end": "HEB.4.14",
+     "note": true
+    },
+    {
+     "at": 489,
+     "text": "Psa. ii. 6",
+     "start": "PSA.2.6",
+     "end": "PSA.2.6",
+     "note": true
+    },
+    {
+     "at": 489,
+     "text": "Heb. i. 8",
+     "start": "HEB.1.8",
+     "end": "HEB.1.8",
+     "note": true
+    },
+    {
+     "at": 489,
+     "text": "viii. 25",
+     "start": "HEB.8.25",
+     "end": "HEB.8.25",
+     "note": true
+    },
+    {
+     "at": 489,
+     "text": "2 Tim. i. 12",
+     "start": "2TI.1.12",
+     "end": "2TI.1.12",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p19",
+   "label": "IX. OF GOD'S PURPOSE OF GRACE",
+   "text": "We believe that Election is the eternal purpose of God, according to which he graciously regenerates, sanctifies, and saves sinners; that being perfectly consistent with the free agency of man, it comprehends all the means in connection with the end; that it is a most glorious display of God's sovereign goodness, being infinitely free, wise, holy, and unchangeable; that it utterly excludes boasting, and promotes humility, love, prayer, praise, trust in God, and active imitation of his free mercy; that it encourages the use of means in the highest degree; that it may be ascertained by its effects in all who truly believe the gospel; that it is the foundation of Christian assurance; and that to ascertain it with regard to ourselves demands and deserves the utmost diligence.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 132,
+     "text": "2 Tim. i. 8, 9",
+     "start": "2TI.1.8",
+     "end": "2TI.1.9",
+     "note": true
+    },
+    {
+     "at": 132,
+     "text": "Eph. i. 3–14",
+     "start": "EPH.1.3",
+     "end": "EPH.1.14",
+     "note": true
+    },
+    {
+     "at": 132,
+     "text": "1 Pet. i. 1, 2",
+     "start": "1PE.1.1",
+     "end": "1PE.1.2",
+     "note": true
+    },
+    {
+     "at": 132,
+     "text": "Rom. xi. 5, 6",
+     "start": "ROM.11.5",
+     "end": "ROM.11.6",
+     "note": true
+    },
+    {
+     "at": 132,
+     "text": "John xv. 15",
+     "start": "JHN.15.15",
+     "end": "JHN.15.15",
+     "note": true
+    },
+    {
+     "at": 132,
+     "text": "1 John iv. 19",
+     "start": "1JN.4.19",
+     "end": "1JN.4.19",
+     "note": true
+    },
+    {
+     "at": 132,
+     "text": "Hos. xii. 9",
+     "start": "HOS.12.9",
+     "end": "HOS.12.9",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "2 Thess. ii. 13, 14",
+     "start": "2TH.2.13",
+     "end": "2TH.2.14",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Acts xiii. 48",
+     "start": "ACT.13.48",
+     "end": "ACT.13.48",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "John x. 16",
+     "start": "JHN.10.16",
+     "end": "JHN.10.16",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Matt. xx. 16",
+     "start": "MAT.20.16",
+     "end": "MAT.20.16",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Acts xv. 14",
+     "start": "ACT.15.14",
+     "end": "ACT.15.14",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "Exod. xxxiii. 18, 19",
+     "start": "EXO.33.18",
+     "end": "EXO.33.19",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "Matt. xx. 15",
+     "start": "MAT.20.15",
+     "end": "MAT.20.15",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "Rom. ix. 23, 24",
+     "start": "ROM.9.23",
+     "end": "ROM.9.24",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "Jer. xxxi. 3",
+     "start": "JER.31.3",
+     "end": "JER.31.3",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "Rom. xi. 28, 29",
+     "start": "ROM.11.28",
+     "end": "ROM.11.29",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "James i. 17, 18",
+     "start": "JAS.1.17",
+     "end": "JAS.1.18",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "2 Tim. i. 9",
+     "start": "2TI.1.9",
+     "end": "2TI.1.9",
+     "note": true
+    },
+    {
+     "at": 367,
+     "text": "Rom. xi. 32-36",
+     "start": "ROM.11.32",
+     "end": "ROM.11.36",
+     "note": true
+    },
+    {
+     "at": 560,
+     "text": "2 Tim. ii. 10",
+     "start": "2TI.2.10",
+     "end": "2TI.2.10",
+     "note": true
+    },
+    {
+     "at": 560,
+     "text": "1 Cor. ix. 22",
+     "start": "1CO.9.22",
+     "end": "1CO.9.22",
+     "note": true
+    },
+    {
+     "at": 560,
+     "text": "Rom. viii. 28–30",
+     "start": "ROM.8.28",
+     "end": "ROM.8.30",
+     "note": true
+    },
+    {
+     "at": 560,
+     "text": "John vi. 37–40",
+     "start": "JHN.6.37",
+     "end": "JHN.6.40",
+     "note": true
+    },
+    {
+     "at": 560,
+     "text": "2 Pet. i. 10",
+     "start": "2PE.1.10",
+     "end": "2PE.1.10",
+     "note": true
+    },
+    {
+     "at": 639,
+     "text": "1 Thess. i. 4–10",
+     "start": "1TH.1.4",
+     "end": "1TH.1.10",
+     "note": true
+    },
+    {
+     "at": 689,
+     "text": "Rom. viii. 28–30",
+     "start": "ROM.8.28",
+     "end": "ROM.8.30",
+     "note": true
+    },
+    {
+     "at": 689,
+     "text": "Isa. xlii. 16",
+     "start": "ISA.42.16",
+     "end": "ISA.42.16",
+     "note": true
+    },
+    {
+     "at": 689,
+     "text": "Rom. xi. 29",
+     "start": "ROM.11.29",
+     "end": "ROM.11.29",
+     "note": true
+    },
+    {
+     "at": 782,
+     "text": "2 Pet. i. 10, 11",
+     "start": "2PE.1.10",
+     "end": "2PE.1.11",
+     "note": true
+    },
+    {
+     "at": 782,
+     "text": "Phil. iii. 12",
+     "start": "PHP.3.12",
+     "end": "PHP.3.12",
+     "note": true
+    },
+    {
+     "at": 782,
+     "text": "Heb. vi. 11",
+     "start": "HEB.6.11",
+     "end": "HEB.6.11",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p21",
+   "label": "X. OF SANCTIFICATION",
+   "text": "We believe that Sanctification is the process by which, according to the will of God, we are made partakers of his holiness; that it is a progressive work; that it is begun in regeneration; and that it is carried on in the hearts of believers by the presence and power of the Holy Spirit, the Sealer and Comforter, in the continual use of the appointed means—especially the Word of God, self-examination, self-denial, watchfulness, and prayer.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 124,
+     "text": "1 Thess. iv. 3",
+     "start": "1TH.4.3",
+     "end": "1TH.4.3",
+     "note": true
+    },
+    {
+     "at": 124,
+     "text": "1 Thess. v. 23",
+     "start": "1TH.5.23",
+     "end": "1TH.5.23",
+     "note": true
+    },
+    {
+     "at": 124,
+     "text": "2 Cor. vii. 1",
+     "start": "2CO.7.1",
+     "end": "2CO.7.1",
+     "note": true
+    },
+    {
+     "at": 124,
+     "text": "xiii. 9",
+     "start": "2CO.13.9",
+     "end": "2CO.13.9",
+     "note": true
+    },
+    {
+     "at": 124,
+     "text": "Eph. i. 4",
+     "start": "EPH.1.4",
+     "end": "EPH.1.4",
+     "note": true
+    },
+    {
+     "at": 155,
+     "text": "Prov. iv. 18",
+     "start": "PRO.4.18",
+     "end": "PRO.4.18",
+     "note": true
+    },
+    {
+     "at": 155,
+     "text": "2 Cor. iii. 18",
+     "start": "2CO.3.18",
+     "end": "2CO.3.18",
+     "note": true
+    },
+    {
+     "at": 155,
+     "text": "Heb. vi. 1",
+     "start": "HEB.6.1",
+     "end": "HEB.6.1",
+     "note": true
+    },
+    {
+     "at": 155,
+     "text": "2 Pet. i. 5–8",
+     "start": "2PE.1.5",
+     "end": "2PE.1.8",
+     "note": true
+    },
+    {
+     "at": 155,
+     "text": "Phil. iii. 12–16",
+     "start": "PHP.3.12",
+     "end": "PHP.3.16",
+     "note": true
+    },
+    {
+     "at": 189,
+     "text": "John ii. 29",
+     "start": "JHN.2.29",
+     "end": "JHN.2.29",
+     "note": true
+    },
+    {
+     "at": 189,
+     "text": "Rom. viii. 5",
+     "start": "ROM.8.5",
+     "end": "ROM.8.5",
+     "note": true
+    },
+    {
+     "at": 189,
+     "text": "John iii. 6",
+     "start": "JHN.3.6",
+     "end": "JHN.3.6",
+     "note": true
+    },
+    {
+     "at": 189,
+     "text": "Phil. i. 9–11",
+     "start": "PHP.1.9",
+     "end": "PHP.1.11",
+     "note": true
+    },
+    {
+     "at": 189,
+     "text": "Eph. i. 13, 14",
+     "start": "EPH.1.13",
+     "end": "EPH.1.14",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "Phil. ii. 12, 13",
+     "start": "PHP.2.12",
+     "end": "PHP.2.13",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "Eph. iv. 11, 12",
+     "start": "EPH.4.11",
+     "end": "EPH.4.12",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "1 Pet. ii. 2",
+     "start": "1PE.2.2",
+     "end": "1PE.2.2",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "2 Pet. iii. 18",
+     "start": "2PE.3.18",
+     "end": "2PE.3.18",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "2 Cor. xiii. 5",
+     "start": "2CO.13.5",
+     "end": "2CO.13.5",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "Luke xi. 35",
+     "start": "LUK.11.35",
+     "end": "LUK.11.35",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "ix. 23",
+     "start": "LUK.9.23",
+     "end": "LUK.9.23",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "Matt. xxvi. 41",
+     "start": "MAT.26.41",
+     "end": "MAT.26.41",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "Eph. vi. 18",
+     "start": "EPH.6.18",
+     "end": "EPH.6.18",
+     "note": true
+    },
+    {
+     "at": 443,
+     "text": "iv. 30",
+     "start": "EPH.4.30",
+     "end": "EPH.4.30",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p23",
+   "label": "XI. OF THE PERSEl’ERANCE OF SAINTS",
+   "text": "We believe that such only are real believers as endure unto the end; that their persevering attachment to Christ is the grand mark which distinguishes them from superficial professors; that a special Providence watches over their welfare; and they are kept by the power of God through faith unto salvation.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 68,
+     "text": "John viii. 31",
+     "start": "JHN.8.31",
+     "end": "JHN.8.31",
+     "note": true
+    },
+    {
+     "at": 68,
+     "text": "1 John ii. 27, 28",
+     "start": "1JN.2.27",
+     "end": "1JN.2.28",
+     "note": true
+    },
+    {
+     "at": 68,
+     "text": "iii. 9",
+     "start": "JHN.3.9",
+     "end": "JHN.3.9",
+     "note": true
+    },
+    {
+     "at": 68,
+     "text": "v. 18",
+     "start": "JHN.5.18",
+     "end": "JHN.5.18",
+     "note": true
+    },
+    {
+     "at": 184,
+     "text": "1 John ii. 19",
+     "start": "1JN.2.19",
+     "end": "1JN.2.19",
+     "note": true
+    },
+    {
+     "at": 184,
+     "text": "John xiii. 18",
+     "start": "JHN.13.18",
+     "end": "JHN.13.18",
+     "note": true
+    },
+    {
+     "at": 184,
+     "text": "Matt. xiii. 20, 21",
+     "start": "MAT.13.20",
+     "end": "MAT.13.21",
+     "note": true
+    },
+    {
+     "at": 184,
+     "text": "John vi. 66–69",
+     "start": "JHN.6.66",
+     "end": "JHN.6.69",
+     "note": true
+    },
+    {
+     "at": 184,
+     "text": "Job xvii. 9",
+     "start": "JOB.17.9",
+     "end": "JOB.17.9",
+     "note": true
+    },
+    {
+     "at": 238,
+     "text": "Rom. viii. 28",
+     "start": "ROM.8.28",
+     "end": "ROM.8.28",
+     "note": true
+    },
+    {
+     "at": 238,
+     "text": "Matt. vi. 30–33",
+     "start": "MAT.6.30",
+     "end": "MAT.6.33",
+     "note": true
+    },
+    {
+     "at": 238,
+     "text": "Jer. xxxii. 40",
+     "start": "JER.32.40",
+     "end": "JER.32.40",
+     "note": true
+    },
+    {
+     "at": 238,
+     "text": "Psa. cxxi. 3",
+     "start": "PSA.121.3",
+     "end": "PSA.121.3",
+     "note": true
+    },
+    {
+     "at": 238,
+     "text": "xci. 11, 12",
+     "start": "PSA.91.11",
+     "end": "PSA.91.12",
+     "note": true
+    },
+    {
+     "at": 306,
+     "text": "Phil. i. 6",
+     "start": "PHP.1.6",
+     "end": "PHP.1.6",
+     "note": true
+    },
+    {
+     "at": 306,
+     "text": "ii. 12, 13",
+     "start": "PHP.2.12",
+     "end": "PHP.2.13",
+     "note": true
+    },
+    {
+     "at": 306,
+     "text": "Jude 24, 25",
+     "start": "JUD.1.24",
+     "end": "JUD.1.24",
+     "note": true
+    },
+    {
+     "at": 306,
+     "text": "Heb. i. 14",
+     "start": "HEB.1.14",
+     "end": "HEB.1.14",
+     "note": true
+    },
+    {
+     "at": 306,
+     "text": "2 Kings vi. 16",
+     "start": "2KI.6.16",
+     "end": "2KI.6.16",
+     "note": true
+    },
+    {
+     "at": 306,
+     "text": "Heb. xiii. 5",
+     "start": "HEB.13.5",
+     "end": "HEB.13.5",
+     "note": true
+    },
+    {
+     "at": 306,
+     "text": "1 John iv. 4",
+     "start": "1JN.4.4",
+     "end": "1JN.4.4",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p25",
+   "label": "XII. OF THE HARMONY OF THE LAW AND THE GOSPEL",
+   "text": "We believe that the Law of God is the eternal and unchangeable rule of his moral government; that it is holy, just, and good; and that the inability which the Scriptures ascribe to fallen men to fulfill its precepts arises entirely from their love of sin; to deliver them from winch, and to restore them through a Mediator to unfeigned obedience to the holy Law, is one great end of the Gospel, and of the means of grace connected with the establishment of the visible Church.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 92,
+     "text": "Rom. iii. 31",
+     "start": "ROM.3.31",
+     "end": "ROM.3.31",
+     "note": true
+    },
+    {
+     "at": 92,
+     "text": "Matt. v. 17",
+     "start": "MAT.5.17",
+     "end": "MAT.5.17",
+     "note": true
+    },
+    {
+     "at": 92,
+     "text": "Luke xvi. 17",
+     "start": "LUK.16.17",
+     "end": "LUK.16.17",
+     "note": true
+    },
+    {
+     "at": 92,
+     "text": "Rom. iii. 20",
+     "start": "ROM.3.20",
+     "end": "ROM.3.20",
+     "note": true
+    },
+    {
+     "at": 92,
+     "text": "iv. 15",
+     "start": "ROM.4.15",
+     "end": "ROM.4.15",
+     "note": true
+    },
+    {
+     "at": 125,
+     "text": "Rom. vii. 12",
+     "start": "ROM.7.12",
+     "end": "ROM.7.12",
+     "note": true
+    },
+    {
+     "at": 125,
+     "text": "vii. 7, 14, 22",
+     "start": "ROM.7.7",
+     "end": "ROM.7.7",
+     "note": true
+    },
+    {
+     "at": 125,
+     "text": "Gal. iii. 21",
+     "start": "GAL.3.21",
+     "end": "GAL.3.21",
+     "note": true
+    },
+    {
+     "at": 255,
+     "text": "Rom. viii. 7, 8",
+     "start": "ROM.8.7",
+     "end": "ROM.8.8",
+     "note": true
+    },
+    {
+     "at": 255,
+     "text": "Josh. xxiv. 19",
+     "start": "JOS.24.19",
+     "end": "JOS.24.19",
+     "note": true
+    },
+    {
+     "at": 255,
+     "text": "Jer. xiii. 23",
+     "start": "JER.13.23",
+     "end": "JER.13.23",
+     "note": true
+    },
+    {
+     "at": 255,
+     "text": "John vi. 44",
+     "start": "JHN.6.44",
+     "end": "JHN.6.44",
+     "note": true
+    },
+    {
+     "at": 255,
+     "text": "v. 44",
+     "start": "JHN.5.44",
+     "end": "JHN.5.44",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "Rom. viii. 2, 4",
+     "start": "ROM.8.2",
+     "end": "ROM.8.2",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "Rom. viii. 2, 4",
+     "start": "ROM.8.4",
+     "end": "ROM.8.4",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "x. 4",
+     "start": "ROM.10.4",
+     "end": "ROM.10.4",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "1 Tim. i. 5",
+     "start": "1TI.1.5",
+     "end": "1TI.1.5",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "Heb. viii. 10",
+     "start": "HEB.8.10",
+     "end": "HEB.8.10",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "Jude 20, 21",
+     "start": "JUD.1.20",
+     "end": "JUD.1.20",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "Heb. xii. 14",
+     "start": "HEB.12.14",
+     "end": "HEB.12.14",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "Matt. xvi. 17, 18",
+     "start": "MAT.16.17",
+     "end": "MAT.16.18",
+     "note": true
+    },
+    {
+     "at": 476,
+     "text": "1 Cor. xii. 28",
+     "start": "1CO.12.28",
+     "end": "1CO.12.28",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p27",
+   "label": "XIII. OF A GOSPEL CHURCH",
+   "text": "We believe that a visible Church of Christ is a congregation of baptized believers, associated by covenant in the faith and fellowship of the gospel; observing the ordinances of Christ; governed by his laws, and exercising the gifts, rights, and privileges invested in them by his Word; that its only scriptural officers are Bishops, or Pastors, and Deacons, whose qualifications, claims, and duties are defined in the Epistles to Timothy and Titus.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 83,
+     "text": "1 Cor. i. 1–13",
+     "start": "1CO.1.1",
+     "end": "1CO.1.13",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "Matt. xviii. 17",
+     "start": "MAT.18.17",
+     "end": "MAT.18.17",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "Acts v. 11",
+     "start": "ACT.5.11",
+     "end": "ACT.5.11",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "viii. 1",
+     "start": "ACT.8.1",
+     "end": "ACT.8.1",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "xi. 31",
+     "start": "ACT.11.31",
+     "end": "ACT.11.31",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "1 Cor. iv. 17",
+     "start": "1CO.4.17",
+     "end": "1CO.4.17",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "xiv. 23",
+     "start": "1CO.14.23",
+     "end": "1CO.14.23",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "3 John 9",
+     "start": "3JN.1.9",
+     "end": "3JN.1.9",
+     "note": true
+    },
+    {
+     "at": 83,
+     "text": "1 Tim. iii. 5",
+     "start": "1TI.3.5",
+     "end": "1TI.3.5",
+     "note": true
+    },
+    {
+     "at": 149,
+     "text": "Acts ii. 41, 42",
+     "start": "ACT.2.41",
+     "end": "ACT.2.42",
+     "note": true
+    },
+    {
+     "at": 149,
+     "text": "2 Cor. viii. 5",
+     "start": "2CO.8.5",
+     "end": "2CO.8.5",
+     "note": true
+    },
+    {
+     "at": 149,
+     "text": "Acts ii. 47",
+     "start": "ACT.2.47",
+     "end": "ACT.2.47",
+     "note": true
+    },
+    {
+     "at": 149,
+     "text": "1 Cor. v. 12, 13",
+     "start": "1CO.5.12",
+     "end": "1CO.5.13",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "1 Cor. xi. 2",
+     "start": "1CO.11.2",
+     "end": "1CO.11.2",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "2 Thess. iii. 6",
+     "start": "2TH.3.6",
+     "end": "2TH.3.6",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "Rom. xvi. 17–20",
+     "start": "ROM.16.17",
+     "end": "ROM.16.20",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "1 Cor. xi. 23",
+     "start": "1CO.11.23",
+     "end": "1CO.11.23",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "Matt. xviii. 15–20",
+     "start": "MAT.18.15",
+     "end": "MAT.18.20",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "1 Cor. v. 6",
+     "start": "1CO.5.6",
+     "end": "1CO.5.6",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "2 Cor. ii. 7",
+     "start": "2CO.2.7",
+     "end": "2CO.2.7",
+     "note": true
+    },
+    {
+     "at": 185,
+     "text": "1 Cor. iv. 17",
+     "start": "1CO.4.17",
+     "end": "1CO.4.17",
+     "note": true
+    },
+    {
+     "at": 286,
+     "text": "Eph. iv. 7",
+     "start": "EPH.4.7",
+     "end": "EPH.4.7",
+     "note": true
+    },
+    {
+     "at": 286,
+     "text": "1 Cor. xiv. 12",
+     "start": "1CO.14.12",
+     "end": "1CO.14.12",
+     "note": true
+    },
+    {
+     "at": 286,
+     "text": "Phil. i. 27",
+     "start": "PHP.1.27",
+     "end": "PHP.1.27",
+     "note": true
+    },
+    {
+     "at": 286,
+     "text": "1 Cor. xii. 14",
+     "start": "1CO.12.14",
+     "end": "1CO.12.14",
+     "note": true
+    },
+    {
+     "at": 358,
+     "text": "Phil. i. 1",
+     "start": "PHP.1.1",
+     "end": "PHP.1.1",
+     "note": true
+    },
+    {
+     "at": 358,
+     "text": "Acts xiv. 23",
+     "start": "ACT.14.23",
+     "end": "ACT.14.23",
+     "note": true
+    },
+    {
+     "at": 358,
+     "text": "xv. 22",
+     "start": "ACT.15.22",
+     "end": "ACT.15.22",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p29",
+   "label": "XIV. OF BAPTISM AND THE LORD'S SUPPER",
+   "text": "We believe that Christian Baptism is the immersion in water of a believer, into the name of the Father, and Son, and Holy Ghost; to show forth, in a solemn and beautiful emblem, our faith in the crucified, buried, and risen Saviour, with its effect in our death to sin and resurrection to a new life; that it is prerequisite to the privileges of a Church relation; and to the Lord's Supper, in which the members of the Church, by the sacred use of bread and wine, are to commemorate together the dying love of Christ; proceeded always by solemn self-examination.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 74,
+     "text": "Acts viii. 36–39",
+     "start": "ACT.8.36",
+     "end": "ACT.8.39",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "Matt. iii. 5",
+     "start": "MAT.3.5",
+     "end": "MAT.3.5",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "6",
+     "start": "MAT.3.6",
+     "end": "MAT.3.6",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "John iii. 22, 23",
+     "start": "JHN.3.22",
+     "end": "JHN.3.23",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "iv. 1, 2",
+     "start": "JHN.4.1",
+     "end": "JHN.4.2",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "Matt. xxviii. 19",
+     "start": "MAT.28.19",
+     "end": "MAT.28.19",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "Mark xvi. 16",
+     "start": "MRK.16.16",
+     "end": "MRK.16.16",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "Acts ii. 38",
+     "start": "ACT.2.38",
+     "end": "ACT.2.38",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "viii. 12",
+     "start": "ACT.8.12",
+     "end": "ACT.8.12",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "xvi. 32-34",
+     "start": "ACT.16.32",
+     "end": "ACT.16.34",
+     "note": true
+    },
+    {
+     "at": 74,
+     "text": "xviii. 8",
+     "start": "ACT.18.8",
+     "end": "ACT.18.8",
+     "note": true
+    },
+    {
+     "at": 128,
+     "text": "Matt. xxviii. 10",
+     "start": "MAT.28.10",
+     "end": "MAT.28.10",
+     "note": true
+    },
+    {
+     "at": 128,
+     "text": "Acts x. 47, 48",
+     "start": "ACT.10.47",
+     "end": "ACT.10.48",
+     "note": true
+    },
+    {
+     "at": 128,
+     "text": "Gal. iii. 27, 28",
+     "start": "GAL.3.27",
+     "end": "GAL.3.28",
+     "note": true
+    },
+    {
+     "at": 300,
+     "text": "Rom. vi. 4",
+     "start": "ROM.6.4",
+     "end": "ROM.6.4",
+     "note": true
+    },
+    {
+     "at": 300,
+     "text": "Col. ii. 12",
+     "start": "COL.2.12",
+     "end": "COL.2.12",
+     "note": true
+    },
+    {
+     "at": 300,
+     "text": "1 Pet. iii. 20, 21",
+     "start": "1PE.3.20",
+     "end": "1PE.3.21",
+     "note": true
+    },
+    {
+     "at": 300,
+     "text": "Acts xxii. 16",
+     "start": "ACT.22.16",
+     "end": "ACT.22.16",
+     "note": true
+    },
+    {
+     "at": 517,
+     "text": "1 Cor. xi. 20",
+     "start": "1CO.11.20",
+     "end": "1CO.11.20",
+     "note": true
+    },
+    {
+     "at": 517,
+     "text": "Matt. xxvi. 26–29",
+     "start": "MAT.26.26",
+     "end": "MAT.26.29",
+     "note": true
+    },
+    {
+     "at": 517,
+     "text": "Mark xiv. 22–25",
+     "start": "MRK.14.22",
+     "end": "MRK.14.25",
+     "note": true
+    },
+    {
+     "at": 517,
+     "text": "Luke xxii. 14–20",
+     "start": "LUK.22.14",
+     "end": "LUK.22.20",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p31",
+   "label": "XV. OF THE CHRISTIAN SABBATH",
+   "text": "We believe that the first day of the week is the Lord's Day, or Christian Sabbath; and is to be kept sacred to religious purposes, by abstaining from all secular labor and sinful recreations; by the devout observance of all the means of grace, both private and public; and by preparation for that rest that remaineth for the people of God.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 82,
+     "text": "Acts xx. 7",
+     "start": "ACT.20.7",
+     "end": "ACT.20.7",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "Gen. ii. 3",
+     "start": "GEN.2.3",
+     "end": "GEN.2.3",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "Col. ii. 16, 17",
+     "start": "COL.2.16",
+     "end": "COL.2.17",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "Mark ii. 27",
+     "start": "MRK.2.27",
+     "end": "MRK.2.27",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "John xx. 19",
+     "start": "JHN.20.19",
+     "end": "JHN.20.19",
+     "note": true
+    },
+    {
+     "at": 82,
+     "text": "1 Cor. xvi. 1, 2",
+     "start": "1CO.16.1",
+     "end": "1CO.16.2",
+     "note": true
+    },
+    {
+     "at": 130,
+     "text": "Exod. xx. 8",
+     "start": "EXO.20.8",
+     "end": "EXO.20.8",
+     "note": true
+    },
+    {
+     "at": 130,
+     "text": "Rev. i. 10",
+     "start": "REV.1.10",
+     "end": "REV.1.10",
+     "note": true
+    },
+    {
+     "at": 130,
+     "text": "Psa. cxviii. 24",
+     "start": "PSA.118.24",
+     "end": "PSA.118.24",
+     "note": true
+    },
+    {
+     "at": 191,
+     "text": "Isa. lviii. 13, 14",
+     "start": "ISA.58.13",
+     "end": "ISA.58.14",
+     "note": true
+    },
+    {
+     "at": 191,
+     "text": "lvi. 2–8",
+     "start": "ISA.56.2",
+     "end": "ISA.56.8",
+     "note": true
+    },
+    {
+     "at": 256,
+     "text": "Psa. cxiii. 15",
+     "start": "PSA.113.15",
+     "end": "PSA.113.15",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "Heb. x. 24, 25",
+     "start": "HEB.10.24",
+     "end": "HEB.10.25",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "Acts xi. 26",
+     "start": "ACT.11.26",
+     "end": "ACT.11.26",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "xiii. 44",
+     "start": "ACT.13.44",
+     "end": "ACT.13.44",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "Lev. xix. 30",
+     "start": "LEV.19.30",
+     "end": "LEV.19.30",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "Luke iv. 16",
+     "start": "LUK.4.16",
+     "end": "LUK.4.16",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "Acts xvii. 2, 3",
+     "start": "ACT.17.2",
+     "end": "ACT.17.3",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "Psa. xxvi. 8",
+     "start": "PSA.26.8",
+     "end": "PSA.26.8",
+     "note": true
+    },
+    {
+     "at": 268,
+     "text": "lxxxvii. 3",
+     "start": "PSA.87.3",
+     "end": "PSA.87.3",
+     "note": true
+    },
+    {
+     "at": 339,
+     "text": "Heb. iv. 3–11",
+     "start": "HEB.4.3",
+     "end": "HEB.4.11",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p33",
+   "label": "XVI. OF CIVIL GOl’ERNMENT",
+   "text": "We believe that civil government is of divine appointment, for the interests and good order of human society; and that magistrates are to be prayed for, conscientiously honored and obeyed; except only in things opposed to the will of our Lord Jesus Christ, who is the only Lord of the conscience, and the Prince of the kings of the earth.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 109,
+     "text": "Rom. xiii. 1–7",
+     "start": "ROM.13.1",
+     "end": "ROM.13.7",
+     "note": true
+    },
+    {
+     "at": 109,
+     "text": "Deut. xvi. 18",
+     "start": "DEU.16.18",
+     "end": "DEU.16.18",
+     "note": true
+    },
+    {
+     "at": 109,
+     "text": "1 Sam. xxiii. 3",
+     "start": "1SA.23.3",
+     "end": "1SA.23.3",
+     "note": true
+    },
+    {
+     "at": 109,
+     "text": "Exod. xviii. 23",
+     "start": "EXO.18.23",
+     "end": "EXO.18.23",
+     "note": true
+    },
+    {
+     "at": 109,
+     "text": "Jer. xxx. 21",
+     "start": "JER.30.21",
+     "end": "JER.30.21",
+     "note": true
+    },
+    {
+     "at": 188,
+     "text": "Matt. xxii. 21",
+     "start": "MAT.22.21",
+     "end": "MAT.22.21",
+     "note": true
+    },
+    {
+     "at": 188,
+     "text": "Titus iii. 1",
+     "start": "TIT.3.1",
+     "end": "TIT.3.1",
+     "note": true
+    },
+    {
+     "at": 188,
+     "text": "1 Pet. ii. 13",
+     "start": "1PE.2.13",
+     "end": "1PE.2.13",
+     "note": true
+    },
+    {
+     "at": 188,
+     "text": "1 Tim. ii. 1-8",
+     "start": "1TI.2.1",
+     "end": "1TI.2.8",
+     "note": true
+    },
+    {
+     "at": 256,
+     "text": "Acts v. 29",
+     "start": "ACT.5.29",
+     "end": "ACT.5.29",
+     "note": true
+    },
+    {
+     "at": 256,
+     "text": "Matt. x. 28",
+     "start": "MAT.10.28",
+     "end": "MAT.10.28",
+     "note": true
+    },
+    {
+     "at": 256,
+     "text": "Dan. iii. 15–18",
+     "start": "DAN.3.15",
+     "end": "DAN.3.18",
+     "note": true
+    },
+    {
+     "at": 256,
+     "text": "vi. 7–10",
+     "start": "DAN.6.7",
+     "end": "DAN.6.10",
+     "note": true
+    },
+    {
+     "at": 256,
+     "text": "Acts iv. 18–20",
+     "start": "ACT.4.18",
+     "end": "ACT.4.20",
+     "note": true
+    },
+    {
+     "at": 338,
+     "text": "Matt. xxiii. 10",
+     "start": "MAT.23.10",
+     "end": "MAT.23.10",
+     "note": true
+    },
+    {
+     "at": 338,
+     "text": "Rom. xiv. 4",
+     "start": "ROM.14.4",
+     "end": "ROM.14.4",
+     "note": true
+    },
+    {
+     "at": 338,
+     "text": "Rev. xix. 16",
+     "start": "REV.19.16",
+     "end": "REV.19.16",
+     "note": true
+    },
+    {
+     "at": 338,
+     "text": "Psa.lxxii. 1l",
+     "start": "PSA.72.1",
+     "end": "PSA.72.1",
+     "note": true
+    },
+    {
+     "at": 338,
+     "text": "Rom. xiv. 9–13",
+     "start": "ROM.14.9",
+     "end": "ROM.14.13",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p35",
+   "label": "XVII. OF THE RIGHTEOUS AND THE WICKED",
+   "text": "We believe that there is a radical and essential difference between the righteous and the wicked; that such only as through faith are justified in the name of the Lord Jesus, and sanctified by the Spirit of our God, are truly righteous in his esteem; while all such as continue in impenitence and unbelief are in his sight wicked, and under the curse; and this distinction holds among men both in and after death.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 97,
+     "text": "Mal. iii. 18",
+     "start": "MAL.3.18",
+     "end": "MAL.3.18",
+     "note": true
+    },
+    {
+     "at": 97,
+     "text": "Prov. xii. 26",
+     "start": "PRO.12.26",
+     "end": "PRO.12.26",
+     "note": true
+    },
+    {
+     "at": 97,
+     "text": "Isa. v. 20",
+     "start": "ISA.5.20",
+     "end": "ISA.5.20",
+     "note": true
+    },
+    {
+     "at": 97,
+     "text": "Gen. xviii. 23",
+     "start": "GEN.18.23",
+     "end": "GEN.18.23",
+     "note": true
+    },
+    {
+     "at": 97,
+     "text": "Jer. xv. 19",
+     "start": "JER.15.19",
+     "end": "JER.15.19",
+     "note": true
+    },
+    {
+     "at": 97,
+     "text": "Acts x. 34, 35",
+     "start": "ACT.10.34",
+     "end": "ACT.10.35",
+     "note": true
+    },
+    {
+     "at": 97,
+     "text": "Rom. vi. 16",
+     "start": "ROM.6.16",
+     "end": "ROM.6.16",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Rom. i. 17",
+     "start": "ROM.1.17",
+     "end": "ROM.1.17",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "vii. 6",
+     "start": "ROM.7.6",
+     "end": "ROM.7.6",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "1 John ii. 29",
+     "start": "1JN.2.29",
+     "end": "1JN.2.29",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "iii. 7",
+     "start": "JHN.3.7",
+     "end": "JHN.3.7",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Rom. vi. 18, 22",
+     "start": "ROM.6.18",
+     "end": "ROM.6.18",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Rom. vi. 18, 22",
+     "start": "ROM.6.22",
+     "end": "ROM.6.22",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "1 Cor. xi. 32",
+     "start": "1CO.11.32",
+     "end": "1CO.11.32",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "Prov. xi. 31",
+     "start": "PRO.11.31",
+     "end": "PRO.11.31",
+     "note": true
+    },
+    {
+     "at": 250,
+     "text": "1 Pet. iv. 17, 18",
+     "start": "1PE.4.17",
+     "end": "1PE.4.18",
+     "note": true
+    },
+    {
+     "at": 351,
+     "text": "1 John v. 19",
+     "start": "1JN.5.19",
+     "end": "1JN.5.19",
+     "note": true
+    },
+    {
+     "at": 351,
+     "text": "Gal. iii. 10",
+     "start": "GAL.3.10",
+     "end": "GAL.3.10",
+     "note": true
+    },
+    {
+     "at": 351,
+     "text": "John iii. 36",
+     "start": "JHN.3.36",
+     "end": "JHN.3.36",
+     "note": true
+    },
+    {
+     "at": 351,
+     "text": "Isa. lvii. 21",
+     "start": "ISA.57.21",
+     "end": "ISA.57.21",
+     "note": true
+    },
+    {
+     "at": 351,
+     "text": "Psa. x. 4",
+     "start": "PSA.10.4",
+     "end": "PSA.10.4",
+     "note": true
+    },
+    {
+     "at": 351,
+     "text": "Isa. lv. 6, 7",
+     "start": "ISA.55.6",
+     "end": "ISA.55.7",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Prov. xiv. 32",
+     "start": "PRO.14.32",
+     "end": "PRO.14.32",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Luke xvi. 25",
+     "start": "LUK.16.25",
+     "end": "LUK.16.25",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "John viii. 21–24",
+     "start": "JHN.8.21",
+     "end": "JHN.8.24",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Prov. x. 24",
+     "start": "PRO.10.24",
+     "end": "PRO.10.24",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Luke xii. 4, 5",
+     "start": "LUK.12.4",
+     "end": "LUK.12.5",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "ix. 23–26",
+     "start": "LUK.9.23",
+     "end": "LUK.9.26",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "John xii. 25, 26",
+     "start": "JHN.12.25",
+     "end": "JHN.12.26",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Eccl. iii. 17",
+     "start": "ECC.3.17",
+     "end": "ECC.3.17",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Matt. vii. 13, 14",
+     "start": "MAT.7.13",
+     "end": "MAT.7.14",
+     "note": true
+    }
+   ]
+  },
+  {
+   "id": "v.ii.ii-p37",
+   "label": "XVIII. OF THE WORLD TO COME",
+   "text": "We believe that the end of the world is approaching; that at the last day Christ will descend from heaven, and raise the dead from the grave to final retribution; that a solemn separation will then take place; that the wicked will be adjudged to endless punishment, and the righteous to endless joy; and that this judgment will fix forever the final state of men in heaven or hell, on principles of righteousness.",
+   "source": "creeds3.v.ii.ii.html",
+   "cites": [
+    {
+     "at": 52,
+     "text": "1 Pet. iv. 7",
+     "start": "1PE.4.7",
+     "end": "1PE.4.7",
+     "note": true
+    },
+    {
+     "at": 52,
+     "text": "1 Cor. vii. 29–31",
+     "start": "1CO.7.29",
+     "end": "1CO.7.31",
+     "note": true
+    },
+    {
+     "at": 52,
+     "text": "Heb. i. 10–12",
+     "start": "HEB.1.10",
+     "end": "HEB.1.12",
+     "note": true
+    },
+    {
+     "at": 52,
+     "text": "Matt. xxiv. 35",
+     "start": "MAT.24.35",
+     "end": "MAT.24.35",
+     "note": true
+    },
+    {
+     "at": 52,
+     "text": "1 John ii. 17",
+     "start": "1JN.2.17",
+     "end": "1JN.2.17",
+     "note": true
+    },
+    {
+     "at": 52,
+     "text": "Matt. xxviii. 20",
+     "start": "MAT.28.20",
+     "end": "MAT.28.20",
+     "note": true
+    },
+    {
+     "at": 52,
+     "text": "xiii. 39, 40",
+     "start": "MAT.13.39",
+     "end": "MAT.13.40",
+     "note": true
+    },
+    {
+     "at": 52,
+     "text": "2 Pet. iii. 3–13",
+     "start": "2PE.3.3",
+     "end": "2PE.3.13",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "Acts i. 11",
+     "start": "ACT.1.11",
+     "end": "ACT.1.11",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "Rev. i. 7",
+     "start": "REV.1.7",
+     "end": "REV.1.7",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "Heb. ix. 28",
+     "start": "HEB.9.28",
+     "end": "HEB.9.28",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "Acts iii. 21",
+     "start": "ACT.3.21",
+     "end": "ACT.3.21",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "1 Thess. iv. 13–18",
+     "start": "1TH.4.13",
+     "end": "1TH.4.18",
+     "note": true
+    },
+    {
+     "at": 106,
+     "text": "v. 1–11",
+     "start": "1TH.5.1",
+     "end": "1TH.5.11",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "Acts xxiv. 15",
+     "start": "ACT.24.15",
+     "end": "ACT.24.15",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "1 Cor. xv. 12–59",
+     "start": "1CO.15.12",
+     "end": "1CO.15.59",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "Luke xiv. 14",
+     "start": "LUK.14.14",
+     "end": "LUK.14.14",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "Dan. xii. 2",
+     "start": "DAN.12.2",
+     "end": "DAN.12.2",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "John v. 28, 29",
+     "start": "JHN.5.28",
+     "end": "JHN.5.29",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "vi. 40",
+     "start": "JHN.6.40",
+     "end": "JHN.6.40",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "xi. 25, 26",
+     "start": "JHN.11.25",
+     "end": "JHN.11.26",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "2 Tim. i. 10",
+     "start": "2TI.1.10",
+     "end": "2TI.1.10",
+     "note": true
+    },
+    {
+     "at": 162,
+     "text": "Acts x. 42",
+     "start": "ACT.10.42",
+     "end": "ACT.10.42",
+     "note": true
+    },
+    {
+     "at": 209,
+     "text": "Matt. xiii. 49",
+     "start": "MAT.13.49",
+     "end": "MAT.13.49",
+     "note": true
+    },
+    {
+     "at": 209,
+     "text": "xiii. 37–43",
+     "start": "MAT.13.37",
+     "end": "MAT.13.43",
+     "note": true
+    },
+    {
+     "at": 209,
+     "text": "xxiv. 30, 31",
+     "start": "MAT.24.30",
+     "end": "MAT.24.31",
+     "note": true
+    },
+    {
+     "at": 209,
+     "text": "xxv. 31-33",
+     "start": "MAT.25.31",
+     "end": "MAT.25.33",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "Matt. xxv. 35–41",
+     "start": "MAT.25.35",
+     "end": "MAT.25.41",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "Rev. xxii. 11",
+     "start": "REV.22.11",
+     "end": "REV.22.11",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "1 Cor. vi. 9, 10",
+     "start": "1CO.6.9",
+     "end": "1CO.6.10",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "Mark ix. 43–48",
+     "start": "MRK.9.43",
+     "end": "MRK.9.48",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "2 Pet. ii. 9",
+     "start": "2PE.2.9",
+     "end": "2PE.2.9",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "Jude 7",
+     "start": "JUD.1.7",
+     "end": "JUD.1.7",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "Phil. iii. 19",
+     "start": "PHP.3.19",
+     "end": "PHP.3.19",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "Rom. vi. 32",
+     "start": "ROM.6.32",
+     "end": "ROM.6.32",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "2 Cor. v. 10, 11",
+     "start": "2CO.5.10",
+     "end": "2CO.5.11",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "John iv. 36",
+     "start": "JHN.4.36",
+     "end": "JHN.4.36",
+     "note": true
+    },
+    {
+     "at": 299,
+     "text": "2 Cor. iv. 18",
+     "start": "2CO.4.18",
+     "end": "2CO.4.18",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Rom. iii. 5, 6",
+     "start": "ROM.3.5",
+     "end": "ROM.3.6",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "2 Thess. i. 6–12",
+     "start": "2TH.1.6",
+     "end": "2TH.1.12",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Heb. vi. 1, 2",
+     "start": "HEB.6.1",
+     "end": "HEB.6.2",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "1 Cor. iv. 5",
+     "start": "1CO.4.5",
+     "end": "1CO.4.5",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Acts xvii. 31",
+     "start": "ACT.17.31",
+     "end": "ACT.17.31",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Rom. ii. 2-16",
+     "start": "ROM.2.2",
+     "end": "ROM.2.16",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "Rev. xx. 11, 12",
+     "start": "REV.20.11",
+     "end": "REV.20.12",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "1 John ii. 28",
+     "start": "1JN.2.28",
+     "end": "1JN.2.28",
+     "note": true
+    },
+    {
+     "at": 413,
+     "text": "iv. 17",
+     "start": "1JN.4.17",
+     "end": "1JN.4.17",
+     "note": true
+    }
+   ]
+  }
+ ]
+}

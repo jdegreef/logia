@@ -13,6 +13,10 @@ compares the two.
   checked piece by piece.
 - A whole homily or tractate (library/texts/, from scripts/extract_texts.py)
   is checked like a digital excerpt, paragraph by paragraph.
+- A section of a creed or confession (library/creeds/, from
+  scripts/extract_creeds.py) is checked like a digital excerpt against one
+  column of its page: Schaff prints the English beside the Latin or German
+  in a table, so each column is read as a text of its own.
 - A scan source (archive.org OCR) mixes margin notes, running heads and page
   numbers into its lines, so it is checked in runs of six words: at least
   MIN_SCAN_SHARE of an excerpt's words must lie in a run found in the scan.
@@ -24,6 +28,7 @@ Exit status 1 if any excerpt fails.
 
     python3 scripts/verify_sources.py           # every work
     python3 scripts/verify_sources.py calvin    # one work
+    python3 scripts/verify_sources.py creeds    # the creeds and confessions (or one: westminster)
 """
 import glob
 import html
@@ -157,6 +162,83 @@ def check_scan(excerpt, src):
     return None if share >= MIN_SCAN_SHARE else f"only {covered} of {total} words found in the scan ({share:.0%})"
 
 
+class _Columns(_Text):
+    """The text of an HTML extract column by column: a page that prints a
+    Latin or German text beside the English, in a table, gives one stream
+    of letters per column, so an English paragraph that a page break splits
+    over two rows reads on in its column. Text outside any table is in
+    every column's stream."""
+
+    def __init__(self):
+        super().__init__()
+        self.cols, self.segments = [], []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "tr" and not self.depth:
+            self.cols.append([0, None])
+        if tag in ("td", "th") and not self.depth and self.cols:
+            self.cols[-1][0] += 1
+            self.cols[-1][1] = self.cols[-1][0]
+        super().handle_starttag(tag, attrs)
+
+    def handle_endtag(self, tag):
+        before = len(self.out)
+        super().handle_endtag(tag)              # a superscript's text is added at its end
+        self._record(before)
+        if tag == "tr" and not self.depth and self.cols:
+            self.cols.pop()
+
+    def handle_data(self, data):
+        before = len(self.out)
+        super().handle_data(data)
+        self._record(before)
+
+    def _record(self, before):
+        for s in self.out[before:]:
+            self.segments.append((self.cols[-1][1] if self.cols else None, s))
+
+
+def column_letters(path):
+    """{column: the letters of that column's stream} for an HTML source."""
+    p = _Columns()
+    p.feed(open(path, encoding="utf-8").read())
+    cols = {c for c, _ in p.segments if c is not None} or {None}
+    streams = {}
+    for k in cols:
+        text = " ".join(s for c, s in p.segments if c is None or c == k)
+        streams[k] = letters(re.sub(r"-\s*\n\s*", "", text))
+    return streams
+
+
+def check_creeds(only, files):
+    """Every section of library/creeds/ (scripts/extract_creeds.py) in its
+    source, word for word, in one column of it. Returns (sections, failures)."""
+    total = bad = 0
+    read = {}
+    for path in sorted(glob.glob(os.path.join(ROOT, "library", "creeds", "*.json"))):
+        doc = json.load(open(path, encoding="utf-8"))
+        if only and "creeds" not in only and doc["id"] not in only:
+            continue
+        for s in doc["sections"]:
+            total += 1
+            meta = files.get("creeds", {}).get(s["source"])
+            if not meta:
+                bad += 1
+                print(f"{os.path.relpath(path, ROOT)}: {s['id']}: source {s['source']} is not in sources/manifest.json")
+                continue
+            if s["source"] not in read:
+                src = os.path.join(ROOT, meta["path"])
+                read[s["source"]] = column_letters(src), source_original(src)
+            streams, raw = read[s["source"]]
+            problems = [check_digital(s["text"], stream) for stream in streams.values()]
+            problem = None if None in problems else problems[0]
+            problem = problem or check_original(s["text"], raw)
+            if problem:
+                bad += 1
+                print(f"{os.path.relpath(path, ROOT)}: {s['id']}: {problem}")
+    return total, bad
+
+
 def main(argv):
     manifest = json.load(open(os.path.join(ROOT, "sources", "manifest.json"), encoding="utf-8"))
     files = {}
@@ -220,7 +302,10 @@ def main(argv):
                 print(f"{os.path.relpath(path, ROOT)}: {para['id']}: {problem}")
     if paras:
         print(f"{paras - bad} of {paras} paragraphs of whole texts found in their sources")
-    return 1 if failures or bad else 0
+    sections, creeds_bad = check_creeds(only, files)
+    if sections:
+        print(f"{sections - creeds_bad} of {sections} sections of creeds and confessions found in their sources")
+    return 1 if failures or bad or creeds_bad else 0
 
 
 if __name__ == "__main__":

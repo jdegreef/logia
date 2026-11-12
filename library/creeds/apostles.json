@@ -1,0 +1,40 @@
+{
+ "id": "apostles",
+ "title": "The Apostles' Creed",
+ "kind": "creed",
+ "tradition": "Shared by the churches",
+ "year": null,
+ "edition": "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. II, The Greek and Latin Creeds, with Translations (New York: Harper & Brothers, 1877), CCEL edition (from a printing marked 'Sixth Edition', reprinted by arrangement with Harper and Row; copyright 1877 by Harper & Brothers, 1905 and 1919 by David S. Schaff)",
+ "translation": "The received English form, as Schaff prints it",
+ "published": 1877,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.i.i.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Philip Schaff died in 1893; CCEL transcribes a later printing of Schaff, revised by David S. Schaff (copyright 1905 and 1919) and holding matter added up to 1928; confirm against a scan of the 1877 first edition that this document reads the same there, and David S. Schaff's dates if a revision of his is in it"
+ },
+ "notes": "The received form (forma recepta), in the English Schaff prints after the Latin and Greek; NPNF II.14 does not print the Apostles' Creed. The page gives the received form no year. Schaff's footnotes are left out; Scripture references CCEL marks in the text are its cites.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "iv.i.i.i-p12",
+   "label": null,
+   "text": "I believe in God the Father Almighty; Maker of heaven and earth.",
+   "source": "creeds2.iv.i.i.i.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.i.i-p13",
+   "label": null,
+   "text": "And in Jesus Christ his only (begotten) Son our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, dead, and buried; he descended into hell [Hades, spirit-world]; the third day he rose from the dead; he ascended into heaven; and sitteth at the right hand of God the Father Almighty; from thence he shall come to judge the quick and the dead.",
+   "source": "creeds2.iv.i.i.i.html",
+   "cites": []
+  },
+  {
+   "id": "iv.i.i.i-p16",
+   "label": null,
+   "text": "I believe in the Holy Ghost; the holy catholic Church; the communion of saints; the forgiveness of sins; the resurrection of the body [flesh]; and the life everlasting. Amen.",
+   "source": "creeds2.iv.i.i.i.html",
+   "cites": []
+  }
+ ]
+}

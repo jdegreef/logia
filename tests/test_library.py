@@ -2,6 +2,7 @@
 
     python3 -m unittest discover -s tests -t .
 """
+import glob
 import html
 import io
 import json
@@ -17,6 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build_site  # noqa: E402
+import extract_creeds  # noqa: E402
 import extract_texts  # noqa: E402
 import fetch_wikidata  # noqa: E402
 import find_refs  # noqa: E402
@@ -175,6 +177,68 @@ class VerifyCatchesChanges(unittest.TestCase):
         bare = "".join(c for c in unicodedata.normalize("NFD", word) if not unicodedata.combining(c))
         self.assertNotEqual(bare, word)
         self.assertIsNotNone(verify_sources.check_original(entry["text"].replace(word, bare), raw))
+
+
+class Creeds(unittest.TestCase):
+    """library/creeds/: the creeds and confessions, read from their CCEL pages."""
+
+    def doc(self, name):
+        with open(os.path.join(ROOT, "library", "creeds", f"{name}.json"), encoding="utf-8") as f:
+            return json.load(f)
+
+    def test_creeds_are_up_to_date(self):
+        code, out = quiet(extract_creeds.main, ["--check"])
+        self.assertEqual(code, 0, out)
+
+    def test_every_tradition_is_here_and_nothing_is_reviewed(self):
+        docs = [self.doc(os.path.basename(p)[:-5])
+                for p in glob.glob(os.path.join(ROOT, "library", "creeds", "*.json"))]
+        self.assertTrue(all(d["status"] == "ai_draft" for d in docs))
+        shared = {d["id"] for d in docs if d["tradition"] == "Shared by the churches"}
+        self.assertEqual(shared, {"apostles", "nicaea", "constantinople", "chalcedon", "athanasian"})
+        traditions = {d["tradition"] for d in docs}
+        for t in ("Roman Catholic", "Orthodox", "Lutheran", "Reformed", "Anglican", "Baptist"):
+            self.assertTrue(any(x.startswith(t) for x in traditions), t)
+        self.assertTrue(any("Methodist" in x for x in traditions))
+
+    def test_only_the_english_column_is_taken(self):
+        ath = self.doc("athanasian")["sections"]
+        self.assertEqual([s["label"] for s in ath], [str(n) for n in range(1, 45)])
+        self.assertTrue(ath[0]["text"].startswith("1. Whosoever will be saved"))
+        self.assertFalse(any("Quicunque" in s["text"] or "Credimus" in s["text"] for s in ath))
+        # the Thirty-Nine Articles: the English of 1571, not the American revision beside it
+        art1 = self.doc("thirty-nine-articles")["sections"][1]
+        self.assertEqual(art1["label"], "I. Of fayth in the holy Trinitie")
+        self.assertIn("lyuyng and true God", art1["text"])
+        self.assertNotIn("living and true God", art1["text"])
+
+    def test_a_paragraph_split_by_a_page_break_is_one_section(self):
+        canon = next(s for s in self.doc("trent-6")["sections"] if s["label"] == "ON JUSTIFICATION, CANON XVI")
+        self.assertTrue(canon["text"].startswith("CANON XVI.—If any one saith, that he will for certain"))
+
+    def test_proof_texts_are_kept_and_editors_notes_are_not(self):
+        first = self.doc("westminster")["sections"][0]
+        self.assertEqual(first["label"], "Chapter I. Of the Holy Scripture, I")
+        proof = next(c for c in first["cites"] if c["start"] == "ROM.1.19")
+        self.assertEqual((proof["end"], proof["note"]), ("ROM.1.20", True))
+        self.assertEqual(first["text"][:proof["at"]].rstrip()[-len("inexcusable;"):], "inexcusable;")
+        # Schaff's note on "he descended into hell" cites Scripture as he discusses the text: not a citation
+        self.assertEqual([c for s in self.doc("apostles")["sections"] for c in s["cites"]], [])
+
+    def test_a_question_and_its_answer_are_one_section(self):
+        q1 = self.doc("heidelberg")["sections"][0]
+        self.assertEqual(q1["label"], "Question 1")
+        self.assertTrue(q1["text"].startswith("What is thy only comfort in life and in death?\n\nAnswer.\n\nThat I"))
+        orthodox = self.doc("orthodox-catechism")["sections"]
+        self.assertEqual(len(orthodox), 611)          # Schaff numbers the questions 1-611
+
+    def test_a_changed_word_in_a_creed_fails(self):
+        s = self.doc("trent-5")["sections"][1]
+        streams = verify_sources.column_letters(os.path.join(ROOT, "sources", "creeds", s["source"]))
+        self.assertTrue(any(verify_sources.check_digital(s["text"], x) is None for x in streams.values()))
+        changed = s["text"].replace("Paradise", "Eden", 1)
+        self.assertNotEqual(changed, s["text"])
+        self.assertTrue(all(verify_sources.check_digital(changed, x) for x in streams.values()))
 
 
 class Counting(unittest.TestCase):

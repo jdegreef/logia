@@ -26150,6 +26150,222 @@
    "kind": "scan",
    "download_sha256": "566c4cf8c9d4c0f3bd0fbed390914dd28f7ab18def1279ce5241fc8208ce0030",
    "extract": "The scan's full text, as downloaded."
+  },
+  {
+   "path": "sources/creeds/npnf214.vii.iii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/npnf214.vii.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "7eea904658093a90a948e9ffd1c1aeb28936df365cd897f3460c45e50e821beb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/npnf214.ix.iii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/npnf214.ix.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "5918fa265c29a6abf0448d985af6e6bd8d2c24cfe964d437203676196bcabf54",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/npnf214.xi.xiii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/npnf214.xi.xiii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "8a2a8b45bd38f39b4e53fab93dcbfe3c17949839945df9867330a5039779978f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.iv.i.i.i.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.i.i.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "fe6d70eadd52114bcbd833b58e885abb0c48c8d86620607b754127526e3bb7a9",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.iv.i.iv.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "3c10b8884e6a98f16e2051d7674765b4b467ecacd3c3b7d6d6ac4c11b8340fce",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.v.i.i.ii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "a863e6c1d5cda77741b6c9860cfd38f2332191b5b76d1bbc9362ecf556362584",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/creeds/creeds2.v.i.i.iii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "5179a352850b636d5ed4c286dd9e0f53efd65efb355e0a144eb8d78ad6651bee",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.v.i.i.iv.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.iv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "6b9db94b741b0764ec092944b1c617f5cdc018938817e35428ecd6da101f1193",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.v.i.i.vi.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.vi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "7e66f19d43a4886d38a74151f4d28a729336e76b2ab92fe37e013867579724d1",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.vi.ii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.vi.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "f76de908d88b95eaf78c94d4ed185ad495445426c7cd3b13740dc49cad97e50c",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/creeds/creeds2.vi.iii.i.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.vi.iii.i.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "cf3ac5be00f6e7910b24be88cd71ef92992e82ab71a46815109536a1265b99ae",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/creeds/creeds2.vi.iii.ii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.vi.iii.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "4f8cf6982293661e21be6f524e1fbea343076aa9f25f23da35b88f1d7ea2ca51",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.vi.iii.iii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.vi.iii.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "47415cc221ca17cf9b870e4c881e567df4d931fef7eac01fd35bb143d9110457",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.vi.iii.iv.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.vi.iii.iv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "06837d356d4129e7f08953e88aebadc8606947314c95b767a93f0b06ec260a99",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.vi.iii.v.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.vi.iii.v.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "6d86316f10f2707f7d930c926c0458ba631530ebda1d5e5f28a1a0ffe6f2016e",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/creeds/creeds3.iii.ii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds3.iii.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "3355085f27165e33b2cd11382e20b5328127d5d9cf7e8460b2c00cfe545b401f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds3.iii.iii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds3.iii.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "afca9216a8fee42ae2616dd51db7ac2775ead4f08a553cd27267362040d1558c",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds3.iv.vi.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds3.iv.vi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "a4224ca99d42efc833b9a28f2f2f9834802e74e4ad3a638b436a3ee110920fa0",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds3.iv.xvii.ii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds3.iv.xvii.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "5f096a85afd3c6e3561ca57f17f759febe853469f87ec522b31506e3eb53cc99",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds3.iv.xi.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds3.iv.xi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "79d0c3dab55e72f68b7911560bc1a7f94c38e30b5723ab211798c1eef9481511",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds3.v.vi.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds3.v.vi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "7cd39a6a803891e0a4ed19ef3004ca46d1a047b6537beae20414be27b55f116f",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds3.v.ii.ii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds3.v.ii.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "d5c0ec42bfa6c5c69c60624041d2def285817e69c87e7221a143f9bc208878eb",
+   "extract": "The page's book-content block (CCEL site chrome left out); footnote text is inline in mnote spans."
+  },
+  {
+   "path": "sources/creeds/creeds2.v.i.i.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "8972c5b786e7cfd511f3771ede15193ad3b99cb9fced229b9cba31568c995727",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/creeds/creeds2.vi.iii.html",
+   "work": "creeds",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.vi.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "91f46026f649dcf8dd08d2ed21987f11a3de2a706c08b6c3e12b4e89b1946f54",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
   }
  ]
 }

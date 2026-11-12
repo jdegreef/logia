@@ -1,0 +1,54 @@
+{
+ "id": "trent-4",
+ "title": "The Council of Trent, Fourth Session: The Canonical Scriptures",
+ "kind": "council",
+ "tradition": "Roman Catholic",
+ "year": 1546,
+ "edition": "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. II, The Greek and Latin Creeds, with Translations (New York: Harper & Brothers, 1877), CCEL edition (from a printing marked 'Sixth Edition', reprinted by arrangement with Harper and Row; copyright 1877 by Harper & Brothers, 1905 and 1919 by David S. Schaff)",
+ "translation": "J. Waterworth, The Canons and Decrees of the Sacred and Œcumenical Council of Trent (London, 1848), as Schaff prints it",
+ "published": 1877,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.ii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Philip Schaff died in 1893, J. Waterworth in 1876; CCEL transcribes a later printing of Schaff, revised by David S. Schaff (copyright 1905 and 1919) and holding matter added up to 1928; confirm against a scan of the 1877 first edition that this document reads the same there, and David S. Schaff's dates if a revision of his is in it"
+ },
+ "notes": "The dogmatic decrees and canons of the session, in the English column of Schaff's parallel Latin and English. Schaff leaves out the Council's decrees on the reformation of discipline (his note on creeds2.v.i.i.html). Schaff's footnotes are left out; Scripture references CCEL marks in the text are its cites.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "v.i.i.ii-p0.21",
+   "label": "Fourth Session, held April 8, 1546. DECREE CONCERNING THE CANONICAL SCRIPTURES",
+   "text": "The sacred and holy, œcumenical, and general Synod of Trent,—lawfully assembled in the Holy Ghost, the same three legates of the Apostolic See presiding therein,—keeping this always in view, that, errors being removed, the purity itself of the Gospel be preserved in the Church; which (Gospel), before promised through the prophets in the holy Scriptures, our Lord Jesus Christ, the Son of God, first promulgated with His own mouth, and then commanded to be preached by His Apostles to every creature, as the fountain of all, both saving truth, and moral discipline; and seeing clearly that this truth and discipline are contained in the written books, and the unwritten traditions which, received by the Apostles from the mouth of Christ himself, or from the Apostles themselves, the Holy Ghost dictating, have come down even unto us, transmitted as it were from hand to hand: [the Synod] following the examples of the orthodox Fathers, receives and venerates with an equal affection of piety and reverence, all the books both of the Old and of the New Testament—seeing that one God is the author of both—as also the said traditions, as well those appertaining to faith as to morals, as having been dictated, either by Christ's own word of mouth, or by the Holy Ghost, and preserved in the Catholic Church by a continuous succession.",
+   "source": "creeds2.v.i.i.ii.html",
+   "cites": []
+  },
+  {
+   "id": "v.i.i.ii-p0.30",
+   "label": "Fourth Session, held April 8, 1546. DECREE CONCERNING THE CANONICAL SCRIPTURES",
+   "text": "And it has thought it meet that a list of the sacred books be inserted in this decree, lest a doubt may arise in any one's mind, which are the books that are received by this Synod. They are as set down here below: of the Old Testament: the five books of Moses, to wit, Genesis, Exodus, Leviticus, Numbers, Deuteronomy; Josue, Judges, Ruth, four books of Kings, two of Paralipomenon, the first book of Esdras, and the second which is entitled Nehemias; Tobias, Judith, Esther, Job, the Davidical Psalter, consisting of a hundred and fifty psalms; the Proverbs, Ecclesiastes, the Canticle of Canticles, Wisdom, Ecclesiasticus, Isaias, Jeremias, with Baruch; Ezechiel, Daniel; the twelve minor prophets, to wit, Osee, Joel, Amos, Abdias, Jonas, Micheas, Nahum, Habacuc, Sophonias, Aggæus, Zacharias, Malachias; two books of the Machabees, the first and the second. Of the New Testament: the four Gospels, according to Matthew, Mark, Luke, and John; the Acts of the Apostles written by Luke the Evangelist; fourteen epistles of Paul the apostle, (one) to the Romans, two to the Corinthians, (one) to the Galatians, to the Ephesians, to the Philippians, to the Colossians, two to the Thessalonians, two to Timothy, (one) to Titus, to Philemon, to the Hebrews; two of Peter the apostle, three of John the apostle, one of the apostle James, one of Jude the apostle, and the Apocalypse of John the apostle.",
+   "source": "creeds2.v.i.i.ii.html",
+   "cites": []
+  },
+  {
+   "id": "v.i.i.ii-p0.40",
+   "label": "Fourth Session, held April 8, 1546. DECREE CONCERNING THE CANONICAL SCRIPTURES",
+   "text": "But if any one receive not, as sacred and canonical, the said books entire with all their parts, as they have been used to be read in the Catholic Church, and as they are contained in the old Latin vulgate edition; and knowingly and deliberately contemn the traditions aforesaid; let him be anathema. Let all, therefore, understand, in what order, and in what manner, the said Synod, after having laid the foundation of the Confession of faith, will proceed, and what testimonies and authorities it will mainly use in confirming dogmas, and in restoring morals in the Church.",
+   "source": "creeds2.v.i.i.ii.html",
+   "cites": []
+  },
+  {
+   "id": "v.i.i.ii-p0.50",
+   "label": "DECREE CONCERNING THE EDITION, AND THE USE, OF THE SACRED BOOKS",
+   "text": "Moreover, the same sacred and holy Synod,—considering that no small utility may accrue to the Church of God, if it be made known which out of all the Latin editions, now in circulation, of the sacred books, is to be held as authentic,—ordains and declares, that the said old and vulgate edition, which, by the lengthened usage of so many ages, has been approved of in the Church, be, in public lectures, disputations, sermons, and expositions, held as authentic; and that no one is to dare, or presume to reject it under any pretext whatever.",
+   "source": "creeds2.v.i.i.ii.html",
+   "cites": []
+  },
+  {
+   "id": "v.i.i.ii-p0.55",
+   "label": "DECREE CONCERNING THE EDITION, AND THE USE, OF THE SACRED BOOKS",
+   "text": "Furthermore, in order to restrain petulant spirits, it decrees, that no one, relying on his own skill, shall,—in matters of faith, and of morals pertaining to the edification of Christian doctrine,—wresting the sacred Scripture to his own senses, presume to interpret the said sacred Scripture contrary to that sense which holy mother Church,—whose it is to judge of the true sense and intrepretation of the holy Scriptures,—hath held and doth hold; or even contrary to the unanimous consent of the Fathers; even though such interpretations were never [intended] to be at any time published. Contraveners shall be made known by their Ordinaries, and be punished with the penalties by law established.",
+   "source": "creeds2.v.i.i.ii.html",
+   "cites": []
+  }
+ ]
+}

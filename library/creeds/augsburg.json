@@ -1,0 +1,1492 @@
+{
+ "id": "augsburg",
+ "title": "The Augsburg Confession",
+ "kind": "confession",
+ "tradition": "Lutheran",
+ "year": 1530,
+ "edition": "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. III, The Evangelical Protestant Creeds, with Translations (New York: Harper & Brothers, 1877), CCEL edition (from a printing marked 'Fourth Edition—Revised and Enlarged', Baker Book House paperback, Grand Rapids, 1977, reprinted by arrangement with Harper and Row; copyright 1877 by Harper & Brothers, 1905 and 1919 by David S. Schaff)",
+ "translation": "Charles P. Krauth (1868), revised by him for Schaff (1874), from the Latin editio princeps of 1531, with the chief additions of the German in brackets, as Schaff says on the page",
+ "published": 1877,
+ "full_text_url": "https://www.ccel.org/ccel/schaff/creeds3.iii.ii.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Philip Schaff died in 1893, Charles P. Krauth in 1883; CCEL transcribes a later printing of Schaff, revised by David S. Schaff (copyright 1905 and 1919) and holding matter added up to 1928; confirm against a scan of the 1877 first edition that this document reads the same there, and David S. Schaff's dates if a revision of his is in it"
+ },
+ "notes": "The English column of Schaff's parallel Latin and English: the Preface to the Emperor, the twenty-one Chief Articles of Faith with Article XXII, the seven Articles on Abuses, and the Conclusion. The signatures printed after the Conclusion are not included. Schaff's footnotes are left out; Scripture references CCEL marks in the text are its cites.",
+ "status": "ai_draft",
+ "sections": [
+  {
+   "id": "iii.ii-p6.18",
+   "label": "Preface to the Emperor Charles V",
+   "text": "Most Invincible Emperor, Cæsar Augustus, Most Clement Master: Inasmuch as Your Imperial Majesty has summoned a Convention of the Empire at Augsburg, to deliberate in regard to aid against the Turk, the most atrocious, the hereditary, and ancient enemy of the Christian name and religion, in what way, to wit, resistance might be made to his rage and assaults, by protracted and perpetual preparation for war: Because, moreover, of dissensions in the matter of our holy religion and Christian faith, and in order that this matter of religion the opinions and judgments of diverse parties may be heard in each other's presence, may be understood and weighed among one another, in mutual charity, meekness, and gentleness, that those things which in the writings on either side have been handled or understood amiss, being laid aside and corrected, these things may be harmonized and brought back to the one simple truth and Christian concord; so that hereafter the one unfeigned and true religion may be embraced and preserved by us, so that as we are subjects and soldiers of the one Christ, so also, in unity and concord, we may live in the one Christian Church: And inasmuch as we, the Elector and Princes, whose names are subscribed, together with others who are conjoined with us, in common with other Electors, and Princes, and States, have been called to the aforenamed Diet,—we have, in order to render most humble obedience to the Imperial Mandate, come early to Augsburg, and, with no desire to boast, would state that we were among the very first to be present.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.28",
+   "label": "Preface to the Emperor Charles V",
+   "text": "When, therefore, Your Imperial Majesty, among other things, has also at Augsburg, at the very beginning of these sessions, caused the proposition to be made to the Princes and States of the Empire, that each of the States of the Empire, in virtue of the Imperial Edict, should propose and offer in the German and in the Latin language its opinion and decision; after discussion on Wednesday we replied to Your Imperial Majesty, that on the following Friday we would offer on our part the Articles of our Confession:",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.32",
+   "label": "Preface to the Emperor Charles V",
+   "text": "Wherefore, in order that we may do homage to the will of Your Imperial Majesty, we now offer in the matter of religion the Confession of our preachers and of ourselves, the doctrine of which, derived from the Holy Scriptures and pure Word of God, they have to this time set forth in our lands, dukedoms, domains, and cities, and have taught in the churches. If the other Electors, Princes, and States of the Empire, should in similar writings, to wit, in Latin and German, according to the aforementioned Imperial proposition, produce their opinions in this matter of religion: we here, in the presence of Your Imperial Majesty, our most Clement Lord, offer ourselves, prepared, in conjunction with the Princes and our friends already designated, to compare views in a kindly manner in regard to mode and ways which may be available, so that, as far as may honorably be done, we may agree, and the matter between us of both parts being peacefully discussed, with no hateful contention, by God's help the dissension may be removed, and brought back to one true accordant religion (as we are all subjects and soldiers under one Christ, so also we ought to confess one Christ, in accordance with the tenor of the decree of Your Imp. M.), and all things should be brought back to the truth of God, which with most fervent prayers we beseech God to grant.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.42",
+   "label": "Preface to the Emperor Charles V",
+   "text": "But if, as regards the rest of the Electors, Princes, and States, those of the other party, this treatment of the matter of religion, in the manner in which Your I. M. has wisely thought fit it should be conducted and treated, to wit, with such a mutual presentation of writings and calm conference between us, should not go on, nor be attended by any result; yet shall we leave a clear testimony that in no manner do we evade any thing which can tend to promote Christian concord (any thing which God and a good conscience allow); and this Your I. M. and the other Electors and States of the Empire, and all who are moved by a sincere love of religion and concern for it, all who are willing to give an equitable hearing in this matter, will kindly gather and understand from the Confession of ourselves and of ours.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.46",
+   "label": "Preface to the Emperor Charles V",
+   "text": "Since, moreover, Your I. M. has not once only, but repeatedly signified to the Electors, Princes, and other States of the Empire; and at the Diet of Spires, which was held in the year of our Lord 1526, caused to be recited and publicly proclaimed, in accordance with the form of Your Imperial instruction and commission given and prescribed: That Your I. M. in this matter of religion for certain reasons, stated in the name of Your Majesty, was not willing to determine, nor was able to conclude touching any thing, but that Your I. M. would diligently endeavor to have the Roman Pontiff, in accordance with his office, to assemble a General Council; as also the same matter was more amply set forth a year ago in the last public Convention, which was held at Spires, where through His Highness Ferdinand, King of Bohemia and Hungary, our friend and clement Lord, afterward through the Orator and the Imperial Commissioners, Your I. M., among other propositions, caused these to be made: that Your I. M. had known and pondered the resolution to convene a Council, formed by the Representatives of Your I. M. in the Empire, and by the Imperial President and Counselors, and by the Legates of other States convened at Ratisbon, and this Your I. M. also judged that it would be useful to assemble a Council; and because the matters which were to be adjusted at this time between Your I. M. and the Roman Pontiff were approaching agreement and Christian reconciliation, Your I. M. did not doubt that, but that the Pope could be induced to summon a General Council: Wherefore Your I. M. signified that Your I. M. would endeavor to bring it to pass that the Chief Pontiff, together with Your I. M., would consent at the earliest opportunity to issue letters for the convening of such a General Council.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.56",
+   "label": "Preface to the Emperor Charles V",
+   "text": "In the event, therefore, that in this matter of religion the differences between us and the other party should not be settled in friendship and love, we here present ourselves before Your I. M. in all obedience, as we have done before, ready to appear and to defend our cause in such a general, free, and Christian Council, concerning the convening of which there has been concordant action and a determination by agreeing votes on the part of the Electors, Princes, and the other States of the Empire, in all the Imperial Diets which have been held in the reign of Your I. M. To this Convention of a General Council, as also to Your I. M., we have in the due method and legal form before made our protestation and appeal in this greatest and gravest of matters. To which appeal both to Your I. M. and a Council we still adhere; nor do we intend, nor would it be possible for us to forsake it by this or any other document, unless the matter between us and the other party should, in accordance with the tenor of the latest Imperial citation, be adjusted, settled, and brought to Christian concord, in friendship and love; concerning which appeal we here also make our solemn and public protest.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.86",
+   "label": "Part First. CHIEF ARTICLES OF FAITH. Art. I.—Of God",
+   "text": "The churches, with common consent among us, do teach that the decree of the Nicene Synod concerning the unity of the divine essence and of the three persons is true, and without doubt to be believed: to wit, that there is one divine essence which is called and is God, eternal, without body, indivisible [without part], of infinite power, wisdom, goodness, the Creator and Preserver of all things, visible and invisible; and that yet there are three persons of the same essence and power, who also are co-eternal, the Father, the Son, and the Holy Ghost. And they use the name of person in that signification in which the ecclesiastical writers [the fathers] have used it in this cause, to signify, not a part or quality in another, but that which properly subsists.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.93",
+   "label": "Part First. CHIEF ARTICLES OF FAITH. Art. I.—Of God",
+   "text": "They condemn all heresies which have sprung up against this Article, as the Manichees, who set down two principles, good and evil; in the same manner the Valentinians, Arians, Eunomians, Mohammedans, and all such like. They condemn also the Samosatenes, old and new; who, when they earnestly contend that there is but one person, do craftily and wickedly trifle, after the manner of rhetoricians, about the Word and Holy Ghost, that they are not distinct persons, but that the Word signifieth a vocal word, and the Spirit a motion created in things.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.105",
+   "label": "Art. II.—Of Original Sin",
+   "text": "Also they teach that, after Adam's fall, all men begotten after the common course of nature are born with sin; that is, without the fear of God, without trust in him, and with fleshly appetite; and that this disease, or original fault, is truly sin, condemning and bringing eternal death now also upon all that are not born again by baptism and the Holy Spirit.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.109",
+   "label": "Art. II.—Of Original Sin",
+   "text": "They condemn the Pelagians, and others, who deny this original fault to be sin indeed; and who, so as to lessen the glory of the merits and benefits of Christ, argue that a man may, by the strength of his own reason, be justified before God.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.127",
+   "label": "Art. III.—Of the Son of God",
+   "text": "Also they teach that the Word, that is, the Son of God, took unto him man's nature in the womb of the blessed Virgin Mary, so that there are two natures, the divine and the human, inseparably joined together in unity of person; one Christ, true God and true man: who was born of the Virgin Mary, truly suffered, was crucified, dead, and buried, that he might reconcile the Father unto us, and might be a sacrifice, not only for original guilt, but also for all actual sins of men.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.131",
+   "label": "Art. III.—Of the Son of God",
+   "text": "The same also descended into hell, and truly rose again the third day. Afterward he ascended into the heavens, that he might sit at the right hand of the Father; and reign forever, and have dominion over all creatures; might sanctify those that believe in him, by sending the Holy Spirit into their hearts, who shall rule [sanctify, purify, strengthen], comfort, and quicken them, and shall defend them against the devil, and the power of sin.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.135",
+   "label": "Art. III.—Of the Son of God",
+   "text": "The same Christ shall openly come again, to judge the quick and the dead, according as he Apostles' Creed declareth these and other things.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.154",
+   "label": "Art. IV.—Of Justification",
+   "text": "Also they teach that men can not be justified [obtain forgiveness of sins and righteousness] before God by their own powers, merits, or works; but are justified freely [of grace] for Christ's sake through faith, when they believe that they are received into favor, and their sins forgiven for Christ's sake, who by his death hath satisfied for our sins. This faith doth God impute for righteousness before him. Rom. iii. and iv.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.166",
+   "label": "Art. V.—Of the Ministry of the Church",
+   "text": "For the obtaining of this faith, the ministry of teaching the Gospel and administering the Sacraments was instituted.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.170",
+   "label": "Art. V.—Of the Ministry of the Church",
+   "text": "For by the Word and Sacraments, as by instruments, the Holy Spirit is given: who worketh faith, where and when it pleaseth God, in those that hear the Gospel, to wit, that God, not for our merit's sake, but for Christ's sake, doth justify those who believe that they for Christ's sake are received into favor.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.174",
+   "label": "Art. V.—Of the Ministry of the Church",
+   "text": "They condemn the Anabaptists and others, who imagine that the Holy Spirit is given to men without the outward word, through their own preparations and works.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.192",
+   "label": "Art. VI.—Of New Obedience",
+   "text": "Also they teach that this faith should bring forth good fruits, and that men ought to do the good works commanded of God, because it is God's will, and not on any confidence of meriting justification before God by their works.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.197",
+   "label": "Art. VI.—Of New Obedience",
+   "text": "For remission of sins and justification is apprehended by faith, as also the voice of Christ witnesseth: 'When ye have done all these things, say, We are unprofitable servants.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.201",
+   "label": "Art. VI.—Of New Obedience",
+   "text": "The same also do the ancient writers of the Church teach; for Ambrose saith: 'This is ordained of God, that he that believeth in Christ shall be saved, without works, by faith alone, freely receiving remission of sins.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.213",
+   "label": "Art. VII.—Of the Church",
+   "text": "Also they teach that one holy Church is to continue forever. But the Church is the congregation of saints [the assembly of all believers], in which the Gospel is Rightly taught [purely preached] and the Sacraments rightly administered [according to the Gospel].",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.226",
+   "label": "Art. VII.—Of the Church",
+   "text": "And unto the true unity of the Church, it is sufficient to agree concerning the doctrine of the Gospel and the administration of the Sacraments. Nor is it necessary that human traditions, rites, or ceremonies instituted by men should be alike every where, as St. Paul saith: 'There is one faith, one baptism, one God and Father of all.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.237",
+   "label": "Art. VIII.—What the Church is",
+   "text": "Though the Church be properly the congregation of saints and true believers, yet seeing that in this life many hypocrites and evil persons are mingled with it, it is lawful to use the Sacraments administered by evil men, according to the voice of Christ (Matt. xxiii. 2): 'The Scribes and the Pharisees sit in Moses' seat,' and the words following. And the Sacraments and the Word are effectual, by reason of the institution and commandment of Christ, though they be delivered by evil men.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 255,
+     "text": "Matt. xxiii. 2",
+     "start": "MAT.23.2",
+     "end": "MAT.23.2",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.243",
+   "label": "Art. VIII.—What the Church is",
+   "text": "They condemn the Donatists and such like, who denied that it was lawful to use the ministry of evil men in the Church, and held that the ministry of evil men is useless and without effect.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.260",
+   "label": "Art. IX.—Of Baptism",
+   "text": "Of Baptism they teach that it is necessary to salvation, and that by Baptism the grace of God is offered, and that children are to be baptized, who by Baptism, being offered to God, are received into God's favor.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.266",
+   "label": "Art. IX.—Of Baptism",
+   "text": "They condemn the Anabaptists who allow not the Baptism of children, and affirm that children are saved without Baptism.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.278",
+   "label": "Art. X.—Of the Lord's Supper",
+   "text": "Of the Supper of the Lord they teach that the [true] body and blood of Christ are truly present [under the form of bread and wine], and are [there] communicated to those that eat in the Lord's Supper [and receive]. And they disapprove of those that teach otherwise [wherefore also the opposite doctrine is rejected].",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.288",
+   "label": "Art. XI.—Of Confession",
+   "text": "Concerning confession, they teach that private absolution be retained in the churches, though enumeration of all offenses be not necessary in confession. For it is impossible; according to the Psalm: 'Who can understand his errors?\"",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.305",
+   "label": "Art. XII.—Of Repentance",
+   "text": "Touching repentance, they teach that such as have fallen after baptism may find remission of sins, at what time they are converted [whenever they come to repentance], and that the Church should give absolution unto such as return to repentance.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.309",
+   "label": "Art. XII.—Of Repentance",
+   "text": "Now repentance consisteth properly of these two parts: One is contrition, or terrors stricken into the conscience through the acknowledgment of sin; the other is faith, which is conceived by the Gospel, or absolution, and doth believe that for Christ's sake sins be forgiven, and comforteth the conscience, and freeth it from terrors. Then should follow good works, which are fruits of repentance.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.313",
+   "label": "Art. XII.—Of Repentance",
+   "text": "They condemn the Anabaptists, who deny that men once justified can lose the Spirit of God, and do contend that some men may attain to such a perfection in this life that they can not sin. [Here are rejected those who teach that those who have once been holy can not fall again.] The Novatians are also condemned, who would not absolve such as had fallen after baptism, though they returned to repentance. They also that do not teach that remission of sins is obtained by faith, and who command us to merit grace by satisfactions, are rejected.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.329",
+   "label": "Art. XIII.—Of the Use of Sacraments",
+   "text": "Concerning the use of the Sacraments, they teach that they were ordained, not only to be marks of profession among men, but rather that they should be signs and testimonies of the will of God towards us, set forth unto us to stir up and confirm faith in such as use them. Therefore men must use Sacraments so as to join faith with them, which believes the promises that are offered and declared unto us by the Sacraments.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.333",
+   "label": "Art. XIII.—Of the Use of Sacraments",
+   "text": "Wherefore they condemn those that teach that the Sacraments do justify by the work done, and do not teach that faith which believes the remission of sins is requisite in the use of Sacraments.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.343",
+   "label": "Art. XIV.—Of Ecclesiastical Orders",
+   "text": "Concerning Ecclesiastical Orders [Church Government], they teach that no man should publicly in the Church teach, or administer the Sacraments, except he be rightly called [without a regular call].",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.360",
+   "label": "Art. XV.—Of Ecclesiastical Rites",
+   "text": "Concerning Ecclesiastical rites [made by men], they teach that those rites are to be observed which may be observed without sin, and are profitable for tranquility and good order in the Church; such as are set holidays, feasts, and such like. Yet concerning such things, men are to be admonished that consciences are not to be burdened as if such service were necessary to salvation.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.364",
+   "label": "Art. XV.—Of Ecclesiastical Rites",
+   "text": "They are also to be admonished that human traditions, instituted to propitiate God, to merit grace, and make satisfaction for sins, are opposed to the Gospel and the doctrine of faith. Wherefore vows and traditions concerning foods and days, and such like, instituted to merit grace and make satisfaction for sins, are useless and contrary to the Gospel.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.374",
+   "label": "Art. XVI.—Of Civil Affairs",
+   "text": "Concerning civil affairs, they teach that such civil ordinances as are lawful are good works of God; that Christians may lawfully bear civil office, sit in judgments, determine matters by the imperial laws, and other laws in present force, appoint just punishments, engage in just war, act as soldiers, make legal bargains and contracts, hold property, take an oath when the magistrates require it, marry a wife, or be given in marriage. They condemn the Anabaptists who forbid Christians these civil offices. They condemn also those that place the perfection of the Gospel, not in the fear of God and in faith, but in forsaking civil offices, inasmuch as the Gospel teacheth an everlasting righteousness of the heart. In the mean time, it doth not disallow order and government of commonwealths or families, but requireth especially the preservation and maintenance thereof, as of God's own ordinances, and that in such ordinances we should exercise love. Christians, therefore, must necessarily obey their magistrates and laws, save only when they command any sin; for then they must rather obey God than men (Acts v. 29).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 1112,
+     "text": "Acts v. 29",
+     "start": "ACT.5.29",
+     "end": "ACT.5.29",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.392",
+   "label": "Art. XVII.—Of Christ's Return to Judgment",
+   "text": "Also they teach that, in the consummation of the world [at the last day], Christ shall appear to judge, and shall raise up all the dead, and shall give unto the godly and elect eternal life and everlasting joys; but ungodly men and the devils shall he condemn unto endless torments.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.403",
+   "label": "Art. XVII.—Of Christ's Return to Judgment",
+   "text": "They condemn the Anabaptists who think that to condemned men and the devils shall be an end of torments. They condemn others also, who now scatter Jewish opinions, that, before the resurrection of the dead, the godly shall occupy the kingdom of the world, the wicked being every where suppressed [the saints alone, the pious, shall have a worldly kingdom, and shall exterminate all the godless].",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.414",
+   "label": "Art. XVIII.—Of Free Will",
+   "text": "Concerning free will, they teach that man's will hath some liberty to work a civil righteousness, and to choose such things as reason can reach unto; but that it hath no power to work the righteousness of God, or a spiritual righteousness, without the Spirit of God; because that the natural man receiveth not the things of the Spirit of God (1 Cor. ii. 14). But this is wrought in the heart when men do receive the Spirit of God through the Word.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 343,
+     "text": "1 Cor. ii. 14",
+     "start": "1CO.2.14",
+     "end": "1CO.2.14",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.419",
+   "label": "Art. XVIII.—Of Free Will",
+   "text": "These things are in as many words affirmed by St. Augustine, Hypognosticon, lib. iii.: 'We confess that there is in all men a free will, which hath indeed the judgment of reason; not that it is thereby fitted, without God, either to begin or to perform any thing in matters pertaining to God, but only in works belonging to this present life, whether they be good or evil. By good works, I mean those which are of the goodness of nature; as to will to labor in the field, to desire meat or drink, to desire to have a friend, to desire apparel, to desire to build a house, to marry a wife, to nourish cattle, to learn the art of divers good things, to desire any good thing pertaining to this present life; all which are not without God's government, yea, they are, and had their beginning from God and by God. Among evil things, I account such as these: to will to worship an image; to will manslaughter, and such like.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.430",
+   "label": "Art. XVIII.—Of Free Will",
+   "text": "They condemn the Pelagians and others, who teach that by the powers of nature alone, without the Spirit of God, we are able to love God above all things; also to perform the commandments of God, as touching the substance of our actions. For although nature be able in some sort to do the external works (for it is able to withhold the hands from theft and murder), yet it can not work the inward motions, such as the fear of God, trust in God, chastity, patience, and such like.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.443",
+   "label": "Art. XIX.—Of the Cause of Sin",
+   "text": "Touching the cause of sin, they teach that, although God doth create and preserve nature, yet the cause of sin is the will of the wicked; to wit, of the devil and ungodly men; which will, God not aiding, turneth itself from God, as Christ saith: 'When he speaketh a lie, he speaketh of his own' (John viii. 44).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 296,
+     "text": "John viii. 44",
+     "start": "JHN.8.44",
+     "end": "JHN.8.44",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.455",
+   "label": "Art. XX.—Of Good Works",
+   "text": "Ours are falsely accused of forbidding good works. For their writing extant upon the Ten Commandments, and others of the like argument, do bear witness that they have to good purpose taught concerning every kind of life, and its duties; what kinds of life, and what works in every calling, do please God. Of which things preachers in former times taught little or nothing: only they urged certain childish and needless works; as, keeping of holidays, set fasts; fraternities, pilgrimages, worshiping of saints, the use of rosaries, monkery, and such like things. Whereof our adversaries having had warning, they do now unlearn them, and do not preach concerning these unprofitable works, as they were wont. Besides, they begin now to make mention of faith, concerning which there was formerly a deep silence. They teach that we are not justified by works alone; but they conjoin faith and works, and say we are justified by faith and works. Which doctrine is more tolerable than the former one, and can afford more consolation than their old doctrine.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.465",
+   "label": "Art. XX.—Of Good Works",
+   "text": "Whereas, therefore, the doctrine of faith, which should be the chief one in the Church, hath been so long unknown, as all men must needs grant, that there was the deepest silence about the righteousness of faith in their sermons, and that the doctrine of works was usual in the churches; for this cause our divines did thus admonish the churches:",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.471",
+   "label": "Art. XX.—Of Good Works",
+   "text": "First, that our works can not reconcile God, or deserve remission of sins, grace, and justification at his hands, but that these we obtain by faith only, when we believe that we are received into favor for Christ's sake, who alone is appointed the Mediator and Propitiatory, by whom the Father is reconciled. He, therefore, that trusteth by his works to merit grace, doth despise the merit and grace of Christ, and seeketh by his own power, without Christ, to come unto the Father; whereas Christ hath said expressly of himself, 'I am the way, the truth, and the life' (John xiv. 6).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 570,
+     "text": "John xiv. 6",
+     "start": "JHN.14.6",
+     "end": "JHN.14.6",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.479",
+   "label": "Art. XX.—Of Good Works",
+   "text": "This doctrine of faith is handled by Paul almost every where: 'By grace ye are saved through faith, and that not of yourselves: it is the gift of God, not of works' (Eph. ii. 8, 9). And lest any here should cavil, that we bring in a new-found interpretation, this whole cause is sustained by testimonies of the Fathers. Augustine doth in many volumes defend grace, and the righteousness of faith, against the merit of works. The like doth Ambrose teach in his book, De Vocatione Gentium, and elsewhere; for thus he saith of the calling of the Gentiles: 'The redemption made by the blood of Christ would be of small account, and the prerogative of man's works would not give place to the mercy of God, if the justification which is by grace were due to merits going before; so as it should not be the liberality of the giver, but the wages or hire of the laborer.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 166,
+     "text": "Eph. ii. 8, 9",
+     "start": "EPH.2.8",
+     "end": "EPH.2.9",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.484",
+   "label": "Art. XX.—Of Good Works",
+   "text": "This doctrine, though it be contemned of the unskillful, yet godly and fearful consciences find by experience that it bringeth very great comfort: because that consciences can not be quieted by any works, but by faith alone, when they believe assuredly that they have a God who is propitiated for Christ's sake; as St. Paul teacheth, 'Being justified by faith, we have peace with God' (Rom. v. 1). This doctrine doth wholly belong to the conflict of a troubled conscience; and can not be understood, but where the conscience hath felt that conflict. Wherefore, all such as have had no experience thereof, and all that are profane men, who dream that Christian righteousness is naught else but a civil and philosophical righteousness, are poor judges of this matter.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 386,
+     "text": "Rom. v. 1",
+     "start": "ROM.5.1",
+     "end": "ROM.5.1",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.496",
+   "label": "Art. XX.—Of Good Works",
+   "text": "Formerly men's consciences were vexed with the doctrine of works; they did not hear any comfort out of the Gospel. Whereupon conscience drove some into the desert, into monasteries, hoping there to merit grace by a monastical life. Others devised other works, whereby to merit grace, and to satisfy for sin. There was very great need, therefore, to teach and renew this doctrine of faith in Christ; to the end that fearful consciences might not want comfort, but might know that grace, and forgiveness of sins, and justification, are received by faith in Christ.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.500",
+   "label": "Art. XX.—Of Good Works",
+   "text": "Another thing, which we teach men, is that in this place the name of Faith doth not only signify a knowledge of the history, which may be in the wicked, and in the devil, but that is signifieth a faith Which believeth, not only the history, but also the effect of the history; to wit, the article of remission of sins; namely, that by Christ we have grace, righteousness, and remission of sins. Now he that knoweth that he hath the Father merciful to him through Christ, this man knoweth God truly; he knoweth that God hath a care of him; he loveth God, and calleth upon him; in a word, he is not without God, as the Gentiles are. For the devils and the wicked can never believe this article of the remission of sins; and therefore they hate God as their enemy; they call not upon him, they look for no good thing at his hands. After this manner doth Augustine admonish the reader touching the name of Faith, and teacheth that this word Faith is taken in Scriptures, not for such a knowledge as is in the wicked, but for a trust, which doth comfort and lift up disquieted minds.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.511",
+   "label": "Art. XX.—Of Good Works",
+   "text": "Moreover, ours teach that it is necessary to do good works; not that we may trust that we deserve grace by them, but because it is the will of God that we should do them. By faith alone is apprehended remission of sins and grace. And because the Holy Spirit is received by faith, our hearts are now renewed, and so put on new affections, so that they are able to bring forth good works. For thus saith Ambrose: 'Faith is the begetter of a good will and of good actions.' For man's powers, without the Holy Spirit, are full of wicked affections, and are too weak to perform any good deed before God. Besides, they are in the devil's power, who driveth men forward into divers sins, into profane opinions, and into heinous crimes; as was to be seen in the philosophers, who, assaying to live an honest life, could not attain unto it, but were defiled with many heinous crimes. Such is the weakness of man, when he is without faith and the Holy Spirit, and hath no other guide but the natural powers of man.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.521",
+   "label": "Art. XX.—Of Good Works",
+   "text": "Hereby every man may se that this doctrine is not to be accused, as forbidding good works; but rather is much to be commended, because it showeth after what sort we must do good works. For without faith the nature of man can by no means perform the works of the First or Second Table. Without faith, it can not call upon God, hope in God, bear the cross; but seeketh help from man, and trusteth in man's help. So it cometh to pass that all lusts and human counsels bear sway in the heart so long as faith and trust in God are absent.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.528",
+   "label": "Art. XX.—Of Good Works",
+   "text": "Wherefore, also, Christ saith, 'Without me ye can do nothing' (John xv. 5), and the Church singeth, 'Without thy power is naught in man, naught that is innocent.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 63,
+     "text": "John xv. 5",
+     "start": "JHN.15.5",
+     "end": "JHN.15.5",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.541",
+   "label": "Art. XXI.—Of the Worship of Saints",
+   "text": "Touching the worship of saints, they teach that the memory of saints may be set before us, that we may follow their faith and good works according to our calling; as the Emperor may follow David's example in making war to drive away the Turks from his country; for either of them is a king. But the Scripture teacheth not to invocate saints, or to ask help of saints, because it propoundeth unto us one Christ the Mediator, Propitiatory, High-Priest, and Intercessor. This Christ is to be invocated, and he hath promised that he will hear our prayers, and liketh this worship especially, to wit, that he be invocated in all afflictions. 'If any man sin, we have an advocate with God, Jesus Christ the righteous' (1 John ii. 1).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 713,
+     "text": "1 John ii. 1",
+     "start": "1JN.2.1",
+     "end": "1JN.2.1",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.552",
+   "label": "Art. XXII",
+   "text": "This is about the sum of doctrine among us, in which can be seen that there is nothing which is discrepant with the Scriptures, or with the Church Catholic, or even with the Roman Church, so far as that Church is known from writers [the writings of the Fathers]. This being the case, they judge us harshly who insist that we shall be regarded as heretics. But the dissension is concerning certain [traditions and] abuses, which without any certain authority have crept into the churches; in which things, even if there were some difference, yet would it be a becoming lenity on the part of the bishops that, on account of the Confession which we have now presented, they should bear with us, since not even the Canons are so severe as to demand the same rites every where, not were the rites of all churches at any time the same. Although among us in large part the ancient rites are diligently observed. For it is a calumnious falsehood, that all the ceremonies, all the things instituted of old, are abolished in our churches. But the public complaint was that certain abuses were connected with the rites in common use. These, because they could not with good conscience be approved, have to some extent been corrected.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.581",
+   "label": "Part Second. ARTICLES IN WHICH ARE RECOUNTED THE ABUSES WHICH HAVE BEEN CORRECTED",
+   "text": "Inasmuch as the churches among us dissent in no article of faith from [the holy Scriptures, or] the Church Catholic [the Universal Christian Church], and only omit a few of certain abuses, which are novel [in part have crept in with time, in part have been introduced by violence], and, contrary to the purport of the Canons, have been received by the fault of the times, we beg that Your Imperial Majesty would clemently hear both what ought to be changed and what are the reasons that the people ought not to be forced against their consciences to observe those abuses.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.585",
+   "label": "Part Second. ARTICLES IN WHICH ARE RECOUNTED THE ABUSES WHICH HAVE BEEN CORRECTED",
+   "text": "Nor should Your Imperial Majesty have faith in those who, that they may inflame the hatred of men against us, scatter amazing slanders among the people. In this way, the mind of good men being angered at the beginning, they gave occasion to this dissension, and by the same art they now endeavor to increase the discords. For beyond doubt your Imperial Majesty will find that the form, both of doctrines and of ceremonies, among us is far more tolerable than that which these wicked and malicious men describe. The truth, moreover, can not be gathered from common rumors and the reproaches of enemies. But it is easy to judge this, that nothing is more profitable to preserve the dignity of ceremonies and to nurture reverence and piety among the people than that the ceremonies should be rightly performed in the churches.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.606",
+   "label": "Art. I.—Of both Kinds [in the Lord's Supper]",
+   "text": "Both kinds of the Sacrament in the Lord's Supper are given to the laity, because that this custom hath the commandment of the Lord: 'Drink ye all of this' (Matt. xxvi. 27); where Christ doth manifestly command concerning the cup that all should drink. And that no man might cavil that this doth only pertain to the priests, the example of Paul to the Corinthians witnesseth that the whole Church did use both kinds in common (1 Cor. xi. 28). And this custom remained a long time in the Church; neither is it certain when or by what authority it was changed; although the Cardinal de Cusa relates when it was approved. [And this custom remained a long time in the churches, as may be proved from history and the writings of the Fathers.] Cyprian in certain places doth witness that the blood was given to the people; the same thing doth Jerome testify, saying, 'The priests do minister the Eucharist, and communicate the blood of Christ to the people.' Nay, Pope Gelasius commandeth that the Sacrament be not divided (Dist. II., De Consecr. Cap. Comperimus). Only a custom, not thus ancient, doth otherwise. But it is manifest that a custom, brought in contrary to the commandments of God, is not to be approved, as the Canons do witness (Dist. VIII., Cap. Veritate) with the words which follow. Now this custom has been received, not only against the Scripture, but also against the ancient Canons and the example of the Church. Therefore if any would rather use both kinds in the Sacrament, they are not to be compelled to do otherwise with the offense of their conscience. And because that the division of the Sacrament doth not agree with the institution of Christ, among us it is the custom to omit that procession which hitherto hath been in use.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 156,
+     "text": "Matt. xxvi. 27",
+     "start": "MAT.26.27",
+     "end": "MAT.26.27",
+     "note": false
+    },
+    {
+     "at": 426,
+     "text": "1 Cor. xi. 28",
+     "start": "1CO.11.28",
+     "end": "1CO.11.28",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.625",
+   "label": "Art. II.—Of the Marriage of Priests",
+   "text": "There was a common complaint of the examples of such priests as were not continent. For which cause Pope Pius is reported to have said, that 'there were certain causes for which marriage was forbidden to priests, but there were many weightier causes why it should be permitted again;' for so Platina writeth. Whereas, therefore, the priests among us seek to avoid these public offenses, they have married wives, and have taught that it is lawful for them to enter into marriage. First, because that Paul saith, 'To avoid fornication, let every man have his wife;' again, 'It is better to marry than to burn' (1 Cor vii. 2, 9). Secondly, Christ saith, 'All men can not receive this word' (Matt. xix. 11); where he showeth that all men are not fit for a single life, because that God created mankind male and female (Gen. i. 28). Nor is it in man's power, without a special gift and work of God, to alter his creation. Therefore such as are not meet for a single life ought to contract marriage. For no law of man, no vow, can take away the commandment of God and his ordinance. By these reasons the priest do prove that they may lawfully take wives. And it is well known that in the ancient churches priests were married. For Paul saith, 'That a bishop must be chosen which is a husband' (1 Tim. iii. 2).\n\nAnd in Germany, not until about four hundred years ago, were the priests by violence compelled to live a single life; who then were so wholly bent against the mater, that the Archbishop of Mentz, being about to publish the Pope of Rome's decree to that effect, was almost murdered in a tumult by the priests in their anger. And the matter was handled so rudely, that not only were marriages forbidden for the time to come, but also such as were then contracted were broken asunder, contrary to all laws divine and human, contrary to the Canons themselves, that were before made not only by Popes, but also by most famous Councils. And seeing that, as the world decayeth, man's nature by little and little waxeth weaker, it is well to look to it, that no more vices do overspread Germany. Furthermore, God ordained marriage to be a remedy for a man's infirmity. The Canons themselves do say that the old rigor is now and then in latter times to be released because of the weakness of men. Which it were to be wished might be done in this matter also. And if marriage be forbidden any longer, the churches may at length want pastors.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 609,
+     "text": "1 Cor vii. 2, 9",
+     "start": "1CO.7.2",
+     "end": "1CO.7.2",
+     "note": false
+    },
+    {
+     "at": 609,
+     "text": "1 Cor vii. 2, 9",
+     "start": "1CO.7.9",
+     "end": "1CO.7.9",
+     "note": false
+    },
+    {
+     "at": 688,
+     "text": "Matt. xix. 11",
+     "start": "MAT.19.11",
+     "end": "MAT.19.11",
+     "note": false
+    },
+    {
+     "at": 815,
+     "text": "Gen. i. 28",
+     "start": "GEN.1.28",
+     "end": "GEN.1.28",
+     "note": false
+    },
+    {
+     "at": 1288,
+     "text": "1 Tim. iii. 2",
+     "start": "1TI.3.2",
+     "end": "1TI.3.2",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.650",
+   "label": "Art. II.—Of the Marriage of Priests",
+   "text": "Seeing, then, that there is a plain commandment of God; seeing the use of the Church is well known; seeing that impure single life bringeth forth very many offenses, adulteries, and other enormities worthy to be punished by the godly magistrate, it is a marvel that greater cruelty should be showed in no other thing than against the marriage of priests. God had commanded to honor marriage; the laws in all well-ordered commonwealths, even among the heathen, have adorned marriage with very great honors. But now men are cruelly put to death, yea, and priests also, contrary to the mind of the Canons, for no other cause but marriage. Paul calleth that 'a doctrine of devils' which forbiddeth marriage (1 Tim. iv. 1, 3); which may now very well be seen, since the forbidding of marriage is maintained by such punishments.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 704,
+     "text": "1 Tim. iv. 1, 3",
+     "start": "1TI.4.1",
+     "end": "1TI.4.1",
+     "note": false
+    },
+    {
+     "at": 704,
+     "text": "1 Tim. iv. 1, 3",
+     "start": "1TI.4.3",
+     "end": "1TI.4.3",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.663",
+   "label": "Art. II.—Of the Marriage of Priests",
+   "text": "But as no law of man can take away the law of God, no more can any vow whatsoever. Therefore Cyprian also giveth counsel, that those women should marry who do not keep their vowed chastity. His words are these, in the 1st Book, the 2d Epistle: 'If they will not or are not able to endure, it is far better they should marry than that they should fall into the fire by their importunate desires. In any wise let them give no offense to their brethren or sisters.' Yea, even the Canons show some kind of justice towards such as before their ripe years did vow chastity, as hitherto the use hath for the most part been.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.681",
+   "label": "Art. III.—Of the Mass",
+   "text": "Our churches are wrongfully accused to have abolished the Mass. For the Mass is retained still among us, and celebrated with great reverence; yea, and almost all the ceremonies that are in use, saving that with the things sung in Latin we mingle certain things sung in German at various parts of the service, which are added for the people's instruction. For therefore alone we have need of ceremonies, that they may teach the unlearned.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.686",
+   "label": "Art. III.—Of the Mass",
+   "text": "This is not only commanded by St. Paul, to use a tongue that the people understand (1 Cor. xiv. 9), but man's law hath also appointed it. We accustom the people to receive the Sacrament together, if so be any be found fit thereunto; and that is a thing that doth increase the reverence and due estimation of the public ceremonies. For none are admitted, except they be first proved. Besides, we put men in mind of the worthiness and use of the Sacrament, how great comfort it bringeth to timid consciences; that they may learn to believe God, and to look for and crave all good things at his hands.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 84,
+     "text": "1 Cor. xiv. 9",
+     "start": "1CO.14.9",
+     "end": "1CO.14.9",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.697",
+   "label": "Art. III.—Of the Mass",
+   "text": "This worship doth please God; such a use of the Sacrament doth nourish piety towards God. Therefore it seemeth not that Masses be more religiously celebrated among our adversaries than with us.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.702",
+   "label": "Art. III.—Of the Mass",
+   "text": "But it is evident that of long time this hath been the public and most grievous complaint of all good men, that Masses are basely profaned, being used for gain. And it is not unknown how far this abuse hath spread itself in all churches; of what manner of men Masses are used, only for a reward, or for wages; and how many do use them against the prohibition of the Canons. But Paul doth grievously threaten those who treat the Lord's Supper unworthily, saying, 'He that eateth this bread or drinketh this cup of the Lord unworthily, shall be guilty of the body and blood of the Lord' (1 Cor. xi. 27). Therefore, when the priests among us were admonished of this sin, private Masses were laid aside among us, seeing that for the most part there were no private Masses but only for lucre's sake. Neither were the bishops ignorant of these abuses, and if they had amended them in time, there had now been less of dissensions. Heretofore, by their dissembling, they suffered much corruption to creep into the Church; now they begin, though it be late, to complain of the calamities of the Church; seeing that this tumult was raised up by no other mean than by those abuses, which were so evident that they could no longer be tolerated. There were many dissensions, concerning the Mass, concerning the Sacrament. And perhaps the world is punished for so long a profaning of Masses, which they, who both could and ought to have amended it, have so many years tolerated in the churches. For in the Ten Commandments it is written, 'He that taketh in vain the name of the Lord shall not be held guiltless' (Exod. xx. 7). And from the beginning of the world there neither was nor is any divine thing which seems so to have been employed for gain as the Mass.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 586,
+     "text": "1 Cor. xi. 27",
+     "start": "1CO.11.27",
+     "end": "1CO.11.27",
+     "note": false
+    },
+    {
+     "at": 1599,
+     "text": "Exod. xx. 7",
+     "start": "EXO.20.7",
+     "end": "EXO.20.7",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.715",
+   "label": "Art. III.—Of the Mass",
+   "text": "There was added an opinion, which increased private Masses infinitely: to wit, that Christ by his passion did satisfy for original sin, and appointed the Mass, wherein an oblation should be made for daily sins, both mortal and venial. Hereupon a common opinion was received, that the Mass is a work that taketh away the sins of the quick and the dead, and that for the doing of the work. Here men began to dispute whether one Mass said for many were of as great force as particular Masses said for particular men. This disputation hath brought forth that infinite multitude of Masses. Our preachers have admonished concerning these opinions that they do depart from the holy Scriptures, and diminish the glory of the passion of Christ. For the passion of Christ was an oblation and satisfaction, not only for original sin, but also for all other sins; as it is written in the Epistle to the Hebrews (x. 10): 'We are sanctified by the oblation of Jesus Christ once made;' also, 'By one oblation he hath perfected forever them that are sanctified' (Heb. x. 14). The Scripture also teacheth that we are justified before God through faith in Christ, when we believe that our sins are forgiven for Christ's sake. Now, if the Mass do take away the sins of the quick and the dead, even for the work's sake that is done, then justification cometh by the work of Masses, and not by faith; which the Scripture can not endure. But Christ commandeth us 'to do it in remembrance of himself' (Luke xxii. 19), therefore the Mass has been instituted that faith in them which use the Sacrament may remember what benefits it receiveth by Christ, and that it may raise and comfort the fearful conscience. For this is to remember Christ, to wit, to remember his benefits, and to feel and perceive that they be indeed imparted unto us. Nor is it sufficient to call to mind the history; because that the Jews also and the wicked can do. Therefore the Mass must be used to this end, that there the Sacrament may be reached unto them that have need of comfort as Ambrose saith, 'Because I do always sin, therefore I ought always to receive the medicine.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 900,
+     "text": "x. 10",
+     "start": "HEB.10.10",
+     "end": "HEB.10.10",
+     "note": false
+    },
+    {
+     "at": 1047,
+     "text": "Heb. x. 14",
+     "start": "HEB.10.14",
+     "end": "HEB.10.14",
+     "note": false
+    },
+    {
+     "at": 1479,
+     "text": "Luke xxii. 19",
+     "start": "LUK.22.19",
+     "end": "LUK.22.19",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.737",
+   "label": "Art. III.—Of the Mass",
+   "text": "And seeing that the Mass is such a communion of the Sacrament, we do observe one common Mass every holy day, and on other days, if any will use the Sacrament, at which times it is offered to them that desire it. Neither is this custom newly brought into the Church. For the ancients, before Gregory's time, make no mention of any private Mass; of the common Mass they speak much. Chrysostom saith that 'the priest doth daily stand at the altar, and call some unto the Communion, and put back others.' And by the ancient Canons I is evident that some one did celebrate the Mass, of whom the other elders and deacons did receive the body of the Lord. And Paul, concerning the Communion, commandeth, 'that one tarry for another' (1 Cor. xi. 33), that so there may be a common participation.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 727,
+     "text": "1 Cor. xi. 33",
+     "start": "1CO.11.33",
+     "end": "1CO.11.33",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.749",
+   "label": "Art. III.—Of the Mass",
+   "text": "Seeing, therefore, that the Mass amongst us hath the example of the Church, out of the Scripture, and the Fathers, we trust that it can not be disapproved; especially since our public ceremonies are kept, the most part, like unto the usual ceremonies; only the number of Masses is not alike, the which, by reason of very great and manifest abuses, it were certainly far better to be moderated. For in times past also, in the churches whereunto was greatest resort, it was not the use to have Mass said every day, as the Tripartite History, lib. ix. cap. 38, doth witness. 'Again,' saith it, 'in Alexandria, every fourth and sixth day of the week, the Scriptures are read, and the doctors do interpret them; and all other things are done also, expect only the celebration of the Eucharist.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.761",
+   "label": "Art. IV.—Of Confession",
+   "text": "Confession is not abolished in our churches. For it is not usual to communicate the body of our Lord, except to those who have been previously examined and absolved. And the people are taught most carefully concerning the faith required to absolution, about which before these times there has been a deep silence. Men are taught that they should highly regard absolution, inasmuch as it is God's voice, and pronounced by God's command.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.765",
+   "label": "Art. IV.—Of Confession",
+   "text": "The power of the keys is honored, and mention is made how great consolation it brings to terrified consciences, and the God requires faith that we believe that absolution as a voice sounding from heaven, and that this faith in Christ truly obtains and receives remission of sins.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.769",
+   "label": "Art. IV.—Of Confession",
+   "text": "Aforetime satisfactions were immoderately extolled; of faith, and the merit of Christ, and justification by faith, no mention was made. Wherefore on this point our churches are by no means to be blamed. For this even our adversaries are compelled to concede in regard to us, that the doctrine of repentance is most diligently treated and laid open by us.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.773",
+   "label": "Art. IV.—Of Confession",
+   "text": "But of Confession our churches teach that the enumeration of sins is not necessary, nor are consciences to be burdened with the care of enumerating all sins, inasmuch as it is impossible to recount all sins, as the Psalm (xix. 12) testifies: 'Who can understand his errors?' So also Jeremiah (xvii. 9): 'The heart is deceitful above all things, and desperately wicked. Who can know it?' But if no sins were remitted except what were recounted, consciences could never find peace, because very many sins they neither see nor can remember.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 222,
+     "text": "xix. 12",
+     "start": "PSA.19.12",
+     "end": "PSA.19.12",
+     "note": false
+    },
+    {
+     "at": 293,
+     "text": "xvii. 9",
+     "start": "JER.17.9",
+     "end": "JER.17.9",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.788",
+   "label": "Art. IV.—Of Confession",
+   "text": "The ancient writers also testify that the enumeration is not necessary. For in the Decrees Chrysostom is cited, who speaks thus: 'I do not say to thee that thou shouldst discover thyself in public, or accuse thyself before others, but I would have thee obey the prophet when he says: \"Reveal thy way unto the Lord.\" Therefore with prayer confess thy sins before God the true Judge. Pronounce thine errors, not with the tongue, but with the memory of thy conscience.' And the Gloss (Of Repentance, Dist. V., Chap. Consideret), admits that Confession is of human right only [is not commanded in Scripture, but has been instituted by the Church].",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.792",
+   "label": "Art. IV.—Of Confession",
+   "text": "Nevertheless, on account of the very great benefit of absolution, as well as for other uses to the conscience, Confession is retained among us.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.808",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "It hath been a general opinion, not of the people alone, but also of such as are teachers in the churches, that the differences of meats, and such like human traditions, are works available to merit grace, and are satisfactions for sins. And that the world thus thought is apparent by this—that daily new ceremonies, new orders, new holidays, new fasts, were appointed; and the teachers in the churches did exact these works as a service necessary to deserve grace; and they did greatly terrify men's consciences, if aught were omitted.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.812",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Of this persuasion concerning traditions many disadvantages have followed in the Church. For first the doctrine of grace is obscured by it, and also the righteousness of faith, which is the principal part of the Gospel, and which it behooveth most of all to stand forth and to have the pre-eminence in the Church, that the merit of Christ may be well known, and faith, which believeth that sins are remitted for Christ's sake, may be exalted far above works. For which cause also Paul lays much stress on this point: he removeth the law and human traditions, that he may show that the righteousness of Christ is a far other thing than such works as these be, namely, a faith, which believeth that sins are freely remitted for Christ's sake. But this doctrine of Paul is almost wholly smothered by traditions, which have bred an opinion, that, by making difference in meats, and such like services, a man should merit grace and justification. In their doctrine of repentance there was no mention of faith; only these works of satisfaction were spoken of: repentance seemed to consist wholly in these.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.822",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Secondly, these traditions obscured the commandments of God, because traditions were preferred far above the commandments of God. All Christianity was thought to be an observation of certain holidays, rites, fasts, and attire. These observations were in possession of a most goodly title, that they were the spiritual life and the perfect life. In the mean time God's commandments, touching every man's calling, were of small estimation: that the father brought up his children, that the mother nurtured them, that the prince governed the commonwealth. These were reputed worldly affairs, and imperfect, and far inferior to those glittering observances. And this error did greatly torment pious consciences, which were grieved that they were held by an imperfect kind of life, in marriage, in magistracy, or in other civil functions. They had the monks, and such like, in admiration, and falsely imagined that the observances of these men were more grateful to God than their own.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.833",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Thirdly, traditions brought great danger to men's consciences, because it was impossible to keep all traditions, and yet men thought the observation of them to be necessary services. Gerson writeth that 'many fell into despair, and some murdered themselves, because they perceived that they could not keep the traditions;' and all this while they never heard the comfort of the righteousness of faith, or of grace. We see the Summists and Divines gather together the traditions, and seek qualifications of them, to unburden men's consciences; and yet all will not serve, but meantime they bring more snares upon the conscience. The schools and pulpits have been so busied in gathering together the traditions, that they had not leisure to touch the Scripture, and to seek out a more profitable doctrine—of faith, of the cross, of hope, of the dignity of civil affairs, of the comfort of conscience in arduous trials. Wherefore Gerson and some other Divines have made grievous complaints, that they were hindered by these strifes about traditions, so that they could not be occupied in some better kind of doctrine. And Augustine forbiddeth that men's consciences should be burdened with observations of this kind, and doth very prudently warn Januarius to know that they are to be observed as things indifferent; for he so speaketh.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.843",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Wherefore our ministers must not be thought to have touched this matter rashly, or from hatred of the bishops, as some do falsely surmise. There was great need to admonish the churches of those errors, which did arise from mistaking of traditions; for the Gospel compelleth men to urge the doctrine of grace and of the righteousness of faith in the Church; which yet can never be understood if men suppose that they can merit remission of sins and justification by observances of their own choice. Thus, therefore, they teach us that we can not merit grace or justification by the observation of man's traditions; and therefore we must not think that such observations are necessary service.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.847",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Hereunto they add testimonies out of the Scriptures. Christ excuseth his Apostles who kept not the received tradition (which yet seemed to be about a matter not unlawful, but indifferent, and to have some affinity with the baptisms of the law), and saith, 'They worship me in vain with the commandments of men' (Matt. xv. 9). Christ, therefore, exacteth no unprofitable service. And a little after, he addeth: 'Whatsoever entereth in at the mouth defileth not the man' (ver. 11). So also (Paul): 'The kingdom of God is not meat and drink' (Rom. xv. 17). 'Let no man judge you in meat or drink, or in respect of the Sabbath-days, or of a holiday' (Col. ii. 16). Again: 'If ye be dead with Christ from the rudiments of the world, why, as though ye lived in the world, are ye subject to traditions: Touch not, taste not, handle not?' (ver. 20, 21).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 312,
+     "text": "Matt. xv. 9",
+     "start": "MAT.15.9",
+     "end": "MAT.15.9",
+     "note": false
+    },
+    {
+     "at": 470,
+     "text": "ver. 11",
+     "start": "MAT.15.11",
+     "end": "MAT.15.11",
+     "note": false
+    },
+    {
+     "at": 540,
+     "text": "Rom. xv. 17",
+     "start": "ROM.15.17",
+     "end": "ROM.15.17",
+     "note": false
+    },
+    {
+     "at": 647,
+     "text": "Col. ii. 16",
+     "start": "COL.2.16",
+     "end": "COL.2.16",
+     "note": false
+    },
+    {
+     "at": 832,
+     "text": "ver. 20, 21",
+     "start": "COL.2.20",
+     "end": "COL.2.21",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.870",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Peter saith, 'Why tempt ye God, laying a yoke upon the necks of the disciples, which neither we nor our fathers were able to bear? But we believe that through the grace of the Lord Jesus Christ we shall be saved, even as they' (Acts xv. 10, 11). Here Peter forbiddeth to burden the consciences with many rites, whether they be of Moses' or of any others' appointing. And he (Paul) calleth the forbidding of meats 'a doctrine of devils' (1 Tim. iv. 1), because that it is against the Gospel to appoint or do such works, to the end that by them we may merit grace or justification, or as though Christianity could not exist without such service.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 228,
+     "text": "Acts xv. 10, 11",
+     "start": "ACT.15.10",
+     "end": "ACT.15.11",
+     "note": false
+    },
+    {
+     "at": 437,
+     "text": "1 Tim. iv. 1",
+     "start": "1TI.4.1",
+     "end": "1TI.4.1",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.885",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Here our adversaries object against us, that our ministers hinder all good discipline and mortification of the flesh, as Jovinian did. But the contrary may be seen by our men's writings. For they have always taught, touching the cross, that Christians ought to bear afflictions. This is the true, earnest, and unfeigned mortification, to be exercised with divers afflictions, and to be crucified with Christ. Moreover they teach that every Christian must so by bodily discipline, or bodily exercises and labor, exercise and keep himself under, that plenty and sloth do not stimulate him to sin; not that he may by such exercises merit grace, or satisfy for sins. And this corporal discipline should be used always, not only on a few and set days; according to the commandment of Christ: 'Take heed lest your hearts be overcharged with surfeiting' (Luke xxi. 34). Again: 'This kind (of devils) goeth not out but by prayer and fasting' (Matt. xvii. 21). And Paul saith, 'I keep under my body, and bring it into subjection' (1 Cor. ix. 27), where he plainly showeth that he did therefore chastise his body; not that by that discipline he might merit remission of sins, but that his body might be apt and fit for spiritual things, and to do his duty according to his calling. Therefore we do not condemn fasts themselves, but the traditions which prescribe certain days and certain meats, with danger to the conscience, as though such works as these were a necessary service.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 848,
+     "text": "Luke xxi. 34",
+     "start": "LUK.21.34",
+     "end": "LUK.21.34",
+     "note": false
+    },
+    {
+     "at": 935,
+     "text": "Matt. xvii. 21",
+     "start": "MAT.17.21",
+     "end": "MAT.17.21",
+     "note": false
+    },
+    {
+     "at": 1022,
+     "text": "1 Cor. ix. 27",
+     "start": "1CO.9.27",
+     "end": "1CO.9.27",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.898",
+   "label": "Art. V.—Of the Distinction of Meats, and of Traditions",
+   "text": "Yet most of the traditions are observed among us which tend unto this end, that things may be done orderly in the Church; as, namely, the order of Lessons in the Mass and the chiefest holidays. But, in the mean time, men are admonished that such a service doth not justify before God, and that it is not to be supposed there is sin in such things, if they be left undone, without scandal. This liberty in human rites and ceremonies was not unknown to the Fathers. For in the East they kept Easter at another time than they did in Rome; and when they of Rome accused the East of schism for this diversity, they were admonished by others that such customs need not be alike every where. And Irenæus saith: 'The disagreement about fasting doth not break off the agreement of faith.' Besides, Pope Gregory, in the 12th Distinction, intimates that such diversity doth not hurt the unity of the Church; and in the Tripartite History, lib. 9, many examples of dissimilar rites are gathered together, and these words are there rehearsed: 'The mind of the Apostles was, not to give precepts concerning holidays, but to preach godliness and a holy life [faith and love].'",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.915",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "What is taught among us touching the Vows of Monks will be better understood if one call to mind what was the state of monasteries, and how many things were every day committed in the monasteries contrary to the Canons. In Augustine's time cloister-fraternities were free; but afterwards, when discipline was corrupted, vows were every where laid upon them, that, as it were in a newly devised prison, the discipline might be restored again.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.919",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Over and besides vows, many other observances by little and little were added. And these bands and snares were cast upon many, before they came to ripe years, contrary to the Canons.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.925",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Many through error fell into this kind of life unawares, who, though they wanted not years, yet they wanted discretion to judge of their strength and ability. They who were once got within these nets were constrained to abide in them, though, by the benefit of the Canons, some might be set at liberty. And that fell out rather in the monasteries of nuns than of monks; although the weaker sex ought more to have been spared.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.929",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "This rigor and severity displeased many good men heretofore, when they saw young maids and young men thrust into monasteries, there to get their living. They saw what an unhappy issue this counsel had, what offenses it bred, and what snares it laid upon consciences. They were grieved that the authority of the Canons was wholly neglected and contemned in a thing most dangerous.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.933",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "To all these evils there was added such a persuasion concerning vows, as, it is well known, did in former times displease the monks themselves, if any of them were somewhat wiser than the rest. They taught that vows were equal to baptism; they taught that by this kind of life they merited remission of sins and justification before God; yea, they added that the monk's life did not only merit righteousness before God, but more than that, because it observed not only the commandments, but also the counsels of the Gospel. And thus they taught that the monk's profession was better than baptism; that the monk's life did merit more than the life of magistrates, of pastors, and such like, who, in obedience to God's commandment, followed their calling without any such religions of man's making.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.943",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "None of these things can be denied: they are to be seen in their writings.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.947",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "What occurred afterwards in the monasteries? In old time they were schools for the study of sacred letters, and other branches of knowledge, which were profitable to the Church; and thence were pastors and bishops taken: but now the case is altered. It is needless to rehearse what is notorious. In old time they came together into such places to learn; but now they feign that it is a kind of life taken up to merit remission of sins and justification; yea, they say it is a state of perfection, and prefer it to all other kinds of life, the kinds that God ordained.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.951",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "We have therefore mentioned these things, not to excite odium, exaggerating nothing, to the end that the doctrine of our churches touching this matter might be understood.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.963",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "First, concerning such as contract marriage, thus they teach among us: that it is lawful for any to marry that are not adapted for a single life; forasmuch as vows can not take away God's ordinance and commandment. The commandment of God is, 'To avoid fornication, let every man have his own wife' (1 Cor. vii. 2). And not only the commandment, but also the creation and ordinance of God, compelleth such unto marriage as without the special work of God are not exempted; according to that saying, 'It is not good for man to be alone' (Gen. ii. 18). They, therefore, that are obedient to this commandment and ordinance of God do not sin.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 299,
+     "text": "1 Cor. vii. 2",
+     "start": "1CO.7.2",
+     "end": "1CO.7.2",
+     "note": false
+    },
+    {
+     "at": 536,
+     "text": "Gen. ii. 18",
+     "start": "GEN.2.18",
+     "end": "GEN.2.18",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.969",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "What can be said against these things? Let a man exaggerate the bond of a vow as much as he will, yet can he never bring to pass that the vow shall take away God's commandment. The Canons teach, 'that in every vow the right of the superior is excepted:' much less, therefore, can these vows, which are contrary to God's commandment, be of force.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.973",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "If so be that the obligation of vows has no causes why it might be changed, then could not the Roman Pontiffs have dispensed therewith. For neither is it lawful for man to disannul that bond which doth simply belong to the law of God. But the Roman Pontiffs have judged very prudently, that in this obligation there must equity be used; therefore they often, as we read, have dispensed with vows. The history of the King of Arragon, being called back out of a monastery, is well known; and there are examples in our own time.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.985",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Secondly, why do our adversaries exaggerate the obligation or the effect of the vow; when in the mean time they speak not a word of the very nature of a vow, that it ought to be in a thing possible, ought to be voluntary, and taken up of a man's own accord, and with deliberation? But it is not unknown how far perpetual chastity is in the power of a man. And how many a one amongst them is there that doth vow of his own accord and well advised? Maidens and youths, before they know how to judge, are persuaded, yea, sometimes also compelled to vow.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.989",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Wherefore it is not meet to dispute so rigorously of the obligation, seeing that all men confess that it is against the nature of a vow, that it is not done of a man's own accord, nor advisedly.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.999",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "The Canons for the most part disannul vows which are made before fifteen years of age; because that before one come to that age there seemeth not to be so much judgment that determination may be made concerning a perpetual life. Another Canon, permitting more to the weakness of men, doth add some years more; for it forbiddeth a vow to be made before one be eighteen years of age. But which of these shall we follow? The greatest part have this excuse for forsaking monasteries, because most of them vowed before they came to this age.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1003",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Last of all, even though the breaking of a vow were to be reprehended, yet it seems not to follow directly that the marriages of such persons are to be dissolved. For Augustine, in his 27th quest. 1st chap. Of Marriages, doth deny that they ought to be dissolved; and his authority is not lightly to be esteemed, although others afterwards have thought otherwise.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1007",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "And although the commandment of God touching wedlock doth free most men from vows; yet our teachers do also bring another reason concerning vows, to show that they are void: because that all the worship of God, instituted of men without the commandment of God, and chosen to merit remission of sins and justification, is wicked; as Christ saith: 'In vain they do worship me, teaching for doctrines the commandments of men' (Matt. xv. 9). And Paul doth every where teach that righteousness is not to be sought of our own observances, and services which are devised by men; but that it cometh by faith to those that believe that they are received into favor by God for Christ's sake.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 424,
+     "text": "Matt. xv. 9",
+     "start": "MAT.15.9",
+     "end": "MAT.15.9",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1019",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "But it is evident that the monks did teach that these counterfeited religions satisfy for sins, and merit grace and justification. What else is this than to detract from the glory of Christ, and to obscure and deny the righteousness of faith? Wherefore it followeth that these common vows were wicked services, and are therefore void. For a wicked vow, and that which is made against the commandments of God, is one of no force; neither, as the Canon saith, ought a vow to be a bond of iniquity.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1024",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Paul saith, 'Christ is become of no effect unto you, whosoever of you are justified by the law; ye are fallen from grace' (Gal. v. 4). They, therefore, who wish to be justified by vows, are made void of Christ, and fall from grace. For they also who attribute justification to their vows, attribute to their own works what properly belongs to the glory of Christ. Nor truly can it be denied that the monks taught that they are justified by their vows and observances, and merit the remission of sins; nay, they invented yet greater absurdities, and said they could transfer their good works to others. If any man wished to expand these things, so as to excite odium, how many things might he rehearse whereof the monks themselves are now ashamed!",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 123,
+     "text": "Gal. v. 4",
+     "start": "GAL.5.4",
+     "end": "GAL.5.4",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1035",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Moreover, they would persuade men that these invented religious orders are a state of Christian perfection. Or is this not attributing justification to works? It is no light offense in the Church to propound unto the people a certain service devised by men, without the commandment of God, and to teach that such a service doth justify men; because that the righteousness of faith, which ought especially to be taught in the Church, is obscured when those marvelous religions of angels, the pretense of poverty and humility, and of celibacy, are cast before men's eyes.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1039",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Moreover, the commandments of God, and the true worship of God, are obscured when men hear that monks alone are in that state of perfection; because that Christian perfection is this, to bear God sincerely, and again, to conceive great faith, and to trust assuredly that God is pacified towards us, for Christ's sake; to ask, and certainly to look for, help from God in all our affairs, according to our calling; and outwardly to do good works diligently, and to attend to our vocation. In these things doth true perfection and the true worship of God consist: it doth not consist in singleness of life, in beggary, or in vile apparel.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1049",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "The people doth also conceive many pernicious opinions from these false commendations of the monastic life. They hear celibacy praised above measure; therefore with offense of conscience they live in marriage. They hear that mendicants only are perfect; therefore with offense of conscience they keep their possessions, and buy and sell. They hear that the Gospel only giveth counsel not to take revenge; therefore some in private life are not afraid to avenge themselves; for they hear that it is a counsel, not a commandment. Others do think that all magistracy and civil offices are unworthy of Christian men.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1055",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "We read examples of men who, forsaking wedlock, and leaving the government of the commonwealth, have hid themselves in monasteries. This they called flying out of the world, and seeking a kind of life which is more acceptable to God: neither did they see that God is to be served in those commandments which he himself hath delivered, not in the commandments which are devised by men. That is a good and perfect kind of life which hath the commandment of God for it. It is necessary to admonish men of these things. And before these times Gerson did reprehend this error of the monks concerning perfection; and witnesseth, that in his time this was a new saying, that the monastical life is a state of perfection.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1059",
+   "label": "Art. VI.—Of Monastic Vows",
+   "text": "Thus many wicked opinions do cleave fast unto vows: as that they merit remission of sins and justification, that they are Christian perfection, that they do keep the counsels and commandments, that they have works of supererogation. All these things (seeing they be false and vain) do make vows to be of none effect.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1069",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "There have been great controversies touching the power of Bishops; in which many have incommodiously mingled together the Ecclesiastical power and the power of the sword.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1079",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "And out of this confusion there have sprung very great wars and tumults, while that the Pontiffs, trusting in the power of the keys, have not only appointed new kinds of service, and burdened men's consciences by reserving of cases, and by violent excommunications; but have also endeavored to transfer worldly kingdoms from one to another, and to despoil emperors of their power and authority.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1083",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "These faults did godly and learned men long since reprehend in the Church; and for that cause our teachers were compelled, for the comfort of men's consciences, to show the difference between the ecclesiastical power and the power of the sword. And they have taught that both of them, because of God's commandment, are dutifully to be reverenced and honored, as the chiefest blessings of God upon earth.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1087",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Now their judgment is this: that the power of the keys, or the power of the Bishops, by the rule of the Gospel, is a power or commandment from God, of preaching the Gospel, of remitting or retaining sins, and of administering the Sacraments.\n\nFor Christ doth send his Apostles with this charge: 'As the Father hath sent me, even so send I you. Receive ye the Holy Ghost: whosesoever sins ye remit, they are remitted unto them; and whosesoever sins ye retain, they are retained' (John xx. 21–23). 'Go and preach the Gospel to every creature,' etc. (Mark xvi. 15).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 479,
+     "text": "John xx. 21–23",
+     "start": "JHN.20.21",
+     "end": "JHN.20.23",
+     "note": false
+    },
+    {
+     "at": 548,
+     "text": "Mark xvi. 15",
+     "start": "MRK.16.15",
+     "end": "MRK.16.15",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1102",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "This power is put in execution only by teaching or preaching the Word and administering the Sacraments, either to many or to single individuals, in accordance with their call. For thereby not corporal things, but eternal, are granted; as an eternal righteousness, the Holy Ghost, life everlasting. These things can not be got but by the ministry of the Word and of the Sacraments, as Paul saith, 'The Gospel is the power of God to salvation to every one that believeth' (Rom. i. 16).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 471,
+     "text": "Rom. i. 16",
+     "start": "ROM.1.16",
+     "end": "ROM.1.16",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1107",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Seeing, then, that the ecclesiastical power concerneth things eternal, and is exercised only by the ministry of the Word, it hindereth not the political government any more than the art of singing hinders political government. For the political administration is occupied about other matters than is the Gospel. The magistracy defends not the minds, but the bodies, and bodily things, against manifest injuries; and coerces men by the sword and corporal punishments, that it may uphold civil justice and peace.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1121",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Wherefore the ecclesiastical and civil powers are not to be confounded. The ecclesiastical power hath its own commandment to preach the Gospel and administer the Sacraments. Let it not by force enter into the office of another; let it not transfer worldly kingdoms; let it not abrogate the magistrates' laws; let it not withdraw from them lawful obedience; let it not hinder judgments toughing any civil ordinances or contracts; let it not prescribe laws to the magistrate touching the form of the republic; as Christ saith, 'My kingdom is not of this world' (John xviii. 36). Again, 'Who made me a judge or a divider over you?' (Luke xii. 14). And Paul saith, 'Our conversation [citizenship] is in heaven' (Phil. iii. 20). 'The weapons of our warfare are not carnal, but might through God, casting down imaginations,' etc. (2 Cor. x. 4). In this way do our teachers distinguish between the duties of each power one from the other, and do warn all men to honor both powers, and to acknowledge both to be the [highest] gift and blessing of God.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 560,
+     "text": "John xviii. 36",
+     "start": "JHN.18.36",
+     "end": "JHN.18.36",
+     "note": false
+    },
+    {
+     "at": 630,
+     "text": "Luke xii. 14",
+     "start": "LUK.12.14",
+     "end": "LUK.12.14",
+     "note": false
+    },
+    {
+     "at": 708,
+     "text": "Phil. iii. 20",
+     "start": "PHP.3.20",
+     "end": "PHP.3.20",
+     "note": false
+    },
+    {
+     "at": 825,
+     "text": "2 Cor. x. 4",
+     "start": "2CO.10.4",
+     "end": "2CO.10.4",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1129",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "If so be that the Bishops have any power of the sword, they have it not as Bishops by the commandment of the Gospel, but by man's law given unto them of kings and emperors, for the civil government of their goods. This, however, is a kind of function diverse from the ministry of the gospel.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1140",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Therefore, when the question touches the jurisdiction of Bishops, government must be distinguished from ecclesiastical jurisdiction. Again, by the Gospel, or, as they term it, by divine right, Bishops, as Bishops—that is, those who have the administration of the Word and Sacraments committed to them—have no other jurisdiction at all, but only to remit sin, also to take cognizance of [to judge in regard to] doctrine, and to reject doctrine inconsistent with the Gospel, and to exclude from the communion of the Church, without human force, but by the Word [of God], those whose wickedness is known. And herein of necessity the churches ought by divine right to render obedience unto them; according to the saying of Christ, 'He that heareth you heareth me' (Luke x. 16).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 761,
+     "text": "Luke x. 16",
+     "start": "LUK.10.16",
+     "end": "LUK.10.16",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1146",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "But when they teach or determine any thing contrary to the Gospel, then have the churches a commandment of God, which forbiddeth obedience to them: 'Beware of false prophets' (Matt. vii. 15). 'If an angel from heaven preach any other Gospel, let him be accursed' (Gal. i. 8). 'We can not do any thing against the truth, but for the truth' (2 Cor. xiii. 8). Also, 'This power is given us to edify, and not to destroy' (2 Cor. xiii. 10). So do the Canons command (II. Quæst. 7, Cap. Sacerdotes, and Cap. Oves). And Augustine, in his Treatise against Petilian's Epistle, saith, 'Neither must we subscribe to Catholic Bishops, if they chance to err, or determine any thing contrary to the canonical divine Scriptures.'",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 176,
+     "text": "Matt. vii. 15",
+     "start": "MAT.7.15",
+     "end": "MAT.7.15",
+     "note": false
+    },
+    {
+     "at": 264,
+     "text": "Gal. i. 8",
+     "start": "GAL.1.8",
+     "end": "GAL.1.8",
+     "note": false
+    },
+    {
+     "at": 340,
+     "text": "2 Cor. xiii. 8",
+     "start": "2CO.13.8",
+     "end": "2CO.13.8",
+     "note": false
+    },
+    {
+     "at": 418,
+     "text": "2 Cor. xiii. 10",
+     "start": "2CO.13.10",
+     "end": "2CO.13.10",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1162",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "If so be that they have any other power or jurisdiction, in hearing and understanding certain cases, as namely, of Matrimony, and Tithes, etc., they hold it by human right. But when the ordinaries fail [to attend to this office], princes are constrained, whether they wish to do so or not, to declare the law to their subjects, for maintaining of peace.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1167",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Besides these things, there is a controversy whether Bishops or Pastors have power to institute ceremonies in the Church, and to make laws concerning meats, and holidays, and degrees, or orders of ministers, etc. They that ascribe this power to the Bishops allege this testimony for it: 'I have yet many things to say unto you, but ye can not bear them now; but when that Spirit of truth shall come, he shall teach you all truth' (John xvi 12, 13). They allege also the examples of the Apostles, who commanded to abstain from blood, and that which was strangled (Acts xv. 29). They allege the change of the Sabbath into the Lord's day, contrary, as it seemeth, to the Decalogue; and they have no example more in their mouths than the change of the Sabbath. They will needs have the Church's power to be very great, because it hath dispensed with a precept of the Decalogue.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 431,
+     "text": "John xvi 12, 13",
+     "start": "JHN.16.12",
+     "end": "JHN.16.13",
+     "note": false
+    },
+    {
+     "at": 563,
+     "text": "Acts xv. 29",
+     "start": "ACT.15.29",
+     "end": "ACT.15.29",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1179",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "But of this question ours do thus teach: that the Bishops have no power to ordain any thing contrary to the Gospel, as was showed before. The same also do the Canons teach: Distinct. 9. Moreover, it is against the Scripture to ordain or require the observation of any traditions, to the end that we may merit remission of sins, and satisfy for sins by them. For the glory of Christ's merit suffers when we seek by such observances to merit justification. And it is very apparent, that through this persuasion traditions grew into an infinite number in the Church. In the mean while, the doctrine concerning faith, and the righteousness of faith, was quite suppressed, for thereupon there were new holidays made, new fasts appointed, new ceremonies, new worships for saints, instituted; because that the authors of such things supposed by these works to merit grace. After the same manner heretofore did the Penitential Canons increase, whereof we still see some traces in satisfactions.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1189",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Moreover, the authors of traditions do contrary to the command of God when they find matters of sin in foods, in days, and like things, and burden the Church with the servitude of the law, as if there ought to be among Christians, in order to merit justification, a service like the Levitical, the ordination of which God has committed to the Apostles and Bishops. For this some of them write, and the Pontiffs in some measure seem to be misled by the example of the Law of Moses. From hence are those burdens, that it is mortal sin, even without offense to others, to do manual labor on the festivals, that it is a mortal sin to omit the Canonical Hours, that certain foods defile the conscience, that fastings are works which appease God; that sin, in a reserved case, can not be pardoned, but by the authority of him that reserved it: whereas the Canons speak only of reserving of ecclesiastical penalty, and not of the reserving of the fault.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1201",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Whence, then, have the Bishops power and authority of imposing these traditions upon the churches, for the ensnaring of men's consciences, when Peter forbids (Acts xv. 10) 'to put a yoke upon the neck of the disciples,' and St. Paul says (2 Cor. xiii. 10) that the power given him was to edification, not to destruction? Why, therefore do they increase sins by these traditions?",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 159,
+     "text": "Acts xv. 10",
+     "start": "ACT.15.10",
+     "end": "ACT.15.10",
+     "note": false
+    },
+    {
+     "at": 239,
+     "text": "2 Cor. xiii. 10",
+     "start": "2CO.13.10",
+     "end": "2CO.13.10",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1210",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "For there are divers clear testimonies which prohibit the making of such traditions, either to merit grace, or as things necessary to salvation. Paul saith to the Colossians, 'Let no man judge you in meat, or in drink, or in respect of a holiday, or of the new moon, or of the Sabbath days' (Col. ii. 16). Again, 'If ye be dead with Christ from the rudiments of the world, why, as though living in the world, are ye subject to ordinances (Touch not, taste not, handle not; which all are to perish with the using) after the commandments and doctrines of men? Which things indeed have a show of wisdom' (Col. ii. 20–23). And to Titus he doth plainly forbid traditions; for he saith, 'Not giving heed to Jewish fables, and to commandments of men, that turn from the truth' (Tit. i. 14). And Christ saith of them which urge traditions, 'Let them alone; they be blind leaders of the blind' (Matt. xv. 14). And he condemneth such services: 'Every plant which my heavenly Father hath not planted shall be rooted up' (ver. 13).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 292,
+     "text": "Col. ii. 16",
+     "start": "COL.2.16",
+     "end": "COL.2.16",
+     "note": false
+    },
+    {
+     "at": 602,
+     "text": "Col. ii. 20–23",
+     "start": "COL.2.20",
+     "end": "COL.2.23",
+     "note": false
+    },
+    {
+     "at": 771,
+     "text": "Tit. i. 14",
+     "start": "TIT.1.14",
+     "end": "TIT.1.14",
+     "note": false
+    },
+    {
+     "at": 886,
+     "text": "Matt. xv. 14",
+     "start": "MAT.15.14",
+     "end": "MAT.15.14",
+     "note": false
+    },
+    {
+     "at": 1010,
+     "text": "ver. 13",
+     "start": "MAT.15.13",
+     "end": "MAT.15.13",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1227",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "If Bishops have authority to burden the churches with innumerable traditions, and to snare men's consciences, why doth the Scripture so oft forbid to make and to listen to traditions? Why doth it call them the doctrines of devils? (1 Tim. iv. 1.) Hath the Holy Ghost warned us of them to no purpose?",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 232,
+     "text": "1 Tim. iv. 1",
+     "start": "1TI.4.1",
+     "end": "1TI.4.1",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1233",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "It remaineth, then, that (seeing ordinances, instituted as necessary, or with the opinion of meriting grace, are repugnant to the Gospel) it is not lawful for any Bishops to institute or exact such worship. For it is necessary that the doctrine of Christian liberty should be maintained in the church [Christendom]: that the bondage of the law is not necessary unto justification, as it is written to the Galatians: 'Be not entangled again with the yoke of bondage' (Gal. v. 1). It necessary that the chiefest point of all the Gospel should be holden fast, that we do freely obtain grace, by faith in Christ, not because of certain observances, or of services devised by men.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 467,
+     "text": "Gal. v. 1",
+     "start": "GAL.5.1",
+     "end": "GAL.5.1",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1242",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "What is, then to be thought of the Lord's day, and of like rites of temples? Hereunto they [ours] answer, that it is lawful for Bishops or Pastors to make ordinances, whereby things may be done in order in the Church; not that by them we may merit grace, or satisfy for sins, or that men's consciences should be bound to esteem them as necessary services, and think that they sin when they violate them, without the offense of others. So Paul ordained, 'that women should cover their heads in the congregation' (1 Cor. xi. 6); 'that the interpreters of Scriptures should be heard in order in the Church' (1 Cor. xiv. 27), etc.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 512,
+     "text": "1 Cor. xi. 6",
+     "start": "1CO.11.6",
+     "end": "1CO.11.6",
+     "note": false
+    },
+    {
+     "at": 605,
+     "text": "1 Cor. xiv. 27",
+     "start": "1CO.14.27",
+     "end": "1CO.14.27",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1250",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Such ordinances it behooveth the churches to keep for charity and quietness' sake, so that one offend not another, that all things may be done in order, and without tumult in the churches (1 Cor. xiv. 40 and Phil. ii. 14), but so that consciences be not burdened, so as to account them as things necessary to salvation, and think they sin when they violate them, without offense of others; as no one would say that a woman sins if she went into public with her head uncovered, provided it were without the offense of men.",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 189,
+     "text": "1 Cor. xiv. 40",
+     "start": "1CO.14.40",
+     "end": "1CO.14.40",
+     "note": false
+    },
+    {
+     "at": 208,
+     "text": "Phil. ii. 14",
+     "start": "PHP.2.14",
+     "end": "PHP.2.14",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1256",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Such is the observation of the Lord's day, of Easter, of Pentecost, and like holidays and rites. For they that think that the observation of the Lord's day was appointed by the authority of the Church, instead of the Sabbath, as necessary, are greatly deceived. The Scripture, which teacheth that all the Mosaical ceremonies can be omitted after the Gospel is revealed, has abrogated the Sabbath. And yet, because it was requisite to appoint a certain day, that the people might know when they ought to come together, it appears that the [Christian] Church did for that purpose appoint the Lord's day: which for this cause also seemed to have been pleasing, that men might have an example of Christian liberty, and might know that the observation, neither of the Sabbath, nor of another day, was of necessity.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1273",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "There are certain marvelous disputations touching the changing of the law, and the ceremonies of the new law, and the change of the Sabbath: which all arose from the false persuasion, that there should be a service in the Church, like to the Levitical; and that Christ committed to the Apostles and Bishops the devising new ceremonies, which should be necessary to salvation. These errors crept into the Church, when the righteousness of faith was not plainly enough taught. Some dispute that the observation of the Lord's day is not indeed of the law of God, but as it were of the law of God; and touching holidays, they prescribe how far it is lawful to work in them. What else are such disputations but snares for men's consciences? For though they seek to moderate traditions, yet the equity of them can never be perceived so long as the opinion of necessity remaineth; which must needs remain, where the righteousness of faith and Christian liberty are not know.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1286",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "The Apostles commanded 'to abstain from blood' (Acts xv. 20). Who observeth that nowadays? And yet they do not sin that observe it not. For the Apostles themselves would not burden men's consciences with such a servitude; but they forbade it for a time, because of scandal. For in the decree, the will of the Gospel is always to be considered",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 48,
+     "text": "Acts xv. 20",
+     "start": "ACT.15.20",
+     "end": "ACT.15.20",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1293",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Scarcely any canons are precisely kept; and many grow out of use daily, yea, even among them that do most busily defend traditions. Neither can there be sufficient care had of men's consciences, except this equity be kept, that men should know that such rites are not to be observed with any opinion of necessity, and that men's consciences are not hurt, though traditions grow out of use.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1297",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "The Bishops might easily retain lawful obedience, if they would not urge men to observe such traditions as can not be kept with a good conscience. Now they command single life; and they admit none, except they will swear not to teach the pure doctrine of the Gospel. The churches do not desire of the Bishops that they would repair peace and concord with the loss of their honor (which yet good pastors ought to do): they only desire that they would remit unjust burdens, which are both new and received contrary to the custom of the Catholic [Christian Universal] Church. It may well be that some constitutions had some probable reasons when they began, which yet will not agree to latter times. It is evident that some were received through error. Wherefore it were a matter for the pontifical gentleness to mitigate them now; for such a change would not overthrow the unity of the Church. For many human traditions have been changed in time, as the Canons themselves declare. But if it can not be obtained that those observances may be relaxed which can not be kept without sin, then must we follow the Apostles' rule, which willeth 'to obey God rather than men' (Acts v. 29).",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 1167,
+     "text": "Acts v. 29",
+     "start": "ACT.5.29",
+     "end": "ACT.5.29",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1311",
+   "label": "Art. VII.—Of Ecclesiastical Power",
+   "text": "Peter forbiddeth Bishops to be lords, and to be imperious over the churches (1 Pet. v. 3). Now our meaning is not to have rule taken from the Bishops; but this one thing only is requested at their hands, that they would suffer the Gospel to be purely taught, and that they would relax a few observances, which can not be held without sin. But if they will remit none, let them look how they will give account to God for this, that by their obstinacy they afford cause of schism [division and schism, which it were yet fit they should aid in avoiding].",
+   "source": "creeds3.iii.ii.html",
+   "cites": [
+    {
+     "at": 77,
+     "text": "1 Pet. v. 3",
+     "start": "1PE.5.3",
+     "end": "1PE.5.3",
+     "note": false
+    }
+   ]
+  },
+  {
+   "id": "iii.ii-p6.1322",
+   "label": "Conclusion",
+   "text": "These are the principal articles which seem to be matters of controversy. For although we might speak of more abuses, yet that we may avoid undue length we have embraced a few, whereby it is easy to judge of the others. Great have been the complaints about indulgences, about pilgrimages, about the abuse of excommunication. The parishes have been vexed in manifold ways by the stationarii. Endless contentions have arisen between the pastors and the monks about parochial law, about confession, about burials, about sermons on extraordinary occasions, and about other things without number. Things of this sort we pass over, that those which are chief in this matter, being briefly set forth, may more easily be noted. Nor has any thing been here said or adduced for the purpose of casting reproach on any one. Those things only have been enumerated which it seem necessary to say, that it might be understood that in doctrine and ceremonials among us there is nothing received contrary to Scripture or to the Catholic [Universal Christian] Church, inasmuch as it is manifest that we have diligently taken heed that no new and godless doctrines should creep into our churches.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  },
+  {
+   "id": "iii.ii-p6.1335",
+   "label": "Conclusion",
+   "text": "In accordance with the Edict of His Imperial Majesty, we wish to present these articles above written, in which is our Confession, and in which is seen a summary of the doctrine of those who teach among us. If any thing be lacking in this Confession, we are prepared, God willing, to present ampler information, in accordance with the Scriptures.",
+   "source": "creeds3.iii.ii.html",
+   "cites": []
+  }
+ ]
+}
