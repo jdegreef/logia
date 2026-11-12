@@ -1357,6 +1357,10 @@ html {
     padding: 2px 16px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
   .lg-try::-webkit-scrollbar { display: none; }
   .lg-try > * { flex: none; white-space: nowrap; scroll-snap-align: start; }
+  /* No snapping (it scrolled the row past the gutter on load), and "Try"
+     stays in view as the chips scroll under it. */
+  .lg-try { scroll-snap-type: none; }
+  .lg-try > span:first-child { position: sticky; left: -16px; z-index: 1; margin-left: -16px; padding: 0 8px 0 16px; background: var(--bg); }
 }
 
 /* Home: the verse card's tabs, a voice that opens in place, and the
