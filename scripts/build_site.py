@@ -3333,6 +3333,14 @@ def work_page(lib, wid):
              (t("work.translation"), w["translation"]) if w["translation"] else (t("work.edition"), w["edition"])]
     if str(w["published"]) not in facts[-1][1]:
         facts.append((t("work.published"), str(w["published"])))
+    # The page's first button starts reading here, at the work's first
+    # chapter; the source scan is the quieter one beside it.
+    begin = ""
+    if comments:
+        fb, fc, _fv = ref_parts(comments[0]["start"])
+        first = f'{lib.books[fb]["en"]} {fc}'
+        begin = (f'<a class="button" href="{work_chapter_url(wid, fb, fc)}">'
+                 f'{e(t("work.start_reading", chapter=first, name=short_name(a)))}</a> ')
     covered = author_covered(lib, comments)
     on = "; ".join(t("work.on_verses", n=f"{len(vs):,}", total=f"{sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b):,}",
                      book=lib.books[b]["en"]) for b, vs in covered.items())
@@ -3390,7 +3398,7 @@ def work_page(lib, wid):
 <header class="page-head lg-titlepage"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
 <h1>{e(w["title"])}</h1><p class="dek lg-tp-by">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 {imprint}
-<p class="actions"><a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
+<p class="actions">{begin}<a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
 {start}
 <details class="lg-record-fold" open><summary><b>{e(t("work.record"))}</b><span class="lg-quiet">{e(w["original_language"])} · {w["published"]} · {e(t("work.excerpts", n=f"{len(comments):,}"))}</span></summary>
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl>{cite}</section></details>

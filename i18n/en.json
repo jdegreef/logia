@@ -616,6 +616,7 @@
     "cite_copy": "Copy the citation",
     "cite_copied": "Copied",
     "full_text": "Read the full text at the source",
+    "start_reading": "Read {chapter} with {name}",
     "in_logia": "In Logia",
     "identifiers": "Identifiers",
     "cpg": "Clavis Patrum Graecorum {n}",
