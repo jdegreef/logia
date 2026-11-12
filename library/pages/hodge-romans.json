@@ -1,0 +1,3863 @@
+{
+ "work": "hodge-romans",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "commentaryonepis0000char",
+   "files": [
+    {
+     "url": "https://archive.org/download/commentaryonepis0000char/commentaryonepis0000char_hocr_pageindex.json.gz",
+     "sha256": "0a56003975b7d0ea8f233bb864e5cb77643207b1065fda90f6ab84d38db69e6b"
+    },
+    {
+     "url": "https://archive.org/download/commentaryonepis0000char/commentaryonepis0000char_hocr_searchtext.txt.gz",
+     "sha256": "9386c7a0955ead6c13209f7b4325bd49939d82661b97130084e2ab0069982d50"
+    },
+    {
+     "url": "https://archive.org/download/commentaryonepis0000char/commentaryonepis0000char_page_numbers.json",
+     "sha256": "ce01bbbe9025d950ca93ea62ea7fe632605c016678193a29c6cb48372831a4eb"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 767,
+ "missed": 0,
+ "pages": {
+  "hodge-romans.ROM.1.1.1": [
+   "commentaryonepis0000char",
+   26,
+   "19"
+  ],
+  "hodge-romans.ROM.1.1.2": [
+   "commentaryonepis0000char",
+   27,
+   "20"
+  ],
+  "hodge-romans.ROM.1.2.1": [
+   "commentaryonepis0000char",
+   27,
+   "20"
+  ],
+  "hodge-romans.ROM.1.3-4.1": [
+   "commentaryonepis0000char",
+   28,
+   "21"
+  ],
+  "hodge-romans.ROM.1.3-4.2": [
+   "commentaryonepis0000char",
+   28,
+   "21"
+  ],
+  "hodge-romans.ROM.1.3-4.3": [
+   "commentaryonepis0000char",
+   29,
+   "22"
+  ],
+  "hodge-romans.ROM.1.3-4.4": [
+   "commentaryonepis0000char",
+   30,
+   "23"
+  ],
+  "hodge-romans.ROM.1.3-4.5": [
+   "commentaryonepis0000char",
+   30,
+   "23"
+  ],
+  "hodge-romans.ROM.1.3-4.6": [
+   "commentaryonepis0000char",
+   31,
+   "24"
+  ],
+  "hodge-romans.ROM.1.3-4.7": [
+   "commentaryonepis0000char",
+   32,
+   "25"
+  ],
+  "hodge-romans.ROM.1.3-4.8": [
+   "commentaryonepis0000char",
+   32,
+   "25"
+  ],
+  "hodge-romans.ROM.1.3-4.9": [
+   "commentaryonepis0000char",
+   33,
+   "26"
+  ],
+  "hodge-romans.ROM.1.3-4.10": [
+   "commentaryonepis0000char",
+   33,
+   "26"
+  ],
+  "hodge-romans.ROM.1.3-4.11": [
+   "commentaryonepis0000char",
+   34,
+   "27"
+  ],
+  "hodge-romans.ROM.1.3-4.12": [
+   "commentaryonepis0000char",
+   34,
+   "27"
+  ],
+  "hodge-romans.ROM.1.3-4.13": [
+   "commentaryonepis0000char",
+   35,
+   "28"
+  ],
+  "hodge-romans.ROM.1.3-4.14": [
+   "commentaryonepis0000char",
+   36,
+   "29"
+  ],
+  "hodge-romans.ROM.1.3-4.15": [
+   "commentaryonepis0000char",
+   36,
+   "29"
+  ],
+  "hodge-romans.ROM.1.5.1": [
+   "commentaryonepis0000char",
+   37,
+   "30"
+  ],
+  "hodge-romans.ROM.1.5.2": [
+   "commentaryonepis0000char",
+   37,
+   "30"
+  ],
+  "hodge-romans.ROM.1.6.1": [
+   "commentaryonepis0000char",
+   38,
+   "31"
+  ],
+  "hodge-romans.ROM.1.7.1": [
+   "commentaryonepis0000char",
+   38,
+   "31"
+  ],
+  "hodge-romans.ROM.1.7.2": [
+   "commentaryonepis0000char",
+   39,
+   "32"
+  ],
+  "hodge-romans.ROM.1.7.3": [
+   "commentaryonepis0000char",
+   40,
+   "33"
+  ],
+  "hodge-romans.ROM.1.8.1": [
+   "commentaryonepis0000char",
+   40,
+   "33"
+  ],
+  "hodge-romans.ROM.1.8.2": [
+   "commentaryonepis0000char",
+   41,
+   "34"
+  ],
+  "hodge-romans.ROM.1.9.1": [
+   "commentaryonepis0000char",
+   41,
+   "34"
+  ],
+  "hodge-romans.ROM.1.10.1": [
+   "commentaryonepis0000char",
+   41,
+   "34"
+  ],
+  "hodge-romans.ROM.1.11.1": [
+   "commentaryonepis0000char",
+   42,
+   "35"
+  ],
+  "hodge-romans.ROM.1.12.1": [
+   "commentaryonepis0000char",
+   42,
+   "35"
+  ],
+  "hodge-romans.ROM.1.13.1": [
+   "commentaryonepis0000char",
+   43,
+   "36"
+  ],
+  "hodge-romans.ROM.1.14.1": [
+   "commentaryonepis0000char",
+   43,
+   "36"
+  ],
+  "hodge-romans.ROM.1.15.1": [
+   "commentaryonepis0000char",
+   44,
+   "37"
+  ],
+  "hodge-romans.ROM.1.16.1": [
+   "commentaryonepis0000char",
+   44,
+   "37"
+  ],
+  "hodge-romans.ROM.1.16.2": [
+   "commentaryonepis0000char",
+   45,
+   "38"
+  ],
+  "hodge-romans.ROM.1.16.3": [
+   "commentaryonepis0000char",
+   46,
+   "39"
+  ],
+  "hodge-romans.ROM.1.16.4": [
+   "commentaryonepis0000char",
+   46,
+   "39"
+  ],
+  "hodge-romans.ROM.1.16.5": [
+   "commentaryonepis0000char",
+   47,
+   "40"
+  ],
+  "hodge-romans.ROM.1.16.6": [
+   "commentaryonepis0000char",
+   48,
+   "41"
+  ],
+  "hodge-romans.ROM.1.16.7": [
+   "commentaryonepis0000char",
+   49,
+   "42"
+  ],
+  "hodge-romans.ROM.1.16.8": [
+   "commentaryonepis0000char",
+   49,
+   "42"
+  ],
+  "hodge-romans.ROM.1.16.9": [
+   "commentaryonepis0000char",
+   50,
+   "43"
+  ],
+  "hodge-romans.ROM.1.18.1": [
+   "commentaryonepis0000char",
+   54,
+   "47"
+  ],
+  "hodge-romans.ROM.1.18.2": [
+   "commentaryonepis0000char",
+   54,
+   "47"
+  ],
+  "hodge-romans.ROM.1.18.3": [
+   "commentaryonepis0000char",
+   55,
+   "48"
+  ],
+  "hodge-romans.ROM.1.18.4": [
+   "commentaryonepis0000char",
+   56,
+   "49"
+  ],
+  "hodge-romans.ROM.1.19.1": [
+   "commentaryonepis0000char",
+   56,
+   "49"
+  ],
+  "hodge-romans.ROM.1.20.1": [
+   "commentaryonepis0000char",
+   57,
+   "50"
+  ],
+  "hodge-romans.ROM.1.20.2": [
+   "commentaryonepis0000char",
+   57,
+   "50"
+  ],
+  "hodge-romans.ROM.1.21.1": [
+   "commentaryonepis0000char",
+   58,
+   "51"
+  ],
+  "hodge-romans.ROM.1.21.2": [
+   "commentaryonepis0000char",
+   58,
+   "51"
+  ],
+  "hodge-romans.ROM.1.21.3": [
+   "commentaryonepis0000char",
+   59,
+   "52"
+  ],
+  "hodge-romans.ROM.1.22.1": [
+   "commentaryonepis0000char",
+   60,
+   "53"
+  ],
+  "hodge-romans.ROM.1.23.1": [
+   "commentaryonepis0000char",
+   60,
+   "53"
+  ],
+  "hodge-romans.ROM.1.24.1": [
+   "commentaryonepis0000char",
+   61,
+   "54"
+  ],
+  "hodge-romans.ROM.1.25.1": [
+   "commentaryonepis0000char",
+   62,
+   "55"
+  ],
+  "hodge-romans.ROM.1.25.2": [
+   "commentaryonepis0000char",
+   63,
+   "56"
+  ],
+  "hodge-romans.ROM.1.26.1": [
+   "commentaryonepis0000char",
+   63,
+   "56"
+  ],
+  "hodge-romans.ROM.1.27.1": [
+   "commentaryonepis0000char",
+   64,
+   "57"
+  ],
+  "hodge-romans.ROM.1.28.1": [
+   "commentaryonepis0000char",
+   64,
+   "57"
+  ],
+  "hodge-romans.ROM.1.29-31.1": [
+   "commentaryonepis0000char",
+   65,
+   "58"
+  ],
+  "hodge-romans.ROM.1.32.1": [
+   "commentaryonepis0000char",
+   66,
+   "59"
+  ],
+  "hodge-romans.ROM.2.1.1": [
+   "commentaryonepis0000char",
+   70,
+   "63"
+  ],
+  "hodge-romans.ROM.2.1.2": [
+   "commentaryonepis0000char",
+   71,
+   "64"
+  ],
+  "hodge-romans.ROM.2.2.1": [
+   "commentaryonepis0000char",
+   72,
+   "65"
+  ],
+  "hodge-romans.ROM.2.3.1": [
+   "commentaryonepis0000char",
+   72,
+   "65"
+  ],
+  "hodge-romans.ROM.2.4-5.1": [
+   "commentaryonepis0000char",
+   72,
+   "65"
+  ],
+  "hodge-romans.ROM.2.4-5.2": [
+   "commentaryonepis0000char",
+   73,
+   "66"
+  ],
+  "hodge-romans.ROM.2.5.1": [
+   "commentaryonepis0000char",
+   73,
+   "66"
+  ],
+  "hodge-romans.ROM.2.5.2": [
+   "commentaryonepis0000char",
+   74,
+   "67"
+  ],
+  "hodge-romans.ROM.2.6.1": [
+   "commentaryonepis0000char",
+   74,
+   "67"
+  ],
+  "hodge-romans.ROM.2.7.1": [
+   "commentaryonepis0000char",
+   74,
+   "67"
+  ],
+  "hodge-romans.ROM.2.8.1": [
+   "commentaryonepis0000char",
+   75,
+   "68"
+  ],
+  "hodge-romans.ROM.2.9.1": [
+   "commentaryonepis0000char",
+   76,
+   "69"
+  ],
+  "hodge-romans.ROM.2.10.1": [
+   "commentaryonepis0000char",
+   77,
+   "70"
+  ],
+  "hodge-romans.ROM.2.11.1": [
+   "commentaryonepis0000char",
+   77,
+   "70"
+  ],
+  "hodge-romans.ROM.2.12.1": [
+   "commentaryonepis0000char",
+   77,
+   "70"
+  ],
+  "hodge-romans.ROM.2.12.2": [
+   "commentaryonepis0000char",
+   78,
+   "71"
+  ],
+  "hodge-romans.ROM.2.13.1": [
+   "commentaryonepis0000char",
+   78,
+   "71"
+  ],
+  "hodge-romans.ROM.2.13.2": [
+   "commentaryonepis0000char",
+   79,
+   "72"
+  ],
+  "hodge-romans.ROM.2.14.1": [
+   "commentaryonepis0000char",
+   79,
+   "72"
+  ],
+  "hodge-romans.ROM.2.14.2": [
+   "commentaryonepis0000char",
+   80,
+   "73"
+  ],
+  "hodge-romans.ROM.2.15.1": [
+   "commentaryonepis0000char",
+   80,
+   "73"
+  ],
+  "hodge-romans.ROM.2.15.2": [
+   "commentaryonepis0000char",
+   81,
+   "74"
+  ],
+  "hodge-romans.ROM.2.16.1": [
+   "commentaryonepis0000char",
+   82,
+   "75"
+  ],
+  "hodge-romans.ROM.2.16.2": [
+   "commentaryonepis0000char",
+   83,
+   "76"
+  ],
+  "hodge-romans.ROM.2.16.3": [
+   "commentaryonepis0000char",
+   83,
+   "76"
+  ],
+  "hodge-romans.ROM.2.17.1": [
+   "commentaryonepis0000char",
+   86,
+   "79"
+  ],
+  "hodge-romans.ROM.2.17.2": [
+   "commentaryonepis0000char",
+   86,
+   "79"
+  ],
+  "hodge-romans.ROM.2.18.1": [
+   "commentaryonepis0000char",
+   87,
+   "80"
+  ],
+  "hodge-romans.ROM.2.18.2": [
+   "commentaryonepis0000char",
+   88,
+   "81"
+  ],
+  "hodge-romans.ROM.2.21-22.1": [
+   "commentaryonepis0000char",
+   89,
+   "82"
+  ],
+  "hodge-romans.ROM.2.21-22.2": [
+   "commentaryonepis0000char",
+   90,
+   "83"
+  ],
+  "hodge-romans.ROM.2.23-24.1": [
+   "commentaryonepis0000char",
+   90,
+   "83"
+  ],
+  "hodge-romans.ROM.2.25.1": [
+   "commentaryonepis0000char",
+   90,
+   "83"
+  ],
+  "hodge-romans.ROM.2.25.2": [
+   "commentaryonepis0000char",
+   91,
+   "84"
+  ],
+  "hodge-romans.ROM.2.26.1": [
+   "commentaryonepis0000char",
+   91,
+   "84"
+  ],
+  "hodge-romans.ROM.2.27.1": [
+   "commentaryonepis0000char",
+   92,
+   "85"
+  ],
+  "hodge-romans.ROM.2.27.2": [
+   "commentaryonepis0000char",
+   93,
+   "86"
+  ],
+  "hodge-romans.ROM.2.28-29.1": [
+   "commentaryonepis0000char",
+   93,
+   "86"
+  ],
+  "hodge-romans.ROM.2.28-29.2": [
+   "commentaryonepis0000char",
+   94,
+   "87"
+  ],
+  "hodge-romans.ROM.3.1.1": [
+   "commentaryonepis0000char",
+   97,
+   "90"
+  ],
+  "hodge-romans.ROM.3.2.1": [
+   "commentaryonepis0000char",
+   98,
+   "91"
+  ],
+  "hodge-romans.ROM.3.3.1": [
+   "commentaryonepis0000char",
+   99,
+   "92"
+  ],
+  "hodge-romans.ROM.3.3.2": [
+   "commentaryonepis0000char",
+   99,
+   "92"
+  ],
+  "hodge-romans.ROM.3.3.3": [
+   "commentaryonepis0000char",
+   100,
+   "93"
+  ],
+  "hodge-romans.ROM.3.4.1": [
+   "commentaryonepis0000char",
+   101,
+   "94"
+  ],
+  "hodge-romans.ROM.3.4.2": [
+   "commentaryonepis0000char",
+   101,
+   "94"
+  ],
+  "hodge-romans.ROM.3.4.3": [
+   "commentaryonepis0000char",
+   102,
+   "95"
+  ],
+  "hodge-romans.ROM.3.5.1": [
+   "commentaryonepis0000char",
+   103,
+   "96"
+  ],
+  "hodge-romans.ROM.3.5.2": [
+   "commentaryonepis0000char",
+   103,
+   "96"
+  ],
+  "hodge-romans.ROM.3.6.1": [
+   "commentaryonepis0000char",
+   104,
+   "97"
+  ],
+  "hodge-romans.ROM.3.7.1": [
+   "commentaryonepis0000char",
+   104,
+   "97"
+  ],
+  "hodge-romans.ROM.3.7.2": [
+   "commentaryonepis0000char",
+   105,
+   "98"
+  ],
+  "hodge-romans.ROM.3.8.1": [
+   "commentaryonepis0000char",
+   105,
+   "98"
+  ],
+  "hodge-romans.ROM.3.8.2": [
+   "commentaryonepis0000char",
+   106,
+   "99"
+  ],
+  "hodge-romans.ROM.3.9.1": [
+   "commentaryonepis0000char",
+   109,
+   "102"
+  ],
+  "hodge-romans.ROM.3.9.2": [
+   "commentaryonepis0000char",
+   109,
+   "102"
+  ],
+  "hodge-romans.ROM.3.9.3": [
+   "commentaryonepis0000char",
+   110,
+   "103"
+  ],
+  "hodge-romans.ROM.3.10.1": [
+   "commentaryonepis0000char",
+   110,
+   "103"
+  ],
+  "hodge-romans.ROM.3.11.1": [
+   "commentaryonepis0000char",
+   110,
+   "103"
+  ],
+  "hodge-romans.ROM.3.12.1": [
+   "commentaryonepis0000char",
+   111,
+   "104"
+  ],
+  "hodge-romans.ROM.3.13-14.1": [
+   "commentaryonepis0000char",
+   111,
+   "104"
+  ],
+  "hodge-romans.ROM.3.15-17.1": [
+   "commentaryonepis0000char",
+   111,
+   "104"
+  ],
+  "hodge-romans.ROM.3.18.1": [
+   "commentaryonepis0000char",
+   111,
+   "104"
+  ],
+  "hodge-romans.ROM.3.19.1": [
+   "commentaryonepis0000char",
+   112,
+   "105"
+  ],
+  "hodge-romans.ROM.3.19.2": [
+   "commentaryonepis0000char",
+   112,
+   "105"
+  ],
+  "hodge-romans.ROM.3.20.1": [
+   "commentaryonepis0000char",
+   112,
+   "105"
+  ],
+  "hodge-romans.ROM.3.20.2": [
+   "commentaryonepis0000char",
+   113,
+   "106"
+  ],
+  "hodge-romans.ROM.3.20.3": [
+   "commentaryonepis0000char",
+   114,
+   "107"
+  ],
+  "hodge-romans.ROM.3.20.4": [
+   "commentaryonepis0000char",
+   114,
+   "107"
+  ],
+  "hodge-romans.ROM.3.20.5": [
+   "commentaryonepis0000char",
+   115,
+   "108"
+  ],
+  "hodge-romans.ROM.3.20.6": [
+   "commentaryonepis0000char",
+   116,
+   "109"
+  ],
+  "hodge-romans.ROM.3.20.7": [
+   "commentaryonepis0000char",
+   117,
+   "110"
+  ],
+  "hodge-romans.ROM.3.20.8": [
+   "commentaryonepis0000char",
+   117,
+   "110"
+  ],
+  "hodge-romans.ROM.3.20.9": [
+   "commentaryonepis0000char",
+   118,
+   "111"
+  ],
+  "hodge-romans.ROM.3.21.1": [
+   "commentaryonepis0000char",
+   121,
+   "114"
+  ],
+  "hodge-romans.ROM.3.21.2": [
+   "commentaryonepis0000char",
+   122,
+   "115"
+  ],
+  "hodge-romans.ROM.3.21.3": [
+   "commentaryonepis0000char",
+   122,
+   "115"
+  ],
+  "hodge-romans.ROM.3.21.4": [
+   "commentaryonepis0000char",
+   123,
+   "116"
+  ],
+  "hodge-romans.ROM.3.22.1": [
+   "commentaryonepis0000char",
+   123,
+   "116"
+  ],
+  "hodge-romans.ROM.3.23.1": [
+   "commentaryonepis0000char",
+   124,
+   "117"
+  ],
+  "hodge-romans.ROM.3.24.1": [
+   "commentaryonepis0000char",
+   124,
+   "117"
+  ],
+  "hodge-romans.ROM.3.24.2": [
+   "commentaryonepis0000char",
+   125,
+   "118"
+  ],
+  "hodge-romans.ROM.3.24.3": [
+   "commentaryonepis0000char",
+   125,
+   "118"
+  ],
+  "hodge-romans.ROM.3.25.1": [
+   "commentaryonepis0000char",
+   126,
+   "119"
+  ],
+  "hodge-romans.ROM.3.25.2": [
+   "commentaryonepis0000char",
+   126,
+   "119"
+  ],
+  "hodge-romans.ROM.3.25.3": [
+   "commentaryonepis0000char",
+   127,
+   "120"
+  ],
+  "hodge-romans.ROM.3.25.4": [
+   "commentaryonepis0000char",
+   128,
+   "121"
+  ],
+  "hodge-romans.ROM.3.25.5": [
+   "commentaryonepis0000char",
+   128,
+   "121"
+  ],
+  "hodge-romans.ROM.3.25.6": [
+   "commentaryonepis0000char",
+   129,
+   "122"
+  ],
+  "hodge-romans.ROM.3.25.7": [
+   "commentaryonepis0000char",
+   130,
+   "123"
+  ],
+  "hodge-romans.ROM.3.25.8": [
+   "commentaryonepis0000char",
+   130,
+   "123"
+  ],
+  "hodge-romans.ROM.3.25.9": [
+   "commentaryonepis0000char",
+   131,
+   "124"
+  ],
+  "hodge-romans.ROM.3.26.1": [
+   "commentaryonepis0000char",
+   132,
+   "125"
+  ],
+  "hodge-romans.ROM.3.26.2": [
+   "commentaryonepis0000char",
+   132,
+   "125"
+  ],
+  "hodge-romans.ROM.3.26.3": [
+   "commentaryonepis0000char",
+   133,
+   "126"
+  ],
+  "hodge-romans.ROM.3.27.1": [
+   "commentaryonepis0000char",
+   133,
+   "126"
+  ],
+  "hodge-romans.ROM.3.27.2": [
+   "commentaryonepis0000char",
+   134,
+   "127"
+  ],
+  "hodge-romans.ROM.3.28.1": [
+   "commentaryonepis0000char",
+   135,
+   "128"
+  ],
+  "hodge-romans.ROM.3.29-30.1": [
+   "commentaryonepis0000char",
+   135,
+   "128"
+  ],
+  "hodge-romans.ROM.3.31.1": [
+   "commentaryonepis0000char",
+   136,
+   "129"
+  ],
+  "hodge-romans.ROM.4.1.1": [
+   "commentaryonepis0000char",
+   139,
+   "132"
+  ],
+  "hodge-romans.ROM.4.1.2": [
+   "commentaryonepis0000char",
+   140,
+   "133"
+  ],
+  "hodge-romans.ROM.4.2.1": [
+   "commentaryonepis0000char",
+   140,
+   "133"
+  ],
+  "hodge-romans.ROM.4.3.1": [
+   "commentaryonepis0000char",
+   141,
+   "134"
+  ],
+  "hodge-romans.ROM.4.3.2": [
+   "commentaryonepis0000char",
+   142,
+   "135"
+  ],
+  "hodge-romans.ROM.4.3.3": [
+   "commentaryonepis0000char",
+   143,
+   "136"
+  ],
+  "hodge-romans.ROM.4.3.4": [
+   "commentaryonepis0000char",
+   144,
+   "137"
+  ],
+  "hodge-romans.ROM.4.3.5": [
+   "commentaryonepis0000char",
+   144,
+   "137"
+  ],
+  "hodge-romans.ROM.4.3.6": [
+   "commentaryonepis0000char",
+   145,
+   "138"
+  ],
+  "hodge-romans.ROM.4.3.7": [
+   "commentaryonepis0000char",
+   146,
+   "139"
+  ],
+  "hodge-romans.ROM.4.3.8": [
+   "commentaryonepis0000char",
+   146,
+   "139"
+  ],
+  "hodge-romans.ROM.4.3.9": [
+   "commentaryonepis0000char",
+   147,
+   "140"
+  ],
+  "hodge-romans.ROM.4.4-5.1": [
+   "commentaryonepis0000char",
+   148,
+   "141"
+  ],
+  "hodge-romans.ROM.4.5.1": [
+   "commentaryonepis0000char",
+   149,
+   "142"
+  ],
+  "hodge-romans.ROM.4.5.2": [
+   "commentaryonepis0000char",
+   149,
+   "142"
+  ],
+  "hodge-romans.ROM.4.5.3": [
+   "commentaryonepis0000char",
+   150,
+   "143"
+  ],
+  "hodge-romans.ROM.4.6.1": [
+   "commentaryonepis0000char",
+   150,
+   "143"
+  ],
+  "hodge-romans.ROM.4.6.2": [
+   "commentaryonepis0000char",
+   151,
+   "144"
+  ],
+  "hodge-romans.ROM.4.6.3": [
+   "commentaryonepis0000char",
+   152,
+   "145"
+  ],
+  "hodge-romans.ROM.4.10.1": [
+   "commentaryonepis0000char",
+   152,
+   "145"
+  ],
+  "hodge-romans.ROM.4.11.1": [
+   "commentaryonepis0000char",
+   153,
+   "146"
+  ],
+  "hodge-romans.ROM.4.11.2": [
+   "commentaryonepis0000char",
+   153,
+   "146"
+  ],
+  "hodge-romans.ROM.4.11.3": [
+   "commentaryonepis0000char",
+   153,
+   "146"
+  ],
+  "hodge-romans.ROM.4.12.1": [
+   "commentaryonepis0000char",
+   154,
+   "147"
+  ],
+  "hodge-romans.ROM.4.13.1": [
+   "commentaryonepis0000char",
+   155,
+   "148"
+  ],
+  "hodge-romans.ROM.4.13.2": [
+   "commentaryonepis0000char",
+   156,
+   "149"
+  ],
+  "hodge-romans.ROM.4.13.3": [
+   "commentaryonepis0000char",
+   157,
+   "150"
+  ],
+  "hodge-romans.ROM.4.14.1": [
+   "commentaryonepis0000char",
+   158,
+   "151"
+  ],
+  "hodge-romans.ROM.4.15.1": [
+   "commentaryonepis0000char",
+   158,
+   "151"
+  ],
+  "hodge-romans.ROM.4.15.2": [
+   "commentaryonepis0000char",
+   158,
+   "151"
+  ],
+  "hodge-romans.ROM.4.15.3": [
+   "commentaryonepis0000char",
+   159,
+   "152"
+  ],
+  "hodge-romans.ROM.4.16.1": [
+   "commentaryonepis0000char",
+   160,
+   "153"
+  ],
+  "hodge-romans.ROM.4.17.1": [
+   "commentaryonepis0000char",
+   160,
+   "153"
+  ],
+  "hodge-romans.ROM.4.17.2": [
+   "commentaryonepis0000char",
+   161,
+   "154"
+  ],
+  "hodge-romans.ROM.4.18.1": [
+   "commentaryonepis0000char",
+   164,
+   "157"
+  ],
+  "hodge-romans.ROM.4.18.2": [
+   "commentaryonepis0000char",
+   165,
+   "158"
+  ],
+  "hodge-romans.ROM.4.19.1": [
+   "commentaryonepis0000char",
+   165,
+   "158"
+  ],
+  "hodge-romans.ROM.4.20.1": [
+   "commentaryonepis0000char",
+   166,
+   "159"
+  ],
+  "hodge-romans.ROM.4.21.1": [
+   "commentaryonepis0000char",
+   166,
+   "159"
+  ],
+  "hodge-romans.ROM.4.22.1": [
+   "commentaryonepis0000char",
+   166,
+   "159"
+  ],
+  "hodge-romans.ROM.4.23.1": [
+   "commentaryonepis0000char",
+   166,
+   "159"
+  ],
+  "hodge-romans.ROM.4.24.1": [
+   "commentaryonepis0000char",
+   167,
+   "160"
+  ],
+  "hodge-romans.ROM.4.25.1": [
+   "commentaryonepis0000char",
+   167,
+   "160"
+  ],
+  "hodge-romans.ROM.5.1.1": [
+   "commentaryonepis0000char",
+   170,
+   "163"
+  ],
+  "hodge-romans.ROM.5.2.1": [
+   "commentaryonepis0000char",
+   171,
+   "164"
+  ],
+  "hodge-romans.ROM.5.2.2": [
+   "commentaryonepis0000char",
+   172,
+   "165"
+  ],
+  "hodge-romans.ROM.5.3.1": [
+   "commentaryonepis0000char",
+   172,
+   "165"
+  ],
+  "hodge-romans.ROM.5.4.1": [
+   "commentaryonepis0000char",
+   173,
+   "166"
+  ],
+  "hodge-romans.ROM.5.5.1": [
+   "commentaryonepis0000char",
+   173,
+   "166"
+  ],
+  "hodge-romans.ROM.5.5.2": [
+   "commentaryonepis0000char",
+   174,
+   "167"
+  ],
+  "hodge-romans.ROM.5.7.1": [
+   "commentaryonepis0000char",
+   175,
+   "168"
+  ],
+  "hodge-romans.ROM.5.8.1": [
+   "commentaryonepis0000char",
+   176,
+   "169"
+  ],
+  "hodge-romans.ROM.5.9.1": [
+   "commentaryonepis0000char",
+   176,
+   "169"
+  ],
+  "hodge-romans.ROM.5.10.1": [
+   "commentaryonepis0000char",
+   177,
+   "170"
+  ],
+  "hodge-romans.ROM.5.10.2": [
+   "commentaryonepis0000char",
+   177,
+   "170"
+  ],
+  "hodge-romans.ROM.5.10.3": [
+   "commentaryonepis0000char",
+   178,
+   "171"
+  ],
+  "hodge-romans.ROM.5.11.1": [
+   "commentaryonepis0000char",
+   179,
+   "172"
+  ],
+  "hodge-romans.ROM.5.12.1": [
+   "commentaryonepis0000char",
+   185,
+   "178"
+  ],
+  "hodge-romans.ROM.5.12.2": [
+   "commentaryonepis0000char",
+   186,
+   "179"
+  ],
+  "hodge-romans.ROM.5.12.3": [
+   "commentaryonepis0000char",
+   187,
+   "180"
+  ],
+  "hodge-romans.ROM.5.12.4": [
+   "commentaryonepis0000char",
+   187,
+   "180"
+  ],
+  "hodge-romans.ROM.5.12.5": [
+   "commentaryonepis0000char",
+   188,
+   "181"
+  ],
+  "hodge-romans.ROM.5.12.6": [
+   "commentaryonepis0000char",
+   188,
+   "181"
+  ],
+  "hodge-romans.ROM.5.12.7": [
+   "commentaryonepis0000char",
+   189,
+   "182"
+  ],
+  "hodge-romans.ROM.5.12.8": [
+   "commentaryonepis0000char",
+   190,
+   "183"
+  ],
+  "hodge-romans.ROM.5.12.9": [
+   "commentaryonepis0000char",
+   190,
+   "183"
+  ],
+  "hodge-romans.ROM.5.12.10": [
+   "commentaryonepis0000char",
+   191,
+   "184"
+  ],
+  "hodge-romans.ROM.5.12.11": [
+   "commentaryonepis0000char",
+   191,
+   "184"
+  ],
+  "hodge-romans.ROM.5.12.12": [
+   "commentaryonepis0000char",
+   192,
+   "185"
+  ],
+  "hodge-romans.ROM.5.12.13": [
+   "commentaryonepis0000char",
+   193,
+   "186"
+  ],
+  "hodge-romans.ROM.5.12.14": [
+   "commentaryonepis0000char",
+   193,
+   "186"
+  ],
+  "hodge-romans.ROM.5.12.15": [
+   "commentaryonepis0000char",
+   194,
+   "187"
+  ],
+  "hodge-romans.ROM.5.12.16": [
+   "commentaryonepis0000char",
+   194,
+   "187"
+  ],
+  "hodge-romans.ROM.5.12.17": [
+   "commentaryonepis0000char",
+   195,
+   "188"
+  ],
+  "hodge-romans.ROM.5.12.18": [
+   "commentaryonepis0000char",
+   196,
+   "189"
+  ],
+  "hodge-romans.ROM.5.13-14.1": [
+   "commentaryonepis0000char",
+   197,
+   "190"
+  ],
+  "hodge-romans.ROM.5.13-14.2": [
+   "commentaryonepis0000char",
+   197,
+   "190"
+  ],
+  "hodge-romans.ROM.5.13-14.3": [
+   "commentaryonepis0000char",
+   198,
+   "191"
+  ],
+  "hodge-romans.ROM.5.13-14.4": [
+   "commentaryonepis0000char",
+   198,
+   "191"
+  ],
+  "hodge-romans.ROM.5.13-14.5": [
+   "commentaryonepis0000char",
+   198,
+   "191"
+  ],
+  "hodge-romans.ROM.5.13-14.6": [
+   "commentaryonepis0000char",
+   199,
+   "192"
+  ],
+  "hodge-romans.ROM.5.13-14.7": [
+   "commentaryonepis0000char",
+   200,
+   "193"
+  ],
+  "hodge-romans.ROM.5.13-14.8": [
+   "commentaryonepis0000char",
+   200,
+   "193"
+  ],
+  "hodge-romans.ROM.5.13-14.9": [
+   "commentaryonepis0000char",
+   201,
+   "194"
+  ],
+  "hodge-romans.ROM.5.13-14.10": [
+   "commentaryonepis0000char",
+   202,
+   "195"
+  ],
+  "hodge-romans.ROM.5.14.1": [
+   "commentaryonepis0000char",
+   203,
+   "196"
+  ],
+  "hodge-romans.ROM.5.14.2": [
+   "commentaryonepis0000char",
+   204,
+   "197"
+  ],
+  "hodge-romans.ROM.5.14.3": [
+   "commentaryonepis0000char",
+   204,
+   "197"
+  ],
+  "hodge-romans.ROM.5.14.4": [
+   "commentaryonepis0000char",
+   205,
+   "198"
+  ],
+  "hodge-romans.ROM.5.14.5": [
+   "commentaryonepis0000char",
+   206,
+   "199"
+  ],
+  "hodge-romans.ROM.5.15.1": [
+   "commentaryonepis0000char",
+   206,
+   "199"
+  ],
+  "hodge-romans.ROM.5.15.2": [
+   "commentaryonepis0000char",
+   207,
+   "200"
+  ],
+  "hodge-romans.ROM.5.15.3": [
+   "commentaryonepis0000char",
+   207,
+   "200"
+  ],
+  "hodge-romans.ROM.5.15.4": [
+   "commentaryonepis0000char",
+   208,
+   "201"
+  ],
+  "hodge-romans.ROM.5.15.5": [
+   "commentaryonepis0000char",
+   208,
+   "201"
+  ],
+  "hodge-romans.ROM.5.16.1": [
+   "commentaryonepis0000char",
+   209,
+   "202"
+  ],
+  "hodge-romans.ROM.5.16.2": [
+   "commentaryonepis0000char",
+   210,
+   "203"
+  ],
+  "hodge-romans.ROM.5.16.3": [
+   "commentaryonepis0000char",
+   211,
+   "204"
+  ],
+  "hodge-romans.ROM.5.16.4": [
+   "commentaryonepis0000char",
+   211,
+   "204"
+  ],
+  "hodge-romans.ROM.5.16.5": [
+   "commentaryonepis0000char",
+   212,
+   "205"
+  ],
+  "hodge-romans.ROM.5.17.1": [
+   "commentaryonepis0000char",
+   213,
+   "206"
+  ],
+  "hodge-romans.ROM.5.17.2": [
+   "commentaryonepis0000char",
+   214,
+   "207"
+  ],
+  "hodge-romans.ROM.5.17.3": [
+   "commentaryonepis0000char",
+   214,
+   "207"
+  ],
+  "hodge-romans.ROM.5.18.1": [
+   "commentaryonepis0000char",
+   215,
+   "208"
+  ],
+  "hodge-romans.ROM.5.18.2": [
+   "commentaryonepis0000char",
+   216,
+   "209"
+  ],
+  "hodge-romans.ROM.5.18.3": [
+   "commentaryonepis0000char",
+   216,
+   "209"
+  ],
+  "hodge-romans.ROM.5.18.4": [
+   "commentaryonepis0000char",
+   217,
+   "210"
+  ],
+  "hodge-romans.ROM.5.18.5": [
+   "commentaryonepis0000char",
+   218,
+   "211"
+  ],
+  "hodge-romans.ROM.5.18.6": [
+   "commentaryonepis0000char",
+   219,
+   "212"
+  ],
+  "hodge-romans.ROM.5.18.7": [
+   "commentaryonepis0000char",
+   219,
+   "212"
+  ],
+  "hodge-romans.ROM.5.18.8": [
+   "commentaryonepis0000char",
+   220,
+   "213"
+  ],
+  "hodge-romans.ROM.5.18.9": [
+   "commentaryonepis0000char",
+   221,
+   "214"
+  ],
+  "hodge-romans.ROM.5.18.10": [
+   "commentaryonepis0000char",
+   222,
+   "215"
+  ],
+  "hodge-romans.ROM.5.18.11": [
+   "commentaryonepis0000char",
+   223,
+   "216"
+  ],
+  "hodge-romans.ROM.5.18.12": [
+   "commentaryonepis0000char",
+   224,
+   "217"
+  ],
+  "hodge-romans.ROM.5.18.13": [
+   "commentaryonepis0000char",
+   224,
+   "217"
+  ],
+  "hodge-romans.ROM.5.18.14": [
+   "commentaryonepis0000char",
+   225,
+   "218"
+  ],
+  "hodge-romans.ROM.5.18.15": [
+   "commentaryonepis0000char",
+   225,
+   "218"
+  ],
+  "hodge-romans.ROM.5.18.16": [
+   "commentaryonepis0000char",
+   226,
+   "219"
+  ],
+  "hodge-romans.ROM.5.20.1": [
+   "commentaryonepis0000char",
+   227,
+   "220"
+  ],
+  "hodge-romans.ROM.5.20.2": [
+   "commentaryonepis0000char",
+   228,
+   "221"
+  ],
+  "hodge-romans.ROM.5.21.1": [
+   "commentaryonepis0000char",
+   228,
+   "221"
+  ],
+  "hodge-romans.ROM.6.1.1": [
+   "commentaryonepis0000char",
+   248,
+   "241"
+  ],
+  "hodge-romans.ROM.6.2.1": [
+   "commentaryonepis0000char",
+   249,
+   "242"
+  ],
+  "hodge-romans.ROM.6.2.2": [
+   "commentaryonepis0000char",
+   249,
+   "242"
+  ],
+  "hodge-romans.ROM.6.3.1": [
+   "commentaryonepis0000char",
+   250,
+   "243"
+  ],
+  "hodge-romans.ROM.6.3.2": [
+   "commentaryonepis0000char",
+   250,
+   "243"
+  ],
+  "hodge-romans.ROM.6.3.3": [
+   "commentaryonepis0000char",
+   251,
+   "244"
+  ],
+  "hodge-romans.ROM.6.4.1": [
+   "commentaryonepis0000char",
+   251,
+   "244"
+  ],
+  "hodge-romans.ROM.6.4.2": [
+   "commentaryonepis0000char",
+   251,
+   "244"
+  ],
+  "hodge-romans.ROM.6.4.3": [
+   "commentaryonepis0000char",
+   252,
+   "245"
+  ],
+  "hodge-romans.ROM.6.5.1": [
+   "commentaryonepis0000char",
+   252,
+   "245"
+  ],
+  "hodge-romans.ROM.6.5.2": [
+   "commentaryonepis0000char",
+   253,
+   "246"
+  ],
+  "hodge-romans.ROM.6.6.1": [
+   "commentaryonepis0000char",
+   254,
+   "247"
+  ],
+  "hodge-romans.ROM.6.6.2": [
+   "commentaryonepis0000char",
+   254,
+   "247"
+  ],
+  "hodge-romans.ROM.6.6.3": [
+   "commentaryonepis0000char",
+   255,
+   "248"
+  ],
+  "hodge-romans.ROM.6.7.1": [
+   "commentaryonepis0000char",
+   255,
+   "248"
+  ],
+  "hodge-romans.ROM.6.7.2": [
+   "commentaryonepis0000char",
+   256,
+   "249"
+  ],
+  "hodge-romans.ROM.6.8.1": [
+   "commentaryonepis0000char",
+   256,
+   "249"
+  ],
+  "hodge-romans.ROM.6.9.1": [
+   "commentaryonepis0000char",
+   257,
+   "250"
+  ],
+  "hodge-romans.ROM.6.10.1": [
+   "commentaryonepis0000char",
+   257,
+   "250"
+  ],
+  "hodge-romans.ROM.6.11.1": [
+   "commentaryonepis0000char",
+   258,
+   "251"
+  ],
+  "hodge-romans.ROM.6.12.1": [
+   "commentaryonepis0000char",
+   261,
+   "254"
+  ],
+  "hodge-romans.ROM.6.13.1": [
+   "commentaryonepis0000char",
+   262,
+   "255"
+  ],
+  "hodge-romans.ROM.6.14.1": [
+   "commentaryonepis0000char",
+   263,
+   "256"
+  ],
+  "hodge-romans.ROM.6.14.2": [
+   "commentaryonepis0000char",
+   263,
+   "256"
+  ],
+  "hodge-romans.ROM.6.14.3": [
+   "commentaryonepis0000char",
+   264,
+   "257"
+  ],
+  "hodge-romans.ROM.6.15.1": [
+   "commentaryonepis0000char",
+   264,
+   "257"
+  ],
+  "hodge-romans.ROM.6.16.1": [
+   "commentaryonepis0000char",
+   264,
+   "257"
+  ],
+  "hodge-romans.ROM.6.16.2": [
+   "commentaryonepis0000char",
+   265,
+   "258"
+  ],
+  "hodge-romans.ROM.6.17.1": [
+   "commentaryonepis0000char",
+   265,
+   "258"
+  ],
+  "hodge-romans.ROM.6.17.2": [
+   "commentaryonepis0000char",
+   266,
+   "259"
+  ],
+  "hodge-romans.ROM.6.18.1": [
+   "commentaryonepis0000char",
+   267,
+   "260"
+  ],
+  "hodge-romans.ROM.6.19.1": [
+   "commentaryonepis0000char",
+   267,
+   "260"
+  ],
+  "hodge-romans.ROM.6.19.2": [
+   "commentaryonepis0000char",
+   268,
+   "261"
+  ],
+  "hodge-romans.ROM.6.19.3": [
+   "commentaryonepis0000char",
+   268,
+   "261"
+  ],
+  "hodge-romans.ROM.6.21-22.1": [
+   "commentaryonepis0000char",
+   269,
+   "262"
+  ],
+  "hodge-romans.ROM.6.22.1": [
+   "commentaryonepis0000char",
+   269,
+   "262"
+  ],
+  "hodge-romans.ROM.6.23.1": [
+   "commentaryonepis0000char",
+   270,
+   "263"
+  ],
+  "hodge-romans.ROM.7.1.1": [
+   "commentaryonepis0000char",
+   274,
+   "267"
+  ],
+  "hodge-romans.ROM.7.1.2": [
+   "commentaryonepis0000char",
+   275,
+   "268"
+  ],
+  "hodge-romans.ROM.7.2.1": [
+   "commentaryonepis0000char",
+   275,
+   "268"
+  ],
+  "hodge-romans.ROM.7.3.1": [
+   "commentaryonepis0000char",
+   276,
+   "269"
+  ],
+  "hodge-romans.ROM.7.4.1": [
+   "commentaryonepis0000char",
+   276,
+   "269"
+  ],
+  "hodge-romans.ROM.7.4.2": [
+   "commentaryonepis0000char",
+   276,
+   "269"
+  ],
+  "hodge-romans.ROM.7.4.3": [
+   "commentaryonepis0000char",
+   277,
+   "270"
+  ],
+  "hodge-romans.ROM.7.4.4": [
+   "commentaryonepis0000char",
+   277,
+   "270"
+  ],
+  "hodge-romans.ROM.7.4.5": [
+   "commentaryonepis0000char",
+   278,
+   "271"
+  ],
+  "hodge-romans.ROM.7.5.1": [
+   "commentaryonepis0000char",
+   279,
+   "272"
+  ],
+  "hodge-romans.ROM.7.5.2": [
+   "commentaryonepis0000char",
+   279,
+   "272"
+  ],
+  "hodge-romans.ROM.7.6.1": [
+   "commentaryonepis0000char",
+   280,
+   "273"
+  ],
+  "hodge-romans.ROM.7.6.2": [
+   "commentaryonepis0000char",
+   281,
+   "274"
+  ],
+  "hodge-romans.ROM.7.7.1": [
+   "commentaryonepis0000char",
+   283,
+   "276"
+  ],
+  "hodge-romans.ROM.7.7.2": [
+   "commentaryonepis0000char",
+   283,
+   "276"
+  ],
+  "hodge-romans.ROM.7.7.3": [
+   "commentaryonepis0000char",
+   284,
+   "277"
+  ],
+  "hodge-romans.ROM.7.8.1": [
+   "commentaryonepis0000char",
+   285,
+   "278"
+  ],
+  "hodge-romans.ROM.7.8.2": [
+   "commentaryonepis0000char",
+   285,
+   "278"
+  ],
+  "hodge-romans.ROM.7.8.3": [
+   "commentaryonepis0000char",
+   286,
+   "279"
+  ],
+  "hodge-romans.ROM.7.9.1": [
+   "commentaryonepis0000char",
+   287,
+   "280"
+  ],
+  "hodge-romans.ROM.7.10.1": [
+   "commentaryonepis0000char",
+   287,
+   "280"
+  ],
+  "hodge-romans.ROM.7.11.1": [
+   "commentaryonepis0000char",
+   288,
+   "281"
+  ],
+  "hodge-romans.ROM.7.12.1": [
+   "commentaryonepis0000char",
+   288,
+   "281"
+  ],
+  "hodge-romans.ROM.7.13.1": [
+   "commentaryonepis0000char",
+   288,
+   "281"
+  ],
+  "hodge-romans.ROM.7.13.2": [
+   "commentaryonepis0000char",
+   289,
+   "282"
+  ],
+  "hodge-romans.ROM.7.14.1": [
+   "commentaryonepis0000char",
+   292,
+   "285"
+  ],
+  "hodge-romans.ROM.7.14.2": [
+   "commentaryonepis0000char",
+   292,
+   "285"
+  ],
+  "hodge-romans.ROM.7.14.3": [
+   "commentaryonepis0000char",
+   293,
+   "286"
+  ],
+  "hodge-romans.ROM.7.15.1": [
+   "commentaryonepis0000char",
+   293,
+   "286"
+  ],
+  "hodge-romans.ROM.7.15.2": [
+   "commentaryonepis0000char",
+   294,
+   "287"
+  ],
+  "hodge-romans.ROM.7.15.3": [
+   "commentaryonepis0000char",
+   295,
+   "288"
+  ],
+  "hodge-romans.ROM.7.16.1": [
+   "commentaryonepis0000char",
+   295,
+   "288"
+  ],
+  "hodge-romans.ROM.7.17.1": [
+   "commentaryonepis0000char",
+   295,
+   "288"
+  ],
+  "hodge-romans.ROM.7.17.2": [
+   "commentaryonepis0000char",
+   296,
+   "289"
+  ],
+  "hodge-romans.ROM.7.18.1": [
+   "commentaryonepis0000char",
+   297,
+   "290"
+  ],
+  "hodge-romans.ROM.7.18.2": [
+   "commentaryonepis0000char",
+   297,
+   "290"
+  ],
+  "hodge-romans.ROM.7.19.1": [
+   "commentaryonepis0000char",
+   298,
+   "291"
+  ],
+  "hodge-romans.ROM.7.19.2": [
+   "commentaryonepis0000char",
+   298,
+   "291"
+  ],
+  "hodge-romans.ROM.7.20.1": [
+   "commentaryonepis0000char",
+   299,
+   "292"
+  ],
+  "hodge-romans.ROM.7.21.1": [
+   "commentaryonepis0000char",
+   299,
+   "292"
+  ],
+  "hodge-romans.ROM.7.21.2": [
+   "commentaryonepis0000char",
+   300,
+   "293"
+  ],
+  "hodge-romans.ROM.7.22.1": [
+   "commentaryonepis0000char",
+   300,
+   "293"
+  ],
+  "hodge-romans.ROM.7.22.2": [
+   "commentaryonepis0000char",
+   301,
+   "294"
+  ],
+  "hodge-romans.ROM.7.22.3": [
+   "commentaryonepis0000char",
+   301,
+   "294"
+  ],
+  "hodge-romans.ROM.7.23.1": [
+   "commentaryonepis0000char",
+   301,
+   "294"
+  ],
+  "hodge-romans.ROM.7.24.1": [
+   "commentaryonepis0000char",
+   302,
+   "295"
+  ],
+  "hodge-romans.ROM.7.25.1": [
+   "commentaryonepis0000char",
+   303,
+   "296"
+  ],
+  "hodge-romans.ROM.7.25.2": [
+   "commentaryonepis0000char",
+   303,
+   "296"
+  ],
+  "hodge-romans.ROM.7.25.3": [
+   "commentaryonepis0000char",
+   304,
+   "297"
+  ],
+  "hodge-romans.ROM.7.25.4": [
+   "commentaryonepis0000char",
+   304,
+   "297"
+  ],
+  "hodge-romans.ROM.7.25.5": [
+   "commentaryonepis0000char",
+   305,
+   "298"
+  ],
+  "hodge-romans.ROM.7.25.6": [
+   "commentaryonepis0000char",
+   305,
+   "298"
+  ],
+  "hodge-romans.ROM.7.25.7": [
+   "commentaryonepis0000char",
+   306,
+   "299"
+  ],
+  "hodge-romans.ROM.7.25.8": [
+   "commentaryonepis0000char",
+   306,
+   "299"
+  ],
+  "hodge-romans.ROM.7.25.9": [
+   "commentaryonepis0000char",
+   307,
+   "300"
+  ],
+  "hodge-romans.ROM.7.25.10": [
+   "commentaryonepis0000char",
+   308,
+   "301"
+  ],
+  "hodge-romans.ROM.7.25.11": [
+   "commentaryonepis0000char",
+   309,
+   "302"
+  ],
+  "hodge-romans.ROM.7.25.12": [
+   "commentaryonepis0000char",
+   309,
+   "302"
+  ],
+  "hodge-romans.ROM.7.25.13": [
+   "commentaryonepis0000char",
+   310,
+   "303"
+  ],
+  "hodge-romans.ROM.7.25.14": [
+   "commentaryonepis0000char",
+   310,
+   "303"
+  ],
+  "hodge-romans.ROM.7.25.15": [
+   "commentaryonepis0000char",
+   311,
+   "304"
+  ],
+  "hodge-romans.ROM.7.25.16": [
+   "commentaryonepis0000char",
+   312,
+   "305"
+  ],
+  "hodge-romans.ROM.7.25.17": [
+   "commentaryonepis0000char",
+   312,
+   "305"
+  ],
+  "hodge-romans.ROM.7.25.18": [
+   "commentaryonepis0000char",
+   313,
+   "306"
+  ],
+  "hodge-romans.ROM.8.1.1": [
+   "commentaryonepis0000char",
+   318,
+   "311"
+  ],
+  "hodge-romans.ROM.8.1.2": [
+   "commentaryonepis0000char",
+   318,
+   "311"
+  ],
+  "hodge-romans.ROM.8.2.1": [
+   "commentaryonepis0000char",
+   319,
+   "312"
+  ],
+  "hodge-romans.ROM.8.2.2": [
+   "commentaryonepis0000char",
+   320,
+   "313"
+  ],
+  "hodge-romans.ROM.8.2.3": [
+   "commentaryonepis0000char",
+   321,
+   "314"
+  ],
+  "hodge-romans.ROM.8.3.1": [
+   "commentaryonepis0000char",
+   321,
+   "314"
+  ],
+  "hodge-romans.ROM.8.3.2": [
+   "commentaryonepis0000char",
+   322,
+   "315"
+  ],
+  "hodge-romans.ROM.8.3.3": [
+   "commentaryonepis0000char",
+   323,
+   "316"
+  ],
+  "hodge-romans.ROM.8.3.4": [
+   "commentaryonepis0000char",
+   324,
+   "317"
+  ],
+  "hodge-romans.ROM.8.4.1": [
+   "commentaryonepis0000char",
+   324,
+   "317"
+  ],
+  "hodge-romans.ROM.8.4.2": [
+   "commentaryonepis0000char",
+   325,
+   "318"
+  ],
+  "hodge-romans.ROM.8.5.1": [
+   "commentaryonepis0000char",
+   325,
+   "318"
+  ],
+  "hodge-romans.ROM.8.6.1": [
+   "commentaryonepis0000char",
+   326,
+   "319"
+  ],
+  "hodge-romans.ROM.8.7.1": [
+   "commentaryonepis0000char",
+   326,
+   "319"
+  ],
+  "hodge-romans.ROM.8.8.1": [
+   "commentaryonepis0000char",
+   327,
+   "320"
+  ],
+  "hodge-romans.ROM.8.9.1": [
+   "commentaryonepis0000char",
+   328,
+   "321"
+  ],
+  "hodge-romans.ROM.8.9.2": [
+   "commentaryonepis0000char",
+   328,
+   "321"
+  ],
+  "hodge-romans.ROM.8.10.1": [
+   "commentaryonepis0000char",
+   329,
+   "322"
+  ],
+  "hodge-romans.ROM.8.10.2": [
+   "commentaryonepis0000char",
+   329,
+   "322"
+  ],
+  "hodge-romans.ROM.8.10.3": [
+   "commentaryonepis0000char",
+   331,
+   "324"
+  ],
+  "hodge-romans.ROM.8.11.1": [
+   "commentaryonepis0000char",
+   331,
+   "324"
+  ],
+  "hodge-romans.ROM.8.11.2": [
+   "commentaryonepis0000char",
+   332,
+   "325"
+  ],
+  "hodge-romans.ROM.8.11.3": [
+   "commentaryonepis0000char",
+   332,
+   "325"
+  ],
+  "hodge-romans.ROM.8.12.1": [
+   "commentaryonepis0000char",
+   337,
+   "330"
+  ],
+  "hodge-romans.ROM.8.13.1": [
+   "commentaryonepis0000char",
+   337,
+   "330"
+  ],
+  "hodge-romans.ROM.8.14.1": [
+   "commentaryonepis0000char",
+   338,
+   "331"
+  ],
+  "hodge-romans.ROM.8.14.2": [
+   "commentaryonepis0000char",
+   339,
+   "332"
+  ],
+  "hodge-romans.ROM.8.14.3": [
+   "commentaryonepis0000char",
+   339,
+   "332"
+  ],
+  "hodge-romans.ROM.8.16.1": [
+   "commentaryonepis0000char",
+   340,
+   "333"
+  ],
+  "hodge-romans.ROM.8.16.2": [
+   "commentaryonepis0000char",
+   340,
+   "333"
+  ],
+  "hodge-romans.ROM.8.17.1": [
+   "commentaryonepis0000char",
+   341,
+   "334"
+  ],
+  "hodge-romans.ROM.8.17.2": [
+   "commentaryonepis0000char",
+   342,
+   "335"
+  ],
+  "hodge-romans.ROM.8.18.1": [
+   "commentaryonepis0000char",
+   342,
+   "335"
+  ],
+  "hodge-romans.ROM.8.19.1": [
+   "commentaryonepis0000char",
+   343,
+   "336"
+  ],
+  "hodge-romans.ROM.8.20.1": [
+   "commentaryonepis0000char",
+   343,
+   "336"
+  ],
+  "hodge-romans.ROM.8.20.2": [
+   "commentaryonepis0000char",
+   344,
+   "337"
+  ],
+  "hodge-romans.ROM.8.21.1": [
+   "commentaryonepis0000char",
+   345,
+   "338"
+  ],
+  "hodge-romans.ROM.8.22.1": [
+   "commentaryonepis0000char",
+   345,
+   "338"
+  ],
+  "hodge-romans.ROM.8.23.1": [
+   "commentaryonepis0000char",
+   346,
+   "339"
+  ],
+  "hodge-romans.ROM.8.23.2": [
+   "commentaryonepis0000char",
+   346,
+   "339"
+  ],
+  "hodge-romans.ROM.8.23.3": [
+   "commentaryonepis0000char",
+   347,
+   "340"
+  ],
+  "hodge-romans.ROM.8.23.4": [
+   "commentaryonepis0000char",
+   348,
+   "341"
+  ],
+  "hodge-romans.ROM.8.23.5": [
+   "commentaryonepis0000char",
+   348,
+   "341"
+  ],
+  "hodge-romans.ROM.8.23.6": [
+   "commentaryonepis0000char",
+   349,
+   "342"
+  ],
+  "hodge-romans.ROM.8.23.7": [
+   "commentaryonepis0000char",
+   350,
+   "343"
+  ],
+  "hodge-romans.ROM.8.23.8": [
+   "commentaryonepis0000char",
+   350,
+   "343"
+  ],
+  "hodge-romans.ROM.8.23.9": [
+   "commentaryonepis0000char",
+   351,
+   "344"
+  ],
+  "hodge-romans.ROM.8.23.10": [
+   "commentaryonepis0000char",
+   351,
+   "344"
+  ],
+  "hodge-romans.ROM.8.23.11": [
+   "commentaryonepis0000char",
+   352,
+   "345"
+  ],
+  "hodge-romans.ROM.8.23.12": [
+   "commentaryonepis0000char",
+   353,
+   "346"
+  ],
+  "hodge-romans.ROM.8.23.13": [
+   "commentaryonepis0000char",
+   354,
+   "347"
+  ],
+  "hodge-romans.ROM.8.24-25.1": [
+   "commentaryonepis0000char",
+   354,
+   "347"
+  ],
+  "hodge-romans.ROM.8.25.1": [
+   "commentaryonepis0000char",
+   355,
+   "348"
+  ],
+  "hodge-romans.ROM.8.26.1": [
+   "commentaryonepis0000char",
+   355,
+   "348"
+  ],
+  "hodge-romans.ROM.8.26.2": [
+   "commentaryonepis0000char",
+   356,
+   "349"
+  ],
+  "hodge-romans.ROM.8.26.3": [
+   "commentaryonepis0000char",
+   356,
+   "349"
+  ],
+  "hodge-romans.ROM.8.27.1": [
+   "commentaryonepis0000char",
+   357,
+   "350"
+  ],
+  "hodge-romans.ROM.8.27.2": [
+   "commentaryonepis0000char",
+   358,
+   "351"
+  ],
+  "hodge-romans.ROM.8.28.1": [
+   "commentaryonepis0000char",
+   358,
+   "351"
+  ],
+  "hodge-romans.ROM.8.28.2": [
+   "commentaryonepis0000char",
+   359,
+   "352"
+  ],
+  "hodge-romans.ROM.8.28.3": [
+   "commentaryonepis0000char",
+   359,
+   "352"
+  ],
+  "hodge-romans.ROM.8.29.1": [
+   "commentaryonepis0000char",
+   363,
+   "356"
+  ],
+  "hodge-romans.ROM.8.29.2": [
+   "commentaryonepis0000char",
+   363,
+   "356"
+  ],
+  "hodge-romans.ROM.8.29.3": [
+   "commentaryonepis0000char",
+   364,
+   "357"
+  ],
+  "hodge-romans.ROM.8.29.4": [
+   "commentaryonepis0000char",
+   365,
+   "358"
+  ],
+  "hodge-romans.ROM.8.29.5": [
+   "commentaryonepis0000char",
+   365,
+   "358"
+  ],
+  "hodge-romans.ROM.8.30.1": [
+   "commentaryonepis0000char",
+   366,
+   "359"
+  ],
+  "hodge-romans.ROM.8.30.2": [
+   "commentaryonepis0000char",
+   366,
+   "359"
+  ],
+  "hodge-romans.ROM.8.31.1": [
+   "commentaryonepis0000char",
+   367,
+   "360"
+  ],
+  "hodge-romans.ROM.8.31.2": [
+   "commentaryonepis0000char",
+   368,
+   "361"
+  ],
+  "hodge-romans.ROM.8.32.1": [
+   "commentaryonepis0000char",
+   368,
+   "361"
+  ],
+  "hodge-romans.ROM.8.33.1": [
+   "commentaryonepis0000char",
+   369,
+   "362"
+  ],
+  "hodge-romans.ROM.8.33.2": [
+   "commentaryonepis0000char",
+   369,
+   "362"
+  ],
+  "hodge-romans.ROM.8.34.1": [
+   "commentaryonepis0000char",
+   370,
+   "363"
+  ],
+  "hodge-romans.ROM.8.34.2": [
+   "commentaryonepis0000char",
+   371,
+   "364"
+  ],
+  "hodge-romans.ROM.8.35.1": [
+   "commentaryonepis0000char",
+   371,
+   "364"
+  ],
+  "hodge-romans.ROM.8.35.2": [
+   "commentaryonepis0000char",
+   372,
+   "365"
+  ],
+  "hodge-romans.ROM.8.36.1": [
+   "commentaryonepis0000char",
+   372,
+   "365"
+  ],
+  "hodge-romans.ROM.8.37.1": [
+   "commentaryonepis0000char",
+   372,
+   "365"
+  ],
+  "hodge-romans.ROM.8.38-39.1": [
+   "commentaryonepis0000char",
+   373,
+   "366"
+  ],
+  "hodge-romans.ROM.8.39.1": [
+   "commentaryonepis0000char",
+   373,
+   "366"
+  ],
+  "hodge-romans.ROM.9.1.1": [
+   "commentaryonepis0000char",
+   377,
+   "370"
+  ],
+  "hodge-romans.ROM.9.1.2": [
+   "commentaryonepis0000char",
+   378,
+   "371"
+  ],
+  "hodge-romans.ROM.9.2.1": [
+   "commentaryonepis0000char",
+   379,
+   "372"
+  ],
+  "hodge-romans.ROM.9.3.1": [
+   "commentaryonepis0000char",
+   379,
+   "372"
+  ],
+  "hodge-romans.ROM.9.3.2": [
+   "commentaryonepis0000char",
+   380,
+   "373"
+  ],
+  "hodge-romans.ROM.9.3.3": [
+   "commentaryonepis0000char",
+   380,
+   "373"
+  ],
+  "hodge-romans.ROM.9.3.4": [
+   "commentaryonepis0000char",
+   381,
+   "374"
+  ],
+  "hodge-romans.ROM.9.3.5": [
+   "commentaryonepis0000char",
+   382,
+   "375"
+  ],
+  "hodge-romans.ROM.9.4.1": [
+   "commentaryonepis0000char",
+   383,
+   "376"
+  ],
+  "hodge-romans.ROM.9.4.2": [
+   "commentaryonepis0000char",
+   383,
+   "376"
+  ],
+  "hodge-romans.ROM.9.4.3": [
+   "commentaryonepis0000char",
+   384,
+   "377"
+  ],
+  "hodge-romans.ROM.9.5.1": [
+   "commentaryonepis0000char",
+   384,
+   "377"
+  ],
+  "hodge-romans.ROM.9.5.2": [
+   "commentaryonepis0000char",
+   385,
+   "378"
+  ],
+  "hodge-romans.ROM.9.5.3": [
+   "commentaryonepis0000char",
+   386,
+   "379"
+  ],
+  "hodge-romans.ROM.9.5.4": [
+   "commentaryonepis0000char",
+   387,
+   "380"
+  ],
+  "hodge-romans.ROM.9.6.1": [
+   "commentaryonepis0000char",
+   390,
+   "383"
+  ],
+  "hodge-romans.ROM.9.6.2": [
+   "commentaryonepis0000char",
+   391,
+   "384"
+  ],
+  "hodge-romans.ROM.9.7.1": [
+   "commentaryonepis0000char",
+   392,
+   "385"
+  ],
+  "hodge-romans.ROM.9.8.1": [
+   "commentaryonepis0000char",
+   392,
+   "385"
+  ],
+  "hodge-romans.ROM.9.8.2": [
+   "commentaryonepis0000char",
+   393,
+   "386"
+  ],
+  "hodge-romans.ROM.9.8.3": [
+   "commentaryonepis0000char",
+   393,
+   "386"
+  ],
+  "hodge-romans.ROM.9.9.1": [
+   "commentaryonepis0000char",
+   394,
+   "387"
+  ],
+  "hodge-romans.ROM.9.10.1": [
+   "commentaryonepis0000char",
+   394,
+   "387"
+  ],
+  "hodge-romans.ROM.9.11.1": [
+   "commentaryonepis0000char",
+   395,
+   "388"
+  ],
+  "hodge-romans.ROM.9.11.2": [
+   "commentaryonepis0000char",
+   396,
+   "389"
+  ],
+  "hodge-romans.ROM.9.11.3": [
+   "commentaryonepis0000char",
+   396,
+   "389"
+  ],
+  "hodge-romans.ROM.9.11.4": [
+   "commentaryonepis0000char",
+   397,
+   "390"
+  ],
+  "hodge-romans.ROM.9.11.5": [
+   "commentaryonepis0000char",
+   398,
+   "391"
+  ],
+  "hodge-romans.ROM.9.11.6": [
+   "commentaryonepis0000char",
+   398,
+   "391"
+  ],
+  "hodge-romans.ROM.9.12.1": [
+   "commentaryonepis0000char",
+   398,
+   "391"
+  ],
+  "hodge-romans.ROM.9.12.2": [
+   "commentaryonepis0000char",
+   399,
+   "392"
+  ],
+  "hodge-romans.ROM.9.13.1": [
+   "commentaryonepis0000char",
+   400,
+   "393"
+  ],
+  "hodge-romans.ROM.9.13.2": [
+   "commentaryonepis0000char",
+   400,
+   "393"
+  ],
+  "hodge-romans.ROM.9.14.1": [
+   "commentaryonepis0000char",
+   401,
+   "394"
+  ],
+  "hodge-romans.ROM.9.15.1": [
+   "commentaryonepis0000char",
+   401,
+   "394"
+  ],
+  "hodge-romans.ROM.9.16.1": [
+   "commentaryonepis0000char",
+   402,
+   "395"
+  ],
+  "hodge-romans.ROM.9.16.2": [
+   "commentaryonepis0000char",
+   403,
+   "396"
+  ],
+  "hodge-romans.ROM.9.17.1": [
+   "commentaryonepis0000char",
+   403,
+   "396"
+  ],
+  "hodge-romans.ROM.9.17.2": [
+   "commentaryonepis0000char",
+   404,
+   "397"
+  ],
+  "hodge-romans.ROM.9.17.3": [
+   "commentaryonepis0000char",
+   405,
+   "398"
+  ],
+  "hodge-romans.ROM.9.18.1": [
+   "commentaryonepis0000char",
+   405,
+   "398"
+  ],
+  "hodge-romans.ROM.9.18.2": [
+   "commentaryonepis0000char",
+   406,
+   "399"
+  ],
+  "hodge-romans.ROM.9.18.3": [
+   "commentaryonepis0000char",
+   406,
+   "399"
+  ],
+  "hodge-romans.ROM.9.19.1": [
+   "commentaryonepis0000char",
+   407,
+   "400"
+  ],
+  "hodge-romans.ROM.9.19.2": [
+   "commentaryonepis0000char",
+   408,
+   "401"
+  ],
+  "hodge-romans.ROM.9.20.1": [
+   "commentaryonepis0000char",
+   408,
+   "401"
+  ],
+  "hodge-romans.ROM.9.20.2": [
+   "commentaryonepis0000char",
+   409,
+   "402"
+  ],
+  "hodge-romans.ROM.9.21.1": [
+   "commentaryonepis0000char",
+   409,
+   "402"
+  ],
+  "hodge-romans.ROM.9.22-23.1": [
+   "commentaryonepis0000char",
+   410,
+   "403"
+  ],
+  "hodge-romans.ROM.9.22-23.2": [
+   "commentaryonepis0000char",
+   411,
+   "404"
+  ],
+  "hodge-romans.ROM.9.22-23.3": [
+   "commentaryonepis0000char",
+   411,
+   "404"
+  ],
+  "hodge-romans.ROM.9.22-23.4": [
+   "commentaryonepis0000char",
+   412,
+   "405"
+  ],
+  "hodge-romans.ROM.9.22-23.5": [
+   "commentaryonepis0000char",
+   413,
+   "406"
+  ],
+  "hodge-romans.ROM.9.23.1": [
+   "commentaryonepis0000char",
+   414,
+   "407"
+  ],
+  "hodge-romans.ROM.9.23.2": [
+   "commentaryonepis0000char",
+   414,
+   "407"
+  ],
+  "hodge-romans.ROM.9.24.1": [
+   "commentaryonepis0000char",
+   414,
+   "407"
+  ],
+  "hodge-romans.ROM.9.25.1": [
+   "commentaryonepis0000char",
+   420,
+   "413"
+  ],
+  "hodge-romans.ROM.9.25.2": [
+   "commentaryonepis0000char",
+   421,
+   "414"
+  ],
+  "hodge-romans.ROM.9.26.1": [
+   "commentaryonepis0000char",
+   421,
+   "414"
+  ],
+  "hodge-romans.ROM.9.27-28.1": [
+   "commentaryonepis0000char",
+   421,
+   "414"
+  ],
+  "hodge-romans.ROM.9.27-28.2": [
+   "commentaryonepis0000char",
+   422,
+   "415"
+  ],
+  "hodge-romans.ROM.9.29.1": [
+   "commentaryonepis0000char",
+   423,
+   "416"
+  ],
+  "hodge-romans.ROM.9.29.2": [
+   "commentaryonepis0000char",
+   423,
+   "416"
+  ],
+  "hodge-romans.ROM.9.30.1": [
+   "commentaryonepis0000char",
+   424,
+   "417"
+  ],
+  "hodge-romans.ROM.9.30.2": [
+   "commentaryonepis0000char",
+   425,
+   "418"
+  ],
+  "hodge-romans.ROM.9.31.1": [
+   "commentaryonepis0000char",
+   425,
+   "418"
+  ],
+  "hodge-romans.ROM.9.32.1": [
+   "commentaryonepis0000char",
+   426,
+   "419"
+  ],
+  "hodge-romans.ROM.9.33.1": [
+   "commentaryonepis0000char",
+   426,
+   "419"
+  ],
+  "hodge-romans.ROM.9.33.2": [
+   "commentaryonepis0000char",
+   427,
+   "420"
+  ],
+  "hodge-romans.ROM.9.33.3": [
+   "commentaryonepis0000char",
+   428,
+   "421"
+  ],
+  "hodge-romans.ROM.10.1.1": [
+   "commentaryonepis0000char",
+   431,
+   "424"
+  ],
+  "hodge-romans.ROM.10.2.1": [
+   "commentaryonepis0000char",
+   431,
+   "424"
+  ],
+  "hodge-romans.ROM.10.3.1": [
+   "commentaryonepis0000char",
+   432,
+   "425"
+  ],
+  "hodge-romans.ROM.10.3.2": [
+   "commentaryonepis0000char",
+   433,
+   "426"
+  ],
+  "hodge-romans.ROM.10.4.1": [
+   "commentaryonepis0000char",
+   433,
+   "426"
+  ],
+  "hodge-romans.ROM.10.4.2": [
+   "commentaryonepis0000char",
+   434,
+   "427"
+  ],
+  "hodge-romans.ROM.10.4.3": [
+   "commentaryonepis0000char",
+   435,
+   "428"
+  ],
+  "hodge-romans.ROM.10.5.1": [
+   "commentaryonepis0000char",
+   435,
+   "428"
+  ],
+  "hodge-romans.ROM.10.5.2": [
+   "commentaryonepis0000char",
+   436,
+   "429"
+  ],
+  "hodge-romans.ROM.10.5.3": [
+   "commentaryonepis0000char",
+   437,
+   "430"
+  ],
+  "hodge-romans.ROM.10.6-7.1": [
+   "commentaryonepis0000char",
+   437,
+   "430"
+  ],
+  "hodge-romans.ROM.10.6-7.2": [
+   "commentaryonepis0000char",
+   438,
+   "431"
+  ],
+  "hodge-romans.ROM.10.6-7.3": [
+   "commentaryonepis0000char",
+   438,
+   "431"
+  ],
+  "hodge-romans.ROM.10.6-7.4": [
+   "commentaryonepis0000char",
+   439,
+   "432"
+  ],
+  "hodge-romans.ROM.10.6-7.5": [
+   "commentaryonepis0000char",
+   440,
+   "433"
+  ],
+  "hodge-romans.ROM.10.8.1": [
+   "commentaryonepis0000char",
+   440,
+   "433"
+  ],
+  "hodge-romans.ROM.10.9.1": [
+   "commentaryonepis0000char",
+   441,
+   "434"
+  ],
+  "hodge-romans.ROM.10.9.2": [
+   "commentaryonepis0000char",
+   442,
+   "435"
+  ],
+  "hodge-romans.ROM.10.10.1": [
+   "commentaryonepis0000char",
+   442,
+   "435"
+  ],
+  "hodge-romans.ROM.10.11.1": [
+   "commentaryonepis0000char",
+   446,
+   "439"
+  ],
+  "hodge-romans.ROM.10.12.1": [
+   "commentaryonepis0000char",
+   447,
+   "440"
+  ],
+  "hodge-romans.ROM.10.12.2": [
+   "commentaryonepis0000char",
+   447,
+   "440"
+  ],
+  "hodge-romans.ROM.10.13.1": [
+   "commentaryonepis0000char",
+   448,
+   "441"
+  ],
+  "hodge-romans.ROM.10.13.2": [
+   "commentaryonepis0000char",
+   449,
+   "442"
+  ],
+  "hodge-romans.ROM.10.14-15.1": [
+   "commentaryonepis0000char",
+   449,
+   "442"
+  ],
+  "hodge-romans.ROM.10.15.1": [
+   "commentaryonepis0000char",
+   450,
+   "443"
+  ],
+  "hodge-romans.ROM.10.16.1": [
+   "commentaryonepis0000char",
+   450,
+   "443"
+  ],
+  "hodge-romans.ROM.10.17.1": [
+   "commentaryonepis0000char",
+   451,
+   "444"
+  ],
+  "hodge-romans.ROM.10.18.1": [
+   "commentaryonepis0000char",
+   451,
+   "444"
+  ],
+  "hodge-romans.ROM.10.18.2": [
+   "commentaryonepis0000char",
+   452,
+   "445"
+  ],
+  "hodge-romans.ROM.10.18.3": [
+   "commentaryonepis0000char",
+   452,
+   "445"
+  ],
+  "hodge-romans.ROM.10.19.1": [
+   "commentaryonepis0000char",
+   453,
+   "446"
+  ],
+  "hodge-romans.ROM.10.19.2": [
+   "commentaryonepis0000char",
+   453,
+   "446"
+  ],
+  "hodge-romans.ROM.10.20-21.1": [
+   "commentaryonepis0000char",
+   454,
+   "447"
+  ],
+  "hodge-romans.ROM.11.1.1": [
+   "commentaryonepis0000char",
+   458,
+   "451"
+  ],
+  "hodge-romans.ROM.11.1.2": [
+   "commentaryonepis0000char",
+   458,
+   "451"
+  ],
+  "hodge-romans.ROM.11.2.1": [
+   "commentaryonepis0000char",
+   459,
+   "452"
+  ],
+  "hodge-romans.ROM.11.2.2": [
+   "commentaryonepis0000char",
+   459,
+   "452"
+  ],
+  "hodge-romans.ROM.11.2.3": [
+   "commentaryonepis0000char",
+   459,
+   "452"
+  ],
+  "hodge-romans.ROM.11.3.1": [
+   "commentaryonepis0000char",
+   460,
+   "453"
+  ],
+  "hodge-romans.ROM.11.4.1": [
+   "commentaryonepis0000char",
+   460,
+   "453"
+  ],
+  "hodge-romans.ROM.11.5.1": [
+   "commentaryonepis0000char",
+   461,
+   "454"
+  ],
+  "hodge-romans.ROM.11.6.1": [
+   "commentaryonepis0000char",
+   462,
+   "455"
+  ],
+  "hodge-romans.ROM.11.6.2": [
+   "commentaryonepis0000char",
+   462,
+   "455"
+  ],
+  "hodge-romans.ROM.11.7.1": [
+   "commentaryonepis0000char",
+   463,
+   "456"
+  ],
+  "hodge-romans.ROM.11.8.1": [
+   "commentaryonepis0000char",
+   464,
+   "457"
+  ],
+  "hodge-romans.ROM.11.8.2": [
+   "commentaryonepis0000char",
+   464,
+   "457"
+  ],
+  "hodge-romans.ROM.11.9-10.1": [
+   "commentaryonepis0000char",
+   465,
+   "458"
+  ],
+  "hodge-romans.ROM.11.9-10.2": [
+   "commentaryonepis0000char",
+   465,
+   "458"
+  ],
+  "hodge-romans.ROM.11.11.1": [
+   "commentaryonepis0000char",
+   469,
+   "462"
+  ],
+  "hodge-romans.ROM.11.11.2": [
+   "commentaryonepis0000char",
+   469,
+   "462"
+  ],
+  "hodge-romans.ROM.11.11.3": [
+   "commentaryonepis0000char",
+   470,
+   "463"
+  ],
+  "hodge-romans.ROM.11.12.1": [
+   "commentaryonepis0000char",
+   471,
+   "464"
+  ],
+  "hodge-romans.ROM.11.12.2": [
+   "commentaryonepis0000char",
+   471,
+   "464"
+  ],
+  "hodge-romans.ROM.11.12.3": [
+   "commentaryonepis0000char",
+   472,
+   "465"
+  ],
+  "hodge-romans.ROM.11.12.4": [
+   "commentaryonepis0000char",
+   473,
+   "466"
+  ],
+  "hodge-romans.ROM.11.13.1": [
+   "commentaryonepis0000char",
+   473,
+   "466"
+  ],
+  "hodge-romans.ROM.11.13.2": [
+   "commentaryonepis0000char",
+   474,
+   "467"
+  ],
+  "hodge-romans.ROM.11.14.1": [
+   "commentaryonepis0000char",
+   474,
+   "467"
+  ],
+  "hodge-romans.ROM.11.15.1": [
+   "commentaryonepis0000char",
+   474,
+   "467"
+  ],
+  "hodge-romans.ROM.11.16.1": [
+   "commentaryonepis0000char",
+   475,
+   "468"
+  ],
+  "hodge-romans.ROM.11.16.2": [
+   "commentaryonepis0000char",
+   475,
+   "468"
+  ],
+  "hodge-romans.ROM.11.16.3": [
+   "commentaryonepis0000char",
+   476,
+   "469"
+  ],
+  "hodge-romans.ROM.11.16.4": [
+   "commentaryonepis0000char",
+   477,
+   "470"
+  ],
+  "hodge-romans.ROM.11.17-24.1": [
+   "commentaryonepis0000char",
+   477,
+   "470"
+  ],
+  "hodge-romans.ROM.11.17.1": [
+   "commentaryonepis0000char",
+   478,
+   "471"
+  ],
+  "hodge-romans.ROM.11.17.2": [
+   "commentaryonepis0000char",
+   478,
+   "471"
+  ],
+  "hodge-romans.ROM.11.18.1": [
+   "commentaryonepis0000char",
+   479,
+   "472"
+  ],
+  "hodge-romans.ROM.11.19.1": [
+   "commentaryonepis0000char",
+   479,
+   "472"
+  ],
+  "hodge-romans.ROM.11.20.1": [
+   "commentaryonepis0000char",
+   479,
+   "472"
+  ],
+  "hodge-romans.ROM.11.21.1": [
+   "commentaryonepis0000char",
+   479,
+   "472"
+  ],
+  "hodge-romans.ROM.11.22.1": [
+   "commentaryonepis0000char",
+   479,
+   "472"
+  ],
+  "hodge-romans.ROM.11.23.1": [
+   "commentaryonepis0000char",
+   480,
+   "473"
+  ],
+  "hodge-romans.ROM.11.24.1": [
+   "commentaryonepis0000char",
+   481,
+   "474"
+  ],
+  "hodge-romans.ROM.11.25.1": [
+   "commentaryonepis0000char",
+   481,
+   "474"
+  ],
+  "hodge-romans.ROM.11.25.2": [
+   "commentaryonepis0000char",
+   482,
+   "475"
+  ],
+  "hodge-romans.ROM.11.25.3": [
+   "commentaryonepis0000char",
+   483,
+   "476"
+  ],
+  "hodge-romans.ROM.11.25.4": [
+   "commentaryonepis0000char",
+   484,
+   "477"
+  ],
+  "hodge-romans.ROM.11.25.5": [
+   "commentaryonepis0000char",
+   484,
+   "477"
+  ],
+  "hodge-romans.ROM.11.26.1": [
+   "commentaryonepis0000char",
+   484,
+   "477"
+  ],
+  "hodge-romans.ROM.11.26.2": [
+   "commentaryonepis0000char",
+   485,
+   "478"
+  ],
+  "hodge-romans.ROM.11.27.1": [
+   "commentaryonepis0000char",
+   486,
+   "479"
+  ],
+  "hodge-romans.ROM.11.28.1": [
+   "commentaryonepis0000char",
+   486,
+   "479"
+  ],
+  "hodge-romans.ROM.11.29.1": [
+   "commentaryonepis0000char",
+   487,
+   "480"
+  ],
+  "hodge-romans.ROM.11.30-31.1": [
+   "commentaryonepis0000char",
+   488,
+   "481"
+  ],
+  "hodge-romans.ROM.11.30-31.2": [
+   "commentaryonepis0000char",
+   488,
+   "481"
+  ],
+  "hodge-romans.ROM.11.32.1": [
+   "commentaryonepis0000char",
+   489,
+   "482"
+  ],
+  "hodge-romans.ROM.11.33-36.1": [
+   "commentaryonepis0000char",
+   489,
+   "482"
+  ],
+  "hodge-romans.ROM.11.33.1": [
+   "commentaryonepis0000char",
+   490,
+   "483"
+  ],
+  "hodge-romans.ROM.11.34.1": [
+   "commentaryonepis0000char",
+   491,
+   "484"
+  ],
+  "hodge-romans.ROM.11.35.1": [
+   "commentaryonepis0000char",
+   491,
+   "484"
+  ],
+  "hodge-romans.ROM.11.36.1": [
+   "commentaryonepis0000char",
+   491,
+   "484"
+  ],
+  "hodge-romans.ROM.12.1.1": [
+   "commentaryonepis0000char",
+   497,
+   "490"
+  ],
+  "hodge-romans.ROM.12.1.2": [
+   "commentaryonepis0000char",
+   497,
+   "490"
+  ],
+  "hodge-romans.ROM.12.1.3": [
+   "commentaryonepis0000char",
+   498,
+   "491"
+  ],
+  "hodge-romans.ROM.12.2.1": [
+   "commentaryonepis0000char",
+   498,
+   "491"
+  ],
+  "hodge-romans.ROM.12.2.2": [
+   "commentaryonepis0000char",
+   499,
+   "492"
+  ],
+  "hodge-romans.ROM.12.2.3": [
+   "commentaryonepis0000char",
+   500,
+   "493"
+  ],
+  "hodge-romans.ROM.12.3.1": [
+   "commentaryonepis0000char",
+   500,
+   "493"
+  ],
+  "hodge-romans.ROM.12.3.2": [
+   "commentaryonepis0000char",
+   501,
+   "494"
+  ],
+  "hodge-romans.ROM.12.3.3": [
+   "commentaryonepis0000char",
+   501,
+   "494"
+  ],
+  "hodge-romans.ROM.12.3.4": [
+   "commentaryonepis0000char",
+   502,
+   "495"
+  ],
+  "hodge-romans.ROM.12.4-5.1": [
+   "commentaryonepis0000char",
+   502,
+   "495"
+  ],
+  "hodge-romans.ROM.12.6.1": [
+   "commentaryonepis0000char",
+   503,
+   "496"
+  ],
+  "hodge-romans.ROM.12.6.2": [
+   "commentaryonepis0000char",
+   503,
+   "496"
+  ],
+  "hodge-romans.ROM.12.6.3": [
+   "commentaryonepis0000char",
+   504,
+   "497"
+  ],
+  "hodge-romans.ROM.12.6.4": [
+   "commentaryonepis0000char",
+   505,
+   "498"
+  ],
+  "hodge-romans.ROM.12.6.5": [
+   "commentaryonepis0000char",
+   506,
+   "499"
+  ],
+  "hodge-romans.ROM.12.6.6": [
+   "commentaryonepis0000char",
+   507,
+   "500"
+  ],
+  "hodge-romans.ROM.12.6.7": [
+   "commentaryonepis0000char",
+   508,
+   "501"
+  ],
+  "hodge-romans.ROM.12.7.1": [
+   "commentaryonepis0000char",
+   508,
+   "501"
+  ],
+  "hodge-romans.ROM.12.7.2": [
+   "commentaryonepis0000char",
+   509,
+   "502"
+  ],
+  "hodge-romans.ROM.12.8.1": [
+   "commentaryonepis0000char",
+   509,
+   "502"
+  ],
+  "hodge-romans.ROM.12.8.2": [
+   "commentaryonepis0000char",
+   510,
+   "503"
+  ],
+  "hodge-romans.ROM.12.9.1": [
+   "commentaryonepis0000char",
+   513,
+   "506"
+  ],
+  "hodge-romans.ROM.12.10.1": [
+   "commentaryonepis0000char",
+   514,
+   "507"
+  ],
+  "hodge-romans.ROM.12.11.1": [
+   "commentaryonepis0000char",
+   515,
+   "508"
+  ],
+  "hodge-romans.ROM.12.11.2": [
+   "commentaryonepis0000char",
+   515,
+   "508"
+  ],
+  "hodge-romans.ROM.12.12.1": [
+   "commentaryonepis0000char",
+   516,
+   "509"
+  ],
+  "hodge-romans.ROM.12.13.1": [
+   "commentaryonepis0000char",
+   516,
+   "509"
+  ],
+  "hodge-romans.ROM.12.14.1": [
+   "commentaryonepis0000char",
+   517,
+   "510"
+  ],
+  "hodge-romans.ROM.12.15.1": [
+   "commentaryonepis0000char",
+   518,
+   "511"
+  ],
+  "hodge-romans.ROM.12.16.1": [
+   "commentaryonepis0000char",
+   518,
+   "511"
+  ],
+  "hodge-romans.ROM.12.16.2": [
+   "commentaryonepis0000char",
+   518,
+   "511"
+  ],
+  "hodge-romans.ROM.12.16.3": [
+   "commentaryonepis0000char",
+   519,
+   "512"
+  ],
+  "hodge-romans.ROM.12.17.1": [
+   "commentaryonepis0000char",
+   520,
+   "513"
+  ],
+  "hodge-romans.ROM.12.18.1": [
+   "commentaryonepis0000char",
+   521,
+   "514"
+  ],
+  "hodge-romans.ROM.12.19.1": [
+   "commentaryonepis0000char",
+   521,
+   "514"
+  ],
+  "hodge-romans.ROM.12.20.1": [
+   "commentaryonepis0000char",
+   522,
+   "515"
+  ],
+  "hodge-romans.ROM.12.20.2": [
+   "commentaryonepis0000char",
+   523,
+   "516"
+  ],
+  "hodge-romans.ROM.12.21.1": [
+   "commentaryonepis0000char",
+   524,
+   "517"
+  ],
+  "hodge-romans.ROM.12.21.2": [
+   "commentaryonepis0000char",
+   525,
+   "518"
+  ],
+  "hodge-romans.ROM.13.1.1": [
+   "commentaryonepis0000char",
+   528,
+   "521"
+  ],
+  "hodge-romans.ROM.13.1.2": [
+   "commentaryonepis0000char",
+   528,
+   "521"
+  ],
+  "hodge-romans.ROM.13.1.3": [
+   "commentaryonepis0000char",
+   529,
+   "522"
+  ],
+  "hodge-romans.ROM.13.1.4": [
+   "commentaryonepis0000char",
+   530,
+   "523"
+  ],
+  "hodge-romans.ROM.13.2.1": [
+   "commentaryonepis0000char",
+   530,
+   "523"
+  ],
+  "hodge-romans.ROM.13.2.2": [
+   "commentaryonepis0000char",
+   531,
+   "524"
+  ],
+  "hodge-romans.ROM.13.3.1": [
+   "commentaryonepis0000char",
+   531,
+   "524"
+  ],
+  "hodge-romans.ROM.13.4.1": [
+   "commentaryonepis0000char",
+   532,
+   "525"
+  ],
+  "hodge-romans.ROM.13.5.1": [
+   "commentaryonepis0000char",
+   532,
+   "525"
+  ],
+  "hodge-romans.ROM.13.6.1": [
+   "commentaryonepis0000char",
+   533,
+   "526"
+  ],
+  "hodge-romans.ROM.13.7.1": [
+   "commentaryonepis0000char",
+   533,
+   "526"
+  ],
+  "hodge-romans.ROM.13.8.1": [
+   "commentaryonepis0000char",
+   534,
+   "527"
+  ],
+  "hodge-romans.ROM.13.9.1": [
+   "commentaryonepis0000char",
+   534,
+   "527"
+  ],
+  "hodge-romans.ROM.13.10.1": [
+   "commentaryonepis0000char",
+   535,
+   "528"
+  ],
+  "hodge-romans.ROM.13.11.1": [
+   "commentaryonepis0000char",
+   535,
+   "528"
+  ],
+  "hodge-romans.ROM.13.11.2": [
+   "commentaryonepis0000char",
+   536,
+   "529"
+  ],
+  "hodge-romans.ROM.13.11.3": [
+   "commentaryonepis0000char",
+   536,
+   "529"
+  ],
+  "hodge-romans.ROM.13.11.4": [
+   "commentaryonepis0000char",
+   537,
+   "530"
+  ],
+  "hodge-romans.ROM.13.11.5": [
+   "commentaryonepis0000char",
+   538,
+   "531"
+  ],
+  "hodge-romans.ROM.13.12.1": [
+   "commentaryonepis0000char",
+   538,
+   "531"
+  ],
+  "hodge-romans.ROM.13.13.1": [
+   "commentaryonepis0000char",
+   539,
+   "532"
+  ],
+  "hodge-romans.ROM.13.14.1": [
+   "commentaryonepis0000char",
+   539,
+   "532"
+  ],
+  "hodge-romans.ROM.14.1.1": [
+   "commentaryonepis0000char",
+   545,
+   "538"
+  ],
+  "hodge-romans.ROM.14.1.2": [
+   "commentaryonepis0000char",
+   545,
+   "538"
+  ],
+  "hodge-romans.ROM.14.2.1": [
+   "commentaryonepis0000char",
+   546,
+   "539"
+  ],
+  "hodge-romans.ROM.14.2.2": [
+   "commentaryonepis0000char",
+   546,
+   "539"
+  ],
+  "hodge-romans.ROM.14.3.1": [
+   "commentaryonepis0000char",
+   547,
+   "540"
+  ],
+  "hodge-romans.ROM.14.4.1": [
+   "commentaryonepis0000char",
+   547,
+   "540"
+  ],
+  "hodge-romans.ROM.14.4.2": [
+   "commentaryonepis0000char",
+   547,
+   "540"
+  ],
+  "hodge-romans.ROM.14.5.1": [
+   "commentaryonepis0000char",
+   549,
+   "542"
+  ],
+  "hodge-romans.ROM.14.6.1": [
+   "commentaryonepis0000char",
+   549,
+   "542"
+  ],
+  "hodge-romans.ROM.14.7.1": [
+   "commentaryonepis0000char",
+   550,
+   "543"
+  ],
+  "hodge-romans.ROM.14.8.1": [
+   "commentaryonepis0000char",
+   550,
+   "543"
+  ],
+  "hodge-romans.ROM.14.9.1": [
+   "commentaryonepis0000char",
+   551,
+   "544"
+  ],
+  "hodge-romans.ROM.14.10.1": [
+   "commentaryonepis0000char",
+   551,
+   "544"
+  ],
+  "hodge-romans.ROM.14.11.1": [
+   "commentaryonepis0000char",
+   552,
+   "545"
+  ],
+  "hodge-romans.ROM.14.12.1": [
+   "commentaryonepis0000char",
+   553,
+   "546"
+  ],
+  "hodge-romans.ROM.14.13.1": [
+   "commentaryonepis0000char",
+   553,
+   "546"
+  ],
+  "hodge-romans.ROM.14.14.1": [
+   "commentaryonepis0000char",
+   553,
+   "546"
+  ],
+  "hodge-romans.ROM.14.15.1": [
+   "commentaryonepis0000char",
+   554,
+   "547"
+  ],
+  "hodge-romans.ROM.14.16.1": [
+   "commentaryonepis0000char",
+   554,
+   "547"
+  ],
+  "hodge-romans.ROM.14.17.1": [
+   "commentaryonepis0000char",
+   555,
+   "548"
+  ],
+  "hodge-romans.ROM.14.18.1": [
+   "commentaryonepis0000char",
+   555,
+   "548"
+  ],
+  "hodge-romans.ROM.14.19.1": [
+   "commentaryonepis0000char",
+   556,
+   "549"
+  ],
+  "hodge-romans.ROM.14.20.1": [
+   "commentaryonepis0000char",
+   556,
+   "549"
+  ],
+  "hodge-romans.ROM.14.21.1": [
+   "commentaryonepis0000char",
+   557,
+   "550"
+  ],
+  "hodge-romans.ROM.14.22.1": [
+   "commentaryonepis0000char",
+   558,
+   "551"
+  ],
+  "hodge-romans.ROM.14.22.2": [
+   "commentaryonepis0000char",
+   559,
+   "552"
+  ],
+  "hodge-romans.ROM.14.23.1": [
+   "commentaryonepis0000char",
+   559,
+   "552"
+  ],
+  "hodge-romans.ROM.15.1.1": [
+   "commentaryonepis0000char",
+   566,
+   "559"
+  ],
+  "hodge-romans.ROM.15.2.1": [
+   "commentaryonepis0000char",
+   566,
+   "559"
+  ],
+  "hodge-romans.ROM.15.3.1": [
+   "commentaryonepis0000char",
+   567,
+   "560"
+  ],
+  "hodge-romans.ROM.15.4.1": [
+   "commentaryonepis0000char",
+   567,
+   "560"
+  ],
+  "hodge-romans.ROM.15.5.1": [
+   "commentaryonepis0000char",
+   568,
+   "561"
+  ],
+  "hodge-romans.ROM.15.6.1": [
+   "commentaryonepis0000char",
+   568,
+   "561"
+  ],
+  "hodge-romans.ROM.15.7.1": [
+   "commentaryonepis0000char",
+   569,
+   "562"
+  ],
+  "hodge-romans.ROM.15.8.1": [
+   "commentaryonepis0000char",
+   569,
+   "562"
+  ],
+  "hodge-romans.ROM.15.9.1": [
+   "commentaryonepis0000char",
+   570,
+   "563"
+  ],
+  "hodge-romans.ROM.15.10.1": [
+   "commentaryonepis0000char",
+   570,
+   "563"
+  ],
+  "hodge-romans.ROM.15.11.1": [
+   "commentaryonepis0000char",
+   571,
+   "564"
+  ],
+  "hodge-romans.ROM.15.12.1": [
+   "commentaryonepis0000char",
+   571,
+   "564"
+  ],
+  "hodge-romans.ROM.15.13.1": [
+   "commentaryonepis0000char",
+   571,
+   "564"
+  ],
+  "hodge-romans.ROM.15.14.1": [
+   "commentaryonepis0000char",
+   572,
+   "565"
+  ],
+  "hodge-romans.ROM.15.15.1": [
+   "commentaryonepis0000char",
+   573,
+   "566"
+  ],
+  "hodge-romans.ROM.15.16.1": [
+   "commentaryonepis0000char",
+   574,
+   "567"
+  ],
+  "hodge-romans.ROM.15.16.2": [
+   "commentaryonepis0000char",
+   574,
+   "567"
+  ],
+  "hodge-romans.ROM.15.17.1": [
+   "commentaryonepis0000char",
+   575,
+   "568"
+  ],
+  "hodge-romans.ROM.15.18-19.1": [
+   "commentaryonepis0000char",
+   576,
+   "569"
+  ],
+  "hodge-romans.ROM.15.19.1": [
+   "commentaryonepis0000char",
+   576,
+   "569"
+  ],
+  "hodge-romans.ROM.15.20-21.1": [
+   "commentaryonepis0000char",
+   577,
+   "570"
+  ],
+  "hodge-romans.ROM.15.21.1": [
+   "commentaryonepis0000char",
+   578,
+   "571"
+  ],
+  "hodge-romans.ROM.15.22.1": [
+   "commentaryonepis0000char",
+   578,
+   "571"
+  ],
+  "hodge-romans.ROM.15.23.1": [
+   "commentaryonepis0000char",
+   578,
+   "571"
+  ],
+  "hodge-romans.ROM.15.24.1": [
+   "commentaryonepis0000char",
+   578,
+   "571"
+  ],
+  "hodge-romans.ROM.15.25.1": [
+   "commentaryonepis0000char",
+   579,
+   "572"
+  ],
+  "hodge-romans.ROM.15.26-27.1": [
+   "commentaryonepis0000char",
+   579,
+   "572"
+  ],
+  "hodge-romans.ROM.15.28.1": [
+   "commentaryonepis0000char",
+   580,
+   "573"
+  ],
+  "hodge-romans.ROM.15.29.1": [
+   "commentaryonepis0000char",
+   580,
+   "573"
+  ],
+  "hodge-romans.ROM.15.30.1": [
+   "commentaryonepis0000char",
+   580,
+   "573"
+  ],
+  "hodge-romans.ROM.15.31.1": [
+   "commentaryonepis0000char",
+   581,
+   "574"
+  ],
+  "hodge-romans.ROM.15.32.1": [
+   "commentaryonepis0000char",
+   581,
+   "574"
+  ],
+  "hodge-romans.ROM.15.33.1": [
+   "commentaryonepis0000char",
+   582,
+   "575"
+  ],
+  "hodge-romans.ROM.16.1.1": [
+   "commentaryonepis0000char",
+   585,
+   "578"
+  ],
+  "hodge-romans.ROM.16.2.1": [
+   "commentaryonepis0000char",
+   586,
+   "579"
+  ],
+  "hodge-romans.ROM.16.3.1": [
+   "commentaryonepis0000char",
+   586,
+   "579"
+  ],
+  "hodge-romans.ROM.16.4.1": [
+   "commentaryonepis0000char",
+   587,
+   "580"
+  ],
+  "hodge-romans.ROM.16.5.1": [
+   "commentaryonepis0000char",
+   587,
+   "580"
+  ],
+  "hodge-romans.ROM.16.6-7.1": [
+   "commentaryonepis0000char",
+   587,
+   "580"
+  ],
+  "hodge-romans.ROM.16.6-7.2": [
+   "commentaryonepis0000char",
+   588,
+   "581"
+  ],
+  "hodge-romans.ROM.16.16.1": [
+   "commentaryonepis0000char",
+   589,
+   "582"
+  ],
+  "hodge-romans.ROM.16.17.1": [
+   "commentaryonepis0000char",
+   589,
+   "582"
+  ],
+  "hodge-romans.ROM.16.19.1": [
+   "commentaryonepis0000char",
+   590,
+   "583"
+  ],
+  "hodge-romans.ROM.16.20.1": [
+   "commentaryonepis0000char",
+   590,
+   "583"
+  ],
+  "hodge-romans.ROM.16.20.2": [
+   "commentaryonepis0000char",
+   591,
+   "584"
+  ],
+  "hodge-romans.ROM.16.21-24.1": [
+   "commentaryonepis0000char",
+   591,
+   "584"
+  ],
+  "hodge-romans.ROM.16.25-27.1": [
+   "commentaryonepis0000char",
+   592,
+   "585"
+  ],
+  "hodge-romans.ROM.16.25-27.2": [
+   "commentaryonepis0000char",
+   592,
+   "585"
+  ],
+  "hodge-romans.ROM.16.26.1": [
+   "commentaryonepis0000char",
+   593,
+   "586"
+  ],
+  "hodge-romans.ROM.16.27.1": [
+   "commentaryonepis0000char",
+   593,
+   "586"
+  ]
+ }
+}

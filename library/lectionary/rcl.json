@@ -1,0 +1,3962 @@
+{
+ "lectionary": "Revised Common Lectionary",
+ "about": "Sunday and feast-day readings of the Revised Common Lectionary, as the Vanderbilt Divinity Library lists them, imported by scripts/import_rcl.py. References are numbered as English Bibles number them.",
+ "rights": "Revised Common Lectionary copyright 1992 Consultation on Common Texts. Used by permission. Only the table of readings is copied, not the Bible text.",
+ "sources": [
+  {
+   "url": "https://lectionary.library.vanderbilt.edu/calendar/2025-26/?season=all",
+   "retrieved": "2026-11-10",
+   "download_sha256": "8ddf87994400d0b5b6c32973277edce38fbe597b7fa986574bd7dedb0750b074",
+   "days": 75
+  },
+  {
+   "url": "https://lectionary.library.vanderbilt.edu/calendar/2026-27/?season=all",
+   "retrieved": "2026-11-10",
+   "download_sha256": "371b4ee2210f8db55537bc58ebc66da376899909746d96238275b9246991f29c",
+   "days": 74
+  },
+  {
+   "url": "https://lectionary.library.vanderbilt.edu/calendar/2027-28/?season=all",
+   "retrieved": "2026-11-10",
+   "download_sha256": "368dae79f17cc45495c0f0cb3344223eeb2d4fe5be9d611d49f1a24194f569f3",
+   "days": 76
+  }
+ ],
+ "days": [
+  {
+   "name": "First Sunday of Advent",
+   "date": "2025-11-30",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 2:1-5",
+     "Psalm 122"
+    ],
+    "epistle": [
+     "Romans 13:11-14"
+    ],
+    "gospel": [
+     "Matthew 24:36-44"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday of Advent",
+   "date": "2025-12-07",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 11:1-10",
+     "Psalm 72:1-7, 18-19"
+    ],
+    "epistle": [
+     "Romans 15:4-13"
+    ],
+    "gospel": [
+     "Matthew 3:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday of Advent",
+   "date": "2025-12-14",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 35:1-10",
+     "Psalm 146:5-10",
+     "Luke 1:46b-55"
+    ],
+    "epistle": [
+     "James 5:7-10"
+    ],
+    "gospel": [
+     "Matthew 11:2-11"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday of Advent",
+   "date": "2025-12-21",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 7:10-16",
+     "Psalm 80:1-7, 17-19"
+    ],
+    "epistle": [
+     "Romans 1:1-7"
+    ],
+    "gospel": [
+     "Matthew 1:18-25"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper I",
+   "date": "2025-12-24",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 9:2-7",
+     "Psalm 96"
+    ],
+    "epistle": [
+     "Titus 2:11-14"
+    ],
+    "gospel": [
+     "Luke 2:1-14, (15-20)"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper II",
+   "date": "2025-12-25",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 62:6-12",
+     "Psalm 97"
+    ],
+    "epistle": [
+     "Titus 3:4-7"
+    ],
+    "gospel": [
+     "Luke 2:(1-7), 8-20"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper III",
+   "date": "2025-12-25",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 52:7-10",
+     "Psalm 98"
+    ],
+    "epistle": [
+     "Hebrews 1:1-4, (5-12)"
+    ],
+    "gospel": [
+     "John 1:1-14"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday after Christmas Day",
+   "date": "2025-12-28",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 63:7-9",
+     "Psalm 148"
+    ],
+    "epistle": [
+     "Hebrews 2:10-18"
+    ],
+    "gospel": [
+     "Matthew 2:13-23"
+    ]
+   }
+  },
+  {
+   "name": "Holy Name of Jesus",
+   "date": "2026-01-01",
+   "note": "(Mary, Mother of God)",
+   "readings": {
+    "first_and_psalm": [
+     "Numbers 6:22-27",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Galatians 4:4-7",
+     "Philippians 2:5-11"
+    ],
+    "gospel": [
+     "Luke 2:15-21"
+    ]
+   }
+  },
+  {
+   "name": "New Year's Day",
+   "date": "2026-01-01",
+   "readings": {
+    "first_and_psalm": [
+     "Ecclesiastes 3:1-13",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Revelation 21:1-6a"
+    ],
+    "gospel": [
+     "Matthew 25:31-46"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday after Christmas Day",
+   "date": "2026-01-04",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 31:7-14",
+     "Sirach 24:1-12",
+     "Psalm 147:12-20",
+     "Wisdom of Solomon 10:15-21"
+    ],
+    "epistle": [
+     "Ephesians 1:3-14"
+    ],
+    "gospel": [
+     "John 1:(1-9), 10-18"
+    ]
+   }
+  },
+  {
+   "name": "Epiphany of the Lord",
+   "date": "2026-01-06",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 60:1-6",
+     "Psalm 72:1-7, 10-14"
+    ],
+    "epistle": [
+     "Ephesians 3:1-12"
+    ],
+    "gospel": [
+     "Matthew 2:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Baptism of the Lord",
+   "date": "2026-01-11",
+   "note": "First Sunday after the Epiphany",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 42:1-9",
+     "Psalm 29"
+    ],
+    "epistle": [
+     "Acts 10:34-43"
+    ],
+    "gospel": [
+     "Matthew 3:13-17"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday after the Epiphany",
+   "date": "2026-01-18",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 49:1-7",
+     "Psalm 40:1-11"
+    ],
+    "epistle": [
+     "1 Corinthians 1:1-9"
+    ],
+    "gospel": [
+     "John 1:29-42"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday after the Epiphany",
+   "date": "2026-01-25",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 9:1-4",
+     "Psalm 27:1, 4-9"
+    ],
+    "epistle": [
+     "1 Corinthians 1:10-18"
+    ],
+    "gospel": [
+     "Matthew 4:12-23"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday after the Epiphany",
+   "date": "2026-02-01",
+   "readings": {
+    "first_and_psalm": [
+     "Micah 6:1-8",
+     "Psalm 15"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-31"
+    ],
+    "gospel": [
+     "Matthew 5:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Presentation of the Lord",
+   "date": "2026-02-02",
+   "readings": {
+    "first_and_psalm": [
+     "Malachi 3:1-4",
+     "Psalm 84",
+     "Psalm 24:7-10"
+    ],
+    "epistle": [
+     "Hebrews 2:14-18"
+    ],
+    "gospel": [
+     "Luke 2:22-40"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday after the Epiphany",
+   "date": "2026-02-08",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 58:1-9a (9b-12)",
+     "Psalm 112:1-9 (10)"
+    ],
+    "epistle": [
+     "1 Corinthians 2:1-12 (13-16)"
+    ],
+    "gospel": [
+     "Matthew 5:13-20"
+    ]
+   }
+  },
+  {
+   "name": "Transfiguration Sunday",
+   "date": "2026-02-15",
+   "note": "(Last Sunday before Lent)",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 24:12-18",
+     "Psalm 2",
+     "Psalm 99"
+    ],
+    "epistle": [
+     "2 Peter 1:16-21"
+    ],
+    "gospel": [
+     "Matthew 17:1-9"
+    ]
+   }
+  },
+  {
+   "name": "Ash Wednesday",
+   "date": "2026-02-18",
+   "readings": {
+    "first_and_psalm": [
+     "Joel 2:1-2, 12-17",
+     "Isaiah 58:1-12",
+     "Psalm 51:1-17"
+    ],
+    "epistle": [
+     "2 Corinthians 5:20b-6:10"
+    ],
+    "gospel": [
+     "Matthew 6:1-6, 16-21"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday in Lent",
+   "date": "2026-02-22",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 2:15-17; 3:1-7",
+     "Psalm 32"
+    ],
+    "epistle": [
+     "Romans 5:12-19"
+    ],
+    "gospel": [
+     "Matthew 4:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday in Lent",
+   "date": "2026-03-01",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 12:1-4a",
+     "Psalm 121"
+    ],
+    "epistle": [
+     "Romans 4:1-5, 13-17"
+    ],
+    "gospel": [
+     "John 3:1-17",
+     "Matthew 17:1-9"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday in Lent",
+   "date": "2026-03-08",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 17:1-7",
+     "Psalm 95"
+    ],
+    "epistle": [
+     "Romans 5:1-11"
+    ],
+    "gospel": [
+     "John 4:5-42"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday in Lent",
+   "date": "2026-03-15",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 16:1-13",
+     "Psalm 23"
+    ],
+    "epistle": [
+     "Ephesians 5:8-14"
+    ],
+    "gospel": [
+     "John 9:1-41"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday in Lent",
+   "date": "2026-03-22",
+   "readings": {
+    "first_and_psalm": [
+     "Ezekiel 37:1-14",
+     "Psalm 130"
+    ],
+    "epistle": [
+     "Romans 8:6-11"
+    ],
+    "gospel": [
+     "John 11:1-45"
+    ]
+   }
+  },
+  {
+   "name": "Annunciation of the Lord",
+   "date": "2026-03-25",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 7:10-14",
+     "Psalm 45",
+     "Psalm 40:5-10"
+    ],
+    "epistle": [
+     "Hebrews 10:4-10"
+    ],
+    "gospel": [
+     "Luke 1:26-38"
+    ]
+   }
+  },
+  {
+   "name": "Liturgy of the Palms",
+   "date": "2026-03-29",
+   "note": "Sixth Sunday in Lent",
+   "readings": {
+    "first_and_psalm": [],
+    "epistle": [
+     "Psalm 118:1-2, 19-29"
+    ],
+    "gospel": [
+     "Matthew 21:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Liturgy of the Passion",
+   "date": "2026-03-29",
+   "note": "Sixth Sunday in Lent",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 50:4-9a",
+     "Psalm 31:9-16"
+    ],
+    "epistle": [
+     "Philippians 2:5-11"
+    ],
+    "gospel": [
+     "Matthew 26:14-27:66",
+     "Matthew 27:11-54"
+    ]
+   }
+  },
+  {
+   "name": "Monday of Holy Week",
+   "date": "2026-03-30",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 42:1-9",
+     "Psalm 36:5-11"
+    ],
+    "epistle": [
+     "Hebrews 9:11-15"
+    ],
+    "gospel": [
+     "John 12:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Tuesday of Holy Week",
+   "date": "2026-03-31",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 49:1-7",
+     "Psalm 71:1-14"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-31"
+    ],
+    "gospel": [
+     "John 12:20-36"
+    ]
+   }
+  },
+  {
+   "name": "Wednesday of Holy Week",
+   "date": "2026-04-01",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 50:4-9a",
+     "Psalm 70"
+    ],
+    "epistle": [
+     "Hebrews 12:1-3"
+    ],
+    "gospel": [
+     "John 13:21-32"
+    ]
+   }
+  },
+  {
+   "name": "Maundy Thursday",
+   "date": "2026-04-02",
+   "note": "Holy Thursday",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 12:1-4, (5-10), 11-14",
+     "Psalm 116:1-2, 12-19"
+    ],
+    "epistle": [
+     "1 Corinthians 11:23-26"
+    ],
+    "gospel": [
+     "John 13:1-17, 31b-35"
+    ]
+   }
+  },
+  {
+   "name": "Good Friday",
+   "date": "2026-04-03",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 52:13-53:12",
+     "Psalm 22"
+    ],
+    "epistle": [
+     "Hebrews 10:16-25",
+     "Hebrews 4:14-16; 5:7-9"
+    ],
+    "gospel": [
+     "John 18:1-19:42"
+    ]
+   }
+  },
+  {
+   "name": "Holy Saturday",
+   "date": "2026-04-04",
+   "readings": {
+    "first_and_psalm": [
+     "Job 14:1-14",
+     "Lamentations 3:1-9, 19-24",
+     "Psalm 31:1-4, 15-16"
+    ],
+    "epistle": [
+     "1 Peter 4:1-8"
+    ],
+    "gospel": [
+     "Matthew 27:57-66",
+     "John 19:38-42"
+    ]
+   }
+  },
+  {
+   "name": "Easter Evening",
+   "date": "2026-04-05",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 25:6-9",
+     "Psalm 114"
+    ],
+    "epistle": [
+     "1 Corinthians 5:6b-8"
+    ],
+    "gospel": [
+     "Luke 24:13-49"
+    ]
+   }
+  },
+  {
+   "name": "Resurrection of the Lord",
+   "date": "2026-04-05",
+   "note": "Easter Day",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 10:34-43",
+     "Jeremiah 31:1-6",
+     "Psalm 118:1-2, 14-24"
+    ],
+    "epistle": [
+     "Colossians 3:1-4",
+     "Acts 10:34-43"
+    ],
+    "gospel": [
+     "John 20:1-18",
+     "Matthew 28:1-10"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday of Easter",
+   "date": "2026-04-12",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 2:14a, 22-32",
+     "Psalm 16"
+    ],
+    "epistle": [
+     "1 Peter 1:3-9"
+    ],
+    "gospel": [
+     "John 20:19-31"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday of Easter",
+   "date": "2026-04-19",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 2:14a, 36-41",
+     "Psalm 116:1-4, 12-19"
+    ],
+    "epistle": [
+     "1 Peter 1:17-23"
+    ],
+    "gospel": [
+     "Luke 24:13-35"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday of Easter",
+   "date": "2026-04-26",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 2:42-47",
+     "Psalm 23"
+    ],
+    "epistle": [
+     "1 Peter 2:19-25"
+    ],
+    "gospel": [
+     "John 10:1-10"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday of Easter",
+   "date": "2026-05-03",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 7:55-60",
+     "Psalm 31:1-5, 15-16"
+    ],
+    "epistle": [
+     "1 Peter 2:2-10"
+    ],
+    "gospel": [
+     "John 14:1-14"
+    ]
+   }
+  },
+  {
+   "name": "Sixth Sunday of Easter",
+   "date": "2026-05-10",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 17:22-31",
+     "Psalm 66:8-20"
+    ],
+    "epistle": [
+     "1 Peter 3:13-22"
+    ],
+    "gospel": [
+     "John 14:15-21"
+    ]
+   }
+  },
+  {
+   "name": "Ascension of the Lord",
+   "date": "2026-05-14",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 1:1-11",
+     "Psalm 47",
+     "Psalm 93"
+    ],
+    "epistle": [
+     "Ephesians 1:15-23"
+    ],
+    "gospel": [
+     "Luke 24:44-53"
+    ]
+   }
+  },
+  {
+   "name": "Seventh Sunday of Easter",
+   "date": "2026-05-17",
+   "note": "(If Ascension not observed here)",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 1:6-14",
+     "Psalm 68:1-10, 32-35"
+    ],
+    "epistle": [
+     "1 Peter 4:12-14; 5:6-11"
+    ],
+    "gospel": [
+     "John 17:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Day of Pentecost",
+   "date": "2026-05-24",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 2:1-21",
+     "Numbers 11:24-30",
+     "Psalm 104:24-34, 35b"
+    ],
+    "epistle": [
+     "1 Corinthians 12:3b-13",
+     "Acts 2:1-21"
+    ],
+    "gospel": [
+     "John 20:19-23",
+     "John 7:37-39"
+    ]
+   }
+  },
+  {
+   "name": "Trinity Sunday",
+   "date": "2026-05-31",
+   "note": "First Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 1:1-2:4a",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "2 Corinthians 13:11-13"
+    ],
+    "gospel": [
+     "Matthew 28:16-20"
+    ]
+   }
+  },
+  {
+   "name": "Visitation of Mary to Elizabeth",
+   "date": "2026-05-31",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 2:1-10",
+     "Psalm 113"
+    ],
+    "epistle": [
+     "Romans 12:9-16b"
+    ],
+    "gospel": [
+     "Luke 1:39-57"
+    ]
+   }
+  },
+  {
+   "name": "Proper 5 (10)",
+   "date": "2026-06-07",
+   "note": "Second Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 12:1-9",
+     "Psalm 33:1-12",
+     "Hosea 5:15-6:6",
+     "Psalm 50:7-15"
+    ],
+    "epistle": [
+     "Romans 4:13-25"
+    ],
+    "gospel": [
+     "Matthew 9:9-13, 18-26"
+    ]
+   }
+  },
+  {
+   "name": "Proper 6 (11)",
+   "date": "2026-06-14",
+   "note": "Third Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 18:1-15, (21:1-7)",
+     "Psalm 116:1-2, 12-19",
+     "Exodus 19:2-8a",
+     "Psalm 100"
+    ],
+    "epistle": [
+     "Romans 5:1-8"
+    ],
+    "gospel": [
+     "Matthew 9:35-10:8, (9-23)"
+    ]
+   }
+  },
+  {
+   "name": "Proper 7 (12)",
+   "date": "2026-06-21",
+   "note": "Fourth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 21:8-21",
+     "Psalm 86:1-10, 16-17",
+     "Jeremiah 20:7-13",
+     "Psalm 69:7-10, (11-15), 16-18"
+    ],
+    "epistle": [
+     "Romans 6:1b-11"
+    ],
+    "gospel": [
+     "Matthew 10:24-39"
+    ]
+   }
+  },
+  {
+   "name": "Proper 8 (13)",
+   "date": "2026-06-28",
+   "note": "Fifth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 22:1-14",
+     "Psalm 13",
+     "Jeremiah 28:5-9",
+     "Psalm 89:1-4, 15-18"
+    ],
+    "epistle": [
+     "Romans 6:12-23"
+    ],
+    "gospel": [
+     "Matthew 10:40-42"
+    ]
+   }
+  },
+  {
+   "name": "Proper 9 (14)",
+   "date": "2026-07-05",
+   "note": "Sixth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 24:34-38, 42-49, 58-67",
+     "Psalm 45:10-17",
+     "Song of Solomon 2:8-13",
+     "Zechariah 9:9-12",
+     "Psalm 145:8-14"
+    ],
+    "epistle": [
+     "Romans 7:15-25a"
+    ],
+    "gospel": [
+     "Matthew 11:16-19, 25-30"
+    ]
+   }
+  },
+  {
+   "name": "Proper 10 (15)",
+   "date": "2026-07-12",
+   "note": "Seventh Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 25:19-34",
+     "Psalm 119:105-112",
+     "Isaiah 55:10-13",
+     "Psalm 65:(1-8), 9-13"
+    ],
+    "epistle": [
+     "Romans 8:1-11"
+    ],
+    "gospel": [
+     "Matthew 13:1-9, 18-23"
+    ]
+   }
+  },
+  {
+   "name": "Proper 11 (16)",
+   "date": "2026-07-19",
+   "note": "Eighth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 28:10-19a",
+     "Psalm 139:1-12, 23-24",
+     "Wisdom of Solomon 12:13, 16-19",
+     "Isaiah 44:6-8",
+     "Psalm 86:11-17"
+    ],
+    "epistle": [
+     "Romans 8:12-25"
+    ],
+    "gospel": [
+     "Matthew 13:24-30, 36-43"
+    ]
+   }
+  },
+  {
+   "name": "Proper 12 (17)",
+   "date": "2026-07-26",
+   "note": "Ninth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 29:15-28",
+     "Psalm 105:1-11, 45b",
+     "Psalm 128",
+     "1 Kings 3:5-12",
+     "Psalm 119:129-136"
+    ],
+    "epistle": [
+     "Romans 8:26-39"
+    ],
+    "gospel": [
+     "Matthew 13:31-33, 44-52"
+    ]
+   }
+  },
+  {
+   "name": "Proper 13 (18)",
+   "date": "2026-08-02",
+   "note": "Tenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 32:22-31",
+     "Psalm 17:1-7, 15",
+     "Isaiah 55:1-5",
+     "Psalm 145:8-9, 14-21"
+    ],
+    "epistle": [
+     "Romans 9:1-5"
+    ],
+    "gospel": [
+     "Matthew 14:13-21"
+    ]
+   }
+  },
+  {
+   "name": "Proper 14 (19)",
+   "date": "2026-08-09",
+   "note": "Eleventh Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 37:1-4, 12-28",
+     "Psalm 105: 1-6, 16-22, 45b",
+     "1 Kings 19:9-18",
+     "Psalm 85:8-13"
+    ],
+    "epistle": [
+     "Romans 10:5-15"
+    ],
+    "gospel": [
+     "Matthew 14:22-33"
+    ]
+   }
+  },
+  {
+   "name": "Proper 15 (20)",
+   "date": "2026-08-16",
+   "note": "Twelfth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 45:1-15",
+     "Psalm 133",
+     "Isaiah 56:1, 6-8",
+     "Psalm 67"
+    ],
+    "epistle": [
+     "Romans 11:1-2a, 29-32"
+    ],
+    "gospel": [
+     "Matthew 15: (10-20), 21-28"
+    ]
+   }
+  },
+  {
+   "name": "Proper 16 (21)",
+   "date": "2026-08-23",
+   "note": "Thirteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 1:8-2:10",
+     "Psalm 124",
+     "Isaiah 51:1-6",
+     "Psalm 138"
+    ],
+    "epistle": [
+     "Romans 12:1-8"
+    ],
+    "gospel": [
+     "Matthew 16:13-20"
+    ]
+   }
+  },
+  {
+   "name": "Proper 17 (22)",
+   "date": "2026-08-30",
+   "note": "Fourteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 3:1-15",
+     "Psalm 105:1-6, 23-26, 45b",
+     "Jeremiah 15:15-21",
+     "Psalm 26:1-8"
+    ],
+    "epistle": [
+     "Romans 12:9-21"
+    ],
+    "gospel": [
+     "Matthew 16:21-28"
+    ]
+   }
+  },
+  {
+   "name": "Proper 18 (23)",
+   "date": "2026-09-06",
+   "note": "Fifteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 12:1-14",
+     "Psalm 149",
+     "Ezekiel 33:7-11",
+     "Psalm 119:33-40"
+    ],
+    "epistle": [
+     "Romans 13:8-14"
+    ],
+    "gospel": [
+     "Matthew 18:15-20"
+    ]
+   }
+  },
+  {
+   "name": "Proper 19 (24)",
+   "date": "2026-09-13",
+   "note": "Sixteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 14:19-31",
+     "Psalm 114",
+     "Exodus 15:1b-11, 20-21",
+     "Genesis 50:15-21",
+     "Psalm 103:(1-7), 8-13"
+    ],
+    "epistle": [
+     "Romans 14:1-12"
+    ],
+    "gospel": [
+     "Matthew 18:21-35"
+    ]
+   }
+  },
+  {
+   "name": "Holy Cross",
+   "date": "2026-09-14",
+   "readings": {
+    "first_and_psalm": [
+     "Numbers 21:4b-9",
+     "Psalm 98:1-5",
+     "Psalm 78:1-2, 34-38"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-24"
+    ],
+    "gospel": [
+     "John 3:13-17"
+    ]
+   }
+  },
+  {
+   "name": "Proper 20 (25)",
+   "date": "2026-09-20",
+   "note": "Seventeenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 16:2-15",
+     "Psalm 105:1-6, 37-45",
+     "Jonah 3:10-4:11",
+     "Psalm 145:1-8"
+    ],
+    "epistle": [
+     "Philippians 1:21-30"
+    ],
+    "gospel": [
+     "Matthew 20:1-16"
+    ]
+   }
+  },
+  {
+   "name": "Proper 21 (26)",
+   "date": "2026-09-27",
+   "note": "Eighteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 17:1-7",
+     "Psalm 78:1-4, 12-16",
+     "Ezekiel 18:1-4, 25-32",
+     "Psalm 25:1-9"
+    ],
+    "epistle": [
+     "Philippians 2:1-13"
+    ],
+    "gospel": [
+     "Matthew 21:23-32"
+    ]
+   }
+  },
+  {
+   "name": "Proper 22 (27)",
+   "date": "2026-10-04",
+   "note": "Nineteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 20:1-4, 7-9, 12-20",
+     "Psalm 19",
+     "Isaiah 5:1-7",
+     "Psalm 80:7-15"
+    ],
+    "epistle": [
+     "Philippians 3:4b-14"
+    ],
+    "gospel": [
+     "Matthew 21:33-46"
+    ]
+   }
+  },
+  {
+   "name": "Proper 23 (28)",
+   "date": "2026-10-11",
+   "note": "Twentieth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 32:1-14",
+     "Psalm 106:1-6, 19-23",
+     "Isaiah 25:1-9",
+     "Psalm 23"
+    ],
+    "epistle": [
+     "Philippians 4:1-9"
+    ],
+    "gospel": [
+     "Matthew 22:1-14"
+    ]
+   }
+  },
+  {
+   "name": "Canadian Thanksgiving Day",
+   "date": "2026-10-12",
+   "readings": {
+    "first_and_psalm": [
+     "Deuteronomy 8:7-18",
+     "Psalm 65"
+    ],
+    "epistle": [
+     "2 Corinthians 9:6-15"
+    ],
+    "gospel": [
+     "Luke 17:11-19"
+    ]
+   }
+  },
+  {
+   "name": "Proper 24 (29)",
+   "date": "2026-10-18",
+   "note": "Twenty-First Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 33:12-23",
+     "Psalm 99",
+     "Isaiah 45:1-7",
+     "Psalm 96:1-9, (10-13)"
+    ],
+    "epistle": [
+     "1 Thessalonians 1:1-10"
+    ],
+    "gospel": [
+     "Matthew 22:15-22"
+    ]
+   }
+  },
+  {
+   "name": "Proper 25 (30)",
+   "date": "2026-10-25",
+   "note": "Twenty-Second Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Deuteronomy 34:1-12",
+     "Psalm 90:1-6, 13-17",
+     "Leviticus 19:1-2, 15-18",
+     "Psalm 1"
+    ],
+    "epistle": [
+     "1 Thessalonians 2:1-8"
+    ],
+    "gospel": [
+     "Matthew 22:34-46"
+    ]
+   }
+  },
+  {
+   "name": "All Saints Day",
+   "date": "2026-11-01",
+   "note": "(Sometimes observed on first Sunday in November)",
+   "readings": {
+    "first_and_psalm": [
+     "Revelation 7:9-17",
+     "Psalm 34:1-10, 22"
+    ],
+    "epistle": [
+     "1 John 3:1-3"
+    ],
+    "gospel": [
+     "Matthew 5:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Proper 26 (31)",
+   "date": "2026-11-01",
+   "note": "Twenty-Third Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Joshua 3:7-17",
+     "Psalm 107:1-7, 33-37",
+     "Micah 3:5-12",
+     "Psalm 43"
+    ],
+    "epistle": [
+     "1 Thessalonians 2:9-13"
+    ],
+    "gospel": [
+     "Matthew 23:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Proper 27 (32)",
+   "date": "2026-11-08",
+   "note": "Twenty-Fourth Sunday after Pentecost (If All Saints not observed on this day)",
+   "readings": {
+    "first_and_psalm": [
+     "Joshua 24:1-3a, 14-25",
+     "Psalm 78:1-7",
+     "Wisdom of Solomon 6:12-16",
+     "Amos 5:18-24",
+     "Wisdom of Solomon 6:17-20",
+     "Psalm 70"
+    ],
+    "epistle": [
+     "1 Thessalonians 4:13-18"
+    ],
+    "gospel": [
+     "Matthew 25:1-13"
+    ]
+   }
+  },
+  {
+   "name": "Proper 28 (33)",
+   "date": "2026-11-15",
+   "note": "Twenty-Fifth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Judges 4:1-7",
+     "Psalm 123",
+     "Zephaniah 1:7, 12-18",
+     "Psalm 90:1-8, (9-11), 12"
+    ],
+    "epistle": [
+     "1 Thessalonians 5:1-11"
+    ],
+    "gospel": [
+     "Matthew 25:14-30"
+    ]
+   }
+  },
+  {
+   "name": "Reign of Christ - Proper 29 (34)",
+   "date": "2026-11-22",
+   "note": "Twenty-Sixth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Ezekiel 34:11-16, 20-24",
+     "Psalm 100",
+     "Ezekiel 34:11-16, 20-24",
+     "Psalm 95:1-7a"
+    ],
+    "epistle": [
+     "Ephesians 1:15-23"
+    ],
+    "gospel": [
+     "Matthew 25:31-46"
+    ]
+   }
+  },
+  {
+   "name": "Thanksgiving Day",
+   "date": "2026-11-26",
+   "readings": {
+    "first_and_psalm": [
+     "Deuteronomy 8:7-18",
+     "Psalm 65"
+    ],
+    "epistle": [
+     "2 Corinthians 9:6-15"
+    ],
+    "gospel": [
+     "Luke 17:11-19"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday of Advent",
+   "date": "2026-11-29",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 64:1-9",
+     "Psalm 80:1-7, 17-19"
+    ],
+    "epistle": [
+     "1 Corinthians 1:3-9"
+    ],
+    "gospel": [
+     "Mark 13:24-37"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday of Advent",
+   "date": "2026-12-06",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 40:1-11",
+     "Psalm 85:1-2, 8-13"
+    ],
+    "epistle": [
+     "2 Peter 3:8-15a"
+    ],
+    "gospel": [
+     "Mark 1:1-8"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday of Advent",
+   "date": "2026-12-13",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 61:1-4, 8-11",
+     "Psalm 126",
+     "Luke 1:46b-55"
+    ],
+    "epistle": [
+     "1 Thessalonians 5:16-24"
+    ],
+    "gospel": [
+     "John 1:6-8, 19-28"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday of Advent",
+   "date": "2026-12-20",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 7:1-11, 16",
+     "Luke 1:46b-55",
+     "Psalm 89:1-4, 19-26"
+    ],
+    "epistle": [
+     "Romans 16:25-27"
+    ],
+    "gospel": [
+     "Luke 1:26-38"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper I",
+   "date": "2026-12-24",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 9:2-7",
+     "Psalm 96"
+    ],
+    "epistle": [
+     "Titus 2:11-14"
+    ],
+    "gospel": [
+     "Luke 2:1-14, (15-20)"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper II",
+   "date": "2026-12-25",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 62:6-12",
+     "Psalm 97"
+    ],
+    "epistle": [
+     "Titus 3:4-7"
+    ],
+    "gospel": [
+     "Luke 2:(1-7), 8-20"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper III",
+   "date": "2026-12-25",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 52:7-10",
+     "Psalm 98"
+    ],
+    "epistle": [
+     "Hebrews 1:1-4, (5-12)"
+    ],
+    "gospel": [
+     "John 1:1-14"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday after Christmas Day",
+   "date": "2026-12-27",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 61:10-62:3",
+     "Psalm 148"
+    ],
+    "epistle": [
+     "Galatians 4:4-7"
+    ],
+    "gospel": [
+     "Luke 2:22-40"
+    ]
+   }
+  },
+  {
+   "name": "Holy Name of Jesus",
+   "date": "2027-01-01",
+   "note": "(Mary, Mother of God)",
+   "readings": {
+    "first_and_psalm": [
+     "Numbers 6:22-27",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Galatians 4:4-7",
+     "Philippians 2:5-11"
+    ],
+    "gospel": [
+     "Luke 2:15-21"
+    ]
+   }
+  },
+  {
+   "name": "New Year's Day",
+   "date": "2027-01-01",
+   "readings": {
+    "first_and_psalm": [
+     "Ecclesiastes 3:1-13",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Revelation 21:1-6a"
+    ],
+    "gospel": [
+     "Matthew 25:31-46"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday after Christmas Day",
+   "date": "2027-01-03",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 31:7-14",
+     "Sirach 24:1-12",
+     "Psalm 147:12-20",
+     "Wisdom of Solomon 10:15-21"
+    ],
+    "epistle": [
+     "Ephesians 1:3-14"
+    ],
+    "gospel": [
+     "John 1:(1-9), 10-18"
+    ]
+   }
+  },
+  {
+   "name": "Epiphany of the Lord",
+   "date": "2027-01-06",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 60:1-6",
+     "Psalm 72:1-7, 10-14"
+    ],
+    "epistle": [
+     "Ephesians 3:1-12"
+    ],
+    "gospel": [
+     "Matthew 2:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Baptism of the Lord",
+   "date": "2027-01-10",
+   "note": "First Sunday after the Epiphany",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 1:1-5",
+     "Psalm 29"
+    ],
+    "epistle": [
+     "Acts 19:1-7"
+    ],
+    "gospel": [
+     "Mark 1:4-11"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday after the Epiphany",
+   "date": "2027-01-17",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 3:1-10, (11-20)",
+     "Psalm 139:1-6, 13-18"
+    ],
+    "epistle": [
+     "1 Corinthians 6:12-20"
+    ],
+    "gospel": [
+     "John 1:43-51"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday after the Epiphany",
+   "date": "2027-01-24",
+   "readings": {
+    "first_and_psalm": [
+     "Jonah 3:1-5, 10",
+     "Psalm 62:5-12"
+    ],
+    "epistle": [
+     "1 Corinthians 7:29-31"
+    ],
+    "gospel": [
+     "Mark 1:14-20"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday after the Epiphany",
+   "date": "2027-01-31",
+   "readings": {
+    "first_and_psalm": [
+     "Deuteronomy 18:15-20",
+     "Psalm 111"
+    ],
+    "epistle": [
+     "1 Corinthians 8:1-13"
+    ],
+    "gospel": [
+     "Mark 1:21-28"
+    ]
+   }
+  },
+  {
+   "name": "Presentation of the Lord",
+   "date": "2027-02-02",
+   "readings": {
+    "first_and_psalm": [
+     "Malachi 3:1-4",
+     "Psalm 84",
+     "Psalm 24:7-10"
+    ],
+    "epistle": [
+     "Hebrews 2:14-18"
+    ],
+    "gospel": [
+     "Luke 2:22-40"
+    ]
+   }
+  },
+  {
+   "name": "Transfiguration Sunday",
+   "date": "2027-02-07",
+   "note": "(Last Sunday before Lent)",
+   "readings": {
+    "first_and_psalm": [
+     "2 Kings 2:1-12",
+     "Psalm 50:1-6"
+    ],
+    "epistle": [
+     "2 Corinthians 4:3-6"
+    ],
+    "gospel": [
+     "Mark 9:2-9"
+    ]
+   }
+  },
+  {
+   "name": "Ash Wednesday",
+   "date": "2027-02-10",
+   "readings": {
+    "first_and_psalm": [
+     "Joel 2:1-2, 12-17",
+     "Isaiah 58:1-12",
+     "Psalm 51:1-17"
+    ],
+    "epistle": [
+     "2 Corinthians 5:20b-6:10"
+    ],
+    "gospel": [
+     "Matthew 6:1-6, 16-21"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday in Lent",
+   "date": "2027-02-14",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 9:8-17",
+     "Psalm 25:1-10"
+    ],
+    "epistle": [
+     "1 Peter 3:18-22"
+    ],
+    "gospel": [
+     "Mark 1:9-15"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday in Lent",
+   "date": "2027-02-21",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 17:1-7, 15-16",
+     "Psalm 22:23-31"
+    ],
+    "epistle": [
+     "Romans 4:13-25"
+    ],
+    "gospel": [
+     "Mark 8:31-38",
+     "Mark 9:2-9"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday in Lent",
+   "date": "2027-02-28",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 20:1-17",
+     "Psalm 19"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-25"
+    ],
+    "gospel": [
+     "John 2:13-22"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday in Lent",
+   "date": "2027-03-07",
+   "readings": {
+    "first_and_psalm": [
+     "Numbers 21:4-9",
+     "Psalm 107:1-3, 17-22"
+    ],
+    "epistle": [
+     "Ephesians 2:1-10"
+    ],
+    "gospel": [
+     "John 3:14-21"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday in Lent",
+   "date": "2027-03-14",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 31:31-34",
+     "Psalm 51:1-12",
+     "Psalm 119:9-16"
+    ],
+    "epistle": [
+     "Hebrews 5:5-10"
+    ],
+    "gospel": [
+     "John 12:20-33"
+    ]
+   }
+  },
+  {
+   "name": "Liturgy of the Palms",
+   "date": "2027-03-21",
+   "note": "Sixth Sunday in Lent",
+   "readings": {
+    "first_and_psalm": [],
+    "epistle": [
+     "Psalm 118:1-2, 19-29"
+    ],
+    "gospel": [
+     "Mark 11:1-11",
+     "John 12:12-16"
+    ]
+   }
+  },
+  {
+   "name": "Liturgy of the Passion",
+   "date": "2027-03-21",
+   "note": "Sixth Sunday in Lent",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 50:4-9a",
+     "Psalm 31:9-16"
+    ],
+    "epistle": [
+     "Philippians 2:5-11"
+    ],
+    "gospel": [
+     "Mark 14:1-15:47",
+     "Mark 15:1-39, (40-47)"
+    ]
+   }
+  },
+  {
+   "name": "Monday of Holy Week",
+   "date": "2027-03-22",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 42:1-9",
+     "Psalm 36:5-11"
+    ],
+    "epistle": [
+     "Hebrews 9:11-15"
+    ],
+    "gospel": [
+     "John 12:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Tuesday of Holy Week",
+   "date": "2027-03-23",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 49:1-7",
+     "Psalm 71:1-14"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-31"
+    ],
+    "gospel": [
+     "John 12:20-36"
+    ]
+   }
+  },
+  {
+   "name": "Wednesday of Holy Week",
+   "date": "2027-03-24",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 50:4-9a",
+     "Psalm 70"
+    ],
+    "epistle": [
+     "Hebrews 12:1-3"
+    ],
+    "gospel": [
+     "John 13:21-32"
+    ]
+   }
+  },
+  {
+   "name": "Maundy Thursday",
+   "date": "2027-03-25",
+   "note": "Holy Thursday",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 12:1-4, (5-10), 11-14",
+     "Psalm 116:1-2, 12-19"
+    ],
+    "epistle": [
+     "1 Corinthians 11:23-26"
+    ],
+    "gospel": [
+     "John 13:1-17, 31b-35"
+    ]
+   }
+  },
+  {
+   "name": "Good Friday",
+   "date": "2027-03-26",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 52:13-53:12",
+     "Psalm 22"
+    ],
+    "epistle": [
+     "Hebrews 10:16-25",
+     "Hebrews 4:14-16; 5:7-9"
+    ],
+    "gospel": [
+     "John 18:1-19:42"
+    ]
+   }
+  },
+  {
+   "name": "Holy Saturday",
+   "date": "2027-03-27",
+   "readings": {
+    "first_and_psalm": [
+     "Job 14:1-14",
+     "Lamentations 3:1-9, 19-24",
+     "Psalm 31:1-4, 15-16"
+    ],
+    "epistle": [
+     "1 Peter 4:1-8"
+    ],
+    "gospel": [
+     "Matthew 27:57-66",
+     "John 19:38-42"
+    ]
+   }
+  },
+  {
+   "name": "Easter Evening",
+   "date": "2027-03-28",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 25:6-9",
+     "Psalm 114"
+    ],
+    "epistle": [
+     "1 Corinthians 5:6b-8"
+    ],
+    "gospel": [
+     "Luke 24:13-49"
+    ]
+   }
+  },
+  {
+   "name": "Resurrection of the Lord",
+   "date": "2027-03-28",
+   "note": "Easter Day",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 10:34-43",
+     "Isaiah 25:6-9",
+     "Psalm 118:1-2, 14-24"
+    ],
+    "epistle": [
+     "1 Corinthians 15:1-11",
+     "Acts 10:34-43"
+    ],
+    "gospel": [
+     "John 20:1-18",
+     "Mark 16:1-8"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday of Easter",
+   "date": "2027-04-04",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 4:32-35",
+     "Psalm 133"
+    ],
+    "epistle": [
+     "1 John 1:1-2:2"
+    ],
+    "gospel": [
+     "John 20:19-31"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday of Easter",
+   "date": "2027-04-11",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 3:12-19",
+     "Psalm 4"
+    ],
+    "epistle": [
+     "1 John 3:1-7"
+    ],
+    "gospel": [
+     "Luke 24:36b-48"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday of Easter",
+   "date": "2027-04-18",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 4:5-12",
+     "Psalm 23"
+    ],
+    "epistle": [
+     "1 John 3:16-24"
+    ],
+    "gospel": [
+     "John 10:11-18"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday of Easter",
+   "date": "2027-04-25",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 8:26-40",
+     "Psalm 22:25-31"
+    ],
+    "epistle": [
+     "1 John 4:7-21"
+    ],
+    "gospel": [
+     "John 15:1-8"
+    ]
+   }
+  },
+  {
+   "name": "Sixth Sunday of Easter",
+   "date": "2027-05-02",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 10:44-48",
+     "Psalm 98"
+    ],
+    "epistle": [
+     "1 John 5:1-6"
+    ],
+    "gospel": [
+     "John 15:9-17"
+    ]
+   }
+  },
+  {
+   "name": "Ascension of the Lord",
+   "date": "2027-05-06",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 1:1-11",
+     "Psalm 47",
+     "Psalm 93"
+    ],
+    "epistle": [
+     "Ephesians 1:15-23"
+    ],
+    "gospel": [
+     "Luke 24:44-53"
+    ]
+   }
+  },
+  {
+   "name": "Seventh Sunday of Easter",
+   "date": "2027-05-09",
+   "note": "(If Ascension not observed here)",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 1:15-17, 21-26",
+     "Psalm 1"
+    ],
+    "epistle": [
+     "1 John 5:9-13"
+    ],
+    "gospel": [
+     "John 17:6-19"
+    ]
+   }
+  },
+  {
+   "name": "Day of Pentecost",
+   "date": "2027-05-16",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 2:1-21",
+     "Ezekiel 37:1-14",
+     "Psalm 104:24-34, 35b"
+    ],
+    "epistle": [
+     "Romans 8:22-27",
+     "Acts 2:1-21"
+    ],
+    "gospel": [
+     "John 15:26-27; 16:4b-15"
+    ]
+   }
+  },
+  {
+   "name": "Trinity Sunday",
+   "date": "2027-05-23",
+   "note": "First Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 6:1-8",
+     "Psalm 29"
+    ],
+    "epistle": [
+     "Romans 8:12-17"
+    ],
+    "gospel": [
+     "John 3:1-17"
+    ]
+   }
+  },
+  {
+   "name": "Proper 4 (9)",
+   "date": "2027-05-30",
+   "note": "Second Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 3:1-10, (11-20)",
+     "Psalm 139:1-6, 13-18",
+     "Deuteronomy 5:12-15",
+     "Psalm 81:1-10"
+    ],
+    "epistle": [
+     "2 Corinthians 4:5-12"
+    ],
+    "gospel": [
+     "Mark 2:23-3:6"
+    ]
+   }
+  },
+  {
+   "name": "Visitation of Mary to Elizabeth",
+   "date": "2027-05-31",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 2:1-10",
+     "Psalm 113"
+    ],
+    "epistle": [
+     "Romans 12:9-16b"
+    ],
+    "gospel": [
+     "Luke 1:39-57"
+    ]
+   }
+  },
+  {
+   "name": "Proper 5 (10)",
+   "date": "2027-06-06",
+   "note": "Third Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 8:4-11, (12-15), 16-20, (11:14-15)",
+     "Psalm 138",
+     "Genesis 3:8-15",
+     "Psalm 130"
+    ],
+    "epistle": [
+     "2 Corinthians 4:13-5:1"
+    ],
+    "gospel": [
+     "Mark 3:20-35"
+    ]
+   }
+  },
+  {
+   "name": "Proper 6 (11)",
+   "date": "2027-06-13",
+   "note": "Fourth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 15:34 – 16:13",
+     "Psalm 20",
+     "Ezekiel 17:22-24",
+     "Psalm 92:1-4, 12-15"
+    ],
+    "epistle": [
+     "2 Corinthians 5:6-10, (11-13), 14-17"
+    ],
+    "gospel": [
+     "Mark 4:26-34"
+    ]
+   }
+  },
+  {
+   "name": "Proper 7 (12)",
+   "date": "2027-06-20",
+   "note": "Fifth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 17:(1a, 4-11, 19-23), 32-49",
+     "Psalm 9:9-20",
+     "1 Samuel 17:57-18:5, 18:10-16",
+     "Psalm 133",
+     "Job 38:1-11",
+     "Psalm 107:1-3, 23-32"
+    ],
+    "epistle": [
+     "2 Corinthians 6:1-13"
+    ],
+    "gospel": [
+     "Mark 4:35-41"
+    ]
+   }
+  },
+  {
+   "name": "Proper 8 (13)",
+   "date": "2027-06-27",
+   "note": "Sixth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 1:1, 17-27",
+     "Psalm 130",
+     "Wisdom of Solomon 1:13-15, 2:23-24",
+     "Lamentations 3:22-33",
+     "Psalm 30"
+    ],
+    "epistle": [
+     "2 Corinthians 8:7-15"
+    ],
+    "gospel": [
+     "Mark 5:21-43"
+    ]
+   }
+  },
+  {
+   "name": "Proper 9 (14)",
+   "date": "2027-07-04",
+   "note": "Seventh Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 5:1-5, 9-10",
+     "Psalm 48",
+     "Ezekiel 2:1-5",
+     "Psalm 123"
+    ],
+    "epistle": [
+     "2 Corinthians 12:2-10"
+    ],
+    "gospel": [
+     "Mark 6:1-13"
+    ]
+   }
+  },
+  {
+   "name": "Proper 10 (15)",
+   "date": "2027-07-11",
+   "note": "Eighth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 6:1-5, 12b-19",
+     "Psalm 24",
+     "Amos 7:7-15",
+     "Psalm 85:8-13"
+    ],
+    "epistle": [
+     "Ephesians 1:3-14"
+    ],
+    "gospel": [
+     "Mark 6:14-29"
+    ]
+   }
+  },
+  {
+   "name": "Proper 11 (16)",
+   "date": "2027-07-18",
+   "note": "Ninth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 7:1-14a",
+     "Psalm 89:20-37",
+     "Jeremiah 23:1-6",
+     "Psalm 23"
+    ],
+    "epistle": [
+     "Ephesians 2:11-22"
+    ],
+    "gospel": [
+     "Mark 6:30-34, 53-56"
+    ]
+   }
+  },
+  {
+   "name": "Proper 12 (17)",
+   "date": "2027-07-25",
+   "note": "Tenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 11:1-15",
+     "Psalm 14",
+     "2 Kings 4:42-44",
+     "Psalm 145:10-18"
+    ],
+    "epistle": [
+     "Ephesians 3:14-21"
+    ],
+    "gospel": [
+     "John 6:1-21"
+    ]
+   }
+  },
+  {
+   "name": "Proper 13 (18)",
+   "date": "2027-08-01",
+   "note": "Eleventh Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 11:26 – 12:13a",
+     "Psalm 51:1-12",
+     "Exodus 16:2-4, 9-15",
+     "Psalm 78:23-29"
+    ],
+    "epistle": [
+     "Ephesians 4:1-16"
+    ],
+    "gospel": [
+     "John 6:24-35"
+    ]
+   }
+  },
+  {
+   "name": "Proper 14 (19)",
+   "date": "2027-08-08",
+   "note": "Twelfth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 18:5-9, 15, 31-33",
+     "Psalm 130",
+     "1 Kings 19:4-8",
+     "Psalm 34:1-8"
+    ],
+    "epistle": [
+     "Ephesians 4:25-5:2"
+    ],
+    "gospel": [
+     "John 6:35, 41-51"
+    ]
+   }
+  },
+  {
+   "name": "Proper 15 (20)",
+   "date": "2027-08-15",
+   "note": "Thirteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Kings 2:10-12; 3:3-14",
+     "Psalm 111",
+     "Proverbs 9:1-6",
+     "Psalm 34:9-14"
+    ],
+    "epistle": [
+     "Ephesians 5:15-20"
+    ],
+    "gospel": [
+     "John 6:51-58"
+    ]
+   }
+  },
+  {
+   "name": "Proper 16 (21)",
+   "date": "2027-08-22",
+   "note": "Fourteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Kings 8:(1,6,10-11), 22-30, 41-43",
+     "Psalm 84",
+     "Joshua 24:1-2a, 14-18",
+     "Psalm 34:15-22"
+    ],
+    "epistle": [
+     "Ephesians 6:10-20"
+    ],
+    "gospel": [
+     "John 6:56-69"
+    ]
+   }
+  },
+  {
+   "name": "Proper 17 (22)",
+   "date": "2027-08-29",
+   "note": "Fifteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Song of Solomon 2:8-13",
+     "Psalm 45:1-2, 6-9",
+     "Deuteronomy 4:1-2, 6-9",
+     "Psalm 15"
+    ],
+    "epistle": [
+     "James 1:17-27"
+    ],
+    "gospel": [
+     "Mark 7:1-8, 14-15, 21-23"
+    ]
+   }
+  },
+  {
+   "name": "Proper 18 (23)",
+   "date": "2027-09-05",
+   "note": "Sixteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Proverbs 22:1-2, 8-9, 22-23",
+     "Psalm 125",
+     "Isaiah 35:4-7a",
+     "Psalm 146"
+    ],
+    "epistle": [
+     "James 2:1-10, (11-13), 14-17"
+    ],
+    "gospel": [
+     "Mark 7:24-37"
+    ]
+   }
+  },
+  {
+   "name": "Proper 19 (24)",
+   "date": "2027-09-12",
+   "note": "Seventeenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Proverbs 1:20-33",
+     "Psalm 19",
+     "Wisdom of Solomon 7:26 – 8:1",
+     "Isaiah 50:4-9a",
+     "Psalm 116:1-9"
+    ],
+    "epistle": [
+     "James 3:1-12"
+    ],
+    "gospel": [
+     "Mark 8:27-38"
+    ]
+   }
+  },
+  {
+   "name": "Holy Cross",
+   "date": "2027-09-14",
+   "readings": {
+    "first_and_psalm": [
+     "Numbers 21:4b-9",
+     "Psalm 98:1-5",
+     "Psalm 78:1-2, 34-38"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-24"
+    ],
+    "gospel": [
+     "John 3:13-17"
+    ]
+   }
+  },
+  {
+   "name": "Proper 20 (25)",
+   "date": "2027-09-19",
+   "note": "Eighteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Proverbs 31:10-31",
+     "Psalm 1",
+     "Wisdom of Solomon 1:16-2:1, 12-22",
+     "Jeremiah 11:18-20",
+     "Psalm 54"
+    ],
+    "epistle": [
+     "James 3:13-4:3, 7-8a"
+    ],
+    "gospel": [
+     "Mark 9:30-37"
+    ]
+   }
+  },
+  {
+   "name": "Proper 21 (26)",
+   "date": "2027-09-26",
+   "note": "Nineteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Esther 7:1-6, 9-10; 9:20-22",
+     "Psalm 124",
+     "Numbers 11:4-6, 10-16, 24-29",
+     "Psalm 19:7-14"
+    ],
+    "epistle": [
+     "James 5:13-20"
+    ],
+    "gospel": [
+     "Mark 9:38-50"
+    ]
+   }
+  },
+  {
+   "name": "Proper 22 (27)",
+   "date": "2027-10-03",
+   "note": "Twentieth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Job 1:1, 2:1-10",
+     "Psalm 26",
+     "Genesis 2:18-24",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Hebrews 1:1-4, 2:5-12"
+    ],
+    "gospel": [
+     "Mark 10:2-16"
+    ]
+   }
+  },
+  {
+   "name": "Proper 23 (28)",
+   "date": "2027-10-10",
+   "note": "Twenty-First Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Job 23:1-9, 16-17",
+     "Psalm 22:1-15",
+     "Amos 5:6-7, 10-15",
+     "Psalm 90:12-17"
+    ],
+    "epistle": [
+     "Hebrews 4:12-16"
+    ],
+    "gospel": [
+     "Mark 10:17-31"
+    ]
+   }
+  },
+  {
+   "name": "Canadian Thanksgiving Day",
+   "date": "2027-10-11",
+   "readings": {
+    "first_and_psalm": [
+     "Joel 2:21-27",
+     "Psalm 126"
+    ],
+    "epistle": [
+     "1 Timothy 2:1-7"
+    ],
+    "gospel": [
+     "Matthew 6:25-33"
+    ]
+   }
+  },
+  {
+   "name": "Proper 24 (29)",
+   "date": "2027-10-17",
+   "note": "Twenty-Second Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Job 38:1-7, (34-41)",
+     "Psalm 104:1-9, 24, 35c",
+     "Isaiah 53:4-12",
+     "Psalm 91:9-16"
+    ],
+    "epistle": [
+     "Hebrews 5:1-10"
+    ],
+    "gospel": [
+     "Mark 10:35-45"
+    ]
+   }
+  },
+  {
+   "name": "Proper 25 (30)",
+   "date": "2027-10-24",
+   "note": "Twenty-Third Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Job 42:1-6, 10-17",
+     "Psalm 34:1-8, (19-22)",
+     "Jeremiah 31:7-9",
+     "Psalm 126"
+    ],
+    "epistle": [
+     "Hebrews 7:23-28"
+    ],
+    "gospel": [
+     "Mark 10:46-52"
+    ]
+   }
+  },
+  {
+   "name": "Proper 26 (31)",
+   "date": "2027-10-31",
+   "note": "Twenty-Fourth Sunday after Pentecost (If All Saints not observed on this day)",
+   "readings": {
+    "first_and_psalm": [
+     "Ruth 1:1-18",
+     "Psalm 146",
+     "Deuteronomy 6:1-9",
+     "Psalm 119:1-8"
+    ],
+    "epistle": [
+     "Hebrews 9:11-14"
+    ],
+    "gospel": [
+     "Mark 12:28-34"
+    ]
+   }
+  },
+  {
+   "name": "All Saints Day",
+   "date": "2027-11-01",
+   "note": "(Sometimes observed on first Sunday in November)",
+   "readings": {
+    "first_and_psalm": [
+     "Wisdom of Solomon 3:1-9",
+     "Psalm 24",
+     "Isaiah 25:6-9"
+    ],
+    "epistle": [
+     "Revelation 21:1-6a"
+    ],
+    "gospel": [
+     "John 11:32-44"
+    ]
+   }
+  },
+  {
+   "name": "Proper 27 (32)",
+   "date": "2027-11-07",
+   "note": "Twenty-Fifth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Ruth 3:1-5; 4:13-17",
+     "Psalm 127",
+     "1 Kings 17:8-16",
+     "Psalm 146"
+    ],
+    "epistle": [
+     "Hebrews 9:24-28"
+    ],
+    "gospel": [
+     "Mark 12:38-44"
+    ]
+   }
+  },
+  {
+   "name": "Proper 28 (33)",
+   "date": "2027-11-14",
+   "note": "Twenty-Sixth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 1:4-20",
+     "1 Samuel 2:1-10",
+     "Daniel 12:1-3",
+     "Psalm 16"
+    ],
+    "epistle": [
+     "Hebrews 10:11-14, (15-18), 19-25"
+    ],
+    "gospel": [
+     "Mark 13:1-8"
+    ]
+   }
+  },
+  {
+   "name": "Reign of Christ - Proper 29 (34)",
+   "date": "2027-11-21",
+   "note": "Twenty-Seventh Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Samuel 23:1-7",
+     "Psalm 132:1-12, (13-18)",
+     "Daniel 7:9-10, 13-14",
+     "Psalm 93"
+    ],
+    "epistle": [
+     "Revelation 1:4b-8"
+    ],
+    "gospel": [
+     "John 18:33-37"
+    ]
+   }
+  },
+  {
+   "name": "Thanksgiving Day",
+   "date": "2027-11-25",
+   "readings": {
+    "first_and_psalm": [
+     "Joel 2:21-27",
+     "Psalm 126"
+    ],
+    "epistle": [
+     "1 Timothy 2:1-7"
+    ],
+    "gospel": [
+     "Matthew 6:25-33"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday of Advent",
+   "date": "2027-11-28",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 33:14-16",
+     "Psalm 25:1-10"
+    ],
+    "epistle": [
+     "1 Thessalonians 3:9-13"
+    ],
+    "gospel": [
+     "Luke 21:25-36"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday of Advent",
+   "date": "2027-12-05",
+   "readings": {
+    "first_and_psalm": [
+     "Baruch 5:1-9",
+     "Malachi 3:1-4",
+     "Luke 1:68-79"
+    ],
+    "epistle": [
+     "Philippians 1:3-11"
+    ],
+    "gospel": [
+     "Luke 3:1-6"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday of Advent",
+   "date": "2027-12-12",
+   "readings": {
+    "first_and_psalm": [
+     "Zephaniah 3:14-20",
+     "Isaiah 12:2-6"
+    ],
+    "epistle": [
+     "Philippians 4:4-7"
+    ],
+    "gospel": [
+     "Luke 3:7-18"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday of Advent",
+   "date": "2027-12-19",
+   "readings": {
+    "first_and_psalm": [
+     "Micah 5:2-5a",
+     "Luke 1:46b-55",
+     "Psalm 80:1-7"
+    ],
+    "epistle": [
+     "Hebrews 10:5-10"
+    ],
+    "gospel": [
+     "Luke 1:39-45, (46-55)"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper I",
+   "date": "2027-12-24",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 9:2-7",
+     "Psalm 96"
+    ],
+    "epistle": [
+     "Titus 2:11-14"
+    ],
+    "gospel": [
+     "Luke 2:1-14, (15-20)"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper II",
+   "date": "2027-12-25",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 62:6-12",
+     "Psalm 97"
+    ],
+    "epistle": [
+     "Titus 3:4-7"
+    ],
+    "gospel": [
+     "Luke 2:(1-7), 8-20"
+    ]
+   }
+  },
+  {
+   "name": "Nativity of the Lord - Proper III",
+   "date": "2027-12-25",
+   "note": "Christmas Eve, Morn, or Mid-Day",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 52:7-10",
+     "Psalm 98"
+    ],
+    "epistle": [
+     "Hebrews 1:1-4, (5-12)"
+    ],
+    "gospel": [
+     "John 1:1-14"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday after Christmas Day",
+   "date": "2027-12-26",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 2:18-20, 26",
+     "Psalm 148"
+    ],
+    "epistle": [
+     "Colossians 3:12-17"
+    ],
+    "gospel": [
+     "Luke 2:41-52"
+    ]
+   }
+  },
+  {
+   "name": "Holy Name of Jesus",
+   "date": "2028-01-01",
+   "note": "(Mary, Mother of God)",
+   "readings": {
+    "first_and_psalm": [
+     "Numbers 6:22-27",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Galatians 4:4-7",
+     "Philippians 2:5-11"
+    ],
+    "gospel": [
+     "Luke 2:15-21"
+    ]
+   }
+  },
+  {
+   "name": "New Year's Day",
+   "date": "2028-01-01",
+   "readings": {
+    "first_and_psalm": [
+     "Ecclesiastes 3:1-13",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Revelation 21:1-6a"
+    ],
+    "gospel": [
+     "Matthew 25:31-46"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday after Christmas Day",
+   "date": "2028-01-02",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 31:7-14",
+     "Sirach 24:1-12",
+     "Psalm 147:12-20",
+     "Wisdom of Solomon 10:15-21"
+    ],
+    "epistle": [
+     "Ephesians 1:3-14"
+    ],
+    "gospel": [
+     "John 1:(1-9), 10-18"
+    ]
+   }
+  },
+  {
+   "name": "Epiphany of the Lord",
+   "date": "2028-01-06",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 60:1-6",
+     "Psalm 72:1-7, 10-14"
+    ],
+    "epistle": [
+     "Ephesians 3:1-12"
+    ],
+    "gospel": [
+     "Matthew 2:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Baptism of the Lord",
+   "date": "2028-01-09",
+   "note": "First Sunday after the Epiphany",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 43:1-7",
+     "Psalm 29"
+    ],
+    "epistle": [
+     "Acts 8:14-17"
+    ],
+    "gospel": [
+     "Luke 3:15-17, 21-22"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday after the Epiphany",
+   "date": "2028-01-16",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 62:1-5",
+     "Psalm 36:5-10"
+    ],
+    "epistle": [
+     "1 Corinthians 12:1-11"
+    ],
+    "gospel": [
+     "John 2:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday after the Epiphany",
+   "date": "2028-01-23",
+   "readings": {
+    "first_and_psalm": [
+     "Nehemiah 8:1-3, 5-6, 8-10",
+     "Psalm 19"
+    ],
+    "epistle": [
+     "1 Corinthians 12:12-31a"
+    ],
+    "gospel": [
+     "Luke 4:14-21"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday after the Epiphany",
+   "date": "2028-01-30",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 1:4-10",
+     "Psalm 71:1-6"
+    ],
+    "epistle": [
+     "1 Corinthians 13:1-13"
+    ],
+    "gospel": [
+     "Luke 4:21-30"
+    ]
+   }
+  },
+  {
+   "name": "Presentation of the Lord",
+   "date": "2028-02-02",
+   "readings": {
+    "first_and_psalm": [
+     "Malachi 3:1-4",
+     "Psalm 84",
+     "Psalm 24:7-10"
+    ],
+    "epistle": [
+     "Hebrews 2:14-18"
+    ],
+    "gospel": [
+     "Luke 2:22-40"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday after the Epiphany",
+   "date": "2028-02-06",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 6:1-8, (9-13)",
+     "Psalm 138"
+    ],
+    "epistle": [
+     "1 Corinthians 15:1-11"
+    ],
+    "gospel": [
+     "Luke 5:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Sixth Sunday after the Epiphany",
+   "date": "2028-02-13",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 17:5-10",
+     "Psalm 1"
+    ],
+    "epistle": [
+     "1 Corinthians 15:12-20"
+    ],
+    "gospel": [
+     "Luke 6:17-26"
+    ]
+   }
+  },
+  {
+   "name": "Seventh Sunday after the Epiphany",
+   "date": "2028-02-20",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 45:3-11, 15",
+     "Psalm 37:1-11, 39-40"
+    ],
+    "epistle": [
+     "1 Corinthians 15:35-38, 42-50"
+    ],
+    "gospel": [
+     "Luke 6:27-38"
+    ]
+   }
+  },
+  {
+   "name": "Transfiguration Sunday",
+   "date": "2028-02-27",
+   "note": "(Last Sunday before Lent)",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 34:29-35",
+     "Psalm 99"
+    ],
+    "epistle": [
+     "2 Corinthians 3:12-4:2"
+    ],
+    "gospel": [
+     "Luke 9:28-36, (37-43a)"
+    ]
+   }
+  },
+  {
+   "name": "Ash Wednesday",
+   "date": "2028-03-01",
+   "readings": {
+    "first_and_psalm": [
+     "Joel 2:1-2, 12-17",
+     "Isaiah 58:1-12",
+     "Psalm 51:1-17"
+    ],
+    "epistle": [
+     "2 Corinthians 5:20b-6:10"
+    ],
+    "gospel": [
+     "Matthew 6:1-6, 16-21"
+    ]
+   }
+  },
+  {
+   "name": "First Sunday in Lent",
+   "date": "2028-03-05",
+   "readings": {
+    "first_and_psalm": [
+     "Deuteronomy 26:1-11",
+     "Psalm 91:1-2, 9-16"
+    ],
+    "epistle": [
+     "Romans 10:8b-13"
+    ],
+    "gospel": [
+     "Luke 4:1-13"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday in Lent",
+   "date": "2028-03-12",
+   "readings": {
+    "first_and_psalm": [
+     "Genesis 15:1-12, 17-18",
+     "Psalm 27"
+    ],
+    "epistle": [
+     "Philippians 3:17-4:1"
+    ],
+    "gospel": [
+     "Luke 13:31-35",
+     "Luke 9:28-36, (37-43a)"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday in Lent",
+   "date": "2028-03-19",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 55:1-9",
+     "Psalm 63:1-8"
+    ],
+    "epistle": [
+     "1 Corinthians 10:1-13"
+    ],
+    "gospel": [
+     "Luke 13:1-9"
+    ]
+   }
+  },
+  {
+   "name": "Annunciation of the Lord",
+   "date": "2028-03-25",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 7:10-14",
+     "Psalm 45",
+     "Psalm 40:5-10"
+    ],
+    "epistle": [
+     "Hebrews 10:4-10"
+    ],
+    "gospel": [
+     "Luke 1:26-38"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday in Lent",
+   "date": "2028-03-26",
+   "readings": {
+    "first_and_psalm": [
+     "Joshua 5:9-12",
+     "Psalm 32"
+    ],
+    "epistle": [
+     "2 Corinthians 5:16-21"
+    ],
+    "gospel": [
+     "Luke 15:1-3, 11b-32"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday in Lent",
+   "date": "2028-04-02",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 43:16-21",
+     "Psalm 126"
+    ],
+    "epistle": [
+     "Philippians 3:4b-14"
+    ],
+    "gospel": [
+     "John 12:1-8"
+    ]
+   }
+  },
+  {
+   "name": "Liturgy of the Palms",
+   "date": "2028-04-09",
+   "note": "Sixth Sunday in Lent",
+   "readings": {
+    "first_and_psalm": [],
+    "epistle": [
+     "Psalm 118:1-2, 19-29"
+    ],
+    "gospel": [
+     "Luke 19:28-40"
+    ]
+   }
+  },
+  {
+   "name": "Liturgy of the Passion",
+   "date": "2028-04-09",
+   "note": "Sixth Sunday in Lent",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 50:4-9a",
+     "Psalm 31:9-16"
+    ],
+    "epistle": [
+     "Philippians 2:5-11"
+    ],
+    "gospel": [
+     "Luke 22:14-23:56",
+     "Luke 23:1-49"
+    ]
+   }
+  },
+  {
+   "name": "Monday of Holy Week",
+   "date": "2028-04-10",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 42:1-9",
+     "Psalm 36:5-11"
+    ],
+    "epistle": [
+     "Hebrews 9:11-15"
+    ],
+    "gospel": [
+     "John 12:1-11"
+    ]
+   }
+  },
+  {
+   "name": "Tuesday of Holy Week",
+   "date": "2028-04-11",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 49:1-7",
+     "Psalm 71:1-14"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-31"
+    ],
+    "gospel": [
+     "John 12:20-36"
+    ]
+   }
+  },
+  {
+   "name": "Wednesday of Holy Week",
+   "date": "2028-04-12",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 50:4-9a",
+     "Psalm 70"
+    ],
+    "epistle": [
+     "Hebrews 12:1-3"
+    ],
+    "gospel": [
+     "John 13:21-32"
+    ]
+   }
+  },
+  {
+   "name": "Maundy Thursday",
+   "date": "2028-04-13",
+   "note": "Holy Thursday",
+   "readings": {
+    "first_and_psalm": [
+     "Exodus 12:1-4, (5-10), 11-14",
+     "Psalm 116:1-2, 12-19"
+    ],
+    "epistle": [
+     "1 Corinthians 11:23-26"
+    ],
+    "gospel": [
+     "John 13:1-17, 31b-35"
+    ]
+   }
+  },
+  {
+   "name": "Good Friday",
+   "date": "2028-04-14",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 52:13-53:12",
+     "Psalm 22"
+    ],
+    "epistle": [
+     "Hebrews 10:16-25",
+     "Hebrews 4:14-16; 5:7-9"
+    ],
+    "gospel": [
+     "John 18:1-19:42"
+    ]
+   }
+  },
+  {
+   "name": "Holy Saturday",
+   "date": "2028-04-15",
+   "readings": {
+    "first_and_psalm": [
+     "Job 14:1-14",
+     "Lamentations 3:1-9, 19-24",
+     "Psalm 31:1-4, 15-16"
+    ],
+    "epistle": [
+     "1 Peter 4:1-8"
+    ],
+    "gospel": [
+     "Matthew 27:57-66",
+     "John 19:38-42"
+    ]
+   }
+  },
+  {
+   "name": "Easter Evening",
+   "date": "2028-04-16",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 25:6-9",
+     "Psalm 114"
+    ],
+    "epistle": [
+     "1 Corinthians 5:6b-8"
+    ],
+    "gospel": [
+     "Luke 24:13-49"
+    ]
+   }
+  },
+  {
+   "name": "Resurrection of the Lord",
+   "date": "2028-04-16",
+   "note": "Easter Day",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 10:34-43",
+     "Isaiah 65:17-25",
+     "Psalm 118:1-2, 14-24"
+    ],
+    "epistle": [
+     "1 Corinthians 15:19-26",
+     "Acts 10:34-43"
+    ],
+    "gospel": [
+     "John 20:1-18",
+     "Luke 24:1-12"
+    ]
+   }
+  },
+  {
+   "name": "Second Sunday of Easter",
+   "date": "2028-04-23",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 5:27-32",
+     "Psalm 118:14-29",
+     "Psalm 150"
+    ],
+    "epistle": [
+     "Revelation 1:4-8"
+    ],
+    "gospel": [
+     "John 20:19-31"
+    ]
+   }
+  },
+  {
+   "name": "Third Sunday of Easter",
+   "date": "2028-04-30",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 9:1-6, (7-20)",
+     "Psalm 30"
+    ],
+    "epistle": [
+     "Revelation 5:11-14"
+    ],
+    "gospel": [
+     "John 21:1-19"
+    ]
+   }
+  },
+  {
+   "name": "Fourth Sunday of Easter",
+   "date": "2028-05-07",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 9:36-43",
+     "Psalm 23"
+    ],
+    "epistle": [
+     "Revelation 7:9-17"
+    ],
+    "gospel": [
+     "John 10:22-30"
+    ]
+   }
+  },
+  {
+   "name": "Fifth Sunday of Easter",
+   "date": "2028-05-14",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 11:1-18",
+     "Psalm 148"
+    ],
+    "epistle": [
+     "Revelation 21:1-6"
+    ],
+    "gospel": [
+     "John 13:31-35"
+    ]
+   }
+  },
+  {
+   "name": "Sixth Sunday of Easter",
+   "date": "2028-05-21",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 16:9-15",
+     "Psalm 67"
+    ],
+    "epistle": [
+     "Revelation 21:10, 22-22:5"
+    ],
+    "gospel": [
+     "John 14:23-29",
+     "John 5:1-9"
+    ]
+   }
+  },
+  {
+   "name": "Ascension of the Lord",
+   "date": "2028-05-25",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 1:1-11",
+     "Psalm 47",
+     "Psalm 93"
+    ],
+    "epistle": [
+     "Ephesians 1:15-23"
+    ],
+    "gospel": [
+     "Luke 24:44-53"
+    ]
+   }
+  },
+  {
+   "name": "Seventh Sunday of Easter",
+   "date": "2028-05-28",
+   "note": "(If Ascension not observed here)",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 16:16-34",
+     "Psalm 97"
+    ],
+    "epistle": [
+     "Revelation 22:12-14, 16-17, 20-21"
+    ],
+    "gospel": [
+     "John 17:20-26"
+    ]
+   }
+  },
+  {
+   "name": "Visitation of Mary to Elizabeth",
+   "date": "2028-05-31",
+   "readings": {
+    "first_and_psalm": [
+     "1 Samuel 2:1-10",
+     "Psalm 113"
+    ],
+    "epistle": [
+     "Romans 12:9-16b"
+    ],
+    "gospel": [
+     "Luke 1:39-57"
+    ]
+   }
+  },
+  {
+   "name": "Day of Pentecost",
+   "date": "2028-06-04",
+   "readings": {
+    "first_and_psalm": [
+     "Acts 2:1-21",
+     "Genesis 11:1-9",
+     "Psalm 104:24-34, 35b"
+    ],
+    "epistle": [
+     "Romans 8:14-17",
+     "Acts 2:1-21"
+    ],
+    "gospel": [
+     "John 14:8-17, (25-27)"
+    ]
+   }
+  },
+  {
+   "name": "Trinity Sunday",
+   "date": "2028-06-11",
+   "note": "First Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Proverbs 8:1-4, 22-31",
+     "Psalm 8"
+    ],
+    "epistle": [
+     "Romans 5:1-5"
+    ],
+    "gospel": [
+     "John 16:12-15"
+    ]
+   }
+  },
+  {
+   "name": "Proper 6 (11)",
+   "date": "2028-06-18",
+   "note": "Second Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Kings 21:1-10, (11-14), 15-21a",
+     "Psalm 5:1-8",
+     "2 Samuel 11:26-12:10, 13-15",
+     "Psalm 32"
+    ],
+    "epistle": [
+     "Galatians 2:15-21"
+    ],
+    "gospel": [
+     "Luke 7:36-8:3"
+    ]
+   }
+  },
+  {
+   "name": "Proper 7 (12)",
+   "date": "2028-06-25",
+   "note": "Third Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "1 Kings 19:1-4, (5-7), 8-15a",
+     "Psalm 42 and 43",
+     "Isaiah 65:1-9",
+     "Psalm 22:19-28"
+    ],
+    "epistle": [
+     "Galatians 3:23-29"
+    ],
+    "gospel": [
+     "Luke 8:26-39"
+    ]
+   }
+  },
+  {
+   "name": "Proper 8 (13)",
+   "date": "2028-07-02",
+   "note": "Fourth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Kings 2:1-2, 6-14",
+     "Psalm 77:1-2, 11-20",
+     "1 Kings 19:15-16, 19-21",
+     "Psalm 16"
+    ],
+    "epistle": [
+     "Galatians 5:1, 13-25"
+    ],
+    "gospel": [
+     "Luke 9:51-62"
+    ]
+   }
+  },
+  {
+   "name": "Proper 9 (14)",
+   "date": "2028-07-09",
+   "note": "Fifth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "2 Kings 5:1-14",
+     "Psalm 30",
+     "Isaiah 66:10-14",
+     "Psalm 66:1-9"
+    ],
+    "epistle": [
+     "Galatians 6:(1-6), 7-16"
+    ],
+    "gospel": [
+     "Luke 10:1-11, 16-20"
+    ]
+   }
+  },
+  {
+   "name": "Proper 10 (15)",
+   "date": "2028-07-16",
+   "note": "Sixth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Amos 7:7-17",
+     "Psalm 82",
+     "Deuteronomy 30:9-14",
+     "Psalm 25:1-10"
+    ],
+    "epistle": [
+     "Colossians 1:1-14"
+    ],
+    "gospel": [
+     "Luke 10:25-37"
+    ]
+   }
+  },
+  {
+   "name": "Proper 11 (16)",
+   "date": "2028-07-23",
+   "note": "Seventh Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Amos 8:1-12",
+     "Psalm 52",
+     "Genesis 18:1-10a",
+     "Psalm 15"
+    ],
+    "epistle": [
+     "Colossians 1:15-28"
+    ],
+    "gospel": [
+     "Luke 10:38-42"
+    ]
+   }
+  },
+  {
+   "name": "Proper 12 (17)",
+   "date": "2028-07-30",
+   "note": "Eighth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Hosea 1:2-10",
+     "Psalm 85",
+     "Genesis 18:20-32",
+     "Psalm 138"
+    ],
+    "epistle": [
+     "Colossians 2:6-15, (16-19)"
+    ],
+    "gospel": [
+     "Luke 11:1-13"
+    ]
+   }
+  },
+  {
+   "name": "Proper 13 (18)",
+   "date": "2028-08-06",
+   "note": "Ninth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Hosea 11:1-11",
+     "Psalm 107:1-9, 43",
+     "Ecclesiastes 1:2, 12-14; 2:18-23",
+     "Psalm 49:1-12"
+    ],
+    "epistle": [
+     "Colossians 3:1-11"
+    ],
+    "gospel": [
+     "Luke 12:13-21"
+    ]
+   }
+  },
+  {
+   "name": "Proper 14 (19)",
+   "date": "2028-08-13",
+   "note": "Tenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 1:1, 10-20",
+     "Psalm 50:1-8, 22-23",
+     "Genesis 15:1-6",
+     "Psalm 33:12-22"
+    ],
+    "epistle": [
+     "Hebrews 11:1-3, 8-16"
+    ],
+    "gospel": [
+     "Luke 12:32-40"
+    ]
+   }
+  },
+  {
+   "name": "Proper 15 (20)",
+   "date": "2028-08-20",
+   "note": "Eleventh Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 5:1-7",
+     "Psalm 80:1-2, 8-19",
+     "Jeremiah 23:23-29",
+     "Psalm 82"
+    ],
+    "epistle": [
+     "Hebrews 11:29-12:2"
+    ],
+    "gospel": [
+     "Luke 12:49-56"
+    ]
+   }
+  },
+  {
+   "name": "Proper 16 (21)",
+   "date": "2028-08-27",
+   "note": "Twelfth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 1:4-10",
+     "Psalm 71:1-6",
+     "Isaiah 58:9b-14",
+     "Psalm 103:1-8"
+    ],
+    "epistle": [
+     "Hebrews 12:18-29"
+    ],
+    "gospel": [
+     "Luke 13:10-17"
+    ]
+   }
+  },
+  {
+   "name": "Proper 17 (22)",
+   "date": "2028-09-03",
+   "note": "Thirteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 2:4-13",
+     "Psalm 81:1, 10-16",
+     "Sirach 10:12-18",
+     "Proverbs 25:6-7",
+     "Psalm 112"
+    ],
+    "epistle": [
+     "Hebrews 13:1-8, 15-16"
+    ],
+    "gospel": [
+     "Luke 14:1, 7-14"
+    ]
+   }
+  },
+  {
+   "name": "Proper 18 (23)",
+   "date": "2028-09-10",
+   "note": "Fourteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 18:1-11",
+     "Psalm 139:1-6, 13-18",
+     "Deuteronomy 30:15-20",
+     "Psalm 1"
+    ],
+    "epistle": [
+     "Philemon 1:1-21"
+    ],
+    "gospel": [
+     "Luke 14:25-33"
+    ]
+   }
+  },
+  {
+   "name": "Holy Cross",
+   "date": "2028-09-14",
+   "readings": {
+    "first_and_psalm": [
+     "Numbers 21:4b-9",
+     "Psalm 98:1-5",
+     "Psalm 78:1-2, 34-38"
+    ],
+    "epistle": [
+     "1 Corinthians 1:18-24"
+    ],
+    "gospel": [
+     "John 3:13-17"
+    ]
+   }
+  },
+  {
+   "name": "Proper 19 (24)",
+   "date": "2028-09-17",
+   "note": "Fifteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 4:11-12, 22-28",
+     "Psalm 14",
+     "Exodus 32:7-14",
+     "Psalm 51:1-10"
+    ],
+    "epistle": [
+     "1 Timothy 1:12-17"
+    ],
+    "gospel": [
+     "Luke 15:1-10"
+    ]
+   }
+  },
+  {
+   "name": "Proper 20 (25)",
+   "date": "2028-09-24",
+   "note": "Sixteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 8:18-9:1",
+     "Psalm 79:1-9",
+     "Amos 8:4-7",
+     "Psalm 113"
+    ],
+    "epistle": [
+     "1 Timothy 2:1-7"
+    ],
+    "gospel": [
+     "Luke 16:1-13"
+    ]
+   }
+  },
+  {
+   "name": "Proper 21 (26)",
+   "date": "2028-10-01",
+   "note": "Seventeenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 32:1-3a, 6-15",
+     "Psalm 91:1-6, 14-16",
+     "Amos 6:1a, 4-7",
+     "Psalm 146"
+    ],
+    "epistle": [
+     "1 Timothy 6:6-19"
+    ],
+    "gospel": [
+     "Luke 16:19-31"
+    ]
+   }
+  },
+  {
+   "name": "Proper 22 (27)",
+   "date": "2028-10-08",
+   "note": "Eighteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Lamentations 1:1-6",
+     "Lamentations 3:19-26",
+     "Psalm 137",
+     "Habakkuk 1:1-4; 2:1-4",
+     "Psalm 37:1-9"
+    ],
+    "epistle": [
+     "2 Timothy 1:1-14"
+    ],
+    "gospel": [
+     "Luke 17:5-10"
+    ]
+   }
+  },
+  {
+   "name": "Canadian Thanksgiving Day",
+   "date": "2028-10-09",
+   "readings": {
+    "first_and_psalm": [
+     "Deuteronomy 26:1-11",
+     "Psalm 100"
+    ],
+    "epistle": [
+     "Philippians 4:4-9"
+    ],
+    "gospel": [
+     "John 6:25-35"
+    ]
+   }
+  },
+  {
+   "name": "Proper 23 (28)",
+   "date": "2028-10-15",
+   "note": "Nineteenth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 29:1, 4-7",
+     "Psalm 66:1-12",
+     "2 Kings 5:1-3, 7-15c",
+     "Psalm 111"
+    ],
+    "epistle": [
+     "2 Timothy 2:8-15"
+    ],
+    "gospel": [
+     "Luke 17:11-19"
+    ]
+   }
+  },
+  {
+   "name": "Proper 24 (29)",
+   "date": "2028-10-22",
+   "note": "Twentieth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 31:27-34",
+     "Psalm 119:97-104",
+     "Genesis 32:22-31",
+     "Psalm 121"
+    ],
+    "epistle": [
+     "2 Timothy 3:14-4:5"
+    ],
+    "gospel": [
+     "Luke 18:1-8"
+    ]
+   }
+  },
+  {
+   "name": "Proper 25 (30)",
+   "date": "2028-10-29",
+   "note": "Twenty-First Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Joel 2:23-32",
+     "Psalm 65",
+     "Sirach 35:12-17",
+     "Jeremiah 14:7-10, 19-22",
+     "Psalm 84:1-7"
+    ],
+    "epistle": [
+     "2 Timothy 4:6-8, 16-18"
+    ],
+    "gospel": [
+     "Luke 18:9-14"
+    ]
+   }
+  },
+  {
+   "name": "All Saints Day",
+   "date": "2028-11-01",
+   "note": "(Sometimes observed on first Sunday in November)",
+   "readings": {
+    "first_and_psalm": [
+     "Daniel 7:1-3, 15-18",
+     "Psalm 149"
+    ],
+    "epistle": [
+     "Ephesians 1:11-23"
+    ],
+    "gospel": [
+     "Luke 6:20-31"
+    ]
+   }
+  },
+  {
+   "name": "Proper 26 (31)",
+   "date": "2028-11-05",
+   "note": "Twenty-Second Sunday after Pentecost (If All Saints not observed on this day)",
+   "readings": {
+    "first_and_psalm": [
+     "Habakkuk 1:1-4; 2:1-4",
+     "Psalm 119:137-144",
+     "Isaiah 1:10-18",
+     "Psalm 32:1-7"
+    ],
+    "epistle": [
+     "2 Thessalonians 1:1-4, 11-12"
+    ],
+    "gospel": [
+     "Luke 19:1-10"
+    ]
+   }
+  },
+  {
+   "name": "Proper 27 (32)",
+   "date": "2028-11-12",
+   "note": "Twenty-Third Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Haggai 1:15b-2:9",
+     "Psalm 145:1-5, 17-21",
+     "Psalm 98",
+     "Job 19:23-27a",
+     "Psalm 17:1-9"
+    ],
+    "epistle": [
+     "2 Thessalonians 2:1-5, 13-17"
+    ],
+    "gospel": [
+     "Luke 20:27-38"
+    ]
+   }
+  },
+  {
+   "name": "Proper 28 (33)",
+   "date": "2028-11-19",
+   "note": "Twenty-Fourth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Isaiah 65:17-25",
+     "Isaiah 12",
+     "Malachi 4:1-2a",
+     "Psalm 98"
+    ],
+    "epistle": [
+     "2 Thessalonians 3:6-13"
+    ],
+    "gospel": [
+     "Luke 21:5-19"
+    ]
+   }
+  },
+  {
+   "name": "Thanksgiving Day",
+   "date": "2028-11-23",
+   "readings": {
+    "first_and_psalm": [
+     "Deuteronomy 26:1-11",
+     "Psalm 100"
+    ],
+    "epistle": [
+     "Philippians 4:4-9"
+    ],
+    "gospel": [
+     "John 6:25-35"
+    ]
+   }
+  },
+  {
+   "name": "Reign of Christ - Proper 29 (34)",
+   "date": "2028-11-26",
+   "note": "Twenty-Fifth Sunday after Pentecost",
+   "readings": {
+    "first_and_psalm": [
+     "Jeremiah 23:1-6",
+     "Luke 1:68-79",
+     "Jeremiah 23:1-6",
+     "Psalm 46"
+    ],
+    "epistle": [
+     "Colossians 1:11-20"
+    ],
+    "gospel": [
+     "Luke 23:33-43"
+    ]
+   }
+  }
+ ]
+}

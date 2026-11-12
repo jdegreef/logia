@@ -1,0 +1,10451 @@
+{
+ "work": "spurgeon-psalms",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "thetreasuryofdav01spuruoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/thetreasuryofdav01spuruoft/thetreasuryofdav01spuruoft_hocr_pageindex.json.gz",
+     "sha256": "29fc8a6091c3b621932a21caba55dd6b9d36c11749060569706e1cea48a655d7"
+    },
+    {
+     "url": "https://archive.org/download/thetreasuryofdav01spuruoft/thetreasuryofdav01spuruoft_hocr_searchtext.txt.gz",
+     "sha256": "19f2c835b2b6e9da2eed41ffe4b61825afa5522215bf32ca9c84222cfe51deeb"
+    },
+    {
+     "url": "https://archive.org/download/thetreasuryofdav01spuruoft/thetreasuryofdav01spuruoft_page_numbers.json",
+     "sha256": "9b401752950f1b7ba4778b5e357bdcd94c544b3d5bb4378992105d064d14c449"
+    }
+   ]
+  },
+  {
+   "id": "thetreasuryofdav02spuruoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/thetreasuryofdav02spuruoft/thetreasuryofdav02spuruoft_hocr_pageindex.json.gz",
+     "sha256": "1929d9d6abf2554ffdbf3372d4f55538c024d71dbdffcefc230c002bf8fb3698"
+    },
+    {
+     "url": "https://archive.org/download/thetreasuryofdav02spuruoft/thetreasuryofdav02spuruoft_hocr_searchtext.txt.gz",
+     "sha256": "8711a621301e164744ace18e9d9e0d7c480a20a45e057698ace284d52c61d85a"
+    },
+    {
+     "url": "https://archive.org/download/thetreasuryofdav02spuruoft/thetreasuryofdav02spuruoft_page_numbers.json",
+     "sha256": "3c530f064d0645a0927a8bbd8d947c6d12f3d214b07e8748bdf05a1ef073a695"
+    }
+   ]
+  },
+  {
+   "id": "thetreasuryofdav03spuruoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/thetreasuryofdav03spuruoft/thetreasuryofdav03spuruoft_hocr_pageindex.json.gz",
+     "sha256": "2022e9e4fc6290fa961f131b8e2471e507eaa91a29eeb883f34d9ec2ab7ef923"
+    },
+    {
+     "url": "https://archive.org/download/thetreasuryofdav03spuruoft/thetreasuryofdav03spuruoft_hocr_searchtext.txt.gz",
+     "sha256": "f5c2d0c9a86db9e9a7d189bc4c18733ba57ec6893a6f9d350eb0a5b4cb995654"
+    },
+    {
+     "url": "https://archive.org/download/thetreasuryofdav03spuruoft/thetreasuryofdav03spuruoft_page_numbers.json",
+     "sha256": "9f2cb9ed708f22612d243c46d1ec5aa2559d2d415f4a89f220b9a368b4c2e8ea"
+    }
+   ]
+  },
+  {
+   "id": "treasuryofdavid04spuruoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/treasuryofdavid04spuruoft/treasuryofdavid04spuruoft_hocr_pageindex.json.gz",
+     "sha256": "4df2cf52689512a0bc39926e8e18c2565204cf0b91aad3b3492ae54a3f471b14"
+    },
+    {
+     "url": "https://archive.org/download/treasuryofdavid04spuruoft/treasuryofdavid04spuruoft_hocr_searchtext.txt.gz",
+     "sha256": "d024524367286925f0223380e14e0b07173549ec680241c19cc0feb3b7a884a1"
+    },
+    {
+     "url": "https://archive.org/download/treasuryofdavid04spuruoft/treasuryofdavid04spuruoft_page_numbers.json",
+     "sha256": "aa264d81cf4b17cf146c1a9abb90b2c56aa4db7b02543186dafd2fd8f6fea672"
+    }
+   ]
+  },
+  {
+   "id": "treasuryofdavid06spuruoft",
+   "files": [
+    {
+     "url": "https://archive.org/download/treasuryofdavid06spuruoft/treasuryofdavid06spuruoft_hocr_pageindex.json.gz",
+     "sha256": "ad27eaf41e2b985cfea3467dd9e619ce153fcc5a4e7948f2839392aada3d8722"
+    },
+    {
+     "url": "https://archive.org/download/treasuryofdavid06spuruoft/treasuryofdavid06spuruoft_hocr_searchtext.txt.gz",
+     "sha256": "f2ca9563266e4a2b0d8f7a59cc456720a95b65d1afd5585fef778b26b95b0002"
+    },
+    {
+     "url": "https://archive.org/download/treasuryofdavid06spuruoft/treasuryofdavid06spuruoft_page_numbers.json",
+     "sha256": "179fac8a9cfec1767e3a13e464eee2d363fcbdd9d8644b99ab71c2f8db0597eb"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-10",
+ "found": 2071,
+ "missed": 0,
+ "pages": {
+  "spurgeon-psalms.PSA.1.1-2.1": [
+   "thetreasuryofdav01spuruoft",
+   18,
+   ""
+  ],
+  "spurgeon-psalms.PSA.1.3.1": [
+   "thetreasuryofdav01spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.1.4.1": [
+   "thetreasuryofdav01spuruoft",
+   20,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.1.5.1": [
+   "thetreasuryofdav01spuruoft",
+   20,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.1.6.1": [
+   "thetreasuryofdav01spuruoft",
+   20,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.2.1-3.1": [
+   "thetreasuryofdav01spuruoft",
+   27,
+   "10"
+  ],
+  "spurgeon-psalms.PSA.2.4.1": [
+   "thetreasuryofdav01spuruoft",
+   28,
+   "11"
+  ],
+  "spurgeon-psalms.PSA.2.5-6.1": [
+   "thetreasuryofdav01spuruoft",
+   28,
+   "11"
+  ],
+  "spurgeon-psalms.PSA.2.7-9.1": [
+   "thetreasuryofdav01spuruoft",
+   29,
+   "12"
+  ],
+  "spurgeon-psalms.PSA.2.10-12.1": [
+   "thetreasuryofdav01spuruoft",
+   30,
+   "13"
+  ],
+  "spurgeon-psalms.PSA.3.2-3.1": [
+   "thetreasuryofdav01spuruoft",
+   39,
+   "22"
+  ],
+  "spurgeon-psalms.PSA.3.4-5.1": [
+   "thetreasuryofdav01spuruoft",
+   40,
+   "23"
+  ],
+  "spurgeon-psalms.PSA.3.6-7.1": [
+   "thetreasuryofdav01spuruoft",
+   41,
+   "24"
+  ],
+  "spurgeon-psalms.PSA.3.8.1": [
+   "thetreasuryofdav01spuruoft",
+   41,
+   "24"
+  ],
+  "spurgeon-psalms.PSA.3.9.1": [
+   "thetreasuryofdav01spuruoft",
+   41,
+   "24"
+  ],
+  "spurgeon-psalms.PSA.4.2.1": [
+   "thetreasuryofdav01spuruoft",
+   51,
+   "34"
+  ],
+  "spurgeon-psalms.PSA.4.3.1": [
+   "thetreasuryofdav01spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.4.4.1": [
+   "thetreasuryofdav01spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.4.5.1": [
+   "thetreasuryofdav01spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.4.6.1": [
+   "thetreasuryofdav01spuruoft",
+   53,
+   "36"
+  ],
+  "spurgeon-psalms.PSA.4.7.1": [
+   "thetreasuryofdav01spuruoft",
+   53,
+   "36"
+  ],
+  "spurgeon-psalms.PSA.4.8.1": [
+   "thetreasuryofdav01spuruoft",
+   53,
+   "36"
+  ],
+  "spurgeon-psalms.PSA.4.9.1": [
+   "thetreasuryofdav01spuruoft",
+   54,
+   "37"
+  ],
+  "spurgeon-psalms.PSA.5.3.1": [
+   "thetreasuryofdav01spuruoft",
+   62,
+   "45"
+  ],
+  "spurgeon-psalms.PSA.5.4.1": [
+   "thetreasuryofdav01spuruoft",
+   63,
+   "46"
+  ],
+  "spurgeon-psalms.PSA.5.5-7.1": [
+   "thetreasuryofdav01spuruoft",
+   64,
+   "47"
+  ],
+  "spurgeon-psalms.PSA.5.8.1": [
+   "thetreasuryofdav01spuruoft",
+   64,
+   "47"
+  ],
+  "spurgeon-psalms.PSA.5.9.1": [
+   "thetreasuryofdav01spuruoft",
+   65,
+   "48"
+  ],
+  "spurgeon-psalms.PSA.5.10.1": [
+   "thetreasuryofdav01spuruoft",
+   65,
+   "48"
+  ],
+  "spurgeon-psalms.PSA.5.11.1": [
+   "thetreasuryofdav01spuruoft",
+   65,
+   "48"
+  ],
+  "spurgeon-psalms.PSA.5.12.1": [
+   "thetreasuryofdav01spuruoft",
+   66,
+   "49"
+  ],
+  "spurgeon-psalms.PSA.5.13.1": [
+   "thetreasuryofdav01spuruoft",
+   66,
+   "49"
+  ],
+  "spurgeon-psalms.PSA.6.3-8.1": [
+   "thetreasuryofdav01spuruoft",
+   73,
+   "56"
+  ],
+  "spurgeon-psalms.PSA.6.6.1": [
+   "thetreasuryofdav01spuruoft",
+   74,
+   "57"
+  ],
+  "spurgeon-psalms.PSA.6.9.1": [
+   "thetreasuryofdav01spuruoft",
+   75,
+   "58"
+  ],
+  "spurgeon-psalms.PSA.6.10.1": [
+   "thetreasuryofdav01spuruoft",
+   76,
+   "59"
+  ],
+  "spurgeon-psalms.PSA.6.11.1": [
+   "thetreasuryofdav01spuruoft",
+   76,
+   "59"
+  ],
+  "spurgeon-psalms.PSA.7.3.1": [
+   "thetreasuryofdav01spuruoft",
+   84,
+   "67"
+  ],
+  "spurgeon-psalms.PSA.7.4-6.1": [
+   "thetreasuryofdav01spuruoft",
+   85,
+   "68"
+  ],
+  "spurgeon-psalms.PSA.7.7-8.1": [
+   "thetreasuryofdav01spuruoft",
+   86,
+   "69"
+  ],
+  "spurgeon-psalms.PSA.7.9-10.1": [
+   "thetreasuryofdav01spuruoft",
+   86,
+   "69"
+  ],
+  "spurgeon-psalms.PSA.7.11-14.1": [
+   "thetreasuryofdav01spuruoft",
+   87,
+   "70"
+  ],
+  "spurgeon-psalms.PSA.7.15-17.1": [
+   "thetreasuryofdav01spuruoft",
+   87,
+   "70"
+  ],
+  "spurgeon-psalms.PSA.7.18.1": [
+   "thetreasuryofdav01spuruoft",
+   88,
+   "71"
+  ],
+  "spurgeon-psalms.PSA.8.3.1": [
+   "thetreasuryofdav01spuruoft",
+   97,
+   "80"
+  ],
+  "spurgeon-psalms.PSA.8.4-5.1": [
+   "thetreasuryofdav01spuruoft",
+   98,
+   "81"
+  ],
+  "spurgeon-psalms.PSA.8.6-9.1": [
+   "thetreasuryofdav01spuruoft",
+   99,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.8.10.1": [
+   "thetreasuryofdav01spuruoft",
+   99,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.9.2.1": [
+   "thetreasuryofdav01spuruoft",
+   114,
+   "97"
+  ],
+  "spurgeon-psalms.PSA.9.3.1": [
+   "thetreasuryofdav01spuruoft",
+   114,
+   "97"
+  ],
+  "spurgeon-psalms.PSA.9.4.1": [
+   "thetreasuryofdav01spuruoft",
+   114,
+   "97"
+  ],
+  "spurgeon-psalms.PSA.9.5.1": [
+   "thetreasuryofdav01spuruoft",
+   114,
+   "97"
+  ],
+  "spurgeon-psalms.PSA.9.6.1": [
+   "thetreasuryofdav01spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.9.7.1": [
+   "thetreasuryofdav01spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.9.8-13.1": [
+   "thetreasuryofdav01spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.9.8.1": [
+   "thetreasuryofdav01spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.9.9.1": [
+   "thetreasuryofdav01spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.9.10.1": [
+   "thetreasuryofdav01spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.9.11.1": [
+   "thetreasuryofdav01spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.9.12.1": [
+   "thetreasuryofdav01spuruoft",
+   116,
+   "99"
+  ],
+  "spurgeon-psalms.PSA.9.14-15.1": [
+   "thetreasuryofdav01spuruoft",
+   116,
+   "99"
+  ],
+  "spurgeon-psalms.PSA.9.16-17.1": [
+   "thetreasuryofdav01spuruoft",
+   117,
+   "100"
+  ],
+  "spurgeon-psalms.PSA.9.18.1": [
+   "thetreasuryofdav01spuruoft",
+   117,
+   "100"
+  ],
+  "spurgeon-psalms.PSA.9.19.1": [
+   "thetreasuryofdav01spuruoft",
+   118,
+   "101"
+  ],
+  "spurgeon-psalms.PSA.9.20.1": [
+   "thetreasuryofdav01spuruoft",
+   118,
+   "101"
+  ],
+  "spurgeon-psalms.PSA.9.21.1": [
+   "thetreasuryofdav01spuruoft",
+   118,
+   "101"
+  ],
+  "spurgeon-psalms.PSA.10.2.1": [
+   "thetreasuryofdav01spuruoft",
+   128,
+   "111"
+  ],
+  "spurgeon-psalms.PSA.10.3.1": [
+   "thetreasuryofdav01spuruoft",
+   128,
+   "111"
+  ],
+  "spurgeon-psalms.PSA.10.4.1": [
+   "thetreasuryofdav01spuruoft",
+   129,
+   "112"
+  ],
+  "spurgeon-psalms.PSA.10.5.1": [
+   "thetreasuryofdav01spuruoft",
+   129,
+   "112"
+  ],
+  "spurgeon-psalms.PSA.10.6.1": [
+   "thetreasuryofdav01spuruoft",
+   129,
+   "112"
+  ],
+  "spurgeon-psalms.PSA.10.7.1": [
+   "thetreasuryofdav01spuruoft",
+   129,
+   "112"
+  ],
+  "spurgeon-psalms.PSA.10.8.1": [
+   "thetreasuryofdav01spuruoft",
+   130,
+   "113"
+  ],
+  "spurgeon-psalms.PSA.10.9.1": [
+   "thetreasuryofdav01spuruoft",
+   130,
+   "113"
+  ],
+  "spurgeon-psalms.PSA.10.10.1": [
+   "thetreasuryofdav01spuruoft",
+   130,
+   "113"
+  ],
+  "spurgeon-psalms.PSA.10.11.1": [
+   "thetreasuryofdav01spuruoft",
+   130,
+   "113"
+  ],
+  "spurgeon-psalms.PSA.10.12.1": [
+   "thetreasuryofdav01spuruoft",
+   130,
+   "113"
+  ],
+  "spurgeon-psalms.PSA.10.13-15.1": [
+   "thetreasuryofdav01spuruoft",
+   131,
+   "114"
+  ],
+  "spurgeon-psalms.PSA.10.15.1": [
+   "thetreasuryofdav01spuruoft",
+   131,
+   "114"
+  ],
+  "spurgeon-psalms.PSA.10.16-18.1": [
+   "thetreasuryofdav01spuruoft",
+   132,
+   "115"
+  ],
+  "spurgeon-psalms.PSA.11.1-3.1": [
+   "thetreasuryofdav01spuruoft",
+   146,
+   "129"
+  ],
+  "spurgeon-psalms.PSA.11.4-7.1": [
+   "thetreasuryofdav01spuruoft",
+   147,
+   "130"
+  ],
+  "spurgeon-psalms.PSA.12.3.1": [
+   "thetreasuryofdav01spuruoft",
+   158,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.12.4-5.1": [
+   "thetreasuryofdav01spuruoft",
+   159,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.12.6.1": [
+   "thetreasuryofdav01spuruoft",
+   159,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.12.7-8.1": [
+   "thetreasuryofdav01spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.12.8.1": [
+   "thetreasuryofdav01spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.12.9.1": [
+   "thetreasuryofdav01spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.13.2.1": [
+   "thetreasuryofdav01spuruoft",
+   168,
+   "151"
+  ],
+  "spurgeon-psalms.PSA.13.3-4.1": [
+   "thetreasuryofdav01spuruoft",
+   169,
+   "152"
+  ],
+  "spurgeon-psalms.PSA.13.5-6.1": [
+   "thetreasuryofdav01spuruoft",
+   170,
+   "153"
+  ],
+  "spurgeon-psalms.PSA.14.2-3.1": [
+   "thetreasuryofdav01spuruoft",
+   179,
+   "162"
+  ],
+  "spurgeon-psalms.PSA.14.4.1": [
+   "thetreasuryofdav01spuruoft",
+   180,
+   "163"
+  ],
+  "spurgeon-psalms.PSA.14.5.1": [
+   "thetreasuryofdav01spuruoft",
+   180,
+   "163"
+  ],
+  "spurgeon-psalms.PSA.14.6.1": [
+   "thetreasuryofdav01spuruoft",
+   180,
+   "163"
+  ],
+  "spurgeon-psalms.PSA.14.7.1": [
+   "thetreasuryofdav01spuruoft",
+   181,
+   "164"
+  ],
+  "spurgeon-psalms.PSA.15.2.1": [
+   "thetreasuryofdav01spuruoft",
+   193,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.15.3.1": [
+   "thetreasuryofdav01spuruoft",
+   194,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.15.4.1": [
+   "thetreasuryofdav01spuruoft",
+   194,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.15.5.1": [
+   "thetreasuryofdav01spuruoft",
+   195,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.16.3-5.1": [
+   "thetreasuryofdav01spuruoft",
+   210,
+   "193"
+  ],
+  "spurgeon-psalms.PSA.16.6-7.1": [
+   "thetreasuryofdav01spuruoft",
+   212,
+   "195"
+  ],
+  "spurgeon-psalms.PSA.16.8-10.1": [
+   "thetreasuryofdav01spuruoft",
+   213,
+   "196"
+  ],
+  "spurgeon-psalms.PSA.16.11.1": [
+   "thetreasuryofdav01spuruoft",
+   213,
+   "196"
+  ],
+  "spurgeon-psalms.PSA.17.1.1": [
+   "thetreasuryofdav01spuruoft",
+   232,
+   "215"
+  ],
+  "spurgeon-psalms.PSA.17.2.1": [
+   "thetreasuryofdav01spuruoft",
+   233,
+   "216"
+  ],
+  "spurgeon-psalms.PSA.17.3.1": [
+   "thetreasuryofdav01spuruoft",
+   233,
+   "216"
+  ],
+  "spurgeon-psalms.PSA.17.4.1": [
+   "thetreasuryofdav01spuruoft",
+   234,
+   "217"
+  ],
+  "spurgeon-psalms.PSA.17.5.1": [
+   "thetreasuryofdav01spuruoft",
+   234,
+   "217"
+  ],
+  "spurgeon-psalms.PSA.17.6.1": [
+   "thetreasuryofdav01spuruoft",
+   235,
+   "218"
+  ],
+  "spurgeon-psalms.PSA.17.7.1": [
+   "thetreasuryofdav01spuruoft",
+   235,
+   "218"
+  ],
+  "spurgeon-psalms.PSA.17.8.1": [
+   "thetreasuryofdav01spuruoft",
+   235,
+   "218"
+  ],
+  "spurgeon-psalms.PSA.17.9.1": [
+   "thetreasuryofdav01spuruoft",
+   236,
+   "219"
+  ],
+  "spurgeon-psalms.PSA.17.10.1": [
+   "thetreasuryofdav01spuruoft",
+   236,
+   "219"
+  ],
+  "spurgeon-psalms.PSA.17.11.1": [
+   "thetreasuryofdav01spuruoft",
+   236,
+   "219"
+  ],
+  "spurgeon-psalms.PSA.17.12.1": [
+   "thetreasuryofdav01spuruoft",
+   236,
+   "219"
+  ],
+  "spurgeon-psalms.PSA.17.13.1": [
+   "thetreasuryofdav01spuruoft",
+   237,
+   "220"
+  ],
+  "spurgeon-psalms.PSA.17.14.1": [
+   "thetreasuryofdav01spuruoft",
+   237,
+   "220"
+  ],
+  "spurgeon-psalms.PSA.17.15.1": [
+   "thetreasuryofdav01spuruoft",
+   238,
+   "221"
+  ],
+  "spurgeon-psalms.PSA.18.2.1": [
+   "thetreasuryofdav01spuruoft",
+   253,
+   "236"
+  ],
+  "spurgeon-psalms.PSA.18.3.1": [
+   "thetreasuryofdav01spuruoft",
+   254,
+   "237"
+  ],
+  "spurgeon-psalms.PSA.18.4.1": [
+   "thetreasuryofdav01spuruoft",
+   254,
+   "237"
+  ],
+  "spurgeon-psalms.PSA.18.5-20.1": [
+   "thetreasuryofdav01spuruoft",
+   255,
+   "238"
+  ],
+  "spurgeon-psalms.PSA.18.5.1": [
+   "thetreasuryofdav01spuruoft",
+   255,
+   "238"
+  ],
+  "spurgeon-psalms.PSA.18.6.1": [
+   "thetreasuryofdav01spuruoft",
+   255,
+   "238"
+  ],
+  "spurgeon-psalms.PSA.18.7.1": [
+   "thetreasuryofdav01spuruoft",
+   256,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.18.8.1": [
+   "thetreasuryofdav01spuruoft",
+   256,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.18.9.1": [
+   "thetreasuryofdav01spuruoft",
+   256,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.18.10.1": [
+   "thetreasuryofdav01spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.18.11.1": [
+   "thetreasuryofdav01spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.18.12.1": [
+   "thetreasuryofdav01spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.18.13.1": [
+   "thetreasuryofdav01spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.18.14.1": [
+   "thetreasuryofdav01spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.18.15.1": [
+   "thetreasuryofdav01spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.18.16.1": [
+   "thetreasuryofdav01spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.18.17.1": [
+   "thetreasuryofdav01spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.18.18.1": [
+   "thetreasuryofdav01spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.18.19.1": [
+   "thetreasuryofdav01spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.18.20.1": [
+   "thetreasuryofdav01spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.18.21.1": [
+   "thetreasuryofdav01spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.18.22.1": [
+   "thetreasuryofdav01spuruoft",
+   259,
+   "242"
+  ],
+  "spurgeon-psalms.PSA.18.23.1": [
+   "thetreasuryofdav01spuruoft",
+   259,
+   "242"
+  ],
+  "spurgeon-psalms.PSA.18.24.1": [
+   "thetreasuryofdav01spuruoft",
+   260,
+   "243"
+  ],
+  "spurgeon-psalms.PSA.18.25.1": [
+   "thetreasuryofdav01spuruoft",
+   260,
+   "243"
+  ],
+  "spurgeon-psalms.PSA.18.26.1": [
+   "thetreasuryofdav01spuruoft",
+   260,
+   "243"
+  ],
+  "spurgeon-psalms.PSA.18.27.1": [
+   "thetreasuryofdav01spuruoft",
+   260,
+   "243"
+  ],
+  "spurgeon-psalms.PSA.18.28.1": [
+   "thetreasuryofdav01spuruoft",
+   260,
+   "243"
+  ],
+  "spurgeon-psalms.PSA.18.29.1": [
+   "thetreasuryofdav01spuruoft",
+   261,
+   "244"
+  ],
+  "spurgeon-psalms.PSA.18.30-46.1": [
+   "thetreasuryofdav01spuruoft",
+   261,
+   "244"
+  ],
+  "spurgeon-psalms.PSA.18.30.1": [
+   "thetreasuryofdav01spuruoft",
+   261,
+   "244"
+  ],
+  "spurgeon-psalms.PSA.18.31.1": [
+   "thetreasuryofdav01spuruoft",
+   262,
+   "245"
+  ],
+  "spurgeon-psalms.PSA.18.32.1": [
+   "thetreasuryofdav01spuruoft",
+   262,
+   "245"
+  ],
+  "spurgeon-psalms.PSA.18.33.1": [
+   "thetreasuryofdav01spuruoft",
+   262,
+   "245"
+  ],
+  "spurgeon-psalms.PSA.18.34.1": [
+   "thetreasuryofdav01spuruoft",
+   262,
+   "245"
+  ],
+  "spurgeon-psalms.PSA.18.36.1": [
+   "thetreasuryofdav01spuruoft",
+   263,
+   "246"
+  ],
+  "spurgeon-psalms.PSA.18.37.1": [
+   "thetreasuryofdav01spuruoft",
+   263,
+   "246"
+  ],
+  "spurgeon-psalms.PSA.18.38.1": [
+   "thetreasuryofdav01spuruoft",
+   263,
+   "246"
+  ],
+  "spurgeon-psalms.PSA.18.39.1": [
+   "thetreasuryofdav01spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.18.42.1": [
+   "thetreasuryofdav01spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.18.43.1": [
+   "thetreasuryofdav01spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.18.44.1": [
+   "thetreasuryofdav01spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.18.45.1": [
+   "thetreasuryofdav01spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.18.46.1": [
+   "thetreasuryofdav01spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.18.47.1": [
+   "thetreasuryofdav01spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.18.48.1": [
+   "thetreasuryofdav01spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.18.49.1": [
+   "thetreasuryofdav01spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.18.50.1": [
+   "thetreasuryofdav01spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.18.51.1": [
+   "thetreasuryofdav01spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.19.2.1": [
+   "thetreasuryofdav01spuruoft",
+   286,
+   "269"
+  ],
+  "spurgeon-psalms.PSA.19.3.1": [
+   "thetreasuryofdav01spuruoft",
+   287,
+   "270"
+  ],
+  "spurgeon-psalms.PSA.19.4.1": [
+   "thetreasuryofdav01spuruoft",
+   288,
+   "271"
+  ],
+  "spurgeon-psalms.PSA.19.5.1": [
+   "thetreasuryofdav01spuruoft",
+   288,
+   "271"
+  ],
+  "spurgeon-psalms.PSA.19.6.1": [
+   "thetreasuryofdav01spuruoft",
+   288,
+   "271"
+  ],
+  "spurgeon-psalms.PSA.19.7.1": [
+   "thetreasuryofdav01spuruoft",
+   288,
+   "271"
+  ],
+  "spurgeon-psalms.PSA.19.8-11.1": [
+   "thetreasuryofdav01spuruoft",
+   289,
+   "272"
+  ],
+  "spurgeon-psalms.PSA.19.8.1": [
+   "thetreasuryofdav01spuruoft",
+   289,
+   "272"
+  ],
+  "spurgeon-psalms.PSA.19.9.1": [
+   "thetreasuryofdav01spuruoft",
+   290,
+   "273"
+  ],
+  "spurgeon-psalms.PSA.19.10.1": [
+   "thetreasuryofdav01spuruoft",
+   290,
+   "273"
+  ],
+  "spurgeon-psalms.PSA.19.11.1": [
+   "thetreasuryofdav01spuruoft",
+   290,
+   "273"
+  ],
+  "spurgeon-psalms.PSA.19.12.1": [
+   "thetreasuryofdav01spuruoft",
+   291,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.19.13.1": [
+   "thetreasuryofdav01spuruoft",
+   291,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.19.14.1": [
+   "thetreasuryofdav01spuruoft",
+   292,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.19.15.1": [
+   "thetreasuryofdav01spuruoft",
+   292,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.20.2.1": [
+   "thetreasuryofdav01spuruoft",
+   317,
+   "300"
+  ],
+  "spurgeon-psalms.PSA.20.3.1": [
+   "thetreasuryofdav01spuruoft",
+   318,
+   "301"
+  ],
+  "spurgeon-psalms.PSA.20.4.1": [
+   "thetreasuryofdav01spuruoft",
+   318,
+   "301"
+  ],
+  "spurgeon-psalms.PSA.20.5.1": [
+   "thetreasuryofdav01spuruoft",
+   318,
+   "301"
+  ],
+  "spurgeon-psalms.PSA.20.6.1": [
+   "thetreasuryofdav01spuruoft",
+   319,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.20.7.1": [
+   "thetreasuryofdav01spuruoft",
+   319,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.20.8.1": [
+   "thetreasuryofdav01spuruoft",
+   319,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.20.9.1": [
+   "thetreasuryofdav01spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.20.10.1": [
+   "thetreasuryofdav01spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.21.2.1": [
+   "thetreasuryofdav01spuruoft",
+   329,
+   "312"
+  ],
+  "spurgeon-psalms.PSA.21.3.1": [
+   "thetreasuryofdav01spuruoft",
+   330,
+   "313"
+  ],
+  "spurgeon-psalms.PSA.21.4.1": [
+   "thetreasuryofdav01spuruoft",
+   330,
+   "313"
+  ],
+  "spurgeon-psalms.PSA.21.5.1": [
+   "thetreasuryofdav01spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.21.6.1": [
+   "thetreasuryofdav01spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.21.7.1": [
+   "thetreasuryofdav01spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.21.8.1": [
+   "thetreasuryofdav01spuruoft",
+   332,
+   "315"
+  ],
+  "spurgeon-psalms.PSA.21.9.1": [
+   "thetreasuryofdav01spuruoft",
+   332,
+   "315"
+  ],
+  "spurgeon-psalms.PSA.21.10.1": [
+   "thetreasuryofdav01spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.21.11.1": [
+   "thetreasuryofdav01spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.21.12.1": [
+   "thetreasuryofdav01spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.21.13.1": [
+   "thetreasuryofdav01spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.21.14.1": [
+   "thetreasuryofdav01spuruoft",
+   334,
+   "317"
+  ],
+  "spurgeon-psalms.PSA.22.2.1": [
+   "thetreasuryofdav01spuruoft",
+   342,
+   "325"
+  ],
+  "spurgeon-psalms.PSA.22.3.1": [
+   "thetreasuryofdav01spuruoft",
+   342,
+   "325"
+  ],
+  "spurgeon-psalms.PSA.22.4.1": [
+   "thetreasuryofdav01spuruoft",
+   342,
+   "325"
+  ],
+  "spurgeon-psalms.PSA.22.5.1": [
+   "thetreasuryofdav01spuruoft",
+   343,
+   "326"
+  ],
+  "spurgeon-psalms.PSA.22.6.1": [
+   "thetreasuryofdav01spuruoft",
+   343,
+   "326"
+  ],
+  "spurgeon-psalms.PSA.22.7.1": [
+   "thetreasuryofdav01spuruoft",
+   343,
+   "326"
+  ],
+  "spurgeon-psalms.PSA.22.8.1": [
+   "thetreasuryofdav01spuruoft",
+   343,
+   "326"
+  ],
+  "spurgeon-psalms.PSA.22.10.1": [
+   "thetreasuryofdav01spuruoft",
+   344,
+   "327"
+  ],
+  "spurgeon-psalms.PSA.22.11.1": [
+   "thetreasuryofdav01spuruoft",
+   344,
+   "327"
+  ],
+  "spurgeon-psalms.PSA.22.12-22.1": [
+   "thetreasuryofdav01spuruoft",
+   345,
+   "328"
+  ],
+  "spurgeon-psalms.PSA.22.12.1": [
+   "thetreasuryofdav01spuruoft",
+   345,
+   "328"
+  ],
+  "spurgeon-psalms.PSA.22.13.1": [
+   "thetreasuryofdav01spuruoft",
+   345,
+   "328"
+  ],
+  "spurgeon-psalms.PSA.22.14.1": [
+   "thetreasuryofdav01spuruoft",
+   345,
+   "328"
+  ],
+  "spurgeon-psalms.PSA.22.15.1": [
+   "thetreasuryofdav01spuruoft",
+   346,
+   "329"
+  ],
+  "spurgeon-psalms.PSA.22.16.1": [
+   "thetreasuryofdav01spuruoft",
+   346,
+   "329"
+  ],
+  "spurgeon-psalms.PSA.22.17.1": [
+   "thetreasuryofdav01spuruoft",
+   346,
+   "329"
+  ],
+  "spurgeon-psalms.PSA.22.18.1": [
+   "thetreasuryofdav01spuruoft",
+   347,
+   "330"
+  ],
+  "spurgeon-psalms.PSA.22.19.1": [
+   "thetreasuryofdav01spuruoft",
+   347,
+   "330"
+  ],
+  "spurgeon-psalms.PSA.22.20.1": [
+   "thetreasuryofdav01spuruoft",
+   347,
+   "330"
+  ],
+  "spurgeon-psalms.PSA.22.21.1": [
+   "thetreasuryofdav01spuruoft",
+   347,
+   "330"
+  ],
+  "spurgeon-psalms.PSA.22.22.1": [
+   "thetreasuryofdav01spuruoft",
+   347,
+   "330"
+  ],
+  "spurgeon-psalms.PSA.22.23-32.1": [
+   "thetreasuryofdav01spuruoft",
+   348,
+   "331"
+  ],
+  "spurgeon-psalms.PSA.22.23.1": [
+   "thetreasuryofdav01spuruoft",
+   348,
+   "331"
+  ],
+  "spurgeon-psalms.PSA.22.24.1": [
+   "thetreasuryofdav01spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.22.25.1": [
+   "thetreasuryofdav01spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.22.26.1": [
+   "thetreasuryofdav01spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.22.27.1": [
+   "thetreasuryofdav01spuruoft",
+   350,
+   "333"
+  ],
+  "spurgeon-psalms.PSA.22.28.1": [
+   "thetreasuryofdav01spuruoft",
+   350,
+   "333"
+  ],
+  "spurgeon-psalms.PSA.22.29.1": [
+   "thetreasuryofdav01spuruoft",
+   350,
+   "333"
+  ],
+  "spurgeon-psalms.PSA.22.30.1": [
+   "thetreasuryofdav01spuruoft",
+   350,
+   "333"
+  ],
+  "spurgeon-psalms.PSA.22.31.1": [
+   "thetreasuryofdav01spuruoft",
+   350,
+   "333"
+  ],
+  "spurgeon-psalms.PSA.22.32.1": [
+   "thetreasuryofdav01spuruoft",
+   351,
+   "334"
+  ],
+  "spurgeon-psalms.PSA.23.1.1": [
+   "thetreasuryofdav01spuruoft",
+   370,
+   "353"
+  ],
+  "spurgeon-psalms.PSA.23.2.1": [
+   "thetreasuryofdav01spuruoft",
+   371,
+   "354"
+  ],
+  "spurgeon-psalms.PSA.23.3.1": [
+   "thetreasuryofdav01spuruoft",
+   372,
+   "355"
+  ],
+  "spurgeon-psalms.PSA.23.4.1": [
+   "thetreasuryofdav01spuruoft",
+   372,
+   "355"
+  ],
+  "spurgeon-psalms.PSA.23.5.1": [
+   "thetreasuryofdav01spuruoft",
+   373,
+   "356"
+  ],
+  "spurgeon-psalms.PSA.23.6.1": [
+   "thetreasuryofdav01spuruoft",
+   373,
+   "356"
+  ],
+  "spurgeon-psalms.PSA.24.1.1": [
+   "thetreasuryofdav01spuruoft",
+   391,
+   "374"
+  ],
+  "spurgeon-psalms.PSA.24.2.1": [
+   "thetreasuryofdav01spuruoft",
+   392,
+   "375"
+  ],
+  "spurgeon-psalms.PSA.24.3-6.1": [
+   "thetreasuryofdav01spuruoft",
+   392,
+   "375"
+  ],
+  "spurgeon-psalms.PSA.24.3.1": [
+   "thetreasuryofdav01spuruoft",
+   392,
+   "375"
+  ],
+  "spurgeon-psalms.PSA.24.4.1": [
+   "thetreasuryofdav01spuruoft",
+   393,
+   "376"
+  ],
+  "spurgeon-psalms.PSA.24.5.1": [
+   "thetreasuryofdav01spuruoft",
+   393,
+   "376"
+  ],
+  "spurgeon-psalms.PSA.24.6.1": [
+   "thetreasuryofdav01spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.24.7.1": [
+   "thetreasuryofdav01spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.24.8.1": [
+   "thetreasuryofdav01spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.24.9.1": [
+   "thetreasuryofdav01spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.24.10.1": [
+   "thetreasuryofdav01spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.25.1.1": [
+   "thetreasuryofdav01spuruoft",
+   408,
+   "391"
+  ],
+  "spurgeon-psalms.PSA.25.3.1": [
+   "thetreasuryofdav01spuruoft",
+   409,
+   "392"
+  ],
+  "spurgeon-psalms.PSA.25.4.1": [
+   "thetreasuryofdav01spuruoft",
+   409,
+   "392"
+  ],
+  "spurgeon-psalms.PSA.25.5.1": [
+   "thetreasuryofdav01spuruoft",
+   409,
+   "392"
+  ],
+  "spurgeon-psalms.PSA.25.6.1": [
+   "thetreasuryofdav01spuruoft",
+   410,
+   "393"
+  ],
+  "spurgeon-psalms.PSA.25.8-10.1": [
+   "thetreasuryofdav01spuruoft",
+   411,
+   "394"
+  ],
+  "spurgeon-psalms.PSA.25.8.1": [
+   "thetreasuryofdav01spuruoft",
+   411,
+   "394"
+  ],
+  "spurgeon-psalms.PSA.25.9.1": [
+   "thetreasuryofdav01spuruoft",
+   411,
+   "394"
+  ],
+  "spurgeon-psalms.PSA.25.10.1": [
+   "thetreasuryofdav01spuruoft",
+   411,
+   "394"
+  ],
+  "spurgeon-psalms.PSA.25.11.1": [
+   "thetreasuryofdav01spuruoft",
+   411,
+   "394"
+  ],
+  "spurgeon-psalms.PSA.25.12.1": [
+   "thetreasuryofdav01spuruoft",
+   412,
+   "395"
+  ],
+  "spurgeon-psalms.PSA.25.13.1": [
+   "thetreasuryofdav01spuruoft",
+   412,
+   "395"
+  ],
+  "spurgeon-psalms.PSA.25.14.1": [
+   "thetreasuryofdav01spuruoft",
+   412,
+   "395"
+  ],
+  "spurgeon-psalms.PSA.25.15.1": [
+   "thetreasuryofdav01spuruoft",
+   413,
+   "396"
+  ],
+  "spurgeon-psalms.PSA.25.16.1": [
+   "thetreasuryofdav01spuruoft",
+   413,
+   "396"
+  ],
+  "spurgeon-psalms.PSA.25.17.1": [
+   "thetreasuryofdav01spuruoft",
+   413,
+   "396"
+  ],
+  "spurgeon-psalms.PSA.25.18.1": [
+   "thetreasuryofdav01spuruoft",
+   414,
+   "397"
+  ],
+  "spurgeon-psalms.PSA.25.19.1": [
+   "thetreasuryofdav01spuruoft",
+   414,
+   "397"
+  ],
+  "spurgeon-psalms.PSA.25.20.1": [
+   "thetreasuryofdav01spuruoft",
+   414,
+   "397"
+  ],
+  "spurgeon-psalms.PSA.25.21.1": [
+   "thetreasuryofdav01spuruoft",
+   414,
+   "397"
+  ],
+  "spurgeon-psalms.PSA.25.22.1": [
+   "thetreasuryofdav01spuruoft",
+   414,
+   "397"
+  ],
+  "spurgeon-psalms.PSA.26.1.1": [
+   "thetreasuryofdav01spuruoft",
+   432,
+   "415"
+  ],
+  "spurgeon-psalms.PSA.26.2.1": [
+   "thetreasuryofdav01spuruoft",
+   433,
+   "416"
+  ],
+  "spurgeon-psalms.PSA.26.3.1": [
+   "thetreasuryofdav01spuruoft",
+   433,
+   "416"
+  ],
+  "spurgeon-psalms.PSA.26.4-5.1": [
+   "thetreasuryofdav01spuruoft",
+   433,
+   "416"
+  ],
+  "spurgeon-psalms.PSA.26.4.1": [
+   "thetreasuryofdav01spuruoft",
+   433,
+   "416"
+  ],
+  "spurgeon-psalms.PSA.26.5.1": [
+   "thetreasuryofdav01spuruoft",
+   434,
+   "417"
+  ],
+  "spurgeon-psalms.PSA.26.6.1": [
+   "thetreasuryofdav01spuruoft",
+   434,
+   "417"
+  ],
+  "spurgeon-psalms.PSA.26.7.1": [
+   "thetreasuryofdav01spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.26.8.1": [
+   "thetreasuryofdav01spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.26.9.1": [
+   "thetreasuryofdav01spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.26.10.1": [
+   "thetreasuryofdav01spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.26.11.1": [
+   "thetreasuryofdav01spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.26.12.1": [
+   "thetreasuryofdav01spuruoft",
+   436,
+   "419"
+  ],
+  "spurgeon-psalms.PSA.27.1.1": [
+   "thetreasuryofdav02spuruoft",
+   14,
+   ""
+  ],
+  "spurgeon-psalms.PSA.27.2.1": [
+   "thetreasuryofdav02spuruoft",
+   14,
+   ""
+  ],
+  "spurgeon-psalms.PSA.27.3.1": [
+   "thetreasuryofdav02spuruoft",
+   15,
+   ""
+  ],
+  "spurgeon-psalms.PSA.27.4.1": [
+   "thetreasuryofdav02spuruoft",
+   15,
+   ""
+  ],
+  "spurgeon-psalms.PSA.27.5.1": [
+   "thetreasuryofdav02spuruoft",
+   16,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.27.6.1": [
+   "thetreasuryofdav02spuruoft",
+   16,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.27.7.1": [
+   "thetreasuryofdav02spuruoft",
+   16,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.27.8.1": [
+   "thetreasuryofdav02spuruoft",
+   17,
+   "4"
+  ],
+  "spurgeon-psalms.PSA.27.9.1": [
+   "thetreasuryofdav02spuruoft",
+   17,
+   "4"
+  ],
+  "spurgeon-psalms.PSA.27.10.1": [
+   "thetreasuryofdav01spuruoft",
+   443,
+   "426"
+  ],
+  "spurgeon-psalms.PSA.27.11.1": [
+   "thetreasuryofdav02spuruoft",
+   17,
+   "4"
+  ],
+  "spurgeon-psalms.PSA.27.12.1": [
+   "thetreasuryofdav02spuruoft",
+   18,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.27.13.1": [
+   "thetreasuryofdav02spuruoft",
+   18,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.27.14.1": [
+   "thetreasuryofdav02spuruoft",
+   18,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.28.1.1": [
+   "thetreasuryofdav02spuruoft",
+   33,
+   "20"
+  ],
+  "spurgeon-psalms.PSA.28.2.1": [
+   "thetreasuryofdav02spuruoft",
+   33,
+   "20"
+  ],
+  "spurgeon-psalms.PSA.28.3.1": [
+   "thetreasuryofdav02spuruoft",
+   34,
+   "21"
+  ],
+  "spurgeon-psalms.PSA.28.4.1": [
+   "thetreasuryofdav02spuruoft",
+   34,
+   "21"
+  ],
+  "spurgeon-psalms.PSA.28.5.1": [
+   "thetreasuryofdav02spuruoft",
+   34,
+   "21"
+  ],
+  "spurgeon-psalms.PSA.28.6.1": [
+   "thetreasuryofdav02spuruoft",
+   35,
+   "22"
+  ],
+  "spurgeon-psalms.PSA.28.7.1": [
+   "thetreasuryofdav02spuruoft",
+   35,
+   "22"
+  ],
+  "spurgeon-psalms.PSA.28.8.1": [
+   "thetreasuryofdav02spuruoft",
+   36,
+   "23"
+  ],
+  "spurgeon-psalms.PSA.28.9.1": [
+   "thetreasuryofdav02spuruoft",
+   36,
+   "23"
+  ],
+  "spurgeon-psalms.PSA.29.2.1": [
+   "thetreasuryofdav02spuruoft",
+   42,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.29.3.1": [
+   "thetreasuryofdav02spuruoft",
+   42,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.29.4.1": [
+   "thetreasuryofdav02spuruoft",
+   43,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.29.5.1": [
+   "thetreasuryofdav02spuruoft",
+   43,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.29.6.1": [
+   "thetreasuryofdav02spuruoft",
+   44,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.29.7.1": [
+   "thetreasuryofdav02spuruoft",
+   44,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.29.8.1": [
+   "thetreasuryofdav02spuruoft",
+   44,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.29.9.1": [
+   "thetreasuryofdav02spuruoft",
+   45,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.29.10.1": [
+   "thetreasuryofdav02spuruoft",
+   45,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.29.11.1": [
+   "thetreasuryofdav02spuruoft",
+   45,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.30.2.1": [
+   "thetreasuryofdav02spuruoft",
+   56,
+   "43"
+  ],
+  "spurgeon-psalms.PSA.30.3.1": [
+   "thetreasuryofdav02spuruoft",
+   57,
+   "44"
+  ],
+  "spurgeon-psalms.PSA.30.4.1": [
+   "thetreasuryofdav02spuruoft",
+   57,
+   "44"
+  ],
+  "spurgeon-psalms.PSA.30.5.1": [
+   "thetreasuryofdav02spuruoft",
+   57,
+   "44"
+  ],
+  "spurgeon-psalms.PSA.30.6.1": [
+   "thetreasuryofdav02spuruoft",
+   57,
+   "44"
+  ],
+  "spurgeon-psalms.PSA.30.7.1": [
+   "thetreasuryofdav02spuruoft",
+   58,
+   "45"
+  ],
+  "spurgeon-psalms.PSA.30.8.1": [
+   "thetreasuryofdav02spuruoft",
+   58,
+   "45"
+  ],
+  "spurgeon-psalms.PSA.30.9.1": [
+   "thetreasuryofdav02spuruoft",
+   59,
+   "46"
+  ],
+  "spurgeon-psalms.PSA.30.10.1": [
+   "thetreasuryofdav02spuruoft",
+   59,
+   "46"
+  ],
+  "spurgeon-psalms.PSA.30.11.1": [
+   "thetreasuryofdav02spuruoft",
+   59,
+   "46"
+  ],
+  "spurgeon-psalms.PSA.30.12.1": [
+   "thetreasuryofdav02spuruoft",
+   60,
+   "47"
+  ],
+  "spurgeon-psalms.PSA.30.13.1": [
+   "thetreasuryofdav02spuruoft",
+   60,
+   "47"
+  ],
+  "spurgeon-psalms.PSA.31.2.1": [
+   "thetreasuryofdav02spuruoft",
+   70,
+   "57"
+  ],
+  "spurgeon-psalms.PSA.31.3.1": [
+   "thetreasuryofdav02spuruoft",
+   71,
+   "58"
+  ],
+  "spurgeon-psalms.PSA.31.4.1": [
+   "thetreasuryofdav02spuruoft",
+   71,
+   "58"
+  ],
+  "spurgeon-psalms.PSA.31.5.1": [
+   "thetreasuryofdav02spuruoft",
+   71,
+   "58"
+  ],
+  "spurgeon-psalms.PSA.31.6.1": [
+   "thetreasuryofdav02spuruoft",
+   72,
+   "59"
+  ],
+  "spurgeon-psalms.PSA.31.7.1": [
+   "thetreasuryofdav02spuruoft",
+   72,
+   "59"
+  ],
+  "spurgeon-psalms.PSA.31.8.1": [
+   "thetreasuryofdav02spuruoft",
+   73,
+   "60"
+  ],
+  "spurgeon-psalms.PSA.31.9.1": [
+   "thetreasuryofdav02spuruoft",
+   73,
+   "60"
+  ],
+  "spurgeon-psalms.PSA.31.10.1": [
+   "thetreasuryofdav01spuruoft",
+   73,
+   "56"
+  ],
+  "spurgeon-psalms.PSA.31.11.1": [
+   "thetreasuryofdav02spuruoft",
+   73,
+   "60"
+  ],
+  "spurgeon-psalms.PSA.31.12.1": [
+   "thetreasuryofdav02spuruoft",
+   73,
+   "60"
+  ],
+  "spurgeon-psalms.PSA.31.13.1": [
+   "thetreasuryofdav02spuruoft",
+   73,
+   "60"
+  ],
+  "spurgeon-psalms.PSA.31.14.1": [
+   "thetreasuryofdav02spuruoft",
+   74,
+   "61"
+  ],
+  "spurgeon-psalms.PSA.31.15-19.1": [
+   "thetreasuryofdav02spuruoft",
+   75,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.31.15.1": [
+   "thetreasuryofdav02spuruoft",
+   75,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.31.16.1": [
+   "thetreasuryofdav02spuruoft",
+   75,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.31.17.1": [
+   "thetreasuryofdav02spuruoft",
+   75,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.31.18.1": [
+   "thetreasuryofdav02spuruoft",
+   75,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.31.19.1": [
+   "thetreasuryofdav02spuruoft",
+   76,
+   "63"
+  ],
+  "spurgeon-psalms.PSA.31.20.1": [
+   "thetreasuryofdav02spuruoft",
+   76,
+   "63"
+  ],
+  "spurgeon-psalms.PSA.31.21.1": [
+   "thetreasuryofdav02spuruoft",
+   77,
+   "64"
+  ],
+  "spurgeon-psalms.PSA.31.22.1": [
+   "thetreasuryofdav02spuruoft",
+   77,
+   "64"
+  ],
+  "spurgeon-psalms.PSA.31.23.1": [
+   "thetreasuryofdav02spuruoft",
+   77,
+   "64"
+  ],
+  "spurgeon-psalms.PSA.31.24.1": [
+   "thetreasuryofdav02spuruoft",
+   77,
+   "64"
+  ],
+  "spurgeon-psalms.PSA.31.25.1": [
+   "thetreasuryofdav02spuruoft",
+   78,
+   "65"
+  ],
+  "spurgeon-psalms.PSA.32.1.1": [
+   "thetreasuryofdav02spuruoft",
+   94,
+   "81"
+  ],
+  "spurgeon-psalms.PSA.32.2.1": [
+   "thetreasuryofdav02spuruoft",
+   95,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.32.3-5.1": [
+   "thetreasuryofdav02spuruoft",
+   95,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.32.3.1": [
+   "thetreasuryofdav02spuruoft",
+   95,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.32.4.1": [
+   "thetreasuryofdav02spuruoft",
+   95,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.32.5.1": [
+   "thetreasuryofdav02spuruoft",
+   96,
+   "83"
+  ],
+  "spurgeon-psalms.PSA.32.6.1": [
+   "thetreasuryofdav02spuruoft",
+   96,
+   "83"
+  ],
+  "spurgeon-psalms.PSA.32.7.1": [
+   "thetreasuryofdav02spuruoft",
+   97,
+   "84"
+  ],
+  "spurgeon-psalms.PSA.32.8.1": [
+   "thetreasuryofdav02spuruoft",
+   97,
+   "84"
+  ],
+  "spurgeon-psalms.PSA.32.9.1": [
+   "thetreasuryofdav02spuruoft",
+   97,
+   "84"
+  ],
+  "spurgeon-psalms.PSA.32.10.1": [
+   "thetreasuryofdav02spuruoft",
+   98,
+   "85"
+  ],
+  "spurgeon-psalms.PSA.32.11.1": [
+   "thetreasuryofdav02spuruoft",
+   98,
+   "85"
+  ],
+  "spurgeon-psalms.PSA.33.1.1": [
+   "thetreasuryofdav02spuruoft",
+   117,
+   "104"
+  ],
+  "spurgeon-psalms.PSA.33.2.1": [
+   "thetreasuryofdav02spuruoft",
+   117,
+   "104"
+  ],
+  "spurgeon-psalms.PSA.33.3.1": [
+   "thetreasuryofdav02spuruoft",
+   117,
+   "104"
+  ],
+  "spurgeon-psalms.PSA.33.4.1": [
+   "thetreasuryofdav02spuruoft",
+   118,
+   "105"
+  ],
+  "spurgeon-psalms.PSA.33.5.1": [
+   "thetreasuryofdav02spuruoft",
+   118,
+   "105"
+  ],
+  "spurgeon-psalms.PSA.33.6.1": [
+   "thetreasuryofdav01spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.33.7.1": [
+   "thetreasuryofdav02spuruoft",
+   119,
+   "106"
+  ],
+  "spurgeon-psalms.PSA.33.8.1": [
+   "thetreasuryofdav02spuruoft",
+   119,
+   "106"
+  ],
+  "spurgeon-psalms.PSA.33.9.1": [
+   "thetreasuryofdav01spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.33.10.1": [
+   "thetreasuryofdav02spuruoft",
+   119,
+   "106"
+  ],
+  "spurgeon-psalms.PSA.33.11.1": [
+   "thetreasuryofdav02spuruoft",
+   120,
+   "107"
+  ],
+  "spurgeon-psalms.PSA.33.12.1": [
+   "thetreasuryofdav02spuruoft",
+   120,
+   "107"
+  ],
+  "spurgeon-psalms.PSA.33.13.1": [
+   "thetreasuryofdav02spuruoft",
+   120,
+   "107"
+  ],
+  "spurgeon-psalms.PSA.33.14.1": [
+   "thetreasuryofdav02spuruoft",
+   121,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.33.15.1": [
+   "thetreasuryofdav02spuruoft",
+   121,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.33.16.1": [
+   "thetreasuryofdav02spuruoft",
+   121,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.33.17.1": [
+   "thetreasuryofdav02spuruoft",
+   121,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.33.18.1": [
+   "thetreasuryofdav02spuruoft",
+   121,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.33.19.1": [
+   "thetreasuryofdav02spuruoft",
+   121,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.33.20.1": [
+   "thetreasuryofdav02spuruoft",
+   122,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.33.21.1": [
+   "thetreasuryofdav02spuruoft",
+   122,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.33.22.1": [
+   "thetreasuryofdav02spuruoft",
+   122,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.34.2.1": [
+   "thetreasuryofdav02spuruoft",
+   135,
+   "122"
+  ],
+  "spurgeon-psalms.PSA.34.3.1": [
+   "thetreasuryofdav02spuruoft",
+   136,
+   "123"
+  ],
+  "spurgeon-psalms.PSA.34.4.1": [
+   "thetreasuryofdav02spuruoft",
+   136,
+   "123"
+  ],
+  "spurgeon-psalms.PSA.34.5.1": [
+   "thetreasuryofdav02spuruoft",
+   136,
+   "123"
+  ],
+  "spurgeon-psalms.PSA.34.6.1": [
+   "thetreasuryofdav02spuruoft",
+   136,
+   "123"
+  ],
+  "spurgeon-psalms.PSA.34.7.1": [
+   "thetreasuryofdav02spuruoft",
+   137,
+   "124"
+  ],
+  "spurgeon-psalms.PSA.34.8.1": [
+   "thetreasuryofdav02spuruoft",
+   137,
+   "124"
+  ],
+  "spurgeon-psalms.PSA.34.9.1": [
+   "thetreasuryofdav02spuruoft",
+   137,
+   "124"
+  ],
+  "spurgeon-psalms.PSA.34.10.1": [
+   "thetreasuryofdav02spuruoft",
+   137,
+   "124"
+  ],
+  "spurgeon-psalms.PSA.34.11.1": [
+   "thetreasuryofdav01spuruoft",
+   371,
+   "354"
+  ],
+  "spurgeon-psalms.PSA.34.12.1": [
+   "thetreasuryofdav02spuruoft",
+   138,
+   "125"
+  ],
+  "spurgeon-psalms.PSA.34.13.1": [
+   "thetreasuryofdav02spuruoft",
+   138,
+   "125"
+  ],
+  "spurgeon-psalms.PSA.34.14.1": [
+   "thetreasuryofdav02spuruoft",
+   138,
+   "125"
+  ],
+  "spurgeon-psalms.PSA.34.15.1": [
+   "thetreasuryofdav02spuruoft",
+   138,
+   "125"
+  ],
+  "spurgeon-psalms.PSA.34.16.1": [
+   "thetreasuryofdav02spuruoft",
+   139,
+   "126"
+  ],
+  "spurgeon-psalms.PSA.34.17.1": [
+   "thetreasuryofdav02spuruoft",
+   139,
+   "126"
+  ],
+  "spurgeon-psalms.PSA.34.18.1": [
+   "thetreasuryofdav02spuruoft",
+   139,
+   "126"
+  ],
+  "spurgeon-psalms.PSA.34.19.1": [
+   "thetreasuryofdav02spuruoft",
+   139,
+   "126"
+  ],
+  "spurgeon-psalms.PSA.34.20.1": [
+   "thetreasuryofdav02spuruoft",
+   139,
+   "126"
+  ],
+  "spurgeon-psalms.PSA.34.21.1": [
+   "thetreasuryofdav02spuruoft",
+   140,
+   "127"
+  ],
+  "spurgeon-psalms.PSA.34.22.1": [
+   "thetreasuryofdav02spuruoft",
+   140,
+   "127"
+  ],
+  "spurgeon-psalms.PSA.34.23.1": [
+   "thetreasuryofdav02spuruoft",
+   140,
+   "127"
+  ],
+  "spurgeon-psalms.PSA.35.1.1": [
+   "thetreasuryofdav02spuruoft",
+   153,
+   "140"
+  ],
+  "spurgeon-psalms.PSA.35.3.1": [
+   "thetreasuryofdav02spuruoft",
+   154,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.35.4.1": [
+   "thetreasuryofdav02spuruoft",
+   154,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.35.6.1": [
+   "thetreasuryofdav02spuruoft",
+   154,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.35.7.1": [
+   "thetreasuryofdav02spuruoft",
+   154,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.35.8.1": [
+   "thetreasuryofdav02spuruoft",
+   155,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.35.9.1": [
+   "thetreasuryofdav02spuruoft",
+   155,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.35.10.1": [
+   "thetreasuryofdav02spuruoft",
+   155,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.35.11.1": [
+   "thetreasuryofdav02spuruoft",
+   155,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.35.12.1": [
+   "thetreasuryofdav02spuruoft",
+   156,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.35.14.1": [
+   "thetreasuryofdav02spuruoft",
+   156,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.35.15.1": [
+   "thetreasuryofdav02spuruoft",
+   156,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.35.16.1": [
+   "thetreasuryofdav02spuruoft",
+   156,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.35.17.1": [
+   "thetreasuryofdav02spuruoft",
+   157,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.35.18.1": [
+   "thetreasuryofdav02spuruoft",
+   157,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.35.19.1": [
+   "thetreasuryofdav02spuruoft",
+   157,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.35.20.1": [
+   "thetreasuryofdav02spuruoft",
+   157,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.35.21.1": [
+   "thetreasuryofdav02spuruoft",
+   158,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.35.22.1": [
+   "thetreasuryofdav02spuruoft",
+   158,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.35.23.1": [
+   "thetreasuryofdav02spuruoft",
+   158,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.35.24.1": [
+   "thetreasuryofdav02spuruoft",
+   158,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.35.25.1": [
+   "thetreasuryofdav02spuruoft",
+   158,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.35.26.1": [
+   "thetreasuryofdav02spuruoft",
+   158,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.35.27.1": [
+   "thetreasuryofdav02spuruoft",
+   158,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.35.28.1": [
+   "thetreasuryofdav02spuruoft",
+   159,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.36.2.1": [
+   "thetreasuryofdav02spuruoft",
+   170,
+   "157"
+  ],
+  "spurgeon-psalms.PSA.36.3.1": [
+   "thetreasuryofdav02spuruoft",
+   170,
+   "157"
+  ],
+  "spurgeon-psalms.PSA.36.4.1": [
+   "thetreasuryofdav02spuruoft",
+   171,
+   "158"
+  ],
+  "spurgeon-psalms.PSA.36.5.1": [
+   "thetreasuryofdav02spuruoft",
+   171,
+   "158"
+  ],
+  "spurgeon-psalms.PSA.36.6.1": [
+   "thetreasuryofdav02spuruoft",
+   171,
+   "158"
+  ],
+  "spurgeon-psalms.PSA.36.7.1": [
+   "thetreasuryofdav02spuruoft",
+   172,
+   "159"
+  ],
+  "spurgeon-psalms.PSA.36.8.1": [
+   "thetreasuryofdav02spuruoft",
+   172,
+   "159"
+  ],
+  "spurgeon-psalms.PSA.36.9.1": [
+   "thetreasuryofdav02spuruoft",
+   173,
+   "160"
+  ],
+  "spurgeon-psalms.PSA.36.10.1": [
+   "thetreasuryofdav02spuruoft",
+   173,
+   "160"
+  ],
+  "spurgeon-psalms.PSA.36.11.1": [
+   "thetreasuryofdav02spuruoft",
+   173,
+   "160"
+  ],
+  "spurgeon-psalms.PSA.36.12.1": [
+   "thetreasuryofdav02spuruoft",
+   173,
+   "160"
+  ],
+  "spurgeon-psalms.PSA.36.13.1": [
+   "thetreasuryofdav02spuruoft",
+   174,
+   "161"
+  ],
+  "spurgeon-psalms.PSA.37.1.1": [
+   "thetreasuryofdav02spuruoft",
+   183,
+   "170"
+  ],
+  "spurgeon-psalms.PSA.37.2.1": [
+   "thetreasuryofdav02spuruoft",
+   183,
+   "170"
+  ],
+  "spurgeon-psalms.PSA.37.3.1": [
+   "thetreasuryofdav02spuruoft",
+   184,
+   "171"
+  ],
+  "spurgeon-psalms.PSA.37.4.1": [
+   "thetreasuryofdav02spuruoft",
+   184,
+   "171"
+  ],
+  "spurgeon-psalms.PSA.37.5.1": [
+   "thetreasuryofdav02spuruoft",
+   184,
+   "171"
+  ],
+  "spurgeon-psalms.PSA.37.6.1": [
+   "thetreasuryofdav02spuruoft",
+   185,
+   "172"
+  ],
+  "spurgeon-psalms.PSA.37.7.1": [
+   "thetreasuryofdav02spuruoft",
+   185,
+   "172"
+  ],
+  "spurgeon-psalms.PSA.37.8.1": [
+   "thetreasuryofdav02spuruoft",
+   186,
+   "173"
+  ],
+  "spurgeon-psalms.PSA.37.9.1": [
+   "thetreasuryofdav02spuruoft",
+   186,
+   "173"
+  ],
+  "spurgeon-psalms.PSA.37.10.1": [
+   "thetreasuryofdav02spuruoft",
+   186,
+   "173"
+  ],
+  "spurgeon-psalms.PSA.37.11.1": [
+   "thetreasuryofdav02spuruoft",
+   186,
+   "173"
+  ],
+  "spurgeon-psalms.PSA.37.12.1": [
+   "thetreasuryofdav02spuruoft",
+   186,
+   "173"
+  ],
+  "spurgeon-psalms.PSA.37.13.1": [
+   "thetreasuryofdav02spuruoft",
+   186,
+   "173"
+  ],
+  "spurgeon-psalms.PSA.37.14.1": [
+   "thetreasuryofdav02spuruoft",
+   187,
+   "174"
+  ],
+  "spurgeon-psalms.PSA.37.15.1": [
+   "thetreasuryofdav02spuruoft",
+   187,
+   "174"
+  ],
+  "spurgeon-psalms.PSA.37.16.1": [
+   "thetreasuryofdav02spuruoft",
+   187,
+   "174"
+  ],
+  "spurgeon-psalms.PSA.37.17.1": [
+   "thetreasuryofdav02spuruoft",
+   188,
+   "175"
+  ],
+  "spurgeon-psalms.PSA.37.18.1": [
+   "thetreasuryofdav02spuruoft",
+   188,
+   "175"
+  ],
+  "spurgeon-psalms.PSA.37.19.1": [
+   "thetreasuryofdav02spuruoft",
+   188,
+   "175"
+  ],
+  "spurgeon-psalms.PSA.37.20.1": [
+   "thetreasuryofdav02spuruoft",
+   188,
+   "175"
+  ],
+  "spurgeon-psalms.PSA.37.21.1": [
+   "thetreasuryofdav02spuruoft",
+   188,
+   "175"
+  ],
+  "spurgeon-psalms.PSA.37.22.1": [
+   "thetreasuryofdav02spuruoft",
+   189,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.37.23.1": [
+   "thetreasuryofdav02spuruoft",
+   189,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.37.24.1": [
+   "thetreasuryofdav02spuruoft",
+   189,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.37.25.1": [
+   "thetreasuryofdav02spuruoft",
+   189,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.37.26.1": [
+   "thetreasuryofdav02spuruoft",
+   189,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.37.27.1": [
+   "thetreasuryofdav02spuruoft",
+   190,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.37.28.1": [
+   "thetreasuryofdav02spuruoft",
+   190,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.37.29.1": [
+   "thetreasuryofdav02spuruoft",
+   190,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.37.30.1": [
+   "thetreasuryofdav02spuruoft",
+   190,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.37.31.1": [
+   "thetreasuryofdav02spuruoft",
+   190,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.37.32.1": [
+   "thetreasuryofdav02spuruoft",
+   191,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.37.33.1": [
+   "thetreasuryofdav02spuruoft",
+   191,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.37.34.1": [
+   "thetreasuryofdav02spuruoft",
+   191,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.37.35.1": [
+   "thetreasuryofdav02spuruoft",
+   191,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.37.36.1": [
+   "thetreasuryofdav02spuruoft",
+   192,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.37.37.1": [
+   "thetreasuryofdav02spuruoft",
+   192,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.37.38.1": [
+   "thetreasuryofdav02spuruoft",
+   192,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.37.39.1": [
+   "thetreasuryofdav02spuruoft",
+   192,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.37.40.1": [
+   "thetreasuryofdav02spuruoft",
+   192,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.38.2.1": [
+   "thetreasuryofdav02spuruoft",
+   211,
+   "198"
+  ],
+  "spurgeon-psalms.PSA.38.3.1": [
+   "thetreasuryofdav02spuruoft",
+   211,
+   "198"
+  ],
+  "spurgeon-psalms.PSA.38.4.1": [
+   "thetreasuryofdav01spuruoft",
+   80,
+   "63"
+  ],
+  "spurgeon-psalms.PSA.38.5.1": [
+   "thetreasuryofdav02spuruoft",
+   212,
+   "199"
+  ],
+  "spurgeon-psalms.PSA.38.6.1": [
+   "thetreasuryofdav02spuruoft",
+   212,
+   "199"
+  ],
+  "spurgeon-psalms.PSA.38.7.1": [
+   "thetreasuryofdav02spuruoft",
+   212,
+   "199"
+  ],
+  "spurgeon-psalms.PSA.38.8.1": [
+   "thetreasuryofdav02spuruoft",
+   212,
+   "199"
+  ],
+  "spurgeon-psalms.PSA.38.9.1": [
+   "thetreasuryofdav02spuruoft",
+   212,
+   "199"
+  ],
+  "spurgeon-psalms.PSA.38.10.1": [
+   "thetreasuryofdav02spuruoft",
+   213,
+   "200"
+  ],
+  "spurgeon-psalms.PSA.38.11.1": [
+   "thetreasuryofdav02spuruoft",
+   213,
+   "200"
+  ],
+  "spurgeon-psalms.PSA.38.12.1": [
+   "thetreasuryofdav02spuruoft",
+   214,
+   "201"
+  ],
+  "spurgeon-psalms.PSA.38.13.1": [
+   "thetreasuryofdav02spuruoft",
+   214,
+   "201"
+  ],
+  "spurgeon-psalms.PSA.38.14.1": [
+   "thetreasuryofdav02spuruoft",
+   214,
+   "201"
+  ],
+  "spurgeon-psalms.PSA.38.15.1": [
+   "thetreasuryofdav02spuruoft",
+   214,
+   "201"
+  ],
+  "spurgeon-psalms.PSA.38.16.1": [
+   "thetreasuryofdav02spuruoft",
+   214,
+   "201"
+  ],
+  "spurgeon-psalms.PSA.38.17.1": [
+   "thetreasuryofdav02spuruoft",
+   215,
+   "202"
+  ],
+  "spurgeon-psalms.PSA.38.18.1": [
+   "thetreasuryofdav02spuruoft",
+   215,
+   "202"
+  ],
+  "spurgeon-psalms.PSA.38.19.1": [
+   "thetreasuryofdav02spuruoft",
+   215,
+   "202"
+  ],
+  "spurgeon-psalms.PSA.38.20.1": [
+   "thetreasuryofdav02spuruoft",
+   215,
+   "202"
+  ],
+  "spurgeon-psalms.PSA.38.21.1": [
+   "thetreasuryofdav02spuruoft",
+   215,
+   "202"
+  ],
+  "spurgeon-psalms.PSA.38.22.1": [
+   "thetreasuryofdav02spuruoft",
+   216,
+   "203"
+  ],
+  "spurgeon-psalms.PSA.38.23.1": [
+   "thetreasuryofdav02spuruoft",
+   216,
+   "203"
+  ],
+  "spurgeon-psalms.PSA.39.4.1": [
+   "thetreasuryofdav02spuruoft",
+   228,
+   "215"
+  ],
+  "spurgeon-psalms.PSA.39.5.1": [
+   "thetreasuryofdav02spuruoft",
+   228,
+   "215"
+  ],
+  "spurgeon-psalms.PSA.39.6.1": [
+   "thetreasuryofdav02spuruoft",
+   229,
+   "216"
+  ],
+  "spurgeon-psalms.PSA.39.7.1": [
+   "thetreasuryofdav02spuruoft",
+   229,
+   "216"
+  ],
+  "spurgeon-psalms.PSA.39.8.1": [
+   "thetreasuryofdav02spuruoft",
+   230,
+   "217"
+  ],
+  "spurgeon-psalms.PSA.39.9.1": [
+   "thetreasuryofdav02spuruoft",
+   230,
+   "217"
+  ],
+  "spurgeon-psalms.PSA.39.10.1": [
+   "thetreasuryofdav02spuruoft",
+   231,
+   "218"
+  ],
+  "spurgeon-psalms.PSA.39.12.1": [
+   "thetreasuryofdav02spuruoft",
+   231,
+   "218"
+  ],
+  "spurgeon-psalms.PSA.39.13.1": [
+   "thetreasuryofdav02spuruoft",
+   231,
+   "218"
+  ],
+  "spurgeon-psalms.PSA.39.14.1": [
+   "thetreasuryofdav02spuruoft",
+   232,
+   "219"
+  ],
+  "spurgeon-psalms.PSA.40.2.1": [
+   "thetreasuryofdav02spuruoft",
+   248,
+   "235"
+  ],
+  "spurgeon-psalms.PSA.40.3.1": [
+   "thetreasuryofdav02spuruoft",
+   248,
+   "235"
+  ],
+  "spurgeon-psalms.PSA.40.4.1": [
+   "thetreasuryofdav02spuruoft",
+   249,
+   "236"
+  ],
+  "spurgeon-psalms.PSA.40.5.1": [
+   "thetreasuryofdav02spuruoft",
+   249,
+   "236"
+  ],
+  "spurgeon-psalms.PSA.40.6.1": [
+   "thetreasuryofdav02spuruoft",
+   250,
+   "237"
+  ],
+  "spurgeon-psalms.PSA.40.7.1": [
+   "thetreasuryofdav02spuruoft",
+   250,
+   "237"
+  ],
+  "spurgeon-psalms.PSA.40.8.1": [
+   "thetreasuryofdav02spuruoft",
+   251,
+   "238"
+  ],
+  "spurgeon-psalms.PSA.40.9.1": [
+   "thetreasuryofdav02spuruoft",
+   251,
+   "238"
+  ],
+  "spurgeon-psalms.PSA.40.10.1": [
+   "thetreasuryofdav02spuruoft",
+   252,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.40.11.1": [
+   "thetreasuryofdav02spuruoft",
+   252,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.40.12.1": [
+   "thetreasuryofdav02spuruoft",
+   252,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.40.13.1": [
+   "thetreasuryofdav02spuruoft",
+   252,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.40.14.1": [
+   "thetreasuryofdav02spuruoft",
+   254,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.40.15.1": [
+   "thetreasuryofdav02spuruoft",
+   254,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.40.16.1": [
+   "thetreasuryofdav02spuruoft",
+   254,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.40.17.1": [
+   "thetreasuryofdav02spuruoft",
+   254,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.40.18.1": [
+   "thetreasuryofdav02spuruoft",
+   255,
+   "242"
+  ],
+  "spurgeon-psalms.PSA.41.2.1": [
+   "thetreasuryofdav02spuruoft",
+   268,
+   "255"
+  ],
+  "spurgeon-psalms.PSA.41.3.1": [
+   "thetreasuryofdav02spuruoft",
+   269,
+   "256"
+  ],
+  "spurgeon-psalms.PSA.41.4.1": [
+   "thetreasuryofdav02spuruoft",
+   269,
+   "256"
+  ],
+  "spurgeon-psalms.PSA.41.5-10.1": [
+   "thetreasuryofdav02spuruoft",
+   270,
+   "257"
+  ],
+  "spurgeon-psalms.PSA.41.5.1": [
+   "thetreasuryofdav02spuruoft",
+   270,
+   "257"
+  ],
+  "spurgeon-psalms.PSA.41.6.1": [
+   "thetreasuryofdav02spuruoft",
+   270,
+   "257"
+  ],
+  "spurgeon-psalms.PSA.41.7.1": [
+   "thetreasuryofdav02spuruoft",
+   271,
+   "258"
+  ],
+  "spurgeon-psalms.PSA.41.8.1": [
+   "thetreasuryofdav02spuruoft",
+   271,
+   "258"
+  ],
+  "spurgeon-psalms.PSA.41.9.1": [
+   "thetreasuryofdav02spuruoft",
+   271,
+   "258"
+  ],
+  "spurgeon-psalms.PSA.41.10.1": [
+   "thetreasuryofdav02spuruoft",
+   272,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.41.11.1": [
+   "thetreasuryofdav02spuruoft",
+   272,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.41.12.1": [
+   "thetreasuryofdav02spuruoft",
+   272,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.41.13.1": [
+   "thetreasuryofdav02spuruoft",
+   273,
+   "260"
+  ],
+  "spurgeon-psalms.PSA.41.14.1": [
+   "thetreasuryofdav02spuruoft",
+   273,
+   "260"
+  ],
+  "spurgeon-psalms.PSA.42.2.1": [
+   "thetreasuryofdav02spuruoft",
+   283,
+   "270"
+  ],
+  "spurgeon-psalms.PSA.42.3.1": [
+   "thetreasuryofdav02spuruoft",
+   284,
+   "271"
+  ],
+  "spurgeon-psalms.PSA.42.4.1": [
+   "thetreasuryofdav02spuruoft",
+   284,
+   "271"
+  ],
+  "spurgeon-psalms.PSA.42.6.1": [
+   "thetreasuryofdav02spuruoft",
+   285,
+   "272"
+  ],
+  "spurgeon-psalms.PSA.42.7.1": [
+   "thetreasuryofdav02spuruoft",
+   286,
+   "273"
+  ],
+  "spurgeon-psalms.PSA.42.8.1": [
+   "thetreasuryofdav02spuruoft",
+   287,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.42.9.1": [
+   "thetreasuryofdav02spuruoft",
+   287,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.42.10.1": [
+   "thetreasuryofdav02spuruoft",
+   287,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.42.11.1": [
+   "thetreasuryofdav02spuruoft",
+   288,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.42.12.1": [
+   "thetreasuryofdav02spuruoft",
+   288,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.43.1.1": [
+   "thetreasuryofdav02spuruoft",
+   305,
+   "292"
+  ],
+  "spurgeon-psalms.PSA.43.2.1": [
+   "thetreasuryofdav02spuruoft",
+   305,
+   "292"
+  ],
+  "spurgeon-psalms.PSA.43.3.1": [
+   "thetreasuryofdav02spuruoft",
+   306,
+   "293"
+  ],
+  "spurgeon-psalms.PSA.43.4.1": [
+   "thetreasuryofdav02spuruoft",
+   306,
+   "293"
+  ],
+  "spurgeon-psalms.PSA.43.5.1": [
+   "thetreasuryofdav02spuruoft",
+   307,
+   "294"
+  ],
+  "spurgeon-psalms.PSA.44.3.1": [
+   "thetreasuryofdav02spuruoft",
+   312,
+   "299"
+  ],
+  "spurgeon-psalms.PSA.44.4.1": [
+   "thetreasuryofdav02spuruoft",
+   313,
+   "300"
+  ],
+  "spurgeon-psalms.PSA.44.6.1": [
+   "thetreasuryofdav02spuruoft",
+   314,
+   "301"
+  ],
+  "spurgeon-psalms.PSA.44.7.1": [
+   "thetreasuryofdav02spuruoft",
+   314,
+   "301"
+  ],
+  "spurgeon-psalms.PSA.44.8.1": [
+   "thetreasuryofdav02spuruoft",
+   314,
+   "301"
+  ],
+  "spurgeon-psalms.PSA.44.9.1": [
+   "thetreasuryofdav02spuruoft",
+   315,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.44.10.1": [
+   "thetreasuryofdav02spuruoft",
+   315,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.44.11.1": [
+   "thetreasuryofdav02spuruoft",
+   315,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.44.12.1": [
+   "thetreasuryofdav02spuruoft",
+   316,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.44.13.1": [
+   "thetreasuryofdav02spuruoft",
+   316,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.44.14.1": [
+   "thetreasuryofdav02spuruoft",
+   316,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.44.15.1": [
+   "thetreasuryofdav02spuruoft",
+   316,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.44.17.1": [
+   "thetreasuryofdav02spuruoft",
+   317,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.44.18.1": [
+   "thetreasuryofdav02spuruoft",
+   317,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.44.19.1": [
+   "thetreasuryofdav02spuruoft",
+   317,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.44.20.1": [
+   "thetreasuryofdav02spuruoft",
+   317,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.44.21.1": [
+   "thetreasuryofdav02spuruoft",
+   318,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.44.22.1": [
+   "thetreasuryofdav02spuruoft",
+   318,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.44.23.1": [
+   "thetreasuryofdav02spuruoft",
+   318,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.44.24.1": [
+   "thetreasuryofdav02spuruoft",
+   318,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.44.25.1": [
+   "thetreasuryofdav02spuruoft",
+   319,
+   "306"
+  ],
+  "spurgeon-psalms.PSA.44.26.1": [
+   "thetreasuryofdav02spuruoft",
+   319,
+   "306"
+  ],
+  "spurgeon-psalms.PSA.44.27.1": [
+   "thetreasuryofdav02spuruoft",
+   319,
+   "306"
+  ],
+  "spurgeon-psalms.PSA.45.2.1": [
+   "thetreasuryofdav02spuruoft",
+   328,
+   "315"
+  ],
+  "spurgeon-psalms.PSA.45.3.1": [
+   "thetreasuryofdav02spuruoft",
+   329,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.45.4.1": [
+   "thetreasuryofdav02spuruoft",
+   330,
+   "317"
+  ],
+  "spurgeon-psalms.PSA.45.5.1": [
+   "thetreasuryofdav02spuruoft",
+   330,
+   "317"
+  ],
+  "spurgeon-psalms.PSA.45.6.1": [
+   "thetreasuryofdav02spuruoft",
+   330,
+   "317"
+  ],
+  "spurgeon-psalms.PSA.45.7.1": [
+   "thetreasuryofdav02spuruoft",
+   331,
+   "318"
+  ],
+  "spurgeon-psalms.PSA.45.8.1": [
+   "thetreasuryofdav02spuruoft",
+   331,
+   "318"
+  ],
+  "spurgeon-psalms.PSA.45.9.1": [
+   "thetreasuryofdav02spuruoft",
+   331,
+   "318"
+  ],
+  "spurgeon-psalms.PSA.45.10.1": [
+   "thetreasuryofdav02spuruoft",
+   332,
+   "319"
+  ],
+  "spurgeon-psalms.PSA.45.11.1": [
+   "thetreasuryofdav02spuruoft",
+   332,
+   "319"
+  ],
+  "spurgeon-psalms.PSA.45.12.1": [
+   "thetreasuryofdav02spuruoft",
+   333,
+   "320"
+  ],
+  "spurgeon-psalms.PSA.45.13.1": [
+   "thetreasuryofdav02spuruoft",
+   333,
+   "320"
+  ],
+  "spurgeon-psalms.PSA.45.14.1": [
+   "thetreasuryofdav02spuruoft",
+   333,
+   "320"
+  ],
+  "spurgeon-psalms.PSA.45.15.1": [
+   "thetreasuryofdav02spuruoft",
+   334,
+   "321"
+  ],
+  "spurgeon-psalms.PSA.45.16.1": [
+   "thetreasuryofdav02spuruoft",
+   334,
+   "321"
+  ],
+  "spurgeon-psalms.PSA.45.17.1": [
+   "thetreasuryofdav02spuruoft",
+   334,
+   "321"
+  ],
+  "spurgeon-psalms.PSA.45.18.1": [
+   "thetreasuryofdav02spuruoft",
+   334,
+   "321"
+  ],
+  "spurgeon-psalms.PSA.46.2.1": [
+   "thetreasuryofdav02spuruoft",
+   352,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.46.3.1": [
+   "thetreasuryofdav02spuruoft",
+   353,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.46.4.1": [
+   "thetreasuryofdav02spuruoft",
+   353,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.46.5.1": [
+   "thetreasuryofdav02spuruoft",
+   353,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.46.6.1": [
+   "thetreasuryofdav02spuruoft",
+   354,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.46.7.1": [
+   "thetreasuryofdav02spuruoft",
+   354,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.46.8.1": [
+   "thetreasuryofdav01spuruoft",
+   148,
+   "131"
+  ],
+  "spurgeon-psalms.PSA.46.9.1": [
+   "thetreasuryofdav02spuruoft",
+   355,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.46.10.1": [
+   "thetreasuryofdav02spuruoft",
+   355,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.46.11.1": [
+   "thetreasuryofdav02spuruoft",
+   356,
+   "343"
+  ],
+  "spurgeon-psalms.PSA.46.12.1": [
+   "thetreasuryofdav01spuruoft",
+   148,
+   "131"
+  ],
+  "spurgeon-psalms.PSA.47.2.1": [
+   "thetreasuryofdav02spuruoft",
+   365,
+   "352"
+  ],
+  "spurgeon-psalms.PSA.47.3.1": [
+   "thetreasuryofdav02spuruoft",
+   365,
+   "352"
+  ],
+  "spurgeon-psalms.PSA.47.4.1": [
+   "thetreasuryofdav02spuruoft",
+   366,
+   "353"
+  ],
+  "spurgeon-psalms.PSA.47.5.1": [
+   "thetreasuryofdav02spuruoft",
+   366,
+   "353"
+  ],
+  "spurgeon-psalms.PSA.47.6.1": [
+   "thetreasuryofdav02spuruoft",
+   367,
+   "354"
+  ],
+  "spurgeon-psalms.PSA.47.7.1": [
+   "thetreasuryofdav02spuruoft",
+   367,
+   "354"
+  ],
+  "spurgeon-psalms.PSA.47.8.1": [
+   "thetreasuryofdav02spuruoft",
+   367,
+   "354"
+  ],
+  "spurgeon-psalms.PSA.47.9.1": [
+   "thetreasuryofdav02spuruoft",
+   367,
+   "354"
+  ],
+  "spurgeon-psalms.PSA.47.10.1": [
+   "thetreasuryofdav02spuruoft",
+   368,
+   "355"
+  ],
+  "spurgeon-psalms.PSA.48.2.1": [
+   "thetreasuryofdav02spuruoft",
+   373,
+   "360"
+  ],
+  "spurgeon-psalms.PSA.48.3.1": [
+   "thetreasuryofdav02spuruoft",
+   373,
+   "360"
+  ],
+  "spurgeon-psalms.PSA.48.4.1": [
+   "thetreasuryofdav02spuruoft",
+   374,
+   "361"
+  ],
+  "spurgeon-psalms.PSA.48.5.1": [
+   "thetreasuryofdav02spuruoft",
+   374,
+   "361"
+  ],
+  "spurgeon-psalms.PSA.48.6.1": [
+   "thetreasuryofdav02spuruoft",
+   374,
+   "361"
+  ],
+  "spurgeon-psalms.PSA.48.7.1": [
+   "thetreasuryofdav02spuruoft",
+   374,
+   "361"
+  ],
+  "spurgeon-psalms.PSA.48.8.1": [
+   "thetreasuryofdav02spuruoft",
+   374,
+   "361"
+  ],
+  "spurgeon-psalms.PSA.48.9.1": [
+   "thetreasuryofdav02spuruoft",
+   375,
+   "362"
+  ],
+  "spurgeon-psalms.PSA.48.10.1": [
+   "thetreasuryofdav02spuruoft",
+   375,
+   "362"
+  ],
+  "spurgeon-psalms.PSA.48.11.1": [
+   "thetreasuryofdav02spuruoft",
+   375,
+   "362"
+  ],
+  "spurgeon-psalms.PSA.48.12.1": [
+   "thetreasuryofdav02spuruoft",
+   375,
+   "362"
+  ],
+  "spurgeon-psalms.PSA.48.13.1": [
+   "thetreasuryofdav02spuruoft",
+   376,
+   "363"
+  ],
+  "spurgeon-psalms.PSA.48.14.1": [
+   "thetreasuryofdav02spuruoft",
+   376,
+   "363"
+  ],
+  "spurgeon-psalms.PSA.48.15.1": [
+   "thetreasuryofdav02spuruoft",
+   376,
+   "363"
+  ],
+  "spurgeon-psalms.PSA.49.2.1": [
+   "thetreasuryofdav02spuruoft",
+   382,
+   "369"
+  ],
+  "spurgeon-psalms.PSA.49.3.1": [
+   "thetreasuryofdav02spuruoft",
+   382,
+   "369"
+  ],
+  "spurgeon-psalms.PSA.49.4.1": [
+   "thetreasuryofdav02spuruoft",
+   382,
+   "369"
+  ],
+  "spurgeon-psalms.PSA.49.5.1": [
+   "thetreasuryofdav02spuruoft",
+   383,
+   "370"
+  ],
+  "spurgeon-psalms.PSA.49.6.1": [
+   "thetreasuryofdav02spuruoft",
+   383,
+   "370"
+  ],
+  "spurgeon-psalms.PSA.49.7.1": [
+   "thetreasuryofdav02spuruoft",
+   383,
+   "370"
+  ],
+  "spurgeon-psalms.PSA.49.8.1": [
+   "thetreasuryofdav02spuruoft",
+   384,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.49.9.1": [
+   "thetreasuryofdav02spuruoft",
+   384,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.49.10.1": [
+   "thetreasuryofdav02spuruoft",
+   384,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.49.11.1": [
+   "thetreasuryofdav02spuruoft",
+   384,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.49.12.1": [
+   "thetreasuryofdav02spuruoft",
+   384,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.49.13.1": [
+   "thetreasuryofdav02spuruoft",
+   384,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.49.14.1": [
+   "thetreasuryofdav02spuruoft",
+   385,
+   "372"
+  ],
+  "spurgeon-psalms.PSA.49.15.1": [
+   "thetreasuryofdav02spuruoft",
+   385,
+   "372"
+  ],
+  "spurgeon-psalms.PSA.49.16.1": [
+   "thetreasuryofdav02spuruoft",
+   385,
+   "372"
+  ],
+  "spurgeon-psalms.PSA.49.17.1": [
+   "thetreasuryofdav02spuruoft",
+   386,
+   "373"
+  ],
+  "spurgeon-psalms.PSA.49.18.1": [
+   "thetreasuryofdav02spuruoft",
+   386,
+   "373"
+  ],
+  "spurgeon-psalms.PSA.49.19.1": [
+   "thetreasuryofdav02spuruoft",
+   386,
+   "373"
+  ],
+  "spurgeon-psalms.PSA.49.20.1": [
+   "thetreasuryofdav02spuruoft",
+   387,
+   "374"
+  ],
+  "spurgeon-psalms.PSA.49.21.1": [
+   "thetreasuryofdav02spuruoft",
+   387,
+   "374"
+  ],
+  "spurgeon-psalms.PSA.50.1.1": [
+   "thetreasuryofdav02spuruoft",
+   397,
+   "384"
+  ],
+  "spurgeon-psalms.PSA.50.2.1": [
+   "thetreasuryofdav02spuruoft",
+   397,
+   "384"
+  ],
+  "spurgeon-psalms.PSA.50.3.1": [
+   "thetreasuryofdav02spuruoft",
+   398,
+   "385"
+  ],
+  "spurgeon-psalms.PSA.50.4.1": [
+   "thetreasuryofdav02spuruoft",
+   398,
+   "385"
+  ],
+  "spurgeon-psalms.PSA.50.5.1": [
+   "thetreasuryofdav02spuruoft",
+   398,
+   "385"
+  ],
+  "spurgeon-psalms.PSA.50.6.1": [
+   "thetreasuryofdav02spuruoft",
+   398,
+   "385"
+  ],
+  "spurgeon-psalms.PSA.50.7-15.1": [
+   "thetreasuryofdav02spuruoft",
+   399,
+   "386"
+  ],
+  "spurgeon-psalms.PSA.50.7.1": [
+   "thetreasuryofdav02spuruoft",
+   399,
+   "386"
+  ],
+  "spurgeon-psalms.PSA.50.8.1": [
+   "thetreasuryofdav02spuruoft",
+   399,
+   "386"
+  ],
+  "spurgeon-psalms.PSA.50.9.1": [
+   "thetreasuryofdav02spuruoft",
+   399,
+   "386"
+  ],
+  "spurgeon-psalms.PSA.50.10.1": [
+   "thetreasuryofdav02spuruoft",
+   400,
+   "387"
+  ],
+  "spurgeon-psalms.PSA.50.11.1": [
+   "thetreasuryofdav02spuruoft",
+   400,
+   "387"
+  ],
+  "spurgeon-psalms.PSA.50.12.1": [
+   "thetreasuryofdav02spuruoft",
+   400,
+   "387"
+  ],
+  "spurgeon-psalms.PSA.50.13.1": [
+   "thetreasuryofdav02spuruoft",
+   400,
+   "387"
+  ],
+  "spurgeon-psalms.PSA.50.14.1": [
+   "thetreasuryofdav02spuruoft",
+   400,
+   "387"
+  ],
+  "spurgeon-psalms.PSA.50.15.1": [
+   "thetreasuryofdav02spuruoft",
+   401,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.50.16-21.1": [
+   "thetreasuryofdav02spuruoft",
+   401,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.50.16.1": [
+   "thetreasuryofdav02spuruoft",
+   401,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.50.17.1": [
+   "thetreasuryofdav02spuruoft",
+   402,
+   "389"
+  ],
+  "spurgeon-psalms.PSA.50.18.1": [
+   "thetreasuryofdav02spuruoft",
+   402,
+   "389"
+  ],
+  "spurgeon-psalms.PSA.50.19.1": [
+   "thetreasuryofdav02spuruoft",
+   402,
+   "389"
+  ],
+  "spurgeon-psalms.PSA.50.20.1": [
+   "thetreasuryofdav02spuruoft",
+   403,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.50.21.1": [
+   "thetreasuryofdav02spuruoft",
+   403,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.50.22.1": [
+   "thetreasuryofdav02spuruoft",
+   403,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.50.23.1": [
+   "thetreasuryofdav02spuruoft",
+   403,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.51.10.1": [
+   "thetreasuryofdav02spuruoft",
+   417,
+   "404"
+  ],
+  "spurgeon-psalms.PSA.51.11.1": [
+   "thetreasuryofdav02spuruoft",
+   417,
+   "404"
+  ],
+  "spurgeon-psalms.PSA.51.12.1": [
+   "thetreasuryofdav02spuruoft",
+   418,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.51.13.1": [
+   "thetreasuryofdav02spuruoft",
+   418,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.51.14.1": [
+   "thetreasuryofdav02spuruoft",
+   418,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.51.15.1": [
+   "thetreasuryofdav02spuruoft",
+   418,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.51.16.1": [
+   "thetreasuryofdav02spuruoft",
+   419,
+   "406"
+  ],
+  "spurgeon-psalms.PSA.51.17.1": [
+   "thetreasuryofdav02spuruoft",
+   419,
+   "406"
+  ],
+  "spurgeon-psalms.PSA.51.18.1": [
+   "thetreasuryofdav02spuruoft",
+   420,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.51.19.1": [
+   "thetreasuryofdav02spuruoft",
+   420,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.51.20.1": [
+   "thetreasuryofdav02spuruoft",
+   420,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.51.21.1": [
+   "thetreasuryofdav02spuruoft",
+   420,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.52.3.1": [
+   "thetreasuryofdav02spuruoft",
+   439,
+   "426"
+  ],
+  "spurgeon-psalms.PSA.52.4.1": [
+   "thetreasuryofdav02spuruoft",
+   439,
+   "426"
+  ],
+  "spurgeon-psalms.PSA.52.5.1": [
+   "thetreasuryofdav02spuruoft",
+   439,
+   "426"
+  ],
+  "spurgeon-psalms.PSA.52.6.1": [
+   "thetreasuryofdav02spuruoft",
+   440,
+   "427"
+  ],
+  "spurgeon-psalms.PSA.52.7.1": [
+   "thetreasuryofdav02spuruoft",
+   440,
+   "427"
+  ],
+  "spurgeon-psalms.PSA.52.8.1": [
+   "thetreasuryofdav02spuruoft",
+   440,
+   "427"
+  ],
+  "spurgeon-psalms.PSA.52.9.1": [
+   "thetreasuryofdav02spuruoft",
+   440,
+   "427"
+  ],
+  "spurgeon-psalms.PSA.52.10.1": [
+   "thetreasuryofdav02spuruoft",
+   440,
+   "427"
+  ],
+  "spurgeon-psalms.PSA.52.11.1": [
+   "thetreasuryofdav02spuruoft",
+   441,
+   "428"
+  ],
+  "spurgeon-psalms.PSA.53.2.1": [
+   "thetreasuryofdav02spuruoft",
+   446,
+   "433"
+  ],
+  "spurgeon-psalms.PSA.53.3.1": [
+   "thetreasuryofdav01spuruoft",
+   179,
+   "162"
+  ],
+  "spurgeon-psalms.PSA.53.4.1": [
+   "thetreasuryofdav02spuruoft",
+   447,
+   "434"
+  ],
+  "spurgeon-psalms.PSA.53.5.1": [
+   "thetreasuryofdav01spuruoft",
+   189,
+   "172"
+  ],
+  "spurgeon-psalms.PSA.53.6.1": [
+   "thetreasuryofdav01spuruoft",
+   182,
+   "165"
+  ],
+  "spurgeon-psalms.PSA.53.7.1": [
+   "thetreasuryofdav01spuruoft",
+   180,
+   "163"
+  ],
+  "spurgeon-psalms.PSA.55.2.1": [
+   "thetreasuryofdav02spuruoft",
+   458,
+   "445"
+  ],
+  "spurgeon-psalms.PSA.55.3.1": [
+   "thetreasuryofdav02spuruoft",
+   459,
+   "446"
+  ],
+  "spurgeon-psalms.PSA.55.4.1": [
+   "thetreasuryofdav02spuruoft",
+   459,
+   "446"
+  ],
+  "spurgeon-psalms.PSA.55.5.1": [
+   "thetreasuryofdav02spuruoft",
+   459,
+   "446"
+  ],
+  "spurgeon-psalms.PSA.55.6.1": [
+   "thetreasuryofdav02spuruoft",
+   459,
+   "446"
+  ],
+  "spurgeon-psalms.PSA.55.7.1": [
+   "thetreasuryofdav02spuruoft",
+   459,
+   "446"
+  ],
+  "spurgeon-psalms.PSA.55.8.1": [
+   "thetreasuryofdav02spuruoft",
+   460,
+   "447"
+  ],
+  "spurgeon-psalms.PSA.55.9.1": [
+   "thetreasuryofdav02spuruoft",
+   460,
+   "447"
+  ],
+  "spurgeon-psalms.PSA.55.10.1": [
+   "thetreasuryofdav02spuruoft",
+   460,
+   "447"
+  ],
+  "spurgeon-psalms.PSA.55.10.2": [
+   "thetreasuryofdav02spuruoft",
+   460,
+   "447"
+  ],
+  "spurgeon-psalms.PSA.55.11.1": [
+   "thetreasuryofdav02spuruoft",
+   461,
+   "448"
+  ],
+  "spurgeon-psalms.PSA.55.13.1": [
+   "thetreasuryofdav02spuruoft",
+   461,
+   "448"
+  ],
+  "spurgeon-psalms.PSA.55.14.1": [
+   "thetreasuryofdav02spuruoft",
+   462,
+   "449"
+  ],
+  "spurgeon-psalms.PSA.55.15.1": [
+   "thetreasuryofdav02spuruoft",
+   462,
+   "449"
+  ],
+  "spurgeon-psalms.PSA.55.16.1": [
+   "thetreasuryofdav02spuruoft",
+   462,
+   "449"
+  ],
+  "spurgeon-psalms.PSA.55.17.1": [
+   "thetreasuryofdav02spuruoft",
+   463,
+   "450"
+  ],
+  "spurgeon-psalms.PSA.55.18.1": [
+   "thetreasuryofdav02spuruoft",
+   463,
+   "450"
+  ],
+  "spurgeon-psalms.PSA.55.19.1": [
+   "thetreasuryofdav02spuruoft",
+   463,
+   "450"
+  ],
+  "spurgeon-psalms.PSA.55.20.1": [
+   "thetreasuryofdav02spuruoft",
+   464,
+   "451"
+  ],
+  "spurgeon-psalms.PSA.55.21.1": [
+   "thetreasuryofdav02spuruoft",
+   464,
+   "451"
+  ],
+  "spurgeon-psalms.PSA.55.22.1": [
+   "thetreasuryofdav02spuruoft",
+   464,
+   "451"
+  ],
+  "spurgeon-psalms.PSA.55.23.1": [
+   "thetreasuryofdav02spuruoft",
+   464,
+   "451"
+  ],
+  "spurgeon-psalms.PSA.55.24.1": [
+   "thetreasuryofdav02spuruoft",
+   465,
+   "452"
+  ],
+  "spurgeon-psalms.PSA.56.3.1": [
+   "thetreasuryofdav02spuruoft",
+   477,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.56.3.2": [
+   "thetreasuryofdav02spuruoft",
+   477,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.56.4-5.1": [
+   "thetreasuryofdav02spuruoft",
+   478,
+   "465"
+  ],
+  "spurgeon-psalms.PSA.56.5.1": [
+   "thetreasuryofdav02spuruoft",
+   478,
+   "465"
+  ],
+  "spurgeon-psalms.PSA.56.6.1": [
+   "thetreasuryofdav02spuruoft",
+   478,
+   "465"
+  ],
+  "spurgeon-psalms.PSA.56.7.1": [
+   "thetreasuryofdav02spuruoft",
+   479,
+   "466"
+  ],
+  "spurgeon-psalms.PSA.56.8.1": [
+   "thetreasuryofdav02spuruoft",
+   479,
+   "466"
+  ],
+  "spurgeon-psalms.PSA.56.9.1": [
+   "thetreasuryofdav02spuruoft",
+   479,
+   "466"
+  ],
+  "spurgeon-psalms.PSA.56.11.1": [
+   "thetreasuryofdav02spuruoft",
+   480,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.56.12.1": [
+   "thetreasuryofdav02spuruoft",
+   480,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.56.13.1": [
+   "thetreasuryofdav02spuruoft",
+   480,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.56.14.1": [
+   "thetreasuryofdav02spuruoft",
+   480,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.57.2.1": [
+   "thetreasuryofdav02spuruoft",
+   488,
+   "475"
+  ],
+  "spurgeon-psalms.PSA.57.3.1": [
+   "thetreasuryofdav02spuruoft",
+   489,
+   "476"
+  ],
+  "spurgeon-psalms.PSA.57.4.1": [
+   "thetreasuryofdav02spuruoft",
+   489,
+   "476"
+  ],
+  "spurgeon-psalms.PSA.57.5.1": [
+   "thetreasuryofdav02spuruoft",
+   489,
+   "476"
+  ],
+  "spurgeon-psalms.PSA.57.6.1": [
+   "thetreasuryofdav02spuruoft",
+   490,
+   "477"
+  ],
+  "spurgeon-psalms.PSA.57.7.1": [
+   "thetreasuryofdav02spuruoft",
+   490,
+   "477"
+  ],
+  "spurgeon-psalms.PSA.57.8.1": [
+   "thetreasuryofdav02spuruoft",
+   490,
+   "477"
+  ],
+  "spurgeon-psalms.PSA.57.9.1": [
+   "thetreasuryofdav02spuruoft",
+   490,
+   "477"
+  ],
+  "spurgeon-psalms.PSA.57.10.1": [
+   "thetreasuryofdav02spuruoft",
+   491,
+   "478"
+  ],
+  "spurgeon-psalms.PSA.57.11.1": [
+   "thetreasuryofdav02spuruoft",
+   491,
+   "478"
+  ],
+  "spurgeon-psalms.PSA.57.12.1": [
+   "thetreasuryofdav02spuruoft",
+   491,
+   "478"
+  ],
+  "spurgeon-psalms.PSA.58.2.1": [
+   "thetreasuryofdav03spuruoft",
+   18,
+   ""
+  ],
+  "spurgeon-psalms.PSA.58.3.1": [
+   "thetreasuryofdav03spuruoft",
+   18,
+   ""
+  ],
+  "spurgeon-psalms.PSA.58.4.1": [
+   "thetreasuryofdav03spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.58.5.1": [
+   "thetreasuryofdav02spuruoft",
+   217,
+   "204"
+  ],
+  "spurgeon-psalms.PSA.58.6.1": [
+   "thetreasuryofdav03spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.58.7.1": [
+   "thetreasuryofdav03spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.58.8.1": [
+   "thetreasuryofdav03spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.58.9.1": [
+   "thetreasuryofdav03spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.58.10.1": [
+   "thetreasuryofdav03spuruoft",
+   20,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.58.11.1": [
+   "thetreasuryofdav01spuruoft",
+   123,
+   "106"
+  ],
+  "spurgeon-psalms.PSA.58.12.1": [
+   "thetreasuryofdav03spuruoft",
+   21,
+   "4"
+  ],
+  "spurgeon-psalms.PSA.59.2.1": [
+   "thetreasuryofdav03spuruoft",
+   30,
+   "13"
+  ],
+  "spurgeon-psalms.PSA.59.3.1": [
+   "thetreasuryofdav03spuruoft",
+   30,
+   "13"
+  ],
+  "spurgeon-psalms.PSA.59.4.1": [
+   "thetreasuryofdav03spuruoft",
+   31,
+   "14"
+  ],
+  "spurgeon-psalms.PSA.59.5.1": [
+   "thetreasuryofdav03spuruoft",
+   31,
+   "14"
+  ],
+  "spurgeon-psalms.PSA.59.6.1": [
+   "thetreasuryofdav03spuruoft",
+   31,
+   "14"
+  ],
+  "spurgeon-psalms.PSA.59.7.1": [
+   "thetreasuryofdav03spuruoft",
+   32,
+   "15"
+  ],
+  "spurgeon-psalms.PSA.59.8.1": [
+   "thetreasuryofdav03spuruoft",
+   32,
+   "15"
+  ],
+  "spurgeon-psalms.PSA.59.9.1": [
+   "thetreasuryofdav03spuruoft",
+   33,
+   "16"
+  ],
+  "spurgeon-psalms.PSA.59.10.1": [
+   "thetreasuryofdav03spuruoft",
+   33,
+   "16"
+  ],
+  "spurgeon-psalms.PSA.59.11.1": [
+   "thetreasuryofdav02spuruoft",
+   496,
+   "483"
+  ],
+  "spurgeon-psalms.PSA.59.12.1": [
+   "thetreasuryofdav03spuruoft",
+   33,
+   "16"
+  ],
+  "spurgeon-psalms.PSA.59.13.1": [
+   "thetreasuryofdav03spuruoft",
+   33,
+   "16"
+  ],
+  "spurgeon-psalms.PSA.59.14.1": [
+   "thetreasuryofdav03spuruoft",
+   34,
+   "17"
+  ],
+  "spurgeon-psalms.PSA.59.15.1": [
+   "thetreasuryofdav03spuruoft",
+   35,
+   "18"
+  ],
+  "spurgeon-psalms.PSA.59.16.1": [
+   "thetreasuryofdav03spuruoft",
+   35,
+   "18"
+  ],
+  "spurgeon-psalms.PSA.59.17.1": [
+   "thetreasuryofdav03spuruoft",
+   35,
+   "18"
+  ],
+  "spurgeon-psalms.PSA.59.18.1": [
+   "thetreasuryofdav03spuruoft",
+   35,
+   "18"
+  ],
+  "spurgeon-psalms.PSA.61.2.1": [
+   "thetreasuryofdav03spuruoft",
+   56,
+   "39"
+  ],
+  "spurgeon-psalms.PSA.61.2.2": [
+   "thetreasuryofdav03spuruoft",
+   56,
+   "39"
+  ],
+  "spurgeon-psalms.PSA.61.3.1": [
+   "thetreasuryofdav03spuruoft",
+   56,
+   "39"
+  ],
+  "spurgeon-psalms.PSA.61.4.1": [
+   "thetreasuryofdav03spuruoft",
+   57,
+   "40"
+  ],
+  "spurgeon-psalms.PSA.61.5.1": [
+   "thetreasuryofdav03spuruoft",
+   57,
+   "40"
+  ],
+  "spurgeon-psalms.PSA.61.6.1": [
+   "thetreasuryofdav03spuruoft",
+   58,
+   "41"
+  ],
+  "spurgeon-psalms.PSA.61.7.1": [
+   "thetreasuryofdav03spuruoft",
+   58,
+   "41"
+  ],
+  "spurgeon-psalms.PSA.61.8.1": [
+   "thetreasuryofdav03spuruoft",
+   59,
+   "42"
+  ],
+  "spurgeon-psalms.PSA.61.9.1": [
+   "thetreasuryofdav03spuruoft",
+   59,
+   "42"
+  ],
+  "spurgeon-psalms.PSA.62.2.1": [
+   "thetreasuryofdav03spuruoft",
+   65,
+   "48"
+  ],
+  "spurgeon-psalms.PSA.62.3.1": [
+   "thetreasuryofdav03spuruoft",
+   66,
+   "49"
+  ],
+  "spurgeon-psalms.PSA.62.4.1": [
+   "thetreasuryofdav03spuruoft",
+   66,
+   "49"
+  ],
+  "spurgeon-psalms.PSA.62.5.1": [
+   "thetreasuryofdav03spuruoft",
+   67,
+   "50"
+  ],
+  "spurgeon-psalms.PSA.62.6-9.1": [
+   "thetreasuryofdav01spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.62.7.1": [
+   "thetreasuryofdav03spuruoft",
+   67,
+   "50"
+  ],
+  "spurgeon-psalms.PSA.62.8.1": [
+   "thetreasuryofdav03spuruoft",
+   67,
+   "50"
+  ],
+  "spurgeon-psalms.PSA.62.9.1": [
+   "thetreasuryofdav03spuruoft",
+   68,
+   "51"
+  ],
+  "spurgeon-psalms.PSA.62.10.1": [
+   "thetreasuryofdav03spuruoft",
+   68,
+   "51"
+  ],
+  "spurgeon-psalms.PSA.62.11.1": [
+   "thetreasuryofdav03spuruoft",
+   69,
+   "52"
+  ],
+  "spurgeon-psalms.PSA.62.12.1": [
+   "thetreasuryofdav03spuruoft",
+   69,
+   "52"
+  ],
+  "spurgeon-psalms.PSA.62.13.1": [
+   "thetreasuryofdav03spuruoft",
+   69,
+   "52"
+  ],
+  "spurgeon-psalms.PSA.63.2.1": [
+   "thetreasuryofdav03spuruoft",
+   82,
+   "65"
+  ],
+  "spurgeon-psalms.PSA.63.3.1": [
+   "thetreasuryofdav03spuruoft",
+   83,
+   "66"
+  ],
+  "spurgeon-psalms.PSA.63.4.1": [
+   "thetreasuryofdav03spuruoft",
+   83,
+   "66"
+  ],
+  "spurgeon-psalms.PSA.63.5.1": [
+   "thetreasuryofdav03spuruoft",
+   84,
+   "67"
+  ],
+  "spurgeon-psalms.PSA.63.6.1": [
+   "thetreasuryofdav03spuruoft",
+   84,
+   "67"
+  ],
+  "spurgeon-psalms.PSA.63.7.1": [
+   "thetreasuryofdav03spuruoft",
+   84,
+   "67"
+  ],
+  "spurgeon-psalms.PSA.63.8.1": [
+   "thetreasuryofdav03spuruoft",
+   84,
+   "67"
+  ],
+  "spurgeon-psalms.PSA.63.9.1": [
+   "thetreasuryofdav03spuruoft",
+   84,
+   "67"
+  ],
+  "spurgeon-psalms.PSA.63.10.1": [
+   "thetreasuryofdav03spuruoft",
+   85,
+   "68"
+  ],
+  "spurgeon-psalms.PSA.63.11.1": [
+   "thetreasuryofdav02spuruoft",
+   485,
+   "472"
+  ],
+  "spurgeon-psalms.PSA.63.12.1": [
+   "thetreasuryofdav03spuruoft",
+   85,
+   "68"
+  ],
+  "spurgeon-psalms.PSA.64.2.1": [
+   "thetreasuryofdav03spuruoft",
+   99,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.64.3.1": [
+   "thetreasuryofdav03spuruoft",
+   99,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.64.4.1": [
+   "thetreasuryofdav03spuruoft",
+   99,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.64.5.1": [
+   "thetreasuryofdav03spuruoft",
+   100,
+   "83"
+  ],
+  "spurgeon-psalms.PSA.64.6.1": [
+   "thetreasuryofdav03spuruoft",
+   100,
+   "83"
+  ],
+  "spurgeon-psalms.PSA.64.7.1": [
+   "thetreasuryofdav03spuruoft",
+   100,
+   "83"
+  ],
+  "spurgeon-psalms.PSA.64.8.1": [
+   "thetreasuryofdav03spuruoft",
+   101,
+   "84"
+  ],
+  "spurgeon-psalms.PSA.64.9.1": [
+   "thetreasuryofdav03spuruoft",
+   101,
+   "84"
+  ],
+  "spurgeon-psalms.PSA.64.10.1": [
+   "thetreasuryofdav03spuruoft",
+   101,
+   "84"
+  ],
+  "spurgeon-psalms.PSA.64.11.1": [
+   "thetreasuryofdav03spuruoft",
+   102,
+   "85"
+  ],
+  "spurgeon-psalms.PSA.65.2.1": [
+   "thetreasuryofdav03spuruoft",
+   106,
+   "89"
+  ],
+  "spurgeon-psalms.PSA.65.3.1": [
+   "thetreasuryofdav03spuruoft",
+   107,
+   "90"
+  ],
+  "spurgeon-psalms.PSA.65.4.1": [
+   "thetreasuryofdav03spuruoft",
+   107,
+   "90"
+  ],
+  "spurgeon-psalms.PSA.65.5.1": [
+   "thetreasuryofdav03spuruoft",
+   107,
+   "90"
+  ],
+  "spurgeon-psalms.PSA.65.6.1": [
+   "thetreasuryofdav03spuruoft",
+   108,
+   "91"
+  ],
+  "spurgeon-psalms.PSA.65.7.1": [
+   "thetreasuryofdav03spuruoft",
+   108,
+   "91"
+  ],
+  "spurgeon-psalms.PSA.65.8.1": [
+   "thetreasuryofdav03spuruoft",
+   109,
+   "92"
+  ],
+  "spurgeon-psalms.PSA.65.9.1": [
+   "thetreasuryofdav03spuruoft",
+   109,
+   "92"
+  ],
+  "spurgeon-psalms.PSA.65.10.1": [
+   "thetreasuryofdav03spuruoft",
+   110,
+   "93"
+  ],
+  "spurgeon-psalms.PSA.65.11.1": [
+   "thetreasuryofdav03spuruoft",
+   111,
+   "94"
+  ],
+  "spurgeon-psalms.PSA.65.12.1": [
+   "thetreasuryofdav03spuruoft",
+   111,
+   "94"
+  ],
+  "spurgeon-psalms.PSA.65.13.1": [
+   "thetreasuryofdav03spuruoft",
+   111,
+   "94"
+  ],
+  "spurgeon-psalms.PSA.65.14.1": [
+   "thetreasuryofdav03spuruoft",
+   111,
+   "94"
+  ],
+  "spurgeon-psalms.PSA.66.1.1": [
+   "thetreasuryofdav03spuruoft",
+   125,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.66.2.1": [
+   "thetreasuryofdav03spuruoft",
+   125,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.66.3.1": [
+   "thetreasuryofdav03spuruoft",
+   126,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.66.4.1": [
+   "thetreasuryofdav02spuruoft",
+   240,
+   "227"
+  ],
+  "spurgeon-psalms.PSA.66.5.1": [
+   "thetreasuryofdav03spuruoft",
+   126,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.66.6.1": [
+   "thetreasuryofdav03spuruoft",
+   126,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.66.7.1": [
+   "thetreasuryofdav02spuruoft",
+   239,
+   "226"
+  ],
+  "spurgeon-psalms.PSA.66.8.1": [
+   "thetreasuryofdav03spuruoft",
+   127,
+   "110"
+  ],
+  "spurgeon-psalms.PSA.66.9.1": [
+   "thetreasuryofdav03spuruoft",
+   127,
+   "110"
+  ],
+  "spurgeon-psalms.PSA.66.10.1": [
+   "thetreasuryofdav03spuruoft",
+   128,
+   "111"
+  ],
+  "spurgeon-psalms.PSA.66.11.1": [
+   "thetreasuryofdav03spuruoft",
+   128,
+   "111"
+  ],
+  "spurgeon-psalms.PSA.66.12.1": [
+   "thetreasuryofdav03spuruoft",
+   128,
+   "111"
+  ],
+  "spurgeon-psalms.PSA.66.13.1": [
+   "thetreasuryofdav03spuruoft",
+   129,
+   "112"
+  ],
+  "spurgeon-psalms.PSA.66.14.1": [
+   "thetreasuryofdav03spuruoft",
+   129,
+   "112"
+  ],
+  "spurgeon-psalms.PSA.66.15.1": [
+   "thetreasuryofdav03spuruoft",
+   130,
+   "113"
+  ],
+  "spurgeon-psalms.PSA.66.16.1": [
+   "thetreasuryofdav03spuruoft",
+   130,
+   "113"
+  ],
+  "spurgeon-psalms.PSA.66.17.1": [
+   "thetreasuryofdav01spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.66.18.1": [
+   "thetreasuryofdav03spuruoft",
+   131,
+   "114"
+  ],
+  "spurgeon-psalms.PSA.66.19.1": [
+   "thetreasuryofdav03spuruoft",
+   131,
+   "114"
+  ],
+  "spurgeon-psalms.PSA.66.20.1": [
+   "thetreasuryofdav03spuruoft",
+   131,
+   "114"
+  ],
+  "spurgeon-psalms.PSA.67.2.1": [
+   "thetreasuryofdav03spuruoft",
+   145,
+   "128"
+  ],
+  "spurgeon-psalms.PSA.67.3.1": [
+   "thetreasuryofdav03spuruoft",
+   145,
+   "128"
+  ],
+  "spurgeon-psalms.PSA.67.4.1": [
+   "thetreasuryofdav03spuruoft",
+   146,
+   "129"
+  ],
+  "spurgeon-psalms.PSA.67.5.1": [
+   "thetreasuryofdav03spuruoft",
+   146,
+   "129"
+  ],
+  "spurgeon-psalms.PSA.67.6.1": [
+   "thetreasuryofdav03spuruoft",
+   146,
+   "129"
+  ],
+  "spurgeon-psalms.PSA.67.7.1": [
+   "thetreasuryofdav03spuruoft",
+   146,
+   "129"
+  ],
+  "spurgeon-psalms.PSA.67.8.1": [
+   "thetreasuryofdav03spuruoft",
+   147,
+   "130"
+  ],
+  "spurgeon-psalms.PSA.68.1.1": [
+   "thetreasuryofdav03spuruoft",
+   153,
+   "136"
+  ],
+  "spurgeon-psalms.PSA.68.2.1": [
+   "thetreasuryofdav03spuruoft",
+   153,
+   "136"
+  ],
+  "spurgeon-psalms.PSA.68.3.1": [
+   "thetreasuryofdav03spuruoft",
+   154,
+   "137"
+  ],
+  "spurgeon-psalms.PSA.68.4.1": [
+   "thetreasuryofdav03spuruoft",
+   154,
+   "137"
+  ],
+  "spurgeon-psalms.PSA.68.5.1": [
+   "thetreasuryofdav03spuruoft",
+   155,
+   "138"
+  ],
+  "spurgeon-psalms.PSA.68.6.1": [
+   "thetreasuryofdav03spuruoft",
+   155,
+   "138"
+  ],
+  "spurgeon-psalms.PSA.68.7.1": [
+   "thetreasuryofdav03spuruoft",
+   155,
+   "138"
+  ],
+  "spurgeon-psalms.PSA.68.8.1": [
+   "thetreasuryofdav03spuruoft",
+   156,
+   "139"
+  ],
+  "spurgeon-psalms.PSA.68.9.1": [
+   "thetreasuryofdav03spuruoft",
+   156,
+   "139"
+  ],
+  "spurgeon-psalms.PSA.68.10.1": [
+   "thetreasuryofdav03spuruoft",
+   156,
+   "139"
+  ],
+  "spurgeon-psalms.PSA.68.11.1": [
+   "thetreasuryofdav03spuruoft",
+   157,
+   "140"
+  ],
+  "spurgeon-psalms.PSA.68.12.1": [
+   "thetreasuryofdav03spuruoft",
+   157,
+   "140"
+  ],
+  "spurgeon-psalms.PSA.68.13.1": [
+   "thetreasuryofdav03spuruoft",
+   157,
+   "140"
+  ],
+  "spurgeon-psalms.PSA.68.14.1": [
+   "thetreasuryofdav03spuruoft",
+   157,
+   "140"
+  ],
+  "spurgeon-psalms.PSA.68.15.1": [
+   "thetreasuryofdav03spuruoft",
+   158,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.68.16.1": [
+   "thetreasuryofdav03spuruoft",
+   158,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.68.17.1": [
+   "thetreasuryofdav03spuruoft",
+   158,
+   "141"
+  ],
+  "spurgeon-psalms.PSA.68.18.1": [
+   "thetreasuryofdav03spuruoft",
+   159,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.68.19.1": [
+   "thetreasuryofdav03spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.68.20.1": [
+   "thetreasuryofdav03spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.68.21.1": [
+   "thetreasuryofdav03spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.68.22.1": [
+   "thetreasuryofdav03spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.68.23.1": [
+   "thetreasuryofdav03spuruoft",
+   161,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.68.24.1": [
+   "thetreasuryofdav03spuruoft",
+   161,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.68.25.1": [
+   "thetreasuryofdav03spuruoft",
+   161,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.68.26.1": [
+   "thetreasuryofdav03spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.68.27.1": [
+   "thetreasuryofdav03spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.68.28.1": [
+   "thetreasuryofdav03spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.68.29.1": [
+   "thetreasuryofdav03spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.68.30.1": [
+   "thetreasuryofdav03spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.68.31.1": [
+   "thetreasuryofdav03spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.68.32.1": [
+   "thetreasuryofdav03spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.68.33.1": [
+   "thetreasuryofdav03spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.68.34.1": [
+   "thetreasuryofdav03spuruoft",
+   164,
+   "147"
+  ],
+  "spurgeon-psalms.PSA.68.35.1": [
+   "thetreasuryofdav03spuruoft",
+   164,
+   "147"
+  ],
+  "spurgeon-psalms.PSA.69.2.1": [
+   "thetreasuryofdav03spuruoft",
+   192,
+   "175"
+  ],
+  "spurgeon-psalms.PSA.69.3.1": [
+   "thetreasuryofdav03spuruoft",
+   193,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.69.4.1": [
+   "thetreasuryofdav03spuruoft",
+   193,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.69.5.1": [
+   "thetreasuryofdav03spuruoft",
+   193,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.69.6-11.1": [
+   "thetreasuryofdav03spuruoft",
+   194,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.69.6.1": [
+   "thetreasuryofdav03spuruoft",
+   194,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.69.7.1": [
+   "thetreasuryofdav03spuruoft",
+   194,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.69.8.1": [
+   "thetreasuryofdav03spuruoft",
+   195,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.69.9.1": [
+   "thetreasuryofdav03spuruoft",
+   195,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.69.10.1": [
+   "thetreasuryofdav03spuruoft",
+   195,
+   "178"
+  ],
+  "spurgeon-psalms.PSA.69.11.1": [
+   "thetreasuryofdav03spuruoft",
+   196,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.69.12.1": [
+   "thetreasuryofdav03spuruoft",
+   196,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.69.14.1": [
+   "thetreasuryofdav03spuruoft",
+   196,
+   "179"
+  ],
+  "spurgeon-psalms.PSA.69.14.2": [
+   "thetreasuryofdav03spuruoft",
+   197,
+   "180"
+  ],
+  "spurgeon-psalms.PSA.69.15.1": [
+   "thetreasuryofdav03spuruoft",
+   197,
+   "180"
+  ],
+  "spurgeon-psalms.PSA.69.16.1": [
+   "thetreasuryofdav03spuruoft",
+   197,
+   "180"
+  ],
+  "spurgeon-psalms.PSA.69.17.1": [
+   "thetreasuryofdav03spuruoft",
+   197,
+   "180"
+  ],
+  "spurgeon-psalms.PSA.69.18.1": [
+   "thetreasuryofdav03spuruoft",
+   198,
+   "181"
+  ],
+  "spurgeon-psalms.PSA.69.19.1": [
+   "thetreasuryofdav03spuruoft",
+   198,
+   "181"
+  ],
+  "spurgeon-psalms.PSA.69.20.1": [
+   "thetreasuryofdav03spuruoft",
+   198,
+   "181"
+  ],
+  "spurgeon-psalms.PSA.69.21.1": [
+   "thetreasuryofdav03spuruoft",
+   198,
+   "181"
+  ],
+  "spurgeon-psalms.PSA.69.22.1": [
+   "thetreasuryofdav03spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.69.23-29.1": [
+   "thetreasuryofdav03spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.69.23.1": [
+   "thetreasuryofdav03spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.69.24.1": [
+   "thetreasuryofdav03spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.69.25.1": [
+   "thetreasuryofdav03spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.69.26.1": [
+   "thetreasuryofdav03spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.69.27.1": [
+   "thetreasuryofdav03spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.69.28.1": [
+   "thetreasuryofdav03spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.69.29.1": [
+   "thetreasuryofdav03spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.69.30-37.1": [
+   "thetreasuryofdav03spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.69.30.1": [
+   "thetreasuryofdav03spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.69.31.1": [
+   "thetreasuryofdav03spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.69.32.1": [
+   "thetreasuryofdav03spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.69.33.1": [
+   "thetreasuryofdav03spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.69.34.1": [
+   "thetreasuryofdav03spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.69.35.1": [
+   "thetreasuryofdav03spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.69.36.1": [
+   "thetreasuryofdav03spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.69.37.1": [
+   "thetreasuryofdav03spuruoft",
+   203,
+   "186"
+  ],
+  "spurgeon-psalms.PSA.70.2.1": [
+   "thetreasuryofdav03spuruoft",
+   220,
+   "203"
+  ],
+  "spurgeon-psalms.PSA.70.3.1": [
+   "thetreasuryofdav03spuruoft",
+   220,
+   "203"
+  ],
+  "spurgeon-psalms.PSA.70.4.1": [
+   "thetreasuryofdav03spuruoft",
+   220,
+   "203"
+  ],
+  "spurgeon-psalms.PSA.70.5.1": [
+   "thetreasuryofdav02spuruoft",
+   253,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.70.6.1": [
+   "thetreasuryofdav03spuruoft",
+   221,
+   "204"
+  ],
+  "spurgeon-psalms.PSA.71.1.1": [
+   "thetreasuryofdav03spuruoft",
+   224,
+   "207"
+  ],
+  "spurgeon-psalms.PSA.71.2.1": [
+   "thetreasuryofdav03spuruoft",
+   224,
+   "207"
+  ],
+  "spurgeon-psalms.PSA.71.3.1": [
+   "thetreasuryofdav03spuruoft",
+   224,
+   "207"
+  ],
+  "spurgeon-psalms.PSA.71.4.1": [
+   "thetreasuryofdav03spuruoft",
+   225,
+   "208"
+  ],
+  "spurgeon-psalms.PSA.71.5.1": [
+   "thetreasuryofdav03spuruoft",
+   225,
+   "208"
+  ],
+  "spurgeon-psalms.PSA.71.6.1": [
+   "thetreasuryofdav01spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.71.7.1": [
+   "thetreasuryofdav03spuruoft",
+   226,
+   "209"
+  ],
+  "spurgeon-psalms.PSA.71.8.1": [
+   "thetreasuryofdav03spuruoft",
+   226,
+   "209"
+  ],
+  "spurgeon-psalms.PSA.71.9.1": [
+   "thetreasuryofdav03spuruoft",
+   226,
+   "209"
+  ],
+  "spurgeon-psalms.PSA.71.10.1": [
+   "thetreasuryofdav03spuruoft",
+   226,
+   "209"
+  ],
+  "spurgeon-psalms.PSA.71.11.1": [
+   "thetreasuryofdav03spuruoft",
+   226,
+   "209"
+  ],
+  "spurgeon-psalms.PSA.71.12.1": [
+   "thetreasuryofdav03spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.71.13.1": [
+   "thetreasuryofdav03spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.71.14.1": [
+   "thetreasuryofdav03spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.71.15.1": [
+   "thetreasuryofdav03spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.71.16.1": [
+   "thetreasuryofdav03spuruoft",
+   228,
+   "211"
+  ],
+  "spurgeon-psalms.PSA.71.17.1": [
+   "thetreasuryofdav01spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.71.18.1": [
+   "thetreasuryofdav03spuruoft",
+   228,
+   "211"
+  ],
+  "spurgeon-psalms.PSA.71.19.1": [
+   "thetreasuryofdav03spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.71.20.1": [
+   "thetreasuryofdav03spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.71.21.1": [
+   "thetreasuryofdav03spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.71.22.1": [
+   "thetreasuryofdav03spuruoft",
+   230,
+   "213"
+  ],
+  "spurgeon-psalms.PSA.71.23.1": [
+   "thetreasuryofdav03spuruoft",
+   230,
+   "213"
+  ],
+  "spurgeon-psalms.PSA.71.24.1": [
+   "thetreasuryofdav03spuruoft",
+   230,
+   "213"
+  ],
+  "spurgeon-psalms.PSA.72.1.1": [
+   "thetreasuryofdav03spuruoft",
+   243,
+   "226"
+  ],
+  "spurgeon-psalms.PSA.72.2.1": [
+   "thetreasuryofdav03spuruoft",
+   243,
+   "226"
+  ],
+  "spurgeon-psalms.PSA.72.3.1": [
+   "thetreasuryofdav03spuruoft",
+   244,
+   "227"
+  ],
+  "spurgeon-psalms.PSA.72.4.1": [
+   "thetreasuryofdav03spuruoft",
+   244,
+   "227"
+  ],
+  "spurgeon-psalms.PSA.72.5.1": [
+   "thetreasuryofdav03spuruoft",
+   244,
+   "227"
+  ],
+  "spurgeon-psalms.PSA.72.6.1": [
+   "thetreasuryofdav03spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.72.7.1": [
+   "thetreasuryofdav03spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.72.8.1": [
+   "thetreasuryofdav03spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.72.9.1": [
+   "thetreasuryofdav03spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.72.10.1": [
+   "thetreasuryofdav03spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.72.11.1": [
+   "thetreasuryofdav03spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.72.12.1": [
+   "thetreasuryofdav03spuruoft",
+   247,
+   "230"
+  ],
+  "spurgeon-psalms.PSA.72.13.1": [
+   "thetreasuryofdav03spuruoft",
+   247,
+   "230"
+  ],
+  "spurgeon-psalms.PSA.72.14.1": [
+   "thetreasuryofdav03spuruoft",
+   247,
+   "230"
+  ],
+  "spurgeon-psalms.PSA.72.15.1": [
+   "thetreasuryofdav01spuruoft",
+   322,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.72.16.1": [
+   "thetreasuryofdav03spuruoft",
+   247,
+   "230"
+  ],
+  "spurgeon-psalms.PSA.72.17.1": [
+   "thetreasuryofdav03spuruoft",
+   248,
+   "231"
+  ],
+  "spurgeon-psalms.PSA.72.18.1": [
+   "thetreasuryofdav03spuruoft",
+   248,
+   "231"
+  ],
+  "spurgeon-psalms.PSA.72.20.1": [
+   "thetreasuryofdav03spuruoft",
+   249,
+   "232"
+  ],
+  "spurgeon-psalms.PSA.73.1.1": [
+   "thetreasuryofdav03spuruoft",
+   263,
+   "246"
+  ],
+  "spurgeon-psalms.PSA.73.2.1": [
+   "thetreasuryofdav03spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.73.3.1": [
+   "thetreasuryofdav03spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.73.4.1": [
+   "thetreasuryofdav03spuruoft",
+   264,
+   "247"
+  ],
+  "spurgeon-psalms.PSA.73.5.1": [
+   "thetreasuryofdav03spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.73.6.1": [
+   "thetreasuryofdav03spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.73.7.1": [
+   "thetreasuryofdav03spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.73.8.1": [
+   "thetreasuryofdav03spuruoft",
+   265,
+   "248"
+  ],
+  "spurgeon-psalms.PSA.73.9.1": [
+   "thetreasuryofdav03spuruoft",
+   266,
+   "249"
+  ],
+  "spurgeon-psalms.PSA.73.10.1": [
+   "thetreasuryofdav03spuruoft",
+   266,
+   "249"
+  ],
+  "spurgeon-psalms.PSA.73.11.1": [
+   "thetreasuryofdav03spuruoft",
+   266,
+   "249"
+  ],
+  "spurgeon-psalms.PSA.73.12.1": [
+   "thetreasuryofdav03spuruoft",
+   266,
+   "249"
+  ],
+  "spurgeon-psalms.PSA.73.13.1": [
+   "thetreasuryofdav03spuruoft",
+   266,
+   "249"
+  ],
+  "spurgeon-psalms.PSA.73.14.1": [
+   "thetreasuryofdav03spuruoft",
+   267,
+   "250"
+  ],
+  "spurgeon-psalms.PSA.73.15.1": [
+   "thetreasuryofdav03spuruoft",
+   267,
+   "250"
+  ],
+  "spurgeon-psalms.PSA.73.16.1": [
+   "thetreasuryofdav03spuruoft",
+   267,
+   "250"
+  ],
+  "spurgeon-psalms.PSA.73.17.1": [
+   "thetreasuryofdav03spuruoft",
+   267,
+   "250"
+  ],
+  "spurgeon-psalms.PSA.73.18.1": [
+   "thetreasuryofdav03spuruoft",
+   268,
+   "251"
+  ],
+  "spurgeon-psalms.PSA.73.19.1": [
+   "thetreasuryofdav03spuruoft",
+   268,
+   "251"
+  ],
+  "spurgeon-psalms.PSA.73.20.1": [
+   "thetreasuryofdav03spuruoft",
+   268,
+   "251"
+  ],
+  "spurgeon-psalms.PSA.73.21.1": [
+   "thetreasuryofdav03spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.73.22.1": [
+   "thetreasuryofdav03spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.73.23.1": [
+   "thetreasuryofdav03spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.73.24.1": [
+   "thetreasuryofdav03spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.73.25.1": [
+   "thetreasuryofdav01spuruoft",
+   151,
+   "134"
+  ],
+  "spurgeon-psalms.PSA.73.26.1": [
+   "thetreasuryofdav03spuruoft",
+   270,
+   "253"
+  ],
+  "spurgeon-psalms.PSA.73.27.1": [
+   "thetreasuryofdav03spuruoft",
+   270,
+   "253"
+  ],
+  "spurgeon-psalms.PSA.73.28.1": [
+   "thetreasuryofdav03spuruoft",
+   270,
+   "253"
+  ],
+  "spurgeon-psalms.PSA.74.1.1": [
+   "thetreasuryofdav03spuruoft",
+   289,
+   "272"
+  ],
+  "spurgeon-psalms.PSA.74.2.1": [
+   "thetreasuryofdav03spuruoft",
+   290,
+   "273"
+  ],
+  "spurgeon-psalms.PSA.74.3.1": [
+   "thetreasuryofdav03spuruoft",
+   290,
+   "273"
+  ],
+  "spurgeon-psalms.PSA.74.4.1": [
+   "thetreasuryofdav03spuruoft",
+   290,
+   "273"
+  ],
+  "spurgeon-psalms.PSA.74.5.1": [
+   "thetreasuryofdav03spuruoft",
+   291,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.74.6.1": [
+   "thetreasuryofdav03spuruoft",
+   291,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.74.7.1": [
+   "thetreasuryofdav03spuruoft",
+   291,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.74.8.1": [
+   "thetreasuryofdav03spuruoft",
+   291,
+   "274"
+  ],
+  "spurgeon-psalms.PSA.74.9.1": [
+   "thetreasuryofdav03spuruoft",
+   292,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.74.10.1": [
+   "thetreasuryofdav03spuruoft",
+   292,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.74.11.1": [
+   "thetreasuryofdav03spuruoft",
+   292,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.74.12-23.1": [
+   "thetreasuryofdav03spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.74.12.1": [
+   "thetreasuryofdav03spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.74.13.1": [
+   "thetreasuryofdav03spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.74.14.1": [
+   "thetreasuryofdav03spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.74.15.1": [
+   "thetreasuryofdav03spuruoft",
+   294,
+   "277"
+  ],
+  "spurgeon-psalms.PSA.74.16.1": [
+   "thetreasuryofdav03spuruoft",
+   294,
+   "277"
+  ],
+  "spurgeon-psalms.PSA.74.17.1": [
+   "thetreasuryofdav03spuruoft",
+   294,
+   "277"
+  ],
+  "spurgeon-psalms.PSA.74.18.1": [
+   "thetreasuryofdav03spuruoft",
+   294,
+   "277"
+  ],
+  "spurgeon-psalms.PSA.74.19.1": [
+   "thetreasuryofdav03spuruoft",
+   294,
+   "277"
+  ],
+  "spurgeon-psalms.PSA.74.20.1": [
+   "thetreasuryofdav03spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.74.21.1": [
+   "thetreasuryofdav03spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.74.22.1": [
+   "thetreasuryofdav03spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.74.23.1": [
+   "thetreasuryofdav03spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.75.3.1": [
+   "thetreasuryofdav03spuruoft",
+   310,
+   "293"
+  ],
+  "spurgeon-psalms.PSA.75.4.1": [
+   "thetreasuryofdav03spuruoft",
+   310,
+   "293"
+  ],
+  "spurgeon-psalms.PSA.75.5.1": [
+   "thetreasuryofdav03spuruoft",
+   310,
+   "293"
+  ],
+  "spurgeon-psalms.PSA.75.6.1": [
+   "thetreasuryofdav03spuruoft",
+   310,
+   "293"
+  ],
+  "spurgeon-psalms.PSA.75.7.1": [
+   "thetreasuryofdav03spuruoft",
+   311,
+   "294"
+  ],
+  "spurgeon-psalms.PSA.75.8.1": [
+   "thetreasuryofdav03spuruoft",
+   311,
+   "294"
+  ],
+  "spurgeon-psalms.PSA.75.9.1": [
+   "thetreasuryofdav03spuruoft",
+   312,
+   "295"
+  ],
+  "spurgeon-psalms.PSA.75.10.1": [
+   "thetreasuryofdav03spuruoft",
+   312,
+   "295"
+  ],
+  "spurgeon-psalms.PSA.75.11.1": [
+   "thetreasuryofdav03spuruoft",
+   312,
+   "295"
+  ],
+  "spurgeon-psalms.PSA.76.2.1": [
+   "thetreasuryofdav03spuruoft",
+   319,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.76.3.1": [
+   "thetreasuryofdav03spuruoft",
+   319,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.76.4.1": [
+   "thetreasuryofdav03spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.76.5.1": [
+   "thetreasuryofdav03spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.76.6.1": [
+   "thetreasuryofdav03spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.76.7.1": [
+   "thetreasuryofdav03spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.76.8.1": [
+   "thetreasuryofdav03spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.76.9.1": [
+   "thetreasuryofdav03spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.76.10.1": [
+   "thetreasuryofdav03spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.76.11.1": [
+   "thetreasuryofdav03spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.76.12.1": [
+   "thetreasuryofdav03spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.76.13.1": [
+   "thetreasuryofdav03spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.77.2.1": [
+   "thetreasuryofdav03spuruoft",
+   329,
+   "312"
+  ],
+  "spurgeon-psalms.PSA.77.3.1": [
+   "thetreasuryofdav03spuruoft",
+   329,
+   "312"
+  ],
+  "spurgeon-psalms.PSA.77.4.1": [
+   "thetreasuryofdav03spuruoft",
+   330,
+   "313"
+  ],
+  "spurgeon-psalms.PSA.77.5.1": [
+   "thetreasuryofdav03spuruoft",
+   330,
+   "313"
+  ],
+  "spurgeon-psalms.PSA.77.6.1": [
+   "thetreasuryofdav03spuruoft",
+   330,
+   "313"
+  ],
+  "spurgeon-psalms.PSA.77.7.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.8.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.9.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.10.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.11.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.12.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.13.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.14.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.15.1": [
+   "thetreasuryofdav03spuruoft",
+   331,
+   "314"
+  ],
+  "spurgeon-psalms.PSA.77.16.1": [
+   "thetreasuryofdav03spuruoft",
+   332,
+   "315"
+  ],
+  "spurgeon-psalms.PSA.77.17.1": [
+   "thetreasuryofdav03spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.77.18.1": [
+   "thetreasuryofdav03spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.77.19.1": [
+   "thetreasuryofdav03spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.77.20.1": [
+   "thetreasuryofdav03spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.77.21.1": [
+   "thetreasuryofdav03spuruoft",
+   333,
+   "316"
+  ],
+  "spurgeon-psalms.PSA.78.1.1": [
+   "thetreasuryofdav03spuruoft",
+   347,
+   "330"
+  ],
+  "spurgeon-psalms.PSA.78.2.1": [
+   "thetreasuryofdav03spuruoft",
+   348,
+   "331"
+  ],
+  "spurgeon-psalms.PSA.78.3.1": [
+   "thetreasuryofdav03spuruoft",
+   348,
+   "331"
+  ],
+  "spurgeon-psalms.PSA.78.4.1": [
+   "thetreasuryofdav03spuruoft",
+   348,
+   "331"
+  ],
+  "spurgeon-psalms.PSA.78.5.1": [
+   "thetreasuryofdav03spuruoft",
+   348,
+   "331"
+  ],
+  "spurgeon-psalms.PSA.78.6.1": [
+   "thetreasuryofdav03spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.78.7.1": [
+   "thetreasuryofdav03spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.78.8.1": [
+   "thetreasuryofdav03spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.78.9.1": [
+   "thetreasuryofdav03spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.78.10.1": [
+   "thetreasuryofdav03spuruoft",
+   349,
+   "332"
+  ],
+  "spurgeon-psalms.PSA.78.11.1": [
+   "thetreasuryofdav03spuruoft",
+   351,
+   "334"
+  ],
+  "spurgeon-psalms.PSA.78.12.1": [
+   "thetreasuryofdav03spuruoft",
+   351,
+   "334"
+  ],
+  "spurgeon-psalms.PSA.78.13.1": [
+   "thetreasuryofdav03spuruoft",
+   351,
+   "334"
+  ],
+  "spurgeon-psalms.PSA.78.14.1": [
+   "thetreasuryofdav03spuruoft",
+   351,
+   "334"
+  ],
+  "spurgeon-psalms.PSA.78.15.1": [
+   "thetreasuryofdav03spuruoft",
+   351,
+   "334"
+  ],
+  "spurgeon-psalms.PSA.78.16.1": [
+   "thetreasuryofdav03spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.78.17.1": [
+   "thetreasuryofdav03spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.78.18.1": [
+   "thetreasuryofdav03spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.78.19.1": [
+   "thetreasuryofdav03spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.78.20.1": [
+   "thetreasuryofdav03spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.78.21.1": [
+   "thetreasuryofdav03spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.78.22.1": [
+   "thetreasuryofdav03spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.78.23.1": [
+   "thetreasuryofdav03spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.78.24.1": [
+   "thetreasuryofdav03spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.78.25.1": [
+   "thetreasuryofdav03spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.78.26.1": [
+   "thetreasuryofdav03spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.78.27.1": [
+   "thetreasuryofdav03spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.78.28.1": [
+   "thetreasuryofdav03spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.78.29.1": [
+   "thetreasuryofdav03spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.78.30.1": [
+   "thetreasuryofdav03spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.78.32.1": [
+   "thetreasuryofdav03spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.78.33.1": [
+   "thetreasuryofdav03spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.78.34.1": [
+   "thetreasuryofdav03spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.78.35.1": [
+   "thetreasuryofdav03spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.78.36.1": [
+   "thetreasuryofdav03spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.78.37.1": [
+   "thetreasuryofdav03spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.78.38.1": [
+   "thetreasuryofdav03spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.78.39.1": [
+   "thetreasuryofdav03spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.78.40.1": [
+   "thetreasuryofdav03spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.78.41.1": [
+   "thetreasuryofdav03spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.78.42.1": [
+   "thetreasuryofdav03spuruoft",
+   357,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.78.43.1": [
+   "thetreasuryofdav03spuruoft",
+   357,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.78.44.1": [
+   "thetreasuryofdav03spuruoft",
+   357,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.78.45.1": [
+   "thetreasuryofdav03spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.78.46.1": [
+   "thetreasuryofdav03spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.78.47.1": [
+   "thetreasuryofdav03spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.78.48.1": [
+   "thetreasuryofdav03spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.78.49.1": [
+   "thetreasuryofdav03spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.78.50.1": [
+   "thetreasuryofdav03spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.78.51.1": [
+   "thetreasuryofdav03spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.78.52.1": [
+   "thetreasuryofdav03spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.78.53.1": [
+   "thetreasuryofdav03spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.78.54.1": [
+   "thetreasuryofdav03spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.78.55.1": [
+   "thetreasuryofdav03spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.78.56.1": [
+   "thetreasuryofdav03spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.78.57.1": [
+   "thetreasuryofdav03spuruoft",
+   361,
+   "344"
+  ],
+  "spurgeon-psalms.PSA.78.58.1": [
+   "thetreasuryofdav03spuruoft",
+   361,
+   "344"
+  ],
+  "spurgeon-psalms.PSA.78.59.1": [
+   "thetreasuryofdav03spuruoft",
+   361,
+   "344"
+  ],
+  "spurgeon-psalms.PSA.78.60.1": [
+   "thetreasuryofdav03spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.78.61.1": [
+   "thetreasuryofdav03spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.78.62.1": [
+   "thetreasuryofdav03spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.78.63.1": [
+   "thetreasuryofdav03spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.78.64.1": [
+   "thetreasuryofdav03spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.78.65.1": [
+   "thetreasuryofdav01spuruoft",
+   334,
+   "317"
+  ],
+  "spurgeon-psalms.PSA.78.66.1": [
+   "thetreasuryofdav01spuruoft",
+   334,
+   "317"
+  ],
+  "spurgeon-psalms.PSA.78.67.1": [
+   "thetreasuryofdav03spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.78.68.1": [
+   "thetreasuryofdav03spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.78.69.1": [
+   "thetreasuryofdav03spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.78.70.1": [
+   "thetreasuryofdav03spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.78.71.1": [
+   "thetreasuryofdav03spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.78.72.1": [
+   "thetreasuryofdav03spuruoft",
+   364,
+   "347"
+  ],
+  "spurgeon-psalms.PSA.79.4.1": [
+   "thetreasuryofdav03spuruoft",
+   393,
+   "376"
+  ],
+  "spurgeon-psalms.PSA.79.5-10.1": [
+   "thetreasuryofdav03spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.79.5.1": [
+   "thetreasuryofdav03spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.79.6.1": [
+   "thetreasuryofdav03spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.79.7.1": [
+   "thetreasuryofdav03spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.79.8.1": [
+   "thetreasuryofdav03spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.79.9.1": [
+   "thetreasuryofdav03spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.79.10.1": [
+   "thetreasuryofdav03spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.79.11.1": [
+   "thetreasuryofdav03spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.79.12.1": [
+   "thetreasuryofdav03spuruoft",
+   396,
+   "379"
+  ],
+  "spurgeon-psalms.PSA.79.13.1": [
+   "thetreasuryofdav03spuruoft",
+   396,
+   "379"
+  ],
+  "spurgeon-psalms.PSA.80.2.1": [
+   "thetreasuryofdav03spuruoft",
+   404,
+   "387"
+  ],
+  "spurgeon-psalms.PSA.80.3.1": [
+   "thetreasuryofdav03spuruoft",
+   404,
+   "387"
+  ],
+  "spurgeon-psalms.PSA.80.4.1": [
+   "thetreasuryofdav03spuruoft",
+   405,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.80.5.1": [
+   "thetreasuryofdav03spuruoft",
+   405,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.80.6.1": [
+   "thetreasuryofdav03spuruoft",
+   405,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.80.7.1": [
+   "thetreasuryofdav03spuruoft",
+   405,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.80.8.1": [
+   "thetreasuryofdav03spuruoft",
+   405,
+   "388"
+  ],
+  "spurgeon-psalms.PSA.80.9.1": [
+   "thetreasuryofdav03spuruoft",
+   406,
+   "389"
+  ],
+  "spurgeon-psalms.PSA.80.10.1": [
+   "thetreasuryofdav03spuruoft",
+   406,
+   "389"
+  ],
+  "spurgeon-psalms.PSA.80.11.1": [
+   "thetreasuryofdav03spuruoft",
+   406,
+   "389"
+  ],
+  "spurgeon-psalms.PSA.80.12.1": [
+   "thetreasuryofdav03spuruoft",
+   407,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.80.13.1": [
+   "thetreasuryofdav03spuruoft",
+   407,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.80.14.1": [
+   "thetreasuryofdav03spuruoft",
+   407,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.80.15.1": [
+   "thetreasuryofdav03spuruoft",
+   407,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.80.16.1": [
+   "thetreasuryofdav03spuruoft",
+   407,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.80.17.1": [
+   "thetreasuryofdav03spuruoft",
+   407,
+   "390"
+  ],
+  "spurgeon-psalms.PSA.80.18.1": [
+   "thetreasuryofdav03spuruoft",
+   408,
+   "391"
+  ],
+  "spurgeon-psalms.PSA.80.19.1": [
+   "thetreasuryofdav03spuruoft",
+   408,
+   "391"
+  ],
+  "spurgeon-psalms.PSA.80.20.1": [
+   "thetreasuryofdav03spuruoft",
+   408,
+   "391"
+  ],
+  "spurgeon-psalms.PSA.81.2.1": [
+   "thetreasuryofdav03spuruoft",
+   416,
+   "399"
+  ],
+  "spurgeon-psalms.PSA.81.3.1": [
+   "thetreasuryofdav03spuruoft",
+   417,
+   "400"
+  ],
+  "spurgeon-psalms.PSA.81.4.1": [
+   "thetreasuryofdav03spuruoft",
+   417,
+   "400"
+  ],
+  "spurgeon-psalms.PSA.81.5.1": [
+   "thetreasuryofdav03spuruoft",
+   417,
+   "400"
+  ],
+  "spurgeon-psalms.PSA.81.6.1": [
+   "thetreasuryofdav03spuruoft",
+   417,
+   "400"
+  ],
+  "spurgeon-psalms.PSA.81.7.1": [
+   "thetreasuryofdav03spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.81.8.1": [
+   "thetreasuryofdav03spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.81.9.1": [
+   "thetreasuryofdav02spuruoft",
+   399,
+   "386"
+  ],
+  "spurgeon-psalms.PSA.81.10.1": [
+   "thetreasuryofdav03spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.81.11.1": [
+   "thetreasuryofdav02spuruoft",
+   399,
+   "386"
+  ],
+  "spurgeon-psalms.PSA.81.12.1": [
+   "thetreasuryofdav03spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.81.13.1": [
+   "thetreasuryofdav03spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.81.14.1": [
+   "thetreasuryofdav03spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.81.15.1": [
+   "thetreasuryofdav03spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.81.16.1": [
+   "thetreasuryofdav03spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.81.17.1": [
+   "thetreasuryofdav03spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.82.1.1": [
+   "thetreasuryofdav03spuruoft",
+   428,
+   "411"
+  ],
+  "spurgeon-psalms.PSA.82.2.1": [
+   "thetreasuryofdav03spuruoft",
+   429,
+   "412"
+  ],
+  "spurgeon-psalms.PSA.82.3.1": [
+   "thetreasuryofdav03spuruoft",
+   429,
+   "412"
+  ],
+  "spurgeon-psalms.PSA.82.4.1": [
+   "thetreasuryofdav03spuruoft",
+   429,
+   "412"
+  ],
+  "spurgeon-psalms.PSA.82.5.1": [
+   "thetreasuryofdav03spuruoft",
+   429,
+   "412"
+  ],
+  "spurgeon-psalms.PSA.82.6.1": [
+   "thetreasuryofdav03spuruoft",
+   429,
+   "412"
+  ],
+  "spurgeon-psalms.PSA.82.7.1": [
+   "thetreasuryofdav03spuruoft",
+   429,
+   "412"
+  ],
+  "spurgeon-psalms.PSA.82.8.1": [
+   "thetreasuryofdav03spuruoft",
+   430,
+   "413"
+  ],
+  "spurgeon-psalms.PSA.83.2.1": [
+   "thetreasuryofdav03spuruoft",
+   436,
+   "419"
+  ],
+  "spurgeon-psalms.PSA.83.3.1": [
+   "thetreasuryofdav03spuruoft",
+   436,
+   "419"
+  ],
+  "spurgeon-psalms.PSA.83.4.1": [
+   "thetreasuryofdav03spuruoft",
+   436,
+   "419"
+  ],
+  "spurgeon-psalms.PSA.83.5.1": [
+   "thetreasuryofdav03spuruoft",
+   437,
+   "420"
+  ],
+  "spurgeon-psalms.PSA.83.6.1": [
+   "thetreasuryofdav03spuruoft",
+   437,
+   "420"
+  ],
+  "spurgeon-psalms.PSA.83.7.1": [
+   "thetreasuryofdav03spuruoft",
+   437,
+   "420"
+  ],
+  "spurgeon-psalms.PSA.83.8.1": [
+   "thetreasuryofdav03spuruoft",
+   437,
+   "420"
+  ],
+  "spurgeon-psalms.PSA.83.9.1": [
+   "thetreasuryofdav03spuruoft",
+   437,
+   "420"
+  ],
+  "spurgeon-psalms.PSA.83.10.1": [
+   "thetreasuryofdav03spuruoft",
+   438,
+   "421"
+  ],
+  "spurgeon-psalms.PSA.83.11.1": [
+   "thetreasuryofdav03spuruoft",
+   438,
+   "421"
+  ],
+  "spurgeon-psalms.PSA.83.12.1": [
+   "thetreasuryofdav03spuruoft",
+   438,
+   "421"
+  ],
+  "spurgeon-psalms.PSA.83.13.1": [
+   "thetreasuryofdav03spuruoft",
+   438,
+   "421"
+  ],
+  "spurgeon-psalms.PSA.83.14.1": [
+   "thetreasuryofdav03spuruoft",
+   438,
+   "421"
+  ],
+  "spurgeon-psalms.PSA.83.15.1": [
+   "thetreasuryofdav03spuruoft",
+   438,
+   "421"
+  ],
+  "spurgeon-psalms.PSA.83.16.1": [
+   "thetreasuryofdav03spuruoft",
+   439,
+   "422"
+  ],
+  "spurgeon-psalms.PSA.83.17.1": [
+   "thetreasuryofdav03spuruoft",
+   439,
+   "422"
+  ],
+  "spurgeon-psalms.PSA.83.18.1": [
+   "thetreasuryofdav03spuruoft",
+   439,
+   "422"
+  ],
+  "spurgeon-psalms.PSA.83.19.1": [
+   "thetreasuryofdav03spuruoft",
+   439,
+   "422"
+  ],
+  "spurgeon-psalms.PSA.84.2.1": [
+   "thetreasuryofdav03spuruoft",
+   449,
+   "432"
+  ],
+  "spurgeon-psalms.PSA.84.3.1": [
+   "thetreasuryofdav03spuruoft",
+   450,
+   "433"
+  ],
+  "spurgeon-psalms.PSA.84.4.1": [
+   "thetreasuryofdav03spuruoft",
+   450,
+   "433"
+  ],
+  "spurgeon-psalms.PSA.84.5.1": [
+   "thetreasuryofdav03spuruoft",
+   450,
+   "433"
+  ],
+  "spurgeon-psalms.PSA.84.6.1": [
+   "thetreasuryofdav03spuruoft",
+   451,
+   "434"
+  ],
+  "spurgeon-psalms.PSA.84.7.1": [
+   "thetreasuryofdav03spuruoft",
+   451,
+   "434"
+  ],
+  "spurgeon-psalms.PSA.84.8.1": [
+   "thetreasuryofdav03spuruoft",
+   451,
+   "434"
+  ],
+  "spurgeon-psalms.PSA.84.9.1": [
+   "thetreasuryofdav03spuruoft",
+   451,
+   "434"
+  ],
+  "spurgeon-psalms.PSA.84.10.1": [
+   "thetreasuryofdav03spuruoft",
+   452,
+   "435"
+  ],
+  "spurgeon-psalms.PSA.84.11.1": [
+   "thetreasuryofdav03spuruoft",
+   452,
+   "435"
+  ],
+  "spurgeon-psalms.PSA.84.12.1": [
+   "thetreasuryofdav03spuruoft",
+   452,
+   "435"
+  ],
+  "spurgeon-psalms.PSA.84.13.1": [
+   "thetreasuryofdav03spuruoft",
+   453,
+   "436"
+  ],
+  "spurgeon-psalms.PSA.85.2.1": [
+   "thetreasuryofdav03spuruoft",
+   466,
+   "449"
+  ],
+  "spurgeon-psalms.PSA.85.3.1": [
+   "thetreasuryofdav03spuruoft",
+   467,
+   "450"
+  ],
+  "spurgeon-psalms.PSA.85.4.1": [
+   "thetreasuryofdav03spuruoft",
+   467,
+   "450"
+  ],
+  "spurgeon-psalms.PSA.85.5.1": [
+   "thetreasuryofdav03spuruoft",
+   467,
+   "450"
+  ],
+  "spurgeon-psalms.PSA.85.6.1": [
+   "thetreasuryofdav03spuruoft",
+   468,
+   "451"
+  ],
+  "spurgeon-psalms.PSA.85.7.1": [
+   "thetreasuryofdav03spuruoft",
+   468,
+   "451"
+  ],
+  "spurgeon-psalms.PSA.85.8.1": [
+   "thetreasuryofdav03spuruoft",
+   468,
+   "451"
+  ],
+  "spurgeon-psalms.PSA.85.9-14.1": [
+   "thetreasuryofdav03spuruoft",
+   469,
+   "452"
+  ],
+  "spurgeon-psalms.PSA.85.9.1": [
+   "thetreasuryofdav01spuruoft",
+   68,
+   "51"
+  ],
+  "spurgeon-psalms.PSA.85.10.1": [
+   "thetreasuryofdav03spuruoft",
+   469,
+   "452"
+  ],
+  "spurgeon-psalms.PSA.85.11.1": [
+   "thetreasuryofdav03spuruoft",
+   470,
+   "453"
+  ],
+  "spurgeon-psalms.PSA.85.12.1": [
+   "thetreasuryofdav03spuruoft",
+   470,
+   "453"
+  ],
+  "spurgeon-psalms.PSA.85.13.1": [
+   "thetreasuryofdav03spuruoft",
+   470,
+   "453"
+  ],
+  "spurgeon-psalms.PSA.85.14.1": [
+   "thetreasuryofdav03spuruoft",
+   471,
+   "454"
+  ],
+  "spurgeon-psalms.PSA.86.2-7.1": [
+   "thetreasuryofdav03spuruoft",
+   480,
+   "463"
+  ],
+  "spurgeon-psalms.PSA.86.2.1": [
+   "thetreasuryofdav03spuruoft",
+   481,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.86.3.1": [
+   "thetreasuryofdav03spuruoft",
+   481,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.86.4.1": [
+   "thetreasuryofdav03spuruoft",
+   481,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.86.5.1": [
+   "thetreasuryofdav03spuruoft",
+   481,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.86.6.1": [
+   "thetreasuryofdav03spuruoft",
+   482,
+   "465"
+  ],
+  "spurgeon-psalms.PSA.86.7.1": [
+   "thetreasuryofdav03spuruoft",
+   482,
+   "465"
+  ],
+  "spurgeon-psalms.PSA.86.8.1": [
+   "thetreasuryofdav03spuruoft",
+   482,
+   "465"
+  ],
+  "spurgeon-psalms.PSA.86.9.1": [
+   "thetreasuryofdav03spuruoft",
+   482,
+   "465"
+  ],
+  "spurgeon-psalms.PSA.86.10.1": [
+   "thetreasuryofdav03spuruoft",
+   483,
+   "466"
+  ],
+  "spurgeon-psalms.PSA.86.11.1": [
+   "thetreasuryofdav03spuruoft",
+   483,
+   "466"
+  ],
+  "spurgeon-psalms.PSA.86.12.1": [
+   "thetreasuryofdav03spuruoft",
+   484,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.86.13.1": [
+   "thetreasuryofdav03spuruoft",
+   484,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.86.14.1": [
+   "thetreasuryofdav03spuruoft",
+   484,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.86.15.1": [
+   "thetreasuryofdav03spuruoft",
+   484,
+   "467"
+  ],
+  "spurgeon-psalms.PSA.86.16.1": [
+   "thetreasuryofdav03spuruoft",
+   485,
+   "468"
+  ],
+  "spurgeon-psalms.PSA.86.17.1": [
+   "thetreasuryofdav03spuruoft",
+   485,
+   "468"
+  ],
+  "spurgeon-psalms.PSA.87.1.1": [
+   "thetreasuryofdav03spuruoft",
+   494,
+   "477"
+  ],
+  "spurgeon-psalms.PSA.87.2.1": [
+   "thetreasuryofdav03spuruoft",
+   495,
+   "478"
+  ],
+  "spurgeon-psalms.PSA.87.3.1": [
+   "thetreasuryofdav03spuruoft",
+   495,
+   "478"
+  ],
+  "spurgeon-psalms.PSA.87.4.1": [
+   "thetreasuryofdav03spuruoft",
+   495,
+   "478"
+  ],
+  "spurgeon-psalms.PSA.87.5.1": [
+   "thetreasuryofdav03spuruoft",
+   496,
+   "479"
+  ],
+  "spurgeon-psalms.PSA.87.6.1": [
+   "thetreasuryofdav03spuruoft",
+   496,
+   "479"
+  ],
+  "spurgeon-psalms.PSA.87.7.1": [
+   "thetreasuryofdav03spuruoft",
+   496,
+   "479"
+  ],
+  "spurgeon-psalms.PSA.88.2.1": [
+   "treasuryofdavid04spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.88.3.1": [
+   "treasuryofdavid04spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.88.4.1": [
+   "treasuryofdavid04spuruoft",
+   19,
+   ""
+  ],
+  "spurgeon-psalms.PSA.88.5.1": [
+   "treasuryofdavid04spuruoft",
+   20,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.88.6.1": [
+   "treasuryofdavid04spuruoft",
+   20,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.88.7.1": [
+   "treasuryofdavid04spuruoft",
+   20,
+   "3"
+  ],
+  "spurgeon-psalms.PSA.88.8.1": [
+   "treasuryofdavid04spuruoft",
+   21,
+   "4"
+  ],
+  "spurgeon-psalms.PSA.88.9.1": [
+   "treasuryofdavid04spuruoft",
+   21,
+   "4"
+  ],
+  "spurgeon-psalms.PSA.88.10.1": [
+   "treasuryofdavid04spuruoft",
+   22,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.88.11.1": [
+   "treasuryofdavid04spuruoft",
+   22,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.88.12.1": [
+   "treasuryofdavid04spuruoft",
+   22,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.88.13.1": [
+   "treasuryofdavid04spuruoft",
+   22,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.88.14.1": [
+   "treasuryofdavid04spuruoft",
+   22,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.88.15.1": [
+   "treasuryofdavid04spuruoft",
+   23,
+   "6"
+  ],
+  "spurgeon-psalms.PSA.88.16.1": [
+   "treasuryofdavid04spuruoft",
+   23,
+   "6"
+  ],
+  "spurgeon-psalms.PSA.88.17.1": [
+   "treasuryofdavid04spuruoft",
+   23,
+   "6"
+  ],
+  "spurgeon-psalms.PSA.88.18.1": [
+   "treasuryofdavid04spuruoft",
+   24,
+   "7"
+  ],
+  "spurgeon-psalms.PSA.88.19.1": [
+   "treasuryofdavid04spuruoft",
+   24,
+   "7"
+  ],
+  "spurgeon-psalms.PSA.89.2.1": [
+   "treasuryofdavid04spuruoft",
+   40,
+   "23"
+  ],
+  "spurgeon-psalms.PSA.89.3.1": [
+   "treasuryofdavid04spuruoft",
+   41,
+   "24"
+  ],
+  "spurgeon-psalms.PSA.89.4.1": [
+   "treasuryofdavid04spuruoft",
+   41,
+   "24"
+  ],
+  "spurgeon-psalms.PSA.89.6.1": [
+   "treasuryofdavid04spuruoft",
+   42,
+   "25"
+  ],
+  "spurgeon-psalms.PSA.89.7.1": [
+   "treasuryofdavid04spuruoft",
+   42,
+   "25"
+  ],
+  "spurgeon-psalms.PSA.89.8.1": [
+   "treasuryofdavid04spuruoft",
+   42,
+   "25"
+  ],
+  "spurgeon-psalms.PSA.89.9.1": [
+   "treasuryofdavid04spuruoft",
+   42,
+   "25"
+  ],
+  "spurgeon-psalms.PSA.89.10.1": [
+   "treasuryofdavid04spuruoft",
+   42,
+   "25"
+  ],
+  "spurgeon-psalms.PSA.89.11.1": [
+   "treasuryofdavid04spuruoft",
+   44,
+   "27"
+  ],
+  "spurgeon-psalms.PSA.89.12.1": [
+   "treasuryofdavid04spuruoft",
+   44,
+   "27"
+  ],
+  "spurgeon-psalms.PSA.89.13.1": [
+   "treasuryofdavid04spuruoft",
+   44,
+   "27"
+  ],
+  "spurgeon-psalms.PSA.89.14.1": [
+   "treasuryofdavid04spuruoft",
+   44,
+   "27"
+  ],
+  "spurgeon-psalms.PSA.89.15.1": [
+   "treasuryofdavid04spuruoft",
+   44,
+   "27"
+  ],
+  "spurgeon-psalms.PSA.89.16.1": [
+   "thetreasuryofdav03spuruoft",
+   286,
+   "269"
+  ],
+  "spurgeon-psalms.PSA.89.17.1": [
+   "treasuryofdavid04spuruoft",
+   45,
+   "28"
+  ],
+  "spurgeon-psalms.PSA.89.18.1": [
+   "treasuryofdavid04spuruoft",
+   45,
+   "28"
+  ],
+  "spurgeon-psalms.PSA.89.19.1": [
+   "treasuryofdavid04spuruoft",
+   45,
+   "28"
+  ],
+  "spurgeon-psalms.PSA.89.20.1": [
+   "treasuryofdavid04spuruoft",
+   46,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.89.21.1": [
+   "treasuryofdavid04spuruoft",
+   47,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.89.22.1": [
+   "treasuryofdavid04spuruoft",
+   47,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.89.23.1": [
+   "treasuryofdavid04spuruoft",
+   47,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.89.24.1": [
+   "treasuryofdavid04spuruoft",
+   47,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.89.25.1": [
+   "treasuryofdavid04spuruoft",
+   47,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.89.26.1": [
+   "treasuryofdavid04spuruoft",
+   47,
+   "30"
+  ],
+  "spurgeon-psalms.PSA.89.27.1": [
+   "treasuryofdavid04spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.89.28.1": [
+   "treasuryofdavid04spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.89.29.1": [
+   "treasuryofdavid04spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.89.30.1": [
+   "treasuryofdavid04spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.89.31.1": [
+   "treasuryofdavid04spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.89.32.1": [
+   "treasuryofdavid04spuruoft",
+   49,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.89.33.1": [
+   "treasuryofdavid04spuruoft",
+   49,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.89.34.1": [
+   "treasuryofdavid04spuruoft",
+   49,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.89.35.1": [
+   "treasuryofdavid04spuruoft",
+   49,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.89.36.1": [
+   "treasuryofdavid04spuruoft",
+   49,
+   "32"
+  ],
+  "spurgeon-psalms.PSA.89.37.1": [
+   "treasuryofdavid04spuruoft",
+   50,
+   "33"
+  ],
+  "spurgeon-psalms.PSA.89.38.1": [
+   "treasuryofdavid04spuruoft",
+   50,
+   "33"
+  ],
+  "spurgeon-psalms.PSA.89.39.1": [
+   "treasuryofdavid04spuruoft",
+   50,
+   "33"
+  ],
+  "spurgeon-psalms.PSA.89.40.1": [
+   "treasuryofdavid04spuruoft",
+   50,
+   "33"
+  ],
+  "spurgeon-psalms.PSA.89.41.1": [
+   "treasuryofdavid04spuruoft",
+   50,
+   "33"
+  ],
+  "spurgeon-psalms.PSA.89.42.1": [
+   "treasuryofdavid04spuruoft",
+   50,
+   "33"
+  ],
+  "spurgeon-psalms.PSA.89.43.1": [
+   "treasuryofdavid04spuruoft",
+   50,
+   "33"
+  ],
+  "spurgeon-psalms.PSA.89.44.1": [
+   "treasuryofdavid04spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.89.45.1": [
+   "treasuryofdavid04spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.89.46.1": [
+   "treasuryofdavid04spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.89.47.1": [
+   "treasuryofdavid04spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.89.48.1": [
+   "treasuryofdavid04spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.89.49.1": [
+   "treasuryofdavid04spuruoft",
+   52,
+   "35"
+  ],
+  "spurgeon-psalms.PSA.89.50.1": [
+   "thetreasuryofdav01spuruoft",
+   343,
+   "326"
+  ],
+  "spurgeon-psalms.PSA.89.51.1": [
+   "treasuryofdavid04spuruoft",
+   53,
+   "36"
+  ],
+  "spurgeon-psalms.PSA.89.52.1": [
+   "treasuryofdavid04spuruoft",
+   53,
+   "36"
+  ],
+  "spurgeon-psalms.PSA.89.53.1": [
+   "treasuryofdavid04spuruoft",
+   53,
+   "36"
+  ],
+  "spurgeon-psalms.PSA.90.1.1": [
+   "treasuryofdavid04spuruoft",
+   77,
+   "60"
+  ],
+  "spurgeon-psalms.PSA.90.2.1": [
+   "treasuryofdavid04spuruoft",
+   78,
+   "61"
+  ],
+  "spurgeon-psalms.PSA.90.3.1": [
+   "treasuryofdavid04spuruoft",
+   78,
+   "61"
+  ],
+  "spurgeon-psalms.PSA.90.4.1": [
+   "treasuryofdavid04spuruoft",
+   78,
+   "61"
+  ],
+  "spurgeon-psalms.PSA.90.5.1": [
+   "treasuryofdavid04spuruoft",
+   79,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.90.6.1": [
+   "treasuryofdavid04spuruoft",
+   79,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.90.7.1": [
+   "treasuryofdavid04spuruoft",
+   79,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.90.8.1": [
+   "treasuryofdavid04spuruoft",
+   79,
+   "62"
+  ],
+  "spurgeon-psalms.PSA.90.9.1": [
+   "treasuryofdavid04spuruoft",
+   80,
+   "63"
+  ],
+  "spurgeon-psalms.PSA.90.10.1": [
+   "treasuryofdavid04spuruoft",
+   80,
+   "63"
+  ],
+  "spurgeon-psalms.PSA.90.11.1": [
+   "thetreasuryofdav03spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.90.12.1": [
+   "treasuryofdavid04spuruoft",
+   81,
+   "64"
+  ],
+  "spurgeon-psalms.PSA.90.13.1": [
+   "treasuryofdavid04spuruoft",
+   82,
+   "65"
+  ],
+  "spurgeon-psalms.PSA.90.14.1": [
+   "treasuryofdavid04spuruoft",
+   82,
+   "65"
+  ],
+  "spurgeon-psalms.PSA.90.15.1": [
+   "treasuryofdavid04spuruoft",
+   82,
+   "65"
+  ],
+  "spurgeon-psalms.PSA.90.16.1": [
+   "treasuryofdavid04spuruoft",
+   83,
+   "66"
+  ],
+  "spurgeon-psalms.PSA.90.17.1": [
+   "treasuryofdavid04spuruoft",
+   83,
+   "66"
+  ],
+  "spurgeon-psalms.PSA.91.1.1": [
+   "treasuryofdavid04spuruoft",
+   105,
+   "88"
+  ],
+  "spurgeon-psalms.PSA.91.2.1": [
+   "treasuryofdavid04spuruoft",
+   106,
+   "89"
+  ],
+  "spurgeon-psalms.PSA.91.3.1": [
+   "treasuryofdavid04spuruoft",
+   107,
+   "90"
+  ],
+  "spurgeon-psalms.PSA.91.4.1": [
+   "treasuryofdavid04spuruoft",
+   107,
+   "90"
+  ],
+  "spurgeon-psalms.PSA.91.5.1": [
+   "treasuryofdavid04spuruoft",
+   107,
+   "90"
+  ],
+  "spurgeon-psalms.PSA.91.6.1": [
+   "treasuryofdavid04spuruoft",
+   108,
+   "91"
+  ],
+  "spurgeon-psalms.PSA.91.7.1": [
+   "treasuryofdavid04spuruoft",
+   108,
+   "91"
+  ],
+  "spurgeon-psalms.PSA.91.8.1": [
+   "treasuryofdavid04spuruoft",
+   109,
+   "92"
+  ],
+  "spurgeon-psalms.PSA.91.9-10.1": [
+   "treasuryofdavid04spuruoft",
+   109,
+   "92"
+  ],
+  "spurgeon-psalms.PSA.91.11.1": [
+   "treasuryofdavid04spuruoft",
+   110,
+   "93"
+  ],
+  "spurgeon-psalms.PSA.91.12.1": [
+   "treasuryofdavid04spuruoft",
+   110,
+   "93"
+  ],
+  "spurgeon-psalms.PSA.91.13.1": [
+   "treasuryofdavid04spuruoft",
+   110,
+   "93"
+  ],
+  "spurgeon-psalms.PSA.91.14.1": [
+   "treasuryofdavid04spuruoft",
+   111,
+   "94"
+  ],
+  "spurgeon-psalms.PSA.91.15.1": [
+   "thetreasuryofdav03spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.91.16.1": [
+   "treasuryofdavid04spuruoft",
+   111,
+   "94"
+  ],
+  "spurgeon-psalms.PSA.92.2.1": [
+   "treasuryofdavid04spuruoft",
+   133,
+   "116"
+  ],
+  "spurgeon-psalms.PSA.92.3.1": [
+   "treasuryofdavid04spuruoft",
+   133,
+   "116"
+  ],
+  "spurgeon-psalms.PSA.92.4.1": [
+   "treasuryofdavid04spuruoft",
+   134,
+   "117"
+  ],
+  "spurgeon-psalms.PSA.92.5.1": [
+   "treasuryofdavid04spuruoft",
+   134,
+   "117"
+  ],
+  "spurgeon-psalms.PSA.92.6.1": [
+   "treasuryofdavid04spuruoft",
+   134,
+   "117"
+  ],
+  "spurgeon-psalms.PSA.92.7.1": [
+   "treasuryofdavid04spuruoft",
+   134,
+   "117"
+  ],
+  "spurgeon-psalms.PSA.92.8.1": [
+   "treasuryofdavid04spuruoft",
+   135,
+   "118"
+  ],
+  "spurgeon-psalms.PSA.92.9.1": [
+   "treasuryofdavid04spuruoft",
+   135,
+   "118"
+  ],
+  "spurgeon-psalms.PSA.92.10.1": [
+   "treasuryofdavid04spuruoft",
+   136,
+   "119"
+  ],
+  "spurgeon-psalms.PSA.92.11.1": [
+   "treasuryofdavid04spuruoft",
+   136,
+   "119"
+  ],
+  "spurgeon-psalms.PSA.92.12.1": [
+   "treasuryofdavid04spuruoft",
+   136,
+   "119"
+  ],
+  "spurgeon-psalms.PSA.92.13.1": [
+   "treasuryofdavid04spuruoft",
+   137,
+   "120"
+  ],
+  "spurgeon-psalms.PSA.92.14.1": [
+   "treasuryofdavid04spuruoft",
+   137,
+   "120"
+  ],
+  "spurgeon-psalms.PSA.92.15.1": [
+   "treasuryofdavid04spuruoft",
+   137,
+   "120"
+  ],
+  "spurgeon-psalms.PSA.92.16.1": [
+   "treasuryofdavid04spuruoft",
+   137,
+   "120"
+  ],
+  "spurgeon-psalms.PSA.93.1.1": [
+   "treasuryofdavid04spuruoft",
+   151,
+   "134"
+  ],
+  "spurgeon-psalms.PSA.93.2.1": [
+   "treasuryofdavid04spuruoft",
+   152,
+   "135"
+  ],
+  "spurgeon-psalms.PSA.93.3.1": [
+   "treasuryofdavid04spuruoft",
+   152,
+   "135"
+  ],
+  "spurgeon-psalms.PSA.93.4.1": [
+   "treasuryofdavid04spuruoft",
+   152,
+   "135"
+  ],
+  "spurgeon-psalms.PSA.93.5.1": [
+   "treasuryofdavid04spuruoft",
+   152,
+   "135"
+  ],
+  "spurgeon-psalms.PSA.94.1.1": [
+   "treasuryofdavid04spuruoft",
+   159,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.94.2.1": [
+   "treasuryofdavid04spuruoft",
+   159,
+   "142"
+  ],
+  "spurgeon-psalms.PSA.94.3.1": [
+   "treasuryofdavid04spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.94.4.1": [
+   "treasuryofdavid04spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.94.5.1": [
+   "treasuryofdavid04spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.94.6.1": [
+   "treasuryofdavid04spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.94.7.1": [
+   "treasuryofdavid04spuruoft",
+   160,
+   "143"
+  ],
+  "spurgeon-psalms.PSA.94.8.1": [
+   "treasuryofdavid04spuruoft",
+   161,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.94.9.1": [
+   "thetreasuryofdav01spuruoft",
+   121,
+   "104"
+  ],
+  "spurgeon-psalms.PSA.94.10.1": [
+   "treasuryofdavid04spuruoft",
+   161,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.94.11.1": [
+   "treasuryofdavid04spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.94.12.1": [
+   "treasuryofdavid04spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.94.13.1": [
+   "treasuryofdavid04spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.94.14.1": [
+   "treasuryofdavid04spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.94.15.1": [
+   "treasuryofdavid04spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.94.16.1": [
+   "treasuryofdavid04spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.94.17.1": [
+   "treasuryofdavid04spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.94.18.1": [
+   "treasuryofdavid04spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.94.20.1": [
+   "treasuryofdavid04spuruoft",
+   164,
+   "147"
+  ],
+  "spurgeon-psalms.PSA.94.21.1": [
+   "treasuryofdavid04spuruoft",
+   164,
+   "147"
+  ],
+  "spurgeon-psalms.PSA.94.22.1": [
+   "treasuryofdavid04spuruoft",
+   164,
+   "147"
+  ],
+  "spurgeon-psalms.PSA.94.23.1": [
+   "treasuryofdavid04spuruoft",
+   165,
+   "148"
+  ],
+  "spurgeon-psalms.PSA.95.1.1": [
+   "treasuryofdavid04spuruoft",
+   181,
+   "164"
+  ],
+  "spurgeon-psalms.PSA.95.2.1": [
+   "treasuryofdavid04spuruoft",
+   181,
+   "164"
+  ],
+  "spurgeon-psalms.PSA.95.3.1": [
+   "treasuryofdavid04spuruoft",
+   182,
+   "165"
+  ],
+  "spurgeon-psalms.PSA.95.4.1": [
+   "treasuryofdavid04spuruoft",
+   182,
+   "165"
+  ],
+  "spurgeon-psalms.PSA.95.5.1": [
+   "treasuryofdavid04spuruoft",
+   182,
+   "165"
+  ],
+  "spurgeon-psalms.PSA.95.6.1": [
+   "treasuryofdavid04spuruoft",
+   183,
+   "166"
+  ],
+  "spurgeon-psalms.PSA.95.7.1": [
+   "treasuryofdavid04spuruoft",
+   183,
+   "166"
+  ],
+  "spurgeon-psalms.PSA.95.8.1": [
+   "treasuryofdavid04spuruoft",
+   184,
+   "167"
+  ],
+  "spurgeon-psalms.PSA.95.9.1": [
+   "treasuryofdavid04spuruoft",
+   184,
+   "167"
+  ],
+  "spurgeon-psalms.PSA.95.10.1": [
+   "treasuryofdavid04spuruoft",
+   185,
+   "168"
+  ],
+  "spurgeon-psalms.PSA.95.11.1": [
+   "treasuryofdavid04spuruoft",
+   185,
+   "168"
+  ],
+  "spurgeon-psalms.PSA.96.1.1": [
+   "treasuryofdavid04spuruoft",
+   197,
+   "180"
+  ],
+  "spurgeon-psalms.PSA.96.2.1": [
+   "treasuryofdavid04spuruoft",
+   198,
+   "181"
+  ],
+  "spurgeon-psalms.PSA.96.3.1": [
+   "treasuryofdavid04spuruoft",
+   198,
+   "181"
+  ],
+  "spurgeon-psalms.PSA.96.4.1": [
+   "treasuryofdavid04spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.96.5.1": [
+   "treasuryofdavid04spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.96.6.1": [
+   "treasuryofdavid04spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.96.7.1": [
+   "treasuryofdavid04spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.96.8.1": [
+   "thetreasuryofdav02spuruoft",
+   42,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.96.9.1": [
+   "thetreasuryofdav02spuruoft",
+   42,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.96.10.1": [
+   "treasuryofdavid04spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.96.11.1": [
+   "treasuryofdavid04spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.96.12.1": [
+   "treasuryofdavid04spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.96.13.1": [
+   "treasuryofdavid04spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.97.1.1": [
+   "thetreasuryofdav01spuruoft",
+   397,
+   "380"
+  ],
+  "spurgeon-psalms.PSA.97.2.1": [
+   "treasuryofdavid04spuruoft",
+   211,
+   "194"
+  ],
+  "spurgeon-psalms.PSA.97.3.1": [
+   "treasuryofdavid04spuruoft",
+   212,
+   "195"
+  ],
+  "spurgeon-psalms.PSA.97.4.1": [
+   "treasuryofdavid04spuruoft",
+   212,
+   "195"
+  ],
+  "spurgeon-psalms.PSA.97.5.1": [
+   "treasuryofdavid04spuruoft",
+   212,
+   "195"
+  ],
+  "spurgeon-psalms.PSA.97.6.1": [
+   "treasuryofdavid04spuruoft",
+   213,
+   "196"
+  ],
+  "spurgeon-psalms.PSA.97.7.1": [
+   "treasuryofdavid04spuruoft",
+   213,
+   "196"
+  ],
+  "spurgeon-psalms.PSA.97.8.1": [
+   "treasuryofdavid04spuruoft",
+   213,
+   "196"
+  ],
+  "spurgeon-psalms.PSA.97.9.1": [
+   "treasuryofdavid04spuruoft",
+   214,
+   "197"
+  ],
+  "spurgeon-psalms.PSA.97.10.1": [
+   "treasuryofdavid04spuruoft",
+   214,
+   "197"
+  ],
+  "spurgeon-psalms.PSA.97.11.1": [
+   "treasuryofdavid04spuruoft",
+   214,
+   "197"
+  ],
+  "spurgeon-psalms.PSA.97.12.1": [
+   "treasuryofdavid04spuruoft",
+   214,
+   "197"
+  ],
+  "spurgeon-psalms.PSA.98.1.1": [
+   "treasuryofdavid04spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.98.2.1": [
+   "treasuryofdavid04spuruoft",
+   228,
+   "211"
+  ],
+  "spurgeon-psalms.PSA.98.3.1": [
+   "treasuryofdavid04spuruoft",
+   228,
+   "211"
+  ],
+  "spurgeon-psalms.PSA.98.4.1": [
+   "treasuryofdavid04spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.98.5.1": [
+   "treasuryofdavid04spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.98.6.1": [
+   "treasuryofdavid04spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.98.7.1": [
+   "treasuryofdavid04spuruoft",
+   230,
+   "213"
+  ],
+  "spurgeon-psalms.PSA.98.8.1": [
+   "treasuryofdavid04spuruoft",
+   230,
+   "213"
+  ],
+  "spurgeon-psalms.PSA.98.9.1": [
+   "treasuryofdavid04spuruoft",
+   230,
+   "213"
+  ],
+  "spurgeon-psalms.PSA.99.1.1": [
+   "treasuryofdavid04spuruoft",
+   239,
+   "222"
+  ],
+  "spurgeon-psalms.PSA.99.2.1": [
+   "treasuryofdavid04spuruoft",
+   239,
+   "222"
+  ],
+  "spurgeon-psalms.PSA.99.3.1": [
+   "treasuryofdavid04spuruoft",
+   240,
+   "223"
+  ],
+  "spurgeon-psalms.PSA.99.4.1": [
+   "treasuryofdavid04spuruoft",
+   240,
+   "223"
+  ],
+  "spurgeon-psalms.PSA.99.5.1": [
+   "treasuryofdavid04spuruoft",
+   240,
+   "223"
+  ],
+  "spurgeon-psalms.PSA.99.6.1": [
+   "treasuryofdavid04spuruoft",
+   241,
+   "224"
+  ],
+  "spurgeon-psalms.PSA.99.7.1": [
+   "treasuryofdavid04spuruoft",
+   241,
+   "224"
+  ],
+  "spurgeon-psalms.PSA.99.8.1": [
+   "treasuryofdavid04spuruoft",
+   241,
+   "224"
+  ],
+  "spurgeon-psalms.PSA.99.9.1": [
+   "treasuryofdavid04spuruoft",
+   242,
+   "225"
+  ],
+  "spurgeon-psalms.PSA.100.1.1": [
+   "treasuryofdavid04spuruoft",
+   250,
+   "233"
+  ],
+  "spurgeon-psalms.PSA.100.2.1": [
+   "treasuryofdavid04spuruoft",
+   250,
+   "233"
+  ],
+  "spurgeon-psalms.PSA.100.3.1": [
+   "treasuryofdavid04spuruoft",
+   251,
+   "234"
+  ],
+  "spurgeon-psalms.PSA.100.4.1": [
+   "treasuryofdavid04spuruoft",
+   251,
+   "234"
+  ],
+  "spurgeon-psalms.PSA.100.5.1": [
+   "treasuryofdavid04spuruoft",
+   251,
+   "234"
+  ],
+  "spurgeon-psalms.PSA.101.1.1": [
+   "treasuryofdavid04spuruoft",
+   256,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.101.2.1": [
+   "treasuryofdavid04spuruoft",
+   256,
+   "239"
+  ],
+  "spurgeon-psalms.PSA.101.3.1": [
+   "treasuryofdavid04spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.101.4.1": [
+   "treasuryofdavid04spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.101.5.1": [
+   "treasuryofdavid04spuruoft",
+   257,
+   "240"
+  ],
+  "spurgeon-psalms.PSA.101.6.1": [
+   "treasuryofdavid04spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.101.7.1": [
+   "treasuryofdavid04spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.101.8.1": [
+   "treasuryofdavid04spuruoft",
+   258,
+   "241"
+  ],
+  "spurgeon-psalms.PSA.102.2.1": [
+   "treasuryofdavid04spuruoft",
+   268,
+   "251"
+  ],
+  "spurgeon-psalms.PSA.102.3.1": [
+   "treasuryofdavid04spuruoft",
+   268,
+   "251"
+  ],
+  "spurgeon-psalms.PSA.102.4.1": [
+   "treasuryofdavid04spuruoft",
+   268,
+   "251"
+  ],
+  "spurgeon-psalms.PSA.102.5.1": [
+   "treasuryofdavid04spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.102.6.1": [
+   "treasuryofdavid04spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.102.7.1": [
+   "treasuryofdavid04spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.102.8.1": [
+   "treasuryofdavid04spuruoft",
+   269,
+   "252"
+  ],
+  "spurgeon-psalms.PSA.102.9.1": [
+   "treasuryofdavid04spuruoft",
+   270,
+   "253"
+  ],
+  "spurgeon-psalms.PSA.102.10.1": [
+   "treasuryofdavid04spuruoft",
+   270,
+   "253"
+  ],
+  "spurgeon-psalms.PSA.102.11.1": [
+   "thetreasuryofdav02spuruoft",
+   56,
+   "43"
+  ],
+  "spurgeon-psalms.PSA.102.12.1": [
+   "treasuryofdavid04spuruoft",
+   270,
+   "253"
+  ],
+  "spurgeon-psalms.PSA.102.13.1": [
+   "treasuryofdavid04spuruoft",
+   271,
+   "254"
+  ],
+  "spurgeon-psalms.PSA.102.14.1": [
+   "treasuryofdavid04spuruoft",
+   271,
+   "254"
+  ],
+  "spurgeon-psalms.PSA.102.15.1": [
+   "treasuryofdavid04spuruoft",
+   272,
+   "255"
+  ],
+  "spurgeon-psalms.PSA.102.16.1": [
+   "treasuryofdavid04spuruoft",
+   272,
+   "255"
+  ],
+  "spurgeon-psalms.PSA.102.17.1": [
+   "treasuryofdavid04spuruoft",
+   272,
+   "255"
+  ],
+  "spurgeon-psalms.PSA.102.18.1": [
+   "treasuryofdavid04spuruoft",
+   272,
+   "255"
+  ],
+  "spurgeon-psalms.PSA.102.19.1": [
+   "treasuryofdavid04spuruoft",
+   272,
+   "255"
+  ],
+  "spurgeon-psalms.PSA.102.22.1": [
+   "treasuryofdavid04spuruoft",
+   273,
+   "256"
+  ],
+  "spurgeon-psalms.PSA.102.23.1": [
+   "treasuryofdavid04spuruoft",
+   273,
+   "256"
+  ],
+  "spurgeon-psalms.PSA.102.24.1": [
+   "treasuryofdavid04spuruoft",
+   274,
+   "257"
+  ],
+  "spurgeon-psalms.PSA.102.25.1": [
+   "treasuryofdavid04spuruoft",
+   274,
+   "257"
+  ],
+  "spurgeon-psalms.PSA.102.26.1": [
+   "treasuryofdavid04spuruoft",
+   274,
+   "257"
+  ],
+  "spurgeon-psalms.PSA.102.27.1": [
+   "treasuryofdavid04spuruoft",
+   274,
+   "257"
+  ],
+  "spurgeon-psalms.PSA.102.28.1": [
+   "treasuryofdavid04spuruoft",
+   275,
+   "258"
+  ],
+  "spurgeon-psalms.PSA.102.29.1": [
+   "treasuryofdavid04spuruoft",
+   275,
+   "258"
+  ],
+  "spurgeon-psalms.PSA.103.1.1": [
+   "treasuryofdavid04spuruoft",
+   292,
+   "275"
+  ],
+  "spurgeon-psalms.PSA.103.2.1": [
+   "treasuryofdavid04spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.103.3.1": [
+   "treasuryofdavid04spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.103.4.1": [
+   "treasuryofdavid04spuruoft",
+   294,
+   "277"
+  ],
+  "spurgeon-psalms.PSA.103.5.1": [
+   "treasuryofdavid04spuruoft",
+   294,
+   "277"
+  ],
+  "spurgeon-psalms.PSA.103.6.1": [
+   "treasuryofdavid04spuruoft",
+   295,
+   "278"
+  ],
+  "spurgeon-psalms.PSA.103.7.1": [
+   "thetreasuryofdav03spuruoft",
+   148,
+   "131"
+  ],
+  "spurgeon-psalms.PSA.103.8.1": [
+   "treasuryofdavid04spuruoft",
+   296,
+   "279"
+  ],
+  "spurgeon-psalms.PSA.103.9.1": [
+   "treasuryofdavid04spuruoft",
+   296,
+   "279"
+  ],
+  "spurgeon-psalms.PSA.103.10.1": [
+   "treasuryofdavid04spuruoft",
+   296,
+   "279"
+  ],
+  "spurgeon-psalms.PSA.103.11.1": [
+   "treasuryofdavid04spuruoft",
+   297,
+   "280"
+  ],
+  "spurgeon-psalms.PSA.103.12.1": [
+   "treasuryofdavid04spuruoft",
+   297,
+   "280"
+  ],
+  "spurgeon-psalms.PSA.103.13.1": [
+   "treasuryofdavid04spuruoft",
+   297,
+   "280"
+  ],
+  "spurgeon-psalms.PSA.103.14.1": [
+   "treasuryofdavid04spuruoft",
+   297,
+   "280"
+  ],
+  "spurgeon-psalms.PSA.103.15.1": [
+   "treasuryofdavid04spuruoft",
+   298,
+   "281"
+  ],
+  "spurgeon-psalms.PSA.103.16.1": [
+   "treasuryofdavid04spuruoft",
+   298,
+   "281"
+  ],
+  "spurgeon-psalms.PSA.103.17.1": [
+   "treasuryofdavid04spuruoft",
+   298,
+   "281"
+  ],
+  "spurgeon-psalms.PSA.103.18.1": [
+   "treasuryofdavid04spuruoft",
+   299,
+   "282"
+  ],
+  "spurgeon-psalms.PSA.103.19.1": [
+   "treasuryofdavid04spuruoft",
+   299,
+   "282"
+  ],
+  "spurgeon-psalms.PSA.103.20.1": [
+   "treasuryofdavid04spuruoft",
+   300,
+   "283"
+  ],
+  "spurgeon-psalms.PSA.103.21.1": [
+   "thetreasuryofdav01spuruoft",
+   99,
+   "82"
+  ],
+  "spurgeon-psalms.PSA.103.22.1": [
+   "treasuryofdavid04spuruoft",
+   300,
+   "283"
+  ],
+  "spurgeon-psalms.PSA.104.1.1": [
+   "treasuryofdavid04spuruoft",
+   318,
+   "301"
+  ],
+  "spurgeon-psalms.PSA.104.2.1": [
+   "treasuryofdavid04spuruoft",
+   319,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.104.3.1": [
+   "treasuryofdavid04spuruoft",
+   319,
+   "302"
+  ],
+  "spurgeon-psalms.PSA.104.4.1": [
+   "treasuryofdavid04spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.104.5.1": [
+   "treasuryofdavid04spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.104.6.1": [
+   "treasuryofdavid04spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.104.7.1": [
+   "treasuryofdavid04spuruoft",
+   320,
+   "303"
+  ],
+  "spurgeon-psalms.PSA.104.8.1": [
+   "treasuryofdavid04spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.104.9.1": [
+   "treasuryofdavid04spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.104.10.1": [
+   "treasuryofdavid04spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.104.11.1": [
+   "treasuryofdavid04spuruoft",
+   321,
+   "304"
+  ],
+  "spurgeon-psalms.PSA.104.12.1": [
+   "treasuryofdavid04spuruoft",
+   322,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.104.13.1": [
+   "treasuryofdavid04spuruoft",
+   322,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.104.14.1": [
+   "treasuryofdavid04spuruoft",
+   322,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.104.15.1": [
+   "treasuryofdavid04spuruoft",
+   322,
+   "305"
+  ],
+  "spurgeon-psalms.PSA.104.16.1": [
+   "treasuryofdavid04spuruoft",
+   323,
+   "306"
+  ],
+  "spurgeon-psalms.PSA.104.17.1": [
+   "treasuryofdavid04spuruoft",
+   323,
+   "306"
+  ],
+  "spurgeon-psalms.PSA.104.18.1": [
+   "treasuryofdavid04spuruoft",
+   323,
+   "306"
+  ],
+  "spurgeon-psalms.PSA.104.19.1": [
+   "treasuryofdavid04spuruoft",
+   324,
+   "307"
+  ],
+  "spurgeon-psalms.PSA.104.20.1": [
+   "treasuryofdavid04spuruoft",
+   324,
+   "307"
+  ],
+  "spurgeon-psalms.PSA.104.21.1": [
+   "treasuryofdavid04spuruoft",
+   324,
+   "307"
+  ],
+  "spurgeon-psalms.PSA.104.22.1": [
+   "treasuryofdavid04spuruoft",
+   324,
+   "307"
+  ],
+  "spurgeon-psalms.PSA.104.23.1": [
+   "treasuryofdavid04spuruoft",
+   325,
+   "308"
+  ],
+  "spurgeon-psalms.PSA.104.24.1": [
+   "treasuryofdavid04spuruoft",
+   326,
+   "309"
+  ],
+  "spurgeon-psalms.PSA.104.25.1": [
+   "treasuryofdavid04spuruoft",
+   326,
+   "309"
+  ],
+  "spurgeon-psalms.PSA.104.26.1": [
+   "treasuryofdavid04spuruoft",
+   326,
+   "309"
+  ],
+  "spurgeon-psalms.PSA.104.27.1": [
+   "treasuryofdavid04spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.104.28.1": [
+   "treasuryofdavid04spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.104.29.1": [
+   "treasuryofdavid04spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.104.30.1": [
+   "treasuryofdavid04spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.104.31.1": [
+   "treasuryofdavid04spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.104.32.1": [
+   "treasuryofdavid04spuruoft",
+   328,
+   "311"
+  ],
+  "spurgeon-psalms.PSA.104.33.1": [
+   "treasuryofdavid04spuruoft",
+   328,
+   "311"
+  ],
+  "spurgeon-psalms.PSA.104.34.1": [
+   "treasuryofdavid04spuruoft",
+   328,
+   "311"
+  ],
+  "spurgeon-psalms.PSA.104.35.1": [
+   "treasuryofdavid04spuruoft",
+   328,
+   "311"
+  ],
+  "spurgeon-psalms.PSA.105.1.1": [
+   "treasuryofdavid04spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.105.2.1": [
+   "treasuryofdavid04spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.105.3.1": [
+   "treasuryofdavid04spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.105.4.1": [
+   "treasuryofdavid04spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.105.5.1": [
+   "treasuryofdavid04spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.105.6.1": [
+   "treasuryofdavid04spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.105.7.1": [
+   "treasuryofdavid04spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.105.8.1": [
+   "treasuryofdavid04spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.105.9.1": [
+   "treasuryofdavid04spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.105.10.1": [
+   "treasuryofdavid04spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.105.11.1": [
+   "treasuryofdavid04spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.105.13.1": [
+   "treasuryofdavid04spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.105.14.1": [
+   "treasuryofdavid04spuruoft",
+   356,
+   "339"
+  ],
+  "spurgeon-psalms.PSA.105.15.1": [
+   "treasuryofdavid04spuruoft",
+   357,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.105.16-23.1": [
+   "treasuryofdavid04spuruoft",
+   357,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.105.16.1": [
+   "treasuryofdavid04spuruoft",
+   357,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.105.17.1": [
+   "treasuryofdavid04spuruoft",
+   357,
+   "340"
+  ],
+  "spurgeon-psalms.PSA.105.18.1": [
+   "treasuryofdavid04spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.105.19.1": [
+   "treasuryofdavid04spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.105.20.1": [
+   "treasuryofdavid04spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.105.21.1": [
+   "treasuryofdavid04spuruoft",
+   358,
+   "341"
+  ],
+  "spurgeon-psalms.PSA.105.22.1": [
+   "treasuryofdavid04spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.105.23.1": [
+   "treasuryofdavid04spuruoft",
+   359,
+   "342"
+  ],
+  "spurgeon-psalms.PSA.105.24.1": [
+   "treasuryofdavid04spuruoft",
+   360,
+   "343"
+  ],
+  "spurgeon-psalms.PSA.105.25.1": [
+   "treasuryofdavid04spuruoft",
+   360,
+   "343"
+  ],
+  "spurgeon-psalms.PSA.105.26.1": [
+   "treasuryofdavid04spuruoft",
+   360,
+   "343"
+  ],
+  "spurgeon-psalms.PSA.105.27.1": [
+   "treasuryofdavid04spuruoft",
+   360,
+   "343"
+  ],
+  "spurgeon-psalms.PSA.105.28.1": [
+   "treasuryofdavid04spuruoft",
+   360,
+   "343"
+  ],
+  "spurgeon-psalms.PSA.105.29.1": [
+   "treasuryofdavid04spuruoft",
+   361,
+   "344"
+  ],
+  "spurgeon-psalms.PSA.105.30.1": [
+   "treasuryofdavid04spuruoft",
+   361,
+   "344"
+  ],
+  "spurgeon-psalms.PSA.105.31.1": [
+   "treasuryofdavid04spuruoft",
+   361,
+   "344"
+  ],
+  "spurgeon-psalms.PSA.105.32.1": [
+   "treasuryofdavid04spuruoft",
+   361,
+   "344"
+  ],
+  "spurgeon-psalms.PSA.105.33.1": [
+   "treasuryofdavid04spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.105.36.1": [
+   "treasuryofdavid04spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.105.37.1": [
+   "treasuryofdavid04spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.105.38.1": [
+   "treasuryofdavid04spuruoft",
+   362,
+   "345"
+  ],
+  "spurgeon-psalms.PSA.105.39.1": [
+   "treasuryofdavid04spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.105.40.1": [
+   "treasuryofdavid04spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.105.41.1": [
+   "treasuryofdavid04spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.105.42.1": [
+   "treasuryofdavid04spuruoft",
+   363,
+   "346"
+  ],
+  "spurgeon-psalms.PSA.105.43.1": [
+   "treasuryofdavid04spuruoft",
+   364,
+   "347"
+  ],
+  "spurgeon-psalms.PSA.105.44.1": [
+   "treasuryofdavid04spuruoft",
+   364,
+   "347"
+  ],
+  "spurgeon-psalms.PSA.105.45.1": [
+   "treasuryofdavid04spuruoft",
+   364,
+   "347"
+  ],
+  "spurgeon-psalms.PSA.106.1.1": [
+   "treasuryofdavid04spuruoft",
+   380,
+   "363"
+  ],
+  "spurgeon-psalms.PSA.106.2.1": [
+   "treasuryofdavid04spuruoft",
+   381,
+   "364"
+  ],
+  "spurgeon-psalms.PSA.106.3.1": [
+   "treasuryofdavid04spuruoft",
+   381,
+   "364"
+  ],
+  "spurgeon-psalms.PSA.106.4.1": [
+   "treasuryofdavid04spuruoft",
+   381,
+   "364"
+  ],
+  "spurgeon-psalms.PSA.106.5.1": [
+   "treasuryofdavid04spuruoft",
+   382,
+   "365"
+  ],
+  "spurgeon-psalms.PSA.106.6.1": [
+   "treasuryofdavid04spuruoft",
+   382,
+   "365"
+  ],
+  "spurgeon-psalms.PSA.106.7.1": [
+   "treasuryofdavid04spuruoft",
+   382,
+   "365"
+  ],
+  "spurgeon-psalms.PSA.106.8.1": [
+   "treasuryofdavid04spuruoft",
+   383,
+   "366"
+  ],
+  "spurgeon-psalms.PSA.106.9.1": [
+   "treasuryofdavid04spuruoft",
+   383,
+   "366"
+  ],
+  "spurgeon-psalms.PSA.106.10.1": [
+   "treasuryofdavid04spuruoft",
+   383,
+   "366"
+  ],
+  "spurgeon-psalms.PSA.106.11.1": [
+   "treasuryofdavid04spuruoft",
+   383,
+   "366"
+  ],
+  "spurgeon-psalms.PSA.106.12.1": [
+   "treasuryofdavid04spuruoft",
+   383,
+   "366"
+  ],
+  "spurgeon-psalms.PSA.106.13.1": [
+   "treasuryofdavid04spuruoft",
+   384,
+   "367"
+  ],
+  "spurgeon-psalms.PSA.106.14.1": [
+   "treasuryofdavid04spuruoft",
+   384,
+   "367"
+  ],
+  "spurgeon-psalms.PSA.106.15.1": [
+   "treasuryofdavid04spuruoft",
+   384,
+   "367"
+  ],
+  "spurgeon-psalms.PSA.106.16.1": [
+   "treasuryofdavid04spuruoft",
+   384,
+   "367"
+  ],
+  "spurgeon-psalms.PSA.106.17.1": [
+   "treasuryofdavid04spuruoft",
+   384,
+   "367"
+  ],
+  "spurgeon-psalms.PSA.106.18.1": [
+   "treasuryofdavid04spuruoft",
+   384,
+   "367"
+  ],
+  "spurgeon-psalms.PSA.106.19.1": [
+   "treasuryofdavid04spuruoft",
+   385,
+   "368"
+  ],
+  "spurgeon-psalms.PSA.106.20.1": [
+   "treasuryofdavid04spuruoft",
+   385,
+   "368"
+  ],
+  "spurgeon-psalms.PSA.106.23.1": [
+   "treasuryofdavid04spuruoft",
+   386,
+   "369"
+  ],
+  "spurgeon-psalms.PSA.106.24.1": [
+   "treasuryofdavid04spuruoft",
+   386,
+   "369"
+  ],
+  "spurgeon-psalms.PSA.106.25.1": [
+   "treasuryofdavid04spuruoft",
+   387,
+   "370"
+  ],
+  "spurgeon-psalms.PSA.106.26.1": [
+   "treasuryofdavid04spuruoft",
+   387,
+   "370"
+  ],
+  "spurgeon-psalms.PSA.106.28.1": [
+   "treasuryofdavid04spuruoft",
+   387,
+   "370"
+  ],
+  "spurgeon-psalms.PSA.106.29.1": [
+   "treasuryofdavid04spuruoft",
+   388,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.106.30.1": [
+   "treasuryofdavid04spuruoft",
+   388,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.106.31.1": [
+   "thetreasuryofdav01spuruoft",
+   439,
+   "422"
+  ],
+  "spurgeon-psalms.PSA.106.32.1": [
+   "treasuryofdavid04spuruoft",
+   388,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.106.33.1": [
+   "treasuryofdavid04spuruoft",
+   388,
+   "371"
+  ],
+  "spurgeon-psalms.PSA.106.34.1": [
+   "treasuryofdavid04spuruoft",
+   389,
+   "372"
+  ],
+  "spurgeon-psalms.PSA.106.35.1": [
+   "treasuryofdavid04spuruoft",
+   389,
+   "372"
+  ],
+  "spurgeon-psalms.PSA.106.36.1": [
+   "treasuryofdavid04spuruoft",
+   389,
+   "372"
+  ],
+  "spurgeon-psalms.PSA.106.39.1": [
+   "treasuryofdavid04spuruoft",
+   389,
+   "372"
+  ],
+  "spurgeon-psalms.PSA.106.42.1": [
+   "treasuryofdavid04spuruoft",
+   390,
+   "373"
+  ],
+  "spurgeon-psalms.PSA.106.43.1": [
+   "treasuryofdavid04spuruoft",
+   391,
+   "374"
+  ],
+  "spurgeon-psalms.PSA.106.44.1": [
+   "treasuryofdavid04spuruoft",
+   391,
+   "374"
+  ],
+  "spurgeon-psalms.PSA.106.45.1": [
+   "treasuryofdavid04spuruoft",
+   391,
+   "374"
+  ],
+  "spurgeon-psalms.PSA.106.46.1": [
+   "treasuryofdavid04spuruoft",
+   391,
+   "374"
+  ],
+  "spurgeon-psalms.PSA.106.47.1": [
+   "treasuryofdavid04spuruoft",
+   392,
+   "375"
+  ],
+  "spurgeon-psalms.PSA.106.48.1": [
+   "thetreasuryofdav02spuruoft",
+   272,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.107.1.1": [
+   "treasuryofdavid04spuruoft",
+   415,
+   "398"
+  ],
+  "spurgeon-psalms.PSA.107.2.1": [
+   "treasuryofdavid04spuruoft",
+   415,
+   "398"
+  ],
+  "spurgeon-psalms.PSA.107.3.1": [
+   "treasuryofdavid04spuruoft",
+   416,
+   "399"
+  ],
+  "spurgeon-psalms.PSA.107.4.1": [
+   "treasuryofdavid04spuruoft",
+   416,
+   "399"
+  ],
+  "spurgeon-psalms.PSA.107.5.1": [
+   "treasuryofdavid04spuruoft",
+   416,
+   "399"
+  ],
+  "spurgeon-psalms.PSA.107.6.1": [
+   "treasuryofdavid04spuruoft",
+   416,
+   "399"
+  ],
+  "spurgeon-psalms.PSA.107.7.1": [
+   "treasuryofdavid04spuruoft",
+   417,
+   "400"
+  ],
+  "spurgeon-psalms.PSA.107.8.1": [
+   "thetreasuryofdav03spuruoft",
+   184,
+   "167"
+  ],
+  "spurgeon-psalms.PSA.107.9.1": [
+   "treasuryofdavid04spuruoft",
+   417,
+   "400"
+  ],
+  "spurgeon-psalms.PSA.107.10.1": [
+   "treasuryofdavid04spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.107.11.1": [
+   "treasuryofdavid04spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.107.12.1": [
+   "treasuryofdavid04spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.107.13.1": [
+   "treasuryofdavid04spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.107.14.1": [
+   "treasuryofdavid04spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.107.15.1": [
+   "thetreasuryofdav03spuruoft",
+   184,
+   "167"
+  ],
+  "spurgeon-psalms.PSA.107.16.1": [
+   "treasuryofdavid04spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.107.17.1": [
+   "treasuryofdavid04spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.107.18.1": [
+   "treasuryofdavid04spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.107.19.1": [
+   "treasuryofdavid04spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.107.20.1": [
+   "treasuryofdavid04spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.107.21.1": [
+   "thetreasuryofdav03spuruoft",
+   184,
+   "167"
+  ],
+  "spurgeon-psalms.PSA.107.22.1": [
+   "treasuryofdavid04spuruoft",
+   421,
+   "404"
+  ],
+  "spurgeon-psalms.PSA.107.23.1": [
+   "treasuryofdavid04spuruoft",
+   421,
+   "404"
+  ],
+  "spurgeon-psalms.PSA.107.24.1": [
+   "treasuryofdavid04spuruoft",
+   421,
+   "404"
+  ],
+  "spurgeon-psalms.PSA.107.25.1": [
+   "treasuryofdavid04spuruoft",
+   422,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.107.26.1": [
+   "treasuryofdavid04spuruoft",
+   422,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.107.27.1": [
+   "treasuryofdavid04spuruoft",
+   422,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.107.28.1": [
+   "treasuryofdavid04spuruoft",
+   422,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.107.29.1": [
+   "treasuryofdavid04spuruoft",
+   422,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.107.30.1": [
+   "treasuryofdavid04spuruoft",
+   422,
+   "405"
+  ],
+  "spurgeon-psalms.PSA.107.31.1": [
+   "thetreasuryofdav03spuruoft",
+   184,
+   "167"
+  ],
+  "spurgeon-psalms.PSA.107.32.1": [
+   "treasuryofdavid04spuruoft",
+   423,
+   "406"
+  ],
+  "spurgeon-psalms.PSA.107.33.1": [
+   "treasuryofdavid04spuruoft",
+   423,
+   "406"
+  ],
+  "spurgeon-psalms.PSA.107.34.1": [
+   "treasuryofdavid04spuruoft",
+   424,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.107.35.1": [
+   "treasuryofdavid04spuruoft",
+   424,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.107.36.1": [
+   "treasuryofdavid04spuruoft",
+   424,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.107.37.1": [
+   "treasuryofdavid04spuruoft",
+   424,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.107.38.1": [
+   "treasuryofdavid04spuruoft",
+   424,
+   "407"
+  ],
+  "spurgeon-psalms.PSA.107.39.1": [
+   "treasuryofdavid04spuruoft",
+   425,
+   "408"
+  ],
+  "spurgeon-psalms.PSA.107.42.1": [
+   "treasuryofdavid04spuruoft",
+   425,
+   "408"
+  ],
+  "spurgeon-psalms.PSA.107.43.1": [
+   "treasuryofdavid04spuruoft",
+   425,
+   "408"
+  ],
+  "spurgeon-psalms.PSA.108.2.1": [
+   "treasuryofdavid04spuruoft",
+   443,
+   "426"
+  ],
+  "spurgeon-psalms.PSA.108.3.1": [
+   "treasuryofdavid04spuruoft",
+   443,
+   "426"
+  ],
+  "spurgeon-psalms.PSA.108.4-6.1": [
+   "treasuryofdavid04spuruoft",
+   442,
+   "425"
+  ],
+  "spurgeon-psalms.PSA.108.4.1": [
+   "treasuryofdavid04spuruoft",
+   443,
+   "426"
+  ],
+  "spurgeon-psalms.PSA.108.5.1": [
+   "treasuryofdavid04spuruoft",
+   444,
+   "427"
+  ],
+  "spurgeon-psalms.PSA.108.6.1": [
+   "thetreasuryofdav02spuruoft",
+   488,
+   "475"
+  ],
+  "spurgeon-psalms.PSA.108.7-13.1": [
+   "treasuryofdavid04spuruoft",
+   444,
+   "427"
+  ],
+  "spurgeon-psalms.PSA.108.7.1": [
+   "thetreasuryofdav03spuruoft",
+   45,
+   "28"
+  ],
+  "spurgeon-psalms.PSA.108.8.1": [
+   "treasuryofdavid04spuruoft",
+   445,
+   "428"
+  ],
+  "spurgeon-psalms.PSA.108.9.1": [
+   "treasuryofdavid04spuruoft",
+   445,
+   "428"
+  ],
+  "spurgeon-psalms.PSA.108.10.1": [
+   "treasuryofdavid04spuruoft",
+   445,
+   "428"
+  ],
+  "spurgeon-psalms.PSA.108.11.1": [
+   "thetreasuryofdav03spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.108.12.1": [
+   "treasuryofdavid04spuruoft",
+   446,
+   "429"
+  ],
+  "spurgeon-psalms.PSA.108.13.1": [
+   "thetreasuryofdav03spuruoft",
+   48,
+   "31"
+  ],
+  "spurgeon-psalms.PSA.108.14.1": [
+   "treasuryofdavid04spuruoft",
+   447,
+   "430"
+  ],
+  "spurgeon-psalms.PSA.109.1.1": [
+   "treasuryofdavid04spuruoft",
+   454,
+   "437"
+  ],
+  "spurgeon-psalms.PSA.109.2.1": [
+   "treasuryofdavid04spuruoft",
+   454,
+   "437"
+  ],
+  "spurgeon-psalms.PSA.109.3.1": [
+   "treasuryofdavid04spuruoft",
+   454,
+   "437"
+  ],
+  "spurgeon-psalms.PSA.109.4.1": [
+   "treasuryofdavid04spuruoft",
+   454,
+   "437"
+  ],
+  "spurgeon-psalms.PSA.109.5.1": [
+   "treasuryofdavid04spuruoft",
+   455,
+   "438"
+  ],
+  "spurgeon-psalms.PSA.109.6.1": [
+   "treasuryofdavid04spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.109.7.1": [
+   "treasuryofdavid04spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.109.8.1": [
+   "treasuryofdavid04spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.109.9.1": [
+   "treasuryofdavid04spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.109.10.1": [
+   "thetreasuryofdav02spuruoft",
+   203,
+   "190"
+  ],
+  "spurgeon-psalms.PSA.109.11.1": [
+   "treasuryofdavid04spuruoft",
+   457,
+   "440"
+  ],
+  "spurgeon-psalms.PSA.109.12.1": [
+   "treasuryofdavid04spuruoft",
+   457,
+   "440"
+  ],
+  "spurgeon-psalms.PSA.109.13.1": [
+   "treasuryofdavid04spuruoft",
+   458,
+   "441"
+  ],
+  "spurgeon-psalms.PSA.109.14.1": [
+   "treasuryofdavid04spuruoft",
+   458,
+   "441"
+  ],
+  "spurgeon-psalms.PSA.109.15.1": [
+   "treasuryofdavid04spuruoft",
+   458,
+   "441"
+  ],
+  "spurgeon-psalms.PSA.109.16.1": [
+   "treasuryofdavid04spuruoft",
+   458,
+   "441"
+  ],
+  "spurgeon-psalms.PSA.109.17.1": [
+   "thetreasuryofdav01spuruoft",
+   88,
+   "71"
+  ],
+  "spurgeon-psalms.PSA.109.20.1": [
+   "treasuryofdavid04spuruoft",
+   459,
+   "442"
+  ],
+  "spurgeon-psalms.PSA.109.21.1": [
+   "treasuryofdavid04spuruoft",
+   459,
+   "442"
+  ],
+  "spurgeon-psalms.PSA.109.22.1": [
+   "treasuryofdavid04spuruoft",
+   460,
+   "443"
+  ],
+  "spurgeon-psalms.PSA.109.23.1": [
+   "treasuryofdavid04spuruoft",
+   460,
+   "443"
+  ],
+  "spurgeon-psalms.PSA.109.24.1": [
+   "treasuryofdavid04spuruoft",
+   460,
+   "443"
+  ],
+  "spurgeon-psalms.PSA.109.25.1": [
+   "treasuryofdavid04spuruoft",
+   460,
+   "443"
+  ],
+  "spurgeon-psalms.PSA.109.26.1": [
+   "treasuryofdavid04spuruoft",
+   460,
+   "443"
+  ],
+  "spurgeon-psalms.PSA.109.27.1": [
+   "treasuryofdavid04spuruoft",
+   461,
+   "444"
+  ],
+  "spurgeon-psalms.PSA.109.28.1": [
+   "treasuryofdavid04spuruoft",
+   461,
+   "444"
+  ],
+  "spurgeon-psalms.PSA.109.29.1": [
+   "treasuryofdavid04spuruoft",
+   461,
+   "444"
+  ],
+  "spurgeon-psalms.PSA.109.30.1": [
+   "treasuryofdavid04spuruoft",
+   461,
+   "444"
+  ],
+  "spurgeon-psalms.PSA.109.31.1": [
+   "treasuryofdavid04spuruoft",
+   461,
+   "444"
+  ],
+  "spurgeon-psalms.PSA.110.1.1": [
+   "treasuryofdavid04spuruoft",
+   477,
+   "460"
+  ],
+  "spurgeon-psalms.PSA.110.2.1": [
+   "treasuryofdavid04spuruoft",
+   478,
+   "461"
+  ],
+  "spurgeon-psalms.PSA.110.3.1": [
+   "treasuryofdavid04spuruoft",
+   478,
+   "461"
+  ],
+  "spurgeon-psalms.PSA.110.4.1": [
+   "treasuryofdavid04spuruoft",
+   479,
+   "462"
+  ],
+  "spurgeon-psalms.PSA.110.5-7.1": [
+   "treasuryofdavid04spuruoft",
+   480,
+   "463"
+  ],
+  "spurgeon-psalms.PSA.110.5.1": [
+   "treasuryofdavid04spuruoft",
+   480,
+   "463"
+  ],
+  "spurgeon-psalms.PSA.110.6.1": [
+   "treasuryofdavid04spuruoft",
+   480,
+   "463"
+  ],
+  "spurgeon-psalms.PSA.110.7.1": [
+   "treasuryofdavid04spuruoft",
+   481,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.120.1.1": [
+   "treasuryofdavid06spuruoft",
+   22,
+   "5"
+  ],
+  "spurgeon-psalms.PSA.120.2.1": [
+   "treasuryofdavid06spuruoft",
+   23,
+   "6"
+  ],
+  "spurgeon-psalms.PSA.120.3.1": [
+   "treasuryofdavid06spuruoft",
+   23,
+   "6"
+  ],
+  "spurgeon-psalms.PSA.120.4.1": [
+   "treasuryofdavid06spuruoft",
+   24,
+   "7"
+  ],
+  "spurgeon-psalms.PSA.120.5.1": [
+   "thetreasuryofdav01spuruoft",
+   438,
+   "421"
+  ],
+  "spurgeon-psalms.PSA.120.6.1": [
+   "treasuryofdavid06spuruoft",
+   24,
+   "7"
+  ],
+  "spurgeon-psalms.PSA.120.7.1": [
+   "treasuryofdavid06spuruoft",
+   25,
+   "8"
+  ],
+  "spurgeon-psalms.PSA.121.1.1": [
+   "treasuryofdavid06spuruoft",
+   31,
+   "14"
+  ],
+  "spurgeon-psalms.PSA.121.2.1": [
+   "treasuryofdavid06spuruoft",
+   31,
+   "14"
+  ],
+  "spurgeon-psalms.PSA.121.3.1": [
+   "treasuryofdavid06spuruoft",
+   32,
+   "15"
+  ],
+  "spurgeon-psalms.PSA.121.4.1": [
+   "treasuryofdavid06spuruoft",
+   32,
+   "15"
+  ],
+  "spurgeon-psalms.PSA.121.5.1": [
+   "treasuryofdavid06spuruoft",
+   32,
+   "15"
+  ],
+  "spurgeon-psalms.PSA.121.6.1": [
+   "treasuryofdavid04spuruoft",
+   117,
+   "100"
+  ],
+  "spurgeon-psalms.PSA.121.7.1": [
+   "treasuryofdavid06spuruoft",
+   33,
+   "16"
+  ],
+  "spurgeon-psalms.PSA.121.8.1": [
+   "thetreasuryofdav03spuruoft",
+   462,
+   "445"
+  ],
+  "spurgeon-psalms.PSA.122.1.1": [
+   "treasuryofdavid06spuruoft",
+   43,
+   "26"
+  ],
+  "spurgeon-psalms.PSA.122.2.1": [
+   "treasuryofdavid06spuruoft",
+   44,
+   "27"
+  ],
+  "spurgeon-psalms.PSA.122.3.1": [
+   "treasuryofdavid06spuruoft",
+   44,
+   "27"
+  ],
+  "spurgeon-psalms.PSA.122.4.1": [
+   "treasuryofdavid06spuruoft",
+   45,
+   "28"
+  ],
+  "spurgeon-psalms.PSA.122.5.1": [
+   "treasuryofdavid06spuruoft",
+   45,
+   "28"
+  ],
+  "spurgeon-psalms.PSA.122.6.1": [
+   "treasuryofdavid06spuruoft",
+   45,
+   "28"
+  ],
+  "spurgeon-psalms.PSA.122.7.1": [
+   "treasuryofdavid06spuruoft",
+   46,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.122.8.1": [
+   "treasuryofdavid06spuruoft",
+   46,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.122.9.1": [
+   "treasuryofdavid06spuruoft",
+   46,
+   "29"
+  ],
+  "spurgeon-psalms.PSA.124.1.1": [
+   "treasuryofdavid06spuruoft",
+   65,
+   "48"
+  ],
+  "spurgeon-psalms.PSA.124.2.1": [
+   "treasuryofdavid06spuruoft",
+   65,
+   "48"
+  ],
+  "spurgeon-psalms.PSA.124.3.1": [
+   "treasuryofdavid06spuruoft",
+   65,
+   "48"
+  ],
+  "spurgeon-psalms.PSA.124.4.1": [
+   "treasuryofdavid06spuruoft",
+   66,
+   "49"
+  ],
+  "spurgeon-psalms.PSA.124.5.1": [
+   "treasuryofdavid06spuruoft",
+   66,
+   "49"
+  ],
+  "spurgeon-psalms.PSA.124.6.1": [
+   "treasuryofdavid06spuruoft",
+   66,
+   "49"
+  ],
+  "spurgeon-psalms.PSA.124.7.1": [
+   "treasuryofdavid06spuruoft",
+   67,
+   "50"
+  ],
+  "spurgeon-psalms.PSA.124.8.1": [
+   "treasuryofdavid06spuruoft",
+   67,
+   "50"
+  ],
+  "spurgeon-psalms.PSA.125.1.1": [
+   "treasuryofdavid06spuruoft",
+   75,
+   "58"
+  ],
+  "spurgeon-psalms.PSA.125.2.1": [
+   "treasuryofdavid06spuruoft",
+   76,
+   "59"
+  ],
+  "spurgeon-psalms.PSA.125.3.1": [
+   "treasuryofdavid06spuruoft",
+   76,
+   "59"
+  ],
+  "spurgeon-psalms.PSA.125.4.1": [
+   "treasuryofdavid06spuruoft",
+   76,
+   "59"
+  ],
+  "spurgeon-psalms.PSA.125.5.1": [
+   "treasuryofdavid06spuruoft",
+   77,
+   "60"
+  ],
+  "spurgeon-psalms.PSA.126.1.1": [
+   "treasuryofdavid04spuruoft",
+   449,
+   "432"
+  ],
+  "spurgeon-psalms.PSA.126.2.1": [
+   "treasuryofdavid06spuruoft",
+   86,
+   "69"
+  ],
+  "spurgeon-psalms.PSA.126.3.1": [
+   "treasuryofdavid06spuruoft",
+   86,
+   "69"
+  ],
+  "spurgeon-psalms.PSA.126.4.1": [
+   "treasuryofdavid06spuruoft",
+   87,
+   "70"
+  ],
+  "spurgeon-psalms.PSA.126.5.1": [
+   "treasuryofdavid06spuruoft",
+   87,
+   "70"
+  ],
+  "spurgeon-psalms.PSA.126.6.1": [
+   "treasuryofdavid06spuruoft",
+   87,
+   "70"
+  ],
+  "spurgeon-psalms.PSA.127.1.1": [
+   "treasuryofdavid06spuruoft",
+   100,
+   "83"
+  ],
+  "spurgeon-psalms.PSA.127.2.1": [
+   "treasuryofdavid04spuruoft",
+   346,
+   "329"
+  ],
+  "spurgeon-psalms.PSA.127.3.1": [
+   "treasuryofdavid06spuruoft",
+   102,
+   "85"
+  ],
+  "spurgeon-psalms.PSA.127.4.1": [
+   "treasuryofdavid06spuruoft",
+   102,
+   "85"
+  ],
+  "spurgeon-psalms.PSA.127.5.1": [
+   "treasuryofdavid06spuruoft",
+   102,
+   "85"
+  ],
+  "spurgeon-psalms.PSA.128.1.1": [
+   "treasuryofdavid06spuruoft",
+   114,
+   "97"
+  ],
+  "spurgeon-psalms.PSA.128.2.1": [
+   "treasuryofdavid06spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.128.3.1": [
+   "treasuryofdavid06spuruoft",
+   115,
+   "98"
+  ],
+  "spurgeon-psalms.PSA.128.4.1": [
+   "treasuryofdavid06spuruoft",
+   116,
+   "99"
+  ],
+  "spurgeon-psalms.PSA.128.6.1": [
+   "treasuryofdavid06spuruoft",
+   117,
+   "100"
+  ],
+  "spurgeon-psalms.PSA.129.1.1": [
+   "treasuryofdavid06spuruoft",
+   125,
+   "108"
+  ],
+  "spurgeon-psalms.PSA.129.2.1": [
+   "treasuryofdavid06spuruoft",
+   126,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.129.3.1": [
+   "treasuryofdavid06spuruoft",
+   126,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.129.4.1": [
+   "treasuryofdavid06spuruoft",
+   126,
+   "109"
+  ],
+  "spurgeon-psalms.PSA.129.5.1": [
+   "treasuryofdavid06spuruoft",
+   127,
+   "110"
+  ],
+  "spurgeon-psalms.PSA.129.6.1": [
+   "treasuryofdavid06spuruoft",
+   127,
+   "110"
+  ],
+  "spurgeon-psalms.PSA.129.7.1": [
+   "treasuryofdavid06spuruoft",
+   127,
+   "110"
+  ],
+  "spurgeon-psalms.PSA.129.8.1": [
+   "treasuryofdavid06spuruoft",
+   128,
+   "111"
+  ],
+  "spurgeon-psalms.PSA.130.1.1": [
+   "thetreasuryofdav02spuruoft",
+   142,
+   "129"
+  ],
+  "spurgeon-psalms.PSA.130.2.1": [
+   "treasuryofdavid06spuruoft",
+   136,
+   "119"
+  ],
+  "spurgeon-psalms.PSA.130.3.1": [
+   "treasuryofdavid06spuruoft",
+   136,
+   "119"
+  ],
+  "spurgeon-psalms.PSA.130.4.1": [
+   "treasuryofdavid06spuruoft",
+   136,
+   "119"
+  ],
+  "spurgeon-psalms.PSA.130.5.1": [
+   "treasuryofdavid06spuruoft",
+   136,
+   "119"
+  ],
+  "spurgeon-psalms.PSA.130.6.1": [
+   "treasuryofdavid06spuruoft",
+   137,
+   "120"
+  ],
+  "spurgeon-psalms.PSA.130.7.1": [
+   "treasuryofdavid06spuruoft",
+   137,
+   "120"
+  ],
+  "spurgeon-psalms.PSA.130.8.1": [
+   "treasuryofdavid06spuruoft",
+   138,
+   "121"
+  ],
+  "spurgeon-psalms.PSA.131.1.1": [
+   "treasuryofdavid06spuruoft",
+   153,
+   "136"
+  ],
+  "spurgeon-psalms.PSA.131.2.1": [
+   "treasuryofdavid06spuruoft",
+   154,
+   "137"
+  ],
+  "spurgeon-psalms.PSA.131.3.1": [
+   "treasuryofdavid06spuruoft",
+   155,
+   "138"
+  ],
+  "spurgeon-psalms.PSA.132.1.1": [
+   "treasuryofdavid06spuruoft",
+   161,
+   "144"
+  ],
+  "spurgeon-psalms.PSA.132.2.1": [
+   "treasuryofdavid06spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.132.3.1": [
+   "treasuryofdavid06spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.132.4.1": [
+   "treasuryofdavid06spuruoft",
+   162,
+   "145"
+  ],
+  "spurgeon-psalms.PSA.132.5.1": [
+   "treasuryofdavid06spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.132.6.1": [
+   "treasuryofdavid06spuruoft",
+   163,
+   "146"
+  ],
+  "spurgeon-psalms.PSA.132.7.1": [
+   "treasuryofdavid06spuruoft",
+   164,
+   "147"
+  ],
+  "spurgeon-psalms.PSA.132.8.1": [
+   "thetreasuryofdav03spuruoft",
+   169,
+   "152"
+  ],
+  "spurgeon-psalms.PSA.132.9.1": [
+   "treasuryofdavid06spuruoft",
+   164,
+   "147"
+  ],
+  "spurgeon-psalms.PSA.132.10.1": [
+   "treasuryofdavid06spuruoft",
+   165,
+   "148"
+  ],
+  "spurgeon-psalms.PSA.132.11.1": [
+   "treasuryofdavid06spuruoft",
+   165,
+   "148"
+  ],
+  "spurgeon-psalms.PSA.132.12.1": [
+   "treasuryofdavid06spuruoft",
+   166,
+   "149"
+  ],
+  "spurgeon-psalms.PSA.132.13.1": [
+   "treasuryofdavid06spuruoft",
+   166,
+   "149"
+  ],
+  "spurgeon-psalms.PSA.132.14.1": [
+   "treasuryofdavid06spuruoft",
+   167,
+   "150"
+  ],
+  "spurgeon-psalms.PSA.132.15.1": [
+   "treasuryofdavid06spuruoft",
+   167,
+   "150"
+  ],
+  "spurgeon-psalms.PSA.132.16.1": [
+   "treasuryofdavid06spuruoft",
+   168,
+   "151"
+  ],
+  "spurgeon-psalms.PSA.132.17.1": [
+   "treasuryofdavid06spuruoft",
+   168,
+   "151"
+  ],
+  "spurgeon-psalms.PSA.132.18.1": [
+   "treasuryofdavid06spuruoft",
+   168,
+   "151"
+  ],
+  "spurgeon-psalms.PSA.133.1.1": [
+   "treasuryofdavid06spuruoft",
+   184,
+   "167"
+  ],
+  "spurgeon-psalms.PSA.133.2.1": [
+   "treasuryofdavid06spuruoft",
+   185,
+   "168"
+  ],
+  "spurgeon-psalms.PSA.133.3.1": [
+   "treasuryofdavid06spuruoft",
+   185,
+   "168"
+  ],
+  "spurgeon-psalms.PSA.134.1.1": [
+   "treasuryofdavid06spuruoft",
+   193,
+   "176"
+  ],
+  "spurgeon-psalms.PSA.134.2.1": [
+   "treasuryofdavid06spuruoft",
+   194,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.134.3.1": [
+   "treasuryofdavid06spuruoft",
+   194,
+   "177"
+  ],
+  "spurgeon-psalms.PSA.135.1.1": [
+   "treasuryofdavid06spuruoft",
+   199,
+   "182"
+  ],
+  "spurgeon-psalms.PSA.135.2.1": [
+   "treasuryofdavid06spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.135.3.1": [
+   "treasuryofdavid06spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.135.4.1": [
+   "treasuryofdavid06spuruoft",
+   200,
+   "183"
+  ],
+  "spurgeon-psalms.PSA.135.5.1": [
+   "treasuryofdavid06spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.135.6.1": [
+   "treasuryofdavid06spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.135.7.1": [
+   "treasuryofdavid06spuruoft",
+   201,
+   "184"
+  ],
+  "spurgeon-psalms.PSA.135.8.1": [
+   "treasuryofdavid06spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.135.9.1": [
+   "treasuryofdavid06spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.135.10.1": [
+   "treasuryofdavid06spuruoft",
+   202,
+   "185"
+  ],
+  "spurgeon-psalms.PSA.135.11.1": [
+   "thetreasuryofdav02spuruoft",
+   297,
+   "284"
+  ],
+  "spurgeon-psalms.PSA.135.12.1": [
+   "treasuryofdavid06spuruoft",
+   203,
+   "186"
+  ],
+  "spurgeon-psalms.PSA.135.13.1": [
+   "treasuryofdavid06spuruoft",
+   203,
+   "186"
+  ],
+  "spurgeon-psalms.PSA.135.14.1": [
+   "treasuryofdavid06spuruoft",
+   204,
+   "187"
+  ],
+  "spurgeon-psalms.PSA.135.15.1": [
+   "treasuryofdavid06spuruoft",
+   204,
+   "187"
+  ],
+  "spurgeon-psalms.PSA.135.16.1": [
+   "treasuryofdavid06spuruoft",
+   205,
+   "188"
+  ],
+  "spurgeon-psalms.PSA.135.17.1": [
+   "treasuryofdavid06spuruoft",
+   205,
+   "188"
+  ],
+  "spurgeon-psalms.PSA.135.18.1": [
+   "treasuryofdavid06spuruoft",
+   205,
+   "188"
+  ],
+  "spurgeon-psalms.PSA.135.19.1": [
+   "treasuryofdavid06spuruoft",
+   205,
+   "188"
+  ],
+  "spurgeon-psalms.PSA.135.20.1": [
+   "treasuryofdavid06spuruoft",
+   206,
+   "189"
+  ],
+  "spurgeon-psalms.PSA.135.21.1": [
+   "treasuryofdavid06spuruoft",
+   206,
+   "189"
+  ],
+  "spurgeon-psalms.PSA.136.1.1": [
+   "treasuryofdavid06spuruoft",
+   221,
+   "204"
+  ],
+  "spurgeon-psalms.PSA.136.2.1": [
+   "treasuryofdavid06spuruoft",
+   221,
+   "204"
+  ],
+  "spurgeon-psalms.PSA.136.3.1": [
+   "treasuryofdavid06spuruoft",
+   222,
+   "205"
+  ],
+  "spurgeon-psalms.PSA.136.4.1": [
+   "treasuryofdavid06spuruoft",
+   222,
+   "205"
+  ],
+  "spurgeon-psalms.PSA.136.5.1": [
+   "treasuryofdavid06spuruoft",
+   222,
+   "205"
+  ],
+  "spurgeon-psalms.PSA.136.6.1": [
+   "treasuryofdavid06spuruoft",
+   223,
+   "206"
+  ],
+  "spurgeon-psalms.PSA.136.7.1": [
+   "treasuryofdavid06spuruoft",
+   223,
+   "206"
+  ],
+  "spurgeon-psalms.PSA.136.8.1": [
+   "treasuryofdavid06spuruoft",
+   223,
+   "206"
+  ],
+  "spurgeon-psalms.PSA.136.9.1": [
+   "treasuryofdavid06spuruoft",
+   223,
+   "206"
+  ],
+  "spurgeon-psalms.PSA.136.10.1": [
+   "treasuryofdavid06spuruoft",
+   224,
+   "207"
+  ],
+  "spurgeon-psalms.PSA.136.11.1": [
+   "treasuryofdavid06spuruoft",
+   224,
+   "207"
+  ],
+  "spurgeon-psalms.PSA.136.12.1": [
+   "treasuryofdavid06spuruoft",
+   225,
+   "208"
+  ],
+  "spurgeon-psalms.PSA.136.13.1": [
+   "treasuryofdavid06spuruoft",
+   225,
+   "208"
+  ],
+  "spurgeon-psalms.PSA.136.14.1": [
+   "treasuryofdavid06spuruoft",
+   225,
+   "208"
+  ],
+  "spurgeon-psalms.PSA.136.15.1": [
+   "treasuryofdavid06spuruoft",
+   226,
+   "209"
+  ],
+  "spurgeon-psalms.PSA.136.16.1": [
+   "treasuryofdavid06spuruoft",
+   226,
+   "209"
+  ],
+  "spurgeon-psalms.PSA.136.17.1": [
+   "treasuryofdavid06spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.136.18.1": [
+   "treasuryofdavid06spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.136.19.1": [
+   "treasuryofdavid06spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.136.20.1": [
+   "treasuryofdavid06spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.136.21.1": [
+   "treasuryofdavid06spuruoft",
+   227,
+   "210"
+  ],
+  "spurgeon-psalms.PSA.136.22.1": [
+   "treasuryofdavid06spuruoft",
+   228,
+   "211"
+  ],
+  "spurgeon-psalms.PSA.136.23.1": [
+   "treasuryofdavid06spuruoft",
+   228,
+   "211"
+  ],
+  "spurgeon-psalms.PSA.136.24.1": [
+   "treasuryofdavid06spuruoft",
+   228,
+   "211"
+  ],
+  "spurgeon-psalms.PSA.136.25.1": [
+   "treasuryofdavid06spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.136.26.1": [
+   "treasuryofdavid06spuruoft",
+   229,
+   "212"
+  ],
+  "spurgeon-psalms.PSA.137.1.1": [
+   "treasuryofdavid06spuruoft",
+   243,
+   "226"
+  ],
+  "spurgeon-psalms.PSA.137.2.1": [
+   "treasuryofdavid06spuruoft",
+   244,
+   "227"
+  ],
+  "spurgeon-psalms.PSA.137.3.1": [
+   "treasuryofdavid06spuruoft",
+   244,
+   "227"
+  ],
+  "spurgeon-psalms.PSA.137.4.1": [
+   "treasuryofdavid04spuruoft",
+   203,
+   "186"
+  ],
+  "spurgeon-psalms.PSA.137.5.1": [
+   "treasuryofdavid06spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.137.6.1": [
+   "thetreasuryofdav02spuruoft",
+   289,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.137.7.1": [
+   "treasuryofdavid06spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.137.8.1": [
+   "treasuryofdavid06spuruoft",
+   245,
+   "228"
+  ],
+  "spurgeon-psalms.PSA.137.9.1": [
+   "treasuryofdavid06spuruoft",
+   246,
+   "229"
+  ],
+  "spurgeon-psalms.PSA.138.1.1": [
+   "treasuryofdavid06spuruoft",
+   260,
+   "243"
+  ],
+  "spurgeon-psalms.PSA.138.2.1": [
+   "treasuryofdavid06spuruoft",
+   261,
+   "244"
+  ],
+  "spurgeon-psalms.PSA.138.3.1": [
+   "treasuryofdavid06spuruoft",
+   262,
+   "245"
+  ],
+  "spurgeon-psalms.PSA.138.4.1": [
+   "treasuryofdavid06spuruoft",
+   262,
+   "245"
+  ],
+  "spurgeon-psalms.PSA.138.5.1": [
+   "treasuryofdavid06spuruoft",
+   262,
+   "245"
+  ],
+  "spurgeon-psalms.PSA.138.6.1": [
+   "treasuryofdavid06spuruoft",
+   263,
+   "246"
+  ],
+  "spurgeon-psalms.PSA.138.7.1": [
+   "treasuryofdavid06spuruoft",
+   263,
+   "246"
+  ],
+  "spurgeon-psalms.PSA.138.8.1": [
+   "thetreasuryofdav02spuruoft",
+   494,
+   "481"
+  ],
+  "spurgeon-psalms.PSA.139.1.1": [
+   "treasuryofdavid06spuruoft",
+   275,
+   "258"
+  ],
+  "spurgeon-psalms.PSA.139.2.1": [
+   "treasuryofdavid06spuruoft",
+   276,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.139.3.1": [
+   "treasuryofdavid06spuruoft",
+   276,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.139.4.1": [
+   "treasuryofdavid06spuruoft",
+   276,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.139.5.1": [
+   "treasuryofdavid06spuruoft",
+   276,
+   "259"
+  ],
+  "spurgeon-psalms.PSA.139.6.1": [
+   "treasuryofdavid06spuruoft",
+   277,
+   "260"
+  ],
+  "spurgeon-psalms.PSA.139.8.1": [
+   "treasuryofdavid06spuruoft",
+   277,
+   "260"
+  ],
+  "spurgeon-psalms.PSA.139.9.1": [
+   "treasuryofdavid06spuruoft",
+   278,
+   "261"
+  ],
+  "spurgeon-psalms.PSA.139.10-12.1": [
+   "treasuryofdavid06spuruoft",
+   277,
+   "260"
+  ],
+  "spurgeon-psalms.PSA.139.10.1": [
+   "treasuryofdavid06spuruoft",
+   278,
+   "261"
+  ],
+  "spurgeon-psalms.PSA.139.11.1": [
+   "treasuryofdavid06spuruoft",
+   278,
+   "261"
+  ],
+  "spurgeon-psalms.PSA.139.12.1": [
+   "treasuryofdavid06spuruoft",
+   278,
+   "261"
+  ],
+  "spurgeon-psalms.PSA.139.13.1": [
+   "treasuryofdavid06spuruoft",
+   279,
+   "262"
+  ],
+  "spurgeon-psalms.PSA.139.14.1": [
+   "treasuryofdavid06spuruoft",
+   279,
+   "262"
+  ],
+  "spurgeon-psalms.PSA.139.15.1": [
+   "treasuryofdavid06spuruoft",
+   280,
+   "263"
+  ],
+  "spurgeon-psalms.PSA.139.16.1": [
+   "treasuryofdavid06spuruoft",
+   280,
+   "263"
+  ],
+  "spurgeon-psalms.PSA.139.17.1": [
+   "treasuryofdavid06spuruoft",
+   280,
+   "263"
+  ],
+  "spurgeon-psalms.PSA.139.18.1": [
+   "treasuryofdavid06spuruoft",
+   281,
+   "264"
+  ],
+  "spurgeon-psalms.PSA.139.19.1": [
+   "treasuryofdavid06spuruoft",
+   281,
+   "264"
+  ],
+  "spurgeon-psalms.PSA.139.20.1": [
+   "treasuryofdavid06spuruoft",
+   282,
+   "265"
+  ],
+  "spurgeon-psalms.PSA.139.21.1": [
+   "treasuryofdavid06spuruoft",
+   282,
+   "265"
+  ],
+  "spurgeon-psalms.PSA.139.22.1": [
+   "treasuryofdavid06spuruoft",
+   282,
+   "265"
+  ],
+  "spurgeon-psalms.PSA.139.23.1": [
+   "treasuryofdavid06spuruoft",
+   282,
+   "265"
+  ],
+  "spurgeon-psalms.PSA.139.24.1": [
+   "thetreasuryofdav02spuruoft",
+   102,
+   "89"
+  ],
+  "spurgeon-psalms.PSA.140.2.1": [
+   "treasuryofdavid06spuruoft",
+   310,
+   "293"
+  ],
+  "spurgeon-psalms.PSA.140.3.1": [
+   "treasuryofdavid06spuruoft",
+   311,
+   "294"
+  ],
+  "spurgeon-psalms.PSA.140.4.1": [
+   "treasuryofdavid06spuruoft",
+   311,
+   "294"
+  ],
+  "spurgeon-psalms.PSA.140.5.1": [
+   "treasuryofdavid06spuruoft",
+   312,
+   "295"
+  ],
+  "spurgeon-psalms.PSA.140.6.1": [
+   "treasuryofdavid06spuruoft",
+   312,
+   "295"
+  ],
+  "spurgeon-psalms.PSA.140.7.1": [
+   "treasuryofdavid06spuruoft",
+   313,
+   "296"
+  ],
+  "spurgeon-psalms.PSA.140.9.1": [
+   "treasuryofdavid06spuruoft",
+   313,
+   "296"
+  ],
+  "spurgeon-psalms.PSA.140.10.1": [
+   "treasuryofdavid06spuruoft",
+   314,
+   "297"
+  ],
+  "spurgeon-psalms.PSA.140.11.1": [
+   "treasuryofdavid06spuruoft",
+   314,
+   "297"
+  ],
+  "spurgeon-psalms.PSA.140.12.1": [
+   "treasuryofdavid06spuruoft",
+   315,
+   "298"
+  ],
+  "spurgeon-psalms.PSA.140.13.1": [
+   "treasuryofdavid06spuruoft",
+   315,
+   "298"
+  ],
+  "spurgeon-psalms.PSA.140.14.1": [
+   "treasuryofdavid06spuruoft",
+   315,
+   "298"
+  ],
+  "spurgeon-psalms.PSA.141.1.1": [
+   "treasuryofdavid06spuruoft",
+   324,
+   "307"
+  ],
+  "spurgeon-psalms.PSA.141.2.1": [
+   "treasuryofdavid06spuruoft",
+   324,
+   "307"
+  ],
+  "spurgeon-psalms.PSA.141.3.1": [
+   "treasuryofdavid04spuruoft",
+   409,
+   "392"
+  ],
+  "spurgeon-psalms.PSA.141.4.1": [
+   "treasuryofdavid06spuruoft",
+   325,
+   "308"
+  ],
+  "spurgeon-psalms.PSA.141.5.1": [
+   "treasuryofdavid06spuruoft",
+   326,
+   "309"
+  ],
+  "spurgeon-psalms.PSA.141.6.1": [
+   "treasuryofdavid06spuruoft",
+   326,
+   "309"
+  ],
+  "spurgeon-psalms.PSA.141.7.1": [
+   "treasuryofdavid06spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.141.8.1": [
+   "treasuryofdavid06spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.141.9.1": [
+   "treasuryofdavid06spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.141.10.1": [
+   "treasuryofdavid06spuruoft",
+   327,
+   "310"
+  ],
+  "spurgeon-psalms.PSA.142.2.1": [
+   "thetreasuryofdav01spuruoft",
+   40,
+   "23"
+  ],
+  "spurgeon-psalms.PSA.142.3.1": [
+   "treasuryofdavid06spuruoft",
+   341,
+   "324"
+  ],
+  "spurgeon-psalms.PSA.142.4.1": [
+   "treasuryofdavid06spuruoft",
+   341,
+   "324"
+  ],
+  "spurgeon-psalms.PSA.142.5.1": [
+   "treasuryofdavid06spuruoft",
+   341,
+   "324"
+  ],
+  "spurgeon-psalms.PSA.142.6.1": [
+   "treasuryofdavid06spuruoft",
+   342,
+   "325"
+  ],
+  "spurgeon-psalms.PSA.142.7.1": [
+   "treasuryofdavid06spuruoft",
+   342,
+   "325"
+  ],
+  "spurgeon-psalms.PSA.142.8.1": [
+   "treasuryofdavid06spuruoft",
+   343,
+   "326"
+  ],
+  "spurgeon-psalms.PSA.143.1.1": [
+   "treasuryofdavid06spuruoft",
+   351,
+   "334"
+  ],
+  "spurgeon-psalms.PSA.143.2.1": [
+   "treasuryofdavid06spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.143.3.1": [
+   "treasuryofdavid06spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.143.4.1": [
+   "treasuryofdavid06spuruoft",
+   352,
+   "335"
+  ],
+  "spurgeon-psalms.PSA.143.5.1": [
+   "treasuryofdavid06spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.143.6.1": [
+   "treasuryofdavid06spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.143.7.1": [
+   "treasuryofdavid06spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.143.8.1": [
+   "treasuryofdavid06spuruoft",
+   353,
+   "336"
+  ],
+  "spurgeon-psalms.PSA.143.9.1": [
+   "treasuryofdavid06spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.143.10.1": [
+   "treasuryofdavid06spuruoft",
+   354,
+   "337"
+  ],
+  "spurgeon-psalms.PSA.143.11.1": [
+   "treasuryofdavid06spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.143.12.1": [
+   "treasuryofdavid06spuruoft",
+   355,
+   "338"
+  ],
+  "spurgeon-psalms.PSA.144.1.1": [
+   "treasuryofdavid06spuruoft",
+   371,
+   "354"
+  ],
+  "spurgeon-psalms.PSA.144.2.1": [
+   "treasuryofdavid06spuruoft",
+   372,
+   "355"
+  ],
+  "spurgeon-psalms.PSA.144.3.1": [
+   "treasuryofdavid06spuruoft",
+   373,
+   "356"
+  ],
+  "spurgeon-psalms.PSA.144.4.1": [
+   "treasuryofdavid06spuruoft",
+   373,
+   "356"
+  ],
+  "spurgeon-psalms.PSA.144.5.1": [
+   "treasuryofdavid06spuruoft",
+   374,
+   "357"
+  ],
+  "spurgeon-psalms.PSA.144.6.1": [
+   "treasuryofdavid06spuruoft",
+   374,
+   "357"
+  ],
+  "spurgeon-psalms.PSA.144.7.1": [
+   "treasuryofdavid06spuruoft",
+   374,
+   "357"
+  ],
+  "spurgeon-psalms.PSA.144.8.1": [
+   "treasuryofdavid06spuruoft",
+   375,
+   "358"
+  ],
+  "spurgeon-psalms.PSA.144.9.1": [
+   "treasuryofdavid06spuruoft",
+   375,
+   "358"
+  ],
+  "spurgeon-psalms.PSA.144.10.1": [
+   "treasuryofdavid06spuruoft",
+   375,
+   "358"
+  ],
+  "spurgeon-psalms.PSA.144.11.1": [
+   "treasuryofdavid06spuruoft",
+   376,
+   "359"
+  ],
+  "spurgeon-psalms.PSA.144.12-15.1": [
+   "treasuryofdavid06spuruoft",
+   376,
+   "359"
+  ],
+  "spurgeon-psalms.PSA.144.12.1": [
+   "treasuryofdavid06spuruoft",
+   376,
+   "359"
+  ],
+  "spurgeon-psalms.PSA.144.13.1": [
+   "treasuryofdavid06spuruoft",
+   376,
+   "359"
+  ],
+  "spurgeon-psalms.PSA.144.14.1": [
+   "treasuryofdavid06spuruoft",
+   377,
+   "360"
+  ],
+  "spurgeon-psalms.PSA.144.15.1": [
+   "treasuryofdavid06spuruoft",
+   377,
+   "360"
+  ],
+  "spurgeon-psalms.PSA.145.1.1": [
+   "treasuryofdavid06spuruoft",
+   392,
+   "375"
+  ],
+  "spurgeon-psalms.PSA.145.2.1": [
+   "treasuryofdavid06spuruoft",
+   393,
+   "376"
+  ],
+  "spurgeon-psalms.PSA.145.3.1": [
+   "thetreasuryofdav02spuruoft",
+   377,
+   "364"
+  ],
+  "spurgeon-psalms.PSA.145.4.1": [
+   "treasuryofdavid06spuruoft",
+   393,
+   "376"
+  ],
+  "spurgeon-psalms.PSA.145.5.1": [
+   "treasuryofdavid06spuruoft",
+   393,
+   "376"
+  ],
+  "spurgeon-psalms.PSA.145.6.1": [
+   "treasuryofdavid06spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.145.7.1": [
+   "treasuryofdavid06spuruoft",
+   394,
+   "377"
+  ],
+  "spurgeon-psalms.PSA.145.8.1": [
+   "treasuryofdavid06spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.145.9.1": [
+   "treasuryofdavid06spuruoft",
+   395,
+   "378"
+  ],
+  "spurgeon-psalms.PSA.145.10.1": [
+   "thetreasuryofdav03spuruoft",
+   91,
+   "74"
+  ],
+  "spurgeon-psalms.PSA.145.11.1": [
+   "thetreasuryofdav03spuruoft",
+   91,
+   "74"
+  ],
+  "spurgeon-psalms.PSA.145.12.1": [
+   "treasuryofdavid06spuruoft",
+   396,
+   "379"
+  ],
+  "spurgeon-psalms.PSA.145.13.1": [
+   "treasuryofdavid06spuruoft",
+   397,
+   "380"
+  ],
+  "spurgeon-psalms.PSA.145.14-16.1": [
+   "treasuryofdavid06spuruoft",
+   397,
+   "380"
+  ],
+  "spurgeon-psalms.PSA.145.14.1": [
+   "treasuryofdavid06spuruoft",
+   397,
+   "380"
+  ],
+  "spurgeon-psalms.PSA.145.15.1": [
+   "treasuryofdavid06spuruoft",
+   398,
+   "381"
+  ],
+  "spurgeon-psalms.PSA.145.16.1": [
+   "treasuryofdavid04spuruoft",
+   346,
+   "329"
+  ],
+  "spurgeon-psalms.PSA.145.17.1": [
+   "treasuryofdavid06spuruoft",
+   398,
+   "381"
+  ],
+  "spurgeon-psalms.PSA.145.18.1": [
+   "treasuryofdavid06spuruoft",
+   398,
+   "381"
+  ],
+  "spurgeon-psalms.PSA.145.19.1": [
+   "treasuryofdavid06spuruoft",
+   399,
+   "382"
+  ],
+  "spurgeon-psalms.PSA.145.20.1": [
+   "treasuryofdavid06spuruoft",
+   399,
+   "382"
+  ],
+  "spurgeon-psalms.PSA.145.21.1": [
+   "treasuryofdavid06spuruoft",
+   399,
+   "382"
+  ],
+  "spurgeon-psalms.PSA.146.1.1": [
+   "treasuryofdavid06spuruoft",
+   417,
+   "400"
+  ],
+  "spurgeon-psalms.PSA.146.2.1": [
+   "treasuryofdavid06spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.146.3.1": [
+   "treasuryofdavid06spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.146.4.1": [
+   "treasuryofdavid06spuruoft",
+   418,
+   "401"
+  ],
+  "spurgeon-psalms.PSA.146.5.1": [
+   "treasuryofdavid06spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.146.6.1": [
+   "treasuryofdavid06spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.146.7.1": [
+   "treasuryofdavid06spuruoft",
+   419,
+   "402"
+  ],
+  "spurgeon-psalms.PSA.146.8.1": [
+   "treasuryofdavid06spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.146.9.1": [
+   "treasuryofdavid06spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.146.10.1": [
+   "treasuryofdavid06spuruoft",
+   420,
+   "403"
+  ],
+  "spurgeon-psalms.PSA.147.1.1": [
+   "treasuryofdavid06spuruoft",
+   431,
+   "414"
+  ],
+  "spurgeon-psalms.PSA.147.2.1": [
+   "treasuryofdavid06spuruoft",
+   431,
+   "414"
+  ],
+  "spurgeon-psalms.PSA.147.3.1": [
+   "treasuryofdavid06spuruoft",
+   432,
+   "415"
+  ],
+  "spurgeon-psalms.PSA.147.4.1": [
+   "treasuryofdavid06spuruoft",
+   432,
+   "415"
+  ],
+  "spurgeon-psalms.PSA.147.5.1": [
+   "treasuryofdavid06spuruoft",
+   432,
+   "415"
+  ],
+  "spurgeon-psalms.PSA.147.6.1": [
+   "treasuryofdavid06spuruoft",
+   433,
+   "416"
+  ],
+  "spurgeon-psalms.PSA.147.7.1": [
+   "treasuryofdavid06spuruoft",
+   433,
+   "416"
+  ],
+  "spurgeon-psalms.PSA.147.8.1": [
+   "treasuryofdavid06spuruoft",
+   433,
+   "416"
+  ],
+  "spurgeon-psalms.PSA.147.9.1": [
+   "treasuryofdavid06spuruoft",
+   434,
+   "417"
+  ],
+  "spurgeon-psalms.PSA.147.10.1": [
+   "treasuryofdavid06spuruoft",
+   434,
+   "417"
+  ],
+  "spurgeon-psalms.PSA.147.11.1": [
+   "treasuryofdavid06spuruoft",
+   434,
+   "417"
+  ],
+  "spurgeon-psalms.PSA.147.12.1": [
+   "treasuryofdavid06spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.147.13.1": [
+   "treasuryofdavid06spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.147.14.1": [
+   "treasuryofdavid06spuruoft",
+   435,
+   "418"
+  ],
+  "spurgeon-psalms.PSA.147.15.1": [
+   "treasuryofdavid06spuruoft",
+   436,
+   "419"
+  ],
+  "spurgeon-psalms.PSA.147.16.1": [
+   "treasuryofdavid06spuruoft",
+   436,
+   "419"
+  ],
+  "spurgeon-psalms.PSA.147.17.1": [
+   "thetreasuryofdav03spuruoft",
+   314,
+   "297"
+  ],
+  "spurgeon-psalms.PSA.147.18.1": [
+   "treasuryofdavid06spuruoft",
+   436,
+   "419"
+  ],
+  "spurgeon-psalms.PSA.147.19.1": [
+   "thetreasuryofdav01spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.147.20.1": [
+   "thetreasuryofdav01spuruoft",
+   293,
+   "276"
+  ],
+  "spurgeon-psalms.PSA.148.1.1": [
+   "treasuryofdavid06spuruoft",
+   454,
+   "437"
+  ],
+  "spurgeon-psalms.PSA.148.2.1": [
+   "treasuryofdavid06spuruoft",
+   455,
+   "438"
+  ],
+  "spurgeon-psalms.PSA.148.3.1": [
+   "treasuryofdavid06spuruoft",
+   455,
+   "438"
+  ],
+  "spurgeon-psalms.PSA.148.4.1": [
+   "treasuryofdavid06spuruoft",
+   455,
+   "438"
+  ],
+  "spurgeon-psalms.PSA.148.5.1": [
+   "treasuryofdavid06spuruoft",
+   455,
+   "438"
+  ],
+  "spurgeon-psalms.PSA.148.6.1": [
+   "treasuryofdavid06spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.148.7.1": [
+   "treasuryofdavid06spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.148.8.1": [
+   "treasuryofdavid06spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.148.9.1": [
+   "treasuryofdavid06spuruoft",
+   456,
+   "439"
+  ],
+  "spurgeon-psalms.PSA.148.10.1": [
+   "treasuryofdavid06spuruoft",
+   457,
+   "440"
+  ],
+  "spurgeon-psalms.PSA.148.11.1": [
+   "treasuryofdavid06spuruoft",
+   457,
+   "440"
+  ],
+  "spurgeon-psalms.PSA.148.12.1": [
+   "treasuryofdavid06spuruoft",
+   457,
+   "440"
+  ],
+  "spurgeon-psalms.PSA.148.13.1": [
+   "treasuryofdavid06spuruoft",
+   457,
+   "440"
+  ],
+  "spurgeon-psalms.PSA.148.14.1": [
+   "treasuryofdavid06spuruoft",
+   457,
+   "440"
+  ],
+  "spurgeon-psalms.PSA.149.1.1": [
+   "treasuryofdavid06spuruoft",
+   469,
+   "452"
+  ],
+  "spurgeon-psalms.PSA.149.2.1": [
+   "treasuryofdavid06spuruoft",
+   470,
+   "453"
+  ],
+  "spurgeon-psalms.PSA.149.3.1": [
+   "treasuryofdavid06spuruoft",
+   470,
+   "453"
+  ],
+  "spurgeon-psalms.PSA.149.4.1": [
+   "treasuryofdavid06spuruoft",
+   470,
+   "453"
+  ],
+  "spurgeon-psalms.PSA.149.5.1": [
+   "treasuryofdavid06spuruoft",
+   471,
+   "454"
+  ],
+  "spurgeon-psalms.PSA.149.6.1": [
+   "treasuryofdavid06spuruoft",
+   471,
+   "454"
+  ],
+  "spurgeon-psalms.PSA.149.7.1": [
+   "treasuryofdavid06spuruoft",
+   471,
+   "454"
+  ],
+  "spurgeon-psalms.PSA.149.8.1": [
+   "treasuryofdavid06spuruoft",
+   471,
+   "454"
+  ],
+  "spurgeon-psalms.PSA.149.9.1": [
+   "treasuryofdavid06spuruoft",
+   471,
+   "454"
+  ],
+  "spurgeon-psalms.PSA.150.1.1": [
+   "treasuryofdavid06spuruoft",
+   480,
+   "463"
+  ],
+  "spurgeon-psalms.PSA.150.2.1": [
+   "treasuryofdavid06spuruoft",
+   480,
+   "463"
+  ],
+  "spurgeon-psalms.PSA.150.3.1": [
+   "treasuryofdavid06spuruoft",
+   480,
+   "463"
+  ],
+  "spurgeon-psalms.PSA.150.4.1": [
+   "treasuryofdavid06spuruoft",
+   481,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.150.5.1": [
+   "treasuryofdavid06spuruoft",
+   481,
+   "464"
+  ],
+  "spurgeon-psalms.PSA.150.6.1": [
+   "treasuryofdavid06spuruoft",
+   481,
+   "464"
+  ]
+ }
+}
