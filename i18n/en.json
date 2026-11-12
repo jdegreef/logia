@@ -874,6 +874,10 @@
     "xrefs": "Cross-references",
     "xref_credit": "Cross-references from OpenBible.info (CC BY), most voted first.",
     "open_chapter": "Read {chapter} with all its commentary",
+    "nearby": "Verses nearby",
+    "nearby_title": "{ref}: {n} excerpts",
+    "nearby_title_one": "{ref}: 1 excerpt",
+    "nearby_none": "{ref}: no commentary yet",
     "previous": "Previous verse",
     "next": "Next verse",
     "bible_credit": "Bible text: {link} (CC0), Balanced. An AI draft awaiting human review."
