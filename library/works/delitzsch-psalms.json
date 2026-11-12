@@ -1,0 +1,18 @@
+{
+ "id": "delitzsch-psalms",
+ "author": "delitzsch",
+ "title": "Biblical Commentary on the Psalms",
+ "divisions": "verse",
+ "edition": "Franz Delitzsch, Biblical Commentary on the Psalms, translated from the second German edition by Francis Bolton, 3 vols (Clark's Foreign Theological Library). Edinburgh: T. & T. Clark, 1871; archive.org scans biblicalcommenta187101deli (vol. 1), biblicalcommenta187102deli (vol. 2) and biblicalcomment02unkngoog (vol. 3), djvu OCR text",
+ "original_language": "German",
+ "translation": "Francis Bolton, Biblical Commentary on the Psalms (Edinburgh: T. & T. Clark, 1871), from the second German edition (1867)",
+ "published": 1871,
+ "full_text_url": "https://archive.org/details/biblicalcommenta187101deli",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Francis Bolton's death date (Delitzsch died in 1890); life + 70 years"
+ },
+ "source_kind": "scan",
+ "notes": "Not on CCEL; the text is archive.org OCR of the 1871 T. & T. Clark edition, Psalms 1-35 in vol. 1, 36-83 in vol. 2 and 84-150 in vol. 3 (a Google scan whose OCR is poorer). Delitzsch numbers the verses as the Hebrew does, as the Open Word Bible does (Psalm 51:3 is 'Have mercy'). Each page's running head names the psalm and the verses it explains ('PSALM LI. 5, 6. 135'); a paragraph is on the verses of the page it begins on, or on those its own opening names ('Vers. 5, 6.'), and paragraphs on the same verses are joined into entries of up to about 350 words. Each psalm's introduction, its translation and the footnotes are left out. The OCR turns Delitzsch's many Hebrew and Greek words into strings of letters and marks: a sentence holding any word that is not found in an English dictionary, in the rest of Logia's library or several times in this work, or any stray mark, is left out, and the gap is marked ' ... '. So the excerpts keep his exposition and leave out most of his philology; about a fifth of the commentary is kept. Lines are joined, and a word broken at a line end is joined again. Other OCR slips are left as read ('vi'hich' for 'which', 'Ixv.' for 'lxv.').",
+ "status": "ai_draft"
+}
