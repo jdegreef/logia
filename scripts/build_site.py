@@ -3559,9 +3559,12 @@ def about_stats(lib):
     """The library's size: excerpts, commentators, works, books and scan fixes."""
     books = [lib.books[b]["en"] for b in lib.books if any(x == b for x, _c in lib.coverage())]
     items = ((f"{len(lib.comments):,}", t("about.stats.excerpts")), (str(len(lib.authors)), t("about.stats.commentators")),
-             (str(len(lib.works)), t("about.stats.works")), (str(len(books)), t("about.stats.books", books=name_list(books))),
+             (str(len(lib.works)), t("about.stats.works")), (str(len(books)), t("about.stats.books")),
              (f"{sum(len(v) for v in lib.fixes.values()):,}", t("about.stats.fixes")))
-    return '<ul class="lg-ab-stats">' + "".join(f"<li><b>{n}</b><span>{e(label)}</span></li>" for n, label in items) + "</ul>"
+    # Five equal columns of a number and a one-word label; the books are
+    # named on a line of their own, so no caption is longer than the rest.
+    return ('<ul class="lg-ab-stats">' + "".join(f"<li><b>{n}</b><span>{e(label)}</span></li>" for n, label in items) + "</ul>"
+            f'<p class="lg-ab-books">{e(t("about.stats.books_list", books=name_list(books)))}</p>')
 
 
 def about_example(lib):
