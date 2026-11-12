@@ -535,15 +535,6 @@
   },
   {
    "in": "delitzsch-psalms.PSA.11.1-3.1",
-   "at": 598,
-   "text": "xxi. 17",
-   "start": "PSA.21.17",
-   "end": "PSA.21.17",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.11.1-3.1",
    "at": 607,
    "text": "Prov. xxii. 5",
    "start": "PRO.22.5",
@@ -993,6 +984,15 @@
    "status": "detected"
   },
   {
+   "in": "delitzsch-psalms.PSA.18.44-46.1",
+   "at": 309,
+   "text": "Ver. 46",
+   "start": "PSA.18.47",
+   "end": "PSA.18.47",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "delitzsch-psalms.PSA.18.51.1",
    "at": 101,
    "text": "2 Sam. vii. 20",
@@ -1331,15 +1331,6 @@
    "text": "Isa. xl. 11",
    "start": "ISA.40.11",
    "end": "ISA.40.11",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.23.1-3.1",
-   "at": 78,
-   "text": "Ezek. xxxiv. 37",
-   "start": "EZK.34.37",
-   "end": "EZK.34.37",
    "found": "pattern",
    "status": "detected"
   },
@@ -1947,15 +1938,6 @@
    "status": "detected"
   },
   {
-   "in": "delitzsch-psalms.PSA.37.1-2.1",
-   "at": 681,
-   "text": "xxiv. 19",
-   "start": "PSA.24.19",
-   "end": "PSA.24.19",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "delitzsch-psalms.PSA.37.7.1",
    "at": 124,
    "text": "Prov. xxiv. 8",
@@ -1979,15 +1961,6 @@
    "text": "Job xvi. 9",
    "start": "JOB.16.9",
    "end": "JOB.16.9",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.37.16-17.1",
-   "at": 46,
-   "text": "ver. 1",
-   "start": "PSA.37.1",
-   "end": "PSA.37.1",
    "found": "pattern",
    "status": "detected"
   },
@@ -3352,6 +3325,15 @@
   },
   {
    "in": "delitzsch-psalms.PSA.64.8-11.1",
+   "at": 568,
+   "text": "Ver. 9",
+   "start": "PSA.64.10",
+   "end": "PSA.64.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.64.8-11.1",
    "at": 646,
    "text": "ver. 10",
    "start": "PSA.64.11",
@@ -3626,15 +3608,6 @@
    "text": "2 Sam. i. 24",
    "start": "2SA.1.24",
    "end": "2SA.1.24",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.68.12-15.2",
-   "at": 539,
-   "text": "ver. 136",
-   "start": "PSA.68.136",
-   "end": "PSA.68.136",
    "found": "pattern",
    "status": "detected"
   },
@@ -4027,28 +4000,10 @@
   },
   {
    "in": "delitzsch-psalms.PSA.74.9-11.1",
-   "at": 920,
-   "text": "ver. 86",
-   "start": "PSA.74.86",
-   "end": "PSA.74.86",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.74.9-11.1",
    "at": 929,
    "text": "ver. 9",
    "start": "PSA.74.9",
    "end": "PSA.74.9",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.74.9-11.1",
-   "at": 1079,
-   "text": "ver. 116",
-   "start": "PSA.74.116",
-   "end": "PSA.74.116",
    "found": "pattern",
    "status": "detected"
   },
@@ -4152,15 +4107,6 @@
    "status": "detected"
   },
   {
-   "in": "delitzsch-psalms.PSA.74.23.1",
-   "at": 893,
-   "text": "xi. 22",
-   "start": "PSA.11.22",
-   "end": "PSA.11.22",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "delitzsch-psalms.PSA.75.2-6.1",
    "at": 1190,
    "text": "Isa. xxx. 27",
@@ -4220,6 +4166,15 @@
    "text": "ii. 1",
    "start": "PSA.2.1",
    "end": "PSA.2.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.76.2-4.1",
+   "at": 116,
+   "text": "Ver. 4",
+   "start": "PSA.76.5",
+   "end": "PSA.76.5",
    "found": "pattern",
    "status": "detected"
   },
@@ -4310,15 +4265,6 @@
    "text": "Ixxxv. 6",
    "start": "PSA.85.7",
    "end": "PSA.85.7",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.77.17-20.1",
-   "at": 260,
-   "text": "ver. 196",
-   "start": "PSA.77.196",
-   "end": "PSA.77.196",
    "found": "pattern",
    "status": "detected"
   },
@@ -4423,15 +4369,6 @@
   },
   {
    "in": "delitzsch-psalms.PSA.78.38-48.1",
-   "at": 378,
-   "text": "viii. 21",
-   "start": "PSA.8.21",
-   "end": "PSA.8.21",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.78.38-48.1",
    "at": 609,
    "text": "ver. 40",
    "start": "PSA.78.40",
@@ -4463,6 +4400,15 @@
    "text": "Num. XXV. 1-9",
    "start": "NUM.25.1",
    "end": "NUM.25.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.78.49-59.1",
+   "at": 206,
+   "text": "Ver. 49",
+   "start": "PSA.78.49",
+   "end": "PSA.78.49",
    "found": "pattern",
    "status": "detected"
   },
@@ -4508,6 +4454,15 @@
    "text": "Jer. ii. 21",
    "start": "JER.2.21",
    "end": "JER.2.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.78.49-59.1",
+   "at": 751,
+   "text": "Ver. 59",
+   "start": "PSA.78.59",
+   "end": "PSA.78.59",
    "found": "pattern",
    "status": "detected"
   },
@@ -4701,6 +4656,15 @@
    "status": "detected"
   },
   {
+   "in": "delitzsch-psalms.PSA.80.2-4.1",
+   "at": 146,
+   "text": "Ver. 3",
+   "start": "PSA.80.4",
+   "end": "PSA.80.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
    "in": "delitzsch-psalms.PSA.80.9-20.1",
    "at": 517,
    "text": "ver. 15",
@@ -4890,15 +4854,6 @@
    "status": "detected"
   },
   {
-   "in": "delitzsch-psalms.PSA.82.1-4.1",
-   "at": 1279,
-   "text": "i. 17",
-   "start": "PSA.1.17",
-   "end": "PSA.1.17",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "delitzsch-psalms.PSA.82.5-7.1",
    "at": 20,
    "text": "ver. 5",
@@ -4994,15 +4949,6 @@
    "text": "1 Chron. iv. 42",
    "start": "1CH.4.42",
    "end": "1CH.4.42",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.83.14-17.1",
-   "at": 283,
-   "text": "ver. 176",
-   "start": "PSA.83.176",
-   "end": "PSA.83.176",
    "found": "pattern",
    "status": "detected"
   },
@@ -5214,15 +5160,6 @@
    "status": "detected"
   },
   {
-   "in": "delitzsch-psalms.PSA.89.16-19.1",
-   "at": 111,
-   "text": "ver. 186",
-   "start": "PSA.89.186",
-   "end": "PSA.89.186",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "delitzsch-psalms.PSA.89.24-38.1",
    "at": 41,
    "text": "ver. 29",
@@ -5318,42 +5255,6 @@
    "text": "ver. 9",
    "start": "PSA.90.9",
    "end": "PSA.90.9",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.90.13-17.1",
-   "at": 400,
-   "text": "i. 31, 44",
-   "start": "PSA.1.31",
-   "end": "PSA.1.31",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.90.13-17.1",
-   "at": 400,
-   "text": "i. 31, 44",
-   "start": "PSA.1.44",
-   "end": "PSA.1.44",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.90.13-17.1",
-   "at": 440,
-   "text": "xxviii. 13, 44",
-   "start": "PSA.28.13",
-   "end": "PSA.28.13",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.90.13-17.1",
-   "at": 440,
-   "text": "xxviii. 13, 44",
-   "start": "PSA.28.44",
-   "end": "PSA.28.44",
    "found": "pattern",
    "status": "detected"
   },
@@ -5485,15 +5386,6 @@
   },
   {
    "in": "delitzsch-psalms.PSA.97.12.1",
-   "at": 10,
-   "text": "ver. 136",
-   "start": "PSA.97.136",
-   "end": "PSA.97.136",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.97.12.1",
    "at": 76,
    "text": "ver. 13",
    "start": "PSA.97.13",
@@ -5620,28 +5512,10 @@
   },
   {
    "in": "delitzsch-psalms.PSA.103.19-22.1",
-   "at": 79,
-   "text": "ver. 196",
-   "start": "PSA.103.196",
-   "end": "PSA.103.196",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.103.19-22.1",
    "at": 92,
    "text": "1 Chron. xxix. 12",
    "start": "1CH.29.12",
    "end": "1CH.29.12",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.104.1-4.1",
-   "at": 303,
-   "text": "Amos iv. 18",
-   "start": "AMO.4.18",
-   "end": "AMO.4.18",
    "found": "pattern",
    "status": "detected"
   },
@@ -5687,6 +5561,15 @@
    "text": "ver. 6",
    "start": "PSA.104.6",
    "end": "PSA.104.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.105.25-38.1",
+   "at": 87,
+   "text": "Ver. 25",
+   "start": "PSA.105.25",
+   "end": "PSA.105.25",
    "found": "pattern",
    "status": "detected"
   },
@@ -5795,15 +5678,6 @@
    "text": "Ex. xxiii. 32",
    "start": "EXO.23.32",
    "end": "EXO.23.32",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.106.34-43.1",
-   "at": 196,
-   "text": "Num. xxv. 33",
-   "start": "NUM.25.33",
-   "end": "NUM.25.33",
    "found": "pattern",
    "status": "detected"
   },
@@ -5979,29 +5853,11 @@
    "status": "detected"
   },
   {
-   "in": "delitzsch-psalms.PSA.107.23-32.1",
-   "at": 571,
-   "text": "xiv. 10",
-   "start": "PSA.14.10",
-   "end": "PSA.14.10",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "delitzsch-psalms.PSA.107.43.2",
    "at": 25,
    "text": "ver. 3",
    "start": "PSA.107.3",
    "end": "PSA.107.3",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.107.43.2",
-   "at": 62,
-   "text": "ver. 47",
-   "start": "PSA.107.47",
-   "end": "PSA.107.47",
    "found": "pattern",
    "status": "detected"
   },
@@ -6223,6 +6079,15 @@
   },
   {
    "in": "delitzsch-psalms.PSA.119.41-48.1",
+   "at": 88,
+   "text": "Ver. 43",
+   "start": "PSA.119.43",
+   "end": "PSA.119.43",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.119.41-48.1",
    "at": 390,
    "text": "ver. 48",
    "start": "PSA.119.48",
@@ -6331,10 +6196,10 @@
   },
   {
    "in": "delitzsch-psalms.PSA.119.161-168.1",
-   "at": 133,
-   "text": "Judg. v. 80",
-   "start": "JDG.5.80",
-   "end": "JDG.5.80",
+   "at": 139,
+   "text": "v. 80",
+   "start": "PSA.119.80",
+   "end": "PSA.119.80",
    "found": "pattern",
    "status": "detected"
   },
@@ -6898,15 +6763,6 @@
   },
   {
    "in": "delitzsch-psalms.PSA.142.2-6.1",
-   "at": 214,
-   "text": "ver. 46",
-   "start": "PSA.142.46",
-   "end": "PSA.142.46",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.142.2-6.1",
    "at": 588,
    "text": "Job xi. 20",
    "start": "JOB.11.20",
@@ -7046,15 +6902,6 @@
    "text": "Dan. iii. 33",
    "start": "DAN.3.33",
    "end": "DAN.3.33",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "delitzsch-psalms.PSA.145.14-21.1",
-   "at": 150,
-   "text": "ver. 28",
-   "start": "PSA.145.28",
-   "end": "PSA.145.28",
    "found": "pattern",
    "status": "detected"
   },

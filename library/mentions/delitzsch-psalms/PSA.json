@@ -1,0 +1,90 @@
+{
+ "work": "delitzsch-psalms",
+ "book": "PSA",
+ "mentions": [
+  {
+   "in": "delitzsch-psalms.PSA.9.21.1",
+   "at": 465,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.13.2-3.1",
+   "at": 712,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.17.6-7.1",
+   "at": 481,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.18.17-21.1",
+   "at": 105,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.19.2-4.1",
+   "at": 509,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.19.2-4.1",
+   "at": 615,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.34.8-11.1",
+   "at": 160,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.57.2-6.1",
+   "at": 158,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.78.60-72.1",
+   "at": 290,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.111.10.1",
+   "at": 1003,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.111.10.1",
+   "at": 1118,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-psalms.PSA.121.1-4.1",
+   "at": 140,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  }
+ ]
+}

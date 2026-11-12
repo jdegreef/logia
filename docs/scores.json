@@ -2,12 +2,12 @@
  "about": "Written by scripts/score_refs.py: the pattern matcher of scripts/find_refs.py scored against the references CCEL's editors marked, and the Catena's quotations checked against the verses each homily or tractate covers. Never typed.",
  "citations": {
   "all": {
-   "found": 36081,
-   "marked": 32973,
-   "right": 31664,
-   "caught": 31912,
-   "precision": 0.878,
-   "recall": 0.968
+   "found": 39175,
+   "marked": 36069,
+   "right": 34576,
+   "caught": 34934,
+   "precision": 0.883,
+   "recall": 0.969
   },
   "works": {
    "augustine": {
@@ -41,6 +41,14 @@
     "caught": 294,
     "precision": 0.875,
     "recall": 0.997
+   },
+   "calvin-hebrews": {
+    "found": 177,
+    "marked": 180,
+    "right": 165,
+    "caught": 165,
+    "precision": 0.932,
+    "recall": 0.917
    },
    "calvin-luke": {
     "found": 531,
@@ -98,6 +106,14 @@
     "precision": 0.927,
     "recall": 0.804
    },
+   "chrysostom-hebrews": {
+    "found": 702,
+    "marked": 675,
+    "right": 657,
+    "caught": 657,
+    "precision": 0.936,
+    "recall": 0.973
+   },
    "chrysostom-romans": {
     "found": 425,
     "marked": 776,
@@ -129,6 +145,14 @@
     "caught": 2317,
     "precision": 0.914,
     "recall": 0.98
+   },
+   "henry-hebrews": {
+    "found": 340,
+    "marked": 342,
+    "right": 329,
+    "caught": 327,
+    "precision": 0.968,
+    "recall": 0.956
    },
    "henry-luke": {
     "found": 1741,
@@ -185,6 +209,14 @@
     "caught": 330,
     "precision": 0.76,
     "recall": 0.988
+   },
+   "jfb-hebrews": {
+    "found": 1875,
+    "marked": 1899,
+    "right": 1761,
+    "caught": 1873,
+    "precision": 0.939,
+    "recall": 0.986
    },
    "jfb-luke": {
     "found": 1075,
