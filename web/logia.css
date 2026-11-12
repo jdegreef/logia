@@ -160,6 +160,11 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-who b { font-family: var(--display); font-size: 17px; font-weight: 600; }
 .cx-who .cx-d { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .cx-tag { font-size: 11.5px; color: var(--muted); border: 1px solid var(--line); border-radius: 5px; padding: 0 6px; }
+/* Beside a name the tradition is plain muted text after the dates, as on the
+   verse pages: a bordered tag read as a button, and the name should be the
+   one thing that stands out on a card. */
+.cx-who .cx-tag { border: 0; padding: 0; border-radius: 0; font-size: 12.5px; margin-left: -4px; }
+.cx-who .cx-d + .cx-tag::before { content: "\00B7"; margin-right: 6px; }
 /* A voice opens as two lines of its excerpt (web/reader.js); the chevron or
    the lines open it. */
 .cx-toggle { margin-left: auto; align-self: center; border: 0; background: none; padding: 4px; border-radius: 6px; color: var(--muted);
