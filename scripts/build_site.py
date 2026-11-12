@@ -1137,6 +1137,15 @@ def json_ld(items):
     return f'\n<script type="application/ld+json">{text}</script>'
 
 
+def trail(*crumbs):
+    """A page's visible trail back up the library, Home first, as
+    (name, path) pairs; the last is where the reader is now. It sits where the
+    eyebrow line was, in the same small capitals."""
+    links = [f'<a href="/">{e(t("nav.home"))}</a>'] + [f'<a href="{path}">{e(name)}</a>' for name, path in crumbs]
+    return (f'<nav class="eyebrow lg-trail" aria-label="{e(t("nav.breadcrumb"))}">'
+            + '<span aria-hidden="true">›</span>'.join(links) + "</nav>")
+
+
 def breadcrumbs(*crumbs):
     """schema.org BreadcrumbList from (name, path) pairs, Home first."""
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -3232,7 +3241,7 @@ def author_page(lib, author):
 <div class="lg-author">
 <div class="lg-profile lg-era-{era}">
 <div class="lg-profile-main"><header class="page-head lg-person-head"><span class="lg-mono" aria-hidden="true">{e(name_initials(author))}</span><div>
-<p class="eyebrow"><a href="/commentators/">{e(t("commentators.title"))}</a> · <a href="{era_url(author["era"])}">{e(t("eras." + author["era"]))}</a></p>
+{trail((t("commentators.title"), "/commentators/"), (t("eras." + author["era"]), era_url(author["era"])))}
 <h1>{e(name)}</h1><p class="dek">{dek}</p><ul class="lg-chips">{chips}</ul></div></header>
 <section class="prose lg-bio">{bio}{draft}</section>{stats}{works_block}{canon}{words_q}</div>
 <dl class="lg-facts-card">{dl}</dl></div>
@@ -3395,7 +3404,8 @@ def work_page(lib, wid):
     printed = "" if str(w["published"]) in imprint_line else e(t("work.printed", year=w["published"]))
     imprint = f'<p class="lg-tp-imprint">{"<br>".join(x for x in (e(imprint_line), printed) if x)}</p>'
     body = f"""
-<header class="page-head lg-titlepage"><p class="eyebrow">{e(t("work.eyebrow"))} · {e(t("eras." + a["era"]))}</p>
+<header class="page-head lg-titlepage">{trail((t("commentators.title"), "/commentators/"), (t("eras." + a["era"]), era_url(a["era"])),
+                                   (a["name"], f'/commentators/{a["id"]}/'))}
 <h1>{e(w["title"])}</h1><p class="dek lg-tp-by">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 {imprint}
 <p class="actions">{begin}<a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>

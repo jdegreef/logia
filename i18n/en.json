@@ -12,6 +12,7 @@
   "nav": {
     "main": "Main",
     "home": "Home",
+    "breadcrumb": "You are here",
     "read": "Read",
     "commentators": "Commentators",
     "about": "About",

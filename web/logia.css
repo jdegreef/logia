@@ -1520,3 +1520,6 @@ html {
 .lg-near { margin: 14px 0 4px; gap: 5px; }
 .lg-near .chap { min-width: 0; height: 30px; padding: 0 9px; border-radius: 8px; font-size: 13px; font-variant-numeric: tabular-nums; }
 .lg-near .chap[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
+/* A page's trail back up the library (build_site.trail). */
+.lg-trail { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; }
+.lg-trail span { color: var(--muted); opacity: .7; }
