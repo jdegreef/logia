@@ -10,6 +10,8 @@
     "licence": "Logia's data is free to use, with no rights reserved. The commentaries are in the public domain."
   },
   "nav": {
+    "search_words": "Search the words",
+    "search_words_note": "Every excerpt, by era, tradition and book",
     "main": "Main",
     "home": "Home",
     "breadcrumb": "You are here",
@@ -180,10 +182,14 @@
     }
   },
   "home": {
+    "votd": "Verse of the day",
+    "continue": "Continue reading",
+    "continue_go": "Pick up where you left off",
+    "continue_recent": "Also read lately:",
+    "continue_chapter": "{book} {chapter}",
     "verse": "“Unto them were committed the oracles of God.” Romans 3:2",
     "title": "The Word, and what the church has said about it",
     "lead": "Read a verse and hear the church beside it, from the early church to the 1800s, copied word for word from public-domain editions.",
-    "verse_voices": "A verse and its voices",
     "motto_title": "Romans 3:2 in the King James Version. Paul’s word for “oracles” is logia, which gives this site its name.",
     "christmas": "Christmas: {ref}",
     "kind_chapter": "chapter",
@@ -235,6 +241,31 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "eyebrow": "Search",
+    "heading": "Search the commentators' words",
+    "dek": "Every word of all {n} excerpts by {authors} commentators, as they wrote them. Narrow by era, tradition, book or commentator.",
+    "description": "Search the words of {n} excerpts of public-domain Christian commentary, from the early church to the 1800s.",
+    "words_label": "Words to find",
+    "words_placeholder": "grace, the Word, born again …",
+    "result_title": "{name} on {ref}",
+    "filter_era": "Era",
+    "filter_tradition": "Tradition",
+    "filter_book": "Book",
+    "filter_commentator": "Commentator",
+    "any_commentator": "Any commentator",
+    "more": "Show more",
+    "fts": {
+      "start": "Type a word or a few words to find them in every excerpt.",
+      "unavailable": "The words can't be searched in this build of the site. Search above still finds verses, books and commentators.",
+      "noscript": "Searching the words needs JavaScript.",
+      "searching": "Searching…",
+      "none": "Nothing found for “{q}”. Try another spelling: many of these editions spell as their century did.",
+      "count_one": "1 excerpt has “{q}”.",
+      "count": "{n} excerpts have “{q}”.",
+      "count_filtered": "{n} excerpts in what you chose.",
+      "clear": "Clear the filters",
+      "failed": "The search couldn't load. Check the connection and try again."
+    },
     "label": "Go to a verse, a book or a commentator",
     "placeholder": "John 3:16, Romans 8 or Calvin",
     "go": "Go",
@@ -243,7 +274,9 @@
       "verse": "Verse",
       "chapter": "Chapter",
       "book": "{n} chapters",
-      "none": "No verse, book or commentator by that name. Try “John 3:16”."
+      "none": "No verse, book or commentator by that name. Try “John 3:16”.",
+      "words": "“{q}” in the commentators' words",
+      "words_note": "Search every excerpt"
     },
     "key_hint": "Press / on any page to search",
     "open": "Search",
@@ -254,15 +287,16 @@
     "foot_close": "to close"
   },
   "read": {
+    "chapters_of": "Chapters of {book}",
+    "text_only_short": "Text only",
     "title": "Read",
     "heading": "Every book of the Bible",
     "dek": "Commentary so far on {books}, in gold. Every book has the Bible text, its Greek or Hebrew words and translation notes: choose a book, then a chapter.",
     "jump": "Go to a testament",
-    "legend": "What the chapter numbers show",
+    "legend": "What the chapter cells show",
     "has_commentary_key": "Commentary",
     "text_only_key": "Bible text and notes, no commentary yet",
     "read_key": "Read on this device",
-    "chapters": "{n} chapters",
     "chapters_one": "1 chapter",
     "commentary_short": "Commentary on {n} of {total}",
     "commentary_on": "Commentary on {n} of {total} chapters",
@@ -270,7 +304,6 @@
     "text_only": "Bible text, commentary to come",
     "coming": "Coming later",
     "coming_note": "These books are not in Logia yet.",
-    "book_page": "About {book}",
     "has_commentary": "has commentary",
     "text_only_chapter": "Bible text only",
     "no_commentary_title": "No commentary on {ref} yet. Read the Bible text"
@@ -386,6 +419,10 @@
     "by_verse_note": "Each verse with commentary has a page of its own: every voice on it in full, its Greek words, translation notes and cross-references."
   },
   "reader": {
+    "filter_era": "Era",
+    "filter_kind": "Tradition",
+    "show_kinds": "Show traditions",
+    "show_all": "Show all {n}",
     "rail_more": "Open the voices that don't fit on the line: {names}",
     "verse_of": "{n} of {total}",
     "verse_of_label": "Verse {n} of {total} in this chapter",
@@ -492,6 +529,7 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "timeline_key": "What the colours show: the eras",
     "title": "Commentators",
     "heading": "The voices in Logia",
     "dek": "Preachers, bishops and scholars from the early church to the 1800s, Eastern and Western, Catholic and Protestant, each in their own words.",
@@ -596,6 +634,16 @@
     "sec_more": "More on Logia"
   },
   "work": {
+    "cite_copy_short": "Copy",
+    "cite_copy_as": "Copy the {style} citation",
+    "cite_note": "Copy the edition in the form your paper or notes use. Link to the page for a single excerpt with the citation under it.",
+    "cite_chicago": "{name}. {title}. {edition}, {year}. Logia. {url}.",
+    "cite_mla": "{name}. {title}. {edition}, {year}. Logia, {url}.",
+    "cite_chicago_label": "Chicago",
+    "cite_mla_label": "MLA",
+    "cite_bibtex_label": "BibTeX",
+    "contents_by": "{divisions}",
+    "contents_by_note": "All {n} {divisions} Logia holds whole, in order, each with the verses it is on. Open one to read it straight through.",
     "eyebrow": "Commentary",
     "by": "By {name}",
     "printed": "Printed {year}",
@@ -648,7 +696,6 @@
     "open_verse": "Read {ref} with all its commentary",
     "straight_through": "Read straight through",
     "straight_through_note": "The {divisions} that hold Logia's excerpts, copied whole from their CCEL transcriptions. Each marks the passages Logia sets beside a verse.",
-    "by_division": "By {division}",
     "by_verse": "By verse",
     "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on."
   },
@@ -923,7 +970,7 @@
     "xrefs": "Cross-references",
     "xref_credit": "Cross-references from OpenBible.info (CC BY), most voted first.",
     "open_chapter": "Read {chapter} with all its commentary",
-    "nearby": "Verses nearby",
+    "nearby": "Every verse in the chapter",
     "nearby_title": "{ref}: {n} excerpts",
     "nearby_title_one": "{ref}: 1 excerpt",
     "nearby_none": "{ref}: no commentary yet",
@@ -1282,7 +1329,6 @@
     },
     "dek": "{n} excerpts on {book} from {names}, in their own words. Logia dates the era from AD {a} to {b}.",
     "dek_one": "1 excerpt on {book} from {names}, in their own words. Logia dates the era from AD {a} to {b}.",
-    "by_era": "By era:",
     "people": "The commentators",
     "on_verses": "On some well-known verses",
     "on_verses_note": "The opening words of what each of them says on the verse. Follow the link to read the whole excerpt, and the verse to read every era on it.",
@@ -1292,6 +1338,7 @@
     "chapters_title": "Excerpts on each chapter"
   },
   "differ": {
+    "common": "Held in common",
     "eyebrow": "Where the churches differ",
     "title": "{title}: how has the church read {ref}?",
     "description": "How Catholic, Orthodox and Protestant Christians read {ref} ({title}), with what each of {n} commentators in Logia says, in their own words.",
@@ -1638,5 +1685,11 @@
         "feed": "Feed my sheep"
       }
     }
+  },
+  "kinds": {
+    "shared": "Church Fathers",
+    "catholic": "Catholic",
+    "orthodox": "Orthodox",
+    "protestant": "Protestant"
   }
 }

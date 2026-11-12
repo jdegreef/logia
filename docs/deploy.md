@@ -3,6 +3,15 @@
 The site is static: Render runs `python3 scripts/build_site.py` and serves
 `site/`. `render.yaml` holds the settings. DNS is on Cloudflare.
 
+The build's one dependency is [Pagefind](https://pagefind.app), which indexes
+the words of every excerpt for `/search/` into `site/pagefind/`. The build
+command installs it, pinned (`pagefind[bin]==1.5.2` and `pagefind-bin==1.5.2`),
+and CI does the same. Without it the site still builds, and `/search/` says the
+words can't be searched in that build. To build with search locally:
+
+    python3 -m pip install 'pagefind[bin]==1.5.2' 'pagefind-bin==1.5.2'
+    python3 scripts/build_site.py
+
 ## 1. Create the site on Render
 
 1. Render Dashboard > **New** > **Blueprint**, pick `jdegreef/logia`, branch

@@ -71,6 +71,11 @@
     D.people.forEach(function (p) {
       if (out.length < 8 && p[0].toLowerCase().indexOf(low) >= 0) out.push({ href: p[1], title: p[0], note: p[2] });
     });
+    // Anything that isn't only a reference can be looked for in the
+    // excerpts' own words (/search/, full_text below).
+    if (!r && low.length >= 3 && D.ui.words) {
+      out.push({ href: "/search/?q=" + encodeURIComponent(q.trim()), title: fmt(D.ui.words, { q: q.trim() }), note: D.ui.words_note });
+    }
     return out;
   }
   window.LogiaSearch = { parseRef: parseRef, refHref: refHref, refLabel: refLabel, suggest: suggest };
@@ -195,6 +200,58 @@
     a.hidden = false;
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
   });
+
+  // Home: Continue reading. The last verse read (logia-last, kept by
+  // web/reader.js), then up to four other chapters read lately (logia-read).
+  var cont = document.querySelector(".lg-continue");
+  if (cont) {
+    var lastAt = null, readList = [];
+    try {
+      lastAt = JSON.parse(localStorage.getItem("logia-last") || "null");
+      readList = JSON.parse(localStorage.getItem("logia-read") || "[]");
+    } catch (e) { /* storage blocked */ }
+    if (lastAt && lastAt.href && lastAt.href.charAt(0) === "/") {
+      var names = JSON.parse(cont.getAttribute("data-books"));
+      var main = cont.querySelector(".lg-continue-main");
+      main.href = lastAt.href;
+      main.querySelector("b").textContent = lastAt.ref;
+      var here = lastAt.href.split("#")[0], seen = {}, items = [];
+      readList.slice().reverse().forEach(function (h) {
+        var m = h.match(/^\/([a-z0-9]{3})\/(\d+)\/$/);
+        if (!m || h === here || seen[h] || !names[m[1]] || items.length >= 4) return;
+        seen[h] = true;
+        items.push('<li><a href="' + esc(h) + '">' + esc(fmt(cont.getAttribute("data-chapter"), { book: names[m[1]], chapter: m[2] })) + "</a></li>");
+      });
+      if (items.length) {
+        var recent = cont.querySelector(".lg-continue-recent");
+        recent.querySelector("ul").innerHTML = items.join("");
+        recent.hidden = false;
+      }
+      cont.hidden = false;
+    }
+  }
+
+  // Home: the verse of the day. The page holds the day it was built on; the
+  // reader's own day is fetched from /votd/<n>.html when it differs.
+  var votd = document.querySelector("[data-votd]");
+  if (votd) {
+    var now = new Date(), epoch = votd.getAttribute("data-votd-epoch").split("-");
+    var days = Math.floor((Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) - Date.UTC(+epoch[0], +epoch[1] - 1, +epoch[2])) / 864e5);
+    var n = +votd.getAttribute("data-votd-n"), want = ((days % n) + n) % n;
+    var dateLabel = votd.querySelector(".lg-votd-date");
+    try {
+      dateLabel.textContent = "· " + now.toLocaleDateString(document.documentElement.lang || undefined, { weekday: "long", day: "numeric", month: "long" });
+      dateLabel.hidden = false;
+    } catch (e) { /* no date formatting */ }
+    if (want !== +votd.getAttribute("data-votd")) {
+      fetch("/votd/" + want + ".html").then(function (r) { return r.ok ? r.text() : null; }).then(function (html) {
+        if (!html) return;
+        var panel = votd.querySelector(".lg-votd-panel");
+        if (panel) panel.outerHTML = html;
+        votd.setAttribute("data-votd", want);
+      }).catch(function () { /* keep the built day's verse */ });
+    }
+  }
 
   // The book page's chapter bar: say which end has more chapters out of
   // view, so the CSS can fade that edge.
@@ -672,6 +729,159 @@
       offlineList.innerHTML = rows.length ? rows.join("") : "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>";
     }).catch(function () { offlineList.innerHTML = "<li>" + esc(offlineList.getAttribute("data-none")) + "</li>"; });
   }
+  // /search/: the words of every excerpt, through Pagefind's index in
+  // /pagefind/ (build_search_index in scripts/build_site.py). Filters for
+  // era, tradition and book are chips with the count each would give; the
+  // commentator is a list. The query and filters are kept in the address,
+  // so a search can be shared.
+  (function () {
+    var form = document.querySelector("form.lg-fts");
+    if (!form) return;
+    var U = JSON.parse(form.getAttribute("data-ui"));
+    var input = form.querySelector("#fts-q"), status = document.getElementById("fts-status");
+    var list = document.getElementById("fts-results"), more = document.getElementById("fts-more");
+    var who = form.querySelector("#fts-who");
+    var src = form.getAttribute("data-pagefind");
+    if (!src) return;
+    var pf = null, allCounts = {}, chosen = { era: [], tradition: [], book: [], commentator: [] }, results = [], shown = 0, run = 0, timer = null;
+    var params = new URLSearchParams(location.search);
+    input.value = params.get("q") || "";
+    Object.keys(chosen).forEach(function (k) { chosen[k] = params.getAll(k); });
+    function filters(but) {
+      var f = {};
+      Object.keys(chosen).forEach(function (k) { if (k !== but && chosen[k].length) f[k] = { any: chosen[k] }; });
+      return f;
+    }
+    // Each group's counts as if nothing were chosen in it, so its other
+    // values stay offered: one more search for each group with a choice.
+    function facetCounts(q, counts) {
+      var groups = Object.keys(chosen).filter(function (k) { return chosen[k].length; });
+      return Promise.all(groups.map(function (k) {
+        return pf.search(q || null, { filters: filters(k) }).then(function (s) { counts[k] = s.filters[k] || {}; });
+      })).then(function () { return counts; });
+    }
+    function keep() {
+      var p = new URLSearchParams();
+      if (input.value.trim()) p.set("q", input.value.trim());
+      Object.keys(chosen).forEach(function (k) { chosen[k].forEach(function (v) { p.append(k, v); }); });
+      var qs = p.toString();
+      history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
+    }
+    function chips(counts) {
+      form.querySelectorAll(".lg-fts-group[data-filter]").forEach(function (g) {
+        var k = g.getAttribute("data-filter"), c = counts[k] || {};
+        var names = Object.keys(c).filter(function (v) { return c[v] || chosen[k].indexOf(v) >= 0; });
+        if (k === "era" || k === "book") {
+          var order = Object.keys(allCounts[k] || {});
+          names.sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); });
+        } else names.sort();
+        if (k === "commentator") {
+          who.innerHTML = '<option value="">' + esc(who.options[0].text) + "</option>" + names.map(function (v) {
+            return '<option value="' + esc(v) + '"' + (chosen[k].indexOf(v) >= 0 ? " selected" : "") + ">" + esc(v) + " (" + (c[v] || 0) + ")</option>";
+          }).join("");
+        } else {
+          g.querySelector(".lg-fts-chips").innerHTML = names.map(function (v) {
+            return '<button type="button" class="cx-chip" data-k="' + k + '" data-v="' + esc(v) + '" aria-pressed="' + (chosen[k].indexOf(v) >= 0) + '">' +
+              esc(v) + ' <span class="cx-chip-n">' + (c[v] || 0) + "</span></button>";
+          }).join("");
+        }
+        g.hidden = !names.length;
+      });
+    }
+    function card(d) {
+      var m = d.meta;
+      return '<li class="lg-fts-hit"><p class="lg-fts-head"><a href="' + esc(m.link) + '"><b>' + esc(m.title) + "</b></a>" +
+        ' <span class="lg-quiet">' + esc(m.dates) + " · <i>" + esc(m.work) + "</i></span></p>" +
+        '<p class="lg-fts-text">' + d.excerpt + "</p></li>";
+    }
+    function showMore() {
+      var next = results.slice(shown, shown + 10);
+      shown += next.length;
+      more.hidden = true;
+      return Promise.all(next.map(function (r) { return r.data(); })).then(function (ds) {
+        list.insertAdjacentHTML("beforeend", ds.map(card).join(""));
+        more.hidden = shown >= results.length;
+      });
+    }
+    function search() {
+      var q = input.value.trim(), mine = ++run, any = Object.keys(filters()).length;
+      keep();
+      if (!q && !any) { list.innerHTML = ""; more.hidden = true; status.textContent = U.start; chips(allCounts); return; }
+      status.textContent = U.searching;
+      pf.search(q || null, { filters: filters() }).then(function (s) {
+        if (mine !== run) return;
+        results = s.results; shown = 0; list.innerHTML = "";
+        var counts = {};
+        Object.keys(s.filters).forEach(function (k) { counts[k] = s.filters[k]; });
+        facetCounts(q, counts).then(function (c) { if (mine === run) chips(c); });
+        status.innerHTML = esc(!results.length ? fmt(U.none, { q: q })
+          : any ? fmt(U.count_filtered, { n: results.length.toLocaleString() })
+          : fmt(results.length === 1 ? U.count_one : U.count, { n: results.length.toLocaleString(), q: q })) +
+          (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "");
+        return showMore();
+      }).catch(function () { if (mine === run) status.textContent = U.failed; });
+    }
+    import(src).then(function (m) {
+      pf = m;
+      return pf.options({ excerptLength: 36 }).then(function () { return pf.filters(); });
+    }).then(function (all) {
+      allCounts = all;
+      search();
+    }).catch(function () { status.textContent = U.failed; });
+    input.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(function () { if (pf) search(); }, 250); });
+    form.addEventListener("submit", function (e) { e.preventDefault(); if (pf) search(); });
+    form.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-k]");
+      if (!b || !pf) return;
+      var k = b.getAttribute("data-k"), v = b.getAttribute("data-v"), i = chosen[k].indexOf(v);
+      if (i >= 0) chosen[k].splice(i, 1); else chosen[k].push(v);
+      search();
+    });
+    who.addEventListener("change", function () { chosen.commentator = who.value ? [who.value] : []; if (pf) search(); });
+    status.addEventListener("click", function (e) {
+      if (!e.target.closest("[data-clear]")) return;
+      Object.keys(chosen).forEach(function (k) { chosen[k] = []; });
+      search();
+    });
+    more.addEventListener("click", showMore);
+  })();
+
+  // Under an excerpt printed whole (verse and work pages): copy it with its
+  // citation, or share a link to it (excerpt_actions in scripts/build_site.py).
+  // Where the clipboard is refused, the text is shown to copy by hand.
+  document.querySelectorAll(".lg-xact").forEach(function (box) {
+    var note = box.querySelector(".lg-xact-note");
+    function show(text, copy) {
+      note.hidden = false;
+      note.textContent = text;
+      if (copy !== undefined) {
+        var area = document.createElement("textarea");
+        area.readOnly = true; area.rows = 4; area.className = "lg-xact-copy"; area.value = copy;
+        note.appendChild(area); area.select();
+      }
+    }
+    function copy(text, done) {
+      if (!navigator.clipboard) return show(box.dataset.byHand, text);
+      navigator.clipboard.writeText(text).then(function () { show(done); }, function () { show(box.dataset.byHand, text); });
+    }
+    box.querySelectorAll("[data-xact]").forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener("click", function () {
+        if (b.dataset.xact === "share") {
+          if (navigator.share) {
+            navigator.share({ title: box.dataset.title, text: box.dataset.title, url: box.dataset.url }).catch(function () { /* closed */ });
+            return;
+          }
+          return copy(box.dataset.url, box.dataset.linked);
+        }
+        var text = box.closest("article").querySelector(".lg-text");
+        copy("\u201c" + (text ? text.innerText.trim() : "") + "\u201d\n\n" + box.dataset.cite, box.dataset.done);
+      });
+    });
+  });
+  // Verse pages: the strip of the chapter's verses scrolls to this one.
+  var near = document.querySelector(".lg-near"), here = near && near.querySelector("[aria-current]");
+  if (here) near.scrollLeft = here.offsetLeft - near.offsetLeft - (near.clientWidth - here.offsetWidth) / 2;
   // Verse pages: a long excerpt shows its first eight lines with a fade and
   // "Read all 412 words" (scripts/build_site.py, verse_excerpt). The one the
   // address points to opens in full.

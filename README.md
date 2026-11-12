@@ -74,6 +74,7 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 | `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |
 | `/differ/`, `/differ/<id>/` | Passages the churches read differently: a short note on how, then every commentator on the passage, in the order they died |
 | `/creeds/`, `/creeds/<id>/` | Creeds, councils and confessions, each whole, with their Scripture linked; verse pages list the ones that cite the verse |
+| `/search/` | The words of every excerpt, found with [Pagefind](https://pagefind.app) and narrowed by era, tradition, book and commentator (the build's one dependency; see `docs/deploy.md`) |
 | `/about/` | What Logia is and how excerpts are checked |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its
