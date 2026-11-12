@@ -1,0 +1,321 @@
+{
+ "work": "delitzsch-proverbs",
+ "book": "PRO",
+ "mentions": [
+  {
+   "in": "delitzsch-proverbs.PRO.10.2.1",
+   "at": 120,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.12-13.1",
+   "at": 444,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.1-35.1",
+   "at": 273,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.4.1",
+   "at": 599,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.21-33.1",
+   "at": 164,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.32-33.1",
+   "at": 236,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.8.1",
+   "at": 37,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.3",
+   "at": 1357,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.5",
+   "at": 570,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.5",
+   "at": 695,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.5",
+   "at": 1313,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.6",
+   "at": 459,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.6",
+   "at": 512,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.6",
+   "at": 655,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.6",
+   "at": 809,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.7",
+   "at": 762,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.7",
+   "at": 834,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.7",
+   "at": 1052,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.7",
+   "at": 1405,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.7",
+   "at": 1668,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.6-24.1",
+   "at": 376,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.27-28.1",
+   "at": 149,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.17-18.1",
+   "at": 1189,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.28-29.1",
+   "at": 418,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.30.1",
+   "at": 117,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.9-10.1",
+   "at": 174,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.4-5.1",
+   "at": 282,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.17-18.1",
+   "at": 955,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.1",
+   "at": 845,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.27.1",
+   "at": 133,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.26.10.1",
+   "at": 229,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.8.1",
+   "at": 953,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.20.1",
+   "at": 922,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.28.1",
+   "at": 137,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.2.1",
+   "at": 131,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.3",
+   "at": 474,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.7",
+   "at": 863,
+   "text": "Godet",
+   "author": "godet",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.8",
+   "at": 348,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.10",
+   "at": 1634,
+   "text": "Gregory the Great",
+   "author": "gregory",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.12",
+   "at": 1530,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.13",
+   "at": 1067,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.13",
+   "at": 1412,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.13",
+   "at": 1533,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.14",
+   "at": 17,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.15",
+   "at": 618,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  }
+ ]
+}
