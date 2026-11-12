@@ -689,11 +689,23 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 
 /* The commentators' lifetimes on one line of centuries (/commentators/),
    coloured by era from the early church's gold to the 1800s' indigo. */
-.lg-era-0 { --era: var(--lg-gold-ink); }
-.lg-era-1 { --era: color-mix(in srgb, var(--lg-gold-ink) 75%, var(--accent)); }
-.lg-era-2 { --era: color-mix(in srgb, var(--lg-gold-ink) 50%, var(--accent)); }
-.lg-era-3 { --era: color-mix(in srgb, var(--lg-gold-ink) 25%, var(--accent)); }
-.lg-era-4 { --era: var(--accent); }
+/* The five eras, each its own hue (ochre, plum, teal, indigo, brick) so the
+   Reformation and the Puritans, or the 1700s and 1800s, never look alike.
+   Each hue is mixed with the theme's text colour: darker on the light and
+   sepia pages, lighter on dark and night, so text in --bg on an era colour,
+   and an era colour as text, keep their contrast in every theme. */
+html {
+  --lg-era-0: color-mix(in oklab, #b27a12 62%, var(--text));
+  --lg-era-1: color-mix(in oklab, #8a4fb0 62%, var(--text));
+  --lg-era-2: color-mix(in oklab, #18877f 62%, var(--text));
+  --lg-era-3: color-mix(in oklab, #4848c8 62%, var(--text));
+  --lg-era-4: color-mix(in oklab, #c2452f 62%, var(--text));
+}
+.lg-era-0 { --era: var(--lg-era-0); }
+.lg-era-1 { --era: var(--lg-era-1); }
+.lg-era-2 { --era: var(--lg-era-2); }
+.lg-era-3 { --era: var(--lg-era-3); }
+.lg-era-4 { --era: var(--lg-era-4); }
 .lg-tl { margin: 32px 0 0; }
 .lg-tl-scroll { overflow-x: auto; }
 .lg-tl-in { position: relative; min-width: 720px; padding: 34px 0 28px; }
