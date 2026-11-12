@@ -1,0 +1,18 @@
+{
+ "id": "delitzsch-proverbs",
+ "author": "delitzsch",
+ "title": "Biblical Commentary on the Proverbs of Solomon",
+ "divisions": "verse",
+ "edition": "Franz Delitzsch, Biblical Commentary on the Proverbs of Solomon, translated from the German by M. G. Easton, 2 vols (Clark's Foreign Theological Library). Edinburgh: T. & T. Clark, 1874; archive.org scans biblicalcommentary01deli and biblicalcommentary02deli (Princeton Theological Seminary Library), djvu OCR text",
+ "original_language": "German",
+ "translation": "M. G. Easton, Biblical Commentary on the Proverbs of Solomon (Edinburgh: T. & T. Clark, 1874), from the German of 1873",
+ "published": 1874,
+ "full_text_url": "https://archive.org/details/biblicalcommentary01deli",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: M. G. Easton's death date (Delitzsch died in 1890); life + 70 years"
+ },
+ "source_kind": "scan",
+ "notes": "Not on CCEL; the text is archive.org OCR of the 1874 T. & T. Clark edition (vol. 1, chapters 1-15; vol. 2, chapters 16-31). Each odd page's running head names the chapter and the verses it explains ('CHAP. I. 20. 67'); a paragraph is on the verses of the last such head before it, or on those its own opening names ('Ver. 20.'), and paragraphs on the same verses are joined into entries of up to about 350 words. A paragraph that is only Delitzsch's translation of the verses, the introduction to the book and the footnotes are left out. The OCR turns Delitzsch's many Hebrew and Greek words into strings of letters and marks: a sentence holding any word that is not found in an English dictionary, in the rest of Logia's library or several times in this work, or any stray mark, or that is not found word for word in the scan, is left out, and the gap is marked ' ... '. So the excerpts keep his exposition and leave out most of his philology; about a fifth of the commentary is kept. Lines are joined, and a word broken at a line end is joined again. Other OCR slips are left as read.",
+ "status": "ai_draft"
+}

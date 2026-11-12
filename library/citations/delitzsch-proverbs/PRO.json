@@ -1,0 +1,3687 @@
+{
+ "work": "delitzsch-proverbs",
+ "book": "PRO",
+ "citations": [
+  {
+   "in": "delitzsch-proverbs.PRO.1.6.1",
+   "at": 59,
+   "text": "ver. 2",
+   "start": "PRO.1.2",
+   "end": "PRO.1.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.11.1",
+   "at": 82,
+   "text": "Isa. xxviii. 14",
+   "start": "ISA.28.14",
+   "end": "ISA.28.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.12.1",
+   "at": 244,
+   "text": "Ps. xxxviii. 14",
+   "start": "PSA.38.15",
+   "end": "PSA.38.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.12.1",
+   "at": 374,
+   "text": "Ps. xxviii. 1",
+   "start": "PSA.28.1",
+   "end": "PSA.28.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.12.1",
+   "at": 389,
+   "text": "Ixxxviii. 5",
+   "start": "PSA.88.6",
+   "end": "PSA.88.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.12.1",
+   "at": 407,
+   "text": "Isa. xiv. 19",
+   "start": "ISA.14.19",
+   "end": "ISA.14.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.13-14.1",
+   "at": 159,
+   "text": "ver. 14",
+   "start": "PRO.1.14",
+   "end": "PRO.1.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.20.1",
+   "at": 887,
+   "text": "2 Chron. xvii. 7-9",
+   "start": "2CH.17.7",
+   "end": "2CH.17.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.24-27.1",
+   "at": 101,
+   "text": "Isa. i. 20",
+   "start": "ISA.1.20",
+   "end": "ISA.1.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.24-27.1",
+   "at": 722,
+   "text": "Isa. Ixv. 2",
+   "start": "ISA.65.2",
+   "end": "ISA.65.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.1.26-27.1",
+   "at": 260,
+   "text": "i. 22",
+   "start": "PRO.1.22",
+   "end": "PRO.1.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.2.16-19.1",
+   "at": 210,
+   "text": "Deut. xxiii. 18",
+   "start": "DEU.23.19",
+   "end": "DEU.23.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.2.17-19.1",
+   "at": 18,
+   "text": "Jer. iii. 4",
+   "start": "JER.3.4",
+   "end": "JER.3.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.2.17-19.1",
+   "at": 167,
+   "text": "Job xxix. 3",
+   "start": "JOB.29.3",
+   "end": "JOB.29.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.2.17-19.1",
+   "at": 180,
+   "text": "Isa. xxix. 23",
+   "start": "ISA.29.23",
+   "end": "ISA.29.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.1-4.1",
+   "at": 594,
+   "text": "Ex. xx. 12",
+   "start": "EXO.20.12",
+   "end": "EXO.20.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.5-8.1",
+   "at": 28,
+   "text": "ver. 3",
+   "start": "PRO.3.3",
+   "end": "PRO.3.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.9-10.1",
+   "at": 214,
+   "text": "Gen. xxviii. 22",
+   "start": "GEN.28.22",
+   "end": "GEN.28.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.11-12.1",
+   "at": 306,
+   "text": "Ps. li. 18",
+   "start": "PSA.51.20",
+   "end": "PSA.51.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.20.1",
+   "at": 0,
+   "text": "Gen. vii. 11",
+   "start": "GEN.7.11",
+   "end": "GEN.7.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.20.1",
+   "at": 14,
+   "text": "Ex. xiv. 21",
+   "start": "EXO.14.21",
+   "end": "EXO.14.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.20.1",
+   "at": 31,
+   "text": "Ps. Ixxiv. 15",
+   "start": "PSA.74.15",
+   "end": "PSA.74.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.20.1",
+   "at": 241,
+   "text": "Job xxxviii. 8",
+   "start": "JOB.38.8",
+   "end": "JOB.38.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.20.1",
+   "at": 260,
+   "text": "Ps. civ. 6-8",
+   "start": "PSA.104.6",
+   "end": "PSA.104.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.27-28.1",
+   "at": 314,
+   "text": "ver. 28",
+   "start": "PRO.3.28",
+   "end": "PRO.3.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.30-32.1",
+   "at": 896,
+   "text": "Lev. xii. 5",
+   "start": "LEV.12.5",
+   "end": "LEV.12.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.30-32.1",
+   "at": 943,
+   "text": "xxiv. 14",
+   "start": "PRO.24.14",
+   "end": "PRO.24.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.30-32.1",
+   "at": 1182,
+   "text": "Ps. xviii. 26",
+   "start": "PSA.18.27",
+   "end": "PSA.18.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.3.30-32.1",
+   "at": 1287,
+   "text": "Job viii. 20",
+   "start": "JOB.8.20",
+   "end": "JOB.8.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.4.1-4.1",
+   "at": 420,
+   "text": "iv. 1-4",
+   "start": "PRO.4.1",
+   "end": "PRO.4.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.4.7-9.1",
+   "at": 44,
+   "text": "Matt. xiii. 46, 44",
+   "start": "MAT.13.46",
+   "end": "MAT.13.46",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.4.10-17.1",
+   "at": 49,
+   "text": "Job xxviii. 23",
+   "start": "JOB.28.23",
+   "end": "JOB.28.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.4.20-22.1",
+   "at": 552,
+   "text": "1 Tim. iv. 8",
+   "start": "1TI.4.8",
+   "end": "1TI.4.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.4-5.1",
+   "at": 297,
+   "text": "xxiii. 32",
+   "start": "PRO.23.32",
+   "end": "PRO.23.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.7-11.1",
+   "at": 15,
+   "text": "ver. 14",
+   "start": "PRO.5.14",
+   "end": "PRO.5.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.7-11.1",
+   "at": 95,
+   "text": "ver. 9",
+   "start": "PRO.5.9",
+   "end": "PRO.5.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.14.1",
+   "at": 0,
+   "text": "Gen. xxvi. 10",
+   "start": "GEN.26.10",
+   "end": "GEN.26.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.15-17.1",
+   "at": 1038,
+   "text": "ii. 17",
+   "start": "PRO.2.17",
+   "end": "PRO.2.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.18-20.1",
+   "at": 42,
+   "text": "Isa. xxvi. 7",
+   "start": "ISA.26.7",
+   "end": "ISA.26.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.18-20.1",
+   "at": 498,
+   "text": "ver. 20",
+   "start": "PRO.5.20",
+   "end": "PRO.5.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.18-20.1",
+   "at": 517,
+   "text": "ver. 21",
+   "start": "PRO.5.21",
+   "end": "PRO.5.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.5.18-20.1",
+   "at": 727,
+   "text": "ver. 20",
+   "start": "PRO.5.20",
+   "end": "PRO.5.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.6.2-24.2",
+   "at": 283,
+   "text": "Cant. viii. 1, 7",
+   "start": "SNG.8.1",
+   "end": "SNG.8.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.6.2-24.2",
+   "at": 283,
+   "text": "Cant. viii. 1, 7",
+   "start": "SNG.8.7",
+   "end": "SNG.8.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.6.2-24.2",
+   "at": 386,
+   "text": "ver. 30",
+   "start": "PRO.6.30",
+   "end": "PRO.6.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.6.2-24.3",
+   "at": 892,
+   "text": "ver. 24",
+   "start": "PRO.6.24",
+   "end": "PRO.6.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.6.3.1",
+   "at": 221,
+   "text": "viii. 13",
+   "start": "PRO.8.13",
+   "end": "PRO.8.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.6.10-12.1",
+   "at": 69,
+   "text": "Isa. i. 14",
+   "start": "ISA.1.14",
+   "end": "ISA.1.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.6.12-15.1",
+   "at": 64,
+   "text": "ver. 12",
+   "start": "PRO.6.12",
+   "end": "PRO.6.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.4-5.1",
+   "at": 765,
+   "text": "ver. 9",
+   "start": "PRO.7.9",
+   "end": "PRO.7.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.8-9.1",
+   "at": 0,
+   "text": "Ver. 12",
+   "start": "PRO.7.12",
+   "end": "PRO.7.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.8-9.1",
+   "at": 74,
+   "text": "ver. 11",
+   "start": "PRO.7.11",
+   "end": "PRO.7.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.17-18.1",
+   "at": 176,
+   "text": "Ex. xxx. 22-33",
+   "start": "EXO.30.22",
+   "end": "EXO.30.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.17-18.1",
+   "at": 192,
+   "text": "Esth. ii. 12",
+   "start": "EST.2.12",
+   "end": "EST.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.19-20.1",
+   "at": 111,
+   "text": "1 Kings xi. 3",
+   "start": "1KI.11.3",
+   "end": "1KI.11.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.19-20.1",
+   "at": 225,
+   "text": "Deut. xiii. 6, 11",
+   "start": "DEU.13.12",
+   "end": "DEU.13.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.19-20.1",
+   "at": 225,
+   "text": "Deut. xiii. 6, 11",
+   "start": "DEU.13.7",
+   "end": "DEU.13.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.19-20.1",
+   "at": 528,
+   "text": "Isa. lix. 5",
+   "start": "ISA.59.5",
+   "end": "ISA.59.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.24-27.1",
+   "at": 0,
+   "text": "Neh. ix. 28",
+   "start": "NEH.9.28",
+   "end": "NEH.9.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.24-27.1",
+   "at": 231,
+   "text": "Job xxvi. 13",
+   "start": "JOB.26.13",
+   "end": "JOB.26.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.24-27.1",
+   "at": 245,
+   "text": "Dan. ix. 23",
+   "start": "DAN.9.23",
+   "end": "DAN.9.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.7.24-27.1",
+   "at": 278,
+   "text": "Isa. xxxvii. 34",
+   "start": "ISA.37.34",
+   "end": "ISA.37.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.7.1",
+   "at": 43,
+   "text": "ver. 6",
+   "start": "PRO.8.6",
+   "end": "PRO.8.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.7.1",
+   "at": 73,
+   "text": "i. 15-17",
+   "start": "PRO.1.15",
+   "end": "PRO.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.13-14.1",
+   "at": 0,
+   "text": "Eccles. vii. 19",
+   "start": "ECC.7.19",
+   "end": "ECC.7.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.13-14.1",
+   "at": 27,
+   "text": "ver. 14",
+   "start": "PRO.8.14",
+   "end": "PRO.8.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.13-14.1",
+   "at": 165,
+   "text": "ver. 15",
+   "start": "PRO.8.15",
+   "end": "PRO.8.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.13-14.1",
+   "at": 181,
+   "text": "Isa. xxxii. 1",
+   "start": "ISA.32.1",
+   "end": "ISA.32.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.13-14.1",
+   "at": 196,
+   "text": "X. 1",
+   "start": "ISA.10.1",
+   "end": "ISA.10.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.24-26.1",
+   "at": 463,
+   "text": "v. 16",
+   "start": "PRO.5.16",
+   "end": "PRO.5.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.27.1",
+   "at": 413,
+   "text": "Job xxvi. 10",
+   "start": "JOB.26.10",
+   "end": "JOB.26.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.28-31.1",
+   "at": 252,
+   "text": "Gen. i. 1",
+   "start": "GEN.1.1",
+   "end": "GEN.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.8.28-31.1",
+   "at": 282,
+   "text": "Prov. viii. 22",
+   "start": "PRO.8.22",
+   "end": "PRO.8.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.5.1",
+   "at": 213,
+   "text": "Isa Iv. 1",
+   "start": "ISA.4.1",
+   "end": "ISA.4.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.5.1",
+   "at": 243,
+   "text": "John vi. 35",
+   "start": "JHN.6.35",
+   "end": "JHN.6.35",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.6.1",
+   "at": 39,
+   "text": "Isa. i. 17",
+   "start": "ISA.1.17",
+   "end": "ISA.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.6.1",
+   "at": 51,
+   "text": "iii. 12",
+   "start": "ISA.3.12",
+   "end": "ISA.3.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 110,
+   "text": "Job xxxviii. 11",
+   "start": "JOB.38.11",
+   "end": "JOB.38.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 231,
+   "text": "ver. 10",
+   "start": "PRO.9.10",
+   "end": "PRO.9.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 298,
+   "text": "ver. 5",
+   "start": "PRO.9.5",
+   "end": "PRO.9.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 448,
+   "text": "ver. 11",
+   "start": "PRO.9.11",
+   "end": "PRO.9.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 619,
+   "text": "ver. 12",
+   "start": "PRO.9.12",
+   "end": "PRO.9.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 673,
+   "text": "ver. 11",
+   "start": "PRO.9.11",
+   "end": "PRO.9.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 910,
+   "text": "ver. 6",
+   "start": "PRO.9.6",
+   "end": "PRO.9.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 1035,
+   "text": "ver. 11",
+   "start": "PRO.9.11",
+   "end": "PRO.9.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 1057,
+   "text": "ver. 10",
+   "start": "PRO.9.10",
+   "end": "PRO.9.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.12.1",
+   "at": 1317,
+   "text": "Deut. iv. 40",
+   "start": "DEU.4.40",
+   "end": "DEU.4.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.9.18.1",
+   "at": 252,
+   "text": "John viii. 51",
+   "start": "JHN.8.51",
+   "end": "JHN.8.51",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.1-32.2",
+   "at": 165,
+   "text": "Ver. 3",
+   "start": "PRO.10.3",
+   "end": "PRO.10.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.2.1",
+   "at": 0,
+   "text": "Ver. 29",
+   "start": "PRO.10.29",
+   "end": "PRO.10.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.2.1",
+   "at": 372,
+   "text": "Isa. Ivii. 15",
+   "start": "ISA.57.15",
+   "end": "ISA.57.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.2-3.1",
+   "at": 109,
+   "text": "Deut. xxiv. 13",
+   "start": "DEU.24.13",
+   "end": "DEU.24.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.2-3.1",
+   "at": 266,
+   "text": "Hab. ii. 4",
+   "start": "HAB.2.4",
+   "end": "HAB.2.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.5.1",
+   "at": 121,
+   "text": "ver. 1",
+   "start": "PRO.10.1",
+   "end": "PRO.10.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.7.1",
+   "at": 17,
+   "text": "ver. 6",
+   "start": "PRO.10.6",
+   "end": "PRO.10.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.9.1",
+   "at": 171,
+   "text": "Jer. xxxi. 19",
+   "start": "JER.31.19",
+   "end": "JER.31.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.12-13.1",
+   "at": 280,
+   "text": "Isa. xi. 4",
+   "start": "ISA.11.4",
+   "end": "ISA.11.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.22-23.1",
+   "at": 433,
+   "text": "Heb. x. 27",
+   "start": "HEB.10.27",
+   "end": "HEB.10.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.25-26.1",
+   "at": 4,
+   "text": "ver. 25",
+   "start": "PRO.10.25",
+   "end": "PRO.10.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.25-26.1",
+   "at": 30,
+   "text": "ver. 24",
+   "start": "PRO.10.24",
+   "end": "PRO.10.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.10.25-26.2",
+   "at": 19,
+   "text": "ver. 25",
+   "start": "PRO.10.25",
+   "end": "PRO.10.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.7.1",
+   "at": 1062,
+   "text": "Ver. 11",
+   "start": "PRO.11.11",
+   "end": "PRO.11.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.7.1",
+   "at": 1227,
+   "text": "ver. 10",
+   "start": "PRO.11.10",
+   "end": "PRO.11.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.7.1",
+   "at": 1258,
+   "text": "ver. 4",
+   "start": "PRO.11.4",
+   "end": "PRO.11.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.13-14.1",
+   "at": 191,
+   "text": "Ps. xxv. 14",
+   "start": "PSA.25.14",
+   "end": "PSA.25.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.13-14.1",
+   "at": 623,
+   "text": "Isa. iii. 3",
+   "start": "ISA.3.3",
+   "end": "ISA.3.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.13-14.1",
+   "at": 646,
+   "text": "Isa. i. 26",
+   "start": "ISA.1.26",
+   "end": "ISA.1.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.21.1",
+   "at": 617,
+   "text": "Isa. xvi. 6",
+   "start": "ISA.16.6",
+   "end": "ISA.16.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.21.1",
+   "at": 996,
+   "text": "Ver. 24",
+   "start": "PRO.11.24",
+   "end": "PRO.11.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.27.1",
+   "at": 370,
+   "text": "Isa. iii. 10",
+   "start": "ISA.3.10",
+   "end": "ISA.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.27.1",
+   "at": 384,
+   "text": "Jer. xxxii. 19",
+   "start": "JER.32.19",
+   "end": "JER.32.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.27.1",
+   "at": 495,
+   "text": "Ver. 31",
+   "start": "PRO.11.31",
+   "end": "PRO.11.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.11.27.1",
+   "at": 1487,
+   "text": "Ver. 2",
+   "start": "PRO.11.2",
+   "end": "PRO.11.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.12.2-3.1",
+   "at": 628,
+   "text": "Ver. 6",
+   "start": "PRO.12.6",
+   "end": "PRO.12.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.12.7.1",
+   "at": 112,
+   "text": "Ver. 9",
+   "start": "PRO.12.9",
+   "end": "PRO.12.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.12.7.1",
+   "at": 362,
+   "text": "2 Sam. iii. 29",
+   "start": "2SA.3.29",
+   "end": "2SA.3.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.12.10.1",
+   "at": 239,
+   "text": "Ver. 12",
+   "start": "PRO.12.12",
+   "end": "PRO.12.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.12.13.1",
+   "at": 221,
+   "text": "Matt. xii. 37",
+   "start": "MAT.12.37",
+   "end": "MAT.12.37",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.13.3.1",
+   "at": 40,
+   "text": "Ex. ii. 6",
+   "start": "EXO.2.6",
+   "end": "EXO.2.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.13.3.1",
+   "at": 146,
+   "text": "xxi. 25",
+   "start": "PRO.21.25",
+   "end": "PRO.21.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.13.3.1",
+   "at": 573,
+   "text": "Ver. 6",
+   "start": "PRO.13.6",
+   "end": "PRO.13.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.13.9.1",
+   "at": 161,
+   "text": "Ver. 10",
+   "start": "PRO.13.10",
+   "end": "PRO.13.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.1-35.1",
+   "at": 359,
+   "text": "XV. 1-6",
+   "start": "PRO.15.1",
+   "end": "PRO.15.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2.1",
+   "at": 143,
+   "text": "Isa. xi. 1",
+   "start": "ISA.11.1",
+   "end": "ISA.11.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2-31.1",
+   "at": 191,
+   "text": "Job xxxi. 15",
+   "start": "JOB.31.15",
+   "end": "JOB.31.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2-31.1",
+   "at": 209,
+   "text": "iii. 9",
+   "start": "PRO.3.9",
+   "end": "PRO.3.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2-31.1",
+   "at": 303,
+   "text": "Matt. xxv. 40",
+   "start": "MAT.25.40",
+   "end": "MAT.25.40",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2-31.1",
+   "at": 524,
+   "text": "Judg. ix. 15",
+   "start": "JDG.9.15",
+   "end": "JDG.9.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2-31.1",
+   "at": 538,
+   "text": "Isa. xxx. 2",
+   "start": "ISA.30.2",
+   "end": "ISA.30.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2-31.1",
+   "at": 624,
+   "text": "Ps. XXXV. 5",
+   "start": "PSA.35.5",
+   "end": "PSA.35.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.2-31.1",
+   "at": 637,
+   "text": "xxxvi. 13",
+   "start": "PSA.36.13",
+   "end": "PSA.36.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.3.2",
+   "at": 187,
+   "text": "ver. 4",
+   "start": "PRO.14.4",
+   "end": "PRO.14.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.3.2",
+   "at": 216,
+   "text": "ver. 5",
+   "start": "PRO.14.5",
+   "end": "PRO.14.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.4.1",
+   "at": 39,
+   "text": "ver. 3",
+   "start": "PRO.14.3",
+   "end": "PRO.14.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.6-7.1",
+   "at": 1020,
+   "text": "Isa. xxxiii. 23",
+   "start": "ISA.33.23",
+   "end": "ISA.33.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.6-7.1",
+   "at": 1077,
+   "text": "Ps. xxxv. 15",
+   "start": "PSA.35.15",
+   "end": "PSA.35.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.10.1",
+   "at": 798,
+   "text": "1 Kings viii. 38",
+   "start": "1KI.8.38",
+   "end": "1KI.8.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.19.1",
+   "at": 251,
+   "text": "Ver. 20",
+   "start": "PRO.14.20",
+   "end": "PRO.14.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.22.1",
+   "at": 0,
+   "text": "Ps. Iviii. 4",
+   "start": "PSA.58.5",
+   "end": "PSA.58.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.22.1",
+   "at": 142,
+   "text": "xii. 26",
+   "start": "PRO.12.26",
+   "end": "PRO.12.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.22.1",
+   "at": 155,
+   "text": "Job xii. 24",
+   "start": "JOB.12.24",
+   "end": "JOB.12.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.22.1",
+   "at": 464,
+   "text": "ver. 24",
+   "start": "PRO.14.24",
+   "end": "PRO.14.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.28-29.1",
+   "at": 357,
+   "text": "Lev. vi. 8",
+   "start": "LEV.6.1",
+   "end": "LEV.6.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.14.33-34.1",
+   "at": 384,
+   "text": "Isa. i. 4",
+   "start": "ISA.1.4",
+   "end": "ISA.1.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.4.1",
+   "at": 817,
+   "text": "Ver. 5",
+   "start": "PRO.15.5",
+   "end": "PRO.15.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.4.1",
+   "at": 976,
+   "text": "1 Sam. xxiii. 22",
+   "start": "1SA.23.22",
+   "end": "1SA.23.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.4.1",
+   "at": 1033,
+   "text": "Ver. 6",
+   "start": "PRO.15.6",
+   "end": "PRO.15.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.9-11.1",
+   "at": 302,
+   "text": "v. 23",
+   "start": "PRO.15.23",
+   "end": "PRO.15.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.9-11.1",
+   "at": 766,
+   "text": "Jer. xvii. 10",
+   "start": "JER.17.10",
+   "end": "JER.17.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.9-11.1",
+   "at": 1033,
+   "text": "Job ix. 18",
+   "start": "JOB.9.18",
+   "end": "JOB.9.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.9-11.1",
+   "at": 1045,
+   "text": "Isa. xlii. 24",
+   "start": "ISA.42.24",
+   "end": "ISA.42.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.9-11.1",
+   "at": 1097,
+   "text": "Job vi. 25",
+   "start": "JOB.6.25",
+   "end": "JOB.6.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.13-14.1",
+   "at": 211,
+   "text": "Eccles. vii. 3",
+   "start": "ECC.7.3",
+   "end": "ECC.7.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.25.1",
+   "at": 113,
+   "text": "Deut. xix. 14",
+   "start": "DEU.19.14",
+   "end": "DEU.19.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.25.1",
+   "at": 128,
+   "text": "xxvii. 17",
+   "start": "DEU.27.17",
+   "end": "DEU.27.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.25.1",
+   "at": 167,
+   "text": "Job xxiv. 2",
+   "start": "JOB.24.2",
+   "end": "JOB.24.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.29-30.1",
+   "at": 241,
+   "text": "Ps. cxlv. 18",
+   "start": "PSA.145.18",
+   "end": "PSA.145.18",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.29-30.1",
+   "at": 575,
+   "text": "Ver. 31",
+   "start": "PRO.15.31",
+   "end": "PRO.15.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.15.32-33.1",
+   "at": 537,
+   "text": "xvi. 1",
+   "start": "PRO.16.1",
+   "end": "PRO.16.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.2.1",
+   "at": 605,
+   "text": "Ver. 4",
+   "start": "PRO.16.4",
+   "end": "PRO.16.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.2.1",
+   "at": 755,
+   "text": "Ex. ix. 16",
+   "start": "EXO.9.16",
+   "end": "EXO.9.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.2.1",
+   "at": 814,
+   "text": "ver. 22",
+   "start": "PRO.16.22",
+   "end": "PRO.16.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.5.1",
+   "at": 615,
+   "text": "Lev. x. 17",
+   "start": "LEV.10.17",
+   "end": "LEV.10.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.5.1",
+   "at": 1292,
+   "text": "Luke vii. 47",
+   "start": "LUK.7.47",
+   "end": "LUK.7.47",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.5.1",
+   "at": 1444,
+   "text": "Mic. vi. 6-8",
+   "start": "MIC.6.6",
+   "end": "MIC.6.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.7-9.1",
+   "at": 252,
+   "text": "Gen. xxvi. 27",
+   "start": "GEN.26.27",
+   "end": "GEN.26.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.7-9.1",
+   "at": 311,
+   "text": "2 Sam. xix. 9",
+   "start": "2SA.19.10",
+   "end": "2SA.19.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.7-9.1",
+   "at": 618,
+   "text": "Ver. 10",
+   "start": "PRO.16.10",
+   "end": "PRO.16.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.11.1",
+   "at": 198,
+   "text": "Lev. xix. 36",
+   "start": "LEV.19.36",
+   "end": "LEV.19.36",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.11.1",
+   "at": 212,
+   "text": "Deut. xxv. 13-16",
+   "start": "DEU.25.13",
+   "end": "DEU.25.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.11.1",
+   "at": 231,
+   "text": "Ver. 12",
+   "start": "PRO.16.12",
+   "end": "PRO.16.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.14.1",
+   "at": 590,
+   "text": "Ver. 15",
+   "start": "PRO.16.15",
+   "end": "PRO.16.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.14.1",
+   "at": 891,
+   "text": "ver. 14",
+   "start": "PRO.16.14",
+   "end": "PRO.16.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.14.1",
+   "at": 1101,
+   "text": "Ver. 13",
+   "start": "PRO.16.13",
+   "end": "PRO.16.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.14.1",
+   "at": 1220,
+   "text": "xxv. 5",
+   "start": "PRO.25.5",
+   "end": "PRO.25.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.16-18.1",
+   "at": 136,
+   "text": "Gen. 1. 20",
+   "start": "GEN.1.20",
+   "end": "GEN.1.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.16-18.1",
+   "at": 684,
+   "text": "Ver. 21",
+   "start": "PRO.16.21",
+   "end": "PRO.16.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.22-23.1",
+   "at": 408,
+   "text": "Ps. cvii. 17-22",
+   "start": "PSA.107.17",
+   "end": "PSA.107.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.22-23.1",
+   "at": 467,
+   "text": "Ver. 26",
+   "start": "PRO.16.26",
+   "end": "PRO.16.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.27-28.1",
+   "at": 0,
+   "text": "Ver. 31",
+   "start": "PRO.16.31",
+   "end": "PRO.16.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.27-28.1",
+   "at": 273,
+   "text": "Lev. xix. 32",
+   "start": "LEV.19.32",
+   "end": "LEV.19.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.27-28.1",
+   "at": 352,
+   "text": "Gen. xv. 15",
+   "start": "GEN.15.15",
+   "end": "GEN.15.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.32-33.1",
+   "at": 457,
+   "text": "Num. v. 12-31",
+   "start": "NUM.5.12",
+   "end": "NUM.5.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.32-33.1",
+   "at": 619,
+   "text": "Josh. vii. 14",
+   "start": "JOS.7.14",
+   "end": "JOS.7.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.16.32-33.2",
+   "at": 0,
+   "text": "Ver. 2",
+   "start": "PRO.16.2",
+   "end": "PRO.16.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.8.1",
+   "at": 150,
+   "text": "Ver. 9",
+   "start": "PRO.17.9",
+   "end": "PRO.17.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.8.1",
+   "at": 528,
+   "text": "Zeph. ii. 3, 1",
+   "start": "ZEP.2.3",
+   "end": "ZEP.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.10.1",
+   "at": 193,
+   "text": "Ver. 11",
+   "start": "PRO.17.11",
+   "end": "PRO.17.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.10.1",
+   "at": 345,
+   "text": "Gen. xxvii. 3",
+   "start": "GEN.27.3",
+   "end": "GEN.27.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.12-13.1",
+   "at": 426,
+   "text": "Gen. xlii. 1",
+   "start": "GEN.42.1",
+   "end": "GEN.42.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.12-13.1",
+   "at": 440,
+   "text": "Ps. xli. 8",
+   "start": "PSA.41.9",
+   "end": "PSA.41.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.12-13.1",
+   "at": 536,
+   "text": "Hos. xii. 15",
+   "start": "HOS.12.15",
+   "end": "HOS.12.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.14.1",
+   "at": 85,
+   "text": "Isa. v. 23",
+   "start": "ISA.5.23",
+   "end": "ISA.5.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.14.1",
+   "at": 711,
+   "text": "ver. 16",
+   "start": "PRO.17.16",
+   "end": "PRO.17.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.17.1",
+   "at": 1230,
+   "text": "Ver. 22",
+   "start": "PRO.17.22",
+   "end": "PRO.17.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.17.1",
+   "at": 1320,
+   "text": "Jer. viii. 22",
+   "start": "JER.8.22",
+   "end": "JER.8.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.17.2",
+   "at": 116,
+   "text": "Deut. xxx. 11-14",
+   "start": "DEU.30.11",
+   "end": "DEU.30.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.17.2",
+   "at": 628,
+   "text": "Ver. 26",
+   "start": "PRO.17.26",
+   "end": "PRO.17.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.17.2",
+   "at": 1533,
+   "text": "Eccles. v. 7",
+   "start": "ECC.5.6",
+   "end": "ECC.5.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.17.27.1",
+   "at": 195,
+   "text": "Ver. 28",
+   "start": "PRO.17.28",
+   "end": "PRO.17.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.4.1",
+   "at": 101,
+   "text": "ver. 4",
+   "start": "PRO.18.4",
+   "end": "PRO.18.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.4.1",
+   "at": 128,
+   "text": "ver. 5",
+   "start": "PRO.18.5",
+   "end": "PRO.18.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.12-24.1",
+   "at": 673,
+   "text": "Gen. vi. 3",
+   "start": "GEN.6.3",
+   "end": "GEN.6.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.12-24.1",
+   "at": 685,
+   "text": "Ps. li. 12",
+   "start": "PSA.51.14",
+   "end": "PSA.51.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.22.1",
+   "at": 659,
+   "text": "Ver. 24",
+   "start": "PRO.18.24",
+   "end": "PRO.18.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.22.1",
+   "at": 766,
+   "text": "Ps. xcii. 8",
+   "start": "PSA.92.9",
+   "end": "PSA.92.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.22.1",
+   "at": 1178,
+   "text": "ver. 19",
+   "start": "PRO.18.19",
+   "end": "PRO.18.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.18.24.1",
+   "at": 0,
+   "text": "Ver. 9",
+   "start": "PRO.18.9",
+   "end": "PRO.18.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.2.1",
+   "at": 539,
+   "text": "Lam. iii. 39",
+   "start": "LAM.3.39",
+   "end": "LAM.3.39",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.12-13.1",
+   "at": 304,
+   "text": "Ver. 16",
+   "start": "PRO.19.16",
+   "end": "PRO.19.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.17-21.1",
+   "at": 81,
+   "text": "ver. 21",
+   "start": "PRO.19.21",
+   "end": "PRO.19.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.17-21.1",
+   "at": 100,
+   "text": "ver. 22",
+   "start": "PRO.19.22",
+   "end": "PRO.19.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.17-21.1",
+   "at": 124,
+   "text": "ver. 17",
+   "start": "PRO.19.17",
+   "end": "PRO.19.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.20.1",
+   "at": 216,
+   "text": "Ver. 20",
+   "start": "PRO.19.20",
+   "end": "PRO.19.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.20.1",
+   "at": 804,
+   "text": "Deut. xi. 15",
+   "start": "DEU.11.15",
+   "end": "DEU.11.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.20.1",
+   "at": 821,
+   "text": "Lev. xxvi. 6",
+   "start": "LEV.26.6",
+   "end": "LEV.26.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.27-28.1",
+   "at": 452,
+   "text": "Lev. iv. 1",
+   "start": "LEV.4.1",
+   "end": "LEV.4.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.19.27-28.1",
+   "at": 524,
+   "text": "Ver. 29",
+   "start": "PRO.19.29",
+   "end": "PRO.19.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.1-2.1",
+   "at": 193,
+   "text": "2 Sam. xiii. 28",
+   "start": "2SA.13.28",
+   "end": "2SA.13.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.1-2.1",
+   "at": 315,
+   "text": "Isa. xxviii. 7",
+   "start": "ISA.28.7",
+   "end": "ISA.28.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.1-2.1",
+   "at": 762,
+   "text": "1 Sam. xxx. 25",
+   "start": "1SA.30.25",
+   "end": "1SA.30.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.1-2.1",
+   "at": 819,
+   "text": "Lev. xxvii. 17",
+   "start": "LEV.27.17",
+   "end": "LEV.27.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.4.1",
+   "at": 0,
+   "text": "Ver. 5",
+   "start": "PRO.20.5",
+   "end": "PRO.20.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.4.1",
+   "at": 194,
+   "text": "Isa. xxix. 15",
+   "start": "ISA.29.15",
+   "end": "ISA.29.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.9-10.1",
+   "at": 167,
+   "text": "1 Kings viii. 46",
+   "start": "1KI.8.46",
+   "end": "1KI.8.46",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.9-10.1",
+   "at": 451,
+   "text": "Ver. 11",
+   "start": "PRO.20.11",
+   "end": "PRO.20.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.9-10.1",
+   "at": 1134,
+   "text": "Isa. i. 31",
+   "start": "ISA.1.31",
+   "end": "ISA.1.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.12.1",
+   "at": 450,
+   "text": "Isa. xxxiii. 15",
+   "start": "ISA.33.15",
+   "end": "ISA.33.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.12.1",
+   "at": 932,
+   "text": "ver. 8",
+   "start": "PRO.20.8",
+   "end": "PRO.20.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.12.1",
+   "at": 1034,
+   "text": "ver. 20",
+   "start": "PRO.20.20",
+   "end": "PRO.20.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.20.1",
+   "at": 16,
+   "text": "Ex. xxi. 17",
+   "start": "EXO.21.17",
+   "end": "EXO.21.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.20.1",
+   "at": 29,
+   "text": "Lev. xx. 9",
+   "start": "LEV.20.9",
+   "end": "LEV.20.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.20.1",
+   "at": 326,
+   "text": "Ver. 22",
+   "start": "PRO.20.22",
+   "end": "PRO.20.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.20.1",
+   "at": 514,
+   "text": "Rom. xii. 17-19, 1",
+   "start": "ROM.12.17",
+   "end": "ROM.12.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.26-27.1",
+   "at": 88,
+   "text": "Amos i. 3",
+   "start": "AMO.1.3",
+   "end": "AMO.1.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.26-27.1",
+   "at": 431,
+   "text": "ver. 20",
+   "start": "PRO.20.20",
+   "end": "PRO.20.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.30.1",
+   "at": 312,
+   "text": "Gen. xxiv. 67",
+   "start": "GEN.24.67",
+   "end": "GEN.24.67",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.30.1",
+   "at": 390,
+   "text": "Job xxi. 21",
+   "start": "JOB.21.21",
+   "end": "JOB.21.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.30.1",
+   "at": 756,
+   "text": "Ver. 8",
+   "start": "PRO.20.8",
+   "end": "PRO.20.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.20.30.1",
+   "at": 891,
+   "text": "Deut. xiii. 6",
+   "start": "DEU.13.7",
+   "end": "DEU.13.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.2-4.1",
+   "at": 338,
+   "text": "Ver. 4",
+   "start": "PRO.21.4",
+   "end": "PRO.21.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.5.1",
+   "at": 358,
+   "text": "Ex. V. 13",
+   "start": "EXO.5.13",
+   "end": "EXO.5.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.10.1",
+   "at": 169,
+   "text": "Ver. 11",
+   "start": "PRO.21.11",
+   "end": "PRO.21.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.12.1",
+   "at": 324,
+   "text": "Ps. ii. 12",
+   "start": "PSA.2.12",
+   "end": "PSA.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.12.1",
+   "at": 1060,
+   "text": "Ver. 17",
+   "start": "PRO.21.17",
+   "end": "PRO.21.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.12.1",
+   "at": 1284,
+   "text": "xxvii. 9",
+   "start": "PRO.27.9",
+   "end": "PRO.27.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.12.1",
+   "at": 1295,
+   "text": "Amos vi. 6",
+   "start": "AMO.6.6",
+   "end": "AMO.6.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.19-20.1",
+   "at": 412,
+   "text": "Job vi. 14",
+   "start": "JOB.6.14",
+   "end": "JOB.6.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.19-20.1",
+   "at": 816,
+   "text": "Ps. xxix. 3",
+   "start": "PSA.29.3",
+   "end": "PSA.29.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.19-20.1",
+   "at": 845,
+   "text": "Ps. Ixxxiv. 12",
+   "start": "PSA.84.13",
+   "end": "PSA.84.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.22-24.1",
+   "at": 300,
+   "text": "Hab. ii. 5",
+   "start": "HAB.2.5",
+   "end": "HAB.2.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.22-24.1",
+   "at": 330,
+   "text": "Rom. xii. 3",
+   "start": "ROM.12.3",
+   "end": "ROM.12.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.22-24.1",
+   "at": 387,
+   "text": "Ver. 25",
+   "start": "PRO.21.25",
+   "end": "PRO.21.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.22-24.1",
+   "at": 475,
+   "text": "Num. xi. 34",
+   "start": "NUM.11.34",
+   "end": "NUM.11.34",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.21.26-27.1",
+   "at": 402,
+   "text": "Lev. xix. 20-22",
+   "start": "LEV.19.20",
+   "end": "LEV.19.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.1-2.1",
+   "at": 6,
+   "text": "xxii. 1",
+   "start": "PRO.22.1",
+   "end": "PRO.22.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.1-2.1",
+   "at": 110,
+   "text": "Esth. ii. 15",
+   "start": "EST.2.15",
+   "end": "EST.2.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.4.1",
+   "at": 65,
+   "text": "ver. 5",
+   "start": "PRO.22.5",
+   "end": "PRO.22.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.4.1",
+   "at": 235,
+   "text": "Ver. 5",
+   "start": "PRO.22.5",
+   "end": "PRO.22.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.4.1",
+   "at": 786,
+   "text": "Ver. 6",
+   "start": "PRO.22.6",
+   "end": "PRO.22.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.7.1",
+   "at": 477,
+   "text": "Ps. cxxv. 3",
+   "start": "PSA.125.3",
+   "end": "PSA.125.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.7.1",
+   "at": 490,
+   "text": "cvii. 42",
+   "start": "PSA.107.42",
+   "end": "PSA.107.42",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.9-10.1",
+   "at": 73,
+   "text": "Ver. 11",
+   "start": "PRO.22.11",
+   "end": "PRO.22.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.12.1",
+   "at": 49,
+   "text": "v. 2",
+   "start": "PRO.22.2",
+   "end": "PRO.22.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.17-21.1",
+   "at": 730,
+   "text": "v. 2",
+   "start": "PRO.22.2",
+   "end": "PRO.22.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.17-21.1",
+   "at": 860,
+   "text": "Zech. vii. 5",
+   "start": "ZEC.7.5",
+   "end": "ZEC.7.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.22.17-21.1",
+   "at": 1190,
+   "text": "Ps. xcv. 7",
+   "start": "PSA.95.7",
+   "end": "PSA.95.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.4-5.1",
+   "at": 608,
+   "text": "Ver. 6",
+   "start": "PRO.23.6",
+   "end": "PRO.23.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.10-12.1",
+   "at": 42,
+   "text": "Ps. cxix. 70",
+   "start": "PSA.119.70",
+   "end": "PSA.119.70",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.10-12.1",
+   "at": 578,
+   "text": "Ver. 15",
+   "start": "PRO.23.15",
+   "end": "PRO.23.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.10-12.1",
+   "at": 784,
+   "text": "ver. 15",
+   "start": "PRO.23.15",
+   "end": "PRO.23.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.10-12.1",
+   "at": 810,
+   "text": "ver. 16",
+   "start": "PRO.23.16",
+   "end": "PRO.23.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.17-18.1",
+   "at": 217,
+   "text": "Lam. iii. 32",
+   "start": "LAM.3.32",
+   "end": "LAM.3.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.17-18.1",
+   "at": 268,
+   "text": "Jer. xxvi. 15",
+   "start": "JER.26.15",
+   "end": "JER.26.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.19-21.1",
+   "at": 563,
+   "text": "ver. 25",
+   "start": "PRO.23.25",
+   "end": "PRO.23.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.19-21.1",
+   "at": 645,
+   "text": "ver. 22",
+   "start": "PRO.23.22",
+   "end": "PRO.23.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.22-25.1",
+   "at": 4,
+   "text": "ver. 24",
+   "start": "PRO.23.24",
+   "end": "PRO.23.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.22-25.1",
+   "at": 356,
+   "text": "Ver. 26",
+   "start": "PRO.23.26",
+   "end": "PRO.23.26",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.22-25.1",
+   "at": 619,
+   "text": "Ver. 28",
+   "start": "PRO.23.28",
+   "end": "PRO.23.28",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.22-25.1",
+   "at": 733,
+   "text": "Ps. Ixxviii. 60",
+   "start": "PSA.78.60",
+   "end": "PSA.78.60",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.29-35.1",
+   "at": 275,
+   "text": "Ver. 29",
+   "start": "PRO.23.29",
+   "end": "PRO.23.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.29-35.1",
+   "at": 450,
+   "text": "Ps. xvii. 12",
+   "start": "PSA.17.12",
+   "end": "PSA.17.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.23.29-35.1",
+   "at": 664,
+   "text": "ver. 33",
+   "start": "PRO.23.33",
+   "end": "PRO.23.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.1-2.2",
+   "at": 0,
+   "text": "Ver. 5",
+   "start": "PRO.24.5",
+   "end": "PRO.24.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.9.1",
+   "at": 788,
+   "text": "Isa. lix. 19",
+   "start": "ISA.59.19",
+   "end": "ISA.59.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.11-12.1",
+   "at": 0,
+   "text": "Ex. xxxii. 32",
+   "start": "EXO.32.32",
+   "end": "EXO.32.32",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.11-12.1",
+   "at": 19,
+   "text": "Gen. xxiii. 13",
+   "start": "GEN.23.13",
+   "end": "GEN.23.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.11-12.1",
+   "at": 66,
+   "text": "ver. 11",
+   "start": "PRO.24.11",
+   "end": "PRO.24.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.11-12.1",
+   "at": 1583,
+   "text": "Num. XXXV. 31",
+   "start": "NUM.35.31",
+   "end": "NUM.35.31",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.11-12.2",
+   "at": 0,
+   "text": "Ver. 13",
+   "start": "PRO.24.13",
+   "end": "PRO.24.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.11-12.2",
+   "at": 345,
+   "text": "Neh. ii. 5",
+   "start": "NEH.2.5",
+   "end": "NEH.2.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.11-12.2",
+   "at": 358,
+   "text": "Ps. xvi. 6",
+   "start": "PSA.16.6",
+   "end": "PSA.16.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.15-16.1",
+   "at": 230,
+   "text": "Ver. 17",
+   "start": "PRO.24.17",
+   "end": "PRO.24.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.19-22.1",
+   "at": 297,
+   "text": "xx. 20",
+   "start": "PRO.20.20",
+   "end": "PRO.20.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.19-22.1",
+   "at": 513,
+   "text": "ver. 22",
+   "start": "PRO.24.22",
+   "end": "PRO.24.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.19-22.1",
+   "at": 689,
+   "text": "Isa. xxxiii. 10",
+   "start": "ISA.33.10",
+   "end": "ISA.33.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.23-25.1",
+   "at": 281,
+   "text": "viii. 9",
+   "start": "PRO.8.9",
+   "end": "PRO.8.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.29.1",
+   "at": 540,
+   "text": "Judg. xv. 11",
+   "start": "JDG.15.11",
+   "end": "JDG.15.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.29.1",
+   "at": 673,
+   "text": "Ex. xxxiv. 6",
+   "start": "EXO.34.6",
+   "end": "EXO.34.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.24.29.1",
+   "at": 692,
+   "text": "Ver. 30",
+   "start": "PRO.24.30",
+   "end": "PRO.24.30",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.2.1",
+   "at": 218,
+   "text": "1 Kings viii. 12",
+   "start": "1KI.8.12",
+   "end": "1KI.8.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.2.1",
+   "at": 980,
+   "text": "Ver. 3",
+   "start": "PRO.25.3",
+   "end": "PRO.25.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.4-5.1",
+   "at": 174,
+   "text": "Ver. 6",
+   "start": "PRO.25.6",
+   "end": "PRO.25.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.15.2",
+   "at": 246,
+   "text": "ver. 16",
+   "start": "PRO.25.16",
+   "end": "PRO.25.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.15.2",
+   "at": 360,
+   "text": "ver. 16",
+   "start": "PRO.25.16",
+   "end": "PRO.25.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.17-18.1",
+   "at": 768,
+   "text": "Ex. XX. 16",
+   "start": "EXO.20.16",
+   "end": "EXO.20.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.17-18.1",
+   "at": 780,
+   "text": "Deut. v. 17",
+   "start": "DEU.5.17",
+   "end": "DEU.5.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.17-18.1",
+   "at": 1053,
+   "text": "1 Sam. xii. 3",
+   "start": "1SA.12.3",
+   "end": "1SA.12.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.17-18.1",
+   "at": 1069,
+   "text": "Gen. XXX. 33",
+   "start": "GEN.30.33",
+   "end": "GEN.30.33",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.17-18.1",
+   "at": 1114,
+   "text": "Ver. 19",
+   "start": "PRO.25.19",
+   "end": "PRO.25.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.20.1",
+   "at": 278,
+   "text": "Ps. xxii. 19",
+   "start": "PSA.22.20",
+   "end": "PSA.22.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.20.1",
+   "at": 558,
+   "text": "Isa. i. 25",
+   "start": "ISA.1.25",
+   "end": "ISA.1.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.1",
+   "at": 84,
+   "text": "Rom. xii. 20",
+   "start": "ROM.12.20",
+   "end": "ROM.12.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.1",
+   "at": 891,
+   "text": "Ps. cxl. 10",
+   "start": "PSA.140.11",
+   "end": "PSA.140.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.1",
+   "at": 975,
+   "text": "ver. 22",
+   "start": "PRO.25.22",
+   "end": "PRO.25.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.1",
+   "at": 996,
+   "text": "ver. 21",
+   "start": "PRO.25.21",
+   "end": "PRO.25.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.1",
+   "at": 1263,
+   "text": "Isa. Iviii. 8-12",
+   "start": "ISA.58.8",
+   "end": "ISA.58.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.2",
+   "at": 418,
+   "text": "John ii. 6",
+   "start": "JHN.2.6",
+   "end": "JHN.2.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.21-22.2",
+   "at": 517,
+   "text": "Ps. ci. 5",
+   "start": "PSA.101.5",
+   "end": "PSA.101.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.24-26.1",
+   "at": 572,
+   "text": "x. 11",
+   "start": "PRO.10.11",
+   "end": "PRO.10.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.24-26.1",
+   "at": 582,
+   "text": "John vii. 38",
+   "start": "JHN.7.38",
+   "end": "JHN.7.38",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.24-26.1",
+   "at": 679,
+   "text": "Isa. li. 12",
+   "start": "ISA.51.12",
+   "end": "ISA.51.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.24-26.1",
+   "at": 735,
+   "text": "Jer. i. 17",
+   "start": "JER.1.17",
+   "end": "JER.1.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.24-26.1",
+   "at": 952,
+   "text": "2 Sam. xii. 14",
+   "start": "2SA.12.14",
+   "end": "2SA.12.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.28.1",
+   "at": 530,
+   "text": "ver. 1",
+   "start": "PRO.25.1",
+   "end": "PRO.25.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.25.28.1",
+   "at": 577,
+   "text": "Ver. 3",
+   "start": "PRO.25.3",
+   "end": "PRO.25.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.26.3-4.1",
+   "at": 502,
+   "text": "ver. 4",
+   "start": "PRO.26.4",
+   "end": "PRO.26.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.26.3-4.1",
+   "at": 532,
+   "text": "ver. 5",
+   "start": "PRO.26.5",
+   "end": "PRO.26.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.26.8.1",
+   "at": 376,
+   "text": "Ver. 9",
+   "start": "PRO.26.9",
+   "end": "PRO.26.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.26.9.1",
+   "at": 158,
+   "text": "Matt. v. 45",
+   "start": "MAT.5.45",
+   "end": "MAT.5.45",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.26.14-16.1",
+   "at": 353,
+   "text": "Ps. civ. 23",
+   "start": "PSA.104.23",
+   "end": "PSA.104.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.26.14-16.1",
+   "at": 822,
+   "text": "Ver. 17",
+   "start": "PRO.26.17",
+   "end": "PRO.26.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.3.1",
+   "at": 514,
+   "text": "Ver. 5",
+   "start": "PRO.27.5",
+   "end": "PRO.27.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.3.1",
+   "at": 818,
+   "text": "Job vi. 15",
+   "start": "JOB.6.15",
+   "end": "JOB.6.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.6.1",
+   "at": 169,
+   "text": "Ver. 7",
+   "start": "PRO.27.7",
+   "end": "PRO.27.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.14-27.1",
+   "at": 93,
+   "text": "Lev. viii. 14",
+   "start": "LEV.8.14",
+   "end": "LEV.8.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.2",
+   "at": 0,
+   "text": "Ver. 23",
+   "start": "PRO.27.23",
+   "end": "PRO.27.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 129,
+   "text": "ver. 24",
+   "start": "PRO.27.24",
+   "end": "PRO.27.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 361,
+   "text": "ver. 25",
+   "start": "PRO.27.25",
+   "end": "PRO.27.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 382,
+   "text": "ver. 24",
+   "start": "PRO.27.24",
+   "end": "PRO.27.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 973,
+   "text": "ver. 25",
+   "start": "PRO.27.25",
+   "end": "PRO.27.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 1169,
+   "text": "ver. 24",
+   "start": "PRO.27.24",
+   "end": "PRO.27.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 1283,
+   "text": "ver. 24",
+   "start": "PRO.27.24",
+   "end": "PRO.27.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 1371,
+   "text": "ver. 23",
+   "start": "PRO.27.23",
+   "end": "PRO.27.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.22.3",
+   "at": 1411,
+   "text": "ver. 24",
+   "start": "PRO.27.24",
+   "end": "PRO.27.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.27.23-27.2",
+   "at": 46,
+   "text": "ver. 25",
+   "start": "PRO.27.25",
+   "end": "PRO.27.25",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.3.1",
+   "at": 132,
+   "text": "Judg. xi. 8",
+   "start": "JDG.11.8",
+   "end": "JDG.11.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.3.1",
+   "at": 285,
+   "text": "Ps. Ixxii. 1-8",
+   "start": "PSA.72.1",
+   "end": "PSA.72.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.7-8.1",
+   "at": 570,
+   "text": "xiii. 22",
+   "start": "PRO.13.22",
+   "end": "PRO.13.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.7-8.1",
+   "at": 580,
+   "text": "Job xxii. 16",
+   "start": "JOB.22.16",
+   "end": "JOB.22.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.7-8.1",
+   "at": 743,
+   "text": "Ver. 9",
+   "start": "PRO.28.9",
+   "end": "PRO.28.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.7-8.1",
+   "at": 841,
+   "text": "XV. 8",
+   "start": "PRO.15.8",
+   "end": "PRO.15.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.7-8.1",
+   "at": 864,
+   "text": "1 Sam. xv. 22",
+   "start": "1SA.15.22",
+   "end": "1SA.15.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.11.1",
+   "at": 198,
+   "text": "ver. 2",
+   "start": "PRO.28.2",
+   "end": "PRO.28.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.11.1",
+   "at": 208,
+   "text": "Ver. 14",
+   "start": "PRO.28.14",
+   "end": "PRO.28.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.11.1",
+   "at": 354,
+   "text": "Isa. li. 13",
+   "start": "ISA.51.13",
+   "end": "ISA.51.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.11.1",
+   "at": 607,
+   "text": "Ver. 15",
+   "start": "PRO.28.15",
+   "end": "PRO.28.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.11.1",
+   "at": 1254,
+   "text": "Hab. ii. 12",
+   "start": "HAB.2.12",
+   "end": "HAB.2.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.11.1",
+   "at": 1284,
+   "text": "ver. 17",
+   "start": "PRO.28.17",
+   "end": "PRO.28.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.11.1",
+   "at": 1323,
+   "text": "Ver. 17",
+   "start": "PRO.28.17",
+   "end": "PRO.28.17",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.28.26-27.1",
+   "at": 1116,
+   "text": "Jer. xix. 11",
+   "start": "JER.19.11",
+   "end": "JER.19.11",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.2.1",
+   "at": 742,
+   "text": "Ver. 5",
+   "start": "PRO.29.5",
+   "end": "PRO.29.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.7-9.1",
+   "at": 453,
+   "text": "Ex. xxi. 16",
+   "start": "EXO.21.16",
+   "end": "EXO.21.16",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.7-9.1",
+   "at": 466,
+   "text": "Lev. v. 3",
+   "start": "LEV.5.3",
+   "end": "LEV.5.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.7-9.1",
+   "at": 1039,
+   "text": "Job i. 1, 8",
+   "start": "JOB.1.1",
+   "end": "JOB.1.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.7-9.1",
+   "at": 1039,
+   "text": "Job i. 1, 8",
+   "start": "JOB.1.8",
+   "end": "JOB.1.8",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.7-9.1",
+   "at": 1052,
+   "text": "ii. 3",
+   "start": "JOB.2.3",
+   "end": "JOB.2.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.13.1",
+   "at": 284,
+   "text": "Ver. 15",
+   "start": "PRO.29.15",
+   "end": "PRO.29.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.17-18.1",
+   "at": 895,
+   "text": "Isa. i. 10",
+   "start": "ISA.1.10",
+   "end": "ISA.1.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.17-18.1",
+   "at": 1119,
+   "text": "Ps. Ixxiv. 9",
+   "start": "PSA.74.9",
+   "end": "PSA.74.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.17-18.1",
+   "at": 1137,
+   "text": "Amos viii. 12",
+   "start": "AMO.8.12",
+   "end": "AMO.8.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.20.1",
+   "at": 82,
+   "text": "xxvi. 12",
+   "start": "PRO.26.12",
+   "end": "PRO.26.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.20.1",
+   "at": 580,
+   "text": "Ver. 21",
+   "start": "PRO.29.21",
+   "end": "PRO.29.21",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.29.23-24.1",
+   "at": 439,
+   "text": "Lev. v. 1",
+   "start": "LEV.5.1",
+   "end": "LEV.5.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.1.2",
+   "at": 123,
+   "text": "ver. 5",
+   "start": "PRO.30.5",
+   "end": "PRO.30.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.1.2",
+   "at": 901,
+   "text": "ver. 1",
+   "start": "PRO.30.1",
+   "end": "PRO.30.1",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.1.2",
+   "at": 1173,
+   "text": "ver. 6",
+   "start": "PRO.30.6",
+   "end": "PRO.30.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.4.1",
+   "at": 540,
+   "text": "Isa. xxiv. 22",
+   "start": "ISA.24.22",
+   "end": "ISA.24.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.4.1",
+   "at": 560,
+   "text": "Ps. xxii. 28",
+   "start": "PSA.22.29",
+   "end": "PSA.22.29",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.7-9.1",
+   "at": 828,
+   "text": "Job xiii. 20",
+   "start": "JOB.13.20",
+   "end": "JOB.13.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.7-9.1",
+   "at": 845,
+   "text": "Isa. li. 19",
+   "start": "ISA.51.19",
+   "end": "ISA.51.19",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.7-9.1",
+   "at": 1178,
+   "text": "Job xxxi. 5",
+   "start": "JOB.31.5",
+   "end": "JOB.31.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.10.1",
+   "at": 247,
+   "text": "ver. 12",
+   "start": "PRO.30.12",
+   "end": "PRO.30.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.10.1",
+   "at": 331,
+   "text": "Ex. iii. 2",
+   "start": "EXO.3.2",
+   "end": "EXO.3.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.17.1",
+   "at": 443,
+   "text": "ver. 13",
+   "start": "PRO.30.13",
+   "end": "PRO.30.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.17.2",
+   "at": 74,
+   "text": "Job xlii. 3",
+   "start": "JOB.42.3",
+   "end": "JOB.42.3",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.17.2",
+   "at": 92,
+   "text": "Ps. cxxxix. 6",
+   "start": "PSA.139.6",
+   "end": "PSA.139.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.17.2",
+   "at": 572,
+   "text": "Job xxxix. 27",
+   "start": "JOB.39.27",
+   "end": "JOB.39.27",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.21-23.1",
+   "at": 401,
+   "text": "Amos vii. 10",
+   "start": "AMO.7.10",
+   "end": "AMO.7.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.29-31.1",
+   "at": 287,
+   "text": "Isa. xiv. 9",
+   "start": "ISA.14.9",
+   "end": "ISA.14.9",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.29-33.1",
+   "at": 46,
+   "text": "Job xxxix. 22",
+   "start": "JOB.39.22",
+   "end": "JOB.39.22",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.29-33.1",
+   "at": 77,
+   "text": "Isa. xxx. 4",
+   "start": "ISA.30.4",
+   "end": "ISA.30.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.33.1",
+   "at": 348,
+   "text": "Job vi. 10",
+   "start": "JOB.6.10",
+   "end": "JOB.6.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.33.1",
+   "at": 360,
+   "text": "xxiii. 12",
+   "start": "JOB.23.12",
+   "end": "JOB.23.12",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.33.1",
+   "at": 733,
+   "text": "ver. 2",
+   "start": "PRO.30.2",
+   "end": "PRO.30.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.30.33.1",
+   "at": 1015,
+   "text": "Ps. xiv. 2",
+   "start": "PSA.14.2",
+   "end": "PSA.14.2",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.3.1",
+   "at": 0,
+   "text": "Ver. 4",
+   "start": "PRO.31.4",
+   "end": "PRO.31.4",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.8-23.1",
+   "at": 64,
+   "text": "ver. 7",
+   "start": "PRO.31.7",
+   "end": "PRO.31.7",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.8-23.1",
+   "at": 92,
+   "text": "ver. 5",
+   "start": "PRO.31.5",
+   "end": "PRO.31.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.8-23.1",
+   "at": 109,
+   "text": "ver. 6",
+   "start": "PRO.31.6",
+   "end": "PRO.31.6",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.8-23.1",
+   "at": 192,
+   "text": "Ps. civ. 15",
+   "start": "PSA.104.15",
+   "end": "PSA.104.15",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.11.1",
+   "at": 493,
+   "text": "Ps. Ixviii. 13",
+   "start": "PSA.68.14",
+   "end": "PSA.68.14",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.11.1",
+   "at": 569,
+   "text": "Ver. 13",
+   "start": "PRO.31.13",
+   "end": "PRO.31.13",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.14-15.1",
+   "at": 681,
+   "text": "ver. 23",
+   "start": "PRO.31.23",
+   "end": "PRO.31.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.22.1",
+   "at": 118,
+   "text": "Ver. 23",
+   "start": "PRO.31.23",
+   "end": "PRO.31.23",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.22.1",
+   "at": 673,
+   "text": "Ver. 24",
+   "start": "PRO.31.24",
+   "end": "PRO.31.24",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.1",
+   "at": 261,
+   "text": "Isa. iii. 10",
+   "start": "ISA.3.10",
+   "end": "ISA.3.10",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.2",
+   "at": 657,
+   "text": "v. 5",
+   "start": "PRO.31.5",
+   "end": "PRO.31.5",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "delitzsch-proverbs.PRO.31.30-31.2",
+   "at": 717,
+   "text": "v. 3",
+   "start": "PRO.31.3",
+   "end": "PRO.31.3",
+   "found": "pattern",
+   "status": "detected"
+  }
+ ]
+}
