@@ -601,6 +601,7 @@
     "front_to_back": "Front to back",
     "front_to_back_note": "Every excerpt Logia holds from this work, a chapter to a page. Each chapter shows its heading in the Open Word Bible, the reading time at 230 words a minute, and a bar for how much the work says on it.",
     "contents": "Contents",
+    "source_texts": "Source texts",
     "also_on": "Also on {book} in Logia",
     "also_on_note": "The other commentaries on {book} in the library, oldest first. Each sets its excerpts beside the same verses in the reader.",
     "start_here": "Start here",
