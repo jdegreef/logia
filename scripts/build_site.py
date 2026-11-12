@@ -2819,10 +2819,13 @@ def author_covered(lib, comments):
     return covered
 
 
-def coverage_map(lib, author, book, covered):
+def coverage_map(lib, author, book, covered, works=None, link=None):
     """A book as rows of chapters and squares of verses, the verses with no
-    comment left open, and the list of them beneath."""
-    works = {w for w, x in lib.works.items() if x["author"] == author["id"]}
+    comment left open, and the list of them beneath. works narrows it to
+    some of the author's works; link(chapter) is where a chapter's number
+    goes (on the commentator's page, to its section below)."""
+    works = works or {w for w, x in lib.works.items() if x["author"] == author["id"]}
+    link = link or (lambda ch: f"#ch-{book.lower()}-{ch}")
     starts = {ref_parts(c["start"])[1] for c in lib.comments_in_book(book) if c["work"] in works and ref_parts(c["start"])[0] == book}
     rows = []
     for bb, ch in lib.chapters:
@@ -2831,7 +2834,7 @@ def coverage_map(lib, author, book, covered):
         cells = "".join('<i></i>' if (ch, v) in covered else
                         f'<i class="lg-nc" title="{e(lib.books[book]["en"])} {ch}:{v}"></i>' for v in lib.verses(book, ch))
         # The chapters with a section below (where an excerpt starts) link to it.
-        num = f'<a href="#ch-{book.lower()}-{ch}">{ch}</a>' if ch in starts else f"<b>{ch}</b>"
+        num = f'<a href="{link(ch)}">{ch}</a>' if ch in starts else f"<b>{ch}</b>"
         rows.append(f'<li>{num}<span>{cells}</span></li>')
     return (f'<div class="lg-cov-map" data-book="{book}"><h3 class="label">{e(t("commentators.map", book=lib.books[book]["en"]))}</h3>'
             f'<ol>{"".join(rows)}</ol>{missing_verses(lib, author, book, covered)}</div>')
@@ -3415,6 +3418,7 @@ def work_page(lib, wid):
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 {work_goto(lib, wid, a, comments)}<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>
+{work_map(lib, wid, a, comments)}
 {also_on(lib, wid, comments)}"""
     book = {"@context": "https://schema.org", **work_ld(lib, wid), "isBasedOn": [url for url, _l, _s in docs] or w["full_text_url"]}
     if w["translation"]:
@@ -3423,6 +3427,21 @@ def work_page(lib, wid):
                          (w["title"], f"/works/{wid}/"))
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/", ld=(book, crumbs),
                 description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+
+
+def work_map(lib, wid, a, comments):
+    """Every verse of the books a work covers, filled where it comments and
+    open where it is silent, each chapter's number linking to its page."""
+    covered = author_covered(lib, comments)
+    if not covered:
+        return ""
+    totals = {b: sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b) for b in covered}
+    note = "; ".join(t("work.map_note_book", book=lib.books[b]["en"], n=f"{len(vs):,}", total=f"{totals[b]:,}",
+                       pct=round(100 * len(vs) / totals[b])) for b, vs in covered.items())
+    maps = "".join(coverage_map(lib, a, b, vs, works={wid}, link=lambda ch, b=b: work_chapter_url(wid, b, ch))
+                   for b, vs in covered.items())
+    return (f'<section class="lg-block" id="map"><h2>{e(t("work.map", name=short_name(a)))}</h2>'
+            f'<p class="lg-quiet">{e(t("work.map_note", counts=note))}</p><div class="lg-cov-maps">{maps}</div></section>')
 
 
 def source_doc(url):
