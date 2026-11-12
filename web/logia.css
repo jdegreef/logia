@@ -1483,3 +1483,7 @@ html {
 /* Running heads ("Homily XXV") are the book's own place marks, set in small
    capitals; quoted lemmas keep their italic. */
 .lg-lemma.lg-runhead, .cx-lemma.cx-runhead { font-style: normal; font-variant: small-caps; letter-spacing: .05em; font-size: .92em; }
+/* Selected text: a soft gold wash with the body colour, in every theme;
+   the contrast theme keeps the system's own highlight. */
+::selection { background: color-mix(in oklab, var(--gold) 34%, var(--bg)); color: var(--text); }
+:root[data-theme="contrast"] ::selection { background: Highlight; color: HighlightText; }
