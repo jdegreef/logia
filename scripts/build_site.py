@@ -1303,13 +1303,6 @@ def home_hero(lib, cov):
     if HOME_TRY_AUTHOR in lib.authors:
         a = lib.authors[HOME_TRY_AUTHOR]
         chips.append(f'<a href="/commentators/{a["id"]}/">{e(short_name(a))} <i>{e(t("home.kind_commentator"))}</i></a>')
-    # The books with commentary, each with how many voices it has.
-    books = ""
-    for book in dict.fromkeys(b for b, _c in sorted(cov, key=lambda bc: lib.chapters.index(bc))):
-        n = len({lib.author_of(c["work"])["id"] for c in lib.comments if c["start"].split(".")[0] == book})
-        first = min(c for b, c in cov if b == book)
-        books += (f'<a class="button ghost" href="{chapter_url(book, first)}">{e(lib.books[book]["en"])} '
-                  f'<span>{e(t("home.n_voices", n=n))}</span></a>')
     trust = "".join(f'<li><a href="{h}">{e(t("home.trust." + k))}</a></li>'
                     for k, h in (("free", "/about/"), ("public", "/about/"), ("copied", "/about/"), ("data", "/open-data/")))
     return f"""
@@ -1320,7 +1313,7 @@ def home_hero(lib, cov):
 <p class="lg-names">{names}</p>
 {search_box(lib, "home-q", key_hint=True)}
 <p class="hero-try lg-try"><span>{e(t("search.try"))}</span> {" ".join(chips)}</p>
-<p class="lg-books"><span>{e(t("home.start_in"))}</span> <a class="button" href="/" data-resume="{e(t("home.resume"))}" hidden></a>{books}
+<p class="lg-books"><a class="button" href="/" data-resume="{e(t("home.resume"))}" hidden></a>
 <a class="lg-books-all" href="/read/">{e(t("home.browse"))} {icon("arrow", 14)}</a></p>
 <ul class="lg-trust">{trust}</ul>
 </section>"""
