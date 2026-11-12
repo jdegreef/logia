@@ -63,7 +63,7 @@ HEADING = re.compile(r"^(Homily|Tractate)\s+([IVXLC]+)\.")
 # "Chapter II. 23–25; III. 1–5", "John iv. 54; v. 1", "Chapter XI. 55–57; XII", "Chapter IX", "John xiii";
 # a stray full stop at the end ("Chapter XIII. 10–15.", "John xiii. 20 ."), "(continued)" after the
 # verses, and "and" before the next chapter ("Chapter XIX. 31–42, and XX. 1-9") are allowed.
-OPENS = re.compile(r"^(?:(?:John|Rom\.|Matt\.)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)"
+OPENS = re.compile(r"^(?:(?:John|Rom\.|Matt\.|Hebrews)\s+(?P<ch>[ivxl]+|[IVXL]+)\.\s+(?P<v>\d+)"
                    r"(?:(?:[–-]|,\s*)(?:\d+,\s*)*(?P<v2>\d+))?"
                    r"(?:;\s*(?P<ch2>[ivxl]+)\.\s+(?P<e>\d+)(?:[–-](?P<f>\d+))?)?"
                    r"|Chapter\s+(?P<CH>[IVXL]+)\.\s+(?P<a>\d+)(?:(?:[–-]|,\s*)(?P<b>\d+))?"

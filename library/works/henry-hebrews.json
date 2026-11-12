@@ -1,0 +1,18 @@
+{
+ "id": "henry-hebrews",
+ "author": "tong",
+ "title": "Commentary on the Whole Bible, Volume VI (Acts to Revelation): Hebrews, by William Tong",
+ "divisions": "verse",
+ "edition": "Matthew Henry, Exposition of the Old and New Testaments (1706-1721), the exposition of Hebrews completed by William Tong; CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1721,
+ "full_text_url": "https://www.ccel.org/ccel/henry/mhc6.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); William Tong died in 1727"
+ },
+ "source_kind": "digital",
+ "notes": "Hebrews 1-13 are CCEL mhc6 Heb.ii-Heb.xiv; CCEL heads the book 'Hebrews Completed by William Tong'. Every paragraph of exposition is kept, in the order printed, in entries of up to about 350 words; a paragraph cut between entries is marked with ' ...'. Each of the exposition's points is placed on the verse it names near its start ('(v. 7)', 'v. 11-15'); a main point (I., II.) that names none is on the whole section of verses it stands under, and any other paragraph that names none on the verse of the paragraph before it. A short lead-in ('Here observe,') goes with the paragraph after it. The chapter summaries before the sections, the Bible text printed above each section and the preface to the epistle are left out.",
+ "status": "ai_draft"
+}
