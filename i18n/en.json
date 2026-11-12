@@ -276,7 +276,9 @@
       "book": "{n} chapters",
       "none": "No verse, book or commentator by that name. Try “John 3:16”.",
       "words": "“{q}” in the commentators' words",
-      "words_note": "Search every excerpt"
+      "words_note": "Search every excerpt",
+      "text_only": "Bible text and notes, no commentary yet",
+      "meant": "Did you mean {name}?"
     },
     "key_hint": "Press / on any page to search",
     "open": "Search",
@@ -309,6 +311,9 @@
     "no_commentary_title": "No commentary on {ref} yet. Read the Bible text"
   },
   "book": {
+    "heat_chapter": "{ref}: {n} excerpts",
+    "heat_label": "{book}, verse by verse: how much the commentators wrote on each verse",
+    "heat_note": "Each bar is a verse of {book}, taller where more is written on it. Choose a chapter to read it.",
     "keep": "Keep {book} for offline",
     "keep_note": "Saves every chapter and its commentary on this device, for reading with no signal.",
     "keep_saving": "Saving chapter {done} of {total}…",
@@ -423,7 +428,6 @@
     "filter_kind": "Tradition",
     "show_kinds": "Show traditions",
     "show_all": "Show all {n}",
-    "rail_more": "Open the voices that don't fit on the line: {names}",
     "verse_of": "{n} of {total}",
     "verse_of_label": "Verse {n} of {total} in this chapter",
     "listen": "Listen",
@@ -927,6 +931,12 @@
   },
 
   "verse": {
+    "compare": "Compare two voices",
+    "compare_title": "Two voices on {ref}",
+    "compare_pick": "Choose two:",
+    "compare": "Compare two voices",
+    "compare_title": "Two voices on {ref}",
+    "compare_pick": "Choose two:",
     "rail_title": "{n} voices on this verse",
     "rail_words": "{n:,} words",
     "rail_words_one": "1 word",
@@ -999,14 +1009,54 @@
     "in_chapter": "Passages in this chapter"
   },
   "occasions": {
+    "cal_label": "Calendar:",
+    "cal_all": "All",
+    "cal_rcl": "Revised Common Lectionary",
+    "cal_roman": "Roman Missal",
+    "cal_bcp": "Book of Common Prayer",
+    "cal_orthodox": "Orthodox",
+    "next": "Coming next: {name}, {date}",
+    "not_in_cal": "Not in this calendar",
     "eyebrow": "Readings",
     "heading": "The Gospel for {name}: {ref}",
     "title": "{name} Gospel, {ref}: commentary from {names}",
     "description": "What the church has said about the Gospel for {name}, {ref}: {n} excerpts from {names}, word for word from public-domain editions.",
-    "index_heading": "Readings from John through the church year",
-    "index_dek": "Many churches read from John on the great days of the year. Each page sets the reading beside everything Logia holds on it, from the early church to the 1800s.",
+    "index_heading": "Readings through the church year",
+    "index_dek": "The Gospels many churches read on the great days of the year. Each page sets the reading beside everything Logia holds on it, from the early church to the 1800s.",
     "index_note": "Lectionaries differ in where a reading starts and ends. Each page says which passage it shows and which lectionaries read it.",
-    "index_description": "The Gospel readings from John for Christmas, Holy Week, Easter and Pentecost, each with what the church fathers and later commentators wrote on it.",
+    "index_description": "The Gospel readings for Christmas, the Epiphany, Lent, Holy Week, Easter and Pentecost, each with what the church fathers and later commentators wrote on it.",
+    "christmas-eve": {
+      "name": "Christmas Eve",
+      "season": "Christmas",
+      "path": "/christmas-eve/",
+      "heading": "The Gospel for Christmas Eve: {ref}",
+      "intro": "On Christmas Eve, and at the Mass during the Night, the churches read Luke's account of the birth of Jesus: the Revised Common Lectionary Luke 2:1–14, with verses 15–20 if wanted, and the Roman Missal Luke 2:1–14. This page shows the whole of Luke 2:1–20.",
+      "read": "Revised Common Lectionary: Luke 2:1–14 (15–20). Roman Missal, Mass during the Night: Luke 2:1–14."
+    },
+    "epiphany": {
+      "name": "The Epiphany",
+      "season": "Epiphany",
+      "path": "/epiphany/",
+      "heading": "The Gospel for the Epiphany: {ref}",
+      "intro": "On the Epiphany, 6 January, the Revised Common Lectionary, the Roman Missal and the Book of Common Prayer read the coming of the wise men, Matthew 2:1–12.",
+      "read": "Revised Common Lectionary, Roman Missal and Book of Common Prayer: Matthew 2:1–12."
+    },
+    "ash-wednesday": {
+      "name": "Ash Wednesday",
+      "season": "Lent",
+      "path": "/ash-wednesday/",
+      "heading": "The Gospel for Ash Wednesday: {ref}",
+      "intro": "Lent begins on Ash Wednesday with Jesus' teaching on almsgiving, prayer and fasting in secret: the Revised Common Lectionary reads Matthew 6:1–6, 16–21, and the Roman Missal Matthew 6:1–6, 16–18. This page shows the whole of Matthew 6:1–21.",
+      "read": "Revised Common Lectionary: Matthew 6:1–6, 16–21. Roman Missal: Matthew 6:1–6, 16–18."
+    },
+    "annunciation": {
+      "name": "The Annunciation",
+      "season": "Lent or Easter",
+      "path": "/annunciation/",
+      "heading": "The Gospel for the Annunciation: {ref}",
+      "intro": "On 25 March, nine months before Christmas, the Revised Common Lectionary and the Roman Missal read the angel's message to Mary, Luke 1:26–38. When the day falls in Holy Week or Easter Week it is kept later.",
+      "read": "Revised Common Lectionary and Roman Missal: Luke 1:26–38."
+    },
     "christmas": {
       "name": "Christmas Day",
       "season": "Christmas",
@@ -1153,6 +1203,9 @@
     ]
   },
   "most": {
+    "of": "{n} of {total}",
+    "sort_note": "Press a column's heading to sort by it.",
+    "show_all": "Show all {n}",
     "heading": "The most-discussed verses in {book}",
     "lead": "{verses} verses of {book} have commentary in Logia, and {every} have all {works} commentators on them. Here is where they wrote most, counted from the {n} excerpts in the library.",
     "lead_one": "{verses} verses of {book} have commentary in Logia, all from its one commentator. Here is where it says most, counted from the {n} excerpts in the library.",
@@ -1390,6 +1443,7 @@
   },
 
   "guide": {
+    "gloss_more": "In the glossary →",
     "eyebrow": "Guide",
     "draft": "A draft awaiting review",
     "draft_note": "Logia wrote this page; it is not commentary. It is a draft until a named reviewer approves it.",
@@ -1465,6 +1519,11 @@
   },
 
   "topic": {
+    "card_counts": "{n} excerpts · {k} voices",
+    "family_god": "God and Christ",
+    "family_salvation": "Sin and salvation",
+    "family_church": "The church and the sacraments",
+    "family_life": "The Christian life",
     "eyebrow": "Topics",
     "lead": "{n} passages, with {total} excerpts from {k} commentators: {names}.",
     "how": "A topic is a choice of passages, never of excerpts: every commentator Logia holds on each passage is here, whatever their tradition. Each opens with their first words on it; follow a name to read it in full.",

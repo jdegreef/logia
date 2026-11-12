@@ -1,5 +1,11 @@
 {
-  "about": "Topics: the passages of Scripture where readers look for what the church has said on a subject, across the books in Logia, each a page at /topics/<id>/. A topic chooses passages, never excerpts: every commentator Logia holds on each passage is shown. The words are in i18n/<lang>.json under topics.<id>.",
+  "about": "Topics: the passages of Scripture where readers look for what the church has said on a subject, across the books in Logia, each a page at /topics/<id>/. A topic chooses passages, never excerpts: every commentator Logia holds on each passage is shown. The words are in i18n/<lang>.json under topics.<id>. The families group the topics on /topics/, their names under topic.family_<id>; every topic is in one.",
+  "families": [
+    {"id": "god", "topics": ["creation", "incarnation", "holy-spirit", "the-cross", "resurrection", "shepherd"]},
+    {"id": "salvation", "topics": ["the-fall", "new-birth", "repentance", "justification", "grace-and-law", "election"]},
+    {"id": "church", "topics": ["baptism", "lords-supper", "peter"]},
+    {"id": "life", "topics": ["prayer", "love"]}
+  ],
   "topics": [
     {"id": "creation", "items": [
       {"key": "beginning", "start": "GEN.1.1", "end": "GEN.1.5"},

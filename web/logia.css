@@ -130,28 +130,24 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-ph-text { font-family: var(--serif); font-size: 16px; color: var(--muted); margin: 6px 0 14px; }
 .cx-summary { font-size: 13px; color: var(--muted); }
 
-.cx-rail { position: relative; height: calc(38px + var(--lanes, 1) * 22px); margin: 8px 18px 4px; }
+.cx-rail { position: relative; height: calc(48px + var(--lanes, 1) * 16px); margin: 8px 18px 4px; }
 .cx-rail-line { position: absolute; left: -12px; right: -12px; bottom: 22px; height: 1px; background: var(--line-strong); }
 .cx-tick { position: absolute; bottom: 4px; font-size: 10.5px; color: var(--muted); transform: translateX(-50%); font-variant-numeric: tabular-nums; }
 .cx-tick::before { content: ""; position: absolute; left: 50%; top: -6px; width: 1px; height: 5px; background: var(--line-strong); }
 /* A commentator: a pill with the first letters of their name, on a stem down
    to the year they died. */
-.cx-dot { position: absolute; bottom: 30px; transform: translateX(-50%); min-width: 34px; padding: 3px 5px; border-radius: 999px;
-  border: 1.5px solid var(--gold); background: color-mix(in srgb, var(--gold) 16%, var(--surface)); color: var(--text);
-  font: 700 10.5px/1 var(--sans); cursor: pointer; }
-.cx-dot::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 6px; background: var(--gold); }
-.cx-dot { z-index: 3; }
-.cx-dot.cx-lane1 { bottom: 52px; z-index: 2; } .cx-dot.cx-lane1::after { height: 28px; }
-.cx-dot.cx-lane2 { bottom: 74px; z-index: 1; } .cx-dot.cx-lane2::after { height: 50px; }
-.cx-dot:hover { background: var(--lg-gold-ink); color: var(--bg); }
-.cx-dot.cx-cur { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
-.cx-dot.cx-off { opacity: .4; border-style: dashed; cursor: default; background: var(--surface); }
-/* The voices that don't fit in three lanes, folded into one pill at the top
-   right of the line. */
-.cx-dot.cx-more { left: auto; right: -12px; bottom: auto; top: 0; transform: none; border-color: var(--accent);
-  background: var(--accent-soft); color: var(--accent); }
-.cx-dot.cx-more::after { display: none; }
-.cx-dot.cx-off:hover { color: var(--text); }
+/* A voice on the timeline: a dot in its era's colour on a stem from the
+   year it died, in rows where dots would touch; its name shows on hover. */
+.cx-dot { position: absolute; bottom: calc(30px + var(--row, 0) * 16px); transform: translateX(-50%); width: 13px; height: 13px; padding: 0;
+  border-radius: 50%; border: 2px solid var(--surface); background: var(--era, var(--gold)); cursor: pointer; z-index: 2; }
+.cx-dot::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: calc(6px + var(--row, 0) * 16px); background: var(--line-strong); }
+.cx-dot::before { content: attr(data-name); position: absolute; left: 50%; bottom: calc(100% + 5px); transform: translateX(-50%);
+  white-space: nowrap; padding: 2px 7px; border-radius: 999px; background: var(--text); color: var(--bg); font: 600 11.5px/1.3 var(--sans);
+  opacity: 0; pointer-events: none; transition: opacity var(--fast) ease; }
+.cx-dot:hover, .cx-dot:focus-visible { z-index: 5; box-shadow: 0 0 0 2px var(--era, var(--gold)); }
+.cx-dot:hover::before, .cx-dot:focus-visible::before { opacity: 1; }
+.cx-dot.cx-cur { box-shadow: 0 0 0 2px var(--accent); }
+.cx-dot.cx-off { opacity: .28; cursor: default; }
 
 .cx-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
 .cx-tabs button { flex: 1 1 auto; border: 0; background: none; padding: 10px 8px 9px; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent; white-space: nowrap; }
@@ -482,17 +478,7 @@ dialog.lg-palette::backdrop { background: transparent; }
 .lg-progress span { display: block; height: 100%; background: var(--gold); transform: scaleX(0); transform-origin: left; }
 [dir="rtl"] .lg-progress span { transform-origin: right; }
 
-/* The tools: "Continue" on wide screens, dark mode, Saved when signed in. */
-.lg-resume { display: none; align-items: center; gap: 6px; height: 38px; padding: 0 14px 0 11px; border: 1px solid var(--accent-soft-border);
-  border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 14.5px; font-weight: 600; text-decoration: none; white-space: nowrap; }
-.lg-resume:hover { border-color: var(--accent); }
-/* "Continue" only where the bar has room: wide screens, pages without the
-   switcher (whose Read menu has it), and the search folded to its icon. */
-@media (min-width: 1360px) {
-  header.site .bar:not(:has(.lg-where)) .lg-resume:not([hidden]) { display: inline-flex; }
-  header.site .tools:has(.lg-resume:not([hidden])) .search-btn { width: 38px; padding: 0; justify-content: center; }
-  header.site .tools:has(.lg-resume:not([hidden])) :is(.search-label, .search-kbd) { display: none; }
-}
+/* The tools: dark mode, and Saved when signed in. */
 .lg-theme-btn[hidden] { display: none; }
 .lg-theme-btn .icon + .icon, .lg-theme-btn[aria-pressed="true"] .icon:first-child { display: none; }
 .lg-theme-btn[aria-pressed="true"] .icon + .icon { display: block; }
@@ -509,16 +495,17 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
   .lg-nav-resume { padding: 4px 14px; font-weight: 600; color: var(--accent); }
   .lg-dd-read .lg-dd-chapters { display: none; }
 }
-/* Room in the bar: a book's pages carry the switcher, so their bar folds
-   sooner. The brand already goes home, so Home is the first to go. */
+/* Room in the bar: it folds at the same widths on every page, so the menus,
+   the search and the brand keep their places from page to page; a book's
+   pages add only the switcher. The brand already goes home, so Home is the
+   first to go. */
 @media (max-width: 1440px) and (min-width: 941px) {
-  header.site .bar:has(.lg-where) .nav-link > .icon:first-child { display: none; }
-  header.site .bar:has(.lg-where) .search-btn { width: 38px; padding: 0; justify-content: center; }
-  header.site .bar:has(.lg-where) :is(.search-label, .search-kbd) { display: none; }
+  header.site .nav-link > .icon:first-child { display: none; }
+  header.site .search-btn { width: 38px; padding: 0; justify-content: center; }
+  header.site :is(.search-label, .search-kbd) { display: none; }
 }
 @media (max-width: 1180px) and (min-width: 941px) {
-  header.site .nav-link > .icon:first-child { display: none; }
-  header.site .bar:has(.lg-where) .nav-list > li:nth-child(2) { display: none; }
+  header.site .nav-list > li:nth-child(2) { display: none; }
   header.site .bar:has(.lg-where) :is(.lg-turn-btn, .brand-name) { display: none; }
   header.site .bar { gap: 10px; }
 }
@@ -1239,7 +1226,8 @@ html {
 .lg-bstrip { margin: 28px 0 0; }
 .lg-bstrip-cells { display: grid; grid-template-columns: repeat(66, minmax(0, 1fr)); gap: 2px; }
 .lg-bstrip-cells > * { height: 16px; border-radius: 2px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); }
-.lg-bstrip-cells > .lg-on { background: var(--accent); box-shadow: none; }
+.lg-bstrip-cells > .lg-on { background: color-mix(in srgb, var(--accent) var(--depth, 100%), var(--surface-2)); box-shadow: none; }
+.lg-bstrip-named { margin: 8px 0 0; font-size: 13.5px; line-height: 1.7; }
 .lg-bstrip-cells > .lg-on:hover, .lg-bstrip-cells > .lg-on:focus-visible { background: var(--text); }
 .lg-bstrip .lg-quiet { display: flex; justify-content: space-between; font-size: 12px; margin: 4px 0 0; }
 .lg-own { margin: 32px 0 0; padding: 20px 22px; border-radius: var(--radius-sm); background: var(--surface-2); }
@@ -1662,3 +1650,86 @@ html {
 .lg-fts-text { margin: 0; font-family: var(--read-font); font-size: 15.5px; line-height: 1.6; }
 .lg-fts-text mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1px; }
 @media (max-width: 560px) { .lg-fts-group legend, .lg-fts-who > span { float: none; width: 100%; } }
+
+/* Compare two voices (verse and passage pages): a dialog with a row of names
+   and the two chosen side by side, one under the other on a phone. */
+.lg-cmp-row { margin: 12px 0 0; }
+.lg-cmp-row .button { display: inline-flex; align-items: center; gap: 6px; }
+.lg-cmp { width: min(1100px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); box-shadow: var(--shadow-pop); }
+.lg-cmp::backdrop { background: rgb(0 0 0 / .45); }
+.lg-cmp-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px;
+  background: var(--bg); border-bottom: 1px solid var(--line); }
+.lg-cmp-head h2 { margin: 0; font-size: 22px; }
+.lg-cmp-close { border: 0; background: none; color: var(--muted); cursor: pointer; padding: 6px; border-radius: 8px; }
+.lg-cmp-close:hover { color: var(--text); background: var(--surface); }
+.lg-cmp-picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 12px 20px 0; }
+.lg-cmp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding: 16px 20px 24px; }
+.lg-cmp-col { min-width: 0; }
+.lg-cmp-col h3 { margin-top: 0; }
+@media (max-width: 760px) { .lg-cmp-cols { grid-template-columns: minmax(0, 1fr); } .lg-cmp { width: calc(100vw - 16px); max-height: calc(100vh - 16px); } }
+
+/* A book's page: the whole book verse by verse, a bar a verse. */
+.lg-heat { margin: 4px 0 18px; }
+.lg-heat svg { display: block; width: 100%; height: 64px; }
+.lg-heat rect { fill: var(--gold); }
+.lg-heat .lg-heat-hit { fill: transparent; }
+.lg-heat a:hover rect:not(.lg-heat-hit), .lg-heat a:focus rect:not(.lg-heat-hit) { fill: var(--accent); }
+.lg-heat a:focus { outline: none; }
+.lg-heat a:focus .lg-heat-hit { fill: var(--accent-soft); }
+.lg-heat-ticks { position: relative; height: 16px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-heat-ticks span { position: absolute; top: 2px; }
+.lg-heat figcaption { margin-top: 4px; font-size: 13px; }
+
+/* The most-discussed verses: the table across the page, a bar in the
+   excerpts column, numbers right-aligned, headings that sort. */
+.lg-most { max-width: none; }
+.lg-most > .page-head, .lg-most > .lg-block:not(.lg-most-wide) { max-width: 760px; }
+.lg-rank { width: 100%; }
+.lg-rank th button { border: 0; background: none; padding: 0; font: inherit; color: inherit; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+.lg-rank th button::after { content: " ↕"; opacity: .45; }
+.lg-rank th[aria-sort="descending"] button::after { content: " ↓"; opacity: 1; }
+.lg-rank th[aria-sort="ascending"] button::after { content: " ↑"; opacity: 1; }
+.lg-rank .lg-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lg-rank-bar { display: inline-block; width: 90px; height: 8px; margin-right: 8px; border-radius: 4px; background: var(--line); vertical-align: middle; overflow: hidden; }
+.lg-rank-bar span { display: block; height: 100%; background: var(--gold); }
+.lg-rank-text { font-family: var(--read-font); font-size: 14.5px; line-height: 1.45; min-width: 220px; }
+.lg-rank tr[hidden] { display: none; }
+@media (max-width: 640px) { .lg-rank-bar { width: 44px; } .lg-rank-text { min-width: 180px; } }
+.lg-rank th, .lg-rank td:nth-child(2) { white-space: nowrap; }
+
+/* Topics, in families: cards sized to fill each row. */
+.lg-topic-family { margin-top: 28px; }
+.lg-topic-family h2 { font-size: 22px; margin-bottom: 10px; }
+.lg-topic-cards { grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); }
+@media (max-width: 760px) { .lg-topic-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .lg-topic-cards { grid-template-columns: minmax(0, 1fr); } }
+.lg-topic-card { height: 100%; display: flex; flex-direction: column; gap: 4px; }
+.lg-topic-n { margin-top: auto; padding-top: 6px; font-size: 12.5px; font-weight: 600; color: var(--lg-gold-ink); }
+
+/* /readings/: the next day first, a calendar to choose, each day's date and
+   the reading each calendar gives. */
+.lg-reading-next { margin: 18px 0 0; padding: 12px 16px; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--gold) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--gold) 30%, var(--line)); font-size: 15.5px; }
+.lg-reading-next[hidden] { display: none; }
+.lg-reading-next a { font-weight: 700; }
+.lg-cal-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 18px 0 0; }
+.lg-reading-date { display: block; font-size: 13px; color: var(--lg-gold-ink); font-weight: 600; margin-top: 2px; }
+.lg-reading-date[hidden] { display: none; }
+.lg-reading-cals { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 1px; font-size: 13.5px; color: var(--muted); }
+.lg-readings .lg-reading-cals b { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--text); margin-right: 4px; }
+.lg-reading-cals li[hidden] { display: none; }
+.lg-reading-soon > a b { color: var(--accent); }
+.lg-reading-off { opacity: .4; }
+
+/* A glossary word in an excerpt: a dotted underline; pressed, what it means. */
+.lg-gloss-term { display: inline; padding: 0; border: 0; background: none; font: inherit; color: inherit; cursor: help;
+  text-decoration: underline dotted color-mix(in srgb, var(--accent) 70%, transparent); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.lg-gloss-term:hover, .lg-gloss-term[aria-expanded="true"] { color: var(--accent); }
+.lg-gloss-pop { position: absolute; z-index: 60; padding: 12px 34px 10px 14px; border: 1px solid var(--line-strong); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--text); box-shadow: var(--shadow-pop); font-size: 14px; line-height: 1.5; }
+.lg-gloss-pop b { font-family: var(--display); font-size: 15.5px; }
+.lg-gloss-pop p { margin: 4px 0 0; }
+.lg-gloss-pop a { font-weight: 600; }
+.lg-gloss-x { position: absolute; top: 4px; right: 6px; border: 0; background: none; font-size: 20px; line-height: 1; color: var(--muted); cursor: pointer; padding: 4px; }
+@media print { .lg-gloss-term { text-decoration: none; } }

@@ -27,6 +27,25 @@
   // "John 3:16", "jn 3.16", "1 Cor 13", "Ps 23 4", "john3:16": a book (any
   // name or abbreviation in D.aliases, or the start of a book's name), then
   // a chapter and maybe a verse. Returns {code, chapter, verse} or null.
+  // How many letters to add, drop, change or swap to turn a into b, up to
+  // max (then max + 1): for names typed as they sound ("Mathew", "Jhon").
+  function distance(a, b, max) {
+    if (Math.abs(a.length - b.length) > max) return max + 1;
+    var prev2 = null, prev = [], i, j;
+    for (j = 0; j <= b.length; j++) prev[j] = j;
+    for (i = 1; i <= a.length; i++) {
+      var cur = [i], low = i;
+      for (j = 1; j <= b.length; j++) {
+        var cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+        if (prev2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) cur[j] = Math.min(cur[j], prev2[j - 2] + 1);
+        low = Math.min(low, cur[j]);
+      }
+      if (low > max) return max + 1;
+      prev2 = prev; prev = cur;
+    }
+    return prev[b.length];
+  }
   function bookOf(name) {
     var key = name.toLowerCase().replace(/[.\s]+/g, " ").trim().replace(/^(i{1,3})\s/, function (m, r) { return r.length + " "; });
     if (!key) return null;
@@ -36,7 +55,30 @@
     var hits = Object.keys(D.names).filter(function (c) {
       return D.names[c].toLowerCase().replace(/ /g, "").indexOf(squeezed) === 0;
     });
-    return hits.length === 1 ? hits[0] : null;
+    if (hits.length === 1) return hits[0];
+    // Near misses: one slip in a short name, two in a long one, against the
+    // books' names and their usual forms; only when one book is nearest.
+    if (squeezed.length < 4) return null;
+    var max = squeezed.length > 6 ? 2 : 1;
+    function nearest(keys, codeOf) {
+      var best = null, bestD = max + 1, tie = false;
+      keys.forEach(function (k) {
+        var d = distance(squeezed, k.toLowerCase().replace(/ /g, ""), max), code = codeOf(k);
+        if (d < bestD) { best = code; bestD = d; tie = false; }
+        else if (d === bestD && code !== best) tie = true;
+      });
+      return best && !tie ? best : null;
+    }
+    // The books' own names first ("Jhon" is John, not "Jon" for Jonah).
+    return nearest(Object.keys(D.names).map(function (c) { return D.names[c]; }), function (n) {
+      return Object.keys(D.names).filter(function (c) { return D.names[c] === n; })[0];
+    }) || nearest(Object.keys(D.aliases), function (k) { return D.aliases[k]; });
+  }
+  // Whether a book's chapter has commentary (D.has: "1-3,7" per book).
+  function hasCommentary(code, chapter) {
+    return (D.has[code] || "").split(",").some(function (r) {
+      var ab = r.split("-"); return chapter >= +ab[0] && chapter <= +(ab[1] || ab[0]);
+    });
   }
   function parseRef(q) {
     if (!D) return null;
@@ -56,7 +98,11 @@
     var out = [], low = q.trim().toLowerCase();
     if (!low || !D) return out;
     var r = parseRef(q);
-    if (r) out.push({ href: refHref(r), title: refLabel(r), note: D.ui[r.verse ? "verse" : "chapter"] });
+    if (r) {
+      var note = D.ui[r.verse ? "verse" : "chapter"];
+      if (D.has && !hasCommentary(r.code, r.chapter)) note += " · " + D.ui.text_only;
+      out.push({ href: refHref(r), title: refLabel(r), note: note });
+    }
     Object.keys(D.names).forEach(function (c) {
       if (out.length < 6 && D.names[c].toLowerCase().indexOf(low) === 0 && !(r && r.code === c)) {
         out.push({ href: "/" + c.toLowerCase() + "/", title: D.names[c], note: fmt(D.ui.book, { n: D.chapters[c] }) });
@@ -68,9 +114,15 @@
         out.unshift({ href: "/" + b.toLowerCase() + "/", title: D.names[b], note: fmt(D.ui.book, { n: D.chapters[b] }) });
       }
     }
-    D.people.forEach(function (p) {
-      if (out.length < 8 && p[0].toLowerCase().indexOf(low) >= 0) out.push({ href: p[1], title: p[0], note: p[2] });
-    });
+    var people = D.people.filter(function (p) { return p[0].toLowerCase().indexOf(low) >= 0; });
+    // A commentator's name misspelt ("calvn", "agustine"): any word of it
+    // within a slip or two.
+    if (!people.length && low.length >= 4 && !r) {
+      people = D.people.filter(function (p) {
+        return p[0].toLowerCase().split(/[\s.]+/).some(function (w) { return w.length >= 3 && distance(low, w, low.length > 6 ? 2 : 1) <= (low.length > 6 ? 2 : 1); });
+      }).map(function (p) { return [p[0], p[1], fmt(D.ui.meant, { name: p[0] })]; });
+    }
+    people.forEach(function (p) { if (out.length < 8) out.push({ href: p[1], title: p[0], note: p[2] }); });
     // Anything that isn't only a reference can be looked for in the
     // excerpts' own words (/search/, full_text below).
     if (!r && low.length >= 3 && D.ui.words) {
@@ -384,20 +436,6 @@
         a.addEventListener("mouseenter", function () { show(code); });
         a.addEventListener("focus", function () { show(code); });
       });
-    }
-
-    // Continue: the last verse read, as a pill in the bar (not on its own page).
-    var pill = document.querySelector("[data-resume-pill]");
-    if (pill) {
-      var at = null;
-      try { at = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
-      if (at && at.href && at.href.charAt(0) === "/" && at.href.split("#")[0] !== location.pathname) {
-        pill.href = at.href;
-        pill.querySelector("span").textContent = at.ref;
-        pill.title = fmt(pill.getAttribute("data-resume-pill"), { ref: at.ref });
-        pill.setAttribute("aria-label", pill.title);
-        pill.hidden = false;
-      }
     }
 
     // One tap between light and dark: the settings menu's own theme buttons
@@ -879,6 +917,172 @@
       });
     });
   });
+  // Verse and passage pages: compare two voices side by side (compare_dialog
+  // in scripts/build_site.py). The names are chips, two of them chosen; each
+  // column holds that voice's section as the page prints it, unfolded.
+  var cmp = document.querySelector("dialog.lg-cmp"), cmpOpen = document.querySelector(".lg-cmp-open");
+  var voicesHere = [].slice.call(document.querySelectorAll("section.lg-voice"));
+  if (cmp && cmpOpen && cmp.showModal && voicesHere.length > 1) {
+    var picked = [voicesHere[0].id, voicesHere[voicesHere.length - 1].id];
+    var picks = cmp.querySelector(".lg-cmp-picks"), cols = cmp.querySelector(".lg-cmp-cols");
+    var nameOf = function (sec) { var h = sec.querySelector("h3"); return h ? h.textContent.trim() : sec.id; };
+    voicesHere.forEach(function (sec) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "cx-chip"; b.setAttribute("data-voice", sec.id); b.textContent = nameOf(sec);
+      picks.appendChild(b);
+    });
+    var drawCompare = function () {
+      picks.querySelectorAll("[data-voice]").forEach(function (b) { b.setAttribute("aria-pressed", picked.indexOf(b.getAttribute("data-voice")) >= 0); });
+      cols.innerHTML = "";
+      picked.forEach(function (id) {
+        var sec = document.getElementById(id), col = sec.cloneNode(true);
+        col.removeAttribute("id");
+        col.className = "lg-cmp-col";
+        col.querySelectorAll("[id]").forEach(function (x) { x.removeAttribute("id"); });
+        col.querySelectorAll(".lg-xact, .lg-unfold, .lg-vq, .lg-vx-more").forEach(function (x) { x.remove(); });
+        col.querySelectorAll(".lg-folded").forEach(function (x) { x.classList.remove("lg-folded"); });
+        cols.appendChild(col);
+      });
+    };
+    picks.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-voice]"); if (!b) return;
+      var id = b.getAttribute("data-voice"), i = picked.indexOf(id);
+      if (i >= 0) { if (picked.length > 1) picked.splice(i, 1); }
+      else { picked.push(id); if (picked.length > 2) picked.shift(); }
+      drawCompare();
+    });
+    cmpOpen.hidden = false;
+    cmpOpen.addEventListener("click", function () { drawCompare(); cmp.showModal(); });
+    cmp.querySelector(".lg-cmp-close").addEventListener("click", function () { cmp.close(); });
+    cmp.addEventListener("click", function (e) { if (e.target === cmp) cmp.close(); });
+  }
+
+  // A sortable table (the most-discussed verses): a heading's button sorts
+  // by its column's data-sort, highest first, then lowest on a second press.
+  // "Show all" reveals the rows held back.
+  document.querySelectorAll("table.lg-sortable").forEach(function (table) {
+    var body = table.tBodies[0];
+    table.querySelectorAll("[data-sort-col]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var col = +b.getAttribute("data-sort-col"), th = b.parentNode;
+        var down = th.getAttribute("aria-sort") !== "descending";
+        table.querySelectorAll("th[aria-sort]").forEach(function (x) { x.removeAttribute("aria-sort"); });
+        th.setAttribute("aria-sort", down ? "descending" : "ascending");
+        var rows = [].slice.call(body.rows);
+        rows.sort(function (a, c) {
+          var x = +a.cells[col].getAttribute("data-sort"), y = +c.cells[col].getAttribute("data-sort");
+          return down ? y - x : x - y;
+        });
+        rows.forEach(function (r) { body.appendChild(r); });
+      });
+    });
+    var more = table.closest("section").querySelector("[data-show-rows]");
+    if (more) more.addEventListener("click", function () {
+      [].forEach.call(body.rows, function (r) { r.hidden = false; });
+      more.parentNode.remove();
+    });
+  });
+
+  // /readings/: each day's next date, the next of them named first, and a
+  // calendar to show only its readings (kept as logia-calendar). A day the
+  // chosen calendar gives no reading for is faded.
+  var readings = document.querySelectorAll(".lg-reading[data-dates]");
+  if (readings.length) {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var lang = document.documentElement.lang || undefined, soonest = null;
+    readings.forEach(function (li) {
+      var next = li.getAttribute("data-dates").split(" ").map(function (d) { var p = d.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); })
+        .filter(function (d) { return d >= today; })[0];
+      if (!next) return;
+      var label = li.querySelector(".lg-reading-date");
+      try { label.textContent = next.toLocaleDateString(lang, { weekday: "long", day: "numeric", month: "long", year: "numeric" }); label.hidden = false; }
+      catch (e) { /* no date formatting */ }
+      if (!soonest || next < soonest.date) soonest = { li: li, date: next, text: label.textContent };
+    });
+    var nextBox = document.querySelector(".lg-reading-next");
+    if (soonest && nextBox) {
+      var a = soonest.li.querySelector("a");
+      nextBox.innerHTML = fmt(esc(nextBox.getAttribute("data-next")), { name: '<a href="' + esc(a.getAttribute("href")) + '">' + esc(a.querySelector("b").textContent) + "</a>", date: esc(soonest.text) });
+      nextBox.hidden = false;
+      soonest.li.classList.add("lg-reading-soon");
+    }
+    var calPick = document.querySelector(".lg-cal-pick");
+    var setCal = function (cal) {
+      calPick.querySelectorAll("[data-cal]").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-cal") === cal); });
+      readings.forEach(function (li) {
+        var has = !cal || li.getAttribute("data-cals").split(" ").indexOf(cal) >= 0;
+        li.classList.toggle("lg-reading-off", !has);
+        li.querySelectorAll("[data-cal]").forEach(function (x) { x.hidden = !!cal && x.getAttribute("data-cal") !== cal; });
+      });
+      try { localStorage.setItem("logia-calendar", cal); } catch (e) { /* storage blocked */ }
+    };
+    if (calPick) {
+      calPick.addEventListener("click", function (e) { var b = e.target.closest("[data-cal]"); if (b) setCal(b.getAttribute("data-cal")); });
+      var savedCal = ""; try { savedCal = localStorage.getItem("logia-calendar") || ""; } catch (e) { /* storage blocked */ }
+      if (savedCal && calPick.querySelector('[data-cal="' + savedCal + '"]')) setCal(savedCal);
+    }
+  }
+
+  // Glossary words in the excerpts (verse, work and whole-text pages): the
+  // first use on the page of each word in /glossary.json is marked, and
+  // pressing it shows what it means, with a link to its entry. The excerpt's
+  // words are unchanged; only a button is put round the first use.
+  var texts = document.querySelectorAll(".lg-text, .lg-whole");
+  if (texts.length && window.fetch) {
+    fetch("/glossary.json").then(function (r) { return r.ok ? r.json() : null; }).then(function (G) {
+      if (!G) return;
+      var terms = G.terms.map(function (x, i) {
+        try { return { i: i, re: new RegExp(x.m, x.f), x: x }; } catch (e) { return null; }
+      }).filter(Boolean);
+      var left = terms.slice();
+      texts.forEach(function (box) {
+        if (!left.length) return;
+        var walker = document.createTreeWalker(box, NodeFilter.SHOW_TEXT, {
+          acceptNode: function (n) { return n.parentNode.closest("a, button, mark, sup, .lg-gloss-term") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }
+        });
+        var nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (node) {
+          for (var k = 0; k < left.length; k++) {
+            var m = left[k].re.exec(node.nodeValue);
+            if (!m || !m[0]) continue;
+            // A pattern may match the start of a word ("glorif"): take the whole word.
+            var end = m.index + m[0].length;
+            while (end < node.nodeValue.length && /[A-Za-z\u00C0-\u024F]/.test(node.nodeValue.charAt(end))) end++;
+            var after = node.splitText(m.index), rest = after.splitText(end - m.index);
+            var b = document.createElement("button");
+            b.type = "button"; b.className = "lg-gloss-term"; b.setAttribute("data-g", left[k].i); b.setAttribute("aria-expanded", "false");
+            b.title = left[k].x.t;
+            after.parentNode.replaceChild(b, after); b.appendChild(after);
+            left.splice(k, 1);
+            node = rest; k = -1;
+            if (!left.length) break;
+          }
+        });
+      });
+      var pop = null, from = null;
+      function closePop() { if (pop) { pop.remove(); pop = null; } if (from) { from.setAttribute("aria-expanded", "false"); from.focus(); from = null; } }
+      document.addEventListener("click", function (e) {
+        var b = e.target.closest(".lg-gloss-term");
+        if (pop && !e.target.closest(".lg-gloss-pop") && b !== from) closePop();
+        if (!b || b === from) { if (b === from) closePop(); return; }
+        var x = G.terms[+b.getAttribute("data-g")];
+        from = b; b.setAttribute("aria-expanded", "true");
+        pop = document.createElement("div");
+        pop.className = "lg-gloss-pop"; pop.setAttribute("role", "dialog"); pop.setAttribute("aria-label", x.t);
+        pop.innerHTML = "<b>" + esc(x.t) + "</b><p>" + esc(x.d) + '</p><p><a href="' + esc(x.h) + '">' + esc(G.ui.more) + "</a></p>" +
+          '<button type="button" class="lg-gloss-x" aria-label="' + esc(G.ui.close) + '">×</button>';
+        document.body.appendChild(pop);
+        var r = b.getBoundingClientRect(), w = Math.min(320, window.innerWidth - 24);
+        pop.style.width = w + "px";
+        pop.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.left + window.scrollX)) + "px";
+        pop.style.top = (r.bottom + window.scrollY + 8) + "px";
+        pop.querySelector(".lg-gloss-x").addEventListener("click", closePop);
+        pop.querySelector("a").focus();
+      });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && pop) closePop(); });
+    }).catch(function () { /* no glossary: the text stays as it is */ });
+  }
+
   // Verse pages: the strip of the chapter's verses scrolls to this one.
   var near = document.querySelector(".lg-near"), here = near && near.querySelector("[aria-current]");
   if (here) near.scrollLeft = here.offsetLeft - near.offsetLeft - (near.clientWidth - here.offsetWidth) / 2;
