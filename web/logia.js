@@ -180,6 +180,20 @@
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
   });
 
+  // The book page's chapter bar: say which end has more chapters out of
+  // view, so the CSS can fade that edge.
+  document.querySelectorAll(".lg-book-bar .chap-pills").forEach(function (row) {
+    var mark = function () {
+      var room = row.scrollWidth - row.clientWidth;
+      var left = row.scrollLeft > 4, right = row.scrollLeft < room - 4;
+      if (room <= 4) row.removeAttribute("data-more");
+      else row.setAttribute("data-more", left && right ? "both" : left ? "start" : "end");
+    };
+    row.addEventListener("scroll", mark, { passive: true });
+    window.addEventListener("resize", mark);
+    mark();
+  });
+
   // Chapters already read: a dot on their chip (web/reader.js keeps the list).
   var read = [];
   try { read = JSON.parse(localStorage.getItem("logia-read") || "[]"); } catch (e) { /* storage blocked */ }

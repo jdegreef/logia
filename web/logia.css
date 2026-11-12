@@ -1222,6 +1222,18 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .lg-book-bar-name { font-family: var(--display); font-weight: 600; font-size: 16px; flex: none; }
 .lg-book-bar .chap-pills { flex-wrap: nowrap; overflow-x: auto; padding: 3px 2px; scrollbar-width: thin; min-width: 0; }
 .lg-book-bar .chap { position: relative; min-width: 30px; height: 30px; font-size: 13px; flex: none; }
+/* A bar that scrolls fades at whichever end has more chapters to show
+   (logia.js sets data-more); a short book wraps onto two rows instead. */
+.lg-book-bar .chap-pills[data-more="end"] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+.lg-book-bar .chap-pills[data-more="start"] { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.lg-book-bar .chap-pills[data-more="both"] { -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+@media (min-width: 720px) {
+  .lg-book-bar-wrap .chap-pills { display: grid; grid-template-columns: repeat(var(--per-row), auto); justify-content: start;
+    overflow: visible; -webkit-mask-image: none; mask-image: none; }
+}
 .lg-toc-book a { align-items: center; }
 .lg-toc-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .lg-toc-facts { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
