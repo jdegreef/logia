@@ -249,6 +249,9 @@
     $("#ref").textContent = REF(v);
     $("#ph-text").textContent = verseText(v);
     $("#prev").disabled = v === FIRST; $("#next").disabled = v === LAST;
+    var pos = { n: DATA.verses.indexOf(v) + 1, total: DATA.verses.length };
+    $("#vpos").textContent = fmt(U.verse_of, pos);
+    $("#vpos").title = fmt(U.verse_of_label, pos);
     var voices = works.filter(function (w) { return entriesFor(w, v).length; });
     var eras = new Set(voices.map(function (w) { return w.era; }));
     $("#summary").textContent = voices.length
