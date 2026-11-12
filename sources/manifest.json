@@ -26150,6 +26150,150 @@
    "kind": "scan",
    "download_sha256": "566c4cf8c9d4c0f3bd0fbed390914dd28f7ab18def1279ce5241fc8208ce0030",
    "extract": "The scan's full text, as downloaded."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.i.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.i.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "d28db26c5df277cac01bc3071ec1926343dccb7c6f017d77e3c3a092758afda1",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.ii.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.ii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "f3cb81ecfe4c919bf78e329a260588364198e0e1a1b8a2d3680e3a0b63169617",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.iii.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.iii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "c62bc289c456b51445a2e1c53f8aa97e367e4ab224f9c42b7b1ae9d41fe8bb0e",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.iv.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.iv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "6269dfb5b4aa6894122503e0a0fe0f49a6c24a2f21a0642d7072250bd83baf9c",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.v.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.v.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "716c5939122856dbf0d292dec833f086a9805829e4bcc74a5ab9863d7ce370e7",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.vi.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.vi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "1b7fbfb18356b2477c43bcd540f18818ee3015425e0751b1a78a7c76026f2477",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.vii.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.vii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "9017a0e012bb1d5034a5c55126d3305b3f269a61565cfe9d0fbf614fc43460da",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.viii.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.viii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "35a1dad289bba5e8cecca73b1cb0102dcfa8fb025eb5d25054ac6d9baefe0c27",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.ix.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.ix.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "d8464e70b36f8a084c411a0a5d90dca38a82fb2c7bc8187702833d8ac8fa7f9b",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.x.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.x.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "041d54af0776eb7454170da7ee68881200c9828a44609cea3d676a4c6e3ad619",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.xi.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.xi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "ef52b788c13ce2ac8f41897d61c05d73dc6857fabc671872af04e0350e82a299",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.xii.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.xii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "73e6a925180e7d590e5d3b9d9217f3244f3f0ec567e9ddf3e8e85a1b4fe9d123",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.xiii.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.xiii.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "d26ca7b1b2b51cdcf26c29f74313a7a1ac0c9d10756c0a3a3ade6be8da2bfd8a",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.xiv.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.xiv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "65b1566ac2fc06a0f487aaa72e8e6adece2c1a3fc465799e8f3f722938f11f77",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.xv.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.xv.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "1cd0f97e355a2038a712fb5904d18fb2c4b25ed1469c70cbc1e5f1ce971d4abf",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
+  },
+  {
+   "path": "sources/catena-mark/catena2.iii.xvi.html",
+   "work": "catena-mark",
+   "url": "https://www.ccel.org/ccel/aquinas/catena2.iii.xvi.html",
+   "retrieved": "2026-11-12",
+   "kind": "digital",
+   "download_sha256": "21df77e0349bd9aacdf16434e16701dd6d44b0212f18b4b3488b7ca2d505f33a",
+   "extract": "The page's book-content block (CCEL site chrome left out)."
   }
  ]
 }
