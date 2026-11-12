@@ -152,6 +152,42 @@ rarer words both share. `library/quotations/<work>/<BOOK>.json`:
 The reader shows both directions: under a Catena excerpt, where each
 quotation comes from; under the quoted excerpt, that the Catena quotes it.
 
+## Names of other commentators
+
+`library/mentions/<work>/<BOOK>.json` lists where an excerpt prints the name
+of another commentator in the library:
+
+```json
+{"in": "calvin.JHN.1.16.2", "at": 37, "text": "Augustine", "author": "augustine", "status": "detected"}
+```
+
+The forms are listed in `NAMED` in `scripts/find_refs.py`: only names that
+point to one person ("Augustine", "Austin", "a Lapide", "Gregory the
+Great"), never a bare "Cyril", "Gregory" or "Henry". A catena's attributions
+are quotations, so catenas are left out. Under the excerpt the reader shows
+"Names Augustine", linked to his page, and to his own words on the same verse
+where Logia holds them. Status works as for citations.
+
+## Kinds of link
+
+Every link between texts is one of these, and each is something a reader
+can check on the page, whatever church they belong to:
+
+| Kind | Meaning | Where it is kept |
+|---|---|---|
+| comments on | the excerpt is printed under this verse | the excerpt's `start` and `end` |
+| cites | it prints a Scripture reference | `library/citations/` |
+| quotes | a catena reproduces a Father's words | `library/quotations/` |
+| names | it prints another commentator's name | `library/mentions/` |
+| cross-reference | verse to verse, from OpenBible.info | `bible/owb/` |
+
+There is no "refutes", "agrees with" or "corrects": each is a judgement of
+who is right, and Logia takes no side. Where Calvin names Augustine's reading
+of John 1:16 as "piously and judiciously said" but beside the point, the
+link says only that he names Augustine; the reader reads both. An "alludes
+to" link, for a verse echoed but not cited, would need a person to review
+each one before it is shown.
+
 ## How well the references are found
 
 `scripts/score_refs.py` measures both finders and keeps the figures in

@@ -381,6 +381,10 @@
     }).concat((e.quotedIn || []).map(function (q) {
       var label = esc(fmt(U.quoted_by, { name: q.author, title: q.title, ref: q.ref }));
       return "<div>" + (q.href ? '<a href="' + esc(q.href) + '">' + label + "</a>" : label) + unchecked(q) + "</div>";
+    })).concat((e.names || []).map(function (n) {
+      // Another commentator this excerpt names: a fact of the page, not a judgement of agreement.
+      return '<div title="' + esc(U.names_title) + '"><a href="' + esc(n.url) + '">' + esc(fmt(U.names, { name: n.author })) + "</a>" +
+        (n.href ? ' · <a href="' + esc(n.href) + '">' + esc(fmt(U.names_here, { name: n.author, ref: n.ref })) + "</a>" : "") + "</div>";
     }));
     return rows.length ? '<div class="cx-qs">' + rows.join("") + "</div>" : "";
   }

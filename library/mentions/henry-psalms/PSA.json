@@ -1,0 +1,41 @@
+{
+ "work": "henry-psalms",
+ "book": "PSA",
+ "mentions": [
+  {
+   "in": "henry-psalms.PSA.48.13-14.2",
+   "at": 645,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "henry-psalms.PSA.79.3.1",
+   "at": 1452,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "henry-psalms.PSA.96.10-13.1",
+   "at": 791,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "henry-psalms.PSA.109.6-20.1",
+   "at": 550,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "henry-psalms.PSA.115.16.1",
+   "at": 1038,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  }
+ ]
+}

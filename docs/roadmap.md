@@ -19,6 +19,17 @@ Job, the Psalms, Proverbs, Ecclesiastes, the Song of Songs, Matthew, Mark,
 Luke, John, Romans and Galatians, 46,779 excerpts, a chapter reader with
 Greek words and cross-references, and source checking.
 
+From the Catena Commons plan (November 2026): the reference finders are
+scored against CCEL's editors and the Catena's verse headings
+(`scripts/score_refs.py`, `docs/scores.json`); links have named kinds,
+with "names" for a commentator naming another and no kind that judges who
+is right (docs/references.md); pages on passages the churches read
+differently are published only when their commentators come from enough
+traditions (`/differ/`, `scripts/differ.py`); the creeds, councils and
+confessions are a layer of their own, apart from the commentary
+(`/creeds/`); and the Fathers' works take their Clavis Patrum numbers from
+Wikidata where it has them (`scripts/fetch_wikidata.py`).
+
 ## Phase 1: the data model
 
 *Progress:* items 1–3 have a first version (docs/references.md). Works

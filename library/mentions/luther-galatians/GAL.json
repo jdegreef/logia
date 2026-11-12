@@ -1,0 +1,13 @@
+{
+ "work": "luther-galatians",
+ "book": "GAL",
+ "mentions": [
+  {
+   "in": "luther-galatians.GAL.6.1.2",
+   "at": 240,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

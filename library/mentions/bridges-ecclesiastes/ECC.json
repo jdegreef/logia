@@ -1,0 +1,111 @@
+{
+ "work": "bridges-ecclesiastes",
+ "book": "ECC",
+ "mentions": [
+  {
+   "in": "bridges-ecclesiastes.ECC.1.9-10.2",
+   "at": 1362,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.4-11.3",
+   "at": 2025,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.12.2",
+   "at": 739,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.2.16.3",
+   "at": 528,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.3.15.1",
+   "at": 746,
+   "text": "Wesley",
+   "author": "wesley",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.6.9.2",
+   "at": 1189,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.23-25.1",
+   "at": 941,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.27-28.1",
+   "at": 782,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.2",
+   "at": 984,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.7.29.4",
+   "at": 496,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.11.1",
+   "at": 1323,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.2",
+   "at": 574,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.10.12-15.2",
+   "at": 945,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.4",
+   "at": 57,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-ecclesiastes.ECC.12.14.4",
+   "at": 726,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  }
+ ]
+}

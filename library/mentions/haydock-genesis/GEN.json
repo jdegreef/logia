@@ -1,0 +1,195 @@
+{
+ "work": "haydock-genesis",
+ "book": "GEN",
+ "mentions": [
+  {
+   "in": "haydock-genesis.GEN.1.4.1",
+   "at": 290,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.1.1",
+   "at": 180,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.10.1",
+   "at": 375,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.10.1",
+   "at": 424,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.3.15.1",
+   "at": 275,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.4.7.1",
+   "at": 1067,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.4.7.1",
+   "at": 1556,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.4.7.1",
+   "at": 1599,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.4.23.1",
+   "at": 499,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.5.31.1",
+   "at": 381,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.6.15.1",
+   "at": 727,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.7.2.1",
+   "at": 740,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.7.24.1",
+   "at": 1186,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.13.15.1",
+   "at": 215,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.16.3.1",
+   "at": 671,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.25.21.1",
+   "at": 79,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.19.1",
+   "at": 39,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.19.1",
+   "at": 696,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.27.35.1",
+   "at": 78,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.1.1",
+   "at": 339,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.30.42.1",
+   "at": 514,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.43.11.1",
+   "at": 164,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.45.5.1",
+   "at": 422,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.46.26.1",
+   "at": 240,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.16.1",
+   "at": 273,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.16.1",
+   "at": 301,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-genesis.GEN.48.16.1",
+   "at": 483,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  }
+ ]
+}

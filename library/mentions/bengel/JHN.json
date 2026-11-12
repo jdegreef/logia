@@ -1,0 +1,132 @@
+{
+ "work": "bengel",
+ "book": "JHN",
+ "mentions": [
+  {
+   "in": "bengel.JHN.1.28.1",
+   "at": 215,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.4.42.1",
+   "at": 74,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.4.42.1",
+   "at": 980,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.5.1.1",
+   "at": 85,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.5.1.1",
+   "at": 207,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.5.1.1",
+   "at": 1145,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.8.24.1",
+   "at": 1261,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.8.58.2",
+   "at": 707,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.8.59.1",
+   "at": 765,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.9.18-21.1",
+   "at": 586,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.11.30-31.1",
+   "at": 142,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.14.1.1",
+   "at": 170,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.14.6.1",
+   "at": 49,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.14.9.1",
+   "at": 967,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.14.9.1",
+   "at": 1339,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.18.23.1",
+   "at": 39,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.21.15.1",
+   "at": 247,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bengel.JHN.21.16.2",
+   "at": 141,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  }
+ ]
+}

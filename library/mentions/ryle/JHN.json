@@ -1,0 +1,2827 @@
+{
+ "work": "ryle",
+ "book": "JHN",
+ "mentions": [
+  {
+   "in": "ryle.JHN.1.1.4",
+   "at": 625,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.4.1",
+   "at": 325,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.4.2",
+   "at": 15,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.9.2",
+   "at": 15,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.9.2",
+   "at": 457,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.10.1",
+   "at": 620,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.10.1",
+   "at": 628,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.10.1",
+   "at": 640,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.14.4",
+   "at": 994,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.16.2",
+   "at": 204,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.20.1",
+   "at": 324,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.20.1",
+   "at": 407,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.21.3",
+   "at": 53,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.21.3",
+   "at": 185,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.24.1",
+   "at": 297,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.25.1",
+   "at": 332,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.39.2",
+   "at": 310,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.1.40.1",
+   "at": 310,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.2.4.1",
+   "at": 346,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.2.4.2",
+   "at": 81,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.3.3.2",
+   "at": 355,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.3.3.2",
+   "at": 414,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.3.9-21.1",
+   "at": 347,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.3.14.2",
+   "at": 748,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.3.27.1",
+   "at": 405,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.3.27.1",
+   "at": 461,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.9.2",
+   "at": 237,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.10.3",
+   "at": 215,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.10.3",
+   "at": 227,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.10.3",
+   "at": 258,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.11.1",
+   "at": 413,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.16.1",
+   "at": 702,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.27.3",
+   "at": 232,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.29.1",
+   "at": 160,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.30.1",
+   "at": 330,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.33.1",
+   "at": 341,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.35.1",
+   "at": 66,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.35.3",
+   "at": 237,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.38.2",
+   "at": 832,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.38.2",
+   "at": 864,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.38.2",
+   "at": 1021,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.38.2",
+   "at": 1106,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.42.1",
+   "at": 119,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.44.2",
+   "at": 740,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.46.1",
+   "at": 637,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.48.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.50.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.4.54.1",
+   "at": 507,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.4.3",
+   "at": 1203,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.5.1",
+   "at": 1299,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.5.1",
+   "at": 1311,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.5.1",
+   "at": 1606,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.9.1",
+   "at": 2,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.14.1",
+   "at": 276,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.17.3",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.18.2",
+   "at": 1107,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.20.2",
+   "at": 1210,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.20.2",
+   "at": 1413,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.20.2",
+   "at": 1427,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.28-29.3",
+   "at": 792,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.30.1",
+   "at": 1199,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.30.2",
+   "at": 392,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.30.3",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.32.1",
+   "at": 78,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.32.1",
+   "at": 282,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.32.1",
+   "at": 524,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.35.1",
+   "at": 568,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.37.1",
+   "at": 138,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.37.1",
+   "at": 291,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.37.1",
+   "at": 899,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.39.1",
+   "at": 169,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.39.1",
+   "at": 379,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.39.1",
+   "at": 391,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.39.1",
+   "at": 426,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.39.1",
+   "at": 434,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.39.1",
+   "at": 572,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.39.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.5.43.2",
+   "at": 396,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.5.2",
+   "at": 513,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.19.1",
+   "at": 1065,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.26.1",
+   "at": 1324,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.33.1",
+   "at": 279,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.37.1",
+   "at": 711,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.40.3",
+   "at": 0,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.53.3",
+   "at": 621,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.53.3",
+   "at": 650,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.53.3",
+   "at": 1694,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.57.2",
+   "at": 133,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.62.2",
+   "at": 401,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.63.2",
+   "at": 533,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.63.2",
+   "at": 1182,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.6.63.2",
+   "at": 1251,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.3.1",
+   "at": 408,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.3.1",
+   "at": 442,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.7.2",
+   "at": 1444,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.7.2",
+   "at": 1545,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.8.1",
+   "at": 941,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.8.1",
+   "at": 1178,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.16.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.28.2",
+   "at": 672,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.28.2",
+   "at": 934,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.28.2",
+   "at": 1141,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.28.2",
+   "at": 1183,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.28.3",
+   "at": 1054,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.30.1",
+   "at": 1355,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.34.1",
+   "at": 1311,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.34.2",
+   "at": 77,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.34.2",
+   "at": 821,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.35.2",
+   "at": 816,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.37.1",
+   "at": 684,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.38.1",
+   "at": 752,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.38.2",
+   "at": 1007,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.38.3",
+   "at": 1372,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.49.1",
+   "at": 530,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.7.53.1",
+   "at": 1300,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.6.1",
+   "at": 1190,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.6.2",
+   "at": 1520,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.6.2",
+   "at": 1566,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.6.3",
+   "at": 280,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.6.3",
+   "at": 589,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.11.1",
+   "at": 1425,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.14.1",
+   "at": 1435,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.15.1",
+   "at": 586,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.18.1",
+   "at": 1093,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.19.1",
+   "at": 152,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.20.1",
+   "at": 296,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.21.1",
+   "at": 1010,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.21.3",
+   "at": 14,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.22.1",
+   "at": 704,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.24.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.25.1",
+   "at": 782,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.25.1",
+   "at": 794,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.25.1",
+   "at": 1364,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.28.1",
+   "at": 974,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.28.1",
+   "at": 1453,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.28.2",
+   "at": 25,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.28.3",
+   "at": 653,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.29.1",
+   "at": 814,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.29.2",
+   "at": 0,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.30.1",
+   "at": 1143,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.30.1",
+   "at": 1440,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.32.1",
+   "at": 506,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.32.1",
+   "at": 623,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.32.2",
+   "at": 866,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.35.3",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.36.1",
+   "at": 1238,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.41.1",
+   "at": 1178,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.43.2",
+   "at": 220,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.44.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.44.2",
+   "at": 939,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.51.3",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.53.1",
+   "at": 437,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.56.2",
+   "at": 933,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.56.2",
+   "at": 1267,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.58.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.58.2",
+   "at": 263,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.8.59.3",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.1.3",
+   "at": 1099,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.2.2",
+   "at": 940,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.4.2",
+   "at": 1106,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.7.2",
+   "at": 941,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.7.2",
+   "at": 956,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.9.1",
+   "at": 489,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.16.2",
+   "at": 475,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.17.1",
+   "at": 774,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.19.1",
+   "at": 372,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.23.1",
+   "at": 688,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.23.1",
+   "at": 1156,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.27.1",
+   "at": 1075,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.32-33.1",
+   "at": 861,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.34.2",
+   "at": 540,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.35.2",
+   "at": 422,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.36.1",
+   "at": 375,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.38.1",
+   "at": 886,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.39.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.9.40.2",
+   "at": 659,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.1.2",
+   "at": 0,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.1.3",
+   "at": 822,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.1.3",
+   "at": 1049,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.3.2",
+   "at": 629,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.3.2",
+   "at": 1062,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.3.2",
+   "at": 1369,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.8.1",
+   "at": 1196,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.8.2",
+   "at": 0,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.8.2",
+   "at": 357,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.9.2",
+   "at": 295,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.10.3",
+   "at": 1184,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.12-13.3",
+   "at": 636,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.12-13.3",
+   "at": 1331,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.12-13.3",
+   "at": 1662,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.16.1",
+   "at": 787,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.18.3",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.22.2",
+   "at": 884,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.27.2",
+   "at": 606,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.29.1",
+   "at": 1337,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.30.1",
+   "at": 1237,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.30.2",
+   "at": 819,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.30.3",
+   "at": 30,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.30.3",
+   "at": 182,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.31.1",
+   "at": 1301,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.35.1",
+   "at": 438,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.36.2",
+   "at": 0,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.38.1",
+   "at": 1206,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.10.42.1",
+   "at": 843,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.2.1",
+   "at": 648,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.2.1",
+   "at": 660,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.2.1",
+   "at": 936,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.2.2",
+   "at": 13,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.2.2",
+   "at": 72,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.2.3",
+   "at": 725,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.4.2",
+   "at": 310,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.4.2",
+   "at": 486,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.6.2",
+   "at": 586,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.6.2",
+   "at": 811,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.9.2",
+   "at": 1484,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.15.3",
+   "at": 1176,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.16.2",
+   "at": 248,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.19.2",
+   "at": 1049,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.22.1",
+   "at": 1050,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.25.1",
+   "at": 146,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.25.2",
+   "at": 53,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.27.1",
+   "at": 535,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.27.2",
+   "at": 1569,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.30.1",
+   "at": 577,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.32.1",
+   "at": 1448,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.33.2",
+   "at": 1132,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.35.2",
+   "at": 944,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.38.1",
+   "at": 738,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.44.1",
+   "at": 1274,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.44.2",
+   "at": 770,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.48.3",
+   "at": 1561,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.49.2",
+   "at": 380,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.11.50.2",
+   "at": 829,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.2.2",
+   "at": 342,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.3.2",
+   "at": 311,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.3.2",
+   "at": 1499,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.3.3",
+   "at": 341,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.4.2",
+   "at": 343,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.4.2",
+   "at": 507,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.7.1",
+   "at": 912,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.7.2",
+   "at": 219,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.8.2",
+   "at": 1298,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.13.2",
+   "at": 94,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.16.2",
+   "at": 1279,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.19.1",
+   "at": 1062,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.19.1",
+   "at": 1229,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.21.3",
+   "at": 760,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.25.2",
+   "at": 291,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.30.1",
+   "at": 627,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.31.1",
+   "at": 862,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.31.1",
+   "at": 1063,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.31.1",
+   "at": 1298,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.31.3",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.36.2",
+   "at": 757,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.38.1",
+   "at": 328,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.38.1",
+   "at": 467,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.38.2",
+   "at": 641,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.39.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.39.2",
+   "at": 241,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.40.3",
+   "at": 324,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.45.1",
+   "at": 1392,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.45.2",
+   "at": 453,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.12.49.3",
+   "at": 400,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.1.2",
+   "at": 663,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.3.1",
+   "at": 722,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.3.1",
+   "at": 734,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.3.1",
+   "at": 1668,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.6.1",
+   "at": 176,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.6.1",
+   "at": 402,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.6.1",
+   "at": 447,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.10.1",
+   "at": 1447,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.18.1",
+   "at": 511,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.21.1",
+   "at": 1331,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.26.2",
+   "at": 311,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.27.2",
+   "at": 989,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.27.2",
+   "at": 1193,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.27.2",
+   "at": 1269,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.30.1",
+   "at": 1139,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.30.1",
+   "at": 1150,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.30.1",
+   "at": 1204,
+   "text": "Aquinas",
+   "author": "aquinas",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.30.1",
+   "at": 1229,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.30.1",
+   "at": 1274,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.31.1",
+   "at": 313,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.31.2",
+   "at": 822,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.32.2",
+   "at": 847,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.13.34.2",
+   "at": 15,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.1.3",
+   "at": 197,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.1.3",
+   "at": 680,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.2.1",
+   "at": 1296,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.2.1",
+   "at": 1308,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.18.1",
+   "at": 991,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.18.1",
+   "at": 1243,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.20.1",
+   "at": 39,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.20.1",
+   "at": 403,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.27.1",
+   "at": 273,
+   "text": "Matthew Henry",
+   "author": "henry",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.14.31.1",
+   "at": 1073,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.15.7.2",
+   "at": 456,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.15.7-11.1",
+   "at": 1056,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.15.16.2",
+   "at": 0,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.15.16.2",
+   "at": 292,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.15.19.1",
+   "at": 743,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.15.20.1",
+   "at": 1191,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.2.1",
+   "at": 1021,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.7.2",
+   "at": 846,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.16.1",
+   "at": 268,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.16.1",
+   "at": 517,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.20.1",
+   "at": 332,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.20.2",
+   "at": 22,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.23.1",
+   "at": 92,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.23.1",
+   "at": 785,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.28.1",
+   "at": 646,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.16.33.2",
+   "at": 736,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.1.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.1.2",
+   "at": 252,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.1.3",
+   "at": 1683,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.2.1",
+   "at": 1309,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.2.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.3.3",
+   "at": 254,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.4.1",
+   "at": 688,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.9.2",
+   "at": 9,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.17.2",
+   "at": 707,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.17.3",
+   "at": 1578,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.19.1",
+   "at": 154,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.22.1",
+   "at": 360,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.22.1",
+   "at": 495,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.17.22.1",
+   "at": 1116,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.1.3",
+   "at": 1049,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.2.1",
+   "at": 667,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.3.1",
+   "at": 1654,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.5.1",
+   "at": 769,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.6.2",
+   "at": 226,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.8.1",
+   "at": 1465,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.9.1",
+   "at": 1474,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.9.2",
+   "at": 0,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.9.2",
+   "at": 1232,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.11.3",
+   "at": 981,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.13.2",
+   "at": 745,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.13.2",
+   "at": 958,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.13.2",
+   "at": 1343,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.14.1",
+   "at": 444,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.15.2",
+   "at": 274,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.15.2",
+   "at": 326,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.17.3",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.17.3",
+   "at": 628,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.19.1",
+   "at": 1339,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.19.1",
+   "at": 1350,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.20.1",
+   "at": 974,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.21.1",
+   "at": 1474,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.23.1",
+   "at": 737,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.24.3",
+   "at": 1423,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.27.1",
+   "at": 170,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.31.2",
+   "at": 570,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.32.1",
+   "at": 642,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.32.1",
+   "at": 653,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.36.3",
+   "at": 792,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.38.2",
+   "at": 742,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.18.40.3",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.1.1",
+   "at": 1431,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.1.1",
+   "at": 1702,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.11.2",
+   "at": 858,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.14.2",
+   "at": 492,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.14.2",
+   "at": 854,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.21.2",
+   "at": 1083,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.22.1",
+   "at": 1103,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.23.3",
+   "at": 614,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.23.3",
+   "at": 965,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.24.2",
+   "at": 203,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.24.2",
+   "at": 509,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.25.3",
+   "at": 429,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.30.3",
+   "at": 1274,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.34.2",
+   "at": 239,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.34.2",
+   "at": 786,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.19.39.2",
+   "at": 1381,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.7.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.7.2",
+   "at": 1140,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.9.1",
+   "at": 446,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.12.3",
+   "at": 1348,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.14.1",
+   "at": 1325,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.15.3",
+   "at": 826,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.16.2",
+   "at": 985,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.19.3",
+   "at": 136,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.19.3",
+   "at": 347,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.19.3",
+   "at": 366,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.20.1",
+   "at": 1322,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.21.2",
+   "at": 0,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.24.1",
+   "at": 707,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.24.1",
+   "at": 870,
+   "text": "Bellarmin",
+   "author": "bellarmine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.28.3",
+   "at": 168,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.30-31.2",
+   "at": 19,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.20.30-31.3",
+   "at": 15,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.1.2",
+   "at": 0,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.2.1",
+   "at": 1606,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.3.1",
+   "at": 1013,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.3.1",
+   "at": 1213,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.3.2",
+   "at": 0,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.7.3",
+   "at": 1233,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.7.3",
+   "at": 1333,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.12.2",
+   "at": 858,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.13.1",
+   "at": 1228,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.14.1",
+   "at": 822,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.14.2",
+   "at": 792,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.14.2",
+   "at": 814,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "ryle.JHN.21.16.1",
+   "at": 960,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  }
+ ]
+}

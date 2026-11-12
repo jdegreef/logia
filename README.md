@@ -17,9 +17,13 @@ Christian commentaries.
 | `library/comments/<work>/<BOOK>.json` | Its excerpts on one book, each tied to a verse range (`JHN.1.6`–`JHN.1.8`) and, in a work with its own divisions, to its place in the work (Homily 2, section 8) |
 | `library/citations/<work>/<BOOK>.json` | The Scripture each excerpt cites, found by `scripts/find_refs.py` (see `docs/references.md`) |
 | `library/quotations/<work>/<BOOK>.json` | The Catena's quotations of the Fathers, traced to the passages of their works in the library |
+| `library/mentions/<work>/<BOOK>.json` | Where an excerpt names another commentator in the library ("as Augustine explains"), found by `scripts/find_refs.py` |
 | `library/texts/<work>/<n>.json` | Whole homilies and tractates, copied paragraph by paragraph from their CCEL pages by `scripts/extract_texts.py` |
 | `library/corrections/<work>.json` | Scan misreadings fixed at build time (scanned sources only) |
 | `library/guides/<lang>/<guide>.json` | Logia's own guides (where the traditions differ, the glossary, how to study a book): short framing notes, never commentary, each `ai_draft` until a named person reviews it; the commentators' words on its pages come from the excerpts |
+| `library/differ/<id>.json` | A passage the churches read differently: Logia's short framing note (`ai_draft` until reviewed), or a pointer to a guide's; the page shows every commentator on the passage and is published only when they come from enough traditions (`scripts/differ.py`, `library/families.json`) |
+| `library/creeds/<id>.json` | Creeds, conciliar decrees and confessions, copied section by section from CCEL by `scripts/extract_creeds.py`, with the Scripture each section cites |
+| `library/identifiers.json` | Each commentator's, and each Father's work's, Wikidata item, Wikipedia article and Clavis Patrum number, fetched by `scripts/fetch_wikidata.py`, never typed |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
 | `sources/` | The source text each excerpt was copied from, and `manifest.json` listing where each came from |
 | `bible/owb/` | The Bible text: every Open Word Bible chapter, imported at a pinned commit |
@@ -64,6 +68,8 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 | `/commentators/`, `/commentators/<author>/` | Every commentator by era; one commentator's biography, works and comments |
 | `/works/<work>/` | One commentary: edition, rights, source, and every excerpt front to back |
 | `/works/<work>/<n>/` | A whole homily or tractate, read straight through, marking the passages Logia sets beside a verse |
+| `/differ/`, `/differ/<id>/` | Passages the churches read differently: a short note on how, then every commentator on the passage, in the order they died |
+| `/creeds/`, `/creeds/<id>/` | Creeds, councils and confessions, each whole, with their Scripture linked; verse pages list the ones that cite the verse |
 | `/about/` | What Logia is and how excerpts are checked |
 
 It looks and works like [openwordbible.org](https://openwordbible.org), its

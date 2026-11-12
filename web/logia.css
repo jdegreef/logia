@@ -1366,3 +1366,21 @@ footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent
 .cx-nav .cx-listen[hidden] { display: none; }
 .cx-nav .cx-listen[aria-pressed="true"] { border-color: var(--lg-gold-ink); color: var(--lg-gold-ink); }
 .cx-card.cx-speaking { background: color-mix(in srgb, var(--gold) 9%, transparent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 9%, transparent); border-radius: 2px; }
+
+/* Where the churches differ (/differ/): the traditions present, then every voice */
+.lg-differ-families { list-style: none; padding: 0; margin: 12px 0 18px; display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-differ-families li { border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); padding: 4px 10px; font-size: 14px; }
+.lg-differ-families b { font-weight: 600; margin-right: 4px; }
+.lg-differ-voices { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.lg-differ-voice { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); padding: 14px 16px; min-width: 0; }
+.lg-differ-voice p { margin: 0 0 6px; }
+.lg-differ-voice blockquote { margin: 8px 0; font-family: var(--read-font); }
+.lg-differ-who b a { color: inherit; }
+.lg-differ-index { padding-left: 20px; }
+.lg-differ-index li { margin-bottom: 8px; }
+.lg-differ .lg-block .prose, .lg-differ > .prose { padding-top: 0; }
+/* Creeds and councils (/creeds/) */
+.lg-creed-list { padding-left: 20px; }
+.lg-creed-list li { margin-bottom: 8px; }
+.lg-creed-sec { margin: 0 0 18px; scroll-margin-top: calc(var(--header-h) + 16px); }
+.lg-creed-sec .lg-creed-label { font-size: 17px; font-family: var(--sans); font-weight: 600; margin: 24px 0 6px; }

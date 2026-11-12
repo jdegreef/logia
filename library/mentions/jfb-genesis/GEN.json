@@ -1,0 +1,62 @@
+{
+ "work": "jfb-genesis",
+ "book": "GEN",
+ "mentions": [
+  {
+   "in": "jfb-genesis.GEN.3.12.1",
+   "at": 39,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-genesis.GEN.3.15.1",
+   "at": 99,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-genesis.GEN.4.1.1",
+   "at": 505,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-genesis.GEN.21.1.1",
+   "at": 303,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-genesis.GEN.32.24-25.1",
+   "at": 809,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-genesis.GEN.35.6.1",
+   "at": 153,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-genesis.GEN.40.4.1",
+   "at": 569,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-genesis.GEN.49.10.1",
+   "at": 336,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  }
+ ]
+}

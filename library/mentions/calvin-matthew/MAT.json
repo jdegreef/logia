@@ -1,0 +1,118 @@
+{
+ "work": "calvin-matthew",
+ "book": "MAT",
+ "mentions": [
+  {
+   "in": "calvin-matthew.MAT.2.1.3",
+   "at": 737,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.1.3",
+   "at": 771,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.2.23.2",
+   "at": 119,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.39.2",
+   "at": 198,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.5.39.2",
+   "at": 467,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.13.1",
+   "at": 309,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.6.13.3",
+   "at": 172,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.7.1.3",
+   "at": 1057,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.8.28-34.1",
+   "at": 639,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.9.15.1",
+   "at": 306,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.10.23.2",
+   "at": 609,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.57.1",
+   "at": 520,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.13.58.1",
+   "at": 467,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.16.19.4",
+   "at": 1247,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.23.2.4",
+   "at": 706,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "calvin-matthew.MAT.26.26.7",
+   "at": 485,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

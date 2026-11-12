@@ -13,6 +13,7 @@ import os
 import re
 import sys
 
+import differ
 import scripture
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -199,6 +200,30 @@ def main():
             if x["status"] not in CITATION_STATUSES:
                 say(f"{where}: status {x['status']!r}")
 
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "mentions", "*", "*.json"))):
+        m = load(p)
+        name = os.path.relpath(p, ROOT)
+        work = m.get("work")
+        if os.path.basename(os.path.dirname(p)) != work or os.path.basename(p) != f"{m.get('book')}.json":
+            say(f"{name}: file path does not match work {work!r} and book {m.get('book')!r}")
+        for x in m.get("mentions", []):
+            where = f"{name}: {x.get('in')} {x.get('text')!r}"
+            if set(x) != {"in", "at", "text", "author", "status"}:
+                say(f"{where}: fields {sorted(x)}, not ['at', 'author', 'in', 'status', 'text']")
+                continue
+            if x["in"] not in texts or texts[x["in"]][0] != work:
+                say(f"{where}: {x['in']!r} is not an excerpt of {work}")
+                continue
+            text = texts[x["in"]][1]
+            for a, b in fixes.get(work, []):
+                text = text.replace(a, b)
+            if text[x["at"]:x["at"] + len(x["text"])] != x["text"]:
+                say(f"{where}: is not at {x['at']} in the excerpt any more; run scripts/find_refs.py")
+            if x["author"] not in authors:
+                say(f"{where}: {x['author']!r} is not a commentator in library/authors/")
+            if x["status"] not in CITATION_STATUSES:
+                say(f"{where}: status {x['status']!r}")
+
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "quotations", "*", "*.json"))):
         q = load(p)
         name = os.path.relpath(p, ROOT)
@@ -267,6 +292,36 @@ def main():
                 say(f"{name}: {e.get('of')!r} is not an excerpt id")
             if e.get("status") not in STATUSES:
                 say(f"{name}: {e.get('of')}: status {e.get('status')!r}")
+
+    # Where the churches differ (library/differ/): each page fits, and is fair
+    # enough to publish or is held back with what it lacks.
+    fam = differ.families()
+    for a, x in authors.items():
+        if not differ.family(x.get("tradition", ""), fam):
+            say(f"library/authors/{a}.json: tradition {x.get('tradition')!r} is in no family of library/families.json")
+    rows = [(texts[i][0], x["start"], x["end"], i) for i, x in entries.items()
+            if scripture.parse(x.get("start")) and scripture.parse(x.get("end"))]
+    held = []
+    for pg in differ.pages():
+        name = f"library/differ/{pg['id']}.json"
+        if "missing" in pg:
+            say(f"{name}: {pg['missing']}")
+            continue
+        for k in ("start", "end", "focus"):
+            if not scripture.parse(pg.get(k)):
+                say(f"{name}: {k} {pg.get(k)!r} is not a verse")
+        if pg.get("status") not in STATUSES or not pg.get("note") or not pg.get("title"):
+            say(f"{name}: needs a title, a note and a status")
+            continue
+        if pg["status"] == "reviewed" and not pg.get("reviewed_by"):
+            say(f"{name}: reviewed, but by no one named")
+        on = differ.works_on(pg, rows)
+        present = {differ.family(authors[works[w]["author"]]["tradition"], fam) for w in on} - {None}
+        fair, missing = differ.balance(present, fam)
+        if not fair:
+            held.append(f"{pg['id']} ({len(on)} works; lacks {', '.join(missing)})")
+    if held:
+        print("held back, not yet fair enough to publish: " + "; ".join(held))
 
     for a in authors:
         if not any(w["author"] == a for w in works.values()):

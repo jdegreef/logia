@@ -32,6 +32,11 @@ Two things are read from the sources, never written by hand:
   scripts/extract_texts.py first when texts change) needs a smaller lead. Like a
   citation it stays "detected" until a person checks it, for instance
   against the margin note printed beside it ("Aug. in Joan. tract. i. c. 13").
+- **Names**, in library/mentions/<work>/<BOOK>.json: where an excerpt names
+  another commentator in the library ("as Augustine explains", "Calvin and
+  Elsner"), by the forms in NAMED. It records that the name is printed, not
+  whether the writer agrees with them. A catena's attributions are its
+  quotations, so catenas are left out, and a writer naming himself is too.
 """
 import argparse
 import glob
@@ -248,7 +253,8 @@ MORE = re.compile(rf"\s?(?P<sep>[;,])\s?(?P<ch>{_CH})[.,:]\s?(?P<vs>{_VERSES})")
 BARE = re.compile(rf"\b(?P<lead>[Cc]omp\.|[Cc]f\.|[Cc]h\.|[Cc]hap\.|c\.)\s(?P<ch>[ivxlcIVXL]+)\.\s?(?P<vs>{_VERSES})")
 VERSE = re.compile(rf"\b(?:vv|[Vv]er|v)\.\s?(?P<vs>{_VERSES})(?!\s\d)")     # not "Ver. 1 1.", a scan's 11
 LEMMA = re.compile(r"(?:\A|\n)\s*(?:\[\d+\.\]\s*)?\Z")    # nothing but a section mark before it in its paragraph
-SHORT = re.compile(rf"\b(?:(?P<ord>[123])\s?)?(?P<book>{'|'.join(sorted(set(SHORT_SINGLE) | set(SHORT_NUMBERED), key=len, reverse=True))})"
+_SHORT = "|".join(sorted(set(SHORT_SINGLE) | set(SHORT_NUMBERED), key=len, reverse=True))
+SHORT = re.compile(rf"\b(?:(?P<ord>[123])\s?)?(?P<book>{_SHORT})"
                    rf"\s(?P<ch>\d{{1,3}}):(?P<vs>{_VERSES})(?![-–:\d])")    # not "10:1-22:16", a span of chapters
 
 
@@ -334,7 +340,8 @@ def scan_citations(excerpt, book, chapter, own=None):
                       for a, b in _refs(book, chapter_number(ch), m["vs"])]
     for m in VERSE.finditer(excerpt):
         if free(m.start(), m.end()):
-            found += [(m.start(), m.end(), m[0].rstrip(" ,;."), a, b) for a, b in heading(m.start(), _refs(book, chapter, m["vs"]))]
+            refs = heading(m.start(), _refs(book, chapter, m["vs"]))
+            found += [(m.start(), m.end(), m[0].rstrip(" ,;."), a, b) for a, b in refs]
     return sorted((at, text, a, b) for at, _, text, a, b in found)
 
 
@@ -498,6 +505,32 @@ def catena_quotations(entries, labels, candidates, idf, held, spans=None):
     return rows
 
 
+# ---- Names of other commentators -------------------------------------------
+
+# The forms in which the commentaries print the name of a commentator in the
+# library. Only forms that name one person: a bare "Cyril" or "Gregory" could
+# be several Fathers, "Henry" or "Brown" anyone, so they are left out.
+NAMED = {
+    "augustine": r"Augustine|Augustin\b|Austin\b", "chrysostom": r"Chrysostom|Chrysostome",
+    "calvin": r"Calvin\b", "luther": r"Luther\b", "origen": r"Origen\b", "cyril": r"Cyril of Alexandria",
+    "basil": r"Basil\b", "bernard": r"Bernard\b", "aquinas": r"Aquinas", "gregory": r"Gregory the Great|Pope Gregory",
+    "bengel": r"Bengel", "henry": r"Matthew Henry|Mr\. Henry", "hodge": r"Hodge\b", "godet": r"Godet",
+    "spurgeon": r"Spurgeon", "keil": r"Keil\b", "haydock": r"Haydock", "lapide": r"[aà] Lapide",
+    "bellarmine": r"Bellarmin", "ryle": r"Ryle\b", "westcott": r"Westcott", "wesley": r"(?<!Charles )Wesley\b",
+    "fausset": r"Fausset", "jamieson": r"Jamieson",
+}
+NAMED_RE = {a: re.compile(rf"\b(?:{f})") for a, f in NAMED.items()}
+
+
+def mentions(text, author):
+    """[(at, printed, author named)] in an excerpt by `author`."""
+    out = []
+    for named, rx in NAMED_RE.items():
+        if named != author:
+            out += [(m.start(), m[0], named) for m in rx.finditer(text)]
+    return sorted(out)
+
+
 # ---- The library ---------------------------------------------------------
 
 def corrected_texts():
@@ -516,13 +549,13 @@ def derive():
     parts = {os.path.join(ROOT, f["path"]): f.get("part") for f in manifest["files"]}
     works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
     fixes = corrected_texts()
-    pages, comments, citations, problems = {}, {}, {}, []
+    pages, comments, citations, names, problems = {}, {}, {}, {}, []
     held = {}                                # (work, source) -> [(start, end, excerpt id)]
     for path in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
         data = load(path)
         work = works[data["work"]]
         by_division = isinstance(work["divisions"], list)
-        rows = []
+        rows, named = [], []
         for e in data["entries"]:
             e = {k: v for k, v in e.items() if k != "locus"}
             text = e["text"]
@@ -557,6 +590,12 @@ def derive():
                 rows.append({"in": e["id"], "at": at, "text": ctext, "start": start, "end": end,
                              "found": kind, "status": "detected"})
             comments.setdefault(path, {**data, "entries": []})["entries"].append(e)
+            if data["work"] not in CATENAS:
+                named.extend({"in": e["id"], "at": at, "text": t, "author": a, "status": "detected"}
+                             for at, t, a in mentions(text, work["author"]))
+        if named:
+            out = os.path.join(ROOT, "library", "mentions", work["id"], f"{data['book']}.json")
+            names[out] = {"work": work["id"], "book": data["book"], "mentions": named}
         if rows:
             out = os.path.join(ROOT, "library", "citations", work["id"], f"{data['book']}.json")
             citations[out] = {"work": work["id"], "book": data["book"], "citations": rows}
@@ -584,7 +623,7 @@ def derive():
         if rows:
             out = os.path.join(ROOT, "library", "quotations", data["work"], f"{data['book']}.json")
             quotations[out] = {"work": data["work"], "book": data["book"], "quotations": rows}
-    return comments, citations, quotations, problems
+    return comments, citations, quotations, names, problems
 
 
 def keep_status(new, old, rows, fields):
@@ -605,7 +644,7 @@ def main(argv):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--check", action="store_true", help="change nothing; exit 1 if anything would change")
     args = ap.parse_args(argv)
-    comments, citations, quotations, problems = derive()
+    comments, citations, quotations, names, problems = derive()
     changed = []
     for path, data in comments.items():
         if load(path) != data:
@@ -613,7 +652,8 @@ def main(argv):
             if not args.check:
                 dump(path, data)
     for kind, found, rows, fields in (("citations", citations, "citations", ("in", "text", "start", "end")),
-                                      ("quotations", quotations, "quotations", ("in", "label", "work", "locus"))):
+                                      ("quotations", quotations, "quotations", ("in", "label", "work", "locus")),
+                                      ("mentions", names, "mentions", ("in", "text", "author"))):
         existing = set(glob.glob(os.path.join(ROOT, "library", kind, "*", "*.json")))
         for path, data in found.items():
             old = load(path) if path in existing else None
@@ -634,8 +674,9 @@ def main(argv):
     for path in changed:
         print(f"{os.path.relpath(path, ROOT)}: {verb}")
     q = sum(len(c["quotations"]) for c in quotations.values())
+    m = sum(len(c["mentions"]) for c in names.values())
     print(f"{loci} excerpts placed in their works, {n} citations of Scripture found, "
-          f"{q} quotations of the Fathers traced")
+          f"{q} quotations of the Fathers traced, {m} names of other commentators")
     if args.check and changed:
         print("run python3 scripts/find_refs.py and commit what it writes")
     return 1 if problems or (args.check and changed) else 0

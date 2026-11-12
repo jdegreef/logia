@@ -1,0 +1,13 @@
+{
+ "work": "henry-romans",
+ "book": "ROM",
+ "mentions": [
+  {
+   "in": "henry-romans.ROM.1.23-25.2",
+   "at": 826,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

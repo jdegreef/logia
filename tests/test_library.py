@@ -17,6 +17,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build_site  # noqa: E402
+import differ  # noqa: E402
 import extract_texts  # noqa: E402
 import fetch_wikidata  # noqa: E402
 import find_refs  # noqa: E402
@@ -89,7 +90,8 @@ class FindRefs(unittest.TestCase):
         self.assertEqual(self.refs("I am the way ( c. xiv. 6 )"), [("xiv. 6", "JHN.14.6", "JHN.14.6")])
 
     def test_a_heading_is_not_a_citation(self):
-        refs = lambda text: [t for _, t, _, _ in find_refs.scan_citations(text, "ROM", 9, ("ROM.9.13", "ROM.9.13"))]
+        def refs(text):
+            return [t for _, t, _, _ in find_refs.scan_citations(text, "ROM", 9, ("ROM.9.13", "ROM.9.13"))]
         self.assertEqual(refs("Ver. 13. A second quotation"), [])
         self.assertEqual(refs("x\n\n[2.] Ver. 13. Then"), [])
         self.assertEqual(refs("as Ver. 13 shows, and Ver. 11."), ["Ver. 13", "Ver. 11"])
@@ -148,6 +150,27 @@ class Versification(unittest.TestCase):
         entries = json.load(open(os.path.join(ROOT, "library", "comments", "augustine-psalms", "PSA.json")))["entries"]
         on = {e["start"] for e in entries if "Have pity upon me, O God, after Thy great mercy” (ver. 1)" in e["text"]}
         self.assertEqual(on, {"PSA.51.3"})       # Psalm 51:1 in English
+
+
+class Differ(unittest.TestCase):
+    """Pages on passages the churches read differently are published only when fair."""
+    def test_families(self):
+        self.assertEqual(differ.family("Anglican (Methodist)"), "methodist")
+        self.assertEqual(differ.family("Baptist (Reformed)"), "reformed")
+        self.assertEqual(differ.family("Patristic (Greek East)"), "early")
+        self.assertEqual(differ.family("Roman Catholic (Jesuit)"), "catholic")
+
+    def test_a_page_needs_the_early_church_a_catholic_or_orthodox_and_a_protestant_voice(self):
+        self.assertEqual(differ.balance({"early", "catholic", "reformed", "anglican"}), (True, []))
+        fair, missing = differ.balance({"early", "lutheran", "reformed"})
+        self.assertFalse(fair)
+        self.assertIn("Catholic or Orthodox", missing)
+        self.assertFalse(differ.balance({"early", "orthodox", "reformed"})[0])      # three traditions only
+
+    def test_every_page_is_resolved(self):
+        for pg in differ.pages():
+            self.assertNotIn("missing", pg, pg)
+            self.assertTrue(pg["note"] and pg["status"] in ("ai_draft", "reviewed"), pg["id"])
 
 
 class Quotations(unittest.TestCase):
@@ -956,6 +979,21 @@ class Wikidata(unittest.TestCase):
         author = {"name": "John", "died": 407}
         self.assertIsNone(fetch_wikidata.pick(author, [self.item("Q1", died=408)]))
         self.assertIsNone(fetch_wikidata.pick(author, [self.item("Q1", died=407), self.item("Q2", died=407)]))
+
+    def test_a_work_is_the_author_s_one_item_with_its_title(self):
+        def work(qid, label, author="Q100", cpg=None):
+            claims = {"P50": [{"mainsnak": {"datavalue": {"value": {"id": author}}}}]}
+            if cpg:
+                claims["P9"] = [{"mainsnak": {"datavalue": {"value": cpg}}}]
+            return {"id": qid, "labels": {"en": {"value": label}}, "claims": claims}
+        title = "Homilies on the Gospel of St. John"
+        items = [work("Q1", "Homilies on John", cpg="1234"), work("Q2", "Homilies on Matthew"),
+                 work("Q3", "Homilies on John the Baptist", author="Q999")]
+        self.assertEqual(fetch_wikidata.pick_work(title, "Q100", items, {"cpg": "P9"}),
+                         {"wikidata": "Q1", "label": "Homilies on John", "cpg": "1234"})
+        # two items as like the title, or one sharing a single word: none
+        self.assertIsNone(fetch_wikidata.pick_work(title, "Q100", items + [work("Q4", "John: homilies")], {}))
+        self.assertIsNone(fetch_wikidata.pick_work("On the Psalms", "Q100", items, {}))
 
     def test_identifiers_become_same_as_links(self):
         a = {"id": "x", "name": "X", "dates": "354-430", "died": 430}

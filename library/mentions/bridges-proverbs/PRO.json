@@ -1,0 +1,174 @@
+{
+ "work": "bridges-proverbs",
+ "book": "PRO",
+ "mentions": [
+  {
+   "in": "bridges-proverbs.PRO.3.23-26.1",
+   "at": 1547,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.4.3-9.2",
+   "at": 475,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.6.30-35.1",
+   "at": 1189,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.13.25.1",
+   "at": 956,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.16.14-15.2",
+   "at": 210,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.16.18-19.1",
+   "at": 1668,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.16.21.1",
+   "at": 1202,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.16.26.1",
+   "at": 1651,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.18.4.1",
+   "at": 1350,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.18.14.3",
+   "at": 851,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.18.19.2",
+   "at": 562,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.18.19.2",
+   "at": 573,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.18.20-21.2",
+   "at": 219,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.20.19.2",
+   "at": 458,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.21.9.2",
+   "at": 77,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.22.1.3",
+   "at": 216,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.22.9.2",
+   "at": 402,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.23.4-5.2",
+   "at": 505,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.25.6-7.2",
+   "at": 398,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.26.18-19.1",
+   "at": 1047,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.28.1.2",
+   "at": 830,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.28.25.1",
+   "at": 1420,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.31.1-2.1",
+   "at": 705,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "bridges-proverbs.PRO.31.28-31.3",
+   "at": 1451,
+   "text": "Matthew Henry",
+   "author": "henry",
+   "status": "detected"
+  }
+ ]
+}

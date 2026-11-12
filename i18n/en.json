@@ -452,6 +452,9 @@
     "unchecked_title": "Matched by shared wording; no one has checked it yet",
     "not_pinned": "(the passage is not pinned down)",
     "quoted_by": "Quoted by {name} in the {title} on {ref}",
+    "names": "Names {name}",
+    "names_title": "The excerpt prints this commentator's name; found by name, unchecked",
+    "names_here": "{name} on {ref}",
     "full_text_short": "full text",
     "whole_texts": "Read in full on this verse",
     "loading": "Loading…",
@@ -588,6 +591,9 @@
     "cite_copied": "Copied",
     "full_text": "Read the full text at the source",
     "in_logia": "In Logia",
+    "identifiers": "Identifiers",
+    "cpg": "Clavis Patrum Graecorum {n}",
+    "cpl": "Clavis Patrum Latinorum {n}",
     "excerpts": "{n} excerpts",
     "on_verses": "on {n} of the {total} verses of {book}",
     "rights_us_note": "In the US it is in the public domain: this edition was printed in {year}, before 1931.",
@@ -858,6 +864,8 @@
     "in_work": "{name} on {chapter}",
     "quotes": "Quotes {author}, {where}",
     "quoted_by": "Quoted by {name}, {title}, on {ref}",
+    "names": "Names {name}",
+    "names_here": "{name} on {ref}",
     "cited_by": "Cited on other verses",
     "cited_by_note": "Commentators citing {ref} while explaining another verse. The sentence is copied as the excerpt reads.",
     "whole_texts": "Whole homilies and tractates on {ref}",
@@ -1232,12 +1240,62 @@
     "columns": ["Verse", "Excerpts", "The verse"],
     "chapters_title": "Excerpts on each chapter"
   },
+  "differ": {
+    "eyebrow": "Where the churches differ",
+    "title": "{title}: how has the church read {ref}?",
+    "description": "How Catholic, Orthodox and Protestant Christians read {ref} ({title}), with what each of {n} commentators in Logia says, in their own words.",
+    "how": "How the readings differ",
+    "draft_note": "Logia wrote this note; it is not commentary. It is a draft until a named reviewer approves it.",
+    "in_guide": "This passage is one of the {link}.",
+    "guide_link": "places the traditions read John differently",
+    "book_way": "How the churches read it",
+    "voices": "Every commentator in Logia on the passage ({n})",
+    "voices_note": "All of them, in the order they died, each by the opening words of what they say. Logia chooses none of them, and publishes a page like this only when they come from enough traditions to be fair.",
+    "families_label": "How many of them come from each tradition",
+    "on": "On {ref} · {n} excerpts on the passage",
+    "count": "{n} commentators",
+    "index_title": "Where the churches read a passage differently",
+    "index_dek": "Passages that Catholic, Orthodox and Protestant Christians read differently: a short note on how the readings differ, then every commentator in Logia on the passage, in their own words.",
+    "index_intro": ["Most of what the commentators say, they say in common. On a few passages the churches have long read the same words differently. Each page here says briefly how, and then gives every commentator Logia holds on the passage, in the order they lived.", "A page is published only when those commentators come from enough traditions: the early church, a Catholic or Orthodox voice, a Protestant one, and four traditions in all. Others are waiting for the commentaries that would make them fair."]
+  },
+
+  "creeds": {
+    "eyebrow": "Creeds and councils",
+    "index_title": "Creeds, councils and confessions",
+    "index_dek": "The creeds the churches share, the decrees of the councils, and the confessions and catechisms of each tradition, in English editions of 1930 or earlier, with the Scripture they cite linked to each verse.",
+    "index_intro": ["These are not commentary, and Logia keeps them apart from it. They are what the churches have confessed together, and what each has confessed on its own: read whole, as their editions print them, with every Scripture reference the edition marks linked to the verse.", "The confessions of the different churches are listed together, by year, so that no tradition comes first. Some print a list of proof texts under every article and others print few, so the verse pages list the documents that cite a verse, oldest first, and never count them."],
+    "shared_heading": "Shared by the churches",
+    "each_heading": "From each tradition",
+    "each_note": "By year.",
+    "shared": "Shared by the churches",
+    "kind_label": "Kind",
+    "tradition": "Tradition",
+    "year": "Year",
+    "kind": {"creed": "Creed", "council": "Council", "confession": "Confession", "catechism": "Catechism"},
+    "not_commentary": "A creed or confession, not commentary: the words are copied from the edition named below, and its Scripture references link to the verses.",
+    "description": "{title} ({tradition}, {year}): the whole text, with the Scripture it cites linked to each verse.",
+    "on_verse": "In the creeds and councils on {ref}",
+    "on_verse_note": "Creeds, conciliar decrees and confessions that cite this verse, oldest first. They are not commentary; each links to the whole document."
+  },
+
+  "families": {
+    "early": "Early church",
+    "methodist": "Methodist",
+    "catholic": "Catholic",
+    "orthodox": "Orthodox",
+    "lutheran": "Lutheran",
+    "reformed": "Reformed",
+    "anglican": "Anglican",
+    "baptist": "Baptist"
+  },
+
   "guide": {
     "eyebrow": "Guide",
     "draft": "A draft awaiting review",
     "draft_note": "Logia wrote this page; it is not commentary. It is a draft until a named reviewer approves it.",
     "voices": "What the commentators say on {ref}",
-    "used": "In {n} excerpts; first in {who} on {ref}"
+    "used": "In {n} excerpts; first in {who} on {ref}",
+    "differ": "Every commentator on {ref}, side by side"
   },
 
   "llms": {

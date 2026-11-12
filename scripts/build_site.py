@@ -37,6 +37,7 @@ import shutil
 import subprocess
 from urllib.parse import quote
 
+import differ
 import scripture
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -259,7 +260,9 @@ class Library:
     def __init__(self):
         self.authors = {a["id"]: a for a in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "authors", "*.json")))}
         # Their Wikidata items and Wikipedia articles (scripts/fetch_wikidata.py).
-        self.identifiers = load(os.path.join(ROOT, "library", "identifiers.json"))["authors"]
+        ids = load(os.path.join(ROOT, "library", "identifiers.json"))
+        self.identifiers = ids["authors"]
+        self.work_identifiers = ids.get("works", {})
         self.works = {w["id"]: w for w in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "works", "*.json")))}
         self.books = load(os.path.join(ROOT, "bible", "owb", "books.json"))
         self.fixes = {}
@@ -271,7 +274,11 @@ class Library:
         self.urls = urls
         # Scripture each excerpt cites, and the Catena's quotations traced to
         # the Fathers' passages (scripts/find_refs.py); rejected ones are left out.
-        cites, quotes, quoted_in = {}, {}, {}
+        cites, quotes, quoted_in, names = {}, {}, {}, {}
+        for p in sorted(glob.glob(os.path.join(ROOT, "library", "mentions", "*", "*.json"))):
+            for m in load(p)["mentions"]:
+                if m["status"] != "rejected":
+                    names.setdefault(m["in"], []).append(m)
         for p in sorted(glob.glob(os.path.join(ROOT, "library", "citations", "*", "*.json"))):
             for c in load(p)["citations"]:
                 if c["status"] != "rejected":
@@ -293,7 +300,7 @@ class Library:
                 self.comments.append({**entry, "work": work, "text": text,
                                       "source_url": urls.get((work, entry["sources"][0]), self.works[work]["full_text_url"]),
                                       "cites": cites.get(entry["id"], []), "quotes": quotes.get(entry["id"], []),
-                                      "quoted_in": quoted_in.get(entry["id"], [])})
+                                      "quoted_in": quoted_in.get(entry["id"], []), "names": names.get(entry["id"], [])})
         self.by_id = {c["id"]: c for c in self.comments}
         # (work, book, chapter) of each page under /works/<work>/<book>/<chapter>/.
         self.work_chapter_pages = {(c["work"], *ref_parts(c["start"])[:2]) for c in self.comments}
@@ -310,6 +317,26 @@ class Library:
                 for para in x["paragraphs"]:
                     for cid in para["excerpts"]:
                         self.in_full.setdefault(cid, f"/works/{wid}/{x['locus']}/#{para['id']}")
+        # The creeds, councils and confessions (library/creeds/, scripts/extract_creeds.py),
+        # oldest first, and the sections of them that cite each verse. They cite
+        # in English numbering, as CCEL marks it; Logia's verses are the Hebrew.
+        self.creeds = sorted((load(p) for p in glob.glob(os.path.join(ROOT, "library", "creeds", "*.json"))
+                              if not os.path.basename(p).startswith("_")),
+                             key=lambda d: (d["year"], d["id"]))
+        self.creed_cites = {}
+        for d in self.creeds:
+            for sec in d["sections"]:
+                for c in sec["cites"]:
+                    if not (scripture.parse(c["start"]) and scripture.parse(c["end"])):
+                        continue
+                    a, b = scripture.english_span(c["start"], c["end"])
+                    (bk, c1, v1), (_bk, c2, v2) = scripture.parse(a), scripture.parse(b)
+                    if c1 != c2 or v2 - v1 > 30:
+                        continue                 # a span of chapters lists no one verse
+                    for v in range(v1, v2 + 1):
+                        rows = self.creed_cites.setdefault((bk, c1, v), [])
+                        if not any(r[0] is d and r[1] is sec for r in rows):
+                            rows.append((d, sec))
         # The chapters whose Bible text is imported, in canonical order.
         order = list(self.books)
         self.chapters = sorted(
@@ -352,7 +379,7 @@ class Library:
                 "id": c["id"], "start": sv if sc == chapter else 1, "end": ev if ec == chapter else last_verse,
                 "heading": c["heading"], "excerpt": c["text"], "source_url": c["source_url"],
                 "locus": c.get("locus"), "cites": self.cites_for(c), "quotes": self.quote_rows(c),
-                "quotedIn": self.quoted_in_rows(c), "inFull": self.in_full.get(c["id"]),
+                "quotedIn": self.quoted_in_rows(c), "names": self.name_rows(c), "inFull": self.in_full.get(c["id"]),
                 "words": len(c["text"].split()), "speakers": catena_speakers(c["work"], c["text"])})
         return out
 
@@ -395,6 +422,30 @@ class Library:
                         "ref": scripture.label(cat["start"], cat["end"]),
                         "href": self.verse_link(cat["start"], cat["work"])})
         return out
+
+    def name_rows(self, c):
+        """The other commentators an excerpt names, once each, in the order
+        named: their page, and their own words on the same verse if Logia
+        holds any."""
+        out, seen = [], set()
+        for m in c["names"]:
+            if m["author"] in seen or m["author"] not in self.authors:
+                continue
+            seen.add(m["author"])
+            a = self.authors[m["author"]]
+            here = next((x for x in self.on_start.get(c["start"], []) if self.works[x["work"]]["author"] == a["id"]), None)
+            out.append({"author": a["name"], "url": f'/commentators/{a["id"]}/', "status": m["status"],
+                        "href": self.verse_link(here["start"], here["work"]) if here else None,
+                        "ref": scripture.label(here["start"], here["end"]) if here else None})
+        return out
+
+    @property
+    def on_start(self):
+        if not hasattr(self, "_on_start"):
+            self._on_start = {}
+            for x in self.comments:
+                self._on_start.setdefault(x["start"], []).append(x)
+        return self._on_start
 
     def whole_on(self, ref):
         """The whole homilies and tractates that expound a verse (the work's
@@ -653,6 +704,8 @@ def nav_menus(lib):
                          for b in dict.fromkeys(b for b, _c, _v in lib.voices_on) if b == "JHN")
                + f'</div><div class="dd-col"><p class="dd-head">{e(t("nav.explore_guides"))}</p>'
                + "".join(row(g["path"], g["title"], "", "info") for g in guides())
+               + row("/differ/", t("differ.index_title"), "", "info")
+               + (row("/creeds/", t("creeds.index_title"), "", "info") if lib.creeds else "")
                + row("/open-data/", t("nav.open_data"), t("nav.open_data_note"), "data")
                + "</div></div>")
     about = "".join((
@@ -1546,6 +1599,8 @@ def book_page(lib, book):
         cards += [(f"/{b}/{col['id']}/", t("collections." + col["id"] + ".heading"), t("book.ways_collection"))
                   for col in collections(lib) if col["book"] == book]
         cards += [(g["path"], g["title"], t("book.ways_guide")) for g in guides() if g.get("book") == book]
+        cards += [(pg["path"], pg["title"], t("differ.book_way")) for pg, _on, _p in differ_pages(lib)
+                  if pg["start"].startswith(book + ".") and not pg.get("guide")]
         ways = (f'<section class="lg-block" aria-labelledby="h-ways"><h2 id="h-ways">{e(t("book.ways", book=name))}</h2><ul class="lg-cards">'
                 + "".join(f'<li><a class="lg-card" href="{href}"><b>{e(title)}</b><span>{e(note)}</span></a></li>' for href, title, note in cards)
                 + "</ul></section>")
@@ -1921,6 +1976,10 @@ def verse_excerpt(lib, c, book, chapter, verse):
     for q in lib.quoted_in_rows(c):
         label = e(t("verse.quoted_by", name=q["author"], title=q["title"], ref=q["ref"]))
         more.append(f'<li><a href="{e(q["href"])}">{label}</a></li>' if q["href"] else f"<li>{label}</li>")
+    for n in lib.name_rows(c):
+        more.append(f'<li><a href="{e(n["url"])}">{e(t("verse.names", name=n["author"]))}</a>'
+                    + (f' · <a href="{e(n["href"])}">{e(t("verse.names_here", name=n["author"], ref=n["ref"]))}</a>' if n["href"] else "")
+                    + "</li>")
     locus = f' {e(locus_label(w, c["locus"]))}.' if c.get("locus") else ""
     return (f'<article class="lg-excerpt lg-vx" id="{e(c["id"])}">{on}{heading}'
             f'<div class="lg-text">{verse_html(lib, c["text"], c["cites"])}</div>'
@@ -2013,8 +2072,10 @@ def same_as(ids):
 def work_ld(lib, wid):
     """schema.org Book for a commentary: the edition Logia copies from."""
     w = lib.works[wid]
+    ids = lib.work_identifiers.get(wid, {})
+    same = [w["full_text_url"]] + ([f"https://www.wikidata.org/wiki/{ids['wikidata']}"] if ids.get("wikidata") else [])
     return {"@type": "Book", "name": w["title"], "url": SITE_URL + f"/works/{wid}/", "bookEdition": w["edition"],
-            "datePublished": str(w["published"]), "inLanguage": LANG, "sameAs": w["full_text_url"],
+            "datePublished": str(w["published"]), "inLanguage": LANG, "sameAs": same if len(same) > 1 else same[0],
             "author": {"@type": "Person", "name": lib.author_of(wid)["name"]}}
 
 
@@ -2101,7 +2162,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 <p class="dek lg-vlead">{e(lead)}</p>
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
 <section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
-{cited_html}{whole_html}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
+{cited_html}{whole_html}{verse_creeds(lib, book, chapter, verse, ref)}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
 <p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
 <nav class="lg-turns" aria-label="{e(t("verse.previous"))} / {e(t("verse.next"))}">{"".join(turns)}</nav>
 </article>"""
@@ -3166,6 +3227,12 @@ def work_page(lib, wid):
     facts += [(t("work.source"), source),
               (t("work.in_logia"), t("work.excerpts", n=f"{len(comments):,}") + (f" {on}" if on else ""))]
     dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
+    ids = lib.work_identifiers.get(wid, {})
+    if ids:
+        # Fetched from Wikidata by scripts/fetch_wikidata.py, never typed.
+        bits = [f'<a href="https://www.wikidata.org/wiki/{e(ids["wikidata"])}" rel="noopener">Wikidata {e(ids["wikidata"])}</a>']
+        bits += [e(t(f"work.{k}", n=ids[k])) for k in ("cpg", "cpl") if ids.get(k)]
+        dl += f'<dt>{e(t("work.identifiers"))}</dt><dd>{" · ".join(bits)}</dd>'
     dl += (f'<dt>{e(t("work.rights"))}</dt><dd><span class="lg-pills">{rights_pills(w)}</span>'
            f'<span class="lg-quiet lg-rights-note">{e(rights_note(w))}</span></dd>')
     cite = cite_box(a, w)
@@ -4338,7 +4405,10 @@ def guide_page(lib, g):
             f'<p class="lg-ex-ref"><a href="{where}">{e(scripture.label(x["start"], x["end"]))}</a></p>'
             f'<blockquote class="lg-guide-verse"><p>{e(" ".join(chapter_plain(book, c_).get(v_, "") for c_ in range(sc, ec + 1) for v_ in chapter_verses(book, c_) if (sc, sv) <= (c_, v_) <= (ec, ev)))}</p></blockquote>'
             f'<div class="prose">{prose(x["note"])}</div>'
-            f'<h3 class="label">{e(t("guide.voices", ref=verse_ref(lib, book, fc, fv)))}</h3>{voices_list(lib, x["focus"])}</section>')
+            f'<h3 class="label">{e(t("guide.voices", ref=verse_ref(lib, book, fc, fv)))}</h3>{voices_list(lib, x["focus"])}'
+            + "".join(f'<p><a href="{pg["path"]}">{e(t("guide.differ", ref=scripture.label(pg["start"], pg["end"])))}</a></p>'
+                      for pg, _on, _p in differ_pages(lib) if pg.get("guide") == g["id"] and pg.get("topic") == i)
+            + '</section>')
     # A glossary's terms: what each means, how many excerpts on the book use
     # it, and the first of them.
     mine = sorted((c for c in lib.comments if c["start"].startswith(book + ".")), key=order_key)
@@ -4376,6 +4446,174 @@ def guide_page(lib, g):
 </article>"""
     return page(lib, g["title"], body, g["path"], current="/read/", head_title=g["head_title"] + " · Logia",
                 description=g["description"], ld=(breadcrumbs((name, f"/{book.lower()}/"), (g["title"], g["path"])),))
+
+
+# --- Creeds and councils (/creeds/, /creeds/<id>/) ---------------------------
+#
+# The creeds, conciliar decrees and confessions, each whole, as Schaff and the
+# Nicene and Post-Nicene Fathers print them in English. They are not
+# commentary: the verse pages list them apart, under the Scripture each
+# section cites as a proof, oldest first and without counts, since some
+# traditions print long lists of proof texts and others few.
+
+def creed_url(d, sec=None):
+    return f'/creeds/{d["id"]}/' + (f'#{sec["id"]}' if sec else "")
+
+
+def verse_creeds(lib, book, chapter, verse, ref):
+    rows = lib.creed_cites.get((book, chapter, verse), [])
+    if not rows:
+        return ""
+    items = "".join(f'<li><a href="{creed_url(d, sec)}"><b>{e(d["title"])}</b> <span>{e(sec["label"])}</span></a> '
+                    f'<span class="lg-quiet">{e(creed_tradition(d))} · {d["year"]}</span></li>' for d, sec in rows)
+    return (f'<section class="lg-block" id="creeds"><h2>{e(t("creeds.on_verse", ref=ref))}</h2>'
+            f'<p class="lg-quiet">{e(t("creeds.on_verse_note"))}</p><ul class="lg-people lg-wide">{items}</ul></section>')
+
+
+def creed_tradition(d):
+    return t("creeds.shared") if d["tradition"] == "Shared by the churches" else d["tradition"]
+
+
+def creed_page(lib, d):
+    secs = "".join(f'<section class="lg-creed-sec" id="{e(sec["id"])}">'
+                   + (f'<h2 class="lg-creed-label">{e(sec["label"])}</h2>' if sec["label"] else "")
+                   + f'<div class="lg-text">{verse_html(lib, sec["text"], creed_cites(lib, sec))}</div></section>'
+                   for sec in d["sections"])
+    r = d["rights"]
+    facts = [(t("creeds.kind_label"), t(f'creeds.kind.{d["kind"]}')), (t("creeds.tradition"), creed_tradition(d)),
+             (t("creeds.year"), str(d["year"])), (t("work.edition"), d["edition"])]
+    if d.get("translation"):
+        facts.append((t("work.translation"), d["translation"]))
+    facts.append((t("work.rights"), r["basis"] + (f'. {t("work.rights_world_note", what=r["worldwide"].removeprefix("to confirm: ").rstrip("."))}'
+                                                     if r.get("worldwide") else "")))
+    dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in facts)
+    body = f"""
+<article class="lg-verse lg-creed">
+<header class="page-head"><p class="eyebrow"><a href="/creeds/">{e(t("creeds.eyebrow"))}</a> · {e(creed_tradition(d))}</p>
+<h1>{e(d["title"])}</h1>
+<p class="actions"><a class="button ghost" href="{e(d["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
+<p class="lg-quiet">{e(t("creeds.not_commentary"))}</p>
+<dl class="lg-facts">{dl}</dl>
+<div class="lg-creed-body">{secs}</div>
+</article>"""
+    return page(lib, d["title"], body, creed_url(d), current="/read/", head_title=f'{d["title"]} · Logia',
+                description=t("creeds.description", title=d["title"], tradition=creed_tradition(d), year=d["year"]),
+                ld=(breadcrumbs((t("creeds.eyebrow"), "/creeds/"), (d["title"], creed_url(d))),))
+
+
+def creed_cites(lib, sec):
+    """A section's cites in the shape verse_html takes, linked on Logia's (Hebrew) numbering."""
+    out = []
+    for c in sec["cites"]:
+        if scripture.parse(c["start"]) and scripture.parse(c["end"]):
+            a, b = scripture.english_span(c["start"], c["end"])
+            out.append({**c, "start": a, "end": b})
+    return out
+
+
+def creeds_index(lib):
+    shared = [d for d in lib.creeds if d["tradition"] == "Shared by the churches"]
+    rest = [d for d in lib.creeds if d["tradition"] != "Shared by the churches"]
+    def row(d):
+        kind = t("creeds.kind." + d["kind"])
+        return (f'<li><a href="{creed_url(d)}"><b>{e(d["title"])}</b></a> '
+                f'<span class="lg-quiet">{d["year"]} · {e(creed_tradition(d))} · {e(kind)}</span></li>')
+    body = f"""
+<article class="lg-verse lg-creed">
+<header class="page-head"><p class="eyebrow">{e(t("creeds.eyebrow"))}</p><h1>{e(t("creeds.index_title"))}</h1>
+<p class="dek">{e(t("creeds.index_dek"))}</p></header>
+<div class="prose">{prose(t("creeds.index_intro"))}</div>
+<section class="lg-block"><h2>{e(t("creeds.shared_heading"))}</h2><ul class="lg-creed-list">{"".join(map(row, shared))}</ul></section>
+<section class="lg-block"><h2>{e(t("creeds.each_heading"))}</h2><p class="lg-quiet">{e(t("creeds.each_note"))}</p>
+<ul class="lg-creed-list">{"".join(map(row, rest))}</ul></section>
+</article>"""
+    return page(lib, t("creeds.index_title"), body, "/creeds/", current="/read/",
+                head_title=t("creeds.index_title") + " · Logia", description=t("creeds.index_dek"))
+
+
+# --- Where the churches read a passage differently (/differ/<id>/) ------------
+#
+# Logia's short note on how the readings differ (a draft until reviewed),
+# then every work Logia holds on the passage, in the order its author died,
+# each by its opening words. Nothing is chosen: a page shows all of them, and
+# is published only when they come from enough traditions (scripts/differ.py).
+
+def differ_pages(lib):
+    """[(page, {work: excerpts on it}, family ids present)] for the pages fair enough to publish."""
+    if not hasattr(lib, "_differ"):
+        rows = [(c["work"], c["start"], c["end"], c) for c in lib.comments]
+        fam = differ.families()
+        out = []
+        for pg in differ.pages():
+            if "missing" in pg:
+                continue
+            on = differ.works_on(pg, rows)
+            present = {differ.family(lib.author_of(w)["tradition"], fam) for w in on} - {None}
+            if differ.balance(present, fam)[0]:
+                out.append((pg, on, present))
+        lib._differ = out
+    return lib._differ
+
+
+def differ_title(lib, pg):
+    return t("differ.title", title=pg["title"], ref=scripture.label(pg["start"], pg["end"]))
+
+
+def differ_page(lib, pg, on, present):
+    book, sc, sv = ref_parts(pg["start"])
+    _b, ec, ev = ref_parts(pg["end"])
+    name = lib.books[book]["en"]
+    verse = " ".join(chapter_plain(book, c_).get(v_, "") for c_ in range(sc, ec + 1)
+                     for v_ in chapter_verses(book, c_) if (sc, sv) <= (c_, v_) <= (ec, ev))
+    fam = differ.families()
+    strip = "".join(f'<li><b>{e(t("families." + f["id"]))}</b> {sum(1 for w in on if differ.family(lib.author_of(w)["tradition"], fam) == f["id"])}</li>'
+                    for f in fam["families"] if f["id"] in present)
+    cards = ""
+    for w in lib.ordered_works(on):
+        a = lib.author_of(w)
+        es = sorted(on[w], key=order_key)
+        focus = ref_parts(pg["focus"])[1:]
+        c = next((x for x in es if ref_parts(x["start"])[1:] <= focus <= ref_parts(x["end"])[1:]), es[0])
+        cards += (f'<li class="lg-differ-voice"><p class="lg-differ-who"><b><a href="/commentators/{a["id"]}/">{e(a["name"])}</a></b> '
+                  f'<span class="lg-quiet">{e(a["dates"])} · {e(a["tradition"])}</span></p>'
+                  f'<p class="lg-quiet">{e(t("differ.on", ref=scripture.label(c["start"], c["end"]), n=len(es)))}</p>'
+                  f'<blockquote><p>{e(opening_words(c, 60))}</p></blockquote>'
+                  f'<p><a href="{excerpt_href(lib, c)}">{e(t("era.read_on"))}</a></p></li>')
+    review = (f'<p class="lg-guide-draft"><span class="lg-pill lg-pill-draft">{e(t("guide.draft"))}</span> '
+              f'{e(t("differ.draft_note"))}</p>' if pg["status"] == "ai_draft" else "")
+    link = f'<a href="{pg.get("guide_path")}">{e(t("differ.guide_link"))}</a>'
+    guide = f'<p class="lg-quiet">{e(t("differ.in_guide")).replace("{link}", link)}</p>' if pg.get("guide_path") else ""
+    title = differ_title(lib, pg)
+    body = f"""
+<article class="lg-verse lg-differ">
+<header class="page-head"><p class="eyebrow"><a href="/differ/">{e(t("differ.eyebrow"))}</a> · <a href="/{book.lower()}/">{e(name)}</a></p>
+<h1>{e(title)}</h1><p class="lg-ex-ref"><a href="{section_url(lib, book, (sc, sv))}">{e(scripture.label(pg["start"], pg["end"]))}</a></p></header>
+<blockquote class="lg-guide-verse"><p>{e(verse)}</p></blockquote>
+<section class="lg-block"><h2>{e(t("differ.how"))}</h2>{review}<div class="prose">{prose(pg["note"])}</div>{guide}</section>
+<section class="lg-block"><h2>{e(t("differ.voices", n=len(on)))}</h2>
+<p class="lg-quiet">{e(t("differ.voices_note"))}</p>
+<ul class="lg-differ-families" aria-label="{e(t("differ.families_label"))}">{strip}</ul>
+<ol class="lg-differ-voices">{cards}</ol></section>
+</article>"""
+    return page(lib, title, body, pg["path"], current="/read/", head_title=title + " · Logia",
+                description=t("differ.description", title=pg["title"], ref=scripture.label(pg["start"], pg["end"]), n=len(on)),
+                ld=(breadcrumbs((t("differ.eyebrow"), "/differ/"), (title, pg["path"])),))
+
+
+def differ_index(lib):
+    rows = "".join(f'<li><a href="{pg["path"]}"><b>{e(pg["title"])}</b></a> '
+                   f'<span class="lg-quiet">{e(scripture.label(pg["start"], pg["end"]))} · {e(t("differ.count", n=len(on)))}</span></li>'
+                   for pg, on, _p in sorted(differ_pages(lib), key=lambda x: (list(lib.books).index(ref_parts(x[0]["start"])[0]),
+                                                                              ref_parts(x[0]["start"])[1:])))
+    body = f"""
+<article class="lg-verse lg-differ">
+<header class="page-head"><p class="eyebrow">{e(t("differ.eyebrow"))}</p><h1>{e(t("differ.index_title"))}</h1>
+<p class="dek">{e(t("differ.index_dek"))}</p></header>
+<div class="prose">{prose(t("differ.index_intro"))}</div>
+<ul class="lg-differ-index">{rows}</ul>
+</article>"""
+    return page(lib, t("differ.index_title"), body, "/differ/", current="/read/", head_title=t("differ.index_title") + " · Logia",
+                description=t("differ.index_dek"))
 
 
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
@@ -4676,6 +4914,17 @@ def build():
     for g in guides():
         write(g["path"], guide_page(lib, g))
         pages.append(g["path"])
+    if lib.creeds:
+        write("/creeds/", creeds_index(lib))
+        pages.append("/creeds/")
+        for d in lib.creeds:
+            write(creed_url(d), creed_page(lib, d))
+            pages.append(creed_url(d))
+    write("/differ/", differ_index(lib))
+    pages.append("/differ/")
+    for pg, on, present in differ_pages(lib):
+        write(pg["path"], differ_page(lib, pg, on, present))
+        pages.append(pg["path"])
     for era in ERAS:
         if any(a["era"] == era for a in lib.authors.values()):
             write(era_url(era), era_page(lib, era))

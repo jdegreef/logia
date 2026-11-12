@@ -1,0 +1,251 @@
+{
+ "work": "westcott",
+ "book": "JHN",
+ "mentions": [
+  {
+   "in": "westcott.JHN.1.48.1",
+   "at": 1077,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.2.13.1",
+   "at": 254,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.2.13-17.1",
+   "at": 239,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.6.21.1",
+   "at": 1085,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.6.44.1",
+   "at": 218,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.6.44.1",
+   "at": 828,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.7.38.1",
+   "at": 707,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.8.9.1",
+   "at": 484,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.8.51.1",
+   "at": 547,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.9.35.1",
+   "at": 216,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.10.1-21.2",
+   "at": 425,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.10.12.1",
+   "at": 470,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.11.3.1",
+   "at": 179,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.11.15.1",
+   "at": 519,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.11.28.1",
+   "at": 818,
+   "text": "Cyril of Alexandria",
+   "author": "cyril",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.11.39.1",
+   "at": 631,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.11.52.1",
+   "at": 536,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.12.32.2",
+   "at": 390,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.12.39.1",
+   "at": 1365,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.13.33.2",
+   "at": 558,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.13.35.1",
+   "at": 1268,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.14.3.2",
+   "at": 364,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.14.13.2",
+   "at": 1009,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.15.24.1",
+   "at": 359,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.18.2.1",
+   "at": 423,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.19.23.1",
+   "at": 625,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.19.30.2",
+   "at": 99,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.20.22.1",
+   "at": 280,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.20.22.2",
+   "at": 856,
+   "text": "Godet",
+   "author": "godet",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.21.11.1",
+   "at": 741,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.21.17.2",
+   "at": 453,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.21.19.1",
+   "at": 86,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.21.19.2",
+   "at": 864,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.21.23.1",
+   "at": 323,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "westcott.JHN.21.23.2",
+   "at": 340,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}
