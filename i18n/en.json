@@ -837,6 +837,9 @@
   },
 
   "verse": {
+    "rail_title": "{n} voices on this verse",
+    "rail_words": "{n:,} words",
+    "rail_words_one": "1 word",
     "title": "{ref} commentary: {names}",
     "title_more": "{names} and {n} more",
     "and": " and ",

@@ -2062,7 +2062,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
     else:
         lead = t("verse.lead", n=len(authors), ref=ref, first=authors[0]["name"], first_dates=authors[0]["dates"],
                  last=authors[-1]["name"], last_dates=authors[-1]["dates"], names=name_list(names))
-    sections, toc = [], []
+    sections, toc, rail = [], [], []
     for (wid, cs), a in zip(voices, authors):
         w = lib.works[wid]
         meta = (f'<p class="lg-vmeta"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a> ({e(a["dates"])}) · '
@@ -2070,6 +2070,9 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
         sections.append(f'<section class="lg-voice" id="{wid}"><h3>{e(t("verse.question", name=short_name(a), ref=ref))}</h3>'
                         f'{meta}{"".join(verse_excerpt(lib, c, book, chapter, verse) for c in cs)}</section>')
         toc.append(f'<a href="#{wid}">{e(short_name(a))}</a>')
+        words = sum(len(c["text"].split()) for c in cs)
+        rail.append(f'<li class="lg-era-{ERAS.index(a["era"])}"><a href="#{wid}"><b>{e(short_name(a))}</b>'
+                    f'<span>{e(a["dates"])} · {e(t("verse.rail_words", n=words))}</span></a></li>')
     cited = cited_by.get(str(verse), [])
     cited_html = ""
     if cited:
@@ -2090,10 +2093,14 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
              if i + 1 < len(pages_here) else "<span></span>"]
     owb_link = f'<a href="{OWB_SITE}{chapter_url(book, chapter)}" rel="noopener">Open Word Bible</a>'
     chapter_name = f"{name} {chapter}"
+    # On wide screens, the voices in date order beside the page, sticky, the
+    # one being read marked (web/logia.js): the whole conversation at a glance.
+    rail_html = (f'<aside class="lg-vrail" aria-labelledby="vrail-h"><p class="label" id="vrail-h">'
+                 f'{e(t("verse.rail_title", n=len(rail)))}</p><ol>{"".join(rail)}</ol></aside>' if len(rail) > 1 else "")
     crumbs = breadcrumbs((name, f"/{book.lower()}/"), (chapter_name, chapter_url(book, chapter)),
                          (ref, verse_url(book, chapter, verse)))
     body = f"""
-<article class="lg-verse">
+<article class="lg-verse{" lg-verse-railed" if len(rail) > 1 else ""}"><div class="lg-verse-main">
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · <a href="{chapter_url(book, chapter)}">{e(t("chapter.eyebrow", chapter=chapter))}</a> · {e(lib.chapter_title(book, chapter))}</p>
 <h1>{e(ref)}</h1>
 {verse_html}
@@ -2104,6 +2111,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 {cited_html}{whole_html}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
 <p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
 <nav class="lg-turns" aria-label="{e(t("verse.previous"))} / {e(t("verse.next"))}">{"".join(turns)}</nav>
+</div>{rail_html}
 </article>"""
     # Up to four names fit a title; "and 1 more" would be longer than the name.
     shown = names if len(names) <= 4 else names[:3]

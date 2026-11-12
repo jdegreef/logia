@@ -202,6 +202,23 @@
 
   // A book page's "Go to a verse" box: "5:3", "5 3" or "5.3" opens the
   // chapter at that verse.
+  // A verse page's voices rail: mark the voice now at the top of the screen.
+  var vrail = document.querySelector(".lg-vrail");
+  if (vrail && "IntersectionObserver" in window) {
+    var railLinks = {};
+    vrail.querySelectorAll("a").forEach(function (a) { railLinks[a.getAttribute("href").slice(1)] = a; });
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { seen[en.target.id] = en.isIntersecting; });
+      var first = null;
+      document.querySelectorAll(".lg-voice").forEach(function (sec) { if (!first && seen[sec.id]) first = sec.id; });
+      Object.keys(railLinks).forEach(function (id) {
+        if (id === first) railLinks[id].setAttribute("aria-current", "true"); else railLinks[id].removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-30% 0px -50% 0px" });
+    document.querySelectorAll(".lg-voice").forEach(function (sec) { io.observe(sec); });
+  }
+
   document.querySelectorAll(".lg-verse-go").forEach(function (form) {
     var verses = JSON.parse(form.getAttribute("data-verses"));
     var input = form.querySelector("input"), note = form.querySelector("[role=status]");
