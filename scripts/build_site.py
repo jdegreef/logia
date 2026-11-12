@@ -183,6 +183,21 @@ def e(text):
     return html.escape(str(text), quote=True)
 
 
+# A heading that names where it falls in the work ("Homily XXV", "Tractate
+# 12") is a running head and is set in small capitals; any other heading is a
+# quoted lemma and stays italic. Keep in step with RUNHEAD in web/reader.js.
+RUNHEAD = re.compile(
+    r"^(Homily|Tractate|Sermon|Lecture|Discourse|Exposition|Book|Chapter|Section|Part|Psalm|Hom\.|Serm\.)\b.{0,80}$"
+)
+
+
+def lemma_html(heading):
+    if not heading:
+        return ""
+    cls = "lg-lemma lg-runhead" if RUNHEAD.match(heading) else "lg-lemma"
+    return f'<p class="{cls}">{e(heading)}</p>'
+
+
 def icon(name, size=18, cls="icon"):
     return (f'<svg class="{cls}" width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
             f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
@@ -1901,7 +1916,7 @@ def verse_excerpt(lib, c, book, chapter, verse):
     _, _, sv = ref_parts(c["start"])
     _, _, ev = ref_parts(c["end"])
     on = f'<p class="lg-ref">{e(t("verse.on_range", ref=verse_ref(lib, book, chapter, sv, ev)))}</p>' if ev != sv else ""
-    heading = f'<p class="lg-lemma">{e(c["heading"])}</p>' if c["heading"] else ""
+    heading = lemma_html(c["heading"])
     if sv != verse:
         # Printed in full where it begins.
         start = verse_ref(lib, book, chapter, sv)
@@ -3281,7 +3296,7 @@ def work_chapter_page(lib, wid, book, chapter, comments):
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
         ref = f"{lib.books[b]['en']} {ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "")
-        heading = f'<p class="lg-lemma">{e(c["heading"])}</p>' if c["heading"] else ""
+        heading = lemma_html(c["heading"])
         paras = "".join(f"<p>{e(p.strip())}</p>" for p in c["text"].split("\n\n"))
         # The verse being commented on, in the margin, once for a run of
         # excerpts on the same verses (at most three verses of it).
