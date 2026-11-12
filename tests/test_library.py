@@ -18,6 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build_site  # noqa: E402
+import export_data  # noqa: E402
 import differ  # noqa: E402
 import extract_creeds  # noqa: E402
 import extract_texts  # noqa: E402
@@ -408,11 +409,32 @@ class SefariaIdeas(unittest.TestCase):
                 self.assertGreaterEqual(leaf, 0)
 
 
+class DataRelease(unittest.TestCase):
+    """scripts/export_data.py: a release is the whole library, reproducibly."""
+
+    def test_release_holds_the_library_and_its_docs(self):
+        names = export_data.files()
+        self.assertIn("sources/manifest.json", names)
+        for doc in ("docs/data.md", "docs/api.md", "docs/references.md", "LICENSE"):
+            self.assertIn(doc, names)
+        self.assertTrue(any(n.startswith("library/comments/") for n in names))
+        # The Bible text is the Open Word Bible's to release.
+        self.assertFalse(any(n.startswith(("bible/", "site/")) for n in names))
+        counts = export_data.counts()
+        self.assertEqual(counts["works"], len(glob.glob(os.path.join(ROOT, "library", "works", "*.json"))))
+
+    def test_release_version_follows_the_format(self):
+        with redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):
+            export_data.main(["2.0.0"])       # the major number is the data format
+        with redirect_stdout(io.StringIO()), self.assertRaises(SystemExit):
+            export_data.main(["latest"])
+
+
 class Site(unittest.TestCase):
     PAGES = ("index.html", "read/index.html", "jhn/index.html", "jhn/1/index.html", "jhn/21/index.html",
              "commentators/index.html", "commentators/calvin/index.html", "works/ryle/index.html", "about/index.html",
              "jhn/3/16/index.html", "ai/index.html", "new/index.html", "explore/index.html", "linker/index.html",
-             "sheets/index.html", "readings/index.html")
+             "sheets/index.html", "readings/index.html", "about/rules/index.html", "open-data/index.html")
 
     @classmethod
     def setUpClass(cls):
@@ -451,6 +473,31 @@ class Site(unittest.TestCase):
         scanned = next(c for c in lib.comments if c["scan"] and ref_is_verse_page(lib, c))
         text = self.read(build_site.verse_url(*build_site.ref_parts(scanned["start"])).strip("/") + "/index.html")
         self.assertIn(scanned["scan"]["url"], text)
+
+    def test_api_chapters_hold_verses_and_excerpts(self):
+        api_dir = os.path.join(build_site.SITE, "api", "v1")
+        with open(os.path.join(api_dir, "index.json"), encoding="utf-8") as f:
+            index = json.load(f)
+        self.assertEqual(index["api_version"], 1)
+        with open(os.path.join(api_dir, "chapters", "JHN.1.json"), encoding="utf-8") as f:
+            ch = json.load(f)
+        v14 = next(v for v in ch["verses"] if v["verse"] == 14)
+        self.assertTrue(v14["text"] and v14["excerpts"])
+        first = v14["excerpts"][0]
+        self.assertEqual(ch["excerpts"][first]["text"], build_site.Library().by_id[first]["text"])
+        # Every chapter, with or without commentary.
+        self.assertTrue(os.path.isfile(os.path.join(api_dir, "chapters", "OBA.1.json")))
+        with open(os.path.join(api_dir, "works.json"), encoding="utf-8") as f:
+            works = json.load(f)
+        self.assertTrue(all(w["rights"]["basis"] and w["status"] in ("ai_draft", "reviewed") for w in works))
+
+    def test_rules_page_lists_every_work_and_its_rights(self):
+        text = self.read("about/rules/index.html")
+        lib = build_site.Library()
+        for wid, w in lib.works.items():
+            self.assertIn(f'href="/works/{wid}/"', text)
+            self.assertIn(html.escape(w["rights"]["basis"], quote=True), text)
+        self.assertIn("docs/adding-a-work.md", text)
 
     def test_new_feed_is_atom(self):
         text = self.read("new.xml")

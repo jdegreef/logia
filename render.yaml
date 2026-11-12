@@ -79,3 +79,11 @@ services:
       - path: /linker/*
         name: Cache-Control
         value: public, max-age=86400
+      # The API (scripts/api.py, docs/api.md) is for other sites and
+      # programs, so any origin may read it; it changes with each build.
+      - path: /api/*
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /api/*
+        name: Cache-Control
+        value: public, max-age=3600

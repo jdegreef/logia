@@ -23,6 +23,8 @@ static site:
     /sheets/                 study sheets kept in the reader's browser (web/sheets.js)
     /linker/, /linker.js     the script other sites embed to link Bible
                              references to Logia (web/linker.js)
+    /about/rules/            the editorial rules, and every work's rights basis
+    /api/v1/                 the public read-only API (scripts/api.py, docs/api.md)
 
 The look, the header, footer and settings menu follow openwordbible.org:
 web/style.css and the fonts are the Open Word Bible's own, and web/site.js
@@ -42,8 +44,10 @@ import os
 import re
 import shutil
 import subprocess
+import types
 from urllib.parse import quote
 
+import api
 import differ
 import scripture
 
@@ -769,8 +773,10 @@ def nav_menus(lib):
     about = "".join((
         row("/about/", t("nav.about_logia"), t("nav.about_logia_note"), "info"),
         row("/about/#checked", t("nav.checked"), t("nav.checked_note"), "check"),
+        row("/about/rules/", t("nav.rules"), t("nav.rules_note"), "check"),
         row("/ai/", t("nav.ai"), t("nav.ai_note"), "info"),
         row("/linker/", t("nav.linker"), t("nav.linker_note"), "code"),
+        row("/api/v1/index.json", t("nav.api"), t("nav.api_note"), "data"),
         row(OWB_SITE + "/", t("nav.owb"), t("nav.owb_note"), "book", ext=True),
         row(GITHUB_URL, t("nav.source"), t("nav.source_note"), "code", ext=True)))
     return (("read", t("nav.read"), "book", "/read/", read, "dd-read"),
@@ -950,9 +956,9 @@ def build_footer(lib):
         (era_url(era), t("eras." + era)) for era in ERAS if any(a["era"] == era for a in lib.authors.values())]
     data = [("/open-data/", t("footer.open_data"))] + [
         (f"/downloads/logia-{LANG}.{x}", t("footer.download", kind=x.upper())) for x in ("json", "csv")] + [
-        (GITHUB_URL, t("nav.source"))]
+        ("/api/v1/index.json", t("nav.api")), (GITHUB_URL + "/releases", t("footer.releases")), (GITHUB_URL, t("nav.source"))]
     about = [("/about/", t("nav.about_logia")), ("/about/#checked", t("nav.checked")),
-             ("/ai/", t("nav.ai")), ("/linker/", t("nav.linker")),
+             ("/about/rules/", t("nav.rules")), ("/ai/", t("nav.ai")), ("/linker/", t("nav.linker")),
              (OWB_SITE + "/", t("nav.owb")), (GITHUB_URL + "/issues/new", t("footer.report"))]
 
     # The library in three numbers, counted at build time.
@@ -5009,6 +5015,12 @@ def open_data_page(lib, files):
 <h1>{e(t("open_data.heading"))}</h1><p class="dek">{e(t("open_data.dek", n=f"{n:,}", works=len(lib.works), authors=len(lib.authors)))}</p></header>
 <section class="lg-block"><h2>{e(t("open_data.download"))}</h2><p class="lg-quiet">{e(t("open_data.download_note"))}</p>
 <ul class="lg-people lg-wide">{dl}</ul></section>
+<section class="lg-block" id="api"><h2>{e(t("open_data.api_title"))}</h2><p>{e(t("open_data.api_note"))}</p>
+<ul class="lg-people lg-wide"><li><a href="/api/v1/index.json"><b>/api/v1/</b> <span>{e(t("open_data.api_index"))}</span></a></li>
+<li><a href="{GITHUB_URL}/blob/main/docs/api.md" rel="noopener"><b>docs/api.md</b> <span>{e(t("open_data.api_docs"))}</span></a></li></ul></section>
+<section class="lg-block" id="releases"><h2>{e(t("open_data.releases_title"))}</h2><p>{e(t("open_data.releases_note"))}</p>
+<ul class="lg-people lg-wide"><li><a href="{GITHUB_URL}/releases" rel="noopener"><b>{e(t("footer.releases"))}</b> <span>{e(t("open_data.releases_link"))}</span></a></li>
+<li><a href="{GITHUB_URL}/blob/main/docs/data.md" rel="noopener"><b>docs/data.md</b> <span>{e(t("open_data.releases_docs"))}</span></a></li></ul></section>
 <section class="lg-block"><h2>{e(t("open_data.fields_title"))}</h2><div class="lg-table-wrap"><table class="lg-words lg-fields"><tbody>{fields}</tbody></table></div></section>
 <section class="lg-block"><h2>{e(t("open_data.repo_title"))}</h2><p class="lg-quiet">{e(t("open_data.repo_note"))}</p>
 <div class="lg-table-wrap"><table class="lg-words lg-fields"><tbody>{repo}</tbody></table></div></section>
@@ -5473,6 +5485,44 @@ def sundays_block(lib, today=None):
             f'<p class="lg-quiet lg-sunday-rights">{e(t("sundays.rights"))}</p>{script}</section>')
 
 
+# --- Editorial rules (/about/rules/) ------------------------------------------
+#
+# The rules every text follows (CLAUDE.md, docs/adding-a-work.md), in plain
+# words, and every work's edition, source, rights basis and review, read
+# from its record, so anyone can audit the library (roadmap, item 22).
+
+def rules_page(lib):
+    rules = "".join(f"<h3>{e(title)}</h3><p>{e(text)}</p>" for title, text in t("rules.rules"))
+    docs = t("rules.procedure",
+             adding=f'<a href="{GITHUB_URL}/blob/main/docs/adding-a-work.md" rel="noopener">docs/adding-a-work.md</a>',
+             references=f'<a href="{GITHUB_URL}/blob/main/docs/references.md" rel="noopener">docs/references.md</a>')
+    rows = []
+    for wid in lib.ordered_works():
+        w = lib.works[wid]
+        kind = t("rules." + w["source_kind"]) if w.get("source_kind") in ("scan", "digital") else ""
+        src = f'<a href="{e(w["full_text_url"])}" rel="noopener">{e(kind or t("rules.digital"))}</a>' if w.get("full_text_url") else "–"
+        fixes = len(lib.fixes.get(wid, []))
+        fixed = f'<br><span class="lg-quiet">{e(t("rules.fixes", n=f"{fixes:,}"))}</span>' if fixes else ""
+        review = ai_mark(w["status"], w.get("reviewer") or "") or e(t("rules.reviewed"))
+        rows.append(f'<tr><td><a href="/works/{wid}/"><i>{e(w["title"])}</i></a><br>'
+                    f'<span class="lg-quiet">{e(lib.author_of(wid)["name"])}</span></td>'
+                    f'<td>{e(w["edition"])}<br><span class="lg-quiet">{e(w.get("translation") or w["original_language"])}</span></td>'
+                    f'<td class="lg-num">{e(str(w["published"] or "–"))}</td><td>{src}{fixed}</td>'
+                    f'<td>{e(w["rights"]["basis"])}<br><span class="lg-quiet">{e(w["rights"]["worldwide"])}</span></td>'
+                    f'<td>{review}</td></tr>')
+    head = "".join(f'<th scope="col">{e(t("rules.col_" + k))}</th>'
+                   for k in ("work", "edition", "published", "source", "rights", "review"))
+    body = f"""
+<header class="page-head"><p class="eyebrow"><a href="/about/">{e(t("about.title"))}</a></p>
+<h1>{e(t("rules.heading"))}</h1><p class="dek">{e(t("rules.dek"))}</p></header>
+<section class="prose lg-block lg-rules" id="rules"><h2>{e(t("rules.rules_heading"))}</h2>{rules}<p>{docs}</p></section>
+<section class="lg-block" id="rights"><h2>{e(t("rules.rights_heading"))}</h2><p class="lg-quiet">{e(t("rules.rights_note"))}</p>
+<div class="lg-table-wrap"><table class="lg-words lg-rights-table"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>
+<p class="lg-quiet">{e(t("rules.report"))} <a href="{GITHUB_URL}/issues/new" rel="noopener">{e(t("ai.help_link"))}</a></p></section>"""
+    return page(lib, t("rules.title"), body, "/about/rules/", current="/about/", description=t("rules.description"),
+                ld=(breadcrumbs((t("about.title"), "/about/"), (t("rules.title"), "/about/rules/")),))
+
+
 # --- Build --------------------------------------------------------------------
 
 # --- For search engines and answer engines ------------------------------------
@@ -5683,7 +5733,7 @@ def build():
         pages.append(path)
     write("/about/", about_page(lib))
     pages.append("/about/")
-    for path, text in (("/ai/", ai_page(lib)), ("/new/", new_page(lib)), ("/explore/", explore_page(lib)),
+    for path, text in (("/about/rules/", rules_page(lib)), ("/ai/", ai_page(lib)), ("/new/", new_page(lib)), ("/explore/", explore_page(lib)),
                        ("/linker/", linker_page(lib)), ("/sheets/", sheets_page(lib))):
         write(path, text)
         pages.append(path)
@@ -5715,6 +5765,9 @@ def build():
     for book, chapter in sorted(lib.coverage()):
         with open(os.path.join(SITE, "data", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
             json.dump(chapter_file(lib, book, chapter), f, ensure_ascii=False, separators=(",", ":"))
+    api.write(lib, SITE, SITE_URL, types.SimpleNamespace(
+        ref_parts=ref_parts, chapter_url=chapter_url, verse_url=verse_url, chapter_plain=chapter_plain,
+        locus_label=locus_label, topics=topics, topic_span=topic_span, t=t))
     write("/sitemap.xml", sitemap_xml(lib, pages))
     write("/robots.txt", robots_txt())
     write("/llms.txt", llms_txt(lib))

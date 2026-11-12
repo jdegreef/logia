@@ -43,6 +43,10 @@
     "linker_note": "One line links your Bible references here",
     "sheets": "Study sheets",
     "sheets_note": "Gather excerpts, add notes, print or share",
+    "rules": "Editorial rules",
+    "rules_note": "How texts get in, and each one's rights",
+    "api": "The API",
+    "api_note": "Logia's data as JSON, for other programs",
     "readings": "Readings for the church year",
     "readings_note": "The coming Sundays, and the great days from John",
     "collection_i-am": "The “I am” sayings",
@@ -155,6 +159,7 @@
     "new": "New Testament"
   },
   "footer": {
+    "releases": "Data releases",
     "read": "Read",
     "explore": "Explore",
     "commentators": "Commentators",
@@ -1024,6 +1029,14 @@
   },
   "open_data": {
     "heading": "Open data",
+    "api_title": "The API",
+    "api_note": "The same library as static JSON for other programs and sites: every chapter of the Bible with its text and the excerpts on each verse, the works with their rights, the commentators, the topics and the whole texts. No key, any origin; fields are added within a version, never removed or renamed.",
+    "api_index": "Every file of the API, with counts",
+    "api_docs": "What each file holds",
+    "releases_title": "Versioned releases",
+    "releases_note": "The downloads above are rebuilt with every change. For a fixed copy to cite or build on, each data release is a zip of the whole library, its sources list and its documentation, numbered by format, additions and fixes, and the same bytes each time it is built from its tag.",
+    "releases_link": "Every release of the data, on GitHub",
+    "releases_docs": "Every data file, and how releases are numbered",
     "dek": "All {n} excerpts from {works} commentaries by {authors} commentators, free to download and build on. The data is CC0: no permission needed, no attribution required.",
     "description": "Download Logia's {n} public-domain commentary excerpts on {books} as JSON or CSV, each tied to its verse and its source. CC0.",
     "about_link": "Download the open data",
@@ -1529,6 +1542,61 @@
     "n": "{n} excerpts from {k} commentators",
     "all": "Show all {n} days",
     "rights": "Revised Common Lectionary copyright 1992 Consultation on Common Texts. Used by permission. Dates and readings as listed by the Vanderbilt Divinity Library."
+  },
+  "rules": {
+    "title": "Editorial rules",
+    "heading": "How texts get into Logia",
+    "dek": "The rules every text in Logia follows, and the rights each work is used under, so anyone can check them.",
+    "description": "Logia's editorial rules: copied word for word from public-domain editions, scan fixes in the open, nothing marked reviewed by AI, and the rights basis of every work.",
+    "rules_heading": "The rules",
+    "rules": [
+      [
+        "Copied, never written",
+        "Every excerpt is copied from a public-domain edition exactly as it reads, and the source it came from is saved beside it. Nothing is paraphrased, summarised, modernised or filled in from memory. A script checks every excerpt against its source on every change."
+      ],
+      [
+        "Public domain only",
+        "Text and translation must be published in 1930 or earlier, which makes them public domain in the United States. Each work records its edition, translator and year, and what is still to confirm for use worldwide. Logia copies from scans and open transcriptions, not from sites that claim rights in their typed editions."
+      ],
+      [
+        "Greek and Hebrew are never retyped",
+        "Original-language words appear only as the source prints them. Where a scan turns Greek into noise, the Greek is left out and the cut is marked, rather than typed in by hand."
+      ],
+      [
+        "Scan misreadings are corrected in the open",
+        "An excerpt keeps the scan's text. A misreading is fixed by a listed correction (“Let ns” → “Let us”), applied when the site is built. Only what the printed page plainly says is fixed; anything uncertain is left alone."
+      ],
+      [
+        "Places, citations and links are read from the sources",
+        "Where an excerpt sits in its work, the Scripture it cites and the Fathers a catena quotes are found by scripts from the sources, not typed. Each stays marked as unchecked until a person checks it."
+      ],
+      [
+        "Nothing is marked reviewed by an AI",
+        "Works, biographies, guides and translations stay drafts until a named person reviews them, and the site marks them so."
+      ],
+      [
+        "The Bible text is imported, never edited",
+        "Logia reads the Open Word Bible at a pinned version. A problem with its wording is raised with the Open Word Bible, not changed here."
+      ],
+      [
+        "Every tradition, in its own words",
+        "Logia sets Catholic, Orthodox and Protestant voices side by side and takes no side where they differ. A commentator's words are kept whole, even when harsh or dated; a note may explain, but nothing is cut silently."
+      ]
+    ],
+    "procedure": "The full procedure for adding a work, and the reference scheme, are in the repository: {adding} and {references}.",
+    "rights_heading": "Every work, and its rights",
+    "rights_note": "Each work's edition and translator, the year it was published, where it was copied from, the basis on which Logia uses it, what is still to confirm, and whether a person has reviewed it. Read from the work's record when the site is built.",
+    "col_work": "Work",
+    "col_edition": "Edition",
+    "col_published": "Published",
+    "col_source": "Copied from",
+    "col_rights": "Rights",
+    "col_review": "Review",
+    "scan": "page scan",
+    "digital": "transcription",
+    "fixes": "{n} scan misreadings corrected",
+    "reviewed": "Reviewed",
+    "report": "Found something wrong? Every excerpt has a “Report a mistake” link, or open an issue on GitHub."
   },
   "llms": {
     "holds": "It holds {excerpts} excerpts from {works} commentaries by {authors} commentators, on {books}, each tied to the verses it comments on.",
