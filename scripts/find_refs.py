@@ -182,7 +182,7 @@ def ccel_citations(page, where, excerpt):
         if not (s <= rs and rend <= e):
             continue
         text = page["text"][rs:rend].strip()
-        printed = full_refs(text)
+        printed = full_refs(text, short=False)
         if printed:
             out.append((text, [(t, a, b, at) for at, _, t, a, b in printed]))
             continue
@@ -223,12 +223,33 @@ def _names():
 
 SINGLE, NUMBERED = _names()
 _BOOK = "|".join(sorted(set(SINGLE) | set(NUMBERED), key=len, reverse=True))
+
+# The short names some commentaries print with Arabic numbers and a colon,
+# "Lu 1:1-4; 24:3", "Ac 22:26", "1Co 13:12" (Jamieson-Fausset-Brown). Several
+# are also English words ("Am", "Re"), so they are read only before
+# "chapter:verse".
+SHORT_SINGLE = {
+    "Ge": "GEN", "Ex": "EXO", "Le": "LEV", "Nu": "NUM", "De": "DEU", "Jos": "JOS", "Jud": "JDG",
+    "Ru": "RUT", "Ezr": "EZR", "Ne": "NEH", "Es": "EST", "Job": "JOB", "Ps": "PSA", "Pr": "PRO",
+    "Ec": "ECC", "So": "SNG", "Isa": "ISA", "Jer": "JER", "La": "LAM", "Eze": "EZK", "Da": "DAN",
+    "Ho": "HOS", "Joe": "JOL", "Am": "AMO", "Ob": "OBA", "Jon": "JON", "Mic": "MIC", "Na": "NAM",
+    "Hab": "HAB", "Zep": "ZEP", "Hag": "HAG", "Zec": "ZEC", "Mal": "MAL", "Mt": "MAT", "Mr": "MRK",
+    "Lu": "LUK", "Joh": "JHN", "Ac": "ACT", "Ro": "ROM", "Ga": "GAL", "Eph": "EPH", "Php": "PHP",
+    "Col": "COL", "Tit": "TIT", "Phm": "PHM", "Heb": "HEB", "Jas": "JAS", "Jude": "JUD", "Re": "REV",
+}
+SHORT_NUMBERED = {
+    "Sa": ("1SA", "2SA"), "Ki": ("1KI", "2KI"), "Ch": ("1CH", "2CH"), "Co": ("1CO", "2CO"),
+    "Th": ("1TH", "2TH"), "Ti": ("1TI", "2TI"), "Pe": ("1PE", "2PE"), "Jo": ("1JN", "2JN", "3JN"),
+}
 _CH = r"[ivxlcIVXL]+|\d+"
 _VERSES = r"\d{1,3}(?:\s?[-–]\s?\d{1,3})?(?:\s?,\s?\d{1,3}(?:\s?[-–]\s?\d{1,3})?)*(?![\d])"
 FULL = re.compile(rf"\b(?:(?P<ord>[123]|III|II|I)\s?)?(?P<book>{_BOOK})\.?\s(?P<ch>{_CH})[.,:]\s?(?P<vs>{_VERSES})")
 MORE = re.compile(rf"\s?(?P<sep>[;,])\s?(?P<ch>{_CH})[.,:]\s?(?P<vs>{_VERSES})")
-BARE = re.compile(rf"\b(?P<lead>[Cc]omp\.|[Cc]f\.|[Cc]h\.|[Cc]hap\.)\s(?P<ch>[ivxlcIVXL]+)\.\s?(?P<vs>{_VERSES})")
-VERSE = re.compile(rf"\b(?:vv|ver|v)\.\s?(?P<vs>{_VERSES})")
+BARE = re.compile(rf"\b(?P<lead>[Cc]omp\.|[Cc]f\.|[Cc]h\.|[Cc]hap\.|c\.)\s(?P<ch>[ivxlcIVXL]+)\.\s?(?P<vs>{_VERSES})")
+VERSE = re.compile(rf"\b(?:vv|[Vv]er|v)\.\s?(?P<vs>{_VERSES})(?!\s\d)")     # not "Ver. 1 1.", a scan's 11
+LEMMA = re.compile(r"(?:\A|\n)\s*(?:\[\d+\.\]\s*)?\Z")    # nothing but a section mark before it in its paragraph
+SHORT = re.compile(rf"\b(?:(?P<ord>[123])\s?)?(?P<book>{'|'.join(sorted(set(SHORT_SINGLE) | set(SHORT_NUMBERED), key=len, reverse=True))})"
+                   rf"\s(?P<ch>\d{{1,3}}):(?P<vs>{_VERSES})(?![-–:\d])")    # not "10:1-22:16", a span of chapters
 
 
 def chapter_number(s):
@@ -254,22 +275,26 @@ def verse_groups(vs):
 def _refs(code, ch, vs):
     groups = verse_groups(vs) if code and ch else []
     refs = [(f"{code}.{ch}.{a}", f"{code}.{ch}.{b}") for a, b in groups]
-    return refs if refs and all(scripture.parse(s) and scripture.parse(e) for s, e in refs) else []
+    return refs if refs and all(scripture.plausible(s) and scripture.plausible(e) for s, e in refs) else []
 
 
-def full_refs(s):
+def full_refs(s, short=True):
     """References that name their book, with any that follow on from them:
     'Isa. xl. 12, 28; xli. 4', '1 John ii. 29, iii. 9'. Each is (at, end,
     text, start, end ref)."""
     found = []
-    for m in FULL.finditer(s):
+    full = list(FULL.finditer(s))
+    short = [m for m in SHORT.finditer(s) if short
+             and not any(f.start() < m.end() and m.start() < f.end() for f in full)]
+    for m in sorted(full + short, key=lambda m: m.start()):
         name, ordinal = m["book"], m["ord"]
+        single, numbered = (SINGLE, NUMBERED) if m.re is FULL else (SHORT_SINGLE, SHORT_NUMBERED)
         if ordinal:
-            codes = NUMBERED.get(name)
+            codes = numbered.get(name)
             n = {"I": 1, "II": 2, "III": 3}.get(ordinal) or int(ordinal)
             code = codes[n - 1] if codes and n <= len(codes) else None
         else:
-            code = SINGLE.get(name)          # "Tim. iii. 16" with no number is not guessed
+            code = single.get(name)          # "Tim. iii. 16" with no number is not guessed
         refs = _refs(code, chapter_number(m["ch"]), m["vs"])
         if not refs:
             continue
@@ -286,8 +311,18 @@ def full_refs(s):
     return [(at, end, s[at:end].rstrip(" ,;."), a, b) for at, end, a, b in found]
 
 
-def scan_citations(excerpt, book, chapter):
+def scan_citations(excerpt, book, chapter, own=None):
+    """References printed in a scan's excerpt. With `own`, the excerpt's
+    (start, end): a "Ver. 13" that opens a paragraph and names a verse the
+    excerpt is on is its heading ("Ver. 13. A second quotation..."), not a
+    citation. The same words inside a paragraph are a citation."""
     found = full_refs(excerpt)
+
+    def heading(at, refs):
+        if not own or not LEMMA.search(excerpt, 0, at):
+            return refs
+        lo, hi = (scripture.parse(r) for r in own)
+        return [(a, b) for a, b in refs if not (lo <= scripture.parse(a) and scripture.parse(b) <= hi)]
 
     def free(s, e):
         return not any(a < e and s < b for a, b, *_ in found)
@@ -299,7 +334,7 @@ def scan_citations(excerpt, book, chapter):
                       for a, b in _refs(book, chapter_number(ch), m["vs"])]
     for m in VERSE.finditer(excerpt):
         if free(m.start(), m.end()):
-            found += [(m.start(), m.end(), m[0].rstrip(" ,;."), a, b) for a, b in _refs(book, chapter, m["vs"])]
+            found += [(m.start(), m.end(), m[0].rstrip(" ,;."), a, b) for a, b in heading(m.start(), _refs(book, chapter, m["vs"]))]
     return sorted((at, text, a, b) for at, _, text, a, b in found)
 
 
@@ -514,7 +549,7 @@ def derive():
             else:
                 if by_division:
                     problems.append(f"{e['id']}: loci are read from CCEL pages only")
-                found = scan_citations(text, data["book"], int(ch))
+                found = scan_citations(text, data["book"], int(ch), (e["start"], e["end"]))
                 kind = "pattern"
             for at, ctext, start, end in found:
                 start, end = scripture.english_span(start, end)

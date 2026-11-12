@@ -32791,15 +32791,6 @@
   },
   {
    "in": "henry-psalms.PSA.98.4-9.1",
-   "at": 833,
-   "text": "lxvi. 25",
-   "start": "PSA.66.25",
-   "end": "PSA.66.25",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.98.4-9.1",
    "at": 1341,
    "text": "v. 6",
    "start": "PSA.98.6",
@@ -39113,15 +39104,6 @@
    "text": "Ps. lxxii. 2, 23",
    "start": "PSA.72.2",
    "end": "PSA.72.2",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-psalms.PSA.116.3.4",
-   "at": 586,
-   "text": "Ps. lxxii. 2, 23",
-   "start": "PSA.72.23",
-   "end": "PSA.72.23",
    "found": "source",
    "status": "detected"
   },

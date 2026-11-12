@@ -20,6 +20,7 @@ import build_site  # noqa: E402
 import extract_texts  # noqa: E402
 import fetch_wikidata  # noqa: E402
 import find_refs  # noqa: E402
+import score_refs  # noqa: E402
 import scripture  # noqa: E402
 import validate  # noqa: E402
 import verify_sources  # noqa: E402
@@ -74,6 +75,34 @@ class FindRefs(unittest.TestCase):
         self.assertEqual(self.refs("Tim. iii. 16"), [])          # which Timothy?
         self.assertEqual(self.refs("Matt. li. 22"), [])          # Matthew has 28 chapters: a misread
         self.assertEqual(self.refs("Comp. v. 5"), [("v. 5", "JHN.1.5", "JHN.1.5")])   # verse 5, not chapter 5
+
+    def test_short_names_with_a_colon(self):
+        # Jamieson-Fausset-Brown: "Lu 1:1-4; 24:3", "1Co 13:12"
+        self.assertEqual(self.refs("(Lu 1:1-4; 24:3)", "LUK"),
+                         [("Lu 1:1-4", "LUK.1.1", "LUK.1.4"), ("24:3", "LUK.24.3", "LUK.24.3")])
+        self.assertEqual(self.refs("compare 1Co 13:12"), [("1Co 13:12", "1CO.13.12", "1CO.13.12")])
+        self.assertEqual(self.refs("I am 3 years"), [])               # "Am" is read only before chapter:verse
+        self.assertEqual(self.refs("Pr 10:1-22:16", "PRO"), [])        # a span of chapters is not cut short
+
+    def test_capital_ver_and_this_book_s_chapters(self):
+        self.assertEqual(self.refs("as he said, Ver. 4."), [("Ver. 4", "JHN.1.4", "JHN.1.4")])
+        self.assertEqual(self.refs("I am the way ( c. xiv. 6 )"), [("xiv. 6", "JHN.14.6", "JHN.14.6")])
+
+    def test_a_heading_is_not_a_citation(self):
+        refs = lambda text: [t for _, t, _, _ in find_refs.scan_citations(text, "ROM", 9, ("ROM.9.13", "ROM.9.13"))]
+        self.assertEqual(refs("Ver. 13. A second quotation"), [])
+        self.assertEqual(refs("x\n\n[2.] Ver. 13. Then"), [])
+        self.assertEqual(refs("as Ver. 13 shows, and Ver. 11."), ["Ver. 13", "Ver. 11"])
+
+    def test_a_verse_that_cannot_exist_is_a_misreading(self):
+        self.assertEqual(self.refs("ver. 1 7, which", "ROM", 5), [])   # the scan's "17"
+        self.assertEqual(self.refs("Isa. xv. 14"), [])                  # Isaiah 15 has nine verses
+        self.assertEqual(self.refs("Joel ii. 32"), [("Joel ii. 32", "JOL.2.32", "JOL.2.32")])  # Hebrew 3:5
+        self.assertEqual(self.refs("John viii. 51"), [("John viii. 51", "JHN.8.51", "JHN.8.51")])
+
+    def test_the_scores_are_up_to_date(self):
+        code, out = quiet(score_refs.main, ["--check"])
+        self.assertEqual(code, 0, out)
 
     def test_ccel_marks_are_read_as_printed(self):
         with open(os.path.join(ROOT, "library", "citations", "chrysostom", "JHN.json"), encoding="utf-8") as f:

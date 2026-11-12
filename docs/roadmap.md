@@ -23,8 +23,9 @@ and cross-references, and source checking.
 
 *Progress:* items 1–3 have a first version (docs/references.md). Works
 declare their `divisions` and the Chrysostom and Augustine excerpts carry
-their homily or tractate and section. `scripts/find_refs.py` finds 325
-Scripture citations in the excerpts. The reader links each one and lists,
+their homily or tractate and section. `scripts/find_refs.py` finds 46,667
+Scripture citations in the excerpts, and `scripts/score_refs.py` measures
+how often its pattern matcher is right (docs/references.md). The reader links each one and lists,
 under every verse, the excerpts on other verses that cite it. Item 4 has
 a first version too: 15 of the Catena's quotations of Chrysostom and
 Augustine are traced to their homily or tractate, 9 of them to the section

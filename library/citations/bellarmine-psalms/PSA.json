@@ -3,15 +3,6 @@
  "book": "PSA",
  "citations": [
   {
-   "in": "bellarmine-psalms.PSA.13.6.2",
-   "at": 809,
-   "text": "Psalm xix. 39",
-   "start": "PSA.19.39",
-   "end": "PSA.19.39",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
    "in": "bellarmine-psalms.PSA.16.6.1",
    "at": 745,
    "text": "Ephes. i. 11",

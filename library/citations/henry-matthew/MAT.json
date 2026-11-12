@@ -11139,8 +11139,8 @@
    "in": "henry-matthew.MAT.10.23.2",
    "at": 623,
    "text": "Isa. xlvi. 26",
-   "start": "ISA.46.26",
-   "end": "ISA.46.26",
+   "start": "ISA.44.26",
+   "end": "ISA.44.26",
    "found": "source",
    "status": "detected"
   },
@@ -18013,15 +18013,6 @@
   },
   {
    "in": "henry-matthew.MAT.15.18.2",
-   "at": 261,
-   "text": "Ps. iv. 21",
-   "start": "PSA.4.21",
-   "end": "PSA.4.21",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-matthew.MAT.15.18.2",
    "at": 273,
    "text": "James iv. 1",
    "start": "JAS.4.1",
@@ -21671,15 +21662,6 @@
    "text": "Ps. lxxvii. 38, 40",
    "start": "PSA.77.38",
    "end": "PSA.77.38",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-matthew.MAT.18.21-35.1",
-   "at": 803,
-   "text": "Ps. lxxvii. 38, 40",
-   "start": "PSA.77.40",
-   "end": "PSA.77.40",
    "found": "source",
    "status": "detected"
   },
@@ -30113,15 +30095,6 @@
    "text": "Ps. lxxxix. 29",
    "start": "PSA.89.30",
    "end": "PSA.89.30",
-   "found": "source",
-   "status": "detected"
-  },
-  {
-   "in": "henry-matthew.MAT.24.29.1",
-   "at": 1334,
-   "text": "xxxvi. 37",
-   "start": "PSA.36.37",
-   "end": "PSA.36.37",
    "found": "source",
    "status": "detected"
   },

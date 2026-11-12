@@ -103,8 +103,12 @@ cites:
   (after scan corrections).
 - `found` is `source` when the transcription's editors marked the reference
   (CCEL), or `pattern` when `scripts/find_refs.py` matched it in a scan:
-  "Heb. i. 3", "1 Tim. iii. 16, 17", "comp. vi. 46" (this book), "v. 14" (this
-  chapter). A book name with no number ("Tim. iii. 16") is not guessed.
+  "Heb. i. 3", "1 Tim. iii. 16, 17", "Lu 1:1-4; 24:3", "comp. vi. 46" and
+  "c. xiv. 6" (this book), "v. 14" and "Ver. 14" (this chapter). A book name
+  with no number ("Tim. iii. 16") is not guessed; a verse past the end of its
+  chapter is a misreading ("ver. 1 7" for 17) and is left out; a "Ver. 13."
+  that opens a paragraph on verse 13 is the excerpt's heading, not a
+  citation.
 - `status` is `detected` until a person checks it: `reviewed`, or `rejected`
   for a false match. Rejected citations stay in the file, so they are not
   found again, and are not shown. Running the script again keeps every
@@ -147,3 +151,31 @@ rarer words both share. `library/quotations/<work>/<BOOK>.json`:
 
 The reader shows both directions: under a Catena excerpt, where each
 quotation comes from; under the quoted excerpt, that the Catena quotes it.
+
+## How well the references are found
+
+`scripts/score_refs.py` measures both finders and keeps the figures in
+`docs/scores.json`; CI fails if the file is out of date, and recording a
+lower figure needs `--allow-drop`.
+
+- **Citations.** The pattern matcher is run on the CCEL excerpts as if they
+  had no marks, and what it finds is compared with what CCEL's editors
+  marked. A reference found is right when it overlaps a marked one ("Ac
+  22:21, 22" is two references to the matcher and one range to CCEL). In
+  November 2026: precision 0.881, recall 0.966, over 32,772 marked
+  references in 26 works. The editors did not mark everything (Wesley's
+  "Deut. xviii, 15", most of Jamieson-Fausset-Brown's references to the
+  book in hand), so precision is a floor. Chrysostom's "Ver. 4" headings are
+  marked on CCEL's Romans and not on its John, so his scores move with
+  that, not with the matcher.
+- **Quotations.** Each of the Catena's quotations matched to a homily or
+  tractate is checked against the verses the CCEL headings give that homily
+  (from its first verse to the verse the next one opens on), or, for a
+  section match, whether the paragraph is within three verses. In November
+  2026, 849 of the 911 on John and 170 of the 197 on Matthew agree; the
+  others are listed under `check_first` for a person to check first.
+
+Neither is proof. The answer key for a quotation is the margin note on the
+printed page ("Chrys. Hom. ii. in Joan."), which the OCR scatters: a
+reviewer who reads a sample of them off the page images, with their name on
+the file, gives the matcher a true precision.
