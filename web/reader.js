@@ -34,7 +34,18 @@
   }
   var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), kinds: new Set(KINDS), marks: null, counts: {}, note: null, open: {} };
   // Whether a voice is shown under the era and tradition filters.
-  var shownBy = function (w) { return state.eras.has(w.era) && state.kinds.has(w.kind); };
+  // Voices the reader has opened on a verse are marked read (logia-heard,
+  // by comment key, kept on the device); "Only unread" hides them.
+  var heard = (function () { try { return JSON.parse(localStorage.getItem("logia-heard") || "{}"); } catch (e) { return {}; } })();
+  var isHeard = function (w, v) { return !!heard[keyOf(w, v)]; };
+  function markHeard(w, v) {
+    heard[keyOf(w, v)] = 1;
+    try { localStorage.setItem("logia-heard", JSON.stringify(heard)); } catch (e) { /* storage blocked: for this page */ }
+  }
+  var shownBy = function (w) {
+    // A voice opened since "Only unread" was chosen stays, so it doesn't vanish as it is read.
+    return state.eras.has(w.era) && state.kinds.has(w.kind) && !(state.unread && isHeard(w, state.verse) && !(state.kept || {})[w.work_id]);
+  };
   var Account = window.LogiaAccount;
   var CHAPTER = DATA.book + "." + DATA.chapter;
   // A comment's key: <work>.<BOOK>.<chapter>.<verse> (backend/logia/ in open-word-bible).
@@ -474,7 +485,10 @@
     var off = ERAS.some(function (x) { return !state.eras.has(x); }) || KINDS.some(function (x) { return !state.kinds.has(x); });
     return '<div class="cx-filters">' + row("era", ERAS, U.show_eras, U.eras, state.eras, "era", U.filter_era) +
       row("kind", KINDS, U.show_kinds, U.kinds, state.kinds, "kind", U.filter_kind) +
-      (off ? '<button type="button" class="cx-chip-all" data-show-all>' + esc(fmt(U.show_all, { n: on.length })) + "</button>" : "") + "</div>";
+      (off ? '<button type="button" class="cx-chip-all" data-show-all>' + esc(fmt(U.show_all, { n: on.length })) + "</button>" : "") +
+      (on.some(function (w) { return isHeard(w, v); })
+        ? '<button type="button" class="cx-chip cx-unread" data-unread aria-pressed="' + !!state.unread + '">' +
+          esc(fmt(U.only_unread, { n: on.filter(function (w) { return !isHeard(w, v); }).length })) + "</button>" : "") + "</div>";
   }
   function commTab() {
     var v = state.verse;
@@ -493,7 +507,7 @@
     if (pinnedHere.length) groups.push({ label: U.pinned, ws: pinnedHere });
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
-      var ws = works.filter(function (w) { return w.era === era && state.kinds.has(w.kind) && entriesFor(w, v).length && !isPinned(w); });
+      var ws = works.filter(function (w) { return w.era === era && shownBy(w) && entriesFor(w, v).length && !isPinned(w); });
       if (ws.length) groups.push({ label: U.eras[era], ws: ws });
     });
     groups.forEach(function (g) {
@@ -517,6 +531,7 @@
         h += '<section class="cx-card' + (open ? "" : " cx-shut") + '" id="c-' + w.work_id + '">' +
           '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
           '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" + badge +
+          (isHeard(w, v) ? '<span class="cx-heard" title="' + esc(U.heard_title) + '">' + esc(U.heard) + "</span>" : "") +
           '<button type="button" class="cx-pin" data-pin="' + esc(w.author) + '" aria-pressed="' + isPinned(w) + '" title="' +
           esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '" aria-label="' + esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '">' + ICON.pin + "</button>" +
           '<button type="button" class="cx-toggle" data-toggle="' + w.work_id + '" aria-expanded="' + open + '" aria-controls="cb-' + w.work_id +
@@ -680,7 +695,7 @@
     var v = state.verse, toks = PANEL.words[v] || [];
     var h = '<div class="cx-greek" lang="' + SOURCE_LANG + '"' + DIR + ">" + toks.map(function (t) {
       return '<span class="cx-g' + (t.id === state.token ? " cx-on" : "") + '" data-gid="' + t.id + '" role="button" tabindex="0">' +
-        esc(t.text) + "</span>" + esc((t.after || " ").replace(/(\S)$/, "$1 "));
+        esc(t.text) + "</span>" + esc(t.after === "" ? "" : (t.after || " ").replace(/([^\s\u05be])$/, "$1 "));
     }).join("") + "</div>";
     var t = toks.filter(function (x) { return x.id === state.token; })[0];
     if (!t) return h + '<p class="cx-empty">' + esc(U.tap_word) + "</p>";
@@ -781,7 +796,7 @@
   function go(v, opts) {
     opts = opts || {};
     var to = Math.max(FIRST, Math.min(LAST, v));
-    if (to !== state.verse) state.open = {};
+    if (to !== state.verse) { state.open = {}; state.kept = {}; }
     state.verse = to;
     if (!opts.keepToken) state.token = null;
     state.note = null;
@@ -828,6 +843,8 @@
   document.querySelector(".cx-tabs").addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;
     state.tab = b.dataset.tab; renderPanel();
+    // Kept for the next chapter too, so a reader studying the Greek stays on it.
+    try { localStorage.setItem("logia-tab", state.tab); } catch (err) { /* storage blocked */ }
   });
   // On a phone the panel is a sheet over the text: a peek, half the screen
   // or nearly all of it. The handle steps through them; dragging the sheet's
@@ -855,6 +872,14 @@
       window.scrollBy({ top: r.top - top - 16, behavior: reduce ? "auto" : "smooth" });
     }
   }
+  // "Skip to the commentary" (the page's second skip link) opens the sheet
+  // on a phone and puts focus in it.
+  var skipTo = document.querySelector("[data-skip-to]");
+  if (skipTo) skipTo.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    if (PHONE.matches && sheetState() === "min") sheet("half");
+    $("#panel").focus();
+  });
   $("#grab").addEventListener("click", function () {
     sheet({ min: "half", half: "full", full: "min" }[sheetState()]);
   });
@@ -910,12 +935,14 @@
     if (toggle) {
       var wid = toggle.getAttribute("data-toggle");
       state.open[wid] = !isOpen(wid);
+      if (state.open[wid]) { markHeard(byId(wid), state.verse); (state.kept = state.kept || {})[wid] = true; }
       refresh();
       var again = document.querySelector('[data-toggle="' + wid + '"].cx-toggle');
       if (again) again.focus();
       return;
     }
-    var chip = e.target.closest(".cx-filters .cx-chip, [data-show-all]");
+    if (e.target.closest("[data-unread]")) { state.unread = !state.unread; state.kept = {}; renderPanel(); var u = document.querySelector("[data-unread]"); if (u) u.focus(); return; }
+    var chip = e.target.closest(".cx-filters .cx-chip:not([data-unread]), [data-show-all]");
     if (chip) {
       if (chip.hasAttribute("data-show-all")) { state.eras = new Set(ERAS); state.kinds = new Set(KINDS); }
       else if (chip.dataset.era) { var era = chip.dataset.era; if (state.eras.has(era)) state.eras.delete(era); else state.eras.add(era); }
@@ -1006,6 +1033,11 @@
     commTabButton.classList.add("cx-zero");
   }
   var m0 = location.hash.match(HASH);
+  // The tab last chosen (logia-tab), unless the address points at a voice's
+  // comment, or the chapter has no commentary (set above).
+  if (!EMPTY && !(m0 && m0[2])) {
+    try { var lastTab = localStorage.getItem("logia-tab"); if (/^(comm|words|notes|xref)$/.test(lastTab || "")) state.tab = lastTab; } catch (err) { /* storage blocked */ }
+  }
   // A verse the Open Word Bible leaves out (#v1 on John 8): open at the verse
   // after it, and show the note that stands in its place.
   var gapAsked = m0 && DATA.verses.indexOf(+m0[1]) < 0 && (DATA.verses.filter(function (v) { return v > +m0[1]; })[0] || 0);
@@ -1019,7 +1051,11 @@
   // This chapter, read: kept for the dot on its chip (web/logia.js).
   try {
     var read = JSON.parse(localStorage.getItem("logia-read") || "[]");
-    if (read.indexOf(location.pathname) < 0) { read.push(location.pathname); localStorage.setItem("logia-read", JSON.stringify(read.slice(-2000))); }
+    // Kept in the order last read, so "Recently read" (/saved/) can list them newest first.
+    var at = read.indexOf(location.pathname);
+    if (at >= 0) read.splice(at, 1);
+    read.push(location.pathname);
+    localStorage.setItem("logia-read", JSON.stringify(read.slice(-2000)));
   } catch (err) { /* storage blocked */ }
   loadComm();
   renderText(); go(state.verse);

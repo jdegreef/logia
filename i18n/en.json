@@ -1,5 +1,6 @@
 {
   "site": {
+    "skip_commentary": "Skip to the commentary",
     "name": "Logia",
     "tagline": "Scripture beside two thousand years of commentary: the early church, the Middle Ages, the Reformers, the Puritans and the 1800s, copied word for word from public-domain editions.",
     "description": "Logia sets every verse of Scripture beside what the church has said about it for two thousand years: public-domain commentaries from the early church to the 1800s, free and open.",
@@ -161,6 +162,9 @@
     "new": "New Testament"
   },
   "footer": {
+    "report_page": "Report a problem with this page",
+    "report_page_title": "Problem on: {page}",
+    "report_page_body": "Page: {url}\n\nWhat looks wrong, and what you expected:\n\n",
     "releases": "Data releases",
     "read": "Read",
     "explore": "Explore",
@@ -258,6 +262,14 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "within_work": "Search {title}",
+    "within_author": "Search everything by {name}",
+    "within_placeholder": "A word or a few words",
+    "source_comm": "Commentary",
+    "source_bible": "Bible text",
+    "owb": "Open Word Bible",
+    "filter_source": "Source",
+    "dek_bible": "The Bible text is in it too, so a verse can be found by the words you remember, or by a Greek or Hebrew word: in its own letters, in Latin letters (logos), or by its Strong's number (G3056).",
     "eyebrow": "Search",
     "heading": "Search the commentators' words",
     "dek": "Every word of all {n} excerpts by {authors} commentators, as they wrote them. Narrow by era, tradition, book or commentator.",
@@ -277,9 +289,9 @@
       "noscript": "Searching the words needs JavaScript.",
       "searching": "Searching…",
       "none": "Nothing found for “{q}”. Try another spelling: many of these editions spell as their century did.",
-      "count_one": "1 excerpt has “{q}”.",
-      "count": "{n} excerpts have “{q}”.",
-      "count_filtered": "{n} excerpts in what you chose.",
+      "count_one": "1 result has “{q}”.",
+      "count": "{n} results have “{q}”.",
+      "count_filtered": "{n} results in what you chose.",
       "clear": "Clear the filters",
       "failed": "The search couldn't load. Check the connection and try again."
     },
@@ -295,6 +307,9 @@
       "words": "“{q}” in the commentators' words",
       "words_note": "Search every excerpt",
       "text_only": "Bible text and notes, no commentary yet",
+      "passage": "Passage",
+      "who_on": "{name} on {ref}",
+      "in_reader": "In the reader",
       "meant": "Did you mean {name}?"
     },
     "key_hint": "Press / on any page to search",
@@ -328,6 +343,13 @@
     "no_commentary_title": "No commentary on {ref} yet. Read the Bible text"
   },
   "book": {
+    "topics": "Topics drawn from {book}",
+    "topic_n": "{n} passages",
+    "topic_one": "1 passage",
+    "creeds": "Creeds and confessions that cite {book}",
+    "creeds_note": "Counted from the verses each document cites, in its own text or in proof texts, as its edition prints them. An edition printed with proof texts cites far more verses, so the count says how a document was printed as much as how much it draws on the book.",
+    "creed_n": "{n} verses cited",
+    "creed_one": "1 verse cited",
     "heat_chapter": "{ref}: {n} excerpts",
     "heat_label": "{book}, verse by verse: how much the commentators wrote on each verse",
     "heat_note": "Each bar is a verse of {book}, taller where more is written on it. Choose a chapter to read it.",
@@ -404,6 +426,7 @@
     "dek_none_one": "1 chapter, with the Bible text, its original words and translation notes. Commentary on it is still to come."
   },
   "chapter": {
+    "hot": "Most discussed here:",
     "eyebrow": "Chapter {chapter}",
     "pick": "Pick a verse to see what the church has said about it. The gold line beside the text is darker where more has been written, and a bracket marks a comment on a whole passage. In Balanced, tap a word for its Greek.",
     "pick_hbo": "Pick a verse to see what the church has said about it. The gold line beside the text is darker where more has been written, and a bracket marks a comment on a whole passage. In Balanced, tap a word for its Hebrew.",
@@ -441,6 +464,9 @@
     "by_verse_note": "Each verse with commentary has a page of its own: every voice on it in full, its Greek words, translation notes and cross-references."
   },
   "reader": {
+    "heard": "Read",
+    "heard_title": "You have opened this one on this verse",
+    "only_unread": "Only unread ({n})",
     "saved_device": "Saved on this device. Sign in to keep it on every device:",
     "pinned": "Pinned",
     "pin": "Pin {name} to the top of every verse",
@@ -562,6 +588,8 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "alike_note": "Counted from the words each uses, weighted toward the words few commentators use: how alike the two read in Logia's English, not who agrees with whom. The longest bar is the closest; a translator's English counts as much as the author's.",
+    "alike": "Who writes most like {name}",
     "timeline_key": "What the colours show: the eras",
     "title": "Commentators",
     "heading": "The voices in Logia",
@@ -754,6 +782,7 @@
       "open": "Open",
       "privacy": "Privacy",
       "cite": "Citing Logia",
+      "access": "Accessibility",
       "help": "Help build Logia",
       "thanks": "With thanks",
       "questions": "Questions"
@@ -850,6 +879,14 @@
     "citation": "Logia: a free library of Christian commentary. {url}",
     "cite_note": "To quote one excerpt, use the Cite button beside it, which names the edition it was copied from.",
     "help": "A script checks every excerpt, but people catch what scripts miss.",
+    "access": [
+      "Logia means to be usable by everyone who reads: with a screen reader, a keyboard alone, enlarged text or on a small phone. It aims at the Web Content Accessibility Guidelines (WCAG) 2.2, level AA. No person has yet audited it against them; this is what is done so far.",
+      "Each change to the site is tested automatically with axe-core on a sample of pages, in light and in dark colours, and a problem rated serious or critical fails the test.",
+      "Every page begins with a link past the menus to its text, and the reader and verse pages have a second, past the Bible text to the commentary. The site can be used from the keyboard alone; press ? for its shortcuts.",
+      "The colours follow your device's light or dark setting, or the button in the header. Movement is kept still when your device asks for reduced motion.",
+      "Known gaps: Greek and Hebrew words are read in whatever voice your screen reader has for them, and the scans linked as sources are pictures of printed pages, not text."
+    ],
+    "access_report": "If something on Logia gets in your way, tell us: the page, and what happened.",
     "help_items": [
       [
         "Report a misreading",
@@ -925,6 +962,9 @@
     "read": "Browse the books"
   },
   "account": {
+    "recent_title": "Recently read",
+    "recent_note": "The chapters you have read on this device, newest first. They stay on this device and are not sent anywhere.",
+    "recent_clear": "Clear this list",
     "sign_in": "Sign in",
     "sign_in_title": "Sign in with your Open Word Bible account to save and like comments, on every device. Reading needs no account.",
     "your_account": "Your account",
@@ -974,6 +1014,7 @@
   },
 
   "verse": {
+    "orig_words": "Word by word ↓",
     "compare": "Compare two voices",
     "compare_title": "Two voices on {ref}",
     "compare_pick": "Choose two:",
@@ -1052,6 +1093,10 @@
     "in_chapter": "Passages in this chapter"
   },
   "occasions": {
+    "ics_name": "Logia: readings of the church year",
+    "ics_desc": "The great days and the Sunday readings, each with what the church has said on it, at logia.faith.",
+    "ics_link": "Add to your calendar",
+    "ics_note": "Download the file, or subscribe so it stays up to date: {url}",
     "cal_label": "Calendar:",
     "cal_all": "All",
     "cal_rcl": "Revised Common Lectionary",
@@ -1146,6 +1191,16 @@
     }
   },
   "open_data": {
+    "schema_title": "Logia: the commentary excerpts, in English",
+    "code_title": "For developers",
+    "code_note": "The download's shape as a JSON Schema, and a few lines in Python and JavaScript to start from. Neither needs a key or a library.",
+    "schema_link": "The JSON Schema (2020-12) of logia-en.json: every field, its type and what it holds. Each build checks the file against it.",
+    "code_py": "Python: the whole download",
+    "code_py_note": "Reads logia-en.json and prints the start of every excerpt on John 3:16 (the standard library only).",
+    "code_js": "JavaScript: one chapter from the API",
+    "code_js_note": "Fetches John 3 from the API and prints the start of each excerpt on verse 16 (in a browser module or Node 18 and later).",
+    "code_copy": "Copy",
+    "code_copied": "Copied",
     "parts_title": "A book or a work at a time",
     "parts_note": "The same records as the CSV above, one file per book of the Bible and one per commentary, small enough for a spreadsheet. For JSON a chapter or a work at a time, use the API below.",
     "by_book": "By book:",
@@ -1261,6 +1316,13 @@
     ]
   },
   "most": {
+    "all_heading": "The most-discussed verses in the library",
+    "all_lead": "{n} verses in {books} books have commentary in Logia. These are the ones the commentators wrote most on, counted from every excerpt in the library.",
+    "all_description": "Which verses did the church fathers and later commentators write most on? {ref} leads the library with {n} excerpts.",
+    "all_link": "The most-discussed verses across the whole library",
+    "books_title": "How much is written on each book",
+    "books_note": "Excerpts on each book's verses, an excerpt on a range counting on each of its verses. Each opens that book's most-discussed verses.",
+    "how_all": "Each excerpt counts once on every verse it comments on, in any work in the library. Books with more commentaries in Logia naturally count higher; the Commentators column says how many of a book's commentaries speak on the verse.",
     "of": "{n} of {total}",
     "sort_note": "Press a column's heading to sort by it.",
     "show_all": "Show all {n}",
@@ -1476,6 +1538,16 @@
   },
 
   "creeds": {
+    "compare_heading": "Two creeds side by side",
+    "compare_dek": "The creeds the churches share, each whole as its edition sets it out. Choose any two to read side by side; their articles are not matched up, so each is read in its own order.",
+    "compare_left": "On the left",
+    "compare_right": "On the right",
+    "compare_open": "Its own page",
+    "compare_link": "Compare two creeds",
+    "compare_noscript": "Choosing two creeds needs JavaScript; each is on its own page.",
+    "recite": "Recite",
+    "recite_prev": "Back",
+    "recite_next": "Next",
     "record": "The edition",
     "undated": "Not dated in the edition: {names}.",
     "timeline_note": "Each document at the year it was made or adopted, oldest first. Gold: shared by the churches; the other colours, the Catholic, Orthodox and Protestant churches.",
@@ -1677,6 +1749,7 @@
     }
   },
   "sundays": {
+    "ics_others": "Also read: {others}",
     "heading": "The coming Sundays and holy days",
     "dek": "The readings of the Revised Common Lectionary, used by many Anglican, Lutheran, Methodist, Presbyterian and other churches. Each reading links to what Logia's commentators say on it.",
     "gospel": "Gospel:",
@@ -1806,6 +1879,11 @@
   },
 
   "topic": {
+    "mark_read": "Mark as read",
+    "marked_read": "Read ✓",
+    "next": "Next passage ↓",
+    "progress": "{n} of {total} passages read",
+    "done": "All {total} passages read",
     "card_counts": "{n} excerpts · {k} voices",
     "family_god": "God and Christ",
     "family_salvation": "Sin and salvation",
@@ -2077,5 +2155,23 @@
       ]
     ],
     "note": "Shortcuts work when you are not typing in a box."
+  },
+  "timeline": {
+    "label": "Councils and turning points",
+    "events": {
+      "nicaea": "Council of Nicaea",
+      "chalcedon": "Council of Chalcedon",
+      "nicaea-2": "Second Council of Nicaea",
+      "schism": "East and West divide",
+      "reformation": "Luther's Ninety-five Theses",
+      "trent": "Council of Trent opens",
+      "vatican-1": "First Vatican Council opens"
+    },
+    "note": "The dashed lines mark councils the churches count as ecumenical and the divisions between them, for when each commentator lived."
+  },
+  "install": {
+    "text": "Read Logia offline: install it on this device, and the chapters you open stay readable without a connection.",
+    "install": "Install",
+    "later": "Not now"
   }
 }
