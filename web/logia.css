@@ -99,18 +99,20 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-panel { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-card); position: sticky; top: calc(var(--header-h) + 16px); max-height: calc(100vh - var(--header-h) - 32px); display: flex; flex-direction: column; }
 .cx-grab { display: none; }
 @media (max-width: 880px) {
-  .cx-passage { padding-bottom: 52vh; }
+  .cx-passage { padding-bottom: 46vh; }
   /* The sheet: a peek (.cx-min), half the screen with the chosen verse kept
      in view above it, or nearly all of it (.cx-full). */
-  .cx-panel { position: fixed; left: 0; right: 0; bottom: 0; top: auto; z-index: 5; max-height: 50vh; height: 50vh; border-radius: 18px 18px 0 0; border-bottom: 0;
+  .cx-panel { position: fixed; left: 0; right: 0; bottom: 0; top: auto; z-index: 5; max-height: 44vh; height: 44vh; border-radius: 18px 18px 0 0; border-bottom: 0;
     padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);
     box-shadow: 0 -10px 30px -12px rgb(0 0 0 / .35); transition: max-height 220ms ease; }
   .cx-panel.cx-min { max-height: 128px; overflow: hidden; }
   .cx-panel.cx-full { max-height: 88vh; height: 88vh; }
   .cx-panel { transition: max-height 220ms ease, height 220ms ease; }
   .cx-panel.cx-min { height: auto; }
-  .cx-panel:not(.cx-full) .cx-ph-text { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; }
-  .cx-panel.cx-min .cx-pb, .cx-panel.cx-min .cx-rail, .cx-panel.cx-min .cx-ph-text { display: none; }
+  /* Below full height the chosen verse is on screen above the sheet, so the
+     sheet leaves out its text and the timeline and starts with the voices. */
+  .cx-panel:not(.cx-full) .cx-ph-text, .cx-panel:not(.cx-full) .cx-rail { display: none; }
+  .cx-panel.cx-min .cx-pb { display: none; }
   .cx-grab { display: block; width: 100%; border: 0; background: none; padding: 8px 0 0; cursor: pointer; }
   .cx-grab::before { content: ""; display: block; width: 40px; height: 4px; border-radius: 4px; background: var(--line-strong); margin: 0 auto; }
   .cx-ph { padding-top: 6px; }
@@ -128,28 +130,24 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-ph-text { font-family: var(--serif); font-size: 16px; color: var(--muted); margin: 6px 0 14px; }
 .cx-summary { font-size: 13px; color: var(--muted); }
 
-.cx-rail { position: relative; height: calc(38px + var(--lanes, 1) * 22px); margin: 8px 18px 4px; }
+.cx-rail { position: relative; height: calc(48px + var(--lanes, 1) * 16px); margin: 8px 18px 4px; }
 .cx-rail-line { position: absolute; left: -12px; right: -12px; bottom: 22px; height: 1px; background: var(--line-strong); }
 .cx-tick { position: absolute; bottom: 4px; font-size: 10.5px; color: var(--muted); transform: translateX(-50%); font-variant-numeric: tabular-nums; }
 .cx-tick::before { content: ""; position: absolute; left: 50%; top: -6px; width: 1px; height: 5px; background: var(--line-strong); }
 /* A commentator: a pill with the first letters of their name, on a stem down
    to the year they died. */
-.cx-dot { position: absolute; bottom: 30px; transform: translateX(-50%); min-width: 34px; padding: 3px 5px; border-radius: 999px;
-  border: 1.5px solid var(--gold); background: color-mix(in srgb, var(--gold) 16%, var(--surface)); color: var(--text);
-  font: 700 10.5px/1 var(--sans); cursor: pointer; }
-.cx-dot::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 6px; background: var(--gold); }
-.cx-dot { z-index: 3; }
-.cx-dot.cx-lane1 { bottom: 52px; z-index: 2; } .cx-dot.cx-lane1::after { height: 28px; }
-.cx-dot.cx-lane2 { bottom: 74px; z-index: 1; } .cx-dot.cx-lane2::after { height: 50px; }
-.cx-dot:hover { background: var(--lg-gold-ink); color: var(--bg); }
-.cx-dot.cx-cur { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
-.cx-dot.cx-off { opacity: .4; border-style: dashed; cursor: default; background: var(--surface); }
-/* The voices that don't fit in three lanes, folded into one pill at the top
-   right of the line. */
-.cx-dot.cx-more { left: auto; right: -12px; bottom: auto; top: 0; transform: none; border-color: var(--accent);
-  background: var(--accent-soft); color: var(--accent); }
-.cx-dot.cx-more::after { display: none; }
-.cx-dot.cx-off:hover { color: var(--text); }
+/* A voice on the timeline: a dot in its era's colour on a stem from the
+   year it died, in rows where dots would touch; its name shows on hover. */
+.cx-dot { position: absolute; bottom: calc(30px + var(--row, 0) * 16px); transform: translateX(-50%); width: 13px; height: 13px; padding: 0;
+  border-radius: 50%; border: 2px solid var(--surface); background: var(--era, var(--gold)); cursor: pointer; z-index: 2; }
+.cx-dot::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: calc(6px + var(--row, 0) * 16px); background: var(--line-strong); }
+.cx-dot::before { content: attr(data-name); position: absolute; left: 50%; bottom: calc(100% + 5px); transform: translateX(-50%);
+  white-space: nowrap; padding: 2px 7px; border-radius: 999px; background: var(--text); color: var(--bg); font: 600 11.5px/1.3 var(--sans);
+  opacity: 0; pointer-events: none; transition: opacity var(--fast) ease; }
+.cx-dot:hover, .cx-dot:focus-visible { z-index: 5; box-shadow: 0 0 0 2px var(--era, var(--gold)); }
+.cx-dot:hover::before, .cx-dot:focus-visible::before { opacity: 1; }
+.cx-dot.cx-cur { box-shadow: 0 0 0 2px var(--accent); }
+.cx-dot.cx-off { opacity: .28; cursor: default; }
 
 .cx-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
 .cx-tabs button { flex: 1 1 auto; border: 0; background: none; padding: 10px 8px 9px; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent; white-space: nowrap; }
@@ -160,6 +158,20 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
 .cx-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
 .cx-chip { border: 1px solid var(--line); background: var(--bg); border-radius: 999px; padding: 4px 11px; font-size: 12.5px; cursor: pointer; }
 .cx-chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent-soft-border); color: var(--accent); font-weight: 600; }
+/* The reader's filters: a row of eras and a row of traditions, each chip
+   with its count of voices on the verse. A chip turned off is plain. */
+.cx-filters { display: grid; gap: 6px; margin-bottom: 16px; }
+.cx-filters .cx-chips { margin-bottom: 0; }
+.cx-chips-label { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); align-self: center; min-width: 74px; }
+.cx-chip-n { font-variant-numeric: tabular-nums; font-weight: 500; opacity: .75; margin-left: 2px; }
+.cx-filters .cx-chip[aria-pressed="false"] { color: var(--muted); text-decoration: line-through; }
+.cx-chip-all { justify-self: start; border: 0; background: none; padding: 2px 0; font: inherit; font-size: 12.5px; font-weight: 600; color: var(--accent); cursor: pointer; text-decoration: underline; }
+@media (max-width: 880px) {
+  /* On a phone each row scrolls sideways, so the voices start sooner. */
+  .cx-filters .cx-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-right: -20px; padding-right: 20px; }
+  .cx-filters .cx-chips::-webkit-scrollbar { display: none; }
+  .cx-filters .cx-chip { flex: none; }
+}
 
 .cx-era { margin: 18px 0 8px; font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--lg-gold-ink); display: flex; align-items: center; gap: 10px; }
 .cx-era::after { content: ""; flex: 1; height: 1px; background: var(--line); }
@@ -466,17 +478,7 @@ dialog.lg-palette::backdrop { background: transparent; }
 .lg-progress span { display: block; height: 100%; background: var(--gold); transform: scaleX(0); transform-origin: left; }
 [dir="rtl"] .lg-progress span { transform-origin: right; }
 
-/* The tools: "Continue" on wide screens, dark mode, Saved when signed in. */
-.lg-resume { display: none; align-items: center; gap: 6px; height: 38px; padding: 0 14px 0 11px; border: 1px solid var(--accent-soft-border);
-  border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 14.5px; font-weight: 600; text-decoration: none; white-space: nowrap; }
-.lg-resume:hover { border-color: var(--accent); }
-/* "Continue" only where the bar has room: wide screens, pages without the
-   switcher (whose Read menu has it), and the search folded to its icon. */
-@media (min-width: 1360px) {
-  header.site .bar:not(:has(.lg-where)) .lg-resume:not([hidden]) { display: inline-flex; }
-  header.site .tools:has(.lg-resume:not([hidden])) .search-btn { width: 38px; padding: 0; justify-content: center; }
-  header.site .tools:has(.lg-resume:not([hidden])) :is(.search-label, .search-kbd) { display: none; }
-}
+/* The tools: dark mode, and Saved when signed in. */
 .lg-theme-btn[hidden] { display: none; }
 .lg-theme-btn .icon + .icon, .lg-theme-btn[aria-pressed="true"] .icon:first-child { display: none; }
 .lg-theme-btn[aria-pressed="true"] .icon + .icon { display: block; }
@@ -493,16 +495,17 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
   .lg-nav-resume { padding: 4px 14px; font-weight: 600; color: var(--accent); }
   .lg-dd-read .lg-dd-chapters { display: none; }
 }
-/* Room in the bar: a book's pages carry the switcher, so their bar folds
-   sooner. The brand already goes home, so Home is the first to go. */
+/* Room in the bar: it folds at the same widths on every page, so the menus,
+   the search and the brand keep their places from page to page; a book's
+   pages add only the switcher. The brand already goes home, so Home is the
+   first to go. */
 @media (max-width: 1440px) and (min-width: 941px) {
-  header.site .bar:has(.lg-where) .nav-link > .icon:first-child { display: none; }
-  header.site .bar:has(.lg-where) .search-btn { width: 38px; padding: 0; justify-content: center; }
-  header.site .bar:has(.lg-where) :is(.search-label, .search-kbd) { display: none; }
+  header.site .nav-link > .icon:first-child { display: none; }
+  header.site .search-btn { width: 38px; padding: 0; justify-content: center; }
+  header.site :is(.search-label, .search-kbd) { display: none; }
 }
 @media (max-width: 1180px) and (min-width: 941px) {
-  header.site .nav-link > .icon:first-child { display: none; }
-  header.site .bar:has(.lg-where) .nav-list > li:nth-child(2) { display: none; }
+  header.site .nav-list > li:nth-child(2) { display: none; }
   header.site .bar:has(.lg-where) :is(.lg-turn-btn, .brand-name) { display: none; }
   header.site .bar { gap: 10px; }
 }
@@ -1223,7 +1226,8 @@ html {
 .lg-bstrip { margin: 28px 0 0; }
 .lg-bstrip-cells { display: grid; grid-template-columns: repeat(66, minmax(0, 1fr)); gap: 2px; }
 .lg-bstrip-cells > * { height: 16px; border-radius: 2px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); }
-.lg-bstrip-cells > .lg-on { background: var(--accent); box-shadow: none; }
+.lg-bstrip-cells > .lg-on { background: color-mix(in srgb, var(--accent) var(--depth, 100%), var(--surface-2)); box-shadow: none; }
+.lg-bstrip-named { margin: 8px 0 0; font-size: 13.5px; line-height: 1.7; }
 .lg-bstrip-cells > .lg-on:hover, .lg-bstrip-cells > .lg-on:focus-visible { background: var(--text); }
 .lg-bstrip .lg-quiet { display: flex; justify-content: space-between; font-size: 12px; margin: 4px 0 0; }
 .lg-own { margin: 32px 0 0; padding: 20px 22px; border-radius: var(--radius-sm); background: var(--surface-2); }
@@ -1516,13 +1520,219 @@ html {
   color: var(--accent); font: 600 13.5px/1.2 var(--sans); cursor: pointer; }
 .lg-unfold:hover { border-color: var(--accent); }
 @media print { .lg-folded { max-height: none; overflow: visible; -webkit-mask-image: none; mask-image: none; } .lg-unfold { display: none; } }
-/* Verse pages: the verses either side, shaded by how much is said on each. */
-.lg-near { margin: 14px 0 4px; gap: 5px; }
-.lg-near .chap { min-width: 0; height: 30px; padding: 0 9px; border-radius: 8px; font-size: 13px; font-variant-numeric: tabular-nums; }
+/* Verse pages: every verse in the chapter in one scrolling row, shaded by
+   how much is said on each, between the verses before and after. */
+.lg-vstrip { display: flex; align-items: center; gap: 6px; margin: 14px 0 4px; min-width: 0; }
+.lg-vs-turn { flex: none; display: inline-flex; align-items: center; gap: 2px; font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap; min-width: 52px; }
+.lg-vs-turn[rel="next"] { justify-content: flex-end; }
+.lg-near { flex: 1; min-width: 0; flex-wrap: nowrap; overflow-x: auto; gap: 4px; padding: 5px 4px; scrollbar-width: thin;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 14px, #000 calc(100% - 14px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 14px, #000 calc(100% - 14px), transparent); }
+.lg-near .chap { flex: none; min-width: 30px; height: 30px; padding: 0 6px; border-radius: 8px; font-size: 13px; font-variant-numeric: tabular-nums; justify-content: center; }
+@media (max-width: 560px) { .lg-vs-turn span { display: none; } .lg-vs-turn { min-width: 0; } }
 .lg-near .chap[aria-current] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
 /* A page's trail back up the library (build_site.trail). */
 .lg-trail { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; }
 .lg-trail span { color: var(--muted); opacity: .7; }
+
+/* The timeline's key: a swatch in each era's colour, linked to the era. */
+.lg-tl-key { list-style: none; margin: 0 0 4px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.lg-tl-key li { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.lg-tl-key li::before { content: ""; width: 14px; height: 10px; border-radius: 3px; background: var(--era); }
+.lg-tl-key a { color: var(--text); text-decoration-color: var(--line-strong); }
+
+/* Copy with citation, Share, Report a mistake: under each excerpt printed
+   whole on a verse or work page, quiet until hovered. */
+.lg-xact { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin: 8px 0 0; }
+.lg-xact button, .lg-xact a { display: inline-flex; align-items: center; gap: 5px; border: 0; background: none; padding: 4px 0;
+  font: inherit; font-size: 13px; color: var(--muted); text-decoration: none; cursor: pointer; }
+.lg-xact button:hover, .lg-xact a:hover { color: var(--accent); }
+.lg-xact button[hidden] { display: none; }
+.lg-xact-note { flex-basis: 100%; margin: 2px 0 0; font-size: 13px; color: var(--text); }
+.lg-xact-note[hidden] { display: none; }
+.lg-xact-copy { display: block; width: 100%; margin-top: 6px; font: inherit; font-size: 13px; border: 1px solid var(--line-strong); border-radius: 8px; padding: 8px; background: var(--bg); color: var(--text); }
+@media print { .lg-xact { display: none; } }
+
+/* Read: one row per book, its chapters as a bar of thin cells (gold where
+   there is commentary, a dark foot once read), and the two testaments side
+   by side on a wide screen. */
+.lg-cov-index { display: grid; gap: 0 48px; }
+@media (min-width: 1000px) { .lg-cov-index { grid-template-columns: 1fr 1fr; align-items: start; } }
+.lg-canon-part { margin: 22px 0 0; }
+.lg-canon-part .label { margin: 0 0 6px; }
+.lg-cov-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.lg-cov-row { display: grid; grid-template-columns: 8.5em minmax(0, 1fr) 3.4em; align-items: center; gap: 10px; padding: 5px 0;
+  border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 12px); }
+.lg-cov-name { font-family: var(--display); font-weight: 600; font-size: 15.5px; color: var(--text); text-decoration: none;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lg-cov-name:hover { color: var(--accent); }
+.lg-cov-row:not(.lg-cov-has) .lg-cov-name { font-weight: 500; color: var(--muted); }
+.lg-cov-bar { display: flex; gap: 1px; height: 20px; min-width: 0; }
+.lg-cov-bar .chap, .lg-cov-legend .chap { flex: 1 1 0; min-width: 0; height: 100%; padding: 0; border: 0; border-radius: 2px;
+  font-size: 0; color: transparent; background: var(--line); box-shadow: none; }
+.lg-cov-bar .chap.lg-has, .lg-cov-legend .chap.lg-has { background: var(--gold); }
+.lg-cov-bar .chap.none { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.lg-cov-bar .chap.lg-read, .lg-cov-legend .chap.lg-read { box-shadow: inset 0 -4px 0 var(--accent); }
+.lg-cov-bar a.chap:hover, .lg-cov-bar a.chap:focus-visible { background: var(--accent); outline-offset: 1px; }
+.lg-cov-n { font-size: 12px; text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+.lg-cov-has .lg-cov-n { color: var(--lg-gold-ink); font-weight: 700; }
+.lg-cov-legend .chap { flex: none; width: 14px; height: 18px; display: inline-block; }
+@media (max-width: 560px) { .lg-cov-row { grid-template-columns: 6.6em minmax(0, 1fr) 2.8em; gap: 8px; } .lg-cov-name { font-size: 14.5px; } }
+
+/* A work's contents by its own divisions (homilies, tractates, books),
+   near the top of its page: a grid of numbered links with their verses. */
+.lg-div-list { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 168px), 1fr)); }
+.lg-div-list a { display: grid; gap: 1px; padding: 8px 11px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface);
+  text-decoration: none; color: var(--text); height: 100%; }
+.lg-div-list a:hover, .lg-div-list a:focus-visible { border-color: var(--accent); }
+.lg-div-list b { font-family: var(--display); font-weight: 600; font-size: 15px; }
+.lg-div-list span { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+/* How to cite a work: three formats, each with its copy button. */
+.lg-cite-box h2 { margin-bottom: 4px; }
+.lg-cite-row { display: grid; grid-template-columns: 5.5em minmax(0, 1fr) auto; gap: 6px 14px; align-items: start; padding: 12px 0; border-top: 1px solid var(--line); }
+.lg-cite-row:first-of-type { margin-top: 10px; }
+.lg-cite-label { margin: 2px 0 0; font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.lg-cite-row .lg-cite-text { margin: 0; }
+.lg-cite-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.lg-cite-row .button { padding: 5px 12px; font-size: 13px; white-space: nowrap; }
+@media (max-width: 640px) { .lg-cite-row { grid-template-columns: minmax(0, 1fr); } .lg-cite-row .button { justify-self: start; } }
+
+/* Where the churches differ: what all hold in common, then the readings
+   side by side (one column each, up to four), stacked on a phone. */
+.lg-differ-common { margin: 14px 0 16px; padding: 12px 16px; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--gold) 10%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--gold) 30%, var(--line)); font-family: var(--read-font); font-size: 16.5px; line-height: 1.55; }
+.lg-differ-common b { display: block; font-family: var(--sans); font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--lg-gold-ink); margin-bottom: 2px; }
+.lg-differ-readings { display: grid; gap: 12px; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); }
+.lg-differ-reading { border: 1px solid var(--line); border-top: 3px solid var(--line-strong); border-radius: var(--radius-sm); background: var(--surface); padding: 12px 14px; min-width: 0; }
+.lg-differ-reading h3 { margin: 0 0 6px; font-family: var(--display); font-size: 16px; font-weight: 600; }
+.lg-differ-reading p { margin: 0; font-family: var(--read-font); font-size: 15px; line-height: 1.55; }
+.lg-differ-after { margin: 12px 0 0; font-size: 14px; color: var(--muted); font-style: italic; }
+@media (max-width: 900px) { .lg-differ-readings { grid-template-columns: repeat(min(var(--n, 3), 2), minmax(0, 1fr)); } }
+@media (max-width: 600px) { .lg-differ-readings { grid-template-columns: minmax(0, 1fr); } }
+
+/* Home: Continue reading, for a returning reader. */
+.lg-continue { max-width: 560px; margin: 18px auto 4px; text-align: left; padding: 14px 18px; border: 1px solid color-mix(in srgb, var(--gold) 35%, var(--line));
+  border-radius: var(--radius); background: var(--surface); display: grid; gap: 6px; }
+.lg-continue[hidden] { display: none; }
+.lg-continue .eyebrow { margin: 0; color: var(--lg-gold-text); }
+.lg-continue-main { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; text-decoration: none; color: var(--text); }
+.lg-continue-main b { font-family: var(--display); font-size: 24px; font-weight: 600; }
+.lg-continue-main span { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: var(--accent); }
+.lg-continue-main:hover b { color: var(--accent); }
+.lg-continue-recent { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 13.5px; }
+.lg-continue-recent[hidden] { display: none; }
+.lg-continue-recent ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.lg-votd-date { font-weight: 500; letter-spacing: .04em; }
+
+/* /search/: the words of every excerpt, with filters as chips. */
+.lg-fts { display: grid; gap: 14px; margin: 18px 0 8px; }
+.lg-fts-box { display: flex; align-items: center; gap: 10px; max-width: 680px; padding: 6px 6px 6px 16px; border: 1px solid var(--line-strong);
+  border-radius: 999px; background: var(--surface); box-shadow: var(--shadow-card); }
+.lg-fts-box:focus-within { border-color: var(--accent); }
+.lg-fts-box svg { flex: none; color: var(--muted); }
+.lg-fts-box input { flex: 1; min-width: 0; border: 0; background: none; font: inherit; font-family: var(--serif); font-size: 18px; color: var(--text); padding: 8px 0; }
+.lg-fts-box input:focus { outline: none; }
+.lg-fts-box .button { flex: none; }
+.lg-fts-filters { display: grid; gap: 8px; }
+.lg-fts-group { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; }
+.lg-fts-group[hidden] { display: none; }
+.lg-fts-group legend, .lg-fts-who > span { float: left; min-width: 88px; padding: 0; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.lg-fts-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-fts-who select { font: inherit; font-size: 14px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); max-width: 100%; }
+.lg-fts-status { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+.lg-fts-results { list-style: none; margin: 8px 0 0; padding: 0; display: grid; max-width: 760px; }
+.lg-fts-hit { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.lg-fts-head { margin: 0 0 4px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.lg-fts-head a { text-decoration: none; }
+.lg-fts-head b { font-family: var(--display); font-size: 17px; font-weight: 600; color: var(--text); }
+.lg-fts-head a:hover b { color: var(--accent); }
+.lg-fts-head .lg-quiet { font-size: 13px; }
+.lg-fts-text { margin: 0; font-family: var(--read-font); font-size: 15.5px; line-height: 1.6; }
+.lg-fts-text mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1px; }
+@media (max-width: 560px) { .lg-fts-group legend, .lg-fts-who > span { float: none; width: 100%; } }
+
+/* Compare two voices (verse and passage pages): a dialog with a row of names
+   and the two chosen side by side, one under the other on a phone. */
+.lg-cmp-row { margin: 12px 0 0; }
+.lg-cmp-row .button { display: inline-flex; align-items: center; gap: 6px; }
+.lg-cmp { width: min(1100px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); box-shadow: var(--shadow-pop); }
+.lg-cmp::backdrop { background: rgb(0 0 0 / .45); }
+.lg-cmp-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px;
+  background: var(--bg); border-bottom: 1px solid var(--line); }
+.lg-cmp-head h2 { margin: 0; font-size: 22px; }
+.lg-cmp-close { border: 0; background: none; color: var(--muted); cursor: pointer; padding: 6px; border-radius: 8px; }
+.lg-cmp-close:hover { color: var(--text); background: var(--surface); }
+.lg-cmp-picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 12px 20px 0; }
+.lg-cmp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding: 16px 20px 24px; }
+.lg-cmp-col { min-width: 0; }
+.lg-cmp-col h3 { margin-top: 0; }
+@media (max-width: 760px) { .lg-cmp-cols { grid-template-columns: minmax(0, 1fr); } .lg-cmp { width: calc(100vw - 16px); max-height: calc(100vh - 16px); } }
+
+/* A book's page: the whole book verse by verse, a bar a verse. */
+.lg-heat { margin: 4px 0 18px; }
+.lg-heat svg { display: block; width: 100%; height: 64px; }
+.lg-heat rect { fill: var(--gold); }
+.lg-heat .lg-heat-hit { fill: transparent; }
+.lg-heat a:hover rect:not(.lg-heat-hit), .lg-heat a:focus rect:not(.lg-heat-hit) { fill: var(--accent); }
+.lg-heat a:focus { outline: none; }
+.lg-heat a:focus .lg-heat-hit { fill: var(--accent-soft); }
+.lg-heat-ticks { position: relative; height: 16px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-heat-ticks span { position: absolute; top: 2px; }
+.lg-heat figcaption { margin-top: 4px; font-size: 13px; }
+
+/* The most-discussed verses: the table across the page, a bar in the
+   excerpts column, numbers right-aligned, headings that sort. */
+.lg-most { max-width: none; }
+.lg-most > .page-head, .lg-most > .lg-block:not(.lg-most-wide) { max-width: 760px; }
+.lg-rank { width: 100%; }
+.lg-rank th button { border: 0; background: none; padding: 0; font: inherit; color: inherit; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+.lg-rank th button::after { content: " ↕"; opacity: .45; }
+.lg-rank th[aria-sort="descending"] button::after { content: " ↓"; opacity: 1; }
+.lg-rank th[aria-sort="ascending"] button::after { content: " ↑"; opacity: 1; }
+.lg-rank .lg-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lg-rank-bar { display: inline-block; width: 90px; height: 8px; margin-right: 8px; border-radius: 4px; background: var(--line); vertical-align: middle; overflow: hidden; }
+.lg-rank-bar span { display: block; height: 100%; background: var(--gold); }
+.lg-rank-text { font-family: var(--read-font); font-size: 14.5px; line-height: 1.45; min-width: 220px; }
+.lg-rank tr[hidden] { display: none; }
+@media (max-width: 640px) { .lg-rank-bar { width: 44px; } .lg-rank-text { min-width: 180px; } }
+.lg-rank th, .lg-rank td:nth-child(2) { white-space: nowrap; }
+
+/* Topics, in families: cards sized to fill each row. */
+.lg-topic-family { margin-top: 28px; }
+.lg-topic-family h2 { font-size: 22px; margin-bottom: 10px; }
+.lg-topic-cards { grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); }
+@media (max-width: 760px) { .lg-topic-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .lg-topic-cards { grid-template-columns: minmax(0, 1fr); } }
+.lg-topic-card { height: 100%; display: flex; flex-direction: column; gap: 4px; }
+.lg-topic-n { margin-top: auto; padding-top: 6px; font-size: 12.5px; font-weight: 600; color: var(--lg-gold-ink); }
+
+/* /readings/: the next day first, a calendar to choose, each day's date and
+   the reading each calendar gives. */
+.lg-reading-next { margin: 18px 0 0; padding: 12px 16px; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--gold) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--gold) 30%, var(--line)); font-size: 15.5px; }
+.lg-reading-next[hidden] { display: none; }
+.lg-reading-next a { font-weight: 700; }
+.lg-cal-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 18px 0 0; }
+.lg-reading-date { display: block; font-size: 13px; color: var(--lg-gold-ink); font-weight: 600; margin-top: 2px; }
+.lg-reading-date[hidden] { display: none; }
+.lg-reading-cals { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 1px; font-size: 13.5px; color: var(--muted); }
+.lg-readings .lg-reading-cals b { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--text); margin-right: 4px; }
+.lg-reading-cals li[hidden] { display: none; }
+.lg-reading-soon > a b { color: var(--accent); }
+.lg-reading-off { opacity: .4; }
+
+/* A glossary word in an excerpt: a dotted underline; pressed, what it means. */
+.lg-gloss-term { display: inline; padding: 0; border: 0; background: none; font: inherit; color: inherit; cursor: help;
+  text-decoration: underline dotted color-mix(in srgb, var(--accent) 70%, transparent); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.lg-gloss-term:hover, .lg-gloss-term[aria-expanded="true"] { color: var(--accent); }
+.lg-gloss-pop { position: absolute; z-index: 60; padding: 12px 34px 10px 14px; border: 1px solid var(--line-strong); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--text); box-shadow: var(--shadow-pop); font-size: 14px; line-height: 1.5; }
+.lg-gloss-pop b { font-family: var(--display); font-size: 15.5px; }
+.lg-gloss-pop p { margin: 4px 0 0; }
+.lg-gloss-pop a { font-weight: 600; }
+.lg-gloss-x { position: absolute; top: 4px; right: 6px; border: 0; background: none; font-size: 20px; line-height: 1; color: var(--muted); cursor: pointer; padding: 4px; }
+@media print { .lg-gloss-term { text-decoration: none; } }
 
 /* The two AI marks (/ai/): a filled star for a draft, an outlined star once a named person has reviewed it */
 .lg-ai { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--sans); font-size: 12.5px; font-weight: 600;
@@ -1587,3 +1797,127 @@ a.lg-hm:hover, a.lg-hm:focus-visible { outline: 2px solid var(--accent); outline
 .lg-sunday { border-top: 1px solid var(--line); padding: 10px 0; }
 .lg-sunday p { margin: 2px 0; }
 .lg-sunday-day b { font-variant-numeric: tabular-nums; margin-right: 6px; }
+
+/* A whole homily or tractate: the work's divisions beside it, previous and
+   next above and below, and each section's number (4.2) in the margin. */
+.lg-turns-top { margin: 14px 0 0; }
+.lg-text-layout .lg-contents a { flex-direction: column; gap: 0; }
+.lg-section { position: relative; }
+.lg-sec-n { position: absolute; left: -54px; top: 4px; width: 44px; text-align: right; font-size: 12px; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; text-decoration: none; }
+.lg-sec-n:hover { color: var(--accent); }
+@media (max-width: 1100px) { .lg-sec-n { position: static; display: block; width: auto; text-align: left; margin: 14px 0 -6px; } }
+@media (max-width: 900px) { .lg-text-layout { grid-template-columns: minmax(0, 1fr); } .lg-text-layout .lg-work-toc { display: none; } }
+
+/* Creeds: every dated document on one line of years, a row each. */
+.lg-ct { margin: 24px 0 8px; }
+.lg-ct-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; border-left: 1px dashed var(--line); }
+.lg-ct-rows li { position: relative; height: 24px; }
+.lg-ct-rows li::before { content: ""; position: absolute; left: var(--x); top: 7px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--ct, var(--gold)); }
+.lg-ct-rows a { position: absolute; top: 2px; left: calc(var(--x) + 10px); white-space: nowrap; font-size: 13.5px; text-decoration: none; color: var(--text); }
+.lg-ct-rows li.lg-ct-flip a { left: auto; right: calc(100% - var(--x) + 10px); }
+.lg-ct-rows a span { color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-ct-rows a:hover b { color: var(--accent); }
+.lg-ct-shared { --ct: var(--gold); } .lg-ct-catholic { --ct: var(--lg-era-1); } .lg-ct-orthodox { --ct: var(--lg-era-4); } .lg-ct-protestant { --ct: var(--lg-era-3); }
+.lg-ct-axis { position: relative; height: 20px; border-top: 1px solid var(--line-strong); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-ct-axis span { position: absolute; top: 3px; transform: translateX(-50%); }
+.lg-ct figcaption { margin-top: 6px; font-size: 13px; }
+/* A creed's page: a short creed larger, its articles numbered in the margin. */
+.lg-creed-short .lg-text { font-size: 1.18em; line-height: 1.7; }
+.lg-creed-short .lg-creed-sec { position: relative; }
+.lg-creed-n { position: absolute; left: -40px; top: 4px; width: 30px; text-align: right; font-family: var(--display); font-weight: 600; color: var(--lg-gold-ink); }
+@media (max-width: 900px) { .lg-creed-n { position: static; display: block; text-align: left; width: auto; } }
+.lg-creed-record { margin-top: 28px; }
+
+/* Where the churches differ: a card per passage with the traditions on it,
+   then the passages waiting for more voices. */
+.lg-differ .lg-differ-cards { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); margin-top: 20px; }
+.lg-differ-card { height: 100%; display: flex; flex-direction: column; gap: 6px; }
+.lg-differ-quote { font-family: var(--read-font); font-style: italic; font-size: 14.5px; line-height: 1.45; color: var(--text); }
+.lg-differ-kinds { list-style: none; margin: auto 0 0; padding: 6px 0 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.lg-differ-kinds li { font-size: 11.5px; font-weight: 600; padding: 1px 8px; border-radius: 999px; }
+.lg-differ-kinds .lg-has { background: var(--accent-soft); color: var(--accent); }
+.lg-differ-kinds .lg-has::before { content: "✓ "; }
+.lg-differ-kinds .lg-not { color: var(--muted); border: 1px dashed var(--line-strong); }
+.lg-differ-waiting { padding-left: 20px; }
+.lg-differ-waiting li { margin-bottom: 6px; }
+
+/* The reader: pin a commentator to the top of every verse they speak on. */
+.cx-pin { margin-left: auto; border: 0; background: none; padding: 4px; border-radius: 6px; color: var(--muted); cursor: pointer; opacity: .55; }
+.cx-pin:hover, .cx-pin:focus-visible { opacity: 1; color: var(--accent); }
+.cx-pin[aria-pressed="true"] { opacity: 1; color: var(--lg-gold-ink); }
+.cx-pin[aria-pressed="true"] svg { fill: currentColor; }
+.cx-pin + .cx-toggle { margin-left: 0; }
+
+/* Home: the voices as one row of eras, each with its count and first names. */
+.lg-era-row { list-style: none; margin: 18px auto 0; padding: 0; max-width: 860px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); text-align: left; }
+.lg-era-row li { border-right: 1px solid var(--line); box-shadow: inset 0 3px 0 var(--era); min-width: 0; }
+.lg-era-row li:last-child { border-right: 0; }
+.lg-era-row a { display: grid; gap: 1px; padding: 10px 12px 9px; text-decoration: none; color: var(--text); height: 100%; }
+.lg-era-row a:hover { background: var(--accent-soft); }
+.lg-era-row b { font-size: 13.5px; line-height: 1.25; }
+.lg-era-row span { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-era-row i { font-style: normal; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 760px) {
+  .lg-era-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg-era-row li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .lg-era-row li { border-bottom: 1px solid var(--line); }
+  .lg-era-row i { display: none; }
+}
+/* On a phone the search comes straight after the motto, before the headline. */
+@media (max-width: 640px) {
+  .lg-hero { display: flex; flex-direction: column; }
+  .lg-hero > .lg-motto { order: -2; }
+  .lg-hero > .hero-search { order: -1; margin: 0 0 18px; }
+}
+
+/* Saved comments: collections to filter by, export, and which are kept on
+   this device only. */
+.lg-saved-tools { display: grid; gap: 10px; margin: 8px 0 16px; }
+.lg-saved-tools[hidden] { display: none; }
+.lg-saved-colls { display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-saved-export { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.lg-saved-export .button { padding: 6px 14px; font-size: 14px; }
+.lg-saved-device { font-size: 11.5px; font-weight: 600; color: var(--lg-gold-ink); border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line)); border-radius: 999px; padding: 1px 8px; margin-left: 6px; }
+.lg-saved-coll { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.lg-saved-coll input { font: inherit; font-size: 13px; width: 11em; padding: 3px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text); }
+
+/* The glossary: every term A to Z, a bar of letters, and a box to find one. */
+.lg-az-bar { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 12px; }
+.lg-az-bar a { min-width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 8px;
+  font-weight: 600; font-size: 14px; text-decoration: none; color: var(--accent); background: var(--surface); }
+.lg-az-bar a:hover { border-color: var(--accent); }
+.lg-az-lists { columns: 3 180px; column-gap: 28px; font-size: 14px; }
+.lg-az-lists > div { break-inside: avoid; margin-bottom: 10px; scroll-margin-top: calc(var(--header-h) + 16px); }
+.lg-az-lists b { display: block; font-family: var(--display); color: var(--lg-gold-ink); }
+.lg-az-lists ul { list-style: none; margin: 0; padding: 0; }
+.lg-gloss-find { margin: 14px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; }
+.lg-gloss-find[hidden] { display: none; }
+.lg-gloss-find input { font: inherit; padding: 6px 12px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface); color: var(--text); min-width: 240px; }
+dl.lg-gloss > div[hidden], .lg-block[hidden] { display: none; }
+
+/* Open data: the smaller files and a sample record. */
+.lg-data-parts { font-size: 14px; line-height: 1.9; }
+.lg-data-parts b { margin-right: 4px; }
+.lg-data-parts .lg-quiet { font-size: 12px; font-variant-numeric: tabular-nums; }
+.lg-data-sample { overflow-x: auto; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface);
+  font-size: 12.5px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.lg-data-works { list-style: none; margin: 0 0 12px; padding: 0; columns: 2 360px; column-gap: 32px; font-size: 14px; }
+.lg-data-works li { break-inside: avoid; padding: 3px 0; }
+.lg-data-works b { margin-right: 6px; }
+.lg-data-works .lg-quiet { font-size: 12px; font-variant-numeric: tabular-nums; }
+
+/* The keyboard shortcuts (? on any page). */
+.lg-keys { width: min(460px, calc(100vw - 32px)); padding: 0 20px 16px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); box-shadow: var(--shadow-pop); }
+.lg-keys::backdrop { background: rgb(0 0 0 / .45); }
+.lg-keys-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 0 8px; }
+.lg-keys-head h2 { margin: 0; font-size: 20px; }
+.lg-keys dl { margin: 0; display: grid; gap: 6px; }
+.lg-keys dl > div { display: grid; grid-template-columns: 56px 1fr; align-items: baseline; gap: 10px; }
+.lg-keys dt { margin: 0; }
+.lg-keys dd { margin: 0; font-size: 14.5px; }
+.lg-keys kbd { display: inline-block; min-width: 26px; padding: 2px 7px; border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 6px;
+  background: var(--surface); font: 600 13px/1.4 var(--sans); text-align: center; }
+.lg-keys .lg-quiet { margin: 12px 0 0; font-size: 13px; }

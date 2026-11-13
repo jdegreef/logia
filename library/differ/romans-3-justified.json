@@ -8,6 +8,21 @@
   "Lutheran and Reformed readers take justification as God's declaring the sinner righteous for Christ's sake, received by faith alone, apart from any works, and distinct from the renewal of life that follows it.",
   "Catholic teaching holds that justification both forgives sin and makes the sinner inwardly righteous by grace, and that the faith which justifies works through love; the works Paul excludes are not the good works grace produces. Orthodox readers speak of salvation as a lifelong union with God, begun in faith and baptism."
  ],
+ "common": "All read Paul as teaching that sinners are justified by God's grace through faith in Christ, and not by the deeds of the law.",
+ "readings": [
+  {
+   "who": "Lutheran and Reformed",
+   "note": "Lutheran and Reformed readers take justification as God's declaring the sinner righteous for Christ's sake, received by faith alone, apart from any works, and distinct from the renewal of life that follows it."
+  },
+  {
+   "who": "Catholic",
+   "note": "Catholic teaching holds that justification both forgives sin and makes the sinner inwardly righteous by grace, and that the faith which justifies works through love; the works Paul excludes are not the good works grace produces."
+  },
+  {
+   "who": "Orthodox",
+   "note": "Orthodox readers speak of salvation as a lifelong union with God, begun in faith and baptism."
+  }
+ ],
  "status": "ai_draft",
  "reviewed_by": null
 }

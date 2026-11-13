@@ -1,13 +1,15 @@
 # Render Blueprint for Logia (logia.faith): create it with New > Blueprint and
 # this repository, then point logia.faith's DNS at it (docs/deploy.md). The
-# site is static, built from this repository with no dependencies.
+# site is static, built from this repository; its one dependency is Pagefind,
+# which indexes the excerpts' words for /search/ (pinned here and in CI; the
+# build still works without it, with no word search).
 services:
   - type: web
     name: logia
     runtime: static
     # The About page's "Recently added" reads when each work was first
     # committed, so the build needs the whole history, not a shallow clone.
-    buildCommand: (git fetch --unshallow --quiet || true) && python3 scripts/build_site.py
+    buildCommand: (git fetch --unshallow --quiet || true) && (python3 -m pip install --quiet --user 'pagefind[bin]==1.5.2' 'pagefind-bin==1.5.2' || echo "Pagefind not installed: no word search in this build") && python3 scripts/build_site.py
     staticPublishPath: site
     pullRequestPreviewsEnabled: true
     # Deploy main only once CI (.github/workflows/ci.yml) passes.

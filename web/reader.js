@@ -6,7 +6,7 @@
 // the interface text in the page's language (ui). Settings come from the gear
 // menu through window.LogiaPrefs (web/site.js): the translation level, the
 // Open Word Bible's wording settings and how much of each excerpt to show;
-// the eras shown are kept here, as logia-eras.
+// the eras and traditions shown are kept here, as logia-eras and logia-kinds.
 (function () {
   "use strict";
   var holder = document.getElementById("chapter-data");
@@ -24,10 +24,17 @@
   };
   var fmt = function (s, vals) { return s.replace(/\{(\w+)\}/g, function (_, k) { return vals[k] !== undefined ? vals[k] : ""; }); };
 
-  function hiddenEras() {
-    try { return JSON.parse(localStorage.getItem("logia-eras") || "[]"); } catch (e) { return []; }
+  // The traditions a voice can be filtered by (the kinds in library/families.json).
+  var KINDS = DATA.kinds;
+  // Commentators the reader has pinned to the top of the panel, by name.
+  var pinned = (function () { try { return JSON.parse(localStorage.getItem("logia-pinned") || "[]"); } catch (e) { return []; } })();
+  function isPinned(w) { return pinned.indexOf(w.author) >= 0; }
+  function hidden(key) {
+    try { return JSON.parse(localStorage.getItem(key) || "[]"); } catch (e) { return []; }
   }
-  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), marks: null, counts: {}, note: null, open: {} };
+  var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), kinds: new Set(KINDS), marks: null, counts: {}, note: null, open: {} };
+  // Whether a voice is shown under the era and tradition filters.
+  var shownBy = function (w) { return state.eras.has(w.era) && state.kinds.has(w.kind); };
   var Account = window.LogiaAccount;
   var CHAPTER = DATA.book + "." + DATA.chapter;
   // A comment's key: <work>.<BOOK>.<chapter>.<verse> (backend/logia/ in open-word-bible).
@@ -41,15 +48,17 @@
   ICON.sheet = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15h6"/></svg>';
   ICON.flag = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg>';
   ICON.copy = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
+  ICON.pin = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6l-1 5 3 3v2H7v-2l3-3zM12 14v6"/></svg>';
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
-  hiddenEras().forEach(function (e) { state.eras.delete(e); });
+  hidden("logia-eras").forEach(function (e) { state.eras.delete(e); });
+  hidden("logia-kinds").forEach(function (k) { state.kinds.delete(k); });
   // Whether a voice's card is open on the chosen verse (see commTab).
   // A voice with nothing new since the verse before starts closed, while
   // another voice has something new.
   function isOpen(work) {
     if (work in state.open) return state.open[work];
     if (fullExcerpts()) return true;
-    var shown = works.filter(function (w) { return state.eras.has(w.era) && entriesFor(w, state.verse).length; });
+    var shown = works.filter(function (w) { return shownBy(w) && entriesFor(w, state.verse).length; });
     var fresh = shown.filter(function (w) { return !alsoBefore(w, state.verse); });
     if (fresh.length && fresh.length < shown.length && alsoBefore(byId(work), state.verse)) return false;
     return (fresh.length || shown.length) <= 2;
@@ -227,31 +236,27 @@
   // in up to three lanes; any that still don't fit fold into one "+N" pill at
   // the top right, which opens them all. A voice with nothing on this verse
   // is faded.
+  // The timeline over the panel: a dot for each voice in the chapter, at the
+  // year they died, in their era's colour, stacked in rows where dots would
+  // touch. A voice's name shows on hover or focus; voices not on this verse
+  // (or filtered out) are faded.
   function renderRail() {
     var lo = 200, hi = 1950, pos = function (y) { return ((y - lo) / (hi - lo)) * 100; };
-    var width = $("#rail").offsetWidth || 480, PILL = 40, LANES = 3;
-    var h = "", folded = [];
+    var width = $("#rail").offsetWidth || 480, DOT = 16, ROWS = 6;
+    var h = "", rows = [];
     [300, 600, 900, 1200, 1500, 1800].forEach(function (t) { h += '<span class="cx-tick" style="left:' + pos(t) + '%">' + t + "</span>"; });
-    var lanes = [];
     works.slice().sort(function (a, b) { return a.died - b.died; }).forEach(function (w) {
-      var on = entriesFor(w, state.verse).length > 0 && state.eras.has(w.era);
+      var on = entriesFor(w, state.verse).length > 0 && shownBy(w);
       var x = pos(w.died), px = x / 100 * width;
-      var lane = 0;
-      while (lane < LANES && lanes[lane] !== undefined && px - lanes[lane] < PILL + 3) lane++;
-      if (lane === LANES) { if (on) folded.push(w); return; }
-      lanes[lane] = px;
-      var label = (w.short_name || w.author).slice(0, 3);
-      h += '<button type="button" class="cx-dot cx-lane' + lane + (on ? "" : " cx-off") +
-        (on && state.open[w.work_id] ? " cx-cur" : "") + '" style="left:' + x + '%" data-work="' + w.work_id +
-        '" title="' + esc(w.author + ", " + w.author_dates) + '" aria-label="' + esc(w.author) + '"' + (on ? "" : " disabled") + ">" +
-        esc(label) + "</button>";
+      var row = 0;
+      while (row < ROWS - 1 && rows[row] !== undefined && px - rows[row] < DOT) row++;
+      rows[row] = px;
+      h += '<button type="button" class="cx-dot lg-era-' + ERAS.indexOf(w.era) + (on ? "" : " cx-off") +
+        (on && state.open[w.work_id] ? " cx-cur" : "") + '" style="left:' + x + "%;--row:" + row + '" data-work="' + w.work_id +
+        '" data-name="' + esc(w.short_name || w.author) + '" title="' + esc(w.author + ", " + w.author_dates) +
+        '" aria-label="' + esc(w.author) + '"' + (on ? "" : " disabled") + "></button>";
     });
-    if (folded.length) {
-      var names = folded.map(function (w) { return w.author; }).join(", ");
-      h += '<button type="button" class="cx-dot cx-more" data-works="' + folded.map(function (w) { return w.work_id; }).join(" ") +
-        '" title="' + esc(names) + '" aria-label="' + esc(fmt(U.rail_more, { names: names })) + '">+' + folded.length + "</button>";
-    }
-    $("#rail").style.setProperty("--lanes", Math.min(lanes.length, LANES) + (folded.length ? 1 : 0));
+    $("#rail").style.setProperty("--lanes", rows.length);
     $("#rail").innerHTML = '<div class="cx-rail-line"></div>' + h;
   }
   window.addEventListener("resize", function () { if ($("#rail").offsetWidth) renderRail(); });
@@ -453,24 +458,48 @@
     var quoting = names.length ? '<div class="cx-quoting">' + esc(fmt(U.quoting, { names: names.join(", ") })) + "</div>" : "";
     return '<div class="cx-facts">' + esc(bits.join(" · ")) + "</div>" + quoting;
   }
+  // Two rows of filter chips over the voices on a verse: the eras, then the
+  // traditions, each with how many voices on this verse it holds. A chip is
+  // left out where no voice on the verse is in it; "Show all" undoes them.
+  function filters(v) {
+    var on = works.filter(function (w) { return entriesFor(w, v).length; });
+    function row(key, values, label, names, chosen, field, title) {
+      var chips = values.map(function (x) {
+        var n = on.filter(function (w) { return w[field] === x; }).length;
+        return n ? '<button type="button" class="cx-chip" data-' + key + '="' + esc(x) + '" aria-pressed="' + chosen.has(x) + '">' +
+          esc(names[x]) + ' <span class="cx-chip-n">' + n + "</span></button>" : "";
+      }).join("");
+      return '<div class="cx-chips" role="group" aria-label="' + esc(label) + '"><span class="cx-chips-label" aria-hidden="true">' + esc(title) + "</span>" + chips + "</div>";
+    }
+    var off = ERAS.some(function (x) { return !state.eras.has(x); }) || KINDS.some(function (x) { return !state.kinds.has(x); });
+    return '<div class="cx-filters">' + row("era", ERAS, U.show_eras, U.eras, state.eras, "era", U.filter_era) +
+      row("kind", KINDS, U.show_kinds, U.kinds, state.kinds, "kind", U.filter_kind) +
+      (off ? '<button type="button" class="cx-chip-all" data-show-all>' + esc(fmt(U.show_all, { n: on.length })) + "</button>" : "") + "</div>";
+  }
   function commTab() {
     var v = state.verse;
     var onVerse = works.some(function (w) { return entriesFor(w, v).length; });
-    var h = !onVerse ? "" : '<div class="cx-chips" role="group" aria-label="' + esc(U.show_eras) + '">' + ERAS.map(function (e) {
-      return '<button class="cx-chip" data-era="' + esc(e) + '" aria-pressed="' + state.eras.has(e) + '">' + esc(U.eras[e]) + "</button>";
-    }).join("") + "</div>";
-    var shown = works.filter(function (w) { return state.eras.has(w.era) && entriesFor(w, v).length; });
+    var h = !onVerse ? "" : filters(v);
+    var shown = works.filter(function (w) { return shownBy(w) && entriesFor(w, v).length; });
     if (COMM && shown.length > 1) {
       h += '<button type="button" class="cx-compare-btn" data-compare>' + ICON.columns + esc(U.compare) + "</button>";
     }
     var shownOn = shown, fresh = shown.filter(function (w) { return !alsoBefore(w, v); });
     var any = false;
+    // Voices the reader has pinned come first, under their own heading, on
+    // every verse they speak on (kept as logia-pinned, by commentator).
+    var pinnedHere = shown.filter(function (w) { return isPinned(w); });
+    var groups = [];
+    if (pinnedHere.length) groups.push({ label: U.pinned, ws: pinnedHere });
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
-      var ws = works.filter(function (w) { return w.era === era && entriesFor(w, v).length; });
-      if (!ws.length) return;
+      var ws = works.filter(function (w) { return w.era === era && state.kinds.has(w.kind) && entriesFor(w, v).length && !isPinned(w); });
+      if (ws.length) groups.push({ label: U.eras[era], ws: ws });
+    });
+    groups.forEach(function (g) {
+      var ws = g.ws;
       any = true;
-      h += '<div class="cx-era">' + esc(U.eras[era]) + "</div>";
+      h += '<div class="cx-era">' + esc(g.label) + "</div>";
       ws.forEach(function (w) {
         var es = entriesFor(w, v);
         var body = excerptsHtml(w, es);
@@ -488,6 +517,8 @@
         h += '<section class="cx-card' + (open ? "" : " cx-shut") + '" id="c-' + w.work_id + '">' +
           '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
           '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" + badge +
+          '<button type="button" class="cx-pin" data-pin="' + esc(w.author) + '" aria-pressed="' + isPinned(w) + '" title="' +
+          esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '" aria-label="' + esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '">' + ICON.pin + "</button>" +
           '<button type="button" class="cx-toggle" data-toggle="' + w.work_id + '" aria-expanded="' + open + '" aria-controls="cb-' + w.work_id +
           '" aria-label="' + esc(fmt(open ? U.hide_voice : U.show_voice, { name: w.author })) + '">' + ICON.chevron + "</button></div>" +
           facts(w, es, words) +
@@ -528,7 +559,7 @@
   function actions(w, v) {
     var key = keyOf(w, v);
     var liked = !!(state.marks && state.marks.liked[key]);
-    var isSaved = !!(state.marks && state.marks.saved[key]);
+    var isSaved = !!(state.marks && state.marks.saved[key]) || !!(Account && Account.device && Account.device.has(key));
     // The public counts are cached for a minute, so a like of the reader's
     // own may be newer than them: it always counts.
     var n = Math.max(state.counts[key] || 0, liked ? 1 : 0);
@@ -586,6 +617,14 @@
     if (kind === "share") return share(w, key);
     if (kind === "cite") return cite(w, key);
     if (kind === "sheet") return toSheet(key);
+    // Signed out, a save is kept on this device (web/account.js), with a
+    // word that signing in keeps it everywhere; a like needs an account.
+    if (kind === "save" && Account && Account.device && (!Account.user() || Account.device.has(key))) {
+      var on = Account.device.toggle(key);
+      state.note = on ? { key: key, html: esc(U.saved_device) + ' <a href="' + esc(Account.signInUrl()) + '">' + esc(U.sign_in) + "</a>" } : null;
+      refresh();
+      return;
+    }
     if (!Account || !Account.user()) return signInNote(key);
     var mark = kind === "like" ? "liked" : "saved";
     var on = !(state.marks && state.marks[mark][key]);
@@ -805,10 +844,12 @@
     $("#grab").setAttribute("aria-expanded", to !== "min");
   }
   // Scroll the chosen verse into the space above a half-height sheet.
+  // Below the header sits the chapter bar once the title has scrolled away
+  // (about 46px), and the half-height sheet covers 44% of the screen.
   function keepInView(el) {
     if (!PHONE.matches || !el) return;
-    var top = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64;
-    var r = el.getBoundingClientRect(), room = window.innerHeight * 0.5;
+    var top = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64) + 46;
+    var r = el.getBoundingClientRect(), room = window.innerHeight * 0.56;
     if (r.top < top + 8 || r.bottom > room - 8) {
       var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       window.scrollBy({ top: r.top - top - 16, behavior: reduce ? "auto" : "smooth" });
@@ -855,6 +896,16 @@
     var actButton = e.target.closest("[data-act]");
     if (actButton) { act(actButton); return; }
     if (e.target.closest("[data-compare]")) { openCompare(); return; }
+    var pin = e.target.closest("[data-pin]");
+    if (pin) {
+      var who = pin.getAttribute("data-pin"), at = pinned.indexOf(who);
+      if (at >= 0) pinned.splice(at, 1); else pinned.push(who);
+      try { localStorage.setItem("logia-pinned", JSON.stringify(pinned)); } catch (err) { /* storage blocked: for this page */ }
+      refresh();
+      var again = document.querySelector('[data-pin="' + who.replace(/"/g, '\\"') + '"]');
+      if (again) again.focus();
+      return;
+    }
     var toggle = e.target.closest("[data-toggle]");
     if (toggle) {
       var wid = toggle.getAttribute("data-toggle");
@@ -864,14 +915,20 @@
       if (again) again.focus();
       return;
     }
-    var chip = e.target.closest(".cx-chip");
+    var chip = e.target.closest(".cx-filters .cx-chip, [data-show-all]");
     if (chip) {
-      var era = chip.dataset.era;
-      if (state.eras.has(era)) state.eras.delete(era); else state.eras.add(era);
+      if (chip.hasAttribute("data-show-all")) { state.eras = new Set(ERAS); state.kinds = new Set(KINDS); }
+      else if (chip.dataset.era) { var era = chip.dataset.era; if (state.eras.has(era)) state.eras.delete(era); else state.eras.add(era); }
+      else { var kind = chip.dataset.kind; if (state.kinds.has(kind)) state.kinds.delete(kind); else state.kinds.add(kind); }
       try {
         localStorage.setItem("logia-eras", JSON.stringify(ERAS.filter(function (x) { return !state.eras.has(x); })));
+        localStorage.setItem("logia-kinds", JSON.stringify(KINDS.filter(function (x) { return !state.kinds.has(x); })));
       } catch (err) { /* storage blocked: the choice lasts for this page */ }
-      renderPanel(); return;
+      renderPanel();
+      var again = chip.dataset.era ? document.querySelector('.cx-filters [data-era="' + chip.dataset.era + '"]')
+        : chip.dataset.kind ? document.querySelector('.cx-filters [data-kind="' + chip.dataset.kind + '"]') : null;
+      if (again) again.focus();
+      return;
     }
     var retry = e.target.closest("[data-retry]");
     if (retry) {
@@ -889,7 +946,7 @@
   });
   $("#rail").addEventListener("click", function (e) {
     var d = e.target.closest(".cx-dot"); if (!d || d.classList.contains("cx-off")) return;
-    var ids = d.dataset.works ? d.dataset.works.split(" ") : [d.dataset.work];
+    var ids = [d.dataset.work];
     ids.forEach(function (id) { state.open[id] = true; });
     state.tab = "comm"; renderPanel();
     var card = document.getElementById("c-" + ids[0]);
@@ -913,6 +970,7 @@
     if (!m) return;
     if (+m[1] !== state.verse) { if (!EMPTY) state.tab = "comm"; go(+m[1]); }
     if (m[2]) { sheet("half"); showCard(m[2]); }
+    else if (PHONE.matches) keepInView(document.querySelector('.cx-verse[data-v="' + state.verse + '"]'));
   });
 
   // The chapter bar: once the chapter's title has scrolled away, a slim bar
@@ -966,6 +1024,9 @@
   loadComm();
   renderText(); go(state.verse);
   if (m0 && m0[2]) { sheet("half"); showCard(m0[2]); }
+  // A verse asked for in the address (#v14, from "Continue reading" or a
+  // link): on a phone, scroll it into the space above the sheet.
+  else if (m0 && PHONE.matches) { sheet("half"); keepInView(document.querySelector('.cx-verse[data-v="' + state.verse + '"]')); }
   if (gapAsked) {
     var gapNote = [].filter.call(document.querySelectorAll(".lg-gap"), function (el) { return +el.dataset.a <= +m0[1] && +m0[1] <= +el.dataset.b; })[0];
     if (gapNote) gapNote.scrollIntoView({ block: "center" });
@@ -1003,7 +1064,7 @@
     var queue = speakable(REF(v) + ". " + verseText(v)).map(function (t) { return { text: t }; });
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
-      works.filter(function (w) { return w.era === era; }).forEach(function (w) {
+      works.filter(function (w) { return w.era === era && state.kinds.has(w.kind); }).forEach(function (w) {
         var es = entriesFor(w, v).filter(function (e) { return !listen.said[w.work_id + ":" + e.start + ":" + e.excerpt.length]; });
         if (!es.length) return;
         queue.push({ text: w.author + ", " + w.title + ".", work: w.work_id });

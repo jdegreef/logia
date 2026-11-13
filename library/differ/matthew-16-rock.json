@@ -8,6 +8,21 @@
   "Catholic teaching takes the rock to be Peter himself, on whom Christ builds his church, and the keys as an authority that continues in the bishops of Rome as Peter's successors.",
   "Orthodox readers honour Peter as first of the apostles, and with many Fathers also read the rock as his confession of faith; they hold that the promise belongs to every bishop who keeps that faith, not to Rome's alone. Protestant readers most often take the rock as Peter's confession of Christ, or Christ himself, or Peter as the first apostle with no office passed on after him, and the keys as the preaching of the gospel given to the whole church."
  ],
+ "common": "All read the passage as Peter confessing Jesus as the Christ, the Son of the living God, and Christ promising to build his church.",
+ "readings": [
+  {
+   "who": "Catholic",
+   "note": "Catholic teaching takes the rock to be Peter himself, on whom Christ builds his church, and the keys as an authority that continues in the bishops of Rome as Peter's successors."
+  },
+  {
+   "who": "Orthodox",
+   "note": "Orthodox readers honour Peter as first of the apostles, and with many Fathers also read the rock as his confession of faith; they hold that the promise belongs to every bishop who keeps that faith, not to Rome's alone."
+  },
+  {
+   "who": "Protestant",
+   "note": "Protestant readers most often take the rock as Peter's confession of Christ, or Christ himself, or Peter as the first apostle with no office passed on after him, and the keys as the preaching of the gospel given to the whole church."
+  }
+ ],
  "status": "ai_draft",
  "reviewed_by": null
 }

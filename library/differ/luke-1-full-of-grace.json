@@ -8,6 +8,17 @@
   "Catholic and Orthodox readers hear in the angel's greeting a sign of Mary's singular holiness, and both churches pray it. The Catholic Church teaches that she was kept from all sin from the first moment of her conception; the Orthodox churches honour her as all-holy without that teaching.",
   "Protestant readers honour Mary as the one God chose and favoured, and as an example of faith, but take the greeting as God's free favour toward her, not as teaching her freedom from sin."
  ],
+ "common": "All honour Mary as the one God chose to be the mother of the Lord.",
+ "readings": [
+  {
+   "who": "Catholic and Orthodox",
+   "note": "Catholic and Orthodox readers hear in the angel's greeting a sign of Mary's singular holiness, and both churches pray it. The Catholic Church teaches that she was kept from all sin from the first moment of her conception; the Orthodox churches honour her as all-holy without that teaching."
+  },
+  {
+   "who": "Protestant",
+   "note": "Protestant readers honour Mary as the one God chose and favoured, and as an example of faith, but take the greeting as God's free favour toward her, not as teaching her freedom from sin."
+  }
+ ],
  "status": "ai_draft",
  "reviewed_by": null
 }

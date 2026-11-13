@@ -930,7 +930,8 @@ class Site(unittest.TestCase):
         counts = build_site.verse_counts(lib, "JHN")
         (ch, v), n = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
         text = self.read(os.path.join("jhn", "most-discussed", "index.html"))
-        self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a></td><td>{n}</td>', text)
+        cell = f'<td class="lg-num" data-sort="{n}">'
+        self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a></td>{cell}', text)
         self.assertIn('href="/jhn/most-discussed/"', self.read(os.path.join("jhn", "index.html")))
 
     # --- Open data ---

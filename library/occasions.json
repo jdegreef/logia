@@ -1,35 +1,128 @@
 {
-  "about": "The days of the church year Logia builds a Gospel page for, in the year's order: each gives its passage, and its words are in i18n/<lang>.json under occasions.<id>.",
+  "about": "The days of the church year Logia builds a Gospel page for, in the year's order: each gives its passage, when it falls (\"fixed\": month and day, moved to the Monday after the Second Sunday of Easter when \"holy_week\" is set and it falls from Palm Sunday to that Sunday; \"easter\": days from Easter Day, Western reckoning), and the reading each calendar gives for it (rcl: Revised Common Lectionary; roman: Roman Missal; bcp: Book of Common Prayer; orthodox: the Orthodox lectionary). Its words are in i18n/<lang>.json under occasions.<id>.",
   "occasions": [
+    {
+      "id": "christmas-eve",
+      "start": "LUK.2.1",
+      "end": "LUK.2.20",
+      "when": {
+        "fixed": "12-24"
+      },
+      "readings": {
+        "rcl": "Luke 2:1–14 (15–20)",
+        "roman": "Luke 2:1–14"
+      }
+    },
     {
       "id": "christmas",
       "start": "JHN.1.1",
-      "end": "JHN.1.14"
+      "end": "JHN.1.14",
+      "when": {
+        "fixed": "12-25"
+      },
+      "readings": {
+        "rcl": "John 1:1–14",
+        "bcp": "John 1:1–14",
+        "roman": "John 1:1–18"
+      }
+    },
+    {
+      "id": "epiphany",
+      "start": "MAT.2.1",
+      "end": "MAT.2.12",
+      "when": {
+        "fixed": "01-06"
+      },
+      "readings": {
+        "rcl": "Matthew 2:1–12",
+        "roman": "Matthew 2:1–12",
+        "bcp": "Matthew 2:1–12"
+      }
+    },
+    {
+      "id": "ash-wednesday",
+      "start": "MAT.6.1",
+      "end": "MAT.6.21",
+      "when": {
+        "easter": -46
+      },
+      "readings": {
+        "rcl": "Matthew 6:1–6, 16–21",
+        "roman": "Matthew 6:1–6, 16–18"
+      }
+    },
+    {
+      "id": "annunciation",
+      "start": "LUK.1.26",
+      "end": "LUK.1.38",
+      "when": {
+        "fixed": "03-25",
+        "holy_week": "monday-after-easter-2"
+      },
+      "readings": {
+        "rcl": "Luke 1:26–38",
+        "roman": "Luke 1:26–38"
+      }
     },
     {
       "id": "maundy-thursday",
       "start": "JHN.13.1",
-      "end": "JHN.13.17"
+      "end": "JHN.13.17",
+      "when": {
+        "easter": -3
+      },
+      "readings": {
+        "rcl": "John 13:1–17, 31b–35",
+        "roman": "John 13:1–15"
+      }
     },
     {
       "id": "good-friday",
       "start": "JHN.18.1",
-      "end": "JHN.19.42"
+      "end": "JHN.19.42",
+      "when": {
+        "easter": -2
+      },
+      "readings": {
+        "rcl": "John 18:1–19:42",
+        "roman": "John 18:1–19:42"
+      }
     },
     {
       "id": "easter",
       "start": "JHN.20.1",
-      "end": "JHN.20.18"
+      "end": "JHN.20.18",
+      "when": {
+        "easter": 0
+      },
+      "readings": {
+        "rcl": "John 20:1–18",
+        "roman": "John 20:1–9"
+      }
     },
     {
       "id": "second-sunday-of-easter",
       "start": "JHN.20.19",
-      "end": "JHN.20.31"
+      "end": "JHN.20.31",
+      "when": {
+        "easter": 7
+      },
+      "readings": {
+        "rcl": "John 20:19–31",
+        "roman": "John 20:19–31",
+        "orthodox": "Thomas Sunday"
+      }
     },
     {
       "id": "pentecost",
       "start": "JHN.15.26",
-      "end": "JHN.16.15"
+      "end": "JHN.16.15",
+      "when": {
+        "easter": 49
+      },
+      "readings": {
+        "rcl": "Year B: John 15:26–27; 16:4b–15"
+      }
     }
   ]
 }

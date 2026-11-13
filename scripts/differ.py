@@ -16,6 +16,7 @@ one. Otherwise it is held back, and validate.py says what it lacks.
 import glob
 import json
 import os
+import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -38,7 +39,8 @@ def family(tradition, fam=None):
 
 
 def pages():
-    """Every page, resolved: [{id, path, title, start, end, focus, note, status, reviewed_by, guide}]."""
+    """Every page, resolved: [{id, path, title, start, end, focus, note, status, reviewed_by, guide}],
+    with common, readings and after where the note is also set out side by side."""
     guides = {g["id"]: g for g in (load(p) for p in glob.glob(os.path.join(ROOT, "library", "guides", "en", "*.json")))}
     out = []
     for p in sorted(glob.glob(os.path.join(ROOT, "library", "differ", "*.json"))):
@@ -49,10 +51,16 @@ def pages():
             if not topic:
                 out.append({"id": d["id"], "missing": f"guide {d['guide']!r} has no topic {d['topic']}"})
                 continue
-            d = {**d, **{k: topic[k] for k in ("title", "start", "end", "focus", "note")},
+            fields = ("title", "start", "end", "focus", "note", "common", "readings", "after")
+            d = {**d, **{k: topic[k] for k in fields if k in topic},
                  "status": g["status"], "reviewed_by": g.get("reviewed_by"), "guide_path": g["path"]}
         out.append({**d, "path": f"/differ/{d['id']}/"})
     return out
+
+
+def sentences(text):
+    """A note's sentences, split where one ends and the next begins."""
+    return [x for x in re.split(r"(?<=[.”])\s+(?=[A-Z“])", text.strip()) if x]
 
 
 def _key(ref):

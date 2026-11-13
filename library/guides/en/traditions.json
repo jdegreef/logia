@@ -21,6 +21,17 @@
       "note": [
         "Catholic and Orthodox teaching, with Lutheran and many Anglican readers, takes the water as the water of baptism, and the verse as teaching that baptism is the means by which a person is born again.",
         "Many Reformed and evangelical readers take the water as a figure of the Spirit's cleansing, or hold that baptism is the sign of a new birth the Spirit gives, rather than the means of it."
+      ],
+      "common": "All read the verse as Jesus teaching that no one enters the kingdom of God without being born again of the Spirit.",
+      "readings": [
+        {
+          "who": "Catholic, Orthodox, Lutheran and many Anglican",
+          "note": "Catholic and Orthodox teaching, with Lutheran and many Anglican readers, takes the water as the water of baptism, and the verse as teaching that baptism is the means by which a person is born again."
+        },
+        {
+          "who": "Many Reformed and evangelical",
+          "note": "Many Reformed and evangelical readers take the water as a figure of the Spirit's cleansing, or hold that baptism is the sign of a new birth the Spirit gives, rather than the means of it."
+        }
       ]
     },
     {
@@ -31,6 +42,25 @@
       "note": [
         "Catholic and Orthodox readers take these words of the Eucharist, in which, they believe, the bread and wine become the body and blood of Christ. Lutherans also hold that Christ's body and blood are truly present in the sacrament, though they explain it differently.",
         "Reformed readers speak of a real but spiritual feeding on Christ by faith, in the Supper and beyond it. Others, among them many evangelicals, read the passage chiefly of believing in Christ, and not of the sacrament at all."
+      ],
+      "common": "All read the passage as Christ giving himself as the living bread that came down from heaven.",
+      "readings": [
+        {
+          "who": "Catholic and Orthodox",
+          "note": "Catholic and Orthodox readers take these words of the Eucharist, in which, they believe, the bread and wine become the body and blood of Christ."
+        },
+        {
+          "who": "Lutheran",
+          "note": "Lutherans also hold that Christ's body and blood are truly present in the sacrament, though they explain it differently."
+        },
+        {
+          "who": "Reformed",
+          "note": "Reformed readers speak of a real but spiritual feeding on Christ by faith, in the Supper and beyond it."
+        },
+        {
+          "who": "Many evangelical",
+          "note": "Others, among them many evangelicals, read the passage chiefly of believing in Christ, and not of the sacrament at all."
+        }
       ]
     },
     {
@@ -41,6 +71,17 @@
       "note": [
         "Readers who take the discourse of the sacrament hear in this verse a warning against a merely physical understanding of it: the Spirit gives the gift its life.",
         "Readers who take the discourse of faith hear the key to the whole of it: Jesus' words are to be understood spiritually, of believing in him."
+      ],
+      "common": "All take the verse as Jesus' own word on how the discourse is to be heard: it is the Spirit who gives life.",
+      "readings": [
+        {
+          "who": "Of the sacrament",
+          "note": "Readers who take the discourse of the sacrament hear in this verse a warning against a merely physical understanding of it: the Spirit gives the gift its life."
+        },
+        {
+          "who": "Of faith",
+          "note": "Readers who take the discourse of faith hear the key to the whole of it: Jesus' words are to be understood spiritually, of believing in him."
+        }
       ]
     },
     {
@@ -51,6 +92,17 @@
       "note": [
         "Catholic and Orthodox teaching finds here the authority Christ gave the apostles and their successors to forgive sins in his name, exercised in the sacrament of confession.",
         "Protestant readers generally take it as the authority of the whole church to declare God's forgiveness through the preaching of the gospel; Lutherans and some Anglicans also keep private confession and absolution, without counting it a sacrament in the Catholic sense."
+      ],
+      "common": "All read the passage as the risen Christ breathing the Holy Spirit on his disciples and sending them out as the Father sent him.",
+      "readings": [
+        {
+          "who": "Catholic and Orthodox",
+          "note": "Catholic and Orthodox teaching finds here the authority Christ gave the apostles and their successors to forgive sins in his name, exercised in the sacrament of confession."
+        },
+        {
+          "who": "Protestant",
+          "note": "Protestant readers generally take it as the authority of the whole church to declare God's forgiveness through the preaching of the gospel; Lutherans and some Anglicans also keep private confession and absolution, without counting it a sacrament in the Catholic sense."
+        }
       ]
     },
     {
@@ -61,6 +113,21 @@
       "note": [
         "Catholic teaching reads Peter's threefold charge as making him shepherd of the whole flock, an office that continues in the bishops of Rome.",
         "Orthodox readers honour Peter as first among the apostles but hold that the charge does not give one bishop authority over the whole church. Protestant readers see chiefly Peter's restoration after his three denials, and a charge that belongs to every pastor."
+      ],
+      "common": "All read the passage as the risen Christ asking Peter three times whether he loves him, and charging him to feed his sheep.",
+      "readings": [
+        {
+          "who": "Catholic",
+          "note": "Catholic teaching reads Peter's threefold charge as making him shepherd of the whole flock, an office that continues in the bishops of Rome."
+        },
+        {
+          "who": "Orthodox",
+          "note": "Orthodox readers honour Peter as first among the apostles but hold that the charge does not give one bishop authority over the whole church."
+        },
+        {
+          "who": "Protestant",
+          "note": "Protestant readers see chiefly Peter's restoration after his three denials, and a charge that belongs to every pastor."
+        }
       ]
     },
     {
@@ -71,6 +138,17 @@
       "note": [
         "Catholic and Orthodox readers, with some Anglicans, see more than a son's care for his mother: in the beloved disciple Christ gives his mother to all his disciples, and so to the church, as their mother.",
         "Most Protestant readers take the words as Jesus providing for his widowed mother from the cross, and an example of a son's duty."
+      ],
+      "common": "All read the words as Jesus, from the cross, giving his mother and the beloved disciple to one another.",
+      "readings": [
+        {
+          "who": "Catholic, Orthodox and some Anglican",
+          "note": "Catholic and Orthodox readers, with some Anglicans, see more than a son's care for his mother: in the beloved disciple Christ gives his mother to all his disciples, and so to the church, as their mother."
+        },
+        {
+          "who": "Most Protestant",
+          "note": "Most Protestant readers take the words as Jesus providing for his widowed mother from the cross, and an example of a son's duty."
+        }
       ]
     },
     {
@@ -81,7 +159,19 @@
       "note": [
         "The Nicene Creed, as the Western churches came to say it, confesses that the Spirit proceeds from the Father and the Son (in Latin, filioque). Catholics, and most Protestants after them, read this verse alongside others in which the Son sends the Spirit.",
         "The Orthodox churches confess, in the words of the verse, that the Spirit proceeds from the Father, and distinguish his eternal procession from the Father alone from his being sent into the world by the Son. The added words remain one of the chief questions between East and West."
-      ]
+      ],
+      "common": "All confess that the Spirit proceeds from the Father, and that the Son sends him into the world.",
+      "readings": [
+        {
+          "who": "Western: Catholic and most Protestant",
+          "note": "The Nicene Creed, as the Western churches came to say it, confesses that the Spirit proceeds from the Father and the Son (in Latin, filioque). Catholics, and most Protestants after them, read this verse alongside others in which the Son sends the Spirit."
+        },
+        {
+          "who": "Orthodox",
+          "note": "The Orthodox churches confess, in the words of the verse, that the Spirit proceeds from the Father, and distinguish his eternal procession from the Father alone from his being sent into the world by the Son."
+        }
+      ],
+      "after": "The added words remain one of the chief questions between East and West."
     },
     {
       "title": "No one can come unless the Father draws him",
@@ -91,7 +181,23 @@
       "note": [
         "Readers in the line of Augustine, and Reformed readers above all, take the drawing as God's grace, which surely brings to Christ those the Father has given him.",
         "Orthodox, Wesleyan and other readers hold that God draws all people and that his grace can be refused. Catholic teaching holds that no one comes to Christ without grace going before, and that the will, moved by grace, freely consents to it. These readings differ within churches as well as between them."
-      ]
+      ],
+      "common": "All agree that no one comes to Christ unless God draws them.",
+      "readings": [
+        {
+          "who": "In the line of Augustine; Reformed",
+          "note": "Readers in the line of Augustine, and Reformed readers above all, take the drawing as God's grace, which surely brings to Christ those the Father has given him."
+        },
+        {
+          "who": "Orthodox, Wesleyan and others",
+          "note": "Orthodox, Wesleyan and other readers hold that God draws all people and that his grace can be refused."
+        },
+        {
+          "who": "Catholic",
+          "note": "Catholic teaching holds that no one comes to Christ without grace going before, and that the will, moved by grace, freely consents to it."
+        }
+      ],
+      "after": "These readings differ within churches as well as between them."
     }
   ]
 }

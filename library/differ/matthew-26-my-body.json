@@ -8,6 +8,25 @@
   "Catholic and Orthodox readers take the words to mean that the bread and wine become Christ's body and blood. Lutherans hold that his body and blood are truly present in, with and under the bread and wine.",
   "Reformed readers hold that Christ is truly but spiritually received by faith in the Supper. Others, among them many Baptists and evangelicals, take “is” to mean “signifies”, and the Supper as a memorial of his death."
  ],
+ "common": "All read the words as Jesus giving his disciples the bread and the cup at the Last Supper, a meal the church keeps until he comes.",
+ "readings": [
+  {
+   "who": "Catholic and Orthodox",
+   "note": "Catholic and Orthodox readers take the words to mean that the bread and wine become Christ's body and blood."
+  },
+  {
+   "who": "Lutheran",
+   "note": "Lutherans hold that his body and blood are truly present in, with and under the bread and wine."
+  },
+  {
+   "who": "Reformed",
+   "note": "Reformed readers hold that Christ is truly but spiritually received by faith in the Supper."
+  },
+  {
+   "who": "Memorial",
+   "note": "Others, among them many Baptists and evangelicals, take “is” to mean “signifies”, and the Supper as a memorial of his death."
+  }
+ ],
  "status": "ai_draft",
  "reviewed_by": null
 }

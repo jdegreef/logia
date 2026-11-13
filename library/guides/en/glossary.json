@@ -1,12 +1,12 @@
 {
   "id": "glossary",
   "path": "/glossary/",
-  "book": "JHN",
+  "book": null,
   "status": "ai_draft",
   "reviewed_by": null,
   "title": "A glossary for reading the commentators",
   "head_title": "Glossary: words in the commentaries on John explained",
-  "description": "The words the church fathers, Reformers and later commentators use on John that a reader today may not know, from Arians and the Dispensation to the Paraclete, each with where the commentators use it.",
+  "description": "The words the church fathers, Reformers and later commentators use that a reader today may not know, from Arians and the Dispensation to the Paraclete, each with where the commentators use it.",
   "dek": "Words the commentators use that a reader today may not know: names of the heresies they answer, the kinds of books they wrote, and the words of John's own Gospel they explain.",
   "intro": [
     "Each entry says briefly what a word means as the commentators use it, then counts the excerpts in Logia in which it appears and links to the first of them, so the word can be read where it is used."

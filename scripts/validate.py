@@ -376,6 +376,14 @@ def main():
             continue
         if pg["status"] == "reviewed" and not pg.get("reviewed_by"):
             say(f"{name}: reviewed, but by no one named")
+        # The readings side by side are the note's own sentences, regrouped
+        # word for word under a label, every sentence used once.
+        if "readings" in pg:
+            parts = [r.get("note", "") for r in pg["readings"]] + ([pg["after"]] if pg.get("after") else [])
+            if not pg.get("common") or any(not r.get("who") or not r.get("note") for r in pg["readings"]):
+                say(f"{name}: readings need a common line, and each a label and a note")
+            elif sorted(differ.sentences(" ".join(parts))) != sorted(differ.sentences(" ".join(pg["note"]))):
+                say(f"{name}: the readings are not the note's own sentences, each used once")
         on = differ.works_on(pg, rows)
         present = {differ.family(authors[works[w]["author"]]["tradition"], fam) for w in on} - {None}
         fair, missing = differ.balance(present, fam)
