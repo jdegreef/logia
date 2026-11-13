@@ -26,6 +26,9 @@
 
   // The traditions a voice can be filtered by (the kinds in library/families.json).
   var KINDS = DATA.kinds;
+  // Commentators the reader has pinned to the top of the panel, by name.
+  var pinned = (function () { try { return JSON.parse(localStorage.getItem("logia-pinned") || "[]"); } catch (e) { return []; } })();
+  function isPinned(w) { return pinned.indexOf(w.author) >= 0; }
   function hidden(key) {
     try { return JSON.parse(localStorage.getItem(key) || "[]"); } catch (e) { return []; }
   }
@@ -45,6 +48,7 @@
   ICON.sheet = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15h6"/></svg>';
   ICON.flag = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg>';
   ICON.copy = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
+  ICON.pin = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6l-1 5 3 3v2H7v-2l3-3zM12 14v6"/></svg>';
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
   hidden("logia-eras").forEach(function (e) { state.eras.delete(e); });
   hidden("logia-kinds").forEach(function (k) { state.kinds.delete(k); });
@@ -482,12 +486,20 @@
     }
     var shownOn = shown, fresh = shown.filter(function (w) { return !alsoBefore(w, v); });
     var any = false;
+    // Voices the reader has pinned come first, under their own heading, on
+    // every verse they speak on (kept as logia-pinned, by commentator).
+    var pinnedHere = shown.filter(function (w) { return isPinned(w); });
+    var groups = [];
+    if (pinnedHere.length) groups.push({ label: U.pinned, ws: pinnedHere });
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
-      var ws = works.filter(function (w) { return w.era === era && state.kinds.has(w.kind) && entriesFor(w, v).length; });
-      if (!ws.length) return;
+      var ws = works.filter(function (w) { return w.era === era && state.kinds.has(w.kind) && entriesFor(w, v).length && !isPinned(w); });
+      if (ws.length) groups.push({ label: U.eras[era], ws: ws });
+    });
+    groups.forEach(function (g) {
+      var ws = g.ws;
       any = true;
-      h += '<div class="cx-era">' + esc(U.eras[era]) + "</div>";
+      h += '<div class="cx-era">' + esc(g.label) + "</div>";
       ws.forEach(function (w) {
         var es = entriesFor(w, v);
         var body = excerptsHtml(w, es);
@@ -505,6 +517,8 @@
         h += '<section class="cx-card' + (open ? "" : " cx-shut") + '" id="c-' + w.work_id + '">' +
           '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
           '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" + badge +
+          '<button type="button" class="cx-pin" data-pin="' + esc(w.author) + '" aria-pressed="' + isPinned(w) + '" title="' +
+          esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '" aria-label="' + esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '">' + ICON.pin + "</button>" +
           '<button type="button" class="cx-toggle" data-toggle="' + w.work_id + '" aria-expanded="' + open + '" aria-controls="cb-' + w.work_id +
           '" aria-label="' + esc(fmt(open ? U.hide_voice : U.show_voice, { name: w.author })) + '">' + ICON.chevron + "</button></div>" +
           facts(w, es, words) +
@@ -545,7 +559,7 @@
   function actions(w, v) {
     var key = keyOf(w, v);
     var liked = !!(state.marks && state.marks.liked[key]);
-    var isSaved = !!(state.marks && state.marks.saved[key]);
+    var isSaved = !!(state.marks && state.marks.saved[key]) || !!(Account && Account.device && Account.device.has(key));
     // The public counts are cached for a minute, so a like of the reader's
     // own may be newer than them: it always counts.
     var n = Math.max(state.counts[key] || 0, liked ? 1 : 0);
@@ -603,6 +617,14 @@
     if (kind === "share") return share(w, key);
     if (kind === "cite") return cite(w, key);
     if (kind === "sheet") return toSheet(key);
+    // Signed out, a save is kept on this device (web/account.js), with a
+    // word that signing in keeps it everywhere; a like needs an account.
+    if (kind === "save" && Account && Account.device && (!Account.user() || Account.device.has(key))) {
+      var on = Account.device.toggle(key);
+      state.note = on ? { key: key, html: esc(U.saved_device) + ' <a href="' + esc(Account.signInUrl()) + '">' + esc(U.sign_in) + "</a>" } : null;
+      refresh();
+      return;
+    }
     if (!Account || !Account.user()) return signInNote(key);
     var mark = kind === "like" ? "liked" : "saved";
     var on = !(state.marks && state.marks[mark][key]);
@@ -874,6 +896,16 @@
     var actButton = e.target.closest("[data-act]");
     if (actButton) { act(actButton); return; }
     if (e.target.closest("[data-compare]")) { openCompare(); return; }
+    var pin = e.target.closest("[data-pin]");
+    if (pin) {
+      var who = pin.getAttribute("data-pin"), at = pinned.indexOf(who);
+      if (at >= 0) pinned.splice(at, 1); else pinned.push(who);
+      try { localStorage.setItem("logia-pinned", JSON.stringify(pinned)); } catch (err) { /* storage blocked: for this page */ }
+      refresh();
+      var again = document.querySelector('[data-pin="' + who.replace(/"/g, '\\"') + '"]');
+      if (again) again.focus();
+      return;
+    }
     var toggle = e.target.closest("[data-toggle]");
     if (toggle) {
       var wid = toggle.getAttribute("data-toggle");

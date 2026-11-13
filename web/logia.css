@@ -1797,3 +1797,127 @@ a.lg-hm:hover, a.lg-hm:focus-visible { outline: 2px solid var(--accent); outline
 .lg-sunday { border-top: 1px solid var(--line); padding: 10px 0; }
 .lg-sunday p { margin: 2px 0; }
 .lg-sunday-day b { font-variant-numeric: tabular-nums; margin-right: 6px; }
+
+/* A whole homily or tractate: the work's divisions beside it, previous and
+   next above and below, and each section's number (4.2) in the margin. */
+.lg-turns-top { margin: 14px 0 0; }
+.lg-text-layout .lg-contents a { flex-direction: column; gap: 0; }
+.lg-section { position: relative; }
+.lg-sec-n { position: absolute; left: -54px; top: 4px; width: 44px; text-align: right; font-size: 12px; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; text-decoration: none; }
+.lg-sec-n:hover { color: var(--accent); }
+@media (max-width: 1100px) { .lg-sec-n { position: static; display: block; width: auto; text-align: left; margin: 14px 0 -6px; } }
+@media (max-width: 900px) { .lg-text-layout { grid-template-columns: minmax(0, 1fr); } .lg-text-layout .lg-work-toc { display: none; } }
+
+/* Creeds: every dated document on one line of years, a row each. */
+.lg-ct { margin: 24px 0 8px; }
+.lg-ct-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; border-left: 1px dashed var(--line); }
+.lg-ct-rows li { position: relative; height: 24px; }
+.lg-ct-rows li::before { content: ""; position: absolute; left: var(--x); top: 7px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--ct, var(--gold)); }
+.lg-ct-rows a { position: absolute; top: 2px; left: calc(var(--x) + 10px); white-space: nowrap; font-size: 13.5px; text-decoration: none; color: var(--text); }
+.lg-ct-rows li.lg-ct-flip a { left: auto; right: calc(100% - var(--x) + 10px); }
+.lg-ct-rows a span { color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-ct-rows a:hover b { color: var(--accent); }
+.lg-ct-shared { --ct: var(--gold); } .lg-ct-catholic { --ct: var(--lg-era-1); } .lg-ct-orthodox { --ct: var(--lg-era-4); } .lg-ct-protestant { --ct: var(--lg-era-3); }
+.lg-ct-axis { position: relative; height: 20px; border-top: 1px solid var(--line-strong); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-ct-axis span { position: absolute; top: 3px; transform: translateX(-50%); }
+.lg-ct figcaption { margin-top: 6px; font-size: 13px; }
+/* A creed's page: a short creed larger, its articles numbered in the margin. */
+.lg-creed-short .lg-text { font-size: 1.18em; line-height: 1.7; }
+.lg-creed-short .lg-creed-sec { position: relative; }
+.lg-creed-n { position: absolute; left: -40px; top: 4px; width: 30px; text-align: right; font-family: var(--display); font-weight: 600; color: var(--lg-gold-ink); }
+@media (max-width: 900px) { .lg-creed-n { position: static; display: block; text-align: left; width: auto; } }
+.lg-creed-record { margin-top: 28px; }
+
+/* Where the churches differ: a card per passage with the traditions on it,
+   then the passages waiting for more voices. */
+.lg-differ .lg-differ-cards { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); margin-top: 20px; }
+.lg-differ-card { height: 100%; display: flex; flex-direction: column; gap: 6px; }
+.lg-differ-quote { font-family: var(--read-font); font-style: italic; font-size: 14.5px; line-height: 1.45; color: var(--text); }
+.lg-differ-kinds { list-style: none; margin: auto 0 0; padding: 6px 0 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.lg-differ-kinds li { font-size: 11.5px; font-weight: 600; padding: 1px 8px; border-radius: 999px; }
+.lg-differ-kinds .lg-has { background: var(--accent-soft); color: var(--accent); }
+.lg-differ-kinds .lg-has::before { content: "✓ "; }
+.lg-differ-kinds .lg-not { color: var(--muted); border: 1px dashed var(--line-strong); }
+.lg-differ-waiting { padding-left: 20px; }
+.lg-differ-waiting li { margin-bottom: 6px; }
+
+/* The reader: pin a commentator to the top of every verse they speak on. */
+.cx-pin { margin-left: auto; border: 0; background: none; padding: 4px; border-radius: 6px; color: var(--muted); cursor: pointer; opacity: .55; }
+.cx-pin:hover, .cx-pin:focus-visible { opacity: 1; color: var(--accent); }
+.cx-pin[aria-pressed="true"] { opacity: 1; color: var(--lg-gold-ink); }
+.cx-pin[aria-pressed="true"] svg { fill: currentColor; }
+.cx-pin + .cx-toggle { margin-left: 0; }
+
+/* Home: the voices as one row of eras, each with its count and first names. */
+.lg-era-row { list-style: none; margin: 18px auto 0; padding: 0; max-width: 860px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); text-align: left; }
+.lg-era-row li { border-right: 1px solid var(--line); box-shadow: inset 0 3px 0 var(--era); min-width: 0; }
+.lg-era-row li:last-child { border-right: 0; }
+.lg-era-row a { display: grid; gap: 1px; padding: 10px 12px 9px; text-decoration: none; color: var(--text); height: 100%; }
+.lg-era-row a:hover { background: var(--accent-soft); }
+.lg-era-row b { font-size: 13.5px; line-height: 1.25; }
+.lg-era-row span { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-era-row i { font-style: normal; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 760px) {
+  .lg-era-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg-era-row li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .lg-era-row li { border-bottom: 1px solid var(--line); }
+  .lg-era-row i { display: none; }
+}
+/* On a phone the search comes straight after the motto, before the headline. */
+@media (max-width: 640px) {
+  .lg-hero { display: flex; flex-direction: column; }
+  .lg-hero > .lg-motto { order: -2; }
+  .lg-hero > .hero-search { order: -1; margin: 0 0 18px; }
+}
+
+/* Saved comments: collections to filter by, export, and which are kept on
+   this device only. */
+.lg-saved-tools { display: grid; gap: 10px; margin: 8px 0 16px; }
+.lg-saved-tools[hidden] { display: none; }
+.lg-saved-colls { display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-saved-export { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.lg-saved-export .button { padding: 6px 14px; font-size: 14px; }
+.lg-saved-device { font-size: 11.5px; font-weight: 600; color: var(--lg-gold-ink); border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line)); border-radius: 999px; padding: 1px 8px; margin-left: 6px; }
+.lg-saved-coll { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.lg-saved-coll input { font: inherit; font-size: 13px; width: 11em; padding: 3px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text); }
+
+/* The glossary: every term A to Z, a bar of letters, and a box to find one. */
+.lg-az-bar { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 12px; }
+.lg-az-bar a { min-width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 8px;
+  font-weight: 600; font-size: 14px; text-decoration: none; color: var(--accent); background: var(--surface); }
+.lg-az-bar a:hover { border-color: var(--accent); }
+.lg-az-lists { columns: 3 180px; column-gap: 28px; font-size: 14px; }
+.lg-az-lists > div { break-inside: avoid; margin-bottom: 10px; scroll-margin-top: calc(var(--header-h) + 16px); }
+.lg-az-lists b { display: block; font-family: var(--display); color: var(--lg-gold-ink); }
+.lg-az-lists ul { list-style: none; margin: 0; padding: 0; }
+.lg-gloss-find { margin: 14px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; }
+.lg-gloss-find[hidden] { display: none; }
+.lg-gloss-find input { font: inherit; padding: 6px 12px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface); color: var(--text); min-width: 240px; }
+dl.lg-gloss > div[hidden], .lg-block[hidden] { display: none; }
+
+/* Open data: the smaller files and a sample record. */
+.lg-data-parts { font-size: 14px; line-height: 1.9; }
+.lg-data-parts b { margin-right: 4px; }
+.lg-data-parts .lg-quiet { font-size: 12px; font-variant-numeric: tabular-nums; }
+.lg-data-sample { overflow-x: auto; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface);
+  font-size: 12.5px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.lg-data-works { list-style: none; margin: 0 0 12px; padding: 0; columns: 2 360px; column-gap: 32px; font-size: 14px; }
+.lg-data-works li { break-inside: avoid; padding: 3px 0; }
+.lg-data-works b { margin-right: 6px; }
+.lg-data-works .lg-quiet { font-size: 12px; font-variant-numeric: tabular-nums; }
+
+/* The keyboard shortcuts (? on any page). */
+.lg-keys { width: min(460px, calc(100vw - 32px)); padding: 0 20px 16px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); box-shadow: var(--shadow-pop); }
+.lg-keys::backdrop { background: rgb(0 0 0 / .45); }
+.lg-keys-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 0 8px; }
+.lg-keys-head h2 { margin: 0; font-size: 20px; }
+.lg-keys dl { margin: 0; display: grid; gap: 6px; }
+.lg-keys dl > div { display: grid; grid-template-columns: 56px 1fr; align-items: baseline; gap: 10px; }
+.lg-keys dt { margin: 0; }
+.lg-keys dd { margin: 0; font-size: 14.5px; }
+.lg-keys kbd { display: inline-block; min-width: 26px; padding: 2px 7px; border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 6px;
+  background: var(--surface); font: 600 13px/1.4 var(--sans); text-align: center; }
+.lg-keys .lg-quiet { margin: 12px 0 0; font-size: 13px; }

@@ -465,8 +465,8 @@
       });
     }
 
-    // How far through the chapter's text the reader has scrolled.
-    var bar = document.querySelector(".lg-progress span"), text = document.getElementById("text");
+    // How far through the chapter's text, or a whole homily's, the reader has scrolled.
+    var bar = document.querySelector(".lg-progress span"), text = document.getElementById("text") || document.querySelector(".lg-whole");
     if (bar && text) {
       var tick = false;
       var update = function () {
@@ -1082,6 +1082,72 @@
       document.addEventListener("keydown", function (e) { if (e.key === "Escape" && pop) closePop(); });
     }).catch(function () { /* no glossary: the text stays as it is */ });
   }
+
+  // The glossary: a box that keeps only the entries whose word or meaning
+  // has what is typed, and hides the groups left empty.
+  var glossFind = document.getElementById("gloss-q");
+  if (glossFind) {
+    glossFind.parentNode.hidden = false;
+    var entries = [].slice.call(document.querySelectorAll("dl.lg-gloss > div"));
+    glossFind.addEventListener("input", function () {
+      var q = glossFind.value.trim().toLowerCase();
+      entries.forEach(function (d) { d.hidden = !!q && d.textContent.toLowerCase().indexOf(q) < 0; });
+      document.querySelectorAll("dl.lg-gloss").forEach(function (dl) {
+        dl.closest("section").hidden = !!q && !dl.querySelector(":scope > div:not([hidden])");
+      });
+    });
+  }
+
+  // Keyboard shortcuts, when no box has the keys and no modifier is held:
+  // j and k step to the next or previous verse (or homily), ] and [ to the
+  // next or previous chapter, c compares voices, ? shows them all. Each
+  // presses a link or button the page already has, so a page without it
+  // just ignores the key. (/ opens the search, above; the reader's own
+  // arrow keys still step through its verses.)
+  (function () {
+    var holder = document.getElementById("keys-text");
+    if (!holder) return;
+    var K = JSON.parse(holder.textContent), box = null;
+    function press(sel) {
+      var el = [].filter.call(document.querySelectorAll(sel), function (x) { return x.offsetParent !== null || x.closest("header"); })[0]
+        || document.querySelector(sel);
+      if (!el) return false;
+      el.click();
+      return true;
+    }
+    function help() {
+      if (!box) {
+        box = document.createElement("dialog");
+        box.className = "lg-keys";
+        box.setAttribute("aria-labelledby", "keys-h");
+        box.innerHTML = '<div class="lg-keys-head"><h2 id="keys-h">' + esc(K.title) + '</h2><button type="button" class="lg-cmp-close" data-close aria-label="' +
+          esc(K.close) + '">×</button></div><dl>' + K.list.map(function (r) { return "<div><dt><kbd>" + esc(r[0]) + "</kbd></dt><dd>" + esc(r[1]) + "</dd></div>"; }).join("") +
+          '</dl><p class="lg-quiet">' + esc(K.note) + "</p>";
+        document.body.appendChild(box);
+        box.querySelector("[data-close]").addEventListener("click", function () { box.close(); });
+        box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
+      }
+      if (box.showModal && !box.open) box.showModal();
+    }
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey || e.metaKey || e.altKey || e.defaultPrevented) return;
+      var t = e.target;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+      if (document.querySelector("dialog[open]") && e.key !== "?") return;
+      var done = false;
+      if (e.key === "?") { help(); done = true; }
+      else if (e.key === "j") done = press("#next") || press('.lg-vstrip a[rel="next"]') || press('.lg-turns a[rel="next"]');
+      else if (e.key === "k") done = press("#prev") || press('.lg-vstrip a[rel="prev"]') || press('.lg-turns a[rel="prev"]');
+      else if (e.key === "]") done = press('.lg-turn-btn[rel="next"]') || press('.cx-bar-in > a[rel="next"]');
+      else if (e.key === "[") done = press('.lg-turn-btn[rel="prev"]') || press('.cx-bar-in > a[rel="prev"]');
+      else if (e.key === "c") done = press("[data-compare]") || press(".lg-cmp-open");
+      if (done) e.preventDefault();
+    });
+  })();
+
+  // A work's contents beside its pages: scrolled so the page being read shows.
+  var tocBox = document.querySelector(".lg-work-toc"), tocHere = tocBox && tocBox.querySelector("[aria-current]");
+  if (tocHere && tocBox.scrollHeight > tocBox.clientHeight) tocBox.scrollTop = tocHere.offsetTop - tocBox.clientHeight / 3;
 
   // Verse pages: the strip of the chapter's verses scrolls to this one.
   var near = document.querySelector(".lg-near"), here = near && near.querySelector("[aria-current]");

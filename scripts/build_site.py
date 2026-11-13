@@ -900,8 +900,10 @@ def site_header(lib, current, path):
                     f'<a class="lg-nav-resume" href="/" data-resume="{e(t("home.resume"))}" hidden></a></li>')
     menu = e(t("nav.menu"))
     book, chapter = header_place(lib, path)
+    # How far through the text: on a chapter in the reader, and on a whole
+    # homily or tractate (/works/<work>/<n>/).
     progress = ('<div class="lg-progress" aria-hidden="true"><span></span></div>'
-                if chapter and path == chapter_url(book, chapter) else "")
+                if (chapter and path == chapter_url(book, chapter)) or re.fullmatch(r"/works/[^/]+/\d+/", path or "") else "")
     dark, saved = e(t("nav.dark_mode")), e(t("account.saved"))
     return f"""<header class="site"><div class="wrap bar">
 <a class="brand" href="/"{" aria-current=page" if home_on else ""}>{MARK}<span class="brand-name">Logia</span></a>
@@ -1115,6 +1117,8 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
     own = e(SITE_URL + path)
     js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js", "logia.js") + tuple(scripts))
     account_text = json.dumps(CATALOG["account"]["ui"], ensure_ascii=False).replace("</", "<\\/")
+    # The keyboard shortcuts' help, for web/logia.js (? opens it).
+    keys_text = json.dumps(CATALOG["keys"], ensure_ascii=False).replace("</", "<\\/")
     return f"""<!doctype html>
 <html lang="{LANG}">
 <head>
@@ -1155,6 +1159,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 </main>
 {site_footer(lib)}
 <script type="application/json" id="account-text">{account_text}</script>
+<script type="application/json" id="keys-text">{keys_text}</script>
 </body>
 </html>
 """
@@ -1408,8 +1413,17 @@ def home_hero(lib, cov):
     motto = e(t("home.verse"))
     if (mb, mc) in cov:
         motto = f'<a href="{chapter_url(mb, mc)}#v{mv}" title="{e(t("home.motto_title"))}">{motto}</a>'
-    names = " ".join(f'<a class="lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/">{e(short_name(a))}</a>'
-                     for a in lib.ordered_authors())
+    # The voices by era, in one row: each era's count and first few names,
+    # linked to its page (every name is on /commentators/).
+    eras = []
+    for era in ERAS:
+        people = [a for a in lib.ordered_authors() if a["era"] == era]
+        if not people:
+            continue
+        few = ", ".join(short_name(a) for a in people[:3]) + ("…" if len(people) > 3 else "")
+        eras.append(f'<li class="lg-era-{ERAS.index(era)}"><a href="{era_url(era)}" title="{e(", ".join(a["name"] for a in people))}">'
+                    f'<b>{e(t("eras." + era))}</b><span>{e(t("home.era_voices", n=len(people)))}</span><i>{e(few)}</i></a></li>')
+    names = "".join(eras)
     # Try: the season first, then a verse from each book, a chapter, a commentator.
     xmas = next(((b, st, en) for oid, b, st, en, _v in occasions(lib) if oid == "christmas"), None)
     season = [(t("home.christmas", ref=passage_ref(lib, *xmas)), t("occasions.christmas.path"))] if xmas else []
@@ -1434,7 +1448,7 @@ def home_hero(lib, cov):
 <p class="eyebrow lg-motto">{motto}</p>
 <h1>{e(t("home.title"))}</h1>
 <p class="hero-sub">{e(t("home.lead"))}</p>
-<p class="lg-names">{names}</p>
+<ul class="lg-era-row" aria-label="{e(t("home.era_row"))}">{names}</ul>
 {search_box(lib, "home-q", key_hint=True)}
 <p class="hero-try lg-try"><span>{e(t("search.try"))}</span> {" ".join(chips)}</p>
 {home_continue(lib)}
@@ -3973,7 +3987,11 @@ def text_page(lib, wid, x):
         if sec != section:
             if section is not None:
                 body.append("</section>")
-            body.append(f'<section class="lg-section" id="s{sec}">')
+            # The section's number as the edition gives it (Hom. 4.2), a link
+            # to itself, so a passage can be cited and shared.
+            label = f'{x["locus"]}.{sec}' if sec and sec != x["locus"] else ""
+            body.append(f'<section class="lg-section" id="s{sec}">'
+                        + (f'<a class="lg-sec-n" href="#s{sec}" title="{e(locus_label(w, label))}">{e(label)}</a>' if label else ""))
             section = sec
         if p["verse"] and p["verse"] != (paras[n - 1]["verse"] if n else None):
             href = lib.verse_link(p["verse"])
@@ -4006,14 +4024,24 @@ def text_page(lib, wid, x):
              if i else "<span></span>",
              f'<a rel="next" href="/works/{wid}/{siblings[i + 1]["locus"]}/">{e(locus_label(w, siblings[i + 1]["locus"]))} &rarr;</a>'
              if i + 1 < len(siblings) else "<span></span>"]
+    # The work's divisions beside the text, this one marked, each with its verses.
+    toc = "".join(f'<li><a href="/works/{wid}/{y["locus"]}/"{" aria-current=page" if y is x else ""}>'
+                  f'<span>{e(locus_label(w, y["locus"]))}</span><span class="lg-quiet">{e(scripture.label(y["verses"]["start"], y["verses"]["end"]))}</span></a></li>'
+                  for y in siblings)
     html_body = f"""
+<div class="lg-work-layout lg-text-layout">
+<nav class="lg-work-toc" aria-labelledby="toc-h"><p class="label" id="toc-h"><a href="/works/{wid}/">{e(t("text.contents", divisions=plural(w["divisions"][0])))}</a></p>
+<ol class="lg-contents">{toc}</ol></nav>
+<article class="lg-work-main">
 <header class="page-head"><p class="eyebrow"><a href="/works/{wid}/">{e(w["title"])}</a> · {e(scripture.label(x["verses"]["start"], x["verses"]["end"]))}</p>
 <h1>{e(name)}</h1><p class="dek">{e(lead)}</p>
 <p class="actions"><a class="button ghost" href="/commentators/{a["id"]}/">{e(a["name"])}</a>
-<a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p></header>
+<a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p>
+<nav class="lg-turns lg-turns-top" aria-label="{e(w["title"])}">{"".join(turns)}</nav></header>
 <div class="lg-whole">{"".join(body)}</div>
 <nav class="lg-turns" aria-label="{e(w["title"])}">{"".join(turns)}</nav>
-<p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>"""
+<p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>
+</article></div>"""
     return page(lib, f'{a["name"]}, {name}', html_body, f"/works/{wid}/{x['locus']}/", current="/commentators/",
                 description=t("text.description", name=a["name"], title=w["title"], where=name))
 
@@ -4048,7 +4076,12 @@ def saved_page(lib):
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("account.saved_title"))}</p>
 <h1>{e(t("account.saved_heading"))}</h1><p class="dek">{e(t("account.saved_dek"))}</p></header>
-<section id="saved-page"><p class="lg-quiet" id="saved-note" role="status"></p><ul class="lg-saved-list" id="saved-list"></ul>
+<section id="saved-page"><p class="lg-quiet" id="saved-note" role="status"></p>
+<div class="lg-saved-tools" id="saved-tools" hidden><div class="lg-saved-colls" id="saved-collections" role="group" aria-label="{e(t("account.ui.collection"))}"></div>
+<p class="lg-saved-export"><button type="button" class="button ghost" id="saved-copy">{e(t("account.ui.copy_all"))}</button>
+<button type="button" class="button ghost" id="saved-download">{e(t("account.ui.download"))}</button></p></div>
+<datalist id="saved-collection-names"></datalist>
+<ul class="lg-saved-list" id="saved-list"></ul>
 <div class="lg-saved-empty" id="saved-empty" hidden>{sample}
 <h2>{e(t("account.saved_empty_title"))}</h2><p>{e(t("account.saved_empty_text"))}</p>
 <p class="actions"><a class="button" href="{e(href)}" data-login>{icon("user")} {e(t("account.saved_empty_sign_in"))}</a>
@@ -4955,6 +4988,18 @@ def prose(paras):
     return "".join("<p>" + re.sub(r"\*([^*]+)\*", r"<i>\1</i>", e(p)) + "</p>" for p in paras)
 
 
+def gloss_query(pattern):
+    """Words to search for a glossary term's uses (/search/), from the first
+    alternative of its pattern ("(?i)only[- ]begotten" -> "only-begotten"),
+    or None when the pattern doesn't come down to plain words."""
+    q = pattern.split("|")[0].replace("(?i)", "").replace("\\b", "")
+    q = re.sub(r"\(\?:[^)]*\)\?", "", q)                       # an optional group
+    q = re.sub(r"\(\?:([^|)]*)[^)]*\)", r"\1", q)              # a group: its first choice
+    q = re.sub(r"\[(.)[^\]]*\]", r"\1", q)                      # a class: its first character
+    q = re.sub(r".\?", "", q).strip()                            # an optional letter
+    return q if q and re.fullmatch(r"[\w .'-]+", q) else None
+
+
 def gloss_id(term):
     """A glossary term's anchor: "The Word (Logos)" -> "g-the-word-logos"."""
     return "g-" + re.sub(r"[^a-z0-9]+", "-", term.lower()).strip("-")
@@ -5016,6 +5061,9 @@ def guide_page(lib, g):
             if hits:
                 first = hits[0]
                 links.append(f'<a href="{excerpt_href(lib, first)}">{e(t("guide.used", n=len(hits), who=short_name(lib.author_of(first["work"])), ref=scripture.label(first["start"], first["end"])))}</a>')
+                q = gloss_query(x["match"])
+                if q and len(hits) > 1:
+                    links.append(f'<a href="/search/?q={quote(q)}">{e(t("guide.all_uses", n=f"{len(hits):,}"))}</a>')
             rows += (f'<div id="{gloss_id(x["term"])}"><dt>{e(x["term"])}</dt><dd><p>{e(x["text"])}</p>'
                      f'<p class="lg-quiet lg-gloss-links">{" · ".join(links)}</p></dd></div>')
         parts.append(f'<section class="lg-block" id="t{i}"><h2>{e(grp["title"])}</h2><dl class="lg-gloss">{rows}</dl></section>')
@@ -5026,12 +5074,27 @@ def guide_page(lib, g):
                      + (f'<p class="lg-gloss-links">{links}</p>' if links else "") + "</section>")
     toc = "".join(f'<li><a href="#t{i}">{e(x["title"])}</a></li>'
                   for i, x in enumerate(g.get("topics", []) or g.get("groups", []) or g.get("sections", []), 1))
+    # A glossary: every term A to Z as well, the letters as a bar, and a box
+    # that narrows the entries to those that match (web/logia.js).
+    az = ""
+    if g.get("groups"):
+        terms = sorted((x["term"] for grp in g["groups"] for x in grp["terms"]), key=lambda x: re.sub(r"^The ", "", x).lower())
+        by_letter = {}
+        for term in terms:
+            by_letter.setdefault(re.sub(r"^The ", "", term)[0].upper(), []).append(term)
+        letters = "".join(f'<a href="#az-{k}">{k}</a>' for k in by_letter)
+        lists = "".join(f'<div id="az-{k}"><b>{k}</b><ul>' + "".join(f'<li><a href="#{gloss_id(term)}">{e(term)}</a></li>' for term in v) + "</ul></div>"
+                        for k, v in by_letter.items())
+        az = (f'<section class="lg-block lg-gloss-az" aria-labelledby="az-h"><h2 id="az-h">{e(t("guide.az"))}</h2>'
+              f'<p class="lg-gloss-find" hidden><label for="gloss-q">{e(t("guide.find"))}</label> '
+              f'<input type="search" id="gloss-q" autocomplete="off" placeholder="{e(t("guide.find_placeholder"))}"></p>'
+              f'<nav class="lg-az-bar" aria-label="{e(t("guide.az"))}">{letters}</nav><div class="lg-az-lists">{lists}</div></section>')
     body = f"""
 <article class="lg-verse lg-guide">
 <header class="page-head"><p class="eyebrow">{f'<a href="/{book.lower()}/">{e(name)}</a> · ' if book else ""}{e(t("guide.eyebrow"))}</p>
 <h1>{e(g["title"])}</h1><p class="dek">{e(g["dek"])}</p>{draft_note(g)}</header>
 <div class="prose">{prose(g.get("intro", []))}</div>
-{f'<nav class="lg-block"><ol class="lg-guide-toc">{toc}</ol></nav>' if toc else ""}
+{f'<nav class="lg-block"><ol class="lg-guide-toc">{toc}</ol></nav>' if toc else ""}{az}
 {"".join(parts)}
 </article>"""
     return page(lib, g["title"], body, g["path"], current="/read/", head_title=g["head_title"] + " · Logia",
@@ -5069,11 +5132,19 @@ def creed_tradition(d):
     return t("creeds.shared") if d["tradition"] == "Shared by the churches" else d["tradition"]
 
 
+ROMAN = ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII")
+
+
 def creed_page(lib, d):
+    """A creed, council or confession: its text first, as the edition sets
+    it out (a short creed larger, its unlabelled articles numbered), then the
+    record of the edition it is copied from."""
+    short = d["kind"] == "creed" and len(d["sections"]) <= len(ROMAN)
     secs = "".join(f'<section class="lg-creed-sec" id="{e(sec["id"])}">'
-                   + (f'<h2 class="lg-creed-label">{e(sec["label"])}</h2>' if sec["label"] else "")
+                   + (f'<h2 class="lg-creed-label">{e(sec["label"])}</h2>' if sec["label"]
+                      else (f'<span class="lg-creed-n" aria-hidden="true">{ROMAN[i]}</span>' if short and len(d["sections"]) > 1 else ""))
                    + f'<div class="lg-text">{verse_html(lib, sec["text"], creed_cites(lib, sec))}</div>{creed_proofs(lib, sec)}</section>'
-                   for sec in d["sections"])
+                   for i, sec in enumerate(d["sections"]))
     r = d["rights"]
     facts = [(t("creeds.kind_label"), t(f'creeds.kind.{d["kind"]}')), (t("creeds.tradition"), creed_tradition(d)),
              (t("creeds.year"), str(d["year"]) if d["year"] else t("creeds.no_year")), (t("work.edition"), d["edition"])]
@@ -5088,8 +5159,9 @@ def creed_page(lib, d):
 <h1>{e(d["title"])}</h1>
 <p class="actions"><a class="button ghost" href="{e(d["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
 <p class="lg-quiet">{e(t("creeds.not_commentary"))}</p>
-<dl class="lg-facts">{dl}</dl>
-<div class="lg-creed-body">{secs}</div>
+<div class="lg-creed-body{" lg-creed-short" if short else ""}">{secs}</div>
+<details class="lg-record-fold lg-creed-record"><summary><b>{e(t("creeds.record"))}</b><span class="lg-quiet">{e(creed_when(d))}</span></summary>
+<dl class="lg-facts">{dl}</dl></details>
 </article>"""
     return page(lib, d["title"], body, creed_url(d), current="/read/", head_title=f'{d["title"]} · Logia',
                 description=t("creeds.description", title=d["title"], when=creed_when(d)),
@@ -5121,6 +5193,29 @@ def creed_cites(lib, sec):
     return out
 
 
+def creeds_timeline(lib):
+    """Every dated document on one line of years, oldest first, one row each,
+    a dot at its year in its tradition's colour (shared ones in gold), so the
+    order by date that the page keeps can be seen. Undated ones are named
+    under it."""
+    dated = sorted((d for d in lib.creeds if d["year"]), key=lambda d: (d["year"], d["title"]))
+    if not dated:
+        return ""
+    lo, hi = 300, 1900
+
+    def pos(y):
+        return (y - lo) / (hi - lo) * 100
+    rows = "".join(
+        f'<li class="lg-ct-{"shared" if d["tradition"] == "Shared by the churches" else tradition_kind(d)}{" lg-ct-flip" if pos(d["year"]) > 55 else ""}" style="--x:{pos(d["year"]):.2f}%">'
+        f'<a href="{creed_url(d)}"><b>{e(d["title"])}</b> <span>{d["year"]}</span></a></li>' for d in dated)
+    ticks = "".join(f'<span style="left:{pos(y):.2f}%">{y}</span>' for y in range(400, hi + 1, 300))
+    undated = [d for d in lib.creeds if not d["year"]]
+    note = (f'<p class="lg-quiet">{e(t("creeds.undated", names=name_list([d["title"] for d in undated])))}</p>' if undated else "")
+    return (f'<figure class="lg-ct" aria-labelledby="ct-cap"><ol class="lg-ct-rows">{rows}</ol>'
+            f'<div class="lg-ct-axis" aria-hidden="true">{ticks}</div>'
+            f'<figcaption class="lg-quiet" id="ct-cap">{e(t("creeds.timeline_note"))}</figcaption>{note}</figure>')
+
+
 def creeds_index(lib):
     shared = [d for d in lib.creeds if d["tradition"] == "Shared by the churches"]
     rest = [d for d in lib.creeds if d["tradition"] != "Shared by the churches"]
@@ -5132,6 +5227,7 @@ def creeds_index(lib):
 <article class="lg-verse lg-creed">
 <header class="page-head"><p class="eyebrow">{e(t("creeds.eyebrow"))}</p><h1>{e(t("creeds.index_title"))}</h1>
 <p class="dek">{e(t("creeds.index_dek"))}</p></header>
+{creeds_timeline(lib)}
 <div class="prose">{prose(t("creeds.index_intro"))}</div>
 <section class="lg-block"><h2>{e(t("creeds.shared_heading"))}</h2><ul class="lg-creed-list">{"".join(map(row, shared))}</ul></section>
 <section class="lg-block"><h2>{e(t("creeds.each_heading"))}</h2><p class="lg-quiet">{e(t("creeds.each_note"))}</p>
@@ -5224,16 +5320,53 @@ def differ_page(lib, pg, on, present):
 
 
 def differ_index(lib):
-    rows = "".join(f'<li><a href="{pg["path"]}"><b>{e(pg["title"])}</b></a> '
-                   f'<span class="lg-quiet">{e(scripture.label(pg["start"], pg["end"]))} · {e(t("differ.count", n=len(on)))}</span></li>'
-                   for pg, on, _p in sorted(differ_pages(lib), key=lambda x: (list(lib.books).index(ref_parts(x[0]["start"])[0]),
-                                                                              ref_parts(x[0]["start"])[1:])))
+    """Every published passage as a card: its title, reference, the focus
+    verse, how many commentators, and which kinds of tradition they come
+    from. Then the passages held back, each with what it still lacks."""
+    fam = differ.families()
+    kind_of = {f["id"]: f["kind"] for f in fam["families"]}
+    canon = list(lib.books)
+
+    def order(pg):
+        return canon.index(ref_parts(pg["start"])[0]), ref_parts(pg["start"])[1:]
+    cards = []
+    for pg, on, present in sorted(differ_pages(lib), key=lambda x: order(x[0])):
+        b, ch, v = ref_parts(pg["focus"])
+        kinds = {kind_of[f] for f in present if f in kind_of}
+        marks = "".join(f'<li class="{"lg-has" if k in kinds else "lg-not"}">{e(t("kinds." + k))}</li>' for k in KINDS)
+        cards.append(f'<li><a class="lg-card lg-differ-card" href="{pg["path"]}"><b>{e(pg["title"])}</b>'
+                     f'<span class="lg-quiet">{e(scripture.label(pg["start"], pg["end"]))} · {e(t("differ.count", n=len(on)))}</span>'
+                     f'<span class="lg-differ-quote">{e(snippet(chapter_plain(b, ch).get(v, ""), 22))}</span>'
+                     f'<ul class="lg-differ-kinds" aria-label="{e(t("differ.kinds_label"))}">{marks}</ul></a></li>')
+    published = {pg["id"] for pg, _on, _p in differ_pages(lib)}
+    rows = [(c["work"], c["start"], c["end"], c) for c in lib.comments]
+    waiting = []
+    for pg in sorted((p_ for p_ in differ.pages() if "missing" not in p_ and p_["id"] not in published), key=order):
+        on = differ.works_on(pg, rows)
+        present = {differ.family(lib.author_of(w)["tradition"], fam) for w in on} - {None}
+        # What it lacks, in the catalog's words (differ.balance says it in
+        # English for validate.py): each kind of tradition the rule needs and
+        # no commentator brings, then how many more traditions in all.
+        have = {kind_of[f] for f in present if f in kind_of}
+        missing = [t("differ.or").join(t("kinds." + k) for k in need.split("|"))
+                   for need in fam["rule"]["need"] if not have & set(need.split("|"))]
+        if len(present) < fam["rule"]["families"]:
+            more = fam["rule"]["families"] - len(present)
+            missing.append(t("differ.more_one" if more == 1 else "differ.more", n=more))
+        b, sc, sv = ref_parts(pg["start"])
+        _b, ec, ev = ref_parts(pg["end"])
+        waiting.append(f'<li><a href="{section_url(lib, b, (sc, sv))}"><b>{e(pg["title"])}</b></a> '
+                       f'<span class="lg-quiet">{e(scripture.label(pg["start"], pg["end"]))} · '
+                       f'{e(t("differ.lacks", what=", ".join(missing)))}</span></li>')
+    held = (f'<section class="lg-block" id="waiting"><h2>{e(t("differ.waiting"))}</h2><p class="lg-quiet">{e(t("differ.waiting_note"))}</p>'
+            f'<ul class="lg-differ-waiting">{"".join(waiting)}</ul></section>' if waiting else "")
     body = f"""
 <article class="lg-verse lg-differ">
 <header class="page-head"><p class="eyebrow">{e(t("differ.eyebrow"))}</p><h1>{e(t("differ.index_title"))}</h1>
 <p class="dek">{e(t("differ.index_dek"))}</p></header>
 <div class="prose">{prose(t("differ.index_intro"))}</div>
-<ul class="lg-differ-index">{rows}</ul>
+<ul class="lg-cards lg-differ-cards">{"".join(cards)}</ul>
+{held}
 </article>"""
     return page(lib, t("differ.index_title"), body, "/differ/", current="/read/", head_title=t("differ.index_title") + " · Logia",
                 description=t("differ.index_dek"))
@@ -5341,11 +5474,67 @@ def downloads(lib):
     return {"logia-en.json": json.dumps(data, ensure_ascii=False, indent=0) + "\n", "logia-en.csv": buf.getvalue()}
 
 
+def download_parts(lib):
+    """{path under /downloads/: CSV text}: the excerpts one book and one work
+    at a time (books/<BOOK>.csv, works/<work>.csv), for a spreadsheet."""
+    out = {}
+    groups = {}
+    for row in download_rows(lib):
+        groups.setdefault(("books", row["start"].split(".")[0]), []).append(row)
+        groups.setdefault(("works", row["work"]), []).append(row)
+    for (kind, key), rows in groups.items():
+        buf = io.StringIO()
+        w = csv.DictWriter(buf, fieldnames=DOWNLOAD_FIELDS, lineterminator="\n")
+        w.writeheader()
+        w.writerows(rows)
+        out[f"{kind}/{key}.csv"] = buf.getvalue()
+    return out
+
+
 def size_label(n):
     return f"{n / 1_000_000:.1f} MB" if n >= 1_000_000 else f"{n // 1000} KB"
 
 
-def open_data_page(lib, files):
+def open_data_parts(lib, parts):
+    """The smaller files: a book or a work at a time, each a link with its size."""
+    if not parts:
+        return ""
+
+    def links(kind, label):
+        return " · ".join(f'<a href="/downloads/{kind}/{key}.csv" download>{e(label(key))}</a> '
+                          f'<span class="lg-quiet">{size_label(len(parts[f"{kind}/{key}.csv"].encode("utf-8")))}</span>'
+                          for key in (list(lib.books) if kind == "books" else lib.ordered_works()) if f"{kind}/{key}.csv" in parts)
+    # The commentaries by commentator, each named by the books it is on
+    # (Henry's volumes share a title), with its title as the tooltip.
+    canon = list(lib.books)
+    books_of = {}
+    for c in lib.comments:
+        books_of.setdefault(c["work"], set()).add(c["start"].split(".")[0])
+    by_author = ""
+    for a in lib.ordered_authors():
+        mine = [w for w in lib.ordered_works() if lib.works[w]["author"] == a["id"] and f"works/{w}.csv" in parts]
+        if not mine:
+            continue
+        cells = " · ".join(f'<a href="/downloads/works/{w}.csv" download title="{e(lib.works[w]["title"])}">'
+                           f'{e(", ".join(lib.books[b]["en"] for b in sorted(books_of.get(w, ()), key=canon.index)))}</a> '
+                           f'<span class="lg-quiet">{size_label(len(parts[f"works/{w}.csv"].encode("utf-8")))}</span>' for w in mine)
+        by_author += f'<li><b>{e(a["name"])}</b> {cells}</li>'
+    return (f'<h3>{e(t("open_data.parts_title"))}</h3><p class="lg-quiet">{e(t("open_data.parts_note"))}</p>'
+            f'<p class="lg-data-parts"><b>{e(t("open_data.by_book"))}</b> {links("books", lambda k: lib.books[k]["en"])}</p>'
+            f'<p class="lg-data-parts"><b>{e(t("open_data.by_work"))}</b></p><ul class="lg-data-works">{by_author}</ul>')
+
+
+def open_data_sample(lib):
+    """One excerpt as the JSON file holds it, its text cut short, so the shape
+    of a record can be seen before downloading."""
+    c = next((c for c in lib.comments if c["start"] == c["end"] == SAVED_EXAMPLE and c["work"] == "calvin"), lib.comments[0])
+    row = {**{k: c.get(k) or "" for k in DOWNLOAD_FIELDS}, "author": lib.works[c["work"]]["author"]}
+    row["text"] = snippet(row["text"], 24)
+    return (f'<h3>{e(t("open_data.sample_title"))}</h3><p class="lg-quiet">{e(t("open_data.sample_note"))}</p>'
+            f'<pre class="lg-data-sample"><code>{e(json.dumps(row, ensure_ascii=False, indent=2))}</code></pre>')
+
+
+def open_data_page(lib, files, parts=None):
     n = len(lib.comments)
     cov = lib.coverage()
     books = [lib.books[c]["en"] for c in lib.books if any(b == c for b, _c in cov)]
@@ -5369,7 +5558,7 @@ def open_data_page(lib, files):
 <header class="page-head"><p class="eyebrow">{e(t("about.title"))}</p>
 <h1>{e(t("open_data.heading"))}</h1><p class="dek">{e(t("open_data.dek", n=f"{n:,}", works=len(lib.works), authors=len(lib.authors)))}</p></header>
 <section class="lg-block"><h2>{e(t("open_data.download"))}</h2><p class="lg-quiet">{e(t("open_data.download_note"))}</p>
-<ul class="lg-people lg-wide">{dl}</ul></section>
+<ul class="lg-people lg-wide">{dl}</ul>{open_data_parts(lib, parts or {})}{open_data_sample(lib)}</section>
 <section class="lg-block" id="api"><h2>{e(t("open_data.api_title"))}</h2><p>{e(t("open_data.api_note"))}</p>
 <ul class="lg-people lg-wide"><li><a href="/api/v1/index.json"><b>/api/v1/</b> <span>{e(t("open_data.api_index"))}</span></a></li>
 <li><a href="{GITHUB_URL}/blob/main/docs/api.md" rel="noopener"><b>docs/api.md</b> <span>{e(t("open_data.api_docs"))}</span></a></li></ul></section>
@@ -6182,13 +6371,19 @@ def build():
     for name, text in files.items():
         with open(os.path.join(SITE, "downloads", name), "w", encoding="utf-8") as f:
             f.write(text)
+    parts = download_parts(lib)
+    for name, text in parts.items():
+        path = os.path.join(SITE, "downloads", name)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
     # The search's book names and commentators, for the footer's box on pages
     # that don't carry them (web/logia.js).
     with open(os.path.join(SITE, "search.json"), "w", encoding="utf-8") as f:
         f.write(search_json(lib).replace("<\\/", "</"))
     with open(os.path.join(SITE, "glossary.json"), "w", encoding="utf-8") as f:
         f.write(glossary_json())
-    write("/open-data/", open_data_page(lib, files))
+    write("/open-data/", open_data_page(lib, files, parts))
     pages.append("/open-data/")
     write("/signed-in/", signed_in_page(lib))
     write("/saved/", saved_page(lib))

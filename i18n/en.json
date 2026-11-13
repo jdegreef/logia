@@ -197,6 +197,8 @@
     }
   },
   "home": {
+    "era_voices": "{n} voices",
+    "era_row": "The commentators, by era",
     "votd": "Verse of the day",
     "continue": "Continue reading",
     "continue_go": "Pick up where you left off",
@@ -439,6 +441,10 @@
     "by_verse_note": "Each verse with commentary has a page of its own: every voice on it in full, its Greek words, translation notes and cross-references."
   },
   "reader": {
+    "saved_device": "Saved on this device. Sign in to keep it on every device:",
+    "pinned": "Pinned",
+    "pin": "Pin {name} to the top of every verse",
+    "unpin": "Unpin {name}",
     "filter_era": "Era",
     "filter_kind": "Tradition",
     "show_kinds": "Show traditions",
@@ -896,7 +902,10 @@
       [
         "Can I use Logia's text?",
         "Yes. The commentaries are in the public domain and Logia's data is CC0, so you may copy them into a sermon, a class handout or an app without asking."
-      ]
+      ],
+      ["Why are there no modern commentators?", "Logia holds only editions published in 1930 or earlier, so that every text is free to copy. Commentators who wrote later, and modern translations of older ones, are mostly still under copyright."],
+      ["Is the Bible text a new translation?", "Yes. Logia shows the Open Word Bible, a CC0 translation from the Hebrew and Greek. It is an AI draft that people are reviewing, as each verse page says. Logia never edits it: a problem with its wording is fixed in the Open Word Bible itself."],
+      ["Does Logia take sides between the churches?", "No. Where Catholic, Orthodox and Protestant readers differ, Logia shows every commentator it holds on the passage, in the order they lived, and keeps their words whole. Its own short notes say how the readings differ without choosing between them."]
     ]
   },
   "offline": {
@@ -933,6 +942,17 @@
     "saved_empty_sign_in": "Sign in with Open Word Bible",
     "saved_empty_try": "Try it on John 3:16",
     "ui": {
+      "citation": "{name}, {title}, on {ref}. Logia, {url}",
+      "saved_on_device": "Kept on this device only. Sign in to keep them on every device:",
+      "on_device": "On this device",
+      "keep_in_account": "Keep in my account",
+      "collection": "Collection",
+      "collection_placeholder": "Add to a collection",
+      "collection_all": "All",
+      "copy_all": "Copy with citations",
+      "download": "Download as text",
+      "copied": "Copied",
+      "copy_failed": "Couldn't copy. Use Download as text instead.",
       "sign_in": "Sign in",
       "sign_in_failed": "Signing in did not work.",
       "error": "Something went wrong. Please try again.",
@@ -945,6 +965,7 @@
     }
   },
   "text": {
+    "contents": "{divisions}",
     "in_logia": "In Logia on {ref}",
     "quoted": "Quoted by {name} in the {title}, on {ref}",
     "on_ccel": "On CCEL",
@@ -953,9 +974,6 @@
   },
 
   "verse": {
-    "compare": "Compare two voices",
-    "compare_title": "Two voices on {ref}",
-    "compare_pick": "Choose two:",
     "compare": "Compare two voices",
     "compare_title": "Two voices on {ref}",
     "compare_pick": "Choose two:",
@@ -1128,6 +1146,12 @@
     }
   },
   "open_data": {
+    "parts_title": "A book or a work at a time",
+    "parts_note": "The same records as the CSV above, one file per book of the Bible and one per commentary, small enough for a spreadsheet. For JSON a chapter or a work at a time, use the API below.",
+    "by_book": "By book:",
+    "by_work": "By commentary:",
+    "sample_title": "One record",
+    "sample_note": "An excerpt as the JSON file holds it (its text cut short here). The CSV has the same fields, one excerpt a row.",
     "heading": "Open data",
     "api_title": "The API",
     "api_note": "The same library as static JSON for other programs and sites: every chapter of the Bible with its text and the excerpts on each verse, the works with their rights, the commentators, the topics and the whole texts. No key, any origin; fields are added within a version, never removed or renamed.",
@@ -1425,6 +1449,13 @@
     "chapters_title": "Excerpts on each chapter"
   },
   "differ": {
+    "or": " or ",
+    "more_one": "1 more tradition",
+    "more": "{n} more traditions",
+    "kinds_label": "Traditions on this passage",
+    "lacks": "still needs {what}",
+    "waiting": "Waiting for more voices",
+    "waiting_note": "Passages with a note ready that are not yet published, because the commentators Logia holds on them come from too few traditions. A public-domain commentary from the tradition named would let the page go up.",
     "common": "Held in common",
     "eyebrow": "Where the churches differ",
     "title": "{title}: how has the church read {ref}?",
@@ -1445,6 +1476,9 @@
   },
 
   "creeds": {
+    "record": "The edition",
+    "undated": "Not dated in the edition: {names}.",
+    "timeline_note": "Each document at the year it was made or adopted, oldest first. Gold: shared by the churches; the other colours, the Catholic, Orthodox and Protestant churches.",
     "eyebrow": "Creeds and councils",
     "index_title": "Creeds, councils and confessions",
     "index_dek": "The creeds the churches share, the decrees of the councils, and the confessions and catechisms of each tradition, in English editions of 1930 or earlier, with the Scripture they cite linked to each verse.",
@@ -1477,6 +1511,10 @@
   },
 
   "guide": {
+    "all_uses": "See all {n} →",
+    "az": "A to Z",
+    "find": "Find a word:",
+    "find_placeholder": "Arian, Logos, homily …",
     "gloss_more": "In the glossary →",
     "eyebrow": "Guide",
     "draft_note": "Logia wrote this page; it is not commentary. It is a draft until a named reviewer approves it.",
@@ -2000,5 +2038,44 @@
     "catholic": "Catholic",
     "orthodox": "Orthodox",
     "protestant": "Protestant"
+  },
+  "keys": {
+    "title": "Keyboard shortcuts",
+    "close": "Close",
+    "list": [
+      [
+        "j",
+        "Next verse (in the reader, on a verse page) or next homily"
+      ],
+      [
+        "k",
+        "Previous verse or homily"
+      ],
+      [
+        "]",
+        "Next chapter"
+      ],
+      [
+        "[",
+        "Previous chapter"
+      ],
+      [
+        "c",
+        "Compare voices side by side"
+      ],
+      [
+        "/",
+        "Search"
+      ],
+      [
+        "?",
+        "Show these shortcuts"
+      ],
+      [
+        "Esc",
+        "Close a window"
+      ]
+    ],
+    "note": "Shortcuts work when you are not typing in a box."
   }
 }

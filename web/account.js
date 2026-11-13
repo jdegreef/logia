@@ -98,12 +98,36 @@
       .then(function (d) { return d.counts; }, function () { return {}; });
   }
 
+  // Comments saved on this device by a reader who isn't signed in
+  // (logia-saved-local: {key: when}), and the collections a reader groups
+  // their saves into (logia-collections: {key: name}). Both stay on the
+  // device; signed in, a device save can be moved into the account.
+  function readLocal(name) { try { return JSON.parse(localStorage.getItem(name) || "{}"); } catch (e) { return {}; } }
+  function writeLocal(name, v) { try { localStorage.setItem(name, JSON.stringify(v)); return true; } catch (e) { return false; } }
+  var device = {
+    saved: function () { return readLocal("logia-saved-local"); },
+    has: function (key) { return !!readLocal("logia-saved-local")[key]; },
+    toggle: function (key) {
+      var m = readLocal("logia-saved-local"), on = !m[key];
+      if (on) m[key] = new Date().toISOString(); else delete m[key];
+      return writeLocal("logia-saved-local", m) ? on : !on;
+    },
+    remove: function (key) { var m = readLocal("logia-saved-local"); delete m[key]; writeLocal("logia-saved-local", m); },
+    collections: function () { return readLocal("logia-collections"); },
+    setCollection: function (key, name) {
+      var c = readLocal("logia-collections");
+      if (name) c[key] = name; else delete c[key];
+      writeLocal("logia-collections", c);
+    }
+  };
+
   window.LogiaAccount = {
     user: function () { var a = saved(); return a && a.user; },
     signInUrl: signInUrl,
     marks: loadMarks,
     setMark: setMark,
-    likeCounts: likeCounts
+    likeCounts: likeCounts,
+    device: device
   };
 
   // The header's account menu (account_menu in scripts/build_site.py), as on
@@ -178,9 +202,11 @@
     var esc = function (s) {
       return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
     };
-    if (!saved()) {
-      // Signed out: what saving does, with an example and a way to sign in
-      // (#saved-empty, saved_page in scripts/build_site.py).
+    // Every save, the account's and this device's, newest first. Signed
+    // out with nothing on the device: what saving does (#saved-empty).
+    var signedIn = !!saved();
+    var local = device.saved();
+    if (!signedIn && !Object.keys(local).length) {
       var empty = document.getElementById("saved-empty");
       if (empty) {
         empty.hidden = false;
@@ -190,9 +216,14 @@
       }
       return;
     }
-    loadMarks().then(function (m) {
-      if (!m) { note.textContent = T.error; return; }
-      var keys = Object.keys(m.saved).sort(function (a, b) { return m.saved[b] < m.saved[a] ? -1 : 1; });
+    var tools = document.getElementById("saved-tools"), picks = document.getElementById("saved-collections");
+    var shownCollection = "", items = [];
+    (signedIn ? loadMarks() : Promise.resolve({ saved: {} })).then(function (m) {
+      if (!m) { note.textContent = T.error; m = { saved: {} }; }
+      var all = {};
+      Object.keys(m.saved).forEach(function (k) { all[k] = { at: m.saved[k], device: false }; });
+      Object.keys(local).forEach(function (k) { if (!all[k]) all[k] = { at: local[k], device: true }; });
+      var keys = Object.keys(all).sort(function (a, b) { return all[b].at < all[a].at ? -1 : 1; });
       if (!keys.length) { note.textContent = T.saved_empty; return; }
       var chapters = {};
       keys.forEach(function (k) { var p = k.split("."); chapters[p[1] + "." + p[2]] = true; });
@@ -201,34 +232,99 @@
       })).then(function (files) {
         var data = {};
         files.forEach(function (f) { if (f) data[f.book + "." + f.chapter] = f; });
-        note.textContent = "";
-        list.innerHTML = keys.map(function (k) {
+        note.innerHTML = signedIn ? "" : esc(T.saved_on_device) + ' <a href="' + esc(signInUrl()) + '">' + esc(T.sign_in) + "</a>";
+        items = keys.map(function (k) {
           var p = k.split("."), work = p[0], v = +p[3], ch = data[p[1] + "." + p[2]];
           var w = ch && ch.commentaries.filter(function (x) { return x.work_id === work; })[0];
-          var ref = (ch ? ch.bookName : p[1]) + " " + p[2] + ":" + v;
-          var href = "/" + p[1].toLowerCase() + "/" + p[2] + "/#v" + v + "-" + work;
-          if (!w) {
-            return '<li class="lg-saved"><p class="lg-ref"><a href="' + esc(href) + '">' + esc(ref) + "</a></p></li>";
-          }
-          var e = w.entries.filter(function (x) { return x.start <= v && v <= x.end; })[0];
-          var first = e ? e.excerpt.split(/\n\s*\n/)[0] : "";
-          var words = first.split(/\s+/);
-          var text = words.slice(0, 60).join(" ") + (words.length > 60 ? "…" : "");
-          return '<li class="lg-saved" data-key="' + esc(k) + '"><p class="lg-ref"><a href="' + esc(href) + '">' +
-            esc(ref) + '</a></p><p class="lg-saved-who"><b>' + esc(w.author) + "</b> · <i>" + esc(w.title) + "</i></p>" +
-            '<p class="lg-saved-text">' + esc(text) + '</p><p class="lg-saved-actions"><a href="' + esc(href) + '">' +
-            esc(T.open_in_reader) + '</a><button type="button" class="lg-linkish" data-remove>' + esc(T.remove) + "</button></p></li>";
-        }).join("");
+          var e = w && w.entries.filter(function (x) { return x.start <= v && v <= x.end; })[0];
+          return { key: k, device: all[k].device, ref: (ch ? ch.bookName : p[1]) + " " + p[2] + ":" + v,
+            href: "/" + p[1].toLowerCase() + "/" + p[2] + "/#v" + v + "-" + work, w: w, text: e ? e.excerpt : "" };
+        });
+        draw();
+        if (tools) tools.hidden = false;
       });
     });
+    // The list as it is, filtered to one collection when one is chosen.
+    function draw() {
+      var coll = device.collections();
+      var names = Object.keys(coll).map(function (k) { return coll[k]; }).filter(function (n, i, a) { return a.indexOf(n) === i; }).sort();
+      if (picks) {
+        picks.innerHTML = names.length ? ['<button type="button" class="cx-chip" data-coll="" aria-pressed="' + (!shownCollection) + '">' + esc(T.collection_all) + "</button>"]
+          .concat(names.map(function (n) { return '<button type="button" class="cx-chip" data-coll="' + esc(n) + '" aria-pressed="' + (n === shownCollection) + '">' + esc(n) + "</button>"; })).join("") : "";
+      }
+      var dl = document.getElementById("saved-collection-names");
+      if (dl) dl.innerHTML = names.map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");
+      list.innerHTML = visible().map(function (it) {
+        if (!it.w) return '<li class="lg-saved" data-key="' + esc(it.key) + '"><p class="lg-ref"><a href="' + esc(it.href) + '">' + esc(it.ref) + "</a></p></li>";
+        var words = it.text.split(/\n\s*\n/)[0].split(/\s+/);
+        var text = words.slice(0, 60).join(" ") + (words.length > 60 ? "…" : "");
+        return '<li class="lg-saved" data-key="' + esc(it.key) + '"><p class="lg-ref"><a href="' + esc(it.href) + '">' +
+          esc(it.ref) + "</a>" + (it.device ? ' <span class="lg-saved-device">' + esc(T.on_device) + "</span>" : "") + '</p><p class="lg-saved-who"><b>' + esc(it.w.author) + "</b> · <i>" + esc(it.w.title) + "</i></p>" +
+          '<p class="lg-saved-text">' + esc(text) + '</p><p class="lg-saved-actions"><a href="' + esc(it.href) + '">' + esc(T.open_in_reader) + "</a>" +
+          '<label class="lg-saved-coll"><span>' + esc(T.collection) + '</span><input type="text" list="saved-collection-names" value="' + esc(coll[it.key] || "") +
+          '" data-coll-for="' + esc(it.key) + '" placeholder="' + esc(T.collection_placeholder) + '"></label>' +
+          (it.device && signedIn ? '<button type="button" class="lg-linkish" data-keep>' + esc(T.keep_in_account) + "</button>" : "") +
+          '<button type="button" class="lg-linkish" data-remove>' + esc(T.remove) + "</button></p></li>";
+      }).join("");
+    }
+    function visible() {
+      var coll = device.collections();
+      return items.filter(function (it) { return !shownCollection || coll[it.key] === shownCollection; });
+    }
+    // The shown saves as text: each excerpt whole, then who, which work, the
+    // verse and the link, for notes, a handout or a paper.
+    function asText() {
+      return visible().filter(function (it) { return it.w; }).map(function (it) {
+        var cite = T.citation.replace("{name}", it.w.author).replace("{title}", it.w.title).replace("{ref}", it.ref).replace("{url}", location.origin + it.href);
+        return "\u201c" + it.text.trim() + "\u201d\n" + cite;
+      }).join("\n\n---\n\n");
+    }
+    if (picks) picks.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-coll]"); if (!b) return;
+      shownCollection = b.getAttribute("data-coll"); draw();
+    });
+    list.addEventListener("change", function (e) {
+      var input = e.target.closest("[data-coll-for]"); if (!input) return;
+      device.setCollection(input.getAttribute("data-coll-for"), input.value.trim());
+      draw();
+    });
+    var copyBtn = document.getElementById("saved-copy"), dlBtn = document.getElementById("saved-download");
+    if (copyBtn) copyBtn.addEventListener("click", function () {
+      var text = asText(), label = copyBtn.textContent;
+      var done = function () { copyBtn.textContent = T.copied; setTimeout(function () { copyBtn.textContent = label; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () { note.textContent = T.copy_failed; });
+    });
+    if (dlBtn) dlBtn.addEventListener("click", function () {
+      var url = URL.createObjectURL(new Blob([asText() + "\n"], { type: "text/plain;charset=utf-8" }));
+      var a = document.createElement("a");
+      a.href = url; a.download = "logia-" + (shownCollection || "saved").toLowerCase().replace(/[^a-z0-9]+/g, "-") + ".txt";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    });
     list.addEventListener("click", function (e) {
+      var keep = e.target.closest("[data-keep]");
+      if (keep) {
+        var li0 = keep.closest("[data-key]"), key0 = li0.getAttribute("data-key");
+        keep.disabled = true;
+        setMark("saved", key0, true).then(function () {
+          device.remove(key0);
+          items.forEach(function (it) { if (it.key === key0) it.device = false; });
+          draw();
+        }).catch(function (err) { keep.disabled = false; note.textContent = err.message; });
+        return;
+      }
       var b = e.target.closest("[data-remove]"); if (!b) return;
-      var li = b.closest("[data-key]");
+      var li = b.closest("[data-key]"), key = li.getAttribute("data-key");
+      var it = items.filter(function (x) { return x.key === key; })[0];
+      var gone = function () {
+        items = items.filter(function (x) { return x.key !== key; });
+        device.setCollection(key, "");
+        draw();
+        if (!items.length) note.textContent = T.saved_empty;
+      };
+      if (it && it.device) { device.remove(key); gone(); return; }
       b.disabled = true;
-      setMark("saved", li.getAttribute("data-key"), false).then(function () {
-        li.remove();
-        if (!list.children.length) note.textContent = T.saved_empty;
-      }).catch(function (err) { b.disabled = false; note.textContent = err.message; });
+      setMark("saved", key, false).then(gone).catch(function (err) { b.disabled = false; note.textContent = err.message; });
     });
   })();
 })();
