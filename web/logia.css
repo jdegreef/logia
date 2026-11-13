@@ -1989,3 +1989,60 @@ dl.lg-gloss > div[hidden], .lg-block[hidden] { display: none; }
 .lg-recent-list a { text-decoration: none; color: var(--text); }
 .lg-recent-list a:hover b { color: var(--accent); }
 .lg-recent-list span { color: var(--muted); font-size: 14px; }
+
+/* A box on a work's or commentator's page that searches only their words. */
+.lg-within { display: grid; gap: 6px; margin: 22px 0 6px; max-width: 560px; }
+.lg-within label { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.lg-within-box { display: flex; align-items: center; gap: 8px; padding: 4px 4px 4px 14px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface); }
+.lg-within-box:focus-within { border-color: var(--accent); }
+.lg-within-box svg { flex: none; color: var(--muted); }
+.lg-within-box input[type=search] { flex: 1; min-width: 0; border: 0; background: none; font: inherit; font-size: 15px; padding: 6px 0; color: var(--text); }
+.lg-within-box input:focus { outline: none; }
+.lg-within-box .button { padding: 6px 14px; font-size: 14px; }
+
+/* A verse page: the verse in Greek or Hebrew under the English. */
+.lg-vorig { margin: 6px 0 10px; font-family: var(--greek); font-size: 19px; line-height: 1.6; color: var(--muted); }
+.lg-vorig[lang="hbo"] { font-family: var(--hebrew); font-size: 22px; }
+.lg-vorig-more { font-family: var(--sans); font-size: 13px; font-weight: 600; white-space: nowrap; margin-inline-start: 8px; }
+
+/* The reader: the chapter's most-discussed verses as quick links. */
+.lg-hot { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin: 4px 0 12px; font-size: 13.5px; }
+.lg-hot a { padding: 2px 9px; border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line)); border-radius: 999px; text-decoration: none; color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+.lg-hot a span { font-weight: 500; color: var(--muted); font-size: 12px; }
+.lg-hot a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Two creeds side by side (/creeds/compare/), one under the other on a phone. */
+.lg-cc-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 18px 0 32px; }
+.lg-cc-cols > section { min-width: 0; }
+.lg-cc-pick { display: block; width: 100%; margin: 6px 0 14px; padding: 9px 12px; font: inherit; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--bg); color: var(--text); }
+.lg-cc-slot .lg-text { font-family: var(--read-font); font-size: 17px; line-height: 1.7; }
+.lg-cc-slot .lg-creed-label { font-size: 15px; margin: 16px 0 4px; }
+@media (max-width: 760px) { .lg-cc-cols { grid-template-columns: minmax(0, 1fr); } }
+
+/* A short creed recited: one article at a time, large. */
+.lg-recite { width: min(760px, calc(100vw - 24px)); padding: 18px 24px 22px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); box-shadow: var(--shadow-pop); }
+.lg-recite::backdrop { background: rgb(0 0 0 / .55); }
+.lg-recite .lg-cmp-close { float: right; font-size: 22px; line-height: 1; }
+.lg-recite-text { clear: both; min-height: 30vh; padding: 12px 0; font-family: var(--read-font); font-size: clamp(22px, 4vw, 32px); line-height: 1.55; }
+.lg-recite-label { font-family: inherit; font-size: 15px; color: var(--muted); margin: 0 0 8px; }
+.lg-recite-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0; }
+.lg-recite-n { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Who writes most like a commentator: the bars, with their dates. */
+.lg-alike { margin-top: 22px; }
+.lg-alike .lg-pbars li { grid-template-columns: minmax(0, 11em) minmax(0, 1fr) 6.5em; }
+
+/* Phones: the chapter and verse arrows a full fingertip wide (44px). */
+@media (max-width: 560px) {
+  .cx-bar-in > a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; font-size: 22px; }
+  .cx-nav button { width: 44px; height: 44px; font-size: 20px; }
+  .cx-turns a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; }
+}
+#panel:focus, #voices:focus { outline: none; }
+
+/* Open data: a code snippet with its copy button. */
+.lg-code { position: relative; margin: 8px 0 18px; }
+.lg-code pre { margin: 0; padding-right: 92px; }
+.lg-code .lg-copy { position: absolute; top: 8px; right: 8px; padding: 4px 12px; font-size: 13px; }

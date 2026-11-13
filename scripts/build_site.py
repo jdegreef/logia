@@ -47,6 +47,7 @@ import subprocess
 import sys
 import tempfile
 import types
+import unicodedata
 from urllib.parse import quote
 
 import api
@@ -1111,9 +1112,11 @@ def counter_script(noindex=False):
 
 
 def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True,
-         preload=(), head_title=None, ld=()):
+         preload=(), head_title=None, ld=(), skip_to=None):
     """A whole page. head_title, when given, is the <title> and og:title in
-    place of "<title> · Logia"; ld is schema.org data for search engines."""
+    place of "<title> · Logia"; ld is schema.org data for search engines;
+    skip_to, (#id, label), is a second skip link, past the text to the
+    commentary on it."""
     full = head_title or (f"{title} · Logia" if title != "Logia" else "Logia")
     description = description or t("site.description")
     own = e(SITE_URL + path)
@@ -1155,7 +1158,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <link rel="stylesheet" href="{asset("logia.css")}">{js}{counter_script(noindex)}
 </head>
 <body>
-<a class="skip" href="#main">{e(t("site.skip"))}</a>
+<a class="skip" href="#main">{e(t("site.skip"))}</a>{f'<a class="skip" href="{skip_to[0]}" data-skip-to>{e(skip_to[1])}</a>' if skip_to else ""}
 {site_header(lib, current, path)}
 <main class="wrap" id="main" tabindex="-1">
 {body}
@@ -1238,7 +1241,16 @@ def search_json(lib):
             # The chapters with commentary, as ranges ("1-21"), so a reference
             # to one without can say so.
             "has": {k: number_runs(sorted(c for b, c in lib.coverage() if b == k)) for k in lib.books if any(b == k for b, _c in lib.coverage())},
-            "people": [[a["name"], f'/commentators/{a["id"]}/', a["dates"]] for a in lib.ordered_authors()],
+            # Each commentator: name, page, dates, and their work on each book
+            # ("Calvin John 3:16" goes to that work's comment in the reader).
+            "people": [[a["name"], f'/commentators/{a["id"]}/', a["dates"],
+                        {c["start"].split(".")[0]: c["work"] for c in reversed(lib.comments) if lib.works[c["work"]]["author"] == a["id"]}]
+                       for a in lib.ordered_authors()],
+            # The passages with a page of their own ("John 1:1-18"), by range.
+            "passages": {f"{b}.{st[0]}.{st[1]}-{en[0]}.{en[1]}": passage_url(b, st, en)
+                         for b in dict.fromkeys(bk for bk, _c in lib.chapters) for _h, st, en, _v in passages_with_commentary(lib, b)},
+            # ... and the readings of the church year ("John 1:1-14", Christmas).
+            "readings": {f"{b}.{st[0]}.{st[1]}-{en[0]}.{en[1]}": t(f"occasions.{oid}.path") for oid, b, st, en, _v in occasions(lib)},
             "ui": CATALOG["search"]["ui"]}
     return json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
@@ -1858,7 +1870,8 @@ def book_page(lib, book):
 {book_heat(lib, book)}
 {f'<p class="lg-quiet">{e(t("book.chapters_note"))}</p>' if passages else ""}<ol class="lg-toc lg-toc-book">{"".join(rows)}</ol></section>
 {top_verses}{longest}{taste}
-{book_voices(lib, book, works) if works else ""}"""
+{book_voices(lib, book, works) if works else ""}
+{book_topics_creeds(lib, book)}"""
     description = (t("book.description", book=name, names=name_list([short_name(lib.author_of(w)) for w in works]), n=f"{len(here):,}")
                    if here else t("book.description_text", book=name))
     chapters_ld = {"@context": "https://schema.org", "@type": "ItemList", "name": t("book.chapters_ld", book=name),
@@ -1867,6 +1880,32 @@ def book_page(lib, book):
     return page(lib, name, body, f"/{book.lower()}/", current="/read/", noindex=not indexed(lib, f"/{book.lower()}/"),
                 description=description,
                 ld=(breadcrumbs((t("read.title"), "/read/"), (name, f"/{book.lower()}/")), chapters_ld))
+
+
+def book_topics_creeds(lib, book):
+    """The topics with a passage in the book, and the creeds and confessions
+    that cite its verses (as library/creeds marks them), most cited first."""
+    tops = [(tp, sum(1 for x in tp["items"] if topic_span(x)[0] == book)) for tp in topics(lib)]
+    tops = [(tp, n) for tp, n in tops if n]
+    tops = "".join(f'<li><a href="/topics/{tp["id"]}/"><b>{e(t("topics." + tp["id"] + ".heading"))}</b></a> '
+                   f'<span class="lg-quiet">{e(t("book.topic_n" if n != 1 else "book.topic_one", n=n))}</span></li>' for tp, n in tops)
+    cited = {}
+    for (bk, ch, v), rows in lib.creed_cites.items():
+        if bk == book:
+            for d, _sec in rows:
+                cited.setdefault(d["id"], [d, set()])[1].add((ch, v))
+    order = sorted(cited.values(), key=lambda dv: (-len(dv[1]), dv[0]["year"] or 0))
+    creeds = "".join(f'<li><a href="{creed_url(d)}"><b>{e(d["title"])}</b></a> <span class="lg-quiet">{e(creed_when(d))} · '
+                     f'{e(t("book.creed_n" if len(vs) != 1 else "book.creed_one", n=len(vs)))}</span></li>' for d, vs in order)
+    name = lib.books[book]["en"]
+    out = ""
+    if tops:
+        out += (f'<section class="lg-block" id="topics"><h2>{e(t("book.topics", book=name))}</h2>'
+                f'<ul class="lg-people lg-wide">{tops}</ul></section>')
+    if creeds:
+        out += (f'<section class="lg-block" id="creeds"><h2>{e(t("book.creeds", book=name))}</h2>'
+                f'<p class="lg-quiet">{e(t("book.creeds_note"))}</p><ul class="lg-people lg-wide">{creeds}</ul></section>')
+    return out
 
 
 # What the panel's Greek/Hebrew words and translation notes tabs show is most
@@ -1965,6 +2004,18 @@ def _kind_of(tradition):
     return next((f["kind"] for f in fam["families"] if f["id"] == fid), "protestant")
 
 
+def chapter_hot(lib, book, chapter, n=4):
+    """The chapter's most-discussed verses, as quick links to them in the
+    reader (in verse order), with how many excerpts are on each."""
+    counts = {v: k for (ch, v), k in verse_counts_cached(lib, book).items() if ch == chapter}
+    if len(counts) < 3:
+        return ""
+    top = sorted(sorted(counts, key=lambda v: (-counts[v], v))[:n])
+    links = " ".join(f'<a href="#v{v}" title="{e(t("verse.nearby_title", ref=verse_ref(lib, book, chapter, v), n=counts[v]))}">'
+                     f'{chapter}:{v} <span>{counts[v]}</span></a>' for v in top)
+    return f'<p class="lg-hot"><span class="lg-quiet">{e(t("chapter.hot"))}</span> {links}</p>'
+
+
 def chapter_page(lib, book, chapter, all_chapters):
     """The reader page, and the texts of its panel and commentary files."""
     bible = lib.bible(book, chapter)
@@ -2061,13 +2112,14 @@ def chapter_page(lib, book, chapter, all_chapters):
 <p class="cx-eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("chapter.eyebrow", chapter=chapter))}</p>
 <h1>{e(heading)}</h1>
 <p class="cx-sub">{e(t("chapter.pick" + ("" if commentaries else "_none") + ("_hbo" if hebrew else "")))}</p>
+{chapter_hot(lib, book, chapter)}
 <div class="cx-levels" role="group" aria-label="{e(t("chapter.level_label"))}">{levels}</div>
 <div class="cx-text" id="text">{plain}</div>
 <p class="cx-hint">{t("chapter.owb_hint", link=owb_link)}</p>
 {in_order}
 <nav class="cx-turns" aria-label="{e(t("chapter.previous"))} / {e(t("chapter.next"))}">{"".join(turns)}</nav>
 </article>
-<aside class="cx-panel" id="panel" aria-label="{e(t("chapter.panel_label"))}">
+<aside class="cx-panel" id="panel" tabindex="-1" aria-label="{e(t("chapter.panel_label"))}">
 <button type="button" class="cx-grab" id="grab" aria-label="{e(t("chapter.toggle_panel"))}"></button>
 <div class="cx-ph">
 <div class="cx-ph-ref"><h2 class="cx-ref" id="ref">{e(first_ref)}</h2>
@@ -2102,7 +2154,8 @@ def chapter_page(lib, book, chapter, all_chapters):
     # A chapter with no commentary is only the Bible text, which
     # openwordbible.org publishes: it stays readable, out of search (indexed()).
     return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/", ld=(crumbs,), head_title=head_title,
-                description=description, noindex=not indexed(lib, chapter_url(book, chapter)), scripts=("sheets.js", "reader.js"), preload=(comm_url,) if comm_url else ()), panel, comm
+                description=description, noindex=not indexed(lib, chapter_url(book, chapter)), scripts=("sheets.js", "reader.js"), preload=(comm_url,) if comm_url else (),
+                skip_to=("#panel", t("site.skip_commentary"))), panel, comm
 
 
 # --- Verse pages --------------------------------------------------------------
@@ -2241,6 +2294,27 @@ def verse_excerpt(lib, c, book, chapter, verse):
             + (f'<ul class="lg-vx-more">{"".join(more)}</ul>' if more else "")
             + f'<p class="lg-vx-links lg-quiet">{e(t("verse.from", edition=short_edition(w["edition"])))}{locus} '
             f'{" · ".join(links)}</p>{excerpt_actions(lib, c, verse_url(book, chapter, verse))}</article>')
+
+
+def verse_original(bible, verse):
+    """The verse in the Greek or Hebrew the Open Word Bible translates, as one
+    line, joined from its word data as the reader joins it. Copied from the
+    data, never typed."""
+    words = bible["words"].get(str(verse), [])
+    if not words:
+        return ""
+    lang = "hbo" if bible["source"] == "hbo" else "grc"
+
+    # An empty "after" joins the next part on (a Hebrew prefix: בְּ+רֵאשִׁית);
+    # punctuation is followed by a space, except a maqaf, which joins.
+    def gap(w):
+        after = w.get("after")
+        if after is None:
+            return " "
+        return after if after == "" or after.endswith((" ", "\u05be")) else after + " "
+    text = "".join(w["text"] + gap(w) for w in words).strip()
+    return (f'<p class="lg-vorig" lang="{lang}"{" dir=rtl" if lang == "hbo" else ""}>{e(text)} '
+            f'<a class="lg-vorig-more" href="#words" lang="{LANG}" dir="ltr">{e(t("verse.orig_words"))}</a></p>')
 
 
 def verse_words(bible, verse):
@@ -2477,12 +2551,13 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · <a href="{chapter_url(book, chapter)}">{e(t("chapter.eyebrow", chapter=chapter))}</a> · {e(lib.chapter_title(book, chapter))}</p>
 <h1>{e(ref)}</h1>
 {verse_html}
+{verse_original(bible, verse)}
 <p class="lg-quiet">{t("verse.bible_credit", link=owb_link)}</p>
 {nearby_verses(lib, book, chapter, verse, pages_here)}
 <p class="dek lg-vlead">{e(lead)}</p>{verse_topics(lib, book, chapter, verse)}
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav>
 {compare_dialog(ref) if len(rail) > 1 else ""}</header>
-<section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
+<section class="lg-block" id="voices" tabindex="-1"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
 {cited_html}{whole_html}{verse_creeds(lib, book, chapter, verse, ref)}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
 <p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
 <nav class="lg-turns" aria-label="{e(t("verse.previous"))} / {e(t("verse.next"))}">{"".join(turns)}</nav>
@@ -2494,7 +2569,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
     description = (t("verse.description", ref=ref, text=snippet(text, 16), names=name_list(names)) if text
                    else t("verse.description_gap", ref=ref, names=name_list(names)))
     return page(lib, t("verse.title", ref=ref, names=title_names), body, verse_url(book, chapter, verse),
-                current="/read/", description=description,
+                current="/read/", description=description, skip_to=("#voices", t("site.skip_commentary")) if voices else None,
                 ld=(verse_ld(lib, ref, verse_url(book, chapter, verse), voices, verse), crumbs))
 
 
@@ -3222,6 +3297,32 @@ def distinctive_words(lib, author, n=12):
 
 
 @functools.lru_cache(maxsize=1)
+def word_likeness(lib):
+    """How alike each two commentators' English reads: the cosine of their
+    word frequencies, each word weighted by how few commentators use it
+    (tf-idf; words of four letters or more, used by three commentators or
+    more, not NOT_WORDS), over everything Logia has of them. Counted, not
+    chosen; it follows the translators' English as much as the authors'."""
+    low, cap, _forms = word_counts(lib)
+    words = {a: low[a] + cap[a] for a in low}
+    users = Counter(k for ws in words.values() for k in ws)
+    n = len(words)
+    vecs = {}
+    for a, ws in words.items():
+        if sum(ws.values()) < 2000:
+            continue
+        v = {k: x * math.log(n / users[k]) for k, x in ws.most_common(4000)
+             if len(k) > 3 and k not in NOT_WORDS and 3 <= users[k] < n}
+        norm = math.sqrt(sum(x * x for x in v.values()))
+        if norm:
+            vecs[a] = {k: x / norm for k, x in v.items()}
+    out = {}
+    for a, va in vecs.items():
+        out[a] = sorted(((sum(x * vb.get(k, 0) for k, x in va.items()), b) for b, vb in vecs.items() if b != a), reverse=True)
+    return out
+
+
+@functools.lru_cache(maxsize=1)
 def comments_by_start(lib):
     out = {}
     for c in lib.comments:
@@ -3481,9 +3582,14 @@ def author_page(lib, author):
     quoted = sum(1 for c in lib.comments for q in c["quotes"] if q["work"] in works)
     catena = (f'<p class="lg-catq"><b>{quoted:,}</b> <span>{e(t("commentators.catena"))} '
               f'<a href="/works/catena/fathers/">{e(t("commentators.catena_link"))}</a></span></p>' if quoted and "catena" in lib.works else "")
+    alike = [(lib.authors[b], sim) for sim, b in word_likeness(lib).get(aid, [])[:5] if b in lib.authors and sim >= .1]
+    alike = (f'<div class="lg-alike"><h3 class="label">{e(t("commentators.alike", name=short))}</h3><ul class="lg-pbars">'
+             + "".join(f'<li><span><a href="/commentators/{a["id"]}/">{e(a["name"])}</a></span><span class="lg-hbar"><span style="width:{100 * sim / alike[0][1]:.1f}%">'
+                       f'</span></span><span class="lg-quiet">{e(a["dates"])}</span></li>' for a, sim in alike)
+             + f'</ul><p class="lg-quiet">{e(t("commentators.alike_note"))}</p></div>' if alike else "")
     alongside = (f'<section class="lg-block" id="alongside"><h2>{e(t("commentators.alongside"))}</h2>'
                  f'<p class="lg-quiet">{e(t("commentators.alongside_note", name=short))}</p>'
-                 f'<ul class="lg-pbars lg-bars-gold">{count_bars(others, len(mine_keys))}</ul>{catena}</section>' if others else "")
+                 f'<ul class="lg-pbars lg-bars-gold">{count_bars(others, len(mine_keys))}</ul>{catena}{alike}</section>' if others else "")
 
     # More on Logia: the era page, the guides to the books they comment on,
     # and the glossary terms they use most.
@@ -3536,7 +3642,8 @@ def author_page(lib, author):
 <div class="lg-profile-main"><header class="page-head lg-person-head"><span class="lg-mono" aria-hidden="true">{e(name_initials(author))}</span><div>
 {trail((t("commentators.title"), "/commentators/"), (t("eras." + author["era"]), era_url(author["era"])))}
 <h1>{e(name)}</h1><p class="dek">{dek}</p><ul class="lg-chips">{chips}</ul></div></header>
-<section class="prose lg-bio">{bio}{draft}</section>{stats}{works_block}{canon}{words_q}</div>
+<section class="prose lg-bio">{bio}{draft}</section>{stats}{works_block}{canon}{words_q}
+{search_within(t("search.within_author", name=short), "commentator", author["name"], t("search.within_placeholder"))}</div>
 <dl class="lg-facts-card">{dl}</dl></div>
 {secbar}
 {start}{pair}
@@ -3757,6 +3864,7 @@ def work_page(lib, wid):
 <h1>{e(w["title"])}</h1><p class="dek lg-tp-by">{t("work.by", name=f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>')} ({e(a["dates"])})</p>
 {imprint}
 <p class="actions">{begin}<a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
+{search_within(t("search.within_work", title=w["title"]), "work", wid, t("search.within_placeholder"))}
 {contents}
 {start}
 <details class="lg-record-fold" open><summary><b>{e(t("work.record"))}</b><span class="lg-quiet">{e(w["original_language"])} · {w["published"]} · {e(t("work.excerpts", n=f"{len(comments):,}"))}</span></summary>
@@ -4426,6 +4534,8 @@ def about_page(lib):
                 ("privacy", "".join(f"<p>{e(p)}</p>" for p in t("about.privacy"))
                  + (f'<p>{e(t("about.privacy_counter"))}</p>' if GOATCOUNTER else "")),
                 ("cite", about_cite()),
+                ("access", "".join(f"<p>{e(p)}</p>" for p in t("about.access"))
+                 + f'<p><a href="{GITHUB_URL}/issues/new">{e(t("about.access_report"))}</a></p>'),
                 ("help", about_help()),
                 ("thanks", about_thanks(lib)),
                 ("questions", about_questions()))
@@ -5199,7 +5309,11 @@ def creed_page(lib, d):
 <h1>{e(d["title"])}</h1>
 <p class="actions"><a class="button ghost" href="{e(d["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a></p></header>
 <p class="lg-quiet">{e(t("creeds.not_commentary"))}</p>
+{f'<p class="actions lg-creed-tools"><button type="button" class="button ghost" data-recite hidden>{e(t("creeds.recite"))}</button>' + (f' <a class="button ghost" href="/creeds/compare/?a={d["id"]}">{e(t("creeds.compare_link"))}</a>' if d in compare_creeds(lib) else "") + "</p>" if short else ""}
 <div class="lg-creed-body{" lg-creed-short" if short else ""}">{secs}</div>
+<dialog class="lg-recite" aria-label="{e(d["title"])}"><button type="button" class="lg-cmp-close" data-recite-close aria-label="{e(t("reader.close"))}">×</button>
+<div class="lg-recite-text" aria-live="polite"></div><p class="lg-recite-nav"><button type="button" class="button ghost" data-recite-prev>{e(t("creeds.recite_prev"))}</button>
+<span class="lg-recite-n"></span><button type="button" class="button" data-recite-next>{e(t("creeds.recite_next"))}</button></p></dialog>
 <details class="lg-record-fold lg-creed-record"><summary><b>{e(t("creeds.record"))}</b><span class="lg-quiet">{e(creed_when(d))}</span></summary>
 <dl class="lg-facts">{dl}</dl></details>
 </article>"""
@@ -5256,6 +5370,42 @@ def creeds_timeline(lib):
             f'<figcaption class="lg-quiet" id="ct-cap">{e(t("creeds.timeline_note"))}</figcaption>{note}</figure>')
 
 
+def compare_creeds(lib):
+    """The creeds the churches share, each whole, any two side by side
+    (/creeds/compare/, web/logia.js). Each is printed in the page as its
+    edition sets it out; nothing is matched across them."""
+    docs = [d for d in lib.creeds if d["tradition"] == "Shared by the churches"]
+    return docs
+
+
+def creeds_compare_page(lib):
+    docs = compare_creeds(lib)
+    if len(docs) < 2:
+        return None
+    first, second = ("apostles", "constantinople") if {"apostles", "constantinople"} <= {d["id"] for d in docs} else (docs[0]["id"], docs[1]["id"])
+
+    def options(chosen):
+        return "".join(f'<option value="{d["id"]}"{" selected" if d["id"] == chosen else ""}>{e(d["title"])}</option>' for d in docs)
+    texts = "".join(
+        f'<div class="lg-cc-doc" data-doc="{d["id"]}" hidden><p class="lg-quiet">{e(creed_when(d))} · <a href="{creed_url(d)}">{e(t("creeds.compare_open"))}</a></p>'
+        + "".join((f'<h3 class="lg-creed-label">{e(sec["label"])}</h3>' if sec["label"] else "")
+                  + f'<div class="lg-text">{verse_html(lib, sec["text"], creed_cites(lib, sec))}</div>' for sec in d["sections"])
+        + "</div>" for d in docs)
+    body = f"""
+<article class="lg-creed lg-cc">
+<header class="page-head"><p class="eyebrow"><a href="/creeds/">{e(t("creeds.eyebrow"))}</a></p>
+<h1>{e(t("creeds.compare_heading"))}</h1><p class="dek">{e(t("creeds.compare_dek"))}</p></header>
+<div class="lg-cc-cols">
+<section><label for="cc-a" class="label">{e(t("creeds.compare_left"))}</label><select id="cc-a" class="lg-cc-pick">{options(first)}</select><div class="lg-cc-slot" data-slot="a"></div></section>
+<section><label for="cc-b" class="label">{e(t("creeds.compare_right"))}</label><select id="cc-b" class="lg-cc-pick">{options(second)}</select><div class="lg-cc-slot" data-slot="b"></div></section>
+</div>
+<div class="lg-cc-texts">{texts}</div>
+<noscript><p>{e(t("creeds.compare_noscript"))}</p></noscript>
+</article>"""
+    return page(lib, t("creeds.compare_heading"), body, "/creeds/compare/", current="/read/",
+                head_title=t("creeds.compare_heading") + " · Logia", description=t("creeds.compare_dek"))
+
+
 def creeds_index(lib):
     shared = [d for d in lib.creeds if d["tradition"] == "Shared by the churches"]
     rest = [d for d in lib.creeds if d["tradition"] != "Shared by the churches"]
@@ -5268,6 +5418,7 @@ def creeds_index(lib):
 <header class="page-head"><p class="eyebrow">{e(t("creeds.eyebrow"))}</p><h1>{e(t("creeds.index_title"))}</h1>
 <p class="dek">{e(t("creeds.index_dek"))}</p></header>
 {creeds_timeline(lib)}
+<p><a class="button ghost" href="/creeds/compare/">{e(t("creeds.compare_link"))}</a></p>
 <div class="prose">{prose(t("creeds.index_intro"))}</div>
 <section class="lg-block"><h2>{e(t("creeds.shared_heading"))}</h2><ul class="lg-creed-list">{"".join(map(row, shared))}</ul></section>
 <section class="lg-block"><h2>{e(t("creeds.each_heading"))}</h2><p class="lg-quiet">{e(t("creeds.each_note"))}</p>
@@ -5596,6 +5747,75 @@ def downloads(lib):
     return {"logia-en.json": json.dumps(data, ensure_ascii=False, indent=0) + "\n", "logia-en.csv": buf.getvalue()}
 
 
+# The shape of /downloads/logia-en.json as a JSON Schema (2020-12), at
+# /downloads/logia-en.schema.json. Its descriptions are the field notes on
+# /open-data/; schema_errors() checks the file against it on every build.
+REF_PATTERN = r"^[1-3A-Z][A-Z0-9]{2}\.[0-9]+\.[0-9]+$"
+
+
+def download_schema():
+    fields = {}
+    for k, note in t("open_data.fields"):
+        for key in k.split(", "):
+            fields[key] = note
+    excerpt = {"type": "object", "additionalProperties": False, "required": list(DOWNLOAD_FIELDS),
+               "properties": {k: {"type": "string", "description": fields.get(k, "")} for k in DOWNLOAD_FIELDS}}
+    excerpt["properties"]["id"]["pattern"] = r"^[a-z0-9-]+\.[1-3A-Z][A-Z0-9]{2}\.[0-9]+\.[0-9]+(-[0-9]+)?\.[0-9]+$"
+    for k in ("start", "end"):
+        excerpt["properties"][k]["pattern"] = REF_PATTERN
+    text = {"type": "string"}
+    author = {"type": "object", "required": ["name", "dates", "died", "era", "tradition"],
+              "properties": {"name": text, "dates": text, "died": {"type": "integer"}, "era": {"enum": list(ERAS)}, "tradition": text}}
+    work = {"type": "object", "required": ["title", "author", "edition", "translation", "published", "full_text_url", "rights", "status"],
+            "properties": {"title": text, "author": text, "edition": text, "translation": {"type": ["string", "null"]},
+                           "published": {"type": "integer"}, "full_text_url": {"type": "string", "format": "uri"},
+                           "rights": {"type": "object", "required": ["basis"], "properties": {"basis": text, "worldwide": text}},
+                           "status": {"enum": ["ai_draft", "reviewed"]}}}
+    return {"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": SITE_URL + "/downloads/logia-en.schema.json",
+            "title": t("open_data.schema_title"), "description": t("open_data.file_about"), "type": "object",
+            "required": ["about", "licence", "source", "authors", "works", "excerpts"],
+            "properties": {"about": text, "licence": {"const": "CC0-1.0"}, "source": {"type": "string", "format": "uri"},
+                           "authors": {"type": "object", "additionalProperties": {"$ref": "#/$defs/author"}},
+                           "works": {"type": "object", "additionalProperties": {"$ref": "#/$defs/work"}},
+                           "excerpts": {"type": "array", "items": {"$ref": "#/$defs/excerpt"}}},
+            "$defs": {"author": author, "work": work, "excerpt": excerpt}}
+
+
+def schema_errors(schema, data, root=None, at="$"):
+    """What in data the schema refuses: the parts of JSON Schema it uses
+    (type, required, properties, additionalProperties, items, enum, const,
+    pattern, $ref), so the build needs no library to check it."""
+    root = root or schema
+    if "$ref" in schema:
+        return schema_errors(root["$defs"][schema["$ref"].rsplit("/", 1)[1]], data, root, at)
+    kinds = {"string": str, "integer": int, "object": dict, "array": list, "null": type(None)}
+    want = schema.get("type")
+    if want and not any(isinstance(data, kinds[k]) and not (k == "integer" and isinstance(data, bool))
+                        for k in ([want] if isinstance(want, str) else want)):
+        return [f"{at}: not {want}"]
+    out = []
+    if "enum" in schema and data not in schema["enum"]:
+        out.append(f"{at}: {data!r} not one of {schema['enum']}")
+    if "const" in schema and data != schema["const"]:
+        out.append(f"{at}: not {schema['const']!r}")
+    if "pattern" in schema and not re.search(schema["pattern"], data):
+        out.append(f"{at}: {data!r} does not match {schema['pattern']}")
+    if isinstance(data, dict):
+        out += [f"{at}: no {k}" for k in schema.get("required", ()) if k not in data]
+        props = schema.get("properties", {})
+        for k, v in data.items():
+            if k in props:
+                out += schema_errors(props[k], v, root, f"{at}.{k}")
+            elif schema.get("additionalProperties") is False:
+                out.append(f"{at}: {k} not allowed")
+            elif isinstance(schema.get("additionalProperties"), dict):
+                out += schema_errors(schema["additionalProperties"], v, root, f"{at}.{k}")
+    if isinstance(data, list) and "items" in schema:
+        for i, v in enumerate(data):
+            out += schema_errors(schema["items"], v, root, f"{at}[{i}]")
+    return out
+
+
 def download_parts(lib):
     """{path under /downloads/: CSV text}: the excerpts one book and one work
     at a time (books/<BOOK>.csv, works/<work>.csv), for a spreadsheet."""
@@ -5656,6 +5876,39 @@ def open_data_sample(lib):
             f'<pre class="lg-data-sample"><code>{e(json.dumps(row, ensure_ascii=False, indent=2))}</code></pre>')
 
 
+OPEN_DATA_PY = """import json, urllib.request
+
+url = "https://logia.faith/downloads/logia-en.json"
+data = json.load(urllib.request.urlopen(url))
+for x in data["excerpts"]:
+    if x["start"] == "JHN.3.16":
+        work = data["works"][x["work"]]
+        print(work["title"], "|", x["text"][:80])
+"""
+
+OPEN_DATA_JS = """const url = "https://logia.faith/api/v1/chapters/JHN.3.json";
+const chapter = await (await fetch(url)).json();
+const verse = chapter.verses.find(v => v.verse === 16);
+for (const id of verse.excerpts) {
+  const x = chapter.excerpts[id];
+  console.log(x.author_name, "|", x.text.slice(0, 80));
+}
+"""
+
+
+def open_data_code():
+    """The schema of the download, and the same few lines in Python and
+    JavaScript to read the file and the API."""
+    return (f'<section class="lg-block" id="code"><h2>{e(t("open_data.code_title"))}</h2><p>{e(t("open_data.code_note"))}</p>'
+            f'<ul class="lg-people lg-wide"><li><a href="/downloads/logia-en.schema.json"><b>logia-en.schema.json</b> '
+            f'<span>{e(t("open_data.schema_link"))}</span></a></li></ul>'
+            + "".join(f'<h3>{e(label)}</h3><p class="lg-quiet">{e(note)}</p><div class="lg-code"><pre class="lg-data-sample"><code>{e(code)}</code></pre>'
+                      f'<button type="button" class="button ghost lg-copy" data-copy="{e(code)}" data-done="{e(t("open_data.code_copied"))}">{e(t("open_data.code_copy"))}</button></div>'
+                      for label, note, code in ((t("open_data.code_py"), t("open_data.code_py_note"), OPEN_DATA_PY),
+                                                (t("open_data.code_js"), t("open_data.code_js_note"), OPEN_DATA_JS)))
+            + "</section>")
+
+
 def open_data_page(lib, files, parts=None):
     n = len(lib.comments)
     cov = lib.coverage()
@@ -5681,6 +5934,7 @@ def open_data_page(lib, files, parts=None):
 <h1>{e(t("open_data.heading"))}</h1><p class="dek">{e(t("open_data.dek", n=f"{n:,}", works=len(lib.works), authors=len(lib.authors)))}</p></header>
 <section class="lg-block"><h2>{e(t("open_data.download"))}</h2><p class="lg-quiet">{e(t("open_data.download_note"))}</p>
 <ul class="lg-people lg-wide">{dl}</ul>{open_data_parts(lib, parts or {})}{open_data_sample(lib)}</section>
+{open_data_code()}
 <section class="lg-block" id="api"><h2>{e(t("open_data.api_title"))}</h2><p>{e(t("open_data.api_note"))}</p>
 <ul class="lg-people lg-wide"><li><a href="/api/v1/index.json"><b>/api/v1/</b> <span>{e(t("open_data.api_index"))}</span></a></li>
 <li><a href="{GITHUB_URL}/blob/main/docs/api.md" rel="noopener"><b>docs/api.md</b> <span>{e(t("open_data.api_docs"))}</span></a></li></ul></section>
@@ -6347,41 +6601,91 @@ def llms_txt(lib):
 PAGEFIND_VERSION = "1.5.2"
 
 
+# Latin letters for the Greek ones, by their Unicode names, so a lemma can be
+# found as it sounds ("logos"); generated from the data, never typed.
+GREEK_LATIN = {"ALPHA": "a", "BETA": "b", "GAMMA": "g", "DELTA": "d", "EPSILON": "e", "ZETA": "z", "ETA": "e", "THETA": "th",
+               "IOTA": "i", "KAPPA": "k", "LAMDA": "l", "MU": "m", "NU": "n", "XI": "x", "OMICRON": "o", "PI": "p", "RHO": "r",
+               "SIGMA": "s", "TAU": "t", "UPSILON": "u", "PHI": "ph", "CHI": "ch", "PSI": "ps", "OMEGA": "o"}
+
+
+def plain_letters(word):
+    """A word without its accents and breathings (λόγος -> λογος, ʾĕlōhiym -> elohiym)."""
+    return "".join(ch for ch in unicodedata.normalize("NFD", word) if not unicodedata.combining(ch)).replace("ʾ", "").replace("ʿ", "")
+
+
+def greek_latin(word):
+    """A Greek word in Latin letters by its letters' Unicode names; a rough
+    breathing on the first vowel gives an h (ἁμαρτία -> hamartia)."""
+    out = []
+    for i, ch in enumerate(unicodedata.normalize("NFC", word)):
+        name = unicodedata.name(ch, "")
+        if not name.startswith("GREEK"):
+            continue
+        letter = next((v for k, v in GREEK_LATIN.items() if f" LETTER {k}" in name and (f" LETTER {k} " in name + " " or name.endswith(k))), "")
+        if "FINAL SIGMA" in name:
+            letter = "s"
+        if i == 0 and "DASIA" in name:
+            letter = "h" + letter
+        out.append(letter)
+    return "".join(out)
+
+
+def verse_lemmas(lib, book, chapter, verse):
+    """The Greek or Hebrew words a verse translates, for the word search:
+    each lemma as the data gives it, without its marks, in Latin letters
+    (Greek) or by the data's transliteration (Hebrew), and its Strong's
+    number (G3056, H430)."""
+    bible = lib.bible(book, chapter)
+    hebrew = bible["source"] == "hbo"
+    out = []
+    for w in bible["words"].get(str(verse), []):
+        forms = [w["lemma"], plain_letters(w["lemma"])]
+        if hebrew and w.get("transliteration"):
+            forms += [w["transliteration"], plain_letters(w["transliteration"])]
+        elif not hebrew:
+            forms.append(greek_latin(w["lemma"]))
+        if w.get("strong"):
+            forms.append(("H" if hebrew else "G") + w["strong"].lstrip("0"))
+        out += [f for f in forms if f and f not in out]
+    return " ".join(out)
+
+
 def search_records(lib):
-    """(url, html) for each excerpt, as Pagefind indexes it: the text, under
-    a title naming who and where, with the filters and the link to show."""
+    """(path, html) for each record Pagefind indexes: every excerpt, then
+    every verse of the Bible text. Pagefind searches a record's metadata as
+    well as its text, so a record holds only the words to be found and one
+    code (x: work, book, verses); the search page names the result from that
+    code. The record's path is where it is printed, which Pagefind gives back
+    as its address but does not search: /jhn/3/16/calvin.JHN.3.16.1.html is
+    /jhn/3/16/#calvin.JHN.3.16.1 (web/logia.js)."""
     canon = list(lib.books)
-    for n, c in enumerate(lib.comments):
-        a, w = lib.author_of(c["work"]), lib.works[c["work"]]
+    works = lib.ordered_works()
+    for c in lib.comments:
+        a = lib.author_of(c["work"])
         b, ch, v = ref_parts(c["start"])
-        ref = scripture.label(c["start"], c["end"])
+        _b, ech, ev = ref_parts(c["end"])
         filters = {"source": t("search.source_comm"), "era": t("eras." + a["era"]), "tradition": t("kinds." + tradition_kind(a)),
-                   "commentator": a["name"], "book": lib.books[b]["en"]}
+                   "commentator": a["name"], "book": lib.books[b]["en"], "work": c["work"]}
         hidden = "".join(f'<span data-pagefind-filter="{k}">{e(x)}</span>' for k, x in filters.items())
-        hidden += "".join(f'<span data-pagefind-meta="{k}">{e(x)}</span>' for k, x in (
-            ("link", excerpt_href(lib, c)), ("ref", ref), ("work", w["title"]), ("dates", a["dates"])))
+        code = f'{works.index(c["work"])}~{canon.index(b)}~{ch}~{v}~{ech}~{ev}'
         order = f"{canon.index(b):02d}{ch:03d}{v:03d}"
         heading = f"<p>{e(c['heading'])}</p>" if c.get("heading") else ""
         paras = "".join(f"<p>{e(x.strip())}</p>" for x in c["text"].split("\n\n") if x.strip())
-        yield (f"/{n}/", f'<!doctype html><html lang="{LANG}"><head><title>{e(a["name"])}</title></head><body>'
-               f'<div hidden>{hidden}<span data-pagefind-sort="order">{order}</span></div>'
-               f'<main data-pagefind-body><h1 data-pagefind-meta="title">{e(t("search.result_title", name=a["name"], ref=ref))}</h1>'
-               f'{heading}{paras}</main></body></html>')
+        page_path, _hash, cid = excerpt_href(lib, c).partition("#")
+        yield (f"{page_path}{cid}.html", f'<!doctype html><html lang="{LANG}"><head><title>-</title></head><body>'
+               f'<div hidden>{hidden}<span data-pagefind-meta="x">{code}</span><span data-pagefind-sort="order">{order}</span></div>'
+               f'<main data-pagefind-body>{heading}{paras}</main></body></html>')
     # The Bible text too, a record a verse (Balanced, at the default
     # wording), so a verse can be found by the words remembered from it.
-    n = len(lib.comments)
     for b, ch in lib.chapters:
         for v, text in sorted(chapter_plain(b, ch).items()):
-            n += 1
-            ref = f'{lib.books[b]["en"]} {ch}:{v}'
             hidden = (f'<span data-pagefind-filter="source">{e(t("search.source_bible"))}</span>'
-                      f'<span data-pagefind-filter="book">{e(lib.books[b]["en"])}</span>'
-                      f'<span data-pagefind-meta="link">{chapter_url(b, ch)}#v{v}</span>'
-                      f'<span data-pagefind-meta="work">{e(t("search.owb"))}</span>')
+                      f'<span data-pagefind-filter="book">{e(lib.books[b]["en"])}</span>')
             order = f"{canon.index(b):02d}{ch:03d}{v:03d}"
-            yield (f"/{n}/", f'<!doctype html><html lang="{LANG}"><head><title>{e(ref)}</title></head><body>'
-                   f'<div hidden>{hidden}<span data-pagefind-sort="order">{order}</span></div>'
-                   f'<main data-pagefind-body><h1 data-pagefind-meta="title">{e(ref)}</h1><p>{e(text)}</p></main></body></html>')
+            yield (f"{chapter_url(b, ch)}v{v}.html", f'<!doctype html><html lang="{LANG}"><head><title>-</title></head><body>'
+                   f'<div hidden>{hidden}<span data-pagefind-meta="x">b~{canon.index(b)}~{ch}~{v}</span>'
+                   f'<span data-pagefind-meta="w">{e(verse_lemmas(lib, b, ch, v))}</span><span data-pagefind-sort="order">{order}</span></div>'
+                   f'<main data-pagefind-body><p>{e(text)}</p></main></body></html>')
 
 
 def build_search_index(lib):
@@ -6394,7 +6698,8 @@ def build_search_index(lib):
         return False
     with tempfile.TemporaryDirectory() as tmp:
         for url, text in search_records(lib):
-            path = os.path.join(tmp, url.strip("/") + ".html")
+            path = os.path.join(tmp, url.strip("/"))
+            os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, "w", encoding="utf-8") as f:
                 f.write(text)
         out = subprocess.run([sys.executable, "-m", "pagefind", "--site", tmp, "--output-path", os.path.join(SITE, "pagefind"),
@@ -6404,9 +6709,38 @@ def build_search_index(lib):
     return True
 
 
+def search_within(label, field, value, placeholder):
+    """A box on a work's or commentator's page that searches only their words
+    (/search/ with that filter chosen); it needs no script to send."""
+    return (f'<form class="lg-within" role="search" action="/search/"><label for="within-q">{e(label)}</label>'
+            f'<span class="lg-within-box">{SEARCH_ICON}<input type="search" id="within-q" name="q" placeholder="{e(placeholder)}">'
+            f'<input type="hidden" name="{field}" value="{e(value)}"><button type="submit" class="button">{e(t("search.go"))}</button></span></form>')
+
+
+def search_counts(lib):
+    """How many records hold each filter's values, in the order the chips
+    show them: the whole library's counts, before anything is searched."""
+    out = {"source": {}, "era": {}, "tradition": {}, "book": {}, "commentator": {}}
+    canon = list(lib.books)
+    for c in sorted(lib.comments, key=lambda c: canon.index(ref_parts(c["start"])[0])):
+        a = lib.author_of(c["work"])
+        for k, v in (("source", t("search.source_comm")), ("era", t("eras." + a["era"])), ("tradition", t("kinds." + tradition_kind(a))),
+                     ("book", lib.books[ref_parts(c["start"])[0]]["en"]), ("commentator", a["name"])):
+            out[k][v] = out[k].get(v, 0) + 1
+    out["source"][t("search.source_bible")] = sum(len(chapter_plain(b, ch)) for b, ch in lib.chapters)
+    out["era"] = {t("eras." + x): out["era"][t("eras." + x)] for x in ERAS if t("eras." + x) in out["era"]}
+    return out
+
+
 def search_page(lib, indexed):
     """The page that searches the words of every excerpt (web/logia.js runs it
     with Pagefind), narrowed by era, tradition, book and commentator."""
+    # What the page needs to name a result from its code (search_records):
+    # each work's title, commentator and dates, and the books' names.
+    fts_ui = {**CATALOG["search"]["fts"], "result_title": t("search.result_title"), "owb": t("search.owb"),
+              "works": [[lib.works[w]["title"], lib.author_of(w)["name"], lib.author_of(w)["dates"]] for w in lib.ordered_works()],
+              "books": [x["en"] for x in lib.books.values()],
+              "counts": search_counts(lib)}
     groups = "".join(f'<fieldset class="lg-fts-group" data-filter="{k}" hidden><legend>{e(t("search.filter_" + k))}</legend>'
                      f'<div class="lg-fts-chips"></div></fieldset>' for k in ("source", "era", "tradition", "book"))
     groups += (f'<label class="lg-fts-group lg-fts-who" data-filter="commentator" hidden><span>{e(t("search.filter_commentator"))}</span>'
@@ -6414,7 +6748,7 @@ def search_page(lib, indexed):
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("search.eyebrow"))}</p>
 <h1>{e(t("search.heading"))}</h1><p class="dek">{e(t("search.dek", n=f"{len(lib.comments):,}", authors=len(lib.authors)))} {e(t("search.dek_bible"))}</p></header>
-<form class="lg-fts" role="search" data-pagefind="{"/pagefind/pagefind.js" if indexed else ""}" data-ui="{e(json.dumps(CATALOG["search"]["fts"], ensure_ascii=False))}">
+<form class="lg-fts" role="search" data-pagefind="{"/pagefind/pagefind.js" if indexed else ""}" data-ui="{e(json.dumps(fts_ui, ensure_ascii=False))}">
 <label class="sr-only" for="fts-q">{e(t("search.words_label"))}</label>
 <div class="lg-fts-box">{SEARCH_ICON}<input id="fts-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="{e(t("search.words_placeholder"))}">
 <button type="submit" class="button">{e(t("search.go"))}</button></div>
@@ -6505,6 +6839,10 @@ def build():
         for d in lib.creeds:
             write(creed_url(d), creed_page(lib, d))
             pages.append(creed_url(d))
+        compare = creeds_compare_page(lib)
+        if compare:
+            write("/creeds/compare/", compare)
+            pages.append("/creeds/compare/")
     write("/differ/", differ_index(lib))
     pages.append("/differ/")
     for pg, on, present in differ_pages(lib):
@@ -6559,6 +6897,12 @@ def build():
     for name, text in files.items():
         with open(os.path.join(SITE, "downloads", name), "w", encoding="utf-8") as f:
             f.write(text)
+    schema = download_schema()
+    wrong = schema_errors(schema, json.loads(files["logia-en.json"]))
+    if wrong:
+        sys.exit("downloads/logia-en.json does not fit its schema:\n  " + "\n  ".join(wrong[:20]))
+    with open(os.path.join(SITE, "downloads", "logia-en.schema.json"), "w", encoding="utf-8") as f:
+        f.write(json.dumps(schema, ensure_ascii=False, indent=2) + "\n")
     parts = download_parts(lib)
     for name, text in parts.items():
         path = os.path.join(SITE, "downloads", name)

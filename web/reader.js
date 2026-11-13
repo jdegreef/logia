@@ -695,7 +695,7 @@
     var v = state.verse, toks = PANEL.words[v] || [];
     var h = '<div class="cx-greek" lang="' + SOURCE_LANG + '"' + DIR + ">" + toks.map(function (t) {
       return '<span class="cx-g' + (t.id === state.token ? " cx-on" : "") + '" data-gid="' + t.id + '" role="button" tabindex="0">' +
-        esc(t.text) + "</span>" + esc((t.after || " ").replace(/(\S)$/, "$1 "));
+        esc(t.text) + "</span>" + esc(t.after === "" ? "" : (t.after || " ").replace(/([^\s\u05be])$/, "$1 "));
     }).join("") + "</div>";
     var t = toks.filter(function (x) { return x.id === state.token; })[0];
     if (!t) return h + '<p class="cx-empty">' + esc(U.tap_word) + "</p>";
@@ -843,6 +843,8 @@
   document.querySelector(".cx-tabs").addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;
     state.tab = b.dataset.tab; renderPanel();
+    // Kept for the next chapter too, so a reader studying the Greek stays on it.
+    try { localStorage.setItem("logia-tab", state.tab); } catch (err) { /* storage blocked */ }
   });
   // On a phone the panel is a sheet over the text: a peek, half the screen
   // or nearly all of it. The handle steps through them; dragging the sheet's
@@ -870,6 +872,14 @@
       window.scrollBy({ top: r.top - top - 16, behavior: reduce ? "auto" : "smooth" });
     }
   }
+  // "Skip to the commentary" (the page's second skip link) opens the sheet
+  // on a phone and puts focus in it.
+  var skipTo = document.querySelector("[data-skip-to]");
+  if (skipTo) skipTo.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    if (PHONE.matches && sheetState() === "min") sheet("half");
+    $("#panel").focus();
+  });
   $("#grab").addEventListener("click", function () {
     sheet({ min: "half", half: "full", full: "min" }[sheetState()]);
   });
@@ -1023,6 +1033,11 @@
     commTabButton.classList.add("cx-zero");
   }
   var m0 = location.hash.match(HASH);
+  // The tab last chosen (logia-tab), unless the address points at a voice's
+  // comment, or the chapter has no commentary (set above).
+  if (!EMPTY && !(m0 && m0[2])) {
+    try { var lastTab = localStorage.getItem("logia-tab"); if (/^(comm|words|notes|xref)$/.test(lastTab || "")) state.tab = lastTab; } catch (err) { /* storage blocked */ }
+  }
   // A verse the Open Word Bible leaves out (#v1 on John 8): open at the verse
   // after it, and show the note that stands in its place.
   var gapAsked = m0 && DATA.verses.indexOf(+m0[1]) < 0 && (DATA.verses.filter(function (v) { return v > +m0[1]; })[0] || 0);

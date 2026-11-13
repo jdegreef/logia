@@ -295,6 +295,20 @@ class Creeds(unittest.TestCase):
         self.assertTrue(all(verify_sources.check_digital(changed, x) for x in streams.values()))
 
 
+class DownloadSchema(unittest.TestCase):
+    def test_checker_refuses_what_the_schema_does(self):
+        schema = build_site.download_schema()
+        row = {k: "x" for k in build_site.DOWNLOAD_FIELDS}
+        row |= {"id": "chrysostom.JHN.1.7-8.1", "start": "JHN.1.7", "end": "JHN.1.8"}
+        good = {"about": "", "licence": "CC0-1.0", "source": "https://example.org",
+                "authors": {}, "works": {}, "excerpts": [row]}
+        self.assertEqual(build_site.schema_errors(schema, good), [])
+        for bad in ({**good, "licence": "MIT"}, {**good, "excerpts": [{**row, "start": "John 1:1"}]},
+                    {**good, "excerpts": [{**row, "extra": "x"}]}, {k: v for k, v in good.items() if k != "works"},
+                    {**good, "works": {"w": {"title": 1}}}):
+            self.assertTrue(build_site.schema_errors(schema, bad), bad)
+
+
 class Plurals(unittest.TestCase):
     def test_a_count_of_one_takes_the_singular_form(self):
         self.assertEqual(build_site.t("home.n_voices", n=1), "1 voice")

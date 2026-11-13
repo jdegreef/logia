@@ -80,15 +80,27 @@
       var ab = r.split("-"); return chapter >= +ab[0] && chapter <= +(ab[1] || ab[0]);
     });
   }
+  // ... and a range: "John 1:1-14", "John 1:1–2:11" ({..., to: {chapter, verse}}).
   function parseRef(q) {
     if (!D) return null;
-    var m = String(q).trim().match(/^((?:[1-3]|i{1,3})?\s*[a-z][a-z.\s]*?)\s*(\d+)(?:\s*[:.,\s]\s*(\d+))?\s*$/i);
+    var m = String(q).trim().match(/^((?:[1-3]|i{1,3})?\s*[a-z][a-z.\s]*?)\s*(\d+)(?:\s*[:.,\s]\s*(\d+))?(?:\s*[-–—]\s*(\d+)(?:\s*[:.]\s*(\d+))?)?\s*$/i);
     if (!m) return null;
     var code = bookOf(m[1]);
     if (!code) return null;
     var chapter = +m[2], verse = m[3] ? +m[3] : null;
     if (chapter < 1 || chapter > D.chapters[code]) return null;
-    return { code: code, chapter: chapter, verse: verse };
+    var r = { code: code, chapter: chapter, verse: verse };
+    if (m[4] && verse) r.to = m[5] ? { chapter: +m[4], verse: +m[5] } : { chapter: chapter, verse: +m[4] };
+    return r;
+  }
+  // A range's own page where it has one (a passage with commentary), else
+  // the reader at its first verse.
+  function rangeHref(r) {
+    var key = r.code + "." + r.chapter + "." + r.verse + "-" + r.to.chapter + "." + r.to.verse;
+    return (D.readings && D.readings[key]) || (D.passages && D.passages[key]) || refHref(r);
+  }
+  function rangeLabel(r) {
+    return refLabel(r) + "–" + (r.to.chapter !== r.chapter ? r.to.chapter + ":" : "") + r.to.verse;
   }
   function refHref(r) { return "/" + r.code.toLowerCase() + "/" + r.chapter + "/" + (r.verse ? "#v" + r.verse : ""); }
   function refLabel(r) { return D.names[r.code] + " " + r.chapter + (r.verse ? ":" + r.verse : ""); }
@@ -97,8 +109,25 @@
   function suggest(q) {
     var out = [], low = q.trim().toLowerCase();
     if (!low || !D) return out;
+    // "Calvin John 3:16": a commentator's name, then a reference, goes to
+    // what that commentator says there.
+    var who = low.match(/^([a-z.\s]+?)\s+(?:on\s+)?((?:[1-3]\s*)?[a-z][a-z.\s]*\d.*)$/i);
+    if (who && D.people) {
+      var wr = parseRef(who[2]);
+      var person = wr && D.people.filter(function (p) {
+        return p[0].toLowerCase().split(/[\s.]+/).indexOf(who[1].trim().replace(/\s+/g, " ").split(" ").pop()) >= 0;
+      })[0];
+      if (person && person[3] && person[3][wr.code]) {
+        var label = refLabel(wr);
+        out.push({ href: "/" + wr.code.toLowerCase() + "/" + wr.chapter + "/" + (wr.verse ? "#v" + wr.verse + "-" + person[3][wr.code] : ""),
+                   title: fmt(D.ui.who_on, { name: person[0], ref: label }), note: D.ui.in_reader });
+        return out;
+      }
+    }
     var r = parseRef(q);
-    if (r) {
+    if (r && r.to) {
+      out.push({ href: rangeHref(r), title: rangeLabel(r), note: D.ui.passage });
+    } else if (r) {
       var note = D.ui[r.verse ? "verse" : "chapter"];
       if (D.has && !hasCommentary(r.code, r.chapter)) note += " · " + D.ui.text_only;
       out.push({ href: refHref(r), title: refLabel(r), note: note });
@@ -678,6 +707,62 @@
     });
   });
 
+  // Two creeds side by side (/creeds/compare/): each is printed whole in a
+  // hidden template; the two pickers copy the chosen ones into the columns.
+  // ?a=<id> picks the left one (a creed page's "Compare" button).
+  var cc = document.querySelector(".lg-cc");
+  if (cc) {
+    var ccShow = function () {
+      ["a", "b"].forEach(function (k) {
+        var id = document.getElementById("cc-" + k).value;
+        var src = cc.querySelector('.lg-cc-doc[data-doc="' + id + '"]');
+        var slot = cc.querySelector('[data-slot="' + k + '"]');
+        slot.innerHTML = src ? src.innerHTML : "";
+      });
+    };
+    var ccA = new URLSearchParams(location.search).get("a");
+    var pickA = document.getElementById("cc-a"), pickB = document.getElementById("cc-b");
+    if (ccA && pickA.querySelector('option[value="' + ccA + '"]')) {
+      pickA.value = ccA;
+      if (pickB.value === ccA) pickB.selectedIndex = pickB.selectedIndex ? 0 : 1;
+    }
+    pickA.addEventListener("change", ccShow);
+    pickB.addEventListener("change", ccShow);
+    ccShow();
+  }
+
+  // A short creed's "Recite": its articles one at a time, in large type
+  // (a dialog; the arrow keys and the buttons move through them).
+  var recite = document.querySelector("[data-recite]");
+  var rd = document.querySelector(".lg-recite");
+  if (recite && rd && rd.showModal) {
+    var arts = Array.prototype.slice.call(document.querySelectorAll(".lg-creed-body .lg-creed-sec"));
+    var at = 0;
+    var rText = rd.querySelector(".lg-recite-text"), rN = rd.querySelector(".lg-recite-n");
+    var rPrev = rd.querySelector("[data-recite-prev]"), rNext = rd.querySelector("[data-recite-next]");
+    var rShow = function () {
+      var sec = arts[at];
+      var label = sec.querySelector(".lg-creed-label");
+      rText.innerHTML = (label ? "<p class=\"lg-recite-label\">" + label.textContent + "</p>" : "") +
+        sec.querySelector(".lg-text").innerHTML;
+      rN.textContent = (at + 1) + " / " + arts.length;
+      rPrev.disabled = at === 0;
+      rNext.disabled = at === arts.length - 1;
+    };
+    var rGo = function (d) { at = Math.max(0, Math.min(arts.length - 1, at + d)); rShow(); };
+    if (arts.length) {
+      recite.hidden = false;
+      recite.addEventListener("click", function () { at = 0; rShow(); rd.showModal(); });
+      rPrev.addEventListener("click", function () { rGo(-1); });
+      rNext.addEventListener("click", function () { rGo(1); });
+      rd.querySelector("[data-recite-close]").addEventListener("click", function () { rd.close(); });
+      rd.addEventListener("keydown", function (ev) {
+        if (ev.key === "ArrowRight") { rGo(1); ev.preventDefault(); }
+        if (ev.key === "ArrowLeft") { rGo(-1); ev.preventDefault(); }
+      });
+    }
+  }
+
   // A link to #id inside a closed <details> opens it.
   function openTarget() {
     var id = decodeURIComponent(location.hash.slice(1));
@@ -781,7 +866,7 @@
     var who = form.querySelector("#fts-who");
     var src = form.getAttribute("data-pagefind");
     if (!src) return;
-    var pf = null, allCounts = {}, chosen = { source: [], era: [], tradition: [], book: [], commentator: [] }, results = [], shown = 0, run = 0, timer = null;
+    var pf = null, allCounts = {}, chosen = { source: [], era: [], tradition: [], book: [], commentator: [], work: [] }, results = [], shown = 0, run = 0, timer = null;
     var params = new URLSearchParams(location.search);
     input.value = params.get("q") || "";
     Object.keys(chosen).forEach(function (k) { chosen[k] = params.getAll(k); });
@@ -792,11 +877,27 @@
     }
     // Each group's counts as if nothing were chosen in it, so its other
     // values stay offered: one more search for each group with a choice.
-    function facetCounts(q, counts) {
-      var groups = Object.keys(chosen).filter(function (k) { return chosen[k].length; });
-      return Promise.all(groups.map(function (k) {
-        return pf.search(q || null, { filters: filters(k) }).then(function (s) { counts[k] = s.filters[k] || {}; });
-      })).then(function () { return counts; });
+    // Counting the filters costs Pagefind time on every search once their
+    // data is loaded (20 seconds for "Word"), so the results come from an
+    // instance that never loads it, and the chips' counts from a second
+    // instance, asked only when a search has at most COUNT_UP_TO results.
+    // A bigger search shows the chips without counts.
+    var COUNT_UP_TO = 1500, pfCount = null;
+    function counter() {
+      if (!pfCount) pfCount = import(src + "?counts").then(function (m) { return m.filters().then(function () { return m; }); });
+      return pfCount;
+    }
+    function facetCounts(q) {
+      return counter().then(function (m) {
+        return m.search(q || null, { filters: filters() }).then(function (s) {
+          var counts = {};
+          Object.keys(s.filters).forEach(function (k) { counts[k] = s.filters[k]; });
+          var groups = Object.keys(chosen).filter(function (k) { return chosen[k].length; });
+          return Promise.all(groups.map(function (k) {
+            return m.search(q || null, { filters: filters(k) }).then(function (s2) { counts[k] = s2.filters[k] || {}; });
+          })).then(function () { return counts; });
+        });
+      });
     }
     function keep() {
       var p = new URLSearchParams();
@@ -805,9 +906,9 @@
       var qs = p.toString();
       history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
     }
-    function chips(counts) {
+    function chips(counts, bare) {
       form.querySelectorAll(".lg-fts-group[data-filter]").forEach(function (g) {
-        var k = g.getAttribute("data-filter"), c = counts[k] || {};
+        var k = g.getAttribute("data-filter"), c = bare ? allCounts[k] || {} : counts[k] || {};
         var names = Object.keys(c).filter(function (v) { return c[v] || chosen[k].indexOf(v) >= 0; });
         if (k === "era" || k === "book") {
           var order = Object.keys(allCounts[k] || {});
@@ -815,24 +916,32 @@
         } else names.sort();
         if (k === "commentator") {
           who.innerHTML = '<option value="">' + esc(who.options[0].text) + "</option>" + names.map(function (v) {
-            return '<option value="' + esc(v) + '"' + (chosen[k].indexOf(v) >= 0 ? " selected" : "") + ">" + esc(v) + " (" + (c[v] || 0) + ")</option>";
+            return '<option value="' + esc(v) + '"' + (chosen[k].indexOf(v) >= 0 ? " selected" : "") + ">" + esc(v) + (bare ? "" : " (" + (c[v] || 0) + ")") + "</option>";
           }).join("");
         } else {
           g.querySelector(".lg-fts-chips").innerHTML = names.map(function (v) {
             return '<button type="button" class="cx-chip" data-k="' + k + '" data-v="' + esc(v) + '" aria-pressed="' + (chosen[k].indexOf(v) >= 0) + '">' +
-              esc(v) + ' <span class="cx-chip-n">' + (c[v] || 0) + "</span></button>";
+              esc(v) + (bare ? "" : ' <span class="cx-chip-n">' + (c[v] || 0) + "</span>") + "</button>";
           }).join("");
         }
         g.hidden = !names.length;
       });
     }
+    // A result is named from its code (x: work~book~chapter~verse~end chapter~end
+    // verse, or b~book~chapter~verse for a verse of the Bible), and its
+    // address is its record's path with the .html made a #fragment
+    // (search_records in scripts/build_site.py).
     function card(d) {
-      var m = d.meta;
-      var sub = [];
-      if (m.dates) sub.push(esc(m.dates));
-      if (m.work) sub.push("<i>" + esc(m.work) + "</i>");
-      return '<li class="lg-fts-hit' + (m.dates ? "" : " lg-fts-verse") + '"><p class="lg-fts-head"><a href="' + esc(m.link) + '"><b>' + esc(m.title) + "</b></a>" +
-        ' <span class="lg-quiet">' + sub.join(" · ") + "</span></p>" +
+      var x = (d.meta.x || "").split("~"), bible = x[0] === "b";
+      var link = d.url.replace(/\/v(\d+)\.html$/, "/#v$1").replace(/\/([^/]+)\.html$/, "/#$1");
+      var book = U.books[+x[1]] || "", ch = x[2], v = x[3];
+      var ref = book + " " + ch + ":" + v;
+      if (!bible && (x[4] !== ch || x[5] !== v)) ref += "–" + (x[4] !== ch ? x[4] + ":" : "") + x[5];
+      var w = bible ? null : U.works[+x[0]];
+      var title = bible ? ref : fmt(U.result_title, { name: w ? w[1] : "", ref: ref });
+      var sub = bible ? "<i>" + esc(U.owb) + "</i>" : esc(w ? w[2] : "") + " · <i>" + esc(w ? w[0] : "") + "</i>";
+      return '<li class="lg-fts-hit' + (bible ? " lg-fts-verse" : "") + '"><p class="lg-fts-head"><a href="' + esc(link) + '"><b>' + esc(title) + "</b></a>" +
+        ' <span class="lg-quiet">' + sub + "</span></p>" +
         '<p class="lg-fts-text">' + d.excerpt + "</p></li>";
     }
     function showMore() {
@@ -852,9 +961,8 @@
       pf.search(q || null, { filters: filters() }).then(function (s) {
         if (mine !== run) return;
         results = s.results; shown = 0; list.innerHTML = "";
-        var counts = {};
-        Object.keys(s.filters).forEach(function (k) { counts[k] = s.filters[k]; });
-        facetCounts(q, counts).then(function (c) { if (mine === run) chips(c); });
+        chips({}, true);
+        if (results.length <= COUNT_UP_TO) facetCounts(q).then(function (c) { if (mine === run) chips(c); }, function () { /* keep them bare */ });
         status.innerHTML = esc(!results.length ? fmt(U.none, { q: q })
           : any ? fmt(U.count_filtered, { n: results.length.toLocaleString() })
           : fmt(results.length === 1 ? U.count_one : U.count, { n: results.length.toLocaleString(), q: q })) +
@@ -862,11 +970,13 @@
         return showMore();
       }).catch(function () { if (mine === run) status.textContent = U.failed; });
     }
+    // Before anything is typed, the chips show the whole library's counts,
+    // worked out when the site is built (search_page in scripts/build_site.py).
+    allCounts = U.counts || {};
     import(src).then(function (m) {
       pf = m;
-      return pf.options({ excerptLength: 36 }).then(function () { return pf.filters(); });
-    }).then(function (all) {
-      allCounts = all;
+      return pf.options({ excerptLength: 36 });
+    }).then(function () {
       search();
     }).catch(function () { status.textContent = U.failed; });
     input.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(function () { if (pf) search(); }, 250); });
