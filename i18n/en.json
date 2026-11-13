@@ -161,6 +161,9 @@
     "new": "New Testament"
   },
   "footer": {
+    "report_page": "Report a problem with this page",
+    "report_page_title": "Problem on: {page}",
+    "report_page_body": "Page: {url}\n\nWhat looks wrong, and what you expected:\n\n",
     "releases": "Data releases",
     "read": "Read",
     "explore": "Explore",
@@ -258,6 +261,11 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "source_comm": "Commentary",
+    "source_bible": "Bible text",
+    "owb": "Open Word Bible",
+    "filter_source": "Source",
+    "dek_bible": "The Bible text is in it too, so a verse can be found by the words you remember.",
     "eyebrow": "Search",
     "heading": "Search the commentators' words",
     "dek": "Every word of all {n} excerpts by {authors} commentators, as they wrote them. Narrow by era, tradition, book or commentator.",
@@ -277,9 +285,9 @@
       "noscript": "Searching the words needs JavaScript.",
       "searching": "Searching…",
       "none": "Nothing found for “{q}”. Try another spelling: many of these editions spell as their century did.",
-      "count_one": "1 excerpt has “{q}”.",
-      "count": "{n} excerpts have “{q}”.",
-      "count_filtered": "{n} excerpts in what you chose.",
+      "count_one": "1 result has “{q}”.",
+      "count": "{n} results have “{q}”.",
+      "count_filtered": "{n} results in what you chose.",
       "clear": "Clear the filters",
       "failed": "The search couldn't load. Check the connection and try again."
     },
@@ -441,6 +449,9 @@
     "by_verse_note": "Each verse with commentary has a page of its own: every voice on it in full, its Greek words, translation notes and cross-references."
   },
   "reader": {
+    "heard": "Read",
+    "heard_title": "You have opened this one on this verse",
+    "only_unread": "Only unread ({n})",
     "saved_device": "Saved on this device. Sign in to keep it on every device:",
     "pinned": "Pinned",
     "pin": "Pin {name} to the top of every verse",
@@ -925,6 +936,9 @@
     "read": "Browse the books"
   },
   "account": {
+    "recent_title": "Recently read",
+    "recent_note": "The chapters you have read on this device, newest first. They stay on this device and are not sent anywhere.",
+    "recent_clear": "Clear this list",
     "sign_in": "Sign in",
     "sign_in_title": "Sign in with your Open Word Bible account to save and like comments, on every device. Reading needs no account.",
     "your_account": "Your account",
@@ -1052,6 +1066,10 @@
     "in_chapter": "Passages in this chapter"
   },
   "occasions": {
+    "ics_name": "Logia: readings of the church year",
+    "ics_desc": "The great days and the Sunday readings, each with what the church has said on it, at logia.faith.",
+    "ics_link": "Add to your calendar",
+    "ics_note": "Download the file, or subscribe so it stays up to date: {url}",
     "cal_label": "Calendar:",
     "cal_all": "All",
     "cal_rcl": "Revised Common Lectionary",
@@ -1261,6 +1279,13 @@
     ]
   },
   "most": {
+    "all_heading": "The most-discussed verses in the library",
+    "all_lead": "{n} verses in {books} books have commentary in Logia. These are the ones the commentators wrote most on, counted from every excerpt in the library.",
+    "all_description": "Which verses did the church fathers and later commentators write most on? {ref} leads the library with {n} excerpts.",
+    "all_link": "The most-discussed verses across the whole library",
+    "books_title": "How much is written on each book",
+    "books_note": "Excerpts on each book's verses, an excerpt on a range counting on each of its verses. Each opens that book's most-discussed verses.",
+    "how_all": "Each excerpt counts once on every verse it comments on, in any work in the library. Books with more commentaries in Logia naturally count higher; the Commentators column says how many of a book's commentaries speak on the verse.",
     "of": "{n} of {total}",
     "sort_note": "Press a column's heading to sort by it.",
     "show_all": "Show all {n}",
@@ -1677,6 +1702,7 @@
     }
   },
   "sundays": {
+    "ics_others": "Also read: {others}",
     "heading": "The coming Sundays and holy days",
     "dek": "The readings of the Revised Common Lectionary, used by many Anglican, Lutheran, Methodist, Presbyterian and other churches. Each reading links to what Logia's commentators say on it.",
     "gospel": "Gospel:",
@@ -1806,6 +1832,11 @@
   },
 
   "topic": {
+    "mark_read": "Mark as read",
+    "marked_read": "Read ✓",
+    "next": "Next passage ↓",
+    "progress": "{n} of {total} passages read",
+    "done": "All {total} passages read",
     "card_counts": "{n} excerpts · {k} voices",
     "family_god": "God and Christ",
     "family_salvation": "Sin and salvation",
@@ -2077,5 +2108,23 @@
       ]
     ],
     "note": "Shortcuts work when you are not typing in a box."
+  },
+  "timeline": {
+    "label": "Councils and turning points",
+    "events": {
+      "nicaea": "Council of Nicaea",
+      "chalcedon": "Council of Chalcedon",
+      "nicaea-2": "Second Council of Nicaea",
+      "schism": "East and West divide",
+      "reformation": "Luther's Ninety-five Theses",
+      "trent": "Council of Trent opens",
+      "vatican-1": "First Vatican Council opens"
+    },
+    "note": "The dashed lines mark councils the churches count as ecumenical and the divisions between them, for when each commentator lived."
+  },
+  "install": {
+    "text": "Read Logia offline: install it on this device, and the chapters you open stay readable without a connection.",
+    "install": "Install",
+    "later": "Not now"
   }
 }

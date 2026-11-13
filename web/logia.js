@@ -781,7 +781,7 @@
     var who = form.querySelector("#fts-who");
     var src = form.getAttribute("data-pagefind");
     if (!src) return;
-    var pf = null, allCounts = {}, chosen = { era: [], tradition: [], book: [], commentator: [] }, results = [], shown = 0, run = 0, timer = null;
+    var pf = null, allCounts = {}, chosen = { source: [], era: [], tradition: [], book: [], commentator: [] }, results = [], shown = 0, run = 0, timer = null;
     var params = new URLSearchParams(location.search);
     input.value = params.get("q") || "";
     Object.keys(chosen).forEach(function (k) { chosen[k] = params.getAll(k); });
@@ -828,8 +828,11 @@
     }
     function card(d) {
       var m = d.meta;
-      return '<li class="lg-fts-hit"><p class="lg-fts-head"><a href="' + esc(m.link) + '"><b>' + esc(m.title) + "</b></a>" +
-        ' <span class="lg-quiet">' + esc(m.dates) + " · <i>" + esc(m.work) + "</i></span></p>" +
+      var sub = [];
+      if (m.dates) sub.push(esc(m.dates));
+      if (m.work) sub.push("<i>" + esc(m.work) + "</i>");
+      return '<li class="lg-fts-hit' + (m.dates ? "" : " lg-fts-verse") + '"><p class="lg-fts-head"><a href="' + esc(m.link) + '"><b>' + esc(m.title) + "</b></a>" +
+        ' <span class="lg-quiet">' + sub.join(" · ") + "</span></p>" +
         '<p class="lg-fts-text">' + d.excerpt + "</p></li>";
     }
     function showMore() {
@@ -1144,6 +1147,115 @@
       if (done) e.preventDefault();
     });
   })();
+
+  // A topic as a reading path: a button under each passage marks it read
+  // and a link goes on to the next; how far through shows at the top, and on
+  // the topics page (logia-paths: {path: [passage ids]}, on the device).
+  function pathsRead() { try { return JSON.parse(localStorage.getItem("logia-paths") || "{}"); } catch (e) { return {}; } }
+  var pathPage = document.querySelector(".lg-path[data-path]");
+  if (pathPage) {
+    var PU = JSON.parse(pathPage.getAttribute("data-ui")), pathKey = pathPage.getAttribute("data-path");
+    var steps = [].slice.call(pathPage.querySelectorAll("section.lg-voice[id]"));
+    var progress = pathPage.querySelector(".lg-path-progress");
+    var drawPath = function () {
+      var done = pathsRead()[pathKey] || [];
+      steps.forEach(function (sec) {
+        var b = sec.querySelector("[data-step]"), on = done.indexOf(sec.id) >= 0;
+        b.setAttribute("aria-pressed", on); b.textContent = on ? PU.marked_read : PU.mark_read;
+        sec.classList.toggle("lg-step-done", on);
+      });
+      var n = steps.filter(function (sec) { return done.indexOf(sec.id) >= 0; }).length;
+      progress.hidden = !n;
+      progress.querySelector(".lg-path-bar span").style.width = (100 * n / steps.length) + "%";
+      progress.querySelector(".lg-path-n").textContent = fmt(n === steps.length ? PU.done : PU.progress, { n: n, total: steps.length });
+    };
+    steps.forEach(function (sec, i) {
+      var row = document.createElement("p");
+      row.className = "lg-step-row";
+      row.innerHTML = '<button type="button" class="button ghost" data-step aria-pressed="false"></button>' +
+        (steps[i + 1] ? '<a href="#' + esc(steps[i + 1].id) + '">' + esc(PU.next) + "</a>" : "");
+      sec.appendChild(row);
+      row.querySelector("[data-step]").addEventListener("click", function () {
+        var all = pathsRead(), done = all[pathKey] || [], at = done.indexOf(sec.id);
+        if (at >= 0) done.splice(at, 1); else done.push(sec.id);
+        all[pathKey] = done;
+        try { localStorage.setItem("logia-paths", JSON.stringify(all)); } catch (e) { /* storage blocked */ }
+        drawPath();
+      });
+    });
+    drawPath();
+  }
+  document.querySelectorAll(".lg-topic-card[data-path]").forEach(function (card) {
+    var done = (pathsRead()[card.getAttribute("data-path")] || []).length, label = card.querySelector(".lg-topic-read");
+    if (!done || !label) return;
+    label.textContent = fmt(label.getAttribute("data-text"), { n: done, total: +card.getAttribute("data-items") });
+    label.hidden = false;
+  });
+
+  // The offer to install Logia, so it reads offline: shown only from a
+  // reader's second day here (logia-days), only where the browser offers to
+  // install (beforeinstallprompt), and not again once declined
+  // (logia-install-no). The site is installable already; this says so.
+  (function () {
+    var holder = document.getElementById("keys-text");
+    if (!holder) return;
+    var I = JSON.parse(holder.textContent).install, days = [], no = false;
+    try {
+      days = JSON.parse(localStorage.getItem("logia-days") || "[]");
+      var today = new Date().toISOString().slice(0, 10);
+      if (days.indexOf(today) < 0) { days.push(today); localStorage.setItem("logia-days", JSON.stringify(days.slice(-30))); }
+      no = !!localStorage.getItem("logia-install-no");
+    } catch (e) { return; }
+    if (no || days.length < 2 || !I) return;
+    window.addEventListener("beforeinstallprompt", function (ev) {
+      ev.preventDefault();
+      var bar = document.createElement("div");
+      bar.className = "lg-install";
+      bar.setAttribute("role", "region");
+      bar.setAttribute("aria-label", I.install);
+      bar.innerHTML = "<p>" + esc(I.text) + '</p><p><button type="button" class="button" data-yes>' + esc(I.install) +
+        '</button> <button type="button" class="button ghost" data-no>' + esc(I.later) + "</button></p>";
+      document.body.appendChild(bar);
+      var close = function () { bar.remove(); };
+      bar.querySelector("[data-yes]").addEventListener("click", function () { ev.prompt(); close(); });
+      bar.querySelector("[data-no]").addEventListener("click", function () {
+        try { localStorage.setItem("logia-install-no", "1"); } catch (e) { /* storage blocked */ }
+        close();
+      });
+    });
+  })();
+
+  // "Report a problem with this page": a new GitHub issue with the page's
+  // address in it (the footer is the same on every page, so it is filled in here).
+  document.querySelectorAll(".lg-foot-report").forEach(function (a) {
+    var h1 = document.querySelector("main h1");
+    var url = location.origin + location.pathname + location.hash, title = (h1 ? h1.textContent : document.title.replace(/ · Logia$/, "")).trim();
+    a.href = a.href.split("?")[0] + "?title=" + encodeURIComponent(fmt(a.getAttribute("data-title"), { page: title })) +
+      "&body=" + encodeURIComponent(fmt(a.getAttribute("data-body"), { url: url }));
+  });
+
+  // /saved/: the chapters read on this device, newest first, with their
+  // titles, and a way to clear the list.
+  var recent = document.getElementById("recent");
+  if (recent) {
+    var readPaths = [];
+    try { readPaths = JSON.parse(localStorage.getItem("logia-read") || "[]"); } catch (e) { /* storage blocked */ }
+    var bookNames = JSON.parse(recent.getAttribute("data-books")), chTitles = JSON.parse(recent.getAttribute("data-titles"));
+    var rowsR = readPaths.slice().reverse().filter(function (h) { return /^\/[a-z0-9]{3}\/\d+\/$/.test(h); }).slice(0, 30).map(function (h) {
+      var m = h.match(/^\/([a-z0-9]{3})\/(\d+)\/$/);
+      if (!bookNames[m[1]]) return "";
+      return '<li><a href="' + esc(h) + '"><b>' + esc(fmt(recent.getAttribute("data-chapter"), { book: bookNames[m[1]], chapter: m[2] })) + "</b>" +
+        (chTitles[h] ? " <span>" + esc(chTitles[h]) + "</span>" : "") + "</a></li>";
+    }).join("");
+    if (rowsR) {
+      recent.querySelector("ol").innerHTML = rowsR;
+      recent.hidden = false;
+      document.getElementById("recent-clear").addEventListener("click", function () {
+        try { localStorage.removeItem("logia-read"); localStorage.removeItem("logia-last"); } catch (e) { /* storage blocked */ }
+        recent.hidden = true;
+      });
+    }
+  }
 
   // A work's contents beside its pages: scrolled so the page being read shows.
   var tocBox = document.querySelector(".lg-work-toc"), tocHere = tocBox && tocBox.querySelector("[aria-current]");

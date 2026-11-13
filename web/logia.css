@@ -1921,3 +1921,71 @@ dl.lg-gloss > div[hidden], .lg-block[hidden] { display: none; }
 .lg-keys kbd { display: inline-block; min-width: 26px; padding: 2px 7px; border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 6px;
   background: var(--surface); font: 600 13px/1.4 var(--sans); text-align: center; }
 .lg-keys .lg-quiet { margin: 12px 0 0; font-size: 13px; }
+
+/* The reader: a voice already opened on this verse, and "Only unread". */
+.cx-heard { font-size: 11px; font-weight: 700; letter-spacing: .04em; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0 7px; }
+.cx-heard::before { content: "✓ "; }
+.cx-filters .cx-unread { justify-self: start; }
+
+/* A topic as a reading path: progress at the top, and under each passage
+   "Mark as read" and the way on to the next. */
+.lg-path-progress { display: flex; align-items: center; gap: 10px; margin: 10px 0 0; font-size: 13.5px; color: var(--muted); }
+.lg-path-progress[hidden] { display: none; }
+.lg-path-bar { width: 160px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.lg-path-bar span { display: block; height: 100%; background: var(--gold); }
+.lg-step-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin: 12px 0 0; font-size: 14px; }
+.lg-step-row .button { padding: 5px 14px; font-size: 13.5px; }
+.lg-step-row .button[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent-soft-border); color: var(--accent); }
+.lg-step-done .lg-cnum { background: var(--gold); color: var(--bg); }
+.lg-topic-read { font-size: 12px; font-weight: 600; color: var(--accent); }
+.lg-topic-read[hidden] { display: none; }
+
+/* The commentators' timeline: councils and turning points as dashed lines,
+   their names in two rows at the top; on a phone, rows in date order. */
+.lg-tl-in:has(.lg-tl-evs) { padding-top: 76px; }
+.lg-tl-evs { position: absolute; inset: 0 0 24px; pointer-events: none; }
+.lg-tl-ev { position: absolute; top: 28px; bottom: 0; border-left: 1px dashed color-mix(in srgb, var(--muted) 55%, transparent); }
+.lg-tl-ev span { position: absolute; top: 0; left: 4px; white-space: nowrap; font-size: 11px; color: var(--muted); }
+.lg-tl-ev-2 { top: 46px; }
+.lg-tl-evrow { display: none; }
+@media (max-width: 760px) {
+  .lg-tl-in:has(.lg-tl-evs) { padding-top: 0; }
+  .lg-tl-evs { display: none; }
+  .lg-tl-evrow { display: block; position: relative; padding: 6px 0 6px 18px; font-size: 12.5px; color: var(--muted); }
+  .lg-tl-evrow::before { content: ""; position: absolute; left: -9px; top: 50%; width: 17px; border-top: 1px dashed var(--muted); }
+}
+.lg-tl-ev-flip span { left: auto; right: 4px; }
+
+/* A Differ page: the voices on one line of years, coloured by tradition. */
+.lg-dstrip { margin: 4px 0 20px; }
+.lg-dstrip ol { list-style: none; position: relative; margin: 0; padding: 0; height: calc(24px + var(--rows, 3) * 18px); }
+.lg-dstrip ol li { position: absolute; left: var(--x); bottom: 0; height: calc(16px + var(--row) * 18px); border-left: 1px solid var(--line-strong); }
+.lg-dstrip ol li::before { content: ""; position: absolute; left: -5px; top: -5px; width: 9px; height: 9px; border-radius: 50%; background: var(--ds); }
+.lg-dstrip ol li span { position: absolute; top: -9px; left: 7px; white-space: nowrap; font-size: 11.5px; line-height: 1; }
+.lg-dstrip ol li.lg-ds-flip span { left: auto; right: 7px; }
+.lg-ds-axis { position: relative; height: 18px; border-top: 1px solid var(--line-strong); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-ds-axis span { position: absolute; top: 3px; transform: translateX(-50%); }
+.lg-ds-key { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 12.5px; color: var(--muted); }
+.lg-ds-key li::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; background: var(--ds); }
+.lg-ds-shared { --ds: var(--gold); } .lg-ds-catholic { --ds: var(--lg-era-1); } .lg-ds-orthodox { --ds: var(--lg-era-4); } .lg-ds-protestant { --ds: var(--lg-era-3); }
+@media (max-width: 640px) {
+  .lg-dstrip ol { height: 24px; }
+  .lg-dstrip ol li { height: 12px; }
+  .lg-dstrip ol li span { display: none; }
+}
+
+/* The offer to install Logia, at the foot of the screen. */
+.lg-install { position: fixed; z-index: 70; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: min(560px, calc(100vw - 24px)); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 12px 16px;
+  border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); color: var(--text); box-shadow: var(--shadow-pop); font-size: 14px; }
+.lg-install p { margin: 0; flex: 1 1 260px; }
+.lg-install p:last-child { flex: 0 0 auto; display: flex; gap: 8px; }
+.lg-install .button { padding: 6px 14px; font-size: 14px; }
+
+/* /saved/: the chapters read lately on this device. */
+.lg-recent[hidden] { display: none; }
+.lg-recent-list { list-style: none; margin: 10px 0 0; padding: 0; columns: 2 280px; column-gap: 28px; }
+.lg-recent-list li { break-inside: avoid; padding: 5px 0; border-bottom: 1px solid var(--line); }
+.lg-recent-list a { text-decoration: none; color: var(--text); }
+.lg-recent-list a:hover b { color: var(--accent); }
+.lg-recent-list span { color: var(--muted); font-size: 14px; }

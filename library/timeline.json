@@ -1,0 +1,12 @@
+{
+  "about": "Events marked on the commentators' timeline (/commentators/) as context for when each commentator lived, without comment: councils the churches count as ecumenical, and the divisions between them. Each is a year and an id; its name is in i18n/<lang>.json under timeline.events.<id>.",
+  "events": [
+    {"id": "nicaea", "year": 325},
+    {"id": "chalcedon", "year": 451},
+    {"id": "nicaea-2", "year": 787},
+    {"id": "schism", "year": 1054},
+    {"id": "reformation", "year": 1517},
+    {"id": "trent", "year": 1545},
+    {"id": "vatican-1", "year": 1869}
+  ]
+}
