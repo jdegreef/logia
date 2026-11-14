@@ -679,38 +679,114 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
 .lg-famous .lg-card b { font-family: var(--serif); font-weight: 400; font-size: 18px; }
 .lg-card .lg-card-ref { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--lg-gold-ink); }
 
-/* The footer: the project, a box to go to a verse and "Continue reading";
-   the library in three numbers and each book's most-discussed verses; five
-   columns of links; the review note and the sources, each linked. */
-footer.site .lg-foot-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px 56px; align-items: start; }
-footer.site .lg-foot-search { margin-top: 20px; max-width: 420px; }
+/* The footer, kept to about one screen on a laptop (scripts/footer_budget.js
+   checks it): a card to the next chapter; the project, the verse box and the
+   library in one sentence beside a map of the 66 books and three
+   most-discussed verses; the editorial promise; the licence line; and the
+   full site map folded behind one button. */
+footer.site { padding-top: 40px; }
+.lg-foot-next {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label go" "ref go";
+  align-items: center; gap: 2px 16px; margin: 0 0 32px; padding: 14px 18px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line); color: var(--text); text-decoration: none;
+}
+.lg-foot-next:hover { border-color: var(--accent); }
+.lg-foot-next-label { grid-area: label; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.lg-foot-next-ref { grid-area: ref; font: 400 20px/1.3 var(--serif); }
+.lg-foot-next-title { color: var(--muted); font: 400 16px/1.3 var(--serif); }
+.lg-foot-next-go { grid-area: go; padding: 8px 16px; border-radius: 999px; background: var(--accent); color: var(--accent-contrast); font-size: 14px; font-weight: 600; white-space: nowrap; }
+.lg-foot-season { margin: -16px 0 28px; padding: 10px 16px; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid var(--accent-soft-border); font-size: 15px; }
+.lg-foot-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, .8fr); gap: 32px 40px; align-items: start; }
+.lg-foot-tag { color: var(--muted); margin: 10px 0 0; }
+/* The verse box: field and button as one control, flat on the footer. */
+footer.site .lg-foot-search { margin-top: 16px; max-width: 420px; gap: 0; }
+footer.site .lg-foot-search input { border-radius: 999px 0 0 999px; border-right: 0; }
+footer.site .lg-foot-search .button { border-radius: 0 999px 999px 0; box-shadow: none; padding: 10px 18px; }
+footer.site .lg-foot-search .button:hover { transform: none; }
 footer.site .lg-foot-search .lg-sugg { top: auto; bottom: calc(100% + 6px); }
-.lg-foot-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 12px 0 0; }
+.lg-foot-try, .lg-foot-numbers { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+.lg-foot-try a, .lg-foot-numbers a { color: var(--text); }
+.lg-foot-numbers b { font-variant-numeric: tabular-nums; }
+.lg-foot-actions { margin: 14px 0 0; }
 .lg-foot-actions .foot-resume { margin-top: 0; }
-footer.site .lg-foot-up { color: var(--muted); font-size: 14px; }
-footer.site .lg-foot-up:hover { color: var(--accent); }
-.lg-foot-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
-.lg-foot-stats div { min-width: 0; }
-.lg-foot-stats dt { font: 600 28px/1.1 var(--display); font-variant-numeric: tabular-nums; }
-.lg-foot-stats dd { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
-footer.site h2.lg-foot-most { margin-top: 24px; }
-.lg-foot-library .book-chips { list-style: none; padding: 0; margin: 0 0 8px; }
-.lg-foot-library a.book-chip { color: var(--text); font-weight: 600; text-decoration: none; }
-.lg-foot-library a.book-chip:hover { border-color: var(--accent); color: var(--accent); }
-footer.site .lg-foot-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-footer.site .lg-foot-grid .foot-licence { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
-footer.site .foot-review a, .lg-foot-sources a { color: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); }
-footer.site .foot-review a:hover, .lg-foot-sources a:hover { color: var(--accent); }
-.lg-foot-sources { max-width: 100%; }
+/* The books, in canon order: lit where Logia has commentary. */
+.lg-canon { list-style: none; margin: 0; padding: 0; display: grid !important; grid-template-columns: repeat(auto-fill, minmax(38px, 1fr)); gap: 4px !important; }
+.lg-canon-b {
+  display: grid; place-items: center; height: 24px; border-radius: 5px; border: 1px dashed var(--line-strong);
+  font-size: 10.5px; color: var(--muted); text-decoration: none; white-space: nowrap; overflow: hidden;
+}
+.lg-canon-b abbr { text-decoration: none; }
+footer.site .lg-canon-b.on { background: var(--mark); border: 1px solid var(--gold); color: var(--text); font-weight: 700; }
+footer.site .lg-canon-b:hover { border-color: var(--accent); color: var(--accent); }
+.lg-canon-key { display: flex; align-items: center; gap: 8px; margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+.lg-canon-key .lg-canon-b { display: inline-block; width: 22px; height: 14px; }
+.lg-foot-most .book-chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-foot-most a.book-chip { color: var(--text); font-weight: 600; text-decoration: none; }
+.lg-foot-most a.book-chip:hover { border-color: var(--accent); color: var(--accent); }
+.lg-foot-more { margin: 10px 0 0; font-size: 14px; }
+.lg-foot-promise { margin: 32px 0 0; text-align: center; font: 400 16px/1.5 var(--serif); }
+.lg-foot-promise a { color: var(--text); text-decoration: none; }
+.lg-foot-promise a:hover { color: var(--accent); text-decoration: underline; }
+.lg-foot-promise span { color: var(--muted); }
+footer.site .lg-foot-base { align-items: baseline; margin-top: 24px; }
+.lg-foot-base a { color: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); }
+.lg-foot-base a:hover { color: var(--accent); }
+.lg-foot-links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.lg-foot-review { flex-basis: 100%; }
+/* The site map: one button that opens the five columns and the sources. */
+.lg-foot-sitemap { margin-top: 18px; }
+.lg-foot-sitemap > summary {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; padding: 6px 14px; border-radius: 999px;
+  background: var(--accent-soft); border: 1px solid var(--accent-soft-border); color: var(--accent); font-size: 14px; font-weight: 600;
+}
+.lg-foot-sitemap > summary::-webkit-details-marker { display: none; }
+.lg-foot-sitemap > summary::after { content: "▾"; font-size: 12px; }
+.lg-foot-sitemap[open] > summary::after { content: "▴"; }
+footer.site .lg-foot-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 20px; }
+footer.site .lg-foot-col h2 { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+footer.site .lg-foot-col h2 a { color: inherit; text-decoration: none; }
+footer.site .lg-foot-col h2 a::after { content: " →"; }
+footer.site .lg-foot-col h2 a:hover { color: var(--accent); }
+.lg-foot-fold { border: 0; background: none; color: var(--muted); width: 32px; height: 32px; cursor: pointer; border-radius: 50%; }
+.lg-foot-fold::before { content: "−"; font-size: 18px; }
+.lg-foot-fold[aria-expanded="false"]::before { content: "+"; }
+.lg-foot-sources { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 24px; }
+.lg-foot-sources-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 32px; font-size: 14px; }
+.lg-foot-sources h3 { font: 600 14px/1.3 var(--sans); margin: 0 0 8px; }
+.lg-foot-sources a { color: var(--text); }
+.lg-foot-keys { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 24px 0 0; font-size: 13px; color: var(--muted); }
+.lg-foot-keys kbd { font: 600 12px ui-monospace, Menlo, monospace; border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 5px; padding: 0 5px; background: var(--surface); color: var(--text); }
+@media (hover: none), (max-width: 860px) { .lg-foot-keys { display: none; } }
+/* Back to top: a round button once the page has scrolled a screen (web/logia.js). */
+.lg-top {
+  position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 4;
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 20px; font-weight: 700; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--line-strong); color: var(--accent); box-shadow: var(--shadow-card);
+  opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 160ms ease, transform 160ms ease, visibility 160ms;
+}
+.lg-top.on { opacity: 1; visibility: visible; transform: none; }
+@media print { .lg-top { display: none; } }
 @media (max-width: 1000px) {
+  .lg-foot-main { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .lg-foot-about { grid-column: 1 / -1; }
   footer.site .lg-foot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg-foot-sources-grid { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 860px) {
-  footer.site .lg-foot-top { grid-template-columns: minmax(0, 1fr); }
-  footer.site .lg-foot-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 880px) {
+  /* The chapter's verse sheet steps aside while the footer is on screen,
+     and the top button sits above it while it shows. */
+  .cx-panel { transition: max-height 220ms ease, height 220ms ease, transform 220ms ease; }
+  body.lg-at-foot .cx-panel { transform: translateY(100%); }
+  body:has(.cx-panel):not(.lg-at-foot) .lg-top { bottom: 140px; }
 }
-@media (max-width: 480px) {
-  .lg-foot-stats dt { font-size: 22px; }
+@media (max-width: 640px) {
+  .lg-foot-main { grid-template-columns: minmax(0, 1fr); }
+  .lg-foot-next-go { display: none; }
+  footer.site .lg-foot-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  footer.site .lg-foot-col { border-top: 1px solid var(--line); }
+  footer.site .lg-foot-col h2 { margin: 0; min-height: 44px; }
+  footer.site .lg-foot-col ul { padding-bottom: 14px; }
+  .lg-foot-sources-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* The commentators' lifetimes on one line of centuries (/commentators/),
