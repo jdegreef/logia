@@ -3742,7 +3742,7 @@ def excerpt_list(lib, comments, show_work=False, tools=""):
     # The map of chapters: per book, its name and a grid of chapter numbers.
     nav = []
     for b in books:
-        cells = "".join(f'<a href="#ch-{b.lower()}-{ch}" style="--depth:{6 + 40 * words[(b, ch)] / most:.0f}%" '
+        cells = "".join(f'<a href="#ch-{b.lower()}-{ch}" style="--depth:{8 + 32 * words[(b, ch)] / most:.0f}%" '
                         f'title="{e(t("commentators.chapter_words", chapter=chname(b, ch), n=f"{words[(b, ch)]:,}"))}" '
                         f'aria-label="{e(chname(b, ch))}">{ch}</a>' for bb, ch in keys if bb == b)
         n_ch = sum(1 for bb, _ch in keys if bb == b)
