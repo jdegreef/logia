@@ -327,6 +327,23 @@ class Quoting(unittest.TestCase):
         self.assertEqual(build_site.in_quotes("a < b"), "“a &lt; b”")
 
 
+class ReadPage(unittest.TestCase):
+    def test_chapter_lists_read_as_ranges(self):
+        self.assertEqual(build_site.ranges_text([1, 2, 3, 7, 9, 10]), "1–3, 7, 9–10")
+        self.assertEqual(build_site.ranges_text([40]), "40")
+
+    def test_long_books_break_into_lines(self):
+        psalms = build_site.bar_lines("PSA", 150)
+        self.assertEqual([(x[0], x[-1]) for x in psalms], [(1, 41), (42, 72), (73, 89), (90, 106), (107, 150)])
+        self.assertEqual([(x[0], x[-1]) for x in build_site.bar_lines("ISA", 66)], [(1, 33), (34, 66)])
+        self.assertEqual(len(build_site.bar_lines("GEN", 50)), 1)
+
+    def test_heat_falls_in_thirds(self):
+        steps = build_site.heat_steps({("GEN", c): c for c in range(1, 10)})
+        self.assertEqual(steps[("GEN", 1)], 1)
+        self.assertEqual(steps[("GEN", 9)], 3)
+
+
 class Dashes(unittest.TestCase):
     def test_lifespans_take_an_en_dash(self):
         self.assertEqual(build_site.en_dash("1509-1564"), "1509–1564")

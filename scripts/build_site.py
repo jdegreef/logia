@@ -1707,16 +1707,191 @@ def canon_section(lib, code):
     return next(k for k, a, b in CANON_SECTIONS if codes.index(a) <= i <= codes.index(b))
 
 
-def read_page(lib):
+# The books whose commentary is being prepared next: the Read page marks
+# them "In preparation" until they have some. Take a book off once it does.
+NEXT_BOOKS = ("ACT", "1JN")
+# The Psalter's own five books, where the Read page breaks the Psalms' bar.
+PSALM_BOOKS = (41, 72, 89, 106, 150)
+# How long the latest works added count as new on the Read page.
+NEW_DAYS = 14
+
+
+def ranges_text(nums):
+    """[1, 2, 3, 7, 9, 10] -> "1–3, 7, 9–10"."""
+    out, nums = [], sorted(nums)
+    i = 0
+    while i < len(nums):
+        j = i
+        while j + 1 < len(nums) and nums[j + 1] == nums[j] + 1:
+            j += 1
+        out.append(str(nums[i]) if i == j else f"{nums[i]}–{nums[j]}")
+        i = j + 1
+    return ", ".join(out)
+
+
+def bar_lines(book, total):
+    """The chapters of a book's bar, one list per line: the Psalms at the
+    Psalter's five books, any other book over 60 chapters in even halves."""
+    if book == "PSA" and total == 150:
+        ends, lines, a = PSALM_BOOKS, [], 1
+        for z in ends:
+            lines.append(list(range(a, z + 1)))
+            a = z + 1
+        return lines
+    k = math.ceil(total / 60) if total > 60 else 1
+    size = math.ceil(total / k)
+    return [list(range(a, min(total, a + size - 1) + 1)) for a in range(1, total + 1, size)]
+
+
+def heat_steps(counts):
+    """{chapter: excerpts} -> {chapter: 1, 2 or 3}, by where each chapter's
+    count falls among every chapter with commentary (thirds)."""
+    vals = sorted(counts.values())
+    if not vals:
+        return {}
+    lo, hi = vals[len(vals) // 3], vals[2 * len(vals) // 3]
+    return {k: (1 if n <= lo else 2 if n <= hi else 3) for k, n in counts.items()}
+
+
+def sunday_chapters(lib, today=None, weeks=26):
+    """[[date, ["mat/25", ...]], ...]: the chapters of each coming Sunday's
+    readings (library/lectionary/rcl.json), for the Read page's dots."""
+    data = sundays()
+    if not data:
+        return []
+    today = today or datetime.date.today().isoformat()
+    out = []
+    for d in data["days"]:
+        if d["date"] < today:
+            continue
+        chs = []
+        for text in [x for v in d["readings"].values() for x in v]:
+            got = parse_reading(text)
+            if got:
+                book, (sc, _sv), (ec, _ev) = got
+                chs += [f"{book.lower()}/{c}" for c in range(sc, ec + 1)]
+        out.append([d["date"], list(dict.fromkeys(chs))])
+        if len(out) >= weeks:
+            break
+    return out
+
+
+def read_page(lib, today=None):
     """Every book, by testament and part of the canon: one row per book, its
     name and a bar of its chapters, each chapter a thin cell linked to the
-    reader (gold where there is commentary), and how many have commentary.
-    On a wide screen the two testaments stand side by side."""
+    reader (gold where there is commentary, darker where there is more), and
+    how many commentators it has. Above them the whole Bible in one strip, a
+    shelf of the books with commentary and a bar to jump, filter and sort;
+    web/logia.js adds Continue reading, what has been read, this Sunday's
+    readings, the phone's chapter grid and type-to-jump."""
+    today = today or datetime.date.today()
     cov = lib.coverage()
     have = {b for b, _c in lib.chapters}
     codes = list(lib.books)
     commented = [c for c in codes if any(b == c for b, _c in cov)]
-    parts = []
+    per_ch = Counter((ref_parts(c["start"])[0], ref_parts(c["start"])[1]) for c in lib.comments)
+    heat = heat_steps({k: n for k, n in per_ch.items() if k in cov})
+    added = works_added()
+    # New: the works of the latest day anything was added, while that day is
+    # recent (Logia's first works all came within a few days of each other).
+    days = [d for w, d in added.items() if w in lib.works]
+    newest = max(days) if days else None
+    fresh = ({w for w, d in added.items() if d == newest and w in lib.works}
+             if newest and (today - datetime.date.fromisoformat(newest)).days <= NEW_DAYS else set())
+    book_works, book_new = {}, {}
+    for c in lib.comments:
+        b = ref_parts(c["start"])[0]
+        book_works.setdefault(b, set()).add(c["work"])
+    for b, ws in book_works.items():
+        book_new[b] = [w for w in lib.ordered_works(ws) if w in fresh]
+
+    def authors_of(b):
+        return list({lib.works[w]["author"]: lib.authors[lib.works[w]["author"]]
+                     for w in lib.ordered_works(book_works.get(b, ()))}.values())
+
+    def top_verse(b):
+        counts = verse_counts(lib, b)
+        if not counts:
+            return None
+        (ch, v), _n = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        return ch, v
+
+    def dots(b):
+        people = authors_of(b)
+        label = t("read.dots", n=len(people), names=name_list(short_name(a) for a in people))
+        return (f'<span class="lg-cov-dots" role="img" aria-label="{e(label)}" title="{e(label)}">'
+                + "".join(f'<i class="lg-era-{ERAS.index(a["era"])}"></i>' for a in people) + "</span>")
+
+    def new_badge(b):
+        ws = book_new.get(b)
+        if not ws:
+            return ""
+        what = name_list(f'{lib.author_of(w)["name"]}, {lib.works[w]["title"]}' for w in ws)
+        return f' <span class="lg-new-badge" title="{e(t("read.new_title", what=what))}">{e(t("read.new"))}</span>'
+
+    def cell(b, n, name, tick):
+        heading = chapter_title(b, n)
+        k = cov.get((b, n), (0, []))[0]
+        label = " · ".join(x for x in (f"{name} {n}", t("read.tip_works", n=k) if k else t("read.text_only_chapter"), heading) if x)
+        cls = "chap" + (f" lg-has lg-h{heat.get((b, n), 1)}" if (b, n) in cov else " part") + (" lg-t10" if tick else "")
+        return f'<a class="{cls}" href="{chapter_url(b, n)}" aria-label="{e(label)}" data-tip="{e(label)}">{n}</a>'
+
+    total_chapters = sum(lib.books[c]["chapters"] for c in codes)
+    covered = len(cov)
+    # The whole Bible in one strip (each book as wide as its chapters).
+    strip = "".join(
+        f'<a class="lg-bs{" lg-has" if c in commented else ""}" href="#{c.lower()}" style="flex-grow:{lib.books[c]["chapters"]}" '
+        f'title="{e(lib.books[c]["en"])}" aria-label="{e(lib.books[c]["en"])}"></a>' for c in codes if c in have)
+
+    def row(code, i):
+        name, total = lib.books[code]["en"], lib.books[code]["chapters"]
+        done = sorted(c for (bk, c) in cov if bk == code)
+        people = authors_of(code)
+        if done and len(done) < total:
+            count = t("read.part", n=len(done), total=total)
+        elif done:
+            count = t("read.voices", n=len(people))
+        elif code in NEXT_BOOKS:
+            count = t("read.next")
+        else:
+            count = t("read.ch", n=total)
+        lines = bar_lines(code, total)
+        cols = max(len(x) for x in lines)
+        long_bar = len(lines) == 1 and total >= 20
+        bar = "".join(
+            f'<div class="lg-cov-line"{f" data-span={ln[0]}–{ln[-1]}" if len(lines) > 1 else ""}>'
+            f'{"".join(cell(code, n, name, long_bar and n % 10 == 0 and n < total) for n in ln)}</div>'
+            for ln in lines)
+        ticks = ""
+        if long_bar:
+            ticks = ('<div class="lg-cov-ticks" aria-hidden="true">'
+                     + "".join(f'<span style="grid-column:{n}">{n}</span>' for n in range(10, total + 1, 10)) + "</div>")
+        who = f'<a class="lg-cov-name" href="/{code.lower()}/">{e(name)}</a>{new_badge(code)}'
+        extra, gap, peek = "", "", ""
+        top = top_verse(code) if done else None
+        if done:
+            top_link = (f'<a class="lg-cov-top" href="{verse_url(code, *top)}" title="{e(t("read.top_title", book=name))}">'
+                        f'{e(verse_ref(lib, code, *top))}</a>') if top else ""
+            extra = f'<span class="lg-cov-sub">{dots(code)}{top_link}</span>'
+            peek = (f'<div class="lg-peek" hidden><b class="lg-peek-name">{e(name)}</b>'
+                    f'<span class="lg-quiet">{e(t("read.peek_meta", n=len(people), done=len(done), total=total))}</span>'
+                    f'<span class="lg-peek-who">{" · ".join(e(short_name(a)) for a in people)}</span>'
+                    + (f'<span>{e(t("read.top"))} <a href="{verse_url(code, *top)}">{e(verse_ref(lib, code, *top))}</a></span>' if top else "")
+                    + f'<a class="button" href="/{code.lower()}/">{e(t("read.open", book=name))}</a></div>')
+        if done and len(done) < total:
+            missing = [n for n in range(1, total + 1) if n not in set(done)]
+            works = name_list(f'{lib.author_of(w)["name"]}, {lib.works[w]["title"]}' for w in lib.ordered_works(book_works.get(code, ())))
+            gap = f'<p class="lg-cov-gap">{e(t("read.gap", n=len(missing), missing=ranges_text(missing), works=works))}</p>'
+        x = sum(n for (bk, _c), n in per_ch.items() if bk == code)
+        return (f'<li class="lg-cov-row{" lg-cov-has" if done else ""}{" lg-cov-next" if code in NEXT_BOOKS and not done else ""}" id="{code.lower()}" '
+                f'data-name="{e(name)}" data-i="{i}" data-x="{x}" data-total="{total}">'
+                f'<div class="lg-cov-who">{who}{extra}</div>'
+                f'<div class="lg-cov-bar" style="--cols:{cols}" aria-label="{e(t("read.chapters_of", book=name))}">{bar}{ticks}</div>'
+                f'<span class="lg-cov-n">{e(count)}</span>'
+                f'<button type="button" class="lg-cov-open" aria-expanded="false" aria-label="{e(t("read.show_chapters", book=name))}">'
+                f'{icon("chevron", 16)}</button>{gap}{peek}</li>')
+
+    parts, part_links, i = [], [], 0
     for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
         sections = []
         for sec, a, b in CANON_SECTIONS:
@@ -1725,18 +1900,25 @@ def read_page(lib):
                 continue
             rows = []
             for code in books:
-                name, total = lib.books[code]["en"], lib.books[code]["chapters"]
-                done = sum(1 for (bk, _c) in cov if bk == code)
-                count = (f'<span class="lg-cov-n" title="{e(t("read.commentary_short", n=done, total=total))}">{done}/{total}</span>' if done
-                         else f'<span class="lg-cov-n lg-quiet">{e(t("read.text_only_short"))}</span>')
-                rows.append(f'<li class="lg-cov-row{" lg-cov-has" if done else ""}" id="{code.lower()}">'
-                            f'<a class="lg-cov-name" href="/{code.lower()}/">{e(name)}</a>'
-                            f'<div class="lg-cov-bar" aria-label="{e(t("read.chapters_of", book=name))}">{chapter_pills(lib, code, cov)}</div>'
-                            f'{count}</li>')
-            sections.append(f'<section class="lg-canon-part" aria-labelledby="sec-{sec}"><h3 class="label" id="sec-{sec}">'
-                            f'{e(t("canon." + sec))}</h3><ul class="lg-cov-list">{"".join(rows)}</ul></section>')
+                rows.append(row(code, i))
+                i += 1
+            k = sum(1 for c in books if c in commented)
+            note = (f'<span class="lg-part-n">{e(t("read.part_books", n=len(books)))} · '
+                    + (f'<b>{e(t("read.part_with", n=k))}</b>' if k else e(t("read.part_text"))) + "</span>")
+            names = "" if k else f'<span class="lg-part-names">{e(name_list(lib.books[c]["en"] for c in books))}</span>'
+            sections.append(f'<details class="lg-canon-part{"" if k else " lg-part-text"}" id="part-{sec}" open>'
+                            f'<summary><h3 class="label" id="sec-{sec}">{e(t("canon." + sec))}</h3>{note}{names}</summary>'
+                            f'<ul class="lg-cov-list">{"".join(rows)}</ul></details>')
+            part_links.append(f'<a href="#part-{sec}">{e(t("canon." + sec))}</a>')
+        ways = ""
+        if key == "new":
+            cards = "".join(f'<li><a href="{href}"><b>{e(t("nav." + k))}</b><span>{e(t("nav." + k + "_note"))}</span></a></li>'
+                            for href, k in (("/readings/", "readings"), ("/topics/", "topics"), ("/explore/", "explore_page"), ("/sheets/", "sheets")))
+            ways = (f'<section class="lg-ways" aria-labelledby="h-ways"><h3 class="label" id="h-ways">{e(t("read.ways"))}</h3>'
+                    f'<ul>{cards}</ul></section>')
+        n_books = len([c for c in part if c in have])
         parts.append(f'<section class="lg-block lg-testament" id="{"ot" if key == "old" else "nt"}" aria-labelledby="h-{key}">'
-                     f'<h2 id="h-{key}">{e(t("testaments." + key))}</h2>{"".join(sections)}</section>')
+                     f'<h2 id="h-{key}">{e(t("testaments." + key))} <span class="lg-quiet">{n_books}</span></h2>{"".join(sections)}{ways}</section>')
     coming = ""
     for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
         names = [f'<li><span class="book-chip none">{e(lib.books[c]["en"])}</span></li>' for c in part if c not in have]
@@ -1746,16 +1928,44 @@ def read_page(lib):
     if coming:
         coming = (f'<section class="lg-block lg-coming" aria-labelledby="h-coming"><h2 id="h-coming">{e(t("read.coming"))}</h2>'
                   f'<p class="lg-quiet">{e(t("read.coming_note"))}</p><div class="testaments">{coming}</div></section>')
-    so_far = ", ".join(lib.books[c]["en"] for c in commented) or "—"
+    shelf = "".join(
+        f'<li><a class="lg-shelf-card" href="/{c.lower()}/"><b>{e(lib.books[c]["en"])}{new_badge(c)}</b>'
+        f'<span>{e(t("read.voices", n=len(authors_of(c))))}'
+        + (f' · {e(t("read.part", n=sum(1 for (bk, _c) in cov if bk == c), total=lib.books[c]["chapters"]))}'
+           if sum(1 for (bk, _c) in cov if bk == c) < lib.books[c]["chapters"] else "")
+        + f'</span>{dots(c)}</a></li>' for c in commented)
+    ot = len([c for c in codes[:OT_BOOKS] if c in have])
+    nt = len([c for c in codes[OT_BOOKS:] if c in have])
+    names = json.dumps({c.lower(): lib.books[c]["en"] for c in codes}, ensure_ascii=False, separators=(",", ":"))
+    totals = json.dumps({c.lower(): lib.books[c]["chapters"] for c in codes}, separators=(",", ":"))
+    ui = json.dumps({k: t("read.js." + k) for k in CATALOG["read"]["js"]}, ensure_ascii=False, separators=(",", ":"))
+    suns = json.dumps(sunday_chapters(lib, today.isoformat()), separators=(",", ":"))
+    swatch = '<span class="chap lg-has lg-h{}" aria-hidden="true"></span>'
     body = f"""
-<header class="page-head"><p class="eyebrow">{e(t("read.title"))}</p>
-<h1>{e(t("read.heading"))}</h1><p class="dek">{e(t("read.dek", books=so_far))}</p></header>
-<div class="lg-read-tools">{search_box(lib, "read-q", "hero-search lg-read-search")}
-<nav class="lg-jump" aria-label="{e(t("read.jump"))}"><a href="#ot">{e(t("testaments.old"))}</a><a href="#nt">{e(t("testaments.new"))}</a></nav></div>
-<ul class="lg-legend lg-cov-legend" aria-label="{e(t("read.legend"))}"><li><span class="chap lg-has" aria-hidden="true"></span>{e(t("read.has_commentary_key"))}</li>
+<header class="page-head lg-read-head"><p class="eyebrow">{e(t("read.title"))}</p>
+<h1>{e(t("read.heading"))}</h1><p class="dek">{e(t("read.dek", n=len(commented)))}</p>
+<nav class="lg-bible-strip" aria-label="{e(t("read.whole_label"))}">{strip}</nav>
+<p class="lg-strip-note"><span>{e(lib.books[codes[0]]["en"])}</span><span>{e(t("read.whole_note", n=f"{covered:,}", total=f"{total_chapters:,}"))}</span><span>{e(lib.books[codes[-1]]["en"])}</span></p></header>
+<section class="lg-read-cont" aria-labelledby="h-rc" data-books="{e(names)}" data-totals="{e(totals)}" hidden>
+<div><p class="eyebrow" id="h-rc">{e(t("read.continue"))}</p><b class="lg-read-cont-ref"></b><span class="lg-read-cont-meta lg-quiet"></span></div>
+<a class="button lg-read-cont-go" href="/"></a><a class="button ghost lg-read-cont-next" href="/" hidden></a></section>
+<section class="lg-shelf" aria-labelledby="h-shelf"><h2 class="label" id="h-shelf">{e(t("read.shelf"))}</h2><ul>{shelf}</ul></section>
+{search_box(lib, "read-q", "hero-search lg-read-search")}
+<div class="lg-read-bar" data-ui="{e(ui)}">
+<nav class="lg-jump" aria-label="{e(t("read.jump"))}"><a href="#ot">{e(t("testaments.old"))} <span>{ot}</span></a><a href="#nt">{e(t("testaments.new"))} <span>{nt}</span></a></nav>
+<button type="button" class="lg-read-only" aria-pressed="false">{e(t("read.only", n=len(commented)))}</button>
+<label class="lg-read-sort">{e(t("read.sort"))} <select><option value="bible">{e(t("read.sort_bible"))}</option><option value="az">{e(t("read.sort_az"))}</option><option value="most">{e(t("read.sort_most"))}</option></select></label>
+<nav class="lg-read-parts" aria-label="{e(t("read.parts"))}">{"".join(part_links)}</nav>
+</div>
+<p class="lg-read-keys lg-quiet">{e(t("read.keys"))}</p>
+<ul class="lg-legend lg-cov-legend" aria-label="{e(t("read.legend"))}"><li>{swatch.format(1)}{swatch.format(2)}{swatch.format(3)}{e(t("read.has_commentary_key"))}</li>
 <li><span class="chap part" aria-hidden="true"></span>{e(t("read.text_only_key"))}</li>
-<li><span class="chap part lg-read" aria-hidden="true"></span>{e(t("read.read_key"))}</li></ul>
-<div class="book-index lg-cov-index">{"".join(parts)}</div>
+<li><span class="chap part lg-read" aria-hidden="true"></span>{e(t("read.read_key"))}</li>
+<li class="lg-sun-key" hidden><span class="chap part lg-sun" aria-hidden="true"></span><span></span></li></ul>
+<p class="lg-read-none lg-quiet" hidden></p>
+<div class="book-index lg-cov-index" data-sundays="{e(suns)}">{"".join(parts)}</div>
+<ol class="lg-cov-list lg-cov-flat" hidden aria-label="{e(t("read.sorted"))}"></ol>
+<div class="lg-cell-tip" role="presentation" hidden></div>
 {coming}"""
     return page(lib, t("read.title"), body, "/read/", current="/read/")
 
