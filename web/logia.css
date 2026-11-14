@@ -590,21 +590,91 @@ html.signed-in header.site .tools > a.lg-saved-btn { display: grid; }
 .lg-chbar a { min-width: 34px; padding: 5px 8px; box-sizing: border-box; text-align: center; border: 1px solid var(--line); border-radius: 8px;
   background: var(--surface); color: var(--text); text-decoration: none; font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .lg-chbar a:hover { border-color: var(--accent); color: var(--accent); }
-.lg-ch { border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 64px); }
-.lg-ch summary { display: flex; align-items: baseline; gap: 12px; padding: 14px 32px 14px 0; cursor: pointer; list-style: none; position: relative; }
-.lg-ch summary::-webkit-details-marker { display: none; }
-.lg-ch summary b { font-family: var(--display); font-weight: 600; font-size: 20px; }
-.lg-ch summary:hover b { color: var(--accent); }
+/* Verse by verse on a commentator's page: a toolbar, a map of the chapters
+   (a row of numbers a book, shaded by how much is said), then each book's
+   chapters as folds whose heading stays in view while it is open. */
+.lg-vv-tools { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 10px 16px;
+  padding: 14px 16px; margin: 0 0 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.lg-vv-tools .lg-goto { margin: 0; flex: 1 1 320px; }
+.lg-vv-tools .lg-goto .lg-quiet { flex-basis: auto; }
+.lg-ch-all { flex: none; }
+.lg-chnav { display: grid; gap: 14px; margin: 0 0 28px; }
+.lg-chnav-name { display: flex; align-items: baseline; gap: 8px; margin: 0 0 6px; }
+.lg-chnav-name b { font-size: 14px; }
+.lg-chnav-name .lg-quiet { font-size: 13px; }
+.lg-chnav-cells { display: grid; grid-template-columns: repeat(auto-fill, minmax(38px, 1fr)); gap: 5px; }
+.lg-chnav-cells a { display: grid; place-items: center; height: 34px; border: 1px solid var(--line); border-radius: 8px; color: var(--text);
+  background: color-mix(in srgb, var(--accent) var(--depth, 0%), var(--surface)); font-size: 13.5px; font-weight: 600;
+  font-variant-numeric: tabular-nums; text-decoration: none; transition: border-color .15s, box-shadow .15s; }
+.lg-chnav-cells a:hover { border-color: var(--accent); }
+.lg-chnav-cells a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lg-chnav-cells a.lg-on { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.lg-vv-book + .lg-vv-book { margin-top: 36px; }
+.lg-vv-bookh { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 0 0 4px; padding: 0 0 8px;
+  font-family: var(--display); font-weight: 600; font-size: 22px; border-bottom: 2px solid var(--text); }
+.lg-vv-bookh .lg-quiet { font-family: var(--sans); font-weight: 400; }
+.lg-vv-bookh a { color: inherit; text-decoration: none; }
+.lg-vv-bookh a:hover { color: var(--accent); }
+.lg-ch { border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + var(--secbar-h, 46px) + 8px); }
+.lg-ch > summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(48px, 140px) 28px; align-items: center; gap: 16px;
+  padding: 14px 0; cursor: pointer; list-style: none; }
+.lg-ch > summary::-webkit-details-marker { display: none; }
+.lg-ch-name { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; min-width: 0; }
+.lg-ch-name b { font-family: var(--display); font-weight: 600; font-size: 20px; }
+.lg-ch-name .lg-quiet { font-size: 13.5px; }
+.lg-ch > summary:hover b { color: var(--accent); }
+.lg-ch-depth { height: 4px; border-radius: 2px; background: var(--line); overflow: hidden; }
+.lg-ch-depth span { display: block; height: 100%; background: var(--accent); opacity: .55; }
+.lg-ch .lg-caret { justify-self: end; width: 28px; height: 28px; padding: 6px; box-sizing: border-box; border-radius: 50%;
+  border: 1px solid var(--line); color: var(--muted); transition: transform .2s; }
 .lg-ch[open] .lg-caret { transform: rotate(180deg); }
-.lg-ch .lg-caret { position: absolute; right: 4px; top: 19px; color: var(--muted); }
-.lg-chlink { margin: 0 0 6px; font-size: 14px; font-weight: 600; }
+.lg-ch > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* The open chapter's heading stays under the bar of sections. */
+.lg-ch[open] > summary { position: sticky; top: calc(var(--header-h) + var(--secbar-h, 46px)); z-index: 2; background: var(--bg);
+  border-bottom: 1px solid var(--line); }
+.lg-ch-body { padding: 10px 0 18px; }
+.lg-chlink { margin: 0 0 4px; font-size: 14px; font-weight: 600; }
 .lg-chlink a { display: inline-flex; gap: 6px; align-items: center; text-decoration: none; }
-.lg-ch .lg-excerpts li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 4px 16px; }
+.lg-ch .lg-excerpts { gap: 0; }
+.lg-ch .lg-excerpts li { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 4px 20px; padding: 18px 0; }
+.lg-ch .lg-excerpts li:last-child { border-bottom: 0; }
 .lg-ex-ref { margin: 0; display: flex; flex-direction: column; font-size: 14px; }
 .lg-ex-ref .lg-quiet { font-size: 12.5px; }
+.lg-ch .lg-ex-ref a { font-family: var(--display); font-weight: 600; font-size: 17px; font-variant-numeric: tabular-nums; color: var(--text); }
+.lg-ch .lg-ex-ref a:hover { color: var(--accent); }
 .lg-ch .lg-excerpts p { margin: 0; }
 .lg-ch .lg-excerpts i { color: var(--text); }
-@media (max-width: 560px) { .lg-ch .lg-excerpts li { grid-template-columns: minmax(0, 1fr); } .lg-ex-ref { flex-direction: row; gap: 8px; } }
+.lg-ch .lg-excerpts p.lg-ex-work { margin: 0 0 6px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--muted); }
+.lg-ch .lg-excerpts p.lg-ex-verse { margin: 0 0 10px; padding-left: 12px; border-left: 2px solid var(--gold); font-size: 14.5px;
+  font-style: italic; color: var(--muted); }
+.lg-ch .lg-excerpts p.lg-ex-text { color: var(--text); font-size: calc(16.5px * var(--read-scale, 1)); line-height: 1.6; }
+.lg-ch .lg-excerpts p.lg-ex-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin: 10px 0 0; font-family: var(--sans);
+  font-size: 12.5px; color: var(--muted); }
+.lg-ex-go { display: inline-flex; align-items: center; gap: 4px; margin-left: auto; font-size: 13px; font-weight: 600; text-decoration: none; }
+.lg-ex-go:hover { text-decoration: underline; }
+.lg-ex-more { margin: 10px 0 0; font-family: var(--sans); font-size: 13px; }
+.lg-ex-more summary { cursor: pointer; color: var(--accent); font-weight: 600; width: max-content; max-width: 100%; }
+.lg-ex-more ul { list-style: none; margin: 8px 0 0; padding: 0 0 0 12px; border-left: 2px solid var(--line); display: grid; gap: 8px; }
+.lg-ex-more li { display: block !important; padding: 0 !important; border: 0 !important; font-family: var(--serif); font-size: 14.5px; }
+.lg-ch-steps { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0 0; border-top: 1px solid var(--line); }
+.lg-ch-steps a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--line-strong); border-radius: 999px;
+  font-size: 13.5px; font-weight: 600; text-decoration: none; color: var(--text); background: var(--surface); }
+.lg-ch-steps a:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 560px) {
+  .lg-ch .lg-excerpts li { grid-template-columns: minmax(0, 1fr); padding: 16px 0; }
+  .lg-ex-ref { flex-direction: row; gap: 8px; }
+  .lg-ch > summary { grid-template-columns: minmax(0, 1fr) 28px; }
+  .lg-ch-depth { display: none; }
+  .lg-chnav-cells { grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); }
+  .lg-ex-go { margin-left: 0; }
+  .lg-vv-tools { padding: 12px; }
+  .lg-vv-tools .lg-goto label { flex-basis: 100%; }
+  .lg-vv-tools .lg-goto input { flex: 1 1 0; min-width: 0; width: auto; }
+  .lg-vv-tools .lg-goto .lg-quiet { flex-basis: 100%; }
+  .lg-ch-all { width: 100%; }
+  .lg-author > .lg-block { margin-top: 40px; padding-top: 28px; }
+}
 
 /* The chapter bar (web/reader.js): under the header once the chapter's title
    has scrolled away. */
@@ -1090,12 +1160,6 @@ html {
 .lg-tabs button:hover { color: var(--accent); }
 .lg-tab-title { font-family: var(--display); font-weight: 600; font-size: 20px; margin: 32px 0 4px; }
 .lg-tabbed .lg-tab-title { display: none; }
-.lg-chbar-depth { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
-.lg-chbar-depth a { flex: none; background: color-mix(in srgb, var(--accent) var(--depth, 0%), var(--surface)); }
-.lg-ch .lg-excerpts p.lg-ex-verse { margin: 0 0 6px; padding-left: 10px; border-left: 2px solid var(--gold); font-size: 14.5px; color: var(--muted); }
-.lg-ch .lg-excerpts p.lg-ex-meta { margin: 6px 0 0; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
-.lg-ex-meta a { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 2px; }
-.lg-ch .lg-excerpts li.lg-hit { background: color-mix(in srgb, var(--mark) 60%, transparent); }
 
 /* The shape of the work: a map of the verses, the Scripture cited, the
    longest passages. */
@@ -1470,8 +1534,13 @@ html {
 .lg-secbar-in a { flex: none; padding: 11px 0 9px; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
 .lg-secbar-in a:hover { color: var(--text); }
 .lg-secbar-in a[aria-current="true"] { color: var(--text); border-bottom-color: var(--accent); }
-.lg-author .lg-chbar { top: calc(var(--header-h) + var(--secbar-h, 46px)); }
 .lg-author .lg-block { scroll-margin-top: calc(var(--header-h) + 56px); }
+/* One rhythm for the sections of a commentator's page: a rule above each,
+   the same space either side. */
+.lg-author > .lg-block { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+.lg-author > .lg-secbar + .lg-block { margin-top: 36px; padding-top: 0; border-top: 0; }
+.lg-author > .lg-block > h2 { margin-bottom: 6px; }
+.lg-author > .lg-block > h2 + .lg-quiet { margin: 0 0 18px; max-width: 64ch; }
 .lg-bookpick { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 0; }
 .lg-bp { font: 600 13px var(--sans, inherit); padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); cursor: pointer; }
 .lg-bp[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
