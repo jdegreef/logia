@@ -66,6 +66,12 @@ services:
       - path: /sheets.js
         name: Cache-Control
         value: public, max-age=31536000, immutable
+      - path: /study.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /review.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
       # The linker (web/linker.js) runs on other sites, so it and its chapter
       # files may be read from any origin. Their addresses carry no digest,
       # so browsers keep them a day.
@@ -87,5 +93,19 @@ services:
         name: Access-Control-Allow-Origin
         value: "*"
       - path: /api/*
+        name: Cache-Control
+        value: public, max-age=3600
+      # The parish widget (web/widget.js, /widget/) runs on church sites, so
+      # it and its Sundays may be read from any origin; they change weekly.
+      - path: /widget.js
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /widget.js
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /widget/*
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /widget/*
         name: Cache-Control
         value: public, max-age=3600
