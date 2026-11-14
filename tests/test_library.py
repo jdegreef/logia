@@ -931,19 +931,22 @@ class Site(unittest.TestCase):
         (ch, v), n = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
         text = self.read(os.path.join("jhn", "most-discussed", "index.html"))
         self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a>', text)
-        self.assertRegex(text, rf'<td class="lg-num" data-sort="{n}"><span class="lg-rank-bar"[^>]*><span style="width:100%"></span></span>{n}</td>')
+        bar = r'<span class="lg-rank-bar"[^>]*><span style="width:100%"></span></span>'
+        self.assertRegex(text, rf'<td class="lg-num" data-sort="{n}">{bar}{n}</td>')
         self.assertIn('href="/jhn/most-discussed/"', self.read(os.path.join("jhn", "index.html")))
         # The controls' data and the download hold the same counts.
         data = json.loads(self.read(os.path.join("jhn", "most-discussed", "data.json")))
         row = next(r for r in data["rows"] if r[:2] == [ch, v])
         self.assertEqual(sum(row[3]), n)
         import csv as csv_
-        with open(os.path.join(build_site.SITE, "jhn", "most-discussed", "jhn-most-discussed.csv"), encoding="utf-8") as f:
+        path = os.path.join(build_site.SITE, "jhn", "most-discussed", "jhn-most-discussed.csv")
+        with open(path, encoding="utf-8") as f:
             rows = {(int(r["chapter"]), int(r["verse"])): r for r in csv_.DictReader(f)}
         self.assertEqual(int(rows[(ch, v)]["excerpts"]), n)
         self.assertEqual(sum(int(r["excerpts"]) for r in rows.values()), sum(counts.values()))
         # The verse page says where it stands.
-        self.assertIn('href="/jhn/most-discussed/#verses"', self.read(os.path.join("jhn", str(ch), str(v), "index.html")))
+        verse = self.read(os.path.join("jhn", str(ch), str(v), "index.html"))
+        self.assertIn('href="/jhn/most-discussed/#verses"', verse)
 
     def test_ranks_share_a_place_when_counts_are_equal(self):
         self.assertEqual(build_site.rank_with_ties({"a": 5, "b": 3, "c": 3, "d": 1, "e": 0}),
