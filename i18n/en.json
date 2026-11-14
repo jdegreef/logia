@@ -571,7 +571,7 @@
     "on": "on {ref}",
     "quoted": "{name}, quoted by {author}",
     "wrote_in": "Wrote in {lang}",
-    "size": "{n} excerpts · {words} words · about {hours} hours to read",
+    "size": "{n} excerpts · {words} words",
     "one_verse": "{n} voices on {ref}",
     "one_verse_one": "1 voice on {ref}",
     "one_verse_note": "The first words each commentator in Logia writes on the verse, in the order they lived. Each opens the whole comment.",
@@ -663,7 +663,76 @@
     "sections": "On this page",
     "sec_voices": "Two readings",
     "sec_says": "Verse by verse",
-    "sec_more": "More on Logia"
+    "sec_more": "More on Logia",
+    "hours": "About {n} hours to read",
+    "hours_one": "About an hour to read",
+    "hours_less": "Under an hour to read",
+    "pace": "about {n} minutes a day for a year",
+    "coverage_all": "{book}: every verse",
+    "read_short": "Read",
+    "read_book": "Read {name} on {book} from the start",
+    "more_books": "+{n} more books",
+    "more_books_one": "+1 more book",
+    "and_list": "{first} and {last}",
+    "read_on": "Read {name} on {ref}",
+    "n_books": "{n} books",
+    "card_more": "More about {name}",
+    "cards_label": "The commentators",
+    "eras_label": "The eras",
+    "find_label": "Find a commentator",
+    "showing": "Showing {n} of {total}",
+    "show_all": "Show all",
+    "find_none": "No commentator matches. Try another name, or show all.",
+    "new_title": "New here? Three places to start",
+    "new_note": "One voice from the early church, one Catholic and one Protestant, each easy to read in English.",
+    "new_kind": {
+      "early": "Early church",
+      "catholic": "Catholic",
+      "protestant": "Protestant"
+    },
+    "new_why": {
+      "chrysostom": "Sermons preached to his congregation at Antioch.",
+      "haydock": "Short notes from a Catholic family Bible.",
+      "henry": "An exposition written for ordinary readers."
+    },
+    "grid_title": "Who covers what",
+    "grid_note": "Each square is a commentator on a book, darker the more of its verses they comment on. Each links to the map of that book on their page.",
+    "grid_cell": "{name} on {book}: {n} of {total} verses",
+    "grid_none": "{name}: nothing on {book} in Logia",
+    "book_short": {
+      "GEN": "Gen",
+      "EXO": "Exod",
+      "JOB": "Job",
+      "PSA": "Ps",
+      "PRO": "Prov",
+      "ECC": "Eccl",
+      "SNG": "Song",
+      "ISA": "Isa",
+      "MAT": "Matt",
+      "MRK": "Mark",
+      "LUK": "Luke",
+      "JHN": "John",
+      "ACT": "Acts",
+      "ROM": "Rom",
+      "GAL": "Gal",
+      "HEB": "Heb",
+      "1JN": "1 John"
+    },
+    "voices_label": "Every voice on one verse",
+    "timeline_note_phone": "Each dot is a commentator, in the order they lived, in the colour of their era.",
+    "landmarks": {
+      "325": "Nicaea",
+      "451": "Chalcedon",
+      "1054": "East and West divide",
+      "1517": "Luther's theses",
+      "1545": "Trent",
+      "1611": "King James Bible"
+    },
+    "landmarks_note": "The dashed lines mark the councils of Nicaea and Chalcedon, the division of East and West, Luther's theses, the Council of Trent and the King James Bible.",
+    "alive": "Alive at the same time as {name}: {names}",
+    "alive_none": "No one else in Logia was alive at the same time as {name}.",
+    "show_timeline": "Show the timeline",
+    "hide_timeline": "Hide the timeline"
   },
   "work": {
     "cite_copy_short": "Copy",
@@ -903,9 +972,18 @@
         "Can I use Logia's text?",
         "Yes. The commentaries are in the public domain and Logia's data is CC0, so you may copy them into a sermon, a class handout or an app without asking."
       ],
-      ["Why are there no modern commentators?", "Logia holds only editions published in 1930 or earlier, so that every text is free to copy. Commentators who wrote later, and modern translations of older ones, are mostly still under copyright."],
-      ["Is the Bible text a new translation?", "Yes. Logia shows the Open Word Bible, a CC0 translation from the Hebrew and Greek. It is an AI draft that people are reviewing, as each verse page says. Logia never edits it: a problem with its wording is fixed in the Open Word Bible itself."],
-      ["Does Logia take sides between the churches?", "No. Where Catholic, Orthodox and Protestant readers differ, Logia shows every commentator it holds on the passage, in the order they lived, and keeps their words whole. Its own short notes say how the readings differ without choosing between them."]
+      [
+        "Why are there no modern commentators?",
+        "Logia holds only editions published in 1930 or earlier, so that every text is free to copy. Commentators who wrote later, and modern translations of older ones, are mostly still under copyright."
+      ],
+      [
+        "Is the Bible text a new translation?",
+        "Yes. Logia shows the Open Word Bible, a CC0 translation from the Hebrew and Greek. It is an AI draft that people are reviewing, as each verse page says. Logia never edits it: a problem with its wording is fixed in the Open Word Bible itself."
+      ],
+      [
+        "Does Logia take sides between the churches?",
+        "No. Where Catholic, Orthodox and Protestant readers differ, Logia shows every commentator it holds on the passage, in the order they lived, and keeps their words whole. Its own short notes say how the readings differ without choosing between them."
+      ]
     ]
   },
   "offline": {
@@ -972,7 +1050,6 @@
     "note": "Copied word for word from {edition}, as transcribed by CCEL. The translator's footnotes are left out. Scripture references are linked as CCEL marks them. A gold rule marks the passages Logia sets beside a verse.",
     "description": "{name}, {title}, {where}: the whole text, with the passages Logia sets beside each verse."
   },
-
   "verse": {
     "compare": "Compare two voices",
     "compare_title": "Two voices on {ref}",
@@ -1445,7 +1522,11 @@
     "on_verses_note": "The opening words of what each of them says on the verse. Follow the link to read the whole excerpt, and the verse to read every era on it.",
     "read_on": "Read it all",
     "verses_title": "The {n} verses they say most on",
-    "columns": ["Verse", "Excerpts", "The verse"],
+    "columns": [
+      "Verse",
+      "Excerpts",
+      "The verse"
+    ],
     "chapters_title": "Excerpts on each chapter"
   },
   "differ": {
@@ -1472,9 +1553,11 @@
     "count": "{n} commentators",
     "index_title": "Where the churches read a passage differently",
     "index_dek": "Passages that Catholic, Orthodox and Protestant Christians read differently: a short note on how the readings differ, then every commentator in Logia on the passage, in their own words.",
-    "index_intro": ["Most of what the commentators say, they say in common. On a few passages the churches have long read the same words differently. Each page here says briefly how, and then gives every commentator Logia holds on the passage, in the order they lived.", "A page is published only when those commentators come from enough traditions: the early church, a Catholic or Orthodox voice, a Protestant one, and four traditions in all. Others are waiting for the commentaries that would make them fair."]
+    "index_intro": [
+      "Most of what the commentators say, they say in common. On a few passages the churches have long read the same words differently. Each page here says briefly how, and then gives every commentator Logia holds on the passage, in the order they lived.",
+      "A page is published only when those commentators come from enough traditions: the early church, a Catholic or Orthodox voice, a Protestant one, and four traditions in all. Others are waiting for the commentaries that would make them fair."
+    ]
   },
-
   "creeds": {
     "record": "The edition",
     "undated": "Not dated in the edition: {names}.",
@@ -1482,7 +1565,10 @@
     "eyebrow": "Creeds and councils",
     "index_title": "Creeds, councils and confessions",
     "index_dek": "The creeds the churches share, the decrees of the councils, and the confessions and catechisms of each tradition, in English editions of 1930 or earlier, with the Scripture they cite linked to each verse.",
-    "index_intro": ["These are not commentary, and Logia keeps them apart from it. They are what the churches have confessed together, and what each has confessed on its own: read whole, as their editions print them, with every Scripture reference the edition marks linked to the verse.", "The confessions of the different churches are listed together, by year, so that no tradition comes first. Some print a list of proof texts under every article and others print few, so the verse pages list the documents that cite a verse, oldest first, and never count them."],
+    "index_intro": [
+      "These are not commentary, and Logia keeps them apart from it. They are what the churches have confessed together, and what each has confessed on its own: read whole, as their editions print them, with every Scripture reference the edition marks linked to the verse.",
+      "The confessions of the different churches are listed together, by year, so that no tradition comes first. Some print a list of proof texts under every article and others print few, so the verse pages list the documents that cite a verse, oldest first, and never count them."
+    ],
     "shared_heading": "Shared by the churches",
     "each_heading": "From each tradition",
     "each_note": "By year.",
@@ -1490,7 +1576,12 @@
     "kind_label": "Kind",
     "tradition": "Tradition",
     "year": "Year",
-    "kind": {"creed": "Creed", "council": "Council", "confession": "Confession", "catechism": "Catechism"},
+    "kind": {
+      "creed": "Creed",
+      "council": "Council",
+      "confession": "Confession",
+      "catechism": "Catechism"
+    },
     "not_commentary": "A creed or confession, not commentary: the words are copied from the edition named below, and its Scripture references link to the verses.",
     "description": "{title} ({when}): the whole text, with the Scripture it cites linked to each verse.",
     "no_year": "Not dated in the edition",
@@ -1498,7 +1589,6 @@
     "on_verse": "In the creeds and councils on {ref}",
     "on_verse_note": "Creeds, conciliar decrees and confessions that cite this verse, oldest first. They are not commentary; each links to the whole document."
   },
-
   "families": {
     "early": "Early church",
     "methodist": "Methodist",
@@ -1509,7 +1599,6 @@
     "anglican": "Anglican",
     "baptist": "Baptist"
   },
-
   "guide": {
     "all_uses": "See all {n} →",
     "az": "A to Z",
@@ -1523,7 +1612,6 @@
     "used_one": "In 1 excerpt; first in {who} on {ref}",
     "differ": "Every commentator on {ref}, side by side"
   },
-
   "ai": {
     "title": "How Logia uses AI",
     "heading": "How Logia uses AI",
@@ -1536,8 +1624,14 @@
     "mark_reviewed_title": "Drafted with AI, then reviewed and approved by {name}. Follow the link to read how Logia uses AI.",
     "marks_title": "The two marks",
     "marks": [
-      ["draft", "Drafted with AI and not yet reviewed. Read it as a first draft: check it against the sources it points to."],
-      ["reviewed", "Drafted with AI, then read and approved by the person named. The mark keeps their name, so you know who checked it."]
+      [
+        "draft",
+        "Drafted with AI and not yet reviewed. Read it as a first draft: check it against the sources it points to."
+      ],
+      [
+        "reviewed",
+        "Drafted with AI, then read and approved by the person named. The mark keeps their name, so you know who checked it."
+      ]
     ],
     "marks_note": "Text with no mark is copied from a printed edition: the commentators' own words, quoted whole.",
     "never_title": "What AI never does here",
@@ -1549,7 +1643,11 @@
       "It never takes a side. Where Catholic, Orthodox and Protestant readings differ, Logia shows the readings and lets them speak."
     ],
     "drafted_title": "What is drafted with AI",
-    "drafted_cols": ["What", "How many", "Reviewed"],
+    "drafted_cols": [
+      "What",
+      "How many",
+      "Reviewed"
+    ],
     "drafted": {
       "bios": "Commentators' biographies",
       "guides": "Logia's guides, such as the glossary",
@@ -1804,7 +1902,6 @@
     "cite": "How to cite",
     "cite_how": "Name the commentator, the work and the edition, then the Logia address of the verse, for example: John Chrysostom, Homilies on the Gospel of St. John, Homily 27 (Oxford translation), quoted at https://logia.faith/jhn/3/16/."
   },
-
   "topic": {
     "card_counts": "{n} excerpts · {k} voices",
     "family_god": "God and Christ",
@@ -1824,7 +1921,6 @@
     "index_description": "Subjects readers look up across the books in Logia, from creation and the Incarnation to prayer and forgiveness, each as the passages of Scripture on it with every commentator in Logia on each.",
     "index_dek": "Subjects readers look up across the books in Logia, each as the passages of Scripture on it, with what every commentator here wrote on each passage."
   },
-
   "topics": {
     "creation": {
       "heading": "Creation",
@@ -2077,5 +2173,12 @@
       ]
     ],
     "note": "Shortcuts work when you are not typing in a box."
+  },
+  "eras_short": {
+    "Early church": "Early church",
+    "Middle Ages": "Middle Ages",
+    "Reformation": "Reformation",
+    "Puritans and the 1700s": "1700s",
+    "The 1800s": "1800s"
   }
 }

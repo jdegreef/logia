@@ -522,27 +522,145 @@
     });
     bar.hidden = false;
     bar.parentNode.classList.add("lg-tabbed");
-    show(tabs[0]);
+    show(tabs.filter(function (x) { return x.getAttribute("aria-selected") === "true"; })[0] || tabs[0]);
   });
-  // The commentators page: book chips that narrow the cards to those who
-  // comment on that book and dim the other lives on the timeline.
-  document.querySelectorAll(".lg-pick").forEach(function (pick) {
-    var chips = [].slice.call(pick.querySelectorAll("button"));
-    var cards = [].slice.call(pick.parentNode.querySelectorAll("li[data-books]"));
+  // The commentators page: book chips, era buttons (in the bar over the
+  // cards and on the timeline's bands) and a name box that narrow the cards
+  // together, dim the other lives on the timeline, and put the chosen book
+  // first on each card, with a quotation from that book.
+  document.querySelectorAll(".lg-cmtcards").forEach(function (section) {
+    var pick = section.querySelector(".lg-pick"), bar = section.querySelector(".lg-findbar");
+    var cards = [].slice.call(section.querySelectorAll("li.lg-cmt"));
     var rows = [].slice.call(document.querySelectorAll(".lg-tl-row[data-author]"));
+    var chips = pick ? [].slice.call(pick.querySelectorAll("button[data-book]")) : [];
+    var eraButtons = [].slice.call(document.querySelectorAll(".lg-findbar-eras button, .lg-tl-era[data-era]"));
+    var input = bar && bar.querySelector("input"), select = bar && bar.querySelector("select");
+    var count = bar && bar.querySelector(".lg-findbar-count"), reset = bar && bar.querySelector(".lg-findbar-reset");
+    var none = section.querySelector(".lg-findnone");
+    var state = { book: "", era: "", q: "" };
+    var fold = function (s) { return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
+    // Each card's coverage rows in their first order, to put back.
+    cards.forEach(function (li) {
+      li._covs = [].slice.call(li.querySelectorAll(".lg-cov")).map(function (c) { return [c, c.parentNode, c.nextSibling]; });
+    });
+    var bookFirst = function (li) {
+      li._covs.slice().reverse().forEach(function (x) { x[1].insertBefore(x[0], x[2] && x[2].parentNode === x[1] ? x[2] : null); });
+      li._covs.forEach(function (x) { x[0].classList.remove("lg-cov-on"); });
+      var lead = li.querySelector('.lg-pq[data-book="' + state.book + '"]');
+      [].forEach.call(li.querySelectorAll(".lg-pq"), function (q) {
+        q.hidden = state.book && lead ? q !== lead : q.getAttribute("data-book") !== "";
+      });
+      if (!state.book) return;
+      var row = li.querySelector('.lg-cov[data-book="' + state.book + '"]'), list = li.querySelector(".lg-covs");
+      if (row && list) { list.insertBefore(row, list.firstChild); row.classList.add("lg-cov-on"); }
+    };
+    var apply = function () {
+      var shown = {}, n = 0, q = fold(state.q.trim());
+      cards.forEach(function (li) {
+        var on = (!state.book || li.getAttribute("data-books").split(" ").indexOf(state.book) >= 0) &&
+          (state.era === "" || li.getAttribute("data-era") === state.era) &&
+          (!q || fold(li.getAttribute("data-names")).indexOf(q) >= 0);
+        li.hidden = !on;
+        if (on) { shown[li.getAttribute("data-author")] = true; n++; }
+        bookFirst(li);
+      });
+      rows.forEach(function (row) { row.classList.toggle("lg-tl-dim", !shown[row.getAttribute("data-author")]); });
+      chips.forEach(function (x) { x.setAttribute("aria-pressed", String(x.getAttribute("data-book") === state.book)); });
+      eraButtons.forEach(function (x) { x.setAttribute("aria-pressed", String(x.getAttribute("data-era") === state.era)); });
+      if (select) select.value = state.book;
+      var any = state.book || state.era !== "" || q;
+      if (count) count.textContent = any ? count.getAttribute("data-of").replace("{n}", n).replace("{total}", cards.length) : "";
+      if (reset) reset.hidden = !any;
+      if (none) none.hidden = n > 0;
+    };
     chips.forEach(function (chip) {
-      chip.addEventListener("click", function () {
-        var book = chip.getAttribute("data-book"), shown = {};
-        chips.forEach(function (x) { x.setAttribute("aria-pressed", x === chip ? "true" : "false"); });
-        cards.forEach(function (li) {
-          var on = !book || li.getAttribute("data-books").split(" ").indexOf(book) >= 0;
-          li.hidden = !on;
-          if (on) shown[li.getAttribute("data-author")] = true;
-        });
-        rows.forEach(function (row) { row.classList.toggle("lg-tl-dim", !shown[row.getAttribute("data-author")]); });
+      chip.addEventListener("click", function () { state.book = chip.getAttribute("data-book"); apply(); });
+    });
+    eraButtons.forEach(function (b) {
+      if (b.tagName === "A") b.setAttribute("role", "button");
+      b.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var era = b.getAttribute("data-era");
+        state.era = state.era === era ? "" : era;
+        apply();
+        if (b.tagName === "A" && state.era !== "") section.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
-    pick.hidden = false;
+    if (input) input.addEventListener("input", function () { state.q = input.value; apply(); });
+    if (select) select.addEventListener("change", function () { state.book = select.value; apply(); });
+    if (reset) reset.addEventListener("click", function () {
+      state = { book: "", era: "", q: "" }; if (input) input.value = ""; apply();
+    });
+    if (pick) pick.hidden = false;
+    if (bar) bar.hidden = false;
+    // On a phone each card shows its name and a line; a tap opens the rest.
+    section.classList.add("lg-compact");
+    cards.forEach(function (li) {
+      var more = li.querySelector(".lg-card-more");
+      if (!more) return;
+      more.hidden = false;
+      more.addEventListener("click", function () {
+        var open = li.classList.toggle("lg-open");
+        more.setAttribute("aria-expanded", String(open));
+      });
+    });
+    // A link to an era's first card opens it and shows it.
+    var openFromHash = function () {
+      var li = location.hash && document.getElementById(location.hash.slice(1));
+      if (li && li.classList.contains("lg-cmt")) {
+        li.classList.add("lg-open");
+        var m = li.querySelector(".lg-card-more"); if (m) m.setAttribute("aria-expanded", "true");
+      }
+    };
+    window.addEventListener("hashchange", openFromHash); openFromHash();
+  });
+
+  // The timeline: on a page with an era strip, the chart waits behind a
+  // button on a phone; and pointing at a life shows who else was alive then.
+  document.querySelectorAll(".lg-tl").forEach(function (fig) {
+    var toggle = fig.querySelector(".lg-tl-toggle");
+    if (toggle) {
+      var showText = toggle.textContent, hideText = fig.getAttribute("data-hide") || showText;
+      fig.classList.add("lg-tl-folded");
+      toggle.hidden = false;
+      toggle.addEventListener("click", function () {
+        var folded = fig.classList.toggle("lg-tl-folded");
+        toggle.setAttribute("aria-expanded", String(!folded));
+        toggle.textContent = folded ? showText : hideText;
+      });
+    }
+    var rows = [].slice.call(fig.querySelectorAll(".lg-tl-row[data-born]"));
+    var span = fig.querySelector(".lg-tl-span"), say = fig.querySelector(".lg-tl-alive");
+    var wide = window.matchMedia("(min-width: 601px)");
+    if (!span || !say || !rows.length) return;
+    var clear = function () {
+      span.hidden = true; say.textContent = "";
+      rows.forEach(function (r) { r.classList.remove("lg-tl-far"); });
+    };
+    var point = function (row) {
+      if (!wide.matches) return;
+      var b = +row.getAttribute("data-born"), d = +row.getAttribute("data-died"), names = [];
+      var life = row.querySelector(".lg-tl-life");
+      rows.forEach(function (r) {
+        var on = r === row || (+r.getAttribute("data-born") < d && +r.getAttribute("data-died") > b);
+        r.classList.toggle("lg-tl-far", !on);
+        if (on && r !== row) names.push(r.querySelector(".lg-tl-name b").textContent);
+      });
+      span.style.setProperty("--l", life.style.getPropertyValue("--l"));
+      span.style.setProperty("--w", life.style.getPropertyValue("--w"));
+      span.hidden = false;
+      var name = row.querySelector(".lg-tl-name b").textContent;
+      say.textContent = names.length
+        ? fig.getAttribute("data-alive").replace("{name}", name).replace("{names}", names.join(", "))
+        : fig.getAttribute("data-alive-none").replace("{name}", name);
+    };
+    rows.forEach(function (row) {
+      var life = row.querySelector(".lg-tl-life");
+      life.addEventListener("mouseenter", function () { point(row); });
+      life.addEventListener("focus", function () { point(row); });
+      life.addEventListener("mouseleave", clear);
+      life.addEventListener("blur", clear);
+    });
   });
   document.querySelectorAll(".lg-goto:not(.lg-goto-work)").forEach(function (form) {
     var books = JSON.parse(form.getAttribute("data-books"));

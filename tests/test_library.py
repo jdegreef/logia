@@ -452,6 +452,32 @@ class Site(unittest.TestCase):
         self.assertTrue(data["verses"]["1"]["href"].startswith("/psa/51/3"))
         self.assertTrue(os.path.isfile(os.path.join(build_site.SITE, "linker.js")))
 
+    def test_the_commentators_page_cards(self):
+        text = self.read("commentators/index.html")
+        monos = re.findall(r'<span class="lg-mono" aria-hidden="true">(\w+)</span>', text)
+        self.assertEqual(len(monos), len(set(monos)), "two commentators share a monogram")
+        self.assertNotIn("about 1 hours", text.lower())
+        cards = dict(re.findall(r'<li[^>]*class="lg-cmt" data-author="(\w+)".*?<blockquote><p>(.*?)</p>', text, re.S))
+        self.assertFalse(cards["fausset"].startswith("Ec 1"))          # a heading, not a sentence
+        self.assertTrue(cards["gregory"].startswith("Thus we possess"))  # the scan's "3&. ..." left off
+        self.assertTrue(cards["basil"].startswith("I stop struck"))     # the verse he quotes first left off
+        for part in ("lg-findbar", "lg-erastrip", "lg-tl-mark", "lg-covgrid", "lg-new-list", 'role="tablist"'):
+            self.assertIn(part, text)
+        # Cards go in the order the commentators were born, era by era.
+        order = re.findall(r'class="lg-cmt" data-author="(\w+)"', text)
+        self.assertLess(order.index("brown"), order.index("spurgeon"))
+
+    def test_card_sizes_and_bios(self):
+        self.assertIn("About an hour to read", build_site.card_size(12000, 30))
+        self.assertIn("Under an hour to read", build_site.card_size(3000, 9))
+        self.assertIn("minutes a day for a year", build_site.card_size(2_000_000, 8000))
+        self.assertEqual(build_site.bio_line({"bio": "Bishop of Caesarea in Cappadocia from 370, one of the three "
+                                                     "Cappadocian Fathers with his brother Gregory; he wrote rules."}),
+                         "Bishop of Caesarea in Cappadocia from 370")
+        self.assertEqual(build_site.tradition_tag("Roman Catholic (Jesuit)"),
+                         '<span class="lg-trad" title="Roman Catholic (Jesuit)">'
+                         'Roman Catholic <span>Jesuit</span></span>')
+
     def test_ai_marks_replace_the_draft_pills(self):
         calvin = self.read("commentators/calvin/index.html")
         self.assertIn('class="lg-ai lg-ai-draft" href="/ai/"', calvin)
