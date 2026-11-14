@@ -50,6 +50,7 @@ import types
 from urllib.parse import quote
 
 import api
+import build_more
 import differ
 import scripture
 
@@ -126,6 +127,8 @@ LEADING_GAPS = {"compact": 5, "normal": 7, "spacious": 9}
 # default colours or text size. Mirrors web/site.js.
 BOOT_SCRIPT = ("try{var d=document.documentElement,t=localStorage.getItem('logia-theme');"
                "if(['auto','light','sepia','dark','night','contrast'].indexOf(t)>=0)d.setAttribute('data-theme',t);"
+               # No mode chosen and the device asks for more contrast: the contrast mode.
+               "else if(!t&&window.matchMedia&&matchMedia('(prefers-contrast: more)').matches)d.setAttribute('data-theme','contrast');"
                "var p={" + ",".join(f"{name}:{[v for v in values if v != default]!r}"
                                    for name, default, values in DISPLAY_PREFS) + "};"
                "for(var k in p){var v=localStorage.getItem('logia-'+k);"
@@ -350,7 +353,8 @@ class Library:
         printed = {}
         for p in glob.glob(os.path.join(ROOT, "library", "pages", "*.json")):
             for cid, (ident, leaf, number) in load(p)["pages"].items():
-                printed[cid] = {"url": scan_page_url(ident, leaf), "page": number}
+                printed[cid] = {"url": scan_page_url(ident, leaf), "page": number,
+                                 "img": f"https://archive.org/download/{ident}/page/n{leaf}_w1000.jpg"}
         self.comments = []
         for p in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
             data = load(p)
@@ -764,6 +768,10 @@ def nav_menus(lib):
                + row("/search/", t("nav.search_words"), t("nav.search_words_note"), "list")
                + row("/readings/", t("nav.readings"), t("nav.readings_note"), "star")
                + row("/topics/", t("nav.topics"), t("nav.topics_note"), "list")
+               + row("/plans/", t("nav.plans"), t("nav.plans_note"), "star")
+               + row("/explore/most-cited/", t("nav.most_cited"), t("nav.most_cited_note"), "list")
+               + row("/random/", t("nav.random"), t("nav.random_note"), "compass")
+               + row("/quiz/", t("quiz.heading"), t("nav.quiz_note"), "star")
                + "".join(row(f'/{c["book"].lower()}/{c["id"]}/', t(f'nav.collection_{c["id"]}'), t(f'nav.collection_{c["id"]}_note'), "list")
                          for c in collections(lib))
                + "".join(row(f"/{b.lower()}/most-discussed/", t("nav.most", book=lib.books[b]["en"]), t("nav.most_note"), "users")
@@ -782,6 +790,8 @@ def nav_menus(lib):
         row("/about/rules/", t("nav.rules"), t("nav.rules_note"), "check"),
         row("/ai/", t("nav.ai"), t("nav.ai_note"), "info"),
         row("/linker/", t("nav.linker"), t("nav.linker_note"), "code"),
+        row("/widget/", t("nav.widget"), t("nav.widget_note"), "code"),
+        row("/about/help/", t("help.heading"), t("nav.help_note"), "users"),
         row("/api/v1/index.json", t("nav.api"), t("nav.api_note"), "data"),
         row(OWB_SITE + "/", t("nav.owb"), t("nav.owb_note"), "book", ext=True),
         row(GITHUB_URL, t("nav.source"), t("nav.source_note"), "code", ext=True)))
@@ -1109,13 +1119,15 @@ def counter_script(noindex=False):
 
 
 def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True,
-         preload=(), head_title=None, ld=()):
+         preload=(), head_title=None, ld=(), meta=()):
     """A whole page. head_title, when given, is the <title> and og:title in
     place of "<title> · Logia"; ld is schema.org data for search engines."""
     full = head_title or (f"{title} · Logia" if title != "Logia" else "Logia")
     description = description or t("site.description")
     own = e(SITE_URL + path)
-    js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js", "logia.js") + tuple(scripts))
+    js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js", "logia.js", "study.js") + tuple(scripts))
+    # Citation tags (Highwire), for Zotero and other reference managers: (name, content) pairs.
+    tags = "".join(f'\n<meta name="{e(k)}" content="{e(v)}">' for k, v in meta)
     account_text = json.dumps(CATALOG["account"]["ui"], ensure_ascii=False).replace("</", "<\\/")
     # The keyboard shortcuts' help, for web/logia.js (? opens it).
     keys_text = json.dumps(CATALOG["keys"], ensure_ascii=False).replace("</", "<\\/")
@@ -1135,7 +1147,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{e(t("site.card_alt"))}">
-<meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{json_ld(ld)}
+<meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{tags}{json_ld(ld)}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" href="/new.xml" title="{e(t("new.feed_title"))}">
 <link rel="manifest" href="/manifest.webmanifest">
@@ -1160,9 +1172,14 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 {site_footer(lib)}
 <script type="application/json" id="account-text">{account_text}</script>
 <script type="application/json" id="keys-text">{keys_text}</script>
+<script type="application/json" id="study-text">{STUDY_TEXT}</script>
 </body>
 </html>
 """
+
+
+# The words web/study.js shows (notes, quotes, recently read), on every page.
+STUDY_TEXT = json.dumps(CATALOG["study"]["ui"], ensure_ascii=False).replace("</", "<\\/")
 
 
 def json_ld(items):
@@ -2226,6 +2243,10 @@ def verse_excerpt(lib, c, book, chapter, verse):
         more.append(f'<li><a href="{e(n["url"])}">{e(t("verse.names", name=n["author"]))}</a>'
                     + (f' · <a href="{e(n["href"])}">{e(t("verse.names_here", name=n["author"], ref=n["ref"]))}</a>' if n["href"] else "")
                     + "</li>")
+    more += build_more.also_rows(lib, c)
+    fixed = build_more.fixed_link(lib, c)
+    if fixed:
+        links.append(fixed)
     locus = f' {e(locus_label(w, c["locus"]))}.' if c.get("locus") else ""
     # A long excerpt folds to its first lines on screen (web/logia.js), so one
     # long homily doesn't push every other voice down; the whole text stays
@@ -2237,7 +2258,7 @@ def verse_excerpt(lib, c, book, chapter, verse):
             f'<div class="lg-text{" lg-foldable" if fold else ""}">{verse_html(lib, c["text"], c["cites"])}</div>{fold}'
             + (f'<ul class="lg-vx-more">{"".join(more)}</ul>' if more else "")
             + f'<p class="lg-vx-links lg-quiet">{e(t("verse.from", edition=short_edition(w["edition"])))}{locus} '
-            f'{" · ".join(links)}</p>{excerpt_actions(lib, c, verse_url(book, chapter, verse))}</article>')
+            f'{" · ".join(links)} {build_more.scan_button(c)}</p>{excerpt_actions(lib, c, verse_url(book, chapter, verse))}</article>')
 
 
 def verse_words(bible, verse):
@@ -2288,7 +2309,10 @@ def verse_xrefs(lib, bible, verse):
         label = f'{lib.books[p[0]]["en"]} {p[1]}:{p[2]}'
         text = chapter_plain(p[0], ch).get(a, "") if (p[0], ch) in lib.chapters else ""
         href = verse_url(p[0], ch, a) if (p[0], ch, a) in lib.voices_on else chapter_url(p[0], ch) + f"#v{a}"
-        rows.append(f'<li><a href="{href}"><b>{e(label)}</b></a> <span>{e(text)}</span></li>')
+        # How many voices wait there, so a reader sees which links lead somewhere rich.
+        n = len(lib.voices_on.get((p[0], ch, a), []))
+        count = f' <span class="lg-xref-n">{e(t("verse.xref_voices", n=n))}</span>' if n else ""
+        rows.append(f'<li><a href="{href}"><b>{e(label)}</b></a>{count} <span>{e(text)}</span></li>')
     if not rows:
         return ""
     return (f'<section class="lg-block" id="xrefs"><h2>{e(t("verse.xrefs"))}</h2><ul class="lg-xrefs">{"".join(rows)}</ul>'
@@ -2479,7 +2503,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 <p class="dek lg-vlead">{e(lead)}</p>{verse_topics(lib, book, chapter, verse)}
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav>
 {compare_dialog(ref) if len(rail) > 1 else ""}</header>
-<section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
+<section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>{build_more.verse_grid(lib, voices, book, chapter, verse)}{"".join(sections)}</section>
 {cited_html}{whole_html}{verse_creeds(lib, book, chapter, verse, ref)}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
 <p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
 <nav class="lg-turns" aria-label="{e(t("verse.previous"))} / {e(t("verse.next"))}">{"".join(turns)}</nav>
@@ -2663,7 +2687,8 @@ def readings_page(lib):
 <div class="lg-cal-pick" role="group" aria-label="{e(t("occasions.cal_label"))}"><span class="lg-quiet">{e(t("occasions.cal_label"))}</span>{chips}</div>
 <ul class="lg-people lg-wide lg-readings">{"".join(rows)}</ul>
 <p class="lg-quiet">{e(t("occasions.index_note"))}</p>
-<p><a class="lg-more" href="/jhn/lent/">{e(t("plan.heading", book=lib.books["JHN"]["en"], n=40))} {icon("arrow", 15)}</a></p></section>"""
+<p><a class="lg-more" href="/jhn/lent/">{e(t("plan.heading", book=lib.books["JHN"]["en"], n=40))} {icon("arrow", 15)}</a></p>
+<p><a class="lg-more" href="/plans/">{e(t("nav.plans"))}: {e(t("nav.plans_note"))} {icon("arrow", 15)}</a></p></section>"""
     return page(lib, t("occasions.index_heading"), body, "/readings/", current="/read/",
                 description=t("occasions.index_description"),
                 ld=(breadcrumbs((t("occasions.eyebrow"), "/readings/")),))
@@ -3581,7 +3606,7 @@ def cite_edition(w):
 
 # The formats the citation box gives a work in: (key, the text with the
 # title in italics, as HTML). The copied text is the same without the tags.
-CITE_FORMATS = ("chicago", "mla", "bibtex")
+CITE_FORMATS = ("chicago", "mla", "bibtex", "ris")
 
 
 def cite_box(a, w, wid):
@@ -3596,10 +3621,13 @@ def cite_box(a, w, wid):
         "mla": t("work.cite_mla", name=e(a["name"]), title=f"<i>{title}</i>", edition=e(edition), year=w["published"], url=url[len("https://"):]),
         "bibtex": (f'@book{{{wid.replace("-", "_")},\n  author = {{{e(a["name"])}}},\n  title = {{{title}}},\n'
                    f'  note = {{{e(edition)}}},\n  year = {{{w["published"]}}},\n  url = {{{url}}}\n}}'),
+        # RIS, which Zotero, EndNote and Mendeley import.
+        "ris": (f'TY  - BOOK\nAU  - {e(a["name"])}\nTI  - {title}\nPY  - {w["published"]}\n'
+                f'N1  - {e(edition)}\nUR  - {url}\nER  - '),
     }
     rows = "".join(
         f'<div class="lg-cite-row"><p class="lg-cite-label">{e(t("work.cite_" + k + "_label"))}</p>'
-        + (f'<pre class="lg-cite-text lg-cite-code">{v}</pre>' if k == "bibtex" else f'<p class="lg-cite-text">{v}</p>')
+        + (f'<pre class="lg-cite-text lg-cite-code">{v}</pre>' if k in ("bibtex", "ris") else f'<p class="lg-cite-text">{v}</p>')
         + f'<button type="button" class="button ghost lg-copy" data-copy="{e(html.unescape(re.sub(r"<[^>]+>", "", v)))}" '
         f'data-done="{e(t("work.cite_copied"))}" aria-label="{e(t("work.cite_copy_as", style=t("work.cite_" + k + "_label")))}">{e(t("work.cite_copy_short"))}</button></div>'
         for k, v in forms.items())
@@ -3741,6 +3769,7 @@ def work_page(lib, wid):
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 {work_goto(lib, wid, a, comments)}<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>
 {work_map(lib, wid, a, comments)}
+{build_more.work_extras(lib, wid)}
 {also_on(lib, wid, comments)}"""
     book = {"@context": "https://schema.org", **work_ld(lib, wid), "isBasedOn": [url for url, _l, _s in docs] or w["full_text_url"]}
     if w["translation"]:
@@ -3748,7 +3777,18 @@ def work_page(lib, wid):
     crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (a["name"], f'/commentators/{a["id"]}/'),
                          (w["title"], f"/works/{wid}/"))
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/", ld=(book, crumbs),
-                description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+                description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.', meta=citation_meta(a, w))
+
+
+def citation_meta(a, w, part=""):
+    """Highwire citation tags for a work (or a part of it), which Zotero and
+    other reference managers read to save the edition in one press."""
+    tags = [("citation_title", f'{w["title"]}{": " + part if part else ""}'), ("citation_author", a["name"]),
+            ("citation_publication_date", str(w["published"])), ("citation_language", LANG)]
+    edition = cite_edition(w)
+    if edition:
+        tags.append(("citation_publisher", edition))
+    return tags
 
 
 def work_map(lib, wid, a, comments):
@@ -4035,6 +4075,7 @@ def text_page(lib, wid, x):
 <article class="lg-work-main">
 <header class="page-head"><p class="eyebrow"><a href="/works/{wid}/">{e(w["title"])}</a> · {e(scripture.label(x["verses"]["start"], x["verses"]["end"]))}</p>
 <h1>{e(name)}</h1><p class="dek">{e(lead)}</p>
+<p class="lg-quiet lg-text-minutes">{e(t("commentators.minutes", n=reading_minutes(" ".join(p["text"] for p in paras))))}</p>
 <p class="actions"><a class="button ghost" href="/commentators/{a["id"]}/">{e(a["name"])}</a>
 <a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p>
 <nav class="lg-turns lg-turns-top" aria-label="{e(w["title"])}">{"".join(turns)}</nav></header>
@@ -4043,7 +4084,7 @@ def text_page(lib, wid, x):
 <p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>
 </article></div>"""
     return page(lib, f'{a["name"]}, {name}', html_body, f"/works/{wid}/{x['locus']}/", current="/commentators/",
-                description=t("text.description", name=a["name"], title=w["title"], where=name))
+                description=t("text.description", name=a["name"], title=w["title"], where=name), meta=citation_meta(a, w, name))
 
 
 def signed_in_page(lib):
@@ -4085,7 +4126,9 @@ def saved_page(lib):
 <div class="lg-saved-empty" id="saved-empty" hidden>{sample}
 <h2>{e(t("account.saved_empty_title"))}</h2><p>{e(t("account.saved_empty_text"))}</p>
 <p class="actions"><a class="button" href="{e(href)}" data-login>{icon("user")} {e(t("account.saved_empty_sign_in"))}</a>
-<a class="button ghost" href="/jhn/3/#v16">{e(t("account.saved_empty_try"))}</a></p></div></section>"""
+<a class="button ghost" href="/jhn/3/#v16">{e(t("account.saved_empty_try"))}</a></p></div></section>
+<section class="lg-block" id="notes" data-study="notes"></section>
+<section class="lg-block" id="recent" data-study="recent"></section>"""
     return page(lib, t("account.saved_title"), body, "/saved/", noindex=True)
 
 
@@ -4119,7 +4162,7 @@ def app_manifest():
 def service_worker(offline_html):
     """web/sw.js with its list of files to keep from the first visit, and a
     version that changes whenever any of them does."""
-    shell = [asset(n) for n in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "sheets.js", "reader.js")]
+    shell = [asset(n) for n in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "study.js", "sheets.js", "reader.js")]
     shell += ["/favicon.svg", "/offline/", *SHELL_FONTS]
     version = hashlib.sha256((json.dumps(shell) + offline_html).encode()).hexdigest()[:10]
     text = published("sw.js")
@@ -4151,6 +4194,7 @@ def chapter_file(lib, book, chapter):
     by_work = lib.in_chapter(book, chapter, bible["verses"][-1])
     return {"book": book, "chapter": chapter, "bookName": lib.books[book]["en"], "commentaries": [
         {"work_id": w, "author": lib.author_of(w)["name"], "title": lib.works[w]["title"],
+         "era": lib.author_of(w)["era"], "dates": lib.author_of(w)["dates"],
          "entries": [{"start": x["start"], "end": x["end"], "excerpt": x["excerpt"]} for x in by_work[w]]}
         for w in lib.ordered_works(by_work)]}
 
@@ -4353,7 +4397,9 @@ def about_cite():
 def about_help():
     items = "".join(f'<li><a href="{GITHUB_URL}/issues/new?template={e(tpl)}" rel="noopener"><b>{e(a)} ↗</b><span>{e(b)}</span></a></li>'
                     for a, b, tpl in t("about.help_items"))
-    return f'<p>{e(t("about.help"))}</p><ul class="lg-ab-tiles lg-ab-help">{items}</ul>'
+    return (f'<p>{e(t("about.help"))}</p><ul class="lg-ab-tiles lg-ab-help">{items}</ul>'
+            f'<p><a class="lg-more" href="/about/help/">{e(t("help.heading"))} {icon("arrow", 15)}</a> '
+            f'<a class="lg-more" href="/translators/">{e(t("translators.heading"))} {icon("arrow", 15)}</a></p>')
 
 
 def about_thanks(lib):
@@ -5694,7 +5740,7 @@ def new_page(lib):
     groups = "".join(f'<section class="lg-new-day"><h3>{e(day_label(day))}</h3><ul class="lg-ab-recent">{"".join(row(w) for w in ws)}</ul></section>'
                      for day, ws in days.items())
     numbers = "".join(f"<li><b>{n}</b><span>{e(label)}</span></li>" for n, label in library_numbers(lib))
-    feed = (f'<p class="lg-quiet"><a href="/new.xml">{e(t("new.feed"))}</a> · {e(t("new.feed_note"))}</p>' if days else "")
+    feed = (f'<p class="lg-quiet"><a href="/new.xml">{e(t("new.feed"))}</a> · {e(t("new.feed_note"))} · <a href="/feeds/">{e(t("feeds.heading"))}</a></p>' if days else "")
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("about.title"))}</p>
 <h1>{e(t("new.heading"))}</h1><p class="dek">{e(t("new.dek"))}</p></header>
@@ -5800,6 +5846,7 @@ def explore_page(lib):
 {fathers}
 <section class="lg-block" id="cited"><h2>{e(t("explore.cited"))}</h2><p class="lg-quiet">{e(t("explore.cited_note", n=f"{sum(cited.values()):,}"))}</p>
 <p>{t("explore.cited_top", list=top_line)}</p>
+<p><a class="lg-more" href="/explore/most-cited/">{e(t("nav.most_cited"))} {icon("arrow", 15)}</a> <a class="lg-more" href="/random/">{e(t("nav.random"))} {icon("arrow", 15)}</a></p>
 <div class="lg-hm-wrap">{"".join(groups)}</div></section>
 <section class="lg-block" id="centuries"><h2>{e(t("explore.centuries"))}</h2><p class="lg-quiet">{e(t("explore.centuries_note"))}</p>
 <ol class="lg-xbars">{explore_bars(cent, max(words.values(), default=1))}</ol>
@@ -6128,16 +6175,26 @@ def last_changed(lib, path, dates):
     return max((dates[f] for f in files if f in dates), default=None)
 
 
-def sitemap_xml(lib, pages):
-    dates = git_dates()
+def sitemap_rows(lib, pages, dates):
     rows = []
     for p in pages:
         if not indexed(lib, p):
             continue
         when = last_changed(lib, p, dates)
         rows.append(f"<url><loc>{SITE_URL}{p}</loc>{f'<lastmod>{when}</lastmod>' if when else ''}</url>\n")
+    return "".join(rows)
+
+
+def sitemap_xml(lib, pages):
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + "".join(rows) + "</urlset>\n")
+            + sitemap_rows(lib, pages, git_dates()) + "</urlset>\n")
+
+
+def sitemap_files(lib, pages):
+    """sitemap.xml as an index of one sitemap per book and one for the rest,
+    so a crawler can come back to the book that changed."""
+    dates = git_dates()
+    return build_more.sitemaps(lib, pages, lambda ps: sitemap_rows(lib, ps, dates))
 
 
 def llms_txt(lib):
@@ -6256,13 +6313,15 @@ def build():
     if os.path.isdir(SITE):
         shutil.rmtree(SITE)
     os.makedirs(SITE)
-    for name in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "reader.js", "sheets.js"):
+    for name in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "reader.js", "sheets.js", "study.js", "review.js"):
         with open(os.path.join(SITE, name), "w", encoding="utf-8") as f:
             f.write(published(name))
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
     shutil.copy(os.path.join(WEB, "card.png"), os.path.join(SITE, "card.png"))
     shutil.copytree(os.path.join(WEB, "icons"), os.path.join(SITE, "icons"))
+    build_more.setup(sys.modules[__name__])
+    build_more.prepare(lib)
     pages = ["/"]
     write("/", home_page(lib))
     for i, ref in enumerate(votd_refs(lib)):
@@ -6401,7 +6460,9 @@ def build():
     api.write(lib, SITE, SITE_URL, types.SimpleNamespace(
         ref_parts=ref_parts, chapter_url=chapter_url, verse_url=verse_url, chapter_plain=chapter_plain,
         locus_label=locus_label, topics=topics, topic_span=topic_span, t=t))
-    write("/sitemap.xml", sitemap_xml(lib, pages))
+    build_more.build(lib, write, pages)
+    for name, text in sitemap_files(lib, pages).items():
+        write("/" + name, text)
     write("/robots.txt", robots_txt())
     write("/llms.txt", llms_txt(lib))
     print(f"site/: {len(pages)} pages ({len(lib.chapters)} chapters), {len(lib.works)} works, "

@@ -76,4 +76,4 @@ is weak), ships as `ai_draft`, and is approved by a native-speaking reviewer.
     python3 -m unittest discover -s tests -t .
     python3 scripts/build_site.py
     uvx ruff@0.16.9 check .
-    node --check web/site.js && node --check web/reader.js && node --check web/account.js && node --check web/logia.js && node --check web/sw.js && node --check web/linker.js && node --check web/sheets.js
+    node --check web/site.js && node --check web/reader.js && node --check web/account.js && node --check web/logia.js && node --check web/sw.js && node --check web/linker.js && node --check web/sheets.js && node --check web/study.js && node --check web/review.js && node --check web/widget.js

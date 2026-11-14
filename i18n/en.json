@@ -37,6 +37,16 @@
     "explore_guides": "Guides and data",
     "explore_page": "Explore the library",
     "explore_page_note": "Who the Catena quotes, the chapters most cited, words by century",
+    "random": "A random excerpt",
+    "random_note": "Open any one of fifty thousand",
+    "most_cited": "The most-cited verses",
+    "most_cited_note": "The texts the commentators reach for",
+    "plans": "Reading plans",
+    "plans_note": "Advent, Lent and whole books, day by day",
+    "quiz_note": "Guess when a passage was written",
+    "widget": "This Sunday, for your website",
+    "widget_note": "The Sunday Gospel with three voices, for church sites",
+    "help_note": "Check references, report misreadings, suggest a work",
     "ai": "How Logia uses AI",
     "ai_note": "What is drafted, and how it is marked",
     "new": "New on Logia",
@@ -281,7 +291,10 @@
       "count": "{n} excerpts have “{q}”.",
       "count_filtered": "{n} excerpts in what you chose.",
       "clear": "Clear the filters",
-      "failed": "The search couldn't load. Check the connection and try again."
+      "failed": "The search couldn't load. Check the connection and try again.",
+      "operators": {"author": "commentator", "by": "commentator", "era": "era", "tradition": "tradition", "book": "book", "in": "book"},
+      "spellings": {"show": ["shew"], "shown": ["shewn"], "showed": ["shewed"], "showing": ["shewing"], "savior": ["saviour"], "honor": ["honour"], "favor": ["favour"], "labor": ["labour"], "color": ["colour"], "neighbor": ["neighbour"], "connection": ["connexion"], "has": ["hath"], "does": ["doth"], "says": ["saith"], "today": ["to-day"], "tomorrow": ["to-morrow"], "gray": ["grey"], "judgment": ["judgement"], "ax": ["axe"], "plow": ["plough"]},
+      "spelling_note": "Also found as the old editions spell it: {words}."
     },
     "label": "Go to a verse, a book or a commentator",
     "placeholder": "John 3:16, Romans 8 or Calvin",
@@ -674,6 +687,7 @@
     "cite_chicago_label": "Chicago",
     "cite_mla_label": "MLA",
     "cite_bibtex_label": "BibTeX",
+    "cite_ris_label": "RIS (Zotero, EndNote, Mendeley)",
     "contents_by": "{divisions}",
     "contents_by_note": "All {n} {divisions} Logia holds whole, in order, each with the verses it is on. Open one to read it straight through.",
     "eyebrow": "Commentary",
@@ -1006,6 +1020,15 @@
     "quoted_by": "Quoted by {name}, {title}, on {ref}",
     "names": "Names {name}",
     "names_here": "{name} on {ref}",
+    "also_cites": "{name} on {ref}, citing the same verses",
+    "fixed": "{n} scan corrections",
+    "fixed_one": "1 scan correction",
+    "fixed_title": "Misreadings of the scan corrected in this excerpt, to match the printed page",
+    "scan_show": "See the printed page",
+    "scan_hide": "Hide the printed page",
+    "scan_alt": "The printed page {page} of the edition this excerpt was copied from",
+    "xref_voices": "{n} voices",
+    "xref_voices_one": "1 voice",
     "cited_by": "Cited on other verses",
     "cited_by_note": "Commentators citing {ref} while explaining another verse. The sentence is copied as the excerpt reads.",
     "whole_texts": "Whole homilies and tractates on {ref}",
@@ -1673,7 +1696,12 @@
       "shared_note": "A study sheet someone shared with you. The excerpts are copied word for word; the notes are the sheet author's own.",
       "keep": "Keep a copy",
       "kept": "Kept. It is now one of your sheets in this browser.",
-      "missing": "This excerpt is no longer in the library."
+      "missing": "This excerpt is no longer in the library.",
+      "template_label": "Start from:",
+      "templates": [["blank", "A blank sheet", []], ["sermon", "Sermon preparation", ["The passage and what it says", "What the voices agree on", "Where they differ", "My outline"]], ["group", "Small-group handout", ["Read the passage aloud", "Questions to talk about", "To take away"]], ["class", "Class reading", ["Before reading", "Notes while reading", "Questions for the class"]]],
+      "markdown": "Download as Markdown",
+      "md_note": "Note",
+      "md_from": "From Logia, logia.faith"
     }
   },
   "sundays": {
@@ -2077,5 +2105,242 @@
       ]
     ],
     "note": "Shortcuts work when you are not typing in a box."
+  },
+  "plans": {
+    "eyebrow": "Reading plans",
+    "heading": "Reading plans",
+    "dek": "Read a season or a whole book a little each day, each passage with what the church has said about it. Every plan has a calendar to add to your own.",
+    "description": "Reading plans for Advent, Lent and whole books of the Bible, each day's passage beside two thousand years of commentary, with calendar feeds.",
+    "seasons": "Seasons",
+    "books": "Whole books",
+    "sundays": "Sunday readings",
+    "sundays_note": "The Revised Common Lectionary's Sundays, each with its readings and a link to the Gospel on Logia, as a calendar.",
+    "advent_heading": "Advent: 24 days to Christmas with the church fathers",
+    "advent_short": "Advent",
+    "advent_title": "An Advent reading plan for {year}: 24 days with the church fathers",
+    "advent_dek": "One passage a day from 1 December {year} to Christmas Eve: the Word made flesh, the promises to Zechariah and Mary, John the Baptist, and the birth at Bethlehem. Each opens with everything Logia holds on it, from the early church to the 1800s.",
+    "advent_description": "A 24-day Advent reading plan for {year}: a Gospel passage each day from 1 December to Christmas Eve, with what the church fathers and later commentators wrote on it.",
+    "advent_row": "1 to 24 December, a passage a day",
+    "advent_note": "The plan runs from 1 December, as Advent calendars do, whatever day Advent begins.",
+    "christmas_link": "On Christmas Day, read the Gospel for Christmas.",
+    "christmas_eve": "Christmas Eve",
+    "lent_row": "Ash Wednesday to Holy Saturday, {year}",
+    "lent_short": "Lent with {book}",
+    "book_heading": "{book} in {n} days",
+    "book_heading_one": "{book} in 1 day",
+    "book_dek": "Read the whole of {book} in {n} days, {chapters} chapters shared out so each day has about the same number of verses, each chapter with its commentary. Start any day.",
+    "book_description": "Read {book} in {n} days with two thousand years of commentary: a reading plan, a few chapters a day.",
+    "book_row": "{chapters} chapters, start any day",
+    "book_note": "Each day's chapters open in the reader, where every verse has its commentators beside it.",
+    "calendar": "Add to your calendar",
+    "calendar_short": "Calendar",
+    "calendar_note": "An .ics file for Google, Apple or Outlook Calendar: each day links back here.",
+    "ics_day": "{plan}, day {n}: {ref}",
+    "ics_sunday": "Also read: {others}"
+  },
+  "feeds": {
+    "heading": "Follow a book or a commentator",
+    "dek": "A feed for each book and each commentator, so a feed reader tells you when Logia adds a commentary on the book you are preaching through, or another work by the voice you read most.",
+    "all": "Everything new on Logia",
+    "by_book": "By book",
+    "by_author": "By commentator",
+    "author_title": "{name} on Logia",
+    "book_title": "{book} on Logia: new commentaries"
+  },
+  "scripture_index": {
+    "heading": "Scripture index",
+    "dek": "Every verse {title} cites, {verses} verses in {n} references, from Genesis to Revelation, each with where it is cited.",
+    "dek_one": "Every verse {title} cites, from Genesis to Revelation, each with where it is cited.",
+    "note": "The references were found in the excerpts by a program and are still to be checked by a person; a few may be wrong.",
+    "in": "cited on",
+    "none": "No references found in this work yet.",
+    "description": "The Scripture index of {name}'s {title}: {n} verses cited, each linked to where it is cited."
+  },
+  "corrections": {
+    "heading": "Scan corrections",
+    "dek": "{n} misreadings of the scan in {title}, each corrected to what the printed page says.",
+    "dek_one": "1 misreading of the scan in {title}, corrected to what the printed page says.",
+    "note": "The excerpts keep the scan's text; these pairs are applied in order when the site is built, and only where the printed page plainly reads otherwise.",
+    "file": "The list as data",
+    "scan": "The scan read",
+    "page": "The page says",
+    "excerpts": "Excerpts",
+    "where": "Where",
+    "n": "{n} excerpts",
+    "n_one": "1 excerpt",
+    "more": "and {n} more",
+    "link": "{n} scan corrections",
+    "link_one": "1 scan correction",
+    "description": "The {n} scan misreadings corrected in {title} on Logia, each with what the scan read and what the printed page says."
+  },
+  "review": {
+    "work_heading": "Checking this work",
+    "meter": "{done} of {n} Scripture references checked by a person.",
+    "meter_label": "{done} of {n} references checked",
+    "help_link": "Help check them",
+    "heading": "Check the Scripture references",
+    "dek": "A program found the Bible references printed in the commentaries. {n} still wait for a person to say whether each was read right. Each takes a few seconds.",
+    "description": "Help check the Scripture references Logia found in its commentaries, one at a time.",
+    "noscript": "Checking references needs JavaScript.",
+    "how_heading": "How it works",
+    "how": [
+      "You see the words around a reference as the commentary prints it, and the verse the program took it for. Say whether that is the verse meant: Right, Wrong or Skip. Keys Y, N and S work too.",
+      "Your answers are kept in this browser. When you have done some, send them: as a GitHub issue, or as a file to attach to one. A person adds them to the library with scripts/apply_reviews.py, so each reference's status says it was checked.",
+      "Wrong means the program misread it (a verse past the end of a chapter, the wrong book). A reference to a verse in another numbering, such as the Greek Psalms, is still right if the verse is the one meant."
+    ],
+    "ui": {
+      "pick": "Choose a commentary to check:",
+      "left": "{n} to check",
+      "progress": "{done} answered here · {left} left in {what}",
+      "points_to": "The program took it for",
+      "no_text": "This verse's text isn't in Logia yet.",
+      "right": "Right",
+      "wrong": "Wrong",
+      "skip": "Skip",
+      "undo": "Undo",
+      "done_all": "Nothing left to check here. Thank you.",
+      "name_label": "Your name, as it should appear with the answers",
+      "send": "Send my answers as a GitHub issue",
+      "download": "Download my answers",
+      "sent_note": "{n} answers kept in this browser.",
+      "clear": "Clear my answers",
+      "issue_title": "Reference checks by {name}: {n}",
+      "issue_intro": "Answers from the reference checker (/review/citations/). Add them with: python3 scripts/apply_reviews.py answers.json",
+      "too_long": "That is more than one issue holds. Download the file and attach it to an issue instead.",
+      "loading": "Loading…",
+      "failed": "The references couldn't load. Check the connection and try again."
+    }
+  },
+  "translators": {
+    "heading": "Who made the English",
+    "dek": "{n} of Logia's works were written in Latin, Greek, German or French. These are the translators and series whose English Logia prints, as each work's record names them.",
+    "description": "The translators and series behind the English of Logia's commentaries: the Library of the Fathers, the Nicene and Post-Nicene Fathers, the Calvin Translation Society and more.",
+    "note": "Each line is the work's own translation record. Where a volume names no translator, the record says so.",
+    "series": {
+      "npnf": "Nicene and Post-Nicene Fathers",
+      "anf": "Ante-Nicene Fathers",
+      "lf": "The Library of the Fathers, Oxford",
+      "cts": "The Calvin Translation Society, Edinburgh",
+      "clark": "T. & T. Clark, Edinburgh",
+      "other": "Other translators"
+    }
+  },
+  "help": {
+    "heading": "How you can help",
+    "dek": "Nothing in Logia is marked checked until a person has checked it. These are the jobs waiting, counted from the library when this page was built.",
+    "description": "Ways to help Logia: check Scripture references, report a misreading, suggest a public-domain commentary, review a translation.",
+    "note": "Everything you send is public on GitHub, with your name if you give it, so the checking stays open.",
+    "tasks": {
+      "cite": {
+        "title": "Check Scripture references",
+        "text": "{n} references found by a program wait for a person. A few seconds each."
+      },
+      "quote": {
+        "title": "Check the Catena's quotations",
+        "text": "{n} quotations traced to the Fathers' works wait for a person to compare them."
+      },
+      "name": {
+        "title": "Check the names",
+        "text": "{n} places where one commentator names another wait for a look."
+      },
+      "work": {
+        "title": "Review a whole work",
+        "text": "{n} works are drafts until a named reviewer reads a sample against the scans."
+      },
+      "misreading": {
+        "title": "Report a misreading",
+        "text": "{n} misreadings fixed so far. Seen another? Tell us the verse and the word."
+      },
+      "edition": {
+        "title": "Suggest a commentary",
+        "text": "Logia has {n} works. Know one published in 1930 or earlier, with a scan online?"
+      },
+      "translate": {
+        "title": "Review a translation",
+        "text": "When Logia adds a language, a native speaker approves each translation."
+      }
+    }
+  },
+  "most_cited": {
+    "heading": "The most-cited verses",
+    "dek": "The verses Logia's commentators cite most often while writing on another book: the texts the tradition reaches for.",
+    "note": "Counted from the references a program found in every excerpt, leaving out a book's citations of itself. They are still to be checked by a person.",
+    "row": "cited by {k} commentators",
+    "row_one": "cited by 1 commentator",
+    "description": "The Bible verses most often cited across Logia's commentaries, from the early church to the 1800s."
+  },
+  "random": {
+    "heading": "A random excerpt",
+    "dek": "Opening a verse at random…",
+    "again": "Open another",
+    "noscript": "Choosing at random needs JavaScript.",
+    "description": "Open a random excerpt from Logia's two thousand years of commentary."
+  },
+  "widget": {
+    "heading": "This Sunday, for your church's website",
+    "dek": "One line of code puts the coming Sunday's Gospel on your parish or church website, with three voices from the church's tradition, each linked to Logia.",
+    "description": "A free widget for church websites: the coming Sunday's Gospel with three voices from two thousand years of commentary.",
+    "preview": "What it shows",
+    "install": "Add it to a page",
+    "install_note": "Paste this where the box should appear. It moves on to the next Sunday by itself.",
+    "details": [
+      "The Sundays are the Revised Common Lectionary's. The three voices come from different traditions where Logia has them, each its own words from a public-domain edition.",
+      "It takes its look from your page's fonts and colours, sends nothing about your visitors, and works without a sign-in."
+    ],
+    "ui": {
+      "eyebrow": "This Sunday",
+      "voices": "From the church's tradition",
+      "more": "Read all the commentary on Logia",
+      "none": "Commentary on this Gospel is still to come on Logia."
+    }
+  },
+  "grid": {
+    "summary": "See all {n} voices as a grid",
+    "note": "Eras across, traditions down, each with its first words. An empty cell is a place the library has no voice yet."
+  },
+  "study": {
+    "ui": {
+      "quote": "Copy quote with citation",
+      "quote_done": "Quote copied with its citation.",
+      "highlight": "Highlight",
+      "untitled": "My study sheet",
+      "scan_show": "See the printed page",
+      "to_sheet": "Add excerpt to sheet",
+      "to_sheet_done": "Added to your sheet.",
+      "note": "Note",
+      "note_label": "Your note on this excerpt",
+      "note_who": "Your note · only you can see it",
+      "note_save": "Saved in this browser.",
+      "note_delete": "Delete note",
+      "image": "Share as image",
+      "image_title": "{name} on {ref}",
+      "image_done": "Image saved.",
+      "pick_up": "Pick up where you stopped: {where}",
+      "minutes": "{n} min read",
+      "recent_heading": "Recently read",
+      "recent_none": "Pages you read appear here, on this device only.",
+      "recent_clear": "Clear",
+      "notes_heading": "Your notes",
+      "notes_none": "Notes you write under an excerpt appear here, on this device only.",
+      "random_go": "Opening {ref}…"
+    }
+  },
+  "quiz": {
+    "heading": "Who said it?",
+    "dek": "A passage from Logia with its author's name hidden. Guess when it was written, then see who wrote it and read on.",
+    "description": "Who said it? Guess the era of a passage from two thousand years of Christian commentary.",
+    "noscript": "The game needs JavaScript.",
+    "ui": {
+      "loading": "Choosing a passage…",
+      "on": "On {ref}",
+      "ask": "When was it written?",
+      "right": "Right.",
+      "wrong": "Not this time.",
+      "was": "It was {name} ({dates}), {title}.",
+      "read": "Read it on Logia",
+      "score": "{right} of {played} so far",
+      "next": "Another",
+      "failed": "The passage couldn't load. Check the connection and try again."
+    }
   }
 }

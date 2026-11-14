@@ -235,6 +235,9 @@
       }
     }
     if (!href) return;
+    // An address that is plainly a reference (/John.3.16, /jn3:16, /rom8) goes
+    // straight to its page; a name or a near miss is offered as a link.
+    if (r && location.pathname.split("/").filter(Boolean).length === 1) { location.replace(href); return; }
     guess.innerHTML = fmt(esc(guess.getAttribute("data-text")), { link: '<a href="' + esc(href) + '">' + esc(label) + "</a>" });
     guess.hidden = false;
   })();
@@ -841,12 +844,51 @@
         more.hidden = shown >= results.length;
       });
     }
+    // "author:calvin light", "era:early book:john": a word before a colon
+    // (U.operators) chooses a filter, matched to the start of its values.
+    function operators() {
+      var ops = U.operators || {}, left = [], changed = false;
+      input.value.trim().split(/\s+/).forEach(function (w) {
+        var m = /^([a-z]+):(.+)$/i.exec(w), k = m && ops[m[1].toLowerCase()];
+        var values = k && Object.keys(allCounts[k] || {});
+        var want = m && m[2].toLowerCase().replace(/[_-]/g, " ");
+        var hit = values && values.filter(function (v) {
+          var low = v.toLowerCase();
+          return low.indexOf(want) === 0 || low.split(/\s+/).some(function (x) { return x.indexOf(want) === 0; });
+        })[0];
+        if (hit) { if (chosen[k].indexOf(hit) < 0) chosen[k].push(hit); changed = true; } else if (w) left.push(w);
+      });
+      if (changed) input.value = left.join(" ");
+      return input.value.trim();
+    }
+    // The old editions' spellings of a modern word (U.spellings: "show" also
+    // finds "shew"): one more search for each, the results merged, best first.
+    function variants(q) {
+      var sp = U.spellings || {}, words = q.toLowerCase().split(/\s+/), out = [], extra = [];
+      words.forEach(function (w, i) {
+        (sp[w] || []).forEach(function (old) {
+          var copy = words.slice(); copy[i] = old; out.push(copy.join(" ")); extra.push(old);
+        });
+      });
+      return { queries: out.slice(0, 4), words: extra.slice(0, 4) };
+    }
+    function find(q, f) {
+      var base = pf.search(q || null, f), more2 = q ? variants(q) : { queries: [], words: [] };
+      if (!more2.queries.length) return base;
+      return Promise.all([base].concat(more2.queries.map(function (v) { return pf.search(v, f); }))).then(function (all) {
+        var seen = {}, merged = [];
+        all.forEach(function (s) { s.results.forEach(function (r) { if (!seen[r.id]) { seen[r.id] = true; merged.push(r); } }); });
+        merged.sort(function (a, b) { return b.score - a.score; });
+        var extra = all.slice(1).some(function (s) { return s.results.length; });
+        return { results: merged, filters: all[0].filters, oldWords: extra ? more2.words : [] };
+      });
+    }
     function search() {
-      var q = input.value.trim(), mine = ++run, any = Object.keys(filters()).length;
+      var q = operators(), mine = ++run, any = Object.keys(filters()).length;
       keep();
       if (!q && !any) { list.innerHTML = ""; more.hidden = true; status.textContent = U.start; chips(allCounts); return; }
       status.textContent = U.searching;
-      pf.search(q || null, { filters: filters() }).then(function (s) {
+      find(q, { filters: filters() }).then(function (s) {
         if (mine !== run) return;
         results = s.results; shown = 0; list.innerHTML = "";
         var counts = {};
@@ -855,7 +897,8 @@
         status.innerHTML = esc(!results.length ? fmt(U.none, { q: q })
           : any ? fmt(U.count_filtered, { n: results.length.toLocaleString() })
           : fmt(results.length === 1 ? U.count_one : U.count, { n: results.length.toLocaleString(), q: q })) +
-          (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "");
+          (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "") +
+          (s.oldWords && s.oldWords.length ? ' <span class="lg-quiet">' + esc(fmt(U.spelling_note, { words: s.oldWords.join(", ") })) + "</span>" : "");
         return showMore();
       }).catch(function () { if (mine === run) status.textContent = U.failed; });
     }

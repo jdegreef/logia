@@ -19,3 +19,4 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 # Page markup is kept on whole lines.
 "scripts/build_site.py" = ["E501"]
+"scripts/build_more.py" = ["E501"]
