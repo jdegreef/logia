@@ -461,13 +461,13 @@ dialog.lg-palette::backdrop { background: transparent; }
 .lg-where-books a:hover { border-color: var(--line-strong); background: var(--accent-soft); }
 .lg-chgrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
 .lg-chgrid-long { grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
-.lg-ch { position: relative; display: grid; place-items: center; height: 34px; border: 1px solid var(--line); border-radius: 8px;
+.lg-chcell { position: relative; display: grid; place-items: center; height: 34px; border: 1px solid var(--line); border-radius: 8px;
   color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; text-decoration: none; }
-.lg-chgrid-long .lg-ch { height: 30px; font-size: 13px; }
-.lg-ch.lg-has { border-color: var(--gold); color: var(--text); font-weight: 600; }
-.lg-ch:hover { background: var(--accent-soft); color: var(--text); }
-.lg-ch[aria-current] { border-color: var(--accent); background: var(--accent); color: var(--accent-contrast); }
-.lg-ch.lg-read::after { content: ""; position: absolute; top: 4px; right: 4px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+.lg-chgrid-long .lg-chcell { height: 30px; font-size: 13px; }
+.lg-chcell.lg-has { border-color: var(--gold); color: var(--text); font-weight: 600; }
+.lg-chcell:hover { background: var(--accent-soft); color: var(--text); }
+.lg-chcell[aria-current] { border-color: var(--accent); background: var(--accent); color: var(--accent-contrast); }
+.lg-chcell.lg-read::after { content: ""; position: absolute; top: 4px; right: 4px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 
 /* The Read menu: the chapters of the book pointed at, beside the books. */
 .lg-dd-read .lg-dd-chapters { width: 300px; max-height: 380px; overflow: auto; padding: 0 4px 0 16px; border-left: 1px solid var(--line); }

@@ -645,7 +645,7 @@
       for (var c = 1; c <= b.n; c++) {
         var href = "/" + code.toLowerCase() + "/" + c + "/";
         var has = b.has.indexOf(c) >= 0, cur = code === hereBook && c === hereChapter;
-        out.push('<a href="' + href + '" class="lg-ch' + (has ? " lg-has" : "") + (read.indexOf(href) >= 0 ? " lg-read" : "") + '"' +
+        out.push('<a href="' + href + '" class="lg-chcell' + (has ? " lg-has" : "") + (read.indexOf(href) >= 0 ? " lg-read" : "") + '"' +
           (cur ? ' aria-current="page"' : "") + (has ? ' title="' + esc(b.name + " " + c + ", " + N.ui.has) + '"' : "") + ">" + c + "</a>");
       }
       return '<p class="dd-head">' + esc(fmt(N.ui.chapters, { book: b.name })) + "</p>" +
