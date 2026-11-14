@@ -235,6 +235,9 @@
       }
     }
     if (!href) return;
+    // An address that is plainly a reference (/John.3.16, /jn3:16, /rom8) goes
+    // straight to its page; a name or a near miss is offered as a link.
+    if (r && location.pathname.split("/").filter(Boolean).length === 1) { location.replace(href); return; }
     guess.innerHTML = fmt(esc(guess.getAttribute("data-text")), { link: '<a href="' + esc(href) + '">' + esc(label) + "</a>" });
     guess.hidden = false;
   })();
@@ -338,6 +341,262 @@
       p.hidden = false;
     });
   }
+
+  // The Read page (read_page in scripts/build_site.py): Continue reading,
+  // what has been read in each book, a label on each chapter cell, a book's
+  // preview, the phone's grid of chapters, the filter, the search that
+  // narrows the list, the order, this Sunday's readings, the part of the
+  // Bible in view, and typing a book's name to jump to it.
+  var rbar = document.querySelector(".lg-read-bar");
+  if (rbar) (function () {
+    var ui = JSON.parse(rbar.getAttribute("data-ui"));
+    var index = document.querySelector(".lg-cov-index"), flat = document.querySelector(".lg-cov-flat");
+    var rows = [].slice.call(index.querySelectorAll(".lg-cov-row"));
+    var phone = window.matchMedia("(max-width: 600px)");
+    var mouse = window.matchMedia("(hover: hover) and (pointer: fine)");
+    var norm = function (s) { return s.toLowerCase().replace(/[^a-z0-9]/g, ""); };
+    var keep = function (k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { /* storage blocked */ } return null; };
+    rows.forEach(function (r) { r.lgHome = r.parentNode; });
+
+    // Continue reading: the last verse read (logia-last), how much of its
+    // book has been read, and the next chapter.
+    var cont = document.querySelector(".lg-read-cont"), last = null;
+    try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
+    var lm = last && last.href && String(last.href).match(/^\/([a-z0-9]{3})\/(\d+)\//);
+    if (cont && lm) {
+      var names = JSON.parse(cont.getAttribute("data-books")), totals = JSON.parse(cont.getAttribute("data-totals"));
+      var bk = lm[1], ch = +lm[2], total = totals[bk];
+      if (names[bk]) {
+        var ref = last.ref || names[bk] + " " + ch;
+        var done = read.filter(function (h) { return /^\/[a-z0-9]{3}\/\d+\/$/.test(h) && h.indexOf("/" + bk + "/") === 0; }).length;
+        cont.querySelector(".lg-read-cont-ref").textContent = ref;
+        cont.querySelector(".lg-read-cont-meta").textContent = done ? fmt(done === 1 ? ui.of_book_one : ui.of_book, { n: done, total: total, book: names[bk] }) : "";
+        var go = cont.querySelector(".lg-read-cont-go");
+        go.href = last.href;
+        go.textContent = fmt(ui.open, { ref: ref });
+        if (ch < total) {
+          var nx = cont.querySelector(".lg-read-cont-next");
+          nx.href = "/" + bk + "/" + (ch + 1) + "/";
+          nx.textContent = fmt(ui.next, { ref: names[bk] + " " + (ch + 1) });
+          nx.hidden = false;
+        }
+        cont.hidden = false;
+      }
+    }
+
+    // How much of each book has been read, and a tick once all of it is.
+    rows.forEach(function (r) {
+      var cells = r.querySelectorAll(".lg-cov-bar .chap"), k = 0;
+      cells.forEach(function (c) { if (c.classList.contains("lg-read")) k++; });
+      if (!k) return;
+      var s = document.createElement("span");
+      s.className = "lg-cov-read";
+      s.textContent = k === cells.length ? ui.all_read : fmt(ui.read, { n: k });
+      r.querySelector(".lg-cov-n").appendChild(s);
+      if (k === cells.length) r.classList.add("lg-cov-done");
+    });
+
+    // A label over the chapter under the pointer or the keyboard's focus.
+    var tip = document.querySelector(".lg-cell-tip");
+    document.body.appendChild(tip);
+    var showTip = function (a) {
+      var parts = a.getAttribute("data-tip").split(" · ");
+      tip.innerHTML = "<b>" + esc(parts[0]) + "</b>" + (parts[1] ? " · " + esc(parts[1]) : "") + (parts.length > 2 ? "<br>" + esc(parts.slice(2).join(" · ")) : "");
+      tip.hidden = false;
+      var b = a.getBoundingClientRect(), w = tip.offsetWidth, room = document.documentElement.clientWidth;
+      var x = Math.max(8, Math.min(b.left + b.width / 2 - w / 2, room - w - 8));
+      tip.style.left = x + window.scrollX + "px";
+      tip.style.top = b.top + window.scrollY - tip.offsetHeight - 8 + "px";
+    };
+    var cellOf = function (el) { return el && el.closest ? el.closest(".lg-cov-bar .chap") : null; };
+    document.addEventListener("mouseover", function (e) {
+      var a = cellOf(e.target);
+      if (a) showTip(a); else if (!cellOf(document.activeElement)) tip.hidden = true;
+    });
+    document.addEventListener("focusin", function (e) { var a = cellOf(e.target); if (a) showTip(a); else tip.hidden = true; });
+    window.addEventListener("scroll", function () { if (!cellOf(document.activeElement)) tip.hidden = true; }, { passive: true });
+
+    // A wide screen: a book's commentators and its most discussed verse,
+    // after a moment on its name.
+    rows.forEach(function (r) {
+      var pk = r.querySelector(".lg-peek"), name = r.querySelector(".lg-cov-name"), timer;
+      if (!pk) return;
+      var show = function (now) { clearTimeout(timer); timer = setTimeout(function () { pk.hidden = false; }, now ? 0 : 450); };
+      var hide = function () { clearTimeout(timer); timer = setTimeout(function () { pk.hidden = true; }, 200); };
+      name.addEventListener("mouseenter", function () { if (mouse.matches) show(); });
+      name.addEventListener("mouseleave", hide);
+      pk.addEventListener("mouseenter", function () { clearTimeout(timer); });
+      pk.addEventListener("mouseleave", hide);
+      name.addEventListener("focus", function () { if (!phone.matches) show(true); });
+      r.addEventListener("focusout", function (e) { if (!r.contains(e.relatedTarget)) { clearTimeout(timer); pk.hidden = true; } });
+      r.addEventListener("keydown", function (e) { if (e.key === "Escape" && !pk.hidden) { pk.hidden = true; name.focus(); } });
+    });
+
+    // A phone: the row opens a grid of numbered chapters big enough to tap.
+    var toggle = function (r) {
+      var btn = r.querySelector(".lg-cov-open"), g = r.querySelector(".lg-cov-grid");
+      if (!g) {
+        g = document.createElement("div");
+        g.className = "lg-cov-grid";
+        var html = "";
+        r.querySelectorAll(".lg-cov-bar .chap").forEach(function (c) {
+          html += '<a href="' + esc(c.getAttribute("href")) + '" class="' + (c.classList.contains("lg-has") ? "lg-has " : "") + (c.classList.contains("lg-read") ? "lg-read" : "") +
+            '" aria-label="' + esc(c.getAttribute("aria-label")) + '">' + esc(c.textContent) + "</a>";
+        });
+        var name = r.querySelector(".lg-cov-name");
+        g.innerHTML = html + '<a class="lg-cov-grid-all" href="' + esc(name.getAttribute("href")) + '">' + esc(name.textContent) + " →</a>";
+        g.hidden = true;
+        r.appendChild(g);
+      }
+      var open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", open);
+      g.hidden = !open;
+    };
+    rows.forEach(function (r) {
+      r.querySelector(".lg-cov-open").addEventListener("click", function () { toggle(r); });
+      r.addEventListener("click", function (e) {
+        if (phone.matches && !e.target.closest("a, button, .lg-cov-grid")) toggle(r);
+      });
+    });
+
+    // A phone: the parts of the Bible with no commentary start folded.
+    var parts = [].slice.call(index.querySelectorAll(".lg-canon-part"));
+    if (phone.matches) parts.forEach(function (p) { if (p.classList.contains("lg-part-text")) p.open = false; });
+    var reveal = function (id) {
+      var el = id && document.getElementById(id);
+      if (!el || !el.classList.contains("lg-cov-row")) return;
+      if (el.hidden && only.getAttribute("aria-pressed") === "true") setOnly(false);
+      var d = el.closest("details");
+      if (d) d.open = true;
+    };
+    window.addEventListener("hashchange", function () { reveal(location.hash.slice(1)); });
+
+    // With commentary only, the search box narrowing the list, and the order.
+    var only = rbar.querySelector(".lg-read-only"), sortSel = rbar.querySelector(".lg-read-sort select");
+    var input = document.getElementById("read-q"), none = document.querySelector(".lg-read-none");
+    var apply = function () {
+      var on = only.getAttribute("aria-pressed") === "true";
+      var q = norm(input ? input.value : "").replace(/(\D)\d+$/, "$1"), shown = 0, first = null;
+      rows.forEach(function (r) {
+        var nm = norm(r.getAttribute("data-name"));
+        var hit = !q || nm.indexOf(q) === 0 || (q.length > 2 && nm.indexOf(q) > 0);
+        var vis = hit && (!on || r.classList.contains("lg-cov-has"));
+        r.hidden = !vis;
+        r.classList.remove("lg-jumped");
+        if (vis) { shown++; if (!first) first = r; }
+      });
+      if (q && first) first.classList.add("lg-jumped");
+      parts.forEach(function (p) { p.hidden = !p.querySelector(".lg-cov-row:not([hidden])"); if (q) p.open = true; });
+      index.querySelectorAll(".lg-testament").forEach(function (tst) { tst.hidden = !tst.querySelector(".lg-cov-row:not([hidden])"); });
+      none.hidden = shown > 0;
+      if (!shown) none.textContent = fmt(ui.none, { q: input.value.trim() });
+    };
+    var setOnly = function (on) { only.setAttribute("aria-pressed", on); keep("logia-read-only", on ? "1" : "0"); apply(); };
+    only.addEventListener("click", function () { setOnly(only.getAttribute("aria-pressed") !== "true"); });
+    if (input) input.addEventListener("input", apply);
+    var byBible = function (a, b) { return a.getAttribute("data-i") - b.getAttribute("data-i"); };
+    var order = function (mode) {
+      keep("logia-read-sort", mode);
+      sortSel.value = mode;
+      if (mode === "az" || mode === "most") {
+        rows.slice().sort(mode === "az" ? function (a, b) { return a.getAttribute("data-name").localeCompare(b.getAttribute("data-name")); }
+          : function (a, b) { return (b.getAttribute("data-x") - a.getAttribute("data-x")) || byBible(a, b); })
+          .forEach(function (r) { flat.appendChild(r); });
+        index.hidden = true;
+        flat.hidden = false;
+        rbar.classList.add("lg-read-flat");
+      } else {
+        rows.slice().sort(byBible).forEach(function (r) { r.lgHome.appendChild(r); });
+        index.hidden = false;
+        flat.hidden = true;
+        rbar.classList.remove("lg-read-flat");
+      }
+    };
+    sortSel.addEventListener("change", function () { order(sortSel.value); });
+    rbar.querySelectorAll("nav a").forEach(function (a) { a.addEventListener("click", function () { if (!index.hidden) return; order("bible"); }); });
+    document.querySelectorAll(".lg-bs").forEach(function (a) { a.addEventListener("click", function () { if (index.hidden) order("bible"); reveal(a.getAttribute("href").slice(1)); }); });
+    if (keep("logia-read-only") === "1") only.setAttribute("aria-pressed", "true");
+    var saved = keep("logia-read-sort");
+    if (saved === "az" || saved === "most") order(saved);
+    apply();
+    reveal(location.hash.slice(1));
+
+    // This Sunday's readings: a dot over their chapters.
+    var suns = JSON.parse(index.getAttribute("data-sundays") || "[]"), now = new Date();
+    var iso = now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
+    var next = suns.filter(function (d) { return d[0] >= iso; })[0];
+    if (next && next[1].length) {
+      next[1].forEach(function (c) {
+        document.querySelectorAll('a.chap[href="/' + c + '/"]').forEach(function (a) { a.classList.add("lg-sun"); });
+      });
+      var key = document.querySelector(".lg-sun-key"), day = next[0];
+      try { day = new Date(next[0] + "T12:00:00").toLocaleDateString(document.documentElement.lang || undefined, { day: "numeric", month: "long" }); } catch (e) { /* keep the date */ }
+      key.lastElementChild.textContent = fmt(ui.sunday, { day: day });
+      key.hidden = false;
+    }
+
+    // The part of the Bible in view, in the bar (and the margin on a wide
+    // screen); the bar's edge once it sticks.
+    var links = {};
+    rbar.querySelectorAll(".lg-read-parts a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+    var tLinks = rbar.querySelectorAll(".lg-jump a"), partsNav = rbar.querySelector(".lg-read-parts");
+    var mark = function () {
+      if (index.hidden) return;
+      // Side by side, each testament has its own part in view; one above the
+      // other, the last part to pass the middle of the screen is the one.
+      var mid = window.innerHeight * 0.4, at = {}, both = getComputedStyle(index).gridTemplateColumns.split(" ").length > 1;
+      parts.forEach(function (p) {
+        var tst = both ? p.closest(".lg-testament").id : "all";
+        if (!p.hidden && p.getBoundingClientRect().top < mid) at[tst] = p;
+      });
+      var ids = Object.keys(at).map(function (k) { return at[k].id; });
+      Object.keys(links).forEach(function (k) { if (ids.indexOf(k) >= 0) links[k].setAttribute("aria-current", "true"); else links[k].removeAttribute("aria-current"); });
+      var tst = !both && at.all ? at.all.closest(".lg-testament").id : "";
+      tLinks.forEach(function (a) { if (a.getAttribute("href") === "#" + tst) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+    };
+    var tick = false;
+    var onScroll = function () {
+      if (tick) return;
+      tick = true;
+      requestAnimationFrame(function () {
+        tick = false;
+        var top = parseFloat(getComputedStyle(rbar).top) || 0;
+        rbar.classList.toggle("lg-stuck", rbar.getBoundingClientRect().top <= top + 1);
+        partsNav.classList.toggle("lg-before", index.getBoundingClientRect().top > window.innerHeight * 0.6);
+        mark();
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    // Type a book's name (with nothing focused) to jump to it; Enter opens it.
+    var typed = "", jumped = null, idle, hint = document.querySelector(".lg-read-keys"), hintText = hint ? hint.textContent : "";
+    var clear = function () { typed = ""; if (hint) hint.textContent = hintText; };
+    document.addEventListener("keydown", function (e) {
+      if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey) return;
+      var t = e.target;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(t.tagName))) return;
+      if (document.querySelector("dialog[open]")) return;
+      if (e.key === "Enter" && jumped && (t === document.body || t === jumped)) { location.href = jumped.querySelector(".lg-cov-name").href; e.preventDefault(); return; }
+      if (e.key === "Escape") { if (jumped) jumped.classList.remove("lg-jumped"); jumped = null; clear(); return; }
+      if (t !== document.body || !/^[a-z0-9 ]$/i.test(e.key) || (e.key === " " && !typed)) return;
+      typed += e.key.toLowerCase();
+      clearTimeout(idle);
+      idle = setTimeout(clear, 1200);
+      var q = norm(typed), hit = null;
+      rows.forEach(function (r) { if (!hit && !r.hidden && norm(r.getAttribute("data-name")).indexOf(q) === 0) hit = r; });
+      if (hint) hint.innerHTML = esc(fmt(ui.typed, { q: "" })) + "<b>" + esc(typed) + "</b>";
+      if (!hit) return;
+      e.preventDefault();
+      if (jumped) jumped.classList.remove("lg-jumped");
+      jumped = hit;
+      hit.classList.add("lg-jumped");
+      var d = hit.closest("details");
+      if (d) d.open = true;
+      hit.scrollIntoView({ block: "center" });
+    });
+    document.addEventListener("click", function () { if (jumped) { jumped.classList.remove("lg-jumped"); jumped = null; } });
+  })();
 
   // A book page's "Go to a verse" box: "5:3", "5 3" or "5.3" opens the
   // chapter at that verse.
@@ -841,12 +1100,51 @@
         more.hidden = shown >= results.length;
       });
     }
+    // "author:calvin light", "era:early book:john": a word before a colon
+    // (U.operators) chooses a filter, matched to the start of its values.
+    function operators() {
+      var ops = U.operators || {}, left = [], changed = false;
+      input.value.trim().split(/\s+/).forEach(function (w) {
+        var m = /^([a-z]+):(.+)$/i.exec(w), k = m && ops[m[1].toLowerCase()];
+        var values = k && Object.keys(allCounts[k] || {});
+        var want = m && m[2].toLowerCase().replace(/[_-]/g, " ");
+        var hit = values && values.filter(function (v) {
+          var low = v.toLowerCase();
+          return low.indexOf(want) === 0 || low.split(/\s+/).some(function (x) { return x.indexOf(want) === 0; });
+        })[0];
+        if (hit) { if (chosen[k].indexOf(hit) < 0) chosen[k].push(hit); changed = true; } else if (w) left.push(w);
+      });
+      if (changed) input.value = left.join(" ");
+      return input.value.trim();
+    }
+    // The old editions' spellings of a modern word (U.spellings: "show" also
+    // finds "shew"): one more search for each, the results merged, best first.
+    function variants(q) {
+      var sp = U.spellings || {}, words = q.toLowerCase().split(/\s+/), out = [], extra = [];
+      words.forEach(function (w, i) {
+        (sp[w] || []).forEach(function (old) {
+          var copy = words.slice(); copy[i] = old; out.push(copy.join(" ")); extra.push(old);
+        });
+      });
+      return { queries: out.slice(0, 4), words: extra.slice(0, 4) };
+    }
+    function find(q, f) {
+      var base = pf.search(q || null, f), more2 = q ? variants(q) : { queries: [], words: [] };
+      if (!more2.queries.length) return base;
+      return Promise.all([base].concat(more2.queries.map(function (v) { return pf.search(v, f); }))).then(function (all) {
+        var seen = {}, merged = [];
+        all.forEach(function (s) { s.results.forEach(function (r) { if (!seen[r.id]) { seen[r.id] = true; merged.push(r); } }); });
+        merged.sort(function (a, b) { return b.score - a.score; });
+        var extra = all.slice(1).some(function (s) { return s.results.length; });
+        return { results: merged, filters: all[0].filters, oldWords: extra ? more2.words : [] };
+      });
+    }
     function search() {
-      var q = input.value.trim(), mine = ++run, any = Object.keys(filters()).length;
+      var q = operators(), mine = ++run, any = Object.keys(filters()).length;
       keep();
       if (!q && !any) { list.innerHTML = ""; more.hidden = true; status.textContent = U.start; chips(allCounts); return; }
       status.textContent = U.searching;
-      pf.search(q || null, { filters: filters() }).then(function (s) {
+      find(q, { filters: filters() }).then(function (s) {
         if (mine !== run) return;
         results = s.results; shown = 0; list.innerHTML = "";
         var counts = {};
@@ -855,7 +1153,8 @@
         status.innerHTML = esc(!results.length ? fmt(U.none, { q: q })
           : any ? fmt(U.count_filtered, { n: results.length.toLocaleString() })
           : fmt(results.length === 1 ? U.count_one : U.count, { n: results.length.toLocaleString(), q: q })) +
-          (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "");
+          (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "") +
+          (s.oldWords && s.oldWords.length ? ' <span class="lg-quiet">' + esc(fmt(U.spelling_note, { words: s.oldWords.join(", ") })) + "</span>" : "");
         return showMore();
       }).catch(function () { if (mine === run) status.textContent = U.failed; });
     }
@@ -1315,4 +1614,86 @@
       btn.remove();
     });
   });
+  // The footer (scripts/build_site.py, build_footer).
+  (function () {
+    var foot = document.querySelector("footer.site");
+    if (!foot) return;
+    // On a phone each site-map column folds to its heading; wider, all show.
+    var narrow = window.matchMedia("(max-width: 640px)");
+    var folds = foot.querySelectorAll(".lg-foot-fold");
+    function setFolds() {
+      folds.forEach(function (b) {
+        var list = document.getElementById(b.getAttribute("aria-controls"));
+        b.hidden = !narrow.matches;
+        b.setAttribute("aria-expanded", narrow.matches ? "false" : "true");
+        if (list) list.hidden = narrow.matches;
+      });
+    }
+    folds.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var open = b.getAttribute("aria-expanded") !== "true";
+        b.setAttribute("aria-expanded", open ? "true" : "false");
+        document.getElementById(b.getAttribute("aria-controls")).hidden = !open;
+      });
+    });
+    setFolds();
+    if (narrow.addEventListener) narrow.addEventListener("change", setFolds);
+
+    // With no place saved, a page in a book offers its next chapter, so the
+    // "Start reading" link is left for the pages outside the books.
+    var resume = foot.querySelector(".foot-resume");
+    if (resume && foot.querySelector(".lg-foot-next")) {
+      var saved = null;
+      try { saved = localStorage.getItem("logia-last"); } catch (e) { /* storage blocked */ }
+      if (!saved) resume.parentNode.hidden = true;
+    }
+
+    // "Sources and licences" and "All shortcuts" open what they point to.
+    var map = foot.querySelector(".lg-foot-sitemap");
+    foot.querySelectorAll('a[href="#foot-sources"]').forEach(function (a) {
+      a.addEventListener("click", function () { if (map) map.open = true; });
+    });
+    var keysAll = foot.querySelector("[data-keys-help]");
+    if (keysAll) keysAll.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.dispatchEvent(new KeyboardEvent("keydown", { key: "?", bubbles: true }));
+    });
+
+    // Back to top, once the page has scrolled a screen.
+    var top = foot.querySelector(".lg-top");
+    if (top) {
+      var showTop = function () { top.classList.toggle("on", window.scrollY > window.innerHeight); };
+      window.addEventListener("scroll", showTop, { passive: true });
+      showTop();
+    }
+
+    // While the footer is on screen, a chapter's verse sheet steps aside (logia.css).
+    if ("IntersectionObserver" in window && document.querySelector(".cx-panel")) {
+      new IntersectionObserver(function (seen) {
+        document.body.classList.toggle("lg-at-foot", seen[0].isIntersecting);
+      }, { rootMargin: "0px 0px -35% 0px" }).observe(foot);
+    }
+
+    // The next day of the church year with a Logia page, within six weeks.
+    var season = foot.querySelector(".lg-foot-season");
+    if (season) {
+      var days = [], today = new Date(); today.setHours(0, 0, 0, 0);
+      try { days = JSON.parse(season.getAttribute("data-days")); } catch (e) { /* none */ }
+      var soon = null;
+      days.forEach(function (d) {
+        d.dates.forEach(function (iso) {
+          var p = iso.split("-"), at = new Date(+p[0], +p[1] - 1, +p[2]);
+          if (at >= today && at - today <= 42 * 864e5 && (!soon || at < soon.at)) soon = { at: at, day: d };
+        });
+      });
+      if (soon) {
+        var when = "";
+        try { when = soon.at.toLocaleDateString(document.documentElement.lang || undefined, { weekday: "long", day: "numeric", month: "long" }); }
+        catch (e) { when = soon.at.toDateString(); }
+        season.innerHTML = fmt(esc(season.getAttribute("data-text")), { date: esc(when), name: "<b>" + esc(soon.day.name) + "</b>" }) +
+          ' <a href="' + esc(soon.day.href) + '">' + esc(season.getAttribute("data-go")) + "</a>";
+        season.hidden = false;
+      }
+    }
+  })();
 })();
