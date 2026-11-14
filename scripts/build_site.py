@@ -2476,7 +2476,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 {verse_html}
 <p class="lg-quiet">{t("verse.bible_credit", link=owb_link)}</p>
 {nearby_verses(lib, book, chapter, verse, pages_here)}
-<p class="dek lg-vlead">{e(lead)}</p>{verse_topics(lib, book, chapter, verse)}
+<p class="dek lg-vlead">{e(lead)}</p>{verse_topics(lib, book, chapter, verse)}{verse_rank_line(lib, book, chapter, verse)}
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav>
 {compare_dialog(ref) if len(rail) > 1 else ""}</header>
 <section class="lg-block" id="voices"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
@@ -5375,7 +5375,12 @@ def differ_index(lib):
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
 #
 # Counts only: how many excerpts in the library are on each verse and
-# chapter. Nothing on the page is commentary or opinion.
+# chapter, how many words they run to, and how often other excerpts cite the
+# verse. Nothing on the page is commentary or opinion. The first lines a
+# reader can open on a row are copied by web/logia.js from the verse page.
+
+MD_TOP, MD_SHOWN = 100, 25
+
 
 def verse_counts(lib, book):
     """{(chapter, verse): excerpts on it}, an excerpt on a range counting on each of its verses."""
@@ -5390,58 +5395,380 @@ def verse_counts(lib, book):
     return n
 
 
-def most_discussed_page(lib, book, top=100, shown=25):
-    name = lib.books[book]["en"]
-    counts = verse_counts(lib, book)
-    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:top]
-    all_works = len({c["work"] for c in lib.comments if c["start"].startswith(book + ".")})
-    every = sum(1 for (b, _c, _v), ws in lib.voices_on.items() if b == book and len(ws) == all_works)
-    verses_with = sum(1 for (b, _c, _v) in lib.voices_on if b == book)
-    # The first `shown` rows show; the rest wait behind "Show all" (web/logia.js).
-    # Each column sorts when its heading is pressed; data-sort holds the value.
-    rows = []
-    most = ranked[0][1] if ranked else 1
-    canon = list(lib.books).index(book)
-    for i, ((ch, v), n) in enumerate(ranked, 1):
-        ws = lib.voices_on.get((book, ch, v), [])
-        rows.append(f'<tr{" hidden" if i > shown else ""}><td class="lg-quiet" data-sort="{i}">{i}</td>'
-                    f'<td data-sort="{canon * 1000000 + ch * 1000 + v}"><a href="{verse_url(book, ch, v)}"><b>{e(verse_ref(lib, book, ch, v))}</b></a></td>'
-                    f'<td class="lg-num" data-sort="{n}"><span class="lg-rank-bar"><span style="width:{n / most * 100:.0f}%"></span></span>{n}</td>'
-                    f'<td class="lg-num" data-sort="{len(ws)}">{e(t("most.of", n=len(ws), total=all_works))}</td>'
-                    f'<td class="lg-rank-text">{e(snippet(chapter_plain(book, ch).get(v, ""), 26) or t("most.left_out"))}</td></tr>')
-    head = "".join((f'<th scope="col"><button type="button" data-sort-col="{i}">{e(x)}</button></th>' if i < 4 else f'<th scope="col">{e(x)}</th>')
-                   for i, x in enumerate(t("most.columns")))
-    per_chapter = {}
-    for (ch, _v), n in counts.items():
-        per_chapter[ch] = per_chapter.get(ch, 0) + n
-    starts = {}
+def rank_with_ties(scores):
+    """{key: (rank, tied)} for the keys scoring above nothing: one more than
+    how many score higher, and whether another has the same score."""
+    vals = sorted((x for x in scores.values() if x), reverse=True)
+    first = {}
+    for i, x in enumerate(vals):
+        first.setdefault(x, i + 1)
+    same = Counter(vals)
+    return {k: (first[x], same[x] > 1) for k, x in scores.items() if x}
+
+
+def rank_label(rank, tied):
+    return t("most.rank_tied", n=rank) if tied else str(rank)
+
+
+def most_data(lib, book):
+    """What the most-discussed page counts for a book, worked out once per
+    build: its works in the library's order; {(chapter, verse): {work:
+    excerpts}} and the same in words, an excerpt on a run of verses counting
+    on each; {(chapter, verse): excerpts elsewhere that cite the verse while
+    commenting on another}, as the verse page lists them; the totals and
+    their ranks."""
+    memo = lib.__dict__.setdefault("_most_data", {})
+    if book in memo:
+        return memo[book]
+    per, words = {}, {}
     for c in lib.comments:
-        b, sc, _sv = ref_parts(c["start"])
-        if b == book:
-            starts[sc] = starts.get(sc, 0) + 1
+        b, sc, sv = ref_parts(c["start"])
+        _, ec, ev = ref_parts(c["end"])
+        if b != book or sc != ec:
+            continue
+        n = len(c["text"].split())
+        for v in range(sv, ev + 1):
+            here, said = per.setdefault((sc, v), {}), words.setdefault((sc, v), {})
+            here[c["work"]] = here.get(c["work"], 0) + 1
+            said[c["work"]] = said.get(c["work"], 0) + n
+    chapters = [ch for b, ch in lib.chapters if b == book]
+    cited = {}
+    for ch in chapters:
+        seen = {}
+        for c, x in lib.cites_by_chapter.get((book, ch), []):
+            cb, cc, cv = ref_parts(c["start"])
+            _, ce, cev = ref_parts(c["end"])
+            _b, xc, xv = scripture.parse(x["start"])
+            _b, xe, xev = scripture.parse(x["end"])
+            for v in chapter_verses(book, ch):
+                if (xc, xv) <= (ch, v) <= (xe, xev) and not (cb == book and (cc, cv) <= (ch, v) <= (ce, cev)):
+                    seen.setdefault(v, set()).add(c["id"])
+        cited.update({(ch, v): len(ids) for v, ids in seen.items()})
+    totals = {k: sum(d.values()) for k, d in per.items()}
+    memo[book] = types.SimpleNamespace(
+        works=lib.ordered_works({w for d in per.values() for w in d}), per=per, words=words, cited=cited,
+        totals=totals, ranks=rank_with_ties(totals), chapters=chapters)
+    return memo[book]
+
+
+def work_initials(lib, works):
+    """{work: the fewest first letters of its commentator's short name that
+    tell it from the others}: "Ca" and "Ch" for Calvin and Chrysostom."""
+    names = {w: short_name(lib.author_of(w)) for w in works}
+    out = {}
+    for w, n in names.items():
+        k = 1
+        while k < len(n) and any(o != w and names[o][:k] == n[:k] for o in works):
+            k += 1
+        out[w] = n[:k]
+    return out
+
+
+def most_books(lib):
+    """The books with a most-discussed page, in the Bible's order."""
+    have = {b for b, _c, _v in lib.voices_on}
+    return [b for b in lib.books if b in have]
+
+
+def most_row(lib, book, md, key, metric, peak, hidden, ini):
+    """One row of the most-discussed table. web/logia.js draws the same
+    row from data.json when a reader ranks by words or picks commentators."""
+    ch, v = key
+    d = md.per.get(key, {})
+    n, said, cited = md.totals.get(key, 0), sum(md.words.get(key, {}).values()), md.cited.get(key, 0)
+    rank, tied = md.ranks[key]
+    canon = list(lib.books).index(book)
+    url = verse_url(book, ch, v)
+
+    def num(value, kind, text):
+        bar = (f'<span class="lg-rank-bar" aria-hidden="true"><span style="width:{value / peak * 100:.0f}%"></span></span>'
+               if kind == metric and peak else "")
+        return f'<td class="lg-num" data-sort="{value}">{bar}{text}</td>'
+
+    topics = "".join(f'<a class="lg-md-topic" href="/topics/{x}/">{e(t("topics." + x + ".heading"))}</a>'
+                     for x in topics_on_verse(lib).get((book, ch, v), []))
+    dots = "".join(f'<i class="{"on" if w in d else ""}" title="{e(lib.author_of(w)["name"])}">{e(ini[w])}</i>' for w in md.works)
+    text = chapter_plain(book, ch).get(v, "")
+    cited_text = f'<a href="{url}#cited">{cited:,}</a>' if cited else "–"
+    return (f'<tr{" hidden" if hidden else ""} data-href="{url}" data-n="{n}"><td class="lg-quiet lg-md-rank" data-sort="{rank}">{e(rank_label(rank, tied))}</td>'
+            f'<td class="lg-md-ref" data-sort="{canon * 1000000 + ch * 1000 + v}"><a href="{url}"><b>{e(verse_ref(lib, book, ch, v))}</b></a>{topics}'
+            f'<button type="button" class="lg-md-peek" aria-expanded="false">{e(t("most.peek"))}</button></td>'
+            + num(n, "excerpts", f"{n:,}") + num(said, "words", f"{said:,}")
+            + f'<td class="lg-num" data-sort="{cited}">{cited_text}</td>'
+            f'<td class="lg-md-who" data-sort="{len(d)}"><span class="lg-dots" aria-hidden="true">{dots}</span>'
+            f'<span class="sr-only">{e(t("most.of", n=len(d), total=len(md.works)))}</span></td>'
+            f'<td class="lg-rank-text"><span class="lg-clamp">{e(text or t("most.left_out"))}</span></td></tr>')
+
+
+def most_table(lib, book, md, ini):
+    ranked = sorted(md.ranks, key=lambda k: (md.ranks[k][0], k))[:MD_TOP]
+    peak = max((md.totals[k] for k in ranked), default=0)
+    rows = "".join(most_row(lib, book, md, k, "excerpts", peak, i >= MD_SHOWN, ini) for i, k in enumerate(ranked))
+    head = "".join(f'<th scope="col"><button type="button" data-sort-col="{i}">{e(x)}</button></th>' if i < 6
+                   else f'<th scope="col">{e(x)}</th>' for i, x in enumerate(t("most.columns")))
+    return ranked, (f'<div class="lg-table-wrap"><table class="lg-words lg-rank lg-sortable lg-md-table"><thead><tr>{head}</tr></thead>'
+                    f'<tbody>{rows}</tbody></table></div>')
+
+
+def most_controls(lib, book, md):
+    """Rank by excerpts, words or citations, and count only some
+    commentators: drawn by web/logia.js from data.json, hidden without it."""
+    metrics = "".join(f'<button type="button" data-metric="{m}" aria-pressed="{"true" if m == "excerpts" else "false"}">{e(t("most.metric_" + m))}</button>'
+                      for m in ("excerpts", "words", "cited"))
+    out = (f'<div class="lg-md-controls" hidden><div class="lg-md-group" role="group" aria-labelledby="md-by">'
+           f'<span class="label" id="md-by">{e(t("most.rank_by"))}</span>{metrics}</div>')
+    if len(md.works) > 1:
+        works = "".join(f'<button type="button" data-work="{w}" aria-pressed="true">{e(short_name(lib.author_of(w)))}</button>' for w in md.works)
+        out += (f'<div class="lg-md-group" role="group" aria-labelledby="md-who">'
+                f'<span class="label" id="md-who">{e(t("most.counting"))}</span>{works}</div>')
+    return out + '<p class="lg-quiet lg-md-status" aria-live="polite"></p></div>'
+
+
+def most_data_json(lib, book, md):
+    """/<book>/most-discussed/data.json: every verse with commentary or a
+    citation, for the page's controls (web/logia.js)."""
+    ini = work_initials(lib, md.works)
+    rows = []
+    for key in sorted(set(md.per) | set(md.cited)):
+        ch, v = key
+        d, said = md.per.get(key, {}), md.words.get(key, {})
+        rows.append([ch, v, verse_ref(lib, book, ch, v), [d.get(w, 0) for w in md.works], [said.get(w, 0) for w in md.works],
+                     md.cited.get(key, 0), chapter_plain(book, ch).get(v, ""), topics_on_verse(lib).get((book, ch, v), [])])
+    used = sorted({x for r in rows for x in r[7]})
+    return json.dumps({"works": [{"id": w, "name": lib.author_of(w)["name"], "short": short_name(lib.author_of(w)), "ini": ini[w]}
+                                 for w in md.works],
+                       "topics": {x: t("topics." + x + ".heading") for x in used}, "rows": rows},
+                      ensure_ascii=False, separators=(",", ":"))
+
+
+def most_csv(lib, book, md):
+    """/<book>/most-discussed/<book>-most-discussed.csv: every verse of the
+    book with what the page counts on it, one column per commentary too."""
+    buf = io.StringIO()
+    out = csv.writer(buf, lineterminator="\n")
+    out.writerow(["reference", "chapter", "verse", "excerpts", "commentators", "words", "cited_elsewhere"] + md.works)
+    for ch in md.chapters:
+        # The verses the Open Word Bible prints, and any it leaves out that an excerpt is on (John 5:4).
+        for v in sorted(set(chapter_verses(book, ch)) | {v for c, v in md.per if c == ch}):
+            d = md.per.get((ch, v), {})
+            out.writerow([verse_ref(lib, book, ch, v), ch, v, md.totals.get((ch, v), 0), len(d),
+                          sum(md.words.get((ch, v), {}).values()), md.cited.get((ch, v), 0)] + [d.get(w, 0) for w in md.works])
+    return buf.getvalue()
+
+
+def most_csv_path(book):
+    return f"/{book.lower()}/most-discussed/{book.lower()}-most-discussed.csv"
+
+
+def most_podium(lib, book, md, ranked):
+    """The top three verses as cards, with their text and a way to read them."""
+    items = []
+    for i, key in enumerate(ranked[:3]):
+        ch, v = key
+        n, rank = md.totals[key], md.ranks[key]
+        url = verse_url(book, ch, v)
+        items.append(f'<li><span class="lg-md-rk">{e(rank_label(*rank))}</span>'
+                     f'<a class="lg-md-pref" href="{url}">{e(verse_ref(lib, book, ch, v))}</a>'
+                     f'<p class="lg-md-vtext">{e(chapter_plain(book, ch).get(v, "") or t("most.left_out"))}</p>'
+                     f'<p class="lg-quiet">{e(t("most.card_counts", n=f"{n:,}", works=len(md.per[key])))}</p>'
+                     f'<a class="button{"" if i == 0 else " ghost"}" href="{url}">{e(t("most.read_all", n=f"{n:,}"))}</a></li>')
+    return f'<ol class="lg-md-podium" aria-label="{e(t("most.podium_label"))}">{"".join(items)}</ol>'
+
+
+def most_book_menu(lib, book):
+    """The other books with this page, each with its own top verse."""
+    items = []
+    for b in most_books(lib):
+        m = most_data(lib, b)
+        top = min(m.ranks, key=lambda k: (m.ranks[k][0], k)) if m.ranks else None
+        ref = f"{top[0]}:{top[1]}" if top else ""
+        current = ' aria-current="page"' if b == book else ""
+        items.append(f'<li><a href="/{b.lower()}/most-discussed/"{current}><b>{e(lib.books[b]["en"])}</b>'
+                     f'<span>{e(ref)}</span></a></li>')
+    if len(items) < 2:
+        return ""
+    return (f'<details class="lg-md-books"><summary>{e(t("most.other_books"))}</summary>'
+            f'<ul>{"".join(items)}</ul></details>')
+
+
+def most_passages(lib, book, md, top=12):
+    """The sections under the Open Word Bible's headings with the most
+    excerpts, each with a small chart of the verses in it."""
+    rows = []
+    for heading, start, end in book_sections(book, lib.books[book]["chapters"]):
+        if end[0] - start[0] > 2:
+            continue             # a heading with none after it for chapters on end: not one passage
+        voices = in_passage(lib, book, start, end)
+        n = sum(len(cs) for _w, cs in voices)
+        if n:
+            rows.append((n, start, end, heading, len(voices)))
+    rows.sort(key=lambda r: (-r[0], r[1]))
+    if len(rows) < 2:
+        return ""
+    peak = rows[0][0]
+    items = []
+    for n, start, end, heading, k in rows[:top]:
+        verses = [(ch, v) for ch in range(start[0], end[0] + 1) for v in chapter_verses(book, ch) if start <= (ch, v) <= end]
+        most = max((md.totals.get(x, 0) for x in verses), default=0) or 1
+        spark = "".join(f'<i style="height:{max(6, md.totals.get(x, 0) / most * 100):.0f}%"></i>' for x in verses)
+        items.append(f'<li><a href="{passage_url(book, start, end)}"><span class="lg-md-ptext"><b>{e(heading)}</b>'
+                     f'<span class="lg-quiet">{e(passage_ref(lib, book, start, end))} · {e(t("most.passage_who", n=k))}</span></span>'
+                     f'<span class="lg-md-spark" aria-hidden="true">{spark}</span>'
+                     f'<span class="lg-bar" aria-hidden="true"><span style="width:{n / peak * 100:.1f}%"></span></span>'
+                     f'<span class="lg-bar-n">{n:,}</span></a></li>')
+    return (f'<section class="lg-block" id="passages"><h2>{e(t("most.passages_title", n=min(top, len(rows))))}</h2>'
+            f'<p class="lg-quiet">{e(t("most.passages_note"))}</p><ol class="lg-md-passages">{"".join(items)}</ol></section>')
+
+
+def most_chapters(lib, book):
+    starts = chapter_excerpts(lib, book)
     peak = max(starts.values())
+    top_ch = max(starts, key=starts.get)
     bars = "".join(f'<li><a href="{chapter_url(book, ch)}"><span class="lg-bar-label">{e(t("chapter.eyebrow", chapter=ch))}</span>'
                    f'<span class="lg-bar"><span style="width:{starts[ch] / peak * 100:.1f}%"></span></span>'
                    f'<span class="lg-bar-n">{starts[ch]}</span></a></li>' for ch in sorted(starts))
-    top_ch = max(starts, key=starts.get)
-    lead = t("most.lead", book=name, verses=verses_with, every=every, works=all_works, n=f"{sum(starts.values()):,}")
+    legend = "".join(f'<span class="chap lg-has lg-heat-{i}" aria-hidden="true"></span>' for i in range(5))
+    return (f'<section class="lg-block" id="chapters"><h2>{e(t("most.chapters_title"))}</h2>'
+            f'<p class="lg-quiet">{e(t("most.chapters_note", chapter=top_ch, n=starts[top_ch]))}</p>'
+            f'<div class="chap-pills lg-md-heat">{heat_pills(lib, book, lib.coverage())}</div>'
+            f'<p class="lg-md-legend lg-quiet">{e(t("most.heat_fewer"))} {legend} {e(t("most.heat_more"))}</p>'
+            f'<details class="lg-md-list"><summary>{e(t("most.chapters_list"))}</summary><ol class="lg-bars">{bars}</ol></details></section>')
+
+
+def most_commentators(lib, book, md):
+    """Each commentator's own most-discussed verses."""
+    if len(md.works) < 2:
+        return ""
+    cards = []
+    for w in md.works:
+        mine = {k: d[w] for k, d in md.per.items() if w in d}
+        a = lib.author_of(w)
+        top = max(mine.values())
+        if top <= 1:
+            what = f'<p class="lg-quiet">{e(t("most.who_even", n=f"{len(mine):,}"))}</p>'
+        else:
+            best = sorted(k for k, n in mine.items() if n == top)
+            links = ", ".join(f'<a href="{verse_url(book, ch, v)}#{w}">{ch}:{v}</a>' for ch, v in best[:3])
+            more = f' {e(t("collection.and_more", n=len(best) - 3))}' if len(best) > 3 else ""
+            what = f'<p>{links}{more}</p><p class="lg-quiet">{e(t("most.who_n", n=top))}</p>'
+        cards.append(f'<li><a class="lg-md-name" href="/commentators/{a["id"]}/">{e(a["name"])}</a>'
+                     f'<span class="lg-quiet">{e(a["dates"])} · {e(a["tradition"])}</span>{what}</li>')
+    return (f'<section class="lg-block" id="commentators"><h2>{e(t("most.who_title"))}</h2>'
+            f'<p class="lg-quiet">{e(t("most.who_note"))}</p><ul class="lg-md-whos">{"".join(cards)}</ul></section>')
+
+
+def most_quiet(lib, book, md):
+    """The verses no excerpt is on, in the chapters that have commentary,
+    as runs, and how many have only one commentator."""
+    runs = []
+    for ch in sorted({ch for ch, _v in md.per}):
+        plain = chapter_plain(book, ch)
+        for v in chapter_verses(book, ch):
+            if (ch, v) in md.per or not plain.get(v):
+                continue
+            if runs and runs[-1][0] == ch and runs[-1][2] == v - 1:
+                runs[-1][2] = v
+            else:
+                runs.append([ch, v, v])
+    alone = sum(1 for d in md.per.values() if len(d) == 1)
+    if not runs:
+        lead = t("most.quiet_none")
+    else:
+        lead = t("most.quiet_lead", n=sum(b - a + 1 for _c, a, b in runs))
+    shown = 40
+    chips = "".join(f'<a class="chap lg-md-q" href="{chapter_url(book, ch)}#v{a}">{ch}:{a}{"–" + str(b) if b != a else ""}</a>'
+                    for ch, a, b in runs[:shown])
+    more = f'<span class="lg-quiet">{e(t("collection.and_more", n=len(runs) - shown))}</span>' if len(runs) > shown else ""
+    alone_text = t("most.quiet_alone", n=f"{alone:,}") if len(md.works) > 1 else ""
+    return (f'<section class="lg-block" id="quiet"><h2>{e(t("most.quiet_title"))}</h2><p>{e(lead)}</p>'
+            + (f'<div class="lg-md-quiet">{chips}{more}</div>' if runs else "")
+            + (f'<p class="lg-quiet">{e(alone_text)}</p>' if alone_text else "")
+            + "</section>")
+
+
+def most_how(lib, book, md, ranked):
+    """How it is counted: one excerpt on a run of verses, drawn, then the words."""
+    example = None
+    for key in ranked:
+        ch, v = key
+        for c in lib.comments_in(book, ch):
+            _b, sc, sv = ref_parts(c["start"])
+            _b, ec, ev = ref_parts(c["end"])
+            if sc == ec == ch and sv <= v <= ev and 1 <= ev - sv <= 2:
+                example = (c, ch, sv, ev)
+                break
+        if example:
+            break
+    works = len(md.works)
+    words = t("most.how" if works != 1 else "most.how_one", works=works)
+    figure = ""
+    if example:
+        c, ch, sv, ev = example
+        who = short_name(lib.author_of(c["work"]))
+        plus = "".join(f'<span class="lg-md-plus">{e(t("most.how_plus", ref=f"{ch}:{v}"))}</span>' for v in range(sv, ev + 1))
+        figure = (f'<figure class="lg-md-how"><p><span class="lg-md-ex">{e(t("most.how_example", name=who, ref=verse_ref(lib, book, ch, sv, ev)))}</span></p>'
+                  f'<p>{plus} <span class="lg-quiet">{e(t("most.how_table"))}</span></p>'
+                  f'<p><span class="lg-md-plus">{e(t("most.how_plus", ref=t("chapter.eyebrow", chapter=ch)))}</span> '
+                  f'<span class="lg-quiet">{e(t("most.how_chart"))}</span></p></figure>')
+    return (f'<section class="lg-block" id="how"><h2>{e(t("most.how_title"))}</h2>{figure}'
+            f'<details class="lg-md-list"><summary>{e(t("most.how_more"))}</summary><p>{e(words)}</p></details>'
+            f'<p><a class="lg-more" href="{most_csv_path(book)}" download>{e(t("most.csv", book=lib.books[book]["en"]))} {icon("arrow", 15)}</a></p>'
+            f'<p><a class="lg-more" href="/open-data/">{e(t("open_data.about_link"))} {icon("arrow", 15)}</a></p></section>')
+
+
+def most_discussed_page(lib, book):
+    name = lib.books[book]["en"]
+    md = most_data(lib, book)
+    ini = work_initials(lib, md.works)
+    all_works = len(md.works)
+    every = sum(1 for (b, _c, _v), ws in lib.voices_on.items() if b == book and len(ws) == all_works)
+    verses_with = sum(1 for (b, _c, _v) in lib.voices_on if b == book)
+    in_book = sum(len(chapter_verses(book, ch)) for ch in md.chapters)
+    excerpts = sum(chapter_excerpts(lib, book).values())
+    ranked, table = most_table(lib, book, md, ini)
+    lead = t("most.lead" if all_works != 1 else "most.lead_one", book=name, verses=f"{verses_with:,}", every=every,
+             works=all_works, n=f"{excerpts:,}")
+    stats = "".join(f'<div><b>{e(v)}</b><span>{e(x)}</span></div>' for v, x in (
+        (f"{verses_with:,}", t("most.stat_verses", n=f"{in_book:,}")),
+        (str(all_works), t("most.stat_works", n=all_works)),
+        (f"{excerpts:,}", t("most.stat_excerpts"))))
+    ui = {k: t("most.ui." + k) for k in CATALOG["most"]["ui"]}
+    show_all = (f'<p><button type="button" class="button ghost" data-show-rows>{e(t("most.show_all", n=len(ranked)))}</button></p>'
+                if len(ranked) > MD_SHOWN else "")
     body = f"""
 <article class="lg-verse lg-most">
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a></p>
-<h1>{e(t("most.heading", book=name))}</h1><p class="dek">{e(lead)}</p></header>
-<section class="lg-block lg-most-wide" id="verses"><h2>{e(t("most.verses_title", n=len(ranked)))}</h2>
-<p class="lg-quiet">{e(t("most.sort_note"))}</p>
-<div class="lg-table-wrap"><table class="lg-words lg-rank lg-sortable"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>
-{f'<p><button type="button" class="button ghost" data-show-rows>{e(t("most.show_all", n=len(ranked)))}</button></p>' if len(ranked) > shown else ""}</section>
-<section class="lg-block" id="chapters"><h2>{e(t("most.chapters_title"))}</h2>
-<p class="lg-quiet">{e(t("most.chapters_note", chapter=top_ch, n=starts[top_ch]))}</p><ol class="lg-bars">{bars}</ol></section>
-<section class="lg-block"><h2>{e(t("most.how_title"))}</h2><p>{e(t("most.how", works=all_works))}</p>
-<p><a class="lg-more" href="/open-data/">{e(t("open_data.about_link"))} {icon("arrow", 15)}</a></p></section>
+<h1>{e(t("most.heading", book=name))}</h1>
+<div class="lg-stats lg-stats-3">{stats}</div>
+<p class="dek">{e(lead)}</p>{most_book_menu(lib, book)}</header>
+{most_podium(lib, book, md, ranked)}
+<section class="lg-block lg-most-wide" id="verses" data-md="/{book.lower()}/most-discussed/data.json" data-book="{book.lower()}"
+ data-ui="{e(json.dumps(ui, ensure_ascii=False))}"><h2>{e(t("most.verses_title", n=len(ranked)))}</h2>
+<p class="lg-quiet lg-md-sortnote">{e(t("most.sort_note"))}</p>{most_controls(lib, book, md)}
+{table}
+{show_all}</section>
+{most_passages(lib, book, md)}
+{most_chapters(lib, book)}
+{most_commentators(lib, book, md)}
+{most_quiet(lib, book, md)}
+{most_how(lib, book, md, ranked)}
 </article>
 <script type="application/ld+json">{breadcrumbs_ld([("Logia", "/"), (name, f"/{book.lower()}/"), (t("most.heading", book=name), f"/{book.lower()}/most-discussed/")])}</script>"""
     first = ranked[0]
     return page(lib, t("most.heading", book=name), body, f"/{book.lower()}/most-discussed/", current="/read/",
-                description=t("most.description", book=name, ref=verse_ref(lib, book, *first[0]), n=first[1]))
+                description=t("most.description", book=name, ref=verse_ref(lib, book, *first), n=md.totals[first]))
+
+
+def verse_rank_line(lib, book, chapter, verse):
+    """On a verse page: where the verse stands on its book's most-discussed
+    page, when it is among the rows shown first there."""
+    rank, tied = most_data(lib, book).ranks.get((chapter, verse), (0, False))
+    if not rank or rank > MD_SHOWN:
+        return ""
+    name = lib.books[book]["en"]
+    key = ("most.verse_first" if rank == 1 else "most.verse_ranked") + ("_tied" if tied else "")
+    return (f'<p class="lg-md-rankline"><a href="/{book.lower()}/most-discussed/#verses">'
+            f'<span class="lg-pill lg-md-pill">{e(t(key, book=name, n=rank))}</span> {e(t("most.verse_list"))}</a></p>')
 
 
 # --- Open data (/open-data/ and /downloads/) ---------------------------------
@@ -6244,7 +6571,7 @@ def search_page(lib, indexed):
 
 
 def write(rel, text):
-    path = os.path.join(SITE, rel.strip("/"), "index.html") if not rel.endswith((".svg", ".xml", ".txt", ".html", ".js", ".json")) \
+    path = os.path.join(SITE, rel.strip("/"), "index.html") if not rel.endswith((".svg", ".xml", ".txt", ".html", ".js", ".json", ".csv")) \
         else os.path.join(SITE, rel.strip("/"))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -6309,6 +6636,8 @@ def build():
         write(f"/{book.lower()}/scripture-cited/", cited_page(lib, book))
         pages.append(f"/{book.lower()}/scripture-cited/")
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
+        write(f"/{book.lower()}/most-discussed/data.json", most_data_json(lib, book, most_data(lib, book)))
+        write(most_csv_path(book), most_csv(lib, book, most_data(lib, book)))
         pages.append(f"/{book.lower()}/most-discussed/")
     for g in guides():
         write(g["path"], guide_page(lib, g))

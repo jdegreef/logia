@@ -966,6 +966,9 @@
       b.addEventListener("click", function () {
         var col = +b.getAttribute("data-sort-col"), th = b.parentNode;
         var down = th.getAttribute("aria-sort") !== "descending";
+        // A row's open first lines (the most-discussed verses) close first.
+        [].slice.call(body.querySelectorAll(".lg-md-peekrow")).forEach(function (x) { x.remove(); });
+        [].forEach.call(body.querySelectorAll(".lg-md-peek"), function (x) { x.setAttribute("aria-expanded", "false"); });
         table.querySelectorAll("th[aria-sort]").forEach(function (x) { x.removeAttribute("aria-sort"); });
         th.setAttribute("aria-sort", down ? "descending" : "ascending");
         var rows = [].slice.call(body.rows);
@@ -982,6 +985,148 @@
       more.parentNode.remove();
     });
   });
+
+  // The most-discussed verses (/<book>/most-discussed/): rank by excerpts,
+  // words or citations and count only some commentators (from the book's
+  // data.json, loaded when first asked for), open a row's first lines
+  // (copied from its verse page as printed there), and tick the verses whose
+  // page or chapter has been read.
+  var md = document.querySelector("[data-md]");
+  if (md) {
+    var MU = JSON.parse(md.getAttribute("data-ui"));
+    var mdBody = md.querySelector("table.lg-md-table").tBodies[0];
+    var mdControls = md.querySelector(".lg-md-controls");
+    var mdStatus = md.querySelector(".lg-md-status");
+    var mdBook = md.getAttribute("data-book");
+    var mdLang = document.documentElement.lang || "en";
+    var mdData = null, mdWaiting = null, metric = "excerpts";
+    var num = function (n) { return Number(n).toLocaleString(mdLang); };
+    var mdTicks = function () {
+      if (!read.length) return;
+      [].forEach.call(mdBody.rows, function (r) {
+        var href = r.getAttribute("data-href");
+        if (href && (read.indexOf(href) >= 0 || read.indexOf(href.replace(/\d+\/$/, "")) >= 0)) {
+          r.classList.add("lg-read");
+          r.cells[0].title = MU.read;
+        }
+      });
+    };
+    mdTicks();
+    var mdLoad = function (then) {
+      if (mdData) return then();
+      if (!mdWaiting) {
+        mdStatus.textContent = MU.loading;
+        mdWaiting = fetch(md.getAttribute("data-md")).then(function (r) { return r.json(); })
+          .then(function (d) { mdData = d; }, function () { mdWaiting = null; mdStatus.textContent = MU.failed; });
+      }
+      mdWaiting.then(function () { if (mdData) then(); });
+    };
+    var mdDraw = function () {
+      var works = mdData.works;
+      var on = works.map(function (w) {
+        var b = mdControls.querySelector('[data-work="' + w.id + '"]');
+        return !b || b.getAttribute("aria-pressed") === "true";
+      });
+      if (on.indexOf(true) < 0) { mdStatus.textContent = MU.none; return; }
+      var key = metric === "excerpts" ? "n" : metric;
+      var rows = mdData.rows.map(function (r) {
+        var x = { r: r, n: 0, words: 0, all: 0, who: 0, cited: r[5] };
+        r[3].forEach(function (k, i) {
+          x.all += k;
+          if (k) x.who += 1;
+          if (on[i]) { x.n += k; x.words += r[4][i]; }
+        });
+        return x;
+      }).filter(function (x) { return x[key] > 0; });
+      rows.sort(function (a, b) { return b[key] - a[key] || a.r[0] - b.r[0] || a.r[1] - b.r[1]; });
+      var first = {}, same = {};
+      rows.forEach(function (x, i) {
+        if (!(x[key] in first)) first[x[key]] = i + 1;
+        same[x[key]] = (same[x[key]] || 0) + 1;
+      });
+      rows = rows.slice(0, 100);
+      var peak = rows.length ? rows[0][key] : 0;
+      var more = md.querySelector("[data-show-rows]");
+      var cell = function (val, kind) {
+        return '<td class="lg-num" data-sort="' + val + '">' + (kind === metric && peak
+          ? '<span class="lg-rank-bar" aria-hidden="true"><span style="width:' + Math.round(val / peak * 100) + '%"></span></span>' : "") + num(val) + "</td>";
+      };
+      mdBody.innerHTML = rows.map(function (x, i) {
+        var r = x.r, url = "/" + mdBook + "/" + r[0] + "/" + r[1] + "/", has = x.all > 0;
+        var rank = first[x[key]], label = same[x[key]] > 1 ? fmt(MU.rank_tied, { n: rank }) : String(rank);
+        var topics = r[7].map(function (id) { return '<a class="lg-md-topic" href="/topics/' + id + '/">' + esc(mdData.topics[id]) + "</a>"; }).join("");
+        var dots = works.map(function (w, j) { return '<i class="' + (r[3][j] ? "on" : "") + '" title="' + esc(w.name) + '">' + esc(w.ini) + "</i>"; }).join("");
+        return '<tr' + (more && i >= 25 ? " hidden" : "") + (has ? ' data-href="' + url + '"' : "") + ' data-n="' + x.all + '">' +
+          '<td class="lg-quiet lg-md-rank" data-sort="' + rank + '">' + esc(label) + "</td>" +
+          '<td class="lg-md-ref" data-sort="' + (r[0] * 1000 + r[1]) + '"><a href="' + (has ? url : "/" + mdBook + "/" + r[0] + "/#v" + r[1]) + '"><b>' + esc(r[2]) + "</b></a>" + topics +
+          (has ? '<button type="button" class="lg-md-peek" aria-expanded="false">' + esc(MU.peek) + "</button>" : "") + "</td>" +
+          cell(x.n, "excerpts") + cell(x.words, "words") +
+          '<td class="lg-num" data-sort="' + x.cited + '">' + (x.cited ? (has ? '<a href="' + url + '#cited">' + num(x.cited) + "</a>" : num(x.cited)) : "–") + "</td>" +
+          '<td class="lg-md-who" data-sort="' + x.who + '"><span class="lg-dots" aria-hidden="true">' + dots + '</span><span class="sr-only">' +
+          esc(fmt(MU.of, { n: x.who, total: works.length })) + "</span></td>" +
+          '<td class="lg-rank-text"><span class="lg-clamp">' + esc(r[6] || MU.left_out) + "</span></td></tr>";
+      }).join("");
+      md.querySelectorAll("th[aria-sort]").forEach(function (th) { th.removeAttribute("aria-sort"); });
+      if (more) {
+        more.textContent = fmt(MU.show_all, { n: rows.length });
+        more.parentNode.hidden = rows.length <= 25;
+      }
+      mdTicks();
+      var names = works.filter(function (w, i) { return on[i]; }).map(function (w) { return w.short; });
+      mdStatus.textContent = fmt(names.length === works.length ? MU.status_all : MU.status_some,
+        { metric: MU["status_" + metric], names: names.join(", ") });
+    };
+    if (mdControls) {
+      mdControls.hidden = false;
+      mdControls.addEventListener("click", function (ev) {
+        var b = ev.target.closest("button");
+        if (!b) return;
+        if (b.hasAttribute("data-metric")) {
+          metric = b.getAttribute("data-metric");
+          mdControls.querySelectorAll("[data-metric]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        } else {
+          b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true");
+        }
+        mdLoad(mdDraw);
+      });
+    }
+    mdBody.addEventListener("click", function (ev) {
+      var clamp = ev.target.closest(".lg-clamp");
+      if (clamp) { clamp.classList.toggle("lg-open"); return; }
+      var btn = ev.target.closest(".lg-md-peek");
+      if (!btn) return;
+      var tr = btn.closest("tr"), next = tr.nextElementSibling;
+      if (next && next.classList.contains("lg-md-peekrow")) {
+        next.remove();
+        btn.setAttribute("aria-expanded", "false");
+        return;
+      }
+      var href = tr.getAttribute("data-href");
+      var box = document.createElement("td");
+      box.colSpan = tr.cells.length;
+      box.textContent = MU.peek_loading;
+      var pr = document.createElement("tr");
+      pr.className = "lg-md-peekrow";
+      pr.appendChild(box);
+      tr.parentNode.insertBefore(pr, tr.nextSibling);
+      btn.setAttribute("aria-expanded", "true");
+      fetch(href).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (text) {
+        var doc = new DOMParser().parseFromString(text, "text/html");
+        var lines = [];
+        doc.querySelectorAll("section.lg-voice").forEach(function (s) {
+          var h = s.querySelector("h3"), p = s.querySelector(".lg-text p");
+          if (!h || !p) return;
+          var words = p.textContent.trim().split(/\s+/);
+          var line = words.slice(0, 40).join(" ") + (words.length > 40 ? " …" : "");
+          lines.push('<li><a href="' + href + "#" + esc(s.id) + '"><b>' + esc(h.textContent.trim()) + "</b></a> " +
+            '<span class="lg-md-line">' + esc(line) + "</span></li>");
+        });
+        var ref = tr.querySelector(".lg-md-ref b").textContent;
+        box.innerHTML = '<ul class="lg-md-lines">' + lines.join("") + '</ul><p><a class="lg-more" href="' + href + '">' +
+          esc(fmt(MU.peek_more, { n: num(tr.getAttribute("data-n")), ref: ref })) + "</a></p>";
+      }).catch(function () { box.textContent = MU.peek_failed; });
+    });
+  }
 
   // /readings/: each day's next date, the next of them named first, and a
   // calendar to show only its readings (kept as logia-calendar). A day the
