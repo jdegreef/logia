@@ -1170,4 +1170,86 @@
       btn.remove();
     });
   });
+  // The footer (scripts/build_site.py, build_footer).
+  (function () {
+    var foot = document.querySelector("footer.site");
+    if (!foot) return;
+    // On a phone each site-map column folds to its heading; wider, all show.
+    var narrow = window.matchMedia("(max-width: 640px)");
+    var folds = foot.querySelectorAll(".lg-foot-fold");
+    function setFolds() {
+      folds.forEach(function (b) {
+        var list = document.getElementById(b.getAttribute("aria-controls"));
+        b.hidden = !narrow.matches;
+        b.setAttribute("aria-expanded", narrow.matches ? "false" : "true");
+        if (list) list.hidden = narrow.matches;
+      });
+    }
+    folds.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var open = b.getAttribute("aria-expanded") !== "true";
+        b.setAttribute("aria-expanded", open ? "true" : "false");
+        document.getElementById(b.getAttribute("aria-controls")).hidden = !open;
+      });
+    });
+    setFolds();
+    if (narrow.addEventListener) narrow.addEventListener("change", setFolds);
+
+    // With no place saved, a page in a book offers its next chapter, so the
+    // "Start reading" link is left for the pages outside the books.
+    var resume = foot.querySelector(".foot-resume");
+    if (resume && foot.querySelector(".lg-foot-next")) {
+      var saved = null;
+      try { saved = localStorage.getItem("logia-last"); } catch (e) { /* storage blocked */ }
+      if (!saved) resume.parentNode.hidden = true;
+    }
+
+    // "Sources and licences" and "All shortcuts" open what they point to.
+    var map = foot.querySelector(".lg-foot-sitemap");
+    foot.querySelectorAll('a[href="#foot-sources"]').forEach(function (a) {
+      a.addEventListener("click", function () { if (map) map.open = true; });
+    });
+    var keysAll = foot.querySelector("[data-keys-help]");
+    if (keysAll) keysAll.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.dispatchEvent(new KeyboardEvent("keydown", { key: "?", bubbles: true }));
+    });
+
+    // Back to top, once the page has scrolled a screen.
+    var top = foot.querySelector(".lg-top");
+    if (top) {
+      var showTop = function () { top.classList.toggle("on", window.scrollY > window.innerHeight); };
+      window.addEventListener("scroll", showTop, { passive: true });
+      showTop();
+    }
+
+    // While the footer is on screen, a chapter's verse sheet steps aside (logia.css).
+    if ("IntersectionObserver" in window && document.querySelector(".cx-panel")) {
+      new IntersectionObserver(function (seen) {
+        document.body.classList.toggle("lg-at-foot", seen[0].isIntersecting);
+      }, { rootMargin: "0px 0px -35% 0px" }).observe(foot);
+    }
+
+    // The next day of the church year with a Logia page, within six weeks.
+    var season = foot.querySelector(".lg-foot-season");
+    if (season) {
+      var days = [], today = new Date(); today.setHours(0, 0, 0, 0);
+      try { days = JSON.parse(season.getAttribute("data-days")); } catch (e) { /* none */ }
+      var soon = null;
+      days.forEach(function (d) {
+        d.dates.forEach(function (iso) {
+          var p = iso.split("-"), at = new Date(+p[0], +p[1] - 1, +p[2]);
+          if (at >= today && at - today <= 42 * 864e5 && (!soon || at < soon.at)) soon = { at: at, day: d };
+        });
+      });
+      if (soon) {
+        var when = "";
+        try { when = soon.at.toLocaleDateString(document.documentElement.lang || undefined, { weekday: "long", day: "numeric", month: "long" }); }
+        catch (e) { when = soon.at.toDateString(); }
+        season.innerHTML = fmt(esc(season.getAttribute("data-text")), { date: esc(when), name: "<b>" + esc(soon.day.name) + "</b>" }) +
+          ' <a href="' + esc(soon.day.href) + '">' + esc(season.getAttribute("data-go")) + "</a>";
+        season.hidden = false;
+      }
+    }
+  })();
 })();

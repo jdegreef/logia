@@ -933,81 +933,186 @@ FOOT_SOURCES = (("owb", OWB_SITE + "/"), ("sblgnt", "https://sblgnt.com/"),
                 ("openbible", "https://www.openbible.info/labs/cross-references/"),
                 ("commentary", "/about/#checked"))
 
-_FOOTER = {}
+# The most-discussed verses the footer shows: none with fewer excerpts than
+# this, so a book with little commentary yet doesn't look half done.
+FOOT_MOST_MIN = 10
 
 
-def site_footer(lib):
-    """The footer is the same on every page, so it is built once."""
-    if id(lib) not in _FOOTER:
-        _FOOTER.clear()
-        _FOOTER[id(lib)] = build_footer(lib)
-    return _FOOTER[id(lib)]
+def site_footer(lib, path="/", title="Logia"):
+    """The footer: a card to the next chapter on a page in a book, then the
+    parts every page shares, built once, around this book's most-discussed
+    verses and a link to report a problem with this page."""
+    memo = lib.__dict__.setdefault("_footer", {})
+    if "frame" not in memo:
+        memo["frame"] = build_footer(lib)
+    head, tail = memo["frame"]
+    book, chapter = footer_place(lib, path)
+    if book not in memo:
+        memo[book] = foot_most(lib, book)
+    report = (f"{GITHUB_URL}/issues/new?title={quote(t('footer.report_title', page=title))}"
+              f"&body={quote(t('footer.report_body', url=SITE_URL + path))}")
+    return (head.replace("<!--next-->", foot_next(lib, book, chapter)).replace("<!--most-->", memo[book])
+            + tail.replace("{{report}}", e(report)))
+
+
+def footer_place(lib, path):
+    """(book, chapter) for a page in a book: /jhn/ is (JHN, 0), /jhn/3/ and
+    /jhn/3/16/ are (JHN, 3); any other page is (None, 0)."""
+    parts = [x for x in path.split("/") if x]
+    book = parts[0].upper() if parts else ""
+    if book not in lib.books:
+        return None, 0
+    if len(parts) == 1:
+        return book, 0
+    return (book, int(parts[1])) if parts[1].isdigit() else (book, -1)
+
+
+def foot_next(lib, book, chapter):
+    """The chapter after this one, or a book's first chapter on its own page."""
+    if book is None or chapter < 0:
+        return ""
+    at = lib.__dict__.setdefault("_chapter_at", {bc: i for i, bc in enumerate(lib.chapters)})
+    if chapter == 0:
+        nxt, label = (book, 1), t("footer.start_book")
+    else:
+        i = at.get((book, chapter))
+        if i is None or i + 1 >= len(lib.chapters):
+            return ""
+        nxt, label = lib.chapters[i + 1], t("footer.next_chapter")
+    b, c = nxt
+    heading = chapter_title(b, c)
+    return (f'<a class="lg-foot-next" href="{chapter_url(b, c)}"><span class="lg-foot-next-label">{e(label)}</span>'
+            f'<span class="lg-foot-next-ref">{e(lib.books[b]["en"])} {c}'
+            + (f' <span class="lg-foot-next-title">{e(heading)}</span>' if heading else "")
+            + f'</span><span class="lg-foot-next-go" aria-hidden="true">{e(t("footer.read_on"))}</span></a>')
+
+
+def foot_most(lib, book):
+    """The three most-discussed verses: in this book on a page in it, else in
+    the whole library; only verses with at least FOOT_MOST_MIN excerpts."""
+    books = sorted({b for b, _c in lib.coverage()}, key=list(lib.books).index)
+    mine = book in books
+    ranked = sorted(((n, -list(lib.books).index(b), b, ch, v) for b in ([book] if mine else books)
+                     for (ch, v), n in verse_counts_cached(lib, b).items() if n >= FOOT_MOST_MIN),
+                    key=lambda r: (-r[0], -r[1], r[3], r[4]))[:3]
+    if not ranked:
+        return ""
+    chips = "".join(f'<li><a class="book-chip" href="{verse_url(b, ch, v)}">{e(verse_ref(lib, b, ch, v))} '
+                    f'<span class="lg-chip-n" title="{e(t("footer.excerpts_title", n=n))}">{n}</span></a></li>'
+                    for n, _o, b, ch, v in ranked)
+    head = t("footer.most_in", book=lib.books[book]["en"]) if mine else t("footer.most")
+    more = (f'<p class="lg-foot-more"><a href="/{book.lower()}/most-discussed/">{e(t("footer.most_all", book=lib.books[book]["en"]))}</a></p>'
+            if mine else "")
+    return (f'<section class="lg-foot-most" aria-labelledby="foot-most"><h2 id="foot-most">{e(head)}</h2>'
+            f'<ul class="book-chips">{chips}</ul>{more}</section>')
+
+
+def foot_season(lib):
+    """The church year's days with a Logia page, with their dates for three
+    years: web/logia.js names the next one when it is near."""
+    data = {o["id"]: o for o in load(os.path.join(ROOT, "library", "occasions.json"))["occasions"]}
+    year = datetime.date.today().year
+    days = [{"name": t(f"occasions.{oid}.name"), "href": t(f"occasions.{oid}.path"),
+             "dates": [d.isoformat() for d in occasion_dates(data[oid], (year - 1, year, year + 1))]}
+            for oid, *_rest in occasions(lib)]
+    return (f'<p class="lg-foot-season" hidden data-text="{e(t("footer.season"))}" data-go="{e(t("footer.season_go"))}" '
+            f'data-days="{e(json.dumps(days, ensure_ascii=False, separators=(",", ":")))}"></p>')
+
+
+def book_abbr(book):
+    return t("footer.abbr." + book)
 
 
 def build_footer(lib):
+    """The parts of the footer every page shares, as (head, tail): the page's
+    own next-chapter card goes in head at <!--next-->, its most-discussed
+    verses at <!--most-->, and its report link in tail at {{report}}."""
     def links(pairs):
         return "".join(f'<li><a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(label)}</a></li>'
                        for href, label in pairs)
 
-    def column(key, pairs, extra=""):
-        return (f'<nav aria-labelledby="foot-{key}"><h2 id="foot-{key}">{e(t("footer." + key))}</h2>'
-                f'<ul>{links(pairs)}</ul>{extra}</nav>')
+    def column(key, href, pairs):
+        # The heading is a link to the column's own page; on a phone a button
+        # beside it folds the list away (web/logia.js).
+        return (f'<nav class="lg-foot-col" aria-labelledby="foot-{key}"><h2 id="foot-{key}"><a href="{href}">{e(t("footer." + key))}</a>'
+                f'<button type="button" class="lg-foot-fold" aria-expanded="true" aria-controls="foot-{key}-list" hidden>'
+                f'<span class="sr-only">{e(t("footer.fold", name=t("footer." + key)))}</span></button></h2>'
+                f'<ul id="foot-{key}-list">{links(pairs[:7])}</ul></nav>')
 
-    books = list(dict.fromkeys(b for b, _c in sorted(lib.coverage(), key=lambda bc: list(lib.books).index(bc[0]))))
-    read = ([("/read/", t("footer.all_books"))] + [(f"/{b.lower()}/", lib.books[b]["en"]) for b in books]
-            + [("/readings/", t("footer.readings")), ("/topics/", t("nav.topics")), ("/sheets/", t("nav.sheets"))])
-    explore = ([(f"/{b.lower()}/most-discussed/", t("footer.most_in", book=lib.books[b]["en"])) for b in books]
-               + [(g["path"], g["title"]) for g in guides()]
-               + [("/explore/", t("nav.explore_page")), ("/new/", t("nav.new"))])
-    people = [("/commentators/", t("nav.all_commentators"))] + [
-        (era_url(era), t("eras." + era)) for era in ERAS if any(a["era"] == era for a in lib.authors.values())]
-    data = [("/open-data/", t("footer.open_data"))] + [
-        (f"/downloads/logia-{LANG}.{x}", t("footer.download", kind=x.upper())) for x in ("json", "csv")] + [
+    covered = {b for b, _c in lib.coverage()}
+    first = next(b for b in lib.books if b in covered)
+    read = [("/readings/", t("footer.readings")), ("/topics/", t("nav.topics")), ("/sheets/", t("nav.sheets"))] + (
+        [("/creeds/", t("creeds.index_title"))] if lib.creeds else []) + [("/differ/", t("footer.differ"))]
+    explore = [(g["path"], g["title"]) for g in guides()][:5] + [("/new/", t("nav.new"))]
+    people = [(era_url(era), t("eras." + era)) for era in ERAS if any(a["era"] == era for a in lib.authors.values())]
+    data = [(f"/downloads/logia-{LANG}.{x}", t("footer.download", kind=x.upper())) for x in ("json", "csv")] + [
         ("/api/v1/index.json", t("nav.api")), (GITHUB_URL + "/releases", t("footer.releases")), (GITHUB_URL, t("nav.source"))]
-    about = [("/about/", t("nav.about_logia")), ("/about/#checked", t("nav.checked")),
-             ("/about/rules/", t("nav.rules")), ("/ai/", t("nav.ai")), ("/linker/", t("nav.linker")),
-             (OWB_SITE + "/", t("nav.owb")), (GITHUB_URL + "/issues/new", t("footer.report"))]
+    about = [("/about/#checked", t("nav.checked")), ("/about/rules/", t("nav.rules")), ("/ai/", t("nav.ai")),
+             ("/linker/", t("nav.linker")), (OWB_SITE + "/", t("nav.owb")), ("/new.xml", t("footer.feed"))]
 
-    # The library in three numbers, counted at build time.
-    stats = "".join(f'<div><dt>{n:,}</dt><dd>{e(t("footer.stat_" + key))}</dd></div>' for key, n in (
-        ("excerpts", len(lib.comments)), ("commentators", len(lib.authors)), ("verses", len(lib.voices_on))))
+    # Every book of the Bible in canon order, lit where Logia has commentary.
+    cells = "".join(f'<li><a class="lg-canon-b{" on" if b in covered else ""}" href="/{b.lower()}/">'
+                    f'<abbr title="{e(lib.books[b]["en"])}">{e(book_abbr(b))}</abbr></a></li>' for b in lib.books)
+    canon = (f'<section class="lg-foot-canon" aria-labelledby="foot-canon"><h2 id="foot-canon">'
+             f'{e(t("footer.canon", n=len(covered), total=len(lib.books)))}</h2><ul class="lg-canon">{cells}</ul>'
+             f'<p class="lg-canon-key"><span class="lg-canon-b on" aria-hidden="true"></span> {e(t("footer.canon_key"))}</p></section>')
 
-    # Each book's three most-discussed verses, as on its most-discussed page.
-    most = ""
-    for b in books:
-        ranked = sorted(verse_counts(lib, b).items(), key=lambda kv: (-kv[1], kv[0]))[:3]
-        chips = "".join(f'<li><a class="book-chip" href="{verse_url(b, ch, v)}">{e(verse_ref(lib, b, ch, v))} '
-                        f'<span class="lg-chip-n" title="{e(t("footer.excerpts_title", n=n))}">{n}</span></a></li>'
-                        for (ch, v), n in ranked)
-        most += f'<ul class="book-chips">{chips}</ul>'
+    # The library in one sentence, each number a link.
+    numbers = e(t("footer.numbers", excerpts="\x01", commentators="\x02", verses="\x03"))
+    for mark, href, n in (("\x01", "/explore/", len(lib.comments)), ("\x02", "/commentators/", len(lib.authors)),
+                          ("\x03", "/read/", len(lib.voices_on))):
+        numbers = numbers.replace(mark, f'<a href="{href}"><b>{n:,}</b></a>')
 
-    sources = " · ".join(f'<a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(t("footer.sources." + key))}</a>'
-                         for key, href in FOOT_SOURCES)
-    find = e(t("footer.find"))
-    return f"""<footer class="site"><div class="wrap">
-<div class="foot-top lg-foot-top"><div class="foot-about">
+    # The sources, grouped by the terms they come under.
+    groups = (("cc0", ("owb",)), ("ccby", ("macula", "oshb", "openbible")), ("texts", ("sblgnt", "wlc")), ("pd", ("commentary",)))
+    where = dict(FOOT_SOURCES)
+    sources = "".join(f'<div><h3>{e(t("footer.licence." + g))}</h3><ul>'
+                      + "".join(f'<li><a href="{where[k]}"{" rel=noopener" if where[k].startswith("http") else ""}>{e(t("footer.sources." + k))}</a></li>' for k in keys)
+                      + "</ul></div>" for g, keys in groups)
+    promise = " <span aria-hidden=\"true\">·</span> ".join(e(x) for x in t("footer.promise"))
+    keys = " ".join(f'<span><kbd>{e(k)}</kbd> {e(v)}</span>' for k, v in t("footer.keys"))
+
+    head = f"""<footer class="site"><div class="wrap">
+<!--next-->
+{foot_season(lib)}
+<div class="lg-foot-main"><div class="lg-foot-about">
 <a class="brand" href="/">{MARK}<span class="brand-name">Logia</span></a>
-<p>{e(t("site.tagline"))}</p>
+<p class="lg-foot-tag">{e(t("footer.tagline"))}</p>
 <form class="lg-search foot-search lg-foot-search" role="search" action="/read/" autocomplete="off">
-<input type="search" name="q" id="foot-q" placeholder="{e(t("search.placeholder"))}" aria-label="{find}" role="combobox" aria-expanded="false" aria-controls="foot-q-list" aria-autocomplete="list">
+<input type="search" name="q" id="foot-q" placeholder="{e(t("search.placeholder"))}" aria-label="{e(t("footer.find"))}" role="combobox" aria-expanded="false" aria-controls="foot-q-list" aria-autocomplete="list">
 <button type="submit" class="button">{e(t("search.go"))}</button>
-<ul class="lg-sugg" id="foot-q-list" role="listbox" aria-label="{find}" hidden></ul></form>
-<p class="lg-foot-actions"><a class="foot-resume" href="/" data-resume="{e(t("home.resume"))}" hidden></a>
-<a class="lg-foot-up" href="#">{e(t("footer.top"))}</a></p>
+<ul class="lg-sugg" id="foot-q-list" role="listbox" aria-label="{e(t("footer.find"))}" hidden></ul></form>
+<p class="lg-foot-try">{e(t("footer.try"))} {" · ".join(f'<a href="{h}">{e(x)}</a>' for x, h in t("footer.examples"))}</p>
+<p class="lg-foot-numbers">{numbers}</p>
+<p class="lg-foot-actions"><a class="foot-resume" href="{chapter_url(first, 1)}" data-resume="{e(t("home.resume"))}">{e(t("footer.start", ref=f'{lib.books[first]["en"]} 1'))}</a></p>
 </div>
-<section class="lg-foot-library" aria-labelledby="foot-library"><h2 id="foot-library">{e(t("footer.library"))}</h2>
-<dl class="lg-foot-stats">{stats}</dl>
-<h2 class="lg-foot-most">{e(t("footer.most"))}</h2>{most}</section></div>
+{canon}
+<!--most-->
+</div>
+<p class="lg-foot-promise"><a href="/about/rules/">{promise}</a></p>
+"""
+    tail = f"""<div class="foot-base lg-foot-base">
+<p class="lg-foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("footer.cc0_data"))}
+{e(t("footer.bible_from"))} <a href="{OWB_SITE}/" rel="noopener">{e(t("nav.owb"))}</a>. <a href="#foot-sources" class="lg-foot-sources-link">{e(t("footer.sources_link"))}</a></p>
+<p class="lg-foot-links"><a href="/open-data/">{e(t("footer.data"))}</a> <a href="/about/">{e(t("nav.about_logia"))}</a>
+<a href="{{{{report}}}}" rel="noopener">{e(t("footer.report_page"))}</a></p>
+<p class="lg-foot-review">{e(t("footer.review"))} <a href="/about/#checked">{e(t("footer.help_review"))}</a></p>
+</div>
+<details class="lg-foot-sitemap" id="foot-sitemap"><summary>{e(t("footer.sitemap"))}</summary>
 <div class="foot-grid lg-foot-grid">
-{column("read", read)}
-{column("explore", explore)}
-{column("commentators", people)}
-{column("data", data, f'<p class="foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("footer.cc0"))}</p>')}
-{column("project", about)}
+{column("read", "/read/", read)}
+{column("explore", "/explore/", explore)}
+{column("commentators", "/commentators/", people)}
+{column("data", "/open-data/", data)}
+{column("project", "/about/", about)}
 </div>
-<div class="foot-base"><p class="foot-review"><span>{e(t("footer.review"))} <a href="/about/#checked">{e(t("footer.help_review"))}</a></span></p>
-<p class="lg-foot-sources">{e(t("footer.sources_label"))} {sources}</p></div>
+<section class="lg-foot-sources" id="foot-sources" aria-labelledby="foot-sources-h"><h2 id="foot-sources-h">{e(t("footer.sources_label"))}</h2>
+<div class="lg-foot-sources-grid">{sources}</div></section>
+<p class="lg-foot-keys">{keys} <a href="#" data-keys-help>{e(t("footer.keys_all"))}</a></p>
+</details>
+<a class="lg-top" href="#" aria-label="{e(t("footer.top"))}" title="{e(t("footer.top"))}"><span aria-hidden="true">↑</span></a>
 </div></footer>"""
+    return head, tail
 
 
 # --- style.css, trimmed -------------------------------------------------------
@@ -1157,7 +1262,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <main class="wrap" id="main" tabindex="-1">
 {body}
 </main>
-{site_footer(lib)}
+{site_footer(lib, path, full)}
 <script type="application/json" id="account-text">{account_text}</script>
 <script type="application/json" id="keys-text">{keys_text}</script>
 </body>

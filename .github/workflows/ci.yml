@@ -50,3 +50,5 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Accessibility audit (axe, every colour theme)
         run: node scripts/a11y_audit.js
+      - name: Footer height budget
+        run: node scripts/footer_budget.js
