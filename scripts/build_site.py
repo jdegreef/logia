@@ -270,6 +270,24 @@ def short_edition(edition):
     return s if len(s) <= 90 else re.sub(r"\s+\S*$", "", s[:88]) + "…"
 
 
+def card_edition(work, author_name):
+    """A work's edition for a card under its title: where and when it was
+    published ("First published London, 1860; New York: Robert Carter &
+    Brothers, 1860"), not the author and title over again."""
+    ed, title = work["edition"], work["title"]
+    head = f"{author_name}, {title}"
+    if not ed.startswith(head) and not ed.startswith(title):
+        return short_edition(ed)
+    rest = ed[len(head) if ed.startswith(head) else len(title):].strip(" ,.")
+    parts = [p.strip(" ,.") for p in re.split(r";", re.sub(r"^\((.*?)\)", r"\1;", rest))]
+    parts = [p for p in parts if p and not re.search(r"\b(text from|OCR|transcri|scan)", p, re.I)]
+    if not parts:
+        return short_edition(ed)
+    s = "; ".join(parts[:2])
+    s = en_dash(s[:1].upper() + s[1:])
+    return s if len(s) <= 90 else re.sub(r"\s+\S*$", "", s[:88]) + "…"
+
+
 def snippet(text, words=34):
     """The first words of an excerpt, cut at a word, for lists that link to it."""
     first = text.split("\n\n")[0].split()
@@ -3698,39 +3716,70 @@ def reading_minutes(text):
     return max(1, round(len(text.split()) / 200))
 
 
-def excerpt_list(lib, comments, show_work=False):
-    """Excerpts grouped by chapter, each chapter closed but the first, with a
-    bar of the chapters above them, each shaded by how much is said on it:
-    one row per verse or range, the verse as the Open Word Bible has it, the
-    excerpt's first words, where it sits in its work, and links to read it."""
+def excerpt_list(lib, comments, show_work=False, tools=""):
+    """Excerpts grouped by book and chapter, each chapter closed but the
+    first. Above them, a toolbar (the go-to-verse box and a switch that opens
+    or closes every chapter) and a map of the chapters, a row of numbers for
+    each book, each shaded by how much is said on it. Each chapter: its
+    passages and reading time, then one row per verse or range (the verse as
+    the Open Word Bible has it, the excerpt's first words, where it sits in
+    its work, a link to read it, and any more passages on the same verses
+    folded away), and links to the chapters before and after it."""
     out, rows = [], {}
     for c in comments:
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
-        rows.setdefault((b, ch), {}).setdefault((v, ech, ev, c["work"] if show_work else ""), []).append(c)
+        rows.setdefault((b, ch), {}).setdefault((v, ech, ev), []).append(c)
     words = {k: sum(len(c["text"].split()) for cs in g.values() for c in cs) for k, g in rows.items()}
     most = max(words.values(), default=1)
-    several = len({x for x, _y in rows}) > 1
-    bar = "".join(f'<a href="#ch-{b.lower()}-{ch}" data-book="{b}" style="--depth:{8 + 32 * words[(b, ch)] / most:.0f}%" '
-                  f'title="{e(t("commentators.chapter_words", chapter=lib.books[b]["en"] + f" {ch}", n=f"{words[(b, ch)]:,}"))}">'
-                  f'{e(lib.books[b]["en"]) + " " if several else ""}{ch}</a>'
-                  for b, ch in rows)
-    out.append(f'<nav class="lg-chbar lg-chbar-depth" aria-label="{e(t("commentators.chapters"))}">{bar}</nav>')
-    for n, ((b, ch), group) in enumerate(rows.items()):
-        name = f'{lib.books[b]["en"]} {ch}'
+    books = list(dict.fromkeys(b for b, _ch in rows))
+    several = len(books) > 1
+    keys = list(rows)
+
+    def chname(b, ch):
+        return f'{lib.books[b]["en"]} {ch}'
+
+    # The map of chapters: per book, its name and a grid of chapter numbers.
+    nav = []
+    for b in books:
+        cells = "".join(f'<a href="#ch-{b.lower()}-{ch}" style="--depth:{6 + 40 * words[(b, ch)] / most:.0f}%" '
+                        f'title="{e(t("commentators.chapter_words", chapter=chname(b, ch), n=f"{words[(b, ch)]:,}"))}" '
+                        f'aria-label="{e(chname(b, ch))}">{ch}</a>' for bb, ch in keys if bb == b)
+        n_ch = sum(1 for bb, _ch in keys if bb == b)
+        nav.append(f'<div class="lg-chnav-book" data-book="{b}"><p class="lg-chnav-name"><b>{e(lib.books[b]["en"])}</b>'
+                   f'<span class="lg-quiet">{e(t("commentators.n_chapters" if n_ch != 1 else "commentators.one_chapter", n=n_ch))}</span></p>'
+                   f'<div class="lg-chnav-cells">{cells}</div></div>')
+    toggle = (f'<button type="button" class="button ghost lg-ch-all" hidden data-open="{e(t("commentators.open_all"))}" '
+              f'data-close="{e(t("commentators.close_all"))}">{e(t("commentators.open_all"))}</button>')
+    out.append(f'<div class="lg-vv-tools">{tools}{toggle}</div>'
+               f'<nav class="lg-chnav" aria-label="{e(t("commentators.chapters"))}">{"".join(nav)}</nav>')
+
+    for i, ((b, ch), group) in enumerate(rows.items()):
+        if several and (i == 0 or keys[i - 1][0] != b):
+            if i:
+                out.append("</section>")
+            bworks = list(dict.fromkeys(c["work"] for (bb, _c), g in rows.items() if bb == b for cs in g.values() for c in cs))
+            titles = " · ".join(f'<a href="/works/{w}/"><i>{e(lib.works[w]["title"])}</i></a>' for w in bworks)
+            out.append(f'<section class="lg-vv-book" data-book="{b}"><h3 class="lg-vv-bookh">{e(lib.books[b]["en"])}'
+                       f'<span class="lg-quiet">{titles}</span></h3>')
+        name = chname(b, ch)
         passages = sum(len(cs) for cs in group.values())
-        works = {c["work"] for cs in group.values() for c in cs}
-        whole = (f'<p class="lg-chlink"><a href="{work_chapter_url(next(iter(works)), b, ch)}">'
+        minutes = sum(reading_minutes(c["text"]) for cs in group.values() for c in cs)
+        works = list(dict.fromkeys(c["work"] for cs in group.values() for c in cs))
+        whole = (f'<p class="lg-chlink"><a href="{work_chapter_url(works[0], b, ch)}">'
                  f'{e(t("commentators.in_order", chapter=name))} {icon("arrow", 15)}</a></p>' if len(works) == 1 else "")
-        out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}" data-book="{b}"{" open" if n == 0 else ""}><summary><b>{e(name)}</b>'
-                   f'<span class="lg-quiet">{e(t("commentators.passages", n=passages))}</span>{icon("chevron", 16, "icon lg-caret")}</summary>'
-                   f'{whole}<ul class="lg-excerpts">')
+        count = t("commentators.passages" if passages != 1 else "commentators.one_passage", n=passages)
+        out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}" data-book="{b}"{" open" if i == 0 else ""}><summary>'
+                   f'<span class="lg-ch-name"><b>{e(name)}</b><span class="lg-quiet">{e(count)} · {e(t("commentators.minutes", n=minutes))}</span></span>'
+                   f'<span class="lg-ch-depth" aria-hidden="true"><span style="width:{max(4, 100 * words[(b, ch)] / most):.0f}%"></span></span>'
+                   f'{icon("chevron", 16, "icon lg-caret")}</summary>'
+                   f'<div class="lg-ch-body">{whole}<ul class="lg-excerpts">')
         plain = lib.plain(b, ch)
-        for (v, ech, ev, work), cs in group.items():
+        for (v, ech, ev), cs in group.items():
             ref = f"{ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "") if ech == ch else f"{ch}:{v}–{ech}:{ev}"
-            more = f'<span class="lg-quiet">{e(t("commentators.passages", n=len(cs)))}</span>' if len(cs) > 1 else ""
-            title = f'<span class="lg-quiet">{e(lib.works[work]["title"])}</span>' if work else ""
             c = cs[0]
+            # The work's title only where a chapter draws on more than one.
+            title = f'<p class="lg-ex-work">{e(lib.works[c["work"]]["title"])}</p>' if show_work and len(works) > 1 else ""
             h = c["heading"]
             lead = re.sub(r"^\s*\d+\.\s*", "", c["text"]).lower()
             lemma = f'<i>{e(h)}</i> ' if h and not lead.startswith(h.lower().strip(" .")) else ""
@@ -3741,21 +3790,39 @@ def excerpt_list(lib, comments, show_work=False):
             meta = [e(locus_label(w, c["locus"]))] if c.get("locus") else []
             meta.append(e(t("commentators.minutes", n=reading_minutes(c["text"]))))
             if lib.in_full.get(c["id"]):
-                meta.append(f'<a href="{lib.in_full[c["id"]]}">{e(t("commentators.from_here", division=w["divisions"][0].lower()))}</a>')
+                go = f'<a class="lg-ex-go" href="{lib.in_full[c["id"]]}">{e(t("commentators.from_here", division=w["divisions"][0].lower()))} {icon("arrow", 14)}</a>'
             else:
-                meta.append(f'<a href="{excerpt_href(lib, c)}">{e(t("commentators.read_it"))}</a>')
+                go = f'<a class="lg-ex-go" href="{excerpt_href(lib, c)}">{e(t("commentators.read_it"))} {icon("arrow", 14)}</a>'
+            more = ""
+            if len(cs) > 1:
+                items = "".join(
+                    f'<li><a href="{excerpt_href(lib, o)}">{e(snippet(o["text"], 18))}</a>'
+                    f' <span class="lg-quiet">{e(t("commentators.minutes", n=reading_minutes(o["text"])))}</span></li>' for o in cs[1:])
+                more = (f'<details class="lg-ex-more"><summary>{e(t("commentators.more_on", n=len(cs) - 1, ref=ref))}</summary>'
+                        f'<ul>{items}</ul></details>')
             last = ev if ech == ch else max(lib.verses(b, ch))
             out.append(f'<li data-from="{v}" data-to="{last}"><p class="lg-ex-ref"><a href="{chapter_url(b, ch)}#v{v}" '
-                       f'title="{e(lib.books[b]["en"])} {e(ref)}"><b>{e(ref)}</b></a>{more}</p>'
-                       f'<div>{title}{verse}<p>{lemma}{e(snippet(c["text"]))}</p>'
-                       f'<p class="lg-ex-meta">{" · ".join(meta)}</p></div></li>')
-        out.append("</ul></details>")
+                       f'title="{e(lib.books[b]["en"])} {e(ref)}">{e(ref)}</a></p>'
+                       f'<div>{title}{verse}<p class="lg-ex-text">{lemma}{e(snippet(c["text"]))}</p>'
+                       f'<p class="lg-ex-meta">{" · ".join(meta)}{go}</p>{more}</div></li>')
+        prev = (f'<a class="lg-ch-prev" href="#ch-{keys[i - 1][0].lower()}-{keys[i - 1][1]}">{icon("back", 15)} '
+                f'{e(chname(*keys[i - 1]))}</a>' if i else "<span></span>")
+        nxt = (f'<a class="lg-ch-next" href="#ch-{keys[i + 1][0].lower()}-{keys[i + 1][1]}">{e(chname(*keys[i + 1]))} '
+               f'{icon("arrow", 15)}</a>' if i + 1 < len(keys) else "<span></span>")
+        out.append(f'</ul><nav class="lg-ch-steps" aria-label="{e(t("commentators.chapter_steps"))}">{prev}{nxt}</nav></div></details>')
+    if several and keys:
+        out.append("</section>")
     return "".join(out)
 
 
+
+BOOK_ORDER = {b: i for i, b in enumerate(scripture.BOOK_NAMES)}
+
+
 def order_key(c):
+    """Bible order: Proverbs before Ecclesiastes, not by book code."""
     b, ch, v = ref_parts(c["start"])
-    return (b, ch, v, c["id"])
+    return (BOOK_ORDER.get(b, len(BOOK_ORDER)), b, ch, v, c["id"])
 
 
 def missing_verses(lib, author, book, covered):
@@ -3851,8 +3918,10 @@ def quote_of(c, lo=12, hi=48):
 
 
 # Words left out of "words he uses more than the others": scan misreadings
-# and abbreviations that a count would otherwise pick up.
-NOT_WORDS = {"thai", "chap", "ver", "vers", "comp", "viz", "ibid"}
+# and abbreviations that a count would otherwise pick up, and the ends of
+# words a scan split at a line break ("judg- ment", "holi- ness").
+NOT_WORDS = {"thai", "chap", "ver", "vers", "comp", "viz", "ibid",
+             "ment", "ments", "ness", "nesses", "tion", "tions", "sion", "sions", "ance", "ence", "ings", "ible"}
 
 
 def spelling_key(w):
@@ -3930,6 +3999,11 @@ def neighbour_link(a, cls, key):
 def author_page(lib, author):
     works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
     comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
+    # Their works in Bible order of the first verse each comments on.
+    first_at = {}
+    for i, c in enumerate(comments):
+        first_at.setdefault(c["work"], i)
+    works = sorted(works, key=lambda w: first_at.get(w, len(comments)))
     name, short = author["name"], short_name(author)
     aid = author["id"]
     bio = "".join(f"<p>{e(p)}</p>" for p in author["bio"].split("\n\n"))
@@ -3988,7 +4062,7 @@ def author_page(lib, author):
                   f'{e(t("commentators.read_from", chapter=lib.books[b]["en"] + f" {ch}"))}</a>')
         label = " · ".join(lib.books[b]["en"] for b in wcov)
         cards.append(f'<li><p class="lg-wk-book">{e(label)}</p><a class="lg-wk-title" href="/works/{w}/"><i>{e(x["title"])}</i></a>'
-                     + (f'<span class="lg-quiet">{e(short_edition(x["edition"]))}</span>' if x["edition"] else "")
+                     + (f'<span class="lg-quiet">{e(card_edition(x, name))}</span>' if x["edition"] else "")
                      + f'{meters}{go}</li>')
     # Lay the cards on a six-column grid so every row is full: three to a row
     # (span 2) or two (span 3), with the last row or two widened so no card
@@ -4112,7 +4186,7 @@ def author_page(lib, author):
             f'<button type="submit" class="button ghost">{e(t("commentators.jump_go"))}</button>'
             f'<span class="lg-quiet" id="jump-{aid}-hint" role="status">{e(t("commentators.jump_hint", example=example))}</span></form>'
             if first else "")
-    by_verse = excerpt_list(lib, comments, show_work=len(works) > 1)
+    by_verse = excerpt_list(lib, comments, show_work=len(works) > 1, tools=jump)
     if wholes:
         division = lib.works[wholes[0]]["divisions"][0].lower()
         lists = "".join((f'<h3 class="label">{e(lib.works[w]["title"])}</h3>' if len(wholes) > 1 else "")
@@ -4121,12 +4195,12 @@ def author_page(lib, author):
                 f'<button type="button" role="tab" id="tab-{aid}-v" aria-controls="by-verse" aria-selected="true">{e(t("commentators.by_verse"))}</button>'
                 f'<button type="button" role="tab" id="tab-{aid}-w" aria-controls="by-whole" aria-selected="false">'
                 f'{e(t("commentators.by_division", division=division))}</button></div>')
-        says = (f'{tabs}<div id="by-verse" role="tabpanel" aria-labelledby="tab-{aid}-v">{jump}{by_verse}</div>'
+        says = (f'{tabs}<div id="by-verse" role="tabpanel" aria-labelledby="tab-{aid}-v">{by_verse}</div>'
                 f'<div id="by-whole" role="tabpanel" aria-labelledby="tab-{aid}-w">'
                 f'<h3 class="lg-tab-title">{e(t("commentators.by_division", division=division))}</h3>'
                 f'<p class="lg-quiet">{e(t("commentators.whole_note", division=division))}</p>{lists}</div>')
     else:
-        says = jump + by_verse
+        says = by_verse
 
     # The shape of the work: what it covers, the Scripture it cites, where it
     # says the most, and the words it uses more than the others.

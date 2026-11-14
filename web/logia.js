@@ -956,6 +956,36 @@
     });
   });
 
+  // A commentator's chapters: a switch that opens or closes them all, the map
+  // of chapters marking those open, and "next chapter" closing the one left.
+  document.querySelectorAll(".lg-ch-all").forEach(function (btn) {
+    var root = btn.closest("[role=tabpanel]") || btn.closest(".lg-block") || document;
+    var chs = [].slice.call(root.querySelectorAll("details.lg-ch"));
+    var cells = {};
+    [].forEach.call(root.querySelectorAll(".lg-chnav-cells a"), function (a) { cells[a.getAttribute("href").slice(1)] = a; });
+    var sync = function () {
+      var open = 0;
+      chs.forEach(function (d) { if (d.open) open++; if (cells[d.id]) cells[d.id].classList.toggle("lg-on", d.open); });
+      var all = open === chs.length;
+      btn.textContent = btn.getAttribute(all ? "data-close" : "data-open");
+      btn.setAttribute("aria-pressed", String(all));
+    };
+    chs.forEach(function (d) { d.addEventListener("toggle", sync); });
+    btn.addEventListener("click", function () {
+      var all = chs.every(function (d) { return d.open; });
+      chs.forEach(function (d) { d.open = !all; });
+    });
+    [].forEach.call(root.querySelectorAll(".lg-ch-steps a"), function (a) {
+      a.addEventListener("click", function () {
+        var d = a.closest("details"), next = document.getElementById(a.getAttribute("href").slice(1));
+        if (d) d.open = false;
+        if (next) next.open = true;
+      });
+    });
+    btn.hidden = false;
+    sync();
+  });
+
   // A work's page: go to the verse in the work's chapter page, to the
   // excerpt whose verses hold it (data-ranges: "from-to,..." a chapter).
   document.querySelectorAll(".lg-goto-work").forEach(function (form) {
