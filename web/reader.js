@@ -432,6 +432,26 @@
       }).join("") + "</section>";
   }
   // A voice's excerpts on a verse: where each sits, its lemma, its text.
+  // The commentator's own words on these verses, in the language he wrote,
+  // folded under the English (chapter data "original", from
+  // scripts/extract_originals.py, copied from the scan of the original).
+  function originalHtml(w, es) {
+    var o = w.original, O = U.original || {};
+    if (!o) return "";
+    var lo = Math.min.apply(null, es.map(function (e) { return e.start; }));
+    var hi = Math.max.apply(null, es.map(function (e) { return e.end; }));
+    var paras = [];
+    for (var v = lo; v <= hi; v++) (o.verses[v] || []).forEach(function (p) { paras.push(p); });
+    if (!paras.length) return "";
+    var mark = o.status === "ai_draft"
+      ? ' <a class="lg-ai lg-ai-draft" href="/ai/" title="' + esc(U.ai_draft_title) + '"><span class="lg-ai-star" aria-hidden="true">\u2726</span>' + esc(U.ai_draft) + "</a>"
+      : "";
+    return '<details class="cx-orig"><summary>' + esc(fmt(O.summary, { name: w.author, language: o.language })) + "</summary>" +
+      '<div class="cx-orig-text" lang="' + esc(o.lang) + '">' + paras.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
+      '<p class="cx-orig-note">' + esc(fmt(O.note, { edition: o.edition })) + ' <a href="' + esc(o.scan) + '" target="_blank" rel="noopener">' +
+      esc(O.scan) + " \u2197</a>" + mark + "</p></details>";
+  }
+
   function excerptsHtml(w, es) {
     return es.map(function (e) {
       var where = [e.start === e.end ? "" : fmt(U.on_verses, { a: e.start, b: e.end }), locusLabel(w, e.locus)]
@@ -525,7 +545,7 @@
           (open ? "" : '<button type="button" class="cx-peek" data-toggle="' + w.work_id + '">' + esc(peek) + "</button>") +
           '<div class="cx-body" id="cb-' + w.work_id + '"' + (open ? "" : " hidden") + ">" +
           '<div class="cx-work"><a href="' + w.work_url + '"><i>' + esc(w.title) + "</i></a> · " + esc(w.edition_short) + "</div>" +
-          '<div class="cx-ex' + (long ? " cx-clamp" : "") + '">' + body + "</div>" +
+          '<div class="cx-ex' + (long ? " cx-clamp" : "") + '">' + body + "</div>" + originalHtml(w, es) +
           '<div class="cx-more">' + (long ? '<button type="button" data-expand>' + esc(fmt(U.read_all, { n: words.toLocaleString() })) + "</button>" : "") +
           (es[0].inFull ? '<a href="' + esc(es[0].inFull) + '">' +
             esc(fmt(U.read_in_full, { where: locusLabel(w, es[0].locus.split(".")[0]) })) + "</a>" : "") +

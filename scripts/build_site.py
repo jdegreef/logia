@@ -357,6 +357,12 @@ class Library:
             for cid, (ident, leaf, number) in load(p)["pages"].items():
                 printed[cid] = {"url": scan_page_url(ident, leaf), "page": number,
                                  "img": f"https://archive.org/download/{ident}/page/n{leaf}_w1000.jpg"}
+        # A commentator's own words in the language he wrote, verse by verse
+        # (scripts/extract_originals.py): {(work, book): file}.
+        self.originals = {}
+        for p in glob.glob(os.path.join(ROOT, "library", "originals", "*", "*.json")):
+            o = load(p)
+            self.originals[(o["work"], o["book"])] = o
         self.comments = []
         for p in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
             data = load(p)
@@ -453,6 +459,20 @@ class Library:
                 "words": len(c["text"].split()), "speakers": catena_speakers(c["work"], c["text"]),
                 "scan": c["scan"]})
         return out
+
+    def original_in(self, work, book, chapter):
+        """The original of a work's notes on a chapter, for the reader and
+        the verse pages: its language, where it was copied from, its
+        status, and {verse: [paragraphs]} (None if Logia has none)."""
+        o = self.originals.get((work, book))
+        if not o:
+            return None
+        verses = {int(k.split(".")[1]): v for k, v in o["verses"].items() if int(k.split(".")[0]) == chapter}
+        if not verses:
+            return None
+        return {"lang": o["language"], "language": t("original.languages." + o["language"]),
+                "edition": o["edition_short"], "scan": o["scan"],
+                "status": o["status"], "reviewer": o.get("reviewer") or "", "verses": verses}
 
     # --- Links between texts (docs/references.md) ---
 
@@ -2311,8 +2331,11 @@ def chapter_page(lib, book, chapter, all_chapters):
             "tradition": a["tradition"], "era": a["era"], "kind": tradition_kind(a), "died": a["died"], "title": w["title"],
             "edition_short": short_edition(w["edition"]), "author_url": f'/commentators/{a["id"]}/',
             "divisions": w["divisions"],
-            "work_url": f"/works/{wid}/", "entries": sorted(by_work[wid], key=lambda x: (x["start"], x["end"]))})
+            "work_url": f"/works/{wid}/", "entries": sorted(by_work[wid], key=lambda x: (x["start"], x["end"])),
+            **({"original": orig} if (orig := lib.original_in(wid, book, chapter)) else {})})
     ui = dict(CATALOG["reader"])
+    ui["original"] = CATALOG["original"]
+    ui["ai_draft"], ui["ai_draft_title"] = t("ai.mark_draft"), t("ai.mark_draft_title")
     ui["eras"] = CATALOG["eras"]
     ui["kinds"] = CATALOG["kinds"]
     ui["fathers"] = CATALOG["catena"]["names"]
@@ -2528,6 +2551,31 @@ def excerpt_actions(lib, c, path):
             f'<button type="button" data-xact="share" hidden>{icon("share", 16)}{e(t("reader.share"))}</button>'
             f'<a href="{e(report)}" target="_blank" rel="noopener">{icon("flag", 16)}{e(t("reader.report"))}</a>'
             f'<p class="lg-xact-note" role="status" hidden></p></div>')
+
+
+def original_html(lib, author, orig, sv, ev):
+    """The commentator's own words on verses sv-ev, folded under the
+    English: copied from the scan of the original edition, with where it
+    came from and the mark that the pairing is a draft."""
+    if not orig:
+        return ""
+    paras = [p for v in range(sv, ev + 1) for p in orig["verses"].get(v, [])]
+    if not paras:
+        return ""
+    body = "".join(f"<p>{e(p)}</p>" for p in paras)
+    return (f'<details class="lg-orig"><summary>{e(t("original.summary", name=author["name"], language=orig["language"]))}</summary>'
+            f'<div class="lg-orig-text" lang="{e(orig["lang"])}">{body}</div>'
+            f'<p class="lg-orig-note">{e(t("original.note", edition=orig["edition"]))} '
+            f'<a href="{e(orig["scan"])}" rel="noopener">{e(t("original.scan"))} ↗</a> {ai_mark(orig["status"], orig["reviewer"])}</p>'
+            f'</details>')
+
+
+def voice_original(lib, wid, author, cs, book, chapter):
+    """One fold with the original of a voice's excerpts on a verse page."""
+    spans = [(ref_parts(c["start"]), ref_parts(c["end"])) for c in cs]
+    lo = min(s[2] if s[1] == chapter else 1 for s, _e in spans)
+    hi = max(x[2] if x[1] == chapter else 999 for _s, x in spans)
+    return original_html(lib, author, lib.original_in(wid, book, chapter), lo, hi)
 
 
 def verse_excerpt(lib, c, book, chapter, verse):
@@ -2780,7 +2828,8 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
         meta = (f'<p class="lg-vmeta">{e(a["dates"])} · '
                 f'{e(a["tradition"])} · <a href="{work_chapter_url(wid, book, chapter)}"><i>{e(w["title"])}</i></a></p>')
         sections.append(f'<section class="lg-voice" id="{wid}">{voice_head(a, ref)}'
-                        f'{meta}{"".join(verse_excerpt(lib, c, book, chapter, verse) for c in cs)}</section>')
+                        f'{meta}{"".join(verse_excerpt(lib, c, book, chapter, verse) for c in cs)}'
+                        f'{voice_original(lib, wid, a, cs, book, chapter)}</section>')
         toc.append(f'<a href="#{wid}">{e(short_name(a))}</a>')
         words = sum(len(c["text"].split()) for c in cs)
         rail.append(f'<li class="lg-era-{ERAS.index(a["era"])}"><a href="#{wid}"><b>{e(short_name(a))}</b>'

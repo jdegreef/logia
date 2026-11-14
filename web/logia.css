@@ -2463,3 +2463,13 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 .lg-review-send input { font: inherit; padding: 6px 8px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--bg); color: var(--text); max-width: 100%; }
 @media (max-width: 560px) { .lg-most-cited li > a { grid-template-columns: minmax(6em, 9em) minmax(0, 1fr) 2.5em; } }
 @media print { .lg-selbar, .lg-toast, .lg-xact-extra { display: none !important; } }
+
+/* The original beside the English (library/originals/): the commentator's own
+   Latin or Greek, folded under the excerpt on verse pages and reader cards */
+.lg-orig, .cx-orig { margin: 12px 0 4px; border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; }
+.lg-orig summary, .cx-orig summary { cursor: pointer; font-family: var(--sans); font-size: 13.5px; font-weight: 600; color: var(--accent); }
+.lg-orig-text, .cx-orig-text { font-family: var(--serif); font-size: 15.5px; line-height: 1.6; color: var(--text); margin-top: 8px; }
+.lg-orig-text p, .cx-orig-text p { margin: 0 0 10px; }
+.lg-orig-note, .cx-orig-note { font-family: var(--sans); font-size: 12.5px; color: var(--muted); margin: 4px 0 0; }
+.lg-orig-note .lg-ai, .cx-orig-note .lg-ai { margin-left: 4px; }
+@media print { .lg-orig:not([open]) { display: none; } }

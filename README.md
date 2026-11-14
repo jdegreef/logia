@@ -25,6 +25,7 @@ Christian commentaries.
 | `library/differ/<id>.json` | A passage the churches read differently: Logia's short framing note (`ai_draft` until reviewed), or a pointer to a guide's; the page shows every commentator on the passage and is published only when they come from enough traditions (`scripts/differ.py`, `library/families.json`) |
 | `library/creeds/<id>.json` | Creeds, conciliar decrees and confessions, copied section by section from CCEL by `scripts/extract_creeds.py`, with the Scripture each section cites |
 | `library/pages/<work>.json` | The archive.org scan leaf and printed page each scanned excerpt begins on, found by `scripts/find_pages.py` in archive.org's page index |
+| `library/originals/<work>/<BOOK>.json` | A commentator's own words in the language he wrote (Bengel's Latin on John), verse by verse, copied from the scan of the original edition by `scripts/extract_originals.py` and shown folded under the English; which note goes with which verse is `ai_draft` |
 | `library/lectionary/rcl.json` | The Revised Common Lectionary's Sundays and holy days for 2025–28 (references only), imported by `scripts/import_rcl.py` |
 | `library/identifiers.json` | Each commentator's, and each Father's work's, Wikidata item, Wikipedia article and Clavis Patrum number, fetched by `scripts/fetch_wikidata.py`, never typed |
 | `library/translations/<lang>/<work>/<BOOK>.json` | Translations of excerpts, once they start (see `library/translations/README.md`) |
