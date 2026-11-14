@@ -239,6 +239,49 @@ def check_creeds(only, files):
     return total, bad
 
 
+def check_originals(only, files):
+    """The original-language notes (library/originals/, from
+    scripts/extract_originals.py) are checked like a scan excerpt, paragraph
+    by paragraph, and their Greek against the scan with its line-end
+    hyphens joined, as the notes join them."""
+    paras = bad = 0
+    for path in sorted(glob.glob(os.path.join(ROOT, "library", "originals", "*", "*.json"))):
+        o = json.load(open(path, encoding="utf-8"))
+        if only and o["work"] not in only:
+            continue
+        for key in o["sources"]:
+            if key not in files.get(o["work"], {}):
+                bad += 1
+                print(f"{os.path.relpath(path, ROOT)}: source {key} is not in sources/manifest.json")
+        metas = [files[o["work"]][k] for k in o["sources"] if k in files.get(o["work"], {})]
+        read = []
+        for m in metas:
+            # The page's furniture is left out, as the notes leave it out: a
+            # running head ("JOH. I, 4—7. 207"), a page number, a footnote
+            # ("1) ..." to the end of its paragraph); then a word broken at a
+            # line end, across the furniture, is joined.
+            kept, note = [], False
+            for line in source_original(os.path.join(ROOT, m["path"])).split("\n"):
+                if not line.strip():
+                    note = False
+                    continue
+                if re.match(r"^\s*\S{0,4}\s*J[O0][HB][.,:;]?\s|^\s*[\dIVXL\W]{1,4}\s*$", line):
+                    continue
+                note = note or bool(re.match(r"^\s*(?:\d{1,2}|\*)\)\s(?![vVΥνυγyY]\W)", line))
+                if not note:
+                    kept.append(line)
+            raw = re.sub(r"[-=][ \t]*\n[ \t]*", "", "\n".join(kept))
+            read.append((letters(raw), raw))
+        for verse, texts in o["verses"].items():
+            for text in texts:
+                paras += 1
+                problems = [check_scan(text, src) or check_original(text, raw) for src, raw in read]
+                if not read or all(problems):
+                    bad += 1
+                    print(f"{os.path.relpath(path, ROOT)}: {verse}: {'; '.join(p for p in problems if p)}")
+    return paras, bad
+
+
 def main(argv):
     manifest = json.load(open(os.path.join(ROOT, "sources", "manifest.json"), encoding="utf-8"))
     files = {}
@@ -302,10 +345,13 @@ def main(argv):
                 print(f"{os.path.relpath(path, ROOT)}: {para['id']}: {problem}")
     if paras:
         print(f"{paras - bad} of {paras} paragraphs of whole texts found in their sources")
+    lines, orig_bad = check_originals(only, files)
+    if lines:
+        print(f"{lines - orig_bad} of {lines} paragraphs of originals found in their sources")
     sections, creeds_bad = check_creeds(only, files)
     if sections:
         print(f"{sections - creeds_bad} of {sections} sections of creeds and confessions found in their sources")
-    return 1 if failures or bad or creeds_bad else 0
+    return 1 if failures or bad or creeds_bad or orig_bad else 0
 
 
 if __name__ == "__main__":

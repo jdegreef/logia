@@ -27,6 +27,8 @@ jobs:
         run: python3 scripts/extract_creeds.py --check
       - name: Check the scan pages name excerpts the library holds
         run: python3 scripts/find_pages.py --check
+      - name: Check the originals beside the English are up to date
+        run: python3 scripts/extract_originals.py --check
       - name: Check the page scripts parse
         run: node --check web/site.js && node --check web/reader.js && node --check web/account.js && node --check web/logia.js && node --check web/sw.js && node --check web/linker.js && node --check web/sheets.js && node --check web/study.js && node --check web/review.js && node --check web/widget.js
       - name: Validate the library

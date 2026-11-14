@@ -2646,5 +2646,11 @@
       "next": "Another",
       "failed": "The passage couldn't load. Check the connection and try again."
     }
+  },
+  "original": {
+    "summary": "{name}'s own {language}",
+    "note": "Copied from {edition}, word for word as the scan reads, with its misreadings. The notes were matched to these verses by a script, which a person has yet to check.",
+    "scan": "The scan",
+    "languages": {"la": "Latin", "grc": "Greek", "de": "German"}
   }
 }
