@@ -2357,7 +2357,7 @@
       run++; on = false; at = -1;
       speechSynthesis.cancel();
       mark();
-      play.textContent = play.getAttribute("data-start");
+      play.textContent = play.getAttribute("data-say-start");
       next.hidden = stop.hidden = true;
     };
     listenBox.hidden = false;
@@ -2365,19 +2365,19 @@
       if (!on) {
         items = collect(); at = 0; on = true; run++;
         speechSynthesis.cancel();
-        play.textContent = play.getAttribute("data-pause");
+        play.textContent = play.getAttribute("data-say-pause");
         next.hidden = stop.hidden = false;
         say(run);
       } else if (speechSynthesis.paused) {
-        speechSynthesis.resume(); play.textContent = play.getAttribute("data-pause");
+        speechSynthesis.resume(); play.textContent = play.getAttribute("data-say-pause");
       } else {
-        speechSynthesis.pause(); play.textContent = play.getAttribute("data-resume");
+        speechSynthesis.pause(); play.textContent = play.getAttribute("data-say-resume");
       }
     });
     next.addEventListener("click", function () {
       if (!on) return;
       run++; speechSynthesis.cancel();
-      at++; play.textContent = play.getAttribute("data-pause");
+      at++; play.textContent = play.getAttribute("data-say-pause");
       say(run);
     });
     stop.addEventListener("click", finish);
