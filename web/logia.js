@@ -1466,6 +1466,44 @@
         p.querySelector("a").addEventListener("click", function (ev) { ev.preventDefault(); input.value = fixed; search(); });
       });
     }
+    // The results as a file or a list (data-export): the best U.export_top,
+    // each with its reference, commentator, work, address and opening words.
+    function exportRows() {
+      return Promise.all(results.slice(0, U.export_top).map(function (r) { return r.data(); })).then(function (ds) {
+        return ds.map(function (d) {
+          var x = (d.meta.x || "").split("~"), bible = x[0] === "b", w = bible ? null : U.works[+x[0]];
+          var ref = (U.books[+x[1]] || "") + " " + x[2] + ":" + x[3];
+          if (!bible && (x[4] !== x[2] || x[5] !== x[3])) ref += "–" + (x[4] !== x[2] ? x[4] + ":" : "") + x[5];
+          var link = location.origin + card(d).match(/href="([^"]+)"/)[1].replace(/&amp;/g, "&").replace(/\?hl=[^#]*/, "");
+          var words = d.excerpt.replace(/<[^>]+>/g, "").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+          return [ref, w ? w[1] : U.owb, w ? w[0] : "", link, words];
+        });
+      });
+    }
+    document.querySelectorAll("[data-export]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var kind = btn.getAttribute("data-export"), label = btn.textContent;
+        btn.textContent = U.exporting;
+        exportRows().then(function (rows) {
+          var q = input.value.trim(), text;
+          if (kind === "csv") {
+            var cell = function (v) { return '"' + String(v).replace(/"/g, '""') + '"'; };
+            text = [U.export_head.split("|")].concat(rows).map(function (r) { return r.map(cell).join(","); }).join("\r\n") + "\r\n";
+            var a = document.createElement("a");
+            a.href = URL.createObjectURL(new Blob(["\ufeff" + text], { type: "text/csv;charset=utf-8" }));
+            a.download = "logia-search-" + (q || "results").replace(/[^\w-]+/g, "-").slice(0, 40) + ".csv";
+            document.body.appendChild(a); a.click(); a.remove();
+            btn.textContent = label;
+          } else {
+            text = rows.map(function (r) { return r[0] + " — " + r[1] + (r[2] ? ", " + r[2] : "") + "\n" + r[3]; }).join("\n\n");
+            (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+              btn.textContent = fmt(U.exported, { n: rows.length });
+              setTimeout(function () { btn.textContent = label; }, 2500);
+            }, function () { btn.textContent = label; });
+          }
+        });
+      });
+    });
     function showMore() {
       var next = results.slice(shown, shown + 10);
       shown += next.length;
@@ -2141,6 +2179,10 @@
       out.unshift('<div class="lg-side-cols lg-side-names"><p><b>' + esc(nameOf(pickA)) + "</b></p><p><b>" + esc(nameOf(pickB)) + "</b></p></div>");
       rowsBox.innerHTML = out.join("");
       history.replaceState(null, "", location.pathname + "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b) + location.hash);
+      // The chapters before and after keep the same two.
+      document.querySelectorAll("[data-side-turn]").forEach(function (link) {
+        link.href = link.getAttribute("href").split("?")[0] + "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b);
+      });
     };
     fetch(D.comm).then(function (r) { return r.json(); }).then(function (c) {
       c.commentaries.forEach(function (w) { byWork[w.work_id] = w.entries; });
@@ -2177,6 +2219,41 @@
       var to = dx < 0 ? turnNext : turnPrev;
       if (to) location.href = to.href;
     }, { passive: true });
+  })();
+
+  // A link to some words (?mark=…, "Link" in web/study.js's selection bar):
+  // those words marked where they stand, in the excerpt the address points
+  // to or else anywhere in the text, and scrolled into view.
+  (function () {
+    var want = new URLSearchParams(location.search).get("mark");
+    if (!want) return;
+    var squash = function (x) { return x.replace(/\s+/g, " "); };
+    want = squash(want).trim();
+    var target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+    var boxes = [].slice.call(document.querySelectorAll(".lg-text, .lg-whole"));
+    if (target) boxes.sort(function (a, b) { return (target.contains(b) ? 1 : 0) - (target.contains(a) ? 1 : 0); });
+    boxes.some(function (box) {
+      var walker = document.createTreeWalker(box, NodeFilter.SHOW_TEXT), nodes = [], text = "";
+      while (walker.nextNode()) { nodes.push([walker.currentNode, text.length]); text += squash(walker.currentNode.nodeValue); }
+      var at = text.indexOf(want);
+      if (at < 0) return false;
+      var end = at + want.length, first = null;
+      nodes.forEach(function (n) {
+        var node = n[0], start = n[1], len = squash(node.nodeValue).length;
+        var lo = Math.max(at, start), hi = Math.min(end, start + len);
+        if (lo >= hi || len !== node.nodeValue.length) return;   // a node whose spaces were squashed is left unmarked
+        var r = document.createRange();
+        r.setStart(node, lo - start); r.setEnd(node, hi - start);
+        var m = document.createElement("mark"); m.className = "lg-hl lg-marked";
+        try { r.surroundContents(m); first = first || m; } catch (e) { /* across elements */ }
+      });
+      if (first) {
+        var fold = first.closest(".lg-folded");
+        if (fold) { fold.classList.remove("lg-folded"); var more = fold.nextElementSibling; if (more && more.classList.contains("lg-unfold")) more.remove(); }
+        setTimeout(function () { first.scrollIntoView({ block: "center" }); }, 60);
+      }
+      return !!first;
+    });
   })();
 
   // A page opened from a search result (?hl=born again): the words searched
@@ -2216,6 +2293,95 @@
     var fold = first.closest(".lg-folded");
     if (fold) { fold.classList.remove("lg-folded"); var more = fold.nextElementSibling; if (more && more.classList.contains("lg-unfold")) more.remove(); }
     setTimeout(function () { first.scrollIntoView({ block: "center" }); }, 60);
+  })();
+
+  // Listen (listen_button in scripts/build_site.py): a verse page read aloud,
+  // the verse and then each voice, its name first; a homily paragraph by
+  // paragraph. The paragraph being read is marked. Greek and Hebrew are left
+  // out, as the reader's Listen does (web/reader.js).
+  var listenBox = document.querySelector(".lg-listen");
+  if (listenBox && "speechSynthesis" in window) (function () {
+    var play = listenBox.querySelector("[data-listen]"), next = listenBox.querySelector("[data-listen-next]"), stop = listenBox.querySelector("[data-listen-stop]");
+    var items = [], at = -1, on = false, run = 0;
+    var collect = function () {
+      var out = [];
+      var verse = document.querySelector(".lg-vtext p");
+      if (verse) out.push(verse);
+      document.querySelectorAll("section.lg-voice").forEach(function (sec) {
+        var h = sec.querySelector("h3");
+        if (h) out.push(h);
+        sec.querySelectorAll(".lg-text p").forEach(function (p) { out.push(p); });
+      });
+      document.querySelectorAll(".lg-whole p[id]").forEach(function (p) { out.push(p); });
+      return out;
+    };
+    var spoken = function (el) {
+      var copy = el.cloneNode(true);
+      copy.querySelectorAll('[lang="grc"], [lang="hbo"], .lg-sec-n').forEach(function (x) { x.remove(); });
+      var out = [];
+      copy.textContent.replace(/\s+/g, " ").trim().split(/(?<=[.;:!?])\s+/).forEach(function (piece) {
+        while (piece.length > 240) {
+          var cut = piece.lastIndexOf(", ", 240); if (cut < 80) cut = piece.lastIndexOf(" ", 240);
+          out.push(piece.slice(0, cut + 1)); piece = piece.slice(cut + 1).trim();
+        }
+        if (piece) out.push(piece);
+      });
+      return out;
+    };
+    var mark = function () {
+      document.querySelectorAll(".lg-speaking").forEach(function (x) { x.classList.remove("lg-speaking"); });
+      if (items[at]) {
+        items[at].classList.add("lg-speaking");
+        items[at].scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      }
+    };
+    var say = function (mine) {
+      if (mine !== run) return;
+      if (at >= items.length) { finish(); return; }
+      mark();
+      var parts = spoken(items[at]);
+      var i = 0;
+      var one = function () {
+        if (mine !== run) return;
+        if (i >= parts.length) { at++; say(mine); return; }
+        var u = new SpeechSynthesisUtterance(parts[i++]);
+        u.lang = document.documentElement.lang || "en";
+        u.onend = one;
+        // Cancelled by Next or Stop: nothing to do. Anything else (no voice): stop.
+        u.onerror = function (ev) { if (mine === run && ev.error !== "interrupted" && ev.error !== "canceled") finish(); };
+        speechSynthesis.speak(u);
+      };
+      one();
+    };
+    var finish = function () {
+      run++; on = false; at = -1;
+      speechSynthesis.cancel();
+      mark();
+      play.textContent = play.getAttribute("data-start");
+      next.hidden = stop.hidden = true;
+    };
+    listenBox.hidden = false;
+    play.addEventListener("click", function () {
+      if (!on) {
+        items = collect(); at = 0; on = true; run++;
+        speechSynthesis.cancel();
+        play.textContent = play.getAttribute("data-pause");
+        next.hidden = stop.hidden = false;
+        say(run);
+      } else if (speechSynthesis.paused) {
+        speechSynthesis.resume(); play.textContent = play.getAttribute("data-pause");
+      } else {
+        speechSynthesis.pause(); play.textContent = play.getAttribute("data-resume");
+      }
+    });
+    next.addEventListener("click", function () {
+      if (!on) return;
+      run++; speechSynthesis.cancel();
+      at++; play.textContent = play.getAttribute("data-pause");
+      say(run);
+    });
+    stop.addEventListener("click", finish);
+    window.addEventListener("pagehide", function () { speechSynthesis.cancel(); });
   })();
 
   // A verse page: the verse at the reader's level (Literal, Balanced or

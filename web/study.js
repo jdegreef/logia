@@ -125,6 +125,7 @@
       bar = document.createElement("div");
       bar.className = "lg-selbar"; bar.setAttribute("role", "toolbar");
       bar.innerHTML = '<button type="button" data-do="quote">' + esc(T.quote) + "</button>" +
+        '<button type="button" data-do="link">' + esc(T.link) + "</button>" +
         '<button type="button" data-do="hl">' + esc(T.highlight || "Highlight") + "</button>" +
         '<button type="button" data-do="sheet">' + esc(T.to_sheet) + "</button>";
       document.body.appendChild(bar);
@@ -137,6 +138,12 @@
           var said = p.text.replace(/\s+/g, " ").trim();
           var where = p.article ? citeOf(p.article) : title() + ". " + location.origin + location.pathname + (p.anchor ? "#" + p.anchor : "");
           copy("“" + said + "”\n— " + where).then(function () { toast(T.quote_done); }, function () { toast(said); });
+        } else if (what === "link") {
+          // The page with these words marked when it opens (?mark=, web/logia.js).
+          var words = p.text.replace(/\s+/g, " ").trim().slice(0, 300);
+          var anchor = p.article ? p.article.id : p.anchor;
+          var url = location.origin + location.pathname + "?mark=" + encodeURIComponent(words) + (anchor ? "#" + anchor : "");
+          copy(url).then(function () { toast(T.link_done); }, function () { toast(url); });
         } else if (what === "hl" && p.article && p.inText) {
           var all = get(HL, {});
           (all[p.article.id] = all[p.article.id] || []).push([p.start, p.end]);

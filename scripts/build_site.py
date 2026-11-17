@@ -2482,6 +2482,26 @@ def who_names_page(lib):
     return page(lib, t("names.heading"), body, "/who-names-whom/", current="/commentators/", description=t("names.dek"))
 
 
+@functools.lru_cache(maxsize=1)
+def side_chapters(lib):
+    """The chapters with two or more commentaries: those with a side-by-side page."""
+    return [(b, ch) for b, ch in lib.chapters if len({c["work"] for c in lib.comments_in(b, ch)}) > 1]
+
+
+def side_turns(lib, book, chapter):
+    """The chapters before and after with a side-by-side page; web/logia.js
+    carries the chosen pair along (?a=&b=)."""
+    have = side_chapters(lib)
+    i = have.index((book, chapter)) if (book, chapter) in have else -1
+    if i < 0:
+        return ""
+    prev = (f'<a rel="prev" data-side-turn href="{chapter_url(*have[i - 1])}side-by-side/">&larr; {e(lib.books[have[i - 1][0]]["en"])} {have[i - 1][1]}</a>'
+            if i else "<span></span>")
+    nxt = (f'<a rel="next" data-side-turn href="{chapter_url(*have[i + 1])}side-by-side/">{e(lib.books[have[i + 1][0]]["en"])} {have[i + 1][1]} &rarr;</a>'
+           if i + 1 < len(have) else "<span></span>")
+    return f'<nav class="lg-turns" aria-label="{e(t("side.turns"))}">{prev}{nxt}</nav>'
+
+
 def side_by_side_page(lib, book, chapter, comm):
     """Two commentators across a whole chapter, verse by verse in two columns
     (web/logia.js draws them from the chapter's /comm/ file, the reader's own).
@@ -2507,6 +2527,7 @@ def side_by_side_page(lib, book, chapter, comm):
 <label><span class="label">{e(t("side.right"))}</span><select id="side-b">{options(1)}</select></label></div>
 <div class="lg-side-rows" aria-live="polite"><p class="lg-quiet">{e(t("side.loading"))}</p></div>
 <noscript><p>{e(t("side.noscript"))} {plain}</p></noscript>
+{side_turns(lib, book, chapter)}
 <script type="application/json" id="side-data">{json.dumps(data, ensure_ascii=False).replace("</", "<\\/")}</script>
 </article>"""
     return page(lib, t("side.heading", ref=f"{name} {chapter}"), body, chapter_url(book, chapter) + "side-by-side/",
@@ -2547,6 +2568,9 @@ def chapter_page(lib, book, chapter, all_chapters):
     text_data = {k: v for k, v in bible.items() if k not in ("records", "words")}
     data = {**text_data, "records": records, "wordCounts": {v: len(ws) for v, ws in bible["words"].items()},
             "panel": digest_url(f"/panel/{book}.{chapter}.json", panel),
+            "creeds": {str(v): [[d["title"] + (f' · {sec["label"]}' if sec["label"] else ""), creed_url(d, sec), creed_when(d)]
+                              for d, sec in lib.creed_cites.get((book, chapter, v), [])]
+                       for v in bible["verses"] if lib.creed_cites.get((book, chapter, v))},
             "comm": comm_url, "commParts": ({"size": PART_VERSES, "url": comm_url.replace(".json?", ".{n}.json?")} if parts else None),
             "sideBySide": chapter_url(book, chapter) + "side-by-side/", "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS, "kinds": KINDS, "issues": GITHUB_URL + "/issues/new",
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
@@ -3012,6 +3036,15 @@ def compare_dialog(ref, side=None):
             f'<div class="lg-cmp-cols"></div></dialog>')
 
 
+def listen_button():
+    """Read aloud (web/logia.js): the verse and its voices, or a homily, a
+    paragraph at a time; shown only where the browser can speak."""
+    return (f'<span class="lg-listen" hidden><button type="button" class="button ghost" data-listen data-pause="{e(t("listen.pause"))}" '
+            f'data-resume="{e(t("listen.resume"))}" data-start="{e(t("listen.start"))}">{e(t("listen.start"))}</button>'
+            f'<button type="button" class="button ghost" data-listen-next hidden>{e(t("listen.next"))}</button>'
+            f'<button type="button" class="button ghost" data-listen-stop hidden>{e(t("listen.stop"))}</button></span>')
+
+
 def verse_levels(bible, verse):
     """{"L": text, "R": text}: the verse at the Open Word Bible's Literal and
     Readable levels (the records' own L and R), at the default wording."""
@@ -3036,7 +3069,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
         switch = ('<p class="lg-vlevels" role="group" aria-label="' + e(t("chapter.level_label")) + '" hidden>'
                   + "".join(f'<button type="button" data-level="{lv}" aria-pressed="{"true" if lv == "B" else "false"}">{e(t("level." + lv))}</button>'
                             for lv in ("L", "B", "R")) + "</p>") if len(levels) == 2 else ""
-        verse_html = f'<blockquote class="lg-vtext" data-b="{e(text)}"{attrs}><p>{e(text)}</p></blockquote>{switch}'
+        verse_html = f'<blockquote class="lg-vtext" data-b="{e(text)}"{attrs}><p>{e(text)}</p></blockquote>{switch}{listen_button()}'
     else:
         # A verse the Open Word Bible's Greek text leaves out (John 5:4, 8:1-11):
         # say so, as the chapter page does, over the whole run it belongs to.
@@ -4607,6 +4640,13 @@ def author_page(lib, author):
                 if hits >= 5:
                     terms.append((-hits, x["term"], f'{g["path"]}#t{i}', hits))
         related += [(href, term, t("commentators.rel_term", n=f"{hits:,}")) for _h, term, href, hits in sorted(terms)[:4]]
+    # The topics with most of their excerpts on the topic's passages, up to four.
+    on_topic = []
+    for tp in topics(lib):
+        n = sum(1 for c in comments for x in tp["items"] if topic_holds(x, c))
+        if n >= 3:
+            on_topic.append((-n, t(f"topics.{tp['id']}.heading"), f"/topics/{tp['id']}/", n))
+    related += [(href, heading, t("commentators.rel_topic", n=f"{n:,}")) for _n, heading, href, n in sorted(on_topic)[:4]]
     related = (f'<section class="lg-block" id="more"><h2>{e(t("commentators.related", name=short))}</h2><ul class="lg-related">'
                + "".join(f'<li><a href="{href}"><b>{e(title)}</b><span class="lg-quiet">{e(what)}</span></a></li>' for href, title, what in related)
                + "</ul></section>")
@@ -5185,10 +5225,10 @@ def text_page(lib, wid, x):
 <h1>{e(name)}</h1><p class="dek">{e(lead)}</p>
 <p class="lg-quiet lg-text-minutes">{e(t("commentators.minutes", n=reading_minutes(" ".join(p["text"] for p in paras))))}</p>
 <p class="actions"><a class="button ghost" href="/commentators/{a["id"]}/">{e(a["name"])}</a>
-<a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p>
+<a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a> {listen_button()}</p>
 <nav class="lg-turns lg-turns-top" aria-label="{e(w["title"])}">{"".join(turns)}</nav></header>
 <div class="lg-whole">{"".join(body)}</div>
-<nav class="lg-turns" aria-label="{e(w["title"])}">{"".join(turns)}</nav>
+<nav class="lg-turns" aria-label="{e(t("text.turns_end", title=w["title"]))}">{"".join(turns)}</nav>
 <p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>
 </article></div>"""
     return page(lib, f'{a["name"]}, {name}', html_body, f"/works/{wid}/{x['locus']}/", current="/commentators/",
@@ -5656,6 +5696,13 @@ def topics(lib):
         if items:
             out.append({**tp, "items": items})
     return out
+
+
+def topic_holds(item, c):
+    """Whether an excerpt begins within a topic's passage."""
+    book, start, end = topic_span(item)
+    b, ch, v = ref_parts(c["start"])
+    return b == book and start <= (ch, v) <= end
 
 
 def topic_span(item):
@@ -8130,6 +8177,8 @@ BIBLE_RECORD = re.compile(r"^/[a-z0-9]{3}/\d+/v\d+\.html$")
 # How many of the best results "Group by passage" gathers (web/logia.js):
 # each needs its own small file, so not all of a big search.
 GROUP_TOP = 120
+# And how many "Download" and "Copy as a list" take.
+EXPORT_TOP = 500
 
 
 def search_within(label, field, value, placeholder):
@@ -8160,7 +8209,8 @@ def search_page(lib, indexed):
     with Pagefind), narrowed by era, tradition, book and commentator."""
     # What the page needs to name a result from its code (search_records):
     # each work's title, commentator and dates, and the books' names.
-    fts_ui = {**CATALOG["search"]["fts"], "group_top": GROUP_TOP, "group_head": t("search.group_head"),
+    fts_ui = {**CATALOG["search"]["fts"], "group_top": GROUP_TOP, "export_top": EXPORT_TOP, "export_head": t("search.export_head"),
+              "exporting": t("search.exporting"), "exported": t("search.exported"), "group_head": t("search.group_head"),
               "group_head_one": t("search.group_head_one"), "result_title": t("search.result_title"), "owb": t("search.owb"),
               "works": [[lib.works[w]["title"], lib.author_of(w)["name"], lib.author_of(w)["dates"]] for w in lib.ordered_works()],
               "books": [x["en"] for x in lib.books.values()],
@@ -8180,7 +8230,7 @@ def search_page(lib, indexed):
 </form>
 <p class="lg-fts-view" hidden><label for="fts-sort">{e(t("search.sort"))}</label> <select id="fts-sort"><option value="">{e(t("search.sort_best"))}</option>
 <option value="asc">{e(t("search.sort_oldest"))}</option><option value="desc">{e(t("search.sort_newest"))}</option></select>
-<label><input type="checkbox" id="fts-group"> {e(t("search.group"))}</label> <span class="lg-quiet">{e(t("search.group_note", n=GROUP_TOP))}</span></p>
+<label><input type="checkbox" id="fts-group"> {e(t("search.group"))}</label> <button type="button" class="lg-linkish" data-export="csv">{e(t("search.export_csv"))}</button> <button type="button" class="lg-linkish" data-export="list">{e(t("search.export_list"))}</button> <span class="lg-quiet">{e(t("search.group_note", n=GROUP_TOP))}</span></p>
 <p class="lg-fts-status" id="fts-status" aria-live="polite">{e(t("search.fts.start" if indexed else "search.fts.unavailable"))}</p>
 <ol class="lg-fts-results" id="fts-results"></ol>
 <p><button type="button" class="button ghost lg-fts-more" id="fts-more" hidden>{e(t("search.more"))}</button></p>
@@ -8233,7 +8283,7 @@ def build():
             with open(os.path.join(SITE, folder, f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
                 f.write(text)
         pages.append(chapter_url(book, chapter))
-        if comm and len(json.loads(comm)["commentaries"]) > 1:
+        if (book, chapter) in side_chapters(lib):
             write(chapter_url(book, chapter) + "side-by-side/", side_by_side_page(lib, book, chapter, comm))
             pages.append(chapter_url(book, chapter) + "side-by-side/")
         here = lib.verse_pages(book, chapter)
