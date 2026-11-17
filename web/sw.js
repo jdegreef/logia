@@ -77,5 +77,12 @@ self.addEventListener("fetch", function (event) {
         return res;
       });
     }));
+    return;
   }
+
+  // Anything else a page fetches (a commentator's chapter of rows, kept with
+  // "Keep … for offline"): the network, and the kept copy when there is none.
+  event.respondWith(fetch(req).catch(function () {
+    return caches.match(req, { ignoreSearch: true }).then(function (hit) { return hit || Response.error(); });
+  }));
 });

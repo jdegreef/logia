@@ -36,6 +36,9 @@ PATH = os.path.join(ROOT, "library", "identifiers.json")
 API = "https://www.wikidata.org/w/api.php"
 AGENT = "LogiaBuild/1.0 (https://logia.faith; https://github.com/jdegreef/logia)"
 PAUSE = float(os.environ.get("LOGIA_WIKIDATA_PAUSE", "1.5"))   # seconds between requests
+# Wikidata asks automated clients to stop while its servers lag more than
+# this many seconds; a read-only run may allow more when the lag stays high.
+MAXLAG = os.environ.get("LOGIA_WIKIDATA_MAXLAG", "5")
 
 
 class Refused(Exception):
@@ -43,8 +46,9 @@ class Refused(Exception):
 
 
 def get(params):
-    url = API + "?" + urllib.parse.urlencode({**params, "format": "json", "maxlag": "5"})
-    req = urllib.request.Request(url, headers={"User-Agent": AGENT})
+    url = API + "?" + urllib.parse.urlencode({**params, "format": "json", "maxlag": MAXLAG})
+    # Without an Accept header, Wikimedia answers urllib's requests with HTTP 429.
+    req = urllib.request.Request(url, headers={"User-Agent": AGENT, "Accept": "*/*"})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             data = json.load(r)

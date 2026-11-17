@@ -80,15 +80,27 @@
       var ab = r.split("-"); return chapter >= +ab[0] && chapter <= +(ab[1] || ab[0]);
     });
   }
+  // ... and a range: "John 1:1-14", "John 1:1–2:11" ({..., to: {chapter, verse}}).
   function parseRef(q) {
     if (!D) return null;
-    var m = String(q).trim().match(/^((?:[1-3]|i{1,3})?\s*[a-z][a-z.\s]*?)\s*(\d+)(?:\s*[:.,\s]\s*(\d+))?\s*$/i);
+    var m = String(q).trim().match(/^((?:[1-3]|i{1,3})?\s*[a-z][a-z.\s]*?)\s*(\d+)(?:\s*[:.,\s]\s*(\d+))?(?:\s*[-–—]\s*(\d+)(?:\s*[:.]\s*(\d+))?)?\s*$/i);
     if (!m) return null;
     var code = bookOf(m[1]);
     if (!code) return null;
     var chapter = +m[2], verse = m[3] ? +m[3] : null;
     if (chapter < 1 || chapter > D.chapters[code]) return null;
-    return { code: code, chapter: chapter, verse: verse };
+    var r = { code: code, chapter: chapter, verse: verse };
+    if (m[4] && verse) r.to = m[5] ? { chapter: +m[4], verse: +m[5] } : { chapter: chapter, verse: +m[4] };
+    return r;
+  }
+  // A range's own page where it has one (a passage with commentary), else
+  // the reader at its first verse.
+  function rangeHref(r) {
+    var key = r.code + "." + r.chapter + "." + r.verse + "-" + r.to.chapter + "." + r.to.verse;
+    return (D.readings && D.readings[key]) || (D.passages && D.passages[key]) || refHref(r);
+  }
+  function rangeLabel(r) {
+    return refLabel(r) + "–" + (r.to.chapter !== r.chapter ? r.to.chapter + ":" : "") + r.to.verse;
   }
   function refHref(r) { return "/" + r.code.toLowerCase() + "/" + r.chapter + "/" + (r.verse ? "#v" + r.verse : ""); }
   function refLabel(r) { return D.names[r.code] + " " + r.chapter + (r.verse ? ":" + r.verse : ""); }
@@ -97,8 +109,25 @@
   function suggest(q) {
     var out = [], low = q.trim().toLowerCase();
     if (!low || !D) return out;
+    // "Calvin John 3:16": a commentator's name, then a reference, goes to
+    // what that commentator says there.
+    var who = low.match(/^([a-z.\s]+?)\s+(?:on\s+)?((?:[1-3]\s*)?[a-z][a-z.\s]*\d.*)$/i);
+    if (who && D.people) {
+      var wr = parseRef(who[2]);
+      var person = wr && D.people.filter(function (p) {
+        return p[0].toLowerCase().split(/[\s.]+/).indexOf(who[1].trim().replace(/\s+/g, " ").split(" ").pop()) >= 0;
+      })[0];
+      if (person && person[3] && person[3][wr.code]) {
+        var label = refLabel(wr);
+        out.push({ href: "/" + wr.code.toLowerCase() + "/" + wr.chapter + "/" + (wr.verse ? "#v" + wr.verse + "-" + person[3][wr.code] : ""),
+                   title: fmt(D.ui.who_on, { name: person[0], ref: label }), note: D.ui.in_reader });
+        return out;
+      }
+    }
     var r = parseRef(q);
-    if (r) {
+    if (r && r.to) {
+      out.push({ href: rangeHref(r), title: rangeLabel(r), note: D.ui.passage });
+    } else if (r) {
       var note = D.ui[r.verse ? "verse" : "chapter"];
       if (D.has && !hasCommentary(r.code, r.chapter)) note += " · " + D.ui.text_only;
       out.push({ href: refHref(r), title: refLabel(r), note: note });
@@ -921,6 +950,31 @@
       life.addEventListener("blur", clear);
     });
   });
+  // A long verse-by-verse list keeps each closed chapter's rows in a file
+  // of its own (excerpt_list in scripts/build_site.py, data-src): fetched
+  // the first time the chapter opens, however it is opened.
+  function loadRows(details) {
+    var ul = details && details.querySelector("ul.lg-excerpts[data-src]");
+    if (!ul) return Promise.resolve();
+    if (!ul._loading) {
+      ul._loading = fetch(ul.getAttribute("data-src")).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.text();
+      }).then(function (html) {
+        ul.innerHTML = html;
+        ul.removeAttribute("data-src");
+      }, function () {
+        ul._loading = null;
+        ul.innerHTML = '<li class="lg-quiet">' + esc(ul.getAttribute("data-failed")) + "</li>";
+      });
+    }
+    return ul._loading;
+  }
+  document.addEventListener("toggle", function (ev) {
+    if (ev.target.matches && ev.target.matches("details.lg-ch") && ev.target.open) loadRows(ev.target);
+  }, true);
+  document.querySelectorAll("details.lg-ch[open]").forEach(loadRows);
+
   document.querySelectorAll(".lg-goto:not(.lg-goto-work)").forEach(function (form) {
     var books = JSON.parse(form.getAttribute("data-books"));
     var codes = Object.keys(books);
@@ -938,6 +992,9 @@
         });
       }
       var ch = code && document.getElementById("ch-" + code.toLowerCase() + "-" + (m && +m[2]));
+      loadRows(ch).then(function () { mark(ch, m); });
+    });
+    function mark(ch, m) {
       var row = null;
       if (ch) {
         var v = +m[3];
@@ -953,7 +1010,7 @@
       row.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
       var link = row.querySelector("a");
       if (link) link.focus({ preventScroll: true });
-    });
+    }
   });
 
   // A commentator's chapters: a switch that opens or closes them all, the map
@@ -1085,6 +1142,62 @@
     });
   });
 
+  // Two creeds side by side (/creeds/compare/): each is printed whole in a
+  // hidden template; the two pickers copy the chosen ones into the columns.
+  // ?a=<id> picks the left one (a creed page's "Compare" button).
+  var cc = document.querySelector(".lg-cc");
+  if (cc) {
+    var ccShow = function () {
+      ["a", "b"].forEach(function (k) {
+        var id = document.getElementById("cc-" + k).value;
+        var src = cc.querySelector('.lg-cc-doc[data-doc="' + id + '"]');
+        var slot = cc.querySelector('[data-slot="' + k + '"]');
+        slot.innerHTML = src ? src.innerHTML : "";
+      });
+    };
+    var ccA = new URLSearchParams(location.search).get("a");
+    var pickA = document.getElementById("cc-a"), pickB = document.getElementById("cc-b");
+    if (ccA && pickA.querySelector('option[value="' + ccA + '"]')) {
+      pickA.value = ccA;
+      if (pickB.value === ccA) pickB.selectedIndex = pickB.selectedIndex ? 0 : 1;
+    }
+    pickA.addEventListener("change", ccShow);
+    pickB.addEventListener("change", ccShow);
+    ccShow();
+  }
+
+  // A short creed's "Recite": its articles one at a time, in large type
+  // (a dialog; the arrow keys and the buttons move through them).
+  var recite = document.querySelector("[data-recite]");
+  var rd = document.querySelector(".lg-recite");
+  if (recite && rd && rd.showModal) {
+    var arts = Array.prototype.slice.call(document.querySelectorAll(".lg-creed-body .lg-creed-sec"));
+    var at = 0;
+    var rText = rd.querySelector(".lg-recite-text"), rN = rd.querySelector(".lg-recite-n");
+    var rPrev = rd.querySelector("[data-recite-prev]"), rNext = rd.querySelector("[data-recite-next]");
+    var rShow = function () {
+      var sec = arts[at];
+      var label = sec.querySelector(".lg-creed-label");
+      rText.innerHTML = (label ? "<p class=\"lg-recite-label\">" + label.textContent + "</p>" : "") +
+        sec.querySelector(".lg-text").innerHTML;
+      rN.textContent = (at + 1) + " / " + arts.length;
+      rPrev.disabled = at === 0;
+      rNext.disabled = at === arts.length - 1;
+    };
+    var rGo = function (d) { at = Math.max(0, Math.min(arts.length - 1, at + d)); rShow(); };
+    if (arts.length) {
+      recite.hidden = false;
+      recite.addEventListener("click", function () { at = 0; rShow(); rd.showModal(); });
+      rPrev.addEventListener("click", function () { rGo(-1); });
+      rNext.addEventListener("click", function () { rGo(1); });
+      rd.querySelector("[data-recite-close]").addEventListener("click", function () { rd.close(); });
+      rd.addEventListener("keydown", function (ev) {
+        if (ev.key === "ArrowRight") { rGo(1); ev.preventDefault(); }
+        if (ev.key === "ArrowLeft") { rGo(-1); ev.preventDefault(); }
+      });
+    }
+  }
+
   // A link to #id inside a closed <details> opens it.
   function openTarget() {
     var id = decodeURIComponent(location.hash.slice(1));
@@ -1186,11 +1299,32 @@
     var input = form.querySelector("#fts-q"), status = document.getElementById("fts-status");
     var list = document.getElementById("fts-results"), more = document.getElementById("fts-more");
     var who = form.querySelector("#fts-who");
-    var src = form.getAttribute("data-pagefind");
+    var src = form.getAttribute("data-pagefind"), srcBible = form.getAttribute("data-pagefind-bible");
     if (!src) return;
-    var pf = null, allCounts = {}, chosen = { era: [], tradition: [], book: [], commentator: [] }, results = [], shown = 0, run = 0, timer = null;
+    // The Bible's verses are an index of their own, loaded only when "Bible
+    // text" is chosen (build_search_index in scripts/build_site.py).
+    var pfBible = null, srcCounts = {};
+    function sources() {
+      var names = Object.keys(allCounts.source || {}), comm = names[0], bible = names[1], s = chosen.source;
+      return { comm: !s.length || s.indexOf(comm) >= 0, bible: !!bible && s.indexOf(bible) >= 0, names: names };
+    }
+    function bibleIndex() {
+      if (!pfBible) pfBible = import(srcBible).then(function (m) { return m.options({ excerptLength: 36 }).then(function () { return m; }); });
+      return pfBible;
+    }
+    var pf = null, allCounts = {}, chosen = { source: [], era: [], tradition: [], book: [], commentator: [], work: [] }, results = [], shown = 0, run = 0, timer = null;
     var params = new URLSearchParams(location.search);
     input.value = params.get("q") || "";
+    // A reference typed as a search (from the address bar, /opensearch.xml):
+    // "John 3:16" offers its page above the word search's results.
+    if (input.value.trim()) withData(function () {
+      var hit = parseRef(input.value.trim()) && suggest(input.value)[0];
+      if (!hit) return;
+      var go = document.createElement("p");
+      go.className = "lg-fts-goto";
+      go.innerHTML = '<a class="button" href="' + esc(hit.href) + '">' + esc(fmt(U.goto, { ref: hit.title })) + " →</a>";
+      status.parentNode.insertBefore(go, status);
+    });
     Object.keys(chosen).forEach(function (k) { chosen[k] = params.getAll(k); });
     function filters(but) {
       var f = {};
@@ -1199,45 +1333,138 @@
     }
     // Each group's counts as if nothing were chosen in it, so its other
     // values stay offered: one more search for each group with a choice.
-    function facetCounts(q, counts) {
-      var groups = Object.keys(chosen).filter(function (k) { return chosen[k].length; });
-      return Promise.all(groups.map(function (k) {
-        return pf.search(q || null, { filters: filters(k) }).then(function (s) { counts[k] = s.filters[k] || {}; });
-      })).then(function () { return counts; });
+    // Counting the filters costs Pagefind time on every search once their
+    // data is loaded (20 seconds for "Word"), so the results come from an
+    // instance that never loads it, and the chips' counts from a second
+    // instance, asked only when a search has at most COUNT_UP_TO results.
+    // A bigger search shows the chips without counts.
+    var COUNT_UP_TO = 1500, pfCount = null;
+    function counter() {
+      if (!pfCount) pfCount = import(src + "?counts").then(function (m) { return m.filters().then(function () { return m; }); });
+      return pfCount;
+    }
+    function facetCounts(q) {
+      return counter().then(function (m) {
+        return m.search(q || null, { filters: filters() }).then(function (s) {
+          var counts = {};
+          Object.keys(s.filters).forEach(function (k) { counts[k] = s.filters[k]; });
+          var groups = Object.keys(chosen).filter(function (k) { return chosen[k].length; });
+          return Promise.all(groups.map(function (k) {
+            return m.search(q || null, { filters: filters(k) }).then(function (s2) { counts[k] = s2.filters[k] || {}; });
+          })).then(function () { return counts; });
+        });
+      });
     }
     function keep() {
       var p = new URLSearchParams();
       if (input.value.trim()) p.set("q", input.value.trim());
+      if (sortBy.value) p.set("sort", sortBy.value);
       Object.keys(chosen).forEach(function (k) { chosen[k].forEach(function (v) { p.append(k, v); }); });
       var qs = p.toString();
       history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
     }
-    function chips(counts) {
+    function chips(counts, bare) {
       form.querySelectorAll(".lg-fts-group[data-filter]").forEach(function (g) {
-        var k = g.getAttribute("data-filter"), c = counts[k] || {};
+        var k = g.getAttribute("data-filter"), c = bare ? allCounts[k] || {} : counts[k] || {};
         var names = Object.keys(c).filter(function (v) { return c[v] || chosen[k].indexOf(v) >= 0; });
-        if (k === "era" || k === "book") {
+        // Both sources are always offered; a count shows once that index is searched.
+        if (k === "source") { names = Object.keys(allCounts.source || {}); c = input.value.trim() || Object.keys(filters()).length ? srcCounts : allCounts.source || {}; }
+        if (k === "era" || k === "book" || k === "source") {
           var order = Object.keys(allCounts[k] || {});
           names.sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); });
         } else names.sort();
         if (k === "commentator") {
           who.innerHTML = '<option value="">' + esc(who.options[0].text) + "</option>" + names.map(function (v) {
-            return '<option value="' + esc(v) + '"' + (chosen[k].indexOf(v) >= 0 ? " selected" : "") + ">" + esc(v) + " (" + (c[v] || 0) + ")</option>";
+            return '<option value="' + esc(v) + '"' + (chosen[k].indexOf(v) >= 0 ? " selected" : "") + ">" + esc(v) + (bare ? "" : " (" + (c[v] || 0) + ")") + "</option>";
           }).join("");
         } else {
           g.querySelector(".lg-fts-chips").innerHTML = names.map(function (v) {
             return '<button type="button" class="cx-chip" data-k="' + k + '" data-v="' + esc(v) + '" aria-pressed="' + (chosen[k].indexOf(v) >= 0) + '">' +
-              esc(v) + ' <span class="cx-chip-n">' + (c[v] || 0) + "</span></button>";
+              esc(v) + ((bare && k !== "source") || c[v] == null ? "" : ' <span class="cx-chip-n">' + c[v] + "</span>") + "</button>";
           }).join("");
         }
         g.hidden = !names.length;
       });
     }
+    // A result is named from its code (x: work~book~chapter~verse~end chapter~end
+    // verse, or b~book~chapter~verse for a verse of the Bible), and its
+    // address is its record's path with the .html made a #fragment
+    // (search_records in scripts/build_site.py).
     function card(d) {
-      var m = d.meta;
-      return '<li class="lg-fts-hit"><p class="lg-fts-head"><a href="' + esc(m.link) + '"><b>' + esc(m.title) + "</b></a>" +
-        ' <span class="lg-quiet">' + esc(m.dates) + " · <i>" + esc(m.work) + "</i></span></p>" +
+      var x = (d.meta.x || "").split("~"), bible = x[0] === "b";
+      var link = d.url.replace(/\/v(\d+)\.html$/, "/#v$1").replace(/\/([^/]+)\.html$/, "/#$1");
+      // The words searched for go along (?hl=), to be marked where the result opens.
+      var words = input.value.trim().replace(/\b[a-z]+:\S+/gi, "").trim();
+      if (words && !bible) link = link.replace("#", "?hl=" + encodeURIComponent(words) + "#");
+      var book = U.books[+x[1]] || "", ch = x[2], v = x[3];
+      var ref = book + " " + ch + ":" + v;
+      if (!bible && (x[4] !== ch || x[5] !== v)) ref += "–" + (x[4] !== ch ? x[4] + ":" : "") + x[5];
+      var w = bible ? null : U.works[+x[0]];
+      var title = bible ? ref : fmt(U.result_title, { name: w ? w[1] : "", ref: ref });
+      var sub = bible ? "<i>" + esc(U.owb) + "</i>" : esc(w ? w[2] : "") + " · <i>" + esc(w ? w[0] : "") + "</i>";
+      return '<li class="lg-fts-hit' + (bible ? " lg-fts-verse" : "") + '"><p class="lg-fts-head"><a href="' + esc(link) + '"><b>' + esc(title) + "</b></a>" +
+        ' <span class="lg-quiet">' + sub + "</span></p>" +
         '<p class="lg-fts-text">' + d.excerpt + "</p></li>";
+    }
+    // "Group by passage": the best U.group_top results gathered by the verse
+    // each begins at, the verse with most first, each with its voices' lines.
+    var grouping = document.getElementById("fts-group"), view = document.querySelector(".lg-fts-view");
+    function showGroups(mine) {
+      more.hidden = true;
+      return Promise.all(results.slice(0, U.group_top).map(function (r) { return r.data(); })).then(function (ds) {
+        if (mine !== run) return;
+        var groups = {}, order = [];
+        ds.forEach(function (d) {
+          var x = (d.meta.x || "").split("~");
+          var key = x[1] + "~" + x[2] + "~" + x[3];
+          if (!groups[key]) { groups[key] = []; order.push(key); }
+          groups[key].push(d);
+        });
+        order.sort(function (a, b) { return groups[b].length - groups[a].length || order.indexOf(a) - order.indexOf(b); });
+        list.innerHTML = order.map(function (key) {
+          var ds2 = groups[key], k = key.split("~"), ref = (U.books[+k[0]] || "") + " " + k[1] + ":" + k[2];
+          var first = card(ds2[0]).match(/href="([^"]+)"/)[1].replace(/&amp;/g, "&");
+          var href = first.indexOf("/#v") >= 0 ? first : first.split("#")[0];
+          return '<li class="lg-fts-hit lg-fts-grouped"><p class="lg-fts-head"><a href="' + esc(href) + '"><b>' + esc(ref) + "</b></a> " +
+            '<span class="lg-quiet">' + esc(ds2.length === 1 ? U.group_head_one : fmt(U.group_head, { n: ds2.length })) + "</span></p><ul>" +
+            ds2.map(function (d) {
+              var x = (d.meta.x || "").split("~"), w = x[0] === "b" ? null : U.works[+x[0]];
+              var link = card(d).match(/href="([^"]+)"/)[1];
+              return '<li><a href="' + link + '"><b>' + esc(w ? w[1] : U.owb) + "</b></a> " + '<span class="lg-fts-text">' + d.excerpt + "</span></li>";
+            }).join("") + "</ul></li>";
+        }).join("");
+      });
+    }
+    // "Did you mean…": when a search finds little, each word not in the
+    // excerpts' word list (/search-words.txt, commonest first) is offered
+    // as the commonest word within a letter or two of it.
+    var wordList = null;
+    function didYouMean(q, mine) {
+      if (!wordList) wordList = fetch("/search-words.txt").then(function (r) { return r.text(); }).then(function (t) {
+        var list = t.trim().split(" "), set = {};
+        list.forEach(function (w, i) { set[w] = i + 1; });
+        return { list: list, set: set };
+      });
+      wordList.then(function (W) {
+        if (mine !== run) return;
+        var changed = false;
+        var fixed = q.split(/\s+/).map(function (w) {
+          var low = w.toLowerCase();
+          if (low.length < 4 || /[^a-z]/.test(low)) return w;
+          // A word in the list is offered another only twenty times commoner.
+          var rank = W.set[low], max = low.length > 6 ? 2 : 1, upto = rank ? Math.floor(rank / 20) : W.list.length;
+          for (var i = 0; i < upto; i++) {
+            if (distance(low, W.list[i], max) <= max) { changed = true; return W.list[i]; }
+          }
+          return w;
+        }).join(" ");
+        if (!changed) return;
+        var p = document.createElement("span");
+        p.className = "lg-fts-dym";
+        p.innerHTML = " " + esc(U.did_you_mean) + ' <a href="?q=' + encodeURIComponent(fixed) + '">' + esc(fixed) + "</a>?";
+        status.appendChild(p);
+        p.querySelector("a").addEventListener("click", function (ev) { ev.preventDefault(); input.value = fixed; search(); });
+      });
     }
     function showMore() {
       var next = results.slice(shown, shown + 10);
@@ -1276,45 +1503,76 @@
       });
       return { queries: out.slice(0, 4), words: extra.slice(0, 4) };
     }
-    function find(q, f) {
-      var base = pf.search(q || null, f), more2 = q ? variants(q) : { queries: [], words: [] };
-      if (!more2.queries.length) return base;
-      return Promise.all([base].concat(more2.queries.map(function (v) { return pf.search(v, f); }))).then(function (all) {
+    // One index's results for q and its old spellings, merged, best first.
+    function findIn(m, q, f, more2) {
+      return Promise.all([m.search(q || null, f)].concat(more2.queries.map(function (v) { return m.search(v, f); }))).then(function (all) {
         var seen = {}, merged = [];
         all.forEach(function (s) { s.results.forEach(function (r) { if (!seen[r.id]) { seen[r.id] = true; merged.push(r); } }); });
-        merged.sort(function (a, b) { return b.score - a.score; });
-        var extra = all.slice(1).some(function (s) { return s.results.length; });
-        return { results: merged, filters: all[0].filters, oldWords: extra ? more2.words : [] };
+        return { results: merged, extra: all.slice(1).some(function (s) { return s.results.length; }) };
+      });
+    }
+    // The chosen sources' results together, best first; srcCounts holds each one's number.
+    // Sorted by date (the commentator's death, data-pagefind-sort="died"),
+    // the old spellings are left out, so the order holds; the Bible's verses follow.
+    var sortBy = document.getElementById("fts-sort");
+    function find(q, f) {
+      var order = sortBy.value;
+      if (order) f = Object.assign({}, f, { sort: { died: order } });
+      var on = sources(), more2 = q && !order ? variants(q) : { queries: [], words: [] };
+      var jobs = [on.comm ? findIn(pf, q, f, more2) : Promise.resolve(null),
+        on.bible && srcBible ? bibleIndex().then(function (m) { return findIn(m, q, f, more2); }) : Promise.resolve(null)];
+      return Promise.all(jobs).then(function (two) {
+        srcCounts = {};
+        var merged = [], extra = false;
+        two.forEach(function (x, i) {
+          if (!x) return;
+          srcCounts[on.names[i]] = x.results.length;
+          merged = merged.concat(x.results);
+          extra = extra || x.extra;
+        });
+        if (!order) merged.sort(function (a, b) { return b.score - a.score; });
+        return { results: merged, oldWords: extra ? more2.words : [], bibleOff: !on.bible };
       });
     }
     function search() {
       var q = operators(), mine = ++run, any = Object.keys(filters()).length;
       keep();
-      if (!q && !any) { list.innerHTML = ""; more.hidden = true; status.textContent = U.start; chips(allCounts); return; }
+      if (!q && !any) { list.innerHTML = ""; more.hidden = true; view.hidden = true; status.textContent = U.start; chips(allCounts); return; }
       status.textContent = U.searching;
       find(q, { filters: filters() }).then(function (s) {
         if (mine !== run) return;
         results = s.results; shown = 0; list.innerHTML = "";
-        var counts = {};
-        Object.keys(s.filters).forEach(function (k) { counts[k] = s.filters[k]; });
-        facetCounts(q, counts).then(function (c) { if (mine === run) chips(c); });
+        chips({}, true);
+        if (results.length <= COUNT_UP_TO && sources().comm) facetCounts(q).then(function (c) { if (mine === run) chips(c); }, function () { /* keep them bare */ });
+        if (results.length < 20 && q) didYouMean(q, mine);
         status.innerHTML = esc(!results.length ? fmt(U.none, { q: q })
           : any ? fmt(U.count_filtered, { n: results.length.toLocaleString() })
           : fmt(results.length === 1 ? U.count_one : U.count, { n: results.length.toLocaleString(), q: q })) +
           (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "") +
-          (s.oldWords && s.oldWords.length ? ' <span class="lg-quiet">' + esc(fmt(U.spelling_note, { words: s.oldWords.join(", ") })) + "</span>" : "");
-        return showMore();
+          (s.oldWords && s.oldWords.length ? ' <span class="lg-quiet">' + esc(fmt(U.spelling_note, { words: s.oldWords.join(", ") })) + "</span>" : "") +
+          (s.bibleOff && q && srcBible && !["era", "tradition", "commentator", "work"].some(function (k) { return chosen[k].length; }) ? ' <button type="button" class="cx-chip-all" data-also-bible>' + esc(U.also_bible) + "</button>" : "");
+        view.hidden = results.length < 2;
+        return grouping.checked && results.length > 1 ? showGroups(mine) : showMore();
       }).catch(function () { if (mine === run) status.textContent = U.failed; });
     }
+    // Before anything is typed, the chips show the whole library's counts,
+    // worked out when the site is built (search_page in scripts/build_site.py).
+    allCounts = U.counts || {};
     import(src).then(function (m) {
       pf = m;
-      return pf.options({ excerptLength: 36 }).then(function () { return pf.filters(); });
-    }).then(function (all) {
-      allCounts = all;
+      return pf.options({ excerptLength: 36 });
+    }).then(function () {
       search();
     }).catch(function () { status.textContent = U.failed; });
     input.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(function () { if (pf) search(); }, 250); });
     form.addEventListener("submit", function (e) { e.preventDefault(); if (pf) search(); });
+    try { grouping.checked = localStorage.getItem("logia-search-group") === "1"; } catch (e) { /* storage blocked */ }
+    sortBy.value = params.get("sort") || "";
+    sortBy.addEventListener("change", function () { if (pf) search(); });
+    grouping.addEventListener("change", function () {
+      try { localStorage.setItem("logia-search-group", grouping.checked ? "1" : "0"); } catch (e) { /* storage blocked */ }
+      if (pf) search();
+    });
     form.addEventListener("click", function (e) {
       var b = e.target.closest("[data-k]");
       if (!b || !pf) return;
@@ -1324,6 +1582,7 @@
     });
     who.addEventListener("change", function () { chosen.commentator = who.value ? [who.value] : []; if (pf) search(); });
     status.addEventListener("click", function (e) {
+      if (e.target.closest("[data-also-bible]")) { chosen.source = sources().names.slice(); search(); return; }
       if (!e.target.closest("[data-clear]")) return;
       Object.keys(chosen).forEach(function (k) { chosen[k] = []; });
       search();
@@ -1390,6 +1649,16 @@
         col.querySelectorAll(".lg-folded").forEach(function (x) { x.classList.remove("lg-folded"); });
         cols.appendChild(col);
       });
+      // The two across the whole chapter (/<book>/<chapter>/side-by-side/).
+      var side = cmp.getAttribute("data-side"), link = cmp.querySelector(".lg-cmp-side");
+      if (link) link.remove();
+      if (side && picked.length === 2) {
+        link = document.createElement("p");
+        link.className = "lg-cmp-side";
+        link.innerHTML = '<a href="' + esc(side + "?a=" + encodeURIComponent(picked[0]) + "&b=" + encodeURIComponent(picked[1])) + '">' +
+          esc(cmp.getAttribute("data-side-label")) + " →</a>";
+        picks.after(link);
+      }
     };
     picks.addEventListener("click", function (e) {
       var b = e.target.closest("[data-voice]"); if (!b) return;
@@ -1736,6 +2005,238 @@
       if (done) e.preventDefault();
     });
   })();
+
+  // A topic as a reading path: a button under each passage marks it read
+  // and a link goes on to the next; how far through shows at the top, and on
+  // the topics page (logia-paths: {path: [passage ids]}, on the device).
+  function pathsRead() { try { return JSON.parse(localStorage.getItem("logia-paths") || "{}"); } catch (e) { return {}; } }
+  var pathPage = document.querySelector(".lg-path[data-path]");
+  if (pathPage) {
+    var PU = JSON.parse(pathPage.getAttribute("data-ui")), pathKey = pathPage.getAttribute("data-path");
+    var steps = [].slice.call(pathPage.querySelectorAll("section.lg-voice[id]"));
+    var progress = pathPage.querySelector(".lg-path-progress");
+    var drawPath = function () {
+      var done = pathsRead()[pathKey] || [];
+      steps.forEach(function (sec) {
+        var b = sec.querySelector("[data-step]"), on = done.indexOf(sec.id) >= 0;
+        b.setAttribute("aria-pressed", on); b.textContent = on ? PU.marked_read : PU.mark_read;
+        sec.classList.toggle("lg-step-done", on);
+      });
+      var n = steps.filter(function (sec) { return done.indexOf(sec.id) >= 0; }).length;
+      progress.hidden = !n;
+      progress.querySelector(".lg-path-bar span").style.width = (100 * n / steps.length) + "%";
+      progress.querySelector(".lg-path-n").textContent = fmt(n === steps.length ? PU.done : PU.progress, { n: n, total: steps.length });
+    };
+    steps.forEach(function (sec, i) {
+      var row = document.createElement("p");
+      row.className = "lg-step-row";
+      row.innerHTML = '<button type="button" class="button ghost" data-step aria-pressed="false"></button>' +
+        (steps[i + 1] ? '<a href="#' + esc(steps[i + 1].id) + '">' + esc(PU.next) + "</a>" : "");
+      sec.appendChild(row);
+      row.querySelector("[data-step]").addEventListener("click", function () {
+        var all = pathsRead(), done = all[pathKey] || [], at = done.indexOf(sec.id);
+        if (at >= 0) done.splice(at, 1); else done.push(sec.id);
+        all[pathKey] = done;
+        try { localStorage.setItem("logia-paths", JSON.stringify(all)); } catch (e) { /* storage blocked */ }
+        drawPath();
+      });
+    });
+    drawPath();
+  }
+  document.querySelectorAll(".lg-topic-card[data-path]").forEach(function (card) {
+    var done = (pathsRead()[card.getAttribute("data-path")] || []).length, label = card.querySelector(".lg-topic-read");
+    if (!done || !label) return;
+    label.textContent = fmt(label.getAttribute("data-text"), { n: done, total: +card.getAttribute("data-items") });
+    label.hidden = false;
+  });
+
+  // The offer to install Logia, so it reads offline: shown only from a
+  // reader's second day here (logia-days), only where the browser offers to
+  // install (beforeinstallprompt), and not again once declined
+  // (logia-install-no). The site is installable already; this says so.
+  (function () {
+    var holder = document.getElementById("keys-text");
+    if (!holder) return;
+    var I = JSON.parse(holder.textContent).install, days = [], no = false;
+    try {
+      days = JSON.parse(localStorage.getItem("logia-days") || "[]");
+      var today = new Date().toISOString().slice(0, 10);
+      if (days.indexOf(today) < 0) { days.push(today); localStorage.setItem("logia-days", JSON.stringify(days.slice(-30))); }
+      no = !!localStorage.getItem("logia-install-no");
+    } catch (e) { return; }
+    if (no || days.length < 2 || !I) return;
+    window.addEventListener("beforeinstallprompt", function (ev) {
+      ev.preventDefault();
+      var bar = document.createElement("div");
+      bar.className = "lg-install";
+      bar.setAttribute("role", "region");
+      bar.setAttribute("aria-label", I.install);
+      bar.innerHTML = "<p>" + esc(I.text) + '</p><p><button type="button" class="button" data-yes>' + esc(I.install) +
+        '</button> <button type="button" class="button ghost" data-no>' + esc(I.later) + "</button></p>";
+      document.body.appendChild(bar);
+      var close = function () { bar.remove(); };
+      bar.querySelector("[data-yes]").addEventListener("click", function () { ev.prompt(); close(); });
+      bar.querySelector("[data-no]").addEventListener("click", function () {
+        try { localStorage.setItem("logia-install-no", "1"); } catch (e) { /* storage blocked */ }
+        close();
+      });
+    });
+  })();
+
+  // Two commentators across a chapter (/<book>/<chapter>/side-by-side/):
+  // the chapter's commentary file, the reader's own, drawn as rows of
+  // verses with the two chosen side by side. ?a=<work>&b=<work> picks them.
+  var sideData = document.getElementById("side-data");
+  if (sideData) (function () {
+    var D = JSON.parse(sideData.textContent), U = D.ui, rowsBox = document.querySelector(".lg-side-rows");
+    var pickA = document.getElementById("side-a"), pickB = document.getElementById("side-b");
+    var q = new URLSearchParams(location.search);
+    [[pickA, q.get("a")], [pickB, q.get("b")]].forEach(function (p) {
+      if (p[1] && p[0].querySelector('option[value="' + p[1] + '"]')) p[0].value = p[1];
+    });
+    var byWork = {};
+    var paras = function (text) {
+      return text.trim().split(/\n\s*\n/).map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("");
+    };
+    var cell = function (wid, v) {
+      var es = (byWork[wid] || []).filter(function (x) { return +x.start === v; });
+      if (!es.length) return "";
+      return es.map(function (x) {
+        var span = +x.end !== +x.start ? '<p class="lg-quiet">' + esc(fmt(U.verses, { v: x.start + "–" + x.end })) + "</p>" : "";
+        return '<div class="lg-side-x">' + span + (x.heading ? '<p class="lg-side-head">' + esc(x.heading) + "</p>" : "") + paras(x.excerpt) + "</div>";
+      }).join("");
+    };
+    var draw = function () {
+      var a = pickA.value, b = pickB.value, out = [], gap = [];
+      var flush = function () {
+        if (gap.length) out.push('<p class="lg-quiet lg-side-gap">' + esc(gap.length === 1 ? fmt(U.gap_verse, { v: gap[0] }) : fmt(U.both_none, { a: gap[0], b: gap[gap.length - 1] })) + "</p>");
+        gap = [];
+      };
+      Object.keys(D.verses).map(Number).sort(function (x, y) { return x - y; }).forEach(function (v) {
+        var l = cell(a, v), r = cell(b, v);
+        if (!l && !r) { gap.push(v); return; }
+        flush();
+        out.push('<section class="lg-side-row" id="v' + v + '"><h2 class="lg-side-v"><a href="' + esc(D.reader) + "#v" + v + '">' +
+          esc(fmt(U.verse, { v: v })) + "</a></h2><blockquote class=\"lg-side-verse\">" + esc(D.verses[v]) + "</blockquote>" +
+          '<div class="lg-side-cols"><div>' + (l || '<p class="lg-quiet">' + esc(U.none) + "</p>") + "</div><div>" +
+          (r || '<p class="lg-quiet">' + esc(U.none) + "</p>") + "</div></div></section>");
+      });
+      flush();
+      var nameOf = function (pick) { return pick.options[pick.selectedIndex].textContent; };
+      // The chapter's verses as a strip: which each of the two comments on
+      // (an excerpt counts on every verse it covers); a verse links to its row.
+      var covers = function (wid, v) { return (byWork[wid] || []).some(function (x) { return +x.start <= v && v <= +x.end; }); };
+      var shown = {};
+      out.forEach(function (h) { var m = /id="v(\d+)"/.exec(h); if (m) shown[m[1]] = true; });
+      var strip = Object.keys(D.verses).map(Number).sort(function (x, y) { return x - y; }).map(function (v) {
+        var l = covers(a, v), r = covers(b, v), cls = l && r ? "both" : l ? "left" : r ? "right" : "none";
+        var row = v;
+        while (row > 0 && !shown[row]) row--;
+        var label = fmt(U.verse, { v: v }) + ": " + U["strip_" + cls];
+        return '<a class="lg-strip-' + cls + '" href="#v' + (row || v) + '" title="' + esc(label) + '" aria-label="' + esc(label) + '">' + v + "</a>";
+      }).join("");
+      out.unshift('<nav class="lg-side-strip" aria-label="' + esc(U.strip_label) + '">' + strip + "</nav>" +
+        '<p class="lg-side-key"><span class="lg-strip-left">' + esc(fmt(U.key_only, { name: nameOf(pickA).split(":")[0] })) + '</span> <span class="lg-strip-right">' +
+        esc(fmt(U.key_only, { name: nameOf(pickB).split(":")[0] })) + '</span> <span class="lg-strip-both">' + esc(U.key_both) + "</span></p>");
+      out.unshift('<div class="lg-side-cols lg-side-names"><p><b>' + esc(nameOf(pickA)) + "</b></p><p><b>" + esc(nameOf(pickB)) + "</b></p></div>");
+      rowsBox.innerHTML = out.join("");
+      history.replaceState(null, "", location.pathname + "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b) + location.hash);
+    };
+    fetch(D.comm).then(function (r) { return r.json(); }).then(function (c) {
+      c.commentaries.forEach(function (w) { byWork[w.work_id] = w.entries; });
+      draw();
+      pickA.addEventListener("change", draw);
+      pickB.addEventListener("change", draw);
+    });
+  })();
+
+  // Verse and homily pages on a touch screen: a firm sideways swipe goes to
+  // the previous or next one (the page's own rel="prev" and rel="next"
+  // links). Not from a strip, table or box that scrolls sideways itself, nor
+  // while text is being selected.
+  var turnPrev = document.querySelector('.lg-turns a[rel="prev"]'), turnNext = document.querySelector('.lg-turns a[rel="next"]');
+  if ((turnPrev || turnNext) && "ontouchstart" in window) (function () {
+    var x0 = null, y0 = 0, t0 = 0;
+    var scrollsSideways = function (el) {
+      for (; el && el !== document.body; el = el.parentElement) {
+        if (el.scrollWidth > el.clientWidth + 2 && /(auto|scroll)/.test(getComputedStyle(el).overflowX)) return true;
+        if (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.closest("dialog[open]")) return true;
+      }
+      return false;
+    };
+    document.addEventListener("touchstart", function (ev) {
+      x0 = ev.touches.length === 1 && !scrollsSideways(ev.target) ? ev.touches[0].clientX : null;
+      y0 = ev.touches[0].clientY; t0 = Date.now();
+    }, { passive: true });
+    document.addEventListener("touchend", function (ev) {
+      if (x0 === null) return;
+      var t = ev.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+      x0 = null;
+      var sel = window.getSelection && String(window.getSelection());
+      if (sel || Date.now() - t0 > 700 || Math.abs(dx) < 90 || Math.abs(dy) > Math.abs(dx) * 0.5) return;
+      var to = dx < 0 ? turnNext : turnPrev;
+      if (to) location.href = to.href;
+    }, { passive: true });
+  })();
+
+  // A page opened from a search result (?hl=born again): the words searched
+  // for marked in the excerpts' text, and the first in the excerpt the
+  // address points to (or on the page) scrolled into view.
+  (function () {
+    var hl = new URLSearchParams(location.search).get("hl");
+    if (!hl) return;
+    var words = hl.toLowerCase().split(/\s+/).filter(function (w) { return w.length > 2; }).map(function (w) { return w.replace(/[^\p{L}\p{N}']/gu, ""); }).filter(Boolean);
+    if (!words.length) return;
+    var re = new RegExp("(^|[^\\p{L}])(" + words.map(function (w) { return w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|") + ")[\\p{L}]*", "giu");
+    var first = null, target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+    document.querySelectorAll(".lg-text, .lg-text-body, .lg-whole-text").forEach(function (box) {
+      var walker = document.createTreeWalker(box, NodeFilter.SHOW_TEXT), nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var text = node.nodeValue, out = [], last = 0, m;
+        re.lastIndex = 0;
+        while ((m = re.exec(text))) {
+          var start = m.index + m[1].length, end = m.index + m[0].length;
+          out.push(document.createTextNode(text.slice(last, start)));
+          var mark = document.createElement("mark");
+          mark.className = "lg-hl"; mark.textContent = text.slice(start, end);
+          out.push(mark);
+          last = end;
+        }
+        if (!out.length) return;
+        out.push(document.createTextNode(text.slice(last)));
+        var frag = document.createDocumentFragment();
+        out.forEach(function (x) { frag.appendChild(x); });
+        node.parentNode.replaceChild(frag, node);
+      });
+    });
+    var marks = [].slice.call(document.querySelectorAll("mark.lg-hl"));
+    first = (target && marks.filter(function (x) { return target.contains(x); })[0]) || marks[0];
+    if (!first) return;
+    var fold = first.closest(".lg-folded");
+    if (fold) { fold.classList.remove("lg-folded"); var more = fold.nextElementSibling; if (more && more.classList.contains("lg-unfold")) more.remove(); }
+    setTimeout(function () { first.scrollIntoView({ block: "center" }); }, 60);
+  })();
+
+  // A verse page: the verse at the reader's level (Literal, Balanced or
+  // Readable, the setting web/site.js keeps), and buttons to change it there.
+  var vtext = document.querySelector(".lg-vtext[data-l]"), vlevels = document.querySelector(".lg-vlevels");
+  if (vtext && vlevels) {
+    var showLevel = function () {
+      var lv = (window.LogiaPrefs && window.LogiaPrefs.get("level")) || document.documentElement.getAttribute("data-level") || "B";
+      if (!vtext.hasAttribute("data-" + lv.toLowerCase())) lv = "B";
+      vtext.querySelector("p").textContent = vtext.getAttribute("data-" + lv.toLowerCase());
+      vlevels.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-level") === lv); });
+    };
+    vlevels.hidden = false;
+    vlevels.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button");
+      if (b && window.LogiaPrefs) window.LogiaPrefs.set("level", b.getAttribute("data-level"));
+      else if (b) { document.documentElement.setAttribute("data-level", b.getAttribute("data-level")); showLevel(); }
+    });
+    document.addEventListener("logia:prefs", showLevel);
+    showLevel();
+  }
 
   // A work's contents beside its pages: scrolled so the page being read shows.
   var tocBox = document.querySelector(".lg-work-toc"), tocHere = tocBox && tocBox.querySelector("[aria-current]");

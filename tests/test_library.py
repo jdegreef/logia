@@ -297,6 +297,50 @@ class Creeds(unittest.TestCase):
         self.assertTrue(all(verify_sources.check_digital(changed, x) for x in streams.values()))
 
 
+class Cards(unittest.TestCase):
+    def test_every_commentator_book_topic_and_creed_has_its_card(self):
+        # scripts/make_cards.py draws them; run it after adding one.
+        lib = build_site.Library()
+        paths = [f"/commentators/{a['id']}/" for a in lib.ordered_authors()]
+        paths += [f"/{b.lower()}/" for b, _c in lib.chapters]
+        paths += [f"/topics/{x['id']}/" for x in build_site.topics(lib)] + [f"/creeds/{c['id']}/" for c in lib.creeds]
+        for p in paths:
+            self.assertNotEqual(build_site.card_for(None, p), "/card.png", p)
+        self.assertEqual(build_site.card_for(None, "/about/"), "/card.png")
+
+
+class ReadingsFeed(unittest.TestCase):
+    def test_window_and_dates(self):
+        import datetime
+        import xml.dom.minidom
+        lib = build_site.Library()
+        today = datetime.date(build_site.datetime.date.today().year, 12, 1)
+        feed = build_site.readings_feed(lib, today)
+        doc = xml.dom.minidom.parseString(feed.encode())
+        ids = [x.getElementsByTagName("id")[0].firstChild.data for x in doc.getElementsByTagName("entry")]
+        self.assertTrue(ids)
+        lo, hi = today - datetime.timedelta(days=7), today + datetime.timedelta(days=42)
+        for x in ids:
+            y, m, d = x.rsplit("-", 3)[-3:]
+            self.assertTrue(lo <= datetime.date(int(y), int(m), int(d)) <= hi, x)
+        for u in doc.getElementsByTagName("updated"):
+            self.assertLessEqual(u.firstChild.data[:10], today.isoformat())
+
+
+class DownloadSchema(unittest.TestCase):
+    def test_checker_refuses_what_the_schema_does(self):
+        schema = build_site.download_schema()
+        row = {k: "x" for k in build_site.DOWNLOAD_FIELDS}
+        row |= {"id": "chrysostom.JHN.1.7-8.1", "start": "JHN.1.7", "end": "JHN.1.8"}
+        good = {"about": "", "licence": "CC0-1.0", "source": "https://example.org",
+                "authors": {}, "works": {}, "excerpts": [row]}
+        self.assertEqual(build_site.schema_errors(schema, good), [])
+        for bad in ({**good, "licence": "MIT"}, {**good, "excerpts": [{**row, "start": "John 1:1"}]},
+                    {**good, "excerpts": [{**row, "extra": "x"}]}, {k: v for k, v in good.items() if k != "works"},
+                    {**good, "works": {"w": {"title": 1}}}):
+            self.assertTrue(build_site.schema_errors(schema, bad), bad)
+
+
 class Plurals(unittest.TestCase):
     def test_a_count_of_one_takes_the_singular_form(self):
         self.assertEqual(build_site.t("home.n_voices", n=1), "1 voice")
@@ -663,7 +707,15 @@ class Site(unittest.TestCase):
         text = self.read(os.path.join("jhn", "1", "index.html"))
         data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
         self.assertRegex(data["comm"], r"^/comm/JHN\.1\.json\?v=[0-9a-f]{10}$")
-        self.assertIn(f'<link rel="preload" href="{data["comm"]}" as="fetch" crossorigin>', text)
+        # A big chapter's file also comes in parts (comm_parts), so the page doesn't
+        # preload the whole of it: the reader reads the part it needs first.
+        self.assertNotIn(f'<link rel="preload" href="{data["comm"]}"', text)
+        parts = data["commParts"]
+        self.assertEqual(parts["url"], data["comm"].replace(".json?", ".{n}.json?"))
+        first = json.loads(self.read(parts["url"].format(n=0).split("?")[0].lstrip("/")))
+        self.assertEqual((first["lo"], first["hi"]), (1, parts["size"]))
+        for w in first["commentaries"]:
+            self.assertTrue(all(x["start"] <= first["hi"] and x["end"] >= first["lo"] for x in w["entries"]))
         self.assertNotIn("citedBy", data)
         comm = json.loads(self.read(data["comm"].split("?")[0].lstrip("/")))
         # The page's index matches the file: same works, same verse ranges.
@@ -775,8 +827,11 @@ class Site(unittest.TestCase):
         # sits in its homily, and the homilies themselves as a second tab.
         start = text.split('id="start"', 1)[1].split("</section>", 1)[0]
         self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 4)
-        self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', text)
-        self.assertIn("Read the homily from here", text)
+        # A long list keeps its closed chapters' rows in files of their own (LAZY_LIST).
+        self.assertIn('data-src="/commentators/chrysostom/ch/jhn-1.html"', text)
+        rows = self.read("commentators/chrysostom/ch/jhn-1.html")
+        self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', rows)
+        self.assertIn("Read the homily from here", rows)
         self.assertIn('aria-controls="by-whole"', text)
         self.assertIn('href="/works/chrysostom/88/"', text)
         self.assertIn('class="lg-goto"', text)

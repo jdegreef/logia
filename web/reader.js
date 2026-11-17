@@ -34,7 +34,18 @@
   }
   var state = { verse: DATA.verses[0], tab: "comm", token: null, eras: new Set(ERAS), kinds: new Set(KINDS), marks: null, counts: {}, note: null, open: {} };
   // Whether a voice is shown under the era and tradition filters.
-  var shownBy = function (w) { return state.eras.has(w.era) && state.kinds.has(w.kind); };
+  // Voices the reader has opened on a verse are marked read (logia-heard,
+  // by comment key, kept on the device); "Only unread" hides them.
+  var heard = (function () { try { return JSON.parse(localStorage.getItem("logia-heard") || "{}"); } catch (e) { return {}; } })();
+  var isHeard = function (w, v) { return !!heard[keyOf(w, v)]; };
+  function markHeard(w, v) {
+    heard[keyOf(w, v)] = 1;
+    try { localStorage.setItem("logia-heard", JSON.stringify(heard)); } catch (e) { /* storage blocked: for this page */ }
+  }
+  var shownBy = function (w) {
+    // A voice opened since "Only unread" was chosen stays, so it doesn't vanish as it is read.
+    return state.eras.has(w.era) && state.kinds.has(w.kind) && !(state.unread && isHeard(w, state.verse) && !(state.kept || {})[w.work_id]);
+  };
   var Account = window.LogiaAccount;
   var CHAPTER = DATA.book + "." + DATA.chapter;
   // A comment's key: <work>.<BOOK>.<chapter>.<verse> (backend/logia/ in open-word-bible).
@@ -291,7 +302,7 @@
     document.querySelectorAll(".cx-tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === state.tab); });
     renderRail();
     var keep = $("#pb").scrollTop;
-    $("#pb").innerHTML = state.tab === "comm" && !COMM ? waiting(commFailed, "comm")
+    $("#pb").innerHTML = state.tab === "comm" && !ready(state.verse) ? waiting(commFailed, "comm")
       : needsPanel() && !PANEL ? panelWaiting()
       : ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
     $("#pb").scrollTop = state.keepScroll ? keep : 0;
@@ -333,10 +344,39 @@
   // verses, enough for the timeline, the summary and the verse numbers.
   var COMM = DATA.comm ? null : { commentaries: [], citedBy: {} }, commLoad = null, commFailed = false, pendingCard = null;
   DATA.citedBy = {};
+  // A big chapter's file also comes in parts of a few verses (DATA.commParts,
+  // comm_parts in scripts/build_site.py): the part with the verse being
+  // opened is read first, and shown, while the whole file follows. part
+  // holds its range; until the whole file is in, verses outside it wait.
+  var part = null;
+  function ready(v) { return !!COMM || (!!part && part.lo <= v && v <= part.hi); }
+  function loadPart() {
+    var P = DATA.commParts;
+    if (!P || part) return Promise.resolve();
+    var n = Math.floor((state.verse - 1) / P.size);
+    return fetch(P.url.replace("{n}", n)).then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      return res.json();
+    }).then(function (p) {
+      if (COMM) return;
+      // The page's index for every verse, the part's excerpts for its own.
+      var full = {};
+      p.commentaries.forEach(function (w) { full[w.work_id] = w; });
+      works = DATA.commentaries.map(function (w) {
+        var f = full[w.work_id];
+        if (!f) return w;
+        var keep = w.entries.filter(function (x) { return x.start > p.hi || x.end < p.lo; });
+        return Object.assign({}, f, { entries: keep.concat(f.entries).sort(function (a, b) { return a.start - b.start || a.end - b.end; }) });
+      });
+      part = { lo: p.lo, hi: p.hi };
+      refresh();
+      if (pendingCard && ready(state.verse)) { var card = pendingCard; pendingCard = null; showCard(card); }
+    }).catch(function () { /* the whole file follows */ });
+  }
   function loadComm() {
     if (COMM || commLoad) return;
     commFailed = false;
-    commLoad = fetch(DATA.comm).then(function (res) {
+    commLoad = loadPart().then(function () { return fetch(DATA.comm); }).then(function (res) {
       if (!res.ok) throw new Error(res.status);
       return res.json();
     }).then(function (c) {
@@ -351,7 +391,17 @@
   function refresh() { state.keepScroll = true; renderPanel(); }
 
   // Paragraphs of an excerpt already made into HTML (by linked()).
-  function paras(h) { return h.split(/\n\s*\n/).map(function (p) { return "<p>" + p.trim() + "</p>"; }).join(""); }
+  function paras(h) { return langSpans(h.split(/\n\s*\n/).map(function (p) { return "<p>" + p.trim() + "</p>"; }).join("")); }
+  // Greek and Hebrew in an excerpt, as the source prints them, marked with
+  // their language (lang_spans in scripts/build_site.py does the same).
+  var GREEK_RUN = /[\u0370-\u03ff\u1f00-\u1fff](?:[\u0370-\u03ff\u1f00-\u1fff\u0300-\u036f\u00b7\u0387',.;: ]*[\u0370-\u03ff\u1f00-\u1fff])?/g;
+  var HEBREW_RUN = /[\u0590-\u05ff\ufb1d-\ufb4f](?:[\u0590-\u05ff\ufb1d-\ufb4f ,.]*[\u0590-\u05ff\ufb1d-\ufb4f])?/g;
+  function langSpans(h) {
+    if (!/[\u0370-\u03ff\u1f00-\u1fff\u0590-\u05ff]/.test(h)) return h;
+    return h.split(/(<[^>]+>)/).map(function (part, i) {
+      return i % 2 ? part : part.replace(GREEK_RUN, '<span lang="grc">$&</span>').replace(HEBREW_RUN, '<span lang="hbo" dir="rtl">$&</span>');
+    }).join("");
+  }
   // An excerpt's text with the Scripture it cites made into links
   // (library/citations, docs/references.md).
   // In a Catena excerpt, the name that opens each quotation (speakers, from
@@ -474,14 +524,17 @@
     var off = ERAS.some(function (x) { return !state.eras.has(x); }) || KINDS.some(function (x) { return !state.kinds.has(x); });
     return '<div class="cx-filters">' + row("era", ERAS, U.show_eras, U.eras, state.eras, "era", U.filter_era) +
       row("kind", KINDS, U.show_kinds, U.kinds, state.kinds, "kind", U.filter_kind) +
-      (off ? '<button type="button" class="cx-chip-all" data-show-all>' + esc(fmt(U.show_all, { n: on.length })) + "</button>" : "") + "</div>";
+      (off ? '<button type="button" class="cx-chip-all" data-show-all>' + esc(fmt(U.show_all, { n: on.length })) + "</button>" : "") +
+      (on.some(function (w) { return isHeard(w, v); })
+        ? '<button type="button" class="cx-chip cx-unread" data-unread aria-pressed="' + !!state.unread + '">' +
+          esc(fmt(U.only_unread, { n: on.filter(function (w) { return !isHeard(w, v); }).length })) + "</button>" : "") + "</div>";
   }
   function commTab() {
     var v = state.verse;
     var onVerse = works.some(function (w) { return entriesFor(w, v).length; });
     var h = !onVerse ? "" : filters(v);
     var shown = works.filter(function (w) { return shownBy(w) && entriesFor(w, v).length; });
-    if (COMM && shown.length > 1) {
+    if (ready(v) && shown.length > 1) {
       h += '<button type="button" class="cx-compare-btn" data-compare>' + ICON.columns + esc(U.compare) + "</button>";
     }
     var shownOn = shown, fresh = shown.filter(function (w) { return !alsoBefore(w, v); });
@@ -493,7 +546,7 @@
     if (pinnedHere.length) groups.push({ label: U.pinned, ws: pinnedHere });
     ERAS.forEach(function (era) {
       if (!state.eras.has(era)) return;
-      var ws = works.filter(function (w) { return w.era === era && state.kinds.has(w.kind) && entriesFor(w, v).length && !isPinned(w); });
+      var ws = works.filter(function (w) { return w.era === era && shownBy(w) && entriesFor(w, v).length && !isPinned(w); });
       if (ws.length) groups.push({ label: U.eras[era], ws: ws });
     });
     groups.forEach(function (g) {
@@ -517,6 +570,7 @@
         h += '<section class="cx-card' + (open ? "" : " cx-shut") + '" id="c-' + w.work_id + '">' +
           '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
           '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" + badge +
+          (isHeard(w, v) ? '<span class="cx-heard" title="' + esc(U.heard_title) + '">' + esc(U.heard) + "</span>" : "") +
           '<button type="button" class="cx-pin" data-pin="' + esc(w.author) + '" aria-pressed="' + isPinned(w) + '" title="' +
           esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '" aria-label="' + esc(fmt(isPinned(w) ? U.unpin : U.pin, { name: w.author })) + '">' + ICON.pin + "</button>" +
           '<button type="button" class="cx-toggle" data-toggle="' + w.work_id + '" aria-expanded="' + open + '" aria-controls="cb-' + w.work_id +
@@ -680,7 +734,7 @@
     var v = state.verse, toks = PANEL.words[v] || [];
     var h = '<div class="cx-greek" lang="' + SOURCE_LANG + '"' + DIR + ">" + toks.map(function (t) {
       return '<span class="cx-g' + (t.id === state.token ? " cx-on" : "") + '" data-gid="' + t.id + '" role="button" tabindex="0">' +
-        esc(t.text) + "</span>" + esc((t.after || " ").replace(/(\S)$/, "$1 "));
+        esc(t.text) + "</span>" + esc(t.after === "" ? "" : (t.after || " ").replace(/([^\s\u05be])$/, "$1 "));
     }).join("") + "</div>";
     var t = toks.filter(function (x) { return x.id === state.token; })[0];
     if (!t) return h + '<p class="cx-empty">' + esc(U.tap_word) + "</p>";
@@ -762,7 +816,11 @@
     $("#compare-ref").textContent = fmt(U.compare_on, { ref: REF(v) });
     $("#compare-text").textContent = verseText(v);
     $("#compare-picks").innerHTML = '<span class="cx-picks-label">' + esc(U.compare_pick) + "</span>" + chips;
-    $("#compare-cols").innerHTML = cols;
+    // With two chosen, the two across the whole chapter (its side-by-side page).
+    var two = vs.filter(function (w) { return cmp.picked.indexOf(w.work_id) >= 0; });
+    $("#compare-cols").innerHTML = cols + (two.length === 2 && works.length > 1
+      ? '<p class="cx-compare-side"><a href="' + esc(DATA.sideBySide + "?a=" + encodeURIComponent(two[0].work_id) + "&b=" + encodeURIComponent(two[1].work_id)) + '">' +
+        esc(U.compare_side) + " →</a></p>" : "");
     $("#compare-cols").style.setProperty("--cols", cmp.picked.length);
   }
   (function () {
@@ -781,13 +839,20 @@
   function go(v, opts) {
     opts = opts || {};
     var to = Math.max(FIRST, Math.min(LAST, v));
-    if (to !== state.verse) state.open = {};
+    if (to !== state.verse) { state.open = {}; state.kept = {}; }
     state.verse = to;
     if (!opts.keepToken) state.token = null;
     state.note = null;
     document.querySelectorAll(".cx-verse").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
     markTokens();
     renderPanel();
+    // Say where the reader is now, for a screen reader (#announce, polite).
+    var said = $("#announce");
+    if (said && to !== said.getAttribute("data-v")) {
+      var n = works.filter(function (w) { return entriesFor(w, state.verse).length; }).length;
+      said.setAttribute("data-v", to);
+      said.textContent = n ? fmt(n === 1 ? U.verse_voices_one : U.verse_voices, { ref: REF(state.verse), n: n }) : REF(state.verse);
+    }
     // The last verse read, for "Continue reading" (web/logia.js).
     try { localStorage.setItem("logia-last", JSON.stringify({ href: location.pathname + "#v" + state.verse, ref: REF(state.verse) })); }
     catch (err) { /* storage blocked */ }
@@ -828,6 +893,8 @@
   document.querySelector(".cx-tabs").addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;
     state.tab = b.dataset.tab; renderPanel();
+    // Kept for the next chapter too, so a reader studying the Greek stays on it.
+    try { localStorage.setItem("logia-tab", state.tab); } catch (err) { /* storage blocked */ }
   });
   // On a phone the panel is a sheet over the text: a peek, half the screen
   // or nearly all of it. The handle steps through them; dragging the sheet's
@@ -842,6 +909,8 @@
     p.classList.toggle("cx-min", to === "min");
     p.classList.toggle("cx-full", to === "full");
     $("#grab").setAttribute("aria-expanded", to !== "min");
+    // The handle says what pressing it will do next (it steps min → half → full → min).
+    $("#grab").setAttribute("aria-label", U["sheet_" + to] || $("#grab").getAttribute("aria-label"));
   }
   // Scroll the chosen verse into the space above a half-height sheet.
   // Below the header sits the chapter bar once the title has scrolled away
@@ -855,6 +924,14 @@
       window.scrollBy({ top: r.top - top - 16, behavior: reduce ? "auto" : "smooth" });
     }
   }
+  // "Skip to the commentary" (the page's second skip link) opens the sheet
+  // on a phone and puts focus in it.
+  var skipTo = document.querySelector("[data-skip-to]");
+  if (skipTo) skipTo.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    if (PHONE.matches && sheetState() === "min") sheet("half");
+    $("#panel").focus();
+  });
   $("#grab").addEventListener("click", function () {
     sheet({ min: "half", half: "full", full: "min" }[sheetState()]);
   });
@@ -910,12 +987,14 @@
     if (toggle) {
       var wid = toggle.getAttribute("data-toggle");
       state.open[wid] = !isOpen(wid);
+      if (state.open[wid]) { markHeard(byId(wid), state.verse); (state.kept = state.kept || {})[wid] = true; }
       refresh();
       var again = document.querySelector('[data-toggle="' + wid + '"].cx-toggle');
       if (again) again.focus();
       return;
     }
-    var chip = e.target.closest(".cx-filters .cx-chip, [data-show-all]");
+    if (e.target.closest("[data-unread]")) { state.unread = !state.unread; state.kept = {}; renderPanel(); var u = document.querySelector("[data-unread]"); if (u) u.focus(); return; }
+    var chip = e.target.closest(".cx-filters .cx-chip:not([data-unread]), [data-show-all]");
     if (chip) {
       if (chip.hasAttribute("data-show-all")) { state.eras = new Set(ERAS); state.kinds = new Set(KINDS); }
       else if (chip.dataset.era) { var era = chip.dataset.era; if (state.eras.has(era)) state.eras.delete(era); else state.eras.add(era); }
@@ -958,7 +1037,7 @@
   // #v14 opens verse 14; #v14-calvin opens it at Calvin's comment (a shared link).
   var HASH = /^#v(\d+)(?:-([a-z][a-z0-9-]*))?$/;
   function showCard(work) {
-    if (!COMM) { pendingCard = work; return; }
+    if (!ready(state.verse)) { pendingCard = work; return; }
     if (!isOpen(work)) { state.open[work] = true; renderPanel(); }
     var card = document.getElementById("c-" + work);
     if (!card) return;
@@ -1006,6 +1085,11 @@
     commTabButton.classList.add("cx-zero");
   }
   var m0 = location.hash.match(HASH);
+  // The tab last chosen (logia-tab), unless the address points at a voice's
+  // comment, or the chapter has no commentary (set above).
+  if (!EMPTY && !(m0 && m0[2])) {
+    try { var lastTab = localStorage.getItem("logia-tab"); if (/^(comm|words|notes|xref)$/.test(lastTab || "")) state.tab = lastTab; } catch (err) { /* storage blocked */ }
+  }
   // A verse the Open Word Bible leaves out (#v1 on John 8): open at the verse
   // after it, and show the note that stands in its place.
   var gapAsked = m0 && DATA.verses.indexOf(+m0[1]) < 0 && (DATA.verses.filter(function (v) { return v > +m0[1]; })[0] || 0);
@@ -1019,7 +1103,11 @@
   // This chapter, read: kept for the dot on its chip (web/logia.js).
   try {
     var read = JSON.parse(localStorage.getItem("logia-read") || "[]");
-    if (read.indexOf(location.pathname) < 0) { read.push(location.pathname); localStorage.setItem("logia-read", JSON.stringify(read.slice(-2000))); }
+    // Kept in the order last read, so "Recently read" (/saved/) can list them newest first.
+    var at = read.indexOf(location.pathname);
+    if (at >= 0) read.splice(at, 1);
+    read.push(location.pathname);
+    localStorage.setItem("logia-read", JSON.stringify(read.slice(-2000)));
   } catch (err) { /* storage blocked */ }
   loadComm();
   renderText(); go(state.verse);
