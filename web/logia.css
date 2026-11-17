@@ -2633,3 +2633,57 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 .lg-review-send input { font: inherit; padding: 6px 8px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--bg); color: var(--text); max-width: 100%; }
 @media (max-width: 560px) { .lg-most-cited li > a { grid-template-columns: minmax(6em, 9em) minmax(0, 1fr) 2.5em; } }
 @media print { .lg-selbar, .lg-toast, .lg-xact-extra { display: none !important; } }
+
+/* A verse page: the verse's wording level, as in the reader. */
+.lg-vlevels { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); margin: 0 0 18px; }
+.lg-vlevels[hidden] { display: none; }
+.lg-vlevels button { border: 0; background: none; padding: 5px 14px; border-radius: 999px; cursor: pointer; font-size: 13.5px; color: var(--muted); min-height: 32px; }
+.lg-vlevels button[aria-pressed="true"] { background: var(--accent); color: var(--accent-contrast); }
+
+/* Two commentators across a chapter: a row a verse, the two side by side
+   (one under the other on a phone). */
+.lg-side-picks { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 8px 0 24px; position: sticky; top: var(--header-h, 64px); z-index: 3;
+  background: var(--bg); padding: 10px 0; border-bottom: 1px solid var(--line); }
+.lg-side-picks label { display: grid; gap: 4px; min-width: 0; }
+.lg-side-picks select { width: 100%; padding: 8px 10px; font: inherit; font-size: 14.5px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--text); }
+.lg-side-row { padding: 18px 0 8px; border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-h, 64px) + 90px); }
+.lg-side-v { font-size: 15px; margin: 0 0 4px; }
+.lg-side-v a { text-decoration: none; }
+.lg-side-verse { margin: 0 0 12px; font-family: var(--read-font); font-style: italic; color: var(--muted); }
+.lg-side-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.lg-side-cols > div { min-width: 0; font-family: var(--read-font); font-size: 16.5px; line-height: 1.65; }
+.lg-side-cols p { margin: 0 0 .8em; }
+.lg-side-head { font-weight: 600; font-size: 14px; font-family: var(--ui-font, inherit); }
+.lg-side-x + .lg-side-x { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); }
+.lg-side-gap { margin: 14px 0; }
+@media (max-width: 760px) {
+  .lg-side-picks { grid-template-columns: minmax(0, 1fr); gap: 8px; position: static; }
+  .lg-side-cols { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .lg-side-cols > div + div { border-top: 1px dashed var(--line); padding-top: 10px; }
+}
+
+/* Who names whom: a card a commentator, the names in it with examples. */
+.lg-names-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 16px; }
+.lg-names-one { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; background: var(--surface); }
+.lg-names-one h3 { margin: 0 0 2px; font-size: 18px; }
+.lg-names-one h3 a, .lg-names-cat b a { text-decoration: none; }
+.lg-names-one ul, .lg-names-cat { list-style: none; padding: 0; margin: 8px 0 0; }
+.lg-names-one li, .lg-names-cat li { padding: 6px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.lg-names-eg { display: block; font-size: 13px; color: var(--muted); }
+.lg-names-eg a { margin-left: 4px; }
+
+/* Printing a verse, passage, homily or side-by-side page: the verse, the
+   voices and where each was copied from; no menus, strips or buttons. */
+@media print {
+  .lg-vstrip, .lg-chbar, .lg-cmp-row, .lg-cmp-open, .lg-vgrid, .lg-scan-show, .lg-turns, .lg-vlevels, .lg-vorig-more,
+  .lg-in-order, .lg-side-picks, .lg-within, .lg-xact, .lg-secbar, .lg-vnav, .cx-panel, .cx-levels, .cx-turns, .cx-bar, .lg-install,
+  .lg-creed-tools, .lg-recite, .lg-code .lg-copy, .lg-vlead + .lg-chbar { display: none !important; }
+  .lg-names-one { break-inside: avoid-page; }
+  .lg-side-v, .lg-side-verse { break-after: avoid-page; }
+  .lg-vx-links a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; word-break: break-all; }
+  .lg-side-picks + .lg-side-rows { margin-top: 0; }
+  .lg-side-cols { grid-template-columns: 1fr 1fr; gap: 14pt; }
+  .lg-side-cols > div { font-size: 10.5pt; }
+}
+.lg-side-names { display: none; }
+@media print { .lg-side-names { display: grid; border-bottom: .5pt solid #999; } }

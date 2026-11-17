@@ -363,7 +363,7 @@
     "source_bible": "Bible text",
     "owb": "Open Word Bible",
     "filter_source": "Source",
-    "dek_bible": "The Bible text is in it too, so a verse can be found by the words you remember, or by a Greek or Hebrew word: in its own letters, in Latin letters (logos), or by its Strong's number (G3056).",
+    "dek_bible": "Choose Bible text to search the verses too, by the words you remember or by a Greek or Hebrew word: in its own letters, in Latin letters (logos), or by its Strong's number (G3056).",
     "eyebrow": "Search",
     "heading": "Search the commentators' words",
     "dek": "Every word of all {n} excerpts by {authors} commentators, as they wrote them. Narrow by era, tradition, book or commentator.",
@@ -378,6 +378,7 @@
     "any_commentator": "Any commentator",
     "more": "Show more",
     "fts": {
+      "also_bible": "Search the Bible text too",
       "start": "Type a word or a few words to find them in every excerpt.",
       "unavailable": "The words can't be searched in this build of the site. Search above still finds verses, books and commentators.",
       "noscript": "Searching the words needs JavaScript.",
@@ -1332,6 +1333,10 @@
     "in_chapter": "Passages in this chapter"
   },
   "occasions": {
+    "feed_title": "Logia: the coming readings",
+    "feed_desc": "The Gospel and readings for the coming Sundays and great days, each with a link to what the commentators said on them.",
+    "feed_entry": "{date}: {what}",
+    "feed_link": "Or follow them in a feed reader",
     "ics_name": "Logia: readings of the church year",
     "ics_desc": "The great days and the Sunday readings, each with what the church has said on it, at logia.faith.",
     "ics_link": "Add to your calendar",
@@ -2733,5 +2738,35 @@
     "text": "Read Logia offline: install it on this device, and the chapters you open stay readable without a connection.",
     "install": "Install",
     "later": "Not now"
+  },
+  "side": {
+    "verses": "Verses {v}",
+    "gap_verse": "Neither comments on verse {v}.",
+    "link": "Two commentators side by side on this chapter",
+    "heading": "{ref}: two commentators side by side",
+    "dek": "Choose two commentators to read their comments on this chapter verse by verse, each in its own column, as each commentary sets them out. A comment on several verses is shown at its first verse.",
+    "left": "On the left",
+    "right": "On the right",
+    "loading": "Loading the commentary…",
+    "noscript": "Reading two side by side needs JavaScript. Each commentary on this chapter, in order:",
+    "verse": "Verse {v}",
+    "none": "Nothing on this verse",
+    "both_none": "Neither comments on verses {a}–{b}."
+  },
+  "names": {
+    "names_one": "Names one earlier commentator in Logia",
+    "heading": "Who names whom",
+    "nav_note": "Which earlier commentators each one names",
+    "dek": "Which earlier commentators each commentator names in their own words, counted from the excerpts in Logia. A name is found by a script and not yet checked by a person, so a few may be wrong; each count links to examples to read for yourself.",
+    "most": "Most often named",
+    "each": "Whom each one names",
+    "names_n": "Names {n} earlier commentators in Logia",
+    "times": "{n} times",
+    "once": "once",
+    "for_example": "For example:",
+    "catena": "Quoted in the Catena Aurea",
+    "catena_note": "Thomas Aquinas's Catena Aurea is made of quotations. These are the ones matched to a work Logia has, so they can be read in their own setting.",
+    "how_title": "How this is counted",
+    "how": "Each time an excerpt prints the name of another commentator in Logia (Augustine, Chrysostom, Calvin, and the old spellings such as Austin), it counts once. Names are found by scripts/find_refs.py and marked as detected until a person checks them. Only commentators who are in Logia are counted, so a writer named often but not yet in the library does not appear."
   }
 }

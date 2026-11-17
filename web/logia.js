@@ -1271,8 +1271,19 @@
     var input = form.querySelector("#fts-q"), status = document.getElementById("fts-status");
     var list = document.getElementById("fts-results"), more = document.getElementById("fts-more");
     var who = form.querySelector("#fts-who");
-    var src = form.getAttribute("data-pagefind");
+    var src = form.getAttribute("data-pagefind"), srcBible = form.getAttribute("data-pagefind-bible");
     if (!src) return;
+    // The Bible's verses are an index of their own, loaded only when "Bible
+    // text" is chosen (build_search_index in scripts/build_site.py).
+    var pfBible = null, srcCounts = {};
+    function sources() {
+      var names = Object.keys(allCounts.source || {}), comm = names[0], bible = names[1], s = chosen.source;
+      return { comm: !s.length || s.indexOf(comm) >= 0, bible: !!bible && s.indexOf(bible) >= 0, names: names };
+    }
+    function bibleIndex() {
+      if (!pfBible) pfBible = import(srcBible).then(function (m) { return m.options({ excerptLength: 36 }).then(function () { return m; }); });
+      return pfBible;
+    }
     var pf = null, allCounts = {}, chosen = { source: [], era: [], tradition: [], book: [], commentator: [], work: [] }, results = [], shown = 0, run = 0, timer = null;
     var params = new URLSearchParams(location.search);
     input.value = params.get("q") || "";
@@ -1317,7 +1328,9 @@
       form.querySelectorAll(".lg-fts-group[data-filter]").forEach(function (g) {
         var k = g.getAttribute("data-filter"), c = bare ? allCounts[k] || {} : counts[k] || {};
         var names = Object.keys(c).filter(function (v) { return c[v] || chosen[k].indexOf(v) >= 0; });
-        if (k === "era" || k === "book") {
+        // Both sources are always offered; a count shows once that index is searched.
+        if (k === "source") { names = Object.keys(allCounts.source || {}); c = input.value.trim() || Object.keys(filters()).length ? srcCounts : allCounts.source || {}; }
+        if (k === "era" || k === "book" || k === "source") {
           var order = Object.keys(allCounts[k] || {});
           names.sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); });
         } else names.sort();
@@ -1328,7 +1341,7 @@
         } else {
           g.querySelector(".lg-fts-chips").innerHTML = names.map(function (v) {
             return '<button type="button" class="cx-chip" data-k="' + k + '" data-v="' + esc(v) + '" aria-pressed="' + (chosen[k].indexOf(v) >= 0) + '">' +
-              esc(v) + (bare ? "" : ' <span class="cx-chip-n">' + (c[v] || 0) + "</span>") + "</button>";
+              esc(v) + ((bare && k !== "source") || c[v] == null ? "" : ' <span class="cx-chip-n">' + c[v] + "</span>") + "</button>";
           }).join("");
         }
         g.hidden = !names.length;
@@ -1388,15 +1401,30 @@
       });
       return { queries: out.slice(0, 4), words: extra.slice(0, 4) };
     }
-    function find(q, f) {
-      var base = pf.search(q || null, f), more2 = q ? variants(q) : { queries: [], words: [] };
-      if (!more2.queries.length) return base;
-      return Promise.all([base].concat(more2.queries.map(function (v) { return pf.search(v, f); }))).then(function (all) {
+    // One index's results for q and its old spellings, merged, best first.
+    function findIn(m, q, f, more2) {
+      return Promise.all([m.search(q || null, f)].concat(more2.queries.map(function (v) { return m.search(v, f); }))).then(function (all) {
         var seen = {}, merged = [];
         all.forEach(function (s) { s.results.forEach(function (r) { if (!seen[r.id]) { seen[r.id] = true; merged.push(r); } }); });
+        return { results: merged, extra: all.slice(1).some(function (s) { return s.results.length; }) };
+      });
+    }
+    // The chosen sources' results together, best first; srcCounts holds each one's number.
+    function find(q, f) {
+      var on = sources(), more2 = q ? variants(q) : { queries: [], words: [] };
+      var jobs = [on.comm ? findIn(pf, q, f, more2) : Promise.resolve(null),
+        on.bible && srcBible ? bibleIndex().then(function (m) { return findIn(m, q, f, more2); }) : Promise.resolve(null)];
+      return Promise.all(jobs).then(function (two) {
+        srcCounts = {};
+        var merged = [], extra = false;
+        two.forEach(function (x, i) {
+          if (!x) return;
+          srcCounts[on.names[i]] = x.results.length;
+          merged = merged.concat(x.results);
+          extra = extra || x.extra;
+        });
         merged.sort(function (a, b) { return b.score - a.score; });
-        var extra = all.slice(1).some(function (s) { return s.results.length; });
-        return { results: merged, filters: all[0].filters, oldWords: extra ? more2.words : [] };
+        return { results: merged, oldWords: extra ? more2.words : [], bibleOff: !on.bible };
       });
     }
     function search() {
@@ -1408,12 +1436,13 @@
         if (mine !== run) return;
         results = s.results; shown = 0; list.innerHTML = "";
         chips({}, true);
-        if (results.length <= COUNT_UP_TO) facetCounts(q).then(function (c) { if (mine === run) chips(c); }, function () { /* keep them bare */ });
+        if (results.length <= COUNT_UP_TO && sources().comm) facetCounts(q).then(function (c) { if (mine === run) chips(c); }, function () { /* keep them bare */ });
         status.innerHTML = esc(!results.length ? fmt(U.none, { q: q })
           : any ? fmt(U.count_filtered, { n: results.length.toLocaleString() })
           : fmt(results.length === 1 ? U.count_one : U.count, { n: results.length.toLocaleString(), q: q })) +
           (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "") +
-          (s.oldWords && s.oldWords.length ? ' <span class="lg-quiet">' + esc(fmt(U.spelling_note, { words: s.oldWords.join(", ") })) + "</span>" : "");
+          (s.oldWords && s.oldWords.length ? ' <span class="lg-quiet">' + esc(fmt(U.spelling_note, { words: s.oldWords.join(", ") })) + "</span>" : "") +
+          (s.bibleOff && q && srcBible && !["era", "tradition", "commentator", "work"].some(function (k) { return chosen[k].length; }) ? ' <button type="button" class="cx-chip-all" data-also-bible>' + esc(U.also_bible) + "</button>" : "");
         return showMore();
       }).catch(function () { if (mine === run) status.textContent = U.failed; });
     }
@@ -1437,6 +1466,7 @@
     });
     who.addEventListener("change", function () { chosen.commentator = who.value ? [who.value] : []; if (pf) search(); });
     status.addEventListener("click", function (e) {
+      if (e.target.closest("[data-also-bible]")) { chosen.source = sources().names.slice(); search(); return; }
       if (!e.target.closest("[data-clear]")) return;
       Object.keys(chosen).forEach(function (k) { chosen[k] = []; });
       search();
@@ -1926,6 +1956,107 @@
       });
     });
   })();
+
+  // Two commentators across a chapter (/<book>/<chapter>/side-by-side/):
+  // the chapter's commentary file, the reader's own, drawn as rows of
+  // verses with the two chosen side by side. ?a=<work>&b=<work> picks them.
+  var sideData = document.getElementById("side-data");
+  if (sideData) (function () {
+    var D = JSON.parse(sideData.textContent), U = D.ui, rowsBox = document.querySelector(".lg-side-rows");
+    var pickA = document.getElementById("side-a"), pickB = document.getElementById("side-b");
+    var q = new URLSearchParams(location.search);
+    [[pickA, q.get("a")], [pickB, q.get("b")]].forEach(function (p) {
+      if (p[1] && p[0].querySelector('option[value="' + p[1] + '"]')) p[0].value = p[1];
+    });
+    var byWork = {};
+    var paras = function (text) {
+      return text.trim().split(/\n\s*\n/).map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("");
+    };
+    var cell = function (wid, v) {
+      var es = (byWork[wid] || []).filter(function (x) { return +x.start === v; });
+      if (!es.length) return "";
+      return es.map(function (x) {
+        var span = +x.end !== +x.start ? '<p class="lg-quiet">' + esc(fmt(U.verses, { v: x.start + "–" + x.end })) + "</p>" : "";
+        return '<div class="lg-side-x">' + span + (x.heading ? '<p class="lg-side-head">' + esc(x.heading) + "</p>" : "") + paras(x.excerpt) + "</div>";
+      }).join("");
+    };
+    var draw = function () {
+      var a = pickA.value, b = pickB.value, out = [], gap = [];
+      var flush = function () {
+        if (gap.length) out.push('<p class="lg-quiet lg-side-gap">' + esc(gap.length === 1 ? fmt(U.gap_verse, { v: gap[0] }) : fmt(U.both_none, { a: gap[0], b: gap[gap.length - 1] })) + "</p>");
+        gap = [];
+      };
+      Object.keys(D.verses).map(Number).sort(function (x, y) { return x - y; }).forEach(function (v) {
+        var l = cell(a, v), r = cell(b, v);
+        if (!l && !r) { gap.push(v); return; }
+        flush();
+        out.push('<section class="lg-side-row" id="v' + v + '"><h2 class="lg-side-v"><a href="' + esc(D.reader) + "#v" + v + '">' +
+          esc(fmt(U.verse, { v: v })) + "</a></h2><blockquote class=\"lg-side-verse\">" + esc(D.verses[v]) + "</blockquote>" +
+          '<div class="lg-side-cols"><div>' + (l || '<p class="lg-quiet">' + esc(U.none) + "</p>") + "</div><div>" +
+          (r || '<p class="lg-quiet">' + esc(U.none) + "</p>") + "</div></div></section>");
+      });
+      flush();
+      var nameOf = function (pick) { return pick.options[pick.selectedIndex].textContent; };
+      out.unshift('<div class="lg-side-cols lg-side-names"><p><b>' + esc(nameOf(pickA)) + "</b></p><p><b>" + esc(nameOf(pickB)) + "</b></p></div>");
+      rowsBox.innerHTML = out.join("");
+      history.replaceState(null, "", location.pathname + "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b) + location.hash);
+    };
+    fetch(D.comm).then(function (r) { return r.json(); }).then(function (c) {
+      c.commentaries.forEach(function (w) { byWork[w.work_id] = w.entries; });
+      draw();
+      pickA.addEventListener("change", draw);
+      pickB.addEventListener("change", draw);
+    });
+  })();
+
+  // Verse and homily pages on a touch screen: a firm sideways swipe goes to
+  // the previous or next one (the page's own rel="prev" and rel="next"
+  // links). Not from a strip, table or box that scrolls sideways itself, nor
+  // while text is being selected.
+  var turnPrev = document.querySelector('.lg-turns a[rel="prev"]'), turnNext = document.querySelector('.lg-turns a[rel="next"]');
+  if ((turnPrev || turnNext) && "ontouchstart" in window) (function () {
+    var x0 = null, y0 = 0, t0 = 0;
+    var scrollsSideways = function (el) {
+      for (; el && el !== document.body; el = el.parentElement) {
+        if (el.scrollWidth > el.clientWidth + 2 && /(auto|scroll)/.test(getComputedStyle(el).overflowX)) return true;
+        if (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.closest("dialog[open]")) return true;
+      }
+      return false;
+    };
+    document.addEventListener("touchstart", function (ev) {
+      x0 = ev.touches.length === 1 && !scrollsSideways(ev.target) ? ev.touches[0].clientX : null;
+      y0 = ev.touches[0].clientY; t0 = Date.now();
+    }, { passive: true });
+    document.addEventListener("touchend", function (ev) {
+      if (x0 === null) return;
+      var t = ev.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+      x0 = null;
+      var sel = window.getSelection && String(window.getSelection());
+      if (sel || Date.now() - t0 > 700 || Math.abs(dx) < 90 || Math.abs(dy) > Math.abs(dx) * 0.5) return;
+      var to = dx < 0 ? turnNext : turnPrev;
+      if (to) location.href = to.href;
+    }, { passive: true });
+  })();
+
+  // A verse page: the verse at the reader's level (Literal, Balanced or
+  // Readable, the setting web/site.js keeps), and buttons to change it there.
+  var vtext = document.querySelector(".lg-vtext[data-l]"), vlevels = document.querySelector(".lg-vlevels");
+  if (vtext && vlevels) {
+    var showLevel = function () {
+      var lv = (window.LogiaPrefs && window.LogiaPrefs.get("level")) || document.documentElement.getAttribute("data-level") || "B";
+      if (!vtext.hasAttribute("data-" + lv.toLowerCase())) lv = "B";
+      vtext.querySelector("p").textContent = vtext.getAttribute("data-" + lv.toLowerCase());
+      vlevels.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-level") === lv); });
+    };
+    vlevels.hidden = false;
+    vlevels.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button");
+      if (b && window.LogiaPrefs) window.LogiaPrefs.set("level", b.getAttribute("data-level"));
+      else if (b) { document.documentElement.setAttribute("data-level", b.getAttribute("data-level")); showLevel(); }
+    });
+    document.addEventListener("logia:prefs", showLevel);
+    showLevel();
+  }
 
   // A work's contents beside its pages: scrolled so the page being read shows.
   var tocBox = document.querySelector(".lg-work-toc"), tocHere = tocBox && tocBox.querySelector("[aria-current]");

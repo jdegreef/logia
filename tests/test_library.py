@@ -297,6 +297,24 @@ class Creeds(unittest.TestCase):
         self.assertTrue(all(verify_sources.check_digital(changed, x) for x in streams.values()))
 
 
+class ReadingsFeed(unittest.TestCase):
+    def test_window_and_dates(self):
+        import datetime
+        import xml.dom.minidom
+        lib = build_site.Library()
+        today = datetime.date(build_site.datetime.date.today().year, 12, 1)
+        feed = build_site.readings_feed(lib, today)
+        doc = xml.dom.minidom.parseString(feed.encode())
+        ids = [x.getElementsByTagName("id")[0].firstChild.data for x in doc.getElementsByTagName("entry")]
+        self.assertTrue(ids)
+        lo, hi = today - datetime.timedelta(days=7), today + datetime.timedelta(days=42)
+        for x in ids:
+            y, m, d = x.rsplit("-", 3)[-3:]
+            self.assertTrue(lo <= datetime.date(int(y), int(m), int(d)) <= hi, x)
+        for u in doc.getElementsByTagName("updated"):
+            self.assertLessEqual(u.firstChild.data[:10], today.isoformat())
+
+
 class DownloadSchema(unittest.TestCase):
     def test_checker_refuses_what_the_schema_does(self):
         schema = build_site.download_schema()

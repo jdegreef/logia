@@ -4,7 +4,9 @@ The site is static: Render runs `python3 scripts/build_site.py` and serves
 `site/`. `render.yaml` holds the settings. DNS is on Cloudflare.
 
 The build's one dependency is [Pagefind](https://pagefind.app), which indexes
-the words of every excerpt for `/search/` into `site/pagefind/`. The build
+the words of every excerpt for `/search/` into `site/pagefind/`, and the Bible
+text's verses, with their Greek and Hebrew words, into `site/pagefind-bible/`
+(loaded only when a search asks for the Bible text). The build
 command installs it, pinned (`pagefind[bin]==1.5.2` and `pagefind-bin==1.5.2`),
 and CI does the same. Without it the site still builds, and `/search/` says the
 words can't be searched in that build. To build with search locally:
