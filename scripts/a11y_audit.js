@@ -21,7 +21,11 @@ const AXE = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8");
 // read differently, About, the open data and the word search.
 const PAGES = ["/", "/read/", "/jhn/", "/jhn/3/", "/jhn/8/", "/rom/8/", "/gen/1/", "/commentators/",
   "/commentators/calvin/", "/works/chrysostom/", "/works/chrysostom/jhn/1/", "/jhn/1/1/", "/differ/matthew-16-rock/",
-  "/about/", "/open-data/", "/topics/", "/topics/baptism/", "/search/", "/who-names-whom/", "/jhn/3/side-by-side/"];
+  "/about/", "/open-data/", "/topics/", "/topics/baptism/", "/search/", "/who-names-whom/", "/jhn/3/side-by-side/",
+  // Every other kind of page: creeds, the glossary, the readings, Saved, a homily, the most-discussed
+  // verses, the plans, the quiz, what's new, Explore, and a search with its results.
+  "/creeds/", "/creeds/apostles/", "/creeds/compare/", "/glossary/", "/readings/", "/saved/", "/works/chrysostom/24/",
+  "/most-discussed/", "/jhn/most-discussed/", "/differ/", "/plans/", "/quiz/", "/new/", "/explore/", "/search/?q=grace"];
 const THEMES = ["light", "sepia", "dark", "night"];
 const TYPES = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json",
   ".svg": "image/svg+xml", ".png": "image/png", ".woff2": "font/woff2", ".xml": "application/xml", ".txt": "text/plain" };
@@ -51,9 +55,9 @@ function serve() {
     await page.addInitScript((t) => { try { localStorage.setItem("logia-theme", t); } catch (e) { /* blocked */ } }, theme);
     await page.route(/^https?:\/\/(?!127\.0\.0\.1)/, (route) => route.abort());
     for (const p of PAGES) {
-      if (!fs.existsSync(path.join(SITE, p, "index.html"))) continue;
+      if (!fs.existsSync(path.join(SITE, p.split("?")[0], "index.html"))) continue;
       await page.goto(base + p, { waitUntil: "load" });
-      await page.waitForTimeout(400);
+      await page.waitForTimeout(p.includes("?") ? 2500 : 400);   // a search's results arrive after the page
       await page.addScriptTag({ content: AXE });
       const found = await page.evaluate(async () => (await window.axe.run(document, { resultTypes: ["violations"] })).violations
         .map((v) => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.map((n) => n.target.join(" ")) })));

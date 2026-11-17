@@ -2717,3 +2717,13 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
    public-domain one; the initials stand in for it otherwise. */
 .lg-portrait { flex: none; width: 96px; height: 120px; object-fit: cover; object-position: center 20%; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); }
 @media (max-width: 560px) { .lg-portrait { width: 72px; height: 90px; } }
+
+/* Listen on verse and homily pages: the buttons, and the paragraph being read. */
+.lg-listen { display: inline-flex; flex-wrap: wrap; gap: 6px; vertical-align: middle; }
+.lg-listen[hidden], .lg-listen [hidden] { display: none; }
+.lg-vtext + .lg-vlevels + .lg-listen, .lg-vtext + .lg-listen { margin: 0 0 18px 8px; }
+.lg-speaking { background: var(--mark, color-mix(in srgb, var(--gold) 18%, transparent)); border-radius: 4px; box-shadow: 0 0 0 4px var(--mark, color-mix(in srgb, var(--gold) 18%, transparent)); }
+@media print { .lg-listen { display: none !important; } }
+.cx-creeds ul { list-style: none; margin: 6px 0 0; padding: 0; }
+.cx-creeds li { padding: 4px 0; font-size: 14px; }
+.cx-creeds a { text-decoration: none; }

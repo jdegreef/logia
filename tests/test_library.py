@@ -297,6 +297,51 @@ class Creeds(unittest.TestCase):
         self.assertTrue(all(verify_sources.check_digital(changed, x) for x in streams.values()))
 
 
+class EveryWordFromTheCatalog(unittest.TestCase):
+    def test_interface_text_comes_from_i18n(self):
+        # Every catalog string wrapped in ⟦…⟧: a button, label, heading or
+        # accessible name without one, and not made of the library's own names,
+        # titles and references, was typed into the code and would stay
+        # English in another language.
+        import copy
+        lib = build_site.Library()
+        build_site.build_more.setup(build_site)
+        words = {"Logia", "Esc", "Enter", "OWB"}
+        texts = [a["name"] for a in lib.authors.values()] + [a["tradition"] for a in lib.authors.values()]
+        texts += [w["title"] for w in lib.works.values()] + [b["en"] for b in lib.books.values()]
+        texts += [lib.chapter_title(b, c) or "" for b, c in lib.chapters] + [c["title"] for c in lib.creeds]
+        for x in texts:
+            words |= set(re.findall(r"[A-Za-z]+", x))
+
+        def wrap(v):
+            if isinstance(v, str):
+                return "⟦" + v + "⟧" if v.strip() else v
+            if isinstance(v, list):
+                return [wrap(x) for x in v]
+            return {k: wrap(x) for k, x in v.items()} if isinstance(v, dict) else v
+        saved = copy.deepcopy(build_site.CATALOG)
+        build_site.CATALOG.update(wrap(saved))
+        try:
+            bible = lib.bible("JHN", 3)
+            cited = lib.cited_by("JHN", 3, bible["verses"])
+            verse = build_site.verse_page(lib, "JHN", 3, 16, bible, lib.verse_pages("JHN", 3), cited)
+            chapter = build_site.chapter_page(lib, "JHN", 3, lib.chapters)[0]
+            pages = {"home": build_site.home_page(lib), "chapter": chapter,
+                     "verse": verse, "commentator": build_site.author_page(lib, lib.authors["wesley"]),
+                     "about": build_site.about_page(lib), "search": build_site.search_page(lib, True),
+                     "creeds": build_site.creeds_index(lib)}
+        finally:
+            build_site.CATALOG.clear()
+            build_site.CATALOG.update(saved)
+        tags = re.compile(r"<(button|label|summary|th|option|h2|legend|dt)\b[^>]*>(.*?)</\1>", re.S)
+        attrs = re.compile(r'\b(aria-label|title|placeholder|alt)="([^"]*)"')
+        for name, page in pages.items():
+            found = [html.unescape(re.sub(r"<[^>]+>", " ", m[2])).strip() for m in tags.finditer(page)]
+            found += [html.unescape(m[2]).strip() for m in attrs.finditer(page) if not m[2].startswith(("http", "/"))]
+            typed = [x for x in found if "⟦" not in x and [w for w in re.findall(r"[A-Za-z]+", x) if w not in words]]
+            self.assertEqual(typed, [], name)
+
+
 class Cards(unittest.TestCase):
     def test_every_commentator_book_topic_and_creed_has_its_card(self):
         # scripts/make_cards.py draws them; run it after adding one.

@@ -357,6 +357,11 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "export_csv": "Download (CSV)",
+    "export_list": "Copy as a list",
+    "export_head": "Reference|Commentator|Work|Address|Opening words",
+    "exporting": "Gathering…",
+    "exported": "Copied {n}",
     "sort": "Order:",
     "sort_best": "Best match",
     "sort_oldest": "Oldest first",
@@ -655,6 +660,8 @@
     "compare_on": "Compare on {ref}",
     "compare_pick": "Voices (up to three):",
     "compare_side": "Read these two across the whole chapter",
+    "creeds_on": "In the creeds and confessions",
+    "creeds_hint": "Documents of the churches that cite {ref}, in their text or their proof texts.",
     "sheet_min": "Commentary panel, closed: open it",
     "sheet_half": "Commentary panel, half open: open it fully",
     "sheet_full": "Commentary panel, fully open: close it",
@@ -750,6 +757,7 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "rel_topic": "Topic: {n} of their excerpts on its passages",
     "portrait": "Portrait",
     "portrait_alt": "Portrait of {name}",
     "keep": "Keep {name} for offline",
@@ -1261,6 +1269,7 @@
     }
   },
   "text": {
+    "turns_end": "More of {title}",
     "contents": "{divisions}",
     "in_logia": "In Logia on {ref}",
     "quoted": "Quoted by {name} in the {title}, on {ref}",
@@ -2715,6 +2724,8 @@
   },
   "study": {
     "ui": {
+      "link": "Link",
+      "link_done": "Link copied: it opens this page with these words marked.",
       "quote": "Copy quote with citation",
       "quote_done": "Quote copied with its citation.",
       "highlight": "Highlight",
@@ -2764,6 +2775,7 @@
     "later": "Not now"
   },
   "side": {
+    "turns": "The chapters before and after, side by side",
     "strip_label": "Which verses each comments on",
     "strip_left": "only the left",
     "strip_right": "only the right",
@@ -2809,5 +2821,12 @@
     "book_line": "Two thousand years of commentary on it, verse by verse, free and open.",
     "topic": "Topic",
     "creed": "Creeds and councils"
+  },
+  "listen": {
+    "start": "Listen",
+    "pause": "Pause",
+    "resume": "Go on",
+    "next": "Next",
+    "stop": "Stop"
   }
 }

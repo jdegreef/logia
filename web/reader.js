@@ -63,6 +63,8 @@
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
   hidden("logia-eras").forEach(function (e) { state.eras.delete(e); });
   hidden("logia-kinds").forEach(function (k) { state.kinds.delete(k); });
+  // "Only unread", kept from chapter to chapter like the filters.
+  try { state.unread = localStorage.getItem("logia-unread") === "1"; } catch (e) { /* storage blocked */ }
   // Whether a voice's card is open on the chosen verse (see commTab).
   // A voice with nothing new since the verse before starts closed, while
   // another voice has something new.
@@ -468,6 +470,16 @@
     }).join(" · ") + "</p>";
   }
   // Excerpts on other verses that refer to this one (the other way of a citation).
+  // The creeds and confessions that cite the verse (DATA.creeds, from
+  // library/creeds, as verse pages show them).
+  function creedsOn(v) {
+    var rows = (DATA.creeds || {})[v];
+    if (!rows || !rows.length) return "";
+    return '<section class="cx-elsewhere cx-creeds"><div class="cx-era">' + esc(U.creeds_on) + "</div>" +
+      '<p class="cx-hint">' + esc(fmt(U.creeds_hint, { ref: REF(v) })) + "</p><ul>" + rows.map(function (r) {
+        return '<li><a href="' + esc(r[1]) + '"><b>' + esc(r[0]) + '</b></a> <span class="cx-d">' + esc(r[2]) + "</span></li>";
+      }).join("") + "</ul></section>";
+  }
   function elsewhere(v) {
     var rows = (DATA.citedBy[v] || []).filter(function (r) { return state.eras.has(r.era); });
     if (!rows.length) return "";
@@ -592,7 +604,7 @@
     if (!any) {
       h += '<p class="cx-empty' + (onVerse ? "" : " cx-empty-box") + '">' + esc(onVerse ? U.none_in_eras : EMPTY ? fmt(U.none_book_long, { book: DATA.bookName }) : U.none_yet_long) + "</p>";
     }
-    return h + related(v) + wholeTexts(v) + elsewhere(v);
+    return h + related(v) + wholeTexts(v) + elsewhere(v) + creedsOn(v);
   }
   // Where no one comments on a verse: the verses it cross-references that
   // have commentary, with one voice's first words on each.
@@ -993,7 +1005,10 @@
       if (again) again.focus();
       return;
     }
-    if (e.target.closest("[data-unread]")) { state.unread = !state.unread; state.kept = {}; renderPanel(); var u = document.querySelector("[data-unread]"); if (u) u.focus(); return; }
+    if (e.target.closest("[data-unread]")) {
+      state.unread = !state.unread; state.kept = {};
+      try { localStorage.setItem("logia-unread", state.unread ? "1" : "0"); } catch (err) { /* storage blocked */ }
+      renderPanel(); var u = document.querySelector("[data-unread]"); if (u) u.focus(); return; }
     var chip = e.target.closest(".cx-filters .cx-chip:not([data-unread]), [data-show-all]");
     if (chip) {
       if (chip.hasAttribute("data-show-all")) { state.eras = new Set(ERAS); state.kinds = new Set(KINDS); }
@@ -1096,9 +1111,14 @@
   if (gapAsked) state.verse = gapAsked;
   else if (m0) state.verse = Math.max(FIRST, Math.min(LAST, +m0[1]));
   else {
-    // With no verse asked for, open at the first verse that has commentary.
+    // With no verse asked for ("Next chapter"), open at the first verse a
+    // pinned voice comments on, with its card open, so a commentator can be
+    // read on through a book; else at the first verse with commentary.
+    var pinnedHere = works.filter(isPinned)[0];
+    var firstPinned = pinnedHere && DATA.verses.filter(function (v) { return entriesFor(pinnedHere, v).length; })[0];
     var firstWith = DATA.verses.filter(function (v) { return works.some(function (w) { return entriesFor(w, v).length; }); })[0];
-    if (firstWith) state.verse = firstWith;
+    if (firstPinned) { state.verse = firstPinned; var openPinned = pinnedHere.work_id; }
+    else if (firstWith) state.verse = firstWith;
   }
   // This chapter, read: kept for the dot on its chip (web/logia.js).
   try {
@@ -1112,6 +1132,7 @@
   loadComm();
   renderText(); go(state.verse);
   if (m0 && m0[2]) { sheet("half"); showCard(m0[2]); }
+  else if (openPinned) showCard(openPinned);
   // A verse asked for in the address (#v14, from "Continue reading" or a
   // link): on a phone, scroll it into the space above the sheet.
   else if (m0 && PHONE.matches) { sheet("half"); keepInView(document.querySelector('.cx-verse[data-v="' + state.verse + '"]')); }
