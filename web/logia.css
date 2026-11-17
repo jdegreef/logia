@@ -2687,3 +2687,15 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 }
 .lg-side-names { display: none; }
 @media print { .lg-side-names { display: grid; border-bottom: .5pt solid #999; } }
+.lg-names-line { margin: 14px 0 0; font-size: 14.5px; }
+.lg-cmp-side, .cx-compare-side { margin: 10px 20px 0; font-size: 14.5px; font-weight: 600; }
+.cx-compare-side { grid-column: 1 / -1; margin: 4px 0 0; }
+
+/* Search results grouped by passage: the verse, then a line a voice. */
+.lg-fts-view { margin: 4px 0 0; font-size: 14px; }
+.lg-fts-view[hidden] { display: none; }
+.lg-fts-view label { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; cursor: pointer; }
+.lg-fts-grouped ul { list-style: none; margin: 6px 0 0; padding: 0 0 0 14px; border-left: 2px solid var(--line); }
+.lg-fts-grouped li { padding: 5px 0; font-size: 14.5px; line-height: 1.5; }
+.lg-fts-grouped li a { text-decoration: none; }
+.lg-fts-grouped .lg-fts-text { font-family: var(--read-font); }

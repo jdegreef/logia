@@ -950,6 +950,31 @@
       life.addEventListener("blur", clear);
     });
   });
+  // A long verse-by-verse list keeps each closed chapter's rows in a file
+  // of its own (excerpt_list in scripts/build_site.py, data-src): fetched
+  // the first time the chapter opens, however it is opened.
+  function loadRows(details) {
+    var ul = details && details.querySelector("ul.lg-excerpts[data-src]");
+    if (!ul) return Promise.resolve();
+    if (!ul._loading) {
+      ul._loading = fetch(ul.getAttribute("data-src")).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.text();
+      }).then(function (html) {
+        ul.innerHTML = html;
+        ul.removeAttribute("data-src");
+      }, function () {
+        ul._loading = null;
+        ul.innerHTML = '<li class="lg-quiet">' + esc(ul.getAttribute("data-failed")) + "</li>";
+      });
+    }
+    return ul._loading;
+  }
+  document.addEventListener("toggle", function (ev) {
+    if (ev.target.matches && ev.target.matches("details.lg-ch") && ev.target.open) loadRows(ev.target);
+  }, true);
+  document.querySelectorAll("details.lg-ch[open]").forEach(loadRows);
+
   document.querySelectorAll(".lg-goto:not(.lg-goto-work)").forEach(function (form) {
     var books = JSON.parse(form.getAttribute("data-books"));
     var codes = Object.keys(books);
@@ -967,6 +992,9 @@
         });
       }
       var ch = code && document.getElementById("ch-" + code.toLowerCase() + "-" + (m && +m[2]));
+      loadRows(ch).then(function () { mark(ch, m); });
+    });
+    function mark(ch, m) {
       var row = null;
       if (ch) {
         var v = +m[3];
@@ -982,7 +1010,7 @@
       row.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
       var link = row.querySelector("a");
       if (link) link.focus({ preventScroll: true });
-    });
+    }
   });
 
   // A commentator's chapters: a switch that opens or closes them all, the map
@@ -1364,6 +1392,35 @@
         ' <span class="lg-quiet">' + sub + "</span></p>" +
         '<p class="lg-fts-text">' + d.excerpt + "</p></li>";
     }
+    // "Group by passage": the best U.group_top results gathered by the verse
+    // each begins at, the verse with most first, each with its voices' lines.
+    var grouping = document.getElementById("fts-group"), view = document.querySelector(".lg-fts-view");
+    function showGroups(mine) {
+      more.hidden = true;
+      return Promise.all(results.slice(0, U.group_top).map(function (r) { return r.data(); })).then(function (ds) {
+        if (mine !== run) return;
+        var groups = {}, order = [];
+        ds.forEach(function (d) {
+          var x = (d.meta.x || "").split("~");
+          var key = x[1] + "~" + x[2] + "~" + x[3];
+          if (!groups[key]) { groups[key] = []; order.push(key); }
+          groups[key].push(d);
+        });
+        order.sort(function (a, b) { return groups[b].length - groups[a].length || order.indexOf(a) - order.indexOf(b); });
+        list.innerHTML = order.map(function (key) {
+          var ds2 = groups[key], k = key.split("~"), ref = (U.books[+k[0]] || "") + " " + k[1] + ":" + k[2];
+          var first = card(ds2[0]).match(/href="([^"]+)"/)[1].replace(/&amp;/g, "&");
+          var href = first.indexOf("/#v") >= 0 ? first : first.split("#")[0];
+          return '<li class="lg-fts-hit lg-fts-grouped"><p class="lg-fts-head"><a href="' + esc(href) + '"><b>' + esc(ref) + "</b></a> " +
+            '<span class="lg-quiet">' + esc(ds2.length === 1 ? U.group_head_one : fmt(U.group_head, { n: ds2.length })) + "</span></p><ul>" +
+            ds2.map(function (d) {
+              var x = (d.meta.x || "").split("~"), w = x[0] === "b" ? null : U.works[+x[0]];
+              var link = card(d).match(/href="([^"]+)"/)[1];
+              return '<li><a href="' + link + '"><b>' + esc(w ? w[1] : U.owb) + "</b></a> " + '<span class="lg-fts-text">' + d.excerpt + "</span></li>";
+            }).join("") + "</ul></li>";
+        }).join("");
+      });
+    }
     function showMore() {
       var next = results.slice(shown, shown + 10);
       shown += next.length;
@@ -1430,7 +1487,7 @@
     function search() {
       var q = operators(), mine = ++run, any = Object.keys(filters()).length;
       keep();
-      if (!q && !any) { list.innerHTML = ""; more.hidden = true; status.textContent = U.start; chips(allCounts); return; }
+      if (!q && !any) { list.innerHTML = ""; more.hidden = true; view.hidden = true; status.textContent = U.start; chips(allCounts); return; }
       status.textContent = U.searching;
       find(q, { filters: filters() }).then(function (s) {
         if (mine !== run) return;
@@ -1443,7 +1500,8 @@
           (any ? ' <button type="button" class="cx-chip-all" data-clear>' + esc(U.clear) + "</button>" : "") +
           (s.oldWords && s.oldWords.length ? ' <span class="lg-quiet">' + esc(fmt(U.spelling_note, { words: s.oldWords.join(", ") })) + "</span>" : "") +
           (s.bibleOff && q && srcBible && !["era", "tradition", "commentator", "work"].some(function (k) { return chosen[k].length; }) ? ' <button type="button" class="cx-chip-all" data-also-bible>' + esc(U.also_bible) + "</button>" : "");
-        return showMore();
+        view.hidden = results.length < 2;
+        return grouping.checked && results.length > 1 ? showGroups(mine) : showMore();
       }).catch(function () { if (mine === run) status.textContent = U.failed; });
     }
     // Before anything is typed, the chips show the whole library's counts,
@@ -1457,6 +1515,11 @@
     }).catch(function () { status.textContent = U.failed; });
     input.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(function () { if (pf) search(); }, 250); });
     form.addEventListener("submit", function (e) { e.preventDefault(); if (pf) search(); });
+    try { grouping.checked = localStorage.getItem("logia-search-group") === "1"; } catch (e) { /* storage blocked */ }
+    grouping.addEventListener("change", function () {
+      try { localStorage.setItem("logia-search-group", grouping.checked ? "1" : "0"); } catch (e) { /* storage blocked */ }
+      if (pf) search();
+    });
     form.addEventListener("click", function (e) {
       var b = e.target.closest("[data-k]");
       if (!b || !pf) return;
@@ -1533,6 +1596,16 @@
         col.querySelectorAll(".lg-folded").forEach(function (x) { x.classList.remove("lg-folded"); });
         cols.appendChild(col);
       });
+      // The two across the whole chapter (/<book>/<chapter>/side-by-side/).
+      var side = cmp.getAttribute("data-side"), link = cmp.querySelector(".lg-cmp-side");
+      if (link) link.remove();
+      if (side && picked.length === 2) {
+        link = document.createElement("p");
+        link.className = "lg-cmp-side";
+        link.innerHTML = '<a href="' + esc(side + "?a=" + encodeURIComponent(picked[0]) + "&b=" + encodeURIComponent(picked[1])) + '">' +
+          esc(cmp.getAttribute("data-side-label")) + " →</a>";
+        picks.after(link);
+      }
     };
     picks.addEventListener("click", function (e) {
       var b = e.target.closest("[data-voice]"); if (!b) return;

@@ -2369,15 +2369,39 @@ def chapter_hot(lib, book, chapter, n=4):
     return f'<p class="lg-hot"><span class="lg-quiet">{e(t("chapter.hot"))}</span> {links}</p>'
 
 
+@functools.lru_cache(maxsize=1)
+def name_pairs(lib):
+    """{(namer, named): [excerpts, oldest first]}: the earlier commentators
+    each one names (the excerpts' detected names)."""
+    pairs = {}
+    for c in sorted(lib.comments, key=order_key):
+        for n in c["names"]:
+            pairs.setdefault((lib.works[c["work"]]["author"], n["author"]), []).append(c)
+    return pairs
+
+
+def names_line(lib, aid):
+    """A commentator page's line: whom they name most, and who names them
+    most, each linked to /who-names-whom/."""
+    pairs = name_pairs(lib)
+    names = sorted(((len(cs), b) for (a, b), cs in pairs.items() if a == aid), reverse=True)[:3]
+    named = sorted(((len(cs), a) for (a, b), cs in pairs.items() if b == aid), reverse=True)[:3]
+    if not names and not named:
+        return ""
+
+    def people(rows):
+        return name_list([f'<a href="/commentators/{x}/">{e(short_name(lib.authors[x]))}</a> ({n:,})' for n, x in rows])
+    parts = ([f'{e(t("names.line_names"))} {people(names)}'] if names else []) + ([f'{e(t("names.line_named"))} {people(named)}'] if named else [])
+    return (f'<p class="lg-names-line">{". ".join(parts)}. <a href="/who-names-whom/#{f"n-{aid}" if names else "most"}">{e(t("names.line_link"))}</a></p>')
+
+
 def who_names_page(lib):
     """Who names whom: the earlier commentators each one names in their
     excerpts (the names find_refs.py finds, unchecked), and those the Catena
     quotes, matched to their sources. Counted; three excerpts linked a pair."""
-    pairs, quoted = {}, {}
+    pairs, quoted = name_pairs(lib), {}
     for c in sorted(lib.comments, key=order_key):
         a = lib.works[c["work"]]["author"]
-        for n in c["names"]:
-            pairs.setdefault((a, n["author"]), []).append(c)
         for q in c["quotes"]:
             if q.get("work") in lib.works:
                 quoted.setdefault((a, lib.works[q["work"]]["author"]), []).append(c)
@@ -2402,7 +2426,7 @@ def who_names_page(lib):
             continue
         rows = "".join(f'<li><b>{who(b)}</b> <span class="lg-quiet">{e(t("names.times", n=len(cs)) if len(cs) != 1 else t("names.once"))}</span>'
                        f'<span class="lg-names-eg">{e(t("names.for_example"))} {examples(cs)}</span></li>' for b, cs in mine)
-        blocks += (f'<section class="lg-names-one"><h3>{who(a["id"])} <span class="lg-quiet">{e(a["dates"])}</span></h3>'
+        blocks += (f'<section class="lg-names-one" id="n-{a["id"]}"><h3>{who(a["id"])} <span class="lg-quiet">{e(a["dates"])}</span></h3>'
                    f'<p class="lg-quiet">{e(t("names.names_n", n=len(mine)) if len(mine) != 1 else t("names.names_one"))}</p><ul>{rows}</ul></section>')
     catena = "".join(f'<li><b>{who(b)}</b> <span class="lg-quiet">{e(t("names.times", n=len(cs)))}</span>'
                      f'<span class="lg-names-eg">{e(t("names.for_example"))} {examples(cs)}</span></li>'
@@ -2480,7 +2504,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     text_data = {k: v for k, v in bible.items() if k not in ("records", "words")}
     data = {**text_data, "records": records, "wordCounts": {v: len(ws) for v, ws in bible["words"].items()},
             "panel": digest_url(f"/panel/{book}.{chapter}.json", panel),
-            "comm": comm_url, "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS, "kinds": KINDS, "issues": GITHUB_URL + "/issues/new",
+            "comm": comm_url, "sideBySide": chapter_url(book, chapter) + "side-by-side/", "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS, "kinds": KINDS, "issues": GITHUB_URL + "/issues/new",
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "related": lib.related(book, chapter, bible),
@@ -2912,12 +2936,14 @@ def nearby_verses(lib, book, chapter, verse, pages_here):
             f'<div class="chap-pills lg-near">{"".join(cells)}</div>{nxt}</nav>')
 
 
-def compare_dialog(ref):
+def compare_dialog(ref, side=None):
     """Compare two voices: a button (shown by web/logia.js) that opens two of
     the voices on the page side by side, picked from a row of their names; the
-    earliest and the latest to begin with. The texts are those on the page."""
+    earliest and the latest to begin with. The texts are those on the page.
+    side, the chapter's side-by-side page, adds a link to the two chosen there."""
+    side_attrs = f' data-side="{side}" data-side-label="{e(t("reader.compare_side"))}"' if side else ""
     return (f'<p class="lg-cmp-row"><button type="button" class="button ghost lg-cmp-open" hidden>{icon("list", 16)} {e(t("verse.compare"))}</button></p>'
-            f'<dialog class="lg-cmp" aria-labelledby="cmp-h"><div class="lg-cmp-head"><h2 id="cmp-h">{e(t("verse.compare_title", ref=ref))}</h2>'
+            f'<dialog class="lg-cmp" aria-labelledby="cmp-h"{side_attrs}><div class="lg-cmp-head"><h2 id="cmp-h">{e(t("verse.compare_title", ref=ref))}</h2>'
             f'<button type="button" class="lg-cmp-close" aria-label="{e(t("reader.close"))}">{icon("close", 20)}</button></div>'
             f'<div class="lg-cmp-picks" role="group" aria-label="{e(t("verse.compare_pick"))}"><span class="lg-quiet">{e(t("verse.compare_pick"))}</span></div>'
             f'<div class="lg-cmp-cols"></div></dialog>')
@@ -3013,7 +3039,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 {nearby_verses(lib, book, chapter, verse, pages_here)}
 <p class="dek lg-vlead">{e(lead)}</p>{verse_topics(lib, book, chapter, verse)}{verse_rank_line(lib, book, chapter, verse)}
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav>
-{compare_dialog(ref) if len(rail) > 1 else ""}</header>
+{compare_dialog(ref, chapter_url(book, chapter) + "side-by-side/") if len(rail) > 1 else ""}</header>
 <section class="lg-block" id="voices" tabindex="-1"><h2>{e(t("verse.voices"))}</h2>{build_more.verse_grid(lib, voices, book, chapter, verse)}{"".join(sections)}</section>
 {cited_html}{whole_html}{verse_creeds(lib, book, chapter, verse, ref)}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
 <p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
@@ -3894,7 +3920,14 @@ def reading_minutes(text):
     return max(1, round(len(text.split()) / 200))
 
 
-def excerpt_list(lib, comments, show_work=False, tools=""):
+# A commentator's verse-by-verse list longer than this keeps only its first
+# chapter in the page; each other chapter's rows are a file of their own
+# (<lazy>/<book>-<chapter>.html), fetched by web/logia.js when it is opened.
+# Calvin's page was 5.5 MB of HTML with every chapter in it.
+LAZY_LIST = 400
+
+
+def excerpt_list(lib, comments, show_work=False, tools="", lazy=None):
     """Excerpts grouped by book and chapter, each chapter closed but the
     first. Above them, a toolbar (the go-to-verse box and a switch that opens
     or closes every chapter) and a map of the chapters, a row of numbers for
@@ -3902,7 +3935,9 @@ def excerpt_list(lib, comments, show_work=False, tools=""):
     passages and reading time, then one row per verse or range (the verse as
     the Open Word Bible has it, the excerpt's first words, where it sits in
     its work, a link to read it, and any more passages on the same verses
-    folded away), and links to the chapters before and after it."""
+    folded away), and links to the chapters before and after it. lazy, a
+    path, puts a long list's closed chapters in files of their own there."""
+    lazy = lazy if lazy and len(comments) > LAZY_LIST else None
     out, rows = [], {}
     for c in comments:
         b, ch, v = ref_parts(c["start"])
@@ -3951,7 +3986,11 @@ def excerpt_list(lib, comments, show_work=False, tools=""):
                    f'<span class="lg-ch-name"><b>{e(name)}</b><span class="lg-quiet">{e(count)} · {e(t("commentators.minutes", n=minutes))}</span></span>'
                    f'<span class="lg-ch-depth" aria-hidden="true"><span style="width:{max(4, 100 * words[(b, ch)] / most):.0f}%"></span></span>'
                    f'{icon("chevron", 16, "icon lg-caret")}</summary>'
-                   f'<div class="lg-ch-body">{whole}<ul class="lg-excerpts">')
+                   f'<div class="lg-ch-body">{whole}')
+        part_path = f"{lazy}{b.lower()}-{ch}.html" if lazy and i else None
+        out.append(f'<ul class="lg-excerpts" data-src="{part_path}" data-failed="{e(t("commentators.load_failed"))}"></ul>' if part_path
+                   else '<ul class="lg-excerpts">')
+        start_rows = len(out)
         plain = lib.plain(b, ch)
         for (v, ech, ev), cs in group.items():
             ref = f"{ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "") if ech == ch else f"{ch}:{v}–{ech}:{ev}"
@@ -3983,11 +4022,14 @@ def excerpt_list(lib, comments, show_work=False, tools=""):
                        f'title="{e(lib.books[b]["en"])} {e(ref)}">{e(ref)}</a></p>'
                        f'<div>{title}{verse}<p class="lg-ex-text">{lemma}{e(snippet(c["text"]))}</p>'
                        f'<p class="lg-ex-meta">{" · ".join(meta)}{go}</p>{more}</div></li>')
+        if part_path:
+            write(part_path, "".join(out[start_rows:]))
+            del out[start_rows:]
         prev = (f'<a class="lg-ch-prev" href="#ch-{keys[i - 1][0].lower()}-{keys[i - 1][1]}">{icon("back", 15)} '
                 f'{e(chname(*keys[i - 1]))}</a>' if i else "<span></span>")
         nxt = (f'<a class="lg-ch-next" href="#ch-{keys[i + 1][0].lower()}-{keys[i + 1][1]}">{e(chname(*keys[i + 1]))} '
                f'{icon("arrow", 15)}</a>' if i + 1 < len(keys) else "<span></span>")
-        out.append(f'</ul><nav class="lg-ch-steps" aria-label="{e(t("commentators.chapter_steps"))}">{prev}{nxt}</nav></div></details>')
+        out.append(f'{"" if part_path else "</ul>"}<nav class="lg-ch-steps" aria-label="{e(t("commentators.chapter_steps"))}">{prev}{nxt}</nav></div></details>')
     if several and keys:
         out.append("</section>")
     return "".join(out)
@@ -4390,7 +4432,7 @@ def author_page(lib, author):
             f'<button type="submit" class="button ghost">{e(t("commentators.jump_go"))}</button>'
             f'<span class="lg-quiet" id="jump-{aid}-hint" role="status">{e(t("commentators.jump_hint", example=example))}</span></form>'
             if first else "")
-    by_verse = excerpt_list(lib, comments, show_work=len(works) > 1, tools=jump)
+    by_verse = excerpt_list(lib, comments, show_work=len(works) > 1, tools=jump, lazy=f"/commentators/{aid}/ch/")
     if wholes:
         division = lib.works[wholes[0]]["divisions"][0].lower()
         lists = "".join((f'<h3 class="label">{e(lib.works[w]["title"])}</h3>' if len(wholes) > 1 else "")
@@ -4451,7 +4493,7 @@ def author_page(lib, author):
              + f'</ul><p class="lg-quiet">{e(t("commentators.alike_note"))}</p></div>' if alike else "")
     alongside = (f'<section class="lg-block" id="alongside"><h2>{e(t("commentators.alongside"))}</h2>'
                  f'<p class="lg-quiet">{e(t("commentators.alongside_note", name=short))}</p>'
-                 f'<ul class="lg-pbars lg-bars-gold">{count_bars(others, len(mine_keys))}</ul>{catena}{alike}</section>' if others else "")
+                 f'<ul class="lg-pbars lg-bars-gold">{count_bars(others, len(mine_keys))}</ul>{catena}{names_line(lib, aid)}{alike}</section>' if others else "")
 
     # More on Logia: the era page, the guides to the books they comment on,
     # and the glossary terms they use most.
@@ -7962,6 +8004,11 @@ def build_search_index(lib):
 BIBLE_RECORD = re.compile(r"^/[a-z0-9]{3}/\d+/v\d+\.html$")
 
 
+# How many of the best results "Group by passage" gathers (web/logia.js):
+# each needs its own small file, so not all of a big search.
+GROUP_TOP = 120
+
+
 def search_within(label, field, value, placeholder):
     """A box on a work's or commentator's page that searches only their words
     (/search/ with that filter chosen); it needs no script to send."""
@@ -7990,7 +8037,8 @@ def search_page(lib, indexed):
     with Pagefind), narrowed by era, tradition, book and commentator."""
     # What the page needs to name a result from its code (search_records):
     # each work's title, commentator and dates, and the books' names.
-    fts_ui = {**CATALOG["search"]["fts"], "result_title": t("search.result_title"), "owb": t("search.owb"),
+    fts_ui = {**CATALOG["search"]["fts"], "group_top": GROUP_TOP, "group_head": t("search.group_head"),
+              "group_head_one": t("search.group_head_one"), "result_title": t("search.result_title"), "owb": t("search.owb"),
               "works": [[lib.works[w]["title"], lib.author_of(w)["name"], lib.author_of(w)["dates"]] for w in lib.ordered_works()],
               "books": [x["en"] for x in lib.books.values()],
               "counts": search_counts(lib)}
@@ -8007,6 +8055,7 @@ def search_page(lib, indexed):
 <button type="submit" class="button">{e(t("search.go"))}</button></div>
 <div class="lg-fts-filters">{groups}</div>
 </form>
+<p class="lg-fts-view" hidden><label><input type="checkbox" id="fts-group"> {e(t("search.group"))}</label> <span class="lg-quiet">{e(t("search.group_note", n=GROUP_TOP))}</span></p>
 <p class="lg-fts-status" id="fts-status" aria-live="polite">{e(t("search.fts.start" if indexed else "search.fts.unavailable"))}</p>
 <ol class="lg-fts-results" id="fts-results"></ol>
 <p><button type="button" class="button ghost lg-fts-more" id="fts-more" hidden>{e(t("search.more"))}</button></p>

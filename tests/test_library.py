@@ -807,8 +807,11 @@ class Site(unittest.TestCase):
         # sits in its homily, and the homilies themselves as a second tab.
         start = text.split('id="start"', 1)[1].split("</section>", 1)[0]
         self.assertEqual(len(re.findall(r'<li data-book="\w+" data-rank="\d+"><a', start)), 4)
-        self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', text)
-        self.assertIn("Read the homily from here", text)
+        # A long list keeps its closed chapters' rows in files of their own (LAZY_LIST).
+        self.assertIn('data-src="/commentators/chrysostom/ch/jhn-1.html"', text)
+        rows = self.read("commentators/chrysostom/ch/jhn-1.html")
+        self.assertIn('<p class="lg-ex-verse">In the beginning was the Word', rows)
+        self.assertIn("Read the homily from here", rows)
         self.assertIn('aria-controls="by-whole"', text)
         self.assertIn('href="/works/chrysostom/88/"', text)
         self.assertIn('class="lg-goto"', text)

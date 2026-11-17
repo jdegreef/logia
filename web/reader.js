@@ -777,7 +777,11 @@
     $("#compare-ref").textContent = fmt(U.compare_on, { ref: REF(v) });
     $("#compare-text").textContent = verseText(v);
     $("#compare-picks").innerHTML = '<span class="cx-picks-label">' + esc(U.compare_pick) + "</span>" + chips;
-    $("#compare-cols").innerHTML = cols;
+    // With two chosen, the two across the whole chapter (its side-by-side page).
+    var two = vs.filter(function (w) { return cmp.picked.indexOf(w.work_id) >= 0; });
+    $("#compare-cols").innerHTML = cols + (two.length === 2 && works.length > 1
+      ? '<p class="cx-compare-side"><a href="' + esc(DATA.sideBySide + "?a=" + encodeURIComponent(two[0].work_id) + "&b=" + encodeURIComponent(two[1].work_id)) + '">' +
+        esc(U.compare_side) + " →</a></p>" : "");
     $("#compare-cols").style.setProperty("--cols", cmp.picked.length);
   }
   (function () {

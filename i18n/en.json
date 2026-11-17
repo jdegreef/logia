@@ -356,6 +356,10 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "group": "Group by passage",
+    "group_note": "Gathers the {n} best matches by the verse each begins at, the passage with most of them first.",
+    "group_head": "{n} matches",
+    "group_head_one": "1 match",
     "within_work": "Search {title}",
     "within_author": "Search everything by {name}",
     "within_placeholder": "A word or a few words",
@@ -642,6 +646,7 @@
     "compare": "Compare side by side",
     "compare_on": "Compare on {ref}",
     "compare_pick": "Voices (up to three):",
+    "compare_side": "Read these two across the whole chapter",
     "close": "Close",
     "show_voice": "Show what {name} says",
     "hide_voice": "Hide what {name} says",
@@ -734,6 +739,7 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "load_failed": "This chapter could not be loaded. Check the connection and open it again.",
     "alike_note": "Counted from the words each uses, weighted toward the words few commentators use: how alike the two read in Logia's English, not who agrees with whom. The longest bar is the closest; a translator's English counts as much as the author's.",
     "alike": "Who writes most like {name}",
     "timeline_key": "What the colours show: the eras",
@@ -2754,6 +2760,9 @@
     "both_none": "Neither comments on verses {a}–{b}."
   },
   "names": {
+    "line_names": "Names most often:",
+    "line_named": "Named most often by:",
+    "line_link": "Who names whom",
     "names_one": "Names one earlier commentator in Logia",
     "heading": "Who names whom",
     "nav_note": "Which earlier commentators each one names",
