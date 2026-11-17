@@ -1,5 +1,6 @@
 {
   "site": {
+    "card_alt_page": "Logia: {title}",
     "skip_commentary": "Skip to the commentary",
     "name": "Logia",
     "tagline": "Scripture beside two thousand years of commentary: the early church, the Middle Ages, the Reformers, the Puritans and the 1800s, copied word for word from public-domain editions.",
@@ -356,6 +357,11 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "sort": "Order:",
+    "sort_best": "Best match",
+    "sort_oldest": "Oldest first",
+    "sort_newest": "Newest first",
+    "opensearch": "Search two thousand years of Christian commentary on Scripture, or go to a verse.",
     "group": "Group by passage",
     "group_note": "Gathers the {n} best matches by the verse each begins at, the passage with most of them first.",
     "group_head": "{n} matches",
@@ -382,6 +388,8 @@
     "any_commentator": "Any commentator",
     "more": "Show more",
     "fts": {
+      "did_you_mean": "Did you mean",
+      "goto": "Go to {ref}",
       "also_bible": "Search the Bible text too",
       "start": "Type a word or a few words to find them in every excerpt.",
       "unavailable": "The words can't be searched in this build of the site. Search above still finds verses, books and commentators.",
@@ -647,6 +655,9 @@
     "compare_on": "Compare on {ref}",
     "compare_pick": "Voices (up to three):",
     "compare_side": "Read these two across the whole chapter",
+    "sheet_min": "Commentary panel, closed: open it",
+    "sheet_half": "Commentary panel, half open: open it fully",
+    "sheet_full": "Commentary panel, fully open: close it",
     "close": "Close",
     "show_voice": "Show what {name} says",
     "hide_voice": "Hide what {name} says",
@@ -739,6 +750,13 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "portrait": "Portrait",
+    "portrait_alt": "Portrait of {name}",
+    "keep": "Keep {name} for offline",
+    "keep_note": "Saves {n} pages on this device: every chapter here, the commentary in order, and the whole texts, for reading with no signal.",
+    "keep_saving": "Saving page {done} of {total}…",
+    "keep_done": "{name} is saved on this device. It opens with no connection.",
+    "keep_failed": "Some pages didn't save. Try again with a better connection.",
     "load_failed": "This chapter could not be loaded. Check the connection and open it again.",
     "alike_note": "Counted from the words each uses, weighted toward the words few commentators use: how alike the two read in Logia's English, not who agrees with whom. The longest bar is the closest; a translator's English counts as much as the author's.",
     "alike": "Who writes most like {name}",
@@ -2746,6 +2764,13 @@
     "later": "Not now"
   },
   "side": {
+    "strip_label": "Which verses each comments on",
+    "strip_left": "only the left",
+    "strip_right": "only the right",
+    "strip_both": "both",
+    "strip_none": "neither",
+    "key_only": "Only {name}",
+    "key_both": "Both",
     "verses": "Verses {v}",
     "gap_verse": "Neither comments on verse {v}.",
     "link": "Two commentators side by side on this chapter",
@@ -2777,5 +2802,12 @@
     "catena_note": "Thomas Aquinas's Catena Aurea is made of quotations. These are the ones matched to a work Logia has, so they can be read in their own setting.",
     "how_title": "How this is counted",
     "how": "Each time an excerpt prints the name of another commentator in Logia (Augustine, Chrysostom, Calvin, and the old spellings such as Austin), it counts once. Names are found by scripts/find_refs.py and marked as detected until a person checks them. Only commentators who are in Logia are counted, so a writer named often but not yet in the library does not appear."
+  },
+  "cards": {
+    "commentator": "Commentator · {era}",
+    "book": "A book of the Bible",
+    "book_line": "Two thousand years of commentary on it, verse by verse, free and open.",
+    "topic": "Topic",
+    "creed": "Creeds and councils"
   }
 }

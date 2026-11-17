@@ -2699,3 +2699,21 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 .lg-fts-grouped li { padding: 5px 0; font-size: 14.5px; line-height: 1.5; }
 .lg-fts-grouped li a { text-decoration: none; }
 .lg-fts-grouped .lg-fts-text { font-family: var(--read-font); }
+
+/* Side by side: the chapter's verses as a strip, coloured by who comments. */
+.lg-side-strip { display: flex; flex-wrap: wrap; gap: 3px; margin: 6px 0 4px; }
+.lg-side-strip a { min-width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px;
+  font-size: 12px; text-decoration: none; color: var(--text); border: 1px solid var(--line); background: var(--bg); }
+.lg-side-strip a:hover { border-color: var(--accent); }
+.lg-strip-left { background: color-mix(in srgb, var(--accent) 28%, var(--bg)) !important; }
+.lg-strip-right { background: color-mix(in srgb, var(--gold) 32%, var(--bg)) !important; }
+.lg-strip-both { background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, var(--bg)) 50%, color-mix(in srgb, var(--gold) 32%, var(--bg)) 50%) !important; }
+.lg-strip-none { color: var(--muted) !important; border-style: dashed !important; }
+.lg-side-key { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 0 0 8px; font-size: 13px; }
+.lg-side-key span { padding: 2px 8px; border-radius: 6px; }
+@media print { .lg-side-strip, .lg-side-key { display: none; } }
+
+/* A commentator's portrait (scripts/fetch_portraits.py), where Commons has a
+   public-domain one; the initials stand in for it otherwise. */
+.lg-portrait { flex: none; width: 96px; height: 120px; object-fit: cover; object-position: center 20%; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); }
+@media (max-width: 560px) { .lg-portrait { width: 72px; height: 90px; } }

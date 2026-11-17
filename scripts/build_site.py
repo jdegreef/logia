@@ -1247,8 +1247,22 @@ def counter_script(noindex=False):
             'async src="https://gc.zgo.at/count.js"></script>')
 
 
+# A page's link-preview picture: its own card in web/cards/ (scripts/make_cards.py)
+# when there is one, named for the page or given as card, else web/card.png.
+CARD_PATHS = ((r"^/commentators/([a-z0-9-]+)/$", "commentator-{}.png"), (r"^/topics/([a-z0-9-]+)/$", "topic-{}.png"),
+              (r"^/creeds/([a-z0-9-]+)/$", "creed-{}.png"), (r"^/([a-z0-9]{3})/(?:\d+/(?:\d+/)?)?$", "book-{}.png"))
+
+
+def card_for(card, path):
+    names = [card] if card else [pattern.format(m[1]) for rx, pattern in CARD_PATHS for m in [re.match(rx, path or "")] if m]
+    for name in names:
+        if name and os.path.exists(os.path.join(WEB, "cards", name)):
+            return f"/cards/{name}"
+    return "/card.png"
+
+
 def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True,
-         preload=(), head_title=None, ld=(), meta=(), skip_to=None):
+         preload=(), head_title=None, ld=(), meta=(), skip_to=None, card=None):
     """A whole page. head_title, when given, is the <title> and og:title in
     place of "<title> · Logia"; ld is schema.org data for search engines;
     skip_to, (#id, label), is a second skip link, past the text to the
@@ -1275,10 +1289,10 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta property="og:type" content="website">{f'{chr(10)}<meta property="og:url" content="{own}">' if canonical else ""}
 <meta property="og:title" content="{e(full)}">
 <meta property="og:description" content="{e(description)}">
-<meta property="og:image" content="{SITE_URL}/card.png">
+<meta property="og:image" content="{SITE_URL}{card_for(card, path)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{e(t("site.card_alt"))}">
+<meta property="og:image:alt" content="{e(t("site.card_alt_page", title=title) if card_for(card, path) != "/card.png" else t("site.card_alt"))}">
 <meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{tags}{json_ld(ld)}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" href="/new.xml" title="{e(t("new.feed_title"))}">
@@ -1294,6 +1308,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <link rel="preload" href="/fonts/gentium-book-plus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 {"".join(f'<link rel="preload" href="{u}" as="fetch" crossorigin>{chr(10)}' for u in preload)}<link rel="stylesheet" href="{asset("style.css")}">
 <link rel="stylesheet" href="{asset("logia.css")}">{js}{counter_script(noindex)}
+<link rel="search" type="application/opensearchdescription+xml" title="Logia" href="/opensearch.xml">
 </head>
 <body>
 <a class="skip" href="#main">{e(t("site.skip"))}</a>{f'<a class="skip" href="{skip_to[0]}" data-skip-to>{e(skip_to[1])}</a>' if skip_to else ""}
@@ -2298,6 +2313,30 @@ def comm_file(commentaries, cited_by):
                       ensure_ascii=False, separators=(",", ":")), index
 
 
+# A chapter whose commentary file is bigger than this also has it in parts of
+# PART_VERSES verses (/comm/<BOOK>.<chapter>.<n>.json): each part holds every
+# excerpt that touches its verses, with its work's fields. web/reader.js reads
+# the part with the verse being opened first, so its commentary shows before
+# the whole file (John 3: 239 KB compressed) has arrived.
+PART_FROM, PART_VERSES = 60_000, 6
+
+
+def comm_parts(comm, verses):
+    """{n: part text} for a big commentary file, else {}."""
+    if not comm or len(comm) < PART_FROM:
+        return {}
+    data = json.loads(comm)
+    parts = {}
+    for n in range(0, (max(verses) - 1) // PART_VERSES + 1):
+        lo, hi = n * PART_VERSES + 1, (n + 1) * PART_VERSES
+        works = [{**{k: v for k, v in w.items() if k != "entries"},
+                  "entries": [x for x in w["entries"] if int(x["start"]) <= hi and int(x["end"]) >= lo]}
+                 for w in data["commentaries"]]
+        works = [w for w in works if w["entries"]]
+        parts[n] = json.dumps({"lo": lo, "hi": hi, "commentaries": works}, ensure_ascii=False, separators=(",", ":"))
+    return parts
+
+
 def plain_verses(bible):
     """{verse: its Balanced text at the default wording}, as the reader shows it."""
     verses = {}
@@ -2452,7 +2491,8 @@ def side_by_side_page(lib, book, chapter, comm):
     verses = lib.plain(book, chapter)
     data = {"comm": digest_url(f"/comm/{book}.{chapter}.json", comm), "verses": verses,
             "ref": f"{name} {chapter}", "reader": chapter_url(book, chapter),
-            "ui": {k: t("side." + k) for k in ("verse", "verses", "none", "both_none", "gap_verse")}}
+            "ui": {k: t("side." + k) for k in ("verse", "verses", "none", "both_none", "gap_verse", "strip_label", "strip_left", "strip_right",
+                                                 "strip_both", "strip_none", "key_only", "key_both")}}
 
     def options(chosen):
         return "".join(f'<option value="{w["work_id"]}"{" selected" if i == chosen else ""}>{e(w["author"])}: {e(w["title"])}</option>'
@@ -2501,10 +2541,14 @@ def chapter_page(lib, book, chapter, all_chapters):
     panel, records = panel_file(bible)
     comm, index = comm_file(commentaries, lib.cited_by(book, chapter, bible["verses"]))
     comm_url = digest_url(f"/comm/{book}.{chapter}.json", comm) if comm else None
+    parts = comm_parts(comm, bible["verses"])
+    for n, text in parts.items():
+        write(f"/comm/{book}.{chapter}.{n}.json", text)
     text_data = {k: v for k, v in bible.items() if k not in ("records", "words")}
     data = {**text_data, "records": records, "wordCounts": {v: len(ws) for v, ws in bible["words"].items()},
             "panel": digest_url(f"/panel/{book}.{chapter}.json", panel),
-            "comm": comm_url, "sideBySide": chapter_url(book, chapter) + "side-by-side/", "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS, "kinds": KINDS, "issues": GITHUB_URL + "/issues/new",
+            "comm": comm_url, "commParts": ({"size": PART_VERSES, "url": comm_url.replace(".json?", ".{n}.json?")} if parts else None),
+            "sideBySide": chapter_url(book, chapter) + "side-by-side/", "bookName": name, "commentaries": index, "ui": ui, "eras": ERAS, "kinds": KINDS, "issues": GITHUB_URL + "/issues/new",
             "wording": {name: list(values) for name, _d, values in DISPLAY_PREFS if name in WORDING},
             "wholeTexts": {str(v): lib.whole_on(f"{book}.{chapter}.{v}") for v in bible["verses"]},
             "related": lib.related(book, chapter, bible),
@@ -2577,6 +2621,7 @@ def chapter_page(lib, book, chapter, all_chapters):
 {in_order}
 <nav class="cx-turns" aria-label="{e(t("chapter.previous"))} / {e(t("chapter.next"))}">{"".join(turns)}</nav>
 </article>
+<p class="sr-only" id="announce" aria-live="polite" aria-atomic="true"></p>
 <aside class="cx-panel" id="panel" tabindex="-1" aria-label="{e(t("chapter.panel_label"))}">
 <button type="button" class="cx-grab" id="grab" aria-label="{e(t("chapter.toggle_panel"))}"></button>
 <div class="cx-ph">
@@ -2612,7 +2657,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     # A chapter with no commentary is only the Bible text, which
     # openwordbible.org publishes: it stays readable, out of search (indexed()).
     return page(lib, f"{name} {chapter}", body, chapter_url(book, chapter), current="/read/", ld=(crumbs,), head_title=head_title,
-                description=description, noindex=not indexed(lib, chapter_url(book, chapter)), scripts=("sheets.js", "reader.js"), preload=(comm_url,) if comm_url else (),
+                description=description, noindex=not indexed(lib, chapter_url(book, chapter)), scripts=("sheets.js", "reader.js"), preload=(comm_url,) if comm_url and not parts else (),
                 skip_to=("#panel", t("site.skip_commentary"))), panel, comm
 
 
@@ -2657,7 +2702,25 @@ def verse_html(lib, text, cites):
                  else f'<span class="lg-cite" title="{label}">{words}</span>')
         pos = c["at"] + len(c["text"])
     h.append(e(text[pos:]))
-    return "".join(f"<p>{p.strip()}</p>" for p in re.split(r"\n\s*\n", "".join(h)) if p.strip())
+    return lang_spans("".join(f"<p>{p.strip()}</p>" for p in re.split(r"\n\s*\n", "".join(h)) if p.strip()))
+
+
+# Greek and Hebrew inside an excerpt, as the source prints them: each run of
+# words in their own letters marked with its language, so a screen reader
+# and the fonts treat them as such. The words themselves are not touched.
+GREEK_RUN = re.compile("[\u0370-\u03ff\u1f00-\u1fff](?:[\u0370-\u03ff\u1f00-\u1fff\u0300-\u036f\u00b7\u0387',.;: ]*[\u0370-\u03ff\u1f00-\u1fff])?")
+HEBREW_RUN = re.compile("[\u0590-\u05ff\ufb1d-\ufb4f](?:[\u0590-\u05ff\ufb1d-\ufb4f ,.]*[\u0590-\u05ff\ufb1d-\ufb4f])?")
+
+
+def lang_spans(html_text):
+    """html_text with its Greek and Hebrew runs in <span lang>; tags left as they are."""
+    if not GREEK_OR_HEBREW.search(html_text):
+        return html_text
+    parts = re.split(r"(<[^>]+>)", html_text)
+    for i in range(0, len(parts), 2):
+        x = GREEK_RUN.sub(lambda m: f'<span lang="grc">{m[0]}</span>', parts[i])
+        parts[i] = HEBREW_RUN.sub(lambda m: f'<span lang="hbo" dir="rtl">{m[0]}</span>', x)
+    return "".join(parts)
 
 
 def verse_ref(lib, book, chapter, v, ev=None):
@@ -4242,6 +4305,22 @@ def neighbour_link(a, cls, key):
             f'<b>{e(a["name"])}</b><span class="lg-quiet">{e(a["dates"])}</span></a>')
 
 
+@functools.lru_cache(maxsize=1)
+def portraits():
+    """{author id: portrait record} from library/portraits.json (scripts/fetch_portraits.py), if any."""
+    path = os.path.join(ROOT, "library", "portraits.json")
+    return load(path)["portraits"] if os.path.exists(path) else {}
+
+
+def portrait_html(author):
+    """A commentator's portrait, where scripts/fetch_portraits.py found a public-domain one."""
+    pic = portraits().get(author["id"])
+    if not pic or not os.path.exists(os.path.join(WEB, "portraits", f'{author["id"]}.jpg')):
+        return ""
+    return (f'<img class="lg-portrait" src="/portraits/{author["id"]}.jpg" width="{pic.get("width") or 320}" '
+            f'height="{pic.get("height") or 400}" alt="{e(t("commentators.portrait_alt", name=author["name"]))}" loading="lazy">')
+
+
 def author_page(lib, author):
     works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
     comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
@@ -4273,6 +4352,11 @@ def author_page(lib, author):
     facts = [(t("commentators.lived"), e(author["dates"])), (t("commentators.tradition"), e(author["tradition"])),
              (t("work.original"), e(langs)),
              (t("commentators.work"), e(t("commentators.in_logia_total", works=works_word, n=f"{n_verses:,}")) if comments else e(works_word))]
+    pic = portraits().get(aid)
+    if pic and os.path.exists(os.path.join(WEB, "portraits", f"{aid}.jpg")):
+        credit = name_list([x for x in (pic.get("artist"), pic.get("date")) if x]) if (pic.get("artist") or pic.get("date")) else ""
+        facts.append((t("commentators.portrait"), f'{e(credit + ". " if credit else "")}{e(pic["licence"])}, '
+                                                  f'<a href="{e(pic["page"])}" rel="noopener">Wikimedia Commons</a>'))
     dl = "".join(f"<div><dt>{e(k)}</dt><dd>{v}</dd></div>" for k, v in facts)
     # The same facts in a line under the name, for a phone, where the card
     # falls below the biography.
@@ -4433,6 +4517,18 @@ def author_page(lib, author):
             f'<span class="lg-quiet" id="jump-{aid}-hint" role="status">{e(t("commentators.jump_hint", example=example))}</span></form>'
             if first else "")
     by_verse = excerpt_list(lib, comments, show_work=len(works) > 1, tools=jump, lazy=f"/commentators/{aid}/ch/")
+    # "Keep … for offline": this page, its chapters of rows, and every page of
+    # the commentary in order and of its whole texts (web/logia.js, data-keep).
+    keep_urls = [f"/commentators/{aid}/"]
+    if len(comments) > LAZY_LIST:
+        keep_urls += [f"/commentators/{aid}/ch/{b.lower()}-{ch}.html"
+                      for b, ch in list(dict.fromkeys(ref_parts(c["start"])[:2] for c in comments))[1:]]
+    keep_urls += sorted({work_chapter_url(w, b, ch) for w, b, ch in lib.work_chapter_pages if w in works})
+    keep_urls += [f"/works/{w}/{x['locus']}/" for w in works for x in lib.texts.get(w, [])]
+    keep = (f'<p class="lg-keep" data-keep="{e(json.dumps(keep_urls))}" data-saving="{e(t("commentators.keep_saving"))}" '
+            f'data-done="{e(t("commentators.keep_done", name=short))}" data-failed="{e(t("commentators.keep_failed"))}" hidden>'
+            f'<button type="button" class="button ghost">{e(t("commentators.keep", name=short))}</button> '
+            f'<span class="lg-quiet" role="status">{e(t("commentators.keep_note", n=len(keep_urls)))}</span></p>')
     if wholes:
         division = lib.works[wholes[0]]["divisions"][0].lower()
         lists = "".join((f'<h3 class="label">{e(lib.works[w]["title"])}</h3>' if len(wholes) > 1 else "")
@@ -4543,11 +4639,11 @@ def author_page(lib, author):
     body = f"""
 <div class="lg-author">
 <div class="lg-profile lg-era-{era}">
-<div class="lg-profile-main"><header class="page-head lg-person-head"><span class="lg-mono" aria-hidden="true">{e(name_initials(author))}</span><div>
+<div class="lg-profile-main"><header class="page-head lg-person-head">{portrait_html(author) or f'<span class="lg-mono" aria-hidden="true">{e(name_initials(author))}</span>'}<div>
 {trail((t("commentators.title"), "/commentators/"), (t("eras." + author["era"]), era_url(author["era"])))}
 <h1>{e(name)}</h1><p class="dek">{dek}</p><ul class="lg-chips">{chips}</ul></div></header>
 <section class="prose lg-bio">{bio}{draft}</section>{stats}{works_block}{canon}{words_q}
-{search_within(t("search.within_author", name=short), "commentator", author["name"], t("search.within_placeholder"))}</div>
+{search_within(t("search.within_author", name=short), "commentator", author["name"], t("search.within_placeholder"))}{keep}</div>
 <dl class="lg-facts-card">{dl}</dl></div>
 {secbar}
 {start}{pair}
@@ -5018,7 +5114,7 @@ def linked_html(lib, text, cites):
         h.append(f'<a class="lg-cite" href="{e(href)}" title="{label}">{words}</a>' if href
                  else f'<span class="lg-cite" title="{label}">{words}</span>')
         pos = c["at"] + len(c["text"])
-    return "".join(h) + e(text[pos:])
+    return lang_spans("".join(h) + e(text[pos:]))
 
 
 def text_page(lib, wid, x):
@@ -7701,6 +7797,32 @@ def readings_ics(lib):
     return "\r\n".join(ics_fold(x) for x in lines) + "\r\n"
 
 
+def search_words(lib):
+    """/search-words.txt: the words of four letters or more used at least
+    five times in the excerpts, commonest first, one line: what "Did you
+    mean…" on /search/ (web/logia.js) offers in place of a misspelt word."""
+    count = Counter()
+    for c in lib.comments:
+        count.update(w.lower() for w in re.findall(r"[A-Za-z]+", c["text"]))
+    return " ".join(w for w, n in sorted(count.items(), key=lambda x: (-x[1], x[0])) if n >= 5 and len(w) >= 4) + "\n"
+
+
+def opensearch_xml():
+    """/opensearch.xml: Logia as a search engine a browser can add, so
+    "logia John 3:16" in the address bar searches here (/search/ offers a
+    reference's own page above the word search)."""
+    return f"""<?xml version="1.0" encoding="utf-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<ShortName>Logia</ShortName>
+<Description>{e(t("search.opensearch"))}</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Image width="16" height="16" type="image/svg+xml">{SITE_URL}/favicon.svg</Image>
+<Url type="text/html" method="get" template="{SITE_URL}/search/?q={{searchTerms}}"/>
+<moz:SearchForm>{SITE_URL}/search/</moz:SearchForm>
+</OpenSearchDescription>
+"""
+
+
 def readings_feed(lib, today=None):
     """/readings.xml: an Atom feed of the readings from a week ago to six
     weeks ahead, each entry dated a week before its day (never later than
@@ -7956,7 +8078,8 @@ def search_records(lib):
         paras = "".join(f"<p>{e(x.strip())}</p>" for x in c["text"].split("\n\n") if x.strip())
         page_path, _hash, cid = excerpt_href(lib, c).partition("#")
         yield (f"{page_path}{cid}.html", f'<!doctype html><html lang="{LANG}"><head><title>-</title></head><body>'
-               f'<div hidden>{hidden}<span data-pagefind-meta="x">{code}</span><span data-pagefind-sort="order">{order}</span></div>'
+               f'<div hidden>{hidden}<span data-pagefind-meta="x">{code}</span><span data-pagefind-sort="order">{order}</span>'
+               f'<span data-pagefind-sort="died">{a["died"]:04d}</span></div>'
                f'<main data-pagefind-body>{heading}{paras}</main></body></html>')
     # The Bible text too, a record a verse (Balanced, at the default
     # wording), so a verse can be found by the words remembered from it.
@@ -8055,7 +8178,9 @@ def search_page(lib, indexed):
 <button type="submit" class="button">{e(t("search.go"))}</button></div>
 <div class="lg-fts-filters">{groups}</div>
 </form>
-<p class="lg-fts-view" hidden><label><input type="checkbox" id="fts-group"> {e(t("search.group"))}</label> <span class="lg-quiet">{e(t("search.group_note", n=GROUP_TOP))}</span></p>
+<p class="lg-fts-view" hidden><label for="fts-sort">{e(t("search.sort"))}</label> <select id="fts-sort"><option value="">{e(t("search.sort_best"))}</option>
+<option value="asc">{e(t("search.sort_oldest"))}</option><option value="desc">{e(t("search.sort_newest"))}</option></select>
+<label><input type="checkbox" id="fts-group"> {e(t("search.group"))}</label> <span class="lg-quiet">{e(t("search.group_note", n=GROUP_TOP))}</span></p>
 <p class="lg-fts-status" id="fts-status" aria-live="polite">{e(t("search.fts.start" if indexed else "search.fts.unavailable"))}</p>
 <ol class="lg-fts-results" id="fts-results"></ol>
 <p><button type="button" class="button ghost lg-fts-more" id="fts-more" hidden>{e(t("search.more"))}</button></p>
@@ -8082,6 +8207,10 @@ def build():
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
     shutil.copy(os.path.join(WEB, "card.png"), os.path.join(SITE, "card.png"))
+    if os.path.isdir(os.path.join(WEB, "portraits")):
+        shutil.copytree(os.path.join(WEB, "portraits"), os.path.join(SITE, "portraits"), dirs_exist_ok=True)
+    if os.path.isdir(os.path.join(WEB, "cards")):
+        shutil.copytree(os.path.join(WEB, "cards"), os.path.join(SITE, "cards"), dirs_exist_ok=True)
     shutil.copytree(os.path.join(WEB, "icons"), os.path.join(SITE, "icons"))
     build_more.setup(sys.modules[__name__])
     build_more.prepare(lib)
@@ -8169,6 +8298,8 @@ def build():
     with open(os.path.join(SITE, "readings.ics"), "w", encoding="utf-8", newline="") as f:
         f.write(readings_ics(lib))
     write("/readings.xml", readings_feed(lib))
+    write("/opensearch.xml", opensearch_xml())
+    write("/search-words.txt", search_words(lib))
     pages.append("/readings/")
     write("/commentators/", commentators_page(lib))
     pages.append("/commentators/")

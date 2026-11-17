@@ -302,7 +302,7 @@
     document.querySelectorAll(".cx-tabs button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === state.tab); });
     renderRail();
     var keep = $("#pb").scrollTop;
-    $("#pb").innerHTML = state.tab === "comm" && !COMM ? waiting(commFailed, "comm")
+    $("#pb").innerHTML = state.tab === "comm" && !ready(state.verse) ? waiting(commFailed, "comm")
       : needsPanel() && !PANEL ? panelWaiting()
       : ({ comm: commTab, words: wordsTab, notes: notesTab, xref: xrefTab })[state.tab]();
     $("#pb").scrollTop = state.keepScroll ? keep : 0;
@@ -344,10 +344,39 @@
   // verses, enough for the timeline, the summary and the verse numbers.
   var COMM = DATA.comm ? null : { commentaries: [], citedBy: {} }, commLoad = null, commFailed = false, pendingCard = null;
   DATA.citedBy = {};
+  // A big chapter's file also comes in parts of a few verses (DATA.commParts,
+  // comm_parts in scripts/build_site.py): the part with the verse being
+  // opened is read first, and shown, while the whole file follows. part
+  // holds its range; until the whole file is in, verses outside it wait.
+  var part = null;
+  function ready(v) { return !!COMM || (!!part && part.lo <= v && v <= part.hi); }
+  function loadPart() {
+    var P = DATA.commParts;
+    if (!P || part) return Promise.resolve();
+    var n = Math.floor((state.verse - 1) / P.size);
+    return fetch(P.url.replace("{n}", n)).then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      return res.json();
+    }).then(function (p) {
+      if (COMM) return;
+      // The page's index for every verse, the part's excerpts for its own.
+      var full = {};
+      p.commentaries.forEach(function (w) { full[w.work_id] = w; });
+      works = DATA.commentaries.map(function (w) {
+        var f = full[w.work_id];
+        if (!f) return w;
+        var keep = w.entries.filter(function (x) { return x.start > p.hi || x.end < p.lo; });
+        return Object.assign({}, f, { entries: keep.concat(f.entries).sort(function (a, b) { return a.start - b.start || a.end - b.end; }) });
+      });
+      part = { lo: p.lo, hi: p.hi };
+      refresh();
+      if (pendingCard && ready(state.verse)) { var card = pendingCard; pendingCard = null; showCard(card); }
+    }).catch(function () { /* the whole file follows */ });
+  }
   function loadComm() {
     if (COMM || commLoad) return;
     commFailed = false;
-    commLoad = fetch(DATA.comm).then(function (res) {
+    commLoad = loadPart().then(function () { return fetch(DATA.comm); }).then(function (res) {
       if (!res.ok) throw new Error(res.status);
       return res.json();
     }).then(function (c) {
@@ -362,7 +391,17 @@
   function refresh() { state.keepScroll = true; renderPanel(); }
 
   // Paragraphs of an excerpt already made into HTML (by linked()).
-  function paras(h) { return h.split(/\n\s*\n/).map(function (p) { return "<p>" + p.trim() + "</p>"; }).join(""); }
+  function paras(h) { return langSpans(h.split(/\n\s*\n/).map(function (p) { return "<p>" + p.trim() + "</p>"; }).join("")); }
+  // Greek and Hebrew in an excerpt, as the source prints them, marked with
+  // their language (lang_spans in scripts/build_site.py does the same).
+  var GREEK_RUN = /[\u0370-\u03ff\u1f00-\u1fff](?:[\u0370-\u03ff\u1f00-\u1fff\u0300-\u036f\u00b7\u0387',.;: ]*[\u0370-\u03ff\u1f00-\u1fff])?/g;
+  var HEBREW_RUN = /[\u0590-\u05ff\ufb1d-\ufb4f](?:[\u0590-\u05ff\ufb1d-\ufb4f ,.]*[\u0590-\u05ff\ufb1d-\ufb4f])?/g;
+  function langSpans(h) {
+    if (!/[\u0370-\u03ff\u1f00-\u1fff\u0590-\u05ff]/.test(h)) return h;
+    return h.split(/(<[^>]+>)/).map(function (part, i) {
+      return i % 2 ? part : part.replace(GREEK_RUN, '<span lang="grc">$&</span>').replace(HEBREW_RUN, '<span lang="hbo" dir="rtl">$&</span>');
+    }).join("");
+  }
   // An excerpt's text with the Scripture it cites made into links
   // (library/citations, docs/references.md).
   // In a Catena excerpt, the name that opens each quotation (speakers, from
@@ -495,7 +534,7 @@
     var onVerse = works.some(function (w) { return entriesFor(w, v).length; });
     var h = !onVerse ? "" : filters(v);
     var shown = works.filter(function (w) { return shownBy(w) && entriesFor(w, v).length; });
-    if (COMM && shown.length > 1) {
+    if (ready(v) && shown.length > 1) {
       h += '<button type="button" class="cx-compare-btn" data-compare>' + ICON.columns + esc(U.compare) + "</button>";
     }
     var shownOn = shown, fresh = shown.filter(function (w) { return !alsoBefore(w, v); });
@@ -807,6 +846,13 @@
     document.querySelectorAll(".cx-verse").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
     markTokens();
     renderPanel();
+    // Say where the reader is now, for a screen reader (#announce, polite).
+    var said = $("#announce");
+    if (said && to !== said.getAttribute("data-v")) {
+      var n = works.filter(function (w) { return entriesFor(w, state.verse).length; }).length;
+      said.setAttribute("data-v", to);
+      said.textContent = n ? fmt(n === 1 ? U.verse_voices_one : U.verse_voices, { ref: REF(state.verse), n: n }) : REF(state.verse);
+    }
     // The last verse read, for "Continue reading" (web/logia.js).
     try { localStorage.setItem("logia-last", JSON.stringify({ href: location.pathname + "#v" + state.verse, ref: REF(state.verse) })); }
     catch (err) { /* storage blocked */ }
@@ -863,6 +909,8 @@
     p.classList.toggle("cx-min", to === "min");
     p.classList.toggle("cx-full", to === "full");
     $("#grab").setAttribute("aria-expanded", to !== "min");
+    // The handle says what pressing it will do next (it steps min → half → full → min).
+    $("#grab").setAttribute("aria-label", U["sheet_" + to] || $("#grab").getAttribute("aria-label"));
   }
   // Scroll the chosen verse into the space above a half-height sheet.
   // Below the header sits the chapter bar once the title has scrolled away
@@ -989,7 +1037,7 @@
   // #v14 opens verse 14; #v14-calvin opens it at Calvin's comment (a shared link).
   var HASH = /^#v(\d+)(?:-([a-z][a-z0-9-]*))?$/;
   function showCard(work) {
-    if (!COMM) { pendingCard = work; return; }
+    if (!ready(state.verse)) { pendingCard = work; return; }
     if (!isOpen(work)) { state.open[work] = true; renderPanel(); }
     var card = document.getElementById("c-" + work);
     if (!card) return;

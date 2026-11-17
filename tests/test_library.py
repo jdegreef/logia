@@ -297,6 +297,18 @@ class Creeds(unittest.TestCase):
         self.assertTrue(all(verify_sources.check_digital(changed, x) for x in streams.values()))
 
 
+class Cards(unittest.TestCase):
+    def test_every_commentator_book_topic_and_creed_has_its_card(self):
+        # scripts/make_cards.py draws them; run it after adding one.
+        lib = build_site.Library()
+        paths = [f"/commentators/{a['id']}/" for a in lib.ordered_authors()]
+        paths += [f"/{b.lower()}/" for b, _c in lib.chapters]
+        paths += [f"/topics/{x['id']}/" for x in build_site.topics(lib)] + [f"/creeds/{c['id']}/" for c in lib.creeds]
+        for p in paths:
+            self.assertNotEqual(build_site.card_for(None, p), "/card.png", p)
+        self.assertEqual(build_site.card_for(None, "/about/"), "/card.png")
+
+
 class ReadingsFeed(unittest.TestCase):
     def test_window_and_dates(self):
         import datetime
@@ -695,7 +707,15 @@ class Site(unittest.TestCase):
         text = self.read(os.path.join("jhn", "1", "index.html"))
         data = json.loads(re.search(r'id="chapter-data">(.*?)</script>', text, re.S)[1])
         self.assertRegex(data["comm"], r"^/comm/JHN\.1\.json\?v=[0-9a-f]{10}$")
-        self.assertIn(f'<link rel="preload" href="{data["comm"]}" as="fetch" crossorigin>', text)
+        # A big chapter's file also comes in parts (comm_parts), so the page doesn't
+        # preload the whole of it: the reader reads the part it needs first.
+        self.assertNotIn(f'<link rel="preload" href="{data["comm"]}"', text)
+        parts = data["commParts"]
+        self.assertEqual(parts["url"], data["comm"].replace(".json?", ".{n}.json?"))
+        first = json.loads(self.read(parts["url"].format(n=0).split("?")[0].lstrip("/")))
+        self.assertEqual((first["lo"], first["hi"]), (1, parts["size"]))
+        for w in first["commentaries"]:
+            self.assertTrue(all(x["start"] <= first["hi"] and x["end"] >= first["lo"] for x in w["entries"]))
         self.assertNotIn("citedBy", data)
         comm = json.loads(self.read(data["comm"].split("?")[0].lstrip("/")))
         # The page's index matches the file: same works, same verse ranges.

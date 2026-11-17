@@ -1315,6 +1315,16 @@
     var pf = null, allCounts = {}, chosen = { source: [], era: [], tradition: [], book: [], commentator: [], work: [] }, results = [], shown = 0, run = 0, timer = null;
     var params = new URLSearchParams(location.search);
     input.value = params.get("q") || "";
+    // A reference typed as a search (from the address bar, /opensearch.xml):
+    // "John 3:16" offers its page above the word search's results.
+    if (input.value.trim()) withData(function () {
+      var hit = parseRef(input.value.trim()) && suggest(input.value)[0];
+      if (!hit) return;
+      var go = document.createElement("p");
+      go.className = "lg-fts-goto";
+      go.innerHTML = '<a class="button" href="' + esc(hit.href) + '">' + esc(fmt(U.goto, { ref: hit.title })) + " →</a>";
+      status.parentNode.insertBefore(go, status);
+    });
     Object.keys(chosen).forEach(function (k) { chosen[k] = params.getAll(k); });
     function filters(but) {
       var f = {};
@@ -1348,6 +1358,7 @@
     function keep() {
       var p = new URLSearchParams();
       if (input.value.trim()) p.set("q", input.value.trim());
+      if (sortBy.value) p.set("sort", sortBy.value);
       Object.keys(chosen).forEach(function (k) { chosen[k].forEach(function (v) { p.append(k, v); }); });
       var qs = p.toString();
       history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
@@ -1382,6 +1393,9 @@
     function card(d) {
       var x = (d.meta.x || "").split("~"), bible = x[0] === "b";
       var link = d.url.replace(/\/v(\d+)\.html$/, "/#v$1").replace(/\/([^/]+)\.html$/, "/#$1");
+      // The words searched for go along (?hl=), to be marked where the result opens.
+      var words = input.value.trim().replace(/\b[a-z]+:\S+/gi, "").trim();
+      if (words && !bible) link = link.replace("#", "?hl=" + encodeURIComponent(words) + "#");
       var book = U.books[+x[1]] || "", ch = x[2], v = x[3];
       var ref = book + " " + ch + ":" + v;
       if (!bible && (x[4] !== ch || x[5] !== v)) ref += "–" + (x[4] !== ch ? x[4] + ":" : "") + x[5];
@@ -1419,6 +1433,37 @@
               return '<li><a href="' + link + '"><b>' + esc(w ? w[1] : U.owb) + "</b></a> " + '<span class="lg-fts-text">' + d.excerpt + "</span></li>";
             }).join("") + "</ul></li>";
         }).join("");
+      });
+    }
+    // "Did you mean…": when a search finds little, each word not in the
+    // excerpts' word list (/search-words.txt, commonest first) is offered
+    // as the commonest word within a letter or two of it.
+    var wordList = null;
+    function didYouMean(q, mine) {
+      if (!wordList) wordList = fetch("/search-words.txt").then(function (r) { return r.text(); }).then(function (t) {
+        var list = t.trim().split(" "), set = {};
+        list.forEach(function (w, i) { set[w] = i + 1; });
+        return { list: list, set: set };
+      });
+      wordList.then(function (W) {
+        if (mine !== run) return;
+        var changed = false;
+        var fixed = q.split(/\s+/).map(function (w) {
+          var low = w.toLowerCase();
+          if (low.length < 4 || /[^a-z]/.test(low)) return w;
+          // A word in the list is offered another only twenty times commoner.
+          var rank = W.set[low], max = low.length > 6 ? 2 : 1, upto = rank ? Math.floor(rank / 20) : W.list.length;
+          for (var i = 0; i < upto; i++) {
+            if (distance(low, W.list[i], max) <= max) { changed = true; return W.list[i]; }
+          }
+          return w;
+        }).join(" ");
+        if (!changed) return;
+        var p = document.createElement("span");
+        p.className = "lg-fts-dym";
+        p.innerHTML = " " + esc(U.did_you_mean) + ' <a href="?q=' + encodeURIComponent(fixed) + '">' + esc(fixed) + "</a>?";
+        status.appendChild(p);
+        p.querySelector("a").addEventListener("click", function (ev) { ev.preventDefault(); input.value = fixed; search(); });
       });
     }
     function showMore() {
@@ -1467,8 +1512,13 @@
       });
     }
     // The chosen sources' results together, best first; srcCounts holds each one's number.
+    // Sorted by date (the commentator's death, data-pagefind-sort="died"),
+    // the old spellings are left out, so the order holds; the Bible's verses follow.
+    var sortBy = document.getElementById("fts-sort");
     function find(q, f) {
-      var on = sources(), more2 = q ? variants(q) : { queries: [], words: [] };
+      var order = sortBy.value;
+      if (order) f = Object.assign({}, f, { sort: { died: order } });
+      var on = sources(), more2 = q && !order ? variants(q) : { queries: [], words: [] };
       var jobs = [on.comm ? findIn(pf, q, f, more2) : Promise.resolve(null),
         on.bible && srcBible ? bibleIndex().then(function (m) { return findIn(m, q, f, more2); }) : Promise.resolve(null)];
       return Promise.all(jobs).then(function (two) {
@@ -1480,7 +1530,7 @@
           merged = merged.concat(x.results);
           extra = extra || x.extra;
         });
-        merged.sort(function (a, b) { return b.score - a.score; });
+        if (!order) merged.sort(function (a, b) { return b.score - a.score; });
         return { results: merged, oldWords: extra ? more2.words : [], bibleOff: !on.bible };
       });
     }
@@ -1494,6 +1544,7 @@
         results = s.results; shown = 0; list.innerHTML = "";
         chips({}, true);
         if (results.length <= COUNT_UP_TO && sources().comm) facetCounts(q).then(function (c) { if (mine === run) chips(c); }, function () { /* keep them bare */ });
+        if (results.length < 20 && q) didYouMean(q, mine);
         status.innerHTML = esc(!results.length ? fmt(U.none, { q: q })
           : any ? fmt(U.count_filtered, { n: results.length.toLocaleString() })
           : fmt(results.length === 1 ? U.count_one : U.count, { n: results.length.toLocaleString(), q: q })) +
@@ -1516,6 +1567,8 @@
     input.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(function () { if (pf) search(); }, 250); });
     form.addEventListener("submit", function (e) { e.preventDefault(); if (pf) search(); });
     try { grouping.checked = localStorage.getItem("logia-search-group") === "1"; } catch (e) { /* storage blocked */ }
+    sortBy.value = params.get("sort") || "";
+    sortBy.addEventListener("change", function () { if (pf) search(); });
     grouping.addEventListener("change", function () {
       try { localStorage.setItem("logia-search-group", grouping.checked ? "1" : "0"); } catch (e) { /* storage blocked */ }
       if (pf) search();
@@ -2070,6 +2123,21 @@
       });
       flush();
       var nameOf = function (pick) { return pick.options[pick.selectedIndex].textContent; };
+      // The chapter's verses as a strip: which each of the two comments on
+      // (an excerpt counts on every verse it covers); a verse links to its row.
+      var covers = function (wid, v) { return (byWork[wid] || []).some(function (x) { return +x.start <= v && v <= +x.end; }); };
+      var shown = {};
+      out.forEach(function (h) { var m = /id="v(\d+)"/.exec(h); if (m) shown[m[1]] = true; });
+      var strip = Object.keys(D.verses).map(Number).sort(function (x, y) { return x - y; }).map(function (v) {
+        var l = covers(a, v), r = covers(b, v), cls = l && r ? "both" : l ? "left" : r ? "right" : "none";
+        var row = v;
+        while (row > 0 && !shown[row]) row--;
+        var label = fmt(U.verse, { v: v }) + ": " + U["strip_" + cls];
+        return '<a class="lg-strip-' + cls + '" href="#v' + (row || v) + '" title="' + esc(label) + '" aria-label="' + esc(label) + '">' + v + "</a>";
+      }).join("");
+      out.unshift('<nav class="lg-side-strip" aria-label="' + esc(U.strip_label) + '">' + strip + "</nav>" +
+        '<p class="lg-side-key"><span class="lg-strip-left">' + esc(fmt(U.key_only, { name: nameOf(pickA).split(":")[0] })) + '</span> <span class="lg-strip-right">' +
+        esc(fmt(U.key_only, { name: nameOf(pickB).split(":")[0] })) + '</span> <span class="lg-strip-both">' + esc(U.key_both) + "</span></p>");
       out.unshift('<div class="lg-side-cols lg-side-names"><p><b>' + esc(nameOf(pickA)) + "</b></p><p><b>" + esc(nameOf(pickB)) + "</b></p></div>");
       rowsBox.innerHTML = out.join("");
       history.replaceState(null, "", location.pathname + "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b) + location.hash);
@@ -2109,6 +2177,45 @@
       var to = dx < 0 ? turnNext : turnPrev;
       if (to) location.href = to.href;
     }, { passive: true });
+  })();
+
+  // A page opened from a search result (?hl=born again): the words searched
+  // for marked in the excerpts' text, and the first in the excerpt the
+  // address points to (or on the page) scrolled into view.
+  (function () {
+    var hl = new URLSearchParams(location.search).get("hl");
+    if (!hl) return;
+    var words = hl.toLowerCase().split(/\s+/).filter(function (w) { return w.length > 2; }).map(function (w) { return w.replace(/[^\p{L}\p{N}']/gu, ""); }).filter(Boolean);
+    if (!words.length) return;
+    var re = new RegExp("(^|[^\\p{L}])(" + words.map(function (w) { return w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|") + ")[\\p{L}]*", "giu");
+    var first = null, target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+    document.querySelectorAll(".lg-text, .lg-text-body, .lg-whole-text").forEach(function (box) {
+      var walker = document.createTreeWalker(box, NodeFilter.SHOW_TEXT), nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var text = node.nodeValue, out = [], last = 0, m;
+        re.lastIndex = 0;
+        while ((m = re.exec(text))) {
+          var start = m.index + m[1].length, end = m.index + m[0].length;
+          out.push(document.createTextNode(text.slice(last, start)));
+          var mark = document.createElement("mark");
+          mark.className = "lg-hl"; mark.textContent = text.slice(start, end);
+          out.push(mark);
+          last = end;
+        }
+        if (!out.length) return;
+        out.push(document.createTextNode(text.slice(last)));
+        var frag = document.createDocumentFragment();
+        out.forEach(function (x) { frag.appendChild(x); });
+        node.parentNode.replaceChild(frag, node);
+      });
+    });
+    var marks = [].slice.call(document.querySelectorAll("mark.lg-hl"));
+    first = (target && marks.filter(function (x) { return target.contains(x); })[0]) || marks[0];
+    if (!first) return;
+    var fold = first.closest(".lg-folded");
+    if (fold) { fold.classList.remove("lg-folded"); var more = fold.nextElementSibling; if (more && more.classList.contains("lg-unfold")) more.remove(); }
+    setTimeout(function () { first.scrollIntoView({ block: "center" }); }, 60);
   })();
 
   // A verse page: the verse at the reader's level (Literal, Balanced or
