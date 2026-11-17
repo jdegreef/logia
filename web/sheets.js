@@ -105,7 +105,7 @@
     if (!s) {
       root.innerHTML = '<div class="lg-sheet-empty"><h2>' + esc(T.empty_title) + "</h2><p>" + esc(T.empty_text) + '</p><p class="actions">' +
         '<button type="button" class="button" data-sheet="new">' + esc(T["new"]) + '</button> <a class="button ghost" href="/jhn/1/#v14">' +
-        esc(T.try_it) + "</a></p></div>";
+        esc(T.try_it) + "</a></p>" + templates() + "</div>";
       return;
     }
     var head = shared
@@ -114,8 +114,9 @@
       : '<div class="lg-sheet-tools">' + picker +
         '<button type="button" class="button ghost" data-sheet="new">' + esc(T["new"]) + "</button>" +
         '<button type="button" class="button ghost" data-sheet="print">' + esc(T.print) + "</button>" +
+        '<button type="button" class="button ghost" data-sheet="md">' + esc(T.markdown) + "</button>" +
         '<button type="button" class="button" data-sheet="share">' + esc(T.share) + "</button></div>" +
-        '<p class="lg-sheet-msg" role="status" id="sheet-msg"></p>' +
+        '<p class="lg-sheet-msg" role="status" id="sheet-msg"></p>' + templates() +
         '<label class="lg-sheet-label" for="sheet-title">' + esc(T.title_label) + '</label><input class="lg-sheet-title-in" id="sheet-title" value="' + esc(s.title) + '">';
     var items = s.items.map(function (it, i) {
       var tools = shared ? "" : '<p class="lg-sheet-item-tools">' +
@@ -123,8 +124,9 @@
         '<button type="button" class="lg-linkish" data-move="1" data-i="' + i + '"' + (i < s.items.length - 1 ? "" : " disabled") + ">" + esc(T.down) + "</button>" +
         '<button type="button" class="lg-linkish" data-remove="' + i + '">' + esc(T.remove) + "</button></p>";
       if (it.n != null) {
-        var body = shared ? paras(it.n) : '<textarea class="lg-sheet-note-in" data-note="' + i + '" rows="3" aria-label="' + esc(T.note_label) + '">' + esc(it.n) + "</textarea>";
-        return '<li class="lg-sheet-note"><p class="lg-sheet-who">' + esc(T.note_who) + "</p>" + body + tools + "</li>";
+        var prompt = typeof it.p === "string" && it.p ? '<p class="lg-sheet-prompt">' + esc(it.p) + "</p>" : "";
+        var body = shared ? paras(it.n) : '<textarea class="lg-sheet-note-in" data-note="' + i + '" rows="3" aria-label="' + esc(it.p || T.note_label) + '">' + esc(it.n) + "</textarea>";
+        return '<li class="lg-sheet-note">' + prompt + '<p class="lg-sheet-who">' + esc(T.note_who) + "</p>" + body + tools + "</li>";
       }
       return '<li class="lg-sheet-ex" data-key="' + esc(it.k) + '"><p class="lg-quiet">…</p>' + tools + "</li>";
     }).join("");
@@ -141,6 +143,33 @@
     });
   }
 
+  // Templates: a new sheet can start with headings for its parts (a sermon's
+  // outline, a group's questions), as empty notes of the reader's own.
+  var choosing = false;
+  function templates() {
+    if (!choosing || !T.templates) return "";
+    return '<p class="lg-sheet-templates">' + esc(T.template_label) + " " + T.templates.map(function (tp) {
+      return '<button type="button" class="cx-chip" data-template="' + esc(tp[0]) + '">' + esc(tp[1]) + "</button>";
+    }).join(" ") + "</p>";
+  }
+
+  // The sheet as Markdown: each excerpt with its reference and author, quoted,
+  // and the reader's notes marked as theirs.
+  function markdown(s) {
+    return Promise.all(s.items.map(function (it) {
+      if (it.n != null) {
+        return Promise.resolve((it.p ? "## " + it.p + "\n\n" : "") + (it.n.trim() ? "**" + T.md_note + ":** " + it.n.trim() + "\n" : ""));
+      }
+      return excerptOf(it.k).then(function (x) {
+        return "### " + x.ref + ": " + x.author + (x.title ? ", *" + x.title + "*" : "") + "\n\n" +
+          (x.text || T.missing).split(/\n\s*\n/).map(function (p) { return "> " + p.trim(); }).join("\n>\n") +
+          "\n\n" + location.origin + x.href + "\n";
+      });
+    })).then(function (parts) {
+      return "# " + s.title + "\n\n" + parts.filter(Boolean).join("\n") + "\n---\n" + T.md_from + "\n";
+    });
+  }
+
   function save() { store.current = view ? view.id : store.current; write(store); }
   function msg(text) { var el = document.getElementById("sheet-msg"); if (el) el.textContent = text; }
 
@@ -148,9 +177,21 @@
     var b = ev.target.closest("button");
     if (!b) return;
     var what = b.getAttribute("data-sheet");
-    if (what === "new") {
-      view = { id: newId(), title: T.untitled, items: [] };
+    if (what === "new" && T.templates && !choosing) {
+      choosing = true; render();
+    } else if (what === "new" || b.hasAttribute("data-template")) {
+      var tp = (T.templates || []).filter(function (x) { return x[0] === b.getAttribute("data-template"); })[0];
+      choosing = false;
+      view = { id: newId(), title: tp && tp[0] !== "blank" ? tp[1] : T.untitled,
+        items: tp ? tp[2].map(function (p) { return { n: "", p: p }; }) : [] };
       store.sheets.unshift(view); save(); render();
+    } else if (what === "md" && view) {
+      markdown(view).then(function (text) {
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([text], { type: "text/markdown" }));
+        a.download = (view.title || "sheet").replace(/[^\w\- ]+/g, "").trim().replace(/\s+/g, "-").toLowerCase() + ".md";
+        document.body.appendChild(a); a.click(); a.remove();
+      });
     } else if (what === "keep" && shared) {
       view = { id: newId(), title: shared.title, items: shared.items };
       store.sheets.unshift(view); shared = null; save();

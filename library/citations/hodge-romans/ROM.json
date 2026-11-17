@@ -3244,7 +3244,7 @@
   },
   {
    "in": "hodge-romans.ROM.3.24.3",
-   "at": 548,
+   "at": 412,
    "text": "Acts 13: 39",
    "start": "ACT.13.39",
    "end": "ACT.13.39",
@@ -3253,7 +3253,7 @@
   },
   {
    "in": "hodge-romans.ROM.3.24.3",
-   "at": 607,
+   "at": 471,
    "text": "Acts 17: 31",
    "start": "ACT.17.31",
    "end": "ACT.17.31",
@@ -5521,7 +5521,7 @@
   },
   {
    "in": "hodge-romans.ROM.5.14.4",
-   "at": 829,
+   "at": 471,
    "text": "John 20: 25",
    "start": "JHN.20.25",
    "end": "JHN.20.25",
@@ -5530,7 +5530,7 @@
   },
   {
    "in": "hodge-romans.ROM.5.14.4",
-   "at": 1060,
+   "at": 702,
    "text": "1 Cor. 15: 45",
    "start": "1CO.15.45",
    "end": "1CO.15.45",
@@ -5539,7 +5539,7 @@
   },
   {
    "in": "hodge-romans.ROM.5.14.4",
-   "at": 1151,
+   "at": 793,
    "text": "Matt. 11:3",
    "start": "MAT.11.3",
    "end": "MAT.11.3",
@@ -7906,7 +7906,7 @@
   },
   {
    "in": "hodge-romans.ROM.8.4.1",
-   "at": 615,
+   "at": 515,
    "text": "v. 1",
    "start": "ROM.8.1",
    "end": "ROM.8.1",
@@ -9467,6 +9467,15 @@
    "text": "Gal. 2: 20",
    "start": "GAL.2.20",
    "end": "GAL.2.20",
+   "found": "pattern",
+   "status": "detected"
+  },
+  {
+   "in": "hodge-romans.ROM.8.37.1",
+   "at": 531,
+   "text": "Phil. 4: 13",
+   "start": "PHP.4.13",
+   "end": "PHP.4.13",
    "found": "pattern",
    "status": "detected"
   },
@@ -11173,7 +11182,7 @@
   },
   {
    "in": "hodge-romans.ROM.10.4.1",
-   "at": 1188,
+   "at": 651,
    "text": "Col. 2: 17",
    "start": "COL.2.17",
    "end": "COL.2.17",
@@ -11182,7 +11191,7 @@
   },
   {
    "in": "hodge-romans.ROM.10.4.1",
-   "at": 1200,
+   "at": 663,
    "text": "Heb. 9: 9",
    "start": "HEB.9.9",
    "end": "HEB.9.9",
@@ -11425,7 +11434,7 @@
   },
   {
    "in": "hodge-romans.ROM.10.8.1",
-   "at": 728,
+   "at": 483,
    "text": "Ex. 13: 9",
    "start": "EXO.13.9",
    "end": "EXO.13.9",
@@ -11434,7 +11443,7 @@
   },
   {
    "in": "hodge-romans.ROM.10.8.1",
-   "at": 775,
+   "at": 530,
    "text": "Ps. 37: 31",
    "start": "PSA.37.31",
    "end": "PSA.37.31",
@@ -11645,33 +11654,6 @@
    "text": "1 Cor. 1: 2",
    "start": "1CO.1.2",
    "end": "1CO.1.2",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "hodge-romans.ROM.10.13.1",
-   "at": 1606,
-   "text": "v. 11",
-   "start": "ROM.10.11",
-   "end": "ROM.10.11",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "hodge-romans.ROM.10.13.1",
-   "at": 1629,
-   "text": "v. 12, 13",
-   "start": "ROM.10.12",
-   "end": "ROM.10.13",
-   "found": "pattern",
-   "status": "detected"
-  },
-  {
-   "in": "hodge-romans.ROM.10.13.1",
-   "at": 1670,
-   "text": "v. 14, 15",
-   "start": "ROM.10.14",
-   "end": "ROM.10.15",
    "found": "pattern",
    "status": "detected"
   },
@@ -12568,7 +12550,7 @@
   },
   {
    "in": "hodge-romans.ROM.11.33-36.1",
-   "at": 1714,
+   "at": 1687,
    "text": "v. 33",
    "start": "ROM.11.33",
    "end": "ROM.11.33",
@@ -12577,7 +12559,7 @@
   },
   {
    "in": "hodge-romans.ROM.11.33-36.1",
-   "at": 1865,
+   "at": 1838,
    "text": "v. 35",
    "start": "ROM.11.35",
    "end": "ROM.11.35",
@@ -13036,7 +13018,7 @@
   },
   {
    "in": "hodge-romans.ROM.12.7.1",
-   "at": 639,
+   "at": 351,
    "text": "1 Cor. 3: 5",
    "start": "1CO.3.5",
    "end": "1CO.3.5",
@@ -13045,7 +13027,7 @@
   },
   {
    "in": "hodge-romans.ROM.12.7.1",
-   "at": 652,
+   "at": 364,
    "text": "2 Cor. 6: 4",
    "start": "2CO.6.4",
    "end": "2CO.6.4",
@@ -13054,7 +13036,7 @@
   },
   {
    "in": "hodge-romans.ROM.12.7.1",
-   "at": 707,
+   "at": 419,
    "text": "Acts 1:17",
    "start": "ACT.1.17",
    "end": "ACT.1.17",
@@ -13063,7 +13045,7 @@
   },
   {
    "in": "hodge-romans.ROM.12.7.1",
-   "at": 730,
+   "at": 442,
    "text": "Rom. 11: 13",
    "start": "ROM.11.13",
    "end": "ROM.11.13",
@@ -13072,7 +13054,7 @@
   },
   {
    "in": "hodge-romans.ROM.12.7.1",
-   "at": 756,
+   "at": 468,
    "text": "2 Cor. 4: 1",
    "start": "2CO.4.1",
    "end": "2CO.4.1",

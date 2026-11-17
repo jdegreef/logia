@@ -101,3 +101,7 @@ excerpt comes from.
 
 and read the chapter page: does each card read well, and is each excerpt on
 the verse it claims?
+
+If the work is the first commentary on a book named in `NEXT_BOOKS` in
+`scripts/build_site.py` (the books the Read page marks "In preparation"),
+take the book off that list.

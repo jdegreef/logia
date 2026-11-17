@@ -200,7 +200,7 @@
   },
   {
    "in": "hodge-romans.ROM.8.4.1",
-   "at": 1344,
+   "at": 1244,
    "text": "Calvin",
    "author": "calvin",
    "status": "detected"
@@ -221,14 +221,14 @@
   },
   {
    "in": "hodge-romans.ROM.10.4.1",
-   "at": 1620,
+   "at": 1083,
    "text": "Calvin",
    "author": "calvin",
    "status": "detected"
   },
   {
    "in": "hodge-romans.ROM.10.4.1",
-   "at": 1628,
+   "at": 1091,
    "text": "Bengel",
    "author": "bengel",
    "status": "detected"

@@ -1,8 +1,8 @@
 {
   "about": "Logia's Bible text is the Open Word Bible, imported by scripts/import_owb.py from this commit. It is an AI draft until its own reviewers approve it; Logia shows it as published there and never edits it.",
   "repository": "https://github.com/jdegreef/open-word-bible",
-  "commit": "9b6d9bcd7bb475ef5d485e95269d030dcc9aed57",
-  "commit_date": "2026-11-08",
+  "commit": "b76a5961957a39e72768875d3ebec19a751a3913",
+  "commit_date": "2026-11-16",
   "licences": {
     "translation": "Open Word Bible, CC0 1.0",
     "greek_text": "SBLGNT v1.2 via the Open Word Bible",

@@ -17,6 +17,8 @@ from contextlib import redirect_stdout
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
+import apply_reviews  # noqa: E402
+import build_more  # noqa: E402
 import build_site  # noqa: E402
 import export_data  # noqa: E402
 import differ  # noqa: E402
@@ -339,6 +341,23 @@ class Quoting(unittest.TestCase):
         self.assertEqual(build_site.in_quotes("a < b"), "“a &lt; b”")
 
 
+class ReadPage(unittest.TestCase):
+    def test_chapter_lists_read_as_ranges(self):
+        self.assertEqual(build_site.ranges_text([1, 2, 3, 7, 9, 10]), "1–3, 7, 9–10")
+        self.assertEqual(build_site.ranges_text([40]), "40")
+
+    def test_long_books_break_into_lines(self):
+        psalms = build_site.bar_lines("PSA", 150)
+        self.assertEqual([(x[0], x[-1]) for x in psalms], [(1, 41), (42, 72), (73, 89), (90, 106), (107, 150)])
+        self.assertEqual([(x[0], x[-1]) for x in build_site.bar_lines("ISA", 66)], [(1, 33), (34, 66)])
+        self.assertEqual(len(build_site.bar_lines("GEN", 50)), 1)
+
+    def test_heat_falls_in_thirds(self):
+        steps = build_site.heat_steps({("GEN", c): c for c in range(1, 10)})
+        self.assertEqual(steps[("GEN", 1)], 1)
+        self.assertEqual(steps[("GEN", 9)], 3)
+
+
 class Dashes(unittest.TestCase):
     def test_lifespans_take_an_en_dash(self):
         self.assertEqual(build_site.en_dash("1509-1564"), "1509–1564")
@@ -460,11 +479,44 @@ class Site(unittest.TestCase):
         with open(os.path.join(build_site.SITE, page), encoding="utf-8") as f:
             return f.read()
 
+    def sitemap(self):
+        """Every address in the sitemap: sitemap.xml is an index of one file per book and one for the rest."""
+        index = self.read("sitemap.xml")
+        parts = re.findall(r"<sitemap><loc>https://logia\.faith/(sitemap-[a-z0-9]+\.xml)</loc>", index)
+        self.assertIn("sitemap-site.xml", parts)
+        return "".join(self.read(p) for p in parts)
+
     def test_linker_files_are_numbered_as_english_bibles(self):
         with open(os.path.join(build_site.SITE, "linker", "PSA.51.json"), encoding="utf-8") as f:
             data = json.load(f)
         self.assertTrue(data["verses"]["1"]["href"].startswith("/psa/51/3"))
         self.assertTrue(os.path.isfile(os.path.join(build_site.SITE, "linker.js")))
+
+    def test_the_commentators_page_cards(self):
+        text = self.read("commentators/index.html")
+        monos = re.findall(r'<span class="lg-mono" aria-hidden="true">(\w+)</span>', text)
+        self.assertEqual(len(monos), len(set(monos)), "two commentators share a monogram")
+        self.assertNotIn("about 1 hours", text.lower())
+        cards = dict(re.findall(r'<li[^>]*class="lg-cmt" data-author="(\w+)".*?<blockquote><p>(.*?)</p>', text, re.S))
+        self.assertFalse(cards["fausset"].startswith("Ec 1"))          # a heading, not a sentence
+        self.assertTrue(cards["gregory"].startswith("Thus we possess"))  # the scan's "3&. ..." left off
+        self.assertTrue(cards["basil"].startswith("I stop struck"))     # the verse he quotes first left off
+        for part in ("lg-findbar", "lg-erastrip", "lg-tl-mark", "lg-covgrid", "lg-new-list", 'role="tablist"'):
+            self.assertIn(part, text)
+        # Cards go in the order the commentators were born, era by era.
+        order = re.findall(r'class="lg-cmt" data-author="(\w+)"', text)
+        self.assertLess(order.index("brown"), order.index("spurgeon"))
+
+    def test_card_sizes_and_bios(self):
+        self.assertIn("About an hour to read", build_site.card_size(12000, 30))
+        self.assertIn("Under an hour to read", build_site.card_size(3000, 9))
+        self.assertIn("minutes a day for a year", build_site.card_size(2_000_000, 8000))
+        self.assertEqual(build_site.bio_line({"bio": "Bishop of Caesarea in Cappadocia from 370, one of the three "
+                                                     "Cappadocian Fathers with his brother Gregory; he wrote rules."}),
+                         "Bishop of Caesarea in Cappadocia from 370")
+        self.assertEqual(build_site.tradition_tag("Roman Catholic (Jesuit)"),
+                         '<span class="lg-trad" title="Roman Catholic (Jesuit)">'
+                         'Roman Catholic <span>Jesuit</span></span>')
 
     def test_ai_marks_replace_the_draft_pills(self):
         calvin = self.read("commentators/calvin/index.html")
@@ -767,7 +819,7 @@ class Site(unittest.TestCase):
         # Served at any depth, so nothing may be linked relatively.
         for link in re.findall(r'(?:href|src)="([^"]+)"', text):
             self.assertTrue(link.startswith(("/", "https://", "#")), link)
-        self.assertNotIn("/404.html", self.read("sitemap.xml"))
+        self.assertNotIn("/404.html", self.sitemap())
 
     def test_the_saved_page_has_each_chapter_s_comments(self):
         data = json.loads(self.read(os.path.join("data", "JHN.1.json")))
@@ -854,7 +906,7 @@ class Site(unittest.TestCase):
             self.assertTrue(os.path.isfile(path), (book, chapter, verse))
         # Acts has no commentary, so no verse pages.
         self.assertFalse(os.path.exists(os.path.join(build_site.SITE, "act", "1", "1")))
-        sitemap = self.read("sitemap.xml")
+        sitemap = self.sitemap()
         self.assertIn("<loc>https://logia.faith/jhn/3/16/</loc>", sitemap)
         verse_locs = re.findall(r"<loc>https://logia\.faith/jhn/\d+/\d+/</loc>", sitemap)
         self.assertEqual(len(verse_locs), len([k for k in lib.voices_on if k[0] == "JHN"]))
@@ -930,7 +982,7 @@ class Site(unittest.TestCase):
             self.assertIn(f'#{c["id"]}"', text, c["id"])
         self.assertIn('href="/jhn/2/1-12/"', self.read(os.path.join("jhn", "index.html")))
         self.assertIn('href="/jhn/2/1-12/"', self.read(os.path.join("jhn", "2", "index.html")))
-        self.assertIn("<loc>https://logia.faith/jhn/2/1-12/</loc>", self.read("sitemap.xml"))
+        self.assertIn("<loc>https://logia.faith/jhn/2/1-12/</loc>", self.sitemap())
 
     def test_the_christmas_page_is_john_1_1_to_14(self):
         text = self.read(os.path.join("christmas", "index.html"))
@@ -944,9 +996,27 @@ class Site(unittest.TestCase):
         counts = build_site.verse_counts(lib, "JHN")
         (ch, v), n = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
         text = self.read(os.path.join("jhn", "most-discussed", "index.html"))
-        cell = f'<td class="lg-num" data-sort="{n}">'
-        self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a></td>{cell}', text)
+        self.assertIn(f'<a href="/jhn/{ch}/{v}/"><b>John {ch}:{v}</b></a>', text)
+        bar = r'<span class="lg-rank-bar"[^>]*><span style="width:100%"></span></span>'
+        self.assertRegex(text, rf'<td class="lg-num" data-sort="{n}">{bar}{n}</td>')
         self.assertIn('href="/jhn/most-discussed/"', self.read(os.path.join("jhn", "index.html")))
+        # The controls' data and the download hold the same counts.
+        data = json.loads(self.read(os.path.join("jhn", "most-discussed", "data.json")))
+        row = next(r for r in data["rows"] if r[:2] == [ch, v])
+        self.assertEqual(sum(row[3]), n)
+        import csv as csv_
+        path = os.path.join(build_site.SITE, "jhn", "most-discussed", "jhn-most-discussed.csv")
+        with open(path, encoding="utf-8") as f:
+            rows = {(int(r["chapter"]), int(r["verse"])): r for r in csv_.DictReader(f)}
+        self.assertEqual(int(rows[(ch, v)]["excerpts"]), n)
+        self.assertEqual(sum(int(r["excerpts"]) for r in rows.values()), sum(counts.values()))
+        # The verse page says where it stands.
+        verse = self.read(os.path.join("jhn", str(ch), str(v), "index.html"))
+        self.assertIn('href="/jhn/most-discussed/#verses"', verse)
+
+    def test_ranks_share_a_place_when_counts_are_equal(self):
+        self.assertEqual(build_site.rank_with_ties({"a": 5, "b": 3, "c": 3, "d": 1, "e": 0}),
+                         {"a": (1, False), "b": (2, True), "c": (2, True), "d": (4, False)})
 
     # --- Open data ---
 
@@ -1119,7 +1189,7 @@ class Site(unittest.TestCase):
     # --- Search engines and answer engines ---
 
     def test_pages_with_only_the_bible_text_stay_out_of_search(self):
-        sitemap = self.read("sitemap.xml")
+        sitemap = self.sitemap()
         for page in ("exo/1/index.html", "exo/index.html", "act/1/index.html"):
             self.assertIn('<meta name="robots" content="noindex">', self.read(page), page)
             self.assertNotIn(f"<loc>https://logia.faith/{page[:-len('index.html')]}</loc>", sitemap)
@@ -1168,7 +1238,7 @@ class Site(unittest.TestCase):
         dates = build_site.git_dates()
         if not dates:
             self.skipTest("no full git history")
-        self.assertRegex(self.read("sitemap.xml"), r"<loc>https://logia\.faith/jhn/3/16/</loc><lastmod>\d{4}-\d\d-\d\d</lastmod>")
+        self.assertRegex(self.sitemap(), r"<loc>https://logia\.faith/jhn/3/16/</loc><lastmod>\d{4}-\d\d-\d\d</lastmod>")
 
     # --- Topics ---
 
@@ -1196,7 +1266,7 @@ class Site(unittest.TestCase):
             section = text.split(f'id="{item["key"]}"')[1].split("</section>")[0]
             for wid, _cs in build_site.in_passage(lib, *build_site.topic_span(item)):
                 self.assertIn(f"<b>{build_site.short_name(lib.author_of(wid))}</b>", section, (item["key"], wid))
-        self.assertIn("<loc>https://logia.faith/topics/baptism/</loc>", self.read("sitemap.xml"))
+        self.assertIn("<loc>https://logia.faith/topics/baptism/</loc>", self.sitemap())
         index = self.read(os.path.join("topics", "index.html"))
         for x in build_site.topics(lib):
             self.assertIn(f'href="/topics/{x["id"]}/"', index)
@@ -1249,6 +1319,56 @@ class Wikidata(unittest.TestCase):
         ld = build_site.person_ld(a, {"wikidata": "Q8018", "wikipedia": "Augustine_of_Hippo"})
         self.assertEqual(ld["sameAs"], ["https://www.wikidata.org/wiki/Q8018", "https://en.wikipedia.org/wiki/Augustine_of_Hippo"])
         self.assertNotIn("sameAs", build_site.person_ld(a))
+
+
+class StudyToolsTest(unittest.TestCase):
+    """Reading plans, calendar feeds and the reference checker's answers (scripts/build_more.py, apply_reviews.py)."""
+
+    @classmethod
+    def setUpClass(cls):
+        build_more.setup(build_site)
+
+    def test_the_advent_plan_has_a_passage_for_each_day_to_christmas_eve(self):
+        readings = build_more.plans_data()["advent"]["readings"]
+        self.assertEqual(len(readings), 24)
+        for ref in readings:
+            book, start, end = build_more.span_of(ref)
+            self.assertLessEqual(start, end, ref)
+            self.assertIn(end[1], build_site.chapter_verses(book, end[0]), ref)
+
+    def test_a_book_plan_keeps_every_chapter_whole_and_in_order(self):
+        lib = mock.Mock(books={"PSA": {"chapters": 150}})
+        days = build_more.book_plan_days(lib, "PSA", 30)
+        self.assertEqual(len(days), 30)
+        self.assertEqual([c for d in days for c in d], list(range(1, 151)))
+
+    def test_calendar_lines_are_folded_at_75_octets(self):
+        line = "SUMMARY:" + "Advent, day 1: John 1:1–5 " * 6
+        for part in build_more.ics_fold(line).split("\r\n"):
+            self.assertLessEqual(len(part.encode("utf-8")), 75)
+        self.assertEqual(build_more.ics_fold(line).replace("\r\n ", ""), line)
+
+    def test_answers_set_a_status_only_on_the_citation_they_name(self):
+        def cite(at, text, ref):
+            return {"in": "x.JHN.1.1.1", "at": at, "text": text, "start": ref, "end": ref,
+                    "found": "pattern", "status": "detected"}
+        cites = [cite(5, "Rom. 1:1", "ROM.1.1"), cite(40, "Heb. 1:3", "HEB.1.3")]
+        data = {"work": "x", "book": "JHN", "citations": cites}
+        with mock.patch.object(apply_reviews, "ROOT", self.tmp(data)):
+            got = apply_reviews.apply([{"in": "x.JHN.1.1.1", "at": 5, "start": "ROM.1.1", "ok": False},
+                                       {"in": "x.JHN.1.1.1", "at": 99, "start": "ROM.1.1", "ok": True}])
+            with open(apply_reviews.citations_path("x.JHN.1.1.1"), encoding="utf-8") as f:
+                after = json.load(f)
+        self.assertEqual(got, (1, 0, 1))
+        self.assertEqual([c["status"] for c in after["citations"]], ["rejected", "detected"])
+
+    def tmp(self, data):
+        import tempfile
+        root = tempfile.mkdtemp()
+        os.makedirs(os.path.join(root, "library", "citations", "x"))
+        with open(os.path.join(root, "library", "citations", "x", "JHN.json"), "w", encoding="utf-8") as f:
+            json.dump(data, f)
+        return root
 
 
 if __name__ == "__main__":

@@ -7,7 +7,8 @@ requires-python = ">=3.12"
 [tool.ruff]
 target-version = "py312"
 line-length = 120
-extend-exclude = ["site", "vendor"]
+# scripts/extract/: one-off extraction scripts kept as run, as a record (see its README)
+extend-exclude = ["site", "vendor", "scripts/extract"]
 
 [tool.ruff.lint]
 # pycodestyle errors and warnings, pyflakes, bugbear.
@@ -19,3 +20,4 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 # Page markup is kept on whole lines.
 "scripts/build_site.py" = ["E501"]
+"scripts/build_more.py" = ["E501"]

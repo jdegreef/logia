@@ -51,6 +51,7 @@ import unicodedata
 from urllib.parse import quote
 
 import api
+import build_more
 import differ
 import scripture
 
@@ -127,6 +128,8 @@ LEADING_GAPS = {"compact": 5, "normal": 7, "spacious": 9}
 # default colours or text size. Mirrors web/site.js.
 BOOT_SCRIPT = ("try{var d=document.documentElement,t=localStorage.getItem('logia-theme');"
                "if(['auto','light','sepia','dark','night','contrast'].indexOf(t)>=0)d.setAttribute('data-theme',t);"
+               # No mode chosen and the device asks for more contrast: the contrast mode.
+               "else if(!t&&window.matchMedia&&matchMedia('(prefers-contrast: more)').matches)d.setAttribute('data-theme','contrast');"
                "var p={" + ",".join(f"{name}:{[v for v in values if v != default]!r}"
                                    for name, default, values in DISPLAY_PREFS) + "};"
                "for(var k in p){var v=localStorage.getItem('logia-'+k);"
@@ -268,6 +271,24 @@ def short_edition(edition):
     return s if len(s) <= 90 else re.sub(r"\s+\S*$", "", s[:88]) + "…"
 
 
+def card_edition(work, author_name):
+    """A work's edition for a card under its title: where and when it was
+    published ("First published London, 1860; New York: Robert Carter &
+    Brothers, 1860"), not the author and title over again."""
+    ed, title = work["edition"], work["title"]
+    head = f"{author_name}, {title}"
+    if not ed.startswith(head) and not ed.startswith(title):
+        return short_edition(ed)
+    rest = ed[len(head) if ed.startswith(head) else len(title):].strip(" ,.")
+    parts = [p.strip(" ,.") for p in re.split(r";", re.sub(r"^\((.*?)\)", r"\1;", rest))]
+    parts = [p for p in parts if p and not re.search(r"\b(text from|OCR|transcri|scan)", p, re.I)]
+    if not parts:
+        return short_edition(ed)
+    s = "; ".join(parts[:2])
+    s = en_dash(s[:1].upper() + s[1:])
+    return s if len(s) <= 90 else re.sub(r"\s+\S*$", "", s[:88]) + "…"
+
+
 def snippet(text, words=34):
     """The first words of an excerpt, cut at a word, for lists that link to it."""
     first = text.split("\n\n")[0].split()
@@ -317,6 +338,8 @@ class Library:
         # en dash, as the printed editions do ("354–430", "c. 185–c. 253").
         for a in self.authors.values():
             a["dates"] = en_dash(a["dates"])
+        for aid, mono in monograms(self).items():
+            self.authors[aid]["mono"] = mono
         # Their Wikidata items and Wikipedia articles (scripts/fetch_wikidata.py).
         ids = load(os.path.join(ROOT, "library", "identifiers.json"))
         self.identifiers = ids["authors"]
@@ -351,7 +374,8 @@ class Library:
         printed = {}
         for p in glob.glob(os.path.join(ROOT, "library", "pages", "*.json")):
             for cid, (ident, leaf, number) in load(p)["pages"].items():
-                printed[cid] = {"url": scan_page_url(ident, leaf), "page": number}
+                printed[cid] = {"url": scan_page_url(ident, leaf), "page": number,
+                                 "img": f"https://archive.org/download/{ident}/page/n{leaf}_w1000.jpg"}
         self.comments = []
         for p in sorted(glob.glob(os.path.join(ROOT, "library", "comments", "*", "*.json"))):
             data = load(p)
@@ -429,7 +453,8 @@ class Library:
         return sorted(ids, key=lambda w: (ERAS.index(self.author_of(w)["era"]), self.author_of(w)["died"], w))
 
     def ordered_authors(self):
-        return sorted(self.authors.values(), key=lambda a: (ERAS.index(a["era"]), a["died"]))
+        # In the order they lived: by era, then by the year they were born.
+        return sorted(self.authors.values(), key=lambda a: (ERAS.index(a["era"]), born(a), a["died"]))
 
     def in_chapter(self, book, chapter, last_verse):
         """{work: [entries clipped to this chapter as verse numbers]}, each
@@ -765,6 +790,10 @@ def nav_menus(lib):
                + row("/search/", t("nav.search_words"), t("nav.search_words_note"), "list")
                + row("/readings/", t("nav.readings"), t("nav.readings_note"), "star")
                + row("/topics/", t("nav.topics"), t("nav.topics_note"), "list")
+               + row("/plans/", t("nav.plans"), t("nav.plans_note"), "star")
+               + row("/explore/most-cited/", t("nav.most_cited"), t("nav.most_cited_note"), "list")
+               + row("/random/", t("nav.random"), t("nav.random_note"), "compass")
+               + row("/quiz/", t("quiz.heading"), t("nav.quiz_note"), "star")
                + "".join(row(f'/{c["book"].lower()}/{c["id"]}/', t(f'nav.collection_{c["id"]}'), t(f'nav.collection_{c["id"]}_note'), "list")
                          for c in collections(lib))
                + row("/most-discussed/", t("most.all_heading"), t("nav.most_note"), "users")
@@ -784,6 +813,8 @@ def nav_menus(lib):
         row("/about/rules/", t("nav.rules"), t("nav.rules_note"), "check"),
         row("/ai/", t("nav.ai"), t("nav.ai_note"), "info"),
         row("/linker/", t("nav.linker"), t("nav.linker_note"), "code"),
+        row("/widget/", t("nav.widget"), t("nav.widget_note"), "code"),
+        row("/about/help/", t("help.heading"), t("nav.help_note"), "users"),
         row("/api/v1/index.json", t("nav.api"), t("nav.api_note"), "data"),
         row(OWB_SITE + "/", t("nav.owb"), t("nav.owb_note"), "book", ext=True),
         row(GITHUB_URL, t("nav.source"), t("nav.source_note"), "code", ext=True)))
@@ -935,82 +966,186 @@ FOOT_SOURCES = (("owb", OWB_SITE + "/"), ("sblgnt", "https://sblgnt.com/"),
                 ("openbible", "https://www.openbible.info/labs/cross-references/"),
                 ("commentary", "/about/#checked"))
 
-_FOOTER = {}
+# The most-discussed verses the footer shows: none with fewer excerpts than
+# this, so a book with little commentary yet doesn't look half done.
+FOOT_MOST_MIN = 10
 
 
-def site_footer(lib):
-    """The footer is the same on every page, so it is built once."""
-    if id(lib) not in _FOOTER:
-        _FOOTER.clear()
-        _FOOTER[id(lib)] = build_footer(lib)
-    return _FOOTER[id(lib)]
+def site_footer(lib, path="/", title="Logia"):
+    """The footer: a card to the next chapter on a page in a book, then the
+    parts every page shares, built once, around this book's most-discussed
+    verses and a link to report a problem with this page."""
+    memo = lib.__dict__.setdefault("_footer", {})
+    if "frame" not in memo:
+        memo["frame"] = build_footer(lib)
+    head, tail = memo["frame"]
+    book, chapter = footer_place(lib, path)
+    if book not in memo:
+        memo[book] = foot_most(lib, book)
+    report = (f"{GITHUB_URL}/issues/new?title={quote(t('footer.report_title', page=title))}"
+              f"&body={quote(t('footer.report_body', url=SITE_URL + path))}")
+    return (head.replace("<!--next-->", foot_next(lib, book, chapter)).replace("<!--most-->", memo[book])
+            + tail.replace("{{report}}", e(report)))
+
+
+def footer_place(lib, path):
+    """(book, chapter) for a page in a book: /jhn/ is (JHN, 0), /jhn/3/ and
+    /jhn/3/16/ are (JHN, 3); any other page is (None, 0)."""
+    parts = [x for x in path.split("/") if x]
+    book = parts[0].upper() if parts else ""
+    if book not in lib.books:
+        return None, 0
+    if len(parts) == 1:
+        return book, 0
+    return (book, int(parts[1])) if parts[1].isdigit() else (book, -1)
+
+
+def foot_next(lib, book, chapter):
+    """The chapter after this one, or a book's first chapter on its own page."""
+    if book is None or chapter < 0:
+        return ""
+    at = lib.__dict__.setdefault("_chapter_at", {bc: i for i, bc in enumerate(lib.chapters)})
+    if chapter == 0:
+        nxt, label = (book, 1), t("footer.start_book")
+    else:
+        i = at.get((book, chapter))
+        if i is None or i + 1 >= len(lib.chapters):
+            return ""
+        nxt, label = lib.chapters[i + 1], t("footer.next_chapter")
+    b, c = nxt
+    heading = chapter_title(b, c)
+    return (f'<a class="lg-foot-next" href="{chapter_url(b, c)}"><span class="lg-foot-next-label">{e(label)}</span>'
+            f'<span class="lg-foot-next-ref">{e(lib.books[b]["en"])} {c}'
+            + (f' <span class="lg-foot-next-title">{e(heading)}</span>' if heading else "")
+            + f'</span><span class="lg-foot-next-go" aria-hidden="true">{e(t("footer.read_on"))}</span></a>')
+
+
+def foot_most(lib, book):
+    """The three most-discussed verses: in this book on a page in it, else in
+    the whole library; only verses with at least FOOT_MOST_MIN excerpts."""
+    books = sorted({b for b, _c in lib.coverage()}, key=list(lib.books).index)
+    mine = book in books
+    ranked = sorted(((n, -list(lib.books).index(b), b, ch, v) for b in ([book] if mine else books)
+                     for (ch, v), n in verse_counts_cached(lib, b).items() if n >= FOOT_MOST_MIN),
+                    key=lambda r: (-r[0], -r[1], r[3], r[4]))[:3]
+    if not ranked:
+        return ""
+    chips = "".join(f'<li><a class="book-chip" href="{verse_url(b, ch, v)}">{e(verse_ref(lib, b, ch, v))} '
+                    f'<span class="lg-chip-n" title="{e(t("footer.excerpts_title", n=n))}">{n}</span></a></li>'
+                    for n, _o, b, ch, v in ranked)
+    head = t("footer.most_in", book=lib.books[book]["en"]) if mine else t("footer.most")
+    more = (f'<p class="lg-foot-more"><a href="/{book.lower()}/most-discussed/">{e(t("footer.most_all", book=lib.books[book]["en"]))}</a></p>'
+            if mine else "")
+    return (f'<section class="lg-foot-most" aria-labelledby="foot-most"><h2 id="foot-most">{e(head)}</h2>'
+            f'<ul class="book-chips">{chips}</ul>{more}</section>')
+
+
+def foot_season(lib):
+    """The church year's days with a Logia page, with their dates for three
+    years: web/logia.js names the next one when it is near."""
+    data = {o["id"]: o for o in load(os.path.join(ROOT, "library", "occasions.json"))["occasions"]}
+    year = datetime.date.today().year
+    days = [{"name": t(f"occasions.{oid}.name"), "href": t(f"occasions.{oid}.path"),
+             "dates": [d.isoformat() for d in occasion_dates(data[oid], (year - 1, year, year + 1))]}
+            for oid, *_rest in occasions(lib)]
+    return (f'<p class="lg-foot-season" hidden data-text="{e(t("footer.season"))}" data-go="{e(t("footer.season_go"))}" '
+            f'data-days="{e(json.dumps(days, ensure_ascii=False, separators=(",", ":")))}"></p>')
+
+
+def book_abbr(book):
+    return t("footer.abbr." + book)
 
 
 def build_footer(lib):
+    """The parts of the footer every page shares, as (head, tail): the page's
+    own next-chapter card goes in head at <!--next-->, its most-discussed
+    verses at <!--most-->, and its report link in tail at {{report}}."""
     def links(pairs):
         return "".join(f'<li><a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(label)}</a></li>'
                        for href, label in pairs)
 
-    def column(key, pairs, extra=""):
-        return (f'<nav aria-labelledby="foot-{key}"><h2 id="foot-{key}">{e(t("footer." + key))}</h2>'
-                f'<ul>{links(pairs)}</ul>{extra}</nav>')
+    def column(key, href, pairs):
+        # The heading is a link to the column's own page; on a phone a button
+        # beside it folds the list away (web/logia.js).
+        return (f'<nav class="lg-foot-col" aria-labelledby="foot-{key}"><h2 id="foot-{key}"><a href="{href}">{e(t("footer." + key))}</a>'
+                f'<button type="button" class="lg-foot-fold" aria-expanded="true" aria-controls="foot-{key}-list" hidden>'
+                f'<span class="sr-only">{e(t("footer.fold", name=t("footer." + key)))}</span></button></h2>'
+                f'<ul id="foot-{key}-list">{links(pairs[:7])}</ul></nav>')
 
-    books = list(dict.fromkeys(b for b, _c in sorted(lib.coverage(), key=lambda bc: list(lib.books).index(bc[0]))))
-    read = ([("/read/", t("footer.all_books"))] + [(f"/{b.lower()}/", lib.books[b]["en"]) for b in books]
-            + [("/readings/", t("footer.readings")), ("/topics/", t("nav.topics")), ("/sheets/", t("nav.sheets"))])
-    explore = ([(f"/{b.lower()}/most-discussed/", t("footer.most_in", book=lib.books[b]["en"])) for b in books]
-               + [(g["path"], g["title"]) for g in guides()]
-               + [("/explore/", t("nav.explore_page")), ("/new/", t("nav.new"))])
-    people = [("/commentators/", t("nav.all_commentators"))] + [
-        (era_url(era), t("eras." + era)) for era in ERAS if any(a["era"] == era for a in lib.authors.values())]
-    data = [("/open-data/", t("footer.open_data"))] + [
-        (f"/downloads/logia-{LANG}.{x}", t("footer.download", kind=x.upper())) for x in ("json", "csv")] + [
+    covered = {b for b, _c in lib.coverage()}
+    first = next(b for b in lib.books if b in covered)
+    read = [("/readings/", t("footer.readings")), ("/topics/", t("nav.topics")), ("/sheets/", t("nav.sheets"))] + (
+        [("/creeds/", t("creeds.index_title"))] if lib.creeds else []) + [("/differ/", t("footer.differ"))]
+    explore = [(g["path"], g["title"]) for g in guides()][:5] + [("/new/", t("nav.new"))]
+    people = [(era_url(era), t("eras." + era)) for era in ERAS if any(a["era"] == era for a in lib.authors.values())]
+    data = [(f"/downloads/logia-{LANG}.{x}", t("footer.download", kind=x.upper())) for x in ("json", "csv")] + [
         ("/api/v1/index.json", t("nav.api")), (GITHUB_URL + "/releases", t("footer.releases")), (GITHUB_URL, t("nav.source"))]
-    about = [("/about/", t("nav.about_logia")), ("/about/#checked", t("nav.checked")),
-             ("/about/rules/", t("nav.rules")), ("/ai/", t("nav.ai")), ("/linker/", t("nav.linker")),
-             (OWB_SITE + "/", t("nav.owb")), (GITHUB_URL + "/issues/new", t("footer.report"))]
+    about = [("/about/#checked", t("nav.checked")), ("/about/rules/", t("nav.rules")), ("/ai/", t("nav.ai")),
+             ("/linker/", t("nav.linker")), (OWB_SITE + "/", t("nav.owb")), ("/new.xml", t("footer.feed"))]
 
-    # The library in three numbers, counted at build time.
-    stats = "".join(f'<div><dt>{n:,}</dt><dd>{e(t("footer.stat_" + key))}</dd></div>' for key, n in (
-        ("excerpts", len(lib.comments)), ("commentators", len(lib.authors)), ("verses", len(lib.voices_on))))
+    # Every book of the Bible in canon order, lit where Logia has commentary.
+    cells = "".join(f'<li><a class="lg-canon-b{" on" if b in covered else ""}" href="/{b.lower()}/">'
+                    f'<abbr title="{e(lib.books[b]["en"])}">{e(book_abbr(b))}</abbr></a></li>' for b in lib.books)
+    canon = (f'<section class="lg-foot-canon" aria-labelledby="foot-canon"><h2 id="foot-canon">'
+             f'{e(t("footer.canon", n=len(covered), total=len(lib.books)))}</h2><ul class="lg-canon">{cells}</ul>'
+             f'<p class="lg-canon-key"><span class="lg-canon-b on" aria-hidden="true"></span> {e(t("footer.canon_key"))}</p></section>')
 
-    # Each book's three most-discussed verses, as on its most-discussed page.
-    most = ""
-    for b in books:
-        ranked = sorted(verse_counts(lib, b).items(), key=lambda kv: (-kv[1], kv[0]))[:3]
-        chips = "".join(f'<li><a class="book-chip" href="{verse_url(b, ch, v)}">{e(verse_ref(lib, b, ch, v))} '
-                        f'<span class="lg-chip-n" title="{e(t("footer.excerpts_title", n=n))}">{n}</span></a></li>'
-                        for (ch, v), n in ranked)
-        most += f'<ul class="book-chips">{chips}</ul>'
+    # The library in one sentence, each number a link.
+    numbers = e(t("footer.numbers", excerpts="\x01", commentators="\x02", verses="\x03"))
+    for mark, href, n in (("\x01", "/explore/", len(lib.comments)), ("\x02", "/commentators/", len(lib.authors)),
+                          ("\x03", "/read/", len(lib.voices_on))):
+        numbers = numbers.replace(mark, f'<a href="{href}"><b>{n:,}</b></a>')
 
-    sources = " · ".join(f'<a href="{href}"{" rel=noopener" if href.startswith("http") else ""}>{e(t("footer.sources." + key))}</a>'
-                         for key, href in FOOT_SOURCES)
-    find = e(t("footer.find"))
-    return f"""<footer class="site"><div class="wrap">
-<div class="foot-top lg-foot-top"><div class="foot-about">
+    # The sources, grouped by the terms they come under.
+    groups = (("cc0", ("owb",)), ("ccby", ("macula", "oshb", "openbible")), ("texts", ("sblgnt", "wlc")), ("pd", ("commentary",)))
+    where = dict(FOOT_SOURCES)
+    sources = "".join(f'<div><h3>{e(t("footer.licence." + g))}</h3><ul>'
+                      + "".join(f'<li><a href="{where[k]}"{" rel=noopener" if where[k].startswith("http") else ""}>{e(t("footer.sources." + k))}</a></li>' for k in keys)
+                      + "</ul></div>" for g, keys in groups)
+    promise = " <span aria-hidden=\"true\">·</span> ".join(e(x) for x in t("footer.promise"))
+    keys = " ".join(f'<span><kbd>{e(k)}</kbd> {e(v)}</span>' for k, v in t("footer.keys"))
+
+    head = f"""<footer class="site"><div class="wrap">
+<!--next-->
+{foot_season(lib)}
+<div class="lg-foot-main"><div class="lg-foot-about">
 <a class="brand" href="/">{MARK}<span class="brand-name">Logia</span></a>
-<p>{e(t("site.tagline"))}</p>
+<p class="lg-foot-tag">{e(t("footer.tagline"))}</p>
 <form class="lg-search foot-search lg-foot-search" role="search" action="/read/" autocomplete="off">
-<input type="search" name="q" id="foot-q" placeholder="{e(t("search.placeholder"))}" aria-label="{find}" role="combobox" aria-expanded="false" aria-controls="foot-q-list" aria-autocomplete="list">
+<input type="search" name="q" id="foot-q" placeholder="{e(t("search.placeholder"))}" aria-label="{e(t("footer.find"))}" role="combobox" aria-expanded="false" aria-controls="foot-q-list" aria-autocomplete="list">
 <button type="submit" class="button">{e(t("search.go"))}</button>
-<ul class="lg-sugg" id="foot-q-list" role="listbox" aria-label="{find}" hidden></ul></form>
-<p class="lg-foot-actions"><a class="foot-resume" href="/" data-resume="{e(t("home.resume"))}" hidden></a>
-<a class="lg-foot-up" href="#">{e(t("footer.top"))}</a>
-<a class="lg-foot-report" href="{GITHUB_URL}/issues/new" rel="noopener" data-title="{e(t("footer.report_page_title"))}" data-body="{e(t("footer.report_page_body"))}">{e(t("footer.report_page"))}</a></p>
+<ul class="lg-sugg" id="foot-q-list" role="listbox" aria-label="{e(t("footer.find"))}" hidden></ul></form>
+<p class="lg-foot-try">{e(t("footer.try"))} {" · ".join(f'<a href="{h}">{e(x)}</a>' for x, h in t("footer.examples"))}</p>
+<p class="lg-foot-numbers">{numbers}</p>
+<p class="lg-foot-actions"><a class="foot-resume" href="{chapter_url(first, 1)}" data-resume="{e(t("home.resume"))}">{e(t("footer.start", ref=f'{lib.books[first]["en"]} 1'))}</a></p>
 </div>
-<section class="lg-foot-library" aria-labelledby="foot-library"><h2 id="foot-library">{e(t("footer.library"))}</h2>
-<dl class="lg-foot-stats">{stats}</dl>
-<h2 class="lg-foot-most">{e(t("footer.most"))}</h2>{most}</section></div>
+{canon}
+<!--most-->
+</div>
+<p class="lg-foot-promise"><a href="/about/rules/">{promise}</a></p>
+"""
+    tail = f"""<div class="foot-base lg-foot-base">
+<p class="lg-foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("footer.cc0_data"))}
+{e(t("footer.bible_from"))} <a href="{OWB_SITE}/" rel="noopener">{e(t("nav.owb"))}</a>. <a href="#foot-sources" class="lg-foot-sources-link">{e(t("footer.sources_link"))}</a></p>
+<p class="lg-foot-links"><a href="/open-data/">{e(t("footer.data"))}</a> <a href="/about/">{e(t("nav.about_logia"))}</a>
+<a href="{{{{report}}}}" rel="noopener">{e(t("footer.report_page"))}</a></p>
+<p class="lg-foot-review">{e(t("footer.review"))} <a href="/about/#checked">{e(t("footer.help_review"))}</a></p>
+</div>
+<details class="lg-foot-sitemap" id="foot-sitemap"><summary>{e(t("footer.sitemap"))}</summary>
 <div class="foot-grid lg-foot-grid">
-{column("read", read)}
-{column("explore", explore)}
-{column("commentators", people)}
-{column("data", data, f'<p class="foot-licence"><span class="pill">{e(t("site.licence_pill"))}</span> {e(t("footer.cc0"))}</p>')}
-{column("project", about)}
+{column("read", "/read/", read)}
+{column("explore", "/explore/", explore)}
+{column("commentators", "/commentators/", people)}
+{column("data", "/open-data/", data)}
+{column("project", "/about/", about)}
 </div>
-<div class="foot-base"><p class="foot-review"><span>{e(t("footer.review"))} <a href="/about/#checked">{e(t("footer.help_review"))}</a></span></p>
-<p class="lg-foot-sources">{e(t("footer.sources_label"))} {sources}</p></div>
+<section class="lg-foot-sources" id="foot-sources" aria-labelledby="foot-sources-h"><h2 id="foot-sources-h">{e(t("footer.sources_label"))}</h2>
+<div class="lg-foot-sources-grid">{sources}</div></section>
+<p class="lg-foot-keys">{keys} <a href="#" data-keys-help>{e(t("footer.keys_all"))}</a></p>
+</details>
+<a class="lg-top" href="#" aria-label="{e(t("footer.top"))}" title="{e(t("footer.top"))}"><span aria-hidden="true">↑</span></a>
 </div></footer>"""
+    return head, tail
 
 
 # --- style.css, trimmed -------------------------------------------------------
@@ -1112,7 +1247,7 @@ def counter_script(noindex=False):
 
 
 def page(lib, title, body, path, current="", description="", scripts=(), noindex=False, canonical=True,
-         preload=(), head_title=None, ld=(), skip_to=None):
+         preload=(), head_title=None, ld=(), meta=(), skip_to=None):
     """A whole page. head_title, when given, is the <title> and og:title in
     place of "<title> · Logia"; ld is schema.org data for search engines;
     skip_to, (#id, label), is a second skip link, past the text to the
@@ -1120,7 +1255,9 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
     full = head_title or (f"{title} · Logia" if title != "Logia" else "Logia")
     description = description or t("site.description")
     own = e(SITE_URL + path)
-    js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js", "logia.js") + tuple(scripts))
+    js = "".join(f'\n<script src="{asset(s)}" defer></script>' for s in ("site.js", "account.js", "logia.js", "study.js") + tuple(scripts))
+    # Citation tags (Highwire), for Zotero and other reference managers: (name, content) pairs.
+    tags = "".join(f'\n<meta name="{e(k)}" content="{e(v)}">' for k, v in meta)
     account_text = json.dumps(CATALOG["account"]["ui"], ensure_ascii=False).replace("</", "<\\/")
     # The keyboard shortcuts' help (? opens it) and the offer to install the
     # site, for web/logia.js.
@@ -1141,7 +1278,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{e(t("site.card_alt"))}">
-<meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{json_ld(ld)}
+<meta name="twitter:card" content="summary_large_image">{'<meta name="robots" content="noindex">' if noindex else ""}{tags}{json_ld(ld)}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" href="/new.xml" title="{e(t("new.feed_title"))}">
 <link rel="manifest" href="/manifest.webmanifest">
@@ -1163,12 +1300,17 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 <main class="wrap" id="main" tabindex="-1">
 {body}
 </main>
-{site_footer(lib)}
+{site_footer(lib, path, full)}
 <script type="application/json" id="account-text">{account_text}</script>
 <script type="application/json" id="keys-text">{keys_text}</script>
+<script type="application/json" id="study-text">{STUDY_TEXT}</script>
 </body>
 </html>
 """
+
+
+# The words web/study.js shows (notes, quotes, recently read), on every page.
+STUDY_TEXT = json.dumps(CATALOG["study"]["ui"], ensure_ascii=False).replace("</", "<\\/")
 
 
 def json_ld(items):
@@ -1600,16 +1742,191 @@ def canon_section(lib, code):
     return next(k for k, a, b in CANON_SECTIONS if codes.index(a) <= i <= codes.index(b))
 
 
-def read_page(lib):
+# The books whose commentary is being prepared next: the Read page marks
+# them "In preparation" until they have some. Take a book off once it does.
+NEXT_BOOKS = ("ACT", "1JN")
+# The Psalter's own five books, where the Read page breaks the Psalms' bar.
+PSALM_BOOKS = (41, 72, 89, 106, 150)
+# How long the latest works added count as new on the Read page.
+NEW_DAYS = 14
+
+
+def ranges_text(nums):
+    """[1, 2, 3, 7, 9, 10] -> "1–3, 7, 9–10"."""
+    out, nums = [], sorted(nums)
+    i = 0
+    while i < len(nums):
+        j = i
+        while j + 1 < len(nums) and nums[j + 1] == nums[j] + 1:
+            j += 1
+        out.append(str(nums[i]) if i == j else f"{nums[i]}–{nums[j]}")
+        i = j + 1
+    return ", ".join(out)
+
+
+def bar_lines(book, total):
+    """The chapters of a book's bar, one list per line: the Psalms at the
+    Psalter's five books, any other book over 60 chapters in even halves."""
+    if book == "PSA" and total == 150:
+        ends, lines, a = PSALM_BOOKS, [], 1
+        for z in ends:
+            lines.append(list(range(a, z + 1)))
+            a = z + 1
+        return lines
+    k = math.ceil(total / 60) if total > 60 else 1
+    size = math.ceil(total / k)
+    return [list(range(a, min(total, a + size - 1) + 1)) for a in range(1, total + 1, size)]
+
+
+def heat_steps(counts):
+    """{chapter: excerpts} -> {chapter: 1, 2 or 3}, by where each chapter's
+    count falls among every chapter with commentary (thirds)."""
+    vals = sorted(counts.values())
+    if not vals:
+        return {}
+    lo, hi = vals[len(vals) // 3], vals[2 * len(vals) // 3]
+    return {k: (1 if n <= lo else 2 if n <= hi else 3) for k, n in counts.items()}
+
+
+def sunday_chapters(lib, today=None, weeks=26):
+    """[[date, ["mat/25", ...]], ...]: the chapters of each coming Sunday's
+    readings (library/lectionary/rcl.json), for the Read page's dots."""
+    data = sundays()
+    if not data:
+        return []
+    today = today or datetime.date.today().isoformat()
+    out = []
+    for d in data["days"]:
+        if d["date"] < today:
+            continue
+        chs = []
+        for text in [x for v in d["readings"].values() for x in v]:
+            got = parse_reading(text)
+            if got:
+                book, (sc, _sv), (ec, _ev) = got
+                chs += [f"{book.lower()}/{c}" for c in range(sc, ec + 1)]
+        out.append([d["date"], list(dict.fromkeys(chs))])
+        if len(out) >= weeks:
+            break
+    return out
+
+
+def read_page(lib, today=None):
     """Every book, by testament and part of the canon: one row per book, its
     name and a bar of its chapters, each chapter a thin cell linked to the
-    reader (gold where there is commentary), and how many have commentary.
-    On a wide screen the two testaments stand side by side."""
+    reader (gold where there is commentary, darker where there is more), and
+    how many commentators it has. Above them the whole Bible in one strip, a
+    shelf of the books with commentary and a bar to jump, filter and sort;
+    web/logia.js adds Continue reading, what has been read, this Sunday's
+    readings, the phone's chapter grid and type-to-jump."""
+    today = today or datetime.date.today()
     cov = lib.coverage()
     have = {b for b, _c in lib.chapters}
     codes = list(lib.books)
     commented = [c for c in codes if any(b == c for b, _c in cov)]
-    parts = []
+    per_ch = Counter((ref_parts(c["start"])[0], ref_parts(c["start"])[1]) for c in lib.comments)
+    heat = heat_steps({k: n for k, n in per_ch.items() if k in cov})
+    added = works_added()
+    # New: the works of the latest day anything was added, while that day is
+    # recent (Logia's first works all came within a few days of each other).
+    days = [d for w, d in added.items() if w in lib.works]
+    newest = max(days) if days else None
+    fresh = ({w for w, d in added.items() if d == newest and w in lib.works}
+             if newest and (today - datetime.date.fromisoformat(newest)).days <= NEW_DAYS else set())
+    book_works, book_new = {}, {}
+    for c in lib.comments:
+        b = ref_parts(c["start"])[0]
+        book_works.setdefault(b, set()).add(c["work"])
+    for b, ws in book_works.items():
+        book_new[b] = [w for w in lib.ordered_works(ws) if w in fresh]
+
+    def authors_of(b):
+        return list({lib.works[w]["author"]: lib.authors[lib.works[w]["author"]]
+                     for w in lib.ordered_works(book_works.get(b, ()))}.values())
+
+    def top_verse(b):
+        counts = verse_counts(lib, b)
+        if not counts:
+            return None
+        (ch, v), _n = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        return ch, v
+
+    def dots(b):
+        people = authors_of(b)
+        label = t("read.dots", n=len(people), names=name_list(short_name(a) for a in people))
+        return (f'<span class="lg-cov-dots" role="img" aria-label="{e(label)}" title="{e(label)}">'
+                + "".join(f'<i class="lg-era-{ERAS.index(a["era"])}"></i>' for a in people) + "</span>")
+
+    def new_badge(b):
+        ws = book_new.get(b)
+        if not ws:
+            return ""
+        what = name_list(f'{lib.author_of(w)["name"]}, {lib.works[w]["title"]}' for w in ws)
+        return f' <span class="lg-new-badge" title="{e(t("read.new_title", what=what))}">{e(t("read.new"))}</span>'
+
+    def cell(b, n, name, tick):
+        heading = chapter_title(b, n)
+        k = cov.get((b, n), (0, []))[0]
+        label = " · ".join(x for x in (f"{name} {n}", t("read.tip_works", n=k) if k else t("read.text_only_chapter"), heading) if x)
+        cls = "chap" + (f" lg-has lg-h{heat.get((b, n), 1)}" if (b, n) in cov else " part") + (" lg-t10" if tick else "")
+        return f'<a class="{cls}" href="{chapter_url(b, n)}" aria-label="{e(label)}" data-tip="{e(label)}">{n}</a>'
+
+    total_chapters = sum(lib.books[c]["chapters"] for c in codes)
+    covered = len(cov)
+    # The whole Bible in one strip (each book as wide as its chapters).
+    strip = "".join(
+        f'<a class="lg-bs{" lg-has" if c in commented else ""}" href="#{c.lower()}" style="flex-grow:{lib.books[c]["chapters"]}" '
+        f'title="{e(lib.books[c]["en"])}" aria-label="{e(lib.books[c]["en"])}"></a>' for c in codes if c in have)
+
+    def row(code, i):
+        name, total = lib.books[code]["en"], lib.books[code]["chapters"]
+        done = sorted(c for (bk, c) in cov if bk == code)
+        people = authors_of(code)
+        if done and len(done) < total:
+            count = t("read.part", n=len(done), total=total)
+        elif done:
+            count = t("read.voices", n=len(people))
+        elif code in NEXT_BOOKS:
+            count = t("read.next")
+        else:
+            count = t("read.ch", n=total)
+        lines = bar_lines(code, total)
+        cols = max(len(x) for x in lines)
+        long_bar = len(lines) == 1 and total >= 20
+        bar = "".join(
+            f'<div class="lg-cov-line"{f" data-span={ln[0]}–{ln[-1]}" if len(lines) > 1 else ""}>'
+            f'{"".join(cell(code, n, name, long_bar and n % 10 == 0 and n < total) for n in ln)}</div>'
+            for ln in lines)
+        ticks = ""
+        if long_bar:
+            ticks = ('<div class="lg-cov-ticks" aria-hidden="true">'
+                     + "".join(f'<span style="grid-column:{n}">{n}</span>' for n in range(10, total + 1, 10)) + "</div>")
+        who = f'<a class="lg-cov-name" href="/{code.lower()}/">{e(name)}</a>{new_badge(code)}'
+        extra, gap, peek = "", "", ""
+        top = top_verse(code) if done else None
+        if done:
+            top_link = (f'<a class="lg-cov-top" href="{verse_url(code, *top)}" title="{e(t("read.top_title", book=name))}">'
+                        f'{e(verse_ref(lib, code, *top))}</a>') if top else ""
+            extra = f'<span class="lg-cov-sub">{dots(code)}{top_link}</span>'
+            peek = (f'<div class="lg-peek" hidden><b class="lg-peek-name">{e(name)}</b>'
+                    f'<span class="lg-quiet">{e(t("read.peek_meta", n=len(people), done=len(done), total=total))}</span>'
+                    f'<span class="lg-peek-who">{" · ".join(e(short_name(a)) for a in people)}</span>'
+                    + (f'<span>{e(t("read.top"))} <a href="{verse_url(code, *top)}">{e(verse_ref(lib, code, *top))}</a></span>' if top else "")
+                    + f'<a class="button" href="/{code.lower()}/">{e(t("read.open", book=name))}</a></div>')
+        if done and len(done) < total:
+            missing = [n for n in range(1, total + 1) if n not in set(done)]
+            works = name_list(f'{lib.author_of(w)["name"]}, {lib.works[w]["title"]}' for w in lib.ordered_works(book_works.get(code, ())))
+            gap = f'<p class="lg-cov-gap">{e(t("read.gap", n=len(missing), missing=ranges_text(missing), works=works))}</p>'
+        x = sum(n for (bk, _c), n in per_ch.items() if bk == code)
+        return (f'<li class="lg-cov-row{" lg-cov-has" if done else ""}{" lg-cov-next" if code in NEXT_BOOKS and not done else ""}" id="{code.lower()}" '
+                f'data-name="{e(name)}" data-i="{i}" data-x="{x}" data-total="{total}">'
+                f'<div class="lg-cov-who">{who}{extra}</div>'
+                f'<div class="lg-cov-bar" style="--cols:{cols}" aria-label="{e(t("read.chapters_of", book=name))}">{bar}{ticks}</div>'
+                f'<span class="lg-cov-n">{e(count)}</span>'
+                f'<button type="button" class="lg-cov-open" aria-expanded="false" aria-label="{e(t("read.show_chapters", book=name))}">'
+                f'{icon("chevron", 16)}</button>{gap}{peek}</li>')
+
+    parts, part_links, i = [], [], 0
     for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
         sections = []
         for sec, a, b in CANON_SECTIONS:
@@ -1618,18 +1935,25 @@ def read_page(lib):
                 continue
             rows = []
             for code in books:
-                name, total = lib.books[code]["en"], lib.books[code]["chapters"]
-                done = sum(1 for (bk, _c) in cov if bk == code)
-                count = (f'<span class="lg-cov-n" title="{e(t("read.commentary_short", n=done, total=total))}">{done}/{total}</span>' if done
-                         else f'<span class="lg-cov-n lg-quiet">{e(t("read.text_only_short"))}</span>')
-                rows.append(f'<li class="lg-cov-row{" lg-cov-has" if done else ""}" id="{code.lower()}">'
-                            f'<a class="lg-cov-name" href="/{code.lower()}/">{e(name)}</a>'
-                            f'<div class="lg-cov-bar" aria-label="{e(t("read.chapters_of", book=name))}">{chapter_pills(lib, code, cov)}</div>'
-                            f'{count}</li>')
-            sections.append(f'<section class="lg-canon-part" aria-labelledby="sec-{sec}"><h3 class="label" id="sec-{sec}">'
-                            f'{e(t("canon." + sec))}</h3><ul class="lg-cov-list">{"".join(rows)}</ul></section>')
+                rows.append(row(code, i))
+                i += 1
+            k = sum(1 for c in books if c in commented)
+            note = (f'<span class="lg-part-n">{e(t("read.part_books", n=len(books)))} · '
+                    + (f'<b>{e(t("read.part_with", n=k))}</b>' if k else e(t("read.part_text"))) + "</span>")
+            names = "" if k else f'<span class="lg-part-names">{e(name_list(lib.books[c]["en"] for c in books))}</span>'
+            sections.append(f'<details class="lg-canon-part{"" if k else " lg-part-text"}" id="part-{sec}" open>'
+                            f'<summary><h3 class="label" id="sec-{sec}">{e(t("canon." + sec))}</h3>{note}{names}</summary>'
+                            f'<ul class="lg-cov-list">{"".join(rows)}</ul></details>')
+            part_links.append(f'<a href="#part-{sec}">{e(t("canon." + sec))}</a>')
+        ways = ""
+        if key == "new":
+            cards = "".join(f'<li><a href="{href}"><b>{e(t("nav." + k))}</b><span>{e(t("nav." + k + "_note"))}</span></a></li>'
+                            for href, k in (("/readings/", "readings"), ("/topics/", "topics"), ("/explore/", "explore_page"), ("/sheets/", "sheets")))
+            ways = (f'<section class="lg-ways" aria-labelledby="h-ways"><h3 class="label" id="h-ways">{e(t("read.ways"))}</h3>'
+                    f'<ul>{cards}</ul></section>')
+        n_books = len([c for c in part if c in have])
         parts.append(f'<section class="lg-block lg-testament" id="{"ot" if key == "old" else "nt"}" aria-labelledby="h-{key}">'
-                     f'<h2 id="h-{key}">{e(t("testaments." + key))}</h2>{"".join(sections)}</section>')
+                     f'<h2 id="h-{key}">{e(t("testaments." + key))} <span class="lg-quiet">{n_books}</span></h2>{"".join(sections)}{ways}</section>')
     coming = ""
     for key, part in (("old", codes[:OT_BOOKS]), ("new", codes[OT_BOOKS:])):
         names = [f'<li><span class="book-chip none">{e(lib.books[c]["en"])}</span></li>' for c in part if c not in have]
@@ -1639,16 +1963,44 @@ def read_page(lib):
     if coming:
         coming = (f'<section class="lg-block lg-coming" aria-labelledby="h-coming"><h2 id="h-coming">{e(t("read.coming"))}</h2>'
                   f'<p class="lg-quiet">{e(t("read.coming_note"))}</p><div class="testaments">{coming}</div></section>')
-    so_far = ", ".join(lib.books[c]["en"] for c in commented) or "—"
+    shelf = "".join(
+        f'<li><a class="lg-shelf-card" href="/{c.lower()}/"><b>{e(lib.books[c]["en"])}{new_badge(c)}</b>'
+        f'<span>{e(t("read.voices", n=len(authors_of(c))))}'
+        + (f' · {e(t("read.part", n=sum(1 for (bk, _c) in cov if bk == c), total=lib.books[c]["chapters"]))}'
+           if sum(1 for (bk, _c) in cov if bk == c) < lib.books[c]["chapters"] else "")
+        + f'</span>{dots(c)}</a></li>' for c in commented)
+    ot = len([c for c in codes[:OT_BOOKS] if c in have])
+    nt = len([c for c in codes[OT_BOOKS:] if c in have])
+    names = json.dumps({c.lower(): lib.books[c]["en"] for c in codes}, ensure_ascii=False, separators=(",", ":"))
+    totals = json.dumps({c.lower(): lib.books[c]["chapters"] for c in codes}, separators=(",", ":"))
+    ui = json.dumps({k: t("read.js." + k) for k in CATALOG["read"]["js"]}, ensure_ascii=False, separators=(",", ":"))
+    suns = json.dumps(sunday_chapters(lib, today.isoformat()), separators=(",", ":"))
+    swatch = '<span class="chap lg-has lg-h{}" aria-hidden="true"></span>'
     body = f"""
-<header class="page-head"><p class="eyebrow">{e(t("read.title"))}</p>
-<h1>{e(t("read.heading"))}</h1><p class="dek">{e(t("read.dek", books=so_far))}</p></header>
-<div class="lg-read-tools">{search_box(lib, "read-q", "hero-search lg-read-search")}
-<nav class="lg-jump" aria-label="{e(t("read.jump"))}"><a href="#ot">{e(t("testaments.old"))}</a><a href="#nt">{e(t("testaments.new"))}</a></nav></div>
-<ul class="lg-legend lg-cov-legend" aria-label="{e(t("read.legend"))}"><li><span class="chap lg-has" aria-hidden="true"></span>{e(t("read.has_commentary_key"))}</li>
+<header class="page-head lg-read-head"><p class="eyebrow">{e(t("read.title"))}</p>
+<h1>{e(t("read.heading"))}</h1><p class="dek">{e(t("read.dek", n=len(commented)))}</p>
+<nav class="lg-bible-strip" aria-label="{e(t("read.whole_label"))}">{strip}</nav>
+<p class="lg-strip-note"><span>{e(lib.books[codes[0]]["en"])}</span><span>{e(t("read.whole_note", n=f"{covered:,}", total=f"{total_chapters:,}"))}</span><span>{e(lib.books[codes[-1]]["en"])}</span></p></header>
+<section class="lg-read-cont" aria-labelledby="h-rc" data-books="{e(names)}" data-totals="{e(totals)}" hidden>
+<div><p class="eyebrow" id="h-rc">{e(t("read.continue"))}</p><b class="lg-read-cont-ref"></b><span class="lg-read-cont-meta lg-quiet"></span></div>
+<a class="button lg-read-cont-go" href="/"></a><a class="button ghost lg-read-cont-next" href="/" hidden></a></section>
+<section class="lg-shelf" aria-labelledby="h-shelf"><h2 class="label" id="h-shelf">{e(t("read.shelf"))}</h2><ul>{shelf}</ul></section>
+{search_box(lib, "read-q", "hero-search lg-read-search")}
+<div class="lg-read-bar" data-ui="{e(ui)}">
+<nav class="lg-jump" aria-label="{e(t("read.jump"))}"><a href="#ot">{e(t("testaments.old"))} <span>{ot}</span></a><a href="#nt">{e(t("testaments.new"))} <span>{nt}</span></a></nav>
+<button type="button" class="lg-read-only" aria-pressed="false">{e(t("read.only", n=len(commented)))}</button>
+<label class="lg-read-sort">{e(t("read.sort"))} <select><option value="bible">{e(t("read.sort_bible"))}</option><option value="az">{e(t("read.sort_az"))}</option><option value="most">{e(t("read.sort_most"))}</option></select></label>
+<nav class="lg-read-parts" aria-label="{e(t("read.parts"))}">{"".join(part_links)}</nav>
+</div>
+<p class="lg-read-keys lg-quiet">{e(t("read.keys"))}</p>
+<ul class="lg-legend lg-cov-legend" aria-label="{e(t("read.legend"))}"><li>{swatch.format(1)}{swatch.format(2)}{swatch.format(3)}{e(t("read.has_commentary_key"))}</li>
 <li><span class="chap part" aria-hidden="true"></span>{e(t("read.text_only_key"))}</li>
-<li><span class="chap part lg-read" aria-hidden="true"></span>{e(t("read.read_key"))}</li></ul>
-<div class="book-index lg-cov-index">{"".join(parts)}</div>
+<li><span class="chap part lg-read" aria-hidden="true"></span>{e(t("read.read_key"))}</li>
+<li class="lg-sun-key" hidden><span class="chap part lg-sun" aria-hidden="true"></span><span></span></li></ul>
+<p class="lg-read-none lg-quiet" hidden></p>
+<div class="book-index lg-cov-index" data-sundays="{e(suns)}">{"".join(parts)}</div>
+<ol class="lg-cov-list lg-cov-flat" hidden aria-label="{e(t("read.sorted"))}"></ol>
+<div class="lg-cell-tip" role="presentation" hidden></div>
 {coming}"""
     return page(lib, t("read.title"), body, "/read/", current="/read/")
 
@@ -2282,6 +2634,10 @@ def verse_excerpt(lib, c, book, chapter, verse):
         more.append(f'<li><a href="{e(n["url"])}">{e(t("verse.names", name=n["author"]))}</a>'
                     + (f' · <a href="{e(n["href"])}">{e(t("verse.names_here", name=n["author"], ref=n["ref"]))}</a>' if n["href"] else "")
                     + "</li>")
+    more += build_more.also_rows(lib, c)
+    fixed = build_more.fixed_link(lib, c)
+    if fixed:
+        links.append(fixed)
     locus = f' {e(locus_label(w, c["locus"]))}.' if c.get("locus") else ""
     # A long excerpt folds to its first lines on screen (web/logia.js), so one
     # long homily doesn't push every other voice down; the whole text stays
@@ -2293,7 +2649,7 @@ def verse_excerpt(lib, c, book, chapter, verse):
             f'<div class="lg-text{" lg-foldable" if fold else ""}">{verse_html(lib, c["text"], c["cites"])}</div>{fold}'
             + (f'<ul class="lg-vx-more">{"".join(more)}</ul>' if more else "")
             + f'<p class="lg-vx-links lg-quiet">{e(t("verse.from", edition=short_edition(w["edition"])))}{locus} '
-            f'{" · ".join(links)}</p>{excerpt_actions(lib, c, verse_url(book, chapter, verse))}</article>')
+            f'{" · ".join(links)} {build_more.scan_button(c)}</p>{excerpt_actions(lib, c, verse_url(book, chapter, verse))}</article>')
 
 
 def verse_original(bible, verse):
@@ -2365,7 +2721,10 @@ def verse_xrefs(lib, bible, verse):
         label = f'{lib.books[p[0]]["en"]} {p[1]}:{p[2]}'
         text = chapter_plain(p[0], ch).get(a, "") if (p[0], ch) in lib.chapters else ""
         href = verse_url(p[0], ch, a) if (p[0], ch, a) in lib.voices_on else chapter_url(p[0], ch) + f"#v{a}"
-        rows.append(f'<li><a href="{href}"><b>{e(label)}</b></a> <span>{e(text)}</span></li>')
+        # How many voices wait there, so a reader sees which links lead somewhere rich.
+        n = len(lib.voices_on.get((p[0], ch, a), []))
+        count = f' <span class="lg-xref-n">{e(t("verse.xref_voices", n=n))}</span>' if n else ""
+        rows.append(f'<li><a href="{href}"><b>{e(label)}</b></a>{count} <span>{e(text)}</span></li>')
     if not rows:
         return ""
     return (f'<section class="lg-block" id="xrefs"><h2>{e(t("verse.xrefs"))}</h2><ul class="lg-xrefs">{"".join(rows)}</ul>'
@@ -2554,10 +2913,10 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 {verse_original(bible, verse)}
 <p class="lg-quiet">{t("verse.bible_credit", link=owb_link)}</p>
 {nearby_verses(lib, book, chapter, verse, pages_here)}
-<p class="dek lg-vlead">{e(lead)}</p>{verse_topics(lib, book, chapter, verse)}
+<p class="dek lg-vlead">{e(lead)}</p>{verse_topics(lib, book, chapter, verse)}{verse_rank_line(lib, book, chapter, verse)}
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav>
 {compare_dialog(ref) if len(rail) > 1 else ""}</header>
-<section class="lg-block" id="voices" tabindex="-1"><h2>{e(t("verse.voices"))}</h2>{"".join(sections)}</section>
+<section class="lg-block" id="voices" tabindex="-1"><h2>{e(t("verse.voices"))}</h2>{build_more.verse_grid(lib, voices, book, chapter, verse)}{"".join(sections)}</section>
 {cited_html}{whole_html}{verse_creeds(lib, book, chapter, verse, ref)}{verse_words(bible, verse)}{verse_notes(bible, verse, ref)}{verse_xrefs(lib, bible, verse)}
 <p class="lg-block"><a class="lg-more" href="{chapter_url(book, chapter)}#v{verse}">{e(t("verse.open_chapter", chapter=chapter_name))} {icon("arrow", 15)}</a></p>
 <nav class="lg-turns" aria-label="{e(t("verse.previous"))} / {e(t("verse.next"))}">{"".join(turns)}</nav>
@@ -2743,7 +3102,8 @@ def readings_page(lib):
 <div class="lg-cal-pick" role="group" aria-label="{e(t("occasions.cal_label"))}"><span class="lg-quiet">{e(t("occasions.cal_label"))}</span>{chips}</div>
 <ul class="lg-people lg-wide lg-readings">{"".join(rows)}</ul>
 <p class="lg-quiet">{e(t("occasions.index_note"))}</p>
-<p><a class="lg-more" href="/jhn/lent/">{e(t("plan.heading", book=lib.books["JHN"]["en"], n=40))} {icon("arrow", 15)}</a></p></section>"""
+<p><a class="lg-more" href="/jhn/lent/">{e(t("plan.heading", book=lib.books["JHN"]["en"], n=40))} {icon("arrow", 15)}</a></p>
+<p><a class="lg-more" href="/plans/">{e(t("nav.plans"))}: {e(t("nav.plans_note"))} {icon("arrow", 15)}</a></p></section>"""
     return page(lib, t("occasions.index_heading"), body, "/readings/", current="/read/",
                 description=t("occasions.index_description"),
                 ld=(breadcrumbs((t("occasions.eyebrow"), "/readings/")),))
@@ -2875,13 +3235,9 @@ def timeline_fold(lib, authors=None):
 FOLD_WIDTH = 3.0
 
 
-def timeline(lib, authors=None):
-    """Each commentator's lifetime (or only those of authors, by id) as a bar
-    on one line of centuries, over the eras, each bar linking to their page.
-    Empty centuries are folded into a narrow hatched strip, and on a phone the
-    chart runs down the page."""
-    # The line starts at the century before the first life, so the earliest
-    # commentator (Origen, born c. 185) is never drawn off its left edge.
+def timeline_scale(lib, authors=None):
+    """The timeline's ends and fold, and pos(year): where a year falls on it,
+    in percent of its width."""
     first = min(born(a) for a in lib.authors.values() if authors is None or a["id"] in authors)
     lo, hi = min(TIMELINE[0], first // 100 * 100), TIMELINE[1]
     fold = timeline_fold(lib, authors)
@@ -2897,50 +3253,58 @@ def timeline(lib, authors=None):
             return (fa - lo) * per + FOLD_WIDTH + (y - fb) * per
     else:
         pos = lambda y: (y - lo) / (hi - lo) * 100  # noqa: E731
+    return lo, hi, fold, pos
+
+
+def timeline(lib, authors=None, landmarks=False, strip=False):
+    """Each commentator's lifetime (or only those of authors, by id) as a bar
+    on one line of centuries, over the eras, each linking to their page, with
+    every name in one column at the left. Empty centuries are folded into a
+    narrow hatched strip, and on a phone the chart runs down the page. Each
+    era's name over its band links to its page (web/logia.js makes it a
+    filter where the page has one); landmarks adds a few dates every
+    tradition knows, as thin lines; strip folds the chart away on a phone
+    behind a button (the page shows its era strip instead)."""
+    lo, hi, fold, pos = timeline_scale(lib, authors)
+    if fold:
+        fa, fb = fold
     spans = [(era, min(a, lo) if i == 0 else a, b) for i, (era, a, b) in enumerate(ERA_SPANS)]
     if fold:  # an era starting in the fold is drawn from its far side, so its name shows
         spans = [(era, fb if fa <= a < fb else a, fa if fa < b <= fb else b) for era, a, b in spans]
     bands = "".join(f'<span class="lg-tl-band" style="left:{pos(a):.2f}%;width:{pos(b) - pos(a):.2f}%">'
-                    f'<span>{e(t("eras." + era))}</span></span>' for era, a, b in spans if b > a)
+                    f'<a class="lg-tl-era lg-era-{ERAS.index(era)}" href="{era_url(era)}" data-era="{ERAS.index(era)}" title="{e(t("eras." + era))}">{e(t("eras_short." + era))}</a></span>'
+                    for era, a, b in spans if b > a)
     if fold:
-        bands += f'<span class="lg-tl-fold" style="left:{pos(fa):.2f}%;width:{FOLD_WIDTH:.2f}%"></span>'
+        bands += f'<span class="lg-tl-fold" style="left:{pos(fa):.2f}%;width:{FOLD_WIDTH:.2f}%" aria-hidden="true"></span>'
+    marks = ""
+    if landmarks:
+        dates = sorted((int(y), name) for y, name in CATALOG["commentators"]["landmarks"].items())
+        dates = [(y, n) for y, n in dates if lo < y < hi and not (fold and fa <= y < fb)]
+        marks = "".join(f'<span class="lg-tl-mark" style="left:{pos(y):.2f}%;--lane:{i % 3}"><span>{y} {e(n)}</span></span>'
+                        for i, (y, n) in enumerate(dates))
+        marks = f'<div class="lg-tl-marks" aria-hidden="true">{marks}</div>' if marks else ""
     years = [y for y in range((lo // 200 + 1) * 200, hi, 200) if not (fold and fa - 100 < y < fb + 100)]
     ticks = "".join(f'<span class="lg-tl-tick" style="left:{pos(y):.2f}%">{y}</span>' for y in years)
     if fold:
         ticks += f'<span class="lg-tl-tick lg-tl-brk" style="left:{pos(fa) + FOLD_WIDTH / 2:.2f}%">≈</span>'
-    # Councils and turning points (library/timeline.json), on the full
-    # timeline only: a dashed line each, its name above in one of two rows so
-    # names close together don't meet; on a phone, a row in date order.
-    events = [] if authors is not None else [x for x in load(os.path.join(ROOT, "library", "timeline.json"))["events"]
-                                             if lo <= x["year"] <= hi and not (fold and fold[0] < x["year"] < fold[1])]
-    marks = "".join(f'<span class="lg-tl-ev{" lg-tl-ev-2" if i % 2 else ""}{" lg-tl-ev-flip" if pos(x["year"]) > 80 else ""}" style="left:{pos(x["year"]):.2f}%">'
-                    f'<span>{e(t("timeline.events." + x["id"]))} {x["year"]}</span></span>' for i, x in enumerate(events))
-    pending = list(events)
     rows, folded = [], False
     for a in lib.ordered_authors():
         if authors is not None and a["id"] not in authors:
             continue
         b, d = born(a), a["died"]
-        # Events before this life, but none past the folded centuries until
-        # the row that names the fold is in.
-        ahead_of_fold = fold and not folded and b >= fb
-        while pending and pending[0]["year"] <= b and not (ahead_of_fold and pending[0]["year"] >= fa):
-            x = pending.pop(0)
-            rows.append(f'<li class="lg-tl-evrow">{x["year"]} · {e(t("timeline.events." + x["id"]))}</li>')
         if fold and not folded and b >= fb:
             folded = True
             row = "commentators.timeline_fold_row" if authors is None else "commentators.timeline_fold_row_some"
             rows.append(f'<li class="lg-tl-foldrow">{e(t(row, a=fa, b=fb))}</li>')
-            while pending and pending[0]["year"] <= b:
-                x = pending.pop(0)
-                rows.append(f'<li class="lg-tl-evrow">{x["year"]} · {e(t("timeline.events." + x["id"]))}</li>')
-        flip = pos(d) > 62
-        rows.append(f'<li class="lg-tl-row" data-author="{a["id"]}"><a class="lg-tl-life lg-era-{ERAS.index(a["era"])}{" lg-tl-flip" if flip else ""}" '
-                    f'href="/commentators/{a["id"]}/" style="left:{pos(b):.2f}%;width:{max(pos(d) - pos(b), .6):.2f}%">'
+        rows.append(f'<li class="lg-tl-row" data-author="{a["id"]}" data-born="{b}" data-died="{d}">'
+                    f'<a class="lg-tl-life lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/" '
+                    f'style="--l:{pos(b):.2f};--w:{max(pos(d) - pos(b), .6):.2f}">'
                     f'<span class="lg-tl-name"><b>{e(a["name"])}</b> {e(a["dates"])}</span></a></li>')
-    rows += [f'<li class="lg-tl-evrow">{x["year"]} · {e(t("timeline.events." + x["id"]))}</li>' for x in pending]
-    note = e(t("commentators.timeline_note", a=lo, b=hi)) + (" " + e(t("timeline.note")) if events else "")
-    # The key to the bars' colours: one swatch per era, linked to its page.
+    note = (f'<span class="lg-tl-wide">{e(t("commentators.timeline_note", a=lo, b=hi))}</span>'
+            f'<span class="lg-tl-narrow">{e(t("commentators.timeline_note_phone"))}</span>')
+    if marks:
+        note += f' <span class="lg-tl-wide">{e(t("commentators.landmarks_note"))}</span>'
+    # The key to the colours, for a phone, where the bands are not drawn.
     shown = {a["era"] for a in lib.authors.values() if authors is None or a["id"] in authors}
     legend = "".join(f'<li class="lg-era-{ERAS.index(era)}"><a href="{era_url(era)}">{e(t("eras." + era))}</a></li>'
                      for era in ERAS if era in shown)
@@ -2948,12 +3312,18 @@ def timeline(lib, authors=None):
     if fold:
         key = "commentators.timeline_fold" if authors is None else "commentators.timeline_fold_some"
         note += f' <span class="lg-tl-foldnote">{e(t(key, a=fa, b=fb))}</span>'
-    return (f'<figure class="lg-tl" aria-labelledby="tl-cap">{legend}<div class="lg-tl-scroll"><div class="lg-tl-in">'
-            f'<div class="lg-tl-bands" aria-hidden="true">{bands}</div>'
-            + (f'<div class="lg-tl-evs" aria-hidden="true">{marks}</div>' if marks else "")
-            + f'<ol class="lg-tl-rows">{"".join(rows)}</ol>'
+    # Who else was alive, filled in by web/logia.js as a reader points at a life.
+    alive = (f' data-alive="{e(t("commentators.alive"))}" data-alive-none="{e(t("commentators.alive_none"))}"'
+             + (f' data-hide="{e(t("commentators.hide_timeline"))}"' if strip else ""))
+    toggle = (f'<button type="button" class="lg-tl-toggle" aria-expanded="false" hidden>{e(t("commentators.show_timeline"))}</button>'
+              if strip else "")
+    return (f'<figure class="lg-tl{" lg-tl-strip" if strip else ""}{" lg-tl-marked" if marks else ""}" aria-labelledby="tl-cap"{alive}>'
+            f'{legend}{toggle}<div class="lg-tl-scroll"><div class="lg-tl-in">'
+            f'<div class="lg-tl-bands">{bands}</div>{marks}<span class="lg-tl-span" aria-hidden="true" hidden></span>'
+            f'<ol class="lg-tl-rows">{"".join(rows)}</ol>'
             f'<div class="lg-tl-axis" aria-hidden="true">{ticks}</div></div></div>'
-            f'<figcaption class="lg-quiet" id="tl-cap">{note}</figcaption></figure>')
+            f'<figcaption class="lg-quiet" id="tl-cap">{note}</figcaption>'
+            f'<p class="lg-tl-alive lg-quiet" aria-live="polite"></p></figure>')
 
 
 # What a card's quotation leaves off the front of a paragraph: the
@@ -2979,51 +3349,256 @@ def card_lead(text):
     return text, None
 
 
+# What else a card's quotation leaves off the front: a paragraph number as
+# the scan misreads it ("3&. ..."), in brackets ("[1.]"), or as "Ver. 3.",
+# and a "... " where the edition skips words.
+LEAD_SCAN = re.compile(r"^(?:\[\d+\.?\]|\d+\S?\.(?=\s)|Vers?\. \d+(?:[-–]\d+)?\.)\s+(?:\.\.\.\s*)?|^\.\.\.\s*")
+# A paragraph the scan breaks into mid-sentence: a closing bracket early on,
+# before any opening one ("Mai. ii. 6) is used").
+LEAD_BROKEN = re.compile(r"^[^(\[]{0,60}[)\]]")
+# A quotation at the head of a paragraph, and a short first sentence.
+LEAD_QUOTE = re.compile(r'^[“"](.{2,400}?)[”"][,.;:]?\s+')
+LEAD_SENTENCE = re.compile(r"^([^.?!]{1,200}[.?!])\s+")
+WORD = re.compile(r"[a-z]+")
+
+
+def lemma_words(lib, c):
+    """The words of the verses an excerpt comments on, and of its heading."""
+    b, ch, v = ref_parts(c["start"])
+    _, ech, ev = ref_parts(c["end"])
+    plain = lib.plain(b, ch)
+    last = ev if ech == ch else max(plain, default=v)
+    text = " ".join(plain.get(x, "") for x in range(v, last + 1)) + " " + (c.get("heading") or "")
+    return set(WORD.findall(text.lower()))
+
+
+def is_lemma(words, text, share=.7):
+    """Whether a stretch of an excerpt only gives the verse: most of its
+    words are the verse's own."""
+    w = WORD.findall(text.lower())
+    return bool(w) and sum(x in words for x in w) >= share * len(w)
+
+
+def lead_of(lib, c):
+    """(text, whose) a card quotes from an excerpt, or None when nothing in
+    it reads as the commentator speaking. Paragraphs that only give the verse
+    or a heading are passed over, a verse quoted or named at the head of a
+    paragraph is left off, and a paragraph the scan breaks into mid-sentence
+    is not used. Every word is the source's: only where it starts changes."""
+    words = lemma_words(lib, c)
+    paras = [p.strip() for p in c["text"].split("\n\n") if p.strip()]
+    for i, p in enumerate(paras):
+        if i == 0 and len(paras) > 1 and len(p.split()) < 30:
+            continue                                   # the verse or a heading over the comment
+        text, who = card_lead(p)
+        text = LEAD_SCAN.sub("", text, count=1)
+        whole = LEAD_QUOTE.match(text + " ")
+        if whole and whole.end() >= len(text):
+            continue                                   # the paragraph is one quotation: the verse
+        m = LEAD_QUOTE.match(text)
+        if m and is_lemma(words, m[1]):
+            rest = text[m.end():].lstrip("—–- ")
+            if rest[:1].isupper() or rest[:1] in "“\"":
+                text = rest
+        m = LEAD_SENTENCE.match(text)
+        if m and len(m[1].split()) <= 30 and is_lemma(words, m[1], .8):
+            rest = text[m.end():].lstrip("—–- ")
+            if rest[:1].isupper() or rest[:1] in "“\"":
+                text = rest
+        if len(text.split()) < 8 or LEAD_BROKEN.match(text):
+            continue
+        return text, who
+    return None
+
+
+def first_lead(lib, comments, tries=40):
+    """The first excerpt of comments with a lead (see lead_of), as
+    (excerpt, text, whose); the first excerpt as it stands if none has."""
+    for c in comments[:tries]:
+        lead = lead_of(lib, c)
+        if lead:
+            return (c, *lead)
+    if not comments:
+        return None
+    c = comments[0]
+    paras = [p for p in c["text"].split("\n\n") if p.strip()]
+    return (c, *card_lead(paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0]))
+
+
+def card_snippet(text, words=22):
+    """A lead's first words, the cut made clean: no comma or dash before the
+    ellipsis ("earth,…" reads "earth…")."""
+    out = snippet(text, words)
+    return out[:-1].rstrip(",;:—–- ") + "…" if out.endswith("…") else out
+
+
 def name_initials(a):
-    """"JC" for John Chrysostom: the first and last capitals of a name."""
+    """The two letters on a commentator's round mark: their monogram (see
+    monograms), or "JC" for John Chrysostom, the first and last capitals of
+    the name, for anyone without one."""
+    if a.get("mono"):
+        return a["mono"]
     caps = "".join(w[0] for w in a["name"].replace(".", " ").split() if w[0].isupper())
     return caps[0] + caps[-1] if len(caps) > 1 else caps
 
 
-# The verse the commentators page hears every voice on: the opening of John,
-# where most of them begin.
+def monograms(lib):
+    """{author: two letters}, from the name each is known by ("Ba" for Basil,
+    "Ca" for Calvin), no two alike: in the order they lived, a later one whose
+    first two letters are taken pairs the first with the next free letter
+    ("Bl" for Bellarmine after Bernard's "Be")."""
+    out, taken = {}, set()
+    for a in lib.ordered_authors():
+        name = short_name(a)
+        mono = next((name[0] + x.lower() for x in name[1:] if x.isalpha() and name[0] + x.lower() not in taken), None)
+        if mono:
+            out[a["id"]] = mono
+            taken.add(mono)
+    return out
+
+
+# The verse the commentators page hears every voice on first: the opening
+# of John, where most of them begin. The page offers others (voice_verses).
 VOICES_VERSE = "JHN.1.1"
 
 
-def one_verse(lib, ref=VOICES_VERSE):
+def one_verse(lib, ref=VOICES_VERSE, hid="ov-h"):
     """Every commentator on one verse, in the order they lived: the first
     words of the excerpt that comments most closely on it, linked to the
     whole excerpt, and a link to read them side by side in the reader."""
+    rows = heard_on(lib, ref)
+    if len(rows) < 2:
+        return ""
+    book, chapter, verse = ref_parts(ref)
+    label = f'{lib.books[book]["en"]} {chapter}:{verse}'
+    text = plain_verses(lib.bible(book, chapter)).get(verse, "")
+    href = chapter_url(book, chapter) + f"#v{verse}"
+    return (f'<h2 id="{hid}">{e(t("commentators.one_verse", n=len(rows), ref=label))}</h2>'
+            f'<p class="lg-quiet">{e(t("commentators.one_verse_note"))}</p>'
+            f'<blockquote class="lg-ov-verse"><p>{e(text)}</p></blockquote><ol class="lg-ov-list">{"".join(rows.values())}</ol>'
+            f'<p><a class="lg-more" href="{href}">{e(t("commentators.one_verse_all", ref=label))} {icon("arrow", 15)}</a></p>')
+
+
+def heard_on(lib, ref):
+    """{author: their row} for one_verse: each commentator on ref."""
     book, chapter, verse = ref_parts(ref)
     if (book, chapter) not in lib.chapters:
-        return ""
-    rows = []
+        return {}
+    rows = {}
     for a in lib.ordered_authors():
         works = {w for w, x in lib.works.items() if x["author"] == a["id"]}
         c = first_on(lib, works, ref)
         if not c:
             continue
-        paras = [p for p in c["text"].split("\n\n") if p.strip()]
-        lead, quoted = card_lead(paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0])
+        lead = lead_of(lib, c)
+        if not lead:
+            paras = [p for p in c["text"].split("\n\n") if p.strip()]
+            lead = card_lead(paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0])
+        lead, quoted = lead
         who = f' <span class="lg-ov-quoted">{e(t("commentators.quoted", name=quoted, author=short_name(a)))}</span>' if quoted else ""
-        rows.append(f'<li class="lg-era-{ERAS.index(a["era"])}"><p class="lg-ov-who"><a href="/commentators/{a["id"]}/">'
-                    f'<b>{e(a["name"])}</b></a> <span>{e(a["dates"])}</span></p>'
-                    f'<p class="lg-ov-text"><a href="{excerpt_href(lib, c)}">{in_quotes(snippet(lead, 30))}</a>{who}</p></li>')
-    if len(rows) < 2:
+        rows[a["id"]] = (f'<li class="lg-era-{ERAS.index(a["era"])}"><p class="lg-ov-who"><a href="/commentators/{a["id"]}/">'
+                         f'<b>{e(a["name"])}</b></a> <span>{e(a["dates"])}</span></p>'
+                         f'<p class="lg-ov-text"><a href="{excerpt_href(lib, c)}">{in_quotes(card_snippet(lead, 30))}</a>{who}</p></li>')
+    return rows
+
+
+def voice_verses(lib, most=6):
+    """The verses the commentators page offers to hear every voice on: John
+    1:1 first, then, from the first verse of each book in the library, the
+    one that brings in the most commentators not yet heard, until each is
+    heard once or there are most of them; in Bible order."""
+    canon = list(lib.books)
+    firsts = [f"{b}.1.1" for b in canon if (b, 1) in lib.chapters]
+    heard, picked = {}, []
+    for ref in [VOICES_VERSE] + firsts:
+        if ref not in heard:
+            heard[ref] = set(heard_on(lib, ref))
+    picked.append(VOICES_VERSE)
+    have = set(heard[VOICES_VERSE])
+    while len(picked) < most:
+        ref = max((r for r in firsts if r not in picked and len(heard[r]) >= 2),
+                  key=lambda r: (len(heard[r] - have), len(heard[r])), default=None)
+        if not ref or not heard[ref] - have:
+            break
+        picked.append(ref)
+        have |= heard[ref]
+    return sorted(picked, key=lambda r: (canon.index(ref_parts(r)[0]), ref_parts(r)[1], ref_parts(r)[2]))
+
+
+def voices_section(lib):
+    """one_verse for each of voice_verses, as tabs (one after another without
+    script), John 1:1 open first."""
+    refs = [r for r in voice_verses(lib) if heard_on(lib, r)]
+    if not refs:
         return ""
-    label = f'{lib.books[book]["en"]} {chapter}:{verse}'
-    text = plain_verses(lib.bible(book, chapter)).get(verse, "")
-    href = chapter_url(book, chapter) + f"#v{verse}"
-    return (f'<section class="lg-block lg-ov" aria-labelledby="ov-h"><h2 id="ov-h">{e(t("commentators.one_verse", n=len(rows), ref=label))}</h2>'
-            f'<p class="lg-quiet">{e(t("commentators.one_verse_note"))}</p>'
-            f'<blockquote class="lg-ov-verse"><p>{e(text)}</p></blockquote><ol class="lg-ov-list">{"".join(rows)}</ol>'
-            f'<p><a class="lg-more" href="{href}">{e(t("commentators.one_verse_all", ref=label))} {icon("arrow", 15)}</a></p></section>')
+    if len(refs) == 1:
+        return f'<section class="lg-block lg-ov" aria-labelledby="ov-h">{one_verse(lib, refs[0])}</section>'
+    tabs, panels = "", ""
+    for ref in refs:
+        b, ch, v = ref_parts(ref)
+        key = ref.lower().replace(".", "-")
+        on = ref == VOICES_VERSE
+        tabs += (f'<button type="button" role="tab" id="tab-{key}" aria-controls="ov-{key}" aria-selected="{"true" if on else "false"}">'
+                 f'{e(lib.books[b]["en"])} {ch}:{v}</button>')
+        panels += f'<div id="ov-{key}" role="tabpanel" aria-labelledby="tab-{key}">{one_verse(lib, ref, "ovh-" + key)}</div>'
+    return (f'<section class="lg-block lg-ov" aria-label="{e(t("commentators.voices_label"))}">'
+            f'<div class="lg-tabs lg-ov-tabs" role="tablist" aria-label="{e(t("commentators.voices_label"))}" hidden>{tabs}</div>{panels}</section>')
+
+
+def bio_line(author, most=16):
+    """The first clause of a commentator's biography, for a card: up to the
+    first full stop or semicolon, and if that is long, to the last comma
+    within most words ("Bishop of Caesarea in Cappadocia from 370")."""
+    text = (author.get("bio") or "").split("\n\n")[0]
+    text = re.split(r";\s|(?<![A-Z])(?<!\bSt)(?<!\bc)\.\s+(?=[A-Z])", text + " ", maxsplit=1)[0].strip().rstrip(".")
+    words = text.split()
+    if len(words) > most:
+        head = " ".join(words[:most])
+        cut = head.rfind(",")
+        text = head[:cut] if cut > 20 else head.rstrip(",;:") + "…"
+    return text
+
+
+def tradition_tag(tradition):
+    """A tradition as a tag, the part in brackets lighter:
+    "Roman Catholic (Jesuit)" -> Roman Catholic <span>Jesuit</span>."""
+    m = re.match(r"^(.*?) \((.*)\)$", tradition)
+    inner = f'{e(m[1])} <span>{e(m[2])}</span>' if m else e(tradition)
+    return f'<span class="lg-trad" title="{e(tradition)}">{inner}</span>'
+
+
+# The commentators the page suggests to a newcomer, one from the early
+# church, one Catholic and one Protestant: an editor's choice, to change here.
+FIRST_VOICES = (("chrysostom", "early"), ("haydock", "catholic"), ("henry", "protestant"))
+
+
+def book_list(lib, books):
+    """"John, Matthew, Romans and Hebrews": books in Bible order, in words."""
+    names = [lib.books[b]["en"] for b in sorted(books, key=list(lib.books).index)]
+    return names[0] if len(names) == 1 else t("commentators.and_list", first=", ".join(names[:-1]), last=names[-1])
+
+
+def card_size(words, n):
+    """How much of a commentator there is: excerpts and words, then the hours
+    it takes to read them all at 200 words a minute and, when that is long,
+    the minutes a day that would read them in a year."""
+    hours = words / 200 / 60
+    size = t("commentators.size", n=f"{n:,}", words=f"{round(words, -3):,}")
+    if hours < .75:
+        time = t("commentators.hours_less")
+    else:
+        time = t("commentators.hours", n=round(hours))
+        if hours >= 50:                     # ten minutes a day or more
+            time += " · " + t("commentators.pace", n=round(hours * 60 / 365))
+    return (f'<span class="lg-size">{e(size)}</span>'
+            f'<span class="lg-size">{e(time)}</span>')
 
 
 def commentators_page(lib):
     # Each commentator as a card in one grid: their initials in their era's
-    # colour, dates and tradition, the first words of their first excerpt,
-    # the language they wrote in, and how much of each book they cover.
+    # colour, dates and tradition, who they were, where they sit in history,
+    # the first words of their first excerpt, the language they wrote in,
+    # how much of them there is and how much of each book they cover.
     verses = {}
     for c in lib.comments:
         b, ch, v = ref_parts(c["start"])
@@ -3033,54 +3608,186 @@ def commentators_page(lib):
                 verses.setdefault(lib.works[c["work"]]["author"], {}).setdefault(b, set()).add((ch, x))
     book_verses = {b: sum(len(lib.verses(b, ch)) for bb, ch in lib.chapters if bb == b) for b, _c in lib.coverage()}
     canon = list(lib.books)
-    cards = []
+    lo, hi, _fold, _pos = timeline_scale(lib)
+    cards, seen_era, leads = [], set(), {}
     for a in lib.ordered_authors():
+        era = ERAS.index(a["era"])
         mine = sorted((c for c in lib.comments if lib.works[c["work"]]["author"] == a["id"]), key=order_key)
         works = lib.ordered_works({c["work"] for c in mine})
-        first = mine[0] if mine else None
-        quote = ""
-        if first:
-            paras = [p for p in first["text"].split("\n\n") if p.strip()]
-            lead, quoted = card_lead(paras[1] if len(paras) > 1 and len(paras[0].split()) < 30 else paras[0])
-            on = t("commentators.on", ref=scripture.label(first["start"], first["end"]))
-            if quoted:
-                on = t("commentators.quoted", name=quoted, author=short_name(a)) + " · " + on
-            quote = f'<p class="lg-pq">{in_quotes(snippet(lead, 22))} <span>{e(on)}</span></p>'
-        cov = "".join(
-            f'<span class="lg-cov"><span class="lg-meter"><span style="width:{100 * len(vs) / book_verses[b]:.0f}%"></span></span>'
-            f'{e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=book_verses[b]))}</span>'
-            for b, vs in sorted(verses.get(a["id"], {}).items(), key=lambda x: canon.index(x[0])))
-        # How much of them there is: excerpts, words (to the thousand) and the
-        # hours it would take to read them all, at reading_minutes' pace.
+        mybooks = sorted(verses.get(a["id"], {}), key=canon.index)
+
+        # The quotation: from the first excerpt that reads as them speaking,
+        # and for each book, from that book (shown when a reader picks it).
+        def quote(comments, book="", a=a):
+            got = first_lead(lib, comments)
+            if not got:
+                return "", None
+            c, lead, quoted = got
+            on = t("commentators.on", ref=scripture.label(c["start"], c["end"]))
+            who = (f'<span class="lg-pq-who">{e(t("commentators.quoted", name=quoted, author=short_name(a)))}</span>'
+                   if quoted else "")
+            return (f'<figure class="lg-pq" data-book="{book}"{" hidden" if book else ""}>'
+                    f'<blockquote><p>{e(card_snippet(lead))}</p></blockquote>'
+                    f'<figcaption>{who}<span>{e(on)}</span></figcaption></figure>'), c
+        main, first = quote(mine)
+        leads[a["id"]] = first
+        alt = "".join(quote([c for c in mine if c["start"].startswith(b + ".")], b)[0]
+                      for b in mybooks if len(mybooks) > 1)
+        # Coverage of each book: the three it covers most, in Bible order,
+        # then the rest behind "+n more books". Each names the book, links to
+        # its map on their page, and to read them on it from the start.
+        first_in = {}
+        for c in mine:
+            first_in.setdefault(ref_parts(c["start"])[0], c)
+        rows = {}
+        for b in mybooks:
+            n, total = len(verses[a["id"]][b]), book_verses[b]
+            text = (t("commentators.coverage_all", book="{book}") if n == total
+                    else t("commentators.coverage", book="{book}", n=f"{n:,}", total=f"{total:,}"))
+            text = e(text).replace("{book}", f'<a href="/commentators/{a["id"]}/#map-{b.lower()}">{e(lib.books[b]["en"])}</a>')
+            fc = first_in[b]
+            read = work_chapter_url(fc["work"], b, ref_parts(fc["start"])[1])
+            rows[b] = (f'<li class="lg-cov{" lg-cov-all" if n == total else ""}" data-book="{b}">'
+                       f'<span class="lg-meter"><span style="width:{100 * n / total:.0f}%"></span></span>'
+                       f'<span class="lg-cov-line"><span>{text}</span>'
+                       f'<a class="lg-cov-read" href="{read}" aria-label="{e(t("commentators.read_book", name=short_name(a), book=lib.books[b]["en"]))}">'
+                       f'{e(t("commentators.read_short"))}</a></span></li>')
+        top = sorted(sorted(mybooks, key=lambda b: -len(verses[a["id"]][b]) / book_verses[b])[:3], key=canon.index)
+        rest = [b for b in mybooks if b not in top]
+        cov = f'<ul class="lg-covs">{"".join(rows[b] for b in top)}</ul>' if top else ""
+        if rest:
+            cov += (f'<details class="lg-cov-more"><summary>{e(t("commentators.more_books", n=len(rest)))}'
+                    f'<span> · {e(book_list(lib, rest))}</span></summary><ul class="lg-covs">{"".join(rows[b] for b in rest)}</ul></details>')
         words = sum(len(c["text"].split()) for c in mine)
-        size = (f'<span class="lg-size">{e(t("commentators.size", n=f"{len(mine):,}", words=f"{round(words, -3):,}", hours=f"{round(words / 200 / 60):,}"))}</span>'
-                if mine else "")
+        size = card_size(words, len(mine)) if mine else ""
         langs = " · ".join(dict.fromkeys(lib.works[w]["original_language"] for w in works))
-        initials = name_initials(a)
+        b0, d0 = born(a), a["died"]
+        when = (f'<span class="lg-when" aria-hidden="true" style="--l:{(b0 - lo) / (hi - lo) * 100:.2f};'
+                f'--w:{max((d0 - b0) / (hi - lo) * 100, 1):.2f}"></span>')
+        bio = bio_line(a)
+        star = (f' <a class="lg-ai-dot" href="/ai/" title="{e(t("ai.mark_draft_title"))}" aria-label="{e(t("ai.mark_draft"))}">{AI_DRAFT}</a>'
+                if a.get("bio_status") == "ai_draft" else "")
+        bio = f'<p class="lg-card-bio">{e(bio)}{star}</p>' if bio else ""
+        go = ""
+        if first:
+            ref = scripture.label(first["start"], first["end"])
+            go = (f'<a class="lg-card-go" href="{excerpt_href(lib, first)}">'
+                  f'{e(t("commentators.read_on", name=short_name(a), ref=ref))} {icon("arrow", 15)}</a>')
+        books_short = (lib.books[mybooks[0]]["en"] if len(mybooks) == 1
+                       else t("commentators.n_books", n=len(mybooks)))
+        anchor = f' id="era-{ERA_SLUGS[a["era"]]}"' if a["era"] not in seen_era else ""
+        seen_era.add(a["era"])
+        names = " ".join(dict.fromkeys([a["name"], short_name(a), a["id"]] + a.get("aliases", [])))
         cards.append(
-            f'<li data-author="{a["id"]}" data-books="{" ".join(sorted(verses.get(a["id"], {})))}"><a class="lg-person lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/">'
-            f'<span class="lg-mono" aria-hidden="true">{e(initials)}</span>'
-            f'<span><span class="lg-era-name">{e(t("eras." + a["era"]))}</span><b>{e(a["name"])}</b>'
-            f'<span class="lg-dates">{e(a["dates"])} · {e(a["tradition"])}</span>{quote}'
-            f'<span class="lg-meta">{e(t("commentators.wrote_in", lang=langs))}</span>{size}{cov}</span></a></li>')
-    # A row of book chips (shown by web/logia.js) that narrows the cards and
-    # dims the other lives on the timeline; every card is in the HTML.
+            f'<li{anchor} class="lg-cmt" data-author="{a["id"]}" data-era="{era}" data-books="{" ".join(mybooks)}" data-names="{e(names)}">'
+            f'<article class="lg-person lg-era-{era}">'
+            f'<span class="lg-mono" aria-hidden="true">{e(name_initials(a))}</span>'
+            f'<div class="lg-card-body"><span class="lg-era-name">{e(t("eras." + a["era"]))}</span>'
+            f'<h3 class="lg-card-name"><a href="/commentators/{a["id"]}/">{e(a["name"])}</a></h3>'
+            f'<span class="lg-dates">{e(a["dates"])}<span class="lg-card-books"> · {e(books_short)}</span></span>{when}'
+            f'{tradition_tag(a["tradition"])}'
+            f'<button type="button" class="lg-card-more" aria-expanded="false" hidden>'
+            f'<span class="sr-only">{e(t("commentators.card_more", name=a["name"]))}</span>{icon("chevron", 18)}</button>'
+            f'<div class="lg-card-detail">{bio}{main}{alt}'
+            f'<span class="lg-meta">{e(t("commentators.wrote_in", lang=langs))}</span>{size}{cov}{go}</div>'
+            f'</div></article></li>')
+
+    # The era strip a phone shows in place of the chart: each era's share of
+    # the commentators, linked to the first of its cards.
+    counts = {era: sum(a["era"] == era for a in lib.authors.values()) for era in ERAS}
+    strip = "".join(f'<span class="lg-era-{i}" style="flex:{counts[era]}"></span>' for i, era in enumerate(ERAS) if counts[era])
+    strip_links = "".join(f'<li class="lg-era-{i}"><a href="#era-{ERA_SLUGS[era]}">{e(t("eras." + era))} <b>{counts[era]}</b></a></li>'
+                          for i, era in enumerate(ERAS) if counts[era])
+    erastrip = (f'<nav class="lg-erastrip" aria-label="{e(t("commentators.eras_label"))}">'
+                f'<div class="lg-erastrip-bar" aria-hidden="true">{strip}</div><ul>{strip_links}</ul></nav>')
+
+    # Finding a voice: book chips (Old and New Testament), and a bar that
+    # stays at the top over the cards with the eras, a name box, the book and
+    # how many are shown (web/logia.js; every card is in the HTML).
     has = {a: set(bs) for a, bs in verses.items()}
     books = [b for b in lib.books if any(b in bs for bs in has.values())]
-    chips = "".join(f'<button type="button" aria-pressed="false" data-book="{b}">{e(lib.books[b]["en"])} '
-                    f'<span class="lg-chip-n">{sum(b in bs for bs in has.values())}</span></button>' for b in books)
+
+    def chip(b):
+        return (f'<button type="button" aria-pressed="false" data-book="{b}">{e(lib.books[b]["en"])} '
+                f'<span class="lg-chip-n">{sum(b in bs for bs in has.values())}</span></button>')
+    groups = ""
+    for name, part in (("old", [b for b in books if canon.index(b) < OT_BOOKS]), ("new", [b for b in books if canon.index(b) >= OT_BOOKS])):
+        if part:
+            groups += (f'<div class="lg-pick-group" role="group" aria-label="{e(t("testaments." + name))}">'
+                       f'<span class="lg-pick-label">{e(t("testaments." + name))}</span><div class="lg-pick-row">{"".join(chip(b) for b in part)}</div></div>')
     pick = (f'<div class="lg-pick" role="group" aria-label="{e(t("commentators.filter_label"))}" hidden>'
-            f'<span class="lg-pick-label">{e(t("commentators.filter_label"))}</span>'
+            f'<div class="lg-pick-head"><span class="lg-pick-label">{e(t("commentators.filter_label"))}</span>'
             f'<button type="button" aria-pressed="true" data-book="">{e(t("commentators.filter_all"))} '
-            f'<span class="lg-chip-n">{len(lib.authors)}</span></button>{chips}</div>' if len(books) > 1 else "")
-    sections = f'<section class="lg-block">{pick}<ul class="lg-grid lg-people-grid">{"".join(cards)}</ul></section>'
+            f'<span class="lg-chip-n">{len(lib.authors)}</span></button></div>{groups}</div>' if len(books) > 1 else "")
+    eras = "".join(f'<button type="button" class="lg-era-{i}" aria-pressed="false" data-era="{i}">{e(t("eras_short." + era))}</button>'
+                   for i, era in enumerate(ERAS) if counts[era])
+    options = "".join(f'<option value="{b}">{e(lib.books[b]["en"])}</option>' for b in books)
+    bar = (f'<div class="lg-findbar" hidden><div class="lg-findbar-eras" role="group" aria-label="{e(t("commentators.eras_label"))}">{eras}</div>'
+           f'<label class="lg-findbar-name"><span class="sr-only">{e(t("commentators.find_label"))}</span>'
+           f'<input type="search" placeholder="{e(t("commentators.find_label"))}" autocomplete="off"></label>'
+           f'<label class="lg-findbar-book"><span class="sr-only">{e(t("commentators.filter_label"))}</span>'
+           f'<select><option value="">{e(t("commentators.filter_all"))}</option>{options}</select></label>'
+           f'<span class="lg-findbar-count" aria-live="polite" data-of="{e(t("commentators.showing"))}"></span>'
+           f'<button type="button" class="lg-findbar-reset" hidden>{e(t("commentators.show_all"))}</button></div>')
+    none = f'<p class="lg-findnone lg-quiet" hidden>{e(t("commentators.find_none"))}</p>'
+    sections = (f'<section class="lg-block lg-cmtcards" id="cards" aria-label="{e(t("commentators.cards_label"))}">{pick}{bar}'
+                f'<ul class="lg-grid lg-people-grid">{"".join(cards)}</ul>{none}</section>')
+
+    # Three places to start, for a newcomer.
+    starts = ""
+    for aid, kind in FIRST_VOICES:
+        a, c = lib.authors.get(aid), leads.get(aid)
+        if not a or not c:
+            continue
+        mybooks = verses.get(aid, {})
+        starts += (f'<li class="lg-era-{ERAS.index(a["era"])}"><span class="lg-era-name">{e(t("commentators.new_kind." + kind))}</span>'
+                   f'<a class="lg-new-name" href="/commentators/{aid}/">{e(a["name"])}</a>'
+                   f'<span class="lg-new-why">{e(t("commentators.new_why." + aid))}</span>'
+                   f'<span class="lg-quiet">{e(t("commentators.on", ref=book_list(lib, mybooks)))}</span>'
+                   f'<a class="lg-more" href="{excerpt_href(lib, c)}">{e(t("commentators.read_on", name=short_name(a), ref=scripture.label(c["start"], c["end"])))} {icon("arrow", 15)}</a></li>')
+    new_here = (f'<section class="lg-block lg-new" aria-labelledby="new-h"><h2 id="new-h">{e(t("commentators.new_title"))}</h2>'
+                f'<p class="lg-quiet">{e(t("commentators.new_note"))}</p><ul class="lg-new-list">{starts}</ul></section>' if starts else "")
+
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("commentators.title"))}</p>
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
-{timeline(lib)}
+{erastrip}
+{timeline(lib, landmarks=True, strip=True)}
+{new_here}
 {sections}
-{one_verse(lib)}"""
+{coverage_grid(lib, verses, book_verses)}
+{voices_section(lib)}"""
     return page(lib, t("commentators.title"), body, "/commentators/", current="/commentators/")
+
+
+def coverage_grid(lib, verses, book_verses):
+    """Who covers what: a row for each commentator and a column for each
+    book, each square shaded by the share of the book's verses they comment
+    on and linked to the map of it on their page."""
+    canon = list(lib.books)
+    books = sorted({b for bs in verses.values() for b in bs}, key=canon.index)
+    if len(books) < 2:
+        return ""
+    short = CATALOG["commentators"]["book_short"]
+    head = "".join(f'<th scope="col" title="{e(lib.books[b]["en"])}"><abbr title="{e(lib.books[b]["en"])}">{e(short.get(b, lib.books[b]["en"][:4]))}</abbr></th>'
+                   for b in books)
+    rows = ""
+    for a in lib.ordered_authors():
+        mine = verses.get(a["id"], {})
+        if not mine:
+            continue
+        cells = ""
+        for b in books:
+            n, total = len(mine.get(b, ())), book_verses[b]
+            label = t("commentators.grid_cell", name=short_name(a), book=lib.books[b]["en"], n=f"{n:,}", total=f"{total:,}")
+            cells += (f'<td><a href="/commentators/{a["id"]}/#map-{b.lower()}" title="{e(label)}" aria-label="{e(label)}" '
+                      f'style="--n:{20 + 80 * n / total:.0f}%"></a></td>' if n
+                      else f'<td><span title="{e(t("commentators.grid_none", name=short_name(a), book=lib.books[b]["en"]))}"></span></td>')
+        rows += f'<tr class="lg-era-{ERAS.index(a["era"])}"><th scope="row"><a href="/commentators/{a["id"]}/">{e(short_name(a))}</a></th>{cells}</tr>'
+    return (f'<section class="lg-block" aria-labelledby="grid-h"><h2 id="grid-h">{e(t("commentators.grid_title"))}</h2>'
+            f'<p class="lg-quiet">{e(t("commentators.grid_note"))}</p>'
+            f'<figure class="lg-map lg-covgrid"><div class="lg-map-scroll"><table><thead><tr><td></td>{head}</tr></thead>'
+            f'<tbody>{rows}</tbody></table></div></figure></section>')
 
 
 def reading_minutes(text):
@@ -3088,39 +3795,70 @@ def reading_minutes(text):
     return max(1, round(len(text.split()) / 200))
 
 
-def excerpt_list(lib, comments, show_work=False):
-    """Excerpts grouped by chapter, each chapter closed but the first, with a
-    bar of the chapters above them, each shaded by how much is said on it:
-    one row per verse or range, the verse as the Open Word Bible has it, the
-    excerpt's first words, where it sits in its work, and links to read it."""
+def excerpt_list(lib, comments, show_work=False, tools=""):
+    """Excerpts grouped by book and chapter, each chapter closed but the
+    first. Above them, a toolbar (the go-to-verse box and a switch that opens
+    or closes every chapter) and a map of the chapters, a row of numbers for
+    each book, each shaded by how much is said on it. Each chapter: its
+    passages and reading time, then one row per verse or range (the verse as
+    the Open Word Bible has it, the excerpt's first words, where it sits in
+    its work, a link to read it, and any more passages on the same verses
+    folded away), and links to the chapters before and after it."""
     out, rows = [], {}
     for c in comments:
         b, ch, v = ref_parts(c["start"])
         _, ech, ev = ref_parts(c["end"])
-        rows.setdefault((b, ch), {}).setdefault((v, ech, ev, c["work"] if show_work else ""), []).append(c)
+        rows.setdefault((b, ch), {}).setdefault((v, ech, ev), []).append(c)
     words = {k: sum(len(c["text"].split()) for cs in g.values() for c in cs) for k, g in rows.items()}
     most = max(words.values(), default=1)
-    several = len({x for x, _y in rows}) > 1
-    bar = "".join(f'<a href="#ch-{b.lower()}-{ch}" data-book="{b}" style="--depth:{8 + 32 * words[(b, ch)] / most:.0f}%" '
-                  f'title="{e(t("commentators.chapter_words", chapter=lib.books[b]["en"] + f" {ch}", n=f"{words[(b, ch)]:,}"))}">'
-                  f'{e(lib.books[b]["en"]) + " " if several else ""}{ch}</a>'
-                  for b, ch in rows)
-    out.append(f'<nav class="lg-chbar lg-chbar-depth" aria-label="{e(t("commentators.chapters"))}">{bar}</nav>')
-    for n, ((b, ch), group) in enumerate(rows.items()):
-        name = f'{lib.books[b]["en"]} {ch}'
+    books = list(dict.fromkeys(b for b, _ch in rows))
+    several = len(books) > 1
+    keys = list(rows)
+
+    def chname(b, ch):
+        return f'{lib.books[b]["en"]} {ch}'
+
+    # The map of chapters: per book, its name and a grid of chapter numbers.
+    nav = []
+    for b in books:
+        cells = "".join(f'<a href="#ch-{b.lower()}-{ch}" style="--depth:{8 + 32 * words[(b, ch)] / most:.0f}%" '
+                        f'title="{e(t("commentators.chapter_words", chapter=chname(b, ch), n=f"{words[(b, ch)]:,}"))}" '
+                        f'aria-label="{e(chname(b, ch))}">{ch}</a>' for bb, ch in keys if bb == b)
+        n_ch = sum(1 for bb, _ch in keys if bb == b)
+        nav.append(f'<div class="lg-chnav-book" data-book="{b}"><p class="lg-chnav-name"><b>{e(lib.books[b]["en"])}</b>'
+                   f'<span class="lg-quiet">{e(t("commentators.n_chapters" if n_ch != 1 else "commentators.one_chapter", n=n_ch))}</span></p>'
+                   f'<div class="lg-chnav-cells">{cells}</div></div>')
+    toggle = (f'<button type="button" class="button ghost lg-ch-all" hidden data-open="{e(t("commentators.open_all"))}" '
+              f'data-close="{e(t("commentators.close_all"))}">{e(t("commentators.open_all"))}</button>')
+    out.append(f'<div class="lg-vv-tools">{tools}{toggle}</div>'
+               f'<nav class="lg-chnav" aria-label="{e(t("commentators.chapters"))}">{"".join(nav)}</nav>')
+
+    for i, ((b, ch), group) in enumerate(rows.items()):
+        if several and (i == 0 or keys[i - 1][0] != b):
+            if i:
+                out.append("</section>")
+            bworks = list(dict.fromkeys(c["work"] for (bb, _c), g in rows.items() if bb == b for cs in g.values() for c in cs))
+            titles = " · ".join(f'<a href="/works/{w}/"><i>{e(lib.works[w]["title"])}</i></a>' for w in bworks)
+            out.append(f'<section class="lg-vv-book" data-book="{b}"><h3 class="lg-vv-bookh">{e(lib.books[b]["en"])}'
+                       f'<span class="lg-quiet">{titles}</span></h3>')
+        name = chname(b, ch)
         passages = sum(len(cs) for cs in group.values())
-        works = {c["work"] for cs in group.values() for c in cs}
-        whole = (f'<p class="lg-chlink"><a href="{work_chapter_url(next(iter(works)), b, ch)}">'
+        minutes = sum(reading_minutes(c["text"]) for cs in group.values() for c in cs)
+        works = list(dict.fromkeys(c["work"] for cs in group.values() for c in cs))
+        whole = (f'<p class="lg-chlink"><a href="{work_chapter_url(works[0], b, ch)}">'
                  f'{e(t("commentators.in_order", chapter=name))} {icon("arrow", 15)}</a></p>' if len(works) == 1 else "")
-        out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}" data-book="{b}"{" open" if n == 0 else ""}><summary><b>{e(name)}</b>'
-                   f'<span class="lg-quiet">{e(t("commentators.passages", n=passages))}</span>{icon("chevron", 16, "icon lg-caret")}</summary>'
-                   f'{whole}<ul class="lg-excerpts">')
+        count = t("commentators.passages" if passages != 1 else "commentators.one_passage", n=passages)
+        out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}" data-book="{b}"{" open" if i == 0 else ""}><summary>'
+                   f'<span class="lg-ch-name"><b>{e(name)}</b><span class="lg-quiet">{e(count)} · {e(t("commentators.minutes", n=minutes))}</span></span>'
+                   f'<span class="lg-ch-depth" aria-hidden="true"><span style="width:{max(4, 100 * words[(b, ch)] / most):.0f}%"></span></span>'
+                   f'{icon("chevron", 16, "icon lg-caret")}</summary>'
+                   f'<div class="lg-ch-body">{whole}<ul class="lg-excerpts">')
         plain = lib.plain(b, ch)
-        for (v, ech, ev, work), cs in group.items():
+        for (v, ech, ev), cs in group.items():
             ref = f"{ch}:{v}" + (f"–{ev}" if (ech, ev) != (ch, v) else "") if ech == ch else f"{ch}:{v}–{ech}:{ev}"
-            more = f'<span class="lg-quiet">{e(t("commentators.passages", n=len(cs)))}</span>' if len(cs) > 1 else ""
-            title = f'<span class="lg-quiet">{e(lib.works[work]["title"])}</span>' if work else ""
             c = cs[0]
+            # The work's title only where a chapter draws on more than one.
+            title = f'<p class="lg-ex-work">{e(lib.works[c["work"]]["title"])}</p>' if show_work and len(works) > 1 else ""
             h = c["heading"]
             lead = re.sub(r"^\s*\d+\.\s*", "", c["text"]).lower()
             lemma = f'<i>{e(h)}</i> ' if h and not lead.startswith(h.lower().strip(" .")) else ""
@@ -3131,21 +3869,39 @@ def excerpt_list(lib, comments, show_work=False):
             meta = [e(locus_label(w, c["locus"]))] if c.get("locus") else []
             meta.append(e(t("commentators.minutes", n=reading_minutes(c["text"]))))
             if lib.in_full.get(c["id"]):
-                meta.append(f'<a href="{lib.in_full[c["id"]]}">{e(t("commentators.from_here", division=w["divisions"][0].lower()))}</a>')
+                go = f'<a class="lg-ex-go" href="{lib.in_full[c["id"]]}">{e(t("commentators.from_here", division=w["divisions"][0].lower()))} {icon("arrow", 14)}</a>'
             else:
-                meta.append(f'<a href="{excerpt_href(lib, c)}">{e(t("commentators.read_it"))}</a>')
+                go = f'<a class="lg-ex-go" href="{excerpt_href(lib, c)}">{e(t("commentators.read_it"))} {icon("arrow", 14)}</a>'
+            more = ""
+            if len(cs) > 1:
+                items = "".join(
+                    f'<li><a href="{excerpt_href(lib, o)}">{e(snippet(o["text"], 18))}</a>'
+                    f' <span class="lg-quiet">{e(t("commentators.minutes", n=reading_minutes(o["text"])))}</span></li>' for o in cs[1:])
+                more = (f'<details class="lg-ex-more"><summary>{e(t("commentators.more_on", n=len(cs) - 1, ref=ref))}</summary>'
+                        f'<ul>{items}</ul></details>')
             last = ev if ech == ch else max(lib.verses(b, ch))
             out.append(f'<li data-from="{v}" data-to="{last}"><p class="lg-ex-ref"><a href="{chapter_url(b, ch)}#v{v}" '
-                       f'title="{e(lib.books[b]["en"])} {e(ref)}"><b>{e(ref)}</b></a>{more}</p>'
-                       f'<div>{title}{verse}<p>{lemma}{e(snippet(c["text"]))}</p>'
-                       f'<p class="lg-ex-meta">{" · ".join(meta)}</p></div></li>')
-        out.append("</ul></details>")
+                       f'title="{e(lib.books[b]["en"])} {e(ref)}">{e(ref)}</a></p>'
+                       f'<div>{title}{verse}<p class="lg-ex-text">{lemma}{e(snippet(c["text"]))}</p>'
+                       f'<p class="lg-ex-meta">{" · ".join(meta)}{go}</p>{more}</div></li>')
+        prev = (f'<a class="lg-ch-prev" href="#ch-{keys[i - 1][0].lower()}-{keys[i - 1][1]}">{icon("back", 15)} '
+                f'{e(chname(*keys[i - 1]))}</a>' if i else "<span></span>")
+        nxt = (f'<a class="lg-ch-next" href="#ch-{keys[i + 1][0].lower()}-{keys[i + 1][1]}">{e(chname(*keys[i + 1]))} '
+               f'{icon("arrow", 15)}</a>' if i + 1 < len(keys) else "<span></span>")
+        out.append(f'</ul><nav class="lg-ch-steps" aria-label="{e(t("commentators.chapter_steps"))}">{prev}{nxt}</nav></div></details>')
+    if several and keys:
+        out.append("</section>")
     return "".join(out)
 
 
+
+BOOK_ORDER = {b: i for i, b in enumerate(scripture.BOOK_NAMES)}
+
+
 def order_key(c):
+    """Bible order: Proverbs before Ecclesiastes, not by book code."""
     b, ch, v = ref_parts(c["start"])
-    return (b, ch, v, c["id"])
+    return (BOOK_ORDER.get(b, len(BOOK_ORDER)), b, ch, v, c["id"])
 
 
 def missing_verses(lib, author, book, covered):
@@ -3192,7 +3948,7 @@ def coverage_map(lib, author, book, covered, works=None, link=None):
         # The chapters with a section below (where an excerpt starts) link to it.
         num = f'<a href="{link(ch)}">{ch}</a>' if ch in starts else f"<b>{ch}</b>"
         rows.append(f'<li>{num}<span>{cells}</span></li>')
-    return (f'<div class="lg-cov-map" data-book="{book}"><h3 class="label">{e(t("commentators.map", book=lib.books[book]["en"]))}</h3>'
+    return (f'<div class="lg-cov-map" data-book="{book}" id="map-{book.lower()}"><h3 class="label">{e(t("commentators.map", book=lib.books[book]["en"]))}</h3>'
             f'<ol>{"".join(rows)}</ol>{missing_verses(lib, author, book, covered)}</div>')
 
 
@@ -3241,8 +3997,10 @@ def quote_of(c, lo=12, hi=48):
 
 
 # Words left out of "words he uses more than the others": scan misreadings
-# and abbreviations that a count would otherwise pick up.
-NOT_WORDS = {"thai", "chap", "ver", "vers", "comp", "viz", "ibid"}
+# and abbreviations that a count would otherwise pick up, and the ends of
+# words a scan split at a line break ("judg- ment", "holi- ness").
+NOT_WORDS = {"thai", "chap", "ver", "vers", "comp", "viz", "ibid",
+             "ment", "ments", "ness", "nesses", "tion", "tions", "sion", "sions", "ance", "ence", "ings", "ible"}
 
 
 def spelling_key(w):
@@ -3346,6 +4104,11 @@ def neighbour_link(a, cls, key):
 def author_page(lib, author):
     works = lib.ordered_works([w for w, x in lib.works.items() if x["author"] == author["id"]])
     comments = sorted((c for c in lib.comments if c["work"] in works), key=order_key)
+    # Their works in Bible order of the first verse each comments on.
+    first_at = {}
+    for i, c in enumerate(comments):
+        first_at.setdefault(c["work"], i)
+    works = sorted(works, key=lambda w: first_at.get(w, len(comments)))
     name, short = author["name"], short_name(author)
     aid = author["id"]
     bio = "".join(f"<p>{e(p)}</p>" for p in author["bio"].split("\n\n"))
@@ -3395,7 +4158,7 @@ def author_page(lib, author):
         wcov = author_covered(lib, mine)
         meters = "".join(
             f'<span class="lg-meter" aria-hidden="true"><span style="width:{100 * len(vs) / totals[b]:.0f}%"></span></span>'
-            f'<span class="lg-quiet">{e(t("commentators.coverage", book=lib.books[b]["en"], n=len(vs), total=totals[b]))}</span>'
+            f'<span class="lg-quiet">{e(t("commentators.coverage", book=lib.books[b]["en"], n=f"{len(vs):,}", total=f"{totals[b]:,}"))}</span>'
             for b, vs in wcov.items())
         go = ""
         if mine:
@@ -3404,7 +4167,7 @@ def author_page(lib, author):
                   f'{e(t("commentators.read_from", chapter=lib.books[b]["en"] + f" {ch}"))}</a>')
         label = " · ".join(lib.books[b]["en"] for b in wcov)
         cards.append(f'<li><p class="lg-wk-book">{e(label)}</p><a class="lg-wk-title" href="/works/{w}/"><i>{e(x["title"])}</i></a>'
-                     + (f'<span class="lg-quiet">{e(short_edition(x["edition"]))}</span>' if x["edition"] else "")
+                     + (f'<span class="lg-quiet">{e(card_edition(x, name))}</span>' if x["edition"] else "")
                      + f'{meters}{go}</li>')
     # Lay the cards on a six-column grid so every row is full: three to a row
     # (span 2) or two (span 3), with the last row or two widened so no card
@@ -3528,7 +4291,7 @@ def author_page(lib, author):
             f'<button type="submit" class="button ghost">{e(t("commentators.jump_go"))}</button>'
             f'<span class="lg-quiet" id="jump-{aid}-hint" role="status">{e(t("commentators.jump_hint", example=example))}</span></form>'
             if first else "")
-    by_verse = excerpt_list(lib, comments, show_work=len(works) > 1)
+    by_verse = excerpt_list(lib, comments, show_work=len(works) > 1, tools=jump)
     if wholes:
         division = lib.works[wholes[0]]["divisions"][0].lower()
         lists = "".join((f'<h3 class="label">{e(lib.works[w]["title"])}</h3>' if len(wholes) > 1 else "")
@@ -3537,12 +4300,12 @@ def author_page(lib, author):
                 f'<button type="button" role="tab" id="tab-{aid}-v" aria-controls="by-verse" aria-selected="true">{e(t("commentators.by_verse"))}</button>'
                 f'<button type="button" role="tab" id="tab-{aid}-w" aria-controls="by-whole" aria-selected="false">'
                 f'{e(t("commentators.by_division", division=division))}</button></div>')
-        says = (f'{tabs}<div id="by-verse" role="tabpanel" aria-labelledby="tab-{aid}-v">{jump}{by_verse}</div>'
+        says = (f'{tabs}<div id="by-verse" role="tabpanel" aria-labelledby="tab-{aid}-v">{by_verse}</div>'
                 f'<div id="by-whole" role="tabpanel" aria-labelledby="tab-{aid}-w">'
                 f'<h3 class="lg-tab-title">{e(t("commentators.by_division", division=division))}</h3>'
                 f'<p class="lg-quiet">{e(t("commentators.whole_note", division=division))}</p>{lists}</div>')
     else:
-        says = jump + by_verse
+        says = by_verse
 
     # The shape of the work: what it covers, the Scripture it cites, where it
     # says the most, and the words it uses more than the others.
@@ -3713,7 +4476,7 @@ def cite_edition(w):
 
 # The formats the citation box gives a work in: (key, the text with the
 # title in italics, as HTML). The copied text is the same without the tags.
-CITE_FORMATS = ("chicago", "mla", "bibtex")
+CITE_FORMATS = ("chicago", "mla", "bibtex", "ris")
 
 
 def cite_box(a, w, wid):
@@ -3728,10 +4491,13 @@ def cite_box(a, w, wid):
         "mla": t("work.cite_mla", name=e(a["name"]), title=f"<i>{title}</i>", edition=e(edition), year=w["published"], url=url[len("https://"):]),
         "bibtex": (f'@book{{{wid.replace("-", "_")},\n  author = {{{e(a["name"])}}},\n  title = {{{title}}},\n'
                    f'  note = {{{e(edition)}}},\n  year = {{{w["published"]}}},\n  url = {{{url}}}\n}}'),
+        # RIS, which Zotero, EndNote and Mendeley import.
+        "ris": (f'TY  - BOOK\nAU  - {e(a["name"])}\nTI  - {title}\nPY  - {w["published"]}\n'
+                f'N1  - {e(edition)}\nUR  - {url}\nER  - '),
     }
     rows = "".join(
         f'<div class="lg-cite-row"><p class="lg-cite-label">{e(t("work.cite_" + k + "_label"))}</p>'
-        + (f'<pre class="lg-cite-text lg-cite-code">{v}</pre>' if k == "bibtex" else f'<p class="lg-cite-text">{v}</p>')
+        + (f'<pre class="lg-cite-text lg-cite-code">{v}</pre>' if k in ("bibtex", "ris") else f'<p class="lg-cite-text">{v}</p>')
         + f'<button type="button" class="button ghost lg-copy" data-copy="{e(html.unescape(re.sub(r"<[^>]+>", "", v)))}" '
         f'data-done="{e(t("work.cite_copied"))}" aria-label="{e(t("work.cite_copy_as", style=t("work.cite_" + k + "_label")))}">{e(t("work.cite_copy_short"))}</button></div>'
         for k, v in forms.items())
@@ -3874,6 +4640,7 @@ def work_page(lib, wid):
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 {work_goto(lib, wid, a, comments)}<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>
 {work_map(lib, wid, a, comments)}
+{build_more.work_extras(lib, wid)}
 {also_on(lib, wid, comments)}"""
     book = {"@context": "https://schema.org", **work_ld(lib, wid), "isBasedOn": [url for url, _l, _s in docs] or w["full_text_url"]}
     if w["translation"]:
@@ -3881,7 +4648,18 @@ def work_page(lib, wid):
     crumbs = breadcrumbs((t("commentators.title"), "/commentators/"), (a["name"], f'/commentators/{a["id"]}/'),
                          (w["title"], f"/works/{wid}/"))
     return page(lib, w["title"], body, f"/works/{wid}/", current="/commentators/", ld=(book, crumbs),
-                description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.')
+                description=f'{a["name"]}, {w["title"]}: {len(comments)} excerpts in Logia.', meta=citation_meta(a, w))
+
+
+def citation_meta(a, w, part=""):
+    """Highwire citation tags for a work (or a part of it), which Zotero and
+    other reference managers read to save the edition in one press."""
+    tags = [("citation_title", f'{w["title"]}{": " + part if part else ""}'), ("citation_author", a["name"]),
+            ("citation_publication_date", str(w["published"])), ("citation_language", LANG)]
+    edition = cite_edition(w)
+    if edition:
+        tags.append(("citation_publisher", edition))
+    return tags
 
 
 def work_map(lib, wid, a, comments):
@@ -4168,6 +4946,7 @@ def text_page(lib, wid, x):
 <article class="lg-work-main">
 <header class="page-head"><p class="eyebrow"><a href="/works/{wid}/">{e(w["title"])}</a> · {e(scripture.label(x["verses"]["start"], x["verses"]["end"]))}</p>
 <h1>{e(name)}</h1><p class="dek">{e(lead)}</p>
+<p class="lg-quiet lg-text-minutes">{e(t("commentators.minutes", n=reading_minutes(" ".join(p["text"] for p in paras))))}</p>
 <p class="actions"><a class="button ghost" href="/commentators/{a["id"]}/">{e(a["name"])}</a>
 <a class="button ghost" href="{e(x["url"])}" rel="noopener">{e(t("text.on_ccel"))} ↗</a></p>
 <nav class="lg-turns lg-turns-top" aria-label="{e(w["title"])}">{"".join(turns)}</nav></header>
@@ -4176,7 +4955,7 @@ def text_page(lib, wid, x):
 <p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>
 </article></div>"""
     return page(lib, f'{a["name"]}, {name}', html_body, f"/works/{wid}/{x['locus']}/", current="/commentators/",
-                description=t("text.description", name=a["name"], title=w["title"], where=name))
+                description=t("text.description", name=a["name"], title=w["title"], where=name), meta=citation_meta(a, w, name))
 
 
 def signed_in_page(lib):
@@ -4218,16 +4997,9 @@ def saved_page(lib):
 <div class="lg-saved-empty" id="saved-empty" hidden>{sample}
 <h2>{e(t("account.saved_empty_title"))}</h2><p>{e(t("account.saved_empty_text"))}</p>
 <p class="actions"><a class="button" href="{e(href)}" data-login>{icon("user")} {e(t("account.saved_empty_sign_in"))}</a>
-<a class="button ghost" href="/jhn/3/#v16">{e(t("account.saved_empty_try"))}</a></p></div></section>"""
-    # Recently read: the chapters read on this device, newest first (web/logia.js
-    # fills it from logia-read, which web/reader.js keeps).
-    names = json.dumps({b.lower(): lib.books[b]["en"] for b in lib.books}, ensure_ascii=False, separators=(",", ":"))
-    titles = json.dumps({f"/{b.lower()}/{c}/": lib.chapter_title(b, c) for b, c in lib.coverage() if lib.chapter_title(b, c)},
-                        ensure_ascii=False, separators=(",", ":"))
-    body += (f'<section class="lg-block lg-recent" id="recent" hidden data-books="{e(names)}" data-titles="{e(titles)}" '
-             f'data-chapter="{e(t("home.continue_chapter"))}"><h2>{e(t("account.recent_title"))}</h2>'
-             f'<p class="lg-quiet">{e(t("account.recent_note"))}</p><ol class="lg-recent-list"></ol>'
-             f'<p><button type="button" class="lg-linkish" id="recent-clear">{e(t("account.recent_clear"))}</button></p></section>')
+<a class="button ghost" href="/jhn/3/#v16">{e(t("account.saved_empty_try"))}</a></p></div></section>
+<section class="lg-block" id="notes" data-study="notes"></section>
+<section class="lg-block" id="recent" data-study="recent"></section>"""
     return page(lib, t("account.saved_title"), body, "/saved/", noindex=True)
 
 
@@ -4261,7 +5033,7 @@ def app_manifest():
 def service_worker(offline_html):
     """web/sw.js with its list of files to keep from the first visit, and a
     version that changes whenever any of them does."""
-    shell = [asset(n) for n in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "sheets.js", "reader.js")]
+    shell = [asset(n) for n in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "study.js", "sheets.js", "reader.js")]
     shell += ["/favicon.svg", "/offline/", *SHELL_FONTS]
     version = hashlib.sha256((json.dumps(shell) + offline_html).encode()).hexdigest()[:10]
     text = published("sw.js")
@@ -4293,6 +5065,7 @@ def chapter_file(lib, book, chapter):
     by_work = lib.in_chapter(book, chapter, bible["verses"][-1])
     return {"book": book, "chapter": chapter, "bookName": lib.books[book]["en"], "commentaries": [
         {"work_id": w, "author": lib.author_of(w)["name"], "title": lib.works[w]["title"],
+         "era": lib.author_of(w)["era"], "dates": lib.author_of(w)["dates"],
          "entries": [{"start": x["start"], "end": x["end"], "excerpt": x["excerpt"]} for x in by_work[w]]}
         for w in lib.ordered_works(by_work)]}
 
@@ -4495,7 +5268,9 @@ def about_cite():
 def about_help():
     items = "".join(f'<li><a href="{GITHUB_URL}/issues/new?template={e(tpl)}" rel="noopener"><b>{e(a)} ↗</b><span>{e(b)}</span></a></li>'
                     for a, b, tpl in t("about.help_items"))
-    return f'<p>{e(t("about.help"))}</p><ul class="lg-ab-tiles lg-ab-help">{items}</ul>'
+    return (f'<p>{e(t("about.help"))}</p><ul class="lg-ab-tiles lg-ab-help">{items}</ul>'
+            f'<p><a class="lg-more" href="/about/help/">{e(t("help.heading"))} {icon("arrow", 15)}</a> '
+            f'<a class="lg-more" href="/translators/">{e(t("translators.heading"))} {icon("arrow", 15)}</a></p>')
 
 
 def about_thanks(lib):
@@ -5607,7 +6382,12 @@ def differ_index(lib):
 # --- The most-discussed verses (/<book>/most-discussed/) ----------------------
 #
 # Counts only: how many excerpts in the library are on each verse and
-# chapter. Nothing on the page is commentary or opinion.
+# chapter, how many words they run to, and how often other excerpts cite the
+# verse. Nothing on the page is commentary or opinion. The first lines a
+# reader can open on a row are copied by web/logia.js from the verse page.
+
+MD_TOP, MD_SHOWN = 100, 25
+
 
 def verse_counts(lib, book):
     """{(chapter, verse): excerpts on it}, an excerpt on a range counting on each of its verses."""
@@ -5622,59 +6402,380 @@ def verse_counts(lib, book):
     return n
 
 
-def most_discussed_page(lib, book, top=100, shown=25):
-    name = lib.books[book]["en"]
-    counts = verse_counts(lib, book)
-    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:top]
-    all_works = len({c["work"] for c in lib.comments if c["start"].startswith(book + ".")})
-    every = sum(1 for (b, _c, _v), ws in lib.voices_on.items() if b == book and len(ws) == all_works)
-    verses_with = sum(1 for (b, _c, _v) in lib.voices_on if b == book)
-    # The first `shown` rows show; the rest wait behind "Show all" (web/logia.js).
-    # Each column sorts when its heading is pressed; data-sort holds the value.
-    rows = []
-    most = ranked[0][1] if ranked else 1
-    canon = list(lib.books).index(book)
-    for i, ((ch, v), n) in enumerate(ranked, 1):
-        ws = lib.voices_on.get((book, ch, v), [])
-        rows.append(f'<tr{" hidden" if i > shown else ""}><td class="lg-quiet" data-sort="{i}">{i}</td>'
-                    f'<td data-sort="{canon * 1000000 + ch * 1000 + v}"><a href="{verse_url(book, ch, v)}"><b>{e(verse_ref(lib, book, ch, v))}</b></a></td>'
-                    f'<td class="lg-num" data-sort="{n}"><span class="lg-rank-bar"><span style="width:{n / most * 100:.0f}%"></span></span>{n}</td>'
-                    f'<td class="lg-num" data-sort="{len(ws)}">{e(t("most.of", n=len(ws), total=all_works))}</td>'
-                    f'<td class="lg-rank-text">{e(snippet(chapter_plain(book, ch).get(v, ""), 26) or t("most.left_out"))}</td></tr>')
-    head = "".join((f'<th scope="col"><button type="button" data-sort-col="{i}">{e(x)}</button></th>' if i < 4 else f'<th scope="col">{e(x)}</th>')
-                   for i, x in enumerate(t("most.columns")))
-    per_chapter = {}
-    for (ch, _v), n in counts.items():
-        per_chapter[ch] = per_chapter.get(ch, 0) + n
-    starts = {}
+def rank_with_ties(scores):
+    """{key: (rank, tied)} for the keys scoring above nothing: one more than
+    how many score higher, and whether another has the same score."""
+    vals = sorted((x for x in scores.values() if x), reverse=True)
+    first = {}
+    for i, x in enumerate(vals):
+        first.setdefault(x, i + 1)
+    same = Counter(vals)
+    return {k: (first[x], same[x] > 1) for k, x in scores.items() if x}
+
+
+def rank_label(rank, tied):
+    return t("most.rank_tied", n=rank) if tied else str(rank)
+
+
+def most_data(lib, book):
+    """What the most-discussed page counts for a book, worked out once per
+    build: its works in the library's order; {(chapter, verse): {work:
+    excerpts}} and the same in words, an excerpt on a run of verses counting
+    on each; {(chapter, verse): excerpts elsewhere that cite the verse while
+    commenting on another}, as the verse page lists them; the totals and
+    their ranks."""
+    memo = lib.__dict__.setdefault("_most_data", {})
+    if book in memo:
+        return memo[book]
+    per, words = {}, {}
     for c in lib.comments:
-        b, sc, _sv = ref_parts(c["start"])
-        if b == book:
-            starts[sc] = starts.get(sc, 0) + 1
+        b, sc, sv = ref_parts(c["start"])
+        _, ec, ev = ref_parts(c["end"])
+        if b != book or sc != ec:
+            continue
+        n = len(c["text"].split())
+        for v in range(sv, ev + 1):
+            here, said = per.setdefault((sc, v), {}), words.setdefault((sc, v), {})
+            here[c["work"]] = here.get(c["work"], 0) + 1
+            said[c["work"]] = said.get(c["work"], 0) + n
+    chapters = [ch for b, ch in lib.chapters if b == book]
+    cited = {}
+    for ch in chapters:
+        seen = {}
+        for c, x in lib.cites_by_chapter.get((book, ch), []):
+            cb, cc, cv = ref_parts(c["start"])
+            _, ce, cev = ref_parts(c["end"])
+            _b, xc, xv = scripture.parse(x["start"])
+            _b, xe, xev = scripture.parse(x["end"])
+            for v in chapter_verses(book, ch):
+                if (xc, xv) <= (ch, v) <= (xe, xev) and not (cb == book and (cc, cv) <= (ch, v) <= (ce, cev)):
+                    seen.setdefault(v, set()).add(c["id"])
+        cited.update({(ch, v): len(ids) for v, ids in seen.items()})
+    totals = {k: sum(d.values()) for k, d in per.items()}
+    memo[book] = types.SimpleNamespace(
+        works=lib.ordered_works({w for d in per.values() for w in d}), per=per, words=words, cited=cited,
+        totals=totals, ranks=rank_with_ties(totals), chapters=chapters)
+    return memo[book]
+
+
+def work_initials(lib, works):
+    """{work: the fewest first letters of its commentator's short name that
+    tell it from the others}: "Ca" and "Ch" for Calvin and Chrysostom."""
+    names = {w: short_name(lib.author_of(w)) for w in works}
+    out = {}
+    for w, n in names.items():
+        k = 1
+        while k < len(n) and any(o != w and names[o][:k] == n[:k] for o in works):
+            k += 1
+        out[w] = n[:k]
+    return out
+
+
+def most_books(lib):
+    """The books with a most-discussed page, in the Bible's order."""
+    have = {b for b, _c, _v in lib.voices_on}
+    return [b for b in lib.books if b in have]
+
+
+def most_row(lib, book, md, key, metric, peak, hidden, ini):
+    """One row of the most-discussed table. web/logia.js draws the same
+    row from data.json when a reader ranks by words or picks commentators."""
+    ch, v = key
+    d = md.per.get(key, {})
+    n, said, cited = md.totals.get(key, 0), sum(md.words.get(key, {}).values()), md.cited.get(key, 0)
+    rank, tied = md.ranks[key]
+    canon = list(lib.books).index(book)
+    url = verse_url(book, ch, v)
+
+    def num(value, kind, text):
+        bar = (f'<span class="lg-rank-bar" aria-hidden="true"><span style="width:{value / peak * 100:.0f}%"></span></span>'
+               if kind == metric and peak else "")
+        return f'<td class="lg-num" data-sort="{value}">{bar}{text}</td>'
+
+    topics = "".join(f'<a class="lg-md-topic" href="/topics/{x}/">{e(t("topics." + x + ".heading"))}</a>'
+                     for x in topics_on_verse(lib).get((book, ch, v), []))
+    dots = "".join(f'<i class="{"on" if w in d else ""}" title="{e(lib.author_of(w)["name"])}">{e(ini[w])}</i>' for w in md.works)
+    text = chapter_plain(book, ch).get(v, "")
+    cited_text = f'<a href="{url}#cited">{cited:,}</a>' if cited else "–"
+    return (f'<tr{" hidden" if hidden else ""} data-href="{url}" data-n="{n}"><td class="lg-quiet lg-md-rank" data-sort="{rank}">{e(rank_label(rank, tied))}</td>'
+            f'<td class="lg-md-ref" data-sort="{canon * 1000000 + ch * 1000 + v}"><a href="{url}"><b>{e(verse_ref(lib, book, ch, v))}</b></a>{topics}'
+            f'<button type="button" class="lg-md-peek" aria-expanded="false">{e(t("most.peek"))}</button></td>'
+            + num(n, "excerpts", f"{n:,}") + num(said, "words", f"{said:,}")
+            + f'<td class="lg-num" data-sort="{cited}">{cited_text}</td>'
+            f'<td class="lg-md-who" data-sort="{len(d)}"><span class="lg-dots" aria-hidden="true">{dots}</span>'
+            f'<span class="sr-only">{e(t("most.of", n=len(d), total=len(md.works)))}</span></td>'
+            f'<td class="lg-rank-text"><span class="lg-clamp">{e(text or t("most.left_out"))}</span></td></tr>')
+
+
+def most_table(lib, book, md, ini):
+    ranked = sorted(md.ranks, key=lambda k: (md.ranks[k][0], k))[:MD_TOP]
+    peak = max((md.totals[k] for k in ranked), default=0)
+    rows = "".join(most_row(lib, book, md, k, "excerpts", peak, i >= MD_SHOWN, ini) for i, k in enumerate(ranked))
+    head = "".join(f'<th scope="col"><button type="button" data-sort-col="{i}">{e(x)}</button></th>' if i < 6
+                   else f'<th scope="col">{e(x)}</th>' for i, x in enumerate(t("most.columns")))
+    return ranked, (f'<div class="lg-table-wrap"><table class="lg-words lg-rank lg-sortable lg-md-table"><thead><tr>{head}</tr></thead>'
+                    f'<tbody>{rows}</tbody></table></div>')
+
+
+def most_controls(lib, book, md):
+    """Rank by excerpts, words or citations, and count only some
+    commentators: drawn by web/logia.js from data.json, hidden without it."""
+    metrics = "".join(f'<button type="button" data-metric="{m}" aria-pressed="{"true" if m == "excerpts" else "false"}">{e(t("most.metric_" + m))}</button>'
+                      for m in ("excerpts", "words", "cited"))
+    out = (f'<div class="lg-md-controls" hidden><div class="lg-md-group" role="group" aria-labelledby="md-by">'
+           f'<span class="label" id="md-by">{e(t("most.rank_by"))}</span>{metrics}</div>')
+    if len(md.works) > 1:
+        works = "".join(f'<button type="button" data-work="{w}" aria-pressed="true">{e(short_name(lib.author_of(w)))}</button>' for w in md.works)
+        out += (f'<div class="lg-md-group" role="group" aria-labelledby="md-who">'
+                f'<span class="label" id="md-who">{e(t("most.counting"))}</span>{works}</div>')
+    return out + '<p class="lg-quiet lg-md-status" aria-live="polite"></p></div>'
+
+
+def most_data_json(lib, book, md):
+    """/<book>/most-discussed/data.json: every verse with commentary or a
+    citation, for the page's controls (web/logia.js)."""
+    ini = work_initials(lib, md.works)
+    rows = []
+    for key in sorted(set(md.per) | set(md.cited)):
+        ch, v = key
+        d, said = md.per.get(key, {}), md.words.get(key, {})
+        rows.append([ch, v, verse_ref(lib, book, ch, v), [d.get(w, 0) for w in md.works], [said.get(w, 0) for w in md.works],
+                     md.cited.get(key, 0), chapter_plain(book, ch).get(v, ""), topics_on_verse(lib).get((book, ch, v), [])])
+    used = sorted({x for r in rows for x in r[7]})
+    return json.dumps({"works": [{"id": w, "name": lib.author_of(w)["name"], "short": short_name(lib.author_of(w)), "ini": ini[w]}
+                                 for w in md.works],
+                       "topics": {x: t("topics." + x + ".heading") for x in used}, "rows": rows},
+                      ensure_ascii=False, separators=(",", ":"))
+
+
+def most_csv(lib, book, md):
+    """/<book>/most-discussed/<book>-most-discussed.csv: every verse of the
+    book with what the page counts on it, one column per commentary too."""
+    buf = io.StringIO()
+    out = csv.writer(buf, lineterminator="\n")
+    out.writerow(["reference", "chapter", "verse", "excerpts", "commentators", "words", "cited_elsewhere"] + md.works)
+    for ch in md.chapters:
+        # The verses the Open Word Bible prints, and any it leaves out that an excerpt is on (John 5:4).
+        for v in sorted(set(chapter_verses(book, ch)) | {v for c, v in md.per if c == ch}):
+            d = md.per.get((ch, v), {})
+            out.writerow([verse_ref(lib, book, ch, v), ch, v, md.totals.get((ch, v), 0), len(d),
+                          sum(md.words.get((ch, v), {}).values()), md.cited.get((ch, v), 0)] + [d.get(w, 0) for w in md.works])
+    return buf.getvalue()
+
+
+def most_csv_path(book):
+    return f"/{book.lower()}/most-discussed/{book.lower()}-most-discussed.csv"
+
+
+def most_podium(lib, book, md, ranked):
+    """The top three verses as cards, with their text and a way to read them."""
+    items = []
+    for i, key in enumerate(ranked[:3]):
+        ch, v = key
+        n, rank = md.totals[key], md.ranks[key]
+        url = verse_url(book, ch, v)
+        items.append(f'<li><span class="lg-md-rk">{e(rank_label(*rank))}</span>'
+                     f'<a class="lg-md-pref" href="{url}">{e(verse_ref(lib, book, ch, v))}</a>'
+                     f'<p class="lg-md-vtext">{e(chapter_plain(book, ch).get(v, "") or t("most.left_out"))}</p>'
+                     f'<p class="lg-quiet">{e(t("most.card_counts", n=f"{n:,}", works=len(md.per[key])))}</p>'
+                     f'<a class="button{"" if i == 0 else " ghost"}" href="{url}">{e(t("most.read_all", n=f"{n:,}"))}</a></li>')
+    return f'<ol class="lg-md-podium" aria-label="{e(t("most.podium_label"))}">{"".join(items)}</ol>'
+
+
+def most_book_menu(lib, book):
+    """The other books with this page, each with its own top verse."""
+    items = []
+    for b in most_books(lib):
+        m = most_data(lib, b)
+        top = min(m.ranks, key=lambda k: (m.ranks[k][0], k)) if m.ranks else None
+        ref = f"{top[0]}:{top[1]}" if top else ""
+        current = ' aria-current="page"' if b == book else ""
+        items.append(f'<li><a href="/{b.lower()}/most-discussed/"{current}><b>{e(lib.books[b]["en"])}</b>'
+                     f'<span>{e(ref)}</span></a></li>')
+    if len(items) < 2:
+        return ""
+    return (f'<details class="lg-md-books"><summary>{e(t("most.other_books"))}</summary>'
+            f'<ul>{"".join(items)}</ul></details>')
+
+
+def most_passages(lib, book, md, top=12):
+    """The sections under the Open Word Bible's headings with the most
+    excerpts, each with a small chart of the verses in it."""
+    rows = []
+    for heading, start, end in book_sections(book, lib.books[book]["chapters"]):
+        if end[0] - start[0] > 2:
+            continue             # a heading with none after it for chapters on end: not one passage
+        voices = in_passage(lib, book, start, end)
+        n = sum(len(cs) for _w, cs in voices)
+        if n:
+            rows.append((n, start, end, heading, len(voices)))
+    rows.sort(key=lambda r: (-r[0], r[1]))
+    if len(rows) < 2:
+        return ""
+    peak = rows[0][0]
+    items = []
+    for n, start, end, heading, k in rows[:top]:
+        verses = [(ch, v) for ch in range(start[0], end[0] + 1) for v in chapter_verses(book, ch) if start <= (ch, v) <= end]
+        most = max((md.totals.get(x, 0) for x in verses), default=0) or 1
+        spark = "".join(f'<i style="height:{max(6, md.totals.get(x, 0) / most * 100):.0f}%"></i>' for x in verses)
+        items.append(f'<li><a href="{passage_url(book, start, end)}"><span class="lg-md-ptext"><b>{e(heading)}</b>'
+                     f'<span class="lg-quiet">{e(passage_ref(lib, book, start, end))} · {e(t("most.passage_who", n=k))}</span></span>'
+                     f'<span class="lg-md-spark" aria-hidden="true">{spark}</span>'
+                     f'<span class="lg-bar" aria-hidden="true"><span style="width:{n / peak * 100:.1f}%"></span></span>'
+                     f'<span class="lg-bar-n">{n:,}</span></a></li>')
+    return (f'<section class="lg-block" id="passages"><h2>{e(t("most.passages_title", n=min(top, len(rows))))}</h2>'
+            f'<p class="lg-quiet">{e(t("most.passages_note"))}</p><ol class="lg-md-passages">{"".join(items)}</ol></section>')
+
+
+def most_chapters(lib, book):
+    starts = chapter_excerpts(lib, book)
     peak = max(starts.values())
+    top_ch = max(starts, key=starts.get)
     bars = "".join(f'<li><a href="{chapter_url(book, ch)}"><span class="lg-bar-label">{e(t("chapter.eyebrow", chapter=ch))}</span>'
                    f'<span class="lg-bar"><span style="width:{starts[ch] / peak * 100:.1f}%"></span></span>'
                    f'<span class="lg-bar-n">{starts[ch]}</span></a></li>' for ch in sorted(starts))
-    top_ch = max(starts, key=starts.get)
-    lead = t("most.lead", book=name, verses=verses_with, every=every, works=all_works, n=f"{sum(starts.values()):,}")
+    legend = "".join(f'<span class="chap lg-has lg-heat-{i}" aria-hidden="true"></span>' for i in range(5))
+    return (f'<section class="lg-block" id="chapters"><h2>{e(t("most.chapters_title"))}</h2>'
+            f'<p class="lg-quiet">{e(t("most.chapters_note", chapter=top_ch, n=starts[top_ch]))}</p>'
+            f'<div class="chap-pills lg-md-heat">{heat_pills(lib, book, lib.coverage())}</div>'
+            f'<p class="lg-md-legend lg-quiet">{e(t("most.heat_fewer"))} {legend} {e(t("most.heat_more"))}</p>'
+            f'<details class="lg-md-list"><summary>{e(t("most.chapters_list"))}</summary><ol class="lg-bars">{bars}</ol></details></section>')
+
+
+def most_commentators(lib, book, md):
+    """Each commentator's own most-discussed verses."""
+    if len(md.works) < 2:
+        return ""
+    cards = []
+    for w in md.works:
+        mine = {k: d[w] for k, d in md.per.items() if w in d}
+        a = lib.author_of(w)
+        top = max(mine.values())
+        if top <= 1:
+            what = f'<p class="lg-quiet">{e(t("most.who_even", n=f"{len(mine):,}"))}</p>'
+        else:
+            best = sorted(k for k, n in mine.items() if n == top)
+            links = ", ".join(f'<a href="{verse_url(book, ch, v)}#{w}">{ch}:{v}</a>' for ch, v in best[:3])
+            more = f' {e(t("collection.and_more", n=len(best) - 3))}' if len(best) > 3 else ""
+            what = f'<p>{links}{more}</p><p class="lg-quiet">{e(t("most.who_n", n=top))}</p>'
+        cards.append(f'<li><a class="lg-md-name" href="/commentators/{a["id"]}/">{e(a["name"])}</a>'
+                     f'<span class="lg-quiet">{e(a["dates"])} · {e(a["tradition"])}</span>{what}</li>')
+    return (f'<section class="lg-block" id="commentators"><h2>{e(t("most.who_title"))}</h2>'
+            f'<p class="lg-quiet">{e(t("most.who_note"))}</p><ul class="lg-md-whos">{"".join(cards)}</ul></section>')
+
+
+def most_quiet(lib, book, md):
+    """The verses no excerpt is on, in the chapters that have commentary,
+    as runs, and how many have only one commentator."""
+    runs = []
+    for ch in sorted({ch for ch, _v in md.per}):
+        plain = chapter_plain(book, ch)
+        for v in chapter_verses(book, ch):
+            if (ch, v) in md.per or not plain.get(v):
+                continue
+            if runs and runs[-1][0] == ch and runs[-1][2] == v - 1:
+                runs[-1][2] = v
+            else:
+                runs.append([ch, v, v])
+    alone = sum(1 for d in md.per.values() if len(d) == 1)
+    if not runs:
+        lead = t("most.quiet_none")
+    else:
+        lead = t("most.quiet_lead", n=sum(b - a + 1 for _c, a, b in runs))
+    shown = 40
+    chips = "".join(f'<a class="chap lg-md-q" href="{chapter_url(book, ch)}#v{a}">{ch}:{a}{"–" + str(b) if b != a else ""}</a>'
+                    for ch, a, b in runs[:shown])
+    more = f'<span class="lg-quiet">{e(t("collection.and_more", n=len(runs) - shown))}</span>' if len(runs) > shown else ""
+    alone_text = t("most.quiet_alone", n=f"{alone:,}") if len(md.works) > 1 else ""
+    return (f'<section class="lg-block" id="quiet"><h2>{e(t("most.quiet_title"))}</h2><p>{e(lead)}</p>'
+            + (f'<div class="lg-md-quiet">{chips}{more}</div>' if runs else "")
+            + (f'<p class="lg-quiet">{e(alone_text)}</p>' if alone_text else "")
+            + "</section>")
+
+
+def most_how(lib, book, md, ranked):
+    """How it is counted: one excerpt on a run of verses, drawn, then the words."""
+    example = None
+    for key in ranked:
+        ch, v = key
+        for c in lib.comments_in(book, ch):
+            _b, sc, sv = ref_parts(c["start"])
+            _b, ec, ev = ref_parts(c["end"])
+            if sc == ec == ch and sv <= v <= ev and 1 <= ev - sv <= 2:
+                example = (c, ch, sv, ev)
+                break
+        if example:
+            break
+    works = len(md.works)
+    words = t("most.how" if works != 1 else "most.how_one", works=works)
+    figure = ""
+    if example:
+        c, ch, sv, ev = example
+        who = short_name(lib.author_of(c["work"]))
+        plus = "".join(f'<span class="lg-md-plus">{e(t("most.how_plus", ref=f"{ch}:{v}"))}</span>' for v in range(sv, ev + 1))
+        figure = (f'<figure class="lg-md-how"><p><span class="lg-md-ex">{e(t("most.how_example", name=who, ref=verse_ref(lib, book, ch, sv, ev)))}</span></p>'
+                  f'<p>{plus} <span class="lg-quiet">{e(t("most.how_table"))}</span></p>'
+                  f'<p><span class="lg-md-plus">{e(t("most.how_plus", ref=t("chapter.eyebrow", chapter=ch)))}</span> '
+                  f'<span class="lg-quiet">{e(t("most.how_chart"))}</span></p></figure>')
+    return (f'<section class="lg-block" id="how"><h2>{e(t("most.how_title"))}</h2>{figure}'
+            f'<details class="lg-md-list"><summary>{e(t("most.how_more"))}</summary><p>{e(words)}</p></details>'
+            f'<p><a class="lg-more" href="{most_csv_path(book)}" download>{e(t("most.csv", book=lib.books[book]["en"]))} {icon("arrow", 15)}</a></p>'
+            f'<p><a class="lg-more" href="/open-data/">{e(t("open_data.about_link"))} {icon("arrow", 15)}</a></p></section>')
+
+
+def most_discussed_page(lib, book):
+    name = lib.books[book]["en"]
+    md = most_data(lib, book)
+    ini = work_initials(lib, md.works)
+    all_works = len(md.works)
+    every = sum(1 for (b, _c, _v), ws in lib.voices_on.items() if b == book and len(ws) == all_works)
+    verses_with = sum(1 for (b, _c, _v) in lib.voices_on if b == book)
+    in_book = sum(len(chapter_verses(book, ch)) for ch in md.chapters)
+    excerpts = sum(chapter_excerpts(lib, book).values())
+    ranked, table = most_table(lib, book, md, ini)
+    lead = t("most.lead" if all_works != 1 else "most.lead_one", book=name, verses=f"{verses_with:,}", every=every,
+             works=all_works, n=f"{excerpts:,}")
+    stats = "".join(f'<div><b>{e(v)}</b><span>{e(x)}</span></div>' for v, x in (
+        (f"{verses_with:,}", t("most.stat_verses", n=f"{in_book:,}")),
+        (str(all_works), t("most.stat_works", n=all_works)),
+        (f"{excerpts:,}", t("most.stat_excerpts"))))
+    ui = {k: t("most.ui." + k) for k in CATALOG["most"]["ui"]}
+    show_all = (f'<p><button type="button" class="button ghost" data-show-rows>{e(t("most.show_all", n=len(ranked)))}</button></p>'
+                if len(ranked) > MD_SHOWN else "")
     body = f"""
 <article class="lg-verse lg-most">
 <header class="page-head"><p class="eyebrow"><a href="/{book.lower()}/">{e(name)}</a></p>
-<h1>{e(t("most.heading", book=name))}</h1><p class="dek">{e(lead)}</p></header>
-<section class="lg-block lg-most-wide" id="verses"><h2>{e(t("most.verses_title", n=len(ranked)))}</h2>
-<p class="lg-quiet">{e(t("most.sort_note"))}</p>
-<div class="lg-table-wrap"><table class="lg-words lg-rank lg-sortable"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>
-{f'<p><button type="button" class="button ghost" data-show-rows>{e(t("most.show_all", n=len(ranked)))}</button></p>' if len(ranked) > shown else ""}</section>
-<section class="lg-block" id="chapters"><h2>{e(t("most.chapters_title"))}</h2>
-<p class="lg-quiet">{e(t("most.chapters_note", chapter=top_ch, n=starts[top_ch]))}</p><ol class="lg-bars">{bars}</ol></section>
-<section class="lg-block"><h2>{e(t("most.how_title"))}</h2><p>{e(t("most.how", works=all_works))}</p>
-<p><a class="lg-more" href="/most-discussed/">{e(t("most.all_link"))} {icon("arrow", 15)}</a></p>
-<p><a class="lg-more" href="/open-data/">{e(t("open_data.about_link"))} {icon("arrow", 15)}</a></p></section>
+<h1>{e(t("most.heading", book=name))}</h1>
+<div class="lg-stats lg-stats-3">{stats}</div>
+<p class="dek">{e(lead)}</p>{most_book_menu(lib, book)}</header>
+{most_podium(lib, book, md, ranked)}
+<section class="lg-block lg-most-wide" id="verses" data-md="/{book.lower()}/most-discussed/data.json" data-book="{book.lower()}"
+ data-ui="{e(json.dumps(ui, ensure_ascii=False))}"><h2>{e(t("most.verses_title", n=len(ranked)))}</h2>
+<p class="lg-quiet lg-md-sortnote">{e(t("most.sort_note"))}</p>{most_controls(lib, book, md)}
+{table}
+{show_all}</section>
+{most_passages(lib, book, md)}
+{most_chapters(lib, book)}
+{most_commentators(lib, book, md)}
+{most_quiet(lib, book, md)}
+{most_how(lib, book, md, ranked)}
 </article>
 <script type="application/ld+json">{breadcrumbs_ld([("Logia", "/"), (name, f"/{book.lower()}/"), (t("most.heading", book=name), f"/{book.lower()}/most-discussed/")])}</script>"""
     first = ranked[0]
     return page(lib, t("most.heading", book=name), body, f"/{book.lower()}/most-discussed/", current="/read/",
-                description=t("most.description", book=name, ref=verse_ref(lib, book, *first[0]), n=first[1]))
+                description=t("most.description", book=name, ref=verse_ref(lib, book, *first), n=md.totals[first]))
+
+
+def verse_rank_line(lib, book, chapter, verse):
+    """On a verse page: where the verse stands on its book's most-discussed
+    page, when it is among the rows shown first there."""
+    rank, tied = most_data(lib, book).ranks.get((chapter, verse), (0, False))
+    if not rank or rank > MD_SHOWN:
+        return ""
+    name = lib.books[book]["en"]
+    key = ("most.verse_first" if rank == 1 else "most.verse_ranked") + ("_tied" if tied else "")
+    return (f'<p class="lg-md-rankline"><a href="/{book.lower()}/most-discussed/#verses">'
+            f'<span class="lg-pill lg-md-pill">{e(t(key, book=name, n=rank))}</span> {e(t("most.verse_list"))}</a></p>')
 
 
 def most_discussed_all(lib, top=100, shown=25):
@@ -6070,7 +7171,7 @@ def new_page(lib):
     groups = "".join(f'<section class="lg-new-day"><h3>{e(day_label(day))}</h3><ul class="lg-ab-recent">{"".join(row(w) for w in ws)}</ul></section>'
                      for day, ws in days.items())
     numbers = "".join(f"<li><b>{n}</b><span>{e(label)}</span></li>" for n, label in library_numbers(lib))
-    feed = (f'<p class="lg-quiet"><a href="/new.xml">{e(t("new.feed"))}</a> · {e(t("new.feed_note"))}</p>' if days else "")
+    feed = (f'<p class="lg-quiet"><a href="/new.xml">{e(t("new.feed"))}</a> · {e(t("new.feed_note"))} · <a href="/feeds/">{e(t("feeds.heading"))}</a></p>' if days else "")
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("about.title"))}</p>
 <h1>{e(t("new.heading"))}</h1><p class="dek">{e(t("new.dek"))}</p></header>
@@ -6176,6 +7277,7 @@ def explore_page(lib):
 {fathers}
 <section class="lg-block" id="cited"><h2>{e(t("explore.cited"))}</h2><p class="lg-quiet">{e(t("explore.cited_note", n=f"{sum(cited.values()):,}"))}</p>
 <p>{t("explore.cited_top", list=top_line)}</p>
+<p><a class="lg-more" href="/explore/most-cited/">{e(t("nav.most_cited"))} {icon("arrow", 15)}</a> <a class="lg-more" href="/random/">{e(t("nav.random"))} {icon("arrow", 15)}</a></p>
 <div class="lg-hm-wrap">{"".join(groups)}</div></section>
 <section class="lg-block" id="centuries"><h2>{e(t("explore.centuries"))}</h2><p class="lg-quiet">{e(t("explore.centuries_note"))}</p>
 <ol class="lg-xbars">{explore_bars(cent, max(words.values(), default=1))}</ol>
@@ -6551,16 +7653,26 @@ def last_changed(lib, path, dates):
     return max((dates[f] for f in files if f in dates), default=None)
 
 
-def sitemap_xml(lib, pages):
-    dates = git_dates()
+def sitemap_rows(lib, pages, dates):
     rows = []
     for p in pages:
         if not indexed(lib, p):
             continue
         when = last_changed(lib, p, dates)
         rows.append(f"<url><loc>{SITE_URL}{p}</loc>{f'<lastmod>{when}</lastmod>' if when else ''}</url>\n")
+    return "".join(rows)
+
+
+def sitemap_xml(lib, pages):
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + "".join(rows) + "</urlset>\n")
+            + sitemap_rows(lib, pages, git_dates()) + "</urlset>\n")
+
+
+def sitemap_files(lib, pages):
+    """sitemap.xml as an index of one sitemap per book and one for the rest,
+    so a crawler can come back to the book that changed."""
+    dates = git_dates()
+    return build_more.sitemaps(lib, pages, lambda ps: sitemap_rows(lib, ps, dates))
 
 
 def llms_txt(lib):
@@ -6762,7 +7874,7 @@ def search_page(lib, indexed):
 
 
 def write(rel, text):
-    path = os.path.join(SITE, rel.strip("/"), "index.html") if not rel.endswith((".svg", ".xml", ".txt", ".html", ".js", ".json")) \
+    path = os.path.join(SITE, rel.strip("/"), "index.html") if not rel.endswith((".svg", ".xml", ".txt", ".html", ".js", ".json", ".csv")) \
         else os.path.join(SITE, rel.strip("/"))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -6774,13 +7886,15 @@ def build():
     if os.path.isdir(SITE):
         shutil.rmtree(SITE)
     os.makedirs(SITE)
-    for name in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "reader.js", "sheets.js"):
+    for name in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "reader.js", "sheets.js", "study.js", "review.js"):
         with open(os.path.join(SITE, name), "w", encoding="utf-8") as f:
             f.write(published(name))
     shutil.copytree(os.path.join(WEB, "fonts"), os.path.join(SITE, "fonts"))
     write("/favicon.svg", FAVICON)
     shutil.copy(os.path.join(WEB, "card.png"), os.path.join(SITE, "card.png"))
     shutil.copytree(os.path.join(WEB, "icons"), os.path.join(SITE, "icons"))
+    build_more.setup(sys.modules[__name__])
+    build_more.prepare(lib)
     pages = ["/"]
     write("/", home_page(lib))
     for i, ref in enumerate(votd_refs(lib)):
@@ -6827,6 +7941,8 @@ def build():
         write(f"/{book.lower()}/scripture-cited/", cited_page(lib, book))
         pages.append(f"/{book.lower()}/scripture-cited/")
         write(f"/{book.lower()}/most-discussed/", most_discussed_page(lib, book))
+        write(f"/{book.lower()}/most-discussed/data.json", most_data_json(lib, book, most_data(lib, book)))
+        write(most_csv_path(book), most_csv(lib, book, most_data(lib, book)))
         pages.append(f"/{book.lower()}/most-discussed/")
     write("/most-discussed/", most_discussed_all(lib))
     pages.append("/most-discussed/")
@@ -6933,7 +8049,9 @@ def build():
     api.write(lib, SITE, SITE_URL, types.SimpleNamespace(
         ref_parts=ref_parts, chapter_url=chapter_url, verse_url=verse_url, chapter_plain=chapter_plain,
         locus_label=locus_label, topics=topics, topic_span=topic_span, t=t))
-    write("/sitemap.xml", sitemap_xml(lib, pages))
+    build_more.build(lib, write, pages)
+    for name, text in sitemap_files(lib, pages).items():
+        write("/" + name, text)
     write("/robots.txt", robots_txt())
     write("/llms.txt", llms_txt(lib))
     print(f"site/: {len(pages)} pages ({len(lib.chapters)} chapters), {len(lib.works)} works, "
