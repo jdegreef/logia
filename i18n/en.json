@@ -589,6 +589,7 @@
     "dek_none_one": "1 chapter, with the Bible text, its original words and translation notes. Commentary on it is still to come."
   },
   "chapter": {
+    "tip_close": "Hide this tip",
     "hot": "Most discussed here:",
     "eyebrow": "Chapter {chapter}",
     "pick": "Pick a verse to see what the church has said about it. The gold line beside the text is darker where more has been written, and a bracket marks a comment on a whole passage. In Balanced, tap a word for its Greek.",
@@ -660,6 +661,8 @@
     "compare_on": "Compare on {ref}",
     "compare_pick": "Voices (up to three):",
     "compare_side": "Read these two across the whole chapter",
+    "filter_all": "Filter · {n} voices",
+    "filter_some": "Filter · {n} of {total} voices",
     "creeds_on": "In the creeds and confessions",
     "creeds_hint": "Documents of the churches that cite {ref}, in their text or their proof texts.",
     "sheet_min": "Commentary panel, closed: open it",
