@@ -71,6 +71,7 @@ is weak), ships as `ai_draft`, and is approved by a native-speaking reviewer.
     python3 scripts/score_refs.py --check
     python3 scripts/extract_creeds.py --check
     python3 scripts/find_pages.py --check
+    python3 scripts/extract_originals.py --check
     python3 scripts/check_render_yaml.py
     python3 scripts/validate.py
     python3 scripts/verify_sources.py

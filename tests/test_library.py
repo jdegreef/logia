@@ -23,6 +23,7 @@ import build_site  # noqa: E402
 import export_data  # noqa: E402
 import differ  # noqa: E402
 import extract_creeds  # noqa: E402
+import extract_originals  # noqa: E402
 import extract_texts  # noqa: E402
 import fetch_wikidata  # noqa: E402
 import find_pages  # noqa: E402
@@ -428,6 +429,30 @@ class SefariaIdeas(unittest.TestCase):
                 self.assertGreaterEqual(leaf, 0)
 
 
+class Originals(unittest.TestCase):
+    """The original beside the English: copied from the scan, placed by its Greek, a draft."""
+
+    def test_notes_find_their_verse_from_the_greek(self):
+        found = [(1, 1, "ἐν ἀρχῇ, in principio) ..."), (1, 14, "ὅσοι, quotquot) ..."),
+                 (1, 48, "βηθσαϊδὰ, Bethsaida) ...")]
+        placed = extract_originals.place("JHN", found, {(1, v) for v in range(1, 52)})
+        # Bengel's scan numbers them 1, 14 and 48; their Greek is in John 1:1, 1:12 and 1:44.
+        self.assertEqual([p["verse"] for p in placed], [1, 12, 44])
+
+    def test_tidy_leaves_out_greek_noise_and_joins_lines(self):
+        self.assertEqual(extract_originals.tidy("pro-\nxima ὁ υἱὸς imνv 1) est"), "proxima ὁ υἱὸς ... est")
+        self.assertEqual(extract_originals.lemmas("a) b — quam Abrahamus — χαὶ, et) c"),
+                         ["a) b — quam Abrahamus", "χαὶ, et) c"])
+
+    def test_originals_are_drafts_copied_from_a_scan(self):
+        for path in glob.glob(os.path.join(ROOT, "library", "originals", "*", "*.json")):
+            with open(path, encoding="utf-8") as f:
+                o = json.load(f)
+            self.assertEqual(o["status"], "ai_draft")       # only a person marks the pairing reviewed
+            self.assertTrue(o["scan"].startswith("https://archive.org/details/"))
+            self.assertGreater(o["excerpts_with_original"], 0.9 * o["excerpts"])
+
+
 class DataRelease(unittest.TestCase):
     """scripts/export_data.py: a release is the whole library, reproducibly."""
 
@@ -471,6 +496,16 @@ class Site(unittest.TestCase):
         parts = re.findall(r"<sitemap><loc>https://logia\.faith/(sitemap-[a-z0-9]+\.xml)</loc>", index)
         self.assertIn("sitemap-site.xml", parts)
         return "".join(self.read(p) for p in parts)
+
+    def test_bengels_latin_is_folded_under_his_english(self):
+        page = self.read("jhn/1/14/index.html")
+        self.assertEqual(page.count('class="lg-orig"'), 1)       # once for his three excerpts on the verse
+        self.assertIn('lang="la"', page)
+        self.assertIn("σὰρξ, caro)", page)
+        with open(os.path.join(build_site.SITE, "comm", "JHN.1.json"), encoding="utf-8") as f:
+            bengel = [w for w in json.load(f)["commentaries"] if w["work_id"] == "bengel"][0]
+        self.assertEqual(bengel["original"]["lang"], "la")
+        self.assertTrue(bengel["original"]["verses"]["14"][0].startswith("σὰρξ, caro)"))
 
     def test_linker_files_are_numbered_as_english_bibles(self):
         with open(os.path.join(build_site.SITE, "linker", "PSA.51.json"), encoding="utf-8") as f:

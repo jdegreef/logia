@@ -354,6 +354,23 @@ def main():
             if e.get("status") not in STATUSES:
                 say(f"{name}: {e.get('of')}: status {e.get('status')!r}")
 
+    # The originals beside the English (library/originals/, from
+    # scripts/extract_originals.py): a work Logia has, verses that exist, a
+    # source in the manifest, and ai_draft until a named person reviews it.
+    for p in sorted(glob.glob(os.path.join(ROOT, "library", "originals", "*", "*.json"))):
+        o = load(p)
+        name = os.path.relpath(p, ROOT)
+        if o.get("work") not in works:
+            say(f"{name}: work {o.get('work')!r} is not in library/works/")
+        for s_ in o.get("sources", []):
+            if not any(f["work"] == o.get("work") and os.path.basename(f["path"]) == s_ for f in manifest["files"]):
+                say(f"{name}: source {s_!r} is not in sources/manifest.json for {o.get('work')}")
+        if o.get("status") not in STATUSES or (o.get("status") == "reviewed" and not o.get("reviewer")):
+            say(f"{name}: status {o.get('status')!r} (reviewed needs a reviewer)")
+        for v, notes in o.get("verses", {}).items():
+            if not scripture.parse(f"{o.get('book')}.{v}") or not notes:
+                say(f"{name}: {v} is not a verse of {o.get('book')}, or has no text")
+
     # Where the churches differ (library/differ/): each page fits, and is fair
     # enough to publish or is held back with what it lacks.
     fam = differ.families()

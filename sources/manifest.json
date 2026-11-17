@@ -38,6 +38,15 @@
    "extract": "Characters 170445-1479666 of the scan's full text (the pages quoted, with a margin)."
   },
   {
+   "path": "sources/bengel-latin/djohalbertibenge00beng.txt",
+   "work": "bengel",
+   "url": "https://archive.org/stream/djohalbertibenge00beng/djohalbertibenge00beng_djvu.txt",
+   "retrieved": "2026-11-14",
+   "kind": "scan",
+   "download_sha256": "687bfde533ea01a745fab58fefb8c68467c071a1dc398cc9b2d3e0beeaba7312",
+   "extract": "Characters 1265254-1703314 of the scan's full text: Bengel's Latin notes on John (from the heading IN EVANGELIUM SECUNDUM JOHANNEM to the heading of Acts). The original beside Fausset's English; read by scripts/extract_originals.py."
+  },
+  {
    "path": "sources/calvin/calcom34.vii.i.html",
    "work": "calvin",
    "url": "https://www.ccel.org/ccel/calvin/calcom34.vii.i.html",
