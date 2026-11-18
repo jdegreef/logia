@@ -2603,7 +2603,7 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 .lg-toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 70; margin: 0; padding: 10px 16px; border-radius: 10px;
   background: var(--text); color: var(--bg); font-size: 14px; max-width: calc(100vw - 32px); box-shadow: var(--shadow-pop); }
 .lg-toast[hidden] { display: none; }
-.lg-xact .lg-xact-extra { font-size: inherit; }
+.lg-xact .lg-xact-extra { font-size: 13px; }
 .lg-mynote { margin: 10px 0 0; padding: 8px 12px; border: 1px dashed var(--accent); border-radius: var(--radius-sm); background: var(--accent-soft); }
 .lg-mynote-who { margin: 0 0 4px; font-size: 12.5px; font-weight: 600; color: var(--accent); }
 .lg-mynote textarea { display: block; width: 100%; font: inherit; font-size: 15px; border: 1px solid var(--line-strong); border-radius: 8px; padding: 8px; background: var(--bg); color: var(--text); }
@@ -2727,3 +2727,57 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 .cx-creeds ul { list-style: none; margin: 6px 0 0; padding: 0; }
 .cx-creeds li { padding: 4px 0; font-size: 14px; }
 .cx-creeds a { text-decoration: none; }
+
+/* Narrower screens: the voices rail as a bar under the header once the
+   voices begin (web/logia.js), each voice a chip in its era's colour. */
+@media (max-width: 1099px) {
+  .lg-vrail.lg-vrail-bar { display: block; position: fixed; z-index: 20; left: 0; right: 0; top: var(--header-h, 56px);
+    background: color-mix(in srgb, var(--bg) 96%, transparent); border-bottom: 1px solid var(--line); box-shadow: 0 6px 14px -12px rgb(0 0 0 / .4);
+    padding: 6px max(12px, env(safe-area-inset-right, 0px)) 6px max(12px, env(safe-area-inset-left, 0px)); overflow-x: auto; scrollbar-width: none; }
+  .lg-vrail-bar::-webkit-scrollbar { display: none; }
+  .lg-vrail-bar .label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .lg-vrail-bar ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 6px; }
+  .lg-vrail-bar a { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px 0 8px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface); color: var(--text); text-decoration: none; white-space: nowrap; font: 600 13.5px var(--sans); }
+  .lg-vrail-bar a::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--era); }
+  .lg-vrail-bar b { font: inherit; }
+  .lg-vrail-bar span { display: none; }
+  .lg-vrail-bar a[aria-current="true"] { border-color: var(--accent); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .lg-verse .lg-voice { scroll-margin-top: calc(var(--header-h, 56px) + 60px); }
+}
+@media print { .lg-vrail-bar { display: none !important; } }
+
+/* The reader: what sits above the text in one row ("Most discussed" and the
+   wording switch), the how-to line as a tip that can be hidden, and the
+   panel's filters behind one "Filter" button beside "Compare". */
+.cx-sub { position: relative; padding-right: 28px; }
+.cx-tip-x { position: absolute; top: -2px; right: 0; width: 28px; height: 28px; border: 0; border-radius: 6px; background: none; color: var(--muted);
+  font-size: 18px; line-height: 1; cursor: pointer; }
+.cx-tip-x:hover { color: var(--text); background: var(--surface-2); }
+.cx-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin: 0 0 18px; }
+.cx-tools .lg-hot { margin: 0; }
+.cx-tools .cx-levels { margin: 0; }
+.cx-panel-tools { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; margin: 0 0 14px; }
+.cx-panel-tools .cx-compare-btn { margin: 0; min-height: 34px; }
+.cx-filter-box { flex: 0 1 auto; min-width: 0; }
+.cx-filter-box[open] { flex-basis: 100%; order: 2; }
+.cx-filter-box > summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 12px; font-weight: 600; font-size: 13px; }
+.cx-filter-box > summary::-webkit-details-marker { display: none; }
+.cx-filter-box > summary.cx-filter-on { background: var(--accent-soft); border-color: var(--accent-soft-border); color: var(--accent); }
+.cx-filter-box[open] > summary { border-color: var(--accent); }
+.cx-filter-box .cx-filters { margin: 10px 0 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.cx-filter-box .cx-chip { min-height: 32px; }
+/* A phone's half-open sheet: the first voice instead of the summary lines
+   (they show again when the sheet is fully open). */
+@media (max-width: 880px) {
+  .cx-panel:not(.cx-full) #summary, .cx-panel:not(.cx-full) #vpage { display: none; }
+}
+/* Every page's title breaks evenly over its lines. */
+.page-head h1 { text-wrap: balance; }
+/* A commentator's initials until a portrait is found (scripts/fetch_portraits.py):
+   a disc in the era's colour, lit from above, in a thin ring of the same
+   colour; a portrait takes the same ring. */
+.lg-person-head .lg-mono, .lg-people-grid .lg-mono {
+  background: radial-gradient(circle at 32% 26%, color-mix(in srgb, var(--era) 62%, #fff) 0, var(--era) 62%);
+  box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px color-mix(in srgb, var(--era) 50%, transparent); }
+.lg-person-head .lg-portrait { box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px color-mix(in srgb, var(--era) 50%, transparent); border: 0; }

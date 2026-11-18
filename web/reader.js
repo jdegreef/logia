@@ -60,6 +60,7 @@
   ICON.flag = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg>';
   ICON.copy = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
   ICON.pin = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6l-1 5 3 3v2H7v-2l3-3zM12 14v6"/></svg>';
+  ICON.filter = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16l-6 7.5V19l-4 2v-8.5z"/></svg>';
   ICON.columns = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg>';
   hidden("logia-eras").forEach(function (e) { state.eras.delete(e); });
   hidden("logia-kinds").forEach(function (k) { state.kinds.delete(k); });
@@ -534,21 +535,27 @@
       return '<div class="cx-chips" role="group" aria-label="' + esc(label) + '"><span class="cx-chips-label" aria-hidden="true">' + esc(title) + "</span>" + chips + "</div>";
     }
     var off = ERAS.some(function (x) { return !state.eras.has(x); }) || KINDS.some(function (x) { return !state.kinds.has(x); });
-    return '<div class="cx-filters">' + row("era", ERAS, U.show_eras, U.eras, state.eras, "era", U.filter_era) +
+    // All of it folded into one "Filter" button, which says what it is doing:
+    // "Filter · 10 voices", or "Filter · 3 of 10 voices" when some are hidden.
+    var shownN = on.filter(shownBy).length;
+    var label = shownN === on.length ? fmt(U.filter_all, { n: on.length }) : fmt(U.filter_some, { n: shownN, total: on.length });
+    return '<details class="cx-filter-box"' + (state.filtersOpen ? " open" : "") + '><summary class="cx-chip' + (shownN < on.length ? " cx-filter-on" : "") + '">' +
+      ICON.filter + esc(label) + '</summary><div class="cx-filters">' + row("era", ERAS, U.show_eras, U.eras, state.eras, "era", U.filter_era) +
       row("kind", KINDS, U.show_kinds, U.kinds, state.kinds, "kind", U.filter_kind) +
       (off ? '<button type="button" class="cx-chip-all" data-show-all>' + esc(fmt(U.show_all, { n: on.length })) + "</button>" : "") +
       (on.some(function (w) { return isHeard(w, v); })
         ? '<button type="button" class="cx-chip cx-unread" data-unread aria-pressed="' + !!state.unread + '">' +
-          esc(fmt(U.only_unread, { n: on.filter(function (w) { return !isHeard(w, v); }).length })) + "</button>" : "") + "</div>";
+          esc(fmt(U.only_unread, { n: on.filter(function (w) { return !isHeard(w, v); }).length })) + "</button>" : "") + "</div></details>";
   }
   function commTab() {
     var v = state.verse;
     var onVerse = works.some(function (w) { return entriesFor(w, v).length; });
-    var h = !onVerse ? "" : filters(v);
+    var h = !onVerse ? "" : '<div class="cx-panel-tools">' + filters(v);
     var shown = works.filter(function (w) { return shownBy(w) && entriesFor(w, v).length; });
     if (ready(v) && shown.length > 1) {
       h += '<button type="button" class="cx-compare-btn" data-compare>' + ICON.columns + esc(U.compare) + "</button>";
     }
+    if (onVerse) h += "</div>";
     var shownOn = shown, fresh = shown.filter(function (w) { return !alsoBefore(w, v); });
     var any = false;
     // Voices the reader has pinned come first, under their own heading, on
@@ -944,6 +951,21 @@
     if (PHONE.matches && sheetState() === "min") sheet("half");
     $("#panel").focus();
   });
+  // The Filter button stays open or closed as the panel redraws.
+  $("#pb").addEventListener("toggle", function (e) {
+    if (e.target.classList && e.target.classList.contains("cx-filter-box")) state.filtersOpen = e.target.open;
+  }, true);
+  // The "how to use this page" line under the title: shown until dismissed once.
+  (function () {
+    var tip = document.querySelector('[data-tip="reader"]'), x = tip && tip.querySelector("[data-tip-close]");
+    if (!tip || !x) return;
+    try { if (localStorage.getItem("logia-tip-reader") === "1") { tip.hidden = true; return; } } catch (err) { /* storage blocked */ }
+    x.hidden = false;
+    x.addEventListener("click", function () {
+      tip.hidden = true;
+      try { localStorage.setItem("logia-tip-reader", "1"); } catch (err) { /* storage blocked */ }
+    });
+  })();
   $("#grab").addEventListener("click", function () {
     sheet({ min: "half", half: "full", full: "min" }[sheetState()]);
   });

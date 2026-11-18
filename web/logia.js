@@ -644,6 +644,24 @@
       });
     }, { rootMargin: "-30% 0px -50% 0px" });
     document.querySelectorAll(".lg-voice").forEach(function (sec) { io.observe(sec); });
+    // Narrower screens, where the rail isn't beside the page: once the voices
+    // begin, it becomes a bar under the header that scrolls sideways, the
+    // voice being read marked; above the voices it stays out of the way.
+    var firstVoice = document.querySelector(".lg-voice"), narrow = window.matchMedia("(max-width: 1099px)");
+    if (firstVoice) {
+      var place = function () {
+        var on = narrow.matches && firstVoice.getBoundingClientRect().top < 120;
+        vrail.classList.toggle("lg-vrail-bar", on);
+        var cur = on && vrail.querySelector('[aria-current="true"]');
+        if (cur && cur !== vrail._shown) {
+          vrail._shown = cur;
+          vrail.scrollTo({ left: cur.offsetLeft - vrail.clientWidth / 2 + cur.offsetWidth / 2, behavior: "auto" });
+        }
+      };
+      window.addEventListener("scroll", place, { passive: true });
+      narrow.addEventListener("change", place);
+      place();
+    }
   }
 
   document.querySelectorAll(".lg-verse-go").forEach(function (form) {

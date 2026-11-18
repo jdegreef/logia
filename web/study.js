@@ -272,16 +272,21 @@
     }, "image/png");
   }
 
+  function ICON(paths) {
+    return '<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + paths + "</svg>";
+  }
   document.querySelectorAll("article.lg-excerpt .lg-xact").forEach(function (box) {
     var article = excerptOf(box);
     if (!article) return;
     var note = document.createElement("button");
     note.type = "button"; note.className = "lg-xact-extra";
-    note.textContent = T.note;
+    // The same 16px line icon as the actions beside them (icon() in scripts/build_site.py).
+    note.innerHTML = ICON('<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/>') + esc(T.note);
     note.addEventListener("click", function () { noteBox(article, true); });
     var img = document.createElement("button");
     img.type = "button"; img.className = "lg-xact-extra";
-    img.textContent = T.image;
+    img.innerHTML = ICON('<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>') + esc(T.image);
     img.addEventListener("click", function () { shareImage(article); });
     var report = box.querySelector("a");
     box.insertBefore(note, report);

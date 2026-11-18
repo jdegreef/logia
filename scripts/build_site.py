@@ -2637,9 +2637,10 @@ def chapter_page(lib, book, chapter, all_chapters):
 <article class="cx-passage">
 <p class="cx-eyebrow"><a href="/{book.lower()}/">{e(name)}</a> · {e(t("chapter.eyebrow", chapter=chapter))}</p>
 <h1>{e(heading)}</h1>
-<p class="cx-sub">{e(t("chapter.pick" + ("" if commentaries else "_none") + ("_hbo" if hebrew else "")))}</p>
-{chapter_hot(lib, book, chapter)}
-<div class="cx-levels" role="group" aria-label="{e(t("chapter.level_label"))}">{levels}</div>
+<p class="cx-sub" data-tip="reader">{e(t("chapter.pick" + ("" if commentaries else "_none") + ("_hbo" if hebrew else "")))}
+<button type="button" class="cx-tip-x" data-tip-close aria-label="{e(t("chapter.tip_close"))}" hidden>×</button></p>
+<div class="cx-tools">{chapter_hot(lib, book, chapter)}
+<div class="cx-levels" role="group" aria-label="{e(t("chapter.level_label"))}">{levels}</div></div>
 <div class="cx-text" id="text">{plain}</div>
 <p class="cx-hint">{t("chapter.owb_hint", link=owb_link)}</p>
 {in_order}
@@ -5284,7 +5285,7 @@ def offline_page(lib):
     """What the service worker (web/sw.js) shows for a page not saved on
     this device when there is no connection. web/logia.js lists what is."""
     body = f"""
-<header class="page-head"><h1>{e(t("offline.heading"))}</h1><p class="dek">{e(t("offline.dek"))}</p></header>
+<header class="page-head"><p class="eyebrow"><a href="/about/">{e(t("nav.about"))}</a></p><h1>{e(t("offline.heading"))}</h1><p class="dek">{e(t("offline.dek"))}</p></header>
 <section class="lg-block" aria-labelledby="h-saved"><h2 id="h-saved">{e(t("offline.saved"))}</h2>
 <ul class="lg-offline-list" id="lg-offline-list" data-none="{e(t("offline.none"))}"></ul></section>
 <p class="actions"><a class="button" href="/">{e(t("offline.home"))}</a></p>"""
@@ -5775,7 +5776,7 @@ def topics_page(lib):
     if rest:
         sections += f'<ul class="lg-cards lg-topic-cards">{"".join(rest)}</ul>'
     body = f"""
-<header class="page-head"><h1>{e(t("topic.index_heading"))}</h1><p class="dek">{e(t("topic.index_dek"))}</p></header>
+<header class="page-head"><p class="eyebrow"><a href="/explore/">{e(t("nav.explore"))}</a></p><h1>{e(t("topic.index_heading"))}</h1><p class="dek">{e(t("topic.index_dek"))}</p></header>
 {sections}
 <p class="lg-block lg-quiet">{e(t("topic.how"))}</p>"""
     return page(lib, t("topic.index_heading"), body, "/topics/", current="/read/",
