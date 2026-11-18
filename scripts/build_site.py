@@ -3039,8 +3039,8 @@ def compare_dialog(ref, side=None):
 def listen_button():
     """Read aloud (web/logia.js): the verse and its voices, or a homily, a
     paragraph at a time; shown only where the browser can speak."""
-    return (f'<span class="lg-listen" hidden><button type="button" class="button ghost" data-listen data-pause="{e(t("listen.pause"))}" '
-            f'data-resume="{e(t("listen.resume"))}" data-start="{e(t("listen.start"))}">{e(t("listen.start"))}</button>'
+    return (f'<span class="lg-listen" hidden><button type="button" class="button ghost" data-listen data-say-pause="{e(t("listen.pause"))}" '
+            f'data-say-resume="{e(t("listen.resume"))}" data-say-start="{e(t("listen.start"))}">{e(t("listen.start"))}</button>'
             f'<button type="button" class="button ghost" data-listen-next hidden>{e(t("listen.next"))}</button>'
             f'<button type="button" class="button ghost" data-listen-stop hidden>{e(t("listen.stop"))}</button></span>')
 
