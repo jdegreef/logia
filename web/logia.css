@@ -833,6 +833,7 @@ footer.site .lg-foot-col h2 a:hover { color: var(--accent); }
   opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 160ms ease, transform 160ms ease, visibility 160ms;
 }
 .lg-top.on { opacity: 1; visibility: visible; transform: none; }
+.lg-top.docked { position: absolute; bottom: 24px; }
 @media print { .lg-top { display: none; } }
 @media (max-width: 1000px) {
   .lg-foot-main { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
@@ -845,7 +846,7 @@ footer.site .lg-foot-col h2 a:hover { color: var(--accent); }
      and the top button sits above it while it shows. */
   .cx-panel { transition: max-height 220ms ease, height 220ms ease, transform 220ms ease; }
   body.lg-at-foot .cx-panel { transform: translateY(100%); }
-  body:has(.cx-panel):not(.lg-at-foot) .lg-top { bottom: 140px; }
+  body:has(.cx-panel):not(.lg-at-foot) .lg-top:not(.docked) { bottom: 140px; }
 }
 @media (max-width: 640px) {
   .lg-foot-main { grid-template-columns: minmax(0, 1fr); }
@@ -886,6 +887,10 @@ html {
 .lg-tl-band:nth-child(odd) { background: color-mix(in srgb, var(--surface-2) 70%, transparent); }
 .lg-tl-era { position: absolute; z-index: 2; top: 8px; left: 6px; right: 2px; font-size: 10px; font-weight: 700; letter-spacing: .05em;
   text-transform: uppercase; color: var(--era); line-height: 1.2; text-decoration: none; }
+/* Every other era's name sits a line lower, so a narrow band's long name
+   (Reformation) never runs into the next one's. The rows run in date order,
+   so the space under a later era's name is empty. */
+.lg-tl-band:nth-child(even) .lg-tl-era { top: 21px; }
 .lg-tl-era:hover, .lg-tl-era:focus-visible { text-decoration: underline; }
 .lg-tl-era[aria-pressed="true"] { color: var(--bg); background: var(--era); border-radius: 4px; padding: 2px 5px; margin: -2px -5px; right: auto; }
 .lg-tl-rows { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
@@ -1536,7 +1541,11 @@ html {
 .lg-secbar-in a { flex: none; padding: 11px 0 9px; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
 .lg-secbar-in a:hover { color: var(--text); }
 .lg-secbar-in a[aria-current="true"] { color: var(--text); border-bottom-color: var(--accent); }
-.lg-author .lg-block { scroll-margin-top: calc(var(--header-h) + 56px); }
+/* Under the header and the bar of sections, however many rows that bar
+   takes (web/logia.js sets --secbar-h); a verse's row also clears its
+   chapter's sticky heading. */
+.lg-author .lg-block { scroll-margin-top: calc(var(--header-h) + var(--secbar-h, 46px) + 16px); }
+.lg-author .lg-ch .lg-excerpts li { scroll-margin-top: calc(var(--header-h) + var(--secbar-h, 46px) + 72px); }
 /* One rhythm for the sections of a commentator's page: a rule above each,
    the same space either side. */
 .lg-author > .lg-block { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
@@ -1600,6 +1609,11 @@ html {
     overflow: visible; -webkit-mask-image: none; mask-image: none; }
 }
 .lg-toc-book a { align-items: center; }
+/* Two columns read down, as before, but on a grid so the rows line up. */
+.lg-toc-book { columns: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(var(--rows, 1), auto);
+  grid-auto-flow: column; column-gap: 40px; }
+@media (max-width: 840px) { .lg-toc-book { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; } }
+.lg-badge-all { color: var(--accent); background: var(--accent-soft); }
 .lg-toc-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .lg-toc-facts { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .lg-depth { flex: none; width: 72px; height: 7px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
@@ -1878,7 +1892,9 @@ html {
   .lg-shelf ul { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 0 16px 4px; scrollbar-width: thin; }
   .lg-shelf li { flex: 0 0 148px; scroll-snap-align: start; }
 }
-.lg-shelf-card { display: grid; gap: 3px; height: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface);
+.lg-shelf ul { grid-auto-rows: 1fr; }
+.lg-shelf-card > .lg-cov-dots { margin-top: auto; padding-top: 3px; }
+.lg-shelf-card { display: flex; flex-direction: column; gap: 3px; height: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface);
   color: var(--text); text-decoration: none; }
 .lg-shelf-card:hover, .lg-shelf-card:focus-visible { border-color: var(--accent); }
 .lg-shelf-card b { font-family: var(--display); font-weight: 600; font-size: 16.5px; line-height: 1.2; }
@@ -2512,7 +2528,16 @@ dl.lg-gloss > div[hidden], .lg-block[hidden] { display: none; }
 .lg-md-peekrow p { margin: 8px 0 6px; }
 .lg-dots { display: inline-flex; gap: 3px; }
 .lg-dots i { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 3px; border-radius: 10px; border: 1px solid var(--line-strong); color: var(--muted); font: 700 10px var(--sans); font-style: normal; }
-.lg-dots i.on { background: var(--lg-gold-ink); border-color: var(--lg-gold-ink); color: var(--bg); }
+.lg-dots i.on { background: var(--era, var(--lg-gold-ink)); border-color: var(--era, var(--lg-gold-ink)); color: var(--bg); }
+/* The ranked table fits the page: the verse's cell may wrap under its
+   reference, and the head stays in view while the rows scroll by. */
+.lg-md-table td.lg-md-ref { white-space: normal; min-width: 120px; }
+.lg-md-table td.lg-md-ref > a { white-space: nowrap; }
+.lg-md-table .lg-rank-bar { width: 56px; }
+.lg-md-table .lg-dots { flex-wrap: wrap; width: 152px; }
+.lg-md-table .lg-rank-text { min-width: 200px; }
+.lg-table-wrap:has(.lg-md-table) { overflow: visible; }
+.lg-md-table thead th { position: sticky; top: var(--header-h); z-index: 1; background: var(--bg); box-shadow: inset 0 -1px 0 var(--line); }
 .lg-clamp { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; cursor: pointer; }
 .lg-clamp.lg-open { display: block; -webkit-line-clamp: unset; line-clamp: unset; }
 .lg-md-table tr.lg-read .lg-md-rank::before { content: "✓ "; color: var(--lg-gold-ink); font-weight: 700; }
@@ -2783,3 +2808,20 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
   background: radial-gradient(circle at 32% 26%, color-mix(in srgb, var(--era) 62%, #fff) 0, var(--era) 62%);
   box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px color-mix(in srgb, var(--era) 50%, transparent); }
 .lg-person-head .lg-portrait { box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px color-mix(in srgb, var(--era) 50%, transparent); border: 0; }
+
+/* The Commentators and Explore menus fit their panel without scrolling:
+   eras stack in columns, and a long list spreads over two columns. */
+.lg-dd-split { grid-column: span var(--span, 2); column-count: var(--span, 2); column-gap: 8px; }
+.lg-dd-split .dd-head { column-span: all; }
+.lg-dd-split .dd-item { break-inside: avoid; }
+.lg-dd-people .dd-item { padding: 5px 10px; }
+.lg-dd-people .dd-head { margin-top: 4px; }
+.lg-dd-people .dd-col .dd-item + .dd-head { margin-top: 12px; }
+.lg-dd-explore .dd-item { padding: 7px 10px; }
+@media (max-width: 940px) {
+  .lg-dd-split { grid-column: auto; column-count: 1; }
+}
+
+/* "Show all N chapters of Psalms", after a book's first chapters on a
+   commentator's page (web/logia.js). */
+.lg-vv-more { margin: 10px 0 18px; }
