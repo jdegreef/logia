@@ -1,4 +1,5 @@
 {
+  "book_one": {"PSA": "Psalm"},
   "site": {
     "card_alt_page": "Logia: {title}",
     "skip_commentary": "Skip to the commentary",
@@ -506,6 +507,7 @@
     }
   },
   "book": {
+    "head_title": "{book} commentary: {names}, verse by verse · Logia",
     "topics": "Topics drawn from {book}",
     "topic_n": "{n} passages",
     "topic_one": "1 passage",
@@ -953,6 +955,7 @@
     "hide_timeline": "Hide the timeline"
   },
   "work": {
+    "head_title": "{name}, {title} · Logia",
     "cite_copy_short": "Copy",
     "cite_copy_as": "Copy the {style} citation",
     "cite_note": "Copy the edition in the form your paper or notes use. Link to the page for a single excerpt with the citation under it.",
@@ -1274,6 +1277,7 @@
     }
   },
   "text": {
+    "head_title": "{name}, {where} on {book} ({ref}) · Logia",
     "turns_end": "More of {title}",
     "contents": "{divisions}",
     "in_logia": "In Logia on {ref}",

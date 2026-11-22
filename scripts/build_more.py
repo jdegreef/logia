@@ -71,7 +71,7 @@ def passage_href(lib, book, start, end):
 def passage_label(lib, book, start, end):
     name = lib.books[book]["en"]
     if start == end:
-        return f"{name} {start[0]}:{start[1]}"
+        return f"{B.one(name)} {start[0]}:{start[1]}"
     return B.passage_ref(lib, book, start, end)
 
 
@@ -143,7 +143,7 @@ def book_plan_page(lib, book, n_days):
     rows = []
     for i, chs in enumerate(days, 1):
         n = sum(len(lib.comments_in(book, c)) for c in chs)
-        links = " · ".join(f'<a href="{B.chapter_url(book, c)}">{e(name)} {c}</a>' for c in chs)
+        links = " · ".join(f'<a href="{B.chapter_url(book, c)}">{e(B.one(name))} {c}</a>' for c in chs)
         rows.append(f'<li><p class="lg-plan-day"><b>{e(t("plan.day", n=i))}</b> <span class="lg-quiet">{e(t("passage.n_excerpts", n=n))}</span></p>'
                     f'<p>{links}</p></li>')
     heading = t("plans.book_heading", book=name, n=len(days))

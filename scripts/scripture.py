@@ -117,14 +117,22 @@ def parse(ref):
     return book, chapter, verse
 
 
+# A book's name before one chapter of it, by its plural name: {"Psalms":
+# "Psalm"}, filled from the interface catalog (i18n book_one) by the build.
+ONE_NAMES = {}
+
+
 def label(start, end=None):
-    """'JHN.1.14', 'JHN.1.18' -> 'John 1:14–18'."""
+    """'JHN.1.14', 'JHN.1.18' -> 'John 1:14–18'; 'PSA.23.1' -> 'Psalm 23:1',
+    and 'Psalms 3:1–4:2' for a span over two psalms."""
     b, c, v = parse(start)
-    out = f"{BOOK_NAMES[b]} {c}:{v}"
+    one = ONE_NAMES.get(BOOK_NAMES[b], BOOK_NAMES[b])
     if end and end != start:
         eb, ec, ev = parse(end)
-        out += f"–{ev}" if (eb, ec) == (b, c) else f"–{ec}:{ev}"
-    return out
+        if (eb, ec) == (b, c):
+            return f"{one} {c}:{v}–{ev}"
+        return f"{BOOK_NAMES[b]} {c}:{v}–{ec}:{ev}"
+    return f"{one} {c}:{v}"
 
 
 _ROMAN = re.compile(r"^(c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})$")

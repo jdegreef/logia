@@ -309,6 +309,7 @@ class EveryWordFromTheCatalog(unittest.TestCase):
         words = {"Logia", "Esc", "Enter", "OWB"}
         texts = [a["name"] for a in lib.authors.values()] + [a["tradition"] for a in lib.authors.values()]
         texts += [w["title"] for w in lib.works.values()] + [b["en"] for b in lib.books.values()]
+        texts += list(build_site.CATALOG["book_one"].values())      # "Psalm 23": a book's name
         texts += [lib.chapter_title(b, c) or "" for b, c in lib.chapters] + [c["title"] for c in lib.creeds]
         for x in texts:
             words |= set(re.findall(r"[A-Za-z]+", x))
@@ -1459,3 +1460,39 @@ class StudyToolsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SearchEngines(unittest.TestCase):
+    def test_one_psalm_is_singular(self):
+        self.assertEqual(scripture.label("PSA.23.1"), "Psalm 23:1")
+        self.assertEqual(scripture.label("PSA.3.1", "PSA.3.9"), "Psalm 3:1–9")
+        self.assertEqual(scripture.label("PSA.3.1", "PSA.4.2"), "Psalms 3:1–4:2")
+        self.assertEqual(scripture.label("JHN.3.16"), "John 3:16")
+        self.assertEqual(build_site.t("chapter.description", book="Psalms", chapter=23, n=7)[:9], "Psalm 23 ")
+        self.assertTrue(build_site.t("book.description_text", book="Psalms").startswith("Psalms "))
+
+    def test_whole_chapter_passages(self):
+        vs = build_site.chapter_verses("PSA", 3)
+        self.assertTrue(build_site.whole_chapter("PSA", (3, min(vs)), (3, max(vs))))
+        self.assertFalse(build_site.whole_chapter("PSA", (3, 2), (3, max(vs))))
+
+    def test_book_redirects(self):
+        import redirects
+        src = redirects.sources()
+        self.assertEqual(src["john"], "JHN")
+        self.assertEqual(src["JHN"], "JHN")
+        self.assertEqual(src["1-corinthians"], "1CO")
+        self.assertEqual(src["psalm"], "PSA")
+        self.assertFalse(set(src) & redirects.RESERVED)
+        self.assertNotIn("jhn", src)
+
+    def test_indexnow_sends_only_changes(self):
+        import indexnow
+        page = ('<html><head><title>A</title><link rel="stylesheet" href="/s.css?v=1"></head>'
+                '<body><main>x</main></body></html>')
+        self.assertEqual(indexnow.digest(page), indexnow.digest(page.replace("v=1", "v=2")))
+        self.assertNotEqual(indexnow.digest(page), indexnow.digest(page.replace("<main>x", "<main>y")))
+        old = {"pages": {"/a/": "1", "/b/": "2"}}
+        new = {"pages": {"/a/": "1", "/b/": "3", "/c/": "4"}}
+        self.assertEqual(indexnow.changed(old, new), ["/b/", "/c/"])
+        self.assertEqual(indexnow.changed({}, new), ["/a/", "/b/", "/c/"])

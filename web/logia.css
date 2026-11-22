@@ -1401,6 +1401,8 @@ html {
 .lg-voice > h3 a:hover { color: var(--accent); }
 /* The question a voice answers, as a small line above the name. */
 .lg-vq { margin: 22px 0 0; font: 600 12px/1.4 var(--sans); letter-spacing: .04em; color: var(--muted); }
+.lg-voice > h3.lg-vh { margin-top: 22px; }
+.lg-vh .lg-vq { display: block; margin: 0 0 2px; text-wrap: pretty; }
 .lg-vmeta { margin: 0 0 4px; font-size: 14px; color: var(--muted); }
 .lg-vmeta a { text-decoration: none; }
 .lg-vx { border-bottom: 0; padding: 12px 0 4px; }
