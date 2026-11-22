@@ -47,7 +47,8 @@ The library today: the whole Bible in the Open Word Bible text (all 66 books,
 - **Proverbs** and **Ecclesiastes**: Matthew Henry, Fausset and Charles Bridges.
 - **Song of Songs**: Bernard of Clairvaux's sermons (1:1–3:3).
 - **Matthew**: Chrysostom (all but Homilies LIII, LVIII and LXXIX, which
-  CCEL's pages break off), the Catena Aurea, Calvin, Matthew Henry and Ryle.
+  CCEL's pages break off), the Catena Aurea, Calvin, Matthew Henry, Ryle,
+  John Wesley, Haydock and Jamieson (Jamieson-Fausset-Brown).
 - **Mark**: the Catena Aurea on the whole Gospel.
 - **Luke**: the Catena Aurea, Calvin, Matthew Henry and Jamieson
   (Jamieson-Fausset-Brown), on the whole Gospel.

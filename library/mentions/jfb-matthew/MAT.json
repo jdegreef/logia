@@ -1,0 +1,139 @@
+{
+ "work": "jfb-matthew",
+ "book": "MAT",
+ "mentions": [
+  {
+   "in": "jfb-matthew.MAT.3.1-12.1",
+   "at": 149,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.3.11.1",
+   "at": 1075,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.5.1.1",
+   "at": 227,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.5.1.1",
+   "at": 1065,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.5.7.1",
+   "at": 1720,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.5.43.1",
+   "at": 240,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.5.45.1",
+   "at": 230,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.6.11.1",
+   "at": 397,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.6.11.1",
+   "at": 1010,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.6.21.1",
+   "at": 361,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.8.18-22.1",
+   "at": 347,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.11.1.1",
+   "at": 1260,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.12.15.1",
+   "at": 1133,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.16.18.1",
+   "at": 930,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.16.26.2",
+   "at": 194,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.25.14-30.1",
+   "at": 152,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.25.32.1",
+   "at": 255,
+   "text": "Keil",
+   "author": "keil",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.25.46.1",
+   "at": 447,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  },
+  {
+   "in": "jfb-matthew.MAT.27.63.1",
+   "at": 63,
+   "text": "Bengel",
+   "author": "bengel",
+   "status": "detected"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "id": "haydock-matthew",
+ "author": "haydock",
+ "title": "Catholic Family Bible and Commentary: Matthew",
+ "divisions": "verse",
+ "edition": "Haydock's Catholic Family Bible and Commentary, New York: Edward Dunigan and Brother, 1859; text from an archive.org transcription of the notes (\"Haydock Catholic Bible Commentary\", transcriber not named), djvu OCR text",
+ "original_language": "English",
+ "translation": null,
+ "published": 1859,
+ "full_text_url": "https://archive.org/details/haydock-catholic-bible-comment-haydock-george-leo-3948",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "public domain: Haydock died in 1849; the 1859 edition's editors and the transcription's maker are still to identify"
+ },
+ "source_kind": "scan",
+ "notes": "The notes follow the Douay-Rheims text and its verse numbers, which in Matthew are the same as the Open Word Bible's. Haydock gathers other Catholic commentators and marks each note with its source (by the key printed before Matthew: A. the additional notes of this edition, B. Bristow, C. Calmet, Ch. Challoner, D. Du Hamel, E. Estius, J. Jansenius, M. Menochius, Po. Polus, P. Pastorini, T. Tirinus, V. Bible de Vence, W. Worthington, Wi. Witham; other authors by name), and the excerpts keep those marks. One excerpt per verse note (\"Ver. 1. ...\", or a range, \"Ver. 9-10. ...\"), up to about 350 words and cut at a sentence end. The introduction to the Gospel, and the paragraph that opens chapter 26 before its first verse note, on no one verse, are not included. The source is the OCR of a typed transcription, not of the 1859 pages; where the transcription breaks a paragraph in mid-sentence (often at a page turn), the two parts are joined. Its Greek is OCR noise and is left out, marked \" ... \" (43 places, listed in the script; among them 1:21, 3:2, 12:1, 16:16-17, 21:1, 26:26-28, 26:63 and a line of Homer in 28:9); the footnote marks it prints in the text (\"[1]\", and as the OCR reads them \"[1\", \"(31\", \"'21\", \"{21\", \"\\41\", \"|!\") are left out. Headings are left empty: Haydock's notes open with the words of the Douay text or with his own words, and the two cannot be told apart without the Douay text. Letters it misreads in Latin words and names (\"Czsarea\", \"Judza\", \"Machzrus\") are kept as they stand; \"|.\" for \"l.\" (liber) in references and \"S$.\" for \"S.\" are fixed in library/corrections/haydock-matthew.json. This transcription is to be checked against a scan of the 1859 edition. The script that cut it is scripts/extract/matthew/build_haydock.py.",
+ "status": "ai_draft"
+}
