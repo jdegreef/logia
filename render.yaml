@@ -111,3 +111,510 @@ services:
       - path: /widget/*
         name: Cache-Control
         value: public, max-age=3600
+    # BEGIN book redirects (scripts/redirects.py writes these; don't edit by hand)
+    routes:
+      - type: redirect
+        source: /GEN/*
+        destination: /gen/*
+      - type: redirect
+        source: /genesis/*
+        destination: /gen/*
+      - type: redirect
+        source: /EXO/*
+        destination: /exo/*
+      - type: redirect
+        source: /exodus/*
+        destination: /exo/*
+      - type: redirect
+        source: /LEV/*
+        destination: /lev/*
+      - type: redirect
+        source: /levit/*
+        destination: /lev/*
+      - type: redirect
+        source: /leviticus/*
+        destination: /lev/*
+      - type: redirect
+        source: /NUM/*
+        destination: /num/*
+      - type: redirect
+        source: /numbers/*
+        destination: /num/*
+      - type: redirect
+        source: /DEU/*
+        destination: /deu/*
+      - type: redirect
+        source: /deuteronomy/*
+        destination: /deu/*
+      - type: redirect
+        source: /JOS/*
+        destination: /jos/*
+      - type: redirect
+        source: /joshua/*
+        destination: /jos/*
+      - type: redirect
+        source: /JDG/*
+        destination: /jdg/*
+      - type: redirect
+        source: /judges/*
+        destination: /jdg/*
+      - type: redirect
+        source: /RUT/*
+        destination: /rut/*
+      - type: redirect
+        source: /ruth/*
+        destination: /rut/*
+      - type: redirect
+        source: /1-samuel/*
+        destination: /1sa/*
+      - type: redirect
+        source: /1SA/*
+        destination: /1sa/*
+      - type: redirect
+        source: /1samuel/*
+        destination: /1sa/*
+      - type: redirect
+        source: /2-samuel/*
+        destination: /2sa/*
+      - type: redirect
+        source: /2SA/*
+        destination: /2sa/*
+      - type: redirect
+        source: /2samuel/*
+        destination: /2sa/*
+      - type: redirect
+        source: /1-kings/*
+        destination: /1ki/*
+      - type: redirect
+        source: /1KI/*
+        destination: /1ki/*
+      - type: redirect
+        source: /1kings/*
+        destination: /1ki/*
+      - type: redirect
+        source: /2-kings/*
+        destination: /2ki/*
+      - type: redirect
+        source: /2KI/*
+        destination: /2ki/*
+      - type: redirect
+        source: /2kings/*
+        destination: /2ki/*
+      - type: redirect
+        source: /1-chron/*
+        destination: /1ch/*
+      - type: redirect
+        source: /1-chronicles/*
+        destination: /1ch/*
+      - type: redirect
+        source: /1CH/*
+        destination: /1ch/*
+      - type: redirect
+        source: /1chron/*
+        destination: /1ch/*
+      - type: redirect
+        source: /1chronicles/*
+        destination: /1ch/*
+      - type: redirect
+        source: /2-chron/*
+        destination: /2ch/*
+      - type: redirect
+        source: /2-chronicles/*
+        destination: /2ch/*
+      - type: redirect
+        source: /2CH/*
+        destination: /2ch/*
+      - type: redirect
+        source: /2chron/*
+        destination: /2ch/*
+      - type: redirect
+        source: /2chronicles/*
+        destination: /2ch/*
+      - type: redirect
+        source: /EZR/*
+        destination: /ezr/*
+      - type: redirect
+        source: /ezra/*
+        destination: /ezr/*
+      - type: redirect
+        source: /NEH/*
+        destination: /neh/*
+      - type: redirect
+        source: /nehemiah/*
+        destination: /neh/*
+      - type: redirect
+        source: /EST/*
+        destination: /est/*
+      - type: redirect
+        source: /esther/*
+        destination: /est/*
+      - type: redirect
+        source: /JOB/*
+        destination: /job/*
+      - type: redirect
+        source: /PSA/*
+        destination: /psa/*
+      - type: redirect
+        source: /psalm/*
+        destination: /psa/*
+      - type: redirect
+        source: /psalms/*
+        destination: /psa/*
+      - type: redirect
+        source: /PRO/*
+        destination: /pro/*
+      - type: redirect
+        source: /proverbs/*
+        destination: /pro/*
+      - type: redirect
+        source: /ECC/*
+        destination: /ecc/*
+      - type: redirect
+        source: /eccles/*
+        destination: /ecc/*
+      - type: redirect
+        source: /ecclesiastes/*
+        destination: /ecc/*
+      - type: redirect
+        source: /SNG/*
+        destination: /sng/*
+      - type: redirect
+        source: /canticles/*
+        destination: /sng/*
+      - type: redirect
+        source: /song-of-songs/*
+        destination: /sng/*
+      - type: redirect
+        source: /songofsongs/*
+        destination: /sng/*
+      - type: redirect
+        source: /ISA/*
+        destination: /isa/*
+      - type: redirect
+        source: /isaiah/*
+        destination: /isa/*
+      - type: redirect
+        source: /JER/*
+        destination: /jer/*
+      - type: redirect
+        source: /jerem/*
+        destination: /jer/*
+      - type: redirect
+        source: /jeremiah/*
+        destination: /jer/*
+      - type: redirect
+        source: /LAM/*
+        destination: /lam/*
+      - type: redirect
+        source: /lamentations/*
+        destination: /lam/*
+      - type: redirect
+        source: /EZK/*
+        destination: /ezk/*
+      - type: redirect
+        source: /ezekiel/*
+        destination: /ezk/*
+      - type: redirect
+        source: /DAN/*
+        destination: /dan/*
+      - type: redirect
+        source: /daniel/*
+        destination: /dan/*
+      - type: redirect
+        source: /HOS/*
+        destination: /hos/*
+      - type: redirect
+        source: /hosea/*
+        destination: /hos/*
+      - type: redirect
+        source: /JOL/*
+        destination: /jol/*
+      - type: redirect
+        source: /joel/*
+        destination: /jol/*
+      - type: redirect
+        source: /AMO/*
+        destination: /amo/*
+      - type: redirect
+        source: /amos/*
+        destination: /amo/*
+      - type: redirect
+        source: /OBA/*
+        destination: /oba/*
+      - type: redirect
+        source: /obadiah/*
+        destination: /oba/*
+      - type: redirect
+        source: /JON/*
+        destination: /jon/*
+      - type: redirect
+        source: /jonah/*
+        destination: /jon/*
+      - type: redirect
+        source: /MIC/*
+        destination: /mic/*
+      - type: redirect
+        source: /micah/*
+        destination: /mic/*
+      - type: redirect
+        source: /NAM/*
+        destination: /nam/*
+      - type: redirect
+        source: /nahum/*
+        destination: /nam/*
+      - type: redirect
+        source: /HAB/*
+        destination: /hab/*
+      - type: redirect
+        source: /habakkuk/*
+        destination: /hab/*
+      - type: redirect
+        source: /ZEP/*
+        destination: /zep/*
+      - type: redirect
+        source: /zephaniah/*
+        destination: /zep/*
+      - type: redirect
+        source: /HAG/*
+        destination: /hag/*
+      - type: redirect
+        source: /haggai/*
+        destination: /hag/*
+      - type: redirect
+        source: /ZEC/*
+        destination: /zec/*
+      - type: redirect
+        source: /zechariah/*
+        destination: /zec/*
+      - type: redirect
+        source: /MAL/*
+        destination: /mal/*
+      - type: redirect
+        source: /malachi/*
+        destination: /mal/*
+      - type: redirect
+        source: /MAT/*
+        destination: /mat/*
+      - type: redirect
+        source: /matthew/*
+        destination: /mat/*
+      - type: redirect
+        source: /MRK/*
+        destination: /mrk/*
+      - type: redirect
+        source: /mark/*
+        destination: /mrk/*
+      - type: redirect
+        source: /LUK/*
+        destination: /luk/*
+      - type: redirect
+        source: /luke/*
+        destination: /luk/*
+      - type: redirect
+        source: /JHN/*
+        destination: /jhn/*
+      - type: redirect
+        source: /john/*
+        destination: /jhn/*
+      - type: redirect
+        source: /ACT/*
+        destination: /act/*
+      - type: redirect
+        source: /acts/*
+        destination: /act/*
+      - type: redirect
+        source: /ROM/*
+        destination: /rom/*
+      - type: redirect
+        source: /romans/*
+        destination: /rom/*
+      - type: redirect
+        source: /1-corinthians/*
+        destination: /1co/*
+      - type: redirect
+        source: /1CO/*
+        destination: /1co/*
+      - type: redirect
+        source: /1corinthians/*
+        destination: /1co/*
+      - type: redirect
+        source: /2-corinthians/*
+        destination: /2co/*
+      - type: redirect
+        source: /2CO/*
+        destination: /2co/*
+      - type: redirect
+        source: /2corinthians/*
+        destination: /2co/*
+      - type: redirect
+        source: /GAL/*
+        destination: /gal/*
+      - type: redirect
+        source: /galatians/*
+        destination: /gal/*
+      - type: redirect
+        source: /EPH/*
+        destination: /eph/*
+      - type: redirect
+        source: /ephes/*
+        destination: /eph/*
+      - type: redirect
+        source: /ephesians/*
+        destination: /eph/*
+      - type: redirect
+        source: /PHP/*
+        destination: /php/*
+      - type: redirect
+        source: /philip/*
+        destination: /php/*
+      - type: redirect
+        source: /philippians/*
+        destination: /php/*
+      - type: redirect
+        source: /COL/*
+        destination: /col/*
+      - type: redirect
+        source: /coloss/*
+        destination: /col/*
+      - type: redirect
+        source: /colossians/*
+        destination: /col/*
+      - type: redirect
+        source: /1-thess/*
+        destination: /1th/*
+      - type: redirect
+        source: /1-thessalonians/*
+        destination: /1th/*
+      - type: redirect
+        source: /1TH/*
+        destination: /1th/*
+      - type: redirect
+        source: /1thess/*
+        destination: /1th/*
+      - type: redirect
+        source: /1thessalonians/*
+        destination: /1th/*
+      - type: redirect
+        source: /2-thess/*
+        destination: /2th/*
+      - type: redirect
+        source: /2-thessalonians/*
+        destination: /2th/*
+      - type: redirect
+        source: /2TH/*
+        destination: /2th/*
+      - type: redirect
+        source: /2thess/*
+        destination: /2th/*
+      - type: redirect
+        source: /2thessalonians/*
+        destination: /2th/*
+      - type: redirect
+        source: /1-timothy/*
+        destination: /1ti/*
+      - type: redirect
+        source: /1TI/*
+        destination: /1ti/*
+      - type: redirect
+        source: /1timothy/*
+        destination: /1ti/*
+      - type: redirect
+        source: /2-timothy/*
+        destination: /2ti/*
+      - type: redirect
+        source: /2TI/*
+        destination: /2ti/*
+      - type: redirect
+        source: /2timothy/*
+        destination: /2ti/*
+      - type: redirect
+        source: /TIT/*
+        destination: /tit/*
+      - type: redirect
+        source: /titus/*
+        destination: /tit/*
+      - type: redirect
+        source: /PHM/*
+        destination: /phm/*
+      - type: redirect
+        source: /philem/*
+        destination: /phm/*
+      - type: redirect
+        source: /philemon/*
+        destination: /phm/*
+      - type: redirect
+        source: /HEB/*
+        destination: /heb/*
+      - type: redirect
+        source: /hebrews/*
+        destination: /heb/*
+      - type: redirect
+        source: /JAS/*
+        destination: /jas/*
+      - type: redirect
+        source: /james/*
+        destination: /jas/*
+      - type: redirect
+        source: /1-peter/*
+        destination: /1pe/*
+      - type: redirect
+        source: /1PE/*
+        destination: /1pe/*
+      - type: redirect
+        source: /1peter/*
+        destination: /1pe/*
+      - type: redirect
+        source: /2-peter/*
+        destination: /2pe/*
+      - type: redirect
+        source: /2PE/*
+        destination: /2pe/*
+      - type: redirect
+        source: /2peter/*
+        destination: /2pe/*
+      - type: redirect
+        source: /1-john/*
+        destination: /1jn/*
+      - type: redirect
+        source: /1JN/*
+        destination: /1jn/*
+      - type: redirect
+        source: /1john/*
+        destination: /1jn/*
+      - type: redirect
+        source: /2-john/*
+        destination: /2jn/*
+      - type: redirect
+        source: /2JN/*
+        destination: /2jn/*
+      - type: redirect
+        source: /2john/*
+        destination: /2jn/*
+      - type: redirect
+        source: /3-john/*
+        destination: /3jn/*
+      - type: redirect
+        source: /3JN/*
+        destination: /3jn/*
+      - type: redirect
+        source: /3john/*
+        destination: /3jn/*
+      - type: redirect
+        source: /JUD/*
+        destination: /jud/*
+      - type: redirect
+        source: /jude/*
+        destination: /jud/*
+      - type: redirect
+        source: /REV/*
+        destination: /rev/*
+      - type: redirect
+        source: /apocalypse/*
+        destination: /rev/*
+      - type: redirect
+        source: /revelation/*
+        destination: /rev/*
+      - type: redirect
+        source: /gen/18/1-50.26/
+        destination: /gen/18/
+    # END book redirects
