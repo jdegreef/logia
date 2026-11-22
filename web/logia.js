@@ -578,7 +578,10 @@
         var tst = both ? p.closest(".lg-testament").id : "all";
         if (!p.hidden && p.getBoundingClientRect().top < mid) at[tst] = p;
       });
-      var ids = Object.keys(at).map(function (k) { return at[k].id; });
+      // Side by side, the part that passed the line last is the one lit, so
+      // the bar never shows two at once.
+      var keys = Object.keys(at).sort(function (a, b) { return at[b].getBoundingClientRect().top - at[a].getBoundingClientRect().top; });
+      var ids = keys.length ? [at[keys[0]].id] : [];
       Object.keys(links).forEach(function (k) { if (ids.indexOf(k) >= 0) links[k].setAttribute("aria-current", "true"); else links[k].removeAttribute("aria-current"); });
       var tst = !both && at.all ? at.all.closest(".lg-testament").id : "";
       tLinks.forEach(function (a) { if (a.getAttribute("href") === "#" + tst) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
@@ -988,6 +991,31 @@
     }
     return ul._loading;
   }
+  // A long book's later chapters wait behind "Show all" (excerpt_list,
+  // data-fold); going to one of them, however, shows them all first.
+  function unfoldBook(root, book) {
+    [].forEach.call(root.querySelectorAll('details.lg-ch[data-fold][data-book="' + book + '"]'), function (d) { d.hidden = false; });
+    var more = root.querySelector('.lg-vv-more button[data-book="' + book + '"]');
+    if (more) more.parentNode.hidden = true;
+  }
+  function unfold(d) {
+    if (d && d.hidden && d.matches("details.lg-ch[data-fold]")) unfoldBook(d.parentNode, d.getAttribute("data-book"));
+  }
+  document.querySelectorAll(".lg-vv-more button").forEach(function (btn) {
+    var root = btn.closest(".lg-vv-book") || btn.parentNode.parentNode, book = btn.getAttribute("data-book");
+    [].forEach.call(root.querySelectorAll('details.lg-ch[data-fold][data-book="' + book + '"]'), function (d) { d.hidden = true; });
+    btn.parentNode.hidden = false;
+    btn.addEventListener("click", function () {
+      var first = root.querySelector('details.lg-ch[data-fold][data-book="' + book + '"]');
+      unfoldBook(root, book);
+      if (first) first.querySelector("summary").focus();
+    });
+  });
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href^="#ch-"]');
+    if (a) unfold(document.getElementById(a.getAttribute("href").slice(1)));
+  }, true);
+  if (/^#ch-/.test(location.hash)) unfold(document.getElementById(location.hash.slice(1)));
   document.addEventListener("toggle", function (ev) {
     if (ev.target.matches && ev.target.matches("details.lg-ch") && ev.target.open) loadRows(ev.target);
   }, true);
@@ -1023,6 +1051,7 @@
       [].forEach.call(document.querySelectorAll(".lg-hit"), function (x) { x.classList.remove("lg-hit"); });
       if (!row) { note.textContent = form.getAttribute("data-none"); return; }
       note.textContent = hint;
+      unfold(ch);
       ch.open = true;
       row.classList.add("lg-hit");
       row.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
@@ -1048,6 +1077,7 @@
     chs.forEach(function (d) { d.addEventListener("toggle", sync); });
     btn.addEventListener("click", function () {
       var all = chs.every(function (d) { return d.open; });
+      if (!all) chs.forEach(unfold);
       chs.forEach(function (d) { d.open = !all; });
     });
     [].forEach.call(root.querySelectorAll(".lg-ch-steps a"), function (a) {
@@ -1827,7 +1857,7 @@
         var r = x.r, url = "/" + mdBook + "/" + r[0] + "/" + r[1] + "/", has = x.all > 0;
         var rank = first[x[key]], label = same[x[key]] > 1 ? fmt(MU.rank_tied, { n: rank }) : String(rank);
         var topics = r[7].map(function (id) { return '<a class="lg-md-topic" href="/topics/' + id + '/">' + esc(mdData.topics[id]) + "</a>"; }).join("");
-        var dots = works.map(function (w, j) { return '<i class="' + (r[3][j] ? "on" : "") + '" title="' + esc(w.name) + '">' + esc(w.ini) + "</i>"; }).join("");
+        var dots = works.map(function (w, j) { return '<i class="lg-era-' + w.era + (r[3][j] ? " on" : "") + '" title="' + esc(w.name) + '">' + esc(w.ini) + "</i>"; }).join("");
         return '<tr' + (more && i >= 25 ? " hidden" : "") + (has ? ' data-href="' + url + '"' : "") + ' data-n="' + x.all + '">' +
           '<td class="lg-quiet lg-md-rank" data-sort="' + rank + '">' + esc(label) + "</td>" +
           '<td class="lg-md-ref" data-sort="' + (r[0] * 1000 + r[1]) + '"><a href="' + (has ? url : "/" + mdBook + "/" + r[0] + "/#v" + r[1]) + '"><b>' + esc(r[2]) + "</b></a>" + topics +
@@ -2498,13 +2528,22 @@
       var showTop = function () { top.classList.toggle("on", window.scrollY > window.innerHeight); };
       window.addEventListener("scroll", showTop, { passive: true });
       showTop();
+      // Once the footer's last lines are on screen, the button parks at the
+      // footer's end instead of floating over its links (logia.css).
+      var base = foot.querySelector(".lg-foot-base");
+      if (base && "IntersectionObserver" in window) {
+        new IntersectionObserver(function (seen) {
+          top.classList.toggle("docked", seen[0].isIntersecting || seen[0].boundingClientRect.bottom < 0);
+        }).observe(base);
+      }
     }
 
     // While the footer is on screen, a chapter's verse sheet steps aside (logia.css).
-    if ("IntersectionObserver" in window && document.querySelector(".cx-panel")) {
+    // It is watched on every page, since the sheet can be built after this runs.
+    if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (seen) {
         document.body.classList.toggle("lg-at-foot", seen[0].isIntersecting);
-      }, { rootMargin: "0px 0px -35% 0px" }).observe(foot);
+      }, { rootMargin: "0px 0px -10% 0px" }).observe(foot);
     }
 
     // The next day of the church year with a Logia page, within six weeks.

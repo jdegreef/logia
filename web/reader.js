@@ -509,7 +509,7 @@
   // for a Catena, the Fathers it quotes.
   function facts(w, es, words) {
     var bits = [fmt(es.length === 1 ? U.facts_one : U.facts, {
-      n: es.length, words: words.toLocaleString(), min: Math.max(1, Math.round(words / 230)) })];
+      n: es.length, words: words.toLocaleString(), min: Math.max(1, Math.round(words / 200)) })];
     var firsts = es.map(function (e) { return e.locus ? +e.locus.split(".")[0] : NaN; }).filter(function (n) { return !isNaN(n); });
     if (firsts.length && Array.isArray(w.divisions) && w.divisions.length) {
       var a = Math.min.apply(null, firsts), b = Math.max.apply(null, firsts);
