@@ -1,0 +1,18 @@
+{
+ "id": "jfb-matthew",
+ "author": "brown",
+ "title": "A Commentary, Critical and Explanatory, on the Old and New Testaments: Matthew",
+ "divisions": "verse",
+ "edition": "Robert Jamieson, A. R. Fausset and David Brown, Commentary Critical and Explanatory on the Whole Bible (1871); the Gospels are David Brown's; CCEL edition",
+ "original_language": "English",
+ "translation": null,
+ "published": 1871,
+ "full_text_url": "https://www.ccel.org/ccel/jamieson/jfb.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: death dates of every author and editor named (life + 70 years); David Brown died in 1897"
+ },
+ "source_kind": "digital",
+ "notes": "Matthew 1-28 are CCEL jfb xi.i ii-xxx, a page a chapter, with the introduction to the Sermon on the Mount on its own page (xi.i.vi). Every note on Matthew is kept, in the order printed. A note opens with its bold lemma: a verse number ('7.', '13-16.') places it on those verses, and a lemma of words alone goes on the verses of the note before. The summary that opens a section ('Mt 1:1-17. Genealogy of Christ.') and the headings within one ('The Flight into Egypt (Mt 2:13-15).') are on the verses they name (the one section that runs into the next chapter, 'Mt 9:35-10:5', on 9:35-38), with any paragraph that follows them before the next verse note; where Brown expounds a passage only under another Gospel, the entry is his pointer ('For the exposition, see on Mr 13:1-37.'), as printed. The introduction to the Sermon on the Mount is on 5:1. Brown's notes on verses of Luke he sets inside Matthew 3, 8 and 12 (from 'Lu 3:1:' to 'We now return to the first Gospel') are on Luke and are left out, as are the chapter headings, the running heads ('Sermon on the Mount—continued.') and the introduction to the book. Notes on the same verses are kept together in entries of up to about 350 words. Where the Open Word Bible leaves a verse out, Brown's note on it stays on that verse number. The script that cut it is scripts/extract/matthew/build_jfb.py.",
+ "status": "ai_draft"
+}

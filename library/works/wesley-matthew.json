@@ -1,0 +1,18 @@
+{
+ "id": "wesley-matthew",
+ "author": "wesley",
+ "title": "Explanatory Notes upon the New Testament: St. Matthew",
+ "divisions": "verse",
+ "edition": "John Wesley, Explanatory Notes upon the New Testament (London, 1755), CCEL edition (\"Wesley's Notes on the Bible\"; CCEL does not name the printing it follows)",
+ "original_language": "English",
+ "translation": null,
+ "published": 1755,
+ "full_text_url": "https://www.ccel.org/ccel/wesley/notes.html",
+ "rights": {
+  "basis": "public domain: published before 1931 (US)",
+  "worldwide": "to confirm: Wesley died in 1791; the printing CCEL transcribed (and any editor of it) is still to identify"
+ },
+ "source_kind": "digital",
+ "notes": "Chapters 1–28 are CCEL notes.i.ii.iii to notes.i.ii.xxx; the preface to the Gospels (notes.i.ii.i) is not included. One excerpt per verse note, whole: each note is taken as it stands, with its verse number and lemmas. A note that runs into numbered points keeps them as further paragraphs, including points CCEL prints with numbers lower than the verse (the petitions of the Lord's Prayer, '1. Hallowed be thy name' to '6. And lead us not into temptation', and 'III. For thine is the kingdom'). CCEL numbers the note that opens the prayer '10. Our Father'; with its points it is one excerpt on 6:9-13, and the note '9. Thus therefore pray ye' is on 6:9. The outlines that open chapters 7 and 25 are each one excerpt on the whole chapter. Headings are the note's first lemma (the words before its first ' - '), empty where the note has none, or where those words hold a parenthesis or more than one sentence. Where the Open Word Bible leaves a verse out, Wesley's note on it stays on that verse number. The script that cut it is scripts/extract/matthew/build_wesley.py.",
+ "status": "ai_draft"
+}

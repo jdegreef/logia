@@ -1,0 +1,1224 @@
+{
+ "work": "haydock-matthew",
+ "book": "MAT",
+ "mentions": [
+  {
+   "in": "haydock-matthew.MAT.1.6.1",
+   "at": 24,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.1.16.1",
+   "at": 1029,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.1.21.1",
+   "at": 248,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.1.21.1",
+   "at": 786,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.1.22.1",
+   "at": 46,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.2.1.1",
+   "at": 627,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.2.18.1",
+   "at": 666,
+   "text": "a Lapide",
+   "author": "lapide",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.2.23.1",
+   "at": 542,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.3.2.1",
+   "at": 87,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.3.2.1",
+   "at": 241,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.4.6.1",
+   "at": 26,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.5.8.1",
+   "at": 836,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.5.22.1",
+   "at": 597,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.5.25.1",
+   "at": 159,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.5.25.1",
+   "at": 199,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.5.39.1",
+   "at": 882,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.5.48.1",
+   "at": 374,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.6.1.1",
+   "at": 808,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.6.12.1",
+   "at": 409,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.6.13.1",
+   "at": 747,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.6.13.1",
+   "at": 917,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.7.7.1",
+   "at": 1646,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.7.9.1",
+   "at": 368,
+   "text": "Aquinas",
+   "author": "aquinas",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.7.15.1",
+   "at": 870,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.7.16.1",
+   "at": 1112,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.4.1",
+   "at": 595,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.5.1",
+   "at": 1358,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.8.1",
+   "at": 8,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.8.1",
+   "at": 217,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.8.1",
+   "at": 338,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.17.1",
+   "at": 162,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.20.1",
+   "at": 256,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.8.32.1",
+   "at": 585,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.1.1",
+   "at": 312,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.1.1",
+   "at": 507,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.2.2",
+   "at": 518,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.5.1",
+   "at": 263,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.8.1",
+   "at": 165,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.8.1",
+   "at": 329,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.9.1",
+   "at": 338,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.9.1",
+   "at": 392,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.9.1",
+   "at": 938,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.9.1",
+   "at": 1245,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.14.1",
+   "at": 1167,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.9.18.1",
+   "at": 637,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.5.1",
+   "at": 1285,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.7.1",
+   "at": 289,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.11.1",
+   "at": 206,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.11.1",
+   "at": 720,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.11.1",
+   "at": 1267,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.11.1",
+   "at": 1343,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.14.1",
+   "at": 672,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.16.1",
+   "at": 1697,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.17.1",
+   "at": 203,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.17.1",
+   "at": 563,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.22.1",
+   "at": 396,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.24.1",
+   "at": 417,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.28.1",
+   "at": 179,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.30.1",
+   "at": 281,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.31.1",
+   "at": 118,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.34.1",
+   "at": 1315,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.38.1",
+   "at": 569,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.10.41.1",
+   "at": 390,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.11.3.1",
+   "at": 804,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.11.26.1",
+   "at": 29,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.11.30.1",
+   "at": 320,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.11.30.1",
+   "at": 468,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.12.1.1",
+   "at": 494,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.12.27.1",
+   "at": 411,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.12.31.1",
+   "at": 88,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.12.31.1",
+   "at": 1252,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.12.32.2",
+   "at": 874,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.12.32.2",
+   "at": 1121,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.12.32.2",
+   "at": 1616,
+   "text": "Bernard",
+   "author": "bernard",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.8.1",
+   "at": 164,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.9.1",
+   "at": 1367,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.12.1",
+   "at": 487,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.15.1",
+   "at": 854,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.25.1",
+   "at": 138,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.27.1",
+   "at": 31,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.29.1",
+   "at": 1153,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.13.33.1",
+   "at": 591,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.14.28.1",
+   "at": 397,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.16.16.1",
+   "at": 435,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.16.18.1",
+   "at": 1008,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.16.23.1",
+   "at": 1085,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.17.2.1",
+   "at": 508,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.17.6.1",
+   "at": 712,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.17.11.1",
+   "at": 218,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.17.14.1",
+   "at": 333,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.17.23.1",
+   "at": 230,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.18.1.1",
+   "at": 228,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.18.10.1",
+   "at": 929,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.18.10.1",
+   "at": 1020,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.18.10.1",
+   "at": 1132,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.18.15.1",
+   "at": 33,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.18.15.1",
+   "at": 48,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.18.20.1",
+   "at": 217,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.19.4.1",
+   "at": 279,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.19.9.1",
+   "at": 1119,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.19.21.1",
+   "at": 672,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.19.21.1",
+   "at": 1423,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.19.28.1",
+   "at": 649,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.20.1.1",
+   "at": 889,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.20.1.2",
+   "at": 500,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.20.14.1",
+   "at": 607,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.20.23.1",
+   "at": 861,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.21.11.1",
+   "at": 374,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.21.15.1",
+   "at": 21,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.21.28.1",
+   "at": 703,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.21.42.1",
+   "at": 389,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.1.1",
+   "at": 302,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.2.1",
+   "at": 1367,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.3.1",
+   "at": 551,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.11.1",
+   "at": 32,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.11.1",
+   "at": 114,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.11.1",
+   "at": 371,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.11.1",
+   "at": 738,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.18.1",
+   "at": 564,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.21.2",
+   "at": 1321,
+   "text": "Basil",
+   "author": "basil",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.34.1",
+   "at": 579,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.22.45.1",
+   "at": 977,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.23.2.1",
+   "at": 540,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.23.3.1",
+   "at": 52,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.23.9-10.1",
+   "at": 747,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.23.9-10.1",
+   "at": 755,
+   "text": "Calvin",
+   "author": "calvin",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.23.14.1",
+   "at": 661,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.23.19.1",
+   "at": 114,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.23.27.1",
+   "at": 798,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.24.5.1",
+   "at": 956,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.24.7.1",
+   "at": 940,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.24.29.1",
+   "at": 197,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.25.18.1",
+   "at": 207,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.25.34.1",
+   "at": 740,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.25.35.1",
+   "at": 165,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.25.46.1",
+   "at": 793,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.25.46.2",
+   "at": 211,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.2.1",
+   "at": 1705,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.7.1",
+   "at": 571,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.17.1",
+   "at": 1356,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.18.1",
+   "at": 467,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.25.1",
+   "at": 277,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.25.1",
+   "at": 622,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.2",
+   "at": 1471,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.3",
+   "at": 549,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.3",
+   "at": 626,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.3",
+   "at": 1728,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.4",
+   "at": 474,
+   "text": "Luther",
+   "author": "luther",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.4",
+   "at": 565,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.4",
+   "at": 753,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.26.8",
+   "at": 17,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.39.1",
+   "at": 192,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.41.1",
+   "at": 181,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.45.1",
+   "at": 513,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.48.1",
+   "at": 244,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.49.1",
+   "at": 430,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.26.63.1",
+   "at": 223,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.1.1",
+   "at": 346,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.3.1",
+   "at": 769,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.5.1",
+   "at": 791,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.9.1",
+   "at": 552,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.11.1",
+   "at": 1884,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.14.1",
+   "at": 1323,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.20.1",
+   "at": 636,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.25.1",
+   "at": 306,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.32.1",
+   "at": 593,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.34.1",
+   "at": 696,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.44.1",
+   "at": 133,
+   "text": "Chrysostom",
+   "author": "chrysostom",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.45.1",
+   "at": 897,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.45.2",
+   "at": 1441,
+   "text": "Origen",
+   "author": "origen",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.47.1",
+   "at": 655,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.27.63.1",
+   "at": 138,
+   "text": "Augustine",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.28.10.1",
+   "at": 1349,
+   "text": "Austin",
+   "author": "augustine",
+   "status": "detected"
+  },
+  {
+   "in": "haydock-matthew.MAT.28.11.1",
+   "at": 354,
+   "text": "Augustin",
+   "author": "augustine",
+   "status": "detected"
+  }
+ ]
+}

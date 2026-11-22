@@ -2,12 +2,12 @@
  "about": "Written by scripts/score_refs.py: the pattern matcher of scripts/find_refs.py scored against the references CCEL's editors marked, and the Catena's quotations checked against the verses each homily or tractate covers. Never typed.",
  "citations": {
   "all": {
-   "found": 39175,
-   "marked": 36069,
-   "right": 34576,
-   "caught": 34934,
-   "precision": 0.883,
-   "recall": 0.969
+   "found": 41249,
+   "marked": 37713,
+   "right": 36146,
+   "caught": 36569,
+   "precision": 0.876,
+   "recall": 0.97
   },
   "works": {
    "augustine": {
@@ -226,6 +226,14 @@
     "precision": 0.773,
     "recall": 0.997
    },
+   "jfb-matthew": {
+    "found": 1591,
+    "marked": 1457,
+    "right": 1384,
+    "caught": 1450,
+    "precision": 0.87,
+    "recall": 0.995
+   },
    "jfb-proverbs": {
     "found": 1140,
     "marked": 770,
@@ -257,6 +265,14 @@
     "caught": 72,
     "precision": 0.425,
     "recall": 0.973
+   },
+   "wesley-matthew": {
+    "found": 483,
+    "marked": 187,
+    "right": 186,
+    "caught": 185,
+    "precision": 0.385,
+    "recall": 0.989
    },
    "wesley-romans": {
     "found": 183,

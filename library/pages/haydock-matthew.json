@@ -1,0 +1,3618 @@
+{
+ "work": "haydock-matthew",
+ "about": "The leaf of the archive.org scan each excerpt begins on (counted from 0) and the page number printed on it, found by scripts/find_pages.py. Excerpts not found are left out.",
+ "scans": [
+  {
+   "id": "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   "files": [
+    {
+     "url": "https://archive.org/download/haydock-catholic-bible-comment-haydock-george-leo-3948/Haydock%20Catholic%20Bible%20Comment%20-%20Haydock%2C%20George%20Leo_3948_hocr_pageindex.json.gz",
+     "sha256": "308d23ac4a03cd7bd404848a1335b72301cbf86d84b6bede23f48890b5ed6ec3"
+    },
+    {
+     "url": "https://archive.org/download/haydock-catholic-bible-comment-haydock-george-leo-3948/Haydock%20Catholic%20Bible%20Comment%20-%20Haydock%2C%20George%20Leo_3948_hocr_searchtext.txt.gz",
+     "sha256": "3843c015a1900660350c17bb3ea9f6e96ae2009f13e94d943d9cb45c4b74b71b"
+    },
+    {
+     "url": "https://archive.org/download/haydock-catholic-bible-comment-haydock-george-leo-3948/Haydock%20Catholic%20Bible%20Comment%20-%20Haydock%2C%20George%20Leo_3948_page_numbers.json",
+     "sha256": "4d52adbaedeff51967e8f84a147b090275eb6e693ba2bce86c6867b403927196"
+    }
+   ]
+  }
+ ],
+ "retrieved": "2026-11-22",
+ "found": 718,
+ "missed": 0,
+ "pages": {
+  "haydock-matthew.MAT.1.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2564,
+   ""
+  ],
+  "haydock-matthew.MAT.1.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2564,
+   ""
+  ],
+  "haydock-matthew.MAT.1.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2564,
+   ""
+  ],
+  "haydock-matthew.MAT.1.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2564,
+   ""
+  ],
+  "haydock-matthew.MAT.1.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2565,
+   ""
+  ],
+  "haydock-matthew.MAT.1.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2565,
+   ""
+  ],
+  "haydock-matthew.MAT.1.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2565,
+   ""
+  ],
+  "haydock-matthew.MAT.1.11.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2566,
+   ""
+  ],
+  "haydock-matthew.MAT.1.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2567,
+   ""
+  ],
+  "haydock-matthew.MAT.1.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2567,
+   ""
+  ],
+  "haydock-matthew.MAT.1.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2568,
+   ""
+  ],
+  "haydock-matthew.MAT.1.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2568,
+   ""
+  ],
+  "haydock-matthew.MAT.1.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2568,
+   ""
+  ],
+  "haydock-matthew.MAT.1.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2569,
+   ""
+  ],
+  "haydock-matthew.MAT.1.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2569,
+   ""
+  ],
+  "haydock-matthew.MAT.1.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2569,
+   ""
+  ],
+  "haydock-matthew.MAT.1.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2569,
+   ""
+  ],
+  "haydock-matthew.MAT.2.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2570,
+   ""
+  ],
+  "haydock-matthew.MAT.2.1.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2571,
+   ""
+  ],
+  "haydock-matthew.MAT.2.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2571,
+   ""
+  ],
+  "haydock-matthew.MAT.2.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2571,
+   ""
+  ],
+  "haydock-matthew.MAT.2.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2572,
+   ""
+  ],
+  "haydock-matthew.MAT.2.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2572,
+   ""
+  ],
+  "haydock-matthew.MAT.2.11.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2573,
+   ""
+  ],
+  "haydock-matthew.MAT.2.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2573,
+   ""
+  ],
+  "haydock-matthew.MAT.2.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2573,
+   ""
+  ],
+  "haydock-matthew.MAT.2.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2573,
+   ""
+  ],
+  "haydock-matthew.MAT.2.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2573,
+   ""
+  ],
+  "haydock-matthew.MAT.2.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2574,
+   ""
+  ],
+  "haydock-matthew.MAT.3.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2574,
+   ""
+  ],
+  "haydock-matthew.MAT.3.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2575,
+   ""
+  ],
+  "haydock-matthew.MAT.3.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2575,
+   ""
+  ],
+  "haydock-matthew.MAT.3.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2576,
+   ""
+  ],
+  "haydock-matthew.MAT.3.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2576,
+   ""
+  ],
+  "haydock-matthew.MAT.3.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2576,
+   ""
+  ],
+  "haydock-matthew.MAT.3.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2576,
+   ""
+  ],
+  "haydock-matthew.MAT.3.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2577,
+   ""
+  ],
+  "haydock-matthew.MAT.3.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2577,
+   ""
+  ],
+  "haydock-matthew.MAT.3.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2577,
+   ""
+  ],
+  "haydock-matthew.MAT.3.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2578,
+   ""
+  ],
+  "haydock-matthew.MAT.3.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2578,
+   ""
+  ],
+  "haydock-matthew.MAT.3.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2578,
+   ""
+  ],
+  "haydock-matthew.MAT.4.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2579,
+   ""
+  ],
+  "haydock-matthew.MAT.4.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2579,
+   ""
+  ],
+  "haydock-matthew.MAT.4.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2580,
+   ""
+  ],
+  "haydock-matthew.MAT.4.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2580,
+   ""
+  ],
+  "haydock-matthew.MAT.4.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2580,
+   ""
+  ],
+  "haydock-matthew.MAT.4.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2581,
+   ""
+  ],
+  "haydock-matthew.MAT.4.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2581,
+   ""
+  ],
+  "haydock-matthew.MAT.4.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2581,
+   ""
+  ],
+  "haydock-matthew.MAT.4.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2582,
+   ""
+  ],
+  "haydock-matthew.MAT.4.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2582,
+   ""
+  ],
+  "haydock-matthew.MAT.4.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2582,
+   ""
+  ],
+  "haydock-matthew.MAT.4.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2582,
+   ""
+  ],
+  "haydock-matthew.MAT.4.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2582,
+   ""
+  ],
+  "haydock-matthew.MAT.4.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2583,
+   ""
+  ],
+  "haydock-matthew.MAT.4.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2583,
+   ""
+  ],
+  "haydock-matthew.MAT.4.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2583,
+   ""
+  ],
+  "haydock-matthew.MAT.4.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2584,
+   ""
+  ],
+  "haydock-matthew.MAT.4.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2584,
+   ""
+  ],
+  "haydock-matthew.MAT.4.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2584,
+   ""
+  ],
+  "haydock-matthew.MAT.4.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2584,
+   ""
+  ],
+  "haydock-matthew.MAT.5.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2585,
+   ""
+  ],
+  "haydock-matthew.MAT.5.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2585,
+   ""
+  ],
+  "haydock-matthew.MAT.5.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2585,
+   ""
+  ],
+  "haydock-matthew.MAT.5.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2585,
+   ""
+  ],
+  "haydock-matthew.MAT.5.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2586,
+   ""
+  ],
+  "haydock-matthew.MAT.5.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2586,
+   ""
+  ],
+  "haydock-matthew.MAT.5.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2586,
+   ""
+  ],
+  "haydock-matthew.MAT.5.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2586,
+   ""
+  ],
+  "haydock-matthew.MAT.5.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2587,
+   ""
+  ],
+  "haydock-matthew.MAT.5.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2587,
+   ""
+  ],
+  "haydock-matthew.MAT.5.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2587,
+   ""
+  ],
+  "haydock-matthew.MAT.5.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2587,
+   ""
+  ],
+  "haydock-matthew.MAT.5.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2587,
+   ""
+  ],
+  "haydock-matthew.MAT.5.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2588,
+   ""
+  ],
+  "haydock-matthew.MAT.5.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2588,
+   ""
+  ],
+  "haydock-matthew.MAT.5.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2588,
+   ""
+  ],
+  "haydock-matthew.MAT.5.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2589,
+   ""
+  ],
+  "haydock-matthew.MAT.5.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2589,
+   ""
+  ],
+  "haydock-matthew.MAT.5.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2589,
+   ""
+  ],
+  "haydock-matthew.MAT.5.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2590,
+   ""
+  ],
+  "haydock-matthew.MAT.5.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2590,
+   ""
+  ],
+  "haydock-matthew.MAT.5.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2590,
+   ""
+  ],
+  "haydock-matthew.MAT.5.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2590,
+   ""
+  ],
+  "haydock-matthew.MAT.5.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2590,
+   ""
+  ],
+  "haydock-matthew.MAT.5.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2590,
+   ""
+  ],
+  "haydock-matthew.MAT.5.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2591,
+   ""
+  ],
+  "haydock-matthew.MAT.5.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2591,
+   ""
+  ],
+  "haydock-matthew.MAT.5.38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2591,
+   ""
+  ],
+  "haydock-matthew.MAT.5.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2591,
+   ""
+  ],
+  "haydock-matthew.MAT.5.41.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2591,
+   ""
+  ],
+  "haydock-matthew.MAT.5.43.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2592,
+   ""
+  ],
+  "haydock-matthew.MAT.5.44.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2592,
+   ""
+  ],
+  "haydock-matthew.MAT.5.46.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2592,
+   ""
+  ],
+  "haydock-matthew.MAT.5.48.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2592,
+   ""
+  ],
+  "haydock-matthew.MAT.6.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2592,
+   ""
+  ],
+  "haydock-matthew.MAT.6.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2593,
+   ""
+  ],
+  "haydock-matthew.MAT.6.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2593,
+   ""
+  ],
+  "haydock-matthew.MAT.6.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2593,
+   ""
+  ],
+  "haydock-matthew.MAT.6.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2593,
+   ""
+  ],
+  "haydock-matthew.MAT.6.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2593,
+   ""
+  ],
+  "haydock-matthew.MAT.6.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2593,
+   ""
+  ],
+  "haydock-matthew.MAT.6.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2594,
+   ""
+  ],
+  "haydock-matthew.MAT.6.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2594,
+   ""
+  ],
+  "haydock-matthew.MAT.6.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2594,
+   ""
+  ],
+  "haydock-matthew.MAT.6.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2595,
+   ""
+  ],
+  "haydock-matthew.MAT.6.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2595,
+   ""
+  ],
+  "haydock-matthew.MAT.6.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2595,
+   ""
+  ],
+  "haydock-matthew.MAT.6.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2595,
+   ""
+  ],
+  "haydock-matthew.MAT.6.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2595,
+   ""
+  ],
+  "haydock-matthew.MAT.6.17.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2596,
+   ""
+  ],
+  "haydock-matthew.MAT.6.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2596,
+   ""
+  ],
+  "haydock-matthew.MAT.6.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2596,
+   ""
+  ],
+  "haydock-matthew.MAT.6.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2597,
+   ""
+  ],
+  "haydock-matthew.MAT.6.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2597,
+   ""
+  ],
+  "haydock-matthew.MAT.6.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2597,
+   ""
+  ],
+  "haydock-matthew.MAT.6.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2597,
+   ""
+  ],
+  "haydock-matthew.MAT.6.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2597,
+   ""
+  ],
+  "haydock-matthew.MAT.6.33.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2597,
+   ""
+  ],
+  "haydock-matthew.MAT.6.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2598,
+   ""
+  ],
+  "haydock-matthew.MAT.7.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2599,
+   ""
+  ],
+  "haydock-matthew.MAT.7.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2599,
+   ""
+  ],
+  "haydock-matthew.MAT.7.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2599,
+   ""
+  ],
+  "haydock-matthew.MAT.7.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2599,
+   ""
+  ],
+  "haydock-matthew.MAT.7.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2599,
+   ""
+  ],
+  "haydock-matthew.MAT.7.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2600,
+   ""
+  ],
+  "haydock-matthew.MAT.7.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2600,
+   ""
+  ],
+  "haydock-matthew.MAT.7.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2601,
+   ""
+  ],
+  "haydock-matthew.MAT.7.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2601,
+   ""
+  ],
+  "haydock-matthew.MAT.7.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2601,
+   ""
+  ],
+  "haydock-matthew.MAT.7.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2601,
+   ""
+  ],
+  "haydock-matthew.MAT.7.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2601,
+   ""
+  ],
+  "haydock-matthew.MAT.7.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2602,
+   ""
+  ],
+  "haydock-matthew.MAT.7.16.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2602,
+   ""
+  ],
+  "haydock-matthew.MAT.7.16.3": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2603,
+   ""
+  ],
+  "haydock-matthew.MAT.7.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2603,
+   ""
+  ],
+  "haydock-matthew.MAT.7.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2603,
+   ""
+  ],
+  "haydock-matthew.MAT.7.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2603,
+   ""
+  ],
+  "haydock-matthew.MAT.7.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2604,
+   ""
+  ],
+  "haydock-matthew.MAT.7.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2604,
+   ""
+  ],
+  "haydock-matthew.MAT.7.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2604,
+   ""
+  ],
+  "haydock-matthew.MAT.7.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2605,
+   ""
+  ],
+  "haydock-matthew.MAT.7.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2605,
+   ""
+  ],
+  "haydock-matthew.MAT.7.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2605,
+   ""
+  ],
+  "haydock-matthew.MAT.7.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2605,
+   ""
+  ],
+  "haydock-matthew.MAT.7.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2605,
+   ""
+  ],
+  "haydock-matthew.MAT.8.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2606,
+   ""
+  ],
+  "haydock-matthew.MAT.8.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2606,
+   ""
+  ],
+  "haydock-matthew.MAT.8.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2607,
+   ""
+  ],
+  "haydock-matthew.MAT.8.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2607,
+   ""
+  ],
+  "haydock-matthew.MAT.8.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2607,
+   ""
+  ],
+  "haydock-matthew.MAT.8.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2608,
+   ""
+  ],
+  "haydock-matthew.MAT.8.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2608,
+   ""
+  ],
+  "haydock-matthew.MAT.8.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2608,
+   ""
+  ],
+  "haydock-matthew.MAT.8.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2608,
+   ""
+  ],
+  "haydock-matthew.MAT.8.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2609,
+   ""
+  ],
+  "haydock-matthew.MAT.8.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2609,
+   ""
+  ],
+  "haydock-matthew.MAT.8.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2609,
+   ""
+  ],
+  "haydock-matthew.MAT.8.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2609,
+   ""
+  ],
+  "haydock-matthew.MAT.8.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2609,
+   ""
+  ],
+  "haydock-matthew.MAT.8.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2610,
+   ""
+  ],
+  "haydock-matthew.MAT.8.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2610,
+   ""
+  ],
+  "haydock-matthew.MAT.8.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2610,
+   ""
+  ],
+  "haydock-matthew.MAT.8.26.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2611,
+   ""
+  ],
+  "haydock-matthew.MAT.8.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2611,
+   ""
+  ],
+  "haydock-matthew.MAT.8.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2611,
+   ""
+  ],
+  "haydock-matthew.MAT.8.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2611,
+   ""
+  ],
+  "haydock-matthew.MAT.8.31.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2611,
+   ""
+  ],
+  "haydock-matthew.MAT.8.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2611,
+   ""
+  ],
+  "haydock-matthew.MAT.8.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2612,
+   ""
+  ],
+  "haydock-matthew.MAT.9.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2612,
+   ""
+  ],
+  "haydock-matthew.MAT.9.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2613,
+   ""
+  ],
+  "haydock-matthew.MAT.9.2.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2614,
+   ""
+  ],
+  "haydock-matthew.MAT.9.2.3": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2614,
+   ""
+  ],
+  "haydock-matthew.MAT.9.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2615,
+   ""
+  ],
+  "haydock-matthew.MAT.9.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2615,
+   ""
+  ],
+  "haydock-matthew.MAT.9.4.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2615,
+   ""
+  ],
+  "haydock-matthew.MAT.9.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2616,
+   ""
+  ],
+  "haydock-matthew.MAT.9.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2616,
+   ""
+  ],
+  "haydock-matthew.MAT.9.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2616,
+   ""
+  ],
+  "haydock-matthew.MAT.9.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2617,
+   ""
+  ],
+  "haydock-matthew.MAT.9.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2617,
+   ""
+  ],
+  "haydock-matthew.MAT.9.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2617,
+   ""
+  ],
+  "haydock-matthew.MAT.9.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2618,
+   ""
+  ],
+  "haydock-matthew.MAT.9.14.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2618,
+   ""
+  ],
+  "haydock-matthew.MAT.9.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2618,
+   ""
+  ],
+  "haydock-matthew.MAT.9.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2619,
+   ""
+  ],
+  "haydock-matthew.MAT.9.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2619,
+   ""
+  ],
+  "haydock-matthew.MAT.9.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2619,
+   ""
+  ],
+  "haydock-matthew.MAT.9.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2619,
+   ""
+  ],
+  "haydock-matthew.MAT.9.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2620,
+   ""
+  ],
+  "haydock-matthew.MAT.9.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2620,
+   ""
+  ],
+  "haydock-matthew.MAT.9.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2620,
+   ""
+  ],
+  "haydock-matthew.MAT.9.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2620,
+   ""
+  ],
+  "haydock-matthew.MAT.9.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2620,
+   ""
+  ],
+  "haydock-matthew.MAT.9.31.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2621,
+   ""
+  ],
+  "haydock-matthew.MAT.9.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2621,
+   ""
+  ],
+  "haydock-matthew.MAT.9.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2621,
+   ""
+  ],
+  "haydock-matthew.MAT.9.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2621,
+   ""
+  ],
+  "haydock-matthew.MAT.10.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2621,
+   ""
+  ],
+  "haydock-matthew.MAT.10.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2622,
+   ""
+  ],
+  "haydock-matthew.MAT.10.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2622,
+   ""
+  ],
+  "haydock-matthew.MAT.10.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2622,
+   ""
+  ],
+  "haydock-matthew.MAT.10.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2623,
+   ""
+  ],
+  "haydock-matthew.MAT.10.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2623,
+   ""
+  ],
+  "haydock-matthew.MAT.10.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2624,
+   ""
+  ],
+  "haydock-matthew.MAT.10.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2624,
+   ""
+  ],
+  "haydock-matthew.MAT.10.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2625,
+   ""
+  ],
+  "haydock-matthew.MAT.10.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2625,
+   ""
+  ],
+  "haydock-matthew.MAT.10.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2625,
+   ""
+  ],
+  "haydock-matthew.MAT.10.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2625,
+   ""
+  ],
+  "haydock-matthew.MAT.10.16.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2626,
+   ""
+  ],
+  "haydock-matthew.MAT.10.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2626,
+   ""
+  ],
+  "haydock-matthew.MAT.10.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2626,
+   ""
+  ],
+  "haydock-matthew.MAT.10.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2626,
+   ""
+  ],
+  "haydock-matthew.MAT.10.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2627,
+   ""
+  ],
+  "haydock-matthew.MAT.10.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2627,
+   ""
+  ],
+  "haydock-matthew.MAT.10.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2627,
+   ""
+  ],
+  "haydock-matthew.MAT.10.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2627,
+   ""
+  ],
+  "haydock-matthew.MAT.10.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2627,
+   ""
+  ],
+  "haydock-matthew.MAT.10.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2628,
+   ""
+  ],
+  "haydock-matthew.MAT.10.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2628,
+   ""
+  ],
+  "haydock-matthew.MAT.10.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2628,
+   ""
+  ],
+  "haydock-matthew.MAT.10.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2628,
+   ""
+  ],
+  "haydock-matthew.MAT.10.31.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2628,
+   ""
+  ],
+  "haydock-matthew.MAT.10.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2628,
+   ""
+  ],
+  "haydock-matthew.MAT.10.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2629,
+   ""
+  ],
+  "haydock-matthew.MAT.10.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2629,
+   ""
+  ],
+  "haydock-matthew.MAT.10.37.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2629,
+   ""
+  ],
+  "haydock-matthew.MAT.10.38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2629,
+   ""
+  ],
+  "haydock-matthew.MAT.10.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2630,
+   ""
+  ],
+  "haydock-matthew.MAT.10.41.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2630,
+   ""
+  ],
+  "haydock-matthew.MAT.11.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2630,
+   ""
+  ],
+  "haydock-matthew.MAT.11.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2630,
+   ""
+  ],
+  "haydock-matthew.MAT.11.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2631,
+   ""
+  ],
+  "haydock-matthew.MAT.11.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2631,
+   ""
+  ],
+  "haydock-matthew.MAT.11.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2631,
+   ""
+  ],
+  "haydock-matthew.MAT.11.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2632,
+   ""
+  ],
+  "haydock-matthew.MAT.11.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2632,
+   ""
+  ],
+  "haydock-matthew.MAT.11.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2632,
+   ""
+  ],
+  "haydock-matthew.MAT.11.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2633,
+   ""
+  ],
+  "haydock-matthew.MAT.11.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2633,
+   ""
+  ],
+  "haydock-matthew.MAT.11.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2633,
+   ""
+  ],
+  "haydock-matthew.MAT.11.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2633,
+   ""
+  ],
+  "haydock-matthew.MAT.11.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2633,
+   ""
+  ],
+  "haydock-matthew.MAT.11.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2634,
+   ""
+  ],
+  "haydock-matthew.MAT.11.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2634,
+   ""
+  ],
+  "haydock-matthew.MAT.11.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2634,
+   ""
+  ],
+  "haydock-matthew.MAT.11.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2635,
+   ""
+  ],
+  "haydock-matthew.MAT.11.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2635,
+   ""
+  ],
+  "haydock-matthew.MAT.11.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2635,
+   ""
+  ],
+  "haydock-matthew.MAT.11.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2635,
+   ""
+  ],
+  "haydock-matthew.MAT.11.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2635,
+   ""
+  ],
+  "haydock-matthew.MAT.11.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2635,
+   ""
+  ],
+  "haydock-matthew.MAT.11.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2635,
+   ""
+  ],
+  "haydock-matthew.MAT.12.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2636,
+   ""
+  ],
+  "haydock-matthew.MAT.12.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2636,
+   ""
+  ],
+  "haydock-matthew.MAT.12.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2637,
+   ""
+  ],
+  "haydock-matthew.MAT.12.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2637,
+   ""
+  ],
+  "haydock-matthew.MAT.12.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2637,
+   ""
+  ],
+  "haydock-matthew.MAT.12.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2637,
+   ""
+  ],
+  "haydock-matthew.MAT.12.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2637,
+   ""
+  ],
+  "haydock-matthew.MAT.12.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2638,
+   ""
+  ],
+  "haydock-matthew.MAT.12.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2638,
+   ""
+  ],
+  "haydock-matthew.MAT.12.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2638,
+   ""
+  ],
+  "haydock-matthew.MAT.12.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2638,
+   ""
+  ],
+  "haydock-matthew.MAT.12.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2639,
+   ""
+  ],
+  "haydock-matthew.MAT.12.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2639,
+   ""
+  ],
+  "haydock-matthew.MAT.12.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2639,
+   ""
+  ],
+  "haydock-matthew.MAT.12.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2640,
+   ""
+  ],
+  "haydock-matthew.MAT.12.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2640,
+   ""
+  ],
+  "haydock-matthew.MAT.12.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2641,
+   ""
+  ],
+  "haydock-matthew.MAT.12.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2641,
+   ""
+  ],
+  "haydock-matthew.MAT.12.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2641,
+   ""
+  ],
+  "haydock-matthew.MAT.12.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2641,
+   ""
+  ],
+  "haydock-matthew.MAT.12.31.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2641,
+   ""
+  ],
+  "haydock-matthew.MAT.12.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2642,
+   ""
+  ],
+  "haydock-matthew.MAT.12.32.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2642,
+   ""
+  ],
+  "haydock-matthew.MAT.12.33.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2643,
+   ""
+  ],
+  "haydock-matthew.MAT.12.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2643,
+   ""
+  ],
+  "haydock-matthew.MAT.12.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2643,
+   ""
+  ],
+  "haydock-matthew.MAT.12.38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2644,
+   ""
+  ],
+  "haydock-matthew.MAT.12.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2644,
+   ""
+  ],
+  "haydock-matthew.MAT.12.40.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2644,
+   ""
+  ],
+  "haydock-matthew.MAT.12.42.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2644,
+   ""
+  ],
+  "haydock-matthew.MAT.12.45.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2644,
+   ""
+  ],
+  "haydock-matthew.MAT.12.46.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2644,
+   ""
+  ],
+  "haydock-matthew.MAT.13.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2646,
+   ""
+  ],
+  "haydock-matthew.MAT.13.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2646,
+   ""
+  ],
+  "haydock-matthew.MAT.13.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2646,
+   ""
+  ],
+  "haydock-matthew.MAT.13.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2647,
+   ""
+  ],
+  "haydock-matthew.MAT.13.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2647,
+   ""
+  ],
+  "haydock-matthew.MAT.13.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2647,
+   ""
+  ],
+  "haydock-matthew.MAT.13.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2648,
+   ""
+  ],
+  "haydock-matthew.MAT.13.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2648,
+   ""
+  ],
+  "haydock-matthew.MAT.13.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2649,
+   ""
+  ],
+  "haydock-matthew.MAT.13.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2649,
+   ""
+  ],
+  "haydock-matthew.MAT.13.13.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2650,
+   ""
+  ],
+  "haydock-matthew.MAT.13.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2650,
+   ""
+  ],
+  "haydock-matthew.MAT.13.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2650,
+   ""
+  ],
+  "haydock-matthew.MAT.13.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2650,
+   ""
+  ],
+  "haydock-matthew.MAT.13.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2651,
+   ""
+  ],
+  "haydock-matthew.MAT.13.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2651,
+   ""
+  ],
+  "haydock-matthew.MAT.13.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2651,
+   ""
+  ],
+  "haydock-matthew.MAT.13.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2651,
+   ""
+  ],
+  "haydock-matthew.MAT.13.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2651,
+   ""
+  ],
+  "haydock-matthew.MAT.13.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2651,
+   ""
+  ],
+  "haydock-matthew.MAT.13.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2652,
+   ""
+  ],
+  "haydock-matthew.MAT.13.33.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2652,
+   ""
+  ],
+  "haydock-matthew.MAT.13.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2652,
+   ""
+  ],
+  "haydock-matthew.MAT.13.44.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2652,
+   ""
+  ],
+  "haydock-matthew.MAT.13.46.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2653,
+   ""
+  ],
+  "haydock-matthew.MAT.13.52.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2653,
+   ""
+  ],
+  "haydock-matthew.MAT.13.55.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2653,
+   ""
+  ],
+  "haydock-matthew.MAT.14.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2654,
+   ""
+  ],
+  "haydock-matthew.MAT.14.1.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2654,
+   ""
+  ],
+  "haydock-matthew.MAT.14.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2654,
+   ""
+  ],
+  "haydock-matthew.MAT.14.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2654,
+   ""
+  ],
+  "haydock-matthew.MAT.14.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2655,
+   ""
+  ],
+  "haydock-matthew.MAT.14.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2655,
+   ""
+  ],
+  "haydock-matthew.MAT.14.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2655,
+   ""
+  ],
+  "haydock-matthew.MAT.14.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2655,
+   ""
+  ],
+  "haydock-matthew.MAT.14.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2655,
+   ""
+  ],
+  "haydock-matthew.MAT.14.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2656,
+   ""
+  ],
+  "haydock-matthew.MAT.14.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2656,
+   ""
+  ],
+  "haydock-matthew.MAT.14.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2656,
+   ""
+  ],
+  "haydock-matthew.MAT.14.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2657,
+   ""
+  ],
+  "haydock-matthew.MAT.14.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2657,
+   ""
+  ],
+  "haydock-matthew.MAT.14.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2657,
+   ""
+  ],
+  "haydock-matthew.MAT.14.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2657,
+   ""
+  ],
+  "haydock-matthew.MAT.14.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2658,
+   ""
+  ],
+  "haydock-matthew.MAT.14.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2658,
+   ""
+  ],
+  "haydock-matthew.MAT.14.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2658,
+   ""
+  ],
+  "haydock-matthew.MAT.14.31.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2658,
+   ""
+  ],
+  "haydock-matthew.MAT.14.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2659,
+   ""
+  ],
+  "haydock-matthew.MAT.14.33.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2659,
+   ""
+  ],
+  "haydock-matthew.MAT.14.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2659,
+   ""
+  ],
+  "haydock-matthew.MAT.15.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2659,
+   ""
+  ],
+  "haydock-matthew.MAT.15.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2659,
+   ""
+  ],
+  "haydock-matthew.MAT.15.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2660,
+   ""
+  ],
+  "haydock-matthew.MAT.15.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2660,
+   ""
+  ],
+  "haydock-matthew.MAT.15.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2660,
+   ""
+  ],
+  "haydock-matthew.MAT.15.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2661,
+   ""
+  ],
+  "haydock-matthew.MAT.15.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2661,
+   ""
+  ],
+  "haydock-matthew.MAT.15.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2662,
+   ""
+  ],
+  "haydock-matthew.MAT.15.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2662,
+   ""
+  ],
+  "haydock-matthew.MAT.15.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2663,
+   ""
+  ],
+  "haydock-matthew.MAT.15.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2663,
+   ""
+  ],
+  "haydock-matthew.MAT.15.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2663,
+   ""
+  ],
+  "haydock-matthew.MAT.15.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2663,
+   ""
+  ],
+  "haydock-matthew.MAT.15.26-27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2664,
+   ""
+  ],
+  "haydock-matthew.MAT.15.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2664,
+   ""
+  ],
+  "haydock-matthew.MAT.15.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2664,
+   ""
+  ],
+  "haydock-matthew.MAT.15.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2664,
+   ""
+  ],
+  "haydock-matthew.MAT.15.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2664,
+   ""
+  ],
+  "haydock-matthew.MAT.15.37.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2664,
+   ""
+  ],
+  "haydock-matthew.MAT.15.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2665,
+   ""
+  ],
+  "haydock-matthew.MAT.16.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2665,
+   ""
+  ],
+  "haydock-matthew.MAT.16.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2665,
+   ""
+  ],
+  "haydock-matthew.MAT.16.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2666,
+   ""
+  ],
+  "haydock-matthew.MAT.16.6-7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2666,
+   ""
+  ],
+  "haydock-matthew.MAT.16.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2666,
+   ""
+  ],
+  "haydock-matthew.MAT.16.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2666,
+   ""
+  ],
+  "haydock-matthew.MAT.16.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2666,
+   ""
+  ],
+  "haydock-matthew.MAT.16.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2667,
+   ""
+  ],
+  "haydock-matthew.MAT.16.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2667,
+   ""
+  ],
+  "haydock-matthew.MAT.16.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2667,
+   ""
+  ],
+  "haydock-matthew.MAT.16.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2667,
+   ""
+  ],
+  "haydock-matthew.MAT.16.18.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2668,
+   ""
+  ],
+  "haydock-matthew.MAT.16.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2669,
+   ""
+  ],
+  "haydock-matthew.MAT.16.19.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2669,
+   ""
+  ],
+  "haydock-matthew.MAT.16.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2669,
+   ""
+  ],
+  "haydock-matthew.MAT.16.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2670,
+   ""
+  ],
+  "haydock-matthew.MAT.16.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2670,
+   ""
+  ],
+  "haydock-matthew.MAT.16.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2670,
+   ""
+  ],
+  "haydock-matthew.MAT.16.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2671,
+   ""
+  ],
+  "haydock-matthew.MAT.16.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2671,
+   ""
+  ],
+  "haydock-matthew.MAT.16.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2671,
+   ""
+  ],
+  "haydock-matthew.MAT.16.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2671,
+   ""
+  ],
+  "haydock-matthew.MAT.16.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2671,
+   ""
+  ],
+  "haydock-matthew.MAT.17.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2672,
+   ""
+  ],
+  "haydock-matthew.MAT.17.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2672,
+   ""
+  ],
+  "haydock-matthew.MAT.17.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2673,
+   ""
+  ],
+  "haydock-matthew.MAT.17.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2673,
+   ""
+  ],
+  "haydock-matthew.MAT.17.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2674,
+   ""
+  ],
+  "haydock-matthew.MAT.17.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2674,
+   ""
+  ],
+  "haydock-matthew.MAT.17.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2674,
+   ""
+  ],
+  "haydock-matthew.MAT.17.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2674,
+   ""
+  ],
+  "haydock-matthew.MAT.17.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2675,
+   ""
+  ],
+  "haydock-matthew.MAT.17.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2675,
+   ""
+  ],
+  "haydock-matthew.MAT.17.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2675,
+   ""
+  ],
+  "haydock-matthew.MAT.17.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2675,
+   ""
+  ],
+  "haydock-matthew.MAT.17.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2676,
+   ""
+  ],
+  "haydock-matthew.MAT.17.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2676,
+   ""
+  ],
+  "haydock-matthew.MAT.17.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2676,
+   ""
+  ],
+  "haydock-matthew.MAT.17.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2676,
+   ""
+  ],
+  "haydock-matthew.MAT.17.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2677,
+   ""
+  ],
+  "haydock-matthew.MAT.17.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2677,
+   ""
+  ],
+  "haydock-matthew.MAT.17.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2677,
+   ""
+  ],
+  "haydock-matthew.MAT.18.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2678,
+   ""
+  ],
+  "haydock-matthew.MAT.18.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2678,
+   ""
+  ],
+  "haydock-matthew.MAT.18.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2678,
+   ""
+  ],
+  "haydock-matthew.MAT.18.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2678,
+   ""
+  ],
+  "haydock-matthew.MAT.18.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2678,
+   ""
+  ],
+  "haydock-matthew.MAT.18.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2679,
+   ""
+  ],
+  "haydock-matthew.MAT.18.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2679,
+   ""
+  ],
+  "haydock-matthew.MAT.18.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2680,
+   ""
+  ],
+  "haydock-matthew.MAT.18.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2680,
+   ""
+  ],
+  "haydock-matthew.MAT.18.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2680,
+   ""
+  ],
+  "haydock-matthew.MAT.18.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2681,
+   ""
+  ],
+  "haydock-matthew.MAT.18.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2681,
+   ""
+  ],
+  "haydock-matthew.MAT.18.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2681,
+   ""
+  ],
+  "haydock-matthew.MAT.18.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2682,
+   ""
+  ],
+  "haydock-matthew.MAT.18.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2682,
+   ""
+  ],
+  "haydock-matthew.MAT.18.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2682,
+   ""
+  ],
+  "haydock-matthew.MAT.18.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2682,
+   ""
+  ],
+  "haydock-matthew.MAT.18.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2683,
+   ""
+  ],
+  "haydock-matthew.MAT.18.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2683,
+   ""
+  ],
+  "haydock-matthew.MAT.18.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2683,
+   ""
+  ],
+  "haydock-matthew.MAT.19.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2685,
+   ""
+  ],
+  "haydock-matthew.MAT.19.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2685,
+   ""
+  ],
+  "haydock-matthew.MAT.19.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2685,
+   ""
+  ],
+  "haydock-matthew.MAT.19.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2685,
+   ""
+  ],
+  "haydock-matthew.MAT.19.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2685,
+   ""
+  ],
+  "haydock-matthew.MAT.19.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2686,
+   ""
+  ],
+  "haydock-matthew.MAT.19.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2686,
+   ""
+  ],
+  "haydock-matthew.MAT.19.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2687,
+   ""
+  ],
+  "haydock-matthew.MAT.19.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2687,
+   ""
+  ],
+  "haydock-matthew.MAT.19.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2688,
+   ""
+  ],
+  "haydock-matthew.MAT.19.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2688,
+   ""
+  ],
+  "haydock-matthew.MAT.19.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2688,
+   ""
+  ],
+  "haydock-matthew.MAT.19.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2689,
+   ""
+  ],
+  "haydock-matthew.MAT.19.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2689,
+   ""
+  ],
+  "haydock-matthew.MAT.19.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2689,
+   ""
+  ],
+  "haydock-matthew.MAT.19.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2690,
+   ""
+  ],
+  "haydock-matthew.MAT.19.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2690,
+   ""
+  ],
+  "haydock-matthew.MAT.19.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2690,
+   ""
+  ],
+  "haydock-matthew.MAT.19.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2690,
+   ""
+  ],
+  "haydock-matthew.MAT.19.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2691,
+   ""
+  ],
+  "haydock-matthew.MAT.20.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2691,
+   ""
+  ],
+  "haydock-matthew.MAT.20.1.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2692,
+   ""
+  ],
+  "haydock-matthew.MAT.20.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2692,
+   ""
+  ],
+  "haydock-matthew.MAT.20.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2692,
+   ""
+  ],
+  "haydock-matthew.MAT.20.3.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2693,
+   ""
+  ],
+  "haydock-matthew.MAT.20.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2693,
+   ""
+  ],
+  "haydock-matthew.MAT.20.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2693,
+   ""
+  ],
+  "haydock-matthew.MAT.20.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2693,
+   ""
+  ],
+  "haydock-matthew.MAT.20.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2693,
+   ""
+  ],
+  "haydock-matthew.MAT.20.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2694,
+   ""
+  ],
+  "haydock-matthew.MAT.20.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2694,
+   ""
+  ],
+  "haydock-matthew.MAT.20.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2695,
+   ""
+  ],
+  "haydock-matthew.MAT.20.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2695,
+   ""
+  ],
+  "haydock-matthew.MAT.20.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2695,
+   ""
+  ],
+  "haydock-matthew.MAT.20.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2695,
+   ""
+  ],
+  "haydock-matthew.MAT.20.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2696,
+   ""
+  ],
+  "haydock-matthew.MAT.20.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2696,
+   ""
+  ],
+  "haydock-matthew.MAT.20.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2697,
+   ""
+  ],
+  "haydock-matthew.MAT.20.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2697,
+   ""
+  ],
+  "haydock-matthew.MAT.21.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2697,
+   ""
+  ],
+  "haydock-matthew.MAT.21.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2698,
+   ""
+  ],
+  "haydock-matthew.MAT.21.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2699,
+   ""
+  ],
+  "haydock-matthew.MAT.21.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2699,
+   ""
+  ],
+  "haydock-matthew.MAT.21.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2699,
+   ""
+  ],
+  "haydock-matthew.MAT.21.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2699,
+   ""
+  ],
+  "haydock-matthew.MAT.21.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2700,
+   ""
+  ],
+  "haydock-matthew.MAT.21.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2700,
+   ""
+  ],
+  "haydock-matthew.MAT.21.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2700,
+   ""
+  ],
+  "haydock-matthew.MAT.21.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2701,
+   ""
+  ],
+  "haydock-matthew.MAT.21.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2701,
+   ""
+  ],
+  "haydock-matthew.MAT.21.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2701,
+   ""
+  ],
+  "haydock-matthew.MAT.21.24-25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2701,
+   ""
+  ],
+  "haydock-matthew.MAT.21.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2701,
+   ""
+  ],
+  "haydock-matthew.MAT.21.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2702,
+   ""
+  ],
+  "haydock-matthew.MAT.21.33.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2702,
+   ""
+  ],
+  "haydock-matthew.MAT.21.37.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2702,
+   ""
+  ],
+  "haydock-matthew.MAT.21.38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2702,
+   ""
+  ],
+  "haydock-matthew.MAT.21.41.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2703,
+   ""
+  ],
+  "haydock-matthew.MAT.21.42.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2703,
+   ""
+  ],
+  "haydock-matthew.MAT.21.43.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2703,
+   ""
+  ],
+  "haydock-matthew.MAT.21.45.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2703,
+   ""
+  ],
+  "haydock-matthew.MAT.22.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2704,
+   ""
+  ],
+  "haydock-matthew.MAT.22.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2704,
+   ""
+  ],
+  "haydock-matthew.MAT.22.2.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2704,
+   ""
+  ],
+  "haydock-matthew.MAT.22.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2705,
+   ""
+  ],
+  "haydock-matthew.MAT.22.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2705,
+   ""
+  ],
+  "haydock-matthew.MAT.22.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2705,
+   ""
+  ],
+  "haydock-matthew.MAT.22.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2706,
+   ""
+  ],
+  "haydock-matthew.MAT.22.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2706,
+   ""
+  ],
+  "haydock-matthew.MAT.22.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2706,
+   ""
+  ],
+  "haydock-matthew.MAT.22.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2706,
+   ""
+  ],
+  "haydock-matthew.MAT.22.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2706,
+   ""
+  ],
+  "haydock-matthew.MAT.22.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2707,
+   ""
+  ],
+  "haydock-matthew.MAT.22.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2707,
+   ""
+  ],
+  "haydock-matthew.MAT.22.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2707,
+   ""
+  ],
+  "haydock-matthew.MAT.22.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2708,
+   ""
+  ],
+  "haydock-matthew.MAT.22.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2708,
+   ""
+  ],
+  "haydock-matthew.MAT.22.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2708,
+   ""
+  ],
+  "haydock-matthew.MAT.22.21.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2709,
+   ""
+  ],
+  "haydock-matthew.MAT.22.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2710,
+   ""
+  ],
+  "haydock-matthew.MAT.22.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2710,
+   ""
+  ],
+  "haydock-matthew.MAT.22.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2710,
+   ""
+  ],
+  "haydock-matthew.MAT.22.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2710,
+   ""
+  ],
+  "haydock-matthew.MAT.22.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2711,
+   ""
+  ],
+  "haydock-matthew.MAT.22.40.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2711,
+   ""
+  ],
+  "haydock-matthew.MAT.22.45.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2711,
+   ""
+  ],
+  "haydock-matthew.MAT.23.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2712,
+   ""
+  ],
+  "haydock-matthew.MAT.23.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2712,
+   ""
+  ],
+  "haydock-matthew.MAT.23.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2712,
+   ""
+  ],
+  "haydock-matthew.MAT.23.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2713,
+   ""
+  ],
+  "haydock-matthew.MAT.23.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2713,
+   ""
+  ],
+  "haydock-matthew.MAT.23.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2714,
+   ""
+  ],
+  "haydock-matthew.MAT.23.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2714,
+   ""
+  ],
+  "haydock-matthew.MAT.23.9-10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2714,
+   ""
+  ],
+  "haydock-matthew.MAT.23.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2714,
+   ""
+  ],
+  "haydock-matthew.MAT.23.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2714,
+   ""
+  ],
+  "haydock-matthew.MAT.23.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2715,
+   ""
+  ],
+  "haydock-matthew.MAT.23.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2715,
+   ""
+  ],
+  "haydock-matthew.MAT.23.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2716,
+   ""
+  ],
+  "haydock-matthew.MAT.23.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2716,
+   ""
+  ],
+  "haydock-matthew.MAT.23.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2716,
+   ""
+  ],
+  "haydock-matthew.MAT.23.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2716,
+   ""
+  ],
+  "haydock-matthew.MAT.23.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2717,
+   ""
+  ],
+  "haydock-matthew.MAT.23.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2717,
+   ""
+  ],
+  "haydock-matthew.MAT.23.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2717,
+   ""
+  ],
+  "haydock-matthew.MAT.23.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2717,
+   ""
+  ],
+  "haydock-matthew.MAT.23.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2718,
+   ""
+  ],
+  "haydock-matthew.MAT.23.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2718,
+   ""
+  ],
+  "haydock-matthew.MAT.23.35.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2718,
+   ""
+  ],
+  "haydock-matthew.MAT.23.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2718,
+   ""
+  ],
+  "haydock-matthew.MAT.23.37.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2719,
+   ""
+  ],
+  "haydock-matthew.MAT.23.38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2719,
+   ""
+  ],
+  "haydock-matthew.MAT.23.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2719,
+   ""
+  ],
+  "haydock-matthew.MAT.24.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2719,
+   ""
+  ],
+  "haydock-matthew.MAT.24.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2720,
+   ""
+  ],
+  "haydock-matthew.MAT.24.2.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2720,
+   ""
+  ],
+  "haydock-matthew.MAT.24.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2721,
+   ""
+  ],
+  "haydock-matthew.MAT.24.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2721,
+   ""
+  ],
+  "haydock-matthew.MAT.24.4.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2722,
+   ""
+  ],
+  "haydock-matthew.MAT.24.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2722,
+   ""
+  ],
+  "haydock-matthew.MAT.24.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2723,
+   ""
+  ],
+  "haydock-matthew.MAT.24.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2723,
+   ""
+  ],
+  "haydock-matthew.MAT.24.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2723,
+   ""
+  ],
+  "haydock-matthew.MAT.24.9.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2724,
+   ""
+  ],
+  "haydock-matthew.MAT.24.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2724,
+   ""
+  ],
+  "haydock-matthew.MAT.24.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2724,
+   ""
+  ],
+  "haydock-matthew.MAT.24.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2724,
+   ""
+  ],
+  "haydock-matthew.MAT.24.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2725,
+   ""
+  ],
+  "haydock-matthew.MAT.24.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2725,
+   ""
+  ],
+  "haydock-matthew.MAT.24.15.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2725,
+   ""
+  ],
+  "haydock-matthew.MAT.24.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2726,
+   ""
+  ],
+  "haydock-matthew.MAT.24.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2726,
+   ""
+  ],
+  "haydock-matthew.MAT.24.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2726,
+   ""
+  ],
+  "haydock-matthew.MAT.24.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2726,
+   ""
+  ],
+  "haydock-matthew.MAT.24.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2726,
+   ""
+  ],
+  "haydock-matthew.MAT.24.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2726,
+   ""
+  ],
+  "haydock-matthew.MAT.24.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2726,
+   ""
+  ],
+  "haydock-matthew.MAT.24.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2727,
+   ""
+  ],
+  "haydock-matthew.MAT.24.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2727,
+   ""
+  ],
+  "haydock-matthew.MAT.24.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2727,
+   ""
+  ],
+  "haydock-matthew.MAT.24.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2728,
+   ""
+  ],
+  "haydock-matthew.MAT.24.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2728,
+   ""
+  ],
+  "haydock-matthew.MAT.24.36.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2728,
+   ""
+  ],
+  "haydock-matthew.MAT.24.37-38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2728,
+   ""
+  ],
+  "haydock-matthew.MAT.24.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2729,
+   ""
+  ],
+  "haydock-matthew.MAT.24.40.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2729,
+   ""
+  ],
+  "haydock-matthew.MAT.24.41.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2729,
+   ""
+  ],
+  "haydock-matthew.MAT.24.42.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2730,
+   ""
+  ],
+  "haydock-matthew.MAT.25.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2731,
+   ""
+  ],
+  "haydock-matthew.MAT.25.1.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2731,
+   ""
+  ],
+  "haydock-matthew.MAT.25.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2731,
+   ""
+  ],
+  "haydock-matthew.MAT.25.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2732,
+   ""
+  ],
+  "haydock-matthew.MAT.25.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2732,
+   ""
+  ],
+  "haydock-matthew.MAT.25.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2732,
+   ""
+  ],
+  "haydock-matthew.MAT.25.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2732,
+   ""
+  ],
+  "haydock-matthew.MAT.25.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2732,
+   ""
+  ],
+  "haydock-matthew.MAT.25.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2732,
+   ""
+  ],
+  "haydock-matthew.MAT.25.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2733,
+   ""
+  ],
+  "haydock-matthew.MAT.25.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2733,
+   ""
+  ],
+  "haydock-matthew.MAT.25.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2734,
+   ""
+  ],
+  "haydock-matthew.MAT.25.40.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2734,
+   ""
+  ],
+  "haydock-matthew.MAT.25.41.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2734,
+   ""
+  ],
+  "haydock-matthew.MAT.25.42.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2734,
+   ""
+  ],
+  "haydock-matthew.MAT.25.46.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2735,
+   ""
+  ],
+  "haydock-matthew.MAT.25.46.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2735,
+   ""
+  ],
+  "haydock-matthew.MAT.26.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2736,
+   ""
+  ],
+  "haydock-matthew.MAT.26.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2736,
+   ""
+  ],
+  "haydock-matthew.MAT.26.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2736,
+   ""
+  ],
+  "haydock-matthew.MAT.26.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2737,
+   ""
+  ],
+  "haydock-matthew.MAT.26.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2737,
+   ""
+  ],
+  "haydock-matthew.MAT.26.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2738,
+   ""
+  ],
+  "haydock-matthew.MAT.26.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2738,
+   ""
+  ],
+  "haydock-matthew.MAT.26.11-12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2738,
+   ""
+  ],
+  "haydock-matthew.MAT.26.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2738,
+   ""
+  ],
+  "haydock-matthew.MAT.26.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2739,
+   ""
+  ],
+  "haydock-matthew.MAT.26.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2739,
+   ""
+  ],
+  "haydock-matthew.MAT.26.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2739,
+   ""
+  ],
+  "haydock-matthew.MAT.26.17.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2740,
+   ""
+  ],
+  "haydock-matthew.MAT.26.17.3": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2740,
+   ""
+  ],
+  "haydock-matthew.MAT.26.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2740,
+   ""
+  ],
+  "haydock-matthew.MAT.26.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2741,
+   ""
+  ],
+  "haydock-matthew.MAT.26.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2741,
+   ""
+  ],
+  "haydock-matthew.MAT.26.22.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2741,
+   ""
+  ],
+  "haydock-matthew.MAT.26.23.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2741,
+   ""
+  ],
+  "haydock-matthew.MAT.26.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2742,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2742,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2743,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.3": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2743,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.4": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2744,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.5": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2744,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.6": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2745,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.7": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2746,
+   ""
+  ],
+  "haydock-matthew.MAT.26.26.8": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2746,
+   ""
+  ],
+  "haydock-matthew.MAT.26.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2747,
+   ""
+  ],
+  "haydock-matthew.MAT.26.27.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2747,
+   ""
+  ],
+  "haydock-matthew.MAT.26.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2747,
+   ""
+  ],
+  "haydock-matthew.MAT.26.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2748,
+   ""
+  ],
+  "haydock-matthew.MAT.26.29.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2749,
+   ""
+  ],
+  "haydock-matthew.MAT.26.30.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2749,
+   ""
+  ],
+  "haydock-matthew.MAT.26.31.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2749,
+   ""
+  ],
+  "haydock-matthew.MAT.26.33.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2749,
+   ""
+  ],
+  "haydock-matthew.MAT.26.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2749,
+   ""
+  ],
+  "haydock-matthew.MAT.26.36.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2750,
+   ""
+  ],
+  "haydock-matthew.MAT.26.37.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2750,
+   ""
+  ],
+  "haydock-matthew.MAT.26.38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2750,
+   ""
+  ],
+  "haydock-matthew.MAT.26.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2750,
+   ""
+  ],
+  "haydock-matthew.MAT.26.41.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2750,
+   ""
+  ],
+  "haydock-matthew.MAT.26.44.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2751,
+   ""
+  ],
+  "haydock-matthew.MAT.26.45.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2751,
+   ""
+  ],
+  "haydock-matthew.MAT.26.48.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2751,
+   ""
+  ],
+  "haydock-matthew.MAT.26.49.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2751,
+   ""
+  ],
+  "haydock-matthew.MAT.26.51.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2751,
+   ""
+  ],
+  "haydock-matthew.MAT.26.52.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2751,
+   ""
+  ],
+  "haydock-matthew.MAT.26.53.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2752,
+   ""
+  ],
+  "haydock-matthew.MAT.26.55.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2752,
+   ""
+  ],
+  "haydock-matthew.MAT.26.56.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2752,
+   ""
+  ],
+  "haydock-matthew.MAT.26.57.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2752,
+   ""
+  ],
+  "haydock-matthew.MAT.26.58.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2753,
+   ""
+  ],
+  "haydock-matthew.MAT.26.60.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2753,
+   ""
+  ],
+  "haydock-matthew.MAT.26.61.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2753,
+   ""
+  ],
+  "haydock-matthew.MAT.26.63.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2753,
+   ""
+  ],
+  "haydock-matthew.MAT.26.64.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2754,
+   ""
+  ],
+  "haydock-matthew.MAT.26.65.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2754,
+   ""
+  ],
+  "haydock-matthew.MAT.26.66.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2754,
+   ""
+  ],
+  "haydock-matthew.MAT.26.67.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2754,
+   ""
+  ],
+  "haydock-matthew.MAT.26.69.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2754,
+   ""
+  ],
+  "haydock-matthew.MAT.26.71.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2754,
+   ""
+  ],
+  "haydock-matthew.MAT.26.73.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2755,
+   ""
+  ],
+  "haydock-matthew.MAT.26.75.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2755,
+   ""
+  ],
+  "haydock-matthew.MAT.27.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2755,
+   ""
+  ],
+  "haydock-matthew.MAT.27.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2756,
+   ""
+  ],
+  "haydock-matthew.MAT.27.3.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2756,
+   ""
+  ],
+  "haydock-matthew.MAT.27.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2757,
+   ""
+  ],
+  "haydock-matthew.MAT.27.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2757,
+   ""
+  ],
+  "haydock-matthew.MAT.27.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2757,
+   ""
+  ],
+  "haydock-matthew.MAT.27.8.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2757,
+   ""
+  ],
+  "haydock-matthew.MAT.27.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2757,
+   ""
+  ],
+  "haydock-matthew.MAT.27.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2758,
+   ""
+  ],
+  "haydock-matthew.MAT.27.14.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2758,
+   ""
+  ],
+  "haydock-matthew.MAT.27.15.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2759,
+   ""
+  ],
+  "haydock-matthew.MAT.27.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2759,
+   ""
+  ],
+  "haydock-matthew.MAT.27.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2759,
+   ""
+  ],
+  "haydock-matthew.MAT.27.21.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2759,
+   ""
+  ],
+  "haydock-matthew.MAT.27.21.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2760,
+   ""
+  ],
+  "haydock-matthew.MAT.27.24.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2760,
+   ""
+  ],
+  "haydock-matthew.MAT.27.25.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2761,
+   ""
+  ],
+  "haydock-matthew.MAT.27.26.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2761,
+   ""
+  ],
+  "haydock-matthew.MAT.27.27.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2761,
+   ""
+  ],
+  "haydock-matthew.MAT.27.28.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2761,
+   ""
+  ],
+  "haydock-matthew.MAT.27.29.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2761,
+   ""
+  ],
+  "haydock-matthew.MAT.27.31.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2761,
+   ""
+  ],
+  "haydock-matthew.MAT.27.32.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2762,
+   ""
+  ],
+  "haydock-matthew.MAT.27.33.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2762,
+   ""
+  ],
+  "haydock-matthew.MAT.27.34.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2762,
+   ""
+  ],
+  "haydock-matthew.MAT.27.35.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2763,
+   ""
+  ],
+  "haydock-matthew.MAT.27.37.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2763,
+   ""
+  ],
+  "haydock-matthew.MAT.27.38.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2763,
+   ""
+  ],
+  "haydock-matthew.MAT.27.39.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2763,
+   ""
+  ],
+  "haydock-matthew.MAT.27.40.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2763,
+   ""
+  ],
+  "haydock-matthew.MAT.27.42.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2763,
+   ""
+  ],
+  "haydock-matthew.MAT.27.43.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2764,
+   ""
+  ],
+  "haydock-matthew.MAT.27.44.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2764,
+   ""
+  ],
+  "haydock-matthew.MAT.27.45.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2764,
+   ""
+  ],
+  "haydock-matthew.MAT.27.45.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2765,
+   ""
+  ],
+  "haydock-matthew.MAT.27.45.3": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2765,
+   ""
+  ],
+  "haydock-matthew.MAT.27.47.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2766,
+   ""
+  ],
+  "haydock-matthew.MAT.27.50.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2766,
+   ""
+  ],
+  "haydock-matthew.MAT.27.51.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2766,
+   ""
+  ],
+  "haydock-matthew.MAT.27.54.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2767,
+   ""
+  ],
+  "haydock-matthew.MAT.27.55.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2767,
+   ""
+  ],
+  "haydock-matthew.MAT.27.57.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2767,
+   ""
+  ],
+  "haydock-matthew.MAT.27.58.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2768,
+   ""
+  ],
+  "haydock-matthew.MAT.27.59.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2768,
+   ""
+  ],
+  "haydock-matthew.MAT.27.60.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2768,
+   ""
+  ],
+  "haydock-matthew.MAT.27.61.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2768,
+   ""
+  ],
+  "haydock-matthew.MAT.27.62.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2769,
+   ""
+  ],
+  "haydock-matthew.MAT.27.63.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2769,
+   ""
+  ],
+  "haydock-matthew.MAT.27.65.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2769,
+   ""
+  ],
+  "haydock-matthew.MAT.27.66.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2770,
+   ""
+  ],
+  "haydock-matthew.MAT.28.1.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2770,
+   ""
+  ],
+  "haydock-matthew.MAT.28.1.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2771,
+   ""
+  ],
+  "haydock-matthew.MAT.28.2.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2771,
+   ""
+  ],
+  "haydock-matthew.MAT.28.2.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2772,
+   ""
+  ],
+  "haydock-matthew.MAT.28.4.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2772,
+   ""
+  ],
+  "haydock-matthew.MAT.28.5.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2772,
+   ""
+  ],
+  "haydock-matthew.MAT.28.6.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2772,
+   ""
+  ],
+  "haydock-matthew.MAT.28.7.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2773,
+   ""
+  ],
+  "haydock-matthew.MAT.28.9.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2773,
+   ""
+  ],
+  "haydock-matthew.MAT.28.10.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2773,
+   ""
+  ],
+  "haydock-matthew.MAT.28.11.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2774,
+   ""
+  ],
+  "haydock-matthew.MAT.28.12.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2774,
+   ""
+  ],
+  "haydock-matthew.MAT.28.13.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2774,
+   ""
+  ],
+  "haydock-matthew.MAT.28.16.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2775,
+   ""
+  ],
+  "haydock-matthew.MAT.28.17.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2776,
+   ""
+  ],
+  "haydock-matthew.MAT.28.18.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2776,
+   ""
+  ],
+  "haydock-matthew.MAT.28.19.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2776,
+   ""
+  ],
+  "haydock-matthew.MAT.28.19.2": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2777,
+   ""
+  ],
+  "haydock-matthew.MAT.28.20.1": [
+   "haydock-catholic-bible-comment-haydock-george-leo-3948",
+   2777,
+   ""
+  ]
+ }
+}
