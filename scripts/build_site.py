@@ -266,6 +266,10 @@ def short_name(author):
 
 
 def short_edition(edition):
+    # "Vols. 43 (S. John I-VIII, ...) and 48 (...)": the volumes without
+    # their notes, not "Vols. 43".
+    if re.match(r"^[^;(]+\([^)]*\)\s+and\s", edition):
+        edition = re.sub(r"\s*\([^)]*\)", "", edition)
     m = re.match(r"^[^;(]+", edition)
     s = en_dash((m[0] if m else edition).strip().rstrip(",."))
     return s if len(s) <= 90 else re.sub(r"\s+\S*$", "", s[:88]) + "…"
@@ -777,15 +781,31 @@ def nav_menus(lib):
             f'<div class="dd-books">{"".join(rows)}</div></div>'
             f'<div class="lg-dd-chapters" data-nav-chapters aria-live="polite" hidden></div></div>'
             f'<div class="dd-alls">{all_link("/read/", t("nav.all_books"))}</div>')
-    cols = []
+    # Eras stack in columns of at most PER_COL names, and an era longer
+    # than that spreads over two or more columns, so the whole list fits
+    # the panel without scrolling.
+    per_col, cols, stack, rows_in = 9, [], [], 0
     for era in ERAS:
         authors = [a for a in lib.ordered_authors() if a["era"] == era]
-        if authors:
-            cols.append(f'<div class="dd-col"><p class="dd-head">{e(t("eras." + era))}</p>'
-                        + "".join(row(f'/commentators/{a["id"]}/', a["name"], a["dates"]) for a in authors) + "</div>")
-    people = (f'<div class="dd-cols" style="--cols: {min(len(cols), 3)}">{"".join(cols)}</div>'
+        if not authors:
+            continue
+        group = (f'<p class="dd-head">{e(t("eras." + era))}</p>'
+                 + "".join(row(f'/commentators/{a["id"]}/', a["name"], a["dates"]) for a in authors))
+        span = -(-len(authors) // per_col)
+        if span > 1:
+            cols.append((f'<div class="dd-col lg-dd-split" style="--span: {span}">{group}</div>', span))
+        elif stack and rows_in + len(authors) <= per_col:
+            stack.append(group)
+            rows_in += len(authors)
+            cols[-1] = (f'<div class="dd-col">{"".join(stack)}</div>', 1)
+        else:
+            stack, rows_in = [group], len(authors)
+            cols.append((f'<div class="dd-col">{group}</div>', 1))
+        if span > 1:
+            stack, rows_in = [], 0
+    people = (f'<div class="dd-cols lg-dd-people" style="--cols: {sum(n for _c, n in cols)}">{"".join(c for c, _n in cols)}</div>'
               f'{all_link("/commentators/", t("nav.all_commentators"))}')
-    explore = (f'<div class="dd-cols" style="--cols: 2"><div class="dd-col"><p class="dd-head">{e(t("nav.explore_read"))}</p>'
+    explore = (f'<div class="dd-cols" style="--cols: 3"><div class="dd-col lg-dd-split" style="--span: 2"><p class="dd-head">{e(t("nav.explore_read"))}</p>'
                + row("/explore/", t("nav.explore_page"), t("nav.explore_page_note"), "compass")
                + row("/search/", t("nav.search_words"), t("nav.search_words_note"), "list")
                + row("/readings/", t("nav.readings"), t("nav.readings_note"), "star")
@@ -1982,9 +2002,10 @@ def read_page(lib, today=None):
     shelf = "".join(
         f'<li><a class="lg-shelf-card" href="/{c.lower()}/"><b>{e(lib.books[c]["en"])}{new_badge(c)}</b>'
         f'<span>{e(t("read.voices", n=len(authors_of(c))))}'
-        + (f' · {e(t("read.part", n=sum(1 for (bk, _c) in cov if bk == c), total=lib.books[c]["chapters"]))}'
+        + '</span>'
+        + (f'<span>{e(t("read.part", n=sum(1 for (bk, _c) in cov if bk == c), total=lib.books[c]["chapters"]))}</span>'
            if sum(1 for (bk, _c) in cov if bk == c) < lib.books[c]["chapters"] else "")
-        + f'</span>{dots(c)}</a></li>' for c in commented)
+        + f'{dots(c)}</a></li>' for c in commented)
     ot = len([c for c in codes[:OT_BOOKS] if c in have])
     nt = len([c for c in codes[OT_BOOKS:] if c in have])
     names = json.dumps({c.lower(): lib.books[c]["en"] for c in codes}, ensure_ascii=False, separators=(",", ":"))
@@ -2023,7 +2044,7 @@ def read_page(lib, today=None):
 
 def book_hours(words):
     """Hours of reading at reading_minutes' 200 words a minute, to a sensible precision."""
-    h = words / 200 / 60
+    h = words / WORDS_PER_MINUTE / 60
     return f"{h:.1f}" if h < 10 else f"{h:.0f}"
 
 
@@ -2142,7 +2163,9 @@ def book_page(lib, book):
             facts.append(t("book.chapter_excerpts", n=f"{starts[c]:,}", h=book_hours(words[c])))
             depth = f'<span class="lg-depth" aria-hidden="true"><span style="width:{100 * starts[c] / peak:.0f}%"></span></span>'
         badge = (f'<span class="lg-badge" title="{e(t("book.chapter_card_one" if n == 1 else "book.chapter_card", n=n, span=span_text(cov[(book, c)][1])))}">'
-                 f'{e(t("book.commentaries_one" if n == 1 else "book.commentaries", n=n))}</span>' if n and n < len(works) else "")
+                 f'{e(t("book.commentaries_one" if n == 1 else "book.commentaries", n=n))}</span>' if n and n < len(works) else
+                 f'<span class="lg-badge lg-badge-all" title="{e(t("book.chapter_card", n=n, span=span_text(cov[(book, c)][1])))}">'
+                 f'{e(t("book.commentaries_all", n=n))}</span>' if n and len(works) > 1 else "")
         inner = ""
         if under.get(c):
             items = "".join(
@@ -2236,7 +2259,7 @@ def book_page(lib, book):
 {ways}
 <section class="lg-block" id="passages" aria-labelledby="h-chapters"><h2 id="h-chapters">{e(t("book.chapters"))}</h2>
 {book_heat(lib, book)}
-{f'<p class="lg-quiet">{e(t("book.chapters_note"))}</p>' if passages else ""}<ol class="lg-toc lg-toc-book">{"".join(rows)}</ol></section>
+{f'<p class="lg-quiet">{e(t("book.chapters_note"))}</p>' if passages else ""}<ol class="lg-toc lg-toc-book" style="--rows: {-(-len(rows) // 2)}">{"".join(rows)}</ol></section>
 {top_verses}{longest}{taste}
 {book_voices(lib, book, works) if works else ""}
 {book_topics_creeds(lib, book)}"""
@@ -3099,7 +3122,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
         toc.append(f'<a href="#{wid}">{e(short_name(a))}</a>')
         words = sum(len(c["text"].split()) for c in cs)
         rail.append(f'<li class="lg-era-{ERAS.index(a["era"])}"><a href="#{wid}"><b>{e(short_name(a))}</b>'
-                    f'<span>{e(a["dates"])} · {e(t("verse.rail_words", n=words))}</span></a></li>')
+                    f'<span>{e(a["dates"])} · {e(t("verse.rail_excerpts", k=len(cs), n=words) if len(cs) > 1 else t("verse.rail_words", n=words))}</span></a></li>')
     cited = cited_by.get(str(verse), [])
     cited_html = ""
     if cited:
@@ -3804,7 +3827,7 @@ def card_size(words, n):
     """How much of a commentator there is: excerpts and words, then the hours
     it takes to read them all at 200 words a minute and, when that is long,
     the minutes a day that would read them in a year."""
-    hours = words / 200 / 60
+    hours = words / WORDS_PER_MINUTE / 60
     size = t("commentators.size", n=f"{n:,}", words=f"{round(words, -3):,}")
     if hours < .75:
         time = t("commentators.hours_less")
@@ -4014,7 +4037,7 @@ def coverage_grid(lib, verses, book_verses):
 
 def reading_minutes(text):
     """Minutes to read an excerpt aloud or slowly, at about 200 words a minute."""
-    return max(1, round(len(text.split()) / 200))
+    return max(1, round(len(text.split()) / WORDS_PER_MINUTE))
 
 
 # A commentator's verse-by-verse list longer than this keeps only its first
@@ -4022,6 +4045,8 @@ def reading_minutes(text):
 # (<lazy>/<book>-<chapter>.html), fetched by web/logia.js when it is opened.
 # Calvin's page was 5.5 MB of HTML with every chapter in it.
 LAZY_LIST = 400
+WORDS_PER_MINUTE = 200   # one reading speed for every time the site gives
+VV_SHOWN = 4      # a book's chapters shown before "Show all", on a commentator's page
 
 
 def excerpt_list(lib, comments, show_work=False, tools="", lazy=None):
@@ -4079,7 +4104,12 @@ def excerpt_list(lib, comments, show_work=False, tools="", lazy=None):
         whole = (f'<p class="lg-chlink"><a href="{work_chapter_url(works[0], b, ch)}">'
                  f'{e(t("commentators.in_order", chapter=name))} {icon("arrow", 15)}</a></p>' if len(works) == 1 else "")
         count = t("commentators.passages" if passages != 1 else "commentators.one_passage", n=passages)
-        out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}" data-book="{b}"{" open" if i == 0 else ""}><summary>'
+        # A book's first chapters show; the rest wait behind a button
+        # (web/logia.js), so a long list does not run on for pages.
+        n_book = sum(1 for bb, _c in keys if bb == b)
+        j = sum(1 for bb, _c in keys[:i] if bb == b)
+        fold = ' data-fold' if n_book > VV_SHOWN + 2 and j >= VV_SHOWN else ""
+        out.append(f'<details class="lg-ch" id="ch-{b.lower()}-{ch}" data-book="{b}"{fold}{" open" if i == 0 else ""}><summary>'
                    f'<span class="lg-ch-name"><b>{e(name)}</b><span class="lg-quiet">{e(count)} · {e(t("commentators.minutes", n=minutes))}</span></span>'
                    f'<span class="lg-ch-depth" aria-hidden="true"><span style="width:{max(4, 100 * words[(b, ch)] / most):.0f}%"></span></span>'
                    f'{icon("chevron", 16, "icon lg-caret")}</summary>'
@@ -4127,6 +4157,9 @@ def excerpt_list(lib, comments, show_work=False, tools="", lazy=None):
         nxt = (f'<a class="lg-ch-next" href="#ch-{keys[i + 1][0].lower()}-{keys[i + 1][1]}">{e(chname(*keys[i + 1]))} '
                f'{icon("arrow", 15)}</a>' if i + 1 < len(keys) else "<span></span>")
         out.append(f'{"" if part_path else "</ul>"}<nav class="lg-ch-steps" aria-label="{e(t("commentators.chapter_steps"))}">{prev}{nxt}</nav></div></details>')
+        if fold and (i + 1 == len(keys) or keys[i + 1][0] != b):
+            out.append(f'<p class="lg-vv-more" hidden><button type="button" class="button ghost" data-book="{b}">'
+                       f'{e(t("commentators.show_chapters", n=n_book, book=lib.books[b]["en"]))}</button></p>')
     if several and keys:
         out.append("</section>")
     return "".join(out)
@@ -4402,7 +4435,7 @@ def author_page(lib, author):
     # Four numbers: commentaries, excerpts, verses, hours to read them all.
     stats = ""
     if comments:
-        hours = max(1, round(n_words / 200 / 60))
+        hours = max(1, round(n_words / WORDS_PER_MINUTE / 60))
         stats = "".join(f'<div><b>{e(v)}</b><span>{e(t(k))}</span></div>' for v, k in (
             (str(len(works)), "commentators.stat_works"), (f"{len(comments):,}", "commentators.stat_excerpts"),
             (f"{n_verses:,}", "commentators.stat_verses"), (str(hours), "commentators.stat_hours")))
@@ -4611,14 +4644,14 @@ def author_page(lib, author):
     others = []
     for a in lib.ordered_authors():
         if a["id"] != aid and others_rank.get(a["id"]):
-            others.append((f'<a href="/commentators/{a["id"]}/">{e(a["name"])}</a>', others_rank[a["id"]]))
+            others.append((f'<a href="/commentators/{a["id"]}/" title="{e(a["name"])}">{e(short_name(a))}</a>', others_rank[a["id"]]))
     others.sort(key=lambda r: -r[1])
     quoted = sum(1 for c in lib.comments for q in c["quotes"] if q["work"] in works)
     catena = (f'<p class="lg-catq"><b>{quoted:,}</b> <span>{e(t("commentators.catena"))} '
               f'<a href="/works/catena/fathers/">{e(t("commentators.catena_link"))}</a></span></p>' if quoted and "catena" in lib.works else "")
     alike = [(lib.authors[b], sim) for sim, b in word_likeness(lib).get(aid, [])[:5] if b in lib.authors and sim >= .1]
     alike = (f'<div class="lg-alike"><h3 class="label">{e(t("commentators.alike", name=short))}</h3><ul class="lg-pbars">'
-             + "".join(f'<li><span><a href="/commentators/{a["id"]}/">{e(a["name"])}</a></span><span class="lg-hbar"><span style="width:{100 * sim / alike[0][1]:.1f}%">'
+             + "".join(f'<li><span><a href="/commentators/{a["id"]}/" title="{e(a["name"])}">{e(short_name(a))}</a></span><span class="lg-hbar"><span style="width:{100 * sim / alike[0][1]:.1f}%">'
                        f'</span></span><span class="lg-quiet">{e(a["dates"])}</span></li>' for a, sim in alike)
              + f'</ul><p class="lg-quiet">{e(t("commentators.alike_note"))}</p></div>' if alike else "")
     alongside = (f'<section class="lg-block" id="alongside"><h2>{e(t("commentators.alongside"))}</h2>'
@@ -5018,7 +5051,7 @@ def work_tiles(lib, wid, comments):
     return "".join(
         f'<li><a href="{work_chapter_url(wid, b, ch)}"><b data-n="{ch}">{e(lib.books[b]["en"])} {ch}</b>'
         f'<span class="lg-tile-title">{e(lib.chapter_title(b, ch))}</span>'
-        f'<span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))} · {e(t("commentators.minutes", n=max(1, round(words[(b, ch)] / 230))))}</span>'
+        f'<span class="lg-quiet">{e(t("work.excerpts", n=len(cs)))} · {e(t("commentators.minutes", n=max(1, round(words[(b, ch)] / WORDS_PER_MINUTE))))}</span>'
         f'<span class="lg-tile-bar" title="{e(t("commentators.chapter_words", chapter=f"{lib.books[b]['en']} {ch}", n=f"{words[(b, ch)]:,}"))}">'
         f'<span style="width:{100 * words[(b, ch)] / top:.0f}%"></span></span></a></li>'
         for (b, ch), cs in chapters.items())
@@ -6749,10 +6782,13 @@ def work_initials(lib, works):
     names = {w: short_name(lib.author_of(w)) for w in works}
     out = {}
     for w, n in names.items():
+        # Never more than two letters: the first, then the first later one
+        # that tells it apart ("We" Wesley but "Wl" and "Wt" beside Westcott).
+        others = [names[o] for o in works if o != w and names[o][:1] == n[:1]]
         k = 1
-        while k < len(n) and any(o != w and names[o][:k] == n[:k] for o in works):
+        while k < len(n) - 1 and any(len(o) > k and o[k] == n[k] for o in others) and others:
             k += 1
-        out[w] = n[:k]
+        out[w] = n[:1] + n[k] if len(n) > 1 else n
     return out
 
 
@@ -6779,7 +6815,8 @@ def most_row(lib, book, md, key, metric, peak, hidden, ini):
 
     topics = "".join(f'<a class="lg-md-topic" href="/topics/{x}/">{e(t("topics." + x + ".heading"))}</a>'
                      for x in topics_on_verse(lib).get((book, ch, v), []))
-    dots = "".join(f'<i class="{"on" if w in d else ""}" title="{e(lib.author_of(w)["name"])}">{e(ini[w])}</i>' for w in md.works)
+    dots = "".join(f'<i class="lg-era-{ERAS.index(lib.author_of(w)["era"])}{" on" if w in d else ""}" title="{e(lib.author_of(w)["name"])}">{e(ini[w])}</i>'
+                   for w in md.works)
     text = chapter_plain(book, ch).get(v, "")
     cited_text = f'<a href="{url}#cited">{cited:,}</a>' if cited else "–"
     return (f'<tr{" hidden" if hidden else ""} data-href="{url}" data-n="{n}"><td class="lg-quiet lg-md-rank" data-sort="{rank}">{e(rank_label(rank, tied))}</td>'
@@ -6827,7 +6864,8 @@ def most_data_json(lib, book, md):
         rows.append([ch, v, verse_ref(lib, book, ch, v), [d.get(w, 0) for w in md.works], [said.get(w, 0) for w in md.works],
                      md.cited.get(key, 0), chapter_plain(book, ch).get(v, ""), topics_on_verse(lib).get((book, ch, v), [])])
     used = sorted({x for r in rows for x in r[7]})
-    return json.dumps({"works": [{"id": w, "name": lib.author_of(w)["name"], "short": short_name(lib.author_of(w)), "ini": ini[w]}
+    return json.dumps({"works": [{"id": w, "name": lib.author_of(w)["name"], "short": short_name(lib.author_of(w)), "ini": ini[w],
+                                  "era": ERAS.index(lib.author_of(w)["era"])}
                                  for w in md.works],
                        "topics": {x: t("topics." + x + ".heading") for x in used}, "rows": rows},
                       ensure_ascii=False, separators=(",", ":"))
@@ -7014,8 +7052,11 @@ def most_discussed_page(lib, book):
     ini = work_initials(lib, md.works)
     all_works = len(md.works)
     every = sum(1 for (b, _c, _v), ws in lib.voices_on.items() if b == book and len(ws) == all_works)
-    verses_with = sum(1 for (b, _c, _v) in lib.voices_on if b == book)
-    in_book = sum(len(chapter_verses(book, ch)) for ch in md.chapters)
+    # Both counts on the same verses: those the Bible text has, and those it
+    # leaves out (John 5:4, 7:53-8:11) where the commentators still comment.
+    with_voices = {(c, v) for (b, c, v) in lib.voices_on if b == book}
+    verses_with = len(with_voices)
+    in_book = len(with_voices | {(ch, v) for ch in md.chapters for v in chapter_verses(book, ch)})
     excerpts = sum(chapter_excerpts(lib, book).values())
     ranked, table = most_table(lib, book, md, ini)
     lead = t("most.lead" if all_works != 1 else "most.lead_one", book=name, verses=f"{verses_with:,}", every=every,
@@ -7081,7 +7122,7 @@ def most_discussed_all(lib, top=100, shown=25):
                     f'<td class="lg-num" data-sort="{len(ws)}">{e(t("most.of", n=len(ws), total=works_on[b]))}</td>'
                     f'<td class="lg-rank-text">{e(snippet(chapter_plain(b, ch).get(v, ""), 26) or t("most.left_out"))}</td></tr>')
     head = "".join((f'<th scope="col"><button type="button" data-sort-col="{i}">{e(x)}</button></th>' if i < 4 else f'<th scope="col">{e(x)}</th>')
-                   for i, x in enumerate(t("most.columns")))
+                   for i, x in enumerate(t("most.all_columns")))
     per_book = {b: sum(n for (bb, _c, _v), n in counts.items() if bb == b) for b in books}
     peak = max(per_book.values(), default=1)
     bars = "".join(f'<li><a href="/{b.lower()}/most-discussed/"><span class="lg-bar-label">{e(lib.books[b]["en"])}</span>'
