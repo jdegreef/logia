@@ -1348,8 +1348,7 @@ def page(lib, title, body, path, current="", description="", scripts=(), noindex
 STUDY_TEXT = json.dumps(CATALOG["study"]["ui"], ensure_ascii=False).replace("</", "<\\/")
 
 
-# Public-domain texts, and Logia itself as the publisher of its pages.
-PUBLIC_DOMAIN = "https://creativecommons.org/publicdomain/mark/1.0/"
+# Logia itself, as the publisher of its pages.
 ORG_ID = SITE_URL + "/#logia"
 
 
@@ -2999,8 +2998,7 @@ def work_ld(lib, wid):
     same = [w["full_text_url"]] + ([f"https://www.wikidata.org/wiki/{ids['wikidata']}"] if ids.get("wikidata") else [])
     return {"@type": "Book", "name": w["title"], "url": SITE_URL + f"/works/{wid}/", "bookEdition": w["edition"],
             "datePublished": str(w["published"]), "inLanguage": LANG, "sameAs": same if len(same) > 1 else same[0],
-            "author": {"@type": "Person", "name": lib.author_of(wid)["name"]}, "license": PUBLIC_DOMAIN,
-            "isAccessibleForFree": True}
+            "author": {"@type": "Person", "name": lib.author_of(wid)["name"]}, "isAccessibleForFree": True}
 
 
 def verse_ld(lib, ref, path, voices, verse):
@@ -3015,7 +3013,7 @@ def verse_ld(lib, ref, path, voices, verse):
                 continue                    # printed in full on the verse it begins at
             parts.append({"@type": "Quotation", "url": SITE_URL + path + "#" + c["id"],
                           "text": opening_words(c, 60), "creator": creator, "isPartOf": work_ld(lib, wid),
-                          "isBasedOn": c["source_url"], "about": ref, "license": PUBLIC_DOMAIN})
+                          "isBasedOn": c["source_url"], "about": ref})
     return {"@context": "https://schema.org", "@type": "WebPage", "name": ref, "url": SITE_URL + path,
             "inLanguage": LANG, "isAccessibleForFree": True, "hasPart": parts}
 
