@@ -531,6 +531,7 @@
     "chapter_none": "Bible text; commentary to come",
     "commentaries": "{n} commentaries",
     "commentaries_one": "1 commentary",
+    "commentaries_all": "All {n}",
     "verses": "{n} verses",
     "verses_one": "1 verse",
     "on": "on {ref}",
@@ -809,6 +810,7 @@
     "n_chapters": "{n} chapters",
     "one_chapter": "1 chapter",
     "open_all": "Open every chapter",
+    "show_chapters": "Show all {n} chapters of {book}",
     "close_all": "Close every chapter",
     "more_on": "{n} more on {ref}",
     "chapter_steps": "The chapters before and after",
@@ -1027,7 +1029,7 @@
       "works": "works",
       "books": "books",
       "books_list": "The books so far: {books}.",
-      "fixes": "scan misreadings corrected"
+      "fixes": "scan fixes"
     },
     "toc": "On this page",
     "h": {
@@ -1288,6 +1290,7 @@
     "rail_title": "{n} voices on this verse",
     "rail_words": "{n:,} words",
     "rail_words_one": "1 word",
+    "rail_excerpts": "{k} excerpts · {n:,} words",
     "title": "{ref} commentary: {names}",
     "title_more": "{names} and {n} more",
     "and": " and ",
@@ -1617,6 +1620,13 @@
         "Excerpts",
         "Words",
         "Cited elsewhere",
+        "Commentators",
+        "The verse"
+      ],
+      "all_columns": [
+        "#",
+        "Verse",
+        "Excerpts",
         "Commentators",
         "The verse"
       ],
@@ -2023,7 +2033,7 @@
       "verses": "verses with commentary",
       "texts": "homilies and tractates in full",
       "citations": "Scripture references found in the excerpts",
-      "fixes": "scan misreadings corrected"
+      "fixes": "scan fixes"
     },
     "added": "Added, newest first",
     "row_note": "{books} · {n} excerpts",
