@@ -2825,3 +2825,115 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 /* "Show all N chapters of Psalms", after a book's first chapters on a
    commentator's page (web/logia.js). */
 .lg-vv-more { margin: 10px 0 18px; }
+
+/* ---- Design review, second batch ---------------------------------------- */
+/* Reader: the chosen verse is marked by a line under it, not a block of
+   colour behind every line; the tint comes back only while it is read aloud. */
+.cx-verse.cx-on { background: none; box-shadow: none; text-decoration: underline; text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px; text-underline-offset: 5px; text-decoration-skip-ink: none; }
+.cx-listening .cx-verse.cx-on { background: var(--mark); }
+/* Reader: each voice's card starts with its initials in the era's colour. */
+.cx-disc { flex: none; align-self: center; width: 26px; height: 26px; border-radius: 50%; display: inline-grid; place-items: center;
+  background: var(--era, var(--gold)); color: var(--bg); font: 600 10.5px var(--sans); letter-spacing: .02em; }
+.cx-who { align-items: center; }
+/* Reader: commentary set like the rest of the site's reading text. */
+.cx-ex { font-size: calc(17.5px * var(--read-scale)); }
+.cx-ex p { margin: 0 0 .8em; }
+/* Verse pages: the strip of the chapter's verses in lighter tints, so the
+   verse itself stays the heaviest thing on the page. */
+.lg-near .chap.lg-has.lg-heat-3 { --h: color-mix(in oklab, var(--gold) 58%, var(--bg)); color: var(--text); }
+.lg-near .chap.lg-has.lg-heat-4 { --h: color-mix(in oklab, var(--gold) 72%, var(--bg)); color: var(--text); }
+.lg-vs-turn { min-height: 36px; }
+/* Tap targets: the small chips and switches a fingertip wide. */
+.cx-chip, .lg-hot a, .cx-levels button, .lg-vlevels button { min-height: 32px; }
+@media (max-width: 880px) { .cx-chip, .lg-hot a, .cx-levels button, .lg-vlevels button { min-height: 40px; } }
+.lg-hot a { display: inline-flex; align-items: center; }
+/* Page titles: a long one (a question on a Differ page) steps down a size. */
+.page-head h1.lg-long { font-size: clamp(28px, 4.2vw, 40px); }
+/* Verse pages: the voices rail grouped by era, each voice with a bar for how much it says. */
+.lg-vrail .lg-vrail-era { font: 600 10.5px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 10px 0 2px; }
+.lg-vrail .lg-vrail-era:first-child { margin-top: 0; }
+.lg-vrail .lg-vrail-bar-w { display: block; height: 3px; width: var(--w); max-width: 100%; margin-top: 3px; border-radius: 2px; background: color-mix(in srgb, var(--era) 70%, transparent); }
+.lg-vrail-bar .lg-vrail-era, .lg-vrail-bar .lg-vrail-bar-w { display: none; }
+/* A commentator's page: the time it takes to read them, ahead of the counts. */
+.lg-glance { margin: 22px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.lg-glance b { font: 600 26px/1.15 var(--display); }
+.lg-glance span { color: var(--muted); }
+.lg-glance + .lg-stats { margin-top: 10px; }
+/* A homily: author and source as a byline, Listen the one button. */
+.lg-text-byline { margin: 6px 0 0; font-size: 14px; }
+.lg-text-byline a { color: inherit; }
+.lg-text-listen { margin-top: 12px; }
+.lg-text-listen .lg-listen > button:first-child { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); }
+/* Its contents: a box to narrow them, and a tick on those already read. */
+.lg-toc-find { width: 100%; margin: 4px 0 8px; padding: 7px 10px; font: inherit; font-size: 13.5px; border: 1px solid var(--line-strong);
+  border-radius: 8px; background: var(--surface); color: var(--text); }
+.lg-contents a.lg-was-read span:first-child::after { content: " ✓"; color: var(--gold); font-weight: 600; }
+.lg-contents li[hidden] { display: none; }
+/* Search: the tools over the results in one tidy row, and each result
+   edged in its commentator's era colour. */
+.lg-fts-view { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 8px 0 4px; }
+.lg-fts-tool { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px; border: 1px solid var(--line-strong);
+  border-radius: 999px; background: var(--surface); font: 600 13.5px var(--sans); cursor: pointer; }
+.lg-fts-tool select { border: 0; background: none; font: inherit; color: var(--accent); cursor: pointer; padding: 0; }
+.lg-fts-toggle input { accent-color: var(--accent); }
+.lg-fts-export { position: relative; }
+.lg-fts-export > summary { list-style: none; } .lg-fts-export > summary::-webkit-details-marker { display: none; }
+.lg-fts-export > summary::after { content: " ▾"; color: var(--muted); }
+.lg-fts-export-menu { position: absolute; z-index: 5; top: calc(100% + 6px); right: 0; display: grid; min-width: 180px; padding: 6px;
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: 10px; box-shadow: var(--shadow-pop); }
+.lg-fts-export-menu button { text-align: left; border: 0; background: none; padding: 8px 10px; border-radius: 6px; font: 500 14px var(--sans); color: var(--text); cursor: pointer; }
+.lg-fts-export-menu button:hover { background: var(--surface-2); }
+.lg-fts-hit[class*="lg-era-"] { border-left: 3px solid color-mix(in srgb, var(--era) 75%, transparent); padding-left: 12px; }
+/* About: on wide screens its contents are a sticky column beside the text,
+   the section being read marked. */
+@media (min-width: 1100px) {
+  .lg-ab-layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; align-items: start; margin-top: 24px; }
+  .lg-ab-layout .lg-ab-toc { position: sticky; top: calc(var(--header-h) + 24px); border: 0; border-right: 1px solid var(--line); padding: 0 16px 0 0; max-width: none; }
+  .lg-ab-layout .lg-ab-toc ul { display: grid; gap: 2px; }
+  .lg-ab-layout .lg-ab-toc a { display: block; padding: 4px 8px; border-radius: 6px; color: var(--text); }
+  .lg-ab-layout .lg-ab-toc a[aria-current] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+}
+/* Differ pages: the passage in three lines until asked for the rest. */
+.lg-clamp.lg-clamped p { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.lg-clamp-more { margin: -4px 0 18px; }
+@media print { .lg-clamp.lg-clamped p { display: block; -webkit-line-clamp: none; overflow: visible; } .lg-clamp-more { display: none; } }
+/* The glossary's A–Z stays in reach: sticky under the header as the list scrolls. */
+.lg-az-bar { position: sticky; top: var(--header-h, 56px); z-index: 4; background: color-mix(in srgb, var(--bg) 95%, transparent);
+  padding: 6px 0; margin-top: 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 560px) { .lg-az-bar { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .lg-az-bar a { flex: none; } }
+.lg-az-lists [id] { scroll-margin-top: calc(var(--header-h, 56px) + 56px); }
+/* A topic's card: where its passages fall between Genesis and Revelation. */
+.lg-canon { position: relative; display: block; height: 6px; margin-top: 8px; border-radius: 3px; background: var(--line); }
+.lg-canon i { position: absolute; top: -1px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 2px var(--surface); }
+/* The coming Sundays as cards across the page, the next one marked. */
+.lg-sundays { grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px; }
+.lg-sunday { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--surface); display: grid; gap: 4px; align-content: start; }
+.lg-sunday p { margin: 0; }
+.lg-sunday.lg-next { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.lg-sunday-day b { display: block; font: 600 11.5px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--gold); }
+.lg-sunday-day span { font: 600 16px/1.25 var(--display); }
+
+/* Home: one card a book, with a line of its chapters shaded by how much is said. */
+.lg-bookcards { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.lg-bookcard { display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.lg-bookcard:hover { border-color: var(--line-strong); }
+.lg-bookcard-name { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; color: var(--text); text-decoration: none; }
+.lg-bookcard-name b { font-family: var(--display); font-size: 19px; font-weight: 600; }
+.lg-bookcard-name:hover b { color: var(--accent); }
+.lg-bookcard-name span { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.lg-bookcard-heat { display: flex; gap: 1px; height: 14px; }
+.lg-bookcard-heat.lg-dense { gap: 0; }
+.lg-bookcard-heat i { flex: 1; min-width: 0; border-radius: 1px; background: var(--gold); }
+.lg-bookcard-go { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13.5px; }
+.lg-bookcard-go a { min-height: 24px; display: inline-flex; align-items: center; }
+
+/* Book page: chapter rows line up as a table (number, title, commentaries, depth). */
+.lg-toc-book a { display: grid; grid-template-columns: 2.2em minmax(0, 1fr) 8.5em 72px; align-items: center; }
+.lg-toc-book a > .lg-badge { grid-column: 3; justify-self: end; }
+.lg-toc-book a > .lg-depth { grid-column: 4; }
+@media (max-width: 480px) {
+  .lg-toc-book a { grid-template-columns: 2.2em minmax(0, 1fr) 56px; }
+  .lg-toc-book a > .lg-badge { grid-column: 2; grid-row: 2; justify-self: start; }
+  .lg-toc-book a > .lg-depth { grid-column: 3; grid-row: 1; width: 56px; }
+}

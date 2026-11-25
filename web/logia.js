@@ -1450,7 +1450,8 @@
       var w = bible ? null : U.works[+x[0]];
       var title = bible ? ref : fmt(U.result_title, { name: w ? w[1] : "", ref: ref });
       var sub = bible ? "<i>" + esc(U.owb) + "</i>" : esc(w ? w[2] : "") + " · <i>" + esc(w ? w[0] : "") + "</i>";
-      return '<li class="lg-fts-hit' + (bible ? " lg-fts-verse" : "") + '"><p class="lg-fts-head"><a href="' + esc(link) + '"><b>' + esc(title) + "</b></a>" +
+      // A stripe in the commentator's era colour down the result's edge.
+      return '<li class="lg-fts-hit' + (bible ? " lg-fts-verse" : " lg-era-" + (w ? w[3] : 0)) + '"><p class="lg-fts-head"><a href="' + esc(link) + '"><b>' + esc(title) + "</b></a>" +
         ' <span class="lg-quiet">' + sub + "</span></p>" +
         '<p class="lg-fts-text">' + d.excerpt + "</p></li>";
     }
@@ -2431,6 +2432,64 @@
     stop.addEventListener("click", finish);
     window.addEventListener("pagehide", function () { speechSynthesis.cancel(); });
   })();
+
+  // A work's contents beside a homily: the homilies already read are ticked
+  // (kept on the device), and a long list can be narrowed by number or verse
+  // ("24", "3:16": the homilies whose passage holds that verse).
+  var readList = document.querySelector(".lg-contents[data-read-key]");
+  if (readList) (function () {
+    var key = readList.getAttribute("data-read-key"), read = [];
+    try { read = JSON.parse(localStorage.getItem(key) || "[]"); } catch (e) { read = []; }
+    if (read.indexOf(location.pathname) < 0) {
+      read.push(location.pathname);
+      try { localStorage.setItem(key, JSON.stringify(read.slice(-3000))); } catch (e) { /* storage blocked */ }
+    }
+    readList.querySelectorAll("a").forEach(function (a) { if (read.indexOf(a.getAttribute("href")) >= 0) a.classList.add("lg-was-read"); });
+    var find = document.querySelector(".lg-toc-find");
+    if (!find) return;
+    find.hidden = false;
+    var span = function (text) {
+      var m = /(\d+):(\d+)(?:[–-](?:(\d+):)?(\d+))?/.exec(text);
+      if (!m) return null;
+      var a = [+m[1], +m[2]], b = m[4] ? [m[3] ? +m[3] : +m[1], +m[4]] : a;
+      return [a, b];
+    };
+    var le = function (x, y) { return x[0] < y[0] || (x[0] === y[0] && x[1] <= y[1]); };
+    find.addEventListener("input", function () {
+      var q = find.value.trim(), want = /^(\d+):(\d+)$/.exec(q);
+      readList.querySelectorAll("li").forEach(function (li) {
+        var text = li.textContent, show = !q;
+        if (want) { var r = span(text), v = [+want[1], +want[2]]; show = !!r && le(r[0], v) && le(v, r[1]); }
+        else if (q) show = text.toLowerCase().indexOf(q.toLowerCase()) >= 0;
+        li.hidden = !show;
+      });
+    });
+  })();
+
+  // About: the section being read is marked in its contents (a sticky column on wide screens).
+  var abToc = document.querySelector(".lg-ab-toc");
+  if (abToc && "IntersectionObserver" in window) {
+    var abLinks = {};
+    abToc.querySelectorAll("a").forEach(function (a) { abLinks[a.getAttribute("href").slice(1)] = a; });
+    var abIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting || !abLinks[en.target.id]) return;
+        Object.keys(abLinks).forEach(function (id) { abLinks[id].toggleAttribute("aria-current", id === en.target.id); });
+      });
+    }, { rootMargin: "-20% 0px -70% 0px" });
+    document.querySelectorAll(".lg-ab-sec").forEach(function (sec) { abIo.observe(sec); });
+  }
+
+  // A long passage shown in three lines first (Differ pages), with a button for the rest.
+  document.querySelectorAll(".lg-clamp").forEach(function (box) {
+    var more = box.nextElementSibling;
+    if (!more || !more.classList.contains("lg-clamp-more")) return;
+    box.classList.add("lg-clamped");
+    var para = box.querySelector("p");
+    if (!para || para.scrollHeight <= para.clientHeight + 4) { box.classList.remove("lg-clamped"); return; }
+    more.hidden = false;
+    more.addEventListener("click", function () { box.classList.remove("lg-clamped"); more.setAttribute("aria-expanded", "true"); more.remove(); });
+  });
 
   // A verse page: the verse at the reader's level (Literal, Balanced or
   // Readable, the setting web/site.js keeps), and buttons to change it there.

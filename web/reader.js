@@ -587,7 +587,8 @@
             : '<span class="cx-new">' + esc(U.new_here) + "</span>")
           : "";
         h += '<section class="cx-card' + (open ? "" : " cx-shut") + '" id="c-' + w.work_id + '">' +
-          '<div class="cx-who"><a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
+          '<div class="cx-who"><span class="cx-disc lg-era-' + ERAS.indexOf(w.era) + '" aria-hidden="true">' + esc((w.short_name || w.author).slice(0, 2)) + "</span>" +
+          '<a href="' + w.author_url + '"><b>' + esc(w.author) + "</b></a>" +
           '<span class="cx-d">' + esc(w.author_dates) + '</span><span class="cx-tag">' + esc(w.tradition) + "</span>" + badge +
           (isHeard(w, v) ? '<span class="cx-heard" title="' + esc(U.heard_title) + '">' + esc(U.heard) + "</span>" : "") +
           '<button type="button" class="cx-pin" data-pin="' + esc(w.author) + '" aria-pressed="' + isPinned(w) + '" title="' +
@@ -1243,6 +1244,7 @@
     var b = $("#listen");
     b.setAttribute("aria-pressed", listen.on);
     b.querySelector("span").textContent = listen.on ? U.listen_stop : U.listen;
+    document.documentElement.classList.toggle("cx-listening", listen.on);
   }
   function listenStop() {
     listen.on = false; listen.run++; listen.said = {};
