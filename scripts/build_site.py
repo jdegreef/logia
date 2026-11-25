@@ -1497,10 +1497,13 @@ SEARCH_ICON = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stro
 HOME_ERAS = ("Early church", "Reformation", "The 1800s")
 # Well-known passages the home page offers as a way in, by chapter.
 HOME_PASSAGES = (("JHN", 1), ("JHN", 3), ("JHN", 6), ("JHN", 10), ("JHN", 11), ("JHN", 14), ("JHN", 17), ("JHN", 20))
-# The hero's "Try" row: verses (one from each book), a chapter and a commentator.
-HOME_TRY = ("JHN.1.1", "MAT.5.3", "ROM.8.28")
-HOME_TRY_CHAPTER = ("ROM", 8)
+# The hero's "Try" row, three ways in: a verse, a word to search and a
+# commentator (the word is the catalog's home.try_word).
+HOME_TRY = "JHN.1.1"
 HOME_TRY_AUTHOR = "chrysostom"
+# When the Christmas banner shows on the home page: (month, day) from and to,
+# across the new year (web/logia.js reads the reader's own date).
+HOME_CHRISTMAS_SEASON = ((12, 1), (1, 6))
 # The motto's verse: Romans 3:2, where Paul's word for "oracles" is logia.
 HOME_MOTTO = "ROM.3.2"
 # For Christmas, beside the Christmas Day Gospel (library/occasions.json):
@@ -1655,20 +1658,24 @@ def home_hero(lib, cov):
         eras.append(f'<li class="lg-era-{ERAS.index(era)}"><a href="{era_url(era)}" title="{e(", ".join(a["name"] for a in people))}">'
                     f'<b>{e(t("eras." + era))}</b><span>{e(t("home.era_voices", n=len(people)))}</span><i>{e(few)}</i></a></li>')
     names = "".join(eras)
-    # Try: the season first, then a verse from each book, a chapter, a commentator.
+    # Christmas, in its season only: a banner over the search.
     xmas = next(((b, st, en) for oid, b, st, en, _v in occasions(lib) if oid == "christmas"), None)
-    season = [(t("home.christmas", ref=passage_ref(lib, *xmas)), t("occasions.christmas.path"))] if xmas else []
+    season = [(passage_ref(lib, *xmas), t("occasions.christmas.path"))] if xmas else []
     for (sc, sv), (ec, ev) in HOME_CHRISTMAS_MAT:
         if ("MAT", sc) in cov:
-            season.append((t("home.christmas", ref=passage_ref(lib, "MAT", (sc, sv), (ec, ev))), passage_url("MAT", (sc, sv), (ec, ev))))
-    chips = [f'<a class="lg-season" href="{e(h)}">{e(x)}</a>' for x, h in season]
-    for r in HOME_TRY:
-        b, c, v = ref_parts(r)
-        if (b, c) in cov:
-            chips.append(f'<a href="{chapter_url(b, c)}#v{v}">{e(cname(lib, b))} {c}:{v}</a>')
-    if HOME_TRY_CHAPTER in cov:
-        b, c = HOME_TRY_CHAPTER
-        chips.append(f'<a href="{chapter_url(b, c)}">{e(cname(lib, b))} {c} <i>{e(t("home.kind_chapter"))}</i></a>')
+            season.append((passage_ref(lib, "MAT", (sc, sv), (ec, ev)), passage_url("MAT", (sc, sv), (ec, ev))))
+    banner = ""
+    if season:
+        (fm, fd), (tm, td) = HOME_CHRISTMAS_SEASON
+        links = " · ".join(f'<a href="{e(h)}">{e(x)}</a>' for x, h in season)
+        banner = (f'<p class="lg-season" data-from="{fm}-{fd}" data-to="{tm}-{td}" hidden>'
+                  f'<b>{e(t("home.christmas_banner"))}</b> {links}</p>')
+    # Try: a verse, a word, a commentator.
+    chips = []
+    b, c, v = ref_parts(HOME_TRY)
+    if (b, c) in cov:
+        chips.append(f'<a href="{chapter_url(b, c)}#v{v}">{e(cname(lib, b))} {c}:{v} <i>{e(t("home.kind_verse"))}</i></a>')
+    chips.append(f'<a href="/search/?q={quote(t("home.try_word"))}">{e(t("home.try_word"))} <i>{e(t("home.kind_word"))}</i></a>')
     if HOME_TRY_AUTHOR in lib.authors:
         a = lib.authors[HOME_TRY_AUTHOR]
         chips.append(f'<a href="/commentators/{a["id"]}/">{e(short_name(a))} <i>{e(t("home.kind_commentator"))}</i></a>')
@@ -1680,6 +1687,7 @@ def home_hero(lib, cov):
 <h1>{e(t("home.title"))}</h1>
 <p class="hero-sub">{e(t("home.lead"))}</p>
 <ul class="lg-era-row" aria-label="{e(t("home.era_row"))}">{names}</ul>
+{banner}
 {search_box(lib, "home-q", key_hint=True)}
 <p class="hero-try lg-try"><span>{e(t("search.try"))}</span> {" ".join(chips)}</p>
 {home_continue(lib)}
@@ -1783,8 +1791,8 @@ def home_page(lib):
                        + "".join(f'<li><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b> '
                                  f'<span>{e(a["dates"])}</span></a></li>' for a in people) + "</ul></section>")
     body = f"""{home_hero(lib, cov)}
-{home_verse(lib)}
 {home_doors(lib)}
+{home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
 <p class="lg-quiet">{e(t("home.heat_note"))}</p>{cards}</section>
 <section class="lg-block" aria-labelledby="h-voices"><h2 id="h-voices">{e(t("home.voices_heading"))}</h2>
@@ -2237,16 +2245,18 @@ def book_page(lib, book):
     ways, top_verses, longest, taste = "", "", "", ""
     if here:
         b = book.lower()
-        cards = [(f"/{b}/most-discussed/", t("most.heading", book=name), t("book.ways_most")),
-                 (f"/{b}/lent/", t("plan.heading", book=name, n=40), t("book.ways_lent")),
-                 (f"/{b}/scripture-cited/", t("cited.heading", book=name), t("book.ways_cited"))]
-        cards += [(f"/{b}/{col['id']}/", t("collections." + col["id"] + ".heading"), t("book.ways_collection"))
+        # Each card says what kind of page it opens: a list, a plan, an index...
+        cards = [(f"/{b}/most-discussed/", t("most.heading", book=name), t("book.ways_most"), "list"),
+                 (f"/{b}/lent/", t("plan.heading", book=name, n=40), t("book.ways_lent"), "plan"),
+                 (f"/{b}/scripture-cited/", t("cited.heading", book=name), t("book.ways_cited"), "index")]
+        cards += [(f"/{b}/{col['id']}/", t("collections." + col["id"] + ".heading"), t("book.ways_collection"), "collection")
                   for col in collections(lib) if col["book"] == book]
-        cards += [(g["path"], g["title"], t("book.ways_guide")) for g in guides() if g.get("book") in (book, None)]
-        cards += [(pg["path"], pg["title"], t("differ.book_way")) for pg, _on, _p in differ_pages(lib)
+        cards += [(g["path"], g["title"], t("book.ways_guide"), "guide") for g in guides() if g.get("book") in (book, None)]
+        cards += [(pg["path"], pg["title"], t("differ.book_way"), "differ") for pg, _on, _p in differ_pages(lib)
                   if pg["start"].startswith(book + ".") and not pg.get("guide")]
-        ways = (f'<section class="lg-block" aria-labelledby="h-ways"><h2 id="h-ways">{e(t("book.ways", book=name))}</h2><ul class="lg-cards">'
-                + "".join(f'<li><a class="lg-card" href="{href}"><b>{e(title)}</b><span>{e(note)}</span></a></li>' for href, title, note in cards)
+        ways = (f'<section class="lg-block" aria-labelledby="h-ways"><h2 id="h-ways">{e(t("book.ways", book=name))}</h2><ul class="lg-cards lg-way-cards">'
+                + "".join(f'<li><a class="lg-card lg-way-{kind}" href="{href}"><span class="lg-way-kind">{e(t("book.way_kinds." + kind))}</span>'
+                          f'<b>{e(title)}</b><span>{e(note)}</span></a></li>' for href, title, note, kind in cards)
                 + "</ul></section>")
         counts = verse_counts(lib, book)
         ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:4]
@@ -4025,7 +4035,8 @@ def commentators_page(lib):
     erastrip = (f'<nav class="lg-erastrip" aria-label="{e(t("commentators.eras_label"))}">'
                 f'<div class="lg-erastrip-bar" aria-hidden="true">{strip}</div><ul>{strip_links}</ul></nav>')
 
-    # Finding a voice: book chips (Old and New Testament), and a bar that
+    # Finding a voice: book chips (Old and New Testament), set over the
+    # timeline so a reader sees the lives they dim, and a bar that
     # stays at the top over the cards with the eras, a name box, the book and
     # how many are shown (web/logia.js; every card is in the HTML).
     has = {a: set(bs) for a, bs in verses.items()}
@@ -4054,7 +4065,7 @@ def commentators_page(lib):
            f'<span class="lg-findbar-count" aria-live="polite" data-of="{e(t("commentators.showing"))}"></span>'
            f'<button type="button" class="lg-findbar-reset" hidden>{e(t("commentators.show_all"))}</button></div>')
     none = f'<p class="lg-findnone lg-quiet" hidden>{e(t("commentators.find_none"))}</p>'
-    sections = (f'<section class="lg-block lg-cmtcards" id="cards" aria-label="{e(t("commentators.cards_label"))}">{pick}{bar}'
+    sections = (f'<section class="lg-block lg-cmtcards" id="cards" aria-label="{e(t("commentators.cards_label"))}">{bar}'
                 f'<ul class="lg-grid lg-people-grid">{"".join(cards)}</ul>{none}</section>')
 
     # Three places to start, for a newcomer.
@@ -4076,6 +4087,7 @@ def commentators_page(lib):
 <header class="page-head"><p class="eyebrow">{e(t("commentators.title"))}</p>
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
 {erastrip}
+{pick}
 {timeline(lib, landmarks=True, strip=True)}
 {new_here}
 {sections}
@@ -5317,7 +5329,8 @@ def text_page(lib, wid, x):
             href = lib.verse_link(cat["start"], cat["work"])
             ref = e(scripture.label(cat["start"], cat["end"]))
             link = f'<a href="{e(href)}">{ref}</a>' if href else ref
-            note = "" if q["status"] == "reviewed" else " " + e(t("reader.unchecked"))
+            note = ("" if q["status"] == "reviewed" else
+                    f' <a class="lg-ai lg-ai-unchecked" href="/about/#checked" title="{e(t("reader.unchecked_title"))}">{e(t("reader.unchecked"))}</a>')
             marks.append(f'<span>{t("text.quoted", name=e(lib.author_of(cat["work"])["name"]), title="<i>" + e(lib.works[cat["work"]]["title"].split(":")[0]) + "</i>", ref=link)}{note}</span>')
         if marks:
             body.append(f'<div class="lg-marks">{"".join(marks)}</div>')
@@ -5346,6 +5359,7 @@ def text_page(lib, wid, x):
                                          minutes=e(t("commentators.minutes", n=reading_minutes(" ".join(p["text"] for p in paras)))))}</p>
 <p class="actions lg-text-listen">{listen_button()}</p>
 <nav class="lg-turns lg-turns-top" aria-label="{e(w["title"])}">{"".join(turns)}</nav></header>
+<div class="lg-read-progress" aria-hidden="true" hidden><span></span></div>
 <div class="lg-whole">{"".join(body)}</div>
 <nav class="lg-turns" aria-label="{e(t("text.turns_end", title=w["title"]))}">{"".join(turns)}</nav>
 <p class="lg-quiet lg-whole-note">{e(t("text.note", edition=w["edition"]))}</p>

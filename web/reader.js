@@ -444,7 +444,7 @@
   // passage each comes from; under that passage, that the Catena quotes it.
   function traced(e) {
     var unchecked = function (q) {
-      return q.status === "reviewed" ? "" : ' <span title="' + esc(U.unchecked_title) + '">' + esc(U.unchecked) + "</span>";
+      return q.status === "reviewed" ? "" : ' <a class="lg-ai lg-ai-unchecked" href="/about/#checked" title="' + esc(U.unchecked_title) + '">' + esc(U.unchecked) + "</a>";
     };
     var rows = (e.quotes || []).map(function (q) {
       return "<div><b>" + esc(q.label) + "</b> " + esc(q.author) + ", " + esc(q.where) +
@@ -508,8 +508,9 @@
   // Under a voice's name: how much it says here and where in the work, and
   // for a Catena, the Fathers it quotes.
   function facts(w, es, words) {
-    var bits = [fmt(es.length === 1 ? U.facts_one : U.facts, {
-      n: es.length, words: words.toLocaleString(), min: Math.max(1, Math.round(words / 200)) })];
+    // The excerpt count only when there is more than one; the reading time
+    // sits at the line's end.
+    var bits = es.length > 1 ? [fmt(U.facts, { n: es.length })] : [];
     var firsts = es.map(function (e) { return e.locus ? +e.locus.split(".")[0] : NaN; }).filter(function (n) { return !isNaN(n); });
     if (firsts.length && Array.isArray(w.divisions) && w.divisions.length) {
       var a = Math.min.apply(null, firsts), b = Math.max.apply(null, firsts);
@@ -519,7 +520,8 @@
     es.forEach(function (e) { (e.speakers || []).forEach(function (s) { if (who.indexOf(s.who) < 0) who.push(s.who); }); });
     var names = who.map(function (k) { return (U.fathers || {})[k]; }).filter(Boolean);
     var quoting = names.length ? '<div class="cx-quoting">' + esc(fmt(U.quoting, { names: names.join(", ") })) + "</div>" : "";
-    return '<div class="cx-facts">' + esc(bits.join(" · ")) + "</div>" + quoting;
+    return '<div class="cx-facts"><span>' + esc(bits.join(" · ")) + '</span><span class="cx-time">' +
+      esc(fmt(U.facts_time, { min: Math.max(1, Math.round(words / 200)) })) + "</span></div>" + quoting;
   }
   // Two rows of filter chips over the voices on a verse: the eras, then the
   // traditions, each with how many voices on this verse it holds. A chip is

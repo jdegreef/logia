@@ -1678,8 +1678,13 @@ html {
 .lg-hero .hero-search:focus-within .lg-kbd { visibility: hidden; }
 @media (hover: none), (max-width: 560px) { .lg-kbd { display: none; } }
 .lg-try i { font-style: normal; font-size: 12px; color: var(--muted); }
-.lg-try a.lg-season { border-color: var(--gold); background: var(--mark); }
-.lg-try a.lg-season::before { content: "✦ "; color: var(--lg-gold-text); }
+/* Christmas, in season: one quiet banner over the search instead of chips in the Try row. */
+.lg-season { margin: 14px auto 0; width: fit-content; max-width: 100%; padding: 6px 16px; border-radius: 999px; font-size: 14px;
+  border: 1px solid var(--gold); background: var(--mark); color: var(--text); text-align: center; }
+.lg-season[hidden] { display: none; }
+.lg-season::before { content: "✦ "; color: var(--lg-gold-text); }
+.lg-season b { font-weight: 600; }
+.lg-season a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
 .lg-books { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin: 18px 0 0; font-size: 14px; }
 .lg-books > span { color: var(--muted); }
 .lg-books .button { padding: 6px 14px; font-size: 14.5px; }
@@ -2941,4 +2946,34 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
   .lg-toc-book a { grid-template-columns: 2.2em minmax(0, 1fr) 56px; }
   .lg-toc-book a > .lg-badge { grid-column: 2; grid-row: 2; justify-self: start; }
   .lg-toc-book a > .lg-depth { grid-column: 3; grid-row: 1; width: 56px; }
+}
+
+/* Third batch of the design review. */
+/* One status tag for "found by a script, not yet checked", beside the draft and reviewed marks. */
+.lg-ai-unchecked { color: var(--muted); background: var(--surface-2); font-weight: 500; font-size: 11.5px; padding: 1px 8px; vertical-align: 1px; }
+/* The reader's tab counts as small badges, and a voice card's reading time at the end of its line. */
+.cx-tabs .cx-n { display: inline-block; min-width: 1.6em; padding: 0 5px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 14%, transparent); text-align: center; line-height: 1.5; }
+.cx-tabs button[aria-selected="true"] .cx-n { background: var(--accent-soft); color: var(--accent); }
+.cx-facts { display: flex; gap: 8px; justify-content: space-between; }
+.cx-facts .cx-time { margin-left: auto; white-space: nowrap; }
+/* A book's "Ways into" cards each say what kind of page they open. */
+.lg-way-cards .lg-card .lg-way-kind { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--lg-gold-ink); }
+.lg-way-cards .lg-way-differ .lg-way-kind, .lg-way-cards .lg-way-guide .lg-way-kind { color: var(--accent); }
+/* One reading measure: 18px on wide screens and 17px on phones, paragraphs 0.8em apart, for excerpts and whole homilies alike. */
+.lg-text, .lg-whole, .cx-ex { font-size: calc(18px * var(--read-scale)); }
+.cx-col .cx-ex { font-size: calc(16px * var(--read-scale)); }
+.lg-text p, .lg-whole p, .cx-ex p { margin-bottom: .8em; }
+@media (max-width: 560px) {
+  .lg-text, .lg-whole, .cx-ex { font-size: calc(17px * var(--read-scale)); }
+}
+/* Commentator page: the works shelf's titles take the same height, so editions and Read line up. */
+.lg-wk-title { min-height: calc(2em * 1.35); }
+/* A whole homily: a thin line at the top shows how far through it you are. */
+.lg-read-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; pointer-events: none; }
+.lg-read-progress span { display: block; height: 100%; width: 0; background: var(--gold); transform-origin: left; }
+/* Opening a fold in the page lets its contents settle in. */
+@media (prefers-reduced-motion: no-preference) {
+  main details[open] > :not(summary) { animation: lg-settle .18s ease-out; }
+  @keyframes lg-settle { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
 }

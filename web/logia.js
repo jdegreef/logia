@@ -285,6 +285,30 @@
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
   });
 
+  // A whole homily: the line at the top follows how far through it you are.
+  var progress = document.querySelector(".lg-read-progress"), whole = document.querySelector(".lg-whole");
+  if (progress && whole) {
+    var bar = progress.firstChild, ticking = false;
+    var follow = function () {
+      ticking = false;
+      var r = whole.getBoundingClientRect(), span = r.height - window.innerHeight;
+      var done = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 1;
+      bar.style.width = (done * 100).toFixed(1) + "%";
+    };
+    progress.hidden = false;
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(follow); } }, { passive: true });
+    follow();
+  }
+
+  // Home: the Christmas banner, shown only in its season by the reader's own
+  // date (data-from and data-to are month-day, and may cross the new year).
+  document.querySelectorAll(".lg-season[data-from]").forEach(function (el) {
+    var d = new Date(), md = (d.getMonth() + 1) * 100 + d.getDate();
+    var at = function (s) { var p = s.split("-"); return +p[0] * 100 + +p[1]; };
+    var from = at(el.getAttribute("data-from")), to = at(el.getAttribute("data-to"));
+    el.hidden = !(from <= to ? md >= from && md <= to : md >= from || md <= to);
+  });
+
   // Home: Continue reading. The last verse read (logia-last, kept by
   // web/reader.js), then up to four other chapters read lately (logia-read).
   var cont = document.querySelector(".lg-continue");
@@ -312,6 +336,10 @@
         recent.hidden = false;
       }
       cont.hidden = false;
+      // A returning reader has found their way in: the verse of the day
+      // comes before the three doors meant for a first visit.
+      var doors = document.querySelector(".lg-doors"), day = document.querySelector(".lg-votd");
+      if (doors && day && doors.compareDocumentPosition(day) & Node.DOCUMENT_POSITION_FOLLOWING) doors.parentNode.insertBefore(day, doors);
     }
   }
 
@@ -838,7 +866,7 @@
   // together, dim the other lives on the timeline, and put the chosen book
   // first on each card, with a quotation from that book.
   document.querySelectorAll(".lg-cmtcards").forEach(function (section) {
-    var pick = section.querySelector(".lg-pick"), bar = section.querySelector(".lg-findbar");
+    var pick = document.querySelector(".lg-pick"), bar = section.querySelector(".lg-findbar");
     var cards = [].slice.call(section.querySelectorAll("li.lg-cmt"));
     var rows = [].slice.call(document.querySelectorAll(".lg-tl-row[data-author]"));
     var chips = pick ? [].slice.call(pick.querySelectorAll("button[data-book]")) : [];
