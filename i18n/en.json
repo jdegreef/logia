@@ -297,6 +297,9 @@
     }
   },
   "home": {
+    "n_chapters": "{n} chapters",
+    "start_at": "Start: {ref}",
+    "most_at": "Most discussed: {ref}",
     "era_voices": "{n} voices",
     "era_row": "The commentators, by era",
     "votd": "Verse of the day",
@@ -339,7 +342,7 @@
     "browse": "Browse the books",
     "read_heading": "Start reading",
     "read_note": "Chapters in gold have commentary.",
-    "heat_note": "Chapters in gold have commentary; the darker the gold, the more the commentators wrote on it.",
+    "heat_note": "Each line is a book's chapters: the darker the gold, the more the commentators wrote on it.",
     "heat_title": "{ref}: {n} excerpts",
     "heat_title_one": "{ref}: 1 excerpt",
     "top_heading": "Where they wrote most",
@@ -358,6 +361,8 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "toolbar": "Arrange the results",
+    "export": "Export",
     "export_csv": "Download (CSV)",
     "export_list": "Copy as a list",
     "export_head": "Reference|Commentator|Work|Address|Opening words",
@@ -763,6 +768,10 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "glance_one": "An hour of {name}",
+    "glance": "{n} hours of {name}",
+    "glance_on": "to read everything here, in {n} commentaries",
+    "glance_on_one": "to read everything here",
     "rel_topic": "Topic: {n} of their excerpts on its passages",
     "portrait": "Portrait",
     "portrait_alt": "Portrait of {name}",
@@ -1277,6 +1286,9 @@
     }
   },
   "text": {
+    "byline": "By {name} · from {source} · {minutes}",
+    "source_ccel": "CCEL",
+    "toc_find": "Find a verse or number",
     "head_title": "{name}, {where} on {book} ({ref}) · Logia",
     "turns_end": "More of {title}",
     "contents": "{divisions}",
@@ -1875,6 +1887,7 @@
     "chapters_title": "Excerpts on each chapter"
   },
   "differ": {
+    "whole_passage": "Read the whole passage",
     "or": " or ",
     "more_one": "1 more tradition",
     "more": "{n} more traditions",
