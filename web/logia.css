@@ -2841,8 +2841,13 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 .cx-ex p { margin: 0 0 .8em; }
 /* Verse pages: the strip of the chapter's verses in lighter tints, so the
    verse itself stays the heaviest thing on the page. */
-.lg-near .chap.lg-has.lg-heat-3 { --h: color-mix(in oklab, var(--gold) 58%, var(--bg)); color: var(--text); }
-.lg-near .chap.lg-has.lg-heat-4 { --h: color-mix(in oklab, var(--gold) 72%, var(--bg)); color: var(--text); }
+/* Five light steps, dark text on every one, so the strip stays readable in each theme. */
+.lg-near .chap.lg-has[class*="lg-heat-"] { color: var(--text); }
+.lg-near .chap.lg-has.lg-heat-0 { --h: color-mix(in oklab, var(--gold) 12%, var(--bg)); }
+.lg-near .chap.lg-has.lg-heat-1 { --h: color-mix(in oklab, var(--gold) 20%, var(--bg)); }
+.lg-near .chap.lg-has.lg-heat-2 { --h: color-mix(in oklab, var(--gold) 28%, var(--bg)); }
+.lg-near .chap.lg-has.lg-heat-3 { --h: color-mix(in oklab, var(--gold) 36%, var(--bg)); }
+.lg-near .chap.lg-has.lg-heat-4 { --h: color-mix(in oklab, var(--gold) 44%, var(--bg)); }
 .lg-vs-turn { min-height: 36px; }
 /* Tap targets: the small chips and switches a fingertip wide. */
 .cx-chip, .lg-hot a, .cx-levels button, .lg-vlevels button { min-height: 32px; }
@@ -2911,7 +2916,7 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 .lg-sunday { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--surface); display: grid; gap: 4px; align-content: start; }
 .lg-sunday p { margin: 0; }
 .lg-sunday.lg-next { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-.lg-sunday-day b { display: block; font: 600 11.5px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--gold); }
+.lg-sunday-day b { display: block; font: 600 11.5px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--lg-gold-text); }
 .lg-sunday-day span { font: 600 16px/1.25 var(--display); }
 
 /* Home: one card a book, with a line of its chapters shaded by how much is said. */
