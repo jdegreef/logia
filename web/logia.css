@@ -2942,3 +2942,48 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
   .lg-toc-book a > .lg-badge { grid-column: 2; grid-row: 2; justify-self: start; }
   .lg-toc-book a > .lg-depth { grid-column: 3; grid-row: 1; width: 56px; }
 }
+
+/* Design review, third batch */
+/* Voice cards: where in the work on the left, reading time on the right. */
+.cx-facts { display: flex; justify-content: space-between; gap: 12px; }
+.cx-facts .cx-time { flex: none; font-variant-numeric: tabular-nums; }
+/* Panel tabs: counts in small round badges. */
+.cx-tabs .cx-n { display: inline-block; min-width: 1.5em; padding: 1px 6px; border-radius: 999px; background: var(--surface-2); text-align: center; line-height: 1.4; }
+.cx-tabs button[aria-selected="true"] .cx-n { background: var(--accent-soft); color: var(--accent); }
+/* One status tag: a draft, reviewed, or found by a script and not yet checked. */
+.lg-ai-unchecked { color: var(--muted); background: var(--surface-2); font-weight: 500; font-size: 11.5px; padding: 1px 8px; vertical-align: 1px; }
+/* Home: the heat key, and Christmas as a banner in season. */
+.lg-heat-key span { display: inline-flex; align-items: center; gap: 4px; margin-left: 8px; white-space: nowrap; }
+.lg-heat-key i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: var(--gold); margin-left: 6px; }
+.lg-season-banner { margin: 14px auto 0; max-width: 560px; }
+.lg-season-banner a { display: block; padding: 10px 16px; border-radius: var(--radius-sm); background: var(--mark); border: 1px solid color-mix(in srgb, var(--gold) 50%, transparent);
+  color: var(--text); text-decoration: none; font-weight: 600; text-align: center; }
+.lg-season-banner a:hover { border-color: var(--accent); }
+.lg-season-banner span { color: var(--lg-gold-text); }
+/* Book page: each way in labelled with its kind; a row that scrolls sideways on phones. */
+.lg-way-kind { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--lg-gold-ink); }
+.lg-way-plan .lg-way-kind, .lg-way-guide .lg-way-kind { color: var(--accent); }
+@media (max-width: 560px) {
+  .lg-ways { display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x proximity; padding: 2px 0 8px; scrollbar-width: none; }
+  .lg-ways > li { flex: 0 0 78%; scroll-snap-align: start; }
+}
+/* Commentator page: works as a shelf of even cards, titles starting their edition on one line, Read at the foot. */
+.lg-wk-book { font-size: 12.5px; }
+.lg-wk-title { min-height: 2.7em; }
+/* A whole homily: how far through it the reader is. */
+.lg-read-progress { position: fixed; top: var(--header-h); left: 0; right: 0; height: 3px; z-index: 30; pointer-events: none; }
+.lg-read-progress span { display: block; height: 100%; background: var(--gold); transform: scaleX(0); transform-origin: left; }
+
+/* Motion that explains: folds, the sheet and the chosen verse ease in; none with reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  main details[open] > :not(summary) { animation: lg-unfold 180ms ease-out; }
+  .cx-verse { transition: background-color 160ms ease, box-shadow 160ms ease; }
+  .cx-body:not([hidden]) { animation: lg-unfold 160ms ease-out; }
+  .lg-read-progress span { transition: transform 80ms linear; }
+}
+@keyframes lg-unfold { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+/* One reading measure: 18px on wide screens, 17px on phones, paragraphs 0.8em apart, for excerpts and homilies alike. */
+.lg-text p, .lg-whole p { margin-bottom: .8em; }
+@media (max-width: 560px) {
+  .lg-text, .lg-whole, .cx-ex { font-size: calc(17px * var(--read-scale)); }
+}

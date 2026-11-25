@@ -285,6 +285,29 @@
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
   });
 
+  // A whole homily: a thin line under the header shows how far through it
+  // the reader is.
+  var whole = document.querySelector(".lg-whole"), bar = document.querySelector(".lg-read-progress span");
+  if (whole && bar) {
+    var drawn = false;
+    var draw = function () {
+      drawn = false;
+      var r = whole.getBoundingClientRect(), span = r.height - window.innerHeight * 0.6;
+      var done = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 1;
+      bar.style.transform = "scaleX(" + done.toFixed(3) + ")";
+    };
+    window.addEventListener("scroll", function () { if (!drawn) { drawn = true; requestAnimationFrame(draw); } }, { passive: true });
+    draw();
+  }
+
+  // Home: the Christmas banner, from Advent to Epiphany (data-season is
+  // "MM-DD:MM-DD", the window crossing the new year).
+  document.querySelectorAll("[data-season]").forEach(function (el) {
+    var span = el.getAttribute("data-season").split(":"), now = new Date();
+    var md = ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
+    el.hidden = !(span[0] <= span[1] ? md >= span[0] && md <= span[1] : md >= span[0] || md <= span[1]);
+  });
+
   // Home: Continue reading. The last verse read (logia-last, kept by
   // web/reader.js), then up to four other chapters read lately (logia-read).
   var cont = document.querySelector(".lg-continue");
@@ -295,6 +318,10 @@
       readList = JSON.parse(localStorage.getItem("logia-read") || "[]");
     } catch (e) { /* storage blocked */ }
     if (lastAt && lastAt.href && lastAt.href.charAt(0) === "/") {
+      // A returning reader: Continue leads, and the three ways in for
+      // newcomers step back behind the verse of the day.
+      var doors = document.querySelector(".lg-doors"), votd = document.querySelector(".lg-votd");
+      if (doors && votd) votd.after(doors);
       var names = JSON.parse(cont.getAttribute("data-books"));
       var main = cont.querySelector(".lg-continue-main");
       main.href = lastAt.href;
