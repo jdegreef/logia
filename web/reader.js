@@ -266,7 +266,7 @@
       while (row < ROWS - 1 && rows[row] !== undefined && px - rows[row] < DOT) row++;
       rows[row] = px;
       h += '<button type="button" class="cx-dot lg-era-' + ERAS.indexOf(w.era) + (on ? "" : " cx-off") +
-        (on && state.open[w.work_id] ? " cx-cur" : "") + '" style="left:' + x + "%;--row:" + row + '" data-work="' + w.work_id +
+        (on && state.open[w.work_id] ? " cx-cur" : "") + (isPinned(w) ? " cx-pinned" : "") + '" style="left:' + x + "%;--row:" + row + '" data-work="' + w.work_id +
         '" data-name="' + esc(w.short_name || w.author) + '" title="' + esc(w.author + ", " + w.author_dates) +
         '" aria-label="' + esc(w.author) + '"' + (on ? "" : " disabled") + "></button>";
     });
