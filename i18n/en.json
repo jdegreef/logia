@@ -297,6 +297,7 @@
     }
   },
   "home": {
+    "ribbon_voice": "{name} ({dates})",
     "heat_little": "little",
     "heat_some": "some",
     "heat_much": "much said",
@@ -977,6 +978,7 @@
     "hide_timeline": "Hide the timeline"
   },
   "work": {
+    "sec_map": "Verse map",
     "head_title": "{name}, {title} · Logia",
     "cite_copy_short": "Copy",
     "cite_copy_as": "Copy the {style} citation",

@@ -1633,6 +1633,39 @@ def home_doors(lib):
             f'<ul>{items}</ul></section>')
 
 
+def home_ribbon(lib):
+    """The eras as one ribbon from the first commentator to 1900: each era a
+    band in its colour, linked to its page, and each voice a dot at the
+    middle of their life, linked to theirs. Dots too close to share a line
+    stack in up to five. Wide screens only; phones keep the era row."""
+    lo, hi, fold, pos = timeline_scale(lib)
+    spans = [(era, min(a, lo) if i == 0 else a, b) for i, (era, a, b) in enumerate(ERA_SPANS)]
+    if fold:
+        fa, fb = fold
+        spans = [(era, fb if fa <= a < fb else a, fa if fa < b <= fb else b) for era, a, b in spans]
+    bands = []
+    for era, a, b in spans:
+        if b <= a:
+            continue
+        people = [x for x in lib.ordered_authors() if x["era"] == era]
+        bands.append(f'<a class="lg-rb-band lg-era-{ERAS.index(era)}" href="{era_url(era)}" style="left:{pos(a):.2f}%;width:{pos(b) - pos(a):.2f}%" '
+                     f'title="{e(", ".join(x["name"] for x in people))}"><b>{e(t("eras_short." + era))}</b>'
+                     f'<span>{e(t("home.era_voices", n=len(people)))}</span></a>')
+    if fold:
+        bands.append(f'<span class="lg-rb-fold" style="left:{pos(fa):.2f}%;width:{FOLD_WIDTH:.2f}%" aria-hidden="true"></span>')
+    dots, lanes = [], [-9.0] * 5
+    for a in sorted(lib.authors.values(), key=born):
+        x = pos((born(a) + a["died"]) / 2)
+        lane = next((i for i, end in enumerate(lanes) if x - end > 1.4), min(range(5), key=lambda i: lanes[i]))
+        lanes[lane] = x
+        dots.append(f'<a class="lg-rb-dot lg-era-{ERAS.index(a["era"])}" href="/commentators/{a["id"]}/" style="left:{x:.2f}%;--lane:{lane}" '
+                    f'title="{e(t("home.ribbon_voice", name=a["name"], dates=a["dates"]))}" aria-label="{e(t("home.ribbon_voice", name=a["name"], dates=a["dates"]))}"></a>')
+    years = "".join(f'<span style="left:{pos(y):.2f}%">{y}</span>' for y in (lo, 1000, 1500, 1900)
+                    if lo <= y <= hi and not (fold and fold[0] - 50 < y < fold[1] + 50))
+    return (f'<div class="lg-ribbon" role="group" aria-label="{e(t("home.era_row"))}"><div class="lg-rb-dots">{"".join(dots)}</div>'
+            f'<div class="lg-rb-bands">{"".join(bands)}</div><div class="lg-rb-years" aria-hidden="true">{years}</div></div>')
+
+
 def home_hero(lib, cov):
     """The first screen: the motto, the headline, the voices by name, the
     search, ways to try it, the books to start in, and what Logia promises."""
@@ -1651,6 +1684,7 @@ def home_hero(lib, cov):
         eras.append(f'<li class="lg-era-{ERAS.index(era)}"><a href="{era_url(era)}" title="{e(", ".join(a["name"] for a in people))}">'
                     f'<b>{e(t("eras." + era))}</b><span>{e(t("home.era_voices", n=len(people)))}</span><i>{e(few)}</i></a></li>')
     names = "".join(eras)
+    ribbon = home_ribbon(lib)
     # Try: one line of three (a verse, a word, a commentator). Christmas is a
     # banner of its own, shown only from Advent to Epiphany (logia.js).
     xmas = next(((b, st, en) for oid, b, st, en, _v in occasions(lib) if oid == "christmas"), None)
@@ -1671,7 +1705,7 @@ def home_hero(lib, cov):
 <p class="eyebrow lg-motto">{motto}</p>
 <h1>{e(t("home.title"))}</h1>
 <p class="hero-sub">{e(t("home.lead"))}</p>
-<ul class="lg-era-row" aria-label="{e(t("home.era_row"))}">{names}</ul>
+{ribbon}<ul class="lg-era-row" aria-label="{e(t("home.era_row"))}">{names}</ul>
 {search_box(lib, "home-q", key_hint=True)}
 <p class="hero-try lg-try"><span>{e(t("search.try"))}</span> {" ".join(chips)}</p>
 {season}
@@ -4984,7 +5018,7 @@ def work_page(lib, wid):
         f'<span class="lg-start-text">{e(snippet(c["text"], 30))}</span>'
         f'<span class="lg-quiet">{e(voices_line(lib, c))}</span></a></li>'
         for c in work_start_here(lib, comments))
-    start = (f'<section class="lg-block lg-start lg-work-start"><h2>{e(t("work.start_here"))}</h2>'
+    start = (f'<section class="lg-block lg-start lg-work-start" id="start"><h2>{e(t("work.start_here"))}</h2>'
              f'<p class="lg-quiet">{e(t("work.start_note"))}</p><ul>{starts}</ul></section>' if starts else "")
     texts = lib.texts.get(wid, [])
     whole = contents = ""
@@ -4992,7 +5026,7 @@ def work_page(lib, wid):
         # The contents by the work's own divisions, near the top of the page;
         # the same divisions by verse are further down.
         division = w["divisions"][0]
-        contents = (f'<section class="lg-block lg-div-contents" id="contents-{division.lower()}" aria-labelledby="dc-h">'
+        contents = (f'<section class="lg-block lg-div-contents" id="by-{division.lower()}" aria-labelledby="dc-h">'
                     f'<h2 id="dc-h">{e(t("work.contents_by", divisions=plural(division)))}</h2>'
                     f'<p class="lg-quiet">{e(t("work.contents_by_note", n=len(texts), divisions=plural(division).lower()))}</p>'
                     f'<ol class="lg-div-list">{division_contents(lib, wid)}</ol></section>')
@@ -5015,6 +5049,14 @@ def work_page(lib, wid):
     imprint_line = w["translation"] if w["translation"] and len(w["translation"]) <= 160 else ""
     printed = "" if str(w["published"]) in imprint_line else e(t("work.printed", year=w["published"]))
     imprint = f'<p class="lg-tp-imprint">{"<br>".join(x for x in (e(imprint_line), printed) if x)}</p>'
+    wmap = work_map(lib, wid, a, comments)
+    # A bar of the page's sections that stays in view, the one being read
+    # marked (web/logia.js), as on a commentator's page.
+    secs = [(f"by-{w['divisions'][0].lower()}" if texts else "", t("work.contents_by", divisions=plural(w["divisions"][0]))),
+            ("start" if start else "", t("work.start_here")), ("record", t("work.record")),
+            ("whole" if whole else "", t("work.straight_through")), ("contents", t("work.front_to_back")), ("map" if wmap else "", t("work.sec_map"))]
+    secbar = (f'<nav class="lg-secbar lg-work-secbar" aria-label="{e(t("commentators.sections"))}"><div class="lg-secbar-in">'
+              + "".join(f'<a href="#{i}">{e(label)}</a>' for i, label in secs if i) + "</div></nav>")
     body = f"""
 <header class="page-head lg-titlepage">{trail((t("commentators.title"), "/commentators/"), (t("eras." + a["era"]), era_url(a["era"])),
                                    (a["name"], f'/commentators/{a["id"]}/'))}
@@ -5022,15 +5064,16 @@ def work_page(lib, wid):
 {imprint}
 <p class="actions">{begin}<a class="button ghost" href="{e(w["full_text_url"])}" rel="noopener">{e(t("work.full_text"))} ↗</a>{f' <a class="button ghost" href="/works/{wid}/fathers/">{e(t("catena.heading"))}</a>' if wid == "catena" else ""}</p></header>
 {search_within(t("search.within_work", title=w["title"]), "work", wid, t("search.within_placeholder"))}
+{secbar}
 {contents}
 {start}
-<details class="lg-record-fold" open><summary><b>{e(t("work.record"))}</b><span class="lg-quiet">{e(w["original_language"])} · {w["published"]} · {e(t("work.excerpts", n=f"{len(comments):,}"))}</span></summary>
+<details class="lg-record-fold" id="record" open><summary><b>{e(t("work.record"))}</b><span class="lg-quiet">{e(w["original_language"])} · {w["published"]} · {e(t("work.excerpts", n=f"{len(comments):,}"))}</span></summary>
 <section class="lg-record" aria-label="{e(t("work.record"))}"><dl class="lg-facts">{dl}</dl></section></details>
 {cite}
 {whole}
 <section class="lg-block" id="contents"><h2>{e(t("work.front_to_back"))}</h2><p class="lg-quiet">{e(t("work.front_to_back_note"))}</p>
 {work_goto(lib, wid, a, comments)}<ol class="lg-tiles">{work_tiles(lib, wid, comments)}</ol></section>
-{work_map(lib, wid, a, comments)}
+{wmap}
 {build_more.work_extras(lib, wid)}
 {also_on(lib, wid, comments)}"""
     book = {"@context": "https://schema.org", **work_ld(lib, wid), "isBasedOn": [url for url, _l, _s in docs] or w["full_text_url"]}
@@ -8385,6 +8428,7 @@ def search_page(lib, indexed):
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("search.eyebrow"))}</p>
 <h1>{e(t("search.heading"))}</h1><p class="dek">{e(t("search.dek", n=f"{len(lib.comments):,}", authors=len(lib.authors)))} {e(t("search.dek_bible"))}</p></header>
+<div class="lg-fts-layout">
 <form class="lg-fts" role="search" data-pagefind="{"/pagefind/pagefind.js" if indexed else ""}" data-pagefind-bible="{"/pagefind-bible/pagefind.js" if indexed else ""}" data-ui="{e(json.dumps(fts_ui, ensure_ascii=False))}">
 <label class="sr-only" for="fts-q">{e(t("search.words_label"))}</label>
 <div class="lg-fts-box">{SEARCH_ICON}<input id="fts-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="{e(t("search.words_placeholder"))}">
@@ -8400,7 +8444,8 @@ def search_page(lib, indexed):
 </div>
 <p class="lg-fts-status" id="fts-status" aria-live="polite">{e(t("search.fts.start" if indexed else "search.fts.unavailable"))}</p>
 <ol class="lg-fts-results" id="fts-results"></ol>
-<p><button type="button" class="button ghost lg-fts-more" id="fts-more" hidden>{e(t("search.more"))}</button></p>
+<p class="lg-fts-morep"><button type="button" class="button ghost lg-fts-more" id="fts-more" hidden>{e(t("search.more"))}</button></p>
+</div>
 <noscript><p>{e(t("search.fts.noscript"))}</p></noscript>"""
     return page(lib, t("search.heading"), body, "/search/", description=t("search.description", n=f"{len(lib.comments):,}"))
 
