@@ -54,3 +54,5 @@ jobs:
         run: node scripts/a11y_audit.js
       - name: Footer height budget
         run: node scripts/footer_budget.js
+      - name: Page weight budget
+        run: python3 scripts/page_weight.py

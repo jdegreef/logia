@@ -204,6 +204,9 @@
       if (!words || !s) return;
       var r = words / max, lvl = r > 0.66 ? 3 : r > 0.33 ? 2 : 1;
       h += '<i class="cx-heat cx-heat' + lvl + '" style="top:' + s.top + "px;height:" + Math.max(6, s.bottom - s.top) + 'px"></i>';
+      // The same shade on the verse's number, which phones show instead of the line.
+      var vn = box.querySelector('.cx-verse[data-v="' + v + '"] .cx-vn');
+      if (vn) vn.setAttribute("data-heat", lvl);
     });
     // One bracket for each passage, naming every voice that comments on it.
     var spans = {};
@@ -1040,7 +1043,13 @@
     if (toggle) {
       var wid = toggle.getAttribute("data-toggle");
       state.open[wid] = !isOpen(wid);
-      if (state.open[wid]) { markHeard(byId(wid), state.verse); (state.kept = state.kept || {})[wid] = true; }
+      if (state.open[wid]) {
+        markHeard(byId(wid), state.verse); (state.kept = state.kept || {})[wid] = true;
+        // The last voice opened, for "Continue: John 3:16 with Calvin" (web/logia.js).
+        var ow = byId(wid);
+        try { localStorage.setItem("logia-last", JSON.stringify({ href: location.pathname + "#v" + state.verse + "-" + wid, ref: REF(state.verse), voice: ow.short_name || ow.author })); }
+        catch (err) { /* storage blocked */ }
+      }
       refresh();
       var again = document.querySelector('[data-toggle="' + wid + '"].cx-toggle');
       if (again) again.focus();
