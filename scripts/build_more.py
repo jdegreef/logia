@@ -410,7 +410,8 @@ def corrections_page(lib, wid, used):
 <p class="lg-quiet">{e(t("corrections.note"))} <a href="{B.GITHUB_URL}/blob/main/library/corrections/{wid}.json" rel="noopener">{e(t("corrections.file"))} ↗</a></p></header>
 <div class="lg-table-wrap"><table class="lg-corrections"><thead><tr><th>{e(t("corrections.scan"))}</th><th></th><th>{e(t("corrections.page"))}</th>
 <th>{e(t("corrections.excerpts"))}</th><th>{e(t("corrections.where"))}</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>"""
-    return B.page(lib, f'{t("corrections.heading")}: {w["title"]}', body, path, current="/commentators/",
+    # A list of scan fixes is for checking the text, not for search engines.
+    return B.page(lib, f'{t("corrections.heading")}: {w["title"]}', body, path, current="/commentators/", noindex=True,
                   description=t("corrections.description", title=w["title"], n=len(rows)),
                   ld=(B.breadcrumbs((a["name"], f'/commentators/{a["id"]}/'), (w["title"], f"/works/{wid}/"),
                                     (t("corrections.heading"), path)),))
@@ -859,7 +860,11 @@ def sitemaps(lib, pages, rows_for):
         if rows:                 # a book with no commentary has no page for search engines
             out[f"sitemap-{key}.xml"] = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                          + rows + "</urlset>\n")
-    index = "".join(f"<sitemap><loc>{B.SITE_URL}/{name}</loc></sitemap>\n" for name in sorted(out))
+    # Each file's newest <lastmod>, so a crawler can tell which book changed.
+    def newest(name):
+        when = max(re.findall(r"<lastmod>([^<]+)</lastmod>", out[name]), default="")
+        return f"<lastmod>{when}</lastmod>" if when else ""
+    index = "".join(f"<sitemap><loc>{B.SITE_URL}/{name}</loc>{newest(name)}</sitemap>\n" for name in sorted(out))
     out["sitemap.xml"] = ('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                           + index + "</sitemapindex>\n")
     return out

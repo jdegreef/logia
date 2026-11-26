@@ -264,9 +264,11 @@
       }
     }
     if (!href) return;
-    // An address that is plainly a reference (/John.3.16, /jn3:16, /rom8) goes
-    // straight to its page; a name or a near miss is offered as a link.
-    if (r && location.pathname.split("/").filter(Boolean).length === 1) { location.replace(href); return; }
+    // An address that is plainly a reference (/John.3.16, /jn3:16, /rom8,
+    // /rom/8:28, /romans/8/28-30/) goes straight to its page, so a link
+    // typed by hand still lands; a name or a near miss is offered as a link.
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (r && (parts.length === 1 || (parts.length <= 3 && bookOf(parts[0])))) { location.replace(href); return; }
     guess.innerHTML = fmt(esc(guess.getAttribute("data-text")), { link: '<a href="' + esc(href) + '">' + esc(label) + "</a>" });
     guess.hidden = false;
   })();

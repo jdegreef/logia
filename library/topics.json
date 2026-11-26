@@ -4,7 +4,7 @@
     {"id": "god", "topics": ["creation", "incarnation", "holy-spirit", "the-cross", "resurrection", "shepherd"]},
     {"id": "salvation", "topics": ["the-fall", "new-birth", "repentance", "justification", "grace-and-law", "election"]},
     {"id": "church", "topics": ["baptism", "lords-supper", "peter"]},
-    {"id": "life", "topics": ["prayer", "love"]}
+    {"id": "life", "topics": ["prayer", "love", "faith", "suffering", "wisdom", "marriage"]}
   ],
   "topics": [
     {"id": "creation", "items": [
@@ -127,6 +127,35 @@
       {"key": "lost-sheep", "start": "LUK.15.3", "end": "LUK.15.7"},
       {"key": "good-shepherd", "start": "JHN.10.11", "end": "JHN.10.18"},
       {"key": "feed", "start": "JHN.21.15", "end": "JHN.21.17"}
+    ]},
+    {"id": "faith", "items": [
+      {"key": "hoped-for", "start": "HEB.11.1", "end": "HEB.11.6"},
+      {"key": "abraham", "start": "ROM.4.18", "end": "ROM.4.25"},
+      {"key": "crucified-with", "start": "GAL.2.19", "end": "GAL.2.21"},
+      {"key": "mustard-seed", "start": "MAT.17.14", "end": "MAT.17.20"},
+      {"key": "increase", "start": "LUK.17.5", "end": "LUK.17.6"},
+      {"key": "thomas", "start": "JHN.20.24", "end": "JHN.20.29"}
+    ]},
+    {"id": "suffering", "items": [
+      {"key": "job-loses", "start": "JOB.1.13", "end": "JOB.1.22"},
+      {"key": "tribulation", "start": "ROM.5.1", "end": "ROM.5.5"},
+      {"key": "sufferings-glory", "start": "ROM.8.18", "end": "ROM.8.25"},
+      {"key": "discipline", "start": "HEB.12.5", "end": "HEB.12.11"},
+      {"key": "persecuted", "start": "MAT.5.10", "end": "MAT.5.12"}
+    ]},
+    {"id": "wisdom", "items": [
+      {"key": "fear-of-the-lord", "start": "PRO.1.1", "end": "PRO.1.7"},
+      {"key": "wisdom-at-creation", "start": "PRO.8.22", "end": "PRO.8.31"},
+      {"key": "beginning", "start": "PRO.9.10", "end": "PRO.9.12"},
+      {"key": "end-of-matter", "start": "ECC.12.9", "end": "ECC.12.14"},
+      {"key": "grew", "start": "LUK.2.40", "end": "LUK.2.52"}
+    ]},
+    {"id": "marriage", "items": [
+      {"key": "helper", "start": "GEN.2.18", "end": "GEN.2.25"},
+      {"key": "one-flesh", "start": "MAT.19.3", "end": "MAT.19.9"},
+      {"key": "cana", "start": "JHN.2.1", "end": "JHN.2.11"},
+      {"key": "worthy-woman", "start": "PRO.31.10", "end": "PRO.31.31"},
+      {"key": "strong-as-death", "start": "SNG.8.6", "end": "SNG.8.7"}
     ]}
   ]
 }
