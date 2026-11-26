@@ -64,6 +64,7 @@ def write(lib, site, site_url, h):
             book, (sc, sv), (ec, ev) = h.topic_span(item)
             topics_on.setdefault(book, []).append(((sc, sv), (ec, ev), tp["id"]))
 
+    coverage = {}
     for b, ch in lib.chapters:
         text = h.chapter_plain(b, ch)
         verses_n = sorted(text)
@@ -85,6 +86,14 @@ def write(lib, site, site_url, h):
             where = h.verse_url(b, ch, v) if (b, ch, v) in lib.voices_on else h.chapter_url(b, ch) + f"#v{v}"
             verses.append({"verse": v, "ref": f"{b}.{ch}.{v}", "text": text[v], "excerpts": here,
                            "cited_by": [r["id"] for r in cited.get(str(v), [])], "topics": tps, "url": page(where)})
+        # Which verses have commentary and how many voices on each, for
+        # sites that link to Logia (openwordbible.org links each such verse).
+        voices = {v: len({lib.by_id[x]["work"] for x in on[v]}) for v in verses_n if on.get(v)}
+        if voices:
+            coverage[f"{b}.{ch}"] = {
+                "url": page(h.chapter_url(b, ch)), "voices": len({lib.by_id[x]["work"] for x in ids}),
+                "verses": {str(v): {"voices": n, "url": page(h.verse_url(b, ch, v))}
+                           for v, n in voices.items() if (b, ch, v) in lib.voices_on}}
         _dump(site, f"chapters/{b}.{ch}.json", {
             "book": b, "chapter": ch, "name": f"{lib.books[b]['en']} {ch}", "url": page(h.chapter_url(b, ch)),
             "bible": {"text": "Open Word Bible", "level": "Balanced", "licence": "CC0 1.0",
@@ -110,6 +119,7 @@ def write(lib, site, site_url, h):
         for x in texts:
             _dump(site, f"texts/{wid}/{x['locus']}.json", {**x, "url": page(f"/works/{wid}/{x['locus']}/")})
     _dump(site, "works.json", works)
+    _dump(site, "coverage.json", coverage)
     _dump(site, "authors.json", [author(a) for a in lib.ordered_authors()])
 
     rows = []
@@ -131,5 +141,6 @@ def write(lib, site, site_url, h):
         "endpoints": {
             "authors": f"{base}/authors.json", "works": f"{base}/works.json", "work": f"{base}/works/{{work}}.json",
             "chapter": f"{base}/chapters/{{BOOK}}.{{chapter}}.json", "topics": f"{base}/topics.json",
-            "topic": f"{base}/topics/{{topic}}.json", "text": f"{base}/texts/{{work}}/{{n}}.json"}})
+            "topic": f"{base}/topics/{{topic}}.json", "text": f"{base}/texts/{{work}}/{{n}}.json",
+            "coverage": f"{base}/coverage.json"}})
     return counts

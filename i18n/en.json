@@ -448,6 +448,8 @@
     "foot_close": "to close"
   },
   "read": {
+    "head_title": "Bible commentary by book: {n} books, verse by verse",
+    "description": "Bible commentary on {n} books, verse by verse: {books}. Public-domain commentaries from the church fathers to the 1800s, with the Open Word Bible text of every book.",
     "chapters_of": "Chapters of {book}",
     "text_only_short": "Text only",
     "title": "Read",
@@ -622,9 +624,11 @@
     "owb_hint": "Bible text: {link} (CC0), English. An AI draft awaiting human review.",
     "previous": "Previous chapter",
     "next": "Next chapter",
-    "description": "{book} {chapter} with {n} public-domain commentaries from the early church to the 1800s, verse by verse.",
+    "description": "{book} {chapter} verse by verse with {names}, from public-domain commentaries. Most discussed: {hot}.",
+    "description_plain": "{book} {chapter} verse by verse with {names}, from public-domain commentaries of the early church to the 1800s.",
     "head_title": "{book} {chapter} commentary: {names}, verse by verse · Logia",
     "head_more": "{names} and {n} more",
+    "more_names": "{n} more",
     "description_none": "{book} {chapter} in the Open Word Bible. Commentary on {book} is still to come.",
     "credits": "Commentary excerpts are copied word for word from public-domain editions and link to the full text: {works}. The Catena Aurea, Bengel, Ryle and Westcott come from page scans on archive.org: misread letters and figures are corrected to match the printed page, and Greek the scans cannot read is left out (marked … where it breaks a sentence). Scripture references in the excerpts are linked: in the CCEL transcriptions as CCEL's editors marked them, in the scans where they are printed in the usual way; no one has checked these links yet.",
     "gap_one": "Verse {v} is not in the Greek text the Open Word Bible translates, which follows the oldest manuscripts; many later manuscripts and older translations have it.",
@@ -647,7 +651,9 @@
     "tab_notes_short": "Notes",
     "tab_xref_short": "Cross-refs",
     "by_verse": "Commentary verse by verse",
-    "by_verse_note": "Each verse with commentary has a page of its own: every voice on it in full, its Greek words, translation notes and cross-references."
+    "by_verse_note": "Each verse with commentary has a page of its own: every voice on it in full, its Greek words, translation notes and cross-references.",
+    "by_verse_voices": "{n} voices",
+    "by_verse_voices_one": "1 voice"
   },
   "reader": {
     "heard": "Read",
@@ -782,6 +788,8 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "index_title": "Bible commentators from the church fathers to the 1800s",
+    "index_description": "{n} Bible commentators in their own words, from {first} to {last}: {names}. Catholic, Orthodox and Protestant, verse by verse.",
     "glance_one": "An hour of {name}",
     "glance": "{n} hours of {name}",
     "glance_on": "to read everything here, in {n} commentaries",
@@ -1047,6 +1055,7 @@
     "by_verse_note": "Where each verse is expounded, as the text marks it: a homily's heading names the verse it opens on, and “Ver. 7.” where it moves on."
   },
   "about": {
+    "description": "What Logia is: a free, open library of public-domain Christian commentary set verse by verse beside Scripture, how it is checked, and how to cite and reuse it.",
     "title": "About",
     "heading": "About Logia",
     "dek": "A free, open library of Christian commentary, set verse by verse beside Scripture.",
@@ -1322,7 +1331,8 @@
     "rail_words": "{n:,} words",
     "rail_words_one": "1 word",
     "rail_excerpts": "{k} excerpts · {n:,} words",
-    "title": "{ref} commentary: {names}",
+    "title": "{ref} meaning: {n} commentators, {first} to {last}",
+    "title_single": "{ref} meaning: commentary by {name}",
     "title_more": "{names} and {n} more",
     "and": " and ",
     "description": "What the church has said about {ref}, “{text}”: {names}, word for word from public-domain editions.",
@@ -1330,7 +1340,8 @@
     "lead": "{n} commentators in Logia comment on {ref}, from {first} ({first_dates}) to {last} ({last_dates}): {names}.",
     "lead_one": "{name} ({dates}) comments on {ref} in Logia.",
     "contents": "On this page",
-    "voices": "What the church has said",
+    "voices": "What does {ref} mean? What the church has said",
+    "hubs": "Also in:",
     "question": "What does {name} say about {ref}?",
     "on_range": "On {ref}",
     "continues": "This comment begins at {ref}:",
@@ -1384,7 +1395,7 @@
   },
   "passage": {
     "eyebrow": "Passages",
-    "title": "{heading} ({ref}) commentary: {names}",
+    "title": "{ref} commentary: {heading}",
     "description": "What the church has said about “{heading}”, {ref}: {n} excerpts from {names}, word for word from public-domain editions.",
     "description_one": "What the church has said about “{heading}”, {ref}: 1 excerpt from {names}, word for word from public-domain editions.",
     "lead": "{n} excerpts from {k} commentators on {ref}, from {first} ({first_dates}) to {last} ({last_dates}).",
@@ -1879,6 +1890,14 @@
     "eyebrow": "By era",
     "heading": "{book} in {era}",
     "head_title": "{book} in {era}: what its commentators said",
+    "book_heading": "{book} in {era}",
+    "book_head_title": "{book} commentary from {era}",
+    "book_description": "What the commentators of {era} said on {book}, verse by verse: {names}, in their own words from public-domain editions.",
+    "hub_heading": "Bible commentary from {era}",
+    "hub_head_title": "Bible commentary from {era}: every book, verse by verse",
+    "hub_description": "What the commentators of {era} said on the Bible, verse by verse: {names}, on {books}, in their own words.",
+    "books_title": "The books they comment on",
+    "on_book": "{book} in {era}",
     "description": "How commentators of {era} read the Gospel of {book}: {names}, in their own words, verse by verse.",
     "in": {
       "Early church": "the early church",
@@ -2307,7 +2326,7 @@
     "lead": "{n} passages, with {total} excerpts from {k} commentators: {names}.",
     "how": "A topic is a choice of passages, never of excerpts: every commentator Logia holds on each passage is here, whatever their tradition. Each opens with their first words on it; follow a name to read it in full.",
     "others": "Other topics",
-    "title": "{heading} in {books}: what {names} said · Logia",
+    "title": "{heading} in the Bible: what {names} said · Logia",
     "description": "{heading}: {dek} With what {names} wrote, word for word from public-domain editions.",
     "card": "{n} passages in {books}",
     "index_heading": "Topics",
@@ -2520,6 +2539,55 @@
         "lost-sheep": "The lost sheep",
         "good-shepherd": "I am the good shepherd",
         "feed": "Feed my sheep"
+      }
+    },
+    "faith": {
+      "heading": "Faith",
+      "dek": "Faith as the assurance of things hoped for in Hebrews 11, Abraham who believed against hope, living by faith in the Son of God, faith like a mustard seed, the apostles' “increase our faith”, and Thomas who doubted.",
+      "note": "",
+      "items": {
+        "hoped-for": "The assurance of things hoped for",
+        "abraham": "Abraham believed against hope",
+        "crucified-with": "I live by faith in the Son of God",
+        "mustard-seed": "Faith as a grain of mustard seed",
+        "increase": "Increase our faith",
+        "thomas": "Thomas: blessed are those who have not seen"
+      }
+    },
+    "suffering": {
+      "heading": "Suffering",
+      "dek": "Job blessing God after his losses, tribulation that works patience, the sufferings of this present time, the Lord's discipline of his children in Hebrews 12, and the blessing on the persecuted.",
+      "note": "",
+      "items": {
+        "job-loses": "The Lord gave, and the Lord has taken away",
+        "tribulation": "Tribulation works patience",
+        "sufferings-glory": "The sufferings of this present time",
+        "discipline": "The Lord disciplines those he loves",
+        "persecuted": "Blessed are the persecuted"
+      }
+    },
+    "wisdom": {
+      "heading": "Wisdom",
+      "dek": "The fear of the Lord as the beginning of knowledge in Proverbs, wisdom beside God at the creation, the end of the matter in Ecclesiastes, and Jesus growing in wisdom.",
+      "note": "Whether Wisdom in Proverbs 8 speaks of Christ is itself read differently by the commentators.",
+      "items": {
+        "fear-of-the-lord": "The fear of the Lord is the beginning of knowledge",
+        "wisdom-at-creation": "Wisdom at the creation",
+        "beginning": "The beginning of wisdom",
+        "end-of-matter": "The end of the matter",
+        "grew": "Jesus grew in wisdom"
+      }
+    },
+    "marriage": {
+      "heading": "Marriage",
+      "dek": "The man and the woman made one flesh in Genesis, Jesus on marriage and divorce in Matthew 19, the wedding at Cana, the worthy woman of Proverbs 31, and love as strong as death in the Song of Songs.",
+      "note": "",
+      "items": {
+        "helper": "It is not good for the man to be alone",
+        "one-flesh": "What God has joined together",
+        "cana": "The wedding at Cana",
+        "worthy-woman": "A worthy woman",
+        "strong-as-death": "Love is strong as death"
       }
     }
   },

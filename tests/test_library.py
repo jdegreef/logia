@@ -996,7 +996,9 @@ class Site(unittest.TestCase):
         sitemap = self.sitemap()
         self.assertIn("<loc>https://logia.faith/jhn/3/16/</loc>", sitemap)
         verse_locs = re.findall(r"<loc>https://logia\.faith/jhn/\d+/\d+/</loc>", sitemap)
-        self.assertEqual(len(verse_locs), len([k for k in lib.voices_on if k[0] == "JHN"]))
+        # A verse where no excerpt begins repeats the verse where they do, so it stays out.
+        begins = {build_site.ref_parts(c["start"]) for c in lib.comments}
+        self.assertEqual(len(verse_locs), len([k for k in lib.voices_on if k[0] == "JHN" and k in begins]))
 
     def test_a_verse_page_holds_its_commentary_in_the_html(self):
         lib = build_site.Library()
@@ -1034,7 +1036,7 @@ class Site(unittest.TestCase):
         self.assertEqual([x["item"] for x in ld["itemListElement"]][-2:],
                          ["https://logia.faith/jhn/3/", "https://logia.faith/jhn/3/16/"])
         self.assertIn('<link rel="canonical" href="https://logia.faith/jhn/3/16/">', text)
-        self.assertRegex(text, r'<title>John 3:16 commentary: [^<]+ · Logia</title>')
+        self.assertRegex(text, r'<title>John 3:16 meaning: \d+ commentators, [^<]+</title>')
         self.assertNotIn(re.search(r'name="description" content="([^"]*)"', text)[1],
                          self.read(os.path.join("jhn", "3", "17", "index.html")))
 
@@ -1061,7 +1063,7 @@ class Site(unittest.TestCase):
         lib = build_site.Library()
         text = self.read(os.path.join("jhn", "2", "1-12", "index.html"))
         self.assertIn("<h1>The wedding at Cana (John 2:1–12)</h1>", text)
-        self.assertRegex(text, r"<title>The wedding at Cana \(John 2:1–12\) commentary: [^<]+ · Logia</title>")
+        self.assertIn("<title>John 2:1–12 commentary: The wedding at Cana · Logia</title>", text)
         on_it = [c for c in lib.comments if "JHN.2.1" <= c["start"] and c["start"].startswith("JHN.2.")
                  and build_site.ref_parts(c["start"])[2] <= 12]
         self.assertTrue(on_it)
@@ -1287,6 +1289,64 @@ class Site(unittest.TestCase):
         indexed = {c for c in lib.chapters if build_site.indexed(lib, build_site.chapter_url(*c))}
         self.assertEqual(indexed, set(lib.coverage()))
 
+    def test_no_address_in_the_sitemaps_is_marked_noindex(self):
+        locs = re.findall(r"<loc>https://logia\.faith(/[^<]*)</loc>", self.sitemap())
+        self.assertNotIn("/jhn/3/side-by-side/", locs)
+        for path in locs[::97]:
+            page = path.strip("/") + "/index.html" if path != "/" else "index.html"
+            self.assertNotIn('content="noindex"', self.read(page), path)
+        self.assertIn('content="noindex"', self.read("works/bengel-romans/corrections/index.html"))
+        self.assertRegex(self.read("sitemap.xml"),
+                         r"<sitemap><loc>[^<]+</loc>(<lastmod>\d{4}-\d\d-\d\d</lastmod>)?</sitemap>")
+
+    def test_a_title_keeps_the_site_name_only_where_it_fits(self):
+        self.assertEqual(build_site.full_title("Romans 8"), "Romans 8 · Logia")
+        long = "Romans 8:1–11 commentary: Set free by the Spirit of life, again"
+        self.assertEqual(build_site.full_title(long), long)
+        self.assertEqual(build_site.full_title("x", "Short head · Logia"), "Short head · Logia")
+        self.assertEqual(build_site.full_title("x", "Logia: the home page title"), "Logia: the home page title")
+
+    def test_a_chapter_page_holds_the_first_words_of_its_commentary(self):
+        lib = build_site.Library()
+        text = self.read(os.path.join("rom", "8", "index.html"))
+        self.assertIn('<ol class="lg-vlist">', text)
+        lead = next(x for _w, cs in build_site.verse_voices(lib, "ROM", 8, 28) for c in cs
+                    if c["start"] == "ROM.8.28" for x in [build_site.lead_of(lib, c)] if x)
+        self.assertIn(build_site.e(" ".join(lead[0].split()[:5])), text)
+        self.assertIn("Most discussed: ", re.search(r'name="description" content="([^"]*)"', text)[1])
+
+    def test_each_book_has_a_page_for_each_era_that_comments_on_it(self):
+        text = self.read(os.path.join("rom", "early-church", "index.html"))
+        self.assertIn('href="/commentators/chrysostom/"', text)
+        self.assertIn("Romans commentary from the early church", text)
+        hub = self.read(os.path.join("commentators", "era", "early-church", "index.html"))
+        self.assertIn('href="/rom/early-church/"', hub)
+        self.assertIn('href="/rom/early-church/"', self.read(os.path.join("rom", "8", "28", "index.html")))
+        self.assertFalse(os.path.exists(os.path.join(build_site.SITE, "rom", "middle-ages")))
+        self.assertIn("<loc>https://logia.faith/rom/early-church/</loc>", self.sitemap())
+
+    def test_hubs_and_homilies_have_structured_data(self):
+        def graph(page):
+            text = self.read(page)
+            data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)[1])
+            return {x["@type"]: x for x in data.get("@graph", [data])}
+        homily = graph("works/chrysostom-romans/15/index.html")
+        self.assertEqual(homily["Chapter"]["isPartOf"]["@type"], "Book")
+        self.assertEqual(homily["Chapter"]["author"]["name"], "John Chrysostom")
+        self.assertIn("BreadcrumbList", homily)
+        self.assertIn("ItemList", graph("commentators/index.html"))
+        self.assertIn("ItemList", graph("read/index.html"))
+        self.assertIn("CollectionPage", graph("topics/baptism/index.html"))
+        verse = graph("rom/8/28/index.html")["WebPage"]
+        self.assertEqual(verse["isPartOf"]["url"], "https://logia.faith/rom/8/")
+        self.assertIn("What does Romans 8:28 mean?", self.read("rom/8/28/index.html"))
+
+    def test_the_api_lists_the_verses_with_commentary(self):
+        with open(os.path.join(build_site.SITE, "api", "v1", "coverage.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertEqual(data["JHN.3"]["verses"]["16"]["url"], "https://logia.faith/jhn/3/16/")
+        self.assertNotIn("ACT.1", data)
+
     def test_robots_welcomes_the_answer_engines_in_one_group(self):
         text = self.read("robots.txt")
         group = text.split("\n\n")[0]
@@ -1468,7 +1528,8 @@ class SearchEngines(unittest.TestCase):
         self.assertEqual(scripture.label("PSA.3.1", "PSA.3.9"), "Psalm 3:1–9")
         self.assertEqual(scripture.label("PSA.3.1", "PSA.4.2"), "Psalms 3:1–4:2")
         self.assertEqual(scripture.label("JHN.3.16"), "John 3:16")
-        self.assertEqual(build_site.t("chapter.description", book="Psalms", chapter=23, n=7)[:9], "Psalm 23 ")
+        described = build_site.t("chapter.description", book="Psalms", chapter=23, names="Augustine", hot="23:1")
+        self.assertEqual(described[:9], "Psalm 23 ")
         self.assertTrue(build_site.t("book.description_text", book="Psalms").startswith("Psalms "))
 
     def test_whole_chapter_passages(self):

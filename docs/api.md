@@ -20,6 +20,16 @@ citation has not been checked.
 **`/api/v1/index.json`**: the API's name, version, licence, counts, and
 the address of every file below.
 
+**`/api/v1/coverage.json`**: every chapter with commentary, by
+`<BOOK>.<chapter>`: its page, how many works comment on it, and each verse
+that has a page with how many works comment on it. Sites that link to Logia
+(openwordbible.org) read it to know which verses to link.
+
+```json
+{"JHN.3": {"url": "https://logia.faith/jhn/3/", "voices": 12,
+           "verses": {"16": {"voices": 12, "url": "https://logia.faith/jhn/3/16/"}}}}
+```
+
 **`/api/v1/chapters/<BOOK>.<chapter>.json`**: one chapter, for every
 chapter of the Bible (`/api/v1/chapters/JHN.1.json`).
 
