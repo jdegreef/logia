@@ -3329,7 +3329,7 @@ def verse_page(lib, book, chapter, verse, bible, pages_here, cited_by):
 </div>{rail_html}
 </article>"""
     # "Romans 8:28 meaning", the words people search, then who comments on it.
-    title = (t("verse.title_one", ref=ref, name=names[0]) if len(names) == 1
+    title = (t("verse.title_single", ref=ref, name=names[0]) if len(names) == 1
              else t("verse.title", ref=ref, n=len(names), first=names[0], last=names[-1]))
     description = (t("verse.description", ref=ref, text=snippet(text, 16), names=name_list(names)) if text
                    else t("verse.description_gap", ref=ref, names=name_list(names)))

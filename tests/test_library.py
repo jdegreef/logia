@@ -1528,7 +1528,8 @@ class SearchEngines(unittest.TestCase):
         self.assertEqual(scripture.label("PSA.3.1", "PSA.3.9"), "Psalm 3:1–9")
         self.assertEqual(scripture.label("PSA.3.1", "PSA.4.2"), "Psalms 3:1–4:2")
         self.assertEqual(scripture.label("JHN.3.16"), "John 3:16")
-        self.assertEqual(build_site.t("chapter.description", book="Psalms", chapter=23, n=7)[:9], "Psalm 23 ")
+        described = build_site.t("chapter.description", book="Psalms", chapter=23, names="Augustine", hot="23:1 and 23:4")
+        self.assertEqual(described[:9], "Psalm 23 ")
         self.assertTrue(build_site.t("book.description_text", book="Psalms").startswith("Psalms "))
 
     def test_whole_chapter_passages(self):

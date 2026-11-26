@@ -1332,7 +1332,7 @@
     "rail_words_one": "1 word",
     "rail_excerpts": "{k} excerpts · {n:,} words",
     "title": "{ref} meaning: {n} commentators, {first} to {last}",
-    "title_one": "{ref} meaning: commentary by {name}",
+    "title_single": "{ref} meaning: commentary by {name}",
     "title_more": "{names} and {n} more",
     "and": " and ",
     "description": "What the church has said about {ref}, “{text}”: {names}, word for word from public-domain editions.",
