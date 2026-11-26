@@ -288,9 +288,11 @@
     img.type = "button"; img.className = "lg-xact-extra";
     img.innerHTML = ICON('<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>') + esc(T.image);
     img.addEventListener("click", function () { shareImage(article); });
-    var report = box.querySelector("a");
-    box.insertBefore(note, report);
-    box.insertBefore(img, report);
+    // Note sits beside Copy; Share as image goes in the More menu, before Report.
+    var cite = box.querySelector('[data-xact="cite"]');
+    var report = box.querySelector("a[target]") || box.querySelector("a");
+    if (cite) cite.parentNode.insertBefore(note, cite.nextSibling); else box.insertBefore(note, box.firstChild);
+    report.parentNode.insertBefore(img, report);
     noteBox(article, false);
   });
   drawHighlights();
@@ -442,9 +444,9 @@
         var ref = d.bookName + " " + d.chapter + ":" + p.e.start + (p.e.end !== p.e.start ? "–" + p.e.end : "");
         quiz.innerHTML = '<p class="lg-quiz-ref">' + esc(fmt(Q.on, { ref: ref })) + '</p><blockquote class="lg-quiz-text">' +
           p.e.excerpt.split(/\n\s*\n/).map(function (x) { return "<p>" + esc(x.trim()) + "</p>"; }).join("") + "</blockquote>" +
-          '<p class="lg-quiz-ask">' + esc(Q.ask) + '</p><p class="lg-quiz-eras">' + Q.eras.map(function (x) {
-            return '<button type="button" class="cx-chip" data-era="' + esc(x[0]) + '">' + esc(x[1]) + "</button>";
-          }).join("") + '</p><p class="lg-quiz-said" role="status"></p>';
+          '<p class="lg-quiz-ask">' + esc(Q.ask) + '</p><p class="lg-quiz-eras">' + Q.eras.map(function (x, i) {
+            return '<button type="button" class="lg-quiz-era lg-era-' + (x[2] === undefined ? i : x[2]) + '" data-era="' + esc(x[0]) + '">' + esc(x[1]) + "</button>";
+          }).join("") + '</p><div class="lg-quiz-line" hidden></div><p class="lg-quiz-said" role="status"></p>';
         quiz.querySelectorAll("[data-era]").forEach(function (b) {
           b.addEventListener("click", function () {
             var right = b.getAttribute("data-era") === p.w.era;
@@ -454,6 +456,16 @@
               x.disabled = true;
               if (x.getAttribute("data-era") === p.w.era) x.setAttribute("aria-pressed", "true");
             });
+            if (!right) b.classList.add("lg-quiz-miss");
+            // Where the author stands on the centuries, in their era's colour.
+            if (p.w.died) {
+              var lo = 100, hi = 1950, at = Math.max(0, Math.min(100, (p.w.died - lo) / (hi - lo) * 100));
+              var line = quiz.querySelector(".lg-quiz-line"), hit = Q.eras.filter(function (x) { return x[0] === p.w.era; })[0], era = hit ? hit[2] : 0;
+              line.innerHTML = '<span class="lg-quiz-ticks">' + [300, 600, 900, 1200, 1500, 1800].map(function (y) {
+                return '<i style="left:' + ((y - lo) / (hi - lo) * 100) + '%">' + y + "</i>";
+              }).join("") + '</span><b class="lg-quiz-dot lg-era-' + era + (at > 80 ? " lg-quiz-dot-end" : at < 20 ? " lg-quiz-dot-start" : "") + '" style="left:' + at + '%" title="' + esc(p.w.author) + '"><span>' + esc(p.w.author) + "</span></b>";
+              line.hidden = false;
+            }
             var href = "/" + d.book.toLowerCase() + "/" + d.chapter + "/#v" + p.e.start + "-" + p.w.work_id;
             quiz.querySelector(".lg-quiz-said").innerHTML = "<b>" + esc(right ? Q.right : Q.wrong) + "</b> " +
               esc(fmt(Q.was, { name: p.w.author, dates: p.w.dates || "", title: p.w.title })) + ' <a href="' + esc(href) + '">' + esc(Q.read) + "</a>" +

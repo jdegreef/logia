@@ -189,7 +189,8 @@ html { --lg-gold-ink: color-mix(in srgb, var(--gold) 64%, var(--text)); }
    verse pages: a bordered tag read as a button, and the name should be the
    one thing that stands out on a card. */
 .cx-who .cx-tag { border: 0; padding: 0; border-radius: 0; font-size: 12.5px; margin-left: -4px; }
-.cx-who .cx-d + .cx-tag::before { content: "\00B7"; margin-right: 6px; }
+/* The dot between dates and tradition ends the dates, so a wrapped tradition never starts its line with it. */
+.cx-who .cx-d:has(+ .cx-tag)::after { content: "\00A0\00B7"; }
 /* A voice opens as two lines of its excerpt (web/reader.js); the chevron or
    the lines open it. */
 .cx-toggle { margin-left: auto; align-self: center; border: 0; background: none; padding: 4px; border-radius: 6px; color: var(--muted);
@@ -2915,9 +2916,10 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
   padding: 6px 0; margin-top: 0; border-bottom: 1px solid var(--line); }
 @media (max-width: 560px) { .lg-az-bar { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .lg-az-bar a { flex: none; } }
 .lg-az-lists [id] { scroll-margin-top: calc(var(--header-h, 56px) + 56px); }
-/* A topic's card: where its passages fall between Genesis and Revelation. */
-.lg-canon { position: relative; display: block; height: 6px; margin-top: 8px; border-radius: 3px; background: var(--line); }
-.lg-canon i { position: absolute; top: -1px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 2px var(--surface); }
+/* A topic's card: where its passages fall between Genesis and Revelation.
+   (Its own name: the footer's book grid is .lg-canon.) */
+.lg-topic-canon { position: relative; display: block; height: 6px; margin-top: 8px; border-radius: 3px; background: var(--line); }
+.lg-topic-canon i { position: absolute; top: -1px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 2px var(--surface); }
 /* The coming Sundays as cards across the page, the next one marked. */
 .lg-sundays { grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px; }
 .lg-sunday { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--surface); display: grid; gap: 4px; align-content: start; }
@@ -3078,4 +3080,232 @@ main:has(.lg-work-secbar) .lg-block, main:has(.lg-work-secbar) .lg-record-fold {
   .lg-side-toc a::before { content: counter(side) ". "; font-variant-numeric: tabular-nums; color: var(--lg-gold-text); }
   .lg-side-toc a:hover { color: var(--text); }
   .lg-side-toc a[aria-current] { color: var(--text); font-weight: 600; margin-left: -15px; padding-left: 13px; border-left: 2px solid var(--accent); }
+}
+
+/* A muted "…" beside a verse shown on its own whose speech runs on past it
+   (or began before it): editorial, so it is set apart from the words. */
+.lg-runon { color: var(--muted); font-style: normal; cursor: help; }
+
+/* --- Design review, round six ------------------------------------------- */
+
+/* Verse pages: the voices' names and Compare in one row under the verse, so
+   the first voice starts near the top; the lead sentence sits under the
+   voices' heading, quieter. */
+.lg-vbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 14px 0 0; }
+.lg-vbar .lg-chbar { flex: 1 1 auto; margin: 0; padding: 6px 0; border-bottom: 0; }
+.lg-vbar .lg-cmp-row { margin: 0; }
+.lg-vbar .lg-cmp-row .button { padding: 6px 12px; font-size: 13.5px; }
+.lg-chbar a[class*="lg-era-"] { display: inline-flex; align-items: center; gap: 6px; }
+.lg-chbar a[class*="lg-era-"]::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--era); flex: none; }
+#voices > .lg-vlead { margin: 4px 0 14px; font-size: 15.5px; line-height: 1.55; color: var(--muted); max-width: 44em; }
+.lg-vabout .lg-topics-line { margin: 6px 0; }
+
+/* An excerpt's citation: one quiet line. Its actions: Copy and Note, then
+   More; on a pointer screen they stay faint until the excerpt is hovered or
+   focused. */
+.lg-xact-more { position: relative; }
+.lg-xact-more > summary { list-style: none; display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; margin-left: -8px; border-radius: 6px;
+  font-size: 13px; color: var(--muted); cursor: pointer; }
+.lg-xact-more > summary::-webkit-details-marker { display: none; }
+.lg-xact-more > summary:hover, .lg-xact-more[open] > summary { color: var(--accent); background: var(--accent-soft); }
+.lg-xact-menu { position: absolute; z-index: 30; left: -8px; top: calc(100% + 4px); min-width: 200px; display: grid; padding: 6px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-pop); }
+.lg-xact .lg-xact-menu button, .lg-xact .lg-xact-menu a { width: 100%; justify-content: flex-start; padding: 7px 10px; border-radius: 6px; color: var(--text); text-decoration: none; }
+.lg-xact .lg-xact-menu button:hover, .lg-xact .lg-xact-menu a:hover { background: var(--accent-soft); color: var(--accent); }
+@media (hover: hover) and (pointer: fine) {
+  .lg-vx .lg-xact { opacity: .6; transition: opacity var(--fast); }
+  .lg-vx:hover .lg-xact, .lg-vx:focus-within .lg-xact { opacity: 1; }
+}
+@media print { .lg-xact-more { display: none; } }
+
+/* A folded excerpt fades over its last line only, so the lines above stay
+   readable. */
+.lg-folded { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 1.7em), transparent); mask-image: linear-gradient(to bottom, #000 calc(100% - 1.7em), transparent); }
+.lg-unfold-all { margin-top: 6px; }
+
+/* Reader: the chosen verse is underlined with a soft gold highlighter stroke
+   in its lower third: still no block of colour behind every line (second
+   batch), but no longer a navy underline that reads as a link. */
+.cx-verse.cx-on { background: none; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--gold) 45%, transparent);
+  text-decoration-thickness: .42em; text-underline-offset: -.18em; text-decoration-skip-ink: none; }
+.cx-listening .cx-verse.cx-on { background: var(--mark); }
+
+/* Reader on a phone: the sheet at rest is one slim line (the verse and its
+   voices); its tabs, Listen and arrows come with the half-open sheet. */
+@media (max-width: 880px) {
+  .cx-panel.cx-min .cx-tabs, .cx-panel.cx-min .cx-nav, .cx-panel.cx-min .cx-vpage { display: none; }
+  .cx-panel.cx-min .cx-ph { display: flex; align-items: baseline; gap: 10px; padding: 2px 18px 12px; cursor: pointer; }
+  .cx-panel.cx-min .cx-ph-ref { flex: none; }
+  .cx-panel.cx-min .cx-ref { font-size: 18px; }
+  .cx-panel.cx-min #summary { display: block; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cx-panel.cx-min .cx-ph::after { content: ""; flex: none; width: 8px; height: 8px; margin-left: auto; align-self: center;
+    border-left: 2px solid var(--muted); border-top: 2px solid var(--muted); transform: rotate(45deg) translateY(2px); }
+}
+
+/* The footer's 66 books on a phone: cells a finger can hit (34px tall)
+   instead of 24px slivers, within the footer's height budget
+   (scripts/footer_budget.js). */
+@media (max-width: 640px) {
+  footer.site .lg-canon { grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 5px !important; }
+  footer.site .lg-canon .lg-canon-b { height: 34px; font-size: 11.5px; }
+}
+
+/* A chapter on a phone: once the chapter bar (cx-bar) is showing under the
+   header, the header's own "Matthew 5" pill steps aside, so the name is not
+   shown twice, one above the other. */
+@media (max-width: 640px) {
+  .lg-where { transition: opacity var(--fast); }
+  body:has(.cx-bar:not([hidden])) header.site .lg-where { opacity: 0; pointer-events: none; }
+}
+
+/* The reader's gutter: one gold line at rest. A passage's bracket shows only
+   around the chosen verse (web/reader.js, markBrackets), or under the pointer. */
+.cx-brk::before { opacity: 0; }
+.cx-brk.cx-brk-on::before { opacity: .7; }
+.cx-brk:hover::before, .cx-brk:focus-visible::before { opacity: 1; }
+/* The panel's timeline: a flatter strip (two rows at most). */
+.cx-rail { height: calc(42px + var(--lanes, 1) * 14px); margin: 4px 18px 2px; }
+.cx-dot { bottom: calc(30px + var(--row, 0) * 14px); }
+.cx-dot::after { height: calc(6px + var(--row, 0) * 14px); }
+
+/* The chapter bar's list starts with the chapter's own sections. */
+.cx-pick-list .cx-pick-sec-head { padding: 6px 10px 2px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.cx-pick-list .cx-pick-sec a { font-family: var(--serif); }
+.cx-pick-list .cx-pick-sec-end { height: 1px; margin: 6px 4px; background: var(--line); }
+
+/* A Catena excerpt on a verse page: the Father's name that opens each
+   quotation in small capitals (linked where Logia has their page), the place
+   quoted after it quieter. */
+.lg-speaker { font-variant: small-caps; font-weight: 700; letter-spacing: .03em; color: var(--accent); text-decoration: none; }
+a.lg-speaker:hover { text-decoration: underline; text-underline-offset: 3px; }
+span.lg-speaker { cursor: help; }
+.lg-speaker-where { font-style: italic; color: var(--muted); }
+
+/* Verse pages on a wide screen: the whole chapter's verses wrap into rows
+   instead of hiding most of them behind a fade (up to 60; Psalm 119 still scrolls). */
+@media (min-width: 700px) {
+  .lg-near.lg-near-wrap { flex-wrap: wrap; overflow: visible; -webkit-mask-image: none; mask-image: none; }
+}
+
+/* Verse pages, wide screens: the verse in a slim bar under the header once
+   its title has scrolled away. Phones have the voices' bar instead. */
+.lg-vsticky { position: fixed; left: 0; right: 0; top: var(--header-h); z-index: 20; background: color-mix(in srgb, var(--bg) 94%, transparent);
+  border-bottom: 1px solid var(--line); backdrop-filter: blur(6px); }
+.lg-vsticky .wrap { display: flex; align-items: baseline; gap: 12px; padding-block: 8px; min-width: 0; }
+.lg-vsticky a { color: var(--text); text-decoration: none; flex: none; font-family: var(--display); font-size: 16px; }
+.lg-vsticky span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--serif); color: var(--muted); }
+@media (max-width: 880px) { .lg-vsticky { display: none !important; } }
+@media print { .lg-vsticky { display: none !important; } }
+@media (min-width: 881px) { body:has(.lg-vsticky:not([hidden])) .lg-vrail { top: calc(var(--header-h) + 64px); } }
+
+/* A work with a long run of homilies or tractates: one row for each chapter
+   they begin on, opening to its tiles. */
+.lg-div-groups { margin: 14px 0 0; border-top: 1px solid var(--line); }
+.lg-div-group { border-bottom: 1px solid var(--line); }
+.lg-div-group > summary { list-style: none; display: flex; align-items: baseline; gap: 12px; padding: 11px 4px; cursor: pointer; }
+.lg-div-group > summary::-webkit-details-marker { display: none; }
+.lg-div-group > summary b { font-family: var(--display); font-weight: 600; font-size: 17px; min-width: 5.5em; }
+.lg-div-group > summary span { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.lg-div-group > summary .lg-caret { margin-left: auto; color: var(--muted); transition: transform var(--fast); align-self: center; }
+.lg-div-group[open] > summary .lg-caret { transform: rotate(180deg); }
+.lg-div-group > summary:hover b { color: var(--accent); }
+.lg-div-group .lg-div-list { margin: 0 0 14px; }
+
+/* Home: a book card's well-known passages, by title. */
+.lg-bookcard-known { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 13.5px; line-height: 1.6; }
+.lg-bookcard-known > span { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.lg-bookcard-known a { font-family: var(--serif); }
+
+/* The chapters before and after, as two cards with their titles. */
+.cx-turns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cx-turns a { display: grid; gap: 2px; align-content: start; min-height: 0; padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--text); font-weight: 400; }
+.cx-turns a:hover, .cx-turns a:focus-visible { border-color: var(--accent); }
+.cx-turns a[rel="next"] { text-align: right; grid-column: 2; }
+.cx-turns .cx-turn-k { font-size: 12.5px; font-weight: 600; color: var(--accent); }
+.cx-turns b { font-family: var(--display); font-weight: 600; font-size: 18px; }
+.cx-turns .cx-turn-t { font-family: var(--serif); font-size: 14.5px; color: var(--muted); }
+
+/* Metadata links (where an excerpt is from, "also in", the sources of a
+   chapter) in a quieter style than links in the reading itself: the text
+   colour, a faint underline that darkens on hover. */
+.lg-vx-links a, .lg-topics-line a, .lg-in-order a, .lg-top-more a, .lg-vx-more a, .cx-hint a, .cx-credits a {
+  color: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.lg-vx-links a:hover, .lg-topics-line a:hover, .lg-in-order a:hover, .lg-top-more a:hover, .lg-vx-more a:hover, .cx-hint a:hover, .cx-credits a:hover {
+  color: var(--accent); text-decoration-color: currentColor; }
+
+/* Reading plans as cards: kind and length, name, when, day 1, Open. */
+.lg-plan-cards { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+.lg-plan-card { display: grid; gap: 4px; align-content: start; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.lg-plan-card p { margin: 0; }
+.lg-plan-kicker { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--lg-gold-text, var(--gold)); }
+.lg-plan-card h3 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.25; text-wrap: balance; }
+.lg-plan-card h3 a { color: var(--text); text-decoration: none; }
+.lg-plan-card h3 a:hover { color: var(--accent); }
+.lg-plan-first { font-family: var(--serif); font-size: 15px; }
+.lg-plan-go { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px !important; }
+.lg-plan-go .button { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Side by side on a phone: one voice at a time, switched at the top (or by a
+   sideways swipe on a row), verse by verse. Wider, both columns show. */
+.lg-side-switch { display: none; }
+@media (max-width: 640px) {
+  .lg-side-switch { display: flex; gap: 4px; padding: 4px; margin: 0 0 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+    position: sticky; top: calc(var(--header-h, 64px) + 8px); z-index: 4; box-shadow: 0 -9px 0 1px var(--bg); }
+  .lg-side-switch button { flex: 1; min-width: 0; min-height: 40px; border: 0; border-radius: 999px; background: none; color: var(--text);
+    font: 600 14px/1.2 var(--sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+  .lg-side-switch button[aria-pressed="true"] { background: var(--accent); color: var(--accent-contrast, #fff); }
+  .lg-side-rows[data-show="a"] .lg-side-cols > div:nth-child(2), .lg-side-rows[data-show="b"] .lg-side-cols > div:nth-child(1) { display: none; }
+  .lg-side-rows .lg-side-cols > div + div { border-top: 0; padding-top: 0; }
+}
+@media print { .lg-side-switch { display: none !important; } }
+
+/* Readings: the coming day's card leads, twice as wide, its Gospel larger,
+   with the faces of the voices on it. */
+.lg-sunday-faces { display: flex; margin: 4px 0 2px; }
+.lg-sunday-faces .lg-face { width: 24px; height: 24px; font-size: 9.5px; text-decoration: none; }
+@media (min-width: 720px) {
+  .lg-sunday.lg-next { grid-column: span 2; padding: 18px 20px; }
+  .lg-sunday.lg-next .lg-sunday-day span { font-size: 21px; }
+  .lg-sunday.lg-next .lg-sunday-gospel { font-size: 17px; }
+  .lg-sunday.lg-next .lg-sunday-faces .lg-face { width: 30px; height: 30px; font-size: 11px; }
+}
+
+/* "Who said it?": five large era buttons, each with its colour; after the
+   answer, the author's dot on a line of the centuries. */
+.lg-quiz-eras { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.lg-quiz-era { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--text); font: 600 15px/1.25 var(--sans); text-align: left; cursor: pointer; }
+.lg-quiz-era::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--era); }
+.lg-quiz-era:hover:not(:disabled) { border-color: var(--era); box-shadow: inset 0 0 0 1px var(--era); }
+.lg-quiz-era:disabled { cursor: default; opacity: .55; }
+.lg-quiz-era[aria-pressed="true"] { opacity: 1; border-color: var(--era); box-shadow: inset 0 0 0 2px var(--era); }
+.lg-quiz-era.lg-quiz-miss { opacity: 1; text-decoration: line-through; text-decoration-color: var(--muted); }
+.lg-quiz-line { position: relative; height: 64px; margin: 18px 6px 4px; }
+.lg-quiz-ticks { position: absolute; left: 0; right: 0; bottom: 18px; height: 1px; background: var(--line-strong); }
+.lg-quiz-ticks i { position: absolute; top: 6px; transform: translateX(-50%); font-style: normal; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg-quiz-dot { position: absolute; bottom: 12px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--era); border: 2px solid var(--bg);
+  animation: lg-quiz-drop 360ms ease-out; }
+.lg-quiz-dot span { position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 2px 8px; border-radius: 999px;
+  background: var(--text); color: var(--bg); font: 600 12px/1.4 var(--sans); }
+@keyframes lg-quiz-drop { from { transform: translateY(-14px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .lg-quiz-dot { animation: none; } }
+.lg-quiz-dot-end span { left: auto; right: -8px; transform: none; }
+.lg-quiz-dot-start span { left: -8px; transform: none; }
+
+/* The empty search page: an example of each kind of search, and the
+   reader's recent ones. */
+.lg-fts-try { margin: 18px 0 0; display: grid; gap: 16px; }
+.lg-fts-try .label { margin: 0 0 8px; }
+.lg-fts-exs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.lg-fts-ex { display: inline-grid; gap: 0; padding: 8px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface);
+  color: var(--text); text-decoration: none; }
+.lg-fts-ex:hover, .lg-fts-ex:focus-visible { border-color: var(--accent); }
+.lg-fts-ex b { font-family: var(--serif); font-size: 16px; font-weight: 700; }
+.lg-fts-ex span { font-size: 12.5px; color: var(--muted); }
+/* The book whose card lists well-known passages takes two columns, so the
+   others in its row keep their height. */
+@media (min-width: 720px) {
+  .lg-bookcards { grid-auto-flow: row dense; }
+  .lg-bookcard:has(.lg-bookcard-known) { grid-column: span 2; }
 }
