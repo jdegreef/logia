@@ -74,6 +74,10 @@ services:
       - path: /review.js
         name: Cache-Control
         value: public, max-age=31536000, immutable
+      # The header's menus (build_site.menus_file), named with their digest.
+      - path: /menus-*.json
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
       # The linker (web/linker.js) runs on other sites, so it and its chapter
       # files may be read from any origin. Their addresses carry no digest,
       # so browsers keep them a day.

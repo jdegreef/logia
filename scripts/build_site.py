@@ -952,20 +952,29 @@ def where_switcher(lib, path):
             f'{turns[1]}<div class="lg-where-pop" id="lg-where-pop" role="group" aria-label="{pick}" hidden></div></div>')
 
 
+@functools.lru_cache(maxsize=None)
+def menus_file(lib):
+    """The header's dropdown panels (nav_menus) as JSON, {key: html}, and
+    their address, which changes with them. They were most of every page's
+    header; web/site.js (the Open Word Bible's, as on openwordbible.org)
+    fetches them the first time a reader reaches for the menus, and marks
+    the link to the page it is on."""
+    text = json.dumps({key: panel for key, _l, _i, _h, panel, _c in nav_menus(lib)},
+                      ensure_ascii=False, separators=(",", ":"))
+    return text, digest_url(f"/menus-{LANG}.json", text)
+
+
 def site_header(lib, current, path):
     home_on = current == "/"
     items = [f'<li><a class="nav-link" href="/"{" aria-current=page" if home_on else ""}>'
              f'{icon("home")}<span>{e(t("nav.home"))}</span></a></li>']
-    for key, label, ico, href, panel, cls in nav_menus(lib):
-        if path:
-            panel = panel.replace(f'class="dd-item" href="{path}"', f'class="dd-item" href="{path}" aria-current="page"')
-            book = re.match(r"/([a-z0-9]{3})/", path)
-            if book:
-                panel = panel.replace(f'data-book="{book[1]}"', f'data-book="{book[1]}" aria-current="true"')
+    # Each panel is empty in the page (menus_file); a trigger's data-href is
+    # its section's page, where a reader goes if the panels can't be fetched.
+    for key, label, ico, href, _panel, cls in nav_menus(lib):
         items.append(
             f'<li class="nav-item"><button type="button" class="nav-link nav-trigger{" active" if current == href else ""}" '
-            f'aria-expanded="false" aria-controls="dd-{key}">{icon(ico)}<span>{e(label)}</span>'
-            f'{icon("chevron", 15, "icon caret")}</button><div class="dropdown {cls}" id="dd-{key}" hidden>{panel}</div></li>')
+            f'aria-expanded="false" aria-controls="dd-{key}" data-href="{href}">{icon(ico)}<span>{e(label)}</span>'
+            f'{icon("chevron", 15, "icon caret")}</button><div class="dropdown {cls}" id="dd-{key}" hidden></div></li>')
     # On a phone the menu opens with the search and the reader's place.
     items.insert(0, f'<li class="lg-nav-phone"><button type="button" class="lg-nav-search" data-search-open aria-haspopup="dialog" '
                     f'aria-controls="palette">{SEARCH_ICON}<span>{e(t("search.placeholder"))}</span></button>'
@@ -980,7 +989,7 @@ def site_header(lib, current, path):
     return f"""<header class="site"><div class="wrap bar">
 <a class="brand" href="/"{" aria-current=page" if home_on else ""}>{MARK}<span class="brand-name">Logia</span></a>
 {where_switcher(lib, path)}
-<nav class="primary" id="site-nav" aria-label="{e(t("nav.main"))}"><ul class="nav-list">{"".join(items)}</ul></nav>
+<nav class="primary" id="site-nav" aria-label="{e(t("nav.main"))}" data-menus="{menus_file(lib)[1]}"><ul class="nav-list">{"".join(items)}</ul></nav>
 <div class="tools">
 {search_palette()}
 <button type="button" class="tool-btn lg-theme-btn" data-theme-toggle aria-pressed="false" aria-label="{dark}" title="{dark}" hidden>{icon("moon")}{icon("sun")}</button>
@@ -5572,11 +5581,12 @@ def app_manifest():
     }, ensure_ascii=False, indent=1) + "\n"
 
 
-def service_worker(offline_html):
-    """web/sw.js with its list of files to keep from the first visit, and a
-    version that changes whenever any of them does."""
+def service_worker(offline_html, lib=None):
+    """web/sw.js with its list of files to keep from the first visit (the
+    header's menus among them, for offline reading), and a version that
+    changes whenever any of them does."""
     shell = [asset(n) for n in ("style.css", "logia.css", "site.js", "account.js", "logia.js", "study.js", "sheets.js", "reader.js")]
-    shell += ["/favicon.svg", "/offline/", *SHELL_FONTS]
+    shell += ([menus_file(lib)[1]] if lib else []) + ["/favicon.svg", "/offline/", *SHELL_FONTS]
     version = hashlib.sha256((json.dumps(shell) + offline_html).encode()).hexdigest()[:10]
     text = published("sw.js")
     return text.replace("var SHELL = [];", f"var SHELL = {json.dumps(shell)};", 1).replace(
@@ -8858,8 +8868,9 @@ def build():
     write("/offline/", offline)
     with open(os.path.join(SITE, "manifest.webmanifest"), "w", encoding="utf-8") as f:
         f.write(app_manifest())
+    write(f"/menus-{LANG}.json", menus_file(lib)[0])
     with open(os.path.join(SITE, "sw.js"), "w", encoding="utf-8") as f:
-        f.write(service_worker(offline))
+        f.write(service_worker(offline, lib))
     os.makedirs(os.path.join(SITE, "data"))
     for book, chapter in sorted(lib.coverage()):
         with open(os.path.join(SITE, "data", f"{book}.{chapter}.json"), "w", encoding="utf-8") as f:
