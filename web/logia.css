@@ -3119,10 +3119,6 @@ main:has(.lg-work-secbar) .lg-block, main:has(.lg-work-secbar) .lg-record-fold {
   background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-pop); }
 .lg-xact .lg-xact-menu button, .lg-xact .lg-xact-menu a { width: 100%; justify-content: flex-start; padding: 7px 10px; border-radius: 6px; color: var(--text); text-decoration: none; }
 .lg-xact .lg-xact-menu button:hover, .lg-xact .lg-xact-menu a:hover { background: var(--accent-soft); color: var(--accent); }
-@media (hover: hover) and (pointer: fine) {
-  .lg-vx .lg-xact { opacity: .6; transition: opacity var(--fast); }
-  .lg-vx:hover .lg-xact, .lg-vx:focus-within .lg-xact { opacity: 1; }
-}
 @media print { .lg-xact-more { display: none; } }
 
 /* A folded excerpt fades over its last line only, so the lines above stay
