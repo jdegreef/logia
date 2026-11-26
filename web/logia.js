@@ -302,13 +302,21 @@
     draw();
   }
 
-  // Home: the Christmas banner, from Advent to Epiphany (data-season is
-  // "MM-DD:MM-DD", the window crossing the new year).
-  document.querySelectorAll("[data-season]").forEach(function (el) {
-    var span = el.getAttribute("data-season").split(":"), now = new Date();
-    var md = ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
-    el.hidden = !(span[0] <= span[1] ? md >= span[0] && md <= span[1] : md >= span[0] || md <= span[1]);
-  });
+  // Home: the church year's banner. Each [data-season] lists the spans
+  // ("YYYY-MM-DD:YYYY-MM-DD", the last date the day itself) it shows in; of
+  // those that hold today, the one whose day comes soonest is shown.
+  (function () {
+    var now = new Date(), best = null, bestDay = "";
+    var today = now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
+    document.querySelectorAll("[data-season]").forEach(function (el) {
+      el.hidden = true;
+      el.getAttribute("data-season").split(",").forEach(function (span) {
+        var ab = span.split(":");
+        if (today >= ab[0] && today <= ab[1] && (!best || ab[1] < bestDay)) { best = el; bestDay = ab[1]; }
+      });
+    });
+    if (best) best.hidden = false;
+  })();
 
   // Home: Continue reading. The last verse read (logia-last, kept by
   // web/reader.js), then up to four other chapters read lately (logia-read).
@@ -327,7 +335,7 @@
       var names = JSON.parse(cont.getAttribute("data-books"));
       var main = cont.querySelector(".lg-continue-main");
       main.href = lastAt.href;
-      main.querySelector("b").textContent = lastAt.ref;
+      main.querySelector("b").textContent = lastAt.voice ? fmt(cont.getAttribute("data-with"), { ref: lastAt.ref, name: lastAt.voice }) : lastAt.ref;
       var here = lastAt.href.split("#")[0], seen = {}, items = [];
       readList.slice().reverse().forEach(function (h) {
         var m = h.match(/^\/([a-z0-9]{3})\/(\d+)\/$/);
@@ -1392,16 +1400,30 @@
     var pf = null, allCounts = {}, chosen = { source: [], era: [], tradition: [], book: [], commentator: [], work: [] }, results = [], shown = 0, run = 0, timer = null;
     var params = new URLSearchParams(location.search);
     input.value = params.get("q") || "";
-    // A reference typed as a search (from the address bar, /opensearch.xml):
-    // "John 3:16" offers its page above the word search's results.
-    if (input.value.trim()) withData(function () {
-      var hit = parseRef(input.value.trim()) && suggest(input.value)[0];
-      if (!hit) return;
-      var go = document.createElement("p");
-      go.className = "lg-fts-goto";
-      go.innerHTML = '<a class="button" href="' + esc(hit.href) + '">' + esc(fmt(U.goto, { ref: hit.title })) + " →</a>";
-      status.parentNode.insertBefore(go, status);
-    });
+    // As the query is typed (and from the address bar, /opensearch.xml),
+    // what it could name besides words: a reference offers its page as a
+    // button, and up to three books or commentators follow as links, above
+    // the word search's results.
+    var goto = document.createElement("p");
+    goto.className = "lg-fts-goto"; goto.hidden = true;
+    status.parentNode.insertBefore(goto, status);
+    function showGoto() {
+      var q = input.value.trim();
+      if (!q) { goto.hidden = true; return; }
+      withData(function () {
+        var hits = suggest(input.value).filter(function (x) { return x.href.indexOf("/search/") !== 0; }).slice(0, 3);
+        if (!hits.length) { goto.hidden = true; return; }
+        goto.innerHTML = hits.map(function (x, i) {
+          return i === 0 && parseRef(q)
+            ? '<a class="button" href="' + esc(x.href) + '">' + esc(fmt(U.goto, { ref: x.title })) + " →</a>"
+            : '<a class="lg-fts-goto-link" href="' + esc(x.href) + '"><b>' + esc(x.title) + "</b> <span>" + esc(x.note) + "</span></a>";
+        }).join(" ");
+        goto.hidden = false;
+      });
+    }
+    var gotoTimer = null;
+    input.addEventListener("input", function () { clearTimeout(gotoTimer); gotoTimer = setTimeout(showGoto, 150); });
+    if (input.value.trim()) showGoto();
     Object.keys(chosen).forEach(function (k) { chosen[k] = params.getAll(k); });
     function filters(but) {
       var f = {};
@@ -2534,24 +2556,20 @@
     links.forEach(function (a) { var el = document.getElementById(a.getAttribute("href").slice(1)); if (el) io.observe(el); });
   });
 
-  // A verse page: each word of the Greek or Hebrew line opens in place to its
-  // row of the word table further down (dictionary form, gloss, grammar),
-  // the table's own headings labelling it. Words are matched to rows in
-  // order; when the counts differ the line is left as it is.
+  // A verse page: each word of the Greek or Hebrew line (a span the build
+  // marks with the rows of the word table it covers, a Hebrew prefix and its
+  // word together) opens in place to those rows: dictionary form, gloss and
+  // grammar, labelled by the table's own headings.
   (function () {
     var line = document.querySelector(".lg-vorig"), rows = document.querySelectorAll(".lg-words tbody tr");
     var heads = [].map.call(document.querySelectorAll(".lg-words thead th"), function (th) { return th.textContent; });
-    if (!line || !rows.length || !line.firstChild || line.firstChild.nodeType !== 3) return;
-    var words = line.firstChild.nodeValue.trim().split(/\s+/);
-    if (words.length !== rows.length) return;
-    var frag = document.createDocumentFragment();
-    words.forEach(function (w, i) {
+    if (!line || !rows.length) return;
+    [].forEach.call(line.querySelectorAll(".lg-vword"), function (sp) {
       var b = document.createElement("button");
-      b.type = "button"; b.className = "lg-vw"; b.textContent = w; b.setAttribute("data-row", i);
-      b.setAttribute("aria-expanded", "false");
-      frag.appendChild(b); frag.appendChild(document.createTextNode(" "));
+      b.type = "button"; b.className = "lg-vw"; b.textContent = sp.textContent;
+      b.setAttribute("data-rows", sp.getAttribute("data-rows")); b.setAttribute("aria-expanded", "false");
+      sp.replaceWith(b);
     });
-    line.replaceChild(frag, line.firstChild);
     var card = document.createElement("div");
     card.className = "lg-vw-card"; card.hidden = true; card.setAttribute("role", "dialog");
     line.after(card);
@@ -2565,15 +2583,21 @@
       if (!b) return;
       if (open === b) { close(); return; }
       close();
-      var cells = rows[+b.getAttribute("data-row")].children;
       card.innerHTML = "";
-      [].forEach.call(cells, function (td, i) {
-        if (!td.textContent.trim() || td.textContent.trim() === "-") return;
-        var p = document.createElement("p");
-        var k = document.createElement("span"); k.className = "lg-vw-k"; k.textContent = heads[i] || "";
-        var tag = document.createElement("span"); tag.className = "lg-vw-v " + td.className; tag.innerHTML = td.innerHTML;
-        if (td.getAttribute("lang")) tag.setAttribute("lang", td.getAttribute("lang"));
-        p.appendChild(k); p.appendChild(tag); card.appendChild(p);
+      b.getAttribute("data-rows").split(",").forEach(function (r) {
+        var row = rows[+r];
+        if (!row) return;
+        var part = document.createElement("div"); part.className = "lg-vw-part";
+        [].forEach.call(row.children, function (td, i) {
+          if (!td.textContent.trim() || td.textContent.trim() === "-") return;
+          var p = document.createElement("p");
+          var k = document.createElement("span"); k.className = "lg-vw-k"; k.textContent = heads[i] || "";
+          var tag = document.createElement("span"); tag.className = "lg-vw-v " + td.className; tag.innerHTML = td.innerHTML;
+          if (td.getAttribute("lang")) tag.setAttribute("lang", td.getAttribute("lang"));
+          if (td.getAttribute("dir")) tag.setAttribute("dir", td.getAttribute("dir"));
+          p.appendChild(k); p.appendChild(tag); part.appendChild(p);
+        });
+        card.appendChild(part);
       });
       card.setAttribute("aria-label", b.textContent);
       card.hidden = false; open = b; b.setAttribute("aria-expanded", "true");
