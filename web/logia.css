@@ -3022,10 +3022,17 @@ mark.lg-hl { background: color-mix(in srgb, var(--gold) 32%, transparent); color
 /* Work pages: the same bar of sections as a commentator's page. */
 .lg-work-secbar { margin: 18px 0 0; }
 main:has(.lg-work-secbar) .lg-block, main:has(.lg-work-secbar) .lg-record-fold { scroll-margin-top: calc(var(--header-h) + 62px); }
-/* Reader on phones: verse numbers a little larger, with a tap area around them that doesn't move the text. */
+/* Reader on phones: verse numbers a little larger, with a tap area around them that doesn't move the text,
+   each shaded by how much is written on its verse (web/reader.js sets data-heat), in place of the gold line. */
 @media (max-width: 560px) {
   .cx-vn { position: relative; font-size: 12.5px; }
   .cx-vn::after { content: ""; position: absolute; inset: -12px -8px; }
+  .cx-vn[data-heat] { vertical-align: 3px; line-height: 1; padding: 2px 5px; border-radius: 6px; color: var(--text); }
+  .cx-vn[data-heat="1"] { background: color-mix(in oklab, var(--gold) 16%, var(--bg)); }
+  .cx-vn[data-heat="2"] { background: color-mix(in oklab, var(--gold) 30%, var(--bg)); }
+  .cx-vn[data-heat="3"] { background: color-mix(in oklab, var(--gold) 46%, var(--bg)); }
+  .cx-verse.cx-has .cx-vn[data-heat] { color: var(--text); }
+  .cx-heat { display: none; }
 }
 /* Search on wide screens: results in the main column, the filters in a column beside them. */
 @media (min-width: 1100px) {
@@ -3079,3 +3086,27 @@ main:has(.lg-work-secbar) .lg-block, main:has(.lg-work-secbar) .lg-record-fold {
   .lg-side-toc a:hover { color: var(--text); }
   .lg-side-toc a[aria-current] { color: var(--text); font-weight: 600; margin-left: -15px; padding-left: 13px; border-left: 2px solid var(--accent); }
 }
+
+/* Design review follow-ups */
+/* A Hebrew word with a prefix shows each part in turn. */
+.lg-vw-part + .lg-vw-part { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 6px; }
+.lg-vw-card p > span { justify-self: start; }
+.lg-hot a span { margin-left: 4px; }
+/* Whole homilies on wide screens: the links into Logia sit in the right margin beside their section, so the
+   column holds only the homily. */
+@media (min-width: 1300px) {
+  .lg-whole .lg-marks { position: absolute; top: 4px; left: calc(100% + 32px); width: 190px; margin: 0; display: grid; gap: 6px; }
+  .lg-whole .lg-marks a { font-size: 12.5px; line-height: 1.35; }
+  .lg-whole .lg-held + .lg-marks { margin-left: 0; }
+}
+/* Search: what the query could name besides words, as it is typed. */
+.lg-fts-goto { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 0; }
+.lg-fts-goto[hidden] { display: none; }
+.lg-fts-goto-link { display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--text); text-decoration: none; font-size: 14px; }
+.lg-fts-goto-link span { font-size: 12px; color: var(--muted); }
+.lg-fts-goto-link:hover { border-color: var(--accent); }
+/* Chapter page: choose any two commentators and read them side by side. */
+.lg-side-form { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 10px 0 0; }
+.lg-side-form-t { font-weight: 600; font-size: 14px; flex-basis: 100%; }
+.lg-side-form select { font: inherit; font-size: 14px; padding: 6px 10px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--surface); color: var(--text); max-width: 100%; }

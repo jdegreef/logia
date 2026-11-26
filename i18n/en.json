@@ -297,11 +297,12 @@
     }
   },
   "home": {
+    "continue_with": "{ref} with {name}",
     "ribbon_voice": "{name} ({dates})",
     "heat_little": "little",
     "heat_some": "some",
     "heat_much": "much said",
-    "season_christmas": "Christmas is coming: read {ref} with the church",
+    "season": "{name}: read {ref} with the church",
     "try_word": "grace",
     "kind_verse": "verse",
     "kind_word": "word",
@@ -2889,6 +2890,7 @@
     "later": "Not now"
   },
   "side": {
+    "open": "Read side by side",
     "turns": "The chapters before and after, side by side",
     "strip_label": "Which verses each comments on",
     "strip_left": "only the left",

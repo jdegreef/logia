@@ -1657,7 +1657,7 @@ def home_continue(lib):
     what web/reader.js keeps on the device, and it stays hidden without it."""
     names = json.dumps({b.lower(): lib.books[b]["en"] for b in lib.books}, ensure_ascii=False, separators=(",", ":"))
     return (f'<section class="lg-continue" aria-labelledby="h-cont" data-books="{e(names)}" '
-            f'data-chapter="{e(t("home.continue_chapter"))}" hidden>'
+            f'data-chapter="{e(t("home.continue_chapter"))}" data-with="{e(t("home.continue_with"))}" hidden>'
             f'<p class="eyebrow" id="h-cont">{e(t("home.continue"))}</p>'
             f'<a class="lg-continue-main" href="/"><b></b><span>{e(t("home.continue_go"))} {icon("arrow", 15)}</span></a>'
             f'<div class="lg-continue-recent" hidden><span class="lg-quiet">{e(t("home.continue_recent"))}</span><ul></ul></div></section>')
@@ -1727,11 +1727,22 @@ def home_hero(lib, cov, example=""):
                     f'<b>{e(t("eras." + era))}</b><span>{e(t("home.era_voices", n=len(people)))}</span><i>{e(few)}</i></a></li>')
     names = "".join(eras)
     ribbon = home_ribbon(lib)
-    # Try: one line of three (a verse, a word, a commentator). Christmas is a
-    # banner of its own, shown only from Advent to Epiphany (logia.js).
-    xmas = next(((b, st, en) for oid, b, st, en, _v in occasions(lib) if oid == "christmas"), None)
-    season = (f'<p class="lg-season-banner" data-season="11-27:01-06" hidden><a href="{e(t("occasions.christmas.path"))}">'
-              f'<span aria-hidden="true">✦</span> {e(t("home.season_christmas", ref=passage_ref(lib, *xmas)))}</a></p>' if xmas else "")
+    # Try: one line of three (a verse, a word, a commentator). The church
+    # year has a banner of its own: each occasion Logia has a Gospel page for,
+    # shown from a week before its day to the day (Christmas from Advent),
+    # its dates for three years on the page, web/logia.js showing the one
+    # coming soonest.
+    data = {o["id"]: o for o in load(os.path.join(ROOT, "library", "occasions.json"))["occasions"]}
+    year, banners = datetime.date.today().year, []
+    for oid, book, st, en, _v in occasions(lib):
+        if oid == "christmas-eve":
+            continue
+        lead = 28 if oid == "christmas" else 7
+        days = occasion_dates(data[oid], (year, year + 1, year + 2))
+        spans = ",".join(f"{(d - datetime.timedelta(days=lead)).isoformat()}:{d.isoformat()}" for d in days)
+        banners.append(f'<p class="lg-season-banner" data-season="{spans}" hidden><a href="{e(t(f"occasions.{oid}.path"))}">'
+                       f'<span aria-hidden="true">✦</span> {e(t("home.season", name=t(f"occasions.{oid}.name"), ref=passage_ref(lib, book, st, en)))}</a></p>')
+    season = "".join(banners)
     chips = []
     b, c, v = ref_parts(HOME_TRY[0])
     if (b, c) in cov:
@@ -2664,6 +2675,19 @@ def side_turns(lib, book, chapter):
     return f'<nav class="lg-turns" aria-label="{e(t("side.turns"))}">{prev}{nxt}</nav>'
 
 
+def side_form(book, chapter, commentaries):
+    """On a chapter page: any two of its commentators, chosen here, opened
+    side by side across the chapter (its side-by-side page, ?a=&b=)."""
+    def options(chosen):
+        return "".join(f'<option value="{c["work_id"]}"{" selected" if i == chosen else ""}>{e(c["short_name"] or c["author"])}</option>'
+                       for i, c in enumerate(commentaries))
+    return (f'<form class="lg-side-form" action="{chapter_url(book, chapter)}side-by-side/" method="get">'
+            f'<span class="lg-side-form-t">{e(t("side.link"))}</span>'
+            f'<label><span class="sr-only">{e(t("side.left"))}</span><select name="a">{options(0)}</select></label>'
+            f'<label><span class="sr-only">{e(t("side.right"))}</span><select name="b">{options(len(commentaries) - 1)}</select></label>'
+            f'<button type="submit" class="button ghost">{e(t("side.open"))}</button></form>')
+
+
 def side_by_side_page(lib, book, chapter, comm):
     """Two commentators across a whole chapter, verse by verse in two columns
     (web/logia.js draws them from the chapter's /comm/ file, the reader's own).
@@ -2771,7 +2795,7 @@ def chapter_page(lib, book, chapter, all_chapters):
     in_order = (f'<nav class="lg-in-order" aria-label="{e(t("chapter.in_order", chapter=f"{one(name)} {chapter}"))}">'
                 f'<p>{e(t("chapter.in_order", chapter=f"{one(name)} {chapter}"))} '
                 + " · ".join(f'<a href="{href}">{e(c["short_name"] or c["author"])}</a>' for c, href in in_order)
-                + "</p>" + (f'<p><a href="{chapter_url(book, chapter)}side-by-side/">{e(t("side.link"))}</a></p>' if len(commentaries) > 1 else "")
+                + "</p>" + (side_form(book, chapter, commentaries) if len(commentaries) > 1 else "")
                 + "</nav>") if in_order else ""
     owb_link = f'<a href="{OWB_SITE}{chapter_url(book, chapter)}" rel="noopener">Open Word Bible</a>'
     first_ref = f"{one(name)} {chapter}:{bible['verses'][0]}"
@@ -3030,8 +3054,22 @@ def verse_original(bible, verse):
         if after is None:
             return " "
         return after if after == "" or after.endswith((" ", "\u05be")) else after + " "
-    text = "".join(w["text"] + gap(w) for w in words).strip()
-    return (f'<p class="lg-vorig" lang="{lang}"{" dir=rtl" if lang == "hbo" else ""}>{e(text)} '
+    # Each printed word is a span naming the rows of the word table it
+    # covers (a Hebrew prefix and its word share one), so web/logia.js can
+    # open them in place.
+    out, rows = [], []
+    for i, w in enumerate(words):
+        rows.append(str(i))
+        tail = gap(w)
+        if tail == "":
+            continue
+        text = "".join(words[int(r)]["text"] for r in rows)
+        out.append(f'<span class="lg-vword" data-rows="{",".join(rows)}">{e(text)}</span>{e(tail)}')
+        rows = []
+    if rows:
+        out.append(f'<span class="lg-vword" data-rows="{",".join(rows)}">{e("".join(words[int(r)]["text"] for r in rows))}</span>')
+    text = "".join(out).strip()
+    return (f'<p class="lg-vorig" lang="{lang}"{" dir=rtl" if lang == "hbo" else ""}>{text} '
             f'<a class="lg-vorig-more" href="#words" lang="{LANG}" dir="ltr">{e(t("verse.orig_words"))}</a></p>')
 
 
