@@ -4057,7 +4057,8 @@ def commentators_page(lib):
     erastrip = (f'<nav class="lg-erastrip" aria-label="{e(t("commentators.eras_label"))}">'
                 f'<div class="lg-erastrip-bar" aria-hidden="true">{strip}</div><ul>{strip_links}</ul></nav>')
 
-    # Finding a voice: book chips (Old and New Testament), and a bar that
+    # Finding a voice: book chips (Old and New Testament), set over the
+    # timeline so a reader sees the lives they dim, and a bar that
     # stays at the top over the cards with the eras, a name box, the book and
     # how many are shown (web/logia.js; every card is in the HTML).
     has = {a: set(bs) for a, bs in verses.items()}
@@ -4086,7 +4087,7 @@ def commentators_page(lib):
            f'<span class="lg-findbar-count" aria-live="polite" data-of="{e(t("commentators.showing"))}"></span>'
            f'<button type="button" class="lg-findbar-reset" hidden>{e(t("commentators.show_all"))}</button></div>')
     none = f'<p class="lg-findnone lg-quiet" hidden>{e(t("commentators.find_none"))}</p>'
-    sections = (f'<section class="lg-block lg-cmtcards" id="cards" aria-label="{e(t("commentators.cards_label"))}">{pick}{bar}'
+    sections = (f'<section class="lg-block lg-cmtcards" id="cards" aria-label="{e(t("commentators.cards_label"))}">{bar}'
                 f'<ul class="lg-grid lg-people-grid">{"".join(cards)}</ul>{none}</section>')
 
     # Three places to start, for a newcomer.
@@ -4108,6 +4109,7 @@ def commentators_page(lib):
 <header class="page-head"><p class="eyebrow">{e(t("commentators.title"))}</p>
 <h1>{e(t("commentators.heading"))}</h1><p class="dek">{e(t("commentators.dek"))}</p></header>
 {erastrip}
+{pick}
 {timeline(lib, landmarks=True, strip=True)}
 {new_here}
 {sections}

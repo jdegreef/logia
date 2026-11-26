@@ -865,7 +865,7 @@
   // together, dim the other lives on the timeline, and put the chosen book
   // first on each card, with a quotation from that book.
   document.querySelectorAll(".lg-cmtcards").forEach(function (section) {
-    var pick = section.querySelector(".lg-pick"), bar = section.querySelector(".lg-findbar");
+    var pick = document.querySelector(".lg-pick"), bar = section.querySelector(".lg-findbar");
     var cards = [].slice.call(section.querySelectorAll("li.lg-cmt"));
     var rows = [].slice.call(document.querySelectorAll(".lg-tl-row[data-author]"));
     var chips = pick ? [].slice.call(pick.querySelectorAll("button[data-book]")) : [];
