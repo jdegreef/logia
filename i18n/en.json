@@ -2163,6 +2163,7 @@
     }
   },
   "sundays": {
+    "n_one": "{n} excerpts from 1 commentator",
     "ics_others": "Also read: {others}",
     "heading": "The coming Sundays and holy days",
     "dek": "The readings of the Revised Common Lectionary, used by many Anglican, Lutheran, Methodist, Presbyterian and other churches. Each reading links to what Logia's commentators say on it.",

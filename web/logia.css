@@ -3033,3 +3033,42 @@ main:has(.lg-work-secbar) .lg-block, main:has(.lg-work-secbar) .lg-record-fold {
   .lg-fts-layout .lg-fts-chips { display: flex; flex-wrap: wrap; gap: 6px; }
   .lg-fts-layout .lg-fts-who select { width: 100%; }
 }
+
+/* Design review, fifth batch */
+/* Home: the hero leads with a live example, the verse of the day and its voices, with the search under it. */
+.lg-hero .lg-votd { margin: 26px auto 0; }
+.lg-hero .lg-votd + .hero-search { margin-top: 26px; }
+@media (min-width: 900px) { .lg-hero h1 { font-size: clamp(36px, 4.6vw, 50px); } }
+/* Verse page: each Greek or Hebrew word opens in place to its row of the word table. */
+.lg-vorig { position: relative; }
+.lg-vw { font: inherit; color: inherit; background: none; border: 0; padding: 0 1px; margin: 0; border-radius: 4px; cursor: pointer;
+  text-decoration: underline dotted color-mix(in srgb, var(--muted) 50%, transparent); text-underline-offset: 4px; }
+.lg-vw:hover, .lg-vw[aria-expanded="true"] { color: var(--text); background: var(--mark); text-decoration-color: var(--gold); }
+.lg-vw-card { position: absolute; z-index: 20; width: min(320px, 100%); box-sizing: border-box; padding: 10px 14px; border: 1px solid var(--line);
+  border-radius: var(--radius-sm); background: var(--surface); box-shadow: var(--shadow-pop); font-family: var(--sans); font-size: 14px; color: var(--text); }
+.lg-vw-card p { margin: 0; display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 8px; padding: 3px 0; }
+.lg-vw-k { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.lg-vw-v.cx-gk { font-family: var(--greek); font-size: 17px; }
+.lg-vw-card [lang="hbo"] { font-family: var(--hebrew); font-size: 19px; }
+/* Readings: Add to calendar beside the Sundays; each card's readings one to a line. */
+.lg-sundays-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.lg-sundays-head h2 { margin: 0; }
+.lg-sunday-gospel { font-size: 16px; }
+.lg-sunday-also { margin: 8px 0 2px; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.lg-sunday-others { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; font-size: 14px; }
+.lg-sunday-others .lg-quiet, .lg-sunday-gospel .lg-quiet { display: block; font-size: 12.5px; }
+/* Topic pages on wide screens: the passages listed in a sticky column beside the reading, the one being read marked. */
+.lg-side-col { display: none; }
+@media (min-width: 1100px) {
+  .lg-path:has(.lg-side-col) { max-width: none; }
+  .lg-path:has(.lg-side-col) .page-head .lg-chbar { display: none; }
+  .lg-path:has(.lg-side-col) > .page-head { max-width: 760px; }
+  .lg-side-layout { display: grid; grid-template-columns: minmax(0, 760px) 260px; justify-content: space-between; column-gap: 48px; align-items: start; }
+  .lg-side-col { display: block; position: sticky; top: calc(var(--header-h) + 24px); margin-top: 40px; }
+  .lg-side-toc ol { list-style: none; margin: 8px 0 0; padding: 0 0 0 14px; border-left: 1px solid var(--line); counter-reset: side; }
+  .lg-side-toc li { counter-increment: side; }
+  .lg-side-toc a { display: block; padding: 6px 0; font-size: 14px; line-height: 1.35; color: var(--muted); text-decoration: none; }
+  .lg-side-toc a::before { content: counter(side) ". "; font-variant-numeric: tabular-nums; color: var(--lg-gold-text); }
+  .lg-side-toc a:hover { color: var(--text); }
+  .lg-side-toc a[aria-current] { color: var(--text); font-weight: 600; margin-left: -15px; padding-left: 13px; border-left: 2px solid var(--accent); }
+}

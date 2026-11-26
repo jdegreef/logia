@@ -319,9 +319,9 @@
     } catch (e) { /* storage blocked */ }
     if (lastAt && lastAt.href && lastAt.href.charAt(0) === "/") {
       // A returning reader: Continue leads, and the three ways in for
-      // newcomers step back behind the verse of the day.
-      var doors = document.querySelector(".lg-doors"), votd = document.querySelector(".lg-votd");
-      if (doors && votd) votd.after(doors);
+      // newcomers step back behind the books.
+      var doors = document.querySelector(".lg-doors"), books = document.getElementById("h-read");
+      if (doors && books) books.closest("section").after(doors);
       var names = JSON.parse(cont.getAttribute("data-books"));
       var main = cont.querySelector(".lg-continue-main");
       main.href = lastAt.href;
@@ -2517,6 +2517,71 @@
     more.hidden = false;
     more.addEventListener("click", function () { box.classList.remove("lg-clamped"); more.setAttribute("aria-expanded", "true"); more.remove(); });
   });
+
+  // A side list of a page's parts ([data-spy]): the part being read is marked.
+  document.querySelectorAll("nav[data-spy]").forEach(function (nav) {
+    var links = [].slice.call(nav.querySelectorAll('a[href^="#"]'));
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (x) { seen[x.target.id] = x.isIntersecting; });
+      var on = null;
+      links.forEach(function (a) { if (!on && seen[a.getAttribute("href").slice(1)]) on = a; });
+      if (on) links.forEach(function (a) { if (a === on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+    }, { rootMargin: "-90px 0px -50% 0px" });
+    links.forEach(function (a) { var el = document.getElementById(a.getAttribute("href").slice(1)); if (el) io.observe(el); });
+  });
+
+  // A verse page: each word of the Greek or Hebrew line opens in place to its
+  // row of the word table further down (dictionary form, gloss, grammar),
+  // the table's own headings labelling it. Words are matched to rows in
+  // order; when the counts differ the line is left as it is.
+  (function () {
+    var line = document.querySelector(".lg-vorig"), rows = document.querySelectorAll(".lg-words tbody tr");
+    var heads = [].map.call(document.querySelectorAll(".lg-words thead th"), function (th) { return th.textContent; });
+    if (!line || !rows.length || !line.firstChild || line.firstChild.nodeType !== 3) return;
+    var words = line.firstChild.nodeValue.trim().split(/\s+/);
+    if (words.length !== rows.length) return;
+    var frag = document.createDocumentFragment();
+    words.forEach(function (w, i) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "lg-vw"; b.textContent = w; b.setAttribute("data-row", i);
+      b.setAttribute("aria-expanded", "false");
+      frag.appendChild(b); frag.appendChild(document.createTextNode(" "));
+    });
+    line.replaceChild(frag, line.firstChild);
+    var card = document.createElement("div");
+    card.className = "lg-vw-card"; card.hidden = true; card.setAttribute("role", "dialog");
+    line.after(card);
+    var open = null;
+    var close = function () {
+      if (open) open.setAttribute("aria-expanded", "false");
+      open = null; card.hidden = true;
+    };
+    line.addEventListener("click", function (e) {
+      var b = e.target.closest(".lg-vw");
+      if (!b) return;
+      if (open === b) { close(); return; }
+      close();
+      var cells = rows[+b.getAttribute("data-row")].children;
+      card.innerHTML = "";
+      [].forEach.call(cells, function (td, i) {
+        if (!td.textContent.trim() || td.textContent.trim() === "-") return;
+        var p = document.createElement("p");
+        var k = document.createElement("span"); k.className = "lg-vw-k"; k.textContent = heads[i] || "";
+        var tag = document.createElement("span"); tag.className = "lg-vw-v " + td.className; tag.innerHTML = td.innerHTML;
+        if (td.getAttribute("lang")) tag.setAttribute("lang", td.getAttribute("lang"));
+        p.appendChild(k); p.appendChild(tag); card.appendChild(p);
+      });
+      card.setAttribute("aria-label", b.textContent);
+      card.hidden = false; open = b; b.setAttribute("aria-expanded", "true");
+      var lr = line.getBoundingClientRect(), br = b.getBoundingClientRect();
+      card.style.top = (br.bottom - lr.top + line.offsetTop + 6) + "px";
+      card.style.left = Math.max(0, Math.min(br.left - lr.left + line.offsetLeft, line.offsetLeft + line.offsetWidth - card.offsetWidth)) + "px";
+    });
+    document.addEventListener("click", function (e) { if (open && !e.target.closest(".lg-vw, .lg-vw-card")) close(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && open) { var b = open; close(); b.focus(); } });
+  })();
 
   // A verse page: the verse at the reader's level (Literal, Balanced or
   // Readable, the setting web/site.js keeps), and buttons to change it there.

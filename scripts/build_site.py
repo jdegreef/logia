@@ -1666,9 +1666,10 @@ def home_ribbon(lib):
             f'<div class="lg-rb-bands">{"".join(bands)}</div><div class="lg-rb-years" aria-hidden="true">{years}</div></div>')
 
 
-def home_hero(lib, cov):
-    """The first screen: the motto, the headline, the voices by name, the
-    search, ways to try it, the books to start in, and what Logia promises."""
+def home_hero(lib, cov, example=""):
+    """The first screen: the motto, the headline, Continue for a returning
+    reader, an example (the verse of the day with its voices), the search,
+    ways to try it, the eras, the books to start in, and what Logia promises."""
     mb, mc, mv = ref_parts(HOME_MOTTO)
     motto = e(t("home.verse"))
     if (mb, mc) in cov:
@@ -1705,11 +1706,12 @@ def home_hero(lib, cov):
 <p class="eyebrow lg-motto">{motto}</p>
 <h1>{e(t("home.title"))}</h1>
 <p class="hero-sub">{e(t("home.lead"))}</p>
-{ribbon}<ul class="lg-era-row" aria-label="{e(t("home.era_row"))}">{names}</ul>
+{home_continue(lib)}
+{example}
 {search_box(lib, "home-q", key_hint=True)}
 <p class="hero-try lg-try"><span>{e(t("search.try"))}</span> {" ".join(chips)}</p>
 {season}
-{home_continue(lib)}
+{ribbon}<ul class="lg-era-row" aria-label="{e(t("home.era_row"))}">{names}</ul>
 <p class="lg-books"><a class="lg-books-all" href="/read/">{e(t("home.browse"))} {icon("arrow", 14)}</a></p>
 <ul class="lg-trust">{trust}</ul>
 </section>"""
@@ -1811,9 +1813,10 @@ def home_page(lib):
             voices += (f'<section><h3 class="label">{e(t("eras." + era))}</h3><ul class="lg-people lg-people-flow">'
                        + "".join(f'<li><a href="/commentators/{a["id"]}/"><b>{e(a["name"])}</b> '
                                  f'<span>{e(a["dates"])}</span></a></li>' for a in people) + "</ul></section>")
-    body = f"""{home_hero(lib, cov)}
+    # The first screen shows the idea: today's verse with three voices from
+    # different eras beside it, the search under it.
+    body = f"""{home_hero(lib, cov, home_verse(lib))}
 {home_doors(lib)}
-{home_verse(lib)}
 <section class="lg-block" aria-labelledby="h-read"><h2 id="h-read">{e(t("home.read_heading"))}</h2>
 <p class="lg-quiet lg-heat-key">{e(t("home.heat_note"))} <span aria-hidden="true"><i style="opacity:.25"></i>{e(t("home.heat_little"))} <i style="opacity:.6"></i>{e(t("home.heat_some"))} <i></i>{e(t("home.heat_much"))}</span></p>{cards}</section>
 <section class="lg-block" aria-labelledby="h-voices"><h2 id="h-voices">{e(t("home.voices_heading"))}</h2>
@@ -5897,10 +5900,14 @@ def topic_page(lib, tp):
 <p class="dek lg-vlead">{e(t("topic.lead", n=len(tp["items"]), k=len(names), names=name_list(names), total=total))}</p>
 <div class="lg-path-progress" hidden><span class="lg-path-bar"><span></span></span><span class="lg-path-n"></span></div>
 <nav class="lg-chbar" aria-label="{e(t("verse.contents"))}">{"".join(toc)}</nav></header>
+<div class="lg-side-layout"><div class="lg-side-main">
 <section class="lg-block" id="items"><h2>{e(t("collection.passages"))}</h2>{"".join(blocks)}</section>
 {note}
 <p class="lg-quiet">{e(t("topic.how"))}</p>
 <section class="lg-block"><h2>{e(t("topic.others"))}</h2><ul class="lg-people lg-wide">{others}</ul></section>
+</div>
+<div class="lg-side-col"><nav class="lg-side-toc" data-spy aria-label="{e(t("verse.contents"))}"><p class="label">{e(t("collection.passages"))}</p>
+<ol>{"".join(f"<li>{x}</li>" for x in toc)}</ol></nav></div></div>
 </article>"""
     crumbs = breadcrumbs((t("topic.eyebrow"), "/topics/"), (heading, path))
     shown = names if len(names) <= 4 else names[:3]
@@ -7940,7 +7947,7 @@ def reading_link(lib, text):
     n = sum(len(cs) for _w, cs in voices)
     href = (verse_url(book, *start) if start == end and (book, *start) in lib.voices_on
             else section_url(lib, book, start) if n else lib.verse_link(f"{book}.{start[0]}.{start[1]}"))
-    note = f' <span class="lg-quiet">{e(t("sundays.n", n=f"{n:,}", k=len(voices)))}</span>' if n else ""
+    note = f' <span class="lg-quiet">{e(t("sundays.n" if len(voices) != 1 else "sundays.n_one", n=f"{n:,}", k=len(voices)))}</span>' if n else ""
     return (f'<a href="{e(href)}">{e(text)}</a>{note}' if href else e(text)), n
 
 
@@ -7959,19 +7966,21 @@ def sundays_block(lib, today=None):
     for d in data["days"]:
         r = d["readings"]
         gospel = " · ".join(reading_link(lib, x)[0] for x in r["gospel"]) or "–"
-        others = " · ".join(reading_link(lib, x)[0] for x in dict.fromkeys(r["epistle"] + r["first_and_psalm"]))
+        others = "".join(f"<li>{reading_link(lib, x)[0]}</li>" for x in dict.fromkeys(r["epistle"] + r["first_and_psalm"]))
         name = d["name"] + (f' ({d["note"]})' if d.get("note") else "")
         hidden = "" if d in ahead[:READINGS_AHEAD] else " hidden"
         rows.append(f'<li class="lg-sunday" data-date="{d["date"]}"{hidden}><p class="lg-sunday-day"><b>{e(day_label(d["date"]))}</b> '
-                    f'<span>{e(name)}</span></p><p>{e(t("sundays.gospel"))} {gospel}</p>'
-                    f'<p class="lg-quiet">{e(t("sundays.others"))} {others}</p></li>')
+                    f'<span>{e(name)}</span></p><p class="lg-sunday-gospel">{e(t("sundays.gospel"))} {gospel}</p>'
+                    f'<p class="lg-sunday-also">{e(t("sundays.others"))}</p><ul class="lg-sunday-others">{others}</ul></li>')
     # The build's date picks the coming Sundays; the reader's own date moves
     # them on between builds.
     script = ("<script>(function(){var t=new Date(),d=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'),"
               f"n=0;document.querySelectorAll('.lg-sunday').forEach(function(li){{var on=li.getAttribute('data-date')>=d&&n<{READINGS_AHEAD};"
               "li.hidden=!on;li.classList.toggle('lg-next',on&&n===0);if(on)n++;});var all=document.getElementById('sundays-all');if(all)all.addEventListener('click',function(){"
               "document.querySelectorAll('.lg-sunday').forEach(function(li){li.hidden=false;});all.remove();});})();</script>")
-    return (f'<section class="lg-block" id="sundays"><h2>{e(t("sundays.heading"))}</h2><p class="lg-quiet">{e(t("sundays.dek"))}</p>'
+    return (f'<section class="lg-block" id="sundays"><div class="lg-sundays-head"><h2>{e(t("sundays.heading"))}</h2>'
+            f'<a class="button ghost" href="/readings.ics" download>{icon("list", 16)} {e(t("occasions.ics_link"))}</a></div>'
+            f'<p class="lg-quiet">{e(t("sundays.dek"))}</p>'
             f'<ol class="lg-sundays">{"".join(rows)}</ol><p><button type="button" class="button ghost" id="sundays-all">{e(t("sundays.all", n=len(rows)))}</button></p>'
             f'<p class="lg-quiet lg-sunday-rights">{e(t("sundays.rights"))}</p>{script}</section>')
 
