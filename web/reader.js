@@ -271,11 +271,34 @@
       h += '<button type="button" class="cx-dot lg-era-' + ERAS.indexOf(w.era) + (on ? "" : " cx-off") +
         (on && state.open[w.work_id] ? " cx-cur" : "") + (isPinned(w) ? " cx-pinned" : "") + '" style="left:' + x + "%;--row:" + row + '" data-work="' + w.work_id +
         '" data-name="' + esc(w.short_name || w.author) + '" title="' + esc(w.author + ", " + w.author_dates) +
-        '" aria-label="' + esc(w.author) + '"' + (on ? "" : " disabled") + "></button>";
+        '" aria-label="' + esc(w.author + ", " + w.author_dates) + '" tabindex="-1"' + (on ? "" : " disabled") + "></button>";
     });
     $("#rail").style.setProperty("--lanes", rows.length);
     $("#rail").innerHTML = '<div class="cx-rail-line"></div>' + h;
+    // One stop in the tab order: the open voice's dot, else the first.
+    var dots = railDots();
+    var first = dots.filter(function (d) { return d.classList.contains("cx-cur"); })[0] || dots[0];
+    if (first) first.tabIndex = 0;
   }
+  // The voices' dots in time order, those on this verse only.
+  function railDots() {
+    return [].slice.call($("#rail").querySelectorAll(".cx-dot:not([disabled])")).sort(function (a, b) {
+      return parseFloat(a.style.left) - parseFloat(b.style.left);
+    });
+  }
+  // Arrow keys move along the timeline (Home and End to its ends); Enter or
+  // Space opens the voice, as a click does.
+  $("#rail").addEventListener("keydown", function (e) {
+    var dots = railDots(), at = dots.indexOf(document.activeElement);
+    if (at < 0) return;
+    var to = e.key === "ArrowRight" || e.key === "ArrowDown" ? at + 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? at - 1
+      : e.key === "Home" ? 0 : e.key === "End" ? dots.length - 1 : null;
+    if (to === null) return;
+    // The reader's own arrow keys step through the verses; here they stay on the timeline.
+    e.preventDefault(); e.stopPropagation();
+    to = Math.max(0, Math.min(dots.length - 1, to));
+    dots[at].tabIndex = -1; dots[to].tabIndex = 0; dots[to].focus();
+  });
   window.addEventListener("resize", function () { if ($("#rail").offsetWidth) renderRail(); });
 
   function renderPanel() {
@@ -1081,6 +1104,11 @@
     if (card) {
       card.scrollIntoView({ behavior: "smooth", block: "start" });
       card.classList.remove("cx-flash"); void card.offsetWidth; card.classList.add("cx-flash");
+      // From the keyboard, the voice opened takes the focus, so its name is read next.
+      if (e.detail === 0) {
+        if (!card.hasAttribute("tabindex")) card.setAttribute("tabindex", "-1");
+        card.focus({ preventScroll: true });
+      }
     }
   });
   // #v14 opens verse 14; #v14-calvin opens it at Calvin's comment (a shared link).

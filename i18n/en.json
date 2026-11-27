@@ -297,6 +297,8 @@
     }
   },
   "home": {
+    "this_sunday": "This Sunday",
+    "this_sunday_go": "The readings and what the church said on them",
     "share_image": "Share this as a picture",
     "share_done": "Picture saved",
     "continue_in": "Continue in {book}",
@@ -371,6 +373,10 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "copy_link": "Copy link to these results",
+    "copied_link": "Link copied",
+    "keep": "Keep this search",
+    "kept": "Kept in Saved",
     "toolbar": "Arrange the results",
     "export": "Export",
     "export_csv": "Download (CSV)",
@@ -2191,6 +2197,15 @@
     }
   },
   "sundays": {
+    "seasons": {
+      "advent": "Advent",
+      "christmas": "Christmas",
+      "epiphany": "After Epiphany",
+      "lent": "Lent and Holy Week",
+      "easter": "Easter to Pentecost",
+      "ordinary": "After Pentecost"
+    },
+    "read_text": "The reading ({n} verses)",
     "none_yet": "No commentator in Logia writes on this reading yet.",
     "gospel_label": "Gospel",
     "reading_label": "Also read",
@@ -2326,6 +2341,7 @@
     "cite_how": "Name the commentator, the work and the edition, then the Logia address of the verse, for example: John Chrysostom, Homilies on the Gospel of St. John, Homily 27 (Oxford translation), quoted at https://logia.faith/jhn/3/16/."
   },
   "topic": {
+    "heard": "Heard on them: {names}",
     "print_handout": "Print as a handout",
     "mark_read": "Mark as read",
     "marked_read": "Read ✓",
@@ -2881,6 +2897,9 @@
       "pick_up": "Pick up where you stopped: {where}",
       "minutes": "{n} min read",
       "recent_heading": "Recently read",
+      "searches_heading": "Searches you kept",
+      "searches_none": "No searches kept yet. On the search page, Keep this search adds one here.",
+      "search_remove": "Remove",
       "recent_none": "Pages you read appear here, on this device only.",
       "recent_clear": "Clear",
       "notes_heading": "Your notes",
