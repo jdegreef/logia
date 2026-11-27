@@ -3362,5 +3362,33 @@ section.lg-voice:focus { outline: 2px solid var(--accent-soft); outline-offset: 
   .lg-collection .lg-voice { break-inside: avoid-page; }
   .lg-collection .lg-ex-ref a::after { content: none; }
   .lg-collection .lg-vx-links a::after { content: " (logia.faith" attr(href) ")"; font-size: 8pt; }
-  .lg-collection::after { content: "logia.faith"; display: block; margin-top: 18pt; font-size: 9pt; color: #555; }
+  .lg-verse::after { content: "logia.faith"; display: block; margin-top: 18pt; font-size: 9pt; color: #555; }
+  .lg-vrail, .lg-vrail-bar, .lg-vw-card, .lg-vgrid, .lg-hot { display: none !important; }
+  .lg-verse .lg-voice { break-inside: avoid-page; }
 }
+
+/* Readings, speed and sharing batch */
+/* Home: the coming Sunday, for whoever preaches. */
+.lg-thisday { display: grid; gap: 3px; margin: 0 0 14px; padding: 14px 18px; border: 1px solid var(--line); border-left: 4px solid var(--gold);
+  border-radius: var(--radius-sm); background: var(--surface); color: var(--text); text-decoration: none; max-width: 640px; }
+.lg-thisday[hidden] { display: none; }
+.lg-thisday b { font-family: var(--display); font-size: 21px; font-weight: 600; }
+.lg-thisday:hover { border-color: var(--accent); }
+.lg-thisday-go { color: var(--accent); font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 4px; }
+/* Sunday pages: the reading's own text above what is said on it. */
+.lg-reading-text { margin: 6px 0 14px; }
+.lg-reading-text sup { font-family: var(--sans); font-size: 11px; color: var(--muted); margin-right: 2px; }
+.lg-reading-fold { margin: 6px 0 14px; }
+.lg-reading-fold summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--accent); }
+/* /readings/: the coming days under their season, each in its colour (Advent and Lent violet,
+   Christmas and Easter white and gold, the seasons after Epiphany and Pentecost green). */
+.lg-season-h { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; margin: 14px 0 2px; border: 0 !important; padding: 0 !important; background: none !important; }
+.lg-season-h[hidden] { display: none; }
+.lg-season-h span { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.lg-season-h::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--cy); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--text) 25%, transparent); }
+.lg-season-h::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.lg-sunday[class*="lg-cy-"] { border-top: 3px solid var(--cy) !important; }
+.lg-cy-advent, .lg-cy-lent { --cy: #6d3fa3; }
+.lg-cy-christmas, .lg-cy-easter { --cy: #d8b54a; }
+.lg-cy-epiphany, .lg-cy-ordinary { --cy: #3f8a4f; }
+.lg-print-row .lg-linkish + .lg-linkish { margin-left: 14px; }

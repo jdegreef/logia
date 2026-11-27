@@ -274,8 +274,9 @@
     guess.hidden = false;
   })();
 
-  // Continue reading: the last verse read (web/reader.js keeps it).
-  document.querySelectorAll("[data-resume]").forEach(function (a) {
+  // Continue reading: the last verse read (web/reader.js keeps it), and in
+  // the Read menu once web/site.js has fetched the header's menus.
+  var resume = function () { document.querySelectorAll("[data-resume]").forEach(function (a) {
     var last = null;
     try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
     if (!last || !last.href || last.href.charAt(0) !== "/") return;
@@ -286,7 +287,9 @@
     a.textContent = fmt(a.getAttribute("data-resume"), { ref: last.ref });
     a.hidden = false;
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
-  });
+  }); };
+  resume();
+  document.addEventListener("logia:menus", resume);
 
   // A whole homily: a thin line under the header shows how far through it
   // the reader is.
@@ -302,6 +305,17 @@
     window.addEventListener("scroll", function () { if (!drawn) { drawn = true; requestAnimationFrame(draw); } }, { passive: true });
     draw();
   }
+
+  // Home: "This Sunday", the first of the coming days on or after today.
+  (function () {
+    var now = new Date(), shown = false;
+    var today = now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
+    document.querySelectorAll(".lg-thisday[data-date]").forEach(function (a) {
+      var on = !shown && a.getAttribute("data-date") >= today;
+      a.hidden = !on;
+      if (on) shown = true;
+    });
+  })();
 
   // Home: the church year's banner. Each [data-season] lists the spans
   // ("YYYY-MM-DD:YYYY-MM-DD", the last date the day itself) it shows in; of
@@ -369,6 +383,59 @@
       document.body.appendChild(a); a.click(); a.remove();
       setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
       b.textContent = b.getAttribute("data-votd-image");
+    }, "image/png");
+  });
+
+  // A topic as a picture to share (1200 x 630): its title, its passages
+  // with their references, and the voices heard on them, from the page.
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-topic-image]");
+    if (!b) return;
+    var c = document.createElement("canvas"); c.width = 1200; c.height = 630;
+    var x = c.getContext("2d"), serif = getComputedStyle(document.documentElement).getPropertyValue("--serif").trim() || "Georgia, serif";
+    var fit = function (text, width) {
+      while (x.measureText(text).width > width && text.length > 4) text = text.replace(/\s*\S+$/, "") + "…";
+      return text;
+    };
+    x.fillStyle = "#f9f4ea"; x.fillRect(0, 0, 1200, 630);
+    x.fillStyle = "#9c6f1e"; x.fillRect(0, 0, 1200, 10);
+    x.fillStyle = "#2b2318"; x.font = "600 52px " + serif;
+    var title = document.querySelector("h1").textContent.trim();
+    x.fillText(fit(title, 1040), 80, 110);
+    var items = [].slice.call(document.querySelectorAll("#items section.lg-voice")).slice(0, 6);
+    items.forEach(function (sec, i) {
+      var y = 180 + i * 52, h3 = sec.querySelector("h3"), ref = sec.querySelector(".lg-vmeta");
+      x.font = "600 22px system-ui, sans-serif"; x.fillStyle = "#9c6f1e";
+      x.fillText(String(i + 1), 80, y);
+      x.font = "28px " + serif; x.fillStyle = "#2b2318";
+      var label = h3 ? h3.textContent.replace(/^\s*\d+\s*/, "").trim() : "";
+      x.fillText(fit(label, 640), 116, y);
+      x.font = "22px system-ui, sans-serif"; x.fillStyle = "#6f6350";
+      if (ref) x.fillText(fit(ref.textContent.trim(), 330), 790, y);
+    });
+    x.font = "21px " + serif; x.fillStyle = "#4a4034";
+    var heard = fmt(b.getAttribute("data-heard"), { names: b.getAttribute("data-names") }), line = "", lines = [];
+    heard.split(/\s+/).forEach(function (w) {
+      var t = line ? line + " " + w : w;
+      if (x.measureText(t).width > 860 && line) { lines.push(line); line = w; } else line = t;
+    });
+    if (line) lines.push(line);
+    lines.slice(0, 2).forEach(function (l, i) { x.fillText(l, 80, 530 + i * 30); });
+    x.font = "24px system-ui, sans-serif"; x.fillStyle = "#6f6350";
+    x.fillText("logia.faith", 1120 - x.measureText("logia.faith").width, 600);
+    c.toBlob(function (blob) {
+      if (!blob) return;
+      var name = "logia-" + location.pathname.replace(/^\/|\/$/g, "").replace(/[^a-z0-9]+/gi, "-") + ".png";
+      var file = window.File ? new File([blob], name, { type: "image/png" }) : null;
+      if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+        navigator.share({ files: [file], url: location.href }).catch(function () {});
+        return;
+      }
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob); a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+      b.textContent = b.getAttribute("data-topic-image");
     }, "image/png");
   });
 
@@ -845,29 +912,35 @@
       where.addEventListener("focusout", function (e) { if (e.relatedTarget && !where.contains(e.relatedTarget)) shut(false); });
     }
 
-    // The Read menu: the chapters of the book pointed at, beside the books.
-    var chapters = document.querySelector("[data-nav-chapters]");
-    if (N && chapters) {
-      var shown = null;
-      var show = function (code) {
-        if (!N.books[code] || code === shown) return;
-        shown = code; chapters.innerHTML = grid(code); chapters.hidden = false;
-      };
-      var books = document.querySelectorAll(".dd-book[data-book]");
-      var start = hereBook && N.books[hereBook].has.length ? hereBook : null;
-      if (!start) {
-        var last = null;
-        try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
-        var m = last && last.href && last.href.match(/^\/([a-z0-9]{3})\//);
-        start = m && N.books[m[1].toUpperCase()] ? m[1].toUpperCase() : (books[0] && books[0].getAttribute("data-book").toUpperCase());
+    // The Read menu: the chapters of the book pointed at, beside the books,
+    // once web/site.js has fetched the header's menus.
+    var readMenu = function () {
+      var chapters = document.querySelector("[data-nav-chapters]");
+      if (N && chapters && !chapters.hasAttribute("data-ready")) {
+        chapters.setAttribute("data-ready", "");
+        var shown = null;
+        var show = function (code) {
+          if (!N.books[code] || code === shown) return;
+          shown = code; chapters.innerHTML = grid(code); chapters.hidden = false;
+        };
+        var books = document.querySelectorAll(".dd-book[data-book]");
+        var start = hereBook && N.books[hereBook].has.length ? hereBook : null;
+        if (!start) {
+          var last = null;
+          try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
+          var m = last && last.href && last.href.match(/^\/([a-z0-9]{3})\//);
+          start = m && N.books[m[1].toUpperCase()] ? m[1].toUpperCase() : (books[0] && books[0].getAttribute("data-book").toUpperCase());
+        }
+        if (start) show(start);
+        books.forEach(function (a) {
+          var code = a.getAttribute("data-book").toUpperCase();
+          a.addEventListener("mouseenter", function () { show(code); });
+          a.addEventListener("focus", function () { show(code); });
+        });
       }
-      if (start) show(start);
-      books.forEach(function (a) {
-        var code = a.getAttribute("data-book").toUpperCase();
-        a.addEventListener("mouseenter", function () { show(code); });
-        a.addEventListener("focus", function () { show(code); });
-      });
-    }
+    };
+    readMenu();
+    document.addEventListener("logia:menus", readMenu);
 
     // One tap between light and dark: the settings menu's own theme buttons
     // (web/site.js) do the choosing, so the two always agree. It returns to
@@ -1096,22 +1169,35 @@
   // A long verse-by-verse list keeps each closed chapter's rows in a file
   // of its own (excerpt_list in scripts/build_site.py, data-src): fetched
   // the first time the chapter opens, however it is opened.
+  // The shape of a work: an open square (a verse with no comment) names its
+  // verse when pointed at, "Genesis 1:4", from its map and row.
+  document.addEventListener("mouseover", function (e) {
+    var cell = e.target.closest && e.target.closest(".lg-cov-map i.lg-nc");
+    if (!cell || cell.title) return;
+    var map = cell.closest(".lg-cov-map"), row = cell.closest("li"), num = row && row.firstElementChild;
+    var v = [].indexOf.call(cell.parentNode.children, cell) + 1;
+    if (map && num) cell.title = map.getAttribute("data-name") + " " + num.textContent.trim() + ":" + v;
+  });
+
+  // A chapter kept in a file of its own (excerpt_list, data-src): its body,
+  // fetched the first time it is opened.
   function loadRows(details) {
-    var ul = details && details.querySelector("ul.lg-excerpts[data-src]");
-    if (!ul) return Promise.resolve();
-    if (!ul._loading) {
-      ul._loading = fetch(ul.getAttribute("data-src")).then(function (r) {
+    var box = details && details.querySelector(".lg-ch-body[data-src]");
+    if (!box) return Promise.resolve();
+    if (!box._loading) {
+      box._loading = fetch(box.getAttribute("data-src")).then(function (r) {
         if (!r.ok) throw new Error(r.status);
         return r.text();
       }).then(function (html) {
-        ul.innerHTML = html;
-        ul.removeAttribute("data-src");
+        box.innerHTML = html;
+        box.removeAttribute("data-src");
       }, function () {
-        ul._loading = null;
-        ul.innerHTML = '<li class="lg-quiet">' + esc(ul.getAttribute("data-failed")) + "</li>";
+        box._loading = null;
+        var say = document.querySelector(".lg-chnav[data-failed]");
+        box.innerHTML = '<p class="lg-quiet">' + esc(say ? say.getAttribute("data-failed") : "") + "</p>";
       });
     }
-    return ul._loading;
+    return box._loading;
   }
   // A long book's later chapters wait behind "Show all" (excerpt_list,
   // data-fold); going to one of them, however, shows them all first.
@@ -1202,12 +1288,14 @@
       if (!all) chs.forEach(unfold);
       chs.forEach(function (d) { d.open = !all; });
     });
-    [].forEach.call(root.querySelectorAll(".lg-ch-steps a"), function (a) {
-      a.addEventListener("click", function () {
-        var d = a.closest("details"), next = document.getElementById(a.getAttribute("href").slice(1));
-        if (d) d.open = false;
-        if (next) next.open = true;
-      });
+    // The steps to the chapters either side close this one and open that,
+    // those fetched with a chapter as well as those in the page.
+    root.addEventListener("click", function (e) {
+      var a = e.target.closest(".lg-ch-steps a");
+      if (!a) return;
+      var d = a.closest("details"), next = document.getElementById(a.getAttribute("href").split("#")[1]);
+      if (d) d.open = false;
+      if (next) next.open = true;
     });
     btn.hidden = false;
     sync();

@@ -376,6 +376,29 @@
     });
   }
 
+  // The searches kept from /search/ (logia-searches), each to run again or remove.
+  var searchList = document.querySelector('[data-study="searches"]');
+  if (searchList) {
+    var drawSearches = function () {
+      var ks = get("logia-searches", []);
+      searchList.innerHTML = "<h2>" + esc(T.searches_heading) + "</h2>" + (ks.length
+        ? '<ul class="lg-recent">' + ks.map(function (k, i) {
+          return '<li><a href="' + esc(k.u) + '">' + esc(k.q || k.u) + '</a> <span class="lg-quiet">' + esc(k.at) +
+            '</span> <button type="button" class="lg-linkish" data-unkeep="' + i + '">' + esc(T.search_remove) + "</button></li>";
+        }).join("") + "</ul>"
+        : '<p class="lg-quiet">' + esc(T.searches_none) + "</p>");
+    };
+    drawSearches();
+    searchList.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-unkeep]");
+      if (!b) return;
+      var ks = get("logia-searches", []);
+      ks.splice(+b.getAttribute("data-unkeep"), 1);
+      put("logia-searches", ks);
+      drawSearches();
+    });
+  }
+
   // Fetch the next chapter while the reader is near the end of this one ----------
   var next = document.querySelector('.lg-turns a[rel="next"], a[rel="next"]');
   if (next && "IntersectionObserver" in window) {

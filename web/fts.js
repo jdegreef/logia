@@ -408,4 +408,27 @@
     });
     more.addEventListener("click", showMore);
   })();
+  // Share a search: its address holds the words and the filters, so the
+  // link is the address; "Keep" adds it to the searches on /saved/
+  // (logia-searches, on this device).
+  (function () {
+    var said = document.querySelector(".lg-fts-said"), q = document.getElementById("fts-q");
+    var say = function (text) { if (said) said.textContent = text; };
+    var copyBtn = document.querySelector("[data-fts-link]"), keepBtn = document.querySelector("[data-fts-keep]");
+    if (copyBtn) copyBtn.addEventListener("click", function () {
+      var url = location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () { say(copyBtn.getAttribute("data-done")); }, function () { say(url); });
+      } else say(url);
+    });
+    if (keepBtn) keepBtn.addEventListener("click", function () {
+      var kept = [];
+      try { kept = JSON.parse(localStorage.getItem("logia-searches") || "[]"); } catch (e) { /* storage blocked */ }
+      var u = location.pathname + location.search;
+      kept = kept.filter(function (x) { return x.u !== u; });
+      kept.unshift({ q: q ? q.value.trim() : "", u: u, at: new Date().toISOString().slice(0, 10) });
+      try { localStorage.setItem("logia-searches", JSON.stringify(kept.slice(0, 50))); say(keepBtn.getAttribute("data-done")); }
+      catch (e) { say(""); }
+    });
+  })();
 })();

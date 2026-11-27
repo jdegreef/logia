@@ -671,11 +671,33 @@ class Site(unittest.TestCase):
         self.assertEqual(data["books"]["JHN"]["n"], 21)
         self.assertIn(3, data["books"]["JHN"]["has"])
 
+    def test_header_menus_are_fetched_when_first_opened(self):
+        # The dropdowns were most of every page's header: each page names
+        # one file of them, which web/site.js fetches, and no page carries
+        # their links itself.
+        url = re.search(r'data-menus="(/menus-en\.json\?v=[0-9a-f]{10})"', self.read("index.html"))[1]
+        text = self.read(url.split("?")[0].lstrip("/"))
+        for page in self.PAGES:
+            html_ = self.read(page)
+            header = re.search(r'<header class="site">.*?</header>', html_, re.S)[0]
+            self.assertIn(f'data-menus="{url}"', header, page)
+            self.assertNotIn('class="dd-item', header, page)
+            for key in ("read", "commentators", "explore", "about"):
+                self.assertIn(f'id="dd-{key}" hidden></div>', header, page)
+        self.assertIn('data-href="/commentators/"', self.read("index.html"))
+        menus = json.loads(text)
+        self.assertEqual(list(menus), ["read", "commentators", "explore", "about"])
+        self.assertIn('href="/commentators/calvin/"', menus["commentators"])
+        self.assertIn('data-book="jhn"', menus["read"])
+        self.assertNotIn("aria-current", text)
+        self.assertIn(url, self.read("sw.js"))
+
     def test_every_internal_link_leads_to_a_page(self):
         missing = set()
         for root, _dirs, files in os.walk(build_site.SITE):
             for name in files:
-                if not name.endswith(".html"):
+                # The header's menus (menus_file) are links too.
+                if not name.endswith(".html") and not re.fullmatch(r"menus-\w+\.json", name):
                     continue
                 with open(os.path.join(root, name), encoding="utf-8") as f:
                     for href in re.findall(r'href="(/[^"#?]*)', f.read()):
@@ -883,7 +905,10 @@ class Site(unittest.TestCase):
         self.assertIn('class="lg-goto"', text)
         # The shape of the work, who reads the same verses, and the text's record.
         self.assertIn("John, verse by verse", text)
-        self.assertIn('class="lg-nc" title="John 4:30"', text)
+        # An open square is a verse with no comment; it names its verse on hover
+        # (web/logia.js), from the map's data-name and its row.
+        self.assertIn('<i class="lg-nc"></i>', text)
+        self.assertIn('data-name="John" id="map-jhn"', text)
         self.assertIn('href="/commentators/augustine/"', text)
         self.assertIn('href="/works/catena/fathers/"', text)
         self.assertIn('class="lg-cite-box"', text)
