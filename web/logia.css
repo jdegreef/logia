@@ -3116,7 +3116,7 @@ main:has(.lg-work-secbar) .lg-block, main:has(.lg-work-secbar) .lg-record-fold {
 .lg-sunday-page .lg-voice { margin-top: 36px; }
 .lg-sunday-page .lg-voice .label { margin: 0 0 2px; }
 .lg-sunday-page .lg-voice h2 { margin: 0 0 8px; font-family: var(--display); font-size: 26px; }
-.lg-sunday-page .lg-voice h2 a { text-decoration: none; }
+.lg-sunday-page .lg-voice h2 a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .lg-sunday-page .lg-voice h2 .lg-quiet { display: block; font-family: var(--sans); font-size: 13px; font-weight: 500; }
 .lg-sunday-day a { color: inherit; text-decoration: none; }
 .lg-sunday-day a:hover { color: var(--accent); }
@@ -3167,3 +3167,33 @@ section.lg-voice:focus { outline: 2px solid var(--accent-soft); outline-offset: 
 .lg-cy-christmas, .lg-cy-easter { --cy: #d8b54a; }
 .lg-cy-epiphany, .lg-cy-ordinary { --cy: #3f8a4f; }
 .lg-print-row .lg-linkish + .lg-linkish { margin-left: 14px; }
+.lg-rt-gap { margin: -8px 0 6px; color: var(--muted); }
+/* A Sunday's page: the preacher's notes under each reading. */
+.lg-sn { margin: 4px 0 16px; }
+.lg-sn label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.lg-sn textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: 15px; padding: 8px 10px; border: 1px solid var(--line-strong);
+  border-radius: 8px; background: var(--surface); color: var(--text); resize: vertical; }
+.lg-sn .lg-quiet { margin: 2px 0 0; font-size: 12px; }
+.lg-sn-print { display: none; }
+@media print {
+  .lg-sn label, .lg-sn textarea, .lg-sn .lg-quiet { display: none; }
+  .lg-sn-has .lg-sn-print { display: block; white-space: pre-wrap; border-left: 2pt solid #999; padding-left: 8pt; margin: 4pt 0 10pt; }
+}
+/* Two commentators across a book: a row a chapter, a bar of where each and both speak. */
+.lg-sbk-picks { display: flex; flex-wrap: wrap; gap: 12px 20px; margin: 18px 0 8px; }
+.lg-sbk-picks label { display: grid; gap: 4px; }
+.lg-sbk-picks select { font: inherit; font-size: 14px; padding: 6px 10px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--surface); color: var(--text); max-width: 100%; }
+.lg-sbk-sum { font-size: 15px; margin: 8px 0 12px; }
+.lg-sbk-table { border-collapse: collapse; width: 100%; max-width: 820px; font-variant-numeric: tabular-nums; }
+.lg-sbk-table th, .lg-sbk-table td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14px; }
+.lg-sbk-table thead th { font-size: 12px; font-weight: 700; color: var(--muted); }
+.lg-sbk-bar { display: flex; width: 140px; height: 8px; margin-top: 4px; border-radius: 4px; overflow: hidden; background: var(--surface-2); }
+.lg-sbk-bar i { display: block; height: 100%; }
+.lg-sbk-ia { background: color-mix(in srgb, var(--accent) 70%, var(--bg)); }
+.lg-sbk-ib2 { background: var(--gold); }
+.lg-sbk-ib { background: color-mix(in srgb, var(--era-4, #c2452f) 60%, var(--bg)); }
+.lg-sbk-table thead th.lg-sbk-a::before, .lg-sbk-table thead th.lg-sbk-b::before, .lg-sbk-table thead th:nth-child(3)::before {
+  content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.lg-sbk-table thead th.lg-sbk-a::before { background: color-mix(in srgb, var(--accent) 70%, var(--bg)); }
+.lg-sbk-table thead th:nth-child(3)::before { background: var(--gold); }
+.lg-sbk-table thead th.lg-sbk-b::before { background: color-mix(in srgb, var(--era-4, #c2452f) 60%, var(--bg)); }

@@ -40,9 +40,26 @@ def weight(page):
     return sum(n for _f, n in parts), parts
 
 
+# A Sunday's page (the first the build wrote: their dates move on), a topic
+# and a whole homily, with their own budgets.
+MORE = {"sunday": 135, "/topics/baptism/": 130, "/works/augustine/1/": 140}
+
+
+def pages():
+    out = dict(BUDGETS)
+    for page, budget in MORE.items():
+        if page == "sunday":
+            days = sorted(d for d in os.listdir(os.path.join(SITE, "readings")) if re.match(r"\d{4}-\d\d-\d\d$", d))
+            if days:
+                out[f"/readings/{days[0]}/"] = budget
+        else:
+            out[page] = budget
+    return out
+
+
 def main():
     over = 0
-    for page, budget in BUDGETS.items():
+    for page, budget in pages().items():
         total, parts = weight(page)
         ok = total <= budget * 1024
         over += not ok
