@@ -905,7 +905,10 @@ class Site(unittest.TestCase):
         self.assertIn('class="lg-goto"', text)
         # The shape of the work, who reads the same verses, and the text's record.
         self.assertIn("John, verse by verse", text)
-        self.assertIn('class="lg-nc" title="John 4:30"', text)
+        # An open square is a verse with no comment; it names its verse on hover
+        # (web/logia.js), from the map's data-name and its row.
+        self.assertIn('<i class="lg-nc"></i>', text)
+        self.assertIn('data-name="John" id="map-jhn"', text)
         self.assertIn('href="/commentators/augustine/"', text)
         self.assertIn('href="/works/catena/fathers/"', text)
         self.assertIn('class="lg-cite-box"', text)
