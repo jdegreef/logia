@@ -331,8 +331,30 @@
         return { results: merged, oldWords: extra ? more2.words : [], bibleOff: !on.bible };
       });
     }
+    // The examples and recent searches show only while the box is empty; a
+    // search the reader submits is kept (five, newest first) in this browser.
+    var tryBox = document.getElementById("fts-try");
+    function recent() {
+      try { return JSON.parse(localStorage.getItem("logia-fts-recent") || "[]"); } catch (err) { return []; }
+    }
+    if (tryBox) {
+      var mine0 = recent(), box0 = tryBox.querySelector(".lg-fts-recent");
+      if (mine0.length) {
+        box0.querySelector("ul").innerHTML = mine0.map(function (q) {
+          return '<li><a class="lg-fts-ex" href="/search/?q=' + encodeURIComponent(q) + '"><b>' + esc(q) + "</b></a></li>";
+        }).join("");
+        box0.hidden = false;
+      }
+      form.addEventListener("submit", function () {
+        var q = input.value.trim();
+        if (!q) return;
+        var keepIt = [q].concat(recent().filter(function (x) { return x !== q; })).slice(0, 5);
+        try { localStorage.setItem("logia-fts-recent", JSON.stringify(keepIt)); } catch (err) { /* storage blocked */ }
+      });
+    }
     function search() {
       var q = operators(), mine = ++run, any = Object.keys(filters()).length;
+      if (tryBox) tryBox.hidden = !!(q || any);
       keep();
       if (!q && !any) { list.innerHTML = ""; more.hidden = true; view.hidden = true; status.textContent = U.start; chips(allCounts); return; }
       status.textContent = U.searching;

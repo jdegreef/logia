@@ -167,20 +167,36 @@ def calendar_link(href):
             f'<span class="lg-quiet">{e(t("plans.calendar_note"))}</span></p>')
 
 
+def plan_card(kicker, heading, row, href, first="", ics=""):
+    """A reading plan on /plans/: what kind and how long, its name, when it
+    runs, what day 1 holds, then Open and the calendar."""
+    first_html = f'<p class="lg-plan-first">{e(first)}</p>' if first else ""
+    cal = (f'<a class="button ghost" href="{ics}" download>{B.icon("star", 15)} {e(t("plans.calendar_short"))}</a>' if ics else "")
+    return (f'<li class="lg-plan-card"><p class="lg-plan-kicker">{e(kicker)}</p><h3><a href="{href}">{e(heading)}</a></h3>'
+            f'<p class="lg-quiet">{e(row)}</p>{first_html}'
+            f'<p class="lg-plan-go"><a class="button" href="{href}">{e(t("plans.start"))}</a>{cal}</p></li>')
+
+
 def plans_page(lib):
-    advent = (f'<li><a href="/advent/"><b>{e(t("plans.advent_heading"))}</b> <span>{e(t("plans.advent_row"))}</span></a>'
-              f'<span class="lg-quiet"><a href="/advent.ics">{e(t("plans.calendar_short"))}</a></span></li>')
-    lent = "".join(f'<li><a href="/{b.lower()}/lent/"><b>{e(t("plan.heading", book=lib.books[b]["en"], n=40))}</b> '
-                   f'<span>{e(t("plans.lent_row", year=B.LENT_YEAR))}</span></a>'
-                   f'<span class="lg-quiet"><a href="/{b.lower()}/lent.ics">{e(t("plans.calendar_short"))}</a></span></li>'
-                   for b in lent_books(lib) if b == "JHN")
-    books = "".join(f'<li><a href="{plan_url(b)}"><b>{e(t("plans.book_heading", book=lib.books[b]["en"], n=len(book_plan_days(lib, b, n))))}</b> '
-                    f'<span>{e(t("plans.book_row", chapters=lib.books[b]["chapters"]))}</span></a></li>' for b, n in book_plans(lib))
+    days = advent_days(lib)
+    _d, ab, a_start, a_end, _n = days[0]
+    cards = [plan_card(t("plans.kicker_advent"), t("plans.advent_heading"), t("plans.advent_row"), "/advent/",
+                       t("plans.day_one", ref=passage_label(lib, ab, a_start, a_end)), "/advent.ics")]
+    cards += [plan_card(t("plans.kicker_lent"), t("plan.heading", book=lib.books[b]["en"], n=40), t("plans.lent_row", year=B.LENT_YEAR),
+                        f"/{b.lower()}/lent/", "", f"/{b.lower()}/lent.ics")
+              for b in lent_books(lib) if b == "JHN"]
+    books = []
+    for b, n in book_plans(lib):
+        plan = book_plan_days(lib, b, n)
+        name = lib.books[b]["en"]
+        first = ", ".join(f"{B.one(name)} {c}" for c in plan[0])
+        books.append(plan_card(t("plans.kicker_book", n=len(plan)), t("plans.book_heading", book=name, n=len(plan)),
+                               t("plans.book_row", chapters=lib.books[b]["chapters"]), plan_url(b), t("plans.day_one", ref=first)))
     body = f"""
 <header class="page-head"><p class="eyebrow">{e(t("occasions.eyebrow"))}</p>
 <h1>{e(t("plans.heading"))}</h1><p class="dek">{e(t("plans.dek"))}</p></header>
-<section class="lg-block"><h2>{e(t("plans.seasons"))}</h2><ul class="lg-people lg-wide">{advent}{lent}</ul></section>
-<section class="lg-block"><h2>{e(t("plans.books"))}</h2><ul class="lg-people lg-wide">{books}</ul></section>
+<section class="lg-block"><h2>{e(t("plans.seasons"))}</h2><ul class="lg-plan-cards">{"".join(cards)}</ul></section>
+<section class="lg-block"><h2>{e(t("plans.books"))}</h2><ul class="lg-plan-cards">{"".join(books)}</ul></section>
 <section class="lg-block"><h2>{e(t("plans.sundays"))}</h2><p>{e(t("plans.sundays_note"))}</p>{calendar_link("/readings/sundays.ics")}</section>"""
     return B.page(lib, t("plans.heading"), body, "/plans/", current="/read/", description=t("plans.description"),
                   ld=(B.breadcrumbs((t("plans.heading"), "/plans/")),))
@@ -636,7 +652,7 @@ def random_page(lib):
 
 
 def quiz_page(lib):
-    eras = [[x, t("eras." + x)] for x in B.ERAS if any(a["era"] == x for a in lib.authors.values())]
+    eras = [[x, t("eras." + x), B.ERAS.index(x)] for x in B.ERAS if any(a["era"] == x for a in lib.authors.values())]
     ui = {**B.CATALOG["quiz"]["ui"], "eras": eras}
     chapters = [f"{bk}.{ch}" for bk, ch in sorted(lib.coverage())]
     body = f"""

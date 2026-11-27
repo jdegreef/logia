@@ -297,6 +297,7 @@
     }
   },
   "home": {
+    "known_in": "Well known",
     "this_sunday": "This Sunday",
     "this_sunday_go": "The readings and what the church said on them",
     "share_image": "Share this as a picture",
@@ -357,11 +358,7 @@
     "heat_note": "Each line is a book's chapters: the darker the gold, the more the commentators wrote on it.",
     "heat_title": "{ref}: {n} excerpts",
     "heat_title_one": "{ref}: 1 excerpt",
-    "top_heading": "Where they wrote most",
-    "top_n": "{n} excerpts",
-    "top_n_one": "1 excerpt",
     "top_more": "The most-discussed verses in",
-    "famous": "Well-known passages",
     "voices_heading": "The voices, so far",
     "all_commentators": "All commentators",
     "how_heading": "How Logia works",
@@ -373,6 +370,13 @@
     "how_langs_text": "Logia starts in English. Spanish and Portuguese come next, then French, Swahili, Amharic, Korean and Vietnamese, each reviewed by native speakers."
   },
   "search": {
+    "recent": "Your recent searches",
+    "try_name": "a commentator",
+    "try_strong": "a Strong's number",
+    "try_greek": "a Greek word in Latin letters",
+    "try_phrase": "a phrase",
+    "try_word": "a word",
+    "try_heading": "Try a search",
     "copy_link": "Copy link to these results",
     "copied_link": "Link copied",
     "keep": "Keep this search",
@@ -624,6 +628,8 @@
     "dek_none_one": "1 chapter, with the Bible text, its original words and translation notes. Commentary on it is still to come."
   },
   "chapter": {
+    "turn_next": "Next chapter",
+    "turn_prev": "Previous chapter",
     "tip_close": "Hide this tip",
     "hot": "Most discussed here:",
     "eyebrow": "Chapter {chapter}",
@@ -667,6 +673,7 @@
     "by_verse_voices_one": "1 voice"
   },
   "reader": {
+    "sections": "In this chapter",
     "heard": "Read",
     "heard_title": "You have opened this one on this verse",
     "only_unread": "Only unread ({n})",
@@ -1000,6 +1007,8 @@
     "hide_timeline": "Hide the timeline"
   },
   "work": {
+    "group_one": "{division} {a}",
+    "group_span": "{divisions} {a}–{b}",
     "sec_map": "Verse map",
     "head_title": "{name}, {title} · Logia",
     "cite_copy_short": "Copy",
@@ -1337,6 +1346,11 @@
     "description": "{name}, {title}, {where}: the whole text, with the passages Logia sets beside each verse."
   },
   "verse": {
+    "about": "More on this verse",
+    "read_voice": "Read all of {name}: {k} excerpts, {n} words",
+    "more_actions": "More",
+    "ran_on": "The speech began in an earlier verse",
+    "runs_on": "The speech goes on in the next verse",
     "word_uses": "Every verse with {word} →",
     "orig_words": "Word by word ↓",
     "compare": "Compare two voices",
@@ -2684,6 +2698,11 @@
     "The 1800s": "1800s"
   },
   "plans": {
+    "start": "Open the plan",
+    "day_one": "Day 1: {ref}",
+    "kicker_book": "Whole book · {n} days",
+    "kicker_lent": "Lent · 40 days",
+    "kicker_advent": "Advent · 24 days",
     "eyebrow": "Reading plans",
     "heading": "Reading plans",
     "dek": "Read a season or a whole book a little each day, each passage with what the church has said about it. Every plan has a calendar to add to your own.",
@@ -2931,6 +2950,7 @@
     "later": "Not now"
   },
   "side": {
+    "show_label": "Show",
     "open": "Read side by side",
     "turns": "The chapters before and after, side by side",
     "strip_label": "Which verses each comments on",
