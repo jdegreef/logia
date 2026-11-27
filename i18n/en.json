@@ -297,6 +297,9 @@
     }
   },
   "home": {
+    "share_image": "Share this as a picture",
+    "share_done": "Picture saved",
+    "continue_in": "Continue in {book}",
     "continue_with": "{ref} with {name}",
     "ribbon_voice": "{name} ({dates})",
     "heat_little": "little",
@@ -408,6 +411,7 @@
     "fts": {
       "did_you_mean": "Did you mean",
       "goto": "Go to {ref}",
+      "more_text": "Show more of this excerpt",
       "also_bible": "Search the Bible text too",
       "start": "Type a word or a few words to find them in every excerpt.",
       "unavailable": "The words can't be searched in this build of the site. Search above still finds verses, books and commentators.",
@@ -789,6 +793,9 @@
     "heat_title_one": "{ref}: 1 voice, {words} words"
   },
   "commentators": {
+    "differs": "Where {name} is heard on a disputed reading",
+    "differs_note": "Passages the traditions read differently, where {name}'s own words are among those set out side by side.",
+    "sec_differs": "Disputed readings",
     "index_title": "Bible commentators from the church fathers to the 1800s",
     "index_description": "{n} Bible commentators in their own words, from {first} to {last}: {names}. Catholic, Orthodox and Protestant, verse by verse.",
     "glance_one": "An hour of {name}",
@@ -1324,6 +1331,7 @@
     "description": "{name}, {title}, {where}: the whole text, with the passages Logia sets beside each verse."
   },
   "verse": {
+    "word_uses": "Every verse with {word} →",
     "orig_words": "Word by word ↓",
     "compare": "Compare two voices",
     "compare_title": "Two voices on {ref}",
@@ -2183,6 +2191,11 @@
     }
   },
   "sundays": {
+    "none_yet": "No commentator in Logia writes on this reading yet.",
+    "gospel_label": "Gospel",
+    "reading_label": "Also read",
+    "page_dek": "Each of the day's readings, with what Logia's commentators say on it, from the early church to the 1800s.",
+    "page_description": "The readings for {name} ({date}) beside what the church's commentators have said on each.",
     "n_one": "{n} excerpts from 1 commentator",
     "ics_others": "Also read: {others}",
     "heading": "The coming Sundays and holy days",
@@ -2313,6 +2326,7 @@
     "cite_how": "Name the commentator, the work and the edition, then the Logia address of the verse, for example: John Chrysostom, Homilies on the Gospel of St. John, Homily 27 (Oxford translation), quoted at https://logia.faith/jhn/3/16/."
   },
   "topic": {
+    "print_handout": "Print as a handout",
     "mark_read": "Mark as read",
     "marked_read": "Read ✓",
     "next": "Next passage ↓",
@@ -2618,6 +2632,14 @@
       [
         "[",
         "Previous chapter"
+      ],
+      [
+        "n",
+        "Next voice on a verse, topic or Sunday's page"
+      ],
+      [
+        "p",
+        "Previous voice"
       ],
       [
         "c",

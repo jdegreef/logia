@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
 # Page: most kilobytes (gzipped) it may take, about a fifth over its weight
 # when the budget was set (November 2026).
-BUDGETS = {"/": 190, "/jhn/": 180, "/jhn/3/": 215, "/jhn/3/16/": 195, "/commentators/calvin/": 225, "/search/": 160}
+BUDGETS = {"/": 155, "/jhn/": 150, "/jhn/3/": 180, "/jhn/3/16/": 165, "/commentators/calvin/": 195, "/search/": 140}
 
 
 def gz(path):
