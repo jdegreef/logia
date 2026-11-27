@@ -274,8 +274,9 @@
     guess.hidden = false;
   })();
 
-  // Continue reading: the last verse read (web/reader.js keeps it).
-  document.querySelectorAll("[data-resume]").forEach(function (a) {
+  // Continue reading: the last verse read (web/reader.js keeps it), and in
+  // the Read menu once web/site.js has fetched the header's menus.
+  var resume = function () { document.querySelectorAll("[data-resume]").forEach(function (a) {
     var last = null;
     try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
     if (!last || !last.href || last.href.charAt(0) !== "/") return;
@@ -286,7 +287,9 @@
     a.textContent = fmt(a.getAttribute("data-resume"), { ref: last.ref });
     a.hidden = false;
     if (only && a.nextElementSibling) a.nextElementSibling.classList.add("ghost");
-  });
+  }); };
+  resume();
+  document.addEventListener("logia:menus", resume);
 
   // A whole homily: a thin line under the header shows how far through it
   // the reader is.
@@ -845,29 +848,35 @@
       where.addEventListener("focusout", function (e) { if (e.relatedTarget && !where.contains(e.relatedTarget)) shut(false); });
     }
 
-    // The Read menu: the chapters of the book pointed at, beside the books.
-    var chapters = document.querySelector("[data-nav-chapters]");
-    if (N && chapters) {
-      var shown = null;
-      var show = function (code) {
-        if (!N.books[code] || code === shown) return;
-        shown = code; chapters.innerHTML = grid(code); chapters.hidden = false;
-      };
-      var books = document.querySelectorAll(".dd-book[data-book]");
-      var start = hereBook && N.books[hereBook].has.length ? hereBook : null;
-      if (!start) {
-        var last = null;
-        try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
-        var m = last && last.href && last.href.match(/^\/([a-z0-9]{3})\//);
-        start = m && N.books[m[1].toUpperCase()] ? m[1].toUpperCase() : (books[0] && books[0].getAttribute("data-book").toUpperCase());
+    // The Read menu: the chapters of the book pointed at, beside the books,
+    // once web/site.js has fetched the header's menus.
+    var readMenu = function () {
+      var chapters = document.querySelector("[data-nav-chapters]");
+      if (N && chapters && !chapters.hasAttribute("data-ready")) {
+        chapters.setAttribute("data-ready", "");
+        var shown = null;
+        var show = function (code) {
+          if (!N.books[code] || code === shown) return;
+          shown = code; chapters.innerHTML = grid(code); chapters.hidden = false;
+        };
+        var books = document.querySelectorAll(".dd-book[data-book]");
+        var start = hereBook && N.books[hereBook].has.length ? hereBook : null;
+        if (!start) {
+          var last = null;
+          try { last = JSON.parse(localStorage.getItem("logia-last") || "null"); } catch (e) { /* storage blocked */ }
+          var m = last && last.href && last.href.match(/^\/([a-z0-9]{3})\//);
+          start = m && N.books[m[1].toUpperCase()] ? m[1].toUpperCase() : (books[0] && books[0].getAttribute("data-book").toUpperCase());
+        }
+        if (start) show(start);
+        books.forEach(function (a) {
+          var code = a.getAttribute("data-book").toUpperCase();
+          a.addEventListener("mouseenter", function () { show(code); });
+          a.addEventListener("focus", function () { show(code); });
+        });
       }
-      if (start) show(start);
-      books.forEach(function (a) {
-        var code = a.getAttribute("data-book").toUpperCase();
-        a.addEventListener("mouseenter", function () { show(code); });
-        a.addEventListener("focus", function () { show(code); });
-      });
-    }
+    };
+    readMenu();
+    document.addEventListener("logia:menus", readMenu);
 
     // One tap between light and dark: the settings menu's own theme buttons
     // (web/site.js) do the choosing, so the two always agree. It returns to
