@@ -595,7 +595,8 @@
       "index": "Index",
       "collection": "Collection",
       "guide": "Guide",
-      "differ": "Where they differ"
+      "differ": "Where they differ",
+      "compare": "Compare"
     },
     "ways_most": "The verses the commentators wrote most on, counted from the library.",
     "ways_lent": "Forty days through the book, a few passages a day with their commentary.",
@@ -2211,6 +2212,10 @@
     }
   },
   "sundays": {
+    "notes_label": "Your notes on this reading",
+    "notes_hint": "Kept on this device, and printed with the handout.",
+    "year": "Year {y}",
+    "other_years": "The same day in the lectionary's other years:",
     "seasons": {
       "advent": "Advent",
       "christmas": "Christmas",
@@ -2355,6 +2360,7 @@
     "cite_how": "Name the commentator, the work and the edition, then the Logia address of the verse, for example: John Chrysostom, Homilies on the Gospel of St. John, Homily 27 (Oxford translation), quoted at https://logia.faith/jhn/3/16/."
   },
   "topic": {
+    "nearest": "The topics nearest this one",
     "heard": "Heard on them: {names}",
     "print_handout": "Print as a handout",
     "mark_read": "Mark as read",
@@ -2950,6 +2956,15 @@
     "later": "Not now"
   },
   "side": {
+    "book_link": "The two across the whole of {book} →",
+    "book_heading": "{book}: two commentators across the book",
+    "book_dek": "Choose two commentators to see, chapter by chapter, the verses only one of them comments on and the verses both do, then read any chapter with the two side by side.",
+    "book_way": "Chapter by chapter, where two commentators both speak and where only one does.",
+    "book_only": "Only {name}",
+    "book_both": "Both",
+    "book_none_here": "Neither",
+    "book_sum": "Across the book: both comment on {both} verses, only {a} on {only_a}, only {b} on {only_b}.",
+    "col_chapter": "Chapter",
     "show_label": "Show",
     "open": "Read side by side",
     "turns": "The chapters before and after, side by side",

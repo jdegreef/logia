@@ -9,6 +9,18 @@
     return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
   };
   var fmt = function (s, vals) { return s.replace(/\{(\w+)\}/g, function (_, k) { return vals[k] !== undefined ? vals[k] : ""; }); };
+  // What a control did, said to a screen reader: one polite status line for
+  // the page, emptied first so the same words are said again.
+  var say = function (text) {
+    var el = document.getElementById("lg-say");
+    if (!el) {
+      el = document.createElement("p");
+      el.id = "lg-say"; el.className = "sr-only"; el.setAttribute("role", "status");
+      document.body.appendChild(el);
+    }
+    el.textContent = "";
+    setTimeout(function () { el.textContent = text; }, 60);
+  };
   var holder = document.getElementById("search-data");
   var D = holder ? JSON.parse(holder.textContent) : null;
   // A page without #search-data (all but home, Read and page not found) has
@@ -382,7 +394,7 @@
       a.href = URL.createObjectURL(blob); a.download = name;
       document.body.appendChild(a); a.click(); a.remove();
       setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
-      b.textContent = b.getAttribute("data-votd-image");
+      say(b.getAttribute("data-votd-image"));
     }, "image/png");
   });
 
@@ -435,9 +447,77 @@
       a.href = URL.createObjectURL(blob); a.download = name;
       document.body.appendChild(a); a.click(); a.remove();
       setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
-      b.textContent = b.getAttribute("data-topic-image");
+      say(b.getAttribute("data-topic-image"));
     }, "image/png");
   });
+
+  // Two commentators across a book (book_side_page): for the two chosen,
+  // each chapter's verses that only one comments on and that both do, with
+  // a bar, and a link to read the chapter with the two side by side.
+  (function () {
+    var holder = document.getElementById("sbk-data");
+    if (!holder) return;
+    var D = JSON.parse(holder.textContent), U = D.ui;
+    var pickA = document.getElementById("sbk-a"), pickB = document.getElementById("sbk-b");
+    var body = document.querySelector(".lg-sbk-table tbody"), sum = document.querySelector(".lg-sbk-sum");
+    var q = new URLSearchParams(location.search);
+    if (q.get("a") && D.works[q.get("a")]) pickA.value = q.get("a");
+    if (q.get("b") && D.works[q.get("b")]) pickB.value = q.get("b");
+    var draw = function () {
+      var a = pickA.value, b = pickB.value, na = D.names[a], nb = D.names[b], all = [0, 0, 0];
+      document.querySelector(".lg-sbk-table th.lg-sbk-a").textContent = fmt(U.book_only, { name: na });
+      document.querySelector(".lg-sbk-table th.lg-sbk-b").textContent = fmt(U.book_only, { name: nb });
+      body.innerHTML = D.chapters.map(function (ch) {
+        var x = D.works[a][ch] || "", y = D.works[b][ch] || "", n = [0, 0, 0];
+        for (var i = 0; i < Math.max(x.length, y.length); i++) {
+          var p = x[i] === "1", r = y[i] === "1";
+          if (p && r) n[1]++; else if (p) n[0]++; else if (r) n[2]++;
+        }
+        all[0] += n[0]; all[1] += n[1]; all[2] += n[2];
+        var len = Math.max(x.length, 1);
+        var bar = '<span class="lg-sbk-bar" aria-hidden="true"><i class="lg-sbk-ia" style="width:' + (100 * n[0] / len) + '%"></i>' +
+          '<i class="lg-sbk-ib2" style="width:' + (100 * n[1] / len) + '%"></i><i class="lg-sbk-ib" style="width:' + (100 * n[2] / len) + '%"></i></span>';
+        return "<tr><th scope=\"row\">" + ch + "</th><td>" + n[0] + "</td><td>" + n[1] + bar + "</td><td>" + n[2] + "</td><td>" +
+          ((n[0] || n[1] || n[2]) && a !== b ? '<a href="' + esc(D.side[ch]) + "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b) + '">' + esc(U.open) + "</a>" : "") + "</td></tr>";
+      }).join("");
+      sum.textContent = fmt(U.book_sum, { both: all[1], a: na, only_a: all[0], b: nb, only_b: all[2] });
+      try { history.replaceState(null, "", "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b)); } catch (e) { /* file: */ }
+    };
+    pickA.addEventListener("change", draw);
+    pickB.addEventListener("change", draw);
+    draw();
+  })();
+
+  // A Sunday's page: a box for the preacher's own notes under each reading,
+  // kept on this device (logia-sunday-notes: {"<page>#<reading>": text}) and
+  // printed in its place with the handout.
+  (function () {
+    var page = document.querySelector(".lg-sunday-page[data-notes]");
+    if (!page) return;
+    var all = {};
+    try { all = JSON.parse(localStorage.getItem("logia-sunday-notes") || "{}"); } catch (e) { return; }
+    page.querySelectorAll("section.lg-voice[id]").forEach(function (sec) {
+      var key = location.pathname + "#" + sec.id, id = "note-" + sec.id;
+      var box = document.createElement("div");
+      box.className = "lg-sn";
+      box.innerHTML = '<label for="' + id + '">' + esc(page.getAttribute("data-notes")) + '</label><textarea id="' + id + '" rows="3"></textarea>' +
+        '<p class="lg-quiet">' + esc(page.getAttribute("data-notes-hint")) + '</p><div class="lg-sn-print"></div>';
+      var area = box.querySelector("textarea"), print = box.querySelector(".lg-sn-print");
+      area.value = all[key] || ""; print.textContent = area.value;
+      box.classList.toggle("lg-sn-has", !!area.value.trim());
+      area.addEventListener("input", function () {
+        var now = {};
+        try { now = JSON.parse(localStorage.getItem("logia-sunday-notes") || "{}"); } catch (e) { /* storage blocked */ }
+        if (area.value.trim()) now[key] = area.value; else delete now[key];
+        try { localStorage.setItem("logia-sunday-notes", JSON.stringify(now)); } catch (e) { /* storage blocked */ }
+        print.textContent = area.value;
+        box.classList.toggle("lg-sn-has", !!area.value.trim());
+      });
+      var h2 = sec.querySelector("h2");
+      var after = sec.querySelector(".lg-reading-text, .lg-reading-fold") || h2;
+      after.insertAdjacentElement("afterend", box);
+    });
+  })();
 
   // "Print as a handout": the page's print layout (web/logia.css, @media print).
   document.querySelectorAll("[data-print]").forEach(function (b) {
@@ -1169,6 +1249,40 @@
   // A long verse-by-verse list keeps each closed chapter's rows in a file
   // of its own (excerpt_list in scripts/build_site.py, data-src): fetched
   // the first time the chapter opens, however it is opened.
+  // Home: a book card's chapter cell names itself when pointed at.
+  document.addEventListener("mouseover", function (e) {
+    var cell = e.target.closest && e.target.closest(".lg-bookcard-heat i");
+    if (!cell || cell.title) return;
+    var card = cell.closest(".lg-bookcard");
+    var ch = [].indexOf.call(cell.parentNode.children, cell) + 1;
+    cell.title = fmt(card.getAttribute("data-heat-label"), { ch: ch, n: Number(cell.getAttribute("data-n")).toLocaleString("en") });
+  });
+
+  // The shape of a work: each row's squares from its string (coverage_map),
+  // and, when a book's list of verses with no comment is opened, those
+  // verses as linked runs ("1:5, 2:3–4").
+  document.querySelectorAll(".lg-cov-map span[data-c]").forEach(function (row) {
+    row.innerHTML = row.getAttribute("data-c").replace(/-/g, "").replace(/1/g, "<i></i>").replace(/0/g, '<i class="lg-nc"></i>');
+  });
+  document.querySelectorAll(".lg-cov-map details[data-missing]").forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      var out = d.querySelector("p > span");
+      if (!d.open || out.childNodes.length) return;
+      var map = d.closest(".lg-cov-map"), book = map.getAttribute("data-book").toLowerCase(), runs = [];
+      map.querySelectorAll("ol > li").forEach(function (li) {
+        var ch = li.firstElementChild.textContent.trim(), bits = li.querySelector("span[data-c]").getAttribute("data-c");
+        for (var i = 0; i < bits.length; i++) {
+          if (bits[i] !== "0") continue;
+          var last = runs[runs.length - 1];
+          if (last && last.ch === ch && last.z === i) last.z = i + 1; else runs.push({ ch: ch, a: i + 1, z: i + 1 });
+        }
+      });
+      out.innerHTML = runs.map(function (r) {
+        return '<a href="/' + book + "/" + r.ch + "/#v" + r.a + '">' + r.ch + ":" + r.a + (r.z !== r.a ? "–" + r.z : "") + "</a>";
+      }).join(", ");
+    });
+  });
+
   // The shape of a work: an open square (a verse with no comment) names its
   // verse when pointed at, "Genesis 1:4", from its map and row.
   document.addEventListener("mouseover", function (e) {
@@ -1839,11 +1953,12 @@
     }
   }
 
-  // Glossary words in the excerpts (verse, work and whole-text pages): the
-  // first use on the page of each word in /glossary.json is marked, and
-  // pressing it shows what it means, with a link to its entry. The excerpt's
-  // words are unchanged; only a button is put round the first use.
-  var texts = document.querySelectorAll(".lg-text, .lg-whole");
+  // Glossary words in the excerpts (verse, work and whole-text pages, and the
+  // first words on topic and Sunday pages): the first use on the page of
+  // each word in /glossary.json is marked, and pressing it shows what it
+  // means, with a link to its entry. The excerpt's words are unchanged; only
+  // a button is put round the first use.
+  var texts = document.querySelectorAll(".lg-text, .lg-whole, .lg-collection .lg-excerpts > li > div");
   if (texts.length && window.fetch) {
     fetch("/glossary.json").then(function (r) { return r.ok ? r.json() : null; }).then(function (G) {
       if (!G) return;

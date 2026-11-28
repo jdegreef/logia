@@ -25,7 +25,9 @@ const PAGES = ["/", "/read/", "/jhn/", "/jhn/3/", "/jhn/8/", "/rom/8/", "/gen/1/
   // Every other kind of page: creeds, the glossary, the readings, Saved, a homily, the most-discussed
   // verses, the plans, the quiz, what's new, Explore, and a search with its results.
   "/creeds/", "/creeds/apostles/", "/creeds/compare/", "/glossary/", "/readings/", "/saved/", "/works/chrysostom/24/",
-  "/most-discussed/", "/jhn/most-discussed/", "/differ/", "/plans/", "/quiz/", "/new/", "/explore/", "/search/?q=grace"];
+  "/most-discussed/", "/jhn/most-discussed/", "/differ/", "/plans/", "/quiz/", "/new/", "/explore/", "/search/?q=grace",
+  // Two commentators across a book, and a Sunday's page (built for every day the lectionary data holds).
+  "/jhn/side-by-side/", "/readings/2026-12-20/"];
 const THEMES = ["light", "sepia", "dark", "night"];
 const TYPES = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json",
   ".svg": "image/svg+xml", ".png": "image/png", ".woff2": "font/woff2", ".xml": "application/xml", ".txt": "text/plain" };

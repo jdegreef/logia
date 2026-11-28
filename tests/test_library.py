@@ -599,6 +599,17 @@ class Site(unittest.TestCase):
         self.assertIn('class="lg-ai lg-ai-draft" href="/ai/"', calvin)
         self.assertNotIn("a draft awaiting review", calvin)
 
+    def test_pages_load_their_own_stylesheets(self):
+        # The styles only one page uses are published apart (CSS_PARTS); each
+        # such page links its part, and each part holds rules.
+        for part, path in (("logia-search.css", "search/index.html"),
+                           ("logia-side.css", "jhn/3/side-by-side/index.html"),
+                           ("logia-compare.css", "creeds/compare/index.html"),
+                           ("logia-saved.css", "saved/index.html")):
+            page = self.read(path)
+            self.assertIn(f'href="/{part}?v=', page, path)
+            self.assertIn("{", self.read(part))
+
     def test_readings_hold_the_sundays_and_the_great_days(self):
         text = self.read("readings/index.html")
         self.assertIn('id="sundays"', text)
@@ -861,7 +872,8 @@ class Site(unittest.TestCase):
 
     def test_a_commentator_page_lists_the_verses_they_pass_over(self):
         text = self.read("commentators/calvin/index.html")
-        self.assertRegex(text, r'class="lg-missing"><summary>Verses with no comment from Calvin \(\d+\)</summary>')
+        self.assertRegex(text, r'class="lg-missing" data-missing><summary>'
+                               r'Verses with no comment from Calvin \(\d+\)</summary>')
         self.assertNotIn("lg-missing", self.read("commentators/ryle/index.html"))
 
     def test_a_commentator_with_several_books_has_a_page_for_them(self):
@@ -905,9 +917,9 @@ class Site(unittest.TestCase):
         self.assertIn('class="lg-goto"', text)
         # The shape of the work, who reads the same verses, and the text's record.
         self.assertIn("John, verse by verse", text)
-        # An open square is a verse with no comment; it names its verse on hover
-        # (web/logia.js), from the map's data-name and its row.
-        self.assertIn('<i class="lg-nc"></i>', text)
+        # Each row of the map is a string of its verses (1 commented on, 0 not),
+        # drawn as squares by web/logia.js; an open square names its verse on hover.
+        self.assertRegex(text, r'<span data-c="[01-]*0[01-]*"></span>')
         self.assertIn('data-name="John" id="map-jhn"', text)
         self.assertIn('href="/commentators/augustine/"', text)
         self.assertIn('href="/works/catena/fathers/"', text)
