@@ -118,7 +118,7 @@
   // the commentary tab last; the timeline and the era filter stay hidden.
   var EMPTY = !works.length;
   var FIRST = DATA.verses[0], LAST = DATA.verses[DATA.verses.length - 1];
-  var REF = function (v) { return DATA.bookName + " " + DATA.chapter + ":" + v; };
+  var REF = function (v) { return (DATA.refName || DATA.bookName) + " " + DATA.chapter + ":" + v; };
   // A verse of two sentences is in two records (one per sentence).
   var recsFor = function (v) { return DATA.records.filter(function (r) { return r.verses.indexOf(v) >= 0; }); };
   var entriesFor = function (w, v) { return w.entries.filter(function (e) { return e.start <= v && v <= e.end; }); };
@@ -135,7 +135,7 @@
   function renderText() {
     var out = [], lv = level(), seen = {};
     DATA.records.forEach(function (r) {
-      if (r.heading && r.verses[0] !== FIRST) out.push('<h2 class="cx-head">' + esc(flat(r.heading)) + "</h2>");
+      if (r.heading && r.verses[0] !== FIRST) out.push('<h2 class="cx-head" id="s' + r.verses[0] + '">' + esc(flat(r.heading)) + "</h2>");
       // A sentence set as poetry at any level starts each verse on its own line.
       var poem = ["L", "R"].some(function (l) { return Object.keys(r[l]).some(function (k) { return LINE.test(r[l][k]); }); }) ||
         r.pieces.some(function (p) { return LINE.test(p[1]); });
@@ -166,6 +166,7 @@
     $("#text").innerHTML = out.join("") + '<div class="cx-gutter" id="gutter"></div>';
     $("#text").classList.add("cx-ready");
     drawGutter();
+    sectionJumps();
     document.querySelectorAll(".cx-levels button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.level === lv); });
     markTokens();
   }
@@ -229,10 +230,18 @@
         var s = span(p.a, p.b);
         if (!s) return;
         var label = fmt(U.passage, { names: p.names.join(", "), a: DATA.chapter + ":" + p.a, b: p.b });
-        h += '<button type="button" class="cx-brk cx-brk' + lane + '" data-v="' + p.a + '" style="top:' + s.top + "px;height:" +
+        h += '<button type="button" class="cx-brk cx-brk' + lane + '" data-v="' + p.a + '" data-b="' + p.b + '" style="top:' + s.top + "px;height:" +
           (s.bottom - s.top) + 'px" title="' + esc(label) + '" aria-label="' + esc(label) + '"></button>';
       });
     g.innerHTML = h;
+    markBrackets();
+  }
+  // Only the brackets around the chosen verse show at rest: the gutter is one
+  // gold line, and a passage comment appears where it applies.
+  function markBrackets() {
+    document.querySelectorAll(".cx-brk").forEach(function (x) {
+      x.classList.toggle("cx-brk-on", state.verse >= +x.dataset.v && state.verse <= +x.dataset.b);
+    });
   }
   if (window.ResizeObserver) {
     var lastW = 0;
@@ -259,7 +268,9 @@
   // (or filtered out) are faded.
   function renderRail() {
     var lo = 200, hi = 1950, pos = function (y) { return ((y - lo) / (hi - lo)) * 100; };
-    var width = $("#rail").offsetWidth || 480, DOT = 16, ROWS = 6;
+    // At most two rows, dots allowed to touch: a flat strip, so the first
+    // voices fit above the fold.
+    var width = $("#rail").offsetWidth || 480, DOT = 11, ROWS = 2;
     var h = "", rows = [];
     [300, 600, 900, 1200, 1500, 1800].forEach(function (t) { h += '<span class="cx-tick" style="left:' + pos(t) + '%">' + t + "</span>"; });
     works.slice().sort(function (a, b) { return a.died - b.died; }).forEach(function (w) {
@@ -893,6 +904,7 @@
     state.note = null;
     document.querySelectorAll(".cx-verse").forEach(function (el) { el.classList.toggle("cx-on", +el.dataset.v === state.verse); });
     markTokens();
+    markBrackets();
     renderPanel();
     // Say where the reader is now, for a screen reader (#announce, polite).
     var said = $("#announce");
@@ -995,6 +1007,10 @@
       try { localStorage.setItem("logia-tip-reader", "1"); } catch (err) { /* storage blocked */ }
     });
   })();
+  // The slim resting sheet opens when its line is tapped.
+  document.querySelector(".cx-ph").addEventListener("click", function (ev) {
+    if (PHONE.matches && sheetState() === "min" && !ev.target.closest("button, a")) sheet("half");
+  });
   $("#grab").addEventListener("click", function () {
     sheet({ min: "half", half: "full", full: "min" }[sheetState()]);
   });
@@ -1127,6 +1143,28 @@
     if (+m[1] !== state.verse) { if (!EMPTY) state.tab = "comm"; go(+m[1]); }
     if (m[2]) { sheet("half"); showCard(m[2]); }
     else if (PHONE.matches) keepInView(document.querySelector('.cx-verse[data-v="' + state.verse + '"]'));
+  });
+
+  // The chapter's own sections (Salt and light, Jesus and the law...), at the
+  // top of the chapter bar's list, so a long chapter can be crossed in a tap.
+  function sectionJumps() {
+    var list = document.querySelector(".cx-pick-list"), heads = document.querySelectorAll("#text .cx-head");
+    if (!list) return;
+    list.querySelectorAll(".cx-pick-sec").forEach(function (x) { x.remove(); });
+    if (heads.length < 2) return;
+    var h = '<li class="cx-pick-sec cx-pick-sec-head" aria-hidden="true">' + esc(U.sections) + "</li>" +
+      '<li class="cx-pick-sec"><a href="#top" data-sec="">' + esc(document.querySelector(".cx-passage h1").textContent) + "</a></li>";
+    heads.forEach(function (x) { h += '<li class="cx-pick-sec"><a href="#' + x.id + '" data-sec="' + x.id + '">' + esc(x.textContent) + "</a></li>"; });
+    list.insertAdjacentHTML("afterbegin", h + '<li class="cx-pick-sec cx-pick-sec-end" aria-hidden="true"></li>');
+  }
+  document.querySelector(".cx-pick-list") && document.querySelector(".cx-pick-list").addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-sec]");
+    if (!a) return;
+    e.preventDefault();
+    var to = a.dataset.sec ? document.getElementById(a.dataset.sec) : document.querySelector(".cx-passage h1");
+    var top = to.getBoundingClientRect().top + window.scrollY - (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64) - 56;
+    window.scrollTo({ top: top, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    document.querySelector(".cx-pick").open = false;
   });
 
   // The chapter bar: once the chapter's title has scrolled away, a slim bar

@@ -2231,6 +2231,14 @@
         '<p class="lg-side-key"><span class="lg-strip-left">' + esc(fmt(U.key_only, { name: nameOf(pickA).split(":")[0] })) + '</span> <span class="lg-strip-right">' +
         esc(fmt(U.key_only, { name: nameOf(pickB).split(":")[0] })) + '</span> <span class="lg-strip-both">' + esc(U.key_both) + "</span></p>");
       out.unshift('<div class="lg-side-cols lg-side-names"><p><b>' + esc(nameOf(pickA)) + "</b></p><p><b>" + esc(nameOf(pickB)) + "</b></p></div>");
+      // On a phone the two columns would stack, one whole chapter after the
+      // other; instead a switch shows one voice at a time, verse by verse,
+      // and a sideways swipe on a row changes voice.
+      var show = rowsBox.getAttribute("data-show") || "a";
+      out.unshift('<div class="lg-side-switch" role="group" aria-label="' + esc(U.show_label) + '">' +
+        '<button type="button" data-show="a" aria-pressed="' + (show === "a") + '">' + esc(nameOf(pickA).split(":")[0]) + "</button>" +
+        '<button type="button" data-show="b" aria-pressed="' + (show === "b") + '">' + esc(nameOf(pickB).split(":")[0]) + "</button></div>");
+      rowsBox.setAttribute("data-show", show);
       rowsBox.innerHTML = out.join("");
       history.replaceState(null, "", location.pathname + "?a=" + encodeURIComponent(a) + "&b=" + encodeURIComponent(b) + location.hash);
       // The chapters before and after keep the same two.
@@ -2243,6 +2251,24 @@
       draw();
       pickA.addEventListener("change", draw);
       pickB.addEventListener("change", draw);
+      var setShow = function (which) {
+        rowsBox.setAttribute("data-show", which);
+        rowsBox.querySelectorAll(".lg-side-switch button").forEach(function (x) { x.setAttribute("aria-pressed", x.dataset.show === which); });
+      };
+      rowsBox.addEventListener("click", function (ev) {
+        var bt = ev.target.closest(".lg-side-switch button");
+        if (bt) setShow(bt.dataset.show);
+      });
+      var sx = null, sy = 0;
+      rowsBox.addEventListener("touchstart", function (ev) {
+        sx = ev.target.closest(".lg-side-cols") ? ev.touches[0].clientX : null; sy = ev.touches[0].clientY;
+      }, { passive: true });
+      rowsBox.addEventListener("touchend", function (ev) {
+        if (sx === null) return;
+        var dx = ev.changedTouches[0].clientX - sx, dy = ev.changedTouches[0].clientY - sy;
+        sx = null;
+        if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) setShow(dx < 0 ? "b" : "a");
+      });
     });
   })();
 
@@ -2572,6 +2598,49 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && open) { var b = open; close(); b.focus(); } });
   })();
 
+  // Verse pages on a wide screen: once the title has scrolled away, a slim
+  // bar under the header keeps the verse in sight.
+  (function () {
+    var bar = document.querySelector(".lg-vsticky"), h1 = document.querySelector(".lg-verse h1");
+    if (!bar || !h1 || !window.IntersectionObserver) return;
+    new IntersectionObserver(function (es) {
+      bar.hidden = es[0].isIntersecting || es[0].boundingClientRect.top > 0;
+    }).observe(h1);
+  })();
+
+  // A verse shown on its own can open a speech that the next verse closes
+  // ("Blessed are those who are poor in spirit: ... theirs.) or close one an
+  // earlier verse opened. A muted "…" after or before the words says so; the
+  // words themselves are left exactly as the Bible text has them.
+  function markSpeech(box) {
+    var p = box.querySelector("p");
+    if (!p) return;
+    p.querySelectorAll(".lg-runon").forEach(function (x) { x.remove(); });
+    var text = p.textContent, open = false, unopened = false, i, c;
+    for (i = 0; i < text.length; i++) {
+      c = text[i];
+      if (c === "\u201C") open = true;
+      else if (c === "\u201D") { if (open) open = false; else unopened = true; }
+      else if (c === '"') {
+        var before = i ? text[i - 1] : " ";
+        if (open) open = false;
+        else if (/[\s(\[\u2014-]/.test(before) || i === 0) open = true;
+        else unopened = true;
+      }
+    }
+    var cue = function (title, after) {
+      var s = document.createElement("span");
+      s.className = "lg-runon";
+      s.title = title;
+      s.setAttribute("aria-label", title);
+      s.textContent = after ? " \u2026" : "\u2026 ";
+      if (after) p.appendChild(s); else p.insertBefore(s, p.firstChild);
+    };
+    if (open) cue(box.getAttribute("data-runs-on"), true);
+    if (unopened) cue(box.getAttribute("data-ran-on"), false);
+  }
+  document.querySelectorAll("[data-runs-on]").forEach(markSpeech);
+
   // A verse page: the verse at the reader's level (Literal, Balanced or
   // Readable, the setting web/site.js keeps), and buttons to change it there.
   var vtext = document.querySelector(".lg-vtext[data-l]"), vlevels = document.querySelector(".lg-vlevels");
@@ -2580,6 +2649,7 @@
       var lv = (window.LogiaPrefs && window.LogiaPrefs.get("level")) || document.documentElement.getAttribute("data-level") || "B";
       if (!vtext.hasAttribute("data-" + lv.toLowerCase())) lv = "B";
       vtext.querySelector("p").textContent = vtext.getAttribute("data-" + lv.toLowerCase());
+      markSpeech(vtext);
       vlevels.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-level") === lv); });
     };
     vlevels.hidden = false;
@@ -2599,6 +2669,43 @@
   // Verse pages: the strip of the chapter's verses scrolls to this one.
   var near = document.querySelector(".lg-near"), here = near && near.querySelector("[aria-current]");
   if (here) near.scrollLeft = here.offsetLeft - near.offsetLeft - (near.clientWidth - here.offsetWidth) / 2;
+  // An excerpt's More menu (scripts/build_site.py, excerpt_actions) closes
+  // when the reader clicks elsewhere, presses Escape, or picks an item.
+  document.addEventListener("click", function (ev) {
+    document.querySelectorAll(".lg-xact-more[open]").forEach(function (d) {
+      if (!d.contains(ev.target) || ev.target.closest(".lg-xact-menu button, .lg-xact-menu a")) d.open = false;
+    });
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Escape") return;
+    document.querySelectorAll(".lg-xact-more[open]").forEach(function (d) { d.open = false; d.querySelector("summary").focus(); });
+  });
+
+  // Verse pages: a voice with several long excerpts shows its first, folded,
+  // and one "Read all of Chrysostom: 3 excerpts, 857 words" that opens them
+  // all; unless the address or a search points into one of them.
+  document.querySelectorAll(".lg-voice[data-all]").forEach(function (sec) {
+    var arts = [].slice.call(sec.querySelectorAll("article.lg-vx[id]"));
+    if (arts.length < 2) return;
+    if (location.hash && arts.some(function (a) { return "#" + a.id === location.hash; })) return;
+    if (sec.querySelector("mark.lg-hl")) return;
+    var later = arts.slice(1);
+    later.forEach(function (a) { a.hidden = true; });
+    var own = arts[0].querySelector(".lg-unfold");
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "lg-unfold lg-unfold-all";
+    btn.textContent = sec.getAttribute("data-all");
+    var fold = arts[0].querySelector(".lg-foldable");
+    (own || fold || arts[0].querySelector(".lg-text")).insertAdjacentElement("afterend", btn);
+    if (own) own.dataset.grouped = "1";
+    btn.addEventListener("click", function () {
+      later.forEach(function (a) { a.hidden = false; });
+      sec.querySelectorAll(".lg-folded").forEach(function (f) { f.classList.remove("lg-folded"); });
+      sec.querySelectorAll(".lg-unfold").forEach(function (b) { b.remove(); });
+    });
+  });
+
   // Verse pages: a long excerpt shows its first eight lines with a fade and
   // "Read all 412 words" (scripts/build_site.py, verse_excerpt). The one the
   // address points to opens in full.
@@ -2611,7 +2718,7 @@
     if (box.scrollHeight <= line * 11) return;
     box.style.setProperty("--fold", line * 8 + "px");
     box.classList.add("lg-folded");
-    btn.hidden = false;
+    btn.hidden = !!btn.dataset.grouped;   // a voice's one "Read all" stands in for it
     btn.addEventListener("click", function () {
       box.classList.remove("lg-folded");
       btn.remove();
